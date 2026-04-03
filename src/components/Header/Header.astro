@@ -1,0 +1,19 @@
+---
+import LanguageToggle from '../LanguageToggle/LanguageToggle.astro';
+
+interface Props {
+  homePath: string;
+  transparent?: boolean;
+  locale?: string;
+  currentPath?: string;
+}
+
+const { homePath, transparent = false, locale = 'pt-BR', currentPath = '/' } = Astro.props;
+---
+
+<header class={transparent ? 'transparent' : ''}>
+  <a href={homePath} class="header-name"><strong>guitta</strong> monatega</a>
+  <div class="header-right">
+    <LanguageToggle locale={locale} currentPath={currentPath} />
+  </div>
+</header>

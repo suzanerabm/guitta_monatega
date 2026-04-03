@@ -1,5 +1,6 @@
 ---
-import LanguageToggle from '../components/LanguageToggle/LanguageToggle.astro';
+import Header from '../components/Header/Header.astro';
+import Footer from '../components/Footer/Footer.astro';
 import Breadcrumb from '../components/Breadcrumb/Breadcrumb.astro';
 import { getLocalizedPath } from '../i18n/translations';
 
@@ -34,22 +35,13 @@ const currentPath = Astro.url.pathname.replace(/^\/en/, '') || '/';
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class={transparentHeader ? 'transparent' : ''}>
-    <a href={homePath} class="header-name"><strong>guitta</strong> monatega</a>
-    <div class="header-right">
-      <LanguageToggle locale={locale} currentPath={currentPath} />
-    </div>
-  </header>
+  <Header homePath={homePath} transparent={transparentHeader} locale={locale} currentPath={currentPath} />
 
   {breadcrumb && <Breadcrumb items={breadcrumb} locale={locale} />}
 
   <slot />
 
-  <footer>
-    <div class="footer-line"></div>
-    <a href={aboutPath} class="footer-name">guitta monatega</a>
-    <span class="footer-brand">mosaicQ</span>
-  </footer>
+  <Footer aboutPath={aboutPath} />
 </body>
 </html>
 
