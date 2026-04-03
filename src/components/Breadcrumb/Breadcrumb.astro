@@ -93,6 +93,28 @@ const homePath = getLocalizedPath('/', locale as any);
     color: var(--ink-soft);
   }
 
+  :global([data-theme="dark"]) .breadcrumb-back,
+  :global([data-theme="dark"]) .breadcrumb-link {
+    color: rgba(255,255,255,0.5);
+  }
+
+  :global([data-theme="dark"]) .breadcrumb-back:hover,
+  :global([data-theme="dark"]) .breadcrumb-link:hover {
+    color: #fff;
+  }
+
+  :global([data-theme="dark"]) .breadcrumb-divider {
+    background: rgba(255,255,255,0.2);
+  }
+
+  :global([data-theme="dark"]) .breadcrumb-sep {
+    color: rgba(255,255,255,0.2);
+  }
+
+  :global([data-theme="dark"]) .breadcrumb-current {
+    color: rgba(255,255,255,0.7);
+  }
+
   @media (max-width: 768px) {
     .breadcrumb { padding: 0.5rem 1.5rem; padding-top: calc(50px + 0.5rem); }
   }
