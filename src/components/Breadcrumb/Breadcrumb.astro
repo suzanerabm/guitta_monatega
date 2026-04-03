@@ -95,24 +95,24 @@ const homePath = getLocalizedPath('/', locale as any);
 
   :global([data-theme="dark"]) .breadcrumb-back,
   :global([data-theme="dark"]) .breadcrumb-link {
-    color: rgba(255,255,255,0.5);
+    color: var(--color-dark-ink-mid);
   }
 
   :global([data-theme="dark"]) .breadcrumb-back:hover,
   :global([data-theme="dark"]) .breadcrumb-link:hover {
-    color: #fff;
+    color: var(--color-white);
   }
 
   :global([data-theme="dark"]) .breadcrumb-divider {
-    background: rgba(255,255,255,0.2);
+    background: var(--color-dark-border-mid);
   }
 
   :global([data-theme="dark"]) .breadcrumb-sep {
-    color: rgba(255,255,255,0.2);
+    color: var(--color-dark-border-mid);
   }
 
   :global([data-theme="dark"]) .breadcrumb-current {
-    color: rgba(255,255,255,0.7);
+    color: var(--color-dark-ink-strong);
   }
 
   @media (max-width: 768px) {

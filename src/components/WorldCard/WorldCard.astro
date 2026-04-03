@@ -36,7 +36,7 @@ const { tag, name, gradientClass, showDivider = true } = Astro.props;
   .world-name {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
-    color: #fff;
+    color: var(--color-white);
     letter-spacing: 0.04em;
     margin-bottom: 0.8rem;
   }
@@ -74,7 +74,7 @@ const { tag, name, gradientClass, showDivider = true } = Astro.props;
     font-size: 0.8rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.25);
+    color: var(--color-dark-label);
   }
 
   .wb-lunnp1 { background: linear-gradient(135deg, #1a3a5c, #2d5f8a, #1a4a6a); }
@@ -87,7 +87,7 @@ const { tag, name, gradientClass, showDivider = true } = Astro.props;
   .world-divider {
     width: 40px;
     height: 1px;
-    background: rgba(255,255,255,0.08);
+    background: var(--color-dark-border);
     margin: 4rem auto;
   }
 

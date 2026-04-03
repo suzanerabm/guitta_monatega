@@ -3,23 +3,48 @@
    ═══════════════════════════════════════════════ */
 
 :root {
-  /* — Colors ——————————————————————————————————— */
+  /* — Colors: Core ————————————————————————————— */
   --color-white:       #ffffff;
   --color-off-white:   #fafafa;
+  --color-black:       #000000;
   --color-ink:         #1a1d21;
   --color-ink-soft:    #555555;
   --color-ink-muted:   #999999;
   --color-border:      #e0e0e0;
   --color-border-soft: #f0f0f0;
   --color-subtle:      #cccccc;
+  --color-surface:     #f5f5f5;
 
-  /* — Dark theme colors ——————————————————————— */
+  /* — Colors: Overlay / Transparency —————————— */
+  --overlay-light:       rgba(255,255,255,0.92);
+  --overlay-light-soft:  rgba(255,255,255,0.9);
+  --overlay-light-full:  rgba(255,255,255,0.97);
+  --overlay-dark:        rgba(0,0,0,0.95);
+  --overlay-dark-soft:   rgba(0,0,0,0.8);
+  --shadow-sm:           0 4px 20px rgba(0,0,0,0.08);
+  --shadow-md:           0 4px 24px rgba(0,0,0,0.06);
+  --shadow-lg:           0 8px 30px rgba(0,0,0,0.12);
+  --shadow-text:         0 2px 30px rgba(0,0,0,0.3);
+
+  /* — Colors: Dark theme ————————————————————— */
   --color-dark-bg:         #0a0a1a;
   --color-dark-ink:        #e0e0e8;
   --color-dark-ink-soft:   rgba(255,255,255,0.55);
   --color-dark-ink-muted:  rgba(255,255,255,0.3);
+  --color-dark-ink-mid:    rgba(255,255,255,0.5);
+  --color-dark-ink-strong: rgba(255,255,255,0.7);
   --color-dark-border:     rgba(255,255,255,0.08);
+  --color-dark-border-mid: rgba(255,255,255,0.2);
   --color-dark-subtle:     rgba(255,255,255,0.12);
+  --color-dark-label:      rgba(255,255,255,0.25);
+  --color-dark-overlay:    rgba(10,10,26,0.9);
+
+  /* — Colors: Banner text ———————————————————— */
+  --color-banner-label:    rgba(255,255,255,0.6);
+  --color-banner-desc:     rgba(255,255,255,0.7);
+  --color-arte-label:      rgba(0,0,0,0.35);
+  --color-arte-desc:       rgba(0,0,0,0.45);
+  --color-stroke:          rgba(0,0,0,0.04);
 
   /* — Palette: Bichittos ————————————————————— */
   --color-bichittos-pink:    #ff6b9d;

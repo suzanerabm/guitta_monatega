@@ -34,12 +34,12 @@ const currentLabel = locale === 'en' ? 'EN' : 'PT';
   }
 
   :global([data-theme="dark"]) .lang-toggle {
-    color: rgba(255,255,255,0.5);
-    border-color: rgba(255,255,255,0.3);
+    color: var(--color-dark-ink-mid);
+    border-color: var(--color-dark-ink-muted);
   }
 
   :global([data-theme="dark"]) .lang-toggle:hover {
-    color: #fff;
-    border-color: #fff;
+    color: var(--color-white);
+    border-color: var(--color-white);
   }
 </style>
