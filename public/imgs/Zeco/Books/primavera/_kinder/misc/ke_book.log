@@ -1,0 +1,206 @@
+2016-11-20 14:55:46.108 [] INFO  FixedLayoutBook.KidsBook  - Saving stylesheet
+2016-11-20 14:55:46.112 [] INFO  FixedLayoutBook.NcxDocument  - Saving NCX
+2016-11-20 14:55:46.114 [] INFO  FixedLayoutBook.OPFDocument  - Saving OPF
+2016-11-20 14:55:46.114 [] ERROR FixedLayoutBook.OPFDocument  - Failed to open OPF for saving
+2016-11-20 14:55:46.117 [] INFO  FixedLayoutBook.BookMetadata  - Scaling the image
+2016-11-20 14:55:46.825 [] INFO  FixedLayoutBook.BookMetadata  - Scaling not done for /Users/suzanemachado/Dropbox/Bichitto/_books/primavera/_kinder/cover-image.png, since the image meets the guidelines.
+2016-11-20 14:55:46.902 [] INFO  TabManager  - Page is null
+2016-11-20 14:55:47.710 [] INFO  BookManagerDock  - Adding page(s) to book...
+2016-11-20 14:55:52.219 [] INFO  BookManagerDock  - Adding page(s) to book...
+2016-11-20 14:55:52.242 [] INFO  MetricManager  - TimerMetricEntry : kidsimport-image:5ms
+2016-11-20 14:55:52.297 [] INFO  MetricManager  - TimerMetricEntry : kidsimport-image:18ms
+2016-11-20 14:55:52.324 [] INFO  MetricManager  - TimerMetricEntry : kidsimport-image:26ms
+2016-11-20 14:55:52.325 [] INFO  MetricManager  - TimerMetricEntry : kidsimport-image:0ms
+2016-11-20 14:55:52.326 [] INFO  MetricManager  - TimerMetricEntry : kidsimport-image:0ms
+2016-11-20 14:55:52.358 [] INFO  MetricManager  - TimerMetricEntry : kidsimport-image:32ms
+2016-11-20 14:55:52.390 [] INFO  MetricManager  - TimerMetricEntry : kidsimport-image:30ms
+2016-11-20 14:55:52.391 [] INFO  MetricManager  - TimerMetricEntry : kidsimport-image:0ms
+2016-11-20 14:55:52.392 [] INFO  MetricManager  - TimerMetricEntry : kidsimport-image:1ms
+2016-11-20 14:55:52.392 [] INFO  MetricManager  - TimerMetricEntry : kidsimport-image:0ms
+2016-11-20 14:55:52.425 [] INFO  MetricManager  - TimerMetricEntry : kidsimport-image:33ms
+2016-11-20 14:55:52.427 [] INFO  MetricManager  - TimerMetricEntry : kidsimport-image:1ms
+2016-11-20 14:55:52.428 [] INFO  MetricManager  - TimerMetricEntry : kidsimport-image:0ms
+2016-11-20 14:55:52.428 [] INFO  MetricManager  - TimerMetricEntry : kidsimport-image:0ms
+2016-11-20 14:55:52.936 [] INFO  FixedLayoutBook.Layout  - Loading the image
+2016-11-20 14:55:55.443 [] INFO  FixedLayoutBook.Layout  - Loading the image
+2016-11-20 14:55:58.240 [] INFO  FixedLayoutBook.Layout  - Loading the image
+2016-11-20 14:56:01.874 [] INFO  FixedLayoutBook.Layout  - Loading the image
+2016-11-20 14:56:04.671 [] INFO  FixedLayoutBook.Layout  - Loading the image
+2016-11-20 14:56:08.009 [] INFO  FixedLayoutBook.Layout  - Loading the image
+2016-11-20 14:56:11.159 [] INFO  FixedLayoutBook.Layout  - Loading the image
+2016-11-20 14:56:13.921 [] INFO  FixedLayoutBook.Layout  - Loading the image
+2016-11-20 14:56:16.742 [] INFO  FixedLayoutBook.Layout  - Loading the image
+2016-11-20 14:56:19.601 [] INFO  FixedLayoutBook.Layout  - Loading the image
+2016-11-20 14:56:22.790 [] INFO  FixedLayoutBook.Layout  - Loading the image
+2016-11-20 14:56:26.969 [] INFO  FixedLayoutBook.Layout  - Loading the image
+2016-11-20 14:56:30.078 [] INFO  FixedLayoutBook.Layout  - Loading the image
+2016-11-20 14:56:33.730 [] INFO  FixedLayoutBook.Layout  - Loading the image
+2016-11-20 14:56:36.196 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Generating HTML for kids page for loading HTML
+2016-11-20 14:56:36.197 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating head tag for kids page
+2016-11-20 14:56:36.197 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating body tag for kids page
+2016-11-20 14:56:36.198 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating page level CSS as there is none
+2016-11-20 14:56:36.212 [] INFO  FixedLayoutBook.Layout  - Kindle Kids' Book Creator created stylesheet not found
+2016-11-20 14:56:36.212 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 14:56:36.262 [] INFO  MetricManager  - TimerMetricEntry : kidspage-ui-load:42ms
+2016-11-20 14:56:36.270 [] INFO  MetricManager  - TimerMetricEntry : kidsimport-images:44051ms
+2016-11-20 14:56:36.295 [] INFO  SystemUtils  - Available Memory (RAM): hw.memsize: 4294967296
+hw.usermem: 954429440
+
+2016-11-20 14:56:36.296 [] INFO  BookController  - MemoryTotal::31643714
+2016-11-20 14:56:36.551 [] INFO  KENetworkAccessManager  - Loading image /Users/suzanemachado/Dropbox/Bichitto/_books/primavera/_kinder/html/scaled-images/primaveracena_1_intro.png
+2016-11-20 14:56:36.551 [] INFO  KENetworkAccessManager  - Loading image /Users/suzanemachado/Dropbox/Bichitto/_books/primavera/_kinder/html/scaled-images/primaveracena_1_intro_thumb.png
+2016-11-20 14:56:36.585 [] INFO  KEQWebPage  - JS Console:RichTextToolbar.initialize: data-app-amzn-ke-editable,,RichtextBridge(name = ""),[object CSSStyleSheet],undefined: line:96 srcId:qrc:/js/js/richtext.js
+2016-11-20 14:56:36.591 [] INFO  KEQWebPage  - JS Console:Initializing Properties: line:141 srcId:qrc:/js/js/properties.js
+2016-11-20 14:56:36.592 [] INFO  KEQWebPage  - JS Console:Initialized Properties: line:141 srcId:qrc:/js/js/properties.js
+2016-11-20 14:56:36.592 [] INFO  KEQWebPage  - JS Console:rich text : Resetting Current Element: line:1049 srcId:qrc:/js/js/richtext.js
+2016-11-20 14:56:36.593 [] INFO  KEQWebPage  - JS Console:Resetting current edit element: line:1132 srcId:qrc:/js/js/kids-book-edit.js
+2016-11-20 14:56:36.593 [] INFO  KEQWebPage  - JS Console:loading done ...: line:6 srcId:qrc:/js/js/kids-book-edit-loader.js
+2016-11-20 14:57:14.938 [] INFO  MetricsUploadThread  - https://fls-na.amazon.com/1/kc3/1/OE/kc3/action/kids:import-image@v=5:u=ms/kids:import-image@v=18:u=ms/kids:import-image@v=26:u=ms/kids:import-image@v=0:u=ms/kids:import-image@v=0:u=ms/kids:import-image@v=32:u=ms/kids:import-image@v=30:u=ms/kids:import-image@v=0:u=ms/kids:import-image@v=1:u=ms/kids:import-image@v=0:u=ms/kids:import-image@v=33:u=ms/kids:import-image@v=1:u=ms/kids:import-image@v=0:u=ms/kids:import-image@v=0:u=ms/kids:page-ui-load@v=42:u=ms/kids:import-images@v=44051:u=ms/?marketplaceId=A2EUQ1WTGCTBG2&requestId=kc3-request-id&session={2c9bf962-0a2d-435b-9665-ba77dfb2ef5b}
+2016-11-20 14:57:15.816 [] INFO  MetricsUploadThread  - reply was successful and removing entries
+2016-11-20 14:57:38.417 [] INFO  BookController  - Loaded the book: Kids' Book
+2016-11-20 14:57:38.420 [] INFO  MetricManager  - TimerMetricEntry : kidsbook-create:227748ms
+2016-11-20 14:57:39.908 [] INFO  KEQWebPage  - JS Console:div.fs { width: 1920px; height: 1439px; }: line:2495 srcId:qrc:/js/js/kids-book-edit.js
+2016-11-20 14:57:39.909 [] INFO  KEQWebPage  - JS Console:#page-img { margin-top: 0px; margin-bottom: 0px; margin-left: 1px; margin-right: 1px; background-image: url(scaled-images/primaveracena_1_intro.png); background-size: 1918px 1439px; width: 1918px; height: 1439px; }: line:2495 srcId:qrc:/js/js/kids-book-edit.js
+2016-11-20 14:57:39.914 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Generating HTML for kids page for loading HTML
+2016-11-20 14:57:39.914 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating head tag for kids page
+2016-11-20 14:57:39.915 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating body tag for kids page
+2016-11-20 14:57:39.915 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating page level CSS as there is none
+2016-11-20 14:57:39.918 [] INFO  FixedLayoutBook.Layout  - Kindle Kids' Book Creator created stylesheet not found
+2016-11-20 14:57:39.918 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 14:57:39.928 [] INFO  MetricManager  - TimerMetricEntry : kidspage-ui-load:10ms
+2016-11-20 14:57:40.048 [] INFO  KENetworkAccessManager  - Loading image /Users/suzanemachado/Dropbox/Bichitto/_books/primavera/_kinder/html/scaled-images/primaveracena_2_acordar.png
+2016-11-20 14:57:40.049 [] INFO  KENetworkAccessManager  - Loading image /Users/suzanemachado/Dropbox/Bichitto/_books/primavera/_kinder/html/scaled-images/primaveracena_2_acordar_thumb.png
+2016-11-20 14:57:40.070 [] INFO  KEQWebPage  - JS Console:RichTextToolbar.initialize: data-app-amzn-ke-editable,,RichtextBridge(name = ""),[object CSSStyleSheet],undefined: line:96 srcId:qrc:/js/js/richtext.js
+2016-11-20 14:57:40.072 [] INFO  KEQWebPage  - JS Console:Initializing Properties: line:141 srcId:qrc:/js/js/properties.js
+2016-11-20 14:57:40.072 [] INFO  KEQWebPage  - JS Console:Initialized Properties: line:141 srcId:qrc:/js/js/properties.js
+2016-11-20 14:57:40.072 [] INFO  KEQWebPage  - JS Console:rich text : Resetting Current Element: line:1049 srcId:qrc:/js/js/richtext.js
+2016-11-20 14:57:40.072 [] INFO  KEQWebPage  - JS Console:Resetting current edit element: line:1132 srcId:qrc:/js/js/kids-book-edit.js
+2016-11-20 14:57:40.072 [] INFO  KEQWebPage  - JS Console:loading done ...: line:6 srcId:qrc:/js/js/kids-book-edit-loader.js
+2016-11-20 14:59:04.608 [] INFO  SystemUtils  - Available Memory (RAM): hw.memsize: 4294967296
+hw.usermem: 938917888
+
+2016-11-20 14:59:04.610 [] INFO  BookController  - MemoryTotal::31643714
+2016-11-20 14:59:04.610 [] INFO  BookController  - Exporting...
+2016-11-20 14:59:10.272 [] INFO  BookController  - Saving book...
+2016-11-20 14:59:10.277 [] INFO  KEQWebPage  - JS Console:div.fs { width: 1920px; height: 1439px; }: line:2495 srcId:qrc:/js/js/kids-book-edit.js
+2016-11-20 14:59:10.278 [] INFO  KEQWebPage  - JS Console:#page-img { margin-top: 0px; margin-bottom: 0px; margin-left: 1px; margin-right: 1px; background-image: url(scaled-images/primaveracena_2_acordar.png); background-size: 1918px 1439px; width: 1918px; height: 1439px; }: line:2495 srcId:qrc:/js/js/kids-book-edit.js
+2016-11-20 14:59:10.290 [] INFO  FixedLayoutBook.Layout  - Kindle Kids' Book Creator created stylesheet not found
+2016-11-20 14:59:10.291 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 14:59:10.299 [] INFO  MetricManager  - TimerMetricEntry : kidspage-ui-load:8ms
+2016-11-20 14:59:10.300 [] INFO  FixedLayoutBook.KidsBook  - Generating kids book OPF...
+2016-11-20 14:59:10.300 [] INFO  FixedLayoutBook.BookMetadata  - Previous source was 
+2016-11-20 14:59:10.300 [] INFO  FixedLayoutBook.BookMetadata  - Current stamp is KKBC/1.003/baebfe4/mac
+2016-11-20 14:59:10.303 [] INFO  FixedLayoutBook  - Saving pages...
+2016-11-20 14:59:10.305 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 14:59:10.307 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 14:59:10.309 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Generating HTML for kids page for loading HTML
+2016-11-20 14:59:10.309 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating head tag for kids page
+2016-11-20 14:59:10.310 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating body tag for kids page
+2016-11-20 14:59:10.310 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating page level CSS as there is none
+2016-11-20 14:59:10.312 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 14:59:10.313 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Generating HTML for kids page for loading HTML
+2016-11-20 14:59:10.313 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating head tag for kids page
+2016-11-20 14:59:10.313 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating body tag for kids page
+2016-11-20 14:59:10.313 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating page level CSS as there is none
+2016-11-20 14:59:10.314 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 14:59:10.315 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Generating HTML for kids page for loading HTML
+2016-11-20 14:59:10.315 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating head tag for kids page
+2016-11-20 14:59:10.315 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating body tag for kids page
+2016-11-20 14:59:10.315 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating page level CSS as there is none
+2016-11-20 14:59:10.316 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 14:59:10.318 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Generating HTML for kids page for loading HTML
+2016-11-20 14:59:10.318 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating head tag for kids page
+2016-11-20 14:59:10.319 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating body tag for kids page
+2016-11-20 14:59:10.319 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating page level CSS as there is none
+2016-11-20 14:59:10.320 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 14:59:10.322 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Generating HTML for kids page for loading HTML
+2016-11-20 14:59:10.322 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating head tag for kids page
+2016-11-20 14:59:10.322 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating body tag for kids page
+2016-11-20 14:59:10.322 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating page level CSS as there is none
+2016-11-20 14:59:10.323 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 14:59:10.325 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Generating HTML for kids page for loading HTML
+2016-11-20 14:59:10.325 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating head tag for kids page
+2016-11-20 14:59:10.325 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating body tag for kids page
+2016-11-20 14:59:10.325 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating page level CSS as there is none
+2016-11-20 14:59:10.326 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 14:59:10.328 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Generating HTML for kids page for loading HTML
+2016-11-20 14:59:10.328 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating head tag for kids page
+2016-11-20 14:59:10.328 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating body tag for kids page
+2016-11-20 14:59:10.328 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating page level CSS as there is none
+2016-11-20 14:59:10.330 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 14:59:10.331 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Generating HTML for kids page for loading HTML
+2016-11-20 14:59:10.331 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating head tag for kids page
+2016-11-20 14:59:10.331 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating body tag for kids page
+2016-11-20 14:59:10.331 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating page level CSS as there is none
+2016-11-20 14:59:10.333 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 14:59:10.335 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Generating HTML for kids page for loading HTML
+2016-11-20 14:59:10.335 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating head tag for kids page
+2016-11-20 14:59:10.335 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating body tag for kids page
+2016-11-20 14:59:10.335 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating page level CSS as there is none
+2016-11-20 14:59:10.338 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 14:59:10.339 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Generating HTML for kids page for loading HTML
+2016-11-20 14:59:10.340 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating head tag for kids page
+2016-11-20 14:59:10.340 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating body tag for kids page
+2016-11-20 14:59:10.340 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating page level CSS as there is none
+2016-11-20 14:59:10.342 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 14:59:10.343 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Generating HTML for kids page for loading HTML
+2016-11-20 14:59:10.343 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating head tag for kids page
+2016-11-20 14:59:10.343 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating body tag for kids page
+2016-11-20 14:59:10.343 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating page level CSS as there is none
+2016-11-20 14:59:10.345 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 14:59:10.346 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Generating HTML for kids page for loading HTML
+2016-11-20 14:59:10.346 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating head tag for kids page
+2016-11-20 14:59:10.346 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating body tag for kids page
+2016-11-20 14:59:10.347 [] INFO  FixedLayoutBook.KidsBookPageLayout  - Creating page level CSS as there is none
+2016-11-20 14:59:10.348 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 14:59:10.349 [] INFO  FixedLayoutBook.OPFDocument  - Saving OPF
+2016-11-20 14:59:10.349 [] ERROR FixedLayoutBook.OPFDocument  - Failed to open OPF for saving
+2016-11-20 14:59:10.350 [] INFO  FixedLayoutBook.NcxDocument  - Saving NCX
+2016-11-20 14:59:10.351 [] INFO  MetricManager  - TimerMetricEntry : kidsuser-save:79ms
+2016-11-20 14:59:10.371 [] INFO  BookController  - Validation passed without errors
+2016-11-20 14:59:10.664 [] INFO  KENetworkAccessManager  - Loading image /Users/suzanemachado/Dropbox/Bichitto/_books/primavera/_kinder/html/scaled-images/primaveracena_2_acordar.png
+2016-11-20 14:59:10.664 [] INFO  KENetworkAccessManager  - Loading image /Users/suzanemachado/Dropbox/Bichitto/_books/primavera/_kinder/html/scaled-images/primaveracena_2_acordar_thumb.png
+2016-11-20 14:59:10.681 [] INFO  KEQWebPage  - JS Console:RichTextToolbar.initialize: data-app-amzn-ke-editable,,RichtextBridge(name = ""),[object CSSStyleSheet],undefined: line:96 srcId:qrc:/js/js/richtext.js
+2016-11-20 14:59:10.684 [] INFO  KEQWebPage  - JS Console:Initializing Properties: line:141 srcId:qrc:/js/js/properties.js
+2016-11-20 14:59:10.684 [] INFO  KEQWebPage  - JS Console:Initialized Properties: line:141 srcId:qrc:/js/js/properties.js
+2016-11-20 14:59:10.684 [] INFO  KEQWebPage  - JS Console:rich text : Resetting Current Element: line:1049 srcId:qrc:/js/js/richtext.js
+2016-11-20 14:59:10.685 [] INFO  KEQWebPage  - JS Console:Resetting current edit element: line:1132 srcId:qrc:/js/js/kids-book-edit.js
+2016-11-20 14:59:10.685 [] INFO  KEQWebPage  - JS Console:loading done ...: line:6 srcId:qrc:/js/js/kids-book-edit-loader.js
+2016-11-20 14:59:14.935 [] INFO  MetricsUploadThread  - https://fls-na.amazon.com/1/kc3/1/OE/kc3/action/kids:book-create@v=227748:u=ms/kids:page-ui-load@v=10:u=ms/kids:page-ui-load@v=8:u=ms/kids:user-save@v=79:u=ms/?marketplaceId=A2EUQ1WTGCTBG2&requestId=kc3-request-id&session={2c9bf962-0a2d-435b-9665-ba77dfb2ef5b}
+2016-11-20 14:59:16.048 [] INFO  MetricsUploadThread  - reply was successful and removing entries
+2016-11-20 14:59:24.999 [] INFO  KindlegenBuilder  - KF8 Built Successfully.
+2016-11-20 14:59:26.958 [] INFO  MetricManager  - TimerMetricEntry : kidsexport-kf8:16583ms
+2016-11-20 15:01:19.322 [] INFO  MetricsUploadThread  - https://fls-na.amazon.com/1/kc3/1/OE/kc3/action/kids:export-kf8@v=16583:u=ms/?marketplaceId=A2EUQ1WTGCTBG2&requestId=kc3-request-id&session={2c9bf962-0a2d-435b-9665-ba77dfb2ef5b}
+2016-11-20 15:01:20.264 [] INFO  MetricsUploadThread  - reply was successful and removing entries
+2016-11-20 15:16:30.301 [] INFO  MainWindow  - Shutting down
+2016-11-20 15:16:30.311 [] INFO  BookController  - Closing book...
+2016-11-20 15:16:30.312 [] INFO  TabManager  - Checking if view is dirty
+2016-11-20 15:16:30.312 [] INFO  DesignViewTab  - Going to current view
+2016-11-20 15:16:31.960 [] INFO  BookController  - Saving book...
+2016-11-20 15:16:31.974 [] INFO  KEQWebPage  - JS Console:div.fs { width: 1920px; height: 1439px; }: line:2495 srcId:qrc:/js/js/kids-book-edit.js
+2016-11-20 15:16:31.976 [] INFO  KEQWebPage  - JS Console:#page-img { margin-top: 0px; margin-bottom: 0px; margin-left: 1px; margin-right: 1px; background-image: url(scaled-images/primaveracena_2_acordar.png); background-size: 1918px 1439px; width: 1918px; height: 1439px; }: line:2495 srcId:qrc:/js/js/kids-book-edit.js
+2016-11-20 15:16:32.026 [] INFO  FixedLayoutBook.Layout  - Kindle Kids' Book Creator created stylesheet not found
+2016-11-20 15:16:32.026 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 15:16:32.046 [] INFO  MetricManager  - TimerMetricEntry : kidspage-ui-load:19ms
+2016-11-20 15:16:32.046 [] INFO  FixedLayoutBook.KidsBook  - Generating kids book OPF...
+2016-11-20 15:16:32.049 [] INFO  FixedLayoutBook.BookMetadata  - Previous source was KKBC/1.003/baebfe4/mac
+2016-11-20 15:16:32.049 [] INFO  FixedLayoutBook.BookMetadata  - Current stamp is KKBC/1.003/baebfe4/mac
+2016-11-20 15:16:32.052 [] INFO  FixedLayoutBook  - Saving pages...
+2016-11-20 15:16:32.054 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 15:16:32.057 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 15:16:32.058 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 15:16:32.060 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 15:16:32.063 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 15:16:32.066 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 15:16:32.069 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 15:16:32.072 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 15:16:32.074 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 15:16:32.076 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 15:16:32.079 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 15:16:32.081 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 15:16:32.084 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 15:16:32.087 [] INFO  FixedLayoutBook.Page  - Adding book level link tag for template css
+2016-11-20 15:16:32.088 [] INFO  FixedLayoutBook.OPFDocument  - Saving OPF
+2016-11-20 15:16:32.088 [] ERROR FixedLayoutBook.OPFDocument  - Failed to open OPF for saving
+2016-11-20 15:16:32.089 [] INFO  FixedLayoutBook.NcxDocument  - Saving NCX
+2016-11-20 15:16:32.091 [] INFO  MetricManager  - TimerMetricEntry : kidsuser-save:131ms

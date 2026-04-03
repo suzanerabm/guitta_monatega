@@ -1,0 +1,346 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Modal from '../components/Modal.astro';
+import { readdirSync } from 'node:fs';
+import { join } from 'node:path';
+
+const artBase = 'imgs/art';
+
+interface ArtSection {
+  id: string;
+  title: string;
+  technique: string;
+  bg: string;
+  titleColor: string;
+  techColor: string;
+  large: boolean;
+  theme?: string;
+}
+
+const sections: ArtSection[] = [
+  { id: 'black', title: 'Branco no Preto', technique: 'Nanquim branco sobre papel preto', bg: '#1a1a1a', titleColor: '#fff', techColor: 'rgba(255,255,255,0.5)', large: false, theme: 'dark' },
+  { id: 'grafite', title: 'Grafite', technique: 'Estudos com sombreamento e volume', bg: '#f0eeeb', titleColor: '#333', techColor: 'rgba(51,51,51,0.5)', large: true },
+  { id: 'doodle', title: 'Doodle', technique: 'Sketches e rabiscos a lapis', bg: '#f5f3ef', titleColor: '#333', techColor: 'rgba(51,51,51,0.5)', large: true },
+  { id: 'digital', title: 'Arte Digital', technique: 'Ilustracao digital', bg: '#eae8f0', titleColor: '#333', techColor: 'rgba(51,51,51,0.5)', large: false },
+  { id: 'collections', title: 'Colecoes', technique: 'Series e colecoes tematicas', bg: '#f3f0e8', titleColor: '#333', techColor: 'rgba(51,51,51,0.5)', large: false },
+  { id: 'fimo', title: 'Pontilhismo', technique: 'Pontilhismo e mosaico com caneta', bg: '#eef2e8', titleColor: '#333', techColor: 'rgba(51,51,51,0.5)', large: false },
+  { id: 'needle', title: 'Needle Felting', technique: 'Esculturas em miniatura com agulha e la', bg: '#e8eef2', titleColor: '#333', techColor: 'rgba(51,51,51,0.5)', large: false },
+  { id: 'clay', title: 'Clay', technique: 'Modelagem em argila e massa', bg: '#f2ede8', titleColor: '#333', techColor: 'rgba(51,51,51,0.5)', large: false },
+  { id: 'croche', title: 'Croche', technique: 'Amigurumi e pecas em croche', bg: '#f0e8f2', titleColor: '#333', techColor: 'rgba(51,51,51,0.5)', large: false },
+];
+
+function getThumbs(sectionId: string): string[] {
+  const dir = join(process.cwd(), 'public', artBase, sectionId, '_thumb');
+  try {
+    return readdirSync(dir)
+      .filter((f: string) => /\.(jpg|jpeg|png|gif|webp)$/i.test(f))
+      .sort()
+      .map((f: string) => `/${artBase}/${sectionId}/_thumb/${f}`);
+  } catch {
+    return [];
+  }
+}
+
+const sectionThumbs: Record<string, string[]> = {};
+for (const s of sections) {
+  sectionThumbs[s.id] = getThumbs(s.id);
+}
+---
+
+<BaseLayout title="Arte — Guitta Monatega">
+
+  <!-- Hero -->
+  <section class="hero">
+    <span class="hero-label">Portfolio</span>
+    <h1 class="hero-title">Arte</h1>
+  </section>
+
+  <!-- Filter bar -->
+  <nav class="filter-bar">
+    <button class="filter-btn active" data-filter="all">Todos</button>
+    {sections.map((s) => (
+      <button class="filter-btn" data-filter={s.id}>{s.title}</button>
+    ))}
+  </nav>
+
+  <!-- Art sections -->
+  {sections.map((s) => {
+    const thumbs = sectionThumbs[s.id];
+    return (
+      <section
+        class="art-section"
+        data-art={s.id}
+        style={`background: ${s.bg};`}
+      >
+        <div class="art-section-inner">
+          <h2 class="art-section-title" style={`color: ${s.titleColor};`}>{s.title}</h2>
+          <p class="art-section-technique" style={`color: ${s.techColor};`}>{s.technique}</p>
+          <div class={`art-grid ${s.large ? 'art-grid-large' : ''}`}>
+            {thumbs.map((thumb, idx) => (
+              <img
+                class="art-thumb"
+                src={thumb}
+                alt={`${s.title} ${idx + 1}`}
+                loading="lazy"
+                data-section={s.id}
+                data-index={idx}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  })}
+
+  <Modal />
+
+</BaseLayout>
+
+<style>
+  /* Hero */
+  .hero {
+    min-height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f5f5, #e8e8e8, #f0f0f0);
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .hero-label {
+    font-family: 'Fira Sans', system-ui, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 0.6rem;
+    opacity: 0;
+    animation: fadeIn 0.8s ease 0.1s forwards;
+  }
+
+  .hero-title {
+    font-family: 'Fira Sans', system-ui, sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #1a1d21;
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn 1s ease 0.3s forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Filter bar */
+  .filter-bar {
+    position: sticky;
+    top: 62px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #eee;
+  }
+
+  .filter-btn {
+    font-family: 'Fira Sans', system-ui, sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background: transparent;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+
+  .filter-btn:hover {
+    border-color: #999;
+    color: #333;
+  }
+
+  .filter-btn.active {
+    background: #1a1d21;
+    border-color: #1a1d21;
+    color: #fff;
+  }
+
+  /* Art sections */
+  .art-section {
+    padding: 4rem 0;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+  }
+
+  .art-section.hidden {
+    opacity: 0;
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .art-section.visible {
+    opacity: 1;
+  }
+
+  .art-section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .art-section-title {
+    font-family: 'Fira Sans', system-ui, sans-serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin: 0 0 0.3rem;
+  }
+
+  .art-section-technique {
+    font-family: 'Fira Sans', system-ui, sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 0 0 2rem;
+  }
+
+  /* Grid */
+  .art-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 6px;
+  }
+
+  .art-grid-large {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+  }
+
+  .art-thumb {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .art-thumb:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .art-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .art-grid-large {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .filter-bar {
+      gap: 0.35rem;
+      padding: 0.6rem 1rem;
+    }
+
+    .filter-btn {
+      font-size: 0.65rem;
+      padding: 0.3rem 0.7rem;
+    }
+
+    .art-section-inner {
+      padding: 0 1rem;
+    }
+  }
+</style>
+
+<script define:vars={{ sections, sectionThumbs }}>
+  // Register galleries
+  document.addEventListener('DOMContentLoaded', () => {
+    for (const s of sections) {
+      const thumbs = sectionThumbs[s.id] || [];
+      if (thumbs.length > 0) {
+        window.registerGallery(s.id, thumbs);
+      }
+    }
+  });
+</script>
+
+<script>
+  // Scroll reveal with IntersectionObserver
+  const artSections = document.querySelectorAll('[data-art]');
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    },
+    { threshold: 0.05 }
+  );
+  artSections.forEach((el) => revealObserver.observe(el));
+
+  // Filter
+  function filterArt(section: string) {
+    const allSections = document.querySelectorAll('[data-art]') as NodeListOf<HTMLElement>;
+    allSections.forEach((el) => {
+      if (section === 'all' || el.dataset.art === section) {
+        el.classList.remove('hidden');
+        el.classList.add('visible');
+      } else {
+        el.classList.add('hidden');
+        el.classList.remove('visible');
+      }
+    });
+  }
+
+  // Filter button clicks
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      const section = (btn as HTMLElement).dataset.filter || 'all';
+      filterArt(section);
+    });
+  });
+
+  // Open art gallery on thumb click
+  function openArt(sectionId: string, idx: number) {
+    const sectionData = (window as any).__artSections;
+    if (!sectionData) return;
+    const s = sectionData.find((sec: any) => sec.id === sectionId);
+    if (!s) return;
+    const theme = s.theme || undefined;
+    (window as any).openGallery(sectionId, idx, s.title, s.technique, theme);
+  }
+
+  document.querySelectorAll('.art-thumb').forEach((thumb) => {
+    thumb.addEventListener('click', () => {
+      const el = thumb as HTMLElement;
+      const section = el.dataset.section || '';
+      const index = parseInt(el.dataset.index || '0', 10);
+      openArt(section, index);
+    });
+  });
+</script>
+
+<script define:vars={{ sections }}>
+  // Store section metadata for openArt
+  window.__artSections = sections;
+</script>

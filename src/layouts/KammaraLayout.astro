@@ -1,0 +1,64 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <a href="/" class="header-name"><strong>guitta</strong> monatega</a>
+    <div class="header-right">
+      <a href="/" class="header-back">&larr; voltar</a>
+    </div>
+  </header>
+
+  <slot />
+
+  <footer>
+    <div class="footer-line"></div>
+    <a href="/about" class="footer-name">guitta monatega</a>
+    <span class="footer-brand">mosaicQ</span>
+  </footer>
+</body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+
+  :root {
+    --ink: #e0e0e8;
+    --ink-soft: rgba(255,255,255,0.55);
+    --ink-muted: rgba(255,255,255,0.3);
+    --bg: #0a0a1a;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+  }
+
+  header {
+    background: rgba(10,10,26,0.9);
+  }
+
+  .header-name { color: var(--ink); }
+  .header-back { color: var(--ink-muted); }
+  .header-back:hover { color: #fff; }
+
+  footer { background: transparent; }
+  .footer-line { background: rgba(255,255,255,0.08); }
+  .footer-name { color: var(--ink-muted); }
+  .footer-brand { color: rgba(255,255,255,0.12); }
+</style>
