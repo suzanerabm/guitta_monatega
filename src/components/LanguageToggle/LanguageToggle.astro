@@ -32,4 +32,14 @@ const currentLabel = locale === 'en' ? 'EN' : 'PT';
     color: var(--ink);
     border-color: var(--ink);
   }
+
+  :global([data-theme="dark"]) .lang-toggle {
+    color: rgba(255,255,255,0.5);
+    border-color: rgba(255,255,255,0.3);
+  }
+
+  :global([data-theme="dark"]) .lang-toggle:hover {
+    color: #fff;
+    border-color: #fff;
+  }
 </style>
