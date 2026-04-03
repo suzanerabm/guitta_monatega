@@ -37,6 +37,7 @@ function getCharacters(creature: string): { name: string; image: string }[] {
 const napcatChars = getCharacters('napcat');
 const zecoChars = getCharacters('zeco');
 const tayloChars = getCharacters('taylo');
+const miscChars = getCharacters('miscelania');
 
 interface BookDef {
   creature: string;
@@ -96,10 +97,14 @@ const tayloBookDefs: BookDef[] = [
 ];
 const tayloBooks = tayloBookDefs.map(buildBook);
 
+// Miscelania books
+const miscBookDefs: BookDef[] = [];
+const miscBooks = miscBookDefs.map(buildBook);
+
 // Build gallery data for client-side (book pages for modal)
 const bookIllustrated = t.bichittos.bookIllustrated;
 const bookGalleries: Record<string, { title: string; pages: string[] }> = {};
-for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs]) {
+for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs, miscBookDefs]) {
   for (const def of defs) {
     const pages = getBookPages(def.creature, def.id);
     if (pages.length > 0) {
@@ -146,11 +151,20 @@ for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs]) {
 
 <!-- TAYLO -->
 <CreatureSection gradient="var(--gradient-taylo-bg)" accentColor="var(--color-taylo-1)">
-  <CreatureCard name={t.bichittos.taylo.name} bannerImage="/imgs/banners/banner_taylo.jpg" color1="#5d9466" color2="#b6fcc0" color3="#277230">
+  <CreatureCard name={t.bichittos.taylo.name} bannerImage="/imgs/banners/banner_taylo.jpg" color1="#5d9466" color2="#fff" color3="#277230">
     {t.bichittos.taylo.text.map((p) => <p>{p}</p>)}
     <CharacterStrip slot="strip" gradient="var(--gradient-taylo)" side="right" characters={tayloChars} />
   </CreatureCard>
   <BookGallery title={t.bichittos.tayloBooksTitle} books={tayloBooks} soonLabel={t.common.soon} />
+</CreatureSection>
+
+<!-- MISCELANIA -->
+<CreatureSection gradient="var(--gradient-misc-bg)" accentColor="var(--color-misc-1)">
+  <CreatureCard name={t.bichittos.miscelania.name} bannerImage="" color1="#e8a87c" color2="#f2d0b5">
+    <p>{t.bichittos.miscelania.text}</p>
+    {miscChars.length > 0 && <CharacterStrip slot="strip" gradient="var(--gradient-misc)" side="right" characters={miscChars} />}
+  </CreatureCard>
+  {miscBooks.length > 0 && <BookGallery title={t.bichittos.miscelaniaBooksTitle} books={miscBooks} soonLabel={t.common.soon} />}
 </CreatureSection>
 
 <Modal />

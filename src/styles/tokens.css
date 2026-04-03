@@ -56,7 +56,7 @@
   /* — Palette: NapCat ————————————————————————— */
   --color-napcat-1:        #667eea;   /* primaria — azul lavanda 667eea */
   --color-napcat-2:        #764ba2;   /* secundaria — roxo  764ba2*/
-  --color-napcat-3:        #b5a2dc;   /* terciaria — rosa claro f093fb b5a2dc */
+  --color-napcat-3:        #fefdff;   /* terciaria — rosa claro f093fb b5a2dc */
   --color-napcat-dark:     #1a1432;
   --gradient-napcat:       linear-gradient(135deg, var(--color-napcat-1), var(--color-napcat-2), var(--color-napcat-3));
   --gradient-napcat-bg:    linear-gradient(160deg, #1a1432 0%, #2a1f4a 40%, #1e1638 100%);
@@ -77,6 +77,14 @@
   --color-taylo-dark:      #082b0b;
   --gradient-taylo:        linear-gradient(135deg, var(--color-taylo-1), var(--color-taylo-2), var(--color-taylo-1));
   --gradient-taylo-bg:     linear-gradient(160deg, #34843c 0%, #185b1e 40%, #082b0b 100%);
+
+  /* — Palette: Miscelania ————————————————————— */
+  --color-misc-1:          #e8a87c;   /* primaria — pessego */
+  --color-misc-2:          #d4856a;   /* secundaria — terracota */
+  --color-misc-3:          #f2d0b5;   /* terciaria — creme */
+  --color-misc-dark:       #2a1a10;
+  --gradient-misc:         linear-gradient(135deg, var(--color-misc-1), var(--color-misc-2), var(--color-misc-3));
+  --gradient-misc-bg:      linear-gradient(160deg, #2a1a10 0%, #3a2515 40%, #2e1c10 100%);
 
   /* — Palette: Kammara (saga) ————————————————— */
   --color-kammara-deep:    #0a0a2e;

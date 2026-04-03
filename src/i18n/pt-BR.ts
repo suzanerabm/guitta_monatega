@@ -72,6 +72,11 @@ export default {
       starHunter: 'O Cacador de Estrelas',
     },
     bookIllustrated: 'Livro ilustrado',
+    miscelania: {
+      name: 'Miscelania',
+      text: 'Criaturas avulsas, experimentos e personagens que ainda nao encontraram sua historia.',
+    },
+    miscelaniaBooksTitle: 'Livros',
   },
   kammara: {
     pageTitle: 'Kammara — Guitta Monatega',

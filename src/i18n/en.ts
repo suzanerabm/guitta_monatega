@@ -72,6 +72,11 @@ export default {
       starHunter: 'The Star Hunter',
     },
     bookIllustrated: 'Illustrated book',
+    miscelania: {
+      name: 'Miscelania',
+      text: 'Loose creatures, experiments and characters that haven\'t found their story yet.',
+    },
+    miscelaniaBooksTitle: 'Books',
   },
   kammara: {
     pageTitle: 'Kammara — Guitta Monatega',
