@@ -22,3 +22,11 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# python venv
+.venv/
+__pycache__/
+
+# storybook
+storybook-static/
+debug-storybook.log

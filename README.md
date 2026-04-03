@@ -11,6 +11,27 @@ npm run preview      # preview do build
 npm run storybook    # component library em localhost:6006
 ```
 
+### Script de processamento de imagens
+
+Gera thumbnails automaticamente e converte `.heic` para `.jpg`:
+
+```bash
+# setup (uma vez)
+python3 -m venv src/script/.venv
+source src/script/.venv/bin/activate
+pip install -r src/script/requirements.txt
+
+# rodar
+python3 src/script/process_art.py
+```
+
+O script:
+- Le todas as imagens em `public/imgs/art/{categoria}/`
+- Gera thumbnails (crop quadrado 800x800, moldura branca) em `_thumb/`
+- Converte `.heic` para `.jpg` na pasta raiz (e remove o `.heic`)
+- Remove thumbs orfaos cujo original foi apagado
+- So gera thumbs novos (pula os que ja existem)
+
 ## Estrutura
 
 ```
