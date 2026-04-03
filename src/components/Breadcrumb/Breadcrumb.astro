@@ -1,0 +1,76 @@
+---
+import { getLocalizedPath } from '../../i18n/translations';
+import { House, ChevronRight } from '@lucide/astro';
+
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  items: BreadcrumbItem[];
+  locale?: string;
+}
+
+const { items, locale = 'pt-BR' } = Astro.props;
+const homePath = getLocalizedPath('/', locale as any);
+---
+
+<nav class="breadcrumb" aria-label="breadcrumb">
+  <a href={homePath} class="breadcrumb-link breadcrumb-home">
+    <House size={14} strokeWidth={1.5} />
+    <span>home</span>
+  </a>
+  {items.map((item) => (
+    <>
+      <ChevronRight size={12} strokeWidth={1.5} class="breadcrumb-sep" />
+      {item.href
+        ? <a href={item.href} class="breadcrumb-link">{item.label}</a>
+        : <span class="breadcrumb-current">{item.label}</span>
+      }
+    </>
+  ))}
+</nav>
+
+<style>
+  .breadcrumb {
+    padding: 0.6rem 3rem;
+    padding-top: calc(62px + 0.6rem);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: lowercase;
+  }
+
+  .breadcrumb-home {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .breadcrumb-link {
+    color: var(--ink-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .breadcrumb-link:hover {
+    color: var(--ink);
+  }
+
+  .breadcrumb-sep {
+    color: var(--ink-muted);
+    opacity: 0.35;
+  }
+
+  .breadcrumb-current {
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 768px) {
+    .breadcrumb { padding: 0.5rem 1.5rem; padding-top: calc(50px + 0.5rem); }
+  }
+</style>

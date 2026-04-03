@@ -2,6 +2,6 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import AboutContent from '../../page-content/AboutContent.astro';
 ---
-<BaseLayout title="About — Guitta Monatega" locale="en">
+<BaseLayout title="About — Guitta Monatega" locale="en" breadcrumb={[{ label: 'About' }]}>
   <AboutContent locale="en" />
 </BaseLayout>

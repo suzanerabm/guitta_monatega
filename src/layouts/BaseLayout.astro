@@ -1,21 +1,25 @@
 ---
 import LanguageToggle from '../components/LanguageToggle/LanguageToggle.astro';
+import Breadcrumb from '../components/Breadcrumb/Breadcrumb.astro';
 import { getLocalizedPath } from '../i18n/translations';
+
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
 
 interface Props {
   title: string;
   transparentHeader?: boolean;
-  showBack?: boolean;
+  breadcrumb?: BreadcrumbItem[];
   theme?: 'light' | 'dark';
   locale?: string;
 }
 
-const { title, transparentHeader = false, showBack = true, theme = 'light', locale = 'pt-BR' } = Astro.props;
+const { title, transparentHeader = false, breadcrumb, theme = 'light', locale = 'pt-BR' } = Astro.props;
 const htmlLang = locale === 'en' ? 'en' : 'pt-BR';
-const backText = locale === 'en' ? 'back' : 'voltar';
 const homePath = getLocalizedPath('/', locale as any);
 const aboutPath = getLocalizedPath('/about', locale as any);
-// Get current page path for language toggle
 const currentPath = Astro.url.pathname.replace(/^\/en/, '') || '/';
 ---
 
@@ -32,18 +36,12 @@ const currentPath = Astro.url.pathname.replace(/^\/en/, '') || '/';
 <body>
   <header class={transparentHeader ? 'transparent' : ''}>
     <a href={homePath} class="header-name"><strong>guitta</strong> monatega</a>
-    {showBack && (
-      <div class="header-right">
-        <LanguageToggle locale={locale} currentPath={currentPath} />
-        <a href={homePath} class="header-back">&larr; {backText}</a>
-      </div>
-    )}
-    {!showBack && (
-      <div class="header-right">
-        <LanguageToggle locale={locale} currentPath={currentPath} />
-      </div>
-    )}
+    <div class="header-right">
+      <LanguageToggle locale={locale} currentPath={currentPath} />
+    </div>
   </header>
+
+  {breadcrumb && <Breadcrumb items={breadcrumb} locale={locale} />}
 
   <slot />
 
