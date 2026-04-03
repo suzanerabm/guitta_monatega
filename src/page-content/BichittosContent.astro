@@ -100,7 +100,7 @@ for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs]) {
   <p>{t.bichittos.napcat.text}</p>
 </CreatureCard>
 
-<BookGallery title={t.bichittos.napcatBooksTitle} books={napcatBooks} />
+<BookGallery title={t.bichittos.napcatBooksTitle} books={napcatBooks} soonLabel={t.common.soon} />
 
 <div class="creature-divider"></div>
 
@@ -118,7 +118,7 @@ for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs]) {
   {t.bichittos.taylo.text.map((p) => <p>{p}</p>)}
 </CreatureCard>
 
-<BookGallery title={t.bichittos.tayloBooksTitle} books={tayloBooks} />
+<BookGallery title={t.bichittos.tayloBooksTitle} books={tayloBooks} soonLabel={t.common.soon} />
 
 <Modal />
 <ScrollReveal selector="[data-creature]" />

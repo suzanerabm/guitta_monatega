@@ -3,6 +3,7 @@ export default {
     back: 'voltar',
     siteTitle: 'Guitta Monatega',
     footerAbout: 'sobre guitta monatega',
+    soon: 'em breve',
   },
   home: {
     title: 'Guitta Monatega',

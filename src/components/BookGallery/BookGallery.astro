@@ -10,9 +10,10 @@ interface BookCover {
 interface Props {
   title: string;
   books: BookCover[];
+  soonLabel?: string;
 }
 
-const { title, books } = Astro.props;
+const { title, books, soonLabel = 'soon' } = Astro.props;
 const count = books.length;
 ---
 
@@ -23,7 +24,7 @@ const count = books.length;
       <div class={`book-cover ${book.soon ? 'book-cover-soon' : ''}`} data-book={book.soon ? undefined : book.id}>
         {book.soon ? (
           <div class="book-cover-placeholder">
-            <span class="book-soon-label">soon</span>
+            <span class="book-soon-label">{soonLabel}</span>
           </div>
         ) : (
           <img src={book.image} alt={book.alt}>
