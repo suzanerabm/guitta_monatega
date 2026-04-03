@@ -1,14 +1,8 @@
-/* — RESET & VARIABLES ——————————————————————— */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* — TOKENS ————————————————————————————————— */
+@import './tokens.css';
 
-:root {
-  --white: #ffffff;
-  --off-white: #fafafa;
-  --ink: #1a1d21;
-  --ink-soft: #555;
-  --ink-muted: #999;
-  --sans: 'Fira Sans', system-ui, sans-serif;
-}
+/* — RESET ————————————————————————————————————— */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
 
@@ -16,7 +10,7 @@ body {
   background: var(--white);
   color: var(--ink);
   font-family: var(--sans);
-  font-weight: 300;
+  font-weight: var(--weight-light);
   line-height: 1;
   overflow-x: hidden;
 }
@@ -26,7 +20,7 @@ header {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  padding: 1.5rem 3rem;
+  padding: var(--space-lg) var(--space-xl);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,7 +31,7 @@ header {
 header.transparent {
   background: rgba(255,255,255,0);
   backdrop-filter: blur(0);
-  transition: background 0.4s ease, backdrop-filter 0.4s ease;
+  transition: background var(--ease-slow), backdrop-filter var(--ease-slow);
 }
 
 header.transparent.scrolled {
@@ -47,19 +41,19 @@ header.transparent.scrolled {
 
 .header-name {
   font-family: var(--sans);
-  font-weight: 300;
-  font-size: 1.1rem;
+  font-weight: var(--weight-light);
+  font-size: var(--size-xl);
   letter-spacing: 0.25em;
   text-transform: lowercase;
   color: var(--ink);
   text-decoration: none;
 }
 
-.header-name strong { font-weight: 600; }
+.header-name strong { font-weight: var(--weight-semibold); }
 
 header.transparent .header-name {
   opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: opacity var(--ease-slow);
 }
 
 header.transparent.scrolled .header-name {
@@ -73,53 +67,45 @@ header.transparent.scrolled .header-name {
   gap: 0.3rem;
 }
 
-
 /* — FOOTER ————————————————————————————————— */
 footer {
-  padding: 3rem;
+  padding: var(--space-xl);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.8rem;
+  gap: var(--space-md);
   background: var(--white);
 }
 
 .footer-line {
   width: 30px;
   height: 1px;
-  background: #e0e0e0;
+  background: var(--color-border);
   margin: 0.3rem 0;
 }
 
 .footer-name {
   font-family: var(--sans);
-  font-size: 0.75rem;
+  font-size: var(--size-base);
   letter-spacing: 0.2em;
   text-transform: lowercase;
   color: var(--ink-muted);
-  font-weight: 300;
+  font-weight: var(--weight-light);
   text-decoration: none;
 }
 
 .footer-brand {
   font-family: var(--sans);
-  font-size: 0.65rem;
+  font-size: var(--size-xs);
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #ccc;
-  font-weight: 400;
+  color: var(--color-subtle);
+  font-weight: var(--weight-regular);
 }
 
-/* — DARK THEME ————————————————————————————————— */
-[data-theme="dark"] {
-  --white: #0a0a1a;
-  --ink: #e0e0e8;
-  --ink-soft: rgba(255,255,255,0.55);
-  --ink-muted: rgba(255,255,255,0.3);
-}
-
+/* — DARK THEME (non-token overrides) ————————— */
 [data-theme="dark"] body {
-  background: #0a0a1a;
+  background: var(--color-dark-bg);
 }
 
 [data-theme="dark"] header {
@@ -127,8 +113,8 @@ footer {
 }
 
 [data-theme="dark"] footer { background: transparent; }
-[data-theme="dark"] .footer-line { background: rgba(255,255,255,0.08); }
-[data-theme="dark"] .footer-brand { color: rgba(255,255,255,0.12); }
+[data-theme="dark"] .footer-line { background: var(--color-dark-border); }
+[data-theme="dark"] .footer-brand { color: var(--color-dark-subtle); }
 
 /* — ANIMATIONS ————————————————————————————— */
 @keyframes fadeIn {
@@ -138,7 +124,7 @@ footer {
 
 /* — RESPONSIVE ————————————————————————————— */
 @media (max-width: 768px) {
-  header { padding: 1.2rem 1.5rem; }
+  header { padding: 1.2rem var(--space-lg); }
   .header-name { font-size: 0.95rem; }
-  footer { padding: 2rem 1.5rem; }
+  footer { padding: 2rem var(--space-lg); }
 }

@@ -1,0 +1,83 @@
+/* ═══════════════════════════════════════════════
+   Design Tokens — Guitta Monatega
+   ═══════════════════════════════════════════════ */
+
+:root {
+  /* — Colors ——————————————————————————————————— */
+  --color-white:       #ffffff;
+  --color-off-white:   #fafafa;
+  --color-ink:         #1a1d21;
+  --color-ink-soft:    #555555;
+  --color-ink-muted:   #999999;
+  --color-border:      #e0e0e0;
+  --color-border-soft: #f0f0f0;
+  --color-subtle:      #cccccc;
+
+  /* — Dark theme colors ——————————————————————— */
+  --color-dark-bg:         #0a0a1a;
+  --color-dark-ink:        #e0e0e8;
+  --color-dark-ink-soft:   rgba(255,255,255,0.55);
+  --color-dark-ink-muted:  rgba(255,255,255,0.3);
+  --color-dark-border:     rgba(255,255,255,0.08);
+  --color-dark-subtle:     rgba(255,255,255,0.12);
+
+  /* — Palette: Bichittos ————————————————————— */
+  --color-bichittos-pink:    #ff6b9d;
+  --color-bichittos-orange:  #ffa751;
+  --color-bichittos-yellow:  #ffe259;
+  --color-bichittos-blue:    #6dd5fa;
+
+  /* — Palette: Kammara ———————————————————————— */
+  --color-kammara-deep:    #0a0a2e;
+  --color-kammara-mid:     #1a1a4e;
+  --color-kammara-purple:  #2d1b69;
+  --color-kammara-navy:    #0f3460;
+  --color-kammara-glow:    rgba(100,80,200,0.2);
+
+  /* — Typography —————————————————————————————— */
+  --font-sans:  'Fira Sans', system-ui, sans-serif;
+
+  --weight-thin:     100;
+  --weight-light:    300;
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+
+  --size-xs:   0.65rem;   /* 10.4px — brand, labels */
+  --size-sm:   0.72rem;   /* 11.5px — filter buttons, technique */
+  --size-base: 0.85rem;   /* 13.6px — breadcrumb, subtitles */
+  --size-md:   1rem;      /* 16px   — body, links */
+  --size-lg:   1.05rem;   /* 16.8px — paragraphs */
+  --size-xl:   1.1rem;    /* 17.6px — header name */
+  --size-2xl:  1.6rem;    /* 25.6px — modal title */
+  --size-3xl:  1.8rem;    /* 28.8px — section titles */
+
+  /* — Spacing —————————————————————————————————— */
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  0.8rem;
+  --space-lg:  1.5rem;
+  --space-xl:  3rem;
+  --space-2xl: 5rem;
+
+  /* — Transitions ————————————————————————————— */
+  --ease-default: 0.2s ease;
+  --ease-slow:    0.4s ease;
+
+  /* — Semantic aliases (used in components) ——— */
+  --white:     var(--color-white);
+  --off-white: var(--color-off-white);
+  --ink:       var(--color-ink);
+  --ink-soft:  var(--color-ink-soft);
+  --ink-muted: var(--color-ink-muted);
+  --sans:      var(--font-sans);
+}
+
+/* — Dark theme overrides ————————————————————— */
+[data-theme="dark"] {
+  --white:     var(--color-dark-bg);
+  --ink:       var(--color-dark-ink);
+  --ink-soft:  var(--color-dark-ink-soft);
+  --ink-muted: var(--color-dark-ink-muted);
+}
