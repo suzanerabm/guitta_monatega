@@ -113,24 +113,32 @@ Para ativar um livro, basta colocar `cover.jpg` na pasta dele. O site detecta au
 
 Para adicionar um livro novo, edite `src/page-content/BichittosContent.astro` e adicione no array de `BookDef` da criatura correspondente.
 
-## Cores por criatura
+## Cores por colecao
 
-Cada criatura tem cor e gradiente proprio nos tokens (`src/styles/tokens.css`):
+Cada criatura tem 3 cores + gradientes em `src/styles/tokens.css`:
 
-| Criatura | Cor | Gradiente | CSS var |
+| Criatura | Primaria (`-1`) | Secundaria (`-2`) | Terciaria (`-3`) |
 |---|---|---|---|
-| NapCat | roxo/lilas | roxo → lilas → rosa | `--gradient-napcat` |
-| Zeco | laranja | laranja → laranja escuro | `--gradient-zeco` |
-| Taylo | rosa/azul | rosa → azul → rosa | `--gradient-taylo` |
+| NapCat | `#667eea` azul lavanda | `#764ba2` roxo | `#f093fb` rosa claro |
+| Zeco | `#ff8c42` laranja | `#ff6b35` laranja forte | `#ffa751` laranja claro |
+| Taylo | `#fc5c7d` rosa | `#6a82fb` azul | `#b06ab3` lilas |
 
-Use em qualquer lugar:
+Usar em CSS:
 ```css
-background: var(--gradient-zeco);
-color: var(--color-zeco);
-border-color: var(--color-taylo);
+/* Cores individuais */
+color: var(--color-napcat-1);        /* primaria */
+background: var(--color-zeco-2);     /* secundaria */
+border-color: var(--color-taylo-3);  /* terciaria */
+
+/* Gradientes */
+background: var(--gradient-napcat);     /* gradiente da criatura */
+background: var(--gradient-zeco-bg);    /* fundo escuro (parallax) */
+
+/* Fundo escuro da secao */
+background: var(--color-napcat-dark);   /* cor solida escura */
 ```
 
-Gradientes das secoes tambem estao disponiveis: `--gradient-bichittos`, `--gradient-kammara`, `--gradient-arte`.
+Gradientes das secoes: `--gradient-bichittos`, `--gradient-kammara`, `--gradient-arte`.
 
 ## Script de processamento de imagens
 

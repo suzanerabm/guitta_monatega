@@ -53,23 +53,28 @@
   --color-bichittos-blue:    #6dd5fa;
   --gradient-bichittos:      linear-gradient(135deg, #ff6b9d, #ffa751, #ffe259, #6dd5fa);
 
-  /* — Palette: Criaturas ————————————————————— */
-  --color-napcat:          #667eea;
-  --color-napcat-alt:      #764ba2;
+  /* — Palette: NapCat ————————————————————————— */
+  --color-napcat-1:        #667eea;   /* primaria — azul lavanda */
+  --color-napcat-2:        #764ba2;   /* secundaria — roxo */
+  --color-napcat-3:        #f093fb;   /* terciaria — rosa claro */
   --color-napcat-dark:     #1a1432;
-  --gradient-napcat:       linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+  --gradient-napcat:       linear-gradient(135deg, var(--color-napcat-1), var(--color-napcat-2), var(--color-napcat-3));
   --gradient-napcat-bg:    linear-gradient(160deg, #1a1432 0%, #2a1f4a 40%, #1e1638 100%);
 
-  --color-zeco:            #ff8c42;
-  --color-zeco-alt:        #ff6b35;
+  /* — Palette: Zeco —————————————————————————— */
+  --color-zeco-1:          #ff8c42;   /* primaria — laranja */
+  --color-zeco-2:          #ff6b35;   /* secundaria — laranja forte */
+  --color-zeco-3:          #ffa751;   /* terciaria — laranja claro */
   --color-zeco-dark:       #2a1a0a;
-  --gradient-zeco:         linear-gradient(135deg, #ff8c42, #ff6b35, #ffa751);
+  --gradient-zeco:         linear-gradient(135deg, var(--color-zeco-1), var(--color-zeco-2), var(--color-zeco-3));
   --gradient-zeco-bg:      linear-gradient(160deg, #2a1a0a 0%, #3a2510 40%, #2e1c08 100%);
 
-  --color-taylo:           #fc5c7d;
-  --color-taylo-alt:       #6a82fb;
+  /* — Palette: Taylo —————————————————————————— */
+  --color-taylo-1:         #fc5c7d;   /* primaria — rosa */
+  --color-taylo-2:         #6a82fb;   /* secundaria — azul */
+  --color-taylo-3:         #b06ab3;   /* terciaria — lilas */
   --color-taylo-dark:      #2a0a1a;
-  --gradient-taylo:        linear-gradient(135deg, #fc5c7d, #6a82fb, #fc5c7d);
+  --gradient-taylo:        linear-gradient(135deg, var(--color-taylo-1), var(--color-taylo-2), var(--color-taylo-1));
   --gradient-taylo-bg:     linear-gradient(160deg, #2a0a1a 0%, #1a1030 40%, #250a20 100%);
 
   /* — Palette: Kammara (saga) ————————————————— */
