@@ -2,12 +2,21 @@
 interface Props {
   name: string;
   bannerImage: string;
+  color1?: string;
+  color2?: string;
+  color3?: string;
 }
 
-const { name, bannerImage } = Astro.props;
+const {
+  name,
+  bannerImage,
+  color1 = 'var(--color-white)',
+  color2 = 'var(--ink-soft)',
+  color3 = 'var(--ink-muted)',
+} = Astro.props;
 ---
 
-<div class="creature" data-creature>
+<div class="creature" data-creature style={`--c1: ${color1}; --c2: ${color2}; --c3: ${color3};`}>
   <h2 class="creature-name">{name}</h2>
   <div class="creature-text">
     <slot />
@@ -33,7 +42,7 @@ const { name, bannerImage } = Astro.props;
     font-family: var(--sans);
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
-    color: var(--ink);
+    color: var(--c1);
     letter-spacing: 0.04em;
     margin-bottom: 1rem;
   }
@@ -41,7 +50,7 @@ const { name, bannerImage } = Astro.props;
   .creature-text {
     font-size: 1.05rem;
     line-height: 1.7;
-    color: var(--ink-soft);
+    color: var(--c2);
     font-weight: 300;
     max-width: 600px;
   }
