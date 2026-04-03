@@ -85,6 +85,10 @@ export default {
     heroLabel: 'Portfolio',
     heroTitle: 'Arte',
     filterAll: 'Todos',
+    booksTitle: 'Livros de Arte',
+    books: {
+      sketchbook: 'Sketchbook',
+    },
     sections: {
       black: { title: 'Branco no Preto', technique: 'Nanquim branco sobre papel preto' },
       grafite: { title: 'Grafite', technique: 'Estudos com sombreamento e volume' },

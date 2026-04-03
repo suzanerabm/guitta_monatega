@@ -1,10 +1,11 @@
 ---
 import HeroSection from '../components/HeroSection/HeroSection.astro';
+import BookGallery from '../components/BookGallery/BookGallery.astro';
 import FilterBar from '../components/FilterBar/FilterBar.astro';
 import ArtSection from '../components/ArtSection/ArtSection.astro';
 import Modal from '../components/Modal/Modal.astro';
 import ScrollReveal from '../components/ScrollReveal/ScrollReveal.astro';
-import { readdirSync } from 'node:fs';
+import { readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { useTranslations } from '../i18n/translations';
 
@@ -88,6 +89,24 @@ for (const s of sections) {
   sectionThumbs[s.id] = getThumbs(s.id);
   sectionFullImages[s.id] = getFullImages(s.id, sectionThumbs[s.id]);
 }
+
+// Art books
+const BOOKS_BASE = join(process.cwd(), 'public', 'imgs', 'books', 'art');
+const BOOKS_URL = '/imgs/books/art';
+
+const artBookDefs = Object.entries(t.art.books).map(([id, label]) => ({ id, label: label as string }));
+
+const artBooks = artBookDefs.map(def => {
+  const coverPath = join(BOOKS_BASE, def.id, 'cover.jpg');
+  const hasCover = existsSync(coverPath);
+  return {
+    id: `art-${def.id}`,
+    image: hasCover ? `${BOOKS_URL}/${def.id}/cover.jpg` : undefined,
+    alt: def.label,
+    label: def.label,
+    soon: !hasCover,
+  };
+});
 ---
 
 <HeroSection
@@ -98,6 +117,8 @@ for (const s of sections) {
   labelColor="#999"
   minHeight="35vh"
 />
+
+<BookGallery title={t.art.booksTitle} books={artBooks} soonLabel={t.common.soon} />
 
 <FilterBar filters={sections.map(s => ({id: s.id, label: s.title}))} />
 
