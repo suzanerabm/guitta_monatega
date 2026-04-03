@@ -1,0 +1,35 @@
+---
+import { getAlternateLocale, getLocalizedPath } from '../../i18n/translations';
+
+interface Props {
+  locale: string;
+  currentPath: string;
+}
+
+const { locale, currentPath } = Astro.props;
+const altLocale = getAlternateLocale(locale as any);
+const altPath = getLocalizedPath(currentPath, altLocale);
+const altLabel = altLocale === 'en' ? 'EN' : 'PT';
+---
+
+<a href={altPath} class="lang-toggle">{altLabel}</a>
+
+<style>
+  .lang-toggle {
+    font-family: 'Fira Sans', system-ui, sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    text-decoration: none;
+    border: 1px solid currentColor;
+    border-radius: 3px;
+    padding: 0.25rem 0.6rem;
+    transition: all 0.2s;
+  }
+
+  .lang-toggle:hover {
+    color: var(--ink);
+    border-color: var(--ink);
+  }
+</style>

@@ -37,7 +37,6 @@ header {
 header.transparent {
   background: rgba(255,255,255,0);
   backdrop-filter: blur(0);
-  justify-content: center;
   transition: background 0.4s ease, backdrop-filter 0.4s ease;
 }
 
@@ -120,6 +119,28 @@ footer {
   color: #ccc;
   font-weight: 400;
 }
+
+/* — DARK THEME ————————————————————————————————— */
+[data-theme="dark"] {
+  --white: #0a0a1a;
+  --ink: #e0e0e8;
+  --ink-soft: rgba(255,255,255,0.55);
+  --ink-muted: rgba(255,255,255,0.3);
+}
+
+[data-theme="dark"] body {
+  background: #0a0a1a;
+}
+
+[data-theme="dark"] header {
+  background: rgba(10,10,26,0.9);
+}
+
+[data-theme="dark"] .header-back:hover { color: #fff; }
+
+[data-theme="dark"] footer { background: transparent; }
+[data-theme="dark"] .footer-line { background: rgba(255,255,255,0.08); }
+[data-theme="dark"] .footer-brand { color: rgba(255,255,255,0.12); }
 
 /* — ANIMATIONS ————————————————————————————— */
 @keyframes fadeIn {

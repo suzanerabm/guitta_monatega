@@ -1,0 +1,78 @@
+---
+interface BookCover {
+  id: string;
+  image: string;
+  alt: string;
+  label: string;
+}
+
+interface Props {
+  title: string;
+  books: BookCover[];
+}
+
+const { title, books } = Astro.props;
+---
+
+<div class="book-gallery" data-creature>
+  <p class="book-gallery-title">{title}</p>
+  <div class="book-covers">
+    {books.map((book) => (
+      <div class="book-cover" data-book={book.id}>
+        <img src={book.image} alt={book.alt}>
+        <div class="book-cover-label">{book.label}</div>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .book-gallery {
+    max-width: 1000px;
+    margin: 2rem auto 0;
+    padding: 0 3rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .book-gallery.visible { opacity: 1; transform: translateY(0); }
+
+  .book-gallery-title {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 1.2rem;
+  }
+
+  .book-covers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .book-cover {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  .book-cover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  }
+
+  .book-cover img { width: 100%; height: auto; display: block; }
+
+  .book-cover-label {
+    padding: 0.6rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    font-weight: 400;
+    background: var(--white);
+  }
+</style>

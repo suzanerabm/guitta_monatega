@@ -1,15 +1,26 @@
 ---
+import LanguageToggle from '../components/LanguageToggle/LanguageToggle.astro';
+import { getLocalizedPath } from '../i18n/translations';
+
 interface Props {
   title: string;
   transparentHeader?: boolean;
   showBack?: boolean;
+  theme?: 'light' | 'dark';
+  locale?: string;
 }
 
-const { title, transparentHeader = false, showBack = true } = Astro.props;
+const { title, transparentHeader = false, showBack = true, theme = 'light', locale = 'pt-BR' } = Astro.props;
+const htmlLang = locale === 'en' ? 'en' : 'pt-BR';
+const backText = locale === 'en' ? 'back' : 'voltar';
+const homePath = getLocalizedPath('/', locale as any);
+const aboutPath = getLocalizedPath('/about', locale as any);
+// Get current page path for language toggle
+const currentPath = Astro.url.pathname.replace(/^\/en/, '') || '/';
 ---
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang={htmlLang} data-theme={theme}>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,10 +31,16 @@ const { title, transparentHeader = false, showBack = true } = Astro.props;
 </head>
 <body>
   <header class={transparentHeader ? 'transparent' : ''}>
-    <a href="/" class="header-name"><strong>guitta</strong> monatega</a>
+    <a href={homePath} class="header-name"><strong>guitta</strong> monatega</a>
     {showBack && (
       <div class="header-right">
-        <a href="/" class="header-back">&larr; voltar</a>
+        <LanguageToggle locale={locale} currentPath={currentPath} />
+        <a href={homePath} class="header-back">&larr; {backText}</a>
+      </div>
+    )}
+    {!showBack && (
+      <div class="header-right">
+        <LanguageToggle locale={locale} currentPath={currentPath} />
       </div>
     )}
   </header>
@@ -32,7 +49,7 @@ const { title, transparentHeader = false, showBack = true } = Astro.props;
 
   <footer>
     <div class="footer-line"></div>
-    <a href="/about" class="footer-name">guitta monatega</a>
+    <a href={aboutPath} class="footer-name">guitta monatega</a>
     <span class="footer-brand">mosaicQ</span>
   </footer>
 </body>

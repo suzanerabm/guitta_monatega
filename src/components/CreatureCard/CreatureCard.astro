@@ -1,0 +1,64 @@
+---
+interface Props {
+  name: string;
+  bannerImage: string;
+}
+
+const { name, bannerImage } = Astro.props;
+---
+
+<div class="creature" data-creature>
+  <h2 class="creature-name">{name}</h2>
+  <div class="creature-text">
+    <slot />
+  </div>
+</div>
+<div class="creature-banner" style={`background: url('${bannerImage}') center/cover no-repeat;`}></div>
+
+<style>
+  .creature {
+    padding: 5rem 3rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .creature.visible { opacity: 1; transform: translateY(0); }
+
+  .creature-name {
+    font-family: var(--sans);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.04em;
+    margin-bottom: 1rem;
+  }
+
+  .creature-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    font-weight: 300;
+    max-width: 600px;
+  }
+
+  .creature-banner {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    height: 50vh;
+    min-height: 350px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .creature { padding: 3rem 1.5rem 1.5rem; }
+    .creature-banner { height: 35vh; min-height: 250px; }
+  }
+</style>

@@ -1,0 +1,113 @@
+---
+import HomeBanner from '../components/HomeBanner/HomeBanner.astro';
+import ScrollReveal from '../components/ScrollReveal/ScrollReveal.astro';
+import { useTranslations, getLocalizedPath } from '../i18n/translations';
+import type { Locale } from '../i18n/translations';
+
+interface Props { locale?: string; }
+const { locale = 'pt-BR' } = Astro.props;
+const t = useTranslations(locale);
+---
+
+<div class="hero-spacer">
+  <h1 class="hero-title"><strong>guitta</strong> monatega</h1>
+  <p class="hero-sub">{t.home.heroSub}</p>
+</div>
+
+<div class="banner-row">
+  <HomeBanner
+    href={getLocalizedPath('/bichittos', locale as Locale)}
+    label={t.home.bichittos.label}
+    title={t.home.bichittos.title}
+    description={t.home.bichittos.desc}
+    variant="bichittos"
+  />
+  <HomeBanner
+    href={getLocalizedPath('/kammara', locale as Locale)}
+    label={t.home.kammara.label}
+    title={t.home.kammara.title}
+    description={t.home.kammara.desc}
+    variant="kammara"
+  />
+</div>
+
+<div class="banner-spacer"></div>
+
+<HomeBanner
+  href={getLocalizedPath('/art', locale as Locale)}
+  label={t.home.art.label}
+  title={t.home.art.title}
+  description={t.home.art.desc}
+  variant="arte"
+  fullWidth={true}
+/>
+
+<ScrollReveal selector="[data-banner]" />
+
+<style>
+  .hero-spacer {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+  .hero-title {
+    font-family: var(--sans);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 100;
+    letter-spacing: 0.15em;
+    text-transform: lowercase;
+    color: var(--ink);
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1.2s ease 0.2s forwards;
+  }
+  .hero-title strong { font-weight: 600; }
+  .hero-sub {
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    opacity: 0;
+    animation: fadeIn 1s ease 0.6s forwards;
+  }
+  .banner-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100vw;
+  }
+  .banner-spacer {
+    height: 6rem;
+    background: var(--white);
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @media (max-width: 768px) {
+    .banner-row { grid-template-columns: 1fr; }
+    .banner-spacer { height: 3rem; }
+  }
+</style>
+
+<script>
+  const header = document.querySelector('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      header?.classList.add('scrolled');
+    } else {
+      header?.classList.remove('scrolled');
+    }
+  }, { passive: true });
+
+  window.addEventListener('scroll', () => {
+    document.querySelectorAll<HTMLElement>('.banner-bg').forEach(bg => {
+      const section = bg.parentElement;
+      if (!section) return;
+      const rect = section.getBoundingClientRect();
+      bg.style.transform = `translateY(${rect.top * 0.15}px)`;
+    });
+  }, { passive: true });
+</script>

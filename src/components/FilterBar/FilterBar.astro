@@ -1,0 +1,94 @@
+---
+interface FilterItem {
+  id: string;
+  label: string;
+}
+
+interface Props {
+  filters: FilterItem[];
+  allLabel?: string;
+}
+
+const { filters, allLabel = 'Todos' } = Astro.props;
+---
+
+<nav class="filter-bar">
+  <button class="filter-btn active" data-filter="all">{allLabel}</button>
+  {filters.map((f) => (
+    <button class="filter-btn" data-filter={f.id}>{f.label}</button>
+  ))}
+</nav>
+
+<style>
+  .filter-bar {
+    position: sticky;
+    top: 62px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #eee;
+  }
+
+  .filter-btn {
+    font-family: 'Fira Sans', system-ui, sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background: transparent;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+
+  .filter-btn:hover {
+    border-color: #999;
+    color: #333;
+  }
+
+  .filter-btn.active {
+    background: #1a1d21;
+    border-color: #1a1d21;
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .filter-bar {
+      gap: 0.35rem;
+      padding: 0.6rem 1rem;
+    }
+    .filter-btn {
+      font-size: 0.65rem;
+      padding: 0.3rem 0.7rem;
+    }
+  }
+</style>
+
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      const section = (btn as HTMLElement).dataset.filter || 'all';
+      const allSections = document.querySelectorAll('[data-art]') as NodeListOf<HTMLElement>;
+      allSections.forEach((el) => {
+        if (section === 'all' || el.dataset.art === section) {
+          el.classList.remove('hidden');
+          el.classList.add('visible');
+        } else {
+          el.classList.add('hidden');
+          el.classList.remove('visible');
+        }
+      });
+    });
+  });
+</script>
