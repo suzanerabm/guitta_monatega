@@ -1,6 +1,6 @@
 ---
 import { getLocalizedPath } from '../../i18n/translations';
-import { House, ChevronRight } from '@lucide/astro';
+import { House, ChevronRight, ArrowLeft } from '@lucide/astro';
 
 interface BreadcrumbItem {
   label: string;
@@ -17,6 +17,10 @@ const homePath = getLocalizedPath('/', locale as any);
 ---
 
 <nav class="breadcrumb" aria-label="breadcrumb">
+  <a href={homePath} class="breadcrumb-back" title={locale === 'en' ? 'back' : 'voltar'}>
+    <ArrowLeft size={14} strokeWidth={1.5} />
+  </a>
+  <span class="breadcrumb-divider"></span>
   <a href={homePath} class="breadcrumb-link breadcrumb-home">
     <House size={14} strokeWidth={1.5} />
     <span>home</span>
@@ -43,6 +47,25 @@ const homePath = getLocalizedPath('/', locale as any);
     font-size: 0.72rem;
     letter-spacing: 0.1em;
     text-transform: lowercase;
+  }
+
+  .breadcrumb-back {
+    display: flex;
+    align-items: center;
+    color: var(--ink-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .breadcrumb-back:hover {
+    color: var(--ink);
+  }
+
+  .breadcrumb-divider {
+    width: 1px;
+    height: 12px;
+    background: var(--ink-muted);
+    opacity: 0.25;
   }
 
   .breadcrumb-home {
