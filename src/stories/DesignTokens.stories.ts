@@ -72,6 +72,55 @@ export const Colors: Story = {
           </div>
         `)}
 
+        ${section('Collections', `
+          ${[
+            {
+              name: 'NapCat',
+              colors: [
+                { label: '-1 primary', hex: '#667eea' },
+                { label: '-2 secondary', hex: '#764ba2' },
+                { label: '-3 tertiary', hex: '#f093fb' },
+                { label: 'dark', hex: '#1a1432' },
+              ],
+              gradient: 'linear-gradient(135deg, #667eea, #764ba2, #f093fb)',
+            },
+            {
+              name: 'Zeco',
+              colors: [
+                { label: '-1 primary', hex: '#ff8c42' },
+                { label: '-2 secondary', hex: '#ff6b35' },
+                { label: '-3 tertiary', hex: '#ffa751' },
+                { label: 'dark', hex: '#2a1a0a' },
+              ],
+              gradient: 'linear-gradient(135deg, #ff8c42, #ff6b35, #ffa751)',
+            },
+            {
+              name: 'Taylo',
+              colors: [
+                { label: '-1 primary', hex: '#fc5c7d' },
+                { label: '-2 secondary', hex: '#6a82fb' },
+                { label: '-3 tertiary', hex: '#b06ab3' },
+                { label: 'dark', hex: '#2a0a1a' },
+              ],
+              gradient: 'linear-gradient(135deg, #fc5c7d, #6a82fb, #b06ab3)',
+            },
+          ].map(creature => `
+            <div style="margin-bottom:1.5rem;">
+              <div style="font-family:'Fira Sans',sans-serif;font-size:0.85rem;font-weight:600;color:#1a1d21;margin-bottom:0.6rem;">${creature.name}</div>
+              <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+                ${creature.colors.map(c =>
+                  `<div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;">
+                    <div style="width:64px;height:64px;border-radius:8px;background:${c.hex};border:1px solid #e0e0e0;"></div>
+                    <span style="font-size:0.6rem;color:#999;text-align:center;">${c.label}</span>
+                    <span style="font-size:0.55rem;color:#ccc;font-family:monospace;">${c.hex}</span>
+                  </div>`
+                ).join('')}
+              </div>
+              <div style="margin-top:0.6rem;width:280px;height:24px;border-radius:6px;background:${creature.gradient};"></div>
+            </div>
+          `).join('')}
+        `)}
+
         ${section('Gradient Preview', `
           <div style="display:flex;gap:1rem;flex-wrap:wrap;">
             <div style="width:200px;height:80px;border-radius:8px;background:linear-gradient(135deg,#ff6b9d,#ffa751,#ffe259,#6dd5fa);"></div>
