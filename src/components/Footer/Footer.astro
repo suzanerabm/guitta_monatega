@@ -1,13 +1,13 @@
 ---
 interface Props {
   aboutPath: string;
+  aboutLabel: string;
 }
 
-const { aboutPath } = Astro.props;
+const { aboutPath, aboutLabel } = Astro.props;
 ---
 
 <footer>
   <div class="footer-line"></div>
-  <a href={aboutPath} class="footer-name">guitta monatega</a>
-  <!-- <span class="footer-brand">mosaicQ</span> -->
+  <a href={aboutPath} class="footer-name">{aboutLabel}</a>
 </footer>

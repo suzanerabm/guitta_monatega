@@ -2,6 +2,7 @@ export default {
   common: {
     back: 'voltar',
     siteTitle: 'Guitta Monatega',
+    footerAbout: 'sobre guitta monatega',
   },
   home: {
     title: 'Guitta Monatega',
