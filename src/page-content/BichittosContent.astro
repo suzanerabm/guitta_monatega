@@ -104,7 +104,7 @@ for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs]) {
 <CreatureSection gradient="var(--gradient-napcat-bg)" accentColor="var(--color-napcat-1)">
   <CreatureCard name={t.bichittos.napcat.name} bannerImage="/imgs/banners/banner_napcat.jpg">
     <p>{t.bichittos.napcat.text}</p>
-    <CharacterStrip slot="strip" gradient="var(--gradient-napcat)" characters={[
+    <CharacterStrip slot="strip" gradient="var(--gradient-napcat)" side="left" characters={[
       { name: 'NapCat', image: '/imgs/Napcat/napcatDefault.png' },
       { name: 'Violeta', image: '/imgs/Napcat/violeta_default.png' },
       { name: 'NapCat', image: '/imgs/Napcat/napcat_dormindo.png' },
@@ -118,7 +118,7 @@ for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs]) {
 <CreatureSection gradient="var(--gradient-zeco-bg)" accentColor="var(--color-zeco-1)">
   <CreatureCard name={t.bichittos.zeco.name} bannerImage="/imgs/banners/banner_zeco.jpg">
     <p>{t.bichittos.zeco.text}</p>
-    <CharacterStrip slot="strip" gradient="var(--gradient-zeco)" characters={[
+    <CharacterStrip slot="strip" gradient="var(--gradient-zeco)" side="left" characters={[
       { name: 'Zeco', image: '/imgs/Zeco/Zeco/_imgs/Zeco_frente_sorrindo.png' },
       { name: 'Ninha', image: '/imgs/Zeco/Ninha/_imgs/ninha_default.png' },
       { name: 'Rui', image: '/imgs/Zeco/RuiMerengue/_imgs/ruiMerengue_default.png' },
@@ -133,7 +133,7 @@ for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs]) {
 <CreatureSection gradient="var(--gradient-taylo-bg)" accentColor="var(--color-taylo-1)">
   <CreatureCard name={t.bichittos.taylo.name} bannerImage="/imgs/banners/banner_taylo.jpg">
     {t.bichittos.taylo.text.map((p) => <p>{p}</p>)}
-    <CharacterStrip slot="strip" gradient="var(--gradient-taylo)" side="left" characters={[
+    <CharacterStrip slot="strip" gradient="var(--gradient-taylo)" side="right" characters={[
       { name: 'Taylo', image: '/imgs/Taylo/Taylo/Taylo.png' },
       { name: 'Pitu', image: '/imgs/Taylo/Pitu/_imgs/pitu_normal_1.png' },
       { name: 'Squizo', image: '/imgs/Taylo/Squizo/_imgs/squizo1.png' },
