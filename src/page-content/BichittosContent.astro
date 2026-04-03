@@ -10,11 +10,19 @@ interface Props { locale?: string; }
 const { locale = 'pt-BR' } = Astro.props;
 const t = useTranslations(locale);
 
+const napcatBooks = [
+  { id: 'napcat-adventures', alt: t.bichittos.napcatBooks.adventures, label: t.bichittos.napcatBooks.adventures, soon: true },
+];
+
 const zecoBooks = [
-  { id: 'primavera', image: '/imgs/banners/cover_primavera.jpg', alt: `Zeco - ${t.bichittos.bookSeasons.primavera}`, label: t.bichittos.bookSeasons.primavera },
-  { id: 'verao', image: '/imgs/banners/cover_verao.jpg', alt: `Zeco - ${t.bichittos.bookSeasons.verao}`, label: t.bichittos.bookSeasons.verao },
-  { id: 'outono', image: '/imgs/banners/cover_outono.jpg', alt: `Zeco - ${t.bichittos.bookSeasons.outono}`, label: t.bichittos.bookSeasons.outono },
-  { id: 'inverno', image: '/imgs/banners/cover_inverno.jpg', alt: `Zeco - ${t.bichittos.bookSeasons.inverno}`, label: t.bichittos.bookSeasons.inverno },
+  { id: 'primavera', image: '/imgs/banners/cover_primavera.jpg', alt: `Zeco - ${t.bichittos.zecoBookSeasons.primavera}`, label: t.bichittos.zecoBookSeasons.primavera },
+  { id: 'verao', image: '/imgs/banners/cover_verao.jpg', alt: `Zeco - ${t.bichittos.zecoBookSeasons.verao}`, label: t.bichittos.zecoBookSeasons.verao },
+  { id: 'outono', image: '/imgs/banners/cover_outono.jpg', alt: `Zeco - ${t.bichittos.zecoBookSeasons.outono}`, label: t.bichittos.zecoBookSeasons.outono },
+  { id: 'inverno', image: '/imgs/banners/cover_inverno.jpg', alt: `Zeco - ${t.bichittos.zecoBookSeasons.inverno}`, label: t.bichittos.zecoBookSeasons.inverno },
+];
+
+const tayloBooks = [
+  { id: 'star-hunter', alt: t.bichittos.tayloBooks.starHunter, label: t.bichittos.tayloBooks.starHunter, soon: true },
 ];
 ---
 
@@ -37,6 +45,8 @@ const zecoBooks = [
   <p>{t.bichittos.napcat.text}</p>
 </CreatureCard>
 
+<BookGallery title={t.bichittos.napcatBooksTitle} books={napcatBooks} />
+
 <div class="creature-divider"></div>
 
 <!-- ZECO -->
@@ -45,7 +55,7 @@ const zecoBooks = [
 </CreatureCard>
 
 <!-- ZECO BOOKS -->
-<BookGallery title={t.bichittos.booksTitle} books={zecoBooks} />
+<BookGallery title={t.bichittos.zecoBooksTitle} books={zecoBooks} />
 
 <div class="creature-divider"></div>
 
@@ -53,6 +63,8 @@ const zecoBooks = [
 <CreatureCard name={t.bichittos.taylo.name} bannerImage="/imgs/banners/banner_taylo.jpg">
   {t.bichittos.taylo.text.map((p) => <p>{p}</p>)}
 </CreatureCard>
+
+<BookGallery title={t.bichittos.tayloBooksTitle} books={tayloBooks} />
 
 <Modal />
 <ScrollReveal selector="[data-creature]" />

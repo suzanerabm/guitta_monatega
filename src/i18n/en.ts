@@ -54,12 +54,20 @@ export default {
         'In the forest, everyone is his friend — Pitu, Squizo, Candy and the others. Together, they form the Taylo universe.',
       ],
     },
-    booksTitle: 'Books - The 4 Seasons',
-    bookSeasons: {
+    napcatBooksTitle: 'Books',
+    napcatBooks: {
+      adventures: 'NapCat Adventures',
+    },
+    zecoBooksTitle: 'Books - The 4 Seasons',
+    zecoBookSeasons: {
       primavera: 'Spring',
       verao: 'Summer',
       outono: 'Autumn',
       inverno: 'Winter',
+    },
+    tayloBooksTitle: 'Books',
+    tayloBooks: {
+      starHunter: 'The Star Hunter',
     },
     bookIllustrated: 'Illustrated book',
   },

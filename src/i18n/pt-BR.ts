@@ -54,12 +54,20 @@ export default {
         'Na floresta, todo mundo e amigo dele — Pitu, Squizo, Candy e os outros. Juntos, formam o universo Taylo.',
       ],
     },
-    booksTitle: 'Livros - As 4 Estacoes',
-    bookSeasons: {
+    napcatBooksTitle: 'Livros',
+    napcatBooks: {
+      adventures: 'NapCat Adventures',
+    },
+    zecoBooksTitle: 'Livros - As 4 Estacoes',
+    zecoBookSeasons: {
       primavera: 'Primavera',
       verao: 'Verao',
       outono: 'Outono',
       inverno: 'Inverno',
+    },
+    tayloBooksTitle: 'Livros',
+    tayloBooks: {
+      starHunter: 'O Cacador de Estrelas',
     },
     bookIllustrated: 'Livro ilustrado',
   },
