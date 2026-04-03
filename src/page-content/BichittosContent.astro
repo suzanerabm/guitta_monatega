@@ -19,17 +19,19 @@ interface BookDef {
   creature: string;
   id: string;
   label: string;
+  soon?: boolean;
 }
 
 function buildBook(def: BookDef) {
   const coverPath = join(BOOKS_BASE, def.creature, def.id, 'cover.jpg');
   const hasCover = existsSync(coverPath);
+  const isSoon = def.soon ?? !hasCover;
   return {
     id: `${def.creature}-${def.id}`,
     image: hasCover ? `${BOOKS_URL}/${def.creature}/${def.id}/cover.jpg` : undefined,
     alt: def.label,
     label: def.label,
-    soon: !hasCover,
+    soon: isSoon,
   };
 }
 
@@ -47,7 +49,7 @@ function getBookPages(creature: string, bookId: string): string[] {
 
 // NapCat books
 const napcatBookDefs: BookDef[] = [
-  { creature: 'napcat', id: 'adventures', label: t.bichittos.napcatBooks.adventures },
+  { creature: 'napcat', id: 'adventures', label: t.bichittos.napcatBooks.adventures, soon: true },
 ];
 const napcatBooks = napcatBookDefs.map(buildBook);
 
@@ -62,11 +64,12 @@ const zecoBooks = zecoBookDefs.map(buildBook);
 
 // Taylo books
 const tayloBookDefs: BookDef[] = [
-  { creature: 'taylo', id: 'star-hunter', label: t.bichittos.tayloBooks.starHunter },
+  { creature: 'taylo', id: 'star-hunter', label: t.bichittos.tayloBooks.starHunter, soon: true },
 ];
 const tayloBooks = tayloBookDefs.map(buildBook);
 
 // Build gallery data for client-side (book pages for modal)
+const bookIllustrated = t.bichittos.bookIllustrated;
 const bookGalleries: Record<string, { title: string; pages: string[] }> = {};
 for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs]) {
   for (const def of defs) {
@@ -164,18 +167,20 @@ for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs]) {
   });
 </script>
 
+<script is:inline define:vars={{ bookGalleries, bookIllustrated }}>
+  window.__bookGalleries = bookGalleries;
+  window.__bookIllustrated = bookIllustrated;
+</script>
+
 <script>
   // Book click handlers
   document.querySelectorAll<HTMLElement>('[data-book]').forEach(el => {
     el.addEventListener('click', () => {
       const bookId = el.dataset.book!;
       const galleries = (window as any).__bookGalleries;
+      const subtitle = (window as any).__bookIllustrated || 'Illustrated book';
       if (!galleries || !galleries[bookId]) return;
-      (window as any).openGallery('book_' + bookId, 0, galleries[bookId].title, 'Livro ilustrado');
+      (window as any).openGallery('book_' + bookId, 0, galleries[bookId].title, subtitle);
     });
   });
-</script>
-
-<script is:inline define:vars={{ bookGalleries }}>
-  window.__bookGalleries = bookGalleries;
 </script>
