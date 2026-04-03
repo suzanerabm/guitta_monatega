@@ -4,21 +4,19 @@ interface Props {
   bannerImage: string;
   color1?: string;
   color2?: string;
-  color3?: string;
 }
 
 const {
   name,
   bannerImage,
-  color1 = 'var(--color-white)',
-  color2 = 'var(--ink-soft)',
-  color3 = 'var(--ink-muted)',
+  color1,
+  color2,
 } = Astro.props;
 ---
 
-<div class="creature" data-creature style={`--c1: ${color1}; --c2: ${color2}; --c3: ${color3};`}>
-  <h2 class="creature-name">{name}</h2>
-  <div class="creature-text">
+<div class="creature" data-creature>
+  <h2 class="creature-name" style={color1 ? `color: ${color1};` : ''}>{name}</h2>
+  <div class="creature-text" style={color2 ? `color: ${color2};` : ''}>
     <slot />
   </div>
 </div>
@@ -42,7 +40,6 @@ const {
     font-family: var(--sans);
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
-    color: var(--c1);
     letter-spacing: 0.04em;
     margin-bottom: 1rem;
   }
@@ -50,7 +47,6 @@ const {
   .creature-text {
     font-size: 1.05rem;
     line-height: 1.7;
-    color: var(--c2);
     font-weight: 300;
     max-width: 600px;
   }
