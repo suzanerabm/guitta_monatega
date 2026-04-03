@@ -68,15 +68,15 @@
   --color-zeco-dark:       #1a0e02;
   --gradient-zeco:         linear-gradient(135deg, var(--color-zeco-1), var(--color-zeco-2), var(--color-zeco-3));
   /* --gradient-zeco-bg:      linear-gradient(160deg, #6c360d 0%, #3a2008 40%, #2e1805 100%); */
-  --gradient-zeco-bg:      linear-gradient(160deg, #f57f20 0%, #a85918 40%, #f57f20 100%);
+  --gradient-zeco-bg:      linear-gradient(160deg, #f57f20 0%, #d4813d 40%, #fece95 100%);
 
   /* — Palette: Taylo —————————————————————————— */
-  --color-taylo-1:         #fc5c7d;   /* primaria — rosa */
-  --color-taylo-2:         #6a82fb;   /* secundaria — azul */
-  --color-taylo-3:         #b06ab3;   /* terciaria — lilas */
-  --color-taylo-dark:      #2a0a1a;
+  --color-taylo-1:         #5d9466;   /* primaria — rosa */
+  --color-taylo-2:         #427f49;   /* secundaria — azul */
+  --color-taylo-3:         #277230;   /* terciaria — lilas */
+  --color-taylo-dark:      #082b0b;
   --gradient-taylo:        linear-gradient(135deg, var(--color-taylo-1), var(--color-taylo-2), var(--color-taylo-1));
-  --gradient-taylo-bg:     linear-gradient(160deg, #2a0a1a 0%, #1a1030 40%, #250a20 100%);
+  --gradient-taylo-bg:     linear-gradient(160deg, #34843c 0%, #185b1e 40%, #082b0b 100%);
 
   /* — Palette: Kammara (saga) ————————————————— */
   --color-kammara-deep:    #0a0a2e;

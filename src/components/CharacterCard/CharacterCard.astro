@@ -25,17 +25,26 @@ const { name, image, gradient = 'var(--gradient-bichittos)' } = Astro.props;
     align-items: center;
     gap: 0.5rem;
     position: relative;
+    animation: cardFloat 3s ease-in-out infinite;
+  }
+
+  .char-card:nth-child(2n) { animation-delay: -1s; }
+  .char-card:nth-child(3n) { animation-delay: -2s; }
+
+  @keyframes cardFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
   }
 
   .char-card-glow {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 20px;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 15px;
     border-radius: 16px;
-    filter: blur(16px);
-    opacity: 0.4;
+    filter: blur(20px);
+    opacity: 0.6;
     z-index: 0;
   }
 
@@ -47,7 +56,9 @@ const { name, image, gradient = 'var(--gradient-bichittos)' } = Astro.props;
     background: var(--color-white);
     position: relative;
     z-index: 1;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    box-shadow:
+      0 12px 40px rgba(0,0,0,0.15),
+      0 0 20px rgba(255,255,255,0.15);
     outline: 2px solid rgba(255,255,255,0.35);
     outline-offset: 3px;
   }
