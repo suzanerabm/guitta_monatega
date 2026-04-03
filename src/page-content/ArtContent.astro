@@ -104,14 +104,19 @@ function getArtBooks() {
       .sort()
       .map((folder: string) => {
         const coverPath = join(BOOKS_BASE, folder, 'cover.jpg');
+        const pagesDir = join(BOOKS_BASE, folder, 'pages');
         const hasCover = existsSync(coverPath);
+        let hasPages = false;
+        try {
+          hasPages = readdirSync(pagesDir).some((f: string) => /\.(jpg|jpeg|png|webp)$/i.test(f));
+        } catch {}
         const label = folder.replace(/-/g, ' ');
         return {
           id: `art-${folder}`,
           image: hasCover ? `${BOOKS_URL}/${folder}/cover.jpg` : undefined,
           alt: label,
           label,
-          soon: !hasCover,
+          soon: !hasPages,
         };
       });
   } catch {

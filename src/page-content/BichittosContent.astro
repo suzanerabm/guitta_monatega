@@ -47,8 +47,13 @@ interface BookDef {
 
 function buildBook(def: BookDef) {
   const coverPath = join(BOOKS_BASE, def.creature, def.id, 'cover.jpg');
+  const pagesDir = join(BOOKS_BASE, def.creature, def.id, 'pages');
   const hasCover = existsSync(coverPath);
-  const isSoon = def.soon ?? !hasCover;
+  let hasPages = false;
+  try {
+    hasPages = readdirSync(pagesDir).some((f: string) => /\.(jpg|jpeg|png|webp)$/i.test(f));
+  } catch {}
+  const isSoon = def.soon ?? !hasPages;
   return {
     id: `${def.creature}-${def.id}`,
     image: hasCover ? `${BOOKS_URL}/${def.creature}/${def.id}/cover.jpg` : undefined,
@@ -72,7 +77,7 @@ function getBookPages(creature: string, bookId: string): string[] {
 
 // NapCat books
 const napcatBookDefs: BookDef[] = [
-  { creature: 'napcat', id: 'adventures', label: t.bichittos.napcatBooks.adventures, soon: true },
+  { creature: 'napcat', id: 'adventures', label: t.bichittos.napcatBooks.adventures },
 ];
 const napcatBooks = napcatBookDefs.map(buildBook);
 
@@ -87,7 +92,7 @@ const zecoBooks = zecoBookDefs.map(buildBook);
 
 // Taylo books
 const tayloBookDefs: BookDef[] = [
-  { creature: 'taylo', id: 'star-hunter', label: t.bichittos.tayloBooks.starHunter, soon: true },
+  { creature: 'taylo', id: 'star-hunter', label: t.bichittos.tayloBooks.starHunter },
 ];
 const tayloBooks = tayloBookDefs.map(buildBook);
 
