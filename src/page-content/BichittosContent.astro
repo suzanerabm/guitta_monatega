@@ -1,5 +1,6 @@
 ---
 import HeroSection from '../components/HeroSection/HeroSection.astro';
+import CreatureSection from '../components/CreatureSection/CreatureSection.astro';
 import CreatureCard from '../components/CreatureCard/CreatureCard.astro';
 import CharacterStrip from '../components/CharacterStrip/CharacterStrip.astro';
 import BookGallery from '../components/BookGallery/BookGallery.astro';
@@ -100,48 +101,47 @@ for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs]) {
 </HeroSection>
 
 <!-- NAPCAT -->
-<CreatureCard name={t.bichittos.napcat.name} bannerImage="/imgs/banners/banner_napcat.jpg">
-  <p>{t.bichittos.napcat.text}</p>
-  <CharacterStrip slot="strip" gradient="var(--gradient-napcat)" characters={[
-    { name: 'NapCat', image: '/imgs/Napcat/napcatDefault.png' },
-    { name: 'Violeta', image: '/imgs/Napcat/violeta_default.png' },
-    { name: 'NapCat', image: '/imgs/Napcat/napcat_dormindo.png' },
-    { name: 'NapCat', image: '/imgs/Napcat/napcat_bebendo.png' },
-  ]} />
-</CreatureCard>
-
-<BookGallery title={t.bichittos.napcatBooksTitle} books={napcatBooks} soonLabel={t.common.soon} />
-
-<div class="creature-divider"></div>
+<CreatureSection gradient="var(--gradient-napcat-bg)" accentColor="var(--color-napcat)">
+  <CreatureCard name={t.bichittos.napcat.name} bannerImage="/imgs/banners/banner_napcat.jpg">
+    <p>{t.bichittos.napcat.text}</p>
+    <CharacterStrip slot="strip" gradient="var(--gradient-napcat)" characters={[
+      { name: 'NapCat', image: '/imgs/Napcat/napcatDefault.png' },
+      { name: 'Violeta', image: '/imgs/Napcat/violeta_default.png' },
+      { name: 'NapCat', image: '/imgs/Napcat/napcat_dormindo.png' },
+      { name: 'NapCat', image: '/imgs/Napcat/napcat_bebendo.png' },
+    ]} />
+  </CreatureCard>
+  <BookGallery title={t.bichittos.napcatBooksTitle} books={napcatBooks} soonLabel={t.common.soon} />
+</CreatureSection>
 
 <!-- ZECO -->
-<CreatureCard name={t.bichittos.zeco.name} bannerImage="/imgs/banners/banner_zeco.jpg">
-  <p>{t.bichittos.zeco.text}</p>
-  <CharacterStrip slot="strip" gradient="var(--gradient-zeco)" characters={[
-    { name: 'Zeco', image: '/imgs/Zeco/Zeco/_imgs/Zeco_frente_sorrindo.png' },
-    { name: 'Ninha', image: '/imgs/Zeco/Ninha/_imgs/ninha_default.png' },
-    { name: 'Rui', image: '/imgs/Zeco/RuiMerengue/_imgs/ruiMerengue_default.png' },
-    { name: 'Zeco', image: '/imgs/Zeco/Zeco/_imgs/zeco_picole.png' },
-    { name: 'Ninha', image: '/imgs/Zeco/Ninha/_imgs/ninha_praia1.png' },
-  ]} />
-</CreatureCard>
-
-<BookGallery title={t.bichittos.zecoBooksTitle} books={zecoBooks} />
-
-<div class="creature-divider"></div>
+<CreatureSection gradient="var(--gradient-zeco-bg)" accentColor="var(--color-zeco)">
+  <CreatureCard name={t.bichittos.zeco.name} bannerImage="/imgs/banners/banner_zeco.jpg">
+    <p>{t.bichittos.zeco.text}</p>
+    <CharacterStrip slot="strip" gradient="var(--gradient-zeco)" characters={[
+      { name: 'Zeco', image: '/imgs/Zeco/Zeco/_imgs/Zeco_frente_sorrindo.png' },
+      { name: 'Ninha', image: '/imgs/Zeco/Ninha/_imgs/ninha_default.png' },
+      { name: 'Rui', image: '/imgs/Zeco/RuiMerengue/_imgs/ruiMerengue_default.png' },
+      { name: 'Zeco', image: '/imgs/Zeco/Zeco/_imgs/zeco_picole.png' },
+      { name: 'Ninha', image: '/imgs/Zeco/Ninha/_imgs/ninha_praia1.png' },
+    ]} />
+  </CreatureCard>
+  <BookGallery title={t.bichittos.zecoBooksTitle} books={zecoBooks} />
+</CreatureSection>
 
 <!-- TAYLO -->
-<CreatureCard name={t.bichittos.taylo.name} bannerImage="/imgs/banners/banner_taylo.jpg">
-  {t.bichittos.taylo.text.map((p) => <p>{p}</p>)}
-  <CharacterStrip slot="strip" gradient="var(--gradient-taylo)" side="left" characters={[
-    { name: 'Taylo', image: '/imgs/Taylo/Taylo/Taylo.png' },
-    { name: 'Pitu', image: '/imgs/Taylo/Pitu/_imgs/pitu_normal_1.png' },
-    { name: 'Squizo', image: '/imgs/Taylo/Squizo/_imgs/squizo1.png' },
-    { name: 'Candy', image: '/imgs/Taylo/Candy/candy_fairy.png' },
-  ]} />
-</CreatureCard>
-
-<BookGallery title={t.bichittos.tayloBooksTitle} books={tayloBooks} soonLabel={t.common.soon} />
+<CreatureSection gradient="var(--gradient-taylo-bg)" accentColor="var(--color-taylo)">
+  <CreatureCard name={t.bichittos.taylo.name} bannerImage="/imgs/banners/banner_taylo.jpg">
+    {t.bichittos.taylo.text.map((p) => <p>{p}</p>)}
+    <CharacterStrip slot="strip" gradient="var(--gradient-taylo)" side="left" characters={[
+      { name: 'Taylo', image: '/imgs/Taylo/Taylo/Taylo.png' },
+      { name: 'Pitu', image: '/imgs/Taylo/Pitu/_imgs/pitu_normal_1.png' },
+      { name: 'Squizo', image: '/imgs/Taylo/Squizo/_imgs/squizo1.png' },
+      { name: 'Candy', image: '/imgs/Taylo/Candy/candy_fairy.png' },
+    ]} />
+  </CreatureCard>
+  <BookGallery title={t.bichittos.tayloBooksTitle} books={tayloBooks} soonLabel={t.common.soon} />
+</CreatureSection>
 
 <Modal />
 <ScrollReveal selector="[data-creature]" />

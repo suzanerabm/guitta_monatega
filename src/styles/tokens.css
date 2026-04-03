@@ -56,15 +56,21 @@
   /* — Palette: Criaturas ————————————————————— */
   --color-napcat:          #667eea;
   --color-napcat-alt:      #764ba2;
+  --color-napcat-dark:     #1a1432;
   --gradient-napcat:       linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+  --gradient-napcat-bg:    linear-gradient(160deg, #1a1432 0%, #2a1f4a 40%, #1e1638 100%);
 
   --color-zeco:            #ff8c42;
   --color-zeco-alt:        #ff6b35;
+  --color-zeco-dark:       #2a1a0a;
   --gradient-zeco:         linear-gradient(135deg, #ff8c42, #ff6b35, #ffa751);
+  --gradient-zeco-bg:      linear-gradient(160deg, #2a1a0a 0%, #3a2510 40%, #2e1c08 100%);
 
   --color-taylo:           #fc5c7d;
   --color-taylo-alt:       #6a82fb;
+  --color-taylo-dark:      #2a0a1a;
   --gradient-taylo:        linear-gradient(135deg, #fc5c7d, #6a82fb, #fc5c7d);
+  --gradient-taylo-bg:     linear-gradient(160deg, #2a0a1a 0%, #1a1030 40%, #250a20 100%);
 
   /* — Palette: Kammara (saga) ————————————————— */
   --color-kammara-deep:    #0a0a2e;

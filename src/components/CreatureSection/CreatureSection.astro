@@ -1,0 +1,90 @@
+---
+interface Props {
+  gradient: string;
+  accentColor?: string;
+}
+
+const { gradient, accentColor } = Astro.props;
+---
+
+<section class="creature-section" data-parallax-section>
+  <div class="creature-section-bg" style={`background: ${gradient};`}></div>
+  {accentColor && (
+    <div class="creature-section-glow" style={`background: radial-gradient(ellipse at 30% 20%, ${accentColor}15 0%, transparent 70%);`}></div>
+  )}
+  <div class="creature-section-content">
+    <slot />
+  </div>
+</section>
+
+<style>
+  .creature-section {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .creature-section-bg {
+    position: absolute;
+    inset: -20% 0;
+    z-index: 0;
+    will-change: transform;
+  }
+
+  .creature-section-glow {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .creature-section-content {
+    position: relative;
+    z-index: 1;
+    padding: 2rem 0;
+  }
+
+  /* Override creature text colors for dark bg */
+  .creature-section :global(.creature-name) {
+    color: var(--color-white);
+  }
+
+  .creature-section :global(.creature-text) {
+    color: rgba(255,255,255,0.65);
+  }
+
+  .creature-section :global(.creature-divider) {
+    background: rgba(255,255,255,0.1);
+  }
+
+  .creature-section :global(.book-gallery-title) {
+    color: rgba(255,255,255,0.4);
+  }
+
+  .creature-section :global(.book-cover-label) {
+    background: rgba(0,0,0,0.3);
+    color: rgba(255,255,255,0.7);
+  }
+
+  .creature-section :global(.book-soon-label) {
+    color: var(--color-white);
+  }
+</style>
+
+<script>
+  // Parallax on creature section backgrounds
+  const sections = document.querySelectorAll<HTMLElement>('[data-parallax-section]');
+
+  function updateParallax() {
+    sections.forEach(section => {
+      const bg = section.querySelector<HTMLElement>('.creature-section-bg');
+      if (!bg) return;
+      const rect = section.getBoundingClientRect();
+      const speed = 0.15;
+      const offset = rect.top * speed;
+      bg.style.transform = `translateY(${offset}px)`;
+    });
+  }
+
+  window.addEventListener('scroll', updateParallax, { passive: true });
+  updateParallax();
+</script>
