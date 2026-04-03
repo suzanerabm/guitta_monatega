@@ -93,6 +93,45 @@ O script gera automaticamente o thumbnail em `_thumb/` (crop quadrado 800x800 co
 
 Apague a imagem original da pasta. Na proxima vez que rodar `python3 src/script/process_art.py`, o thumbnail orfao sera removido automaticamente.
 
+## Livros (BookGallery)
+
+Os livros ficam em `public/imgs/books/{criatura}/{livro-id}/`:
+
+```
+public/imgs/books/
+  napcat/adventures/       ← sem cover.jpg → mostra "soon"
+  zeco/primavera/
+    cover.jpg              ← capa do livro (mostrada no grid)
+    pages/                 ← paginas do livro (abertas no modal)
+      primaveracena_0_capa.png
+      primaveracena_1_intro.png
+      ...
+  taylo/star-hunter/       ← sem cover.jpg → mostra "soon"
+```
+
+Para ativar um livro, basta colocar `cover.jpg` na pasta dele. O site detecta automaticamente no build — se existe `cover.jpg` mostra a capa, senao mostra "soon".
+
+Para adicionar um livro novo, edite `src/page-content/BichittosContent.astro` e adicione no array de `BookDef` da criatura correspondente.
+
+## Cores por criatura
+
+Cada criatura tem cor e gradiente proprio nos tokens (`src/styles/tokens.css`):
+
+| Criatura | Cor | Gradiente | CSS var |
+|---|---|---|---|
+| NapCat | roxo/lilas | roxo → lilas → rosa | `--gradient-napcat` |
+| Zeco | laranja | laranja → laranja escuro | `--gradient-zeco` |
+| Taylo | rosa/azul | rosa → azul → rosa | `--gradient-taylo` |
+
+Use em qualquer lugar:
+```css
+background: var(--gradient-zeco);
+color: var(--color-zeco);
+border-color: var(--color-taylo);
+```
+
+Gradientes das secoes tambem estao disponiveis: `--gradient-bichittos`, `--gradient-kammara`, `--gradient-arte`.
+
 ## Script de processamento de imagens
 
 Setup (uma vez):
