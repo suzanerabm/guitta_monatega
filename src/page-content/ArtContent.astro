@@ -66,9 +66,27 @@ function getThumbs(sectionId: string): string[] {
   }
 }
 
+function getFullImages(sectionId: string, thumbs: string[]): string[] {
+  const origDir = join(process.cwd(), 'public', artBase, sectionId);
+  let origFiles: string[] = [];
+  try {
+    origFiles = readdirSync(origDir).filter((f: string) => /\.(jpg|jpeg|png|gif|webp)$/i.test(f));
+  } catch { /* no originals folder */ }
+
+  return thumbs.map((thumbPath) => {
+    const thumbFile = thumbPath.split('/').pop()!;
+    const baseName = thumbFile.replace(/\.[^.]+$/, '');
+    const match = origFiles.find((f) => f.replace(/\.[^.]+$/, '') === baseName);
+    if (match) return `/${artBase}/${sectionId}/${match}`;
+    return thumbPath;
+  });
+}
+
 const sectionThumbs: Record<string, string[]> = {};
+const sectionFullImages: Record<string, string[]> = {};
 for (const s of sections) {
   sectionThumbs[s.id] = getThumbs(s.id);
+  sectionFullImages[s.id] = getFullImages(s.id, sectionThumbs[s.id]);
 }
 ---
 
@@ -100,13 +118,13 @@ for (const s of sections) {
 
 <ScrollReveal selector="[data-art]" threshold={0.05} once={false} />
 
-<script define:vars={{ sections, sectionThumbs }}>
-  // Register galleries
+<script define:vars={{ sections, sectionFullImages }}>
+  // Register galleries with full-size images (not thumbs)
   document.addEventListener('DOMContentLoaded', () => {
     for (const s of sections) {
-      const thumbs = sectionThumbs[s.id] || [];
-      if (thumbs.length > 0) {
-        window.registerGallery(s.id, thumbs);
+      const images = sectionFullImages[s.id] || [];
+      if (images.length > 0) {
+        window.registerGallery(s.id, images);
       }
     }
   });
