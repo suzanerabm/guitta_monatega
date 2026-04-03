@@ -9,10 +9,10 @@ interface Props {
 const { locale, currentPath } = Astro.props;
 const altLocale = getAlternateLocale(locale as any);
 const altPath = getLocalizedPath(currentPath, altLocale);
-const altLabel = altLocale === 'en' ? 'EN' : 'PT';
+const currentLabel = locale === 'en' ? 'EN' : 'PT';
 ---
 
-<a href={altPath} class="lang-toggle">{altLabel}</a>
+<a href={altPath} class="lang-toggle">{currentLabel}</a>
 
 <style>
   .lang-toggle {
