@@ -11,62 +11,42 @@ npm run preview      # preview do build
 npm run storybook    # component library em localhost:6006
 ```
 
-### Script de processamento de imagens
-
-Gera thumbnails automaticamente e converte `.heic` para `.jpg`:
-
-```bash
-# setup (uma vez)
-python3 -m venv src/script/.venv
-source src/script/.venv/bin/activate
-pip install -r src/script/requirements.txt
-
-# rodar
-python3 src/script/process_art.py
-```
-
-O script:
-- Le todas as imagens em `public/imgs/art/{categoria}/`
-- Gera thumbnails (crop quadrado 800x800, moldura branca) em `_thumb/`
-- Converte `.heic` para `.jpg` na pasta raiz (e remove o `.heic`)
-- Remove thumbs orfaos cujo original foi apagado
-- So gera thumbs novos (pula os que ja existem)
-
 ## Estrutura
 
 ```
 src/
-  components/        # componentes reutilizaveis (cada um em sua pasta)
+  components/        # componentes reutilizaveis (cada um em sua pasta com .stories.ts)
   layouts/           # BaseLayout (header + breadcrumb + footer)
   page-content/      # conteudo das paginas (aceita locale prop)
   pages/             # rotas pt-BR (default)
   pages/en/          # rotas em ingles
   i18n/              # traducoes e helpers
-  styles/            # tokens.css + global.css
-  stories/           # stories de documentacao (design tokens)
+  styles/            # tokens.css (design tokens) + global.css
+  stories/           # stories de documentacao (Foundation/Design Tokens)
+  script/            # scripts de processamento de imagens
 public/
-  imgs/              # todas as imagens
+  imgs/              # todas as imagens do site
 ```
 
-## Como adicionar imagens na galeria de arte
+## Galeria de arte
 
-A galeria le as imagens automaticamente do filesystem. Basta colocar os arquivos nas pastas certas.
+A galeria le imagens automaticamente do filesystem. O grid mostra thumbnails, o modal abre a imagem original.
 
-### Adicionar imagem a uma categoria existente
+### Adicionar imagens a uma categoria existente
 
-1. Coloque a **imagem original** (`.jpg`, `.jpeg` ou `.png`) na pasta da categoria:
+1. Coloque as imagens originais na pasta da categoria:
    ```
    public/imgs/art/{categoria}/minha-foto.jpeg
    ```
 
-2. Coloque o **thumbnail** (`.jpg`) na subpasta `_thumb/` com o **mesmo nome base**:
-   ```
-   public/imgs/art/{categoria}/_thumb/minha-foto.jpg
+2. Rode o script de processamento para gerar os thumbnails:
+   ```bash
+   python3 src/script/process_art.py
    ```
 
-3. Rode `npm run dev` ou `npm run build` — a imagem aparece sozinha no grid.
+3. Rode `npm run dev` — as imagens aparecem no grid.
 
-O thumbnail aparece no grid da pagina. Ao clicar, o modal abre a imagem original em tamanho completo.
+O script gera automaticamente o thumbnail em `_thumb/` (crop quadrado 800x800 com moldura branca, ajustes de contraste/nitidez). Tambem converte `.heic` para `.jpg`.
 
 ### Categorias existentes
 
@@ -84,23 +64,21 @@ O thumbnail aparece no grid da pagina. Ao clicar, o modal abre a imagem original
 
 ### Criar uma categoria nova
 
-1. Crie as pastas:
-   ```
-   public/imgs/art/{nova-categoria}/
-   public/imgs/art/{nova-categoria}/_thumb/
-   ```
+1. Crie a pasta em `public/imgs/art/{nova-categoria}/` e coloque as imagens.
 
-2. Em `src/page-content/ArtContent.astro`, adicione o id no array `sectionIds`:
+2. Rode `python3 src/script/process_art.py` para gerar os thumbnails.
+
+3. Em `src/page-content/ArtContent.astro`, adicione o id no array `sectionIds`:
    ```typescript
    const sectionIds = ['black', 'grafite', ..., 'nova-categoria'] as const;
    ```
 
-3. No mesmo arquivo, adicione os metadados visuais em `sectionMeta`:
+4. No mesmo arquivo, adicione os metadados visuais em `sectionMeta`:
    ```typescript
    'nova-categoria': { bg: '#f0f0f0', titleColor: '#333', techColor: 'rgba(51,51,51,0.5)', large: false },
    ```
 
-4. Adicione as traducoes em `src/i18n/pt-BR.ts` e `src/i18n/en.ts`:
+5. Adicione as traducoes em `src/i18n/pt-BR.ts` e `src/i18n/en.ts`:
    ```typescript
    // pt-BR.ts → art.sections
    'nova-categoria': { title: 'Nome em Portugues', technique: 'Descricao da tecnica' },
@@ -109,6 +87,46 @@ O thumbnail aparece no grid da pagina. Ao clicar, o modal abre a imagem original
    'nova-categoria': { title: 'English Name', technique: 'Technique description' },
    ```
 
-5. Coloque as imagens + thumbs nas pastas criadas no passo 1.
-
 6. Rode `npm run build` — a nova categoria aparece automaticamente com filtro e galeria.
+
+### Remover imagens
+
+Apague a imagem original da pasta. Na proxima vez que rodar `python3 src/script/process_art.py`, o thumbnail orfao sera removido automaticamente.
+
+## Script de processamento de imagens
+
+Setup (uma vez):
+
+```bash
+python3 -m venv src/script/.venv
+source src/script/.venv/bin/activate
+pip install -r src/script/requirements.txt
+```
+
+Rodar:
+
+```bash
+source src/script/.venv/bin/activate
+python3 src/script/process_art.py
+```
+
+O que o script faz:
+- Gera thumbnails (crop quadrado 800x800, moldura branca, ajustes de cor/nitidez) em `_thumb/`
+- Converte `.heic` para `.jpg` na pasta raiz (remove o `.heic`)
+- Remove thumbs orfaos (cuja original foi apagada)
+- Incremental: so processa imagens novas (pula as que ja tem thumb)
+- Efeito bokeh automatico nas categorias `croche`, `needle` e `clay`
+
+## i18n
+
+Idioma padrao: pt-BR (sem prefixo na URL). Ingles em `/en/`.
+
+- Traducoes em `src/i18n/pt-BR.ts` e `src/i18n/en.ts`
+- Toggle de idioma no header de todas as paginas
+- Para adicionar texto traduzivel, edite os dois arquivos de traducao
+
+## Design tokens
+
+Cores, tipografia, espacamento e sombras centralizados em `src/styles/tokens.css`. Todos os componentes usam variaveis CSS em vez de cores hardcoded.
+
+Documentacao visual no Storybook: `npm run storybook` → Foundation / Design Tokens.
