@@ -13,7 +13,9 @@ const { name, bannerImage } = Astro.props;
     <slot />
   </div>
 </div>
-<div class="creature-banner" style={`background: url('${bannerImage}') center/cover no-repeat;`}></div>
+<div class="creature-banner" style={`background: url('${bannerImage}') center/cover no-repeat;`}>
+  <slot name="strip" />
+</div>
 
 <style>
   .creature {

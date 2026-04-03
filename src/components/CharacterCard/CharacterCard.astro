@@ -1,0 +1,77 @@
+---
+interface Props {
+  name: string;
+  image: string;
+  gradient?: string;
+}
+
+const { name, image, gradient = 'var(--gradient-bichittos)' } = Astro.props;
+---
+
+<div class="char-card">
+  <div class="char-card-glow" style={`background: ${gradient};`}></div>
+  <div class="char-card-img-wrap">
+    <img src={image} alt={name} class="char-card-img" />
+  </div>
+  <span class="char-card-name">{name}</span>
+</div>
+
+<style>
+  .char-card {
+    flex-shrink: 0;
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+  }
+
+  .char-card-glow {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 20px;
+    border-radius: 16px;
+    filter: blur(16px);
+    opacity: 0.4;
+    z-index: 0;
+  }
+
+  .char-card-img-wrap {
+    width: 120px;
+    height: 120px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--color-white);
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  }
+
+  .char-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    padding: 8px;
+  }
+
+  .char-card-name {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-white);
+    font-weight: var(--weight-regular);
+    z-index: 1;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.3);
+  }
+
+  @media (max-width: 768px) {
+    .char-card { width: 110px; }
+    .char-card-img-wrap { width: 96px; height: 96px; border-radius: 12px; }
+    .char-card-name { font-size: 0.6rem; }
+  }
+</style>
