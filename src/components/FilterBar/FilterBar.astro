@@ -22,16 +22,16 @@ const { filters, allLabel = 'Todos' } = Astro.props;
 <style>
   .filter-bar {
     position: sticky;
-    top: 62px;
-    z-index: 100;
+    top: 92px;
+    z-index: 98;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 0.5rem;
     padding: 0.8rem 1.5rem;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: var(--overlay-light);
+    backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--color-border-soft);
   }
 
