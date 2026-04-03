@@ -19,12 +19,12 @@ interface Props {
 }
 
 const { characters, gradient = 'var(--gradient-bichittos)', side = 'right', speed = 20 } = Astro.props;
-// Duplicar os cards para criar loop seamless
 const allCards = [...characters, ...characters];
+const uid = `strip-${Math.random().toString(36).slice(2, 8)}`;
 ---
 
 <div class={`char-strip char-strip-${side}`}>
-  <div class="char-strip-track" style={`--strip-speed: ${speed}s; --strip-items: ${characters.length};`}>
+  <div class="char-strip-track" data-strip-track={uid} data-speed={speed}>
     {allCards.map((c) => (
       <CharacterCard name={c.name} image={c.image} gradient={gradient} />
     ))}
@@ -52,16 +52,10 @@ const allCards = [...characters, ...characters];
     gap: 1rem;
     padding: 1rem 0;
     width: max-content;
-    animation: stripScroll var(--strip-speed) linear infinite;
   }
 
   .char-strip:hover .char-strip-track {
     animation-play-state: paused;
-  }
-
-  @keyframes stripScroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-50% - 0.5rem)); }
   }
 
   @media (max-width: 768px) {
@@ -76,3 +70,28 @@ const allCards = [...characters, ...characters];
     }
   }
 </style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-strip-track]').forEach(track => {
+    const speed = Number(track.dataset.speed) || 20;
+    const halfWidth = track.scrollWidth / 2;
+
+    const keyframes = [
+      { transform: 'translateX(0)' },
+      { transform: `translateX(-${halfWidth}px)` },
+    ];
+
+    track.animate(keyframes, {
+      duration: speed * 1000,
+      iterations: Infinity,
+      easing: 'linear',
+    });
+
+    track.closest('.char-strip')?.addEventListener('mouseenter', () => {
+      track.getAnimations().forEach(a => a.pause());
+    });
+    track.closest('.char-strip')?.addEventListener('mouseleave', () => {
+      track.getAnimations().forEach(a => a.play());
+    });
+  });
+</script>

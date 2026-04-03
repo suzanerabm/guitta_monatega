@@ -16,6 +16,27 @@ const t = useTranslations(locale);
 
 const BOOKS_BASE = join(process.cwd(), 'public', 'imgs', 'books');
 const BOOKS_URL = '/imgs/books';
+const CHARS_BASE = join(process.cwd(), 'public', 'imgs', 'characters');
+const CHARS_URL = '/imgs/characters';
+
+function getCharacters(creature: string): { name: string; image: string }[] {
+  const dir = join(CHARS_BASE, creature);
+  try {
+    return readdirSync(dir)
+      .filter((f: string) => /\.(png|jpg|jpeg|gif|webp|apng)$/i.test(f))
+      .sort()
+      .map((f: string) => ({
+        name: f.replace(/\.[^.]+$/, '').replace(/-/g, ' '),
+        image: `${CHARS_URL}/${creature}/${f}`,
+      }));
+  } catch {
+    return [];
+  }
+}
+
+const napcatChars = getCharacters('napcat');
+const zecoChars = getCharacters('zeco');
+const tayloChars = getCharacters('taylo');
 
 interface BookDef {
   creature: string;
@@ -104,12 +125,7 @@ for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs]) {
 <CreatureSection gradient="var(--gradient-napcat-bg)" accentColor="var(--color-napcat-1)">
   <CreatureCard name={t.bichittos.napcat.name} bannerImage="/imgs/banners/banner_napcat.jpg">
     <p>{t.bichittos.napcat.text}</p>
-    <CharacterStrip slot="strip" gradient="var(--gradient-napcat)" side="left" characters={[
-      { name: 'NapCat', image: '/imgs/Napcat/napcatDefault.png' },
-      { name: 'Violeta', image: '/imgs/Napcat/violeta_default.png' },
-      { name: 'NapCat', image: '/imgs/Napcat/napcat_dormindo.png' },
-      { name: 'NapCat', image: '/imgs/Napcat/napcat_bebendo.png' },
-    ]} />
+    <CharacterStrip slot="strip" gradient="var(--gradient-napcat)" side="left" characters={napcatChars} />
   </CreatureCard>
   <BookGallery title={t.bichittos.napcatBooksTitle} books={napcatBooks} soonLabel={t.common.soon} />
 </CreatureSection>
@@ -118,13 +134,7 @@ for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs]) {
 <CreatureSection gradient="var(--gradient-zeco-bg)" accentColor="var(--color-zeco-1)">
   <CreatureCard name={t.bichittos.zeco.name} bannerImage="/imgs/banners/banner_zeco.jpg">
     <p>{t.bichittos.zeco.text}</p>
-    <CharacterStrip slot="strip" gradient="var(--gradient-zeco)" side="left" characters={[
-      { name: 'Zeco', image: '/imgs/Zeco/Zeco/_imgs/Zeco_frente_sorrindo.png' },
-      { name: 'Ninha', image: '/imgs/Zeco/Ninha/_imgs/ninha_default.png' },
-      { name: 'Rui', image: '/imgs/Zeco/RuiMerengue/_imgs/ruiMerengue_default.png' },
-      { name: 'Zeco', image: '/imgs/Zeco/Zeco/_imgs/zeco_picole.png' },
-      { name: 'Ninha', image: '/imgs/Zeco/Ninha/_imgs/ninha_praia1.png' },
-    ]} />
+    <CharacterStrip slot="strip" gradient="var(--gradient-zeco)" side="left" characters={zecoChars} />
   </CreatureCard>
   <BookGallery title={t.bichittos.zecoBooksTitle} books={zecoBooks} />
 </CreatureSection>
@@ -133,12 +143,7 @@ for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs]) {
 <CreatureSection gradient="var(--gradient-taylo-bg)" accentColor="var(--color-taylo-1)">
   <CreatureCard name={t.bichittos.taylo.name} bannerImage="/imgs/banners/banner_taylo.jpg">
     {t.bichittos.taylo.text.map((p) => <p>{p}</p>)}
-    <CharacterStrip slot="strip" gradient="var(--gradient-taylo)" side="right" characters={[
-      { name: 'Taylo', image: '/imgs/Taylo/Taylo/Taylo.png' },
-      { name: 'Pitu', image: '/imgs/Taylo/Pitu/_imgs/pitu_normal_1.png' },
-      { name: 'Squizo', image: '/imgs/Taylo/Squizo/_imgs/squizo1.png' },
-      { name: 'Candy', image: '/imgs/Taylo/Candy/candy_fairy.png' },
-    ]} />
+    <CharacterStrip slot="strip" gradient="var(--gradient-taylo)" side="right" characters={tayloChars} />
   </CreatureCard>
   <BookGallery title={t.bichittos.tayloBooksTitle} books={tayloBooks} soonLabel={t.common.soon} />
 </CreatureSection>
