@@ -65,9 +65,9 @@
   --color-zeco-1:          #ff8c42;   /* primaria — laranja */
   --color-zeco-2:          #ff6b35;   /* secundaria — laranja forte */
   --color-zeco-3:          #ffa751;   /* terciaria — laranja claro */
-  --color-zeco-dark:       #2a1a0a;
+  --color-zeco-dark:       #1a0e02;
   --gradient-zeco:         linear-gradient(135deg, var(--color-zeco-1), var(--color-zeco-2), var(--color-zeco-3));
-  --gradient-zeco-bg:      linear-gradient(160deg, #2a1a0a 0%, #3a2510 40%, #2e1c08 100%);
+  --gradient-zeco-bg:      linear-gradient(160deg, #2a1505 0%, #3a2008 40%, #2e1805 100%);
 
   /* — Palette: Taylo —————————————————————————— */
   --color-taylo-1:         #fc5c7d;   /* primaria — rosa */
