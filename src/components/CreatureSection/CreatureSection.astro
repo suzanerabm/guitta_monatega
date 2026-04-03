@@ -25,7 +25,7 @@ const { gradient, accentColor } = Astro.props;
 
   .creature-section-bg {
     position: absolute;
-    inset: -20% 0;
+    inset: -40% 0;
     z-index: 0;
     will-change: transform;
   }
@@ -71,20 +71,35 @@ const { gradient, accentColor } = Astro.props;
 </style>
 
 <script>
-  // Parallax on creature section backgrounds
-  const sections = document.querySelectorAll<HTMLElement>('[data-parallax-section]');
+  function initParallax() {
+    const sections = document.querySelectorAll<HTMLElement>('[data-parallax-section]');
+    let ticking = false;
 
-  function updateParallax() {
-    sections.forEach(section => {
-      const bg = section.querySelector<HTMLElement>('.creature-section-bg');
-      if (!bg) return;
-      const rect = section.getBoundingClientRect();
-      const speed = 0.15;
-      const offset = rect.top * speed;
-      bg.style.transform = `translateY(${offset}px)`;
-    });
+    function update() {
+      const vh = window.innerHeight;
+      sections.forEach(section => {
+        const bg = section.querySelector<HTMLElement>('.creature-section-bg');
+        if (!bg) return;
+        const rect = section.getBoundingClientRect();
+        // Normaliza: 0 quando a secao entra por baixo, 1 quando sai por cima
+        const progress = (vh - rect.top) / (vh + rect.height);
+        // Move o fundo de -30% a +30% baseado no progresso
+        const offset = (progress - 0.5) * 60;
+        bg.style.transform = `translateY(${offset}%)`;
+      });
+      ticking = false;
+    }
+
+    function onScroll() {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    update();
   }
 
-  window.addEventListener('scroll', updateParallax, { passive: true });
-  updateParallax();
+  initParallax();
 </script>
