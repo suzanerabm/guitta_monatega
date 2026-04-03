@@ -5,25 +5,80 @@ import BookGallery from '../components/BookGallery/BookGallery.astro';
 import Modal from '../components/Modal/Modal.astro';
 import ScrollReveal from '../components/ScrollReveal/ScrollReveal.astro';
 import { useTranslations } from '../i18n/translations';
+import { existsSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
 
 interface Props { locale?: string; }
 const { locale = 'pt-BR' } = Astro.props;
 const t = useTranslations(locale);
 
-const napcatBooks = [
-  { id: 'napcat-adventures', alt: t.bichittos.napcatBooks.adventures, label: t.bichittos.napcatBooks.adventures, soon: true },
-];
+const BOOKS_BASE = join(process.cwd(), 'public', 'imgs', 'books');
+const BOOKS_URL = '/imgs/books';
 
-const zecoBooks = [
-  { id: 'primavera', image: '/imgs/banners/cover_primavera.jpg', alt: `Zeco - ${t.bichittos.zecoBookSeasons.primavera}`, label: t.bichittos.zecoBookSeasons.primavera },
-  { id: 'verao', image: '/imgs/banners/cover_verao.jpg', alt: `Zeco - ${t.bichittos.zecoBookSeasons.verao}`, label: t.bichittos.zecoBookSeasons.verao },
-  { id: 'outono', image: '/imgs/banners/cover_outono.jpg', alt: `Zeco - ${t.bichittos.zecoBookSeasons.outono}`, label: t.bichittos.zecoBookSeasons.outono },
-  { id: 'inverno', image: '/imgs/banners/cover_inverno.jpg', alt: `Zeco - ${t.bichittos.zecoBookSeasons.inverno}`, label: t.bichittos.zecoBookSeasons.inverno },
-];
+interface BookDef {
+  creature: string;
+  id: string;
+  label: string;
+}
 
-const tayloBooks = [
-  { id: 'star-hunter', alt: t.bichittos.tayloBooks.starHunter, label: t.bichittos.tayloBooks.starHunter, soon: true },
+function buildBook(def: BookDef) {
+  const coverPath = join(BOOKS_BASE, def.creature, def.id, 'cover.jpg');
+  const hasCover = existsSync(coverPath);
+  return {
+    id: `${def.creature}-${def.id}`,
+    image: hasCover ? `${BOOKS_URL}/${def.creature}/${def.id}/cover.jpg` : undefined,
+    alt: def.label,
+    label: def.label,
+    soon: !hasCover,
+  };
+}
+
+function getBookPages(creature: string, bookId: string): string[] {
+  const pagesDir = join(BOOKS_BASE, creature, bookId, 'pages');
+  try {
+    return readdirSync(pagesDir)
+      .filter((f: string) => /\.(jpg|jpeg|png|webp)$/i.test(f))
+      .sort()
+      .map((f: string) => `${BOOKS_URL}/${creature}/${bookId}/pages/${f}`);
+  } catch {
+    return [];
+  }
+}
+
+// NapCat books
+const napcatBookDefs: BookDef[] = [
+  { creature: 'napcat', id: 'adventures', label: t.bichittos.napcatBooks.adventures },
 ];
+const napcatBooks = napcatBookDefs.map(buildBook);
+
+// Zeco books
+const zecoBookDefs: BookDef[] = [
+  { creature: 'zeco', id: 'primavera', label: t.bichittos.zecoBookSeasons.primavera },
+  { creature: 'zeco', id: 'verao', label: t.bichittos.zecoBookSeasons.verao },
+  { creature: 'zeco', id: 'outono', label: t.bichittos.zecoBookSeasons.outono },
+  { creature: 'zeco', id: 'inverno', label: t.bichittos.zecoBookSeasons.inverno },
+];
+const zecoBooks = zecoBookDefs.map(buildBook);
+
+// Taylo books
+const tayloBookDefs: BookDef[] = [
+  { creature: 'taylo', id: 'star-hunter', label: t.bichittos.tayloBooks.starHunter },
+];
+const tayloBooks = tayloBookDefs.map(buildBook);
+
+// Build gallery data for client-side (book pages for modal)
+const bookGalleries: Record<string, { title: string; pages: string[] }> = {};
+for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs]) {
+  for (const def of defs) {
+    const pages = getBookPages(def.creature, def.id);
+    if (pages.length > 0) {
+      bookGalleries[`${def.creature}-${def.id}`] = {
+        title: def.label,
+        pages,
+      };
+    }
+  }
+}
 ---
 
 <!-- HERO -->
@@ -54,7 +109,6 @@ const tayloBooks = [
   <p>{t.bichittos.zeco.text}</p>
 </CreatureCard>
 
-<!-- ZECO BOOKS -->
 <BookGallery title={t.bichittos.zecoBooksTitle} books={zecoBooks} />
 
 <div class="creature-divider"></div>
@@ -91,7 +145,7 @@ const tayloBooks = [
   .creature-divider {
     width: 40px;
     height: 1px;
-    background: #e0e0e0;
+    background: var(--color-border);
     margin: 4rem auto;
   }
 
@@ -101,36 +155,27 @@ const tayloBooks = [
   }
 </style>
 
-<script>
-  // Book data
-  const books: Record<string, { title: string; pages: string[] }> = {
-    primavera: {
-      title: 'Zeco na Primavera',
-      pages: Array.from({ length: 15 }, (_, i) => `/imgs/Zeco/Books/primavera/_png/primaveracena_${i}_${['capa','intro','acordar','limpeza','flores','abelha','alvoroco','gralhaazul','colher','cozinhar','compota','piquenique','ipe','pordosol','capa_fim'][i]}.png`)
-    },
-    verao: {
-      title: 'Zeco no Verao',
-      pages: Array.from({ length: 16 }, (_, i) => `/imgs/Zeco/Books/verao/_png/veraocena_${i}_${['capa','intro','nadando','rio','secando','praia','refrescando','pescando','chovendo','picole','carnaval','soneca','brincar','chule','limpar','fim'][i]}.png`)
-    },
-    outono: {
-      title: 'Zeco no Outono',
-      pages: Array.from({ length: 15 }, (_, i) => `/imgs/Zeco/Books/outono/_png/outonocena_${i}_${['capa','intro','cedinho','armario','lavar','bolinho','cha','passear','tv','varrer','gafanhoto','jantar','lareira','chocolate','capa_fim'][i]}.png`)
-    },
-    inverno: {
-      title: 'Zeco no Inverno',
-      pages: Array.from({ length: 15 }, (_, i) => `/imgs/Zeco/Books/inverno/_png/invernocena_${i}_${['capa','intro','acordar','embacada','brincar','pintura','festa','licao','cola','jogando','baralho','gibi','jantar','nanar','capa_fim'][i]}.png`)
+<script is:inline define:vars={{ bookGalleries }}>
+  // Register book galleries for modal
+  document.addEventListener('DOMContentLoaded', () => {
+    for (const [id, data] of Object.entries(bookGalleries)) {
+      window.registerGallery('book_' + id, data.pages);
     }
-  };
+  });
+</script>
 
-  // Register galleries
-  Object.keys(books).forEach(k => (window as any).registerGallery('book_' + k, books[k].pages));
-
+<script>
   // Book click handlers
   document.querySelectorAll<HTMLElement>('[data-book]').forEach(el => {
     el.addEventListener('click', () => {
-      const season = el.dataset.book!;
-      const book = books[season];
-      (window as any).openGallery('book_' + season, 0, book.title, 'Livro ilustrado');
+      const bookId = el.dataset.book!;
+      const galleries = (window as any).__bookGalleries;
+      if (!galleries || !galleries[bookId]) return;
+      (window as any).openGallery('book_' + bookId, 0, galleries[bookId].title, 'Livro ilustrado');
     });
   });
+</script>
+
+<script is:inline define:vars={{ bookGalleries }}>
+  window.__bookGalleries = bookGalleries;
 </script>
