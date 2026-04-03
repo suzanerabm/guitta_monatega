@@ -1,13 +1,8 @@
 ---
 /**
- * CharacterStrip — galeria horizontal de CharacterCards
+ * CharacterStrip — galeria horizontal animada de CharacterCards
  * Fica sobreposta no banner, ocupando 50% (lado direito ou esquerdo).
- * Os cards "emergem" do banner com overflow hidden nas pontas.
- *
- * Props:
- *   characters: array de { name, image }
- *   gradient: CSS gradient para o glow dos cards
- *   side: 'left' | 'right' — qual lado do banner a strip ocupa
+ * Os cards rolam automaticamente em loop infinito.
  */
 import CharacterCard from '../CharacterCard/CharacterCard.astro';
 
@@ -20,14 +15,17 @@ interface Props {
   characters: Character[];
   gradient?: string;
   side?: 'left' | 'right';
+  speed?: number;
 }
 
-const { characters, gradient = 'var(--gradient-bichittos)', side = 'right' } = Astro.props;
+const { characters, gradient = 'var(--gradient-bichittos)', side = 'right', speed = 20 } = Astro.props;
+// Duplicar os cards para criar loop seamless
+const allCards = [...characters, ...characters];
 ---
 
 <div class={`char-strip char-strip-${side}`}>
-  <div class="char-strip-track">
-    {characters.map((c) => (
+  <div class="char-strip-track" style={`--strip-speed: ${speed}s; --strip-items: ${characters.length};`}>
+    {allCards.map((c) => (
       <CharacterCard name={c.name} image={c.image} gradient={gradient} />
     ))}
   </div>
@@ -42,35 +40,28 @@ const { characters, gradient = 'var(--gradient-bichittos)', side = 'right' } = A
     height: auto;
     z-index: 2;
     overflow: hidden;
-    /* Mascara de fade nas pontas */
     mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
   }
 
-  .char-strip-right {
-    right: 0;
-  }
-
-  .char-strip-left {
-    left: 0;
-  }
+  .char-strip-right { right: 0; }
+  .char-strip-left { left: 0; }
 
   .char-strip-track {
     display: flex;
     gap: 1rem;
-    padding: 1rem 2rem;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    scroll-snap-type: x mandatory;
+    padding: 1rem 0;
+    width: max-content;
+    animation: stripScroll var(--strip-speed) linear infinite;
   }
 
-  .char-strip-track::-webkit-scrollbar {
-    display: none;
+  .char-strip:hover .char-strip-track {
+    animation-play-state: paused;
   }
 
-  .char-strip-track > :global(.char-card) {
-    scroll-snap-align: center;
+  @keyframes stripScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 0.5rem)); }
   }
 
   @media (max-width: 768px) {
@@ -82,10 +73,6 @@ const { characters, gradient = 'var(--gradient-bichittos)', side = 'right' } = A
       margin-top: -3rem;
       mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
       -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
-    }
-
-    .char-strip-track {
-      padding: 1rem;
     }
   }
 </style>
