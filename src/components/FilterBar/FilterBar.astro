@@ -2,6 +2,7 @@
 interface FilterItem {
   id: string;
   label: string;
+  color?: string;
 }
 
 interface Props {
@@ -16,7 +17,7 @@ const { filters, allLabel = 'Todos', target = 'art' } = Astro.props;
 <nav class="filter-bar" data-filter-bar={target}>
   <button class="filter-btn active" data-filter="all">{allLabel}</button>
   {filters.map((f) => (
-    <button class="filter-btn" data-filter={f.id}>{f.label}</button>
+    <button class="filter-btn" data-filter={f.id} data-color={f.color || ''}>{f.label}</button>
   ))}
 </nav>
 
@@ -26,7 +27,6 @@ const { filters, allLabel = 'Todos', target = 'art' } = Astro.props;
     top: 92px;
     z-index: 98;
     display: flex;
-    transition: top 0.3s ease;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -35,6 +35,7 @@ const { filters, allLabel = 'Todos', target = 'art' } = Astro.props;
     background: var(--overlay-light);
     backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--color-border-soft);
+    transition: top 0.3s ease;
   }
 
   .filter-btn {
@@ -82,8 +83,21 @@ const { filters, allLabel = 'Todos', target = 'art' } = Astro.props;
 
     btns.forEach(btn => {
       btn.addEventListener('click', () => {
-        btns.forEach(b => b.classList.remove('active'));
+        btns.forEach(b => {
+          b.classList.remove('active');
+          b.style.background = '';
+          b.style.borderColor = '';
+          b.style.color = '';
+        });
         btn.classList.add('active');
+
+        const color = btn.dataset.color;
+        if (color) {
+          btn.style.background = color;
+          btn.style.borderColor = color;
+          btn.style.color = '#fff';
+        }
+
         const filter = btn.dataset.filter || 'all';
         const sections = document.querySelectorAll<HTMLElement>(`[data-section-${target}]`);
         sections.forEach(el => {
