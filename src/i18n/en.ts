@@ -126,10 +126,10 @@ export default {
     title: 'About',
     paragraphs: [
       'Guitta Monatega is a designer, illustrator, and creator of original universes.',
-'Since childhood, she has been building characters and stories that exist between the cute and the unexpected — where imperfection becomes form, identity, and presence. NapCat, Zeco, Taylo, the bichittos, and their friends were born in sketchbooks and have grown into books, animations, and miniature sculptures.',
-'Kammara is her most recent project — an illustrated saga that connects worlds, systems, and creatures in an ever-expanding narrative.',
-'Her work moves between traditional and digital techniques: ink, graphite, stippling, crochet, needle felting, sculpting, and digital illustration. Each piece is shaped with time, repetition, and care, preserving the essence of handmade creation.',
-'Her work explores the meeting point between form, affection, and construction — where every creation carries a memory, a gesture, and its own sense of time.'
+      'Since childhood, she has been building characters and stories that exist between the cute and the unexpected — where imperfection becomes form, identity, and presence. NapCat, Zeco, Taylo, the bichittos, and their friends were born in sketchbooks and have grown into books, animations, and miniature sculptures.',
+      'Kammara is her most recent project — an illustrated saga that connects worlds, systems, and creatures in an ever-expanding narrative.',
+      'Her work moves between traditional and digital techniques: ink, graphite, stippling, crochet, needle felting, sculpting, and digital illustration. Each piece is shaped with time, repetition, and care, preserving the essence of handmade creation.',
+      'Her work explores the meeting point between form, affection, and construction — where every creation carries a memory, a gesture, and its own sense of time.'
     ],
     universesLabel: 'Universes',
     contactLabel: 'Contact',
@@ -188,8 +188,10 @@ export default {
         { tag: 'star-hunter', title: 'The Star Hunter' },
       ],
       text: [
-        'A bear with bigger ears than the others — and that makes him special. Loves telling stories. He inherited from his ancestors the power of the stars: once a year, on the magic cliff, he hunts the ones that fall from the sky.',
-        'In the forest, everyone is his friend — Pitu, Squizo, Candy and the others. Together, they form the Taylo universe.',
+        'Taylo is a bear with rabbit ears. He is the Guardian of the Stars — a gentle protector who collects and cares for the stars of every being.',
+        'He doesn\'t tell the dreams that belong to others; he simply keeps them, until they shine again.',
+        'Every night, his friends gather around the bonfire in the Blue Forest to hear his stories — especially the ones about his grandfather, the first to find this forest of light.',
+        'Taylo was born for this: to remind the world that, even when a star goes out, its light never truly disappears.',
       ],
       panel: {
         story: [
@@ -239,15 +241,15 @@ export default {
       { tag: 'Coloring Book', title: 'Coloring Book' },
     ],
     sections: {
-      black: { title: 'White on Black', technique: 'White ink on black paper' },
-      grafite: { title: 'Graphite', technique: 'Shading and volume studies' },
-      doodle: { title: 'Doodle', technique: 'Pencil sketches and doodles' },
-      digital: { title: 'Digital Art', technique: 'Digital illustration' },
-      collections: { title: 'Collections', technique: 'Themed series and collections' },
-      fimo: { title: 'Pointillism', technique: 'Pen pointillism and mosaic' },
-      needle: { title: 'Needle Felting', technique: 'Miniature sculptures with needle and wool' },
-      clay: { title: 'Clay', technique: 'Clay and dough modeling' },
-      croche: { title: 'Crochet', technique: 'Amigurumi and crochet pieces' },
+      black: { title: 'White on Black', technique: 'White ink on black paper.' },
+      grafite: { title: 'Graphite', technique: 'Shading and volume studies.' },
+      doodle: { title: 'Doodle', technique: 'Pencil and ink sketches and doodles.' },
+      digital: { title: 'Digital Art', technique: 'Digital illustration.' },
+      collections: { title: 'Collections', technique: 'Themed series and collections.' },
+      fimo: { title: 'Pointillism', technique: 'Stippling and mini-fimo collage.' },
+      needle: { title: 'Needle Felting', technique: 'Miniature sculptures with needle and wool.' },
+      clay: { title: 'Clay', technique: 'Biscuit clay modeling.' },
+      croche: { title: 'Crochet', technique: 'Amigurumi and crochet pieces.' },
     },
   },
 } as const;

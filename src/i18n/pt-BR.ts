@@ -125,10 +125,11 @@ export default {
     pageTitle: 'Sobre — Guitta Monatega',
     title: 'Sobre',
     paragraphs: [
-      'Guitta Monatega é designer, ilustradora e criadora de universos.',
-      'Desde sua infância, cria personagens e histórias que vivem entre o fofo e o absurdo. NapCat, Zeco, Taylo e seus amigos nasceram de cadernos de desenho e viraram livros, animações e esculturas em miniatura.',
-      'Kammara é o projeto mais recente — uma saga ilustrada que conecta mundos, sistemas e criaturas numa narrativa que cresce a cada capítulo.',
-      'O trabalho mistura técnicas: nanquim, grafite, pontilhismo, crochê, needle felting, modelagem e ilustração digital. Tudo feito à mão, com paciência.',
+      'Guitta Monatega é designer, ilustradora e criadora de universos autorais.',
+      'Desde a infância, constrói personagens e histórias que habitam um espaço entre o fofo e o inusitado — onde o imperfeito ganha forma, identidade e presença. NapCat, Zeco, Taylo, os bichittos e seus amigos nasceram de cadernos de desenho e ganharam forma em livros, animações e esculturas em miniatura.',
+      'Kammara é seu projeto mais recente — uma saga ilustrada que conecta mundos, sistemas e criaturas em uma narrativa em constante expansão.',
+      'Seu trabalho transita entre técnicas tradicionais e digitais: nanquim, grafite, pontilhismo, crochê, needle felting, modelagem e ilustração digital. Cada peça é construída com tempo, repetição e cuidado, preservando a essência do feito à mão.',
+      'Seu trabalho investiga o encontro entre forma, afeto e construção — onde cada criação carrega uma memória, um gesto e um tempo próprio.'
     ],
     universesLabel: 'Universos',
     contactLabel: 'Contato',
@@ -142,7 +143,7 @@ export default {
       name: 'NapCat',
       text: 'Cinza, macio, com a ponta do rabo azul — como se tivesse mergulhado num balde de tinta. Calmo, charmoso, sempre de bom humor. O que ele mais gosta é tirar soneca. Tem uma irmã gêmea, a Violeta.',
       books: [
-        { tag: 'adventures', title: 'NapCat Adventures' },
+        { tag: 'adventures', title: 'Aventuras do NapCat' },
       ],
       panel: {
         napcat: [
@@ -187,8 +188,10 @@ export default {
         { tag: 'star-hunter', title: 'O Caçador de Estrelas' },
       ],
       text: [
-        'Um urso com orelhas maiores que os outros — e isso o torna especial. Adora contar histórias. Herdou dos ancestrais o poder das estrelas: uma vez por ano, no penhasco mágico, ele caça as que caem do céu.',
-        'Na floresta, todo mundo é amigo dele — Pitu, Squizo, Candy e os outros. Juntos, formam o universo Taylo.',
+        'Taylo é um urso com orelhas de coelho. Ele é o Guardião das Estrelas — um protetor gentil que coleta e cuida das estrelas de cada ser.',
+        'Ele não conta os sonhos que pertencem aos outros; apenas os guarda, até que voltem a brilhar.',
+        'Todas as noites, seus amigos se reúnem ao redor da fogueira da Floresta Azul para ouvir suas histórias — principalmente as que falam de seu avô, o primeiro a encontrar essa floresta de luz.',
+        'Taylo nasceu para isso: para lembrar ao mundo que, mesmo quando uma estrela se apaga, sua luz nunca desaparece de verdade.',
       ],
       panel: {
         story: [
@@ -235,18 +238,18 @@ export default {
     filterAll: 'Todos',
     booksTitle: 'Livros de Arte',
     books: [
-      { tag: 'Coloring Book', title: 'Coloring Book' },
+      { tag: 'Coloring Book', title: 'Livro para Colorir'},
     ],
     sections: {
       black: { title: 'Branco no Preto', technique: 'Nanquim branco sobre papel preto' },
-      grafite: { title: 'Grafite', technique: 'Estudos com sombreamento e volume' },
-      doodle: { title: 'Doodle', technique: 'Sketches e rabiscos a lápis' },
-      digital: { title: 'Arte Digital', technique: 'Ilustração digital' },
-      collections: { title: 'Coleções', technique: 'Séries e coleções temáticas' },
-      fimo: { title: 'Pontilhismo', technique: 'Pontilhismo e mosaico com caneta' },
-      needle: { title: 'Needle Felting', technique: 'Esculturas em miniatura com agulha e lã' },
-      clay: { title: 'Clay', technique: 'Modelagem em argila e massa' },
-      croche: { title: 'Crochê', technique: 'Amigurumi e peças em crochê' },
+      grafite: { title: 'Grafite', technique: 'Estudos com sombreamento e volume.' },
+      doodle: { title: 'Doodle', technique: 'Sketches e rabiscos a lápis ou nankin.' },
+      digital: { title: 'Arte Digital', technique: 'Ilustração digital.' },
+      collections: { title: 'Coleções', technique: 'Séries e coleções temáticas.' },
+      fimo: { title: 'Pontilhismo', technique: 'Pontilhismo e colagem de mini-fimos.' },
+      needle: { title: 'Needle Felting', technique: 'Esculturas em miniatura com agulha e lã.' },
+      clay: { title: 'Clay', technique: 'Modelagem em massinha de biscuit.' },
+      croche: { title: 'Crochê', technique: 'Amigurumi e peças em crochê.' },
     },
   },
 } as const;
