@@ -137,7 +137,7 @@ export default {
     bookIllustrated: 'Livro ilustrado',
     miscelania: {
       name: 'Miscelânia',
-      text: 'Criaturas avulsas, experimentos e personagens que ainda não tem sua própria história.',
+      text: 'Criaturas avulsas, experimentos e personagens que tem sua própria história.',
       panel: {
         story: [
           'Nem todo personagem nasce sabendo quem é. Alguns aparecem num rabisco de caderno, outros surgem de um sonho esquecido.',

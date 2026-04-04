@@ -137,7 +137,7 @@ export default {
     bookIllustrated: 'Illustrated book',
     miscelania: {
       name: 'Miscelania',
-      text: 'Loose creatures, experiments and characters that don\'t have their own story yet.',
+      text: 'Loose creatures, experiments and characters that have their own story.',
       panel: {
         story: [
           'Not every character is born knowing who they are. Some appear in a notebook doodle, others emerge from a forgotten dream.',
