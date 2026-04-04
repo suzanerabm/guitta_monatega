@@ -167,9 +167,27 @@ for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs, miscBookDefs]) 
 
 <!-- ZECO -->
 <CreatureSection gradient="var(--gradient-zeco-bg)" accentColor="var(--color-zeco-1)">
-  <CreatureCard name={t.bichittos.zeco.name} bannerImage="/imgs/banners/banner_zeco.jpg" color1="#f7b87f" color2="#f9e3cf" color3="#ff6b35">
+  <CreatureCard name={t.bichittos.zeco.name} color1="#f7b87f" color2="#f9e3cf">
     <p>{t.bichittos.zeco.text}</p>
-    <CharacterStrip slot="strip" gradient="var(--gradient-zeco)" side="left" characters={zecoChars} />
+    <DSMainCard
+      slot="banner"
+      gradient="var(--gradient-zeco)"
+      height="1400px"
+      maxHeight="80vh"
+      titleColor="#f7b87f"
+      textColor="#f9e3cf"
+      characters={[
+        { image: '/imgs/characters/zeco/zeco.png', x: 55, y: 0, size: 360, zIndex: 3 },
+        { image: '/imgs/characters/zeco/ninha.png', x: 80, y: 5, size: 200, zIndex: 2 },
+        { image: '/imgs/characters/zeco/RuiMerengue.png', x: 90, y: 0, size: 280, zIndex: 1 },
+      ]}
+    >
+      <Fragment slot="text">
+        <h3>{t.bichittos.zeco.name} & Amigos</h3>
+        {t.bichittos.zeco.panel.story.map((p) => <p>{p}</p>)}
+      </Fragment>
+      <CharacterStrip gradient="var(--gradient-zeco)" characters={zecoChars} />
+    </DSMainCard>
   </CreatureCard>
   <BookGallery title={t.bichittos.zecoBooksTitle} books={zecoBooks} />
 </CreatureSection>

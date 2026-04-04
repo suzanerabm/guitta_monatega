@@ -87,6 +87,18 @@ export default {
     zeco: {
       name: 'Zeco',
       text: 'Round, orange, with plaid socks. Makes friends with anyone. Loves popsicles, is afraid of the fridge and cries about everything — but the next minute he is laughing again.',
+      panel: {
+        story: [
+          'Zeco woke up hungry. This was not news — Zeco always woke up hungry.',
+          'He went down the stairs with his plaid socks dragging on the floor and headed straight to the kitchen. Opened the fridge. Closed it. Opened it again. Nothing changed.',
+          '"Ninha!" he shouted. "Where\'s my popsicle?"',
+          'Ninha flew in through the window, feathers still wet from her river bath. "I ate it", she said simply.',
+          'Zeco\'s eyes went wide. His lip trembled. His cheeks puffed up. And it came — the most scandalous cry that kitchen had ever heard.',
+          'Rui Merengue appeared at the door wearing a chef\'s apron. "Stop the drama, Zeco. I made cake." And he placed on the table the most beautiful and crooked cake in the world.',
+          'Zeco stopped crying instantly. Smiled. Hugged Rui so hard he almost knocked the cake over. "You\'re the best friend in the world!"',
+          '"I know", said Rui, adjusting his apron. Ninha rolled her eyes. And the three sat down to eat the tastiest crooked cake in the forest.',
+        ],
+      },
     },
     taylo: {
       name: 'Taylo',

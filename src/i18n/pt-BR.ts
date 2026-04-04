@@ -87,6 +87,18 @@ export default {
     zeco: {
       name: 'Zeco',
       text: 'Redondo, laranja, com meias xadrez. Faz amizade com qualquer um. Adora picolé, tem medo de geladeira e chora por qualquer coisa — mas no minuto seguinte já está rindo de novo.',
+      panel: {
+        story: [
+          'Zeco acordou com fome. Isso não era novidade — Zeco sempre acordava com fome.',
+          'Desceu as escadas com as meias xadrez arrastando no chão e foi direto pra cozinha. Abriu a geladeira. Fechou. Abriu de novo. Nada mudou.',
+          '"Ninha!", gritou. "Cadê meu picolé?"',
+          'Ninha apareceu voando pela janela, com penas ainda molhadas do banho de rio. "Comi", disse simplesmente.',
+          'Zeco arregalou os olhos. O lábio tremeu. As bochechas incharam. E veio — o choro mais escandaloso que aquela cozinha já ouviu.',
+          'Rui Merengue apareceu na porta com um avental de chef. "Para de drama, Zeco. Eu fiz bolo." E colocou na mesa o bolo mais bonito e torto do mundo.',
+          'Zeco parou de chorar na hora. Sorriu. Abraçou o Rui tão forte que quase derrubou o bolo. "Você é o melhor amigo do mundo!"',
+          '"Eu sei", disse Rui, ajeitando o avental. Ninha revirou os olhos. E os três sentaram pra comer o bolo torto mais gostoso da floresta.',
+        ],
+      },
     },
     taylo: {
       name: 'Taylo',
