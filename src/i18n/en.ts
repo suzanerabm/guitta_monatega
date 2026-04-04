@@ -53,6 +53,16 @@ export default {
     napcat: {
       name: 'NapCat',
       text: 'Gray, soft, with a blue-tipped tail — as if dipped in a bucket of paint. Calm, charming, always in a good mood. What he loves most is taking naps. He has a twin sister, Violeta.',
+      panel: {
+        napcat: [
+          'Gray, soft, with a blue-tipped tail — as if dipped in a bucket of paint.',
+          'Calm, charming, always in a good mood. What he loves most is taking naps. Where there is sun, there is NapCat sleeping.',
+        ],
+        violeta: [
+          'The twin sister. Just like him, but purple. Quieter, more observant — and when she decides to speak, everyone stops to listen.',
+          'Together, they are inseparable. He sleeps, she watches. He eats, she complains. He purrs, she pretends not to care.',
+        ],
+      },
     },
     zeco: {
       name: 'Zeco',

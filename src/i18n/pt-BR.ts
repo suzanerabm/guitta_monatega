@@ -53,6 +53,16 @@ export default {
     napcat: {
       name: 'NapCat',
       text: 'Cinza, macio, com a ponta do rabo azul — como se tivesse mergulhado num balde de tinta. Calmo, charmoso, sempre de bom humor. O que ele mais gosta e tirar soneca. Tem uma irma gemea, a Violeta.',
+      panel: {
+        napcat: [
+          'Cinza, macio, com a ponta do rabo azul — como se tivesse mergulhado num balde de tinta.',
+          'Calmo, charmoso, sempre de bom humor. O que ele mais gosta e tirar soneca. Onde tem sol, tem NapCat dormindo.',
+        ],
+        violeta: [
+          'A irma gemea. Igual a ele, mas roxa. Mais quieta, mais observadora — e quando resolve falar, todo mundo para pra ouvir.',
+          'Juntos, sao inseparaveis. Ele dorme, ela vigia. Ele come, ela reclama. Ele ronrona, ela finge que nao liga.',
+        ],
+      },
     },
     zeco: {
       name: 'Zeco',

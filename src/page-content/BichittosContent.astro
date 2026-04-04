@@ -156,12 +156,10 @@ for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs, miscBookDefs]) 
       ]}
     >
       <Fragment slot="text">
-        <h3>NapCat</h3>
-        <p>Cinza, macio, com a ponta do rabo azul — como se tivesse mergulhado num balde de tinta.</p>
-        <p>Calmo, charmoso, sempre de bom humor. O que ele mais gosta e tirar soneca. Onde tem sol, tem NapCat dormindo.</p>
+        <h3>{t.bichittos.napcat.name}</h3>
+        {t.bichittos.napcat.panel.napcat.map((p) => <p>{p}</p>)}
         <h3>Violeta</h3>
-        <p>A irma gemea. Igual a ele, mas roxa. Mais quieta, mais observadora — e quando resolve falar, todo mundo para pra ouvir.</p>
-        <p>Juntos, sao inseparaveis. Ele dorme, ela vigia. Ele come, ela reclama. Ele ronrona, ela finge que nao liga.</p>
+        {t.bichittos.napcat.panel.violeta.map((p) => <p>{p}</p>)}
       </Fragment>
       <CharacterStrip gradient="var(--gradient-napcat)" characters={napcatChars} />
     </DSMainCard>
