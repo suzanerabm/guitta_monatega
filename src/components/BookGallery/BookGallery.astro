@@ -121,9 +121,13 @@ const count = books.length;
 
   @media (max-width: 768px) {
     .book-gallery { padding: 0 1.5rem; }
+    .book-covers-1 { max-width: 100%; }
     .book-covers-3,
     .book-covers-4 {
       grid-template-columns: repeat(2, 1fr);
+    }
+    .book-cover-visual {
+      aspect-ratio: 3 / 2;
     }
   }
 </style>

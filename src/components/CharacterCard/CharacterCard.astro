@@ -93,6 +93,11 @@ const { name, image, gradient = 'var(--gradient-bichittos)' } = Astro.props;
   @media (max-width: 768px) {
     .char-card { width: 110px; }
     .char-card-img-wrap { width: 96px; height: 96px; border-radius: 12px; }
+    .char-card:hover .char-card-img-wrap,
+    .char-card:active .char-card-img-wrap {
+      transform: scale(1.2);
+      margin-bottom: 0.5rem;
+    }
     .char-card-name { font-size: 0.6rem; }
   }
 </style>

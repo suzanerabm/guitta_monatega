@@ -44,4 +44,14 @@ const { label = 'soon', overlay = false } = Astro.props;
     color: var(--color-white);
     font-size: 0.7rem;
   }
+
+  @media (max-width: 768px) {
+    .soon-badge {
+      font-size: 0.58rem;
+      padding: 0.25rem 0.55rem;
+    }
+    .soon-badge-overlay {
+      font-size: 0.6rem;
+    }
+  }
 </style>

@@ -61,6 +61,12 @@ const { gradient, accentColor } = Astro.props;
   .creature-section :global(.book-soon-label) {
     color: var(--color-white);
   }
+
+  @media (max-width: 768px) {
+    .creature-section-content {
+      padding: 1rem 0;
+    }
+  }
 </style>
 
 <script>
