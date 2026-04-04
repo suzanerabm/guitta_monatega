@@ -80,6 +80,11 @@ const { name, image, gradient = 'var(--gradient-bichittos)' } = Astro.props;
     font-weight: var(--weight-regular);
     z-index: 1;
     text-shadow: 0 1px 8px rgba(0,0,0,0.3);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    text-align: center;
   }
 
   @media (max-width: 768px) {
