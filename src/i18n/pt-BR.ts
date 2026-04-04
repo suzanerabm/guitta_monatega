@@ -164,7 +164,7 @@ export default {
     },
     zeco: {
       name: 'Zeco',
-      text: 'Zeco é um pequeno hamster inspirado em memórias de infância, que vive os momentos simples com curiosidade, carinho e presença. Entre amigos, natureza e pequenas rotinas, ele mostra que as coisas mais importantes estão no cuidado e nos detalhes do dia a dia. E Zeco te convida para brincar com ele !',
+      text: 'Zeco é um pequeno hamster curioso, afetuoso e cheio de imaginação, que sonha em ser chef de cozinha. Entre amigos, natureza e pequenas rotinas, ele cria, compartilha e descobre que as coisas mais importantes estão no cuidado e nos detalhes do dia a dia. Venha brincar com o Zeco e seus amigos.',
       panel: {
         story: [
           'A coleção Zeco nasceu de uma memória real.',

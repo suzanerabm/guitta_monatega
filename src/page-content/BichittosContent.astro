@@ -48,31 +48,37 @@ const zecoChars = getCharacters('zeco');
 const tayloChars = getCharacters('taylo');
 const miscChars = getCharacters('miscelania');
 
-interface BookDef {
-  creature: string;
-  id: string;
-  label: string;
-  soon?: boolean;
-}
-
-function buildBook(def: BookDef) {
-  const coverPath = join(BOOKS_BASE, def.creature, def.id, 'cover.jpg');
-  const pagesDir = join(BOOKS_BASE, def.creature, def.id, 'pages');
-  const altPagesDir = join(BOOKS_BASE, def.creature, def.id, '_pages');
-  const hasCover = existsSync(coverPath);
-  let hasPages = false;
-  const actualPagesDir = existsSync(pagesDir) ? pagesDir : altPagesDir;
+function getCreatureBooks(creature: string) {
+  const creatureDir = join(BOOKS_BASE, creature);
   try {
-    hasPages = readdirSync(actualPagesDir).some((f: string) => /\.(jpg|jpeg|png|webp)$/i.test(f));
-  } catch {}
-  const isSoon = def.soon ?? !hasPages;
-  return {
-    id: `${def.creature}-${def.id}`,
-    image: hasCover ? `${BOOKS_URL}/${def.creature}/${encodeURIComponent(def.id)}/cover.jpg` : undefined,
-    alt: def.label,
-    label: def.label,
-    soon: isSoon,
-  };
+    return readdirSync(creatureDir)
+      .filter((f: string) => {
+        try { return statSync(join(creatureDir, f)).isDirectory(); } catch { return false; }
+      })
+      .filter((f: string) => !f.startsWith('.') && !f.startsWith('_'))
+      .sort()
+      .map((folder: string) => {
+        const coverPath = join(creatureDir, folder, 'cover.jpg');
+        const pagesDir = join(creatureDir, folder, 'pages');
+        const altPagesDir = join(creatureDir, folder, '_pages');
+        const hasCover = existsSync(coverPath);
+        const actualPagesDir = existsSync(pagesDir) ? pagesDir : altPagesDir;
+        let hasPages = false;
+        try {
+          hasPages = readdirSync(actualPagesDir).some((f: string) => /\.(jpg|jpeg|png|webp)$/i.test(f));
+        } catch {}
+        const label = folder.replace(/-/g, ' ');
+        return {
+          id: `${creature}-${folder}`,
+          image: hasCover ? `${BOOKS_URL}/${creature}/${encodeURIComponent(folder)}/cover.jpg` : undefined,
+          alt: label,
+          label,
+          soon: !hasPages,
+        };
+      });
+  } catch {
+    return [];
+  }
 }
 
 function getBookPages(creature: string, bookId: string): string[] {
@@ -90,37 +96,23 @@ function getBookPages(creature: string, bookId: string): string[] {
   }
 }
 
-// NapCat books
-const napcatBookDefs: BookDef[] = [
-  { creature: 'napcat', id: 'adventures', label: t.bichittos.napcatBooks.adventures },
-];
-const napcatBooks = napcatBookDefs.map(buildBook);
-
-// Zeco books
-const zecoBookDefs: BookDef[] = [
-  { creature: 'zeco', id: 'Zeco nas estações', label: t.bichittos.zecoBooksLabel },
-];
-const zecoBooks = zecoBookDefs.map(buildBook);
-
-// Taylo books
-const tayloBookDefs: BookDef[] = [
-  { creature: 'taylo', id: 'star-hunter', label: t.bichittos.tayloBooks.starHunter },
-];
-const tayloBooks = tayloBookDefs.map(buildBook);
-
-// Miscelania books
-const miscBookDefs: BookDef[] = [];
-const miscBooks = miscBookDefs.map(buildBook);
+const napcatBooks = getCreatureBooks('napcat');
+const zecoBooks = getCreatureBooks('zeco');
+const tayloBooks = getCreatureBooks('taylo');
+const miscBooks = getCreatureBooks('miscelania');
 
 // Build gallery data for client-side (book pages for modal)
 const bookIllustrated = t.bichittos.bookIllustrated;
 const bookGalleries: Record<string, { title: string; pages: string[] }> = {};
-for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs, miscBookDefs]) {
-  for (const def of defs) {
-    const pages = getBookPages(def.creature, def.id);
+const allBooks = [...napcatBooks, ...zecoBooks, ...tayloBooks, ...miscBooks];
+for (const book of allBooks) {
+  if (!book.soon && book.id) {
+    const [creature, ...rest] = book.id.split('-');
+    const bookFolder = rest.join('-');
+    const pages = getBookPages(creature, bookFolder);
     if (pages.length > 0) {
-      bookGalleries[`${def.creature}-${def.id}`] = {
-        title: def.label,
+      bookGalleries[book.id] = {
+        title: book.label,
         pages,
       };
     }
