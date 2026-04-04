@@ -48,6 +48,9 @@ const zecoChars = getCharacters('zeco');
 const tayloChars = getCharacters('taylo');
 const miscChars = getCharacters('miscelania');
 
+// Dicionario de titulos de livros (pasta → titulo traduzido)
+const bookTitles = (t.bichittos as any).bookTitles as Record<string, string> | undefined;
+
 function getCreatureBooks(creature: string) {
   const creatureDir = join(BOOKS_BASE, creature);
   try {
@@ -60,20 +63,20 @@ function getCreatureBooks(creature: string) {
       .map((folder: string) => {
         const coverPath = join(creatureDir, folder, 'cover.jpg');
         const pagesDir = join(creatureDir, folder, 'pages');
-        const altPagesDir = join(creatureDir, folder, '_pages');
         const hasCover = existsSync(coverPath);
-        const actualPagesDir = existsSync(pagesDir) ? pagesDir : altPagesDir;
-        let hasPages = false;
+        // pages = publicado, _pages = rascunho (soon)
+        let hasPublishedPages = false;
         try {
-          hasPages = readdirSync(actualPagesDir).some((f: string) => /\.(jpg|jpeg|png|webp)$/i.test(f));
+          hasPublishedPages = existsSync(pagesDir) && readdirSync(pagesDir).some((f: string) => /\.(jpg|jpeg|png|webp)$/i.test(f));
         } catch {}
-        const label = folder.replace(/-/g, ' ');
+        const folderKey = `${creature}/${folder}`;
+        const label = bookTitles?.[folderKey] ?? folder.replace(/-/g, ' ');
         return {
           id: `${creature}-${folder}`,
           image: hasCover ? `${BOOKS_URL}/${creature}/${encodeURIComponent(folder)}/cover.jpg` : undefined,
           alt: label,
           label,
-          soon: !hasPages,
+          soon: !hasPublishedPages,
         };
       });
   } catch {
@@ -83,14 +86,11 @@ function getCreatureBooks(creature: string) {
 
 function getBookPages(creature: string, bookId: string): string[] {
   const pagesDir = join(BOOKS_BASE, creature, bookId, 'pages');
-  const altPagesDir = join(BOOKS_BASE, creature, bookId, '_pages');
-  const dir = existsSync(pagesDir) ? pagesDir : altPagesDir;
-  const urlDir = existsSync(pagesDir) ? 'pages' : '_pages';
   try {
-    return readdirSync(dir)
+    return readdirSync(pagesDir)
       .filter((f: string) => /\.(jpg|jpeg|png|webp)$/i.test(f))
       .sort()
-      .map((f: string) => `${BOOKS_URL}/${creature}/${encodeURIComponent(bookId)}/${urlDir}/${encodeURIComponent(f)}`);
+      .map((f: string) => `${BOOKS_URL}/${creature}/${encodeURIComponent(bookId)}/pages/${encodeURIComponent(f)}`);
   } catch {
     return [];
   }

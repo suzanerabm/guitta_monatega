@@ -196,6 +196,11 @@ export default {
     },
     booksTitle: 'Books',
     bookIllustrated: 'Illustrated book',
+    bookTitles: {
+      'napcat/adventures': 'NapCat Adventures',
+      'zeco/zeco-estacoes': 'Zeco in the Seasons',
+      'taylo/star-hunter': 'The Star Hunter',
+    } as Record<string, string>,
     miscelania: {
       name: 'Miscelania',
       text: 'Loose creatures, experiments and characters that have their own story.',

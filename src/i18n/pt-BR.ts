@@ -196,6 +196,11 @@ export default {
     },
     booksTitle: 'Livros',
     bookIllustrated: 'Livro ilustrado',
+    bookTitles: {
+      'napcat/adventures': 'NapCat Adventures',
+      'zeco/zeco-estacoes': 'Zeco nas Estações',
+      'taylo/star-hunter': 'O Caçador de Estrelas',
+    } as Record<string, string>,
     miscelania: {
       name: 'Miscelânia',
       text: 'Criaturas avulsas, experimentos e personagens que tem sua própria história.',
