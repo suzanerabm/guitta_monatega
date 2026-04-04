@@ -198,13 +198,8 @@ export default {
     napcatBooks: {
       adventures: 'NapCat Adventures',
     },
-    zecoBooksTitle: 'Books - The 4 Seasons',
-    zecoBookSeasons: {
-      primavera: 'Spring',
-      verao: 'Summer',
-      outono: 'Autumn',
-      inverno: 'Winter',
-    },
+    zecoBooksTitle: 'Books',
+    zecoBooksLabel: 'Zeco in the Seasons',
     tayloBooksTitle: 'Books',
     tayloBooks: {
       starHunter: 'The Star Hunter',

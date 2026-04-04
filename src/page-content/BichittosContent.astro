@@ -58,15 +58,17 @@ interface BookDef {
 function buildBook(def: BookDef) {
   const coverPath = join(BOOKS_BASE, def.creature, def.id, 'cover.jpg');
   const pagesDir = join(BOOKS_BASE, def.creature, def.id, 'pages');
+  const altPagesDir = join(BOOKS_BASE, def.creature, def.id, '_pages');
   const hasCover = existsSync(coverPath);
   let hasPages = false;
+  const actualPagesDir = existsSync(pagesDir) ? pagesDir : altPagesDir;
   try {
-    hasPages = readdirSync(pagesDir).some((f: string) => /\.(jpg|jpeg|png|webp)$/i.test(f));
+    hasPages = readdirSync(actualPagesDir).some((f: string) => /\.(jpg|jpeg|png|webp)$/i.test(f));
   } catch {}
   const isSoon = def.soon ?? !hasPages;
   return {
     id: `${def.creature}-${def.id}`,
-    image: hasCover ? `${BOOKS_URL}/${def.creature}/${def.id}/cover.jpg` : undefined,
+    image: hasCover ? `${BOOKS_URL}/${def.creature}/${encodeURIComponent(def.id)}/cover.jpg` : undefined,
     alt: def.label,
     label: def.label,
     soon: isSoon,
@@ -75,11 +77,14 @@ function buildBook(def: BookDef) {
 
 function getBookPages(creature: string, bookId: string): string[] {
   const pagesDir = join(BOOKS_BASE, creature, bookId, 'pages');
+  const altPagesDir = join(BOOKS_BASE, creature, bookId, '_pages');
+  const dir = existsSync(pagesDir) ? pagesDir : altPagesDir;
+  const urlDir = existsSync(pagesDir) ? 'pages' : '_pages';
   try {
-    return readdirSync(pagesDir)
+    return readdirSync(dir)
       .filter((f: string) => /\.(jpg|jpeg|png|webp)$/i.test(f))
       .sort()
-      .map((f: string) => `${BOOKS_URL}/${creature}/${bookId}/pages/${f}`);
+      .map((f: string) => `${BOOKS_URL}/${creature}/${encodeURIComponent(bookId)}/${urlDir}/${encodeURIComponent(f)}`);
   } catch {
     return [];
   }
@@ -93,10 +98,7 @@ const napcatBooks = napcatBookDefs.map(buildBook);
 
 // Zeco books
 const zecoBookDefs: BookDef[] = [
-  { creature: 'zeco', id: 'primavera', label: t.bichittos.zecoBookSeasons.primavera },
-  { creature: 'zeco', id: 'verao', label: t.bichittos.zecoBookSeasons.verao },
-  { creature: 'zeco', id: 'outono', label: t.bichittos.zecoBookSeasons.outono },
-  { creature: 'zeco', id: 'inverno', label: t.bichittos.zecoBookSeasons.inverno },
+  { creature: 'zeco', id: 'Zeco nas estações', label: t.bichittos.zecoBooksLabel },
 ];
 const zecoBooks = zecoBookDefs.map(buildBook);
 

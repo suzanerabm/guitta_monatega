@@ -164,7 +164,7 @@ export default {
     },
     zeco: {
       name: 'Zeco',
-      text: 'Redondo, laranja, com meias xadrez. Faz amizade com qualquer um. Adora picolé, tem medo de geladeira e chora por qualquer coisa — mas no minuto seguinte já está rindo de novo.',
+      text: 'Zeco é um pequeno hamster inspirado em memórias de infância, que vive os momentos simples com curiosidade, carinho e presença. Entre amigos, natureza e pequenas rotinas, ele mostra que as coisas mais importantes estão no cuidado e nos detalhes do dia a dia. E Zeco te convida para brincar com ele !',
       panel: {
         story: [
           'A coleção Zeco nasceu de uma memória real.',
@@ -198,13 +198,8 @@ export default {
     napcatBooks: {
       adventures: 'NapCat Adventures',
     },
-    zecoBooksTitle: 'Livros - As 4 Estações',
-    zecoBookSeasons: {
-      primavera: 'Primavera',
-      verao: 'Verão',
-      outono: 'Outono',
-      inverno: 'Inverno',
-    },
+    zecoBooksTitle: 'Livros',
+    zecoBooksLabel: 'Zeco nas Estações',
     tayloBooksTitle: 'Livros',
     tayloBooks: {
       starHunter: 'O Caçador de Estrelas',
