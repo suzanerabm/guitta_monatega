@@ -224,6 +224,8 @@ export default {
     heroTitle: 'Kammara',
     heroDesc: 'Connected worlds. Living systems. A saga that grows with each chapter.',
     placeholder: 'Placeholder — description goes here.',
+    booksTitle: 'Books',
+    books: [] as { tag: string; title: string }[],
   },
   art: {
     pageTitle: 'Art — Guitta Monatega',

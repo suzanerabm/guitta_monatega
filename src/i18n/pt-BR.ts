@@ -223,6 +223,8 @@ export default {
     heroTitle: 'Kammara',
     heroDesc: 'Mundos conectados. Sistemas vivos. Uma saga que cresce a cada capítulo.',
     placeholder: 'Placeholder — descrição vai aqui.',
+    booksTitle: 'Livros',
+    books: [] as { tag: string; title: string }[],
   },
   art: {
     pageTitle: 'Arte — Guitta Monatega',

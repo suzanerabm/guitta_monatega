@@ -1,9 +1,12 @@
 ---
 import HeroSection from '../components/HeroSection/HeroSection.astro';
 import WorldCard from '../components/WorldCard/WorldCard.astro';
+import BookGallery from '../components/BookGallery/BookGallery.astro';
 import FilterBar from '../components/FilterBar/FilterBar.astro';
 import ScrollReveal from '../components/ScrollReveal/ScrollReveal.astro';
 import { useTranslations } from '../i18n/translations';
+import { existsSync, readdirSync, statSync } from 'node:fs';
+import { join } from 'node:path';
 
 interface Props { locale?: string; }
 const { locale = 'pt-BR' } = Astro.props;
@@ -17,6 +20,37 @@ const worlds = [
   { id: 'z1', tag: 'Planeta', name: 'Z1', css: 'wb-z1' },
   { id: 'gotto', tag: 'Planeta', name: 'Gotto', css: 'wb-gotto' },
 ];
+
+const BOOKS_BASE = join(process.cwd(), 'public', 'imgs', 'books', 'kammara');
+const BOOKS_URL = '/imgs/books/kammara';
+
+function findCover(dir: string): string | null {
+  for (const ext of ['jpg', 'jpeg', 'png', 'webp']) {
+    const p = join(dir, `cover.${ext}`);
+    if (existsSync(p)) return `cover.${ext}`;
+  }
+  return null;
+}
+
+const kammaraBookDefs = (t.kammara.books as any) as { tag: string; title: string }[] || [];
+const kammaraBooks = kammaraBookDefs.length > 0
+  ? kammaraBookDefs.map((def) => {
+      const bookDir = join(BOOKS_BASE, def.tag);
+      const cover = findCover(bookDir);
+      const pagesDir = join(bookDir, 'pages');
+      let hasPublishedPages = false;
+      try {
+        hasPublishedPages = existsSync(pagesDir) && readdirSync(pagesDir).some((f: string) => /\.(jpg|jpeg|png|webp)$/i.test(f));
+      } catch {}
+      return {
+        id: `kammara-${def.tag}`,
+        image: cover ? `${BOOKS_URL}/${encodeURIComponent(def.tag)}/${cover}` : undefined,
+        alt: def.title,
+        label: def.title,
+        soon: !hasPublishedPages,
+      };
+    })
+  : [];
 ---
 
 <HeroSection
@@ -35,6 +69,8 @@ const worlds = [
     <div class="hero-glow"></div>
   </Fragment>
 </HeroSection>
+
+{kammaraBooks.length > 0 && <BookGallery title={t.kammara.booksTitle} books={kammaraBooks} soonLabel={t.common.soon} />}
 
 <FilterBar
   target="world"
@@ -55,6 +91,7 @@ const worlds = [
 ))}
 
 <ScrollReveal selector="[data-world]" />
+<ScrollReveal selector="[data-creature]" />
 
 <style>
   :global(.hero) {
