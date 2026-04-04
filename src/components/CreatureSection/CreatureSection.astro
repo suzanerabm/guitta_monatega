@@ -72,7 +72,6 @@ const { gradient, accentColor } = Astro.props;
 <script>
   function initParallax() {
     const sections = document.querySelectorAll<HTMLElement>('[data-parallax-section]');
-    let ticking = false;
 
     function update() {
       const vh = window.innerHeight;
@@ -80,24 +79,14 @@ const { gradient, accentColor } = Astro.props;
         const bg = section.querySelector<HTMLElement>('.creature-section-bg');
         if (!bg) return;
         const rect = section.getBoundingClientRect();
-        // Normaliza: 0 quando a secao entra por baixo, 1 quando sai por cima
         const progress = (vh - rect.top) / (vh + rect.height);
-        // Move o fundo de -50% a +50% baseado no progresso
         const offset = (progress - 0.5) * 100;
         bg.style.transform = `translateY(${offset}%)`;
       });
-      ticking = false;
+      requestAnimationFrame(update);
     }
 
-    function onScroll() {
-      if (!ticking) {
-        requestAnimationFrame(update);
-        ticking = true;
-      }
-    }
-
-    window.addEventListener('scroll', onScroll, { passive: true });
-    update();
+    requestAnimationFrame(update);
   }
 
   initParallax();
