@@ -82,8 +82,8 @@ const { gradient, accentColor } = Astro.props;
         const rect = section.getBoundingClientRect();
         // Normaliza: 0 quando a secao entra por baixo, 1 quando sai por cima
         const progress = (vh - rect.top) / (vh + rect.height);
-        // Move o fundo de -30% a +30% baseado no progresso
-        const offset = (progress - 0.5) * 60;
+        // Move o fundo de -50% a +50% baseado no progresso
+        const offset = (progress - 0.5) * 100;
         bg.style.transform = `translateY(${offset}%)`;
       });
       ticking = false;
