@@ -176,10 +176,19 @@ import { X, ChevronLeft, ChevronRight } from '@lucide/astro';
   const techEl = document.getElementById('modalTechnique')!;
   const counterEl = document.getElementById('modalCounter')!;
 
+  function formatFilename(path: string): string {
+    const file = path.split('/').pop() || '';
+    return file
+      .replace(/\.[^.]+$/, '')       // remove extension
+      .replace(/[_-]/g, ' ')         // underscores/hyphens to spaces
+      .replace(/\s+/g, ' ')          // collapse spaces
+      .trim();
+  }
+
   function show() {
     imgEl.src = currentImages[currentIndex];
     titleEl.textContent = currentTitle;
-    techEl.textContent = currentTechnique;
+    techEl.textContent = formatFilename(currentImages[currentIndex]);
     counterEl.textContent = (currentIndex + 1) + ' / ' + currentImages.length;
   }
 
