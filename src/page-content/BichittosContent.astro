@@ -162,7 +162,7 @@ for (const book of allBooks) {
 <!-- NAPCAT -->
 <CreatureSection gradient="var(--gradient-napcat-bg)" accentColor="var(--color-napcat-1)" id="napcat">
   <CreatureCard name={t.bichittos.napcat.name} color1="#b5a2dc" color2="#ddd4f4">
-    <p>{t.bichittos.napcat.text}</p>
+    {t.bichittos.napcat.text.map((p) => <p>{p}</p>)}
     <DSMainCard
       slot="banner"
       gradient="var(--gradient-napcat)"
@@ -188,7 +188,7 @@ for (const book of allBooks) {
 <!-- ZECO -->
 <CreatureSection gradient="var(--gradient-zeco-bg)" accentColor="var(--color-zeco-1)" id="zeco">
   <CreatureCard name={t.bichittos.zeco.name} color1="#964712" color2="#f9e3cf">
-    <p>{t.bichittos.zeco.text}</p>
+    {t.bichittos.zeco.text.map((p) => <p>{p}</p>)}
     <DSMainCard
       slot="banner"
       gradient="var(--gradient-zeco)"
@@ -242,7 +242,7 @@ for (const book of allBooks) {
 <!-- MISCELANIA -->
 <CreatureSection gradient="var(--gradient-misc-bg)" accentColor="var(--color-misc-1)" id="miscelania">
   <CreatureCard name={t.bichittos.miscelania.name} color1="#8badc4" color2="#b0cfe0">
-    <p>{t.bichittos.miscelania.text}</p>
+    {t.bichittos.miscelania.text.map((p) => <p>{p}</p>)}
     <DSMainCard
       slot="banner"
       gradient="var(--gradient-misc)"

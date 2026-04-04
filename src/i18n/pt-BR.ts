@@ -95,7 +95,7 @@ export default {
       tira: 'tira',
       tomando: 'tomando',
       triste: 'triste',
-      'tropeçou': 'tropeçou',
+      tropecou: 'tropeçou',
       voa: 'voa',
       voando: 'voando',
       vomitando: 'vomitando',
@@ -141,7 +141,12 @@ export default {
     heroDesc: 'Personagens que existem entre o imperfeito e o afeto.',
     napcat: {
       name: 'NapCat',
-      text: 'NapCat é um gatinho calmo e sonhador que adora tirar pequenos cochilos. Em cada soneca, ele descobre o mundo de um jeitinho especial — sentindo sons, cores e texturas. Ao lado de sua irmã Violeta, NapCat vive momentos simples, cheios de carinho, imaginação e aconchego. Venha descansar, sentir e sonhar com NapCat e seus amigos.',
+      text: [
+        'NapCat é um gatinho calmo e sonhador que adora tirar pequenos cochilos.',
+        'Em cada soneca, ele descobre o mundo de um jeitinho especial — sentindo sons, cores e texturas.',
+        'Ao lado de sua irmã Violeta, NapCat vive momentos simples, cheios de carinho, imaginação e aconchego.',
+        'Venha descansar, sentir e sonhar com NapCat e seus amigos.',
+      ],
       books: [
         { tag: 'adventures', title: 'Aventuras do NapCat' },
       ],
@@ -156,7 +161,11 @@ export default {
     },
     zeco: {
       name: 'Zeco',
-      text: 'Zeco é um pequeno hamster curioso, afetuoso e cheio de imaginação, que sonha em ser chef de cozinha. Entre amigos, natureza e pequenas rotinas, ele cria, compartilha e descobre que as coisas mais importantes estão no cuidado e nos detalhes do dia a dia. Venha brincar com o Zeco e seus amigos.',
+      text: [
+        'Zeco é um pequeno hamster curioso, afetuoso e cheio de imaginação, que sonha em ser chef de cozinha.',
+        'Entre amigos, natureza e pequenas rotinas, ele cria, compartilha e descobre que as coisas mais importantes estão no cuidado e nos detalhes do dia a dia.',
+        'Venha brincar com o Zeco e seus amigos.',
+      ],
       books: [
         { tag: 'zeco-estacoes', title: 'Zeco nas Estações' },
       ],
@@ -195,7 +204,9 @@ export default {
     bookIllustrated: 'Livro ilustrado',
     miscelania: {
       name: 'Miscelânia',
-      text: 'Criaturas avulsas, experimentos e personagens que tem sua própria história.',
+      text: [
+        'Criaturas avulsas, experimentos e personagens que tem sua própria história.',
+      ],
       panel: {
         story: [
           'Nem todo personagem nasce sabendo quem é. Alguns aparecem num rabisco de caderno, outros surgem de um sonho esquecido.',
