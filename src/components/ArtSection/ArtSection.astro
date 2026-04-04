@@ -13,7 +13,7 @@ interface Props {
 const { id, title, technique, bg, titleColor, techColor, large, thumbs } = Astro.props;
 ---
 
-<section class="art-section" data-art={id} style={`background: ${bg};`}>
+<section class="art-section" data-section-art={id} style={`background: ${bg};`}>
   <div class="art-section-inner">
     <h2 class="art-section-title" style={`color: ${titleColor};`}>{title}</h2>
     <p class="art-section-technique" style={`color: ${techColor};`}>{technique}</p>

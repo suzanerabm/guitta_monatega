@@ -5,6 +5,7 @@ import CreatureCard from '../components/CreatureCard/CreatureCard.astro';
 import CharacterStrip from '../components/CharacterStrip/CharacterStrip.astro';
 import DSMainCard from '../components/DSMainCard/DSMainCard.astro';
 import BookGallery from '../components/BookGallery/BookGallery.astro';
+import FilterBar from '../components/FilterBar/FilterBar.astro';
 import Modal from '../components/Modal/Modal.astro';
 import ScrollReveal from '../components/ScrollReveal/ScrollReveal.astro';
 import { useTranslations } from '../i18n/translations';
@@ -139,8 +140,19 @@ for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs, miscBookDefs]) 
   </div>
 </HeroSection>
 
+<FilterBar
+  target="creature"
+  allLabel={locale === 'en' ? 'All' : 'Todos'}
+  filters={[
+    { id: 'napcat', label: 'NapCat' },
+    { id: 'zeco', label: 'Zeco' },
+    { id: 'taylo', label: 'Taylo' },
+    { id: 'miscelania', label: t.bichittos.miscelania.name },
+  ]}
+/>
+
 <!-- NAPCAT -->
-<CreatureSection gradient="var(--gradient-napcat-bg)" accentColor="var(--color-napcat-1)">
+<CreatureSection gradient="var(--gradient-napcat-bg)" accentColor="var(--color-napcat-1)" id="napcat">
   <CreatureCard name={t.bichittos.napcat.name} color1="#b5a2dc" color2="#ddd4f4">
     <p>{t.bichittos.napcat.text}</p>
     <DSMainCard
@@ -166,7 +178,7 @@ for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs, miscBookDefs]) 
 </CreatureSection>
 
 <!-- ZECO -->
-<CreatureSection gradient="var(--gradient-zeco-bg)" accentColor="var(--color-zeco-1)">
+<CreatureSection gradient="var(--gradient-zeco-bg)" accentColor="var(--color-zeco-1)" id="zeco">
   <CreatureCard name={t.bichittos.zeco.name} color1="#964712" color2="#f9e3cf">
     <p>{t.bichittos.zeco.text}</p>
     <DSMainCard
@@ -193,7 +205,7 @@ for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs, miscBookDefs]) 
 </CreatureSection>
 
 <!-- TAYLO -->
-<CreatureSection gradient="var(--gradient-taylo-bg)" accentColor="var(--color-taylo-1)">
+<CreatureSection gradient="var(--gradient-taylo-bg)" accentColor="var(--color-taylo-1)" id="taylo">
   <CreatureCard name={t.bichittos.taylo.name} color1="#5d9466" color2="#fff">
     {t.bichittos.taylo.text.map((p) => <p>{p}</p>)}
     <DSMainCard
@@ -220,7 +232,7 @@ for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs, miscBookDefs]) 
 </CreatureSection>
 
 <!-- MISCELANIA -->
-<CreatureSection gradient="var(--gradient-misc-bg)" accentColor="var(--color-misc-1)">
+<CreatureSection gradient="var(--gradient-misc-bg)" accentColor="var(--color-misc-1)" id="miscelania">
   <CreatureCard name={t.bichittos.miscelania.name} color1="#8badc4" color2="#b0cfe0">
     <p>{t.bichittos.miscelania.text}</p>
     <DSMainCard

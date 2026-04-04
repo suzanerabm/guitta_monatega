@@ -2,26 +2,40 @@
 interface Props {
   tag: string;
   name: string;
+  id?: string;
   gradientClass: string;
   showDivider?: boolean;
 }
 
-const { tag, name, gradientClass, showDivider = true } = Astro.props;
+const { tag, name, id, gradientClass, showDivider = true } = Astro.props;
 ---
 
-<div class="world" data-world>
-  <span class="world-tag">{tag}</span>
-  <h2 class="world-name">{name}</h2>
-  <div class="world-text">
-    <slot />
+<div class="world-wrap" {...(id ? { [`data-section-world`]: id } : {})}>
+  <div class="world" data-world>
+    <span class="world-tag">{tag}</span>
+    <h2 class="world-name">{name}</h2>
+    <div class="world-text">
+      <slot />
+    </div>
   </div>
+  <div class={`world-banner ${gradientClass}`}>
+    <span class="world-banner-label">[ imagem {name} ]</span>
+  </div>
+  {showDivider && <div class="world-divider"></div>}
 </div>
-<div class={`world-banner ${gradientClass}`}>
-  <span class="world-banner-label">[ imagem {name} ]</span>
-</div>
-{showDivider && <div class="world-divider"></div>}
 
 <style>
+  .world-wrap {
+    transition: opacity 0.4s ease, max-height 0.5s ease;
+  }
+
+  .world-wrap.hidden {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
   .world {
     padding: 5rem 3rem 2rem;
     max-width: 1000px;

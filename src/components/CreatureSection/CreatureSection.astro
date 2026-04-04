@@ -2,12 +2,13 @@
 interface Props {
   gradient: string;
   accentColor?: string;
+  id?: string;
 }
 
-const { gradient, accentColor } = Astro.props;
+const { gradient, accentColor, id } = Astro.props;
 ---
 
-<section class="creature-section" data-parallax-section>
+<section class="creature-section" data-parallax-section {...(id ? { [`data-section-creature`]: id } : {})}>
   <div class="creature-section-bg" style={`background: ${gradient};`}></div>
   {accentColor && (
     <div class="creature-section-glow" style={`background: radial-gradient(ellipse at 30% 20%, ${accentColor}15 0%, transparent 70%);`}></div>
@@ -20,6 +21,13 @@ const { gradient, accentColor } = Astro.props;
 <style>
   .creature-section {
     position: relative;
+    overflow: hidden;
+    transition: opacity 0.4s ease, max-height 0.5s ease;
+  }
+
+  .creature-section.hidden {
+    opacity: 0;
+    max-height: 0;
     overflow: hidden;
   }
 

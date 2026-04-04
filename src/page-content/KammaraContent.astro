@@ -1,6 +1,7 @@
 ---
 import HeroSection from '../components/HeroSection/HeroSection.astro';
 import WorldCard from '../components/WorldCard/WorldCard.astro';
+import FilterBar from '../components/FilterBar/FilterBar.astro';
 import ScrollReveal from '../components/ScrollReveal/ScrollReveal.astro';
 import { useTranslations } from '../i18n/translations';
 
@@ -9,12 +10,12 @@ const { locale = 'pt-BR' } = Astro.props;
 const t = useTranslations(locale);
 
 const worlds = [
-  { tag: 'Planeta', name: "LUNN'P1", css: 'wb-lunnp1' },
-  { tag: 'Planeta', name: 'ENI-4\u0394', css: 'wb-eni4' },
-  { tag: 'Estacao Espacial', name: 'TripleC', css: 'wb-triplec' },
-  { tag: 'Planeta', name: 'ORF-V', css: 'wb-orfv' },
-  { tag: 'Planeta', name: 'Z1', css: 'wb-z1' },
-  { tag: 'Planeta', name: 'Gotto', css: 'wb-gotto' },
+  { id: 'lunnp1', tag: 'Planeta', name: "LUNN'P1", css: 'wb-lunnp1' },
+  { id: 'eni4', tag: 'Planeta', name: 'ENI-4\u0394', css: 'wb-eni4' },
+  { id: 'triplec', tag: 'Estação Espacial', name: 'TripleC', css: 'wb-triplec' },
+  { id: 'orfv', tag: 'Planeta', name: 'ORF-V', css: 'wb-orfv' },
+  { id: 'z1', tag: 'Planeta', name: 'Z1', css: 'wb-z1' },
+  { id: 'gotto', tag: 'Planeta', name: 'Gotto', css: 'wb-gotto' },
 ];
 ---
 
@@ -35,10 +36,17 @@ const worlds = [
   </Fragment>
 </HeroSection>
 
+<FilterBar
+  target="world"
+  allLabel={locale === 'en' ? 'All' : 'Todos'}
+  filters={worlds.map(w => ({ id: w.id, label: w.name }))}
+/>
+
 {worlds.map((world, i) => (
   <WorldCard
     tag={world.tag}
     name={world.name}
+    id={world.id}
     gradientClass={world.css}
     showDivider={i < worlds.length - 1}
   >
