@@ -148,16 +148,20 @@ for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs, miscBookDefs]) 
       gradient="var(--gradient-napcat)"
       height="1400px"
       maxHeight="80vh"
-      textColor="#f093fb"
+      titleColor="#fefdff"
+      textColor="#ddd4f4"
       characters={[
         { image: '/imgs/Napcat/napcatDefault.png', x: 55, y: 0, size: 400, zIndex: 2 },
         { image: '/imgs/Napcat/Violeta.png', x: 82, y: 0, size: 350, zIndex: 1 },
       ]}
     >
       <Fragment slot="text">
-        <h3>NapCat & Violeta</h3>
-        <p>{t.bichittos.napcat.text}</p>
-        <p>Violeta e a irma gemea do NapCat. Igual a ele, mas roxa. Mais quieta, mais observadora — e quando resolve falar, todo mundo para pra ouvir.</p>
+        <h3>NapCat</h3>
+        <p>Cinza, macio, com a ponta do rabo azul — como se tivesse mergulhado num balde de tinta.</p>
+        <p>Calmo, charmoso, sempre de bom humor. O que ele mais gosta e tirar soneca. Onde tem sol, tem NapCat dormindo.</p>
+        <h3>Violeta</h3>
+        <p>A irma gemea. Igual a ele, mas roxa. Mais quieta, mais observadora — e quando resolve falar, todo mundo para pra ouvir.</p>
+        <p>Juntos, sao inseparaveis. Ele dorme, ela vigia. Ele come, ela reclama. Ele ronrona, ela finge que nao liga.</p>
       </Fragment>
       <CharacterStrip gradient="var(--gradient-napcat)" characters={napcatChars} />
     </DSMainCard>
