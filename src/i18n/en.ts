@@ -194,16 +194,7 @@ export default {
         ],
       },
     },
-    napcatBooksTitle: 'Books',
-    napcatBooks: {
-      adventures: 'NapCat Adventures',
-    },
-    zecoBooksTitle: 'Books',
-    zecoBooksLabel: 'Zeco in the Seasons',
-    tayloBooksTitle: 'Books',
-    tayloBooks: {
-      starHunter: 'The Star Hunter',
-    },
+    booksTitle: 'Books',
     bookIllustrated: 'Illustrated book',
     miscelania: {
       name: 'Miscelania',
@@ -220,7 +211,6 @@ export default {
         ],
       },
     },
-    miscelaniaBooksTitle: 'Books',
   },
   kammara: {
     pageTitle: 'Kammara — Guitta Monatega',
