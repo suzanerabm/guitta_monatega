@@ -141,10 +141,11 @@ export default {
       panel: {
         story: [
           'Not every character is born knowing who they are. Some appear in a notebook doodle, others emerge from a forgotten dream.',
-          'Here live those still discovering their place. Creatures without a definitive name, with shapes that change with every drawing.',
-          'Cheio de Bolinha showed up on a rainy afternoon — round, colorful, covered in dots that nobody knows where they came from.',
-          'Malmo arrived quietly, as always. Sat in the corner and watched. Hasn\'t said a word yet, but everyone feels he has a lot to tell.',
-          'One day, each one will find their story. Until then, they live here — in this space between the sketch and the finished.',
+          'Querie is a buck-toothed little mouse who hates brushing his teeth. Every time someone mentions a toothbrush, he runs away. The problem is he loves eating — corn, apples, anything hard.',
+          'One day, he bit into a corn cob so hard he heard a "crack". His tooth broke. Querie stood there, mouth open, in disbelief.',
+          'Did he learn his lesson? Of course not. But now he eats slowly — and makes a very funny face when he chews.',
+          'Malmo arrived quietly, as always. Sat in the corner and watched. Doesn\'t like sharing, doesn\'t want to talk, and gets angry over anything. But deep down, he just wants someone to sit next to him.',
+          'Each one here has their own story. Some short, others still being written.',
         ],
       },
     },

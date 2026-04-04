@@ -141,10 +141,11 @@ export default {
       panel: {
         story: [
           'Nem todo personagem nasce sabendo quem é. Alguns aparecem num rabisco de caderno, outros surgem de um sonho esquecido.',
-          'Aqui vivem os que ainda estão descobrindo seu lugar. Criaturas sem nome definitivo, com formas que mudam a cada desenho.',
-          'Cheio de Bolinha apareceu numa tarde de chuva — redondo, colorido, coberto de pontos que ninguém sabe de onde vieram.',
-          'Malmo chegou quieto, como sempre. Sentou no canto e ficou observando. Ainda não disse uma palavra, mas todo mundo sente que ele tem muito a contar.',
-          'Um dia, cada um vai encontrar sua história. Até lá, moram aqui — nesse espaço entre o rascunho e o acabado.',
+          'Querie é um ratinho dentuço que odeia escovar os dentes. Toda vez que alguém fala em escova, ele sai correndo. O problema é que ele adora comer — milho, maçã, tudo que é duro.',
+          'Um dia, mordeu uma espiga com tanta força que ouviu um "crac". O dente quebrou. Querie ficou parado, de boca aberta, sem acreditar.',
+          'Desde então, aprendeu a lição? Claro que não. Mas agora come devagar — e faz uma cara muito engraçada quando mastiga.',
+          'Malmo chegou quieto, como sempre. Sentou no canto e ficou observando. Não gosta de dividir, não quer falar, e fica bravo por qualquer coisa. Mas no fundo, só quer que alguém sente do lado dele.',
+          'Cada um aqui tem sua própria história. Algumas curtas, outras ainda sendo escritas.',
         ],
       },
     },
