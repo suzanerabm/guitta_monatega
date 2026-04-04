@@ -143,7 +143,7 @@ export default {
       name: 'NapCat',
       text: [
         'NapCat é um gatinho calmo e sonhador que adora tirar pequenos cochilos. Em cada soneca, ele descobre o mundo de um jeitinho especial — sentindo sons, cores e texturas. Ao lado de sua irmã Violeta, NapCat vive momentos simples, cheios de carinho, imaginação e aconchego.',
-        'Venha descansar, tirar soneca e sonhar com NapCat e seus amigos.',
+        'Venha tirar soneca e sonhar com NapCat e seus amigos.',
       ],
       books: [
         { tag: 'adventures', title: 'Aventuras do NapCat' },
@@ -153,16 +153,15 @@ export default {
           'NapCat é um gatinho calmo e sonhador que adora tirar pequenos cochilos.',
           'Em cada soneca, ele descobre o mundo de um jeitinho especial — sentindo sons, cores e texturas.',
           'Ao lado de sua irmã Violeta, NapCat vive momentos simples, cheios de carinho, imaginação e aconchego.',
-          'Venha descansar, sentir e sonhar com NapCat e seus amigos.',
+          'Venha tirar soneca com NapCat e seus amigos.',
         ],
       },
     },
     zeco: {
       name: 'Zeco',
       text: [
-        'Zeco é um pequeno hamster curioso, afetuoso e cheio de imaginação, que sonha em ser chef de cozinha.',
-        'Entre amigos, natureza e pequenas rotinas, ele cria, compartilha e descobre que as coisas mais importantes estão no cuidado e nos detalhes do dia a dia.',
-        'Venha brincar com o Zeco e seus amigos.',
+        'Zeco é um pequeno hamster curioso, afetuoso e cheio de imaginação, que sonha em ser chef de cozinha. Entre amigos, natureza e pequenas rotinas, ele cria, compartilha e descobre que as coisas mais importantes estão no cuidado e nos detalhes do dia a dia.',
+        'Zeco e seus amigos estão te esperando para brincar.',
       ],
       books: [
         { tag: 'zeco-estacoes', title: 'Zeco nas Estações' },

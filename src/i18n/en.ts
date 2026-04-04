@@ -142,10 +142,8 @@ export default {
     napcat: {
       name: 'NapCat',
       text: [
-        'NapCat is a calm and dreamy kitten who loves taking little naps.',
-        'In each nap, he discovers the world in his own special way — feeling sounds, colors and textures.',
-        'Alongside his sister Violeta, NapCat lives simple moments, full of warmth, imagination and coziness.',
-        'Come rest, feel and dream with NapCat and his friends.',
+        'NapCat is a calm and dreamy kitten who loves taking little naps. In each nap, he discovers the world in his own special way — feeling sounds, colors and textures. Alongside his sister Violeta, NapCat lives simple moments, full of warmth, imagination and coziness.',
+        'Come take a nap and dream with NapCat and his friends.',
       ],
       books: [
         { tag: 'adventures', title: 'NapCat Adventures' },
@@ -155,16 +153,15 @@ export default {
           'NapCat is a calm and dreamy kitten who loves taking little naps.',
           'In each nap, he discovers the world in his own special way — feeling sounds, colors and textures.',
           'Alongside his sister Violeta, NapCat lives simple moments, full of warmth, imagination and coziness.',
-          'Come rest, feel and dream with NapCat and his friends.',
+          'Come take a nap with NapCat and his friends.',
         ],
       },
     },
     zeco: {
       name: 'Zeco',
       text: [
-        'Zeco is a small hamster who is curious, affectionate, and full of imagination, and he dreams of becoming a chef.',
-        'Among friends, nature, and everyday moments, he creates, shares, and discovers that the most important things are found in care and in the little details of daily life.',
-        'Come play with Zeco and his friends.',
+        'Zeco is a small hamster who is curious, affectionate, and full of imagination, and he dreams of becoming a chef. Among friends, nature, and everyday moments, he creates, shares, and discovers that the most important things are found in care and in the little details of daily life.',
+        'Zeco and his friends are waiting for you to play.',
       ],
       books: [
         { tag: 'zeco-estacoes', title: 'Zeco in the Seasons' },
