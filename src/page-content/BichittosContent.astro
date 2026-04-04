@@ -48,10 +48,27 @@ const zecoChars = getCharacters('zeco');
 const tayloChars = getCharacters('taylo');
 const miscChars = getCharacters('miscelania');
 
-// Dicionario de titulos de livros (pasta → titulo traduzido)
-const bookTitles = (t.bichittos as any).bookTitles as Record<string, string> | undefined;
-
-function getCreatureBooks(creature: string) {
+function getCreatureBooks(creature: string, bookDefs?: { tag: string; title: string }[]) {
+  // Se tem definicoes no i18n, usa elas (tag → pasta, title → titulo)
+  if (bookDefs && bookDefs.length > 0) {
+    return bookDefs.map((def) => {
+      const coverPath = join(BOOKS_BASE, creature, def.tag, 'cover.jpg');
+      const pagesDir = join(BOOKS_BASE, creature, def.tag, 'pages');
+      const hasCover = existsSync(coverPath);
+      let hasPublishedPages = false;
+      try {
+        hasPublishedPages = existsSync(pagesDir) && readdirSync(pagesDir).some((f: string) => /\.(jpg|jpeg|png|webp)$/i.test(f));
+      } catch {}
+      return {
+        id: `${creature}-${def.tag}`,
+        image: hasCover ? `${BOOKS_URL}/${creature}/${encodeURIComponent(def.tag)}/cover.jpg` : undefined,
+        alt: def.title,
+        label: def.title,
+        soon: !hasPublishedPages,
+      };
+    });
+  }
+  // Senao, le do filesystem (fallback)
   const creatureDir = join(BOOKS_BASE, creature);
   try {
     return readdirSync(creatureDir)
@@ -64,18 +81,15 @@ function getCreatureBooks(creature: string) {
         const coverPath = join(creatureDir, folder, 'cover.jpg');
         const pagesDir = join(creatureDir, folder, 'pages');
         const hasCover = existsSync(coverPath);
-        // pages = publicado, _pages = rascunho (soon)
         let hasPublishedPages = false;
         try {
           hasPublishedPages = existsSync(pagesDir) && readdirSync(pagesDir).some((f: string) => /\.(jpg|jpeg|png|webp)$/i.test(f));
         } catch {}
-        const folderKey = `${creature}/${folder}`;
-        const label = bookTitles?.[folderKey] ?? folder.replace(/-/g, ' ');
         return {
           id: `${creature}-${folder}`,
           image: hasCover ? `${BOOKS_URL}/${creature}/${encodeURIComponent(folder)}/cover.jpg` : undefined,
-          alt: label,
-          label,
+          alt: folder.replace(/-/g, ' '),
+          label: folder.replace(/-/g, ' '),
           soon: !hasPublishedPages,
         };
       });
@@ -96,9 +110,9 @@ function getBookPages(creature: string, bookId: string): string[] {
   }
 }
 
-const napcatBooks = getCreatureBooks('napcat');
-const zecoBooks = getCreatureBooks('zeco');
-const tayloBooks = getCreatureBooks('taylo');
+const napcatBooks = getCreatureBooks('napcat', (t.bichittos.napcat as any).books);
+const zecoBooks = getCreatureBooks('zeco', (t.bichittos.zeco as any).books);
+const tayloBooks = getCreatureBooks('taylo', (t.bichittos.taylo as any).books);
 const miscBooks = getCreatureBooks('miscelania');
 
 // Build gallery data for client-side (book pages for modal)

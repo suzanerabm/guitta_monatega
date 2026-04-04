@@ -125,8 +125,8 @@ export default {
     pageTitle: 'Sobre — Guitta Monatega',
     title: 'Sobre',
     paragraphs: [
-      'Guitta Monatega é o nome artístico de Suzane Machado — designer, ilustradora e criadora de universos.',
-      'Desde 2012, cria personagens e histórias que vivem entre o fofo e o absurdo. NapCat, Zeco, Taylo e seus amigos nasceram de cadernos de desenho e viraram livros, animações e esculturas em miniatura.',
+      'Guitta Monatega é designer, ilustradora e criadora de universos.',
+      'Desde sua infância, cria personagens e histórias que vivem entre o fofo e o absurdo. NapCat, Zeco, Taylo e seus amigos nasceram de cadernos de desenho e viraram livros, animações e esculturas em miniatura.',
       'Kammara é o projeto mais recente — uma saga ilustrada que conecta mundos, sistemas e criaturas numa narrativa que cresce a cada capítulo.',
       'O trabalho mistura técnicas: nanquim, grafite, pontilhismo, crochê, needle felting, modelagem e ilustração digital. Tudo feito à mão, com paciência.',
     ],
@@ -141,6 +141,9 @@ export default {
     napcat: {
       name: 'NapCat',
       text: 'Cinza, macio, com a ponta do rabo azul — como se tivesse mergulhado num balde de tinta. Calmo, charmoso, sempre de bom humor. O que ele mais gosta é tirar soneca. Tem uma irmã gêmea, a Violeta.',
+      books: [
+        { tag: 'adventures', title: 'NapCat Adventures' },
+      ],
       panel: {
         napcat: [
           'Cinza, macio, com a ponta do rabo azul — como se tivesse mergulhado num balde de tinta.',
@@ -165,6 +168,9 @@ export default {
     zeco: {
       name: 'Zeco',
       text: 'Zeco é um pequeno hamster curioso, afetuoso e cheio de imaginação, que sonha em ser chef de cozinha. Entre amigos, natureza e pequenas rotinas, ele cria, compartilha e descobre que as coisas mais importantes estão no cuidado e nos detalhes do dia a dia. Venha brincar com o Zeco e seus amigos.',
+      books: [
+        { tag: 'zeco-estacoes', title: 'Zeco nas Estações' },
+      ],
       panel: {
         story: [
           'A coleção Zeco nasceu de uma memória real.',
@@ -177,6 +183,9 @@ export default {
     },
     taylo: {
       name: 'Taylo',
+      books: [
+        { tag: 'star-hunter', title: 'O Caçador de Estrelas' },
+      ],
       text: [
         'Um urso com orelhas maiores que os outros — e isso o torna especial. Adora contar histórias. Herdou dos ancestrais o poder das estrelas: uma vez por ano, no penhasco mágico, ele caça as que caem do céu.',
         'Na floresta, todo mundo é amigo dele — Pitu, Squizo, Candy e os outros. Juntos, formam o universo Taylo.',
@@ -196,11 +205,6 @@ export default {
     },
     booksTitle: 'Livros',
     bookIllustrated: 'Livro ilustrado',
-    bookTitles: {
-      'napcat/adventures': 'NapCat Adventures',
-      'zeco/zeco-estacoes': 'Zeco nas Estações',
-      'taylo/star-hunter': 'O Caçador de Estrelas',
-    } as Record<string, string>,
     miscelania: {
       name: 'Miscelânia',
       text: 'Criaturas avulsas, experimentos e personagens que tem sua própria história.',

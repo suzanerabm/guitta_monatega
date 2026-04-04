@@ -141,6 +141,9 @@ export default {
     napcat: {
       name: 'NapCat',
       text: 'Gray, soft, with a blue-tipped tail — as if dipped in a bucket of paint. Calm, charming, always in a good mood. What he loves most is taking naps. He has a twin sister, Violeta.',
+      books: [
+        { tag: 'adventures', title: 'NapCat Adventures' },
+      ],
       panel: {
         napcat: [
           'Gray, soft, with a blue-tipped tail — as if dipped in a bucket of paint.',
@@ -165,6 +168,9 @@ export default {
     zeco: {
       name: 'Zeco',
       text: 'Zeco is a small hamster who is curious, affectionate, and full of imagination, and he dreams of becoming a chef. Among friends, nature, and everyday moments, he creates, shares, and discovers that the most important things are found in care and in the little details of daily life. Come play with Zeco and his friends.',
+      books: [
+        { tag: 'zeco-estacoes', title: 'Zeco in the Seasons' },
+      ],
       panel: {
         story: [
           'The Zeco collection was born from a real memory.',
@@ -177,6 +183,9 @@ export default {
     },
     taylo: {
       name: 'Taylo',
+      books: [
+        { tag: 'star-hunter', title: 'The Star Hunter' },
+      ],
       text: [
         'A bear with bigger ears than the others — and that makes him special. Loves telling stories. He inherited from his ancestors the power of the stars: once a year, on the magic cliff, he hunts the ones that fall from the sky.',
         'In the forest, everyone is his friend — Pitu, Squizo, Candy and the others. Together, they form the Taylo universe.',
@@ -196,11 +205,6 @@ export default {
     },
     booksTitle: 'Books',
     bookIllustrated: 'Illustrated book',
-    bookTitles: {
-      'napcat/adventures': 'NapCat Adventures',
-      'zeco/zeco-estacoes': 'Zeco in the Seasons',
-      'taylo/star-hunter': 'The Star Hunter',
-    } as Record<string, string>,
     miscelania: {
       name: 'Miscelania',
       text: 'Loose creatures, experiments and characters that have their own story.',
