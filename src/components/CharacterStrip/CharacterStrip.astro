@@ -18,13 +18,14 @@ interface Props {
   speed?: number;
 }
 
-const { characters, gradient = 'var(--gradient-bichittos)', side = 'right', speed = 20 } = Astro.props;
+const { characters, gradient = 'var(--gradient-bichittos)', side = 'right', speed } = Astro.props;
+const autoSpeed = speed ?? characters.length * 5;
 const allCards = [...characters, ...characters];
 const uid = `strip-${Math.random().toString(36).slice(2, 8)}`;
 ---
 
 <div class={`char-strip char-strip-${side}`}>
-  <div class="char-strip-track" data-strip-track={uid} data-speed={speed}>
+  <div class="char-strip-track" data-strip-track={uid} data-speed={autoSpeed}>
     {allCards.map((c) => (
       <CharacterCard name={c.name} image={c.image} gradient={gradient} />
     ))}
