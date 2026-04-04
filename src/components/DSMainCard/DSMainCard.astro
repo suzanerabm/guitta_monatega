@@ -1,15 +1,12 @@
 ---
 /**
- * DSMainCard — Cena animada fullwidth que substitui o banner JPG
- *
- * Os personagens sao posicionados como PNGs individuais dentro da cena,
- * igual ao banner original mas com imagens separadas e potencial pra animacao.
+ * DSMainCard — Cena fullwidth que substitui o banner JPG
  *
  * Props:
  *   characters: array de { image, x, y, size, zIndex? }
- *   gradient: CSS gradient para o fundo da cena
- *   height: altura do card (default '50vh')
- *   maxHeight: altura maxima (default '80vh')
+ *   gradient: CSS gradient para o fundo
+ *   height/maxHeight: dimensoes
+ *   textColor: cor do texto no bloco lateral (default branco)
  */
 
 interface Character {
@@ -25,6 +22,7 @@ interface Props {
   gradient?: string;
   height?: string;
   maxHeight?: string;
+  textColor?: string;
 }
 
 const {
@@ -32,11 +30,16 @@ const {
   gradient = 'var(--gradient-bichittos)',
   height = '50vh',
   maxHeight = '80vh',
+  textColor = 'rgba(255,255,255,0.85)',
 } = Astro.props;
+
+const hasText = Astro.slots.has('text');
 ---
 
 <div class="ds-card" style={`height: ${height}; max-height: ${maxHeight};`}>
   <div class="ds-card-bg" style={`background: ${gradient};`}></div>
+
+  <!-- Personagens -->
   <div class="ds-card-scene">
     {characters.map((c) => (
       <div
@@ -53,6 +56,18 @@ const {
       </div>
     ))}
   </div>
+
+  <!-- Bloco de texto lateral -->
+  {hasText && (
+    <div class="ds-text-wrap">
+      <div class="ds-text-card">
+        <div class="ds-text-scroll" style={`color: ${textColor};`}>
+          <slot name="text" />
+        </div>
+      </div>
+    </div>
+  )}
+
   <slot />
 </div>
 
@@ -89,6 +104,62 @@ const {
     filter: drop-shadow(0 4px 16px rgba(0,0,0,0.15));
   }
 
+  /* Bloco de texto lateral esquerdo */
+  .ds-text-wrap {
+    position: absolute;
+    left: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35%;
+    max-width: 400px;
+    height: 70%;
+    z-index: 3;
+  }
+
+  .ds-text-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.15);
+    backdrop-filter: blur(8px);
+    outline: 2px solid rgba(255,255,255,0.2);
+    outline-offset: 3px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  }
+
+  .ds-text-scroll {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 2rem 1.5rem;
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    font-weight: var(--weight-light);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
+  }
+
+  .ds-text-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ds-text-scroll :global(h3) {
+    font-size: 1.3rem;
+    font-weight: var(--weight-bold);
+    margin-bottom: 0.8rem;
+    color: inherit;
+  }
+
+  .ds-text-scroll :global(p) {
+    margin-bottom: 0.8rem;
+    color: inherit;
+    opacity: 0.85;
+  }
+
   @media (max-width: 768px) {
     .ds-card {
       height: 35vh !important;
@@ -96,7 +167,15 @@ const {
     }
 
     .ds-char {
-      transform: translate(-50%, -50%) scale(0.7);
+      transform: translateX(-50%) scale(0.7);
+    }
+
+    .ds-text-wrap {
+      left: 1rem;
+      right: 1rem;
+      width: auto;
+      max-width: none;
+      height: 60%;
     }
   }
 </style>
