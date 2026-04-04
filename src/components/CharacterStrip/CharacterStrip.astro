@@ -35,16 +35,15 @@ const uid = `strip-${Math.random().toString(36).slice(2, 8)}`;
   .char-strip {
     position: absolute;
     top: 20px;
-    width: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
     height: auto;
     z-index: 2;
     overflow: hidden;
-    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
   }
-
-  .char-strip-right { right: 0; }
-  .char-strip-left { left: 0; }
 
   .char-strip-track {
     display: flex;
