@@ -146,9 +146,14 @@ const hasText = Astro.slots.has('text');
 
   @media (max-width: 768px) {
     .ds-card {
-      height: 60vh !important;
-      min-height: 350px;
-      max-height: 500px !important;
+      height: auto !important;
+      max-height: none !important;
+      overflow: visible;
+    }
+
+    .ds-card-bg,
+    .ds-card-scene {
+      height: 300px;
     }
 
     .ds-char {
@@ -156,7 +161,15 @@ const hasText = Astro.slots.has('text');
     }
 
     .ds-text-wrap {
-      display: none;
+      position: relative;
+      left: 0;
+      top: auto;
+      bottom: auto;
+      width: 100%;
+      max-width: none;
+      height: auto;
+      margin-top: 100px;
+      padding: 0 1.5rem 2rem;
     }
 
     .ds-mascot {

@@ -71,9 +71,19 @@ const {
   }
 
   @media (max-width: 768px) {
+    .ds-text-panel {
+      height: auto;
+      outline: none;
+      box-shadow: none;
+      border-radius: 0;
+    }
     .ds-text-scroll {
-      padding: 1.5rem 1rem;
+      height: auto;
+      overflow: visible;
+      padding: 1.5rem 0;
       font-size: 0.85rem;
+      mask-image: none;
+      -webkit-mask-image: none;
     }
     .ds-text-scroll :global(h3) {
       font-size: 1.1rem;
