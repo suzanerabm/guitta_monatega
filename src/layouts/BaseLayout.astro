@@ -67,7 +67,8 @@ const t = useTranslations(locale);
         (breadcrumb as HTMLElement).style.opacity = '0';
       }
       if (filterBar) {
-        (filterBar as HTMLElement).style.top = '42px';
+        (filterBar as HTMLElement).style.transform = 'translateY(-100%)';
+        (filterBar as HTMLElement).style.opacity = '0';
       }
     } else {
       header?.classList.remove('compact');
@@ -76,7 +77,8 @@ const t = useTranslations(locale);
         (breadcrumb as HTMLElement).style.opacity = '1';
       }
       if (filterBar) {
-        (filterBar as HTMLElement).style.top = '92px';
+        (filterBar as HTMLElement).style.transform = 'translateY(0)';
+        (filterBar as HTMLElement).style.opacity = '1';
       }
     }
     lastScroll = y;
