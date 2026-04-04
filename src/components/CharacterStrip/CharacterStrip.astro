@@ -74,23 +74,36 @@ const uid = `strip-${Math.random().toString(36).slice(2, 8)}`;
   document.querySelectorAll<HTMLElement>('[data-strip-track]').forEach(track => {
     const speed = Number(track.dataset.speed) || 20;
     const halfWidth = track.scrollWidth / 2;
+    const strip = track.closest('.char-strip') as HTMLElement;
+    if (!strip) return;
 
-    const keyframes = [
-      { transform: 'translateX(0)' },
-      { transform: `translateX(-${halfWidth}px)` },
-    ];
+    const anim = track.animate(
+      [
+        { transform: 'translateX(0)' },
+        { transform: `translateX(-${halfWidth}px)` },
+      ],
+      { duration: speed * 1000, iterations: Infinity, easing: 'linear' }
+    );
 
-    track.animate(keyframes, {
-      duration: speed * 1000,
-      iterations: Infinity,
-      easing: 'linear',
+    let baseRate = 1;
+
+    strip.addEventListener('mousemove', (e: MouseEvent) => {
+      const rect = strip.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width;
+      // Centro = velocidade normal, cantos = acelera (até 3x)
+      // Esquerda = inverte direção
+      if (x < 0.3) {
+        baseRate = -1 - (0.3 - x) * 6;
+      } else if (x > 0.7) {
+        baseRate = 1 + (x - 0.7) * 6;
+      } else {
+        baseRate = 1;
+      }
+      anim.playbackRate = baseRate;
     });
 
-    track.closest('.char-strip')?.addEventListener('mouseenter', () => {
-      track.getAnimations().forEach(a => a.pause());
-    });
-    track.closest('.char-strip')?.addEventListener('mouseleave', () => {
-      track.getAnimations().forEach(a => a.play());
+    strip.addEventListener('mouseleave', () => {
+      anim.playbackRate = 1;
     });
   });
 </script>
