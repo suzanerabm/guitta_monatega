@@ -31,6 +31,13 @@ const { name, image, gradient = 'var(--gradient-bichittos)' } = Astro.props;
   .char-card:nth-child(2n) { animation-delay: -1s; }
   .char-card:nth-child(3n) { animation-delay: -2s; }
 
+  .char-card:hover, .char-card:active {
+    animation-play-state: paused;
+    transform: scale(1.15);
+    z-index: 10;
+    transition: transform 0.25s ease;
+  }
+
   @keyframes cardFloat {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-6px); }
