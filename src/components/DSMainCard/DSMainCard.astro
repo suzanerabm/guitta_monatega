@@ -43,7 +43,7 @@ const {
         class="ds-char"
         style={`
           left: ${c.x}%;
-          top: ${c.y}%;
+          bottom: ${c.y}%;
           width: ${c.size}px;
           height: ${c.size}px;
           z-index: ${c.zIndex || 1};
@@ -79,7 +79,7 @@ const {
 
   .ds-char {
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
   }
 
   .ds-char img {
