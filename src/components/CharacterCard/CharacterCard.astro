@@ -31,13 +31,6 @@ const { name, image, gradient = 'var(--gradient-bichittos)' } = Astro.props;
   .char-card:nth-child(2n) { animation-delay: -1s; }
   .char-card:nth-child(3n) { animation-delay: -2s; }
 
-  .char-card:hover, .char-card:active {
-    animation-play-state: paused;
-    transform: scale(1.15);
-    z-index: 10;
-    transition: transform 0.25s ease;
-  }
-
   @keyframes cardFloat {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-6px); }
@@ -63,11 +56,17 @@ const { name, image, gradient = 'var(--gradient-bichittos)' } = Astro.props;
     background: var(--color-white);
     position: relative;
     z-index: 1;
+    transition: transform 0.25s ease;
     box-shadow:
       0 12px 40px rgba(0,0,0,0.15),
       0 0 20px rgba(255,255,255,0.15);
     outline: 2px solid rgba(255,255,255,0.35);
     outline-offset: 3px;
+  }
+
+  .char-card:hover .char-card-img-wrap,
+  .char-card:active .char-card-img-wrap {
+    transform: scale(1.2);
   }
 
   .char-card-img {
