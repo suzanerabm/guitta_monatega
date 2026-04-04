@@ -4,6 +4,15 @@ export default {
     siteTitle: 'Guitta Monatega',
     footerAbout: 'about guitta monatega',
     soon: 'coming soon',
+    words: {
+      bebendo: 'drinking',
+      dormindo: 'sleeping',
+      praia: 'beach',
+      picole: 'popsicle',
+      cheio: 'full',
+      bolinha: 'polka dot',
+      merengue: 'merengue',
+    } as Record<string, string>,
   },
   home: {
     title: 'Guitta Monatega',
