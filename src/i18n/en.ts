@@ -144,6 +144,7 @@ export default {
           'Querie is a buck-toothed little mouse who hates brushing his teeth. Every time someone mentions a toothbrush, he runs away. The problem is he loves eating — corn, apples, anything hard.',
           'One day, he bit into a corn cob so hard he heard a "crack". His tooth broke. Querie stood there, mouth open, in disbelief.',
           'Did he learn his lesson? Of course not. But now he eats slowly — and makes a very funny face when he chews.',
+          'Cheio de Bolinha is round, colorful and covered in polka dots. He looks brave, but he\'s terrified of mice. When he sees one, he panics and climbs onto the first soap bubble he can find — and floats up there until he\'s sure the danger has passed.',
           'Malmo arrived quietly, as always. Sat in the corner and watched. Doesn\'t like sharing, doesn\'t want to talk, and gets angry over anything. But deep down, he just wants someone to sit next to him.',
           'Each one here has their own story. Some short, others still being written.',
         ],

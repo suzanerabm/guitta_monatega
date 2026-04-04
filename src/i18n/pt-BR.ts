@@ -144,6 +144,7 @@ export default {
           'Querie é um ratinho dentuço que odeia escovar os dentes. Toda vez que alguém fala em escova, ele sai correndo. O problema é que ele adora comer — milho, maçã, tudo que é duro.',
           'Um dia, mordeu uma espiga com tanta força que ouviu um "crac". O dente quebrou. Querie ficou parado, de boca aberta, sem acreditar.',
           'Desde então, aprendeu a lição? Claro que não. Mas agora come devagar — e faz uma cara muito engraçada quando mastiga.',
+          'Cheio de Bolinha é redondo, colorido e coberto de bolinhas. Parece corajoso, mas morre de medo de ratinhos. Quando vê um, entra em pânico e sobe na primeira bolha de sabão que encontra — e fica lá no alto, flutuando, até ter certeza de que o perigo passou.',
           'Malmo chegou quieto, como sempre. Sentou no canto e ficou observando. Não gosta de dividir, não quer falar, e fica bravo por qualquer coisa. Mas no fundo, só quer que alguém sente do lado dele.',
           'Cada um aqui tem sua própria história. Algumas curtas, outras ainda sendo escritas.',
         ],
