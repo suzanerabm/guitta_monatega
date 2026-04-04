@@ -102,8 +102,15 @@ const { filters, allLabel = 'Todos', target = 'art' } = Astro.props;
         const bgColor = btn.dataset.bgColor;
         if (bgColor) {
           bar.style.background = bgColor;
+          bar.style.borderBottom = 'none';
+          btns.forEach(b => { b.style.borderColor = 'rgba(255,255,255,0.2)'; b.style.color = 'rgba(255,255,255,0.6)'; });
+          btn.style.background = color || '';
+          btn.style.borderColor = color || '';
+          btn.style.color = '#fff';
         } else {
           bar.style.background = '';
+          bar.style.borderBottom = '';
+          btns.forEach(b => { b.style.borderColor = ''; b.style.color = ''; });
         }
 
         const filter = btn.dataset.filter || 'all';
