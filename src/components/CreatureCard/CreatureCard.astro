@@ -1,7 +1,7 @@
 ---
 interface Props {
   name: string;
-  bannerImage: string;
+  bannerImage?: string;
   color1?: string;
   color2?: string;
 }
@@ -12,6 +12,8 @@ const {
   color1,
   color2,
 } = Astro.props;
+
+const hasBannerSlot = Astro.slots.has('banner');
 ---
 
 <div class="creature" data-creature>
@@ -20,9 +22,13 @@ const {
     <slot />
   </div>
 </div>
-<div class="creature-banner" style={`background: url('${bannerImage}') center/cover no-repeat;`}>
-  <slot name="strip" />
-</div>
+{hasBannerSlot ? (
+  <slot name="banner" />
+) : bannerImage ? (
+  <div class="creature-banner" style={`background: url('${bannerImage}') center/cover no-repeat;`}>
+    <slot name="strip" />
+  </div>
+) : null}
 
 <style>
   .creature {
