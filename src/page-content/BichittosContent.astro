@@ -204,7 +204,7 @@ for (const book of allBooks) {
       maxHeight="80vh"
       titleColor="#f58020"
       textColor="#594733"
-      mascot={{ image: '/imgs/characters/zeco/ninha_apaixonada.png', size: 100, offsetX: 15, offsetY: -70 }}
+      mascot={{ image: '/imgs/characters/zeco/ninha_apaixonada.png', size: 100, offsetX: 15, offsetY: -70,  mobileScale: 0.5, mobileOffsetY: -10 }}
       characters={[
         { image: '/imgs/characters/zeco/zeco_comendo_picole.png', x: 55, y: 0, size: 400, zIndex: 3 },
         { image: '/imgs/characters/zeco/Rui_Merengue_comendo_compota.png', x: 85, y: 0, size: 280, zIndex: 1 },
@@ -233,7 +233,7 @@ for (const book of allBooks) {
       textColor="#b6fcc0"
       characters={[
         { image: '/imgs/characters/taylo/taylo.png', x: 80, y: 0, size: 400, zIndex: 3 },
-        { image: '/imgs/characters/taylo/pitu.png', x: 55, y: 0, size: 200, zIndex: 2 },
+        { image: '/imgs/characters/taylo/pitu.png', x: 55, y: 0, size: 200, zIndex: 2, mobileY: 35 },
         // { image: '/imgs/characters/taylo/Catarina.png', x: 63, y: 0, size: 220, zIndex: 1 },
       ]}
     >
@@ -259,8 +259,8 @@ for (const book of allBooks) {
       titleColor="#081e28"
       textColor="#b0cfe0"
       characters={[
-        { image: '/imgs/characters/miscelania/querie_dancando.gif', x: 55, y: 0, size: 100, zIndex: 2 },
-        { image: '/imgs/characters/miscelania/Cheio_Bolinha_voando.png', x: 82, y: 30, size: 200, zIndex: 1 },
+        { image: '/imgs/characters/miscelania/querie_dancando.gif', x: 55, y: 0, size: 100, zIndex: 2, mobileY: 85, mobileScale: 0.55},
+        { image: '/imgs/characters/miscelania/Cheio_Bolinha_voando.png', x: 82, y: 30, size: 200, zIndex: 1, mobileY: 100, mobileScale: 0.70 },
         { image: '/imgs/characters/miscelania/malmo.png', x: 5, y: 0, size: 100, zIndex: 1 },
       ]}
     >

@@ -105,7 +105,7 @@ export default {
   },
   home: {
     title: 'Guitta Monatega',
-    heroSub: 'universes & creatures',
+    heroSub: 'universes & Characters',
     bichittos: {
       label: 'Series',
       title: 'Bichittos',

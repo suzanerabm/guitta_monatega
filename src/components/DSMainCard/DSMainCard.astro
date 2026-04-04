@@ -16,6 +16,8 @@ interface Character {
   y: number;
   size: number;
   zIndex?: number;
+  mobileY?: number;
+  mobileScale?: number;
 }
 
 interface Mascot {
@@ -23,6 +25,8 @@ interface Mascot {
   size?: number;
   offsetX?: number;
   offsetY?: number;
+  mobileScale?: number;
+  mobileOffsetY?: number;
 }
 
 interface Props {
@@ -61,6 +65,8 @@ const hasText = Astro.slots.has('text');
           width: ${c.size}px;
           height: ${c.size}px;
           z-index: ${c.zIndex || 1};
+          --mobile-y: ${c.mobileY ?? 20}%;
+          --mobile-scale: ${c.mobileScale ?? 0.4};
         `}
       >
         <img src={c.image} alt="" />
@@ -76,6 +82,8 @@ const hasText = Astro.slots.has('text');
           height: ${mascot.size || 120}px;
           right: ${mascot.offsetX || 10}%;
           top: ${mascot.offsetY || -40}px;
+          --mascot-mobile-scale: ${mascot.mobileScale ?? 0.7};
+          --mascot-mobile-y: ${mascot.mobileOffsetY ?? mascot.offsetY ?? -40}px;
         `}>
           <img src={mascot.image} alt="" />
         </div>
@@ -149,7 +157,7 @@ const hasText = Astro.slots.has('text');
       height: auto !important;
       max-height: none !important;
       overflow: visible;
-      margin-top: 0.5rem;
+      margin-top: 8rem;
     }
 
     .ds-card-bg {
@@ -166,8 +174,8 @@ const hasText = Astro.slots.has('text');
     }
 
     .ds-char {
-      transform: translateX(-50%) scale(0.4);
-      bottom: 20% !important;
+      transform: translateX(-50%) scale(var(--mobile-scale));
+      bottom: var(--mobile-y) !important;
     }
 
     .ds-text-wrap {
@@ -183,7 +191,8 @@ const hasText = Astro.slots.has('text');
     }
 
     .ds-mascot {
-      transform: scale(0.7);
+      transform: scale(var(--mascot-mobile-scale));
+      top: var(--mascot-mobile-y) !important;
     }
   }
 </style>

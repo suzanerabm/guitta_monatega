@@ -71,7 +71,9 @@ const hasBannerSlot = Astro.slots.has('banner');
   }
 
   @media (max-width: 768px) {
-    .creature { padding: 1.5rem 1.5rem 2rem; }
+    .creature { padding: 1.5rem 1.5rem 4rem; }
+    .creature-name { font-size: 1.5rem; }
+    .creature-text { font-size: 0.9rem; }
     .creature-banner { height: 35vh; min-height: 250px; }
   }
 </style>
