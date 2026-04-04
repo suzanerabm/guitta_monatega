@@ -90,20 +90,21 @@ const uid = `strip-${Math.random().toString(36).slice(2, 8)}`;
     strip.addEventListener('mousemove', (e: MouseEvent) => {
       const rect = strip.getBoundingClientRect();
       const x = (e.clientX - rect.left) / rect.width;
-      // Centro = velocidade normal, cantos = acelera (até 3x)
-      // Esquerda = inverte direção
-      if (x < 0.3) {
-        baseRate = -1 - (0.3 - x) * 6;
-      } else if (x > 0.7) {
-        baseRate = 1 + (x - 0.7) * 6;
+      // Cantos (< 15% ou > 85%) = acelera, centro = pausa
+      if (x < 0.15) {
+        anim.playbackRate = -1 - (0.15 - x) * 10;
+        anim.play();
+      } else if (x > 0.85) {
+        anim.playbackRate = 1 + (x - 0.85) * 10;
+        anim.play();
       } else {
-        baseRate = 1;
+        anim.pause();
       }
-      anim.playbackRate = baseRate;
     });
 
     strip.addEventListener('mouseleave', () => {
       anim.playbackRate = 1;
+      anim.play();
     });
   });
 </script>
