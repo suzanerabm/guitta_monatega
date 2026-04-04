@@ -106,6 +106,18 @@ export default {
         'Um urso com orelhas maiores que os outros — e isso o torna especial. Adora contar histórias. Herdou dos ancestrais o poder das estrelas: uma vez por ano, no penhasco mágico, ele caça as que caem do céu.',
         'Na floresta, todo mundo é amigo dele — Pitu, Squizo, Candy e os outros. Juntos, formam o universo Taylo.',
       ],
+      panel: {
+        story: [
+          'Todo ano, quando o céu ficava mais escuro e as estrelas brilhavam mais forte, Taylo subia até o penhasco mágico.',
+          'Era uma tradição antiga — herdada dos ancestrais. Diziam que quem pegasse uma estrela cadente podia guardar um desejo dentro dela.',
+          'Pitu sempre ia junto. Não porque acreditava em estrelas mágicas — ia porque tinha medo de que Taylo caísse do penhasco.',
+          '"Cuidado com a borda!", gritava Pitu, agarrado numa raiz. Squizo já estava no topo, fingindo que não ligava, mas com os olhos grudados no céu.',
+          'Candy chegou por último, trazendo um cobertor e chocolate quente. "Se vamos ficar aqui a noite inteira, pelo menos vamos ficar confortáveis."',
+          'E então aconteceu. Uma luz cortou o céu — longa, brilhante, deixando um rastro dourado. Taylo esticou a pata e fechou os olhos.',
+          'Quando abriu, tinha uma pequena luz pulsando entre os dedos. Quente. Suave. Como um coração minúsculo.',
+          '"O que você vai desejar?", sussurrou Pitu. Taylo olhou pros amigos. Sorriu. "Nada. Já tenho tudo."',
+        ],
+      },
     },
     napcatBooksTitle: 'Livros',
     napcatBooks: {
@@ -126,6 +138,15 @@ export default {
     miscelania: {
       name: 'Miscelânia',
       text: 'Criaturas avulsas, experimentos e personagens que ainda não encontraram sua história.',
+      panel: {
+        story: [
+          'Nem todo personagem nasce sabendo quem é. Alguns aparecem num rabisco de caderno, outros surgem de um sonho esquecido.',
+          'Aqui vivem os que ainda estão descobrindo seu lugar. Criaturas sem nome definitivo, com formas que mudam a cada desenho.',
+          'Cheio de Bolinha apareceu numa tarde de chuva — redondo, colorido, coberto de pontos que ninguém sabe de onde vieram.',
+          'Malmo chegou quieto, como sempre. Sentou no canto e ficou observando. Ainda não disse uma palavra, mas todo mundo sente que ele tem muito a contar.',
+          'Um dia, cada um vai encontrar sua história. Até lá, moram aqui — nesse espaço entre o rascunho e o acabado.',
+        ],
+      },
     },
     miscelaniaBooksTitle: 'Livros',
   },

@@ -194,18 +194,53 @@ for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs, miscBookDefs]) 
 
 <!-- TAYLO -->
 <CreatureSection gradient="var(--gradient-taylo-bg)" accentColor="var(--color-taylo-1)">
-  <CreatureCard name={t.bichittos.taylo.name} bannerImage="/imgs/banners/banner_taylo.jpg" color1="#5d9466" color2="#fff" color3="#277230">
+  <CreatureCard name={t.bichittos.taylo.name} color1="#5d9466" color2="#fff">
     {t.bichittos.taylo.text.map((p) => <p>{p}</p>)}
-    <CharacterStrip slot="strip" gradient="var(--gradient-taylo)" side="right" characters={tayloChars} />
+    <DSMainCard
+      slot="banner"
+      gradient="var(--gradient-taylo)"
+      height="1400px"
+      maxHeight="80vh"
+      titleColor="#5d9466"
+      textColor="#b6fcc0"
+      characters={[
+        { image: '/imgs/characters/taylo/taylo.png', x: 55, y: 0, size: 400, zIndex: 3 },
+        { image: '/imgs/characters/taylo/pitu.png', x: 80, y: 0, size: 200, zIndex: 2 },
+        { image: '/imgs/characters/taylo/squizo.png', x: 90, y: 5, size: 250, zIndex: 1 },
+      ]}
+    >
+      <Fragment slot="text">
+        <h3>{t.bichittos.taylo.name} & Amigos</h3>
+        {t.bichittos.taylo.panel.story.map((p) => <p>{p}</p>)}
+      </Fragment>
+      <CharacterStrip gradient="var(--gradient-taylo)" characters={tayloChars} />
+    </DSMainCard>
   </CreatureCard>
   <BookGallery title={t.bichittos.tayloBooksTitle} books={tayloBooks} soonLabel={t.common.soon} />
 </CreatureSection>
 
 <!-- MISCELANIA -->
 <CreatureSection gradient="var(--gradient-misc-bg)" accentColor="var(--color-misc-1)">
-  <CreatureCard name={t.bichittos.miscelania.name} bannerImage="/imgs/banners/banner_miscelania.jpg" color1="#e8a87c" color2="#f2d0b5">
+  <CreatureCard name={t.bichittos.miscelania.name} color1="#e8a87c" color2="#f2d0b5">
     <p>{t.bichittos.miscelania.text}</p>
-    {miscChars.length > 0 && <CharacterStrip slot="strip" gradient="var(--gradient-misc)" side="right" characters={miscChars} />}
+    <DSMainCard
+      slot="banner"
+      gradient="var(--gradient-misc)"
+      height="1400px"
+      maxHeight="80vh"
+      titleColor="#e8a87c"
+      textColor="#f2d0b5"
+      characters={[
+        { image: '/imgs/characters/miscelania/cheio_bolinha.png', x: 55, y: 0, size: 350, zIndex: 2 },
+        { image: '/imgs/characters/miscelania/malmo.png', x: 82, y: 0, size: 300, zIndex: 1 },
+      ]}
+    >
+      <Fragment slot="text">
+        <h3>{t.bichittos.miscelania.name}</h3>
+        {t.bichittos.miscelania.panel.story.map((p) => <p>{p}</p>)}
+      </Fragment>
+      {miscChars.length > 0 && <CharacterStrip gradient="var(--gradient-misc)" characters={miscChars} />}
+    </DSMainCard>
   </CreatureCard>
   {miscBooks.length > 0 && <BookGallery title={t.bichittos.miscelaniaBooksTitle} books={miscBooks} soonLabel={t.common.soon} />}
 </CreatureSection>

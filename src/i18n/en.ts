@@ -106,6 +106,18 @@ export default {
         'A bear with bigger ears than the others — and that makes him special. Loves telling stories. He inherited from his ancestors the power of the stars: once a year, on the magic cliff, he hunts the ones that fall from the sky.',
         'In the forest, everyone is his friend — Pitu, Squizo, Candy and the others. Together, they form the Taylo universe.',
       ],
+      panel: {
+        story: [
+          'Every year, when the sky grew darker and the stars shone brighter, Taylo climbed up to the magic cliff.',
+          'It was an ancient tradition — inherited from his ancestors. They said that whoever caught a falling star could keep a wish inside it.',
+          'Pitu always tagged along. Not because he believed in magic stars — he went because he was afraid Taylo might fall off the cliff.',
+          '"Watch the edge!" Pitu shouted, clinging to a root. Squizo was already at the top, pretending not to care, but with his eyes glued to the sky.',
+          'Candy arrived last, carrying a blanket and hot chocolate. "If we\'re going to stay here all night, at least let\'s be comfortable."',
+          'And then it happened. A light cut across the sky — long, bright, leaving a golden trail. Taylo stretched out his paw and closed his eyes.',
+          'When he opened them, there was a small light pulsing between his fingers. Warm. Soft. Like a tiny heart.',
+          '"What are you going to wish for?" Pitu whispered. Taylo looked at his friends. Smiled. "Nothing. I already have everything."',
+        ],
+      },
     },
     napcatBooksTitle: 'Books',
     napcatBooks: {
@@ -126,6 +138,15 @@ export default {
     miscelania: {
       name: 'Miscelania',
       text: 'Loose creatures, experiments and characters that haven\'t found their story yet.',
+      panel: {
+        story: [
+          'Not every character is born knowing who they are. Some appear in a notebook doodle, others emerge from a forgotten dream.',
+          'Here live those still discovering their place. Creatures without a definitive name, with shapes that change with every drawing.',
+          'Cheio de Bolinha showed up on a rainy afternoon — round, colorful, covered in dots that nobody knows where they came from.',
+          'Malmo arrived quietly, as always. Sat in the corner and watched. Hasn\'t said a word yet, but everyone feels he has a lot to tell.',
+          'One day, each one will find their story. Until then, they live here — in this space between the sketch and the finished.',
+        ],
+      },
     },
     miscelaniaBooksTitle: 'Books',
   },
