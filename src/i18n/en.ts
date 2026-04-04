@@ -125,10 +125,11 @@ export default {
     pageTitle: 'About — Guitta Monatega',
     title: 'About',
     paragraphs: [
-      'Guitta Monatega is the artistic name of Suzane Machado — designer, illustrator and creator of universes.',
-      'Since 2012, she creates characters and stories that live between cute and absurd. NapCat, Zeco, Taylo and their friends were born from sketchbooks and became books, animations and miniature sculptures.',
-      'Kammara is the most recent project — an illustrated saga that connects worlds, systems and creatures in a narrative that grows with each chapter.',
-      'The work mixes techniques: ink, graphite, pointillism, crochet, needle felting, modeling and digital illustration. All handmade, with patience.',
+      'Guitta Monatega is a designer, illustrator, and creator of original universes.',
+'Since childhood, she has been building characters and stories that exist between the cute and the unexpected — where imperfection becomes form, identity, and presence. NapCat, Zeco, Taylo, the bichittos, and their friends were born in sketchbooks and have grown into books, animations, and miniature sculptures.',
+'Kammara is her most recent project — an illustrated saga that connects worlds, systems, and creatures in an ever-expanding narrative.',
+'Her work moves between traditional and digital techniques: ink, graphite, stippling, crochet, needle felting, sculpting, and digital illustration. Each piece is shaped with time, repetition, and care, preserving the essence of handmade creation.',
+'Her work explores the meeting point between form, affection, and construction — where every creation carries a memory, a gesture, and its own sense of time.'
     ],
     universesLabel: 'Universes',
     contactLabel: 'Contact',
@@ -234,9 +235,9 @@ export default {
     heroTitle: 'Art',
     filterAll: 'All',
     booksTitle: 'Art Books',
-    books: {
-      sketchbook: 'Sketchbook',
-    },
+    books: [
+      { tag: 'Coloring Book', title: 'Coloring Book' },
+    ],
     sections: {
       black: { title: 'White on Black', technique: 'White ink on black paper' },
       grafite: { title: 'Graphite', technique: 'Shading and volume studies' },

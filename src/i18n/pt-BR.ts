@@ -234,9 +234,9 @@ export default {
     heroTitle: 'Arte',
     filterAll: 'Todos',
     booksTitle: 'Livros de Arte',
-    books: {
-      sketchbook: 'Sketchbook',
-    },
+    books: [
+      { tag: 'Coloring Book', title: 'Coloring Book' },
+    ],
     sections: {
       black: { title: 'Branco no Preto', technique: 'Nanquim branco sobre papel preto' },
       grafite: { title: 'Grafite', technique: 'Estudos com sombreamento e volume' },

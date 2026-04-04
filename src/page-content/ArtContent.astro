@@ -5,7 +5,7 @@ import FilterBar from '../components/FilterBar/FilterBar.astro';
 import ArtSection from '../components/ArtSection/ArtSection.astro';
 import Modal from '../components/Modal/Modal.astro';
 import ScrollReveal from '../components/ScrollReveal/ScrollReveal.astro';
-import { readdirSync, existsSync, statSync } from 'node:fs';
+import { readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { useTranslations } from '../i18n/translations';
 
@@ -90,41 +90,27 @@ for (const s of sections) {
   sectionFullImages[s.id] = getFullImages(s.id, sectionThumbs[s.id]);
 }
 
-// Art books — auto-detect from filesystem
-const BOOKS_BASE = join(process.cwd(), 'public', 'imgs', 'books', 'art');
-const BOOKS_URL = '/imgs/books/art';
+// Art books — from i18n with tag + title
+const ART_BOOKS_BASE = join(process.cwd(), 'public', 'imgs', 'books', 'art');
+const ART_BOOKS_URL = '/imgs/books/art';
 
-function getArtBooks() {
+const artBookDefs = (t.art.books as any) as { tag: string; title: string }[] || [];
+const artBooks = artBookDefs.map((def) => {
+  const coverPath = join(ART_BOOKS_BASE, def.tag, 'cover.jpg');
+  const pagesDir = join(ART_BOOKS_BASE, def.tag, 'pages');
+  const hasCover = existsSync(coverPath);
+  let hasPublishedPages = false;
   try {
-    return readdirSync(BOOKS_BASE)
-      .filter((f: string) => {
-        try { return statSync(join(BOOKS_BASE, f)).isDirectory(); } catch { return false; }
-      })
-      .filter((f: string) => !f.startsWith('.') && !f.startsWith('_'))
-      .sort()
-      .map((folder: string) => {
-        const coverPath = join(BOOKS_BASE, folder, 'cover.jpg');
-        const pagesDir = join(BOOKS_BASE, folder, 'pages');
-        const hasCover = existsSync(coverPath);
-        let hasPages = false;
-        try {
-          hasPages = readdirSync(pagesDir).some((f: string) => /\.(jpg|jpeg|png|webp)$/i.test(f));
-        } catch {}
-        const label = folder.replace(/-/g, ' ');
-        return {
-          id: `art-${folder}`,
-          image: hasCover ? `${BOOKS_URL}/${folder}/cover.jpg` : undefined,
-          alt: label,
-          label,
-          soon: !hasPages,
-        };
-      });
-  } catch {
-    return [];
-  }
-}
-
-const artBooks = getArtBooks();
+    hasPublishedPages = existsSync(pagesDir) && readdirSync(pagesDir).some((f: string) => /\.(jpg|jpeg|png|webp)$/i.test(f));
+  } catch {}
+  return {
+    id: `art-${def.tag}`,
+    image: hasCover ? `${ART_BOOKS_URL}/${encodeURIComponent(def.tag)}/cover.jpg` : undefined,
+    alt: def.title,
+    label: def.title,
+    soon: !hasPublishedPages,
+  };
+});
 ---
 
 <HeroSection
