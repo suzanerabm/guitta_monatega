@@ -97,6 +97,8 @@ export default {
       voando: 'flying',
       vomitando: 'vomiting',
       xicara: 'cup',
+      compota: 'compote',
+      cozinhando: 'cooking',
     } as Record<string, string>,
   },
   home: {
