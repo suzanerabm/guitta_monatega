@@ -146,23 +146,11 @@ export default {
         { tag: 'adventures', title: 'NapCat Adventures' },
       ],
       panel: {
-        napcat: [
-          'Gray, soft, with a blue-tipped tail — as if dipped in a bucket of paint.',
-          'Calm, charming, always in a good mood. What he loves most is taking naps. Where there is sun, there is NapCat sleeping.',
-        ],
-        violeta: [
-          'The twin sister. Just like him, but purple. Quieter, more observant — and when she decides to speak, everyone stops to listen.',
-          'Together, they are inseparable. He sleeps, she watches. He eats, she complains. He purrs, she pretends not to care.',
-        ],
         story: [
-          'It was a warm summer afternoon when NapCat found the perfect sunspot — right in the center of the living room rug.',
-          'He spun three times, adjusted his paws, and sank into the most delicious sleep in the world. The kind of sleep that makes your ear twitch.',
-          'Violeta appeared at the door. She looked at her brother. Sighed. "Again", she murmured. But instead of complaining, she sat down next to him.',
-          'Not to sleep — Violeta never slept in the afternoon. She sat to keep watch. Because someone had to take care of things while he dreamed of flying fish and infinite yarn balls.',
-          'A butterfly flew in through the window. NapCat opened one eye. Just one. Assessed the situation. Decided it wasn\'t worth the effort. Closed his eye.',
-          'Violeta watched the butterfly land on her brother\'s ear. He didn\'t even notice. She almost smiled — almost, because Violeta doesn\'t smile easily.',
-          '"You\'re impossible", she said softly. He replied with a purr so loud the butterfly fled in fright.',
-          'And so they spent the entire afternoon. One sleeping, the other pretending not to care. Both exactly where they wanted to be.',
+          'NapCat is a calm and dreamy kitten who loves taking little naps.',
+          'In each nap, he discovers the world in his own special way — feeling sounds, colors and textures.',
+          'Alongside his sister Violeta, NapCat lives simple moments, full of warmth, imagination and coziness.',
+          'Come rest, feel and dream with NapCat and his friends.',
         ],
       },
     },
@@ -185,24 +173,22 @@ export default {
     taylo: {
       name: 'Taylo',
       books: [
-        { tag: 'star-hunter', title: 'The Star Hunter' },
+        { tag: 'star-hunter', title: 'The Star Collector' },
       ],
       text: [
-        'Taylo is a bear with rabbit ears. He is the Guardian of the Stars — a gentle protector who collects and cares for the stars of every being.',
-        'He doesn\'t tell the dreams that belong to others; he simply keeps them, until they shine again.',
-        'Every night, his friends gather around the bonfire in the Blue Forest to hear his stories — especially the ones about his grandfather, the first to find this forest of light.',
-        'Taylo was born for this: to remind the world that, even when a star goes out, its light never truly disappears.',
+        'Taylo is the Star Collector — a silent guardian who cares for the light within each of us. He does not share anyone’s dreams, because each dream belongs only to its owner.',
+        'On his journey through the Blue Forest, alongside his friend Pitu, Taylo looks at the sky and reminds us that we are like the stars: sometimes we shine brighter, and other times, more softly.',
+        'Complete just as we are, always dreaming.'
       ],
       panel: {
         story: [
-          'Every year, when the sky grew darker and the stars shone brighter, Taylo climbed up to the magic cliff.',
-          'It was an ancient tradition — inherited from his ancestors. They said that whoever caught a falling star could keep a wish inside it.',
-          'Pitu always tagged along. Not because he believed in magic stars — he went because he was afraid Taylo might fall off the cliff.',
-          '"Watch the edge!" Pitu shouted, clinging to a root. Squizo was already at the top, pretending not to care, but with his eyes glued to the sky.',
-          'Candy arrived last, carrying a blanket and hot chocolate. "If we\'re going to stay here all night, at least let\'s be comfortable."',
-          'And then it happened. A light cut across the sky — long, bright, leaving a golden trail. Taylo stretched out his paw and closed his eyes.',
-          'When he opened them, there was a small light pulsing between his fingers. Warm. Soft. Like a tiny heart.',
-          '"What are you going to wish for?" Pitu whispered. Taylo looked at his friends. Smiled. "Nothing. I already have everything."',
+          'Taylo is the Star Collector — a silent guardian who cares for the light within each of us.',
+          'He does not share anyone’s dreams, because each dream belongs only to its owner, but he watches over each star with care.',
+          'Even when a star seems a little dim, Taylo knows it is still there, shining in its own way.',
+          'On his journey through the Blue Forest, alongside his friend Pitu, he spends his nights looking at the sky filled with tiny glowing lights.',
+          'And in those quiet moments, he reminds us that we are like the stars: sometimes we shine brighter, and other times, more softly.',
+          'And that is perfectly okay, because every light has its own time and its own way.',
+          'Complete just as we are, always dreaming.'
         ],
       },
     },

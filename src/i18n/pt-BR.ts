@@ -146,23 +146,11 @@ export default {
         { tag: 'adventures', title: 'Aventuras do NapCat' },
       ],
       panel: {
-        napcat: [
-          'Cinza, macio, com a ponta do rabo azul — como se tivesse mergulhado num balde de tinta.',
-          'Calmo, charmoso, sempre de bom humor. O que ele mais gosta é tirar soneca. Onde tem sol, tem NapCat dormindo.',
-        ],
-        violeta: [
-          'A irmã gêmea. Igual a ele, mas roxa. Mais quieta, mais observadora — e quando resolve falar, todo mundo para pra ouvir.',
-          'Juntos, são inseparáveis. Ele dorme, ela vigia. Ele come, ela reclama. Ele ronrona, ela finge que não liga.',
-        ],
         story: [
-          'Era uma tarde quente de verão quando NapCat encontrou a mancha de sol perfeita — bem no centro do tapete da sala.',
-          'Ele girou três vezes, ajeitou as patas, e afundou no sono mais gostoso do mundo. O tipo de sono que faz a orelha tremer.',
-          'Violeta apareceu na porta. Olhou pro irmão. Suspirou. "De novo", murmurou. Mas em vez de reclamar, sentou do lado dele.',
-          'Não pra dormir — Violeta nunca dormia de tarde. Sentou pra vigiar. Porque alguém tinha que tomar conta enquanto ele sonhava com peixes voadores e novelos de lã infinitos.',
-          'Uma borboleta entrou pela janela. NapCat abriu um olho. Só um. Avaliou a situação. Decidiu que não valia o esforço. Fechou o olho.',
-          'Violeta observou a borboleta pousar na orelha do irmão. Ele nem percebeu. Ela quase sorriu — quase, porque Violeta não sorri fácil.',
-          '"Você é impossível", ela disse baixinho. Ele respondeu com um ronronar tão alto que a borboleta fugiu assustada.',
-          'E assim passaram a tarde inteira. Um dormindo, a outra fingindo que não se importava. Os dois exatamente onde queriam estar.',
+          'NapCat é um gatinho calmo e sonhador que adora tirar pequenos cochilos.',
+          'Em cada soneca, ele descobre o mundo de um jeitinho especial — sentindo sons, cores e texturas.',
+          'Ao lado de sua irmã Violeta, NapCat vive momentos simples, cheios de carinho, imaginação e aconchego.',
+          'Venha descansar, sentir e sonhar com NapCat e seus amigos.',
         ],
       },
     },
@@ -188,21 +176,18 @@ export default {
         { tag: 'star-hunter', title: 'O Caçador de Estrelas' },
       ],
       text: [
-        'Taylo é um urso com orelhas de coelho. Ele é o Guardião das Estrelas — um protetor gentil que coleta e cuida das estrelas de cada ser.',
-        'Ele não conta os sonhos que pertencem aos outros; apenas os guarda, até que voltem a brilhar.',
-        'Todas as noites, seus amigos se reúnem ao redor da fogueira da Floresta Azul para ouvir suas histórias — principalmente as que falam de seu avô, o primeiro a encontrar essa floresta de luz.',
-        'Taylo nasceu para isso: para lembrar ao mundo que, mesmo quando uma estrela se apaga, sua luz nunca desaparece de verdade.',
+       'Taylo é o Colecionador de Estrelas — um guardião silencioso que cuida do brilho que existe em cada um de nós. Ele não compartilha os sonhos de ninguém, pois cada sonho pertence apenas ao seu dono.',
+      'Em sua jornada pela Floresta Azul, ao lado de seu amigo Pitu, Taylo observa o céu e nos lembra que somos como as estrelas: em alguns momentos brilhamos muito, em outros, bem de levinho. Completos do jeito que somos.'
       ],
       panel: {
         story: [
-          'Todo ano, quando o céu ficava mais escuro e as estrelas brilhavam mais forte, Taylo subia até o penhasco mágico.',
-          'Era uma tradição antiga — herdada dos ancestrais. Diziam que quem pegasse uma estrela cadente podia guardar um desejo dentro dela.',
-          'Pitu sempre ia junto. Não porque acreditava em estrelas mágicas — ia porque tinha medo de que Taylo caísse do penhasco.',
-          '"Cuidado com a borda!", gritava Pitu, agarrado numa raiz. Squizo já estava no topo, fingindo que não ligava, mas com os olhos grudados no céu.',
-          'Candy chegou por último, trazendo um cobertor e chocolate quente. "Se vamos ficar aqui a noite inteira, pelo menos vamos ficar confortáveis."',
-          'E então aconteceu. Uma luz cortou o céu — longa, brilhante, deixando um rastro dourado. Taylo esticou a pata e fechou os olhos.',
-          'Quando abriu, tinha uma pequena luz pulsando entre os dedos. Quente. Suave. Como um coração minúsculo.',
-          '"O que você vai desejar?", sussurrou Pitu. Taylo olhou pros amigos. Sorriu. "Nada. Já tenho tudo."',
+          'Taylo é o Colecionador de Estrelas — um guardião silencioso que cuida do brilho que existe em cada um de nós.',
+          'Ele não compartilha os sonhos de ninguém, pois cada sonho pertence apenas ao seu dono, mas observa cada estrela com carinho.',
+          'Mesmo quando uma estrela parece mais fraquinha, Taylo sabe que ela continua lá, do jeitinho dela.',
+          'Em sua jornada pela Floresta Azul, ao lado de seu amigo Pitu, ele passa noites olhando o céu cheio de pontinhos brilhantes.',
+          'E ali, bem quietinho, ele lembra que somos como as estrelas: em alguns momentos brilhamos mais, em outros, bem de levinho.',
+          'E tudo bem ser assim, porque cada brilho tem o seu tempo e o seu jeito.',
+          'Completos do jeito que somos e sempre sonhando.'
         ],
       },
     },
