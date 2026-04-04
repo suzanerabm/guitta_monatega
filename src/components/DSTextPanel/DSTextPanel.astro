@@ -1,0 +1,72 @@
+---
+/**
+ * DSTextPanel — Painel de texto com scroll transparente
+ *
+ * Card com outline flutuante, scroll vertical com fade top/bottom,
+ * scrollbar escondida. Reutilizavel em qualquer contexto.
+ *
+ * Props:
+ *   titleColor: cor dos h3
+ *   textColor: cor dos p
+ */
+
+interface Props {
+  titleColor?: string;
+  textColor?: string;
+}
+
+const {
+  titleColor = 'rgba(255,255,255,0.9)',
+  textColor = 'rgba(255,255,255,0.7)',
+} = Astro.props;
+---
+
+<div class="ds-text-panel">
+  <div class="ds-text-scroll" style={`--ds-title-color: ${titleColor}; --ds-text-color: ${textColor};`}>
+    <slot />
+  </div>
+</div>
+
+<style>
+  .ds-text-panel {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    background: transparent;
+    outline: 2px solid rgba(255,255,255,0.2);
+    outline-offset: 3px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  }
+
+  .ds-text-scroll {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 2rem 1.5rem;
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    font-weight: var(--weight-light);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
+  }
+
+  .ds-text-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ds-text-scroll :global(h3) {
+    font-size: 1.3rem;
+    font-weight: var(--weight-bold);
+    margin-bottom: 0.8rem;
+    color: var(--ds-title-color);
+  }
+
+  .ds-text-scroll :global(p) {
+    margin-bottom: 0.8rem;
+    color: var(--ds-text-color);
+  }
+</style>

@@ -6,8 +6,9 @@
  *   characters: array de { image, x, y, size, zIndex? }
  *   gradient: CSS gradient para o fundo
  *   height/maxHeight: dimensoes
- *   textColor: cor do texto no bloco lateral (default branco)
+ *   titleColor/textColor: cores do painel de texto
  */
+import DSTextPanel from '../DSTextPanel/DSTextPanel.astro';
 
 interface Character {
   image: string;
@@ -31,8 +32,8 @@ const {
   gradient = 'var(--gradient-bichittos)',
   height = '50vh',
   maxHeight = '80vh',
-  titleColor = 'rgba(255,255,255,0.9)',
-  textColor = 'rgba(255,255,255,0.7)',
+  titleColor,
+  textColor,
 } = Astro.props;
 
 const hasText = Astro.slots.has('text');
@@ -41,7 +42,6 @@ const hasText = Astro.slots.has('text');
 <div class="ds-card" style={`height: ${height}; max-height: ${maxHeight};`}>
   <div class="ds-card-bg" style={`background: ${gradient};`}></div>
 
-  <!-- Personagens -->
   <div class="ds-card-scene">
     {characters.map((c) => (
       <div
@@ -59,14 +59,11 @@ const hasText = Astro.slots.has('text');
     ))}
   </div>
 
-  <!-- Bloco de texto lateral -->
   {hasText && (
     <div class="ds-text-wrap">
-      <div class="ds-text-card">
-        <div class="ds-text-scroll" style={`--ds-title-color: ${titleColor}; --ds-text-color: ${textColor};`}>
-          <slot name="text" />
-        </div>
-      </div>
+      <DSTextPanel titleColor={titleColor} textColor={textColor}>
+        <slot name="text" />
+      </DSTextPanel>
     </div>
   )}
 
@@ -106,7 +103,6 @@ const hasText = Astro.slots.has('text');
     filter: drop-shadow(0 4px 16px rgba(0,0,0,0.15));
   }
 
-  /* Bloco de texto lateral esquerdo */
   .ds-text-wrap {
     position: absolute;
     left: 5rem;
@@ -115,48 +111,6 @@ const hasText = Astro.slots.has('text');
     width: 30%;
     max-width: 380px;
     z-index: 3;
-  }
-
-  .ds-text-card {
-    width: 100%;
-    height: 100%;
-    border-radius: 16px;
-    overflow: hidden;
-    background: transparent;
-    outline: 2px solid rgba(255,255,255,0.2);
-    outline-offset: 3px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-  }
-
-  .ds-text-scroll {
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    padding: 2rem 1.5rem;
-    font-family: var(--sans);
-    font-size: 0.95rem;
-    line-height: 1.7;
-    font-weight: var(--weight-light);
-    mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
-  }
-
-  .ds-text-scroll::-webkit-scrollbar {
-    display: none;
-  }
-
-  .ds-text-scroll :global(h3) {
-    font-size: 1.3rem;
-    font-weight: var(--weight-bold);
-    margin-bottom: 0.8rem;
-    color: var(--ds-title-color);
-  }
-
-  .ds-text-scroll :global(p) {
-    margin-bottom: 0.8rem;
-    color: var(--ds-text-color);
   }
 
   @media (max-width: 768px) {
@@ -174,7 +128,8 @@ const hasText = Astro.slots.has('text');
       right: 1rem;
       width: auto;
       max-width: none;
-      height: 60%;
+      top: 180px;
+      bottom: 2rem;
     }
   }
 </style>
