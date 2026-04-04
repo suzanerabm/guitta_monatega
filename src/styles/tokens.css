@@ -79,12 +79,12 @@
   --gradient-taylo-bg:     linear-gradient(160deg, #34843c 0%, #185b1e 40%, #082b0b 100%);
 
   /* — Palette: Miscelania ————————————————————— */
-  --color-misc-1:          #e74c3c;   /* primaria — vermelho morango */
-  --color-misc-2:          #c0392b;   /* secundaria — vermelho escuro */
-  --color-misc-3:          #f5b7b1;   /* terciaria — bege rosado */
-  --color-misc-dark:       #2a0a0a;
-  --gradient-misc:         linear-gradient(135deg, #a9a542, #bfbb72);
-  --gradient-misc-bg:      linear-gradient(160deg, #2a0a0a 0%, #3a1510 40%, #2e0c08 100%);
+  --color-misc-1:          #3a5a8c;   /* primaria — azul marinho */
+  --color-misc-2:          #2c4a6e;   /* secundaria — azul escuro */
+  --color-misc-3:          #8badc4;   /* terciaria — azul claro */
+  --color-misc-dark:       #0e1a2a;
+  --gradient-misc:         linear-gradient(135deg, #2c4a6e, #3a5a8c, #5a7a9c);
+  --gradient-misc-bg:      linear-gradient(160deg, #0e1a2a 0%, #1a2a40 40%, #152238 100%);
 
   /* — Palette: Kammara (saga) ————————————————— */
   --color-kammara-deep:    #0a0a2e;
