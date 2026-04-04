@@ -224,6 +224,23 @@ export default {
     heroTitle: 'Kammara',
     heroDesc: 'Connected worlds. Living systems. A saga that grows with each chapter.',
     placeholder: 'Placeholder — description goes here.',
+    section: {
+      name: 'Kammara',
+      text: [
+        'Kammara is an illustrated saga that connects worlds, systems and creatures in an ever-expanding narrative.',
+        'Each planet has its own story, its inhabitants and its rules — but they are all part of something greater.',
+      ],
+      panel: {
+        story: [
+          'In the beginning, there was only the void — and from it, the first light was born.',
+          'That light split into six fragments, and each fragment found a place to land. Thus the planets were born.',
+          'LUNN\'P1 was the first to awaken. Then came ENI-4Δ, TripleC, ORF-V, Z1 and Gotto.',
+          'Each world developed its own way of existing. Some flourished in silence, others in creative chaos.',
+          'But they all share the same origin — and at the center of everything, an invisible connection pulses, reminding us that no world is alone.',
+          'Kammara is the story of that connection.',
+        ],
+      },
+    },
     booksTitle: 'Books',
     books: [] as { tag: string; title: string }[],
   },

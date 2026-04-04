@@ -1,5 +1,9 @@
 ---
 import HeroSection from '../components/HeroSection/HeroSection.astro';
+import CreatureSection from '../components/CreatureSection/CreatureSection.astro';
+import CreatureCard from '../components/CreatureCard/CreatureCard.astro';
+import DSMainCard from '../components/DSMainCard/DSMainCard.astro';
+import CharacterStrip from '../components/CharacterStrip/CharacterStrip.astro';
 import WorldCard from '../components/WorldCard/WorldCard.astro';
 import BookGallery from '../components/BookGallery/BookGallery.astro';
 import FilterBar from '../components/FilterBar/FilterBar.astro';
@@ -20,6 +24,27 @@ const worlds = [
   { id: 'z1', tag: 'Planeta', name: 'Z1', css: 'wb-z1' },
   { id: 'gotto', tag: 'Planeta', name: 'Gotto', css: 'wb-gotto' },
 ];
+
+// Kammara characters
+const CHARS_BASE = join(process.cwd(), 'public', 'imgs', 'characters');
+const CHARS_URL = '/imgs/characters';
+
+function getCharacters(creature: string): { name: string; image: string }[] {
+  const dir = join(CHARS_BASE, creature);
+  try {
+    return readdirSync(dir)
+      .filter((f: string) => /\.(png|jpg|jpeg|gif|webp|apng)$/i.test(f))
+      .sort()
+      .map((f: string) => ({
+        name: f.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' '),
+        image: `${CHARS_URL}/${creature}/${f}`,
+      }));
+  } catch {
+    return [];
+  }
+}
+
+const kammaraChars = getCharacters('kammara');
 
 const BOOKS_BASE = join(process.cwd(), 'public', 'imgs', 'books', 'kammara');
 const BOOKS_URL = '/imgs/books/kammara';
@@ -71,6 +96,28 @@ const kammaraBooks = kammaraBookDefs.length > 0
 </HeroSection>
 
 {kammaraBooks.length > 0 && <BookGallery title={t.kammara.booksTitle} books={kammaraBooks} soonLabel={t.common.soon} />}
+
+<!-- KAMMARA SECTION -->
+<CreatureSection gradient="var(--gradient-kammara)" accentColor="var(--color-kammara-purple)">
+  <CreatureCard name={(t.kammara.section as any).name} color1="#b8a9e8" color2="#d4cbf0">
+    {(t.kammara.section as any).text.map((p: string) => <p>{p}</p>)}
+    <DSMainCard
+      slot="banner"
+      gradient="var(--gradient-kammara)"
+      height="1400px"
+      maxHeight="80vh"
+      titleColor="#b8a9e8"
+      textColor="#d4cbf0"
+      characters={[]}
+    >
+      <Fragment slot="text">
+        <h3>{(t.kammara.section as any).name}</h3>
+        {(t.kammara.section as any).panel.story.map((p: string) => <p>{p}</p>)}
+      </Fragment>
+      {kammaraChars.length > 0 && <CharacterStrip gradient="var(--gradient-kammara)" characters={kammaraChars} />}
+    </DSMainCard>
+  </CreatureCard>
+</CreatureSection>
 
 <FilterBar
   target="world"
