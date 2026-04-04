@@ -49,3 +49,36 @@ const t = useTranslations(locale);
 <style is:global>
   @import '../styles/global.css';
 </style>
+
+<script>
+  const header = document.querySelector('header');
+  const breadcrumb = document.querySelector('.breadcrumb');
+  const filterBar = document.querySelector('.filter-bar');
+  let lastScroll = 0;
+
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    const scrollingDown = y > lastScroll && y > 80;
+
+    if (scrollingDown) {
+      header?.classList.add('compact');
+      if (breadcrumb) {
+        (breadcrumb as HTMLElement).style.transform = 'translateY(-100%)';
+        (breadcrumb as HTMLElement).style.opacity = '0';
+      }
+      if (filterBar) {
+        (filterBar as HTMLElement).style.top = '42px';
+      }
+    } else {
+      header?.classList.remove('compact');
+      if (breadcrumb) {
+        (breadcrumb as HTMLElement).style.transform = 'translateY(0)';
+        (breadcrumb as HTMLElement).style.opacity = '1';
+      }
+      if (filterBar) {
+        (filterBar as HTMLElement).style.top = '92px';
+      }
+    }
+    lastScroll = y;
+  }, { passive: true });
+</script>
