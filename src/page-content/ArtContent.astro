@@ -94,18 +94,26 @@ for (const s of sections) {
 const ART_BOOKS_BASE = join(process.cwd(), 'public', 'imgs', 'books', 'art');
 const ART_BOOKS_URL = '/imgs/books/art';
 
+function findCover(dir: string): string | null {
+  for (const ext of ['jpg', 'jpeg', 'png', 'webp']) {
+    const p = join(dir, `cover.${ext}`);
+    if (existsSync(p)) return `cover.${ext}`;
+  }
+  return null;
+}
+
 const artBookDefs = (t.art.books as any) as { tag: string; title: string }[] || [];
 const artBooks = artBookDefs.map((def) => {
-  const coverPath = join(ART_BOOKS_BASE, def.tag, 'cover.jpg');
-  const pagesDir = join(ART_BOOKS_BASE, def.tag, 'pages');
-  const hasCover = existsSync(coverPath);
+  const bookDir = join(ART_BOOKS_BASE, def.tag);
+  const cover = findCover(bookDir);
+  const pagesDir = join(bookDir, 'pages');
   let hasPublishedPages = false;
   try {
     hasPublishedPages = existsSync(pagesDir) && readdirSync(pagesDir).some((f: string) => /\.(jpg|jpeg|png|webp)$/i.test(f));
   } catch {}
   return {
     id: `art-${def.tag}`,
-    image: hasCover ? `${ART_BOOKS_URL}/${encodeURIComponent(def.tag)}/cover.jpg` : undefined,
+    image: cover ? `${ART_BOOKS_URL}/${encodeURIComponent(def.tag)}/${cover}` : undefined,
     alt: def.title,
     label: def.title,
     soon: !hasPublishedPages,

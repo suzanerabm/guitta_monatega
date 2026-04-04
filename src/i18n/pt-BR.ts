@@ -43,7 +43,7 @@ export default {
       doente: 'doente',
       doodle: 'rabisco',
       dormindo: 'dormindo',
-      'dúvida': 'dúvida',
+      duvida: 'dúvida',
       escondido: 'escondido',
       escova: 'escova',
       falando: 'falando',

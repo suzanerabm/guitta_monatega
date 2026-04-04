@@ -48,20 +48,28 @@ const zecoChars = getCharacters('zeco');
 const tayloChars = getCharacters('taylo');
 const miscChars = getCharacters('miscelania');
 
+function findCover(dir: string): string | null {
+  for (const ext of ['jpg', 'jpeg', 'png', 'webp']) {
+    const p = join(dir, `cover.${ext}`);
+    if (existsSync(p)) return `cover.${ext}`;
+  }
+  return null;
+}
+
 function getCreatureBooks(creature: string, bookDefs?: { tag: string; title: string }[]) {
   // Se tem definicoes no i18n, usa elas (tag → pasta, title → titulo)
   if (bookDefs && bookDefs.length > 0) {
     return bookDefs.map((def) => {
-      const coverPath = join(BOOKS_BASE, creature, def.tag, 'cover.jpg');
-      const pagesDir = join(BOOKS_BASE, creature, def.tag, 'pages');
-      const hasCover = existsSync(coverPath);
+      const bookDir = join(BOOKS_BASE, creature, def.tag);
+      const cover = findCover(bookDir);
+      const pagesDir = join(bookDir, 'pages');
       let hasPublishedPages = false;
       try {
         hasPublishedPages = existsSync(pagesDir) && readdirSync(pagesDir).some((f: string) => /\.(jpg|jpeg|png|webp)$/i.test(f));
       } catch {}
       return {
         id: `${creature}-${def.tag}`,
-        image: hasCover ? `${BOOKS_URL}/${creature}/${encodeURIComponent(def.tag)}/cover.jpg` : undefined,
+        image: cover ? `${BOOKS_URL}/${creature}/${encodeURIComponent(def.tag)}/${cover}` : undefined,
         alt: def.title,
         label: def.title,
         soon: !hasPublishedPages,
@@ -78,16 +86,16 @@ function getCreatureBooks(creature: string, bookDefs?: { tag: string; title: str
       .filter((f: string) => !f.startsWith('.') && !f.startsWith('_'))
       .sort()
       .map((folder: string) => {
-        const coverPath = join(creatureDir, folder, 'cover.jpg');
-        const pagesDir = join(creatureDir, folder, 'pages');
-        const hasCover = existsSync(coverPath);
+        const bookDir = join(creatureDir, folder);
+        const cover = findCover(bookDir);
+        const pagesDir = join(bookDir, 'pages');
         let hasPublishedPages = false;
         try {
           hasPublishedPages = existsSync(pagesDir) && readdirSync(pagesDir).some((f: string) => /\.(jpg|jpeg|png|webp)$/i.test(f));
         } catch {}
         return {
           id: `${creature}-${folder}`,
-          image: hasCover ? `${BOOKS_URL}/${creature}/${encodeURIComponent(folder)}/cover.jpg` : undefined,
+          image: cover ? `${BOOKS_URL}/${creature}/${encodeURIComponent(folder)}/${cover}` : undefined,
           alt: folder.replace(/-/g, ' '),
           label: folder.replace(/-/g, ' '),
           soon: !hasPublishedPages,
