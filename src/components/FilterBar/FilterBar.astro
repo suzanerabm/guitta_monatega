@@ -3,6 +3,7 @@ interface FilterItem {
   id: string;
   label: string;
   color?: string;
+  bgColor?: string;
 }
 
 interface Props {
@@ -17,7 +18,7 @@ const { filters, allLabel = 'Todos', target = 'art' } = Astro.props;
 <nav class="filter-bar" data-filter-bar={target}>
   <button class="filter-btn active" data-filter="all">{allLabel}</button>
   {filters.map((f) => (
-    <button class="filter-btn" data-filter={f.id} data-color={f.color || ''}>{f.label}</button>
+    <button class="filter-btn" data-filter={f.id} data-color={f.color || ''} data-bg-color={f.bgColor || ''}>{f.label}</button>
   ))}
 </nav>
 
@@ -96,6 +97,13 @@ const { filters, allLabel = 'Todos', target = 'art' } = Astro.props;
           btn.style.background = color;
           btn.style.borderColor = color;
           btn.style.color = '#fff';
+        }
+
+        const bgColor = btn.dataset.bgColor;
+        if (bgColor) {
+          bar.style.background = bgColor;
+        } else {
+          bar.style.background = '';
         }
 
         const filter = btn.dataset.filter || 'all';

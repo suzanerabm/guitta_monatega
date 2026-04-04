@@ -142,10 +142,8 @@ export default {
     napcat: {
       name: 'NapCat',
       text: [
-        'NapCat é um gatinho calmo e sonhador que adora tirar pequenos cochilos.',
-        'Em cada soneca, ele descobre o mundo de um jeitinho especial — sentindo sons, cores e texturas.',
-        'Ao lado de sua irmã Violeta, NapCat vive momentos simples, cheios de carinho, imaginação e aconchego.',
-        'Venha descansar, sentir e sonhar com NapCat e seus amigos.',
+        'NapCat é um gatinho calmo e sonhador que adora tirar pequenos cochilos. Em cada soneca, ele descobre o mundo de um jeitinho especial — sentindo sons, cores e texturas. Ao lado de sua irmã Violeta, NapCat vive momentos simples, cheios de carinho, imaginação e aconchego.',
+        'Venha descansar, tirar soneca e sonhar com NapCat e seus amigos.',
       ],
       books: [
         { tag: 'adventures', title: 'Aventuras do NapCat' },
