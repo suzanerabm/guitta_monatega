@@ -164,7 +164,7 @@ export default {
     },
     zeco: {
       name: 'Zeco',
-      text: 'Round, orange, with plaid socks. Makes friends with anyone. Loves popsicles, is afraid of the fridge and cries about everything — but the next minute he is laughing again.',
+      text: 'Zeco is a small hamster who is curious, affectionate, and full of imagination, and he dreams of becoming a chef. Among friends, nature, and everyday moments, he creates, shares, and discovers that the most important things are found in care and in the little details of daily life. Come play with Zeco and his friends.',
       panel: {
         story: [
           'The Zeco collection was born from a real memory.',

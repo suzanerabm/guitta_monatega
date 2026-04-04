@@ -9,7 +9,7 @@ import FilterBar from '../components/FilterBar/FilterBar.astro';
 import Modal from '../components/Modal/Modal.astro';
 import ScrollReveal from '../components/ScrollReveal/ScrollReveal.astro';
 import { useTranslations } from '../i18n/translations';
-import { existsSync, readdirSync } from 'node:fs';
+import { existsSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
 interface Props { locale?: string; }
