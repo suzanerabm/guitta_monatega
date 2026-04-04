@@ -3,6 +3,7 @@ import HeroSection from '../components/HeroSection/HeroSection.astro';
 import CreatureSection from '../components/CreatureSection/CreatureSection.astro';
 import CreatureCard from '../components/CreatureCard/CreatureCard.astro';
 import CharacterStrip from '../components/CharacterStrip/CharacterStrip.astro';
+import DSMainCard from '../components/DSMainCard/DSMainCard.astro';
 import BookGallery from '../components/BookGallery/BookGallery.astro';
 import Modal from '../components/Modal/Modal.astro';
 import ScrollReveal from '../components/ScrollReveal/ScrollReveal.astro';
@@ -144,6 +145,20 @@ for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs, miscBookDefs]) 
     <p>{t.bichittos.napcat.text}</p>
     <CharacterStrip slot="strip" gradient="var(--gradient-napcat)" side="left" characters={napcatChars} />
   </CreatureCard>
+  <DSMainCard
+    gradient="var(--gradient-napcat-bg)"
+    height="600px"
+    characters={[
+      { image: '/imgs/Napcat/napcatDefault.png', size: 130, speed: 20, delay: 0, y: 55 },
+      { image: '/imgs/Napcat/violeta_default.png', size: 100, speed: 25, delay: -8, y: 40 },
+      { image: '/imgs/Napcat/napcat_bebendo.png', size: 90, speed: 18, delay: -4, y: 65 },
+      { image: '/imgs/Napcat/napcat_dormindo.png', size: 110, speed: 30, delay: -12, y: 50 },
+      { image: '/imgs/Napcat/napcat_burp.png', size: 85, speed: 22, delay: -16, y: 35 },
+    ]}
+  >
+    <h3>NapCat & Violeta</h3>
+    <p>{t.bichittos.napcat.text}</p>
+  </DSMainCard>
   <BookGallery title={t.bichittos.napcatBooksTitle} books={napcatBooks} soonLabel={t.common.soon} />
 </CreatureSection>
 

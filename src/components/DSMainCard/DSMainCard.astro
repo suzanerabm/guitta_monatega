@@ -1,0 +1,153 @@
+---
+/**
+ * DSMainCard — Card de cena animada estilo Disney
+ *
+ * Uma janela para um mundinho vivo: personagens se movem no fundo,
+ * texto flutua por cima com scroll transparente.
+ *
+ * Props:
+ *   characters: array de { image, size?, speed?, delay?, y? }
+ *   gradient: CSS gradient para o fundo da cena
+ *   height: altura do card (default '600px')
+ */
+
+interface Character {
+  image: string;
+  size?: number;
+  speed?: number;
+  delay?: number;
+  y?: number;
+}
+
+interface Props {
+  characters: Character[];
+  gradient?: string;
+  height?: string;
+}
+
+const { characters, gradient = 'var(--gradient-bichittos)', height = '600px' } = Astro.props;
+---
+
+<div class="ds-card" style={`height: ${height};`}>
+  <!-- Fundo com gradiente -->
+  <div class="ds-card-bg" style={`background: ${gradient};`}></div>
+
+  <!-- Personagens animados -->
+  <div class="ds-card-scene">
+    {characters.map((c, i) => (
+      <div
+        class="ds-char"
+        style={`
+          --char-size: ${c.size || 120}px;
+          --char-speed: ${c.speed || 15 + i * 5}s;
+          --char-delay: ${c.delay || i * -4}s;
+          --char-y: ${c.y || 50 + (i % 3) * 15}%;
+        `}
+      >
+        <img src={c.image} alt="" />
+      </div>
+    ))}
+  </div>
+
+  <!-- Texto com scroll transparente + fade top/bottom -->
+  <div class="ds-card-content">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .ds-card {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    overflow: hidden;
+    border-radius: 0;
+  }
+
+  .ds-card-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  /* Cena dos personagens */
+  .ds-card-scene {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .ds-char {
+    position: absolute;
+    top: var(--char-y);
+    width: var(--char-size);
+    height: var(--char-size);
+    animation: charWalk var(--char-speed) linear infinite;
+    animation-delay: var(--char-delay);
+    transform: translateX(-150px);
+  }
+
+  .ds-char img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: charBounce 0.8s ease-in-out infinite;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+  }
+
+  .ds-char:nth-child(even) img {
+    animation-duration: 0.9s;
+  }
+
+  @keyframes charWalk {
+    0% { transform: translateX(-150px); }
+    100% { transform: translateX(calc(100vw + 150px)); }
+  }
+
+  @keyframes charBounce {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-8px) rotate(-2deg); }
+    75% { transform: translateY(-4px) rotate(2deg); }
+  }
+
+  /* Texto com scroll por cima */
+  .ds-card-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 4rem 3rem;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+  }
+
+  .ds-card-content::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Texto dentro do card */
+  .ds-card-content :global(h2),
+  .ds-card-content :global(h3) {
+    color: var(--color-white);
+    text-shadow: 0 2px 16px rgba(0,0,0,0.3);
+  }
+
+  .ds-card-content :global(p) {
+    color: rgba(255,255,255,0.8);
+    text-shadow: 0 1px 8px rgba(0,0,0,0.2);
+    max-width: 500px;
+  }
+
+  @media (max-width: 768px) {
+    .ds-card-content {
+      padding: 3rem 1.5rem;
+    }
+
+    .ds-char {
+      --char-size: 80px !important;
+    }
+  }
+</style>
