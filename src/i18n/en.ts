@@ -108,7 +108,7 @@ export default {
     bichittos: {
       label: 'Series',
       title: 'Bichittos',
-      desc: 'Creatures that live between the absurd and affection.',
+      desc: 'Characters that live between the imperfect and affection.',
     },
     kammara: {
       label: 'Saga',
@@ -138,10 +138,10 @@ export default {
     pageTitle: 'Bichittos — Guitta Monatega',
     heroLabel: 'Series',
     heroTitle: 'Bichittos',
-    heroDesc: 'Creatures that live between the absurd and affection.',
+    heroDesc: 'Characters that live between the imperfect and affection.',
     napcat: {
       name: 'NapCat',
-      text: 'Gray, soft, with a blue-tipped tail — as if dipped in a bucket of paint. Calm, charming, always in a good mood. What he loves most is taking naps. He has a twin sister, Violeta.',
+      text: 'NapCat is a calm and dreamy kitten who loves taking little naps. In each nap, he discovers the world in his own special way — feeling sounds, colors and textures. Alongside his sister Violeta, NapCat lives simple moments, full of warmth, imagination and coziness. Come rest, feel and dream with NapCat and his friends.',
       books: [
         { tag: 'adventures', title: 'NapCat Adventures' },
       ],

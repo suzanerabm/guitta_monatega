@@ -108,7 +108,7 @@ export default {
     bichittos: {
       label: 'Série',
       title: 'Bichittos',
-      desc: 'Criaturas que existem entre o absurdo e o afeto.',
+      desc: 'Personagens que existem entre o imperfeito e o afeto.',
     },
     kammara: {
       label: 'Saga',
@@ -138,10 +138,10 @@ export default {
     pageTitle: 'Bichittos — Guitta Monatega',
     heroLabel: 'Série',
     heroTitle: 'Bichittos',
-    heroDesc: 'Criaturas que existem entre o absurdo e o afeto.',
+    heroDesc: 'Personagens que existem entre o imperfeito e o afeto.',
     napcat: {
       name: 'NapCat',
-      text: 'Cinza, macio, com a ponta do rabo azul — como se tivesse mergulhado num balde de tinta. Calmo, charmoso, sempre de bom humor. O que ele mais gosta é tirar soneca. Tem uma irmã gêmea, a Violeta.',
+      text: 'NapCat é um gatinho calmo e sonhador que adora tirar pequenos cochilos. Em cada soneca, ele descobre o mundo de um jeitinho especial — sentindo sons, cores e texturas. Ao lado de sua irmã Violeta, NapCat vive momentos simples, cheios de carinho, imaginação e aconchego. Venha descansar, sentir e sonhar com NapCat e seus amigos.',
       books: [
         { tag: 'adventures', title: 'Aventuras do NapCat' },
       ],
