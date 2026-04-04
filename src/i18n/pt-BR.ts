@@ -62,6 +62,16 @@ export default {
           'A irma gemea. Igual a ele, mas roxa. Mais quieta, mais observadora — e quando resolve falar, todo mundo para pra ouvir.',
           'Juntos, sao inseparaveis. Ele dorme, ela vigia. Ele come, ela reclama. Ele ronrona, ela finge que nao liga.',
         ],
+        story: [
+          'Era uma tarde quente de verao quando NapCat encontrou a mancha de sol perfeita — bem no centro do tapete da sala.',
+          'Ele girou tres vezes, ajeitou as patas, e afundou no sono mais gostoso do mundo. O tipo de sono que faz a orelha tremer.',
+          'Violeta apareceu na porta. Olhou pro irmao. Suspirou. "De novo", murmurou. Mas em vez de reclamar, sentou do lado dele.',
+          'Nao pra dormir — Violeta nunca dormia de tarde. Sentou pra vigiar. Porque alguem tinha que tomar conta enquanto ele sonhava com peixes voadores e novelos de la infinitos.',
+          'Uma borboleta entrou pela janela. NapCat abriu um olho. So um. Avaliou a situacao. Decidiu que nao valia o esforco. Fechou o olho.',
+          'Violeta observou a borboleta pousar na orelha do irmao. Ele nem percebeu. Ela quase sorriu — quase, porque Violeta nao sorri facil.',
+          '"Voce e impossivel", ela disse baixinho. Ele respondeu com um ronronar tao alto que a borboleta fugiu assustada.',
+          'E assim passaram a tarde inteira. Um dormindo, a outra fingindo que nao se importava. Os dois exatamente onde queriam estar.',
+        ],
       },
     },
     zeco: {

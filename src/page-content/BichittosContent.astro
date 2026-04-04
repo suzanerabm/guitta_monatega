@@ -151,15 +151,13 @@ for (const defs of [napcatBookDefs, zecoBookDefs, tayloBookDefs, miscBookDefs]) 
       titleColor="#f4a6ea"
       textColor="#ddd4f4"
       characters={[
-        { image: '/imgs/Napcat/napcatDefault.png', x: 55, y: 0, size: 400, zIndex: 2 },
+        { image: '/imgs/Napcat/napcatDefault.png', x: 55, y: 0, size: 360, zIndex: 2 },
         { image: '/imgs/Napcat/Violeta.png', x: 82, y: 0, size: 350, zIndex: 1 },
       ]}
     >
       <Fragment slot="text">
-        <h3>{t.bichittos.napcat.name}</h3>
-        {t.bichittos.napcat.panel.napcat.map((p) => <p>{p}</p>)}
-        <h3>Violeta</h3>
-        {t.bichittos.napcat.panel.violeta.map((p) => <p>{p}</p>)}
+        <h3>{t.bichittos.napcat.name} & Violeta</h3>
+        {t.bichittos.napcat.panel.story.map((p) => <p>{p}</p>)}
       </Fragment>
       <CharacterStrip gradient="var(--gradient-napcat)" characters={napcatChars} />
     </DSMainCard>

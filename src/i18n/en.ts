@@ -62,6 +62,16 @@ export default {
           'The twin sister. Just like him, but purple. Quieter, more observant — and when she decides to speak, everyone stops to listen.',
           'Together, they are inseparable. He sleeps, she watches. He eats, she complains. He purrs, she pretends not to care.',
         ],
+        story: [
+          'It was a warm summer afternoon when NapCat found the perfect sunspot — right in the center of the living room rug.',
+          'He spun three times, adjusted his paws, and sank into the most delicious sleep in the world. The kind of sleep that makes your ear twitch.',
+          'Violeta appeared at the door. She looked at her brother. Sighed. "Again", she murmured. But instead of complaining, she sat down next to him.',
+          'Not to sleep — Violeta never slept in the afternoon. She sat to keep watch. Because someone had to take care of things while he dreamed of flying fish and infinite yarn balls.',
+          'A butterfly flew in through the window. NapCat opened one eye. Just one. Assessed the situation. Decided it wasn\'t worth the effort. Closed his eye.',
+          'Violeta watched the butterfly land on her brother\'s ear. He didn\'t even notice. She almost smiled — almost, because Violeta doesn\'t smile easily.',
+          '"You\'re impossible", she said softly. He replied with a purr so loud the butterfly fled in fright.',
+          'And so they spent the entire afternoon. One sleeping, the other pretending not to care. Both exactly where they wanted to be.',
+        ],
       },
     },
     zeco: {
