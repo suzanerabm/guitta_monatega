@@ -66,7 +66,7 @@
   --color-zeco-2:          #ff6b35;   /* secundaria — laranja forte */
   --color-zeco-3:          #ffa751;   /* terciaria — laranja claro */
   --color-zeco-dark:       #1a0e02;
-  --gradient-zeco:         linear-gradient(135deg, var(--color-zeco-1), var(--color-zeco-2), var(--color-zeco-3));
+  --gradient-zeco:         linear-gradient(160deg, #fece95 0%, #fcaf5b 40%, #fece95 100%);
   /* --gradient-zeco-bg:      linear-gradient(160deg, #6c360d 0%, #3a2008 40%, #2e1805 100%); */
   --gradient-zeco-bg:      linear-gradient(160deg, #fece95 0%, #f57f20 40%, #fece95 100%);
 

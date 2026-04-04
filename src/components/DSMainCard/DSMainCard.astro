@@ -18,6 +18,13 @@ interface Character {
   zIndex?: number;
 }
 
+interface Mascot {
+  image: string;
+  size?: number;
+  offsetX?: number;
+  offsetY?: number;
+}
+
 interface Props {
   characters: Character[];
   gradient?: string;
@@ -25,6 +32,7 @@ interface Props {
   maxHeight?: string;
   titleColor?: string;
   textColor?: string;
+  mascot?: Mascot;
 }
 
 const {
@@ -34,6 +42,7 @@ const {
   maxHeight = '80vh',
   titleColor,
   textColor,
+  mascot,
 } = Astro.props;
 
 const hasText = Astro.slots.has('text');
@@ -61,6 +70,16 @@ const hasText = Astro.slots.has('text');
 
   {hasText && (
     <div class="ds-text-wrap">
+      {mascot && (
+        <div class="ds-mascot" style={`
+          width: ${mascot.size || 120}px;
+          height: ${mascot.size || 120}px;
+          right: ${mascot.offsetX || 10}%;
+          top: ${mascot.offsetY || -40}px;
+        `}>
+          <img src={mascot.image} alt="" />
+        </div>
+      )}
       <DSTextPanel titleColor={titleColor} textColor={textColor}>
         <slot name="text" />
       </DSTextPanel>
@@ -103,6 +122,18 @@ const hasText = Astro.slots.has('text');
     filter: drop-shadow(0 4px 16px rgba(0,0,0,0.15));
   }
 
+  .ds-mascot {
+    position: absolute;
+    z-index: 4;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
+  }
+
+  .ds-mascot img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
   .ds-text-wrap {
     position: absolute;
     left: 5rem;
@@ -130,6 +161,10 @@ const hasText = Astro.slots.has('text');
       max-width: none;
       top: 180px;
       bottom: 2rem;
+    }
+
+    .ds-mascot {
+      transform: scale(0.7);
     }
   }
 </style>
