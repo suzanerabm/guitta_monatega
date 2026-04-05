@@ -293,16 +293,33 @@ export default {
         ],
 
         // Texto curto
-description: 'LUNN\'P1 — o planeta onde tudo flui. Um mundo sem sol, onde quatro luas regem o tempo e a água nunca mente. Lar dos Shal\'ún, os únicos seres naturalmente imunes a vírus em todo o universo.',
-
-
-
-
+        description: 'LUNN\'P1 — o planeta onde tudo flui. Um mundo sem sol, onde quatro luas regem o tempo e a água nunca mente. Lar dos Shal\'ún, os únicos seres naturalmente imunes a vírus em todo o universo.',
         },
         subsystems: [
-          { title: 'Cultura', text: ['Placeholder — descreva a cultura aqui.'] },
-          { title: 'Ecossistema', text: ['Placeholder — descreva o ecossistema aqui.'] },
-          { title: 'Tecnologia', text: ['Placeholder — descreva a tecnologia aqui.'] },
+          { title: 'Flora & Fauna', text: [
+            'Não há fauna predatória em LUNN\'P1. Não há ecossistema de competição. Tudo coexiste.',
+            'As árvores-torre são raízes que subiram. Sustentam as Naru\'ei, conduzem vibrações, e conectam a superfície ao fundo da água.',
+            'Os Lún\'Kai são guias lumínicos — vagalumes de luz viva, ligados 1:1 a cada Shal\'ún desde o nascimento. Onde vai o Shal\'ún, vai o Lún\'Kai.',
+            'Túri\'Kan são tartarugas de transporte vibracional. Cruzam distâncias entre Naru\'ei carregando passageiros pelo ritmo da água.',
+            'Peixes-lume e Ori\'Shen formam padrões aquáticos que lembram glifos. Arraias-reflexo devolvem ao observador o que ele não quer ver.',
+            'As Lunas-folhas mudam de cor conforme a lua dominante. A flora de Oru\'Len é mutável. As raízes ancestrais guardam memórias que nenhum ser vivo lembra.',
+          ] },
+          { title: 'Geografia', text: [
+            'LUNN\'P1 não tem zonas secas, metálicas ou urbanas. Tudo é vivo, lumínico e vibracional.',
+            'As Naru\'ei são cidades-folha gigantes que flutuam sobre a Lún\'Rai. Migram conforme a vibração coletiva — não têm endereço fixo.',
+            'Árvores-torre as sustentam de baixo, com raízes que conduzem energia e som de uma ponta a outra do planeta.',
+            'Lagos ancestrais guardam os dead-pixels — pontos de energia condensada de cada dissolução. Brilham apenas no reflexo da água.',
+            'Fendas vibracionais são pontos de alta concentração de energia Dra\'Lum. Regiões profundas, antigas, onde o planeta guarda o que já foi.',
+            'Não existe mapa fixo. As Naru\'ei se movem. Os caminhos mudam. A geografia de LUNN\'P1 respira.',
+          ] },
+          { title: 'Linguagem', text: [
+            'Em LUNN\'P1, existem três formas de comunicação — e nenhuma delas depende de palavras como as conhecemos.',
+            'A Voz Kalún é o idioma falado. Poucos sons, significados profundos. Sem gênero, sem plural rígido. Cada palavra carrega peso vibracional.',
+            'O Código-Lume é a comunicação entre Shal\'ún e Lún\'Kai. Não é falado nem escrito — é vibração pura traduzida em luz.',
+            'Os Glifos Kalún são linguagem de luz inscrita nas costas de cada Shal\'ún. Cada glifo dorsal é único — funciona como identidade vibracional.',
+            'Os Tzir\'Kai, anfíbios tradutores, convertem Click-Δ — os sons virais de ENI-4Δ — em Código-Lume. São a ponte entre a linguagem da ameaça e a linguagem da luz.',
+            'Em LUNN\'P1, comunicar não é transmitir informação. É compartilhar vibração.',
+          ] },
         ],
       },
       eni4: {
@@ -337,9 +354,22 @@ description: 'LUNN\'P1 — o planeta onde tudo flui. Um mundo sem sol, onde quat
 
         },
         subsystems: [
-          { title: 'Cultura', text: ['Placeholder — descreva a cultura aqui.'] },
-          { title: 'Ecossistema', text: ['Placeholder — descreva o ecossistema aqui.'] },
-          { title: 'Tecnologia', text: ['Placeholder — descreva a tecnologia aqui.'] },
+          { title: 'Zonas Térmicas', text: [
+            'Quatro zonas térmicas dividem ENI-4Δ. Poder é temperatura — quem fica mais perto do calor, manda.',
+            'SCORCH — temperatura extrema. Onde Node-0 queima no centro. Terror constante. Submissão absoluta.',
+            'BURN — alta e estável. Onde a elite opera. VALKON, KARTEX e os Δ-PRIME disputam prestígio e eficiência técnica.',
+            'CRACK — média e instável. Caos e imprevisibilidade. Bugs dominam, worms surgem sem aviso, fábricas de clonagem operam sem parar.',
+            'SINK — baixa. Isolamento e silêncio. Vírus de infiltração, Caste-MASK, aguardam ordens na escuridão fria.',
+            'O Vale das Válvulas Queimadas. Os Campos de Cartões Perfurados. Os Túneis de Worms. Nada em ENI-4Δ é bonito. Tudo é funcional para o consumo.',
+          ] },
+          { title: 'Protocolos de Ataque', text: [
+            'SIPHON — drenagem rápida e passiva. Qualquer vírus pode executar. Horas ou dias. Consome sem que a vítima entenda o que aconteceu.',
+            'ERODE — influência prolongada. Drena identidade ao longo de semanas ou meses. Operado por Caste-MASK sênior. O alvo muda sem perceber que mudou.',
+            'BREACH — invasão estrutural. Meses ou ciclos inteiros de infiltração pela porta dos fundos. Coordenado por VEXON. Quando é descoberto, já é tarde.',
+            'Os vírus chegam em Máscara Cute — casca branca, olhinhos escuros, aparência inofensiva. Ganham confiança antes de drenar.',
+            'As Troy-Δ são as únicas naves de ENI-4Δ. Sem elas, vírus evaporam ao atravessar o Cshift. São transporte e proteção ao mesmo tempo.',
+            'Quando os sintomas aparecem, a invasão já terminou.',
+          ] },
         ],
       },
       triplec: {

@@ -183,7 +183,7 @@ const worldsData = worlds.map((world) => ({
         {(t.kammara.section as any).panel.story.map((p: string) => <p>{p}</p>)}
       </Fragment>
       {kammaraChars.length > 0 ? (
-        <CharacterStrip gradient="var(--gradient-kammara)" characters={kammaraChars} cardSize={500} noFloat speed={120} transparent />
+        <CharacterStrip gradient="var(--gradient-kammara)" characters={kammaraChars} cardSize={300} noFloat speed={120} transparent />
       ) : (
         <SoonPanel label={t.common.soon} />
       )}
@@ -212,22 +212,25 @@ const worldsData = worlds.map((world) => ({
           {w.panelStory.map((p: string) => <p>{p}</p>)}
         </Fragment>
         {w.chars.length > 0 ? (
-          <CharacterStrip gradient={w.gradient} characters={w.chars} cardSize={500} noFloat speed={120} transparent />
+          <CharacterStrip gradient={w.gradient} characters={w.chars} cardSize={330} noFloat speed={100} transparent />
         ) : (
           <SoonPanel label={t.common.soon} color={w.color} />
         )}
       </DSMainCard>
     </CreatureCard>
-    {w.subsystems.length > 0 && (
+    {w.subsystems.filter((s) => s.text.length > 0 && s.text[0] !== 'Placeholder — descreva a cultura aqui.' && s.text[0] !== 'Placeholder — descreva a geografia aqui.' && s.text[0] !== 'Placeholder — descreva a linguagem aqui.' && s.text[0] !== 'Placeholder — descreva o ecossistema aqui.' && s.text[0] !== 'Placeholder — descreva a tecnologia aqui.').length > 0 && (
       <SubSystem
-        cards={w.subsystems.map((s, i) => ({
-          title: s.title,
-          image: w.subsystemImages[i] || undefined,
-          imageAlt: s.title,
-          texts: s.text,
-        }))}
+        cards={w.subsystems
+          .map((s, i) => ({
+            title: s.title,
+            image: w.subsystemImages[i] || undefined,
+            imageAlt: s.title,
+            texts: s.text,
+          }))
+          .filter((c) => c.texts.length > 0 && !c.texts[0].startsWith('Placeholder'))}
         titleColor={w.titleColor}
         textColor={w.textColor}
+        gradient={w.gradient}
       />
     )}
   </CreatureSection>

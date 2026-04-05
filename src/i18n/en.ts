@@ -268,9 +268,30 @@ export default {
           ],
         },
         subsystems: [
-          { title: 'Culture', text: ['Placeholder — describe the culture here.'] },
-          { title: 'Ecosystem', text: ['Placeholder — describe the ecosystem here.'] },
-          { title: 'Technology', text: ['Placeholder — describe the technology here.'] },
+          { title: 'Flora & Fauna', text: [
+            'There is no predatory fauna on LUNN\'P1. No competitive ecosystem. Everything coexists.',
+            'Tower-trees are roots that rose. They sustain the Naru\'ei, conduct vibrations, and connect the surface to the water\'s depths.',
+            'The Lún\'Kai are luminous guides — living light fireflies, bonded 1:1 to each Shal\'ún since birth. Where the Shal\'ún goes, the Lún\'Kai follows.',
+            'Túri\'Kan are vibrational transport turtles. They cross distances between Naru\'ei carrying passengers through the water\'s rhythm.',
+            'Lume-fish and Ori\'Shen form aquatic patterns that resemble glyphs. Mirror-rays reflect back what the observer doesn\'t want to see.',
+            'Luna-leaves change color according to the dominant moon. Oru\'Len flora is mutable. Ancestral roots hold memories no living being remembers.',
+          ] },
+          { title: 'Geography', text: [
+            'LUNN\'P1 has no dry, metallic or urban zones. Everything is alive, luminous and vibrational.',
+            'The Naru\'ei are giant leaf-cities that float on the Lún\'Rai. They migrate according to collective vibration — they have no fixed address.',
+            'Tower-trees sustain them from below, with roots that conduct energy and sound from one end of the planet to the other.',
+            'Ancestral lakes hold the dead-pixels — condensed energy points from each dissolution. They glow only in the water\'s reflection.',
+            'Vibrational rifts are points of high Dra\'Lum energy concentration. Deep, ancient regions where the planet keeps what once was.',
+            'There is no fixed map. The Naru\'ei move. Paths change. The geography of LUNN\'P1 breathes.',
+          ] },
+          { title: 'Language', text: [
+            'On LUNN\'P1, there are three forms of communication — and none of them depend on words as we know them.',
+            'The Kalún Voice is the spoken language. Few sounds, deep meanings. No gender, no rigid plural. Each word carries vibrational weight.',
+            'The Lume-Code is the communication between Shal\'ún and Lún\'Kai. It is neither spoken nor written — it is pure vibration translated into light.',
+            'The Kalún Glyphs are light language inscribed on each Shal\'ún\'s back. Each dorsal glyph is unique — it functions as vibrational identity.',
+            'The Tzir\'Kai, amphibian translators, convert Click-Δ — the viral sounds of ENI-4Δ — into Lume-Code. They are the bridge between the language of threat and the language of light.',
+            'On LUNN\'P1, to communicate is not to transmit information. It is to share vibration.',
+          ] },
         ],
       },
       eni4: {

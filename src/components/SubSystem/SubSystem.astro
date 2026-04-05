@@ -15,23 +15,22 @@ interface Props {
   cards: SubSystemCard[];
   titleColor?: string;
   textColor?: string;
+  gradient?: string;
 }
 
-const { cards, titleColor = 'rgba(255,255,255,0.9)', textColor = 'rgba(255,255,255,0.7)' } = Astro.props;
+const { cards, titleColor = 'rgba(255,255,255,0.9)', textColor = 'rgba(255,255,255,0.7)', gradient } = Astro.props;
 ---
 
 <div class="subsystem-grid">
   {cards.map((card) => (
-    <div class="subsystem-card">
+    <div class="subsystem-card" style={gradient ? `--sub-bg: ${gradient};` : ''}>
       <span class="subsystem-title" style={`color: ${titleColor};`}>{card.title}</span>
-      <div class="subsystem-body">
-        <div class="subsystem-image">
-          {card.image ? (
-            <img src={card.image} alt={card.imageAlt || card.title} />
-          ) : (
-            <div class="subsystem-image-placeholder"></div>
-          )}
-        </div>
+      <div class={`subsystem-body ${card.image ? '' : 'no-image'}`}>
+        {card.image && (
+          <div class="subsystem-image">
+            <img src={card.image} alt={card.imageAlt || card.title} loading="lazy" decoding="async" />
+          </div>
+        )}
         <div class="subsystem-text" style={`color: ${textColor};`}>
           {card.texts.map((p) => <p>{p}</p>)}
         </div>
@@ -42,21 +41,44 @@ const { cards, titleColor = 'rgba(255,255,255,0.9)', textColor = 'rgba(255,255,2
 
 <style>
   .subsystem-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1.5rem;
-    padding: 2rem 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 2rem;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   }
 
   .subsystem-card {
+    flex: 0 1 calc(33.333% - 1rem);
+    min-width: 280px;
     border-radius: 16px;
     outline: 2px solid rgba(255,255,255,0.2);
     outline-offset: 3px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    height: 300px;
+    position: relative;
+  }
+
+  .subsystem-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--sub-bg);
+    opacity: 0.2;
+    z-index: 0;
+    border-radius: 16px;
+  }
+
+  .subsystem-title,
+  .subsystem-body {
+    position: relative;
+    z-index: 1;
   }
 
   .subsystem-title {
@@ -72,6 +94,8 @@ const { cards, titleColor = 'rgba(255,255,255,0.9)', textColor = 'rgba(255,255,2
     display: flex;
     flex: 1;
     gap: 0;
+    min-height: 0;
+    overflow: hidden;
   }
 
   .subsystem-image {
@@ -82,15 +106,8 @@ const { cards, titleColor = 'rgba(255,255,255,0.9)', textColor = 'rgba(255,255,2
   .subsystem-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
-  }
-
-  .subsystem-image-placeholder {
-    width: 100%;
-    height: 100%;
-    min-height: 200px;
-    background: rgba(255,255,255,0.05);
   }
 
   .subsystem-text {
@@ -103,6 +120,8 @@ const { cards, titleColor = 'rgba(255,255,255,0.9)', textColor = 'rgba(255,255,2
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
   }
 
   .subsystem-text::-webkit-scrollbar {
@@ -115,23 +134,34 @@ const { cards, titleColor = 'rgba(255,255,255,0.9)', textColor = 'rgba(255,255,2
 
   @media (max-width: 768px) {
     .subsystem-grid {
-      grid-template-columns: 1fr;
-      padding: 1.5rem;
+      flex-direction: column;
+      padding: 1rem 1.5rem;
       gap: 1.2rem;
+      width: 100%;
+      margin-left: 0;
+    }
+
+    .subsystem-card {
+      flex: none;
+      width: 100%;
+      min-width: 0;
+      height: auto;
     }
 
     .subsystem-body {
-      flex-direction: column;
+      flex-direction: row;
     }
 
     .subsystem-image {
-      flex: none;
-      height: 180px;
+      flex: 0 0 35%;
+      height: auto;
     }
 
     .subsystem-text {
       font-size: 0.8rem;
       padding: 1rem;
+      max-height: 250px;
+      overflow-y: auto;
     }
   }
 </style>
