@@ -29,7 +29,7 @@ const { cards, titleColor = 'var(--color-text-overlay-bright)', subtitleColor, t
 <div class="subsystem-grid">
   {cards.map((card) => (
     <div class="subsystem-card" style={gradient ? `--sub-bg: ${gradient};` : ''}>
-      <span class="subsystem-title" style={`color: ${titleColor};`}>{card.title}</span>
+      <h6 class="subsystem-title" style={`color: ${subtitleColor || titleColor};`}>{card.title}</h6>
       <div class={`subsystem-body ${card.image ? '' : 'no-image'}`}>
         {card.image && (
           <div class="subsystem-image">
