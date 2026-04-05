@@ -35,6 +35,7 @@ interface Props {
   height?: string;
   maxHeight?: string;
   titleColor?: string;
+  subtitleColor?: string;
   textColor?: string;
   mascot?: Mascot;
   stripSide?: boolean;
@@ -47,6 +48,7 @@ const {
   height = '50vh',
   maxHeight = '80vh',
   titleColor,
+  subtitleColor,
   textColor,
   mascot,
   stripSide = false,
@@ -92,7 +94,7 @@ const hasText = Astro.slots.has('text');
           <img src={mascot.image} alt="" />
         </div>
       )}
-      <DSTextPanel titleColor={titleColor} textColor={textColor}>
+      <DSTextPanel titleColor={titleColor} subtitleColor={subtitleColor} textColor={textColor}>
         <slot name="text" />
       </DSTextPanel>
     </div>

@@ -18,12 +18,12 @@ const { locale = 'pt-BR' } = Astro.props;
 const t = useTranslations(locale);
 
 const worlds = [
-  { id: 'lunnp1', tag: 'Planeta', name: "LUNN'P1", color: 'var(--color-lunnp1-filter)', bgColor: 'var(--color-lunnp1-filter-bg)', color1: 'var(--color-lunnp1-1)', color2: 'var(--color-lunnp1-3)', gradient: 'var(--gradient-lunnp1)', accentColor: 'var(--color-lunnp1-1)', titleColor: 'var(--color-lunnp1-title)', textColor: 'var(--color-lunnp1-text)' },
-  { id: 'eni4', tag: 'Planeta', name: 'ENI-4\u0394', color: 'var(--color-eni4-filter)', bgColor: 'var(--color-eni4-filter-bg)', color1: 'var(--color-eni4-1)', color2: 'var(--color-eni4-3)', gradient: 'var(--gradient-eni4)', accentColor: 'var(--color-eni4-1)', titleColor: 'var(--color-eni4-title)', textColor: 'var(--color-eni4-text)' },
-  { id: 'triplec', tag: 'Estação Espacial', name: 'TripleC', color: 'var(--color-triplec-filter)', bgColor: 'var(--color-triplec-filter-bg)', color1: 'var(--color-triplec-title)', color2: 'var(--color-triplec-3)', gradient: 'var(--gradient-triplec)', accentColor: 'var(--color-triplec-1)', titleColor: 'var(--color-triplec-title)', textColor: 'var(--color-triplec-text)' },
-  { id: 'orfv', tag: 'Planeta', name: 'ORF-V', color: 'var(--color-orfv-filter)', bgColor: 'var(--color-orfv-filter-bg)', color1: 'var(--color-orfv-title)', color2: 'var(--color-orfv-3)', gradient: 'var(--gradient-orfv)', accentColor: 'var(--color-orfv-1)', titleColor: 'var(--color-orfv-title)', textColor: 'var(--color-orfv-text)', bgOpacity: 0.4 },
-  { id: 'z1', tag: 'Planeta', name: 'Z1', color: 'var(--color-z1-filter)', bgColor: 'var(--color-z1-filter-bg)', color1: 'var(--color-z1-1)', color2: 'var(--color-z1-3)', gradient: 'var(--gradient-z1)', accentColor: 'var(--color-z1-1)', titleColor: 'var(--color-z1-title)', textColor: 'var(--color-z1-text)' },
-  { id: 'gotto', tag: 'Planeta', name: 'Gotto', color: 'var(--color-gotto-filter)', bgColor: 'var(--color-gotto-filter-bg)', color1: 'var(--color-gotto-1)', color2: 'var(--color-gotto-3)', gradient: 'var(--gradient-gotto)', accentColor: 'var(--color-gotto-1)', titleColor: 'var(--color-gotto-title)', textColor: 'var(--color-gotto-text)' },
+  { id: 'lunnp1', tag: 'Planeta', name: "LUNN'P1", color: 'var(--color-lunnp1-1)', bgColor: 'var(--color-lunnp1-dark)', color1: 'var(--color-lunnp1-1)', color2: 'var(--color-lunnp1-3)', gradient: 'var(--gradient-lunnp1)', accentColor: 'var(--color-lunnp1-1)', titleColor: 'var(--color-lunnp1-2)', textColor: 'var(--color-lunnp1-3)', subtitleColor: 'var(--color-lunnp1-4)', labelColor: 'var(--color-lunnp1-3)' },
+  { id: 'eni4', tag: 'Planeta', name: 'ENI-4\u0394', color: 'var(--color-eni4-1)', bgColor: 'var(--color-eni4-dark)', color1: 'var(--color-eni4-1)', color2: 'var(--color-eni4-3)', gradient: 'var(--gradient-eni4)', accentColor: 'var(--color-eni4-1)', titleColor: 'var(--color-eni4-2)', textColor: 'var(--color-eni4-3)', subtitleColor: 'var(--color-eni4-4)', labelColor: 'var(--color-eni4-3)' },
+  { id: 'triplec', tag: 'Estação Espacial', name: 'TripleC', color: 'var(--color-triplec-1)', bgColor: 'var(--color-triplec-dark)', color1: 'var(--color-triplec-4)', color2: 'var(--color-triplec-3)', gradient: 'var(--gradient-triplec)', accentColor: 'var(--color-triplec-1)', titleColor: 'var(--color-triplec-2)', textColor: 'var(--color-triplec-3)', subtitleColor: 'var(--color-triplec-4)', labelColor: 'var(--color-triplec-3)' },
+  { id: 'orfv', tag: 'Planeta', name: 'ORF-V', color: 'var(--color-orfv-1)', bgColor: 'var(--color-orfv-dark)', color1: 'var(--color-orfv-4)', color2: 'var(--color-orfv-3)', gradient: 'var(--gradient-orfv)', accentColor: 'var(--color-orfv-1)', titleColor: 'var(--color-orfv-2)', textColor: 'var(--color-orfv-3)', subtitleColor: 'var(--color-orfv-4)', labelColor: 'var(--color-orfv-3)', bgOpacity: 0.4 },
+  { id: 'z1', tag: 'Planeta', name: 'Z1', color: 'var(--color-z1-1)', bgColor: 'var(--color-z1-dark)', color1: 'var(--color-z1-1)', color2: 'var(--color-z1-3)', gradient: 'var(--gradient-z1)', accentColor: 'var(--color-z1-1)', titleColor: 'var(--color-z1-2)', textColor: 'var(--color-z1-3)', subtitleColor: 'var(--color-z1-4)', labelColor: 'var(--color-z1-3)' },
+  { id: 'gotto', tag: 'Planeta', name: 'Gotto', color: 'var(--color-gotto-1)', bgColor: 'var(--color-gotto-dark)', color1: 'var(--color-gotto-1)', color2: 'var(--color-gotto-3)', gradient: 'var(--gradient-gotto)', accentColor: 'var(--color-gotto-1)', titleColor: 'var(--color-gotto-2)', textColor: 'var(--color-gotto-3)', subtitleColor: 'var(--color-gotto-4)', labelColor: 'var(--color-gotto-3)' },
 ];
 
 // Kammara characters
@@ -198,8 +198,8 @@ const worldsData = worlds.map((world) => ({
       gradient="var(--gradient-kammara-card)"
       height="1400px"
       maxHeight="80vh"
-      titleColor="var(--color-kammara-title)"
-      textColor="var(--color-kammara-text)"
+      titleColor="var(--color-kammara-1)"
+      textColor="var(--color-kammara-2)"
       characters={[]}
       stripSide
       bgOpacity={0.3}
@@ -229,6 +229,7 @@ const worldsData = worlds.map((world) => ({
         maxHeight="80vh"
         titleColor={w.titleColor}
         textColor={w.textColor}
+        subtitleColor={(w as any).subtitleColor}
         characters={[]}
         stripSide
         bgOpacity={(w as any).bgOpacity ?? (w.bgImage ? 0.6 : 1)}

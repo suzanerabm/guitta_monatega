@@ -14,12 +14,13 @@ interface SubSystemCard {
 interface Props {
   cards: SubSystemCard[];
   titleColor?: string;
+  subtitleColor?: string;
   textColor?: string;
   gradient?: string;
   sectionTitle?: string;
 }
 
-const { cards, titleColor = 'var(--color-text-overlay-bright)', textColor = 'var(--color-text-overlay)', gradient, sectionTitle } = Astro.props;
+const { cards, titleColor = 'var(--color-text-overlay-bright)', subtitleColor, textColor = 'var(--color-text-overlay)', gradient, sectionTitle } = Astro.props;
 ---
 
 {sectionTitle && (

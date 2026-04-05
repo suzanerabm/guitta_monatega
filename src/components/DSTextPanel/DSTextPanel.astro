@@ -12,17 +12,19 @@
 
 interface Props {
   titleColor?: string;
+  subtitleColor?: string;
   textColor?: string;
 }
 
 const {
   titleColor = 'var(--color-text-overlay-bright)',
+  subtitleColor,
   textColor = 'var(--color-text-overlay)',
 } = Astro.props;
 ---
 
 <div class="ds-text-panel">
-  <div class="ds-text-scroll" style={`--ds-title-color: ${titleColor}; --ds-text-color: ${textColor};`}>
+  <div class="ds-text-scroll" style={`--ds-title-color: ${titleColor}; --ds-subtitle-color: ${subtitleColor || titleColor}; --ds-text-color: ${textColor};`}>
     <slot />
   </div>
 </div>
@@ -72,8 +74,7 @@ const {
     text-transform: uppercase;
     margin-top: 1.2rem;
     margin-bottom: 0.3rem;
-    color: var(--ds-title-color);
-    opacity: 0.8;
+    color: var(--ds-subtitle-color);
   }
 
   .ds-text-scroll :global(p) {

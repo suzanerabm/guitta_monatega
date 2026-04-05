@@ -57,14 +57,10 @@
   --color-napcat-1:        #667eea;   /* primaria — azul lavanda 667eea */
   --color-napcat-2:        #764ba2;   /* secundaria — roxo  764ba2*/
   --color-napcat-3:        #fefdff;   /* terciaria — rosa claro f093fb b5a2dc */
+  --color-napcat-4:        #b5a2dc;   /* card-1 */
+  --color-napcat-5:        #ddd4f4;   /* card-2 */
+  --color-napcat-6:        #4f0a42;   /* accent escuro */
   --color-napcat-dark:     #1a1432;
-  --color-napcat-filter:   #b5a2dc;
-  --color-napcat-filter-bg:#2a1f4a;
-  --color-napcat-card-1:   #b5a2dc;
-  --color-napcat-card-2:   #ddd4f4;
-  --color-napcat-title:    #4f0a42;
-  --color-napcat-text:     #ddd4f4;
-  --color-napcat-label:    var(--color-white);
   --gradient-napcat:       linear-gradient(135deg, var(--color-napcat-1), var(--color-napcat-2), var(--color-napcat-3));
   --gradient-napcat-bg:    linear-gradient(160deg, #1a1432 0%, #2a1f4a 40%, #1e1638 100%);
 
@@ -75,14 +71,10 @@
   --color-zeco-1:          #ff8c42;   /* primaria — laranja */
   --color-zeco-2:          #ff6b35;   /* secundaria — laranja forte */
   --color-zeco-3:          #ffa751;   /* terciaria — laranja claro */
+  --color-zeco-4:          #964712;   /* marrom */
+  --color-zeco-5:          #f9e3cf;   /* creme claro */
+  --color-zeco-6:          #f58020;   /* laranja vivo */
   --color-zeco-dark:       #1a0e02;
-  --color-zeco-filter:     #964712;
-  --color-zeco-filter-bg:  #f57f20;
-  --color-zeco-card-1:     #964712;
-  --color-zeco-card-2:     #f9e3cf;
-  --color-zeco-title:      #f58020;
-  --color-zeco-text:       #594733;
-  --color-zeco-label:      var(--color-white);
   --gradient-zeco:         linear-gradient(160deg, #fece95 0%, #fcaf5b 40%, #fece95 100%);
   /* --gradient-zeco-bg:      linear-gradient(160deg, #6c360d 0%, #3a2008 40%, #2e1805 100%); */
   --gradient-zeco-bg:      linear-gradient(160deg, #fece95 0%, #f57f20 40%, #fece95 100%);
@@ -91,14 +83,10 @@
   --color-taylo-1:         #5d9466;   /* primaria — rosa */
   --color-taylo-2:         #427f49;   /* secundaria — azul */
   --color-taylo-3:         #277230;   /* terciaria — lilas */
+  --color-taylo-4:         #d7e2dd;   /* verde claro */
+  --color-taylo-5:         #b6fcc0;   /* verde neon */
+  --color-taylo-6:         #082b0b;   /* verde escuro */
   --color-taylo-dark:      #082b0b;
-  --color-taylo-filter:    #5d9466;
-  --color-taylo-filter-bg: #185b1e;
-  --color-taylo-card-1:    #5d9466;
-  --color-taylo-card-2:    #ffffff;
-  --color-taylo-title:     #d7e2dd;
-  --color-taylo-text:      #b6fcc0;
-  --color-taylo-label:     var(--color-white);
   --gradient-taylo:        linear-gradient(135deg, var(--color-taylo-1), var(--color-taylo-2), var(--color-taylo-1));
   --gradient-taylo-bg:     linear-gradient(160deg, #34843c 0%, #185b1e 40%, #082b0b 100%);
 
@@ -106,14 +94,10 @@
   --color-misc-1:          #3a5a8c;   /* primaria — azul marinho */
   --color-misc-2:          #2c4a6e;   /* secundaria — azul escuro */
   --color-misc-3:          #8badc4;   /* terciaria — azul claro */
+  --color-misc-4:          #b0cfe0;   /* azul claro */
+  --color-misc-5:          #081e28;   /* azul muito escuro */
+  --color-misc-6:          #1a3a48;   /* azul escuro */
   --color-misc-dark:       #0e1a2a;
-  --color-misc-filter:     #8badc4;
-  --color-misc-filter-bg:  #1a2a40;
-  --color-misc-card-1:     #8badc4;
-  --color-misc-card-2:     #b0cfe0;
-  --color-misc-title:      #081e28;
-  --color-misc-text:       #b0cfe0;
-  --color-misc-label:      var(--color-white);
   --gradient-misc:         linear-gradient(135deg, #2c4a6e, #3a5a8c, #5a7a9c);
   --gradient-misc-bg:      linear-gradient(160deg, #0e1a2a 0%, #1a2a40 40%, #152238 100%);
 
@@ -125,9 +109,10 @@
   --color-kammara-glow:    rgba(100,80,200,0.2);
   --color-kammara-1:       #d4cbf0;
   --color-kammara-2:       #b8a9e8;
-  --color-kammara-title:   #d4cbf0;
-  --color-kammara-text:    #b8a9e8;
-  --color-kammara-label:   #ffffff;
+  --color-kammara-3:       #7a60b0;   /* roxo medio */
+  --color-kammara-4:       #a898d0;   /* lavanda medio */
+  --color-kammara-5:       #2d1b69;   /* roxo profundo */
+  --color-kammara-6:       #0a0a2e;   /* quase preto */
   --gradient-kammara:      linear-gradient(135deg, #0a0a2e, #1a1a4e, #2d1b69, #0f3460);
   --gradient-kammara-card: linear-gradient(135deg, #000000, #0a0a2e, #1a1a4e, #000000);
 
@@ -135,12 +120,10 @@
   --color-lunnp1-1:        #151418;
   --color-lunnp1-2:        #c80071;
   --color-lunnp1-3:        #e569f0;
+  --color-lunnp1-4:        #002e14;   /* verde escuro */
+  --color-lunnp1-5:        #00c853;   /* verde medio */
+  --color-lunnp1-6:        #004d25;   /* verde profundo */
   --color-lunnp1-dark:     #002e14;
-  --color-lunnp1-filter:   #00e676;
-  --color-lunnp1-filter-bg:#002e14;
-  --color-lunnp1-title:    #fed20b;
-  --color-lunnp1-text:     #8669f0;
-  --color-lunnp1-label:    #28247a;
   --gradient-lunnp1:       linear-gradient(135deg, #004d25, #00c853, #00e676);
   --gradient-lunnp1-bg:    linear-gradient(160deg, #001a0e 0%, #003d1a 40%, #002e14 100%);
 
@@ -148,12 +131,10 @@
   --color-eni4-1:          #e8a317;
   --color-eni4-2:          #c47f0a;
   --color-eni4-3:          #f5c842;
+  --color-eni4-4:          #1a1005;   /* marrom escuro */
+  --color-eni4-5:          #c47f0a;   /* laranja escuro */
+  --color-eni4-6:          #8a5a0a;   /* dourado escuro */
   --color-eni4-dark:       #1a1005;
-  --color-eni4-filter:     #e8a317;
-  --color-eni4-filter-bg:  #1a1005;
-  --color-eni4-title:      #e8a317;
-  --color-eni4-text:       #f5c842;
-  --color-eni4-label:      #ffffff;
   --gradient-eni4:         linear-gradient(135deg, #8a5a0a, #e8a317, #f5c842);
   --gradient-eni4-bg:      linear-gradient(160deg, #1a1005 0%, #3a2a0a 40%, #2a1c06 100%);
 
@@ -161,12 +142,10 @@
   --color-triplec-1:       #7b4fbf;
   --color-triplec-2:       #2a5caa;
   --color-triplec-3:       #00e86a;
+  --color-triplec-4:       #2a2868;   /* azul-roxo */
+  --color-triplec-5:       #0e3a1a;   /* verde escuro */
+  --color-triplec-6:       #1a4a30;   /* verde floresta */
   --color-triplec-dark:    #0a0818;
-  --color-triplec-filter:  #00e86a;
-  --color-triplec-filter-bg:#0a0818;
-  --color-triplec-title:   #2a2868;
-  --color-triplec-text:    #0e3a1a;
-  --color-triplec-label:   #ffffff;
   --gradient-triplec:      linear-gradient(135deg, #00e86a 0%, #00e86a 35%, #7b4fbf 70%, #2a5caa 100%);
   --gradient-triplec-bg:   linear-gradient(160deg, #0a0818 0%, #1a1040 40%, #081a10 100%);
 
@@ -174,12 +153,10 @@
   --color-orfv-1:          #8040c8;
   --color-orfv-2:          #5a30a0;
   --color-orfv-3:          #40d0e8;
+  --color-orfv-4:          #cf568c;   /* rosa */
+  --color-orfv-5:          #3a1860;   /* roxo escuro */
+  --color-orfv-6:          #9040a0;   /* roxo medio */
   --color-orfv-dark:       #0c0620;
-  --color-orfv-filter:     #8040c8;
-  --color-orfv-filter-bg:  #0c0620;
-  --color-orfv-title:      #cf568c;
-  --color-orfv-text:       #3a1860;
-  --color-orfv-label:      #ffffff;
   --gradient-orfv:         linear-gradient(135deg, #d4829a 0%, #d4829a 70%, #40d0e8 100%);
   --gradient-orfv-bg:      linear-gradient(160deg, #0c0620 0%, #1a0c40 40%, #081828 100%);
 
@@ -187,12 +164,10 @@
   --color-z1-1:            #b0b8c4;
   --color-z1-2:            #8a929e;
   --color-z1-3:            #d8dce4;
+  --color-z1-4:            #8a929e;   /* cinza medio */
+  --color-z1-5:            #6a7080;   /* cinza escuro */
+  --color-z1-6:            #2a2c34;   /* quase preto */
   --color-z1-dark:         #12141a;
-  --color-z1-filter:       #b0b8c4;
-  --color-z1-filter-bg:    #12141a;
-  --color-z1-title:        #b0b8c4;
-  --color-z1-text:         #d8dce4;
-  --color-z1-label:        #ffffff;
   --gradient-z1:           linear-gradient(135deg, #6a7080, #b0b8c4, #d8dce4);
   --gradient-z1-bg:        linear-gradient(160deg, #12141a 0%, #2a2c34 40%, #1a1c22 100%);
 
@@ -200,12 +175,10 @@
   --color-gotto-1:         #4a2a2a;
   --color-gotto-2:         #3a1a1a;
   --color-gotto-3:         #6a4a4a;
+  --color-gotto-4:         #c4a8a8;   /* rosa claro */
+  --color-gotto-5:         #8a6a6a;   /* rosa escuro */
+  --color-gotto-6:         #201212;   /* quase preto */
   --color-gotto-dark:      #1a0e0e;
-  --color-gotto-filter:    #6a4a4a;
-  --color-gotto-filter-bg: #1a0e0e;
-  --color-gotto-title:     #6a4a4a;
-  --color-gotto-label:     #ffffff;
-  --color-gotto-text:      #c4a8a8;
   --gradient-gotto:        linear-gradient(135deg, #2a1a1a, #4a2a2a, #3a1a1a);
   --gradient-gotto-bg:     linear-gradient(160deg, #1a0e0e 0%, #2a1a1a 40%, #201212 100%);
 
