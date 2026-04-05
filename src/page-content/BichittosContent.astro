@@ -24,7 +24,11 @@ const CHARS_URL = '/imgs/characters';
 const words = t.common.words;
 
 function translateName(filename: string): string {
-  const raw = filename.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ');
+  const raw = filename
+    .replace(/\.[^.]+$/, '')
+    .replace(/_/g, ' ')
+    .replace(/^\d+\s*/, '')
+    .trim();
   return raw.split(' ').map(w => words[w.toLowerCase()] ?? w).join(' ');
 }
 

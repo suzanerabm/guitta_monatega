@@ -5,6 +5,7 @@
  * Os cards rolam automaticamente em loop infinito.
  */
 import CharacterCard from '../CharacterCard/CharacterCard.astro';
+import { ChevronLeft, ChevronRight } from '@lucide/astro';
 
 interface Character {
   name: string;
@@ -19,20 +20,36 @@ interface Props {
   cardSize?: number;
   noFloat?: boolean;
   transparent?: boolean;
+  noBorder?: boolean;
+  noLoop?: boolean;
+  showArrows?: boolean;
+  noHoverScale?: boolean;
 }
 
-const { characters, gradient = 'var(--gradient-bichittos)', side = 'right', speed, cardSize, noFloat = false, transparent = false } = Astro.props;
+const { characters, gradient = 'var(--gradient-bichittos)', side = 'right', speed, cardSize, noFloat = false, transparent = false, noBorder = false, noLoop = false, showArrows = false, noHoverScale = false } = Astro.props;
 const autoSpeed = speed ?? characters.length * 5;
-const allCards = [...characters, ...characters];
+const allCards = noLoop ? characters : [...characters, ...characters];
 const uid = `strip-${Math.random().toString(36).slice(2, 8)}`;
 ---
 
-<div class={`char-strip char-strip-${side}`}>
-  <div class="char-strip-track" data-strip-track={uid} data-speed={autoSpeed}>
-    {allCards.map((c) => (
-      <CharacterCard name={c.name} image={c.image} gradient={gradient} cardSize={cardSize} noFloat={noFloat} transparent={transparent} />
-    ))}
+<div class={`char-strip-wrap ${showArrows ? 'has-arrows' : ''}`}>
+  {showArrows && (
+    <button class="strip-arrow strip-arrow-left" data-strip-arrow="left" aria-label="Previous">
+      <ChevronLeft size={20} />
+    </button>
+  )}
+  <div class={`char-strip char-strip-${side} ${noLoop ? 'char-strip-static' : ''}`}>
+    <div class="char-strip-track" {...(!noLoop ? { 'data-strip-track': uid, 'data-speed': String(autoSpeed) } : {})}>
+      {allCards.map((c) => (
+        <CharacterCard name={c.name} image={c.image} gradient={gradient} cardSize={cardSize} noFloat={noFloat} transparent={transparent} noBorder={noBorder} noHoverScale={noHoverScale} />
+      ))}
+    </div>
   </div>
+  {showArrows && (
+    <button class="strip-arrow strip-arrow-right" data-strip-arrow="right" aria-label="Next">
+      <ChevronRight size={20} />
+    </button>
+  )}
 </div>
 
 <style>
@@ -48,6 +65,60 @@ const uid = `strip-${Math.random().toString(36).slice(2, 8)}`;
     overflow-y: visible;
     mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  }
+
+  .char-strip-static {
+    position: relative;
+    top: auto;
+    flex: 1;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .char-strip-static::-webkit-scrollbar {
+    display: none;
+  }
+
+  .char-strip-wrap {
+    position: relative;
+    width: 100%;
+  }
+
+  .char-strip-wrap.has-arrows {
+    display: flex;
+    align-items: center;
+  }
+
+  .strip-arrow {
+    flex-shrink: 0;
+    z-index: 10;
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.7);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(8px);
+  }
+
+  .strip-arrow:hover {
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+  }
+
+  .strip-arrow-left { margin-right: 0.5rem; }
+  .strip-arrow-right { margin-left: 0.5rem; }
+
+  .has-arrows .char-strip {
+    flex: 1;
+    min-width: 0;
   }
 
   .char-strip-track {
@@ -71,6 +142,21 @@ const uid = `strip-${Math.random().toString(36).slice(2, 8)}`;
       margin-top: 2rem;
       mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
       -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+    }
+
+    .char-strip-static {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .char-strip-static::-webkit-scrollbar {
+      display: none;
+    }
+
+    .strip-arrow {
+      display: none;
     }
   }
 </style>
@@ -117,6 +203,23 @@ const uid = `strip-${Math.random().toString(36).slice(2, 8)}`;
     strip.addEventListener('mouseleave', () => {
       anim.playbackRate = 1;
       anim.play();
+    });
+  });
+
+  // Arrow navigation
+  document.querySelectorAll<HTMLElement>('.has-arrows').forEach(wrap => {
+    const strip = wrap.querySelector('.char-strip') as HTMLElement;
+    if (!strip) return;
+    const track = strip.querySelector('.char-strip-track') as HTMLElement;
+    if (!track) return;
+    const card = track.querySelector('.char-card') as HTMLElement;
+    const scrollAmount = card ? card.offsetWidth + 16 : 300;
+
+    wrap.querySelectorAll<HTMLElement>('[data-strip-arrow]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const dir = btn.dataset.stripArrow === 'left' ? -1 : 1;
+        strip.scrollBy({ left: dir * scrollAmount, behavior: 'smooth' });
+      });
     });
   });
 </script>

@@ -30,6 +30,17 @@ const worlds = [
 const CHARS_BASE = join(process.cwd(), 'public', 'imgs', 'characters');
 const CHARS_URL = '/imgs/characters';
 
+const words = t.common.words;
+
+function cleanName(filename: string): string {
+  const raw = filename
+    .replace(/\.[^.]+$/, '')     // remove extensão
+    .replace(/_/g, ' ')          // underscores viram espaço
+    .replace(/^\d+\s*/, '')      // remove números do início
+    .trim();
+  return raw.split(' ').map(w => words[w.toLowerCase()] ?? w).join(' ');
+}
+
 function getCharacters(creature: string): { name: string; image: string }[] {
   const dir = join(CHARS_BASE, creature);
   try {
@@ -37,7 +48,7 @@ function getCharacters(creature: string): { name: string; image: string }[] {
       .filter((f: string) => /\.(png|jpg|jpeg|gif|webp|apng)$/i.test(f))
       .sort()
       .map((f: string) => ({
-        name: f.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' '),
+        name: cleanName(f),
         image: `${CHARS_URL}/${creature}/${f}`,
       }));
   } catch {
@@ -61,8 +72,23 @@ function getWorldCharacters(worldId: string): { name: string; image: string }[] 
       .filter((f: string) => /\.(png|jpg|jpeg|gif|webp|apng)$/i.test(f))
       .sort()
       .map((f: string) => ({
-        name: f.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' '),
+        name: cleanName(f),
         image: `${CHARS_URL}/kammara/${worldId}/${f}`,
+      }));
+  } catch {
+    return [];
+  }
+}
+
+function getWorldScenes(worldId: string): { name: string; image: string }[] {
+  const dir = join(CHARS_BASE, 'kammara', worldId, '_scenes');
+  try {
+    return readdirSync(dir)
+      .filter((f: string) => /\.(png|jpg|jpeg|gif|webp|apng)$/i.test(f))
+      .sort()
+      .map((f: string) => ({
+        name: cleanName(f),
+        image: `${CHARS_URL}/kammara/${worldId}/_scenes/${f}`,
       }));
   } catch {
     return [];
@@ -131,6 +157,7 @@ const worldsData = worlds.map((world) => ({
   panelStory: (kammaraWorlds[world.id]?.panel?.story || []) as string[],
   worldName: (kammaraWorlds[world.id]?.name || world.name) as string,
   chars: getWorldCharacters(world.id),
+  scenes: getWorldScenes(world.id),
   bgImage: getWorldBg(world.id),
   subsystems: (kammaraWorlds[world.id]?.subsystems || []) as { title: string; text: string[] }[],
   subsystemImages: getSubsystemImages(world.id),
@@ -210,8 +237,15 @@ const worldsData = worlds.map((world) => ({
           <h3>{w.worldName}</h3>
           {w.panelStory.map((p: string) => <p>{p}</p>)}
         </Fragment>
-        {w.chars.length > 0 ? (
-          <CharacterStrip gradient={w.gradient} characters={w.chars} cardSize={330} noFloat speed={100} transparent />
+        {(w.chars.length > 0 || w.scenes.length > 0) ? (
+          <div class="strips-stack">
+            {w.chars.length > 0 && (
+              <CharacterStrip gradient={w.gradient} characters={w.chars} cardSize={200} noFloat speed={100} transparent />
+            )}
+            {w.scenes.length > 0 && (
+              <CharacterStrip gradient={w.gradient} characters={w.scenes} cardSize={300} noFloat speed={300} transparent noBorder noLoop showArrows />
+            )}
+          </div>
         ) : (
           <SoonPanel label={t.common.soon} color={w.color} />
         )}
@@ -236,6 +270,26 @@ const worldsData = worlds.map((world) => ({
 ))}
 
 <ScrollReveal selector="[data-creature]" />
+
+<style is:global>
+  .strips-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .strips-stack .char-strip {
+    position: relative;
+    top: auto;
+    flex: 1;
+  }
+
+  .strips-stack .char-strip-wrap {
+    width: 100%;
+  }
+</style>
 
 <script>
   const canvas = document.getElementById('kammara-stars');

@@ -6,17 +6,19 @@ interface Props {
   cardSize?: number;
   noFloat?: boolean;
   transparent?: boolean;
+  noBorder?: boolean;
+  noHoverScale?: boolean;
 }
 
-const { name, image, gradient = 'var(--gradient-bichittos)', cardSize, noFloat = false, transparent = false } = Astro.props;
+const { name, image, gradient = 'var(--gradient-bichittos)', cardSize, noFloat = false, transparent = false, noBorder = false, noHoverScale = false } = Astro.props;
 const size = cardSize || 120;
 const wrapperWidth = size + 20;
 ---
 
-<div class={`char-card ${noFloat ? 'no-float' : ''} ${transparent ? 'transparent' : ''}`} style={`--card-size: ${size}px; --card-width: ${wrapperWidth}px;`}>
+<div class={`char-card ${noFloat ? 'no-float' : ''} ${transparent ? 'transparent' : ''} ${noBorder ? 'no-border' : ''} ${noHoverScale ? 'no-hover-scale' : ''}`} style={`--card-size: ${size}px; --card-width: ${wrapperWidth}px;`}>
   <div class="char-card-glow" style={`background: ${gradient};`}></div>
   <div class="char-card-img-wrap">
-    <img src={image} alt={name} class="char-card-img" />
+    <img src={image} alt={name} class="char-card-img" draggable="false" />
   </div>
   <span class="char-card-name">{name}</span>
 </div>
@@ -47,6 +49,30 @@ const wrapperWidth = size + 20;
 
   .char-card.transparent .char-card-glow {
     display: none;
+  }
+
+  .char-card.no-border .char-card-img-wrap {
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+    border-radius: 8px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+
+  .char-card.no-border .char-card-img {
+    padding: 0;
+    object-fit: cover;
+  }
+
+  .char-card.no-border .char-card-glow {
+    display: none;
+  }
+
+  .char-card.no-hover-scale:hover .char-card-img-wrap,
+  .char-card.no-hover-scale:active .char-card-img-wrap {
+    transform: none;
+    margin-bottom: 0;
   }
 
   @keyframes cardFloat {
@@ -82,10 +108,20 @@ const wrapperWidth = size + 20;
     outline-offset: 3px;
   }
 
+  .char-card:hover,
+  .char-card:active {
+    z-index: 10;
+  }
+
   .char-card:hover .char-card-img-wrap,
   .char-card:active .char-card-img-wrap {
     transform: scale(1.35);
-    margin-bottom: 2rem;
+  }
+
+  .char-card.transparent:hover .char-card-img-wrap,
+  .char-card.transparent:active .char-card-img-wrap {
+    transform: scale(1.8);
+    outline: none;
   }
 
   .char-card-img {
@@ -106,6 +142,12 @@ const wrapperWidth = size + 20;
     z-index: 1;
     text-shadow: 0 1px 8px rgba(0,0,0,0.3);
     text-align: center;
+    transition: transform 0.25s ease;
+  }
+
+  .char-card:hover .char-card-name,
+  .char-card:active .char-card-name {
+    transform: translateY(2rem);
   }
 
   @media (max-width: 768px) {
@@ -114,7 +156,6 @@ const wrapperWidth = size + 20;
     .char-card:hover .char-card-img-wrap,
     .char-card:active .char-card-img-wrap {
       transform: scale(1.2);
-      margin-bottom: 0.5rem;
     }
     .char-card-name { font-size: 0.6rem; }
   }
