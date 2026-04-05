@@ -95,8 +95,8 @@ const { href, label, title, description, variant, fullWidth = false } = Astro.pr
 
   .banner-label {
     font-family: var(--sans);
-    font-size: 0.7rem;
-    letter-spacing: 0.3em;
+    font-size: var(--size-label);
+    letter-spacing: var(--tracking-widest);
     text-transform: uppercase;
     color: var(--color-banner-label);
     font-weight: 400;
@@ -104,10 +104,10 @@ const { href, label, title, description, variant, fullWidth = false } = Astro.pr
 
   .banner-title {
     font-family: var(--sans);
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: var(--size-h2);
     font-weight: 700;
     color: var(--color-white);
-    letter-spacing: 0.08em;
+    letter-spacing: var(--tracking-normal);
     text-transform: uppercase;
     text-shadow: var(--shadow-text);
   }

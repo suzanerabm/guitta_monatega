@@ -27,9 +27,10 @@ interface Props {
   arrowColor?: string;
   sectionTitle?: string;
   cardBg?: string;
+  labelColor?: string;
 }
 
-const { characters, gradient = 'var(--gradient-bichittos)', side = 'right', speed, cardSize, noFloat = false, transparent = false, noBorder = false, noLoop = false, showArrows = false, noHoverScale = false, arrowColor, sectionTitle, cardBg } = Astro.props;
+const { characters, gradient = 'var(--gradient-bichittos)', side = 'right', speed, cardSize, noFloat = false, transparent = false, noBorder = false, noLoop = false, showArrows = false, noHoverScale = false, arrowColor, sectionTitle, cardBg, labelColor } = Astro.props;
 const autoSpeed = speed ?? characters.length * 5;
 const allCards = noLoop ? characters : [...characters, ...characters];
 const uid = `strip-${Math.random().toString(36).slice(2, 8)}`;
@@ -47,7 +48,7 @@ const uid = `strip-${Math.random().toString(36).slice(2, 8)}`;
   <div class={`char-strip char-strip-${side} ${noLoop ? 'char-strip-static' : ''}`}>
     <div class="char-strip-track" {...(!noLoop ? { 'data-strip-track': uid, 'data-speed': String(autoSpeed) } : {})}>
       {allCards.map((c) => (
-        <CharacterCard name={c.name} image={c.image} gradient={gradient} cardSize={cardSize} noFloat={noFloat} transparent={transparent} noBorder={noBorder} noHoverScale={noHoverScale} cardBg={cardBg} />
+        <CharacterCard name={c.name} image={c.image} gradient={gradient} cardSize={cardSize} noFloat={noFloat} transparent={transparent} noBorder={noBorder} noHoverScale={noHoverScale} cardBg={cardBg} labelColor={labelColor} />
       ))}
     </div>
   </div>

@@ -56,17 +56,17 @@ const { id, title, technique, bg, titleColor, techColor, large, thumbs } = Astro
   }
 
   .art-section-title {
-    font-family: 'Fira Sans', system-ui, sans-serif;
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-family: var(--sans);
+    font-size: var(--size-2xl);
     font-weight: 700;
-    letter-spacing: 0.03em;
+    letter-spacing: var(--tracking-tight);
     margin: 0 0 0.3rem;
   }
 
   .art-section-technique {
-    font-family: 'Fira Sans', system-ui, sans-serif;
-    font-size: 0.72rem;
-    letter-spacing: 0.12em;
+    font-family: var(--sans);
+    font-size: var(--size-sm);
+    letter-spacing: var(--tracking-wide);
     text-transform: uppercase;
     margin: 0 0 2rem;
   }

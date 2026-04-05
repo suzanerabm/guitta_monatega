@@ -55,9 +55,9 @@ const t = useTranslations(locale);
   }
   .hero-title {
     font-family: var(--sans);
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-size: var(--size-h1);
     font-weight: 100;
-    letter-spacing: 0.15em;
+    letter-spacing: var(--tracking-wide);
     text-transform: lowercase;
     color: var(--ink);
     text-align: center;
@@ -66,8 +66,8 @@ const t = useTranslations(locale);
   }
   .hero-title strong { font-weight: 600; }
   .hero-sub {
-    font-size: 0.85rem;
-    letter-spacing: 0.2em;
+    font-size: var(--size-base);
+    letter-spacing: var(--tracking-wider);
     text-transform: uppercase;
     color: var(--ink-muted);
     opacity: 0;

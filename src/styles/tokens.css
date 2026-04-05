@@ -61,6 +61,9 @@
   --gradient-napcat:       linear-gradient(135deg, var(--color-napcat-1), var(--color-napcat-2), var(--color-napcat-3));
   --gradient-napcat-bg:    linear-gradient(160deg, #1a1432 0%, #2a1f4a 40%, #1e1638 100%);
 
+  /* — Bichittos: fundo dos cards ————————————— */
+  --color-bichittos-card-bg: var(--color-white);
+
   /* — Palette: Zeco —————————————————————————— */
   --color-zeco-1:          #ff8c42;   /* primaria — laranja */
   --color-zeco-2:          #ff6b35;   /* secundaria — laranja forte */

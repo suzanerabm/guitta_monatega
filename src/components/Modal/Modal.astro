@@ -71,17 +71,17 @@ import { X, ChevronLeft, ChevronRight } from '@lucide/astro';
   }
 
   .modal-title {
-    font-family: 'Fira Sans', system-ui, sans-serif;
-    font-size: 1.6rem;
+    font-family: var(--sans);
+    font-size: var(--size-2xl);
     font-weight: 700;
     color: var(--color-ink);
     margin: 0;
   }
 
   .modal-technique {
-    font-family: 'Fira Sans', system-ui, sans-serif;
-    font-size: 0.72rem;
-    letter-spacing: 0.15em;
+    font-family: var(--sans);
+    font-size: var(--size-sm);
+    letter-spacing: var(--tracking-wide);
     text-transform: uppercase;
     color: var(--color-ink-muted);
     margin: 0;
@@ -121,10 +121,10 @@ import { X, ChevronLeft, ChevronRight } from '@lucide/astro';
   }
 
   .modal-counter {
-    font-family: 'Fira Sans', system-ui, sans-serif;
-    font-size: 0.72rem;
+    font-family: var(--sans);
+    font-size: var(--size-sm);
     color: var(--color-subtle);
-    letter-spacing: 0.1em;
+    letter-spacing: var(--tracking-wide);
   }
 
   .modal-btn {
@@ -135,7 +135,7 @@ import { X, ChevronLeft, ChevronRight } from '@lucide/astro';
     cursor: pointer;
     padding: 0.3rem 1rem;
     border-radius: 4px;
-    font-family: 'Fira Sans', system-ui, sans-serif;
+    font-family: var(--sans);
     transition: all 0.2s;
   }
 

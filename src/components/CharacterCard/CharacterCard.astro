@@ -9,9 +9,10 @@ interface Props {
   noBorder?: boolean;
   noHoverScale?: boolean;
   cardBg?: string;
+  labelColor?: string;
 }
 
-const { name, image, gradient = 'var(--gradient-bichittos)', cardSize, noFloat = false, transparent = false, noBorder = false, noHoverScale = false, cardBg } = Astro.props;
+const { name, image, gradient = 'var(--gradient-bichittos)', cardSize, noFloat = false, transparent = false, noBorder = false, noHoverScale = false, cardBg, labelColor } = Astro.props;
 const size = cardSize || 120;
 const wrapperWidth = size + 20;
 ---
@@ -21,7 +22,7 @@ const wrapperWidth = size + 20;
   <div class="char-card-img-wrap">
     <img src={image} alt={name} class="char-card-img" draggable="false" />
   </div>
-  <span class="char-card-name">{name}</span>
+  <h4 class="char-card-name" {...(labelColor ? { style: `color: ${labelColor};` } : '')}>{name}</h4>
 </div>
 
 <style>

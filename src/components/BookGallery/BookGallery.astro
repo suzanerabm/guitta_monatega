@@ -20,7 +20,7 @@ const count = books.length;
 ---
 
 <div class="book-gallery" data-creature>
-  <p class="book-gallery-title">{title}</p>
+  <h4 class="book-gallery-title">{title}</h4>
   <div class={`book-covers book-covers-${count > 4 ? 'many' : count}`}>
     {books.map((book) => (
       <div class={`book-cover ${book.soon ? 'book-cover-soon' : ''}`} data-book={book.soon ? undefined : book.id}>

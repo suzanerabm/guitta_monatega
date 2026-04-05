@@ -20,8 +20,8 @@ const { label = 'soon', overlay = false } = Astro.props;
     align-items: center;
     gap: 0.3rem;
     font-family: var(--sans);
-    font-size: 0.65rem;
-    letter-spacing: 0.18em;
+    font-size: var(--size-xs);
+    letter-spacing: var(--tracking-wider);
     text-transform: uppercase;
     color: var(--ink-muted);
     font-weight: var(--weight-regular);
@@ -42,7 +42,7 @@ const { label = 'soon', overlay = false } = Astro.props;
     padding: 0;
     background: rgba(0,0,0,0.35);
     color: var(--color-white);
-    font-size: 0.7rem;
+    font-size: var(--size-label);
   }
 
   @media (max-width: 768px) {
