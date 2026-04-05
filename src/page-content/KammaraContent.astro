@@ -146,10 +146,8 @@ const worldsData = worlds.map((world) => ({
   labelColor="rgba(255,255,255,0.3)"
 >
   <Fragment slot="decorations">
-    <div class="hero-stars">
-      <div class="hero-star"></div><div class="hero-star"></div><div class="hero-star"></div>
-      <div class="hero-star"></div><div class="hero-star"></div><div class="hero-star"></div>
-    </div>
+    <div class="hero-stars-field"></div>
+    <div class="hero-stars-field hero-stars-field-2"></div>
     <div class="hero-glow"></div>
   </Fragment>
 </HeroSection>
@@ -165,18 +163,19 @@ const worldsData = worlds.map((world) => ({
 
 <!-- KAMMARA SECTION -->
 <CreatureSection gradient="var(--gradient-kammara)" accentColor="var(--color-kammara-purple)" id="kammara" {...(kammaraBg ? { bgImage: kammaraBg } : {})}>
-  <CreatureCard name={(t.kammara.section as any).name} color1="#1a0a30" color2="#d4cbf0">
+  <div class="kammara-stars" id="kammara-stars" data-parallax-stars></div>
+  <CreatureCard name={(t.kammara.section as any).name} color1="#d4cbf0" color2="#b8a9e8">
     {(t.kammara.section as any).text.map((p: string) => <p>{p}</p>)}
     <DSMainCard
       slot="banner"
       gradient="linear-gradient(135deg, #000000, #0a0a2e, #1a1a4e, #000000)"
       height="1400px"
       maxHeight="80vh"
-      titleColor="#1a0a30"
-      textColor="#d4cbf0"
+      titleColor="#d4cbf0"
+      textColor="#b8a9e8"
       characters={[]}
       stripSide
-      bgOpacity={kammaraBg ? 0.6 : 1}
+      bgOpacity={0.3}
     >
       <Fragment slot="text">
         <h3>{(t.kammara.section as any).name}</h3>
@@ -238,31 +237,98 @@ const worldsData = worlds.map((world) => ({
 
 <ScrollReveal selector="[data-creature]" />
 
+<script>
+  const canvas = document.getElementById('kammara-stars');
+  if (canvas) {
+    const section = canvas.closest('[data-section-creature="kammara"]') as HTMLElement;
+    if (section) {
+    const w = section.offsetWidth;
+    const h = section.offsetHeight;
+    const count = 250;
+    const shadows: string[] = [];
+    for (let i = 0; i < count; i++) {
+      const x = Math.floor(Math.random() * w);
+      const y = Math.floor(Math.random() * h);
+      const opacity = (0.2 + Math.random() * 0.6).toFixed(2);
+      const blur = Math.random() < 0.1 ? '1px' : '0';
+      shadows.push(`${x}px ${y}px ${blur} rgba(255,255,255,${opacity})`);
+    }
+    canvas.style.boxShadow = shadows.join(',');
+
+    // Parallax: estrelas movem mais devagar que o conteúdo
+    function updateStarsParallax() {
+      const rect = section.getBoundingClientRect();
+      const vh = window.innerHeight;
+      if (rect.bottom > -200 && rect.top < vh + 200) {
+        const progress = (vh - rect.top) / (vh + rect.height);
+        const offset = (progress - 0.5) * 80;
+        canvas.style.transform = `translateY(${offset}px)`;
+      }
+      requestAnimationFrame(updateStarsParallax);
+    }
+    requestAnimationFrame(updateStarsParallax);
+    }
+  }
+</script>
+
 <style>
+  :global(#kammara-stars) {
+    position: absolute;
+    top: -20%;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    z-index: 1;
+    pointer-events: none;
+    animation: twinkleField 8s ease-in-out infinite;
+  }
+
   :global(.hero) {
     background-size: 400% 400%;
     animation: fluidCosmos 20s ease-in-out infinite;
   }
 
-  .hero-stars {
+  .hero-stars-field {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     pointer-events: none;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow:
+      25px 15px #fff, 80px 40px #fff, 150px 20px rgba(255,255,255,0.8),
+      200px 60px #fff, 320px 30px rgba(255,255,255,0.6), 400px 80px #fff,
+      50px 90px rgba(255,255,255,0.5), 180px 110px #fff, 280px 95px rgba(255,255,255,0.7),
+      350px 120px #fff, 450px 50px rgba(255,255,255,0.4), 500px 100px #fff,
+      30px 140px rgba(255,255,255,0.6), 120px 160px #fff, 250px 150px rgba(255,255,255,0.5),
+      380px 170px #fff, 480px 140px rgba(255,255,255,0.8), 550px 160px #fff,
+      70px 200px #fff, 160px 220px rgba(255,255,255,0.6), 300px 210px #fff,
+      420px 230px rgba(255,255,255,0.7), 520px 200px #fff, 600px 220px rgba(255,255,255,0.5),
+      90px 250px rgba(255,255,255,0.4), 210px 270px #fff, 340px 260px rgba(255,255,255,0.8),
+      460px 280px #fff, 580px 250px rgba(255,255,255,0.6), 650px 270px #fff,
+      40px 300px #fff, 130px 320px rgba(255,255,255,0.5), 270px 310px #fff,
+      390px 330px rgba(255,255,255,0.7), 510px 300px #fff, 630px 320px rgba(255,255,255,0.4),
+      700px 50px rgba(255,255,255,0.6), 750px 120px #fff, 800px 200px rgba(255,255,255,0.5),
+      850px 80px #fff, 900px 160px rgba(255,255,255,0.7), 950px 240px #fff,
+      720px 300px rgba(255,255,255,0.4), 780px 30px #fff, 830px 280px rgba(255,255,255,0.6);
+    animation: twinkleField 6s ease-in-out infinite;
   }
 
-  .hero-star {
-    position: absolute;
-    background: #fff;
-    border-radius: 50%;
-    animation: twinkle 4s ease-in-out infinite;
+  .hero-stars-field-2 {
+    box-shadow:
+      60px 35px rgba(255,255,255,0.5), 140px 70px #fff, 230px 45px rgba(255,255,255,0.7),
+      310px 85px #fff, 410px 55px rgba(255,255,255,0.4), 490px 75px #fff,
+      100px 130px rgba(255,255,255,0.6), 190px 145px #fff, 290px 125px rgba(255,255,255,0.8),
+      370px 155px #fff, 460px 135px rgba(255,255,255,0.5), 540px 150px #fff,
+      75px 190px #fff, 170px 205px rgba(255,255,255,0.7), 260px 195px #fff,
+      360px 215px rgba(255,255,255,0.4), 440px 190px #fff, 530px 210px rgba(255,255,255,0.6),
+      110px 260px rgba(255,255,255,0.5), 200px 275px #fff, 330px 265px rgba(255,255,255,0.8),
+      430px 285px #fff, 520px 260px rgba(255,255,255,0.6), 610px 280px #fff,
+      680px 100px rgba(255,255,255,0.5), 740px 180px #fff, 810px 130px rgba(255,255,255,0.7),
+      870px 220px #fff, 930px 100px rgba(255,255,255,0.4), 760px 260px #fff;
+    animation: twinkleField 6s ease-in-out infinite;
+    animation-delay: -3s;
   }
-
-  .hero-star:nth-child(1) { width: 2px; height: 2px; top: 10%; left: 15%; }
-  .hero-star:nth-child(2) { width: 3px; height: 3px; top: 20%; left: 70%; animation-delay: 1s; }
-  .hero-star:nth-child(3) { width: 1.5px; height: 1.5px; top: 35%; left: 40%; animation-delay: 2s; }
-  .hero-star:nth-child(4) { width: 2px; height: 2px; top: 50%; left: 85%; animation-delay: 0.5s; }
-  .hero-star:nth-child(5) { width: 2.5px; height: 2.5px; top: 65%; left: 25%; animation-delay: 3s; }
-  .hero-star:nth-child(6) { width: 2px; height: 2px; top: 80%; left: 60%; animation-delay: 1.5s; }
 
   .hero-glow {
     position: absolute;
@@ -286,9 +352,9 @@ const worldsData = worlds.map((world) => ({
     100% { background-position: 0% 50%; }
   }
 
-  @keyframes twinkle {
-    0%, 100% { opacity: 0.2; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.5); }
+  @keyframes twinkleField {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
   }
 
   @keyframes glowPulse {

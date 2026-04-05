@@ -222,7 +222,7 @@ export default {
     pageTitle: 'Kammara — Guitta Monatega',
     heroLabel: 'Illustrated Saga',
     heroTitle: 'Kammara',
-    heroDesc: 'Connected worlds. Living systems. A saga that grows with each chapter.',
+    heroDesc: 'A bio-logical universe. An invisible war. A saga far from over.',
     placeholder: 'Placeholder — description goes here.',
     section: {
       name: 'Kammara Universe',

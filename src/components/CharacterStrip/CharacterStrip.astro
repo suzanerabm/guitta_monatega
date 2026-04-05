@@ -44,7 +44,8 @@ const uid = `strip-${Math.random().toString(36).slice(2, 8)}`;
     width: 100%;
     height: auto;
     z-index: 2;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: visible;
     mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
   }

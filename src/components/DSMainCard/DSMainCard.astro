@@ -162,6 +162,11 @@ const hasText = Astro.slots.has('text');
     z-index: 3;
   }
 
+  .ds-card-strip-side {
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+
   .ds-card-strip-side .ds-text-wrap {
     left: auto;
     right: 50%;
@@ -190,7 +195,8 @@ const hasText = Astro.slots.has('text');
     transform: translateY(-50%);
     width: 50%;
     z-index: 2;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: visible;
   }
 
   .ds-strip-side :global(.char-strip) {
