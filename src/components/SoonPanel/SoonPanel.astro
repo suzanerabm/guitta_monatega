@@ -4,7 +4,7 @@ interface Props {
   color?: string;
 }
 
-const { label = 'soon', color = 'rgba(255,255,255,0.25)' } = Astro.props;
+const { label = 'soon', color = 'var(--color-text-overlay-dim)' } = Astro.props;
 ---
 
 <div class="soon-panel">

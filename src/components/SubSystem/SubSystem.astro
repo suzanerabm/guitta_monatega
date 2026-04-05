@@ -19,7 +19,7 @@ interface Props {
   sectionTitle?: string;
 }
 
-const { cards, titleColor = 'rgba(255,255,255,0.9)', textColor = 'rgba(255,255,255,0.7)', gradient, sectionTitle } = Astro.props;
+const { cards, titleColor = 'var(--color-text-overlay-bright)', textColor = 'var(--color-text-overlay)', gradient, sectionTitle } = Astro.props;
 ---
 
 {sectionTitle && (
