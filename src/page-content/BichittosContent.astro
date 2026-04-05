@@ -164,31 +164,31 @@ for (const book of allBooks) {
   target="creature"
   allLabel={locale === 'en' ? 'All' : 'Todos'}
   filters={[
-    { id: 'napcat', label: 'NapCat', color: '#b5a2dc', bgColor: '#2a1f4a' },
-    { id: 'zeco', label: 'Zeco', color: '#964712', bgColor: '#f57f20' },
-    { id: 'taylo', label: 'Taylo', color: '#5d9466', bgColor: '#185b1e' },
-    { id: 'miscelania', label: t.bichittos.miscelania.name, color: '#8badc4', bgColor: '#1a2a40' },
+    { id: 'napcat', label: 'NapCat', color: 'var(--color-napcat-filter)', bgColor: 'var(--color-napcat-filter-bg)' },
+    { id: 'zeco', label: 'Zeco', color: 'var(--color-zeco-filter)', bgColor: 'var(--color-zeco-filter-bg)' },
+    { id: 'taylo', label: 'Taylo', color: 'var(--color-taylo-filter)', bgColor: 'var(--color-taylo-filter-bg)' },
+    { id: 'miscelania', label: t.bichittos.miscelania.name, color: 'var(--color-misc-filter)', bgColor: 'var(--color-misc-filter-bg)' },
   ]}
 />
 
 <!-- NAPCAT -->
 <CreatureSection gradient="var(--gradient-napcat-bg)" accentColor="var(--color-napcat-1)" id="napcat">
-  <CreatureCard name={t.bichittos.napcat.name} color1="#b5a2dc" color2="#ddd4f4">
+  <CreatureCard name={t.bichittos.napcat.name} color1="var(--color-napcat-card-1)" color2="var(--color-napcat-card-2)">
     {t.bichittos.napcat.text.map((p) => <p>{p}</p>)}
     <DSMainCard
       slot="banner"
       gradient="var(--gradient-napcat)"
       height="1400px"
       maxHeight="80vh"
-      titleColor="#4f0a42"
-      textColor="#ddd4f4"
+      titleColor="var(--color-napcat-title)"
+      textColor="var(--color-napcat-text)"
       characters={[
         { image: '/imgs/characters/napcat/napcat-sonequinha.png', x: 55, y: 0, size: 360, zIndex: 2 },
         { image: '/imgs/characters/napcat/violeta.png', x: 82, y: 0, size: 350, zIndex: 1 },
       ]}
     >
       <Fragment slot="text">
-        <h3>{t.bichittos.napcat.name} & Violeta</h3>
+        <h2>{t.bichittos.napcat.name} & Violeta</h2>
         {t.bichittos.napcat.panel.story.map((p) => <p>{p}</p>)}
       </Fragment>
       <CharacterStrip gradient="var(--gradient-napcat)" characters={napcatChars} cardBg="var(--color-bichittos-card-bg)" />
@@ -199,15 +199,15 @@ for (const book of allBooks) {
 
 <!-- ZECO -->
 <CreatureSection gradient="var(--gradient-zeco-bg)" accentColor="var(--color-zeco-1)" id="zeco">
-  <CreatureCard name={t.bichittos.zeco.name} color1="#964712" color2="#f9e3cf">
+  <CreatureCard name={t.bichittos.zeco.name} color1="var(--color-zeco-card-1)" color2="var(--color-zeco-card-2)">
     {t.bichittos.zeco.text.map((p) => <p>{p}</p>)}
     <DSMainCard
       slot="banner"
       gradient="var(--gradient-zeco)"
       height="1400px"
       maxHeight="80vh"
-      titleColor="#f58020"
-      textColor="#594733"
+      titleColor="var(--color-zeco-title)"
+      textColor="var(--color-zeco-text)"
       mascot={{ image: '/imgs/characters/zeco/ninha_apaixonada.png', size: 100, offsetX: 15, offsetY: -70,  mobileScale: 0.5, mobileOffsetY: -10 }}
       characters={[
         { image: '/imgs/characters/zeco/zeco_comendo_picole.png', x: 55, y: 0, size: 400, zIndex: 3 },
@@ -215,7 +215,7 @@ for (const book of allBooks) {
       ]}
     >
       <Fragment slot="text">
-        <h3>{t.bichittos.zeco.name} & Amigos</h3>
+        <h2>{t.bichittos.zeco.name} & Amigos</h2>
         {t.bichittos.zeco.panel.story.map((p) => <p>{p}</p>)}
       </Fragment>
       <CharacterStrip gradient="var(--gradient-zeco)" characters={zecoChars} cardBg="var(--color-bichittos-card-bg)" />
@@ -226,15 +226,15 @@ for (const book of allBooks) {
 
 <!-- TAYLO -->
 <CreatureSection gradient="var(--gradient-taylo-bg)" accentColor="var(--color-taylo-1)" id="taylo">
-  <CreatureCard name={t.bichittos.taylo.name} color1="#5d9466" color2="#fff">
+  <CreatureCard name={t.bichittos.taylo.name} color1="var(--color-taylo-card-1)" color2="var(--color-taylo-card-2)">
     {t.bichittos.taylo.text.map((p) => <p>{p}</p>)}
     <DSMainCard
       slot="banner"
       gradient="var(--gradient-taylo)"
       height="1400px"
       maxHeight="80vh"
-      titleColor="#d7e2dd"
-      textColor="#b6fcc0"
+      titleColor="var(--color-taylo-title)"
+      textColor="var(--color-taylo-text)"
       characters={[
         { image: '/imgs/characters/taylo/taylo.png', x: 80, y: 0, size: 400, zIndex: 3 },
         { image: '/imgs/characters/taylo/pitu.png', x: 55, y: 0, size: 200, zIndex: 2, mobileY: 35 },
@@ -242,7 +242,7 @@ for (const book of allBooks) {
       ]}
     >
       <Fragment slot="text">
-        <h3>{t.bichittos.taylo.name} & Amigos</h3>
+        <h2>{t.bichittos.taylo.name} & Amigos</h2>
         {t.bichittos.taylo.panel.story.map((p) => <p>{p}</p>)}
       </Fragment>
       <CharacterStrip gradient="var(--gradient-taylo)" characters={tayloChars} cardBg="var(--color-bichittos-card-bg)" />
@@ -253,15 +253,15 @@ for (const book of allBooks) {
 
 <!-- MISCELANIA -->
 <CreatureSection gradient="var(--gradient-misc-bg)" accentColor="var(--color-misc-1)" id="miscelania">
-  <CreatureCard name={t.bichittos.miscelania.name} color1="#8badc4" color2="#b0cfe0">
+  <CreatureCard name={t.bichittos.miscelania.name} color1="var(--color-misc-card-1)" color2="var(--color-misc-card-2)">
     {t.bichittos.miscelania.text.map((p) => <p>{p}</p>)}
     <DSMainCard
       slot="banner"
       gradient="var(--gradient-misc)"
       height="1400px"
       maxHeight="80vh"
-      titleColor="#081e28"
-      textColor="#b0cfe0"
+      titleColor="var(--color-misc-title)"
+      textColor="var(--color-misc-text)"
       characters={[
         { image: '/imgs/characters/miscelania/querie_dancando.gif', x: 55, y: 0, size: 100, zIndex: 2, mobileY: 85, mobileScale: 0.55},
         { image: '/imgs/characters/miscelania/Cheio_Bolinha_voando.png', x: 82, y: 30, size: 200, zIndex: 1, mobileY: 100, mobileScale: 0.70 },
@@ -269,7 +269,7 @@ for (const book of allBooks) {
       ]}
     >
       <Fragment slot="text">
-        <h3>{t.bichittos.miscelania.name}</h3>
+        <h2>{t.bichittos.miscelania.name}</h2>
         {t.bichittos.miscelania.panel.story.map((p) => <p>{p}</p>)}
       </Fragment>
       {miscChars.length > 0 && <CharacterStrip gradient="var(--gradient-misc)" characters={miscChars} cardBg="var(--color-bichittos-card-bg)" />}

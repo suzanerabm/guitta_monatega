@@ -58,6 +58,13 @@
   --color-napcat-2:        #764ba2;   /* secundaria — roxo  764ba2*/
   --color-napcat-3:        #fefdff;   /* terciaria — rosa claro f093fb b5a2dc */
   --color-napcat-dark:     #1a1432;
+  --color-napcat-filter:   #b5a2dc;
+  --color-napcat-filter-bg:#2a1f4a;
+  --color-napcat-card-1:   #b5a2dc;
+  --color-napcat-card-2:   #ddd4f4;
+  --color-napcat-title:    #4f0a42;
+  --color-napcat-text:     #ddd4f4;
+  --color-napcat-label:    var(--color-white);
   --gradient-napcat:       linear-gradient(135deg, var(--color-napcat-1), var(--color-napcat-2), var(--color-napcat-3));
   --gradient-napcat-bg:    linear-gradient(160deg, #1a1432 0%, #2a1f4a 40%, #1e1638 100%);
 
@@ -69,6 +76,13 @@
   --color-zeco-2:          #ff6b35;   /* secundaria — laranja forte */
   --color-zeco-3:          #ffa751;   /* terciaria — laranja claro */
   --color-zeco-dark:       #1a0e02;
+  --color-zeco-filter:     #964712;
+  --color-zeco-filter-bg:  #f57f20;
+  --color-zeco-card-1:     #964712;
+  --color-zeco-card-2:     #f9e3cf;
+  --color-zeco-title:      #f58020;
+  --color-zeco-text:       #594733;
+  --color-zeco-label:      var(--color-white);
   --gradient-zeco:         linear-gradient(160deg, #fece95 0%, #fcaf5b 40%, #fece95 100%);
   /* --gradient-zeco-bg:      linear-gradient(160deg, #6c360d 0%, #3a2008 40%, #2e1805 100%); */
   --gradient-zeco-bg:      linear-gradient(160deg, #fece95 0%, #f57f20 40%, #fece95 100%);
@@ -78,6 +92,13 @@
   --color-taylo-2:         #427f49;   /* secundaria — azul */
   --color-taylo-3:         #277230;   /* terciaria — lilas */
   --color-taylo-dark:      #082b0b;
+  --color-taylo-filter:    #5d9466;
+  --color-taylo-filter-bg: #185b1e;
+  --color-taylo-card-1:    #5d9466;
+  --color-taylo-card-2:    #ffffff;
+  --color-taylo-title:     #d7e2dd;
+  --color-taylo-text:      #b6fcc0;
+  --color-taylo-label:     var(--color-white);
   --gradient-taylo:        linear-gradient(135deg, var(--color-taylo-1), var(--color-taylo-2), var(--color-taylo-1));
   --gradient-taylo-bg:     linear-gradient(160deg, #34843c 0%, #185b1e 40%, #082b0b 100%);
 
@@ -86,6 +107,13 @@
   --color-misc-2:          #2c4a6e;   /* secundaria — azul escuro */
   --color-misc-3:          #8badc4;   /* terciaria — azul claro */
   --color-misc-dark:       #0e1a2a;
+  --color-misc-filter:     #8badc4;
+  --color-misc-filter-bg:  #1a2a40;
+  --color-misc-card-1:     #8badc4;
+  --color-misc-card-2:     #b0cfe0;
+  --color-misc-title:      #081e28;
+  --color-misc-text:       #b0cfe0;
+  --color-misc-label:      var(--color-white);
   --gradient-misc:         linear-gradient(135deg, #2c4a6e, #3a5a8c, #5a7a9c);
   --gradient-misc-bg:      linear-gradient(160deg, #0e1a2a 0%, #1a2a40 40%, #152238 100%);
 
@@ -95,7 +123,13 @@
   --color-kammara-purple:  #2d1b69;
   --color-kammara-navy:    #0f3460;
   --color-kammara-glow:    rgba(100,80,200,0.2);
+  --color-kammara-1:       #d4cbf0;
+  --color-kammara-2:       #b8a9e8;
+  --color-kammara-title:   #d4cbf0;
+  --color-kammara-text:    #b8a9e8;
+  --color-kammara-label:   #ffffff;
   --gradient-kammara:      linear-gradient(135deg, #0a0a2e, #1a1a4e, #2d1b69, #0f3460);
+  --gradient-kammara-card: linear-gradient(135deg, #000000, #0a0a2e, #1a1a4e, #000000);
 
   /* — Palette: LUNN'P1 — verde fluorescente, planeta de água — */
   --color-lunnp1-1:        #151418;
@@ -104,9 +138,9 @@
   --color-lunnp1-dark:     #002e14;
   --color-lunnp1-filter:   #00e676;
   --color-lunnp1-filter-bg:#002e14;
-  --color-lunnp1-title:    #00e676;
-  --color-lunnp1-text:     #69f0ae;
-  --color-lunnp1-label:    #ccf4e0;
+  --color-lunnp1-title:    #fed20b;
+  --color-lunnp1-text:     #8669f0;
+  --color-lunnp1-label:    #28247a;
   --gradient-lunnp1:       linear-gradient(135deg, #004d25, #00c853, #00e676);
   --gradient-lunnp1-bg:    linear-gradient(160deg, #001a0e 0%, #003d1a 40%, #002e14 100%);
 
