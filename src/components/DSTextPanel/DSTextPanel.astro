@@ -34,7 +34,7 @@ const {
     border-radius: 16px;
     overflow: hidden;
     background: transparent;
-    outline: 2px solid rgba(255,255,255,0.2);
+    outline: 2px solid var(--color-outline-mid);
     outline-offset: 3px;
     box-shadow: 0 8px 32px rgba(0,0,0,0.1);
   }
@@ -47,7 +47,7 @@ const {
     -ms-overflow-style: none;
     padding: 2rem 1.5rem;
     font-family: var(--sans);
-    font-size: 0.95rem;
+    font-size: var(--size-md);
     line-height: 1.7;
     font-weight: var(--weight-light);
     mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
@@ -58,11 +58,22 @@ const {
     display: none;
   }
 
-  .ds-text-scroll :global(h3) {
-    font-size: 1.3rem;
+  .ds-text-scroll :global(h2) {
+    font-size: var(--size-h3);
     font-weight: var(--weight-bold);
     margin-bottom: 0.8rem;
     color: var(--ds-title-color);
+  }
+
+  .ds-text-scroll :global(h3) {
+    font-size: var(--size-h4);
+    font-weight: var(--weight-semibold);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    margin-top: 1.2rem;
+    margin-bottom: 0.3rem;
+    color: var(--ds-title-color);
+    opacity: 0.8;
   }
 
   .ds-text-scroll :global(p) {
@@ -83,9 +94,13 @@ const {
       mask-image: none;
       -webkit-mask-image: none;
     }
-    .ds-text-scroll :global(h3) {
-      font-size: 1rem;
+    .ds-text-scroll :global(h2) {
+      font-size: var(--size-md);
       margin-bottom: 0.5rem;
+    }
+    .ds-text-scroll :global(h3) {
+      font-size: var(--size-xs);
+      margin-bottom: 0.3rem;
     }
     .ds-text-scroll :global(p) {
       margin-bottom: 0.5rem;

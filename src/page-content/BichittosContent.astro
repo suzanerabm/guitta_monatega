@@ -191,7 +191,7 @@ for (const book of allBooks) {
         <h3>{t.bichittos.napcat.name} & Violeta</h3>
         {t.bichittos.napcat.panel.story.map((p) => <p>{p}</p>)}
       </Fragment>
-      <CharacterStrip gradient="var(--gradient-napcat)" characters={napcatChars} />
+      <CharacterStrip gradient="var(--gradient-napcat)" characters={napcatChars} cardBg="var(--color-napcat-3)" />
     </DSMainCard>
   </CreatureCard>
   <BookGallery title={t.bichittos.booksTitle} books={napcatBooks} soonLabel={t.common.soon} />
@@ -218,7 +218,7 @@ for (const book of allBooks) {
         <h3>{t.bichittos.zeco.name} & Amigos</h3>
         {t.bichittos.zeco.panel.story.map((p) => <p>{p}</p>)}
       </Fragment>
-      <CharacterStrip gradient="var(--gradient-zeco)" characters={zecoChars} />
+      <CharacterStrip gradient="var(--gradient-zeco)" characters={zecoChars} cardBg="var(--color-zeco-3)" />
     </DSMainCard>
   </CreatureCard>
   <BookGallery title={t.bichittos.booksTitle} books={zecoBooks} />
@@ -245,7 +245,7 @@ for (const book of allBooks) {
         <h3>{t.bichittos.taylo.name} & Amigos</h3>
         {t.bichittos.taylo.panel.story.map((p) => <p>{p}</p>)}
       </Fragment>
-      <CharacterStrip gradient="var(--gradient-taylo)" characters={tayloChars} />
+      <CharacterStrip gradient="var(--gradient-taylo)" characters={tayloChars} cardBg="var(--color-taylo-3)" />
     </DSMainCard>
   </CreatureCard>
   <BookGallery title={t.bichittos.booksTitle} books={tayloBooks} soonLabel={t.common.soon} />
@@ -272,7 +272,7 @@ for (const book of allBooks) {
         <h3>{t.bichittos.miscelania.name}</h3>
         {t.bichittos.miscelania.panel.story.map((p) => <p>{p}</p>)}
       </Fragment>
-      {miscChars.length > 0 && <CharacterStrip gradient="var(--gradient-misc)" characters={miscChars} />}
+      {miscChars.length > 0 && <CharacterStrip gradient="var(--gradient-misc)" characters={miscChars} cardBg="var(--color-misc-3)" />}
     </DSMainCard>
   </CreatureCard>
   {miscBooks.length > 0 && <BookGallery title={t.bichittos.booksTitle} books={miscBooks} soonLabel={t.common.soon} />}

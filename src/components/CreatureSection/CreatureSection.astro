@@ -81,16 +81,16 @@ const { gradient, accentColor, id, bgImage, noParallax = false } = Astro.props;
   /* Creature name and text colors come from CreatureCard's --c1/--c2/--c3 props */
 
   .creature-section :global(.creature-divider) {
-    background: rgba(255,255,255,0.1);
+    background: var(--color-outline-soft);
   }
 
   .creature-section :global(.book-gallery-title) {
-    color: rgba(255,255,255,0.4);
+    color: rgba(255,255,255,0.4); /* no exact token — between dim(0.5) and label(0.25) */
   }
 
   .creature-section :global(.book-cover-label) {
-    background: rgba(0,0,0,0.3);
-    color: rgba(255,255,255,0.7);
+    background: var(--color-bg-overlay);
+    color: var(--color-text-overlay);
   }
 
   .creature-section :global(.book-soon-label) {

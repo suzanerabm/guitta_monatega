@@ -120,14 +120,8 @@ def make_thumbnail(img, folder_name=""):
     img = ImageEnhance.Color(img).enhance(1.1 if not dark else 1.0)
     img = ImageEnhance.Sharpness(img).enhance(1.3)
 
-    # 6. Blur de fundo (efeito bokeh) pra fotos de objetos
-    blur_folders = ('croche', 'needle', 'clay')
-    if folder_name.lower() in blur_folders:
-        img = apply_background_blur(img)
-
-    # 7. Suavizacao de ruido (pastas sem blur)
-    if folder_name.lower() not in blur_folders:
-        img = img.filter(ImageFilter.MedianFilter(size=3))
+    # 6. Suavizacao de ruido
+    img = img.filter(ImageFilter.MedianFilter(size=3))
 
     # 8. Nitidez final
     img = img.filter(ImageFilter.UnsharpMask(radius=2, percent=80, threshold=3))

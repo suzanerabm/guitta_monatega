@@ -51,8 +51,8 @@ const count = books.length;
   .book-gallery.visible { opacity: 1; transform: translateY(0); }
 
   .book-gallery-title {
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
+    font-size: var(--size-h4);
+    letter-spacing: var(--tracking-wider);
     text-transform: uppercase;
     color: var(--ink-muted);
     margin-bottom: 1.2rem;
@@ -113,7 +113,7 @@ const count = books.length;
   .book-cover-label {
     padding: 0.6rem;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: var(--size-base);
     color: var(--ink-soft);
     font-weight: 400;
     background: var(--white);

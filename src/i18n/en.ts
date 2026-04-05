@@ -241,6 +241,8 @@ export default {
     heroTitle: 'Kammara',
     heroDesc: 'A bio-logical universe. An invisible war. A saga far from over.',
     placeholder: 'Placeholder — description goes here.',
+    scenesTitle: 'Scenes',
+    subsystemsTitle: 'Subsystems',
     section: {
       name: 'Kammara Universe',
       text: [

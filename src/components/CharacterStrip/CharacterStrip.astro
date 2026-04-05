@@ -24,30 +24,36 @@ interface Props {
   noLoop?: boolean;
   showArrows?: boolean;
   noHoverScale?: boolean;
+  arrowColor?: string;
+  sectionTitle?: string;
+  cardBg?: string;
 }
 
-const { characters, gradient = 'var(--gradient-bichittos)', side = 'right', speed, cardSize, noFloat = false, transparent = false, noBorder = false, noLoop = false, showArrows = false, noHoverScale = false } = Astro.props;
+const { characters, gradient = 'var(--gradient-bichittos)', side = 'right', speed, cardSize, noFloat = false, transparent = false, noBorder = false, noLoop = false, showArrows = false, noHoverScale = false, arrowColor, sectionTitle, cardBg } = Astro.props;
 const autoSpeed = speed ?? characters.length * 5;
 const allCards = noLoop ? characters : [...characters, ...characters];
 const uid = `strip-${Math.random().toString(36).slice(2, 8)}`;
 ---
 
+{sectionTitle && (
+  <h2 class="strip-section-title" {...(arrowColor ? { style: `color: ${arrowColor};` } : {})}>{sectionTitle}</h2>
+)}
 <div class={`char-strip-wrap ${showArrows ? 'has-arrows' : ''}`}>
   {showArrows && (
-    <button class="strip-arrow strip-arrow-left" data-strip-arrow="left" aria-label="Previous">
-      <ChevronLeft size={20} />
+    <button class="strip-arrow strip-arrow-left" data-strip-arrow="left" aria-label="Previous" {...(arrowColor ? { style: `color: ${arrowColor};` } : {})}>
+      <ChevronLeft size={40} />
     </button>
   )}
   <div class={`char-strip char-strip-${side} ${noLoop ? 'char-strip-static' : ''}`}>
     <div class="char-strip-track" {...(!noLoop ? { 'data-strip-track': uid, 'data-speed': String(autoSpeed) } : {})}>
       {allCards.map((c) => (
-        <CharacterCard name={c.name} image={c.image} gradient={gradient} cardSize={cardSize} noFloat={noFloat} transparent={transparent} noBorder={noBorder} noHoverScale={noHoverScale} />
+        <CharacterCard name={c.name} image={c.image} gradient={gradient} cardSize={cardSize} noFloat={noFloat} transparent={transparent} noBorder={noBorder} noHoverScale={noHoverScale} cardBg={cardBg} />
       ))}
     </div>
   </div>
   {showArrows && (
-    <button class="strip-arrow strip-arrow-right" data-strip-arrow="right" aria-label="Next">
-      <ChevronRight size={20} />
+    <button class="strip-arrow strip-arrow-right" data-strip-arrow="right" aria-label="Next" {...(arrowColor ? { style: `color: ${arrowColor};` } : {})}>
+      <ChevronRight size={40} />
     </button>
   )}
 </div>
@@ -61,11 +67,11 @@ const uid = `strip-${Math.random().toString(36).slice(2, 8)}`;
     width: 100%;
     height: auto;
     z-index: 2;
-    overflow-x: hidden;
-    overflow-y: visible;
+    overflow: hidden;
     mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
   }
+
 
   .char-strip-static {
     position: relative;
@@ -81,6 +87,21 @@ const uid = `strip-${Math.random().toString(36).slice(2, 8)}`;
     display: none;
   }
 
+  .char-strip-static .char-strip-track {
+    padding: 0.5rem 0 1rem;
+  }
+
+  .strip-section-title {
+    display: block;
+    font-family: var(--sans);
+    font-size: var(--size-section);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0 2rem;
+    margin: 5em 2em 0 3em;
+  }
+
   .char-strip-wrap {
     position: relative;
     width: 100%;
@@ -94,23 +115,19 @@ const uid = `strip-${Math.random().toString(36).slice(2, 8)}`;
   .strip-arrow {
     flex-shrink: 0;
     z-index: 10;
-    background: rgba(0,0,0,0.4);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    background: none;
+    border: none;
+    padding: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(255,255,255,0.7);
+    color: var(--color-text-overlay-dim);
     cursor: pointer;
-    transition: all 0.2s ease;
-    backdrop-filter: blur(8px);
+    transition: opacity 0.2s ease;
   }
 
   .strip-arrow:hover {
-    background: rgba(0,0,0,0.6);
-    color: #fff;
+    opacity: 0.7;
   }
 
   .strip-arrow-left { margin-right: 0.5rem; }
@@ -119,12 +136,17 @@ const uid = `strip-${Math.random().toString(36).slice(2, 8)}`;
   .has-arrows .char-strip {
     flex: 1;
     min-width: 0;
+    overflow: hidden;
+  }
+
+  .has-arrows {
+    padding: 0 0.5rem;
   }
 
   .char-strip-track {
     display: flex;
     gap: 1rem;
-    padding: 2rem 0;
+    padding: 4rem 0 2rem;
     width: max-content;
   }
 

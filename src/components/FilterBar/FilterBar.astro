@@ -40,9 +40,9 @@ const { filters, allLabel = 'Todos', target = 'art' } = Astro.props;
   }
 
   .filter-btn {
-    font-family: 'Fira Sans', system-ui, sans-serif;
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
+    font-family: var(--sans);
+    font-size: var(--size-sm);
+    letter-spacing: var(--tracking-normal);
     text-transform: uppercase;
     padding: 0.4rem 1rem;
     border: 1px solid var(--color-border);
@@ -71,7 +71,7 @@ const { filters, allLabel = 'Todos', target = 'art' } = Astro.props;
       padding: 0.6rem 1rem;
     }
     .filter-btn {
-      font-size: 0.65rem;
+      font-size: var(--size-xs);
       padding: 0.3rem 0.7rem;
     }
   }

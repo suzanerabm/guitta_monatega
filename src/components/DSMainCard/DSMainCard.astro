@@ -137,7 +137,7 @@ const hasText = Astro.slots.has('text');
     width: 100%;
     height: 100%;
     object-fit: contain;
-    filter: drop-shadow(0 4px 16px rgba(0,0,0,0.15));
+    filter: drop-shadow(0 4px 16px rgba(0,0,0,0.15)); /* no token for 0.15 */
   }
 
   .ds-mascot {
@@ -163,8 +163,7 @@ const hasText = Astro.slots.has('text');
   }
 
   .ds-card-strip-side {
-    overflow-x: hidden;
-    overflow-y: visible;
+    overflow: hidden;
   }
 
   .ds-card-strip-side .ds-text-wrap {
@@ -177,15 +176,21 @@ const hasText = Astro.slots.has('text');
     max-width: 540px;
     height: 60%;
     margin-right: 12rem;
+    z-index: 30;
+  }
+
+  .ds-card-strip-side :global(.ds-text-panel) {
+    background: var(--color-bg-overlay);
+    backdrop-filter: blur(8px);
   }
 /* area somente kammara de texto */
   .ds-card-strip-side :global(.ds-text-scroll) {
-    font-size: 1rem;
+    font-size: var(--size-body-kammara);
     line-height: 1.65;
   }
-/* area somente kammara do titulo */
-  .ds-card-strip-side :global(.ds-text-scroll h3) {
-    font-size: 2rem;
+/* area somente kammara do titulo h2 */
+  .ds-card-strip-side :global(.ds-text-scroll h2) {
+    font-size: var(--size-h3-kammara);
   }
 
   .ds-strip-side {
@@ -195,14 +200,22 @@ const hasText = Astro.slots.has('text');
     transform: translateY(-50%);
     width: 48%;
     z-index: 2;
-    overflow-x: hidden;
-    overflow-y: visible;
+    overflow: hidden;
   }
 
   .ds-strip-side :global(.char-strip) {
     position: relative;
     top: auto;
     width: 100%;
+  }
+
+  @media (max-width: 1500px) {
+    .ds-card-strip-side .ds-text-wrap {
+      margin-right: 2rem;
+      width: 38%;
+      left: 2rem;
+      right: auto;
+    }
   }
 
   @media (max-width: 768px) {
@@ -263,7 +276,7 @@ const hasText = Astro.slots.has('text');
     }
 
     .ds-card-strip-side :global(.ds-text-scroll) {
-      font-size: 0.85rem;
+      font-size: var(--size-base);
       line-height: 1.6;
       height: 100% !important;
       overflow-y: auto !important;
@@ -271,8 +284,8 @@ const hasText = Astro.slots.has('text');
       -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%) !important;
     }
 
-    .ds-card-strip-side :global(.ds-text-scroll h3) {
-      font-size: 1.05rem;
+    .ds-card-strip-side :global(.ds-text-scroll h2) {
+      font-size: var(--size-lg);
     }
 
     .ds-strip-side {

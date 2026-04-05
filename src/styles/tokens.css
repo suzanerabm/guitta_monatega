@@ -99,6 +99,10 @@
   --color-lunnp1-2:        #00c853;
   --color-lunnp1-3:        #69f0ae;
   --color-lunnp1-dark:     #002e14;
+  --color-lunnp1-filter:   #00e676;
+  --color-lunnp1-filter-bg:#002e14;
+  --color-lunnp1-title:    #00e676;
+  --color-lunnp1-text:     #69f0ae;
   --gradient-lunnp1:       linear-gradient(135deg, #004d25, #00c853, #00e676);
   --gradient-lunnp1-bg:    linear-gradient(160deg, #001a0e 0%, #003d1a 40%, #002e14 100%);
 
@@ -107,6 +111,10 @@
   --color-eni4-2:          #c47f0a;
   --color-eni4-3:          #f5c842;
   --color-eni4-dark:       #1a1005;
+  --color-eni4-filter:     #e8a317;
+  --color-eni4-filter-bg:  #1a1005;
+  --color-eni4-title:      #e8a317;
+  --color-eni4-text:       #f5c842;
   --gradient-eni4:         linear-gradient(135deg, #8a5a0a, #e8a317, #f5c842);
   --gradient-eni4-bg:      linear-gradient(160deg, #1a1005 0%, #3a2a0a 40%, #2a1c06 100%);
 
@@ -115,14 +123,22 @@
   --color-triplec-2:       #2a5caa;
   --color-triplec-3:       #00e86a;
   --color-triplec-dark:    #0a0818;
+  --color-triplec-filter:  #00e86a;
+  --color-triplec-filter-bg:#0a0818;
+  --color-triplec-title:   #2a2868;
+  --color-triplec-text:    #0e3a1a;
   --gradient-triplec:      linear-gradient(135deg, #00e86a 0%, #00e86a 35%, #7b4fbf 70%, #2a5caa 100%);
   --gradient-triplec-bg:   linear-gradient(160deg, #0a0818 0%, #1a1040 40%, #081a10 100%);
 
-  /* — Palette: ORF-V — roxo profundo, azul ciano — */
+  /* — Palette: ORF-V — roxo profundo, rosa, ciano — */
   --color-orfv-1:          #8040c8;
   --color-orfv-2:          #5a30a0;
   --color-orfv-3:          #40d0e8;
   --color-orfv-dark:       #0c0620;
+  --color-orfv-filter:     #8040c8;
+  --color-orfv-filter-bg:  #0c0620;
+  --color-orfv-title:      #cf568c;
+  --color-orfv-text:       #3a1860;
   --gradient-orfv:         linear-gradient(135deg, #d4829a 0%, #d4829a 70%, #40d0e8 100%);
   --gradient-orfv-bg:      linear-gradient(160deg, #0c0620 0%, #1a0c40 40%, #081828 100%);
 
@@ -131,6 +147,10 @@
   --color-z1-2:            #8a929e;
   --color-z1-3:            #d8dce4;
   --color-z1-dark:         #12141a;
+  --color-z1-filter:       #b0b8c4;
+  --color-z1-filter-bg:    #12141a;
+  --color-z1-title:        #b0b8c4;
+  --color-z1-text:         #d8dce4;
   --gradient-z1:           linear-gradient(135deg, #6a7080, #b0b8c4, #d8dce4);
   --gradient-z1-bg:        linear-gradient(160deg, #12141a 0%, #2a2c34 40%, #1a1c22 100%);
 
@@ -139,6 +159,10 @@
   --color-gotto-2:         #3a1a1a;
   --color-gotto-3:         #6a4a4a;
   --color-gotto-dark:      #1a0e0e;
+  --color-gotto-filter:    #6a4a4a;
+  --color-gotto-filter-bg: #1a0e0e;
+  --color-gotto-title:     #6a4a4a;
+  --color-gotto-text:      #c4a8a8;
   --gradient-gotto:        linear-gradient(135deg, #2a1a1a, #4a2a2a, #3a1a1a);
   --gradient-gotto-bg:     linear-gradient(160deg, #1a0e0e 0%, #2a1a1a 40%, #201212 100%);
 
@@ -155,14 +179,46 @@
   --weight-semibold: 600;
   --weight-bold:     700;
 
+  /* — Font Scale ————————————————————————————— */
   --size-xs:   0.65rem;   /* 10.4px — brand, labels */
   --size-sm:   0.72rem;   /* 11.5px — filter buttons, technique */
-  --size-base: 0.85rem;   /* 13.6px — breadcrumb, subtitles */
-  --size-md:   1rem;      /* 16px   — body, links */
-  --size-lg:   1.05rem;   /* 16.8px — paragraphs */
+  --size-base: 0.85rem;   /* 13.6px — breadcrumb, subtitles, subsystem body */
+  --size-md:   1rem;      /* 16px   — body, links, hero desc */
+  --size-lg:   1.05rem;   /* 16.8px — paragraphs, creature text */
   --size-xl:   1.1rem;    /* 17.6px — header name */
   --size-2xl:  1.6rem;    /* 25.6px — modal title */
   --size-3xl:  1.8rem;    /* 28.8px — section titles */
+
+  /* — Heading Scale —————————————————————————— */
+  --size-h1:       clamp(3rem, 8vw, 6rem);    /* hero title */
+  --size-h2:       clamp(2rem, 4vw, 3rem);    /* creature/world name */
+  --size-h3:       1.3rem;                     /* DSTextPanel title */
+  --size-h4:       0.75rem;                    /* DSTextPanel subtitle */
+  --size-label:    0.7rem;                     /* tags, small labels */
+  --size-section:  1.2rem;                     /* section titles (SCENES, SUBSYSTEMS) */
+  --size-soon:     2rem;                       /* soon badge large */
+
+  /* — Heading Scale (Kammara override) ———————— */
+  --size-h3-kammara:  2rem;                    /* DSTextPanel title in Kammara */
+  --size-body-kammara: 1rem;                   /* DSTextPanel body in Kammara */
+
+  /* — Common Colors ——————————————————————————— */
+  --color-outline-soft:    rgba(255,255,255,0.12);
+  --color-outline-mid:     rgba(255,255,255,0.2);
+  --color-outline-strong:  rgba(255,255,255,0.35);
+  --color-text-overlay:    rgba(255,255,255,0.7);
+  --color-text-overlay-dim:rgba(255,255,255,0.5);
+  --color-text-overlay-bright: rgba(255,255,255,0.9);
+  --color-bg-overlay:      rgba(0,0,0,0.3);
+  --color-bg-overlay-mid:  rgba(0,0,0,0.4);
+  --color-bg-overlay-heavy:rgba(0,0,0,0.6);
+
+  /* — Letter Spacing ————————————————————————— */
+  --tracking-tight:  0.04em;
+  --tracking-normal: 0.08em;
+  --tracking-wide:   0.12em;
+  --tracking-wider:  0.2em;
+  --tracking-widest: 0.25em;
 
   /* — Spacing —————————————————————————————————— */
   --space-xs:  0.25rem;

@@ -16,11 +16,15 @@ interface Props {
   titleColor?: string;
   textColor?: string;
   gradient?: string;
+  sectionTitle?: string;
 }
 
-const { cards, titleColor = 'rgba(255,255,255,0.9)', textColor = 'rgba(255,255,255,0.7)', gradient } = Astro.props;
+const { cards, titleColor = 'rgba(255,255,255,0.9)', textColor = 'rgba(255,255,255,0.7)', gradient, sectionTitle } = Astro.props;
 ---
 
+{sectionTitle && (
+  <h2 class="subsystem-section-title" style={`color: ${titleColor};`}>{sectionTitle}</h2>
+)}
 <div class="subsystem-grid">
   {cards.map((card) => (
     <div class="subsystem-card" style={gradient ? `--sub-bg: ${gradient};` : ''}>
@@ -40,15 +44,26 @@ const { cards, titleColor = 'rgba(255,255,255,0.9)', textColor = 'rgba(255,255,2
 </div>
 
 <style>
+  .subsystem-section-title {
+    display: block;
+    font-family: var(--sans);
+    font-size: var(--size-section);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.5em 2rem;
+    margin: 5em 2em 0 3em;
+  }
+
   .subsystem-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
-    padding: 2rem;
+    padding: 0.5rem 2rem 2rem;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
-    margin-top: 5rem;
+    margin-top: 0;
     margin-bottom: 5rem;
   }
 
@@ -56,7 +71,7 @@ const { cards, titleColor = 'rgba(255,255,255,0.9)', textColor = 'rgba(255,255,2
     flex: 0 1 calc(33.333% - 1rem);
     min-width: 280px;
     border-radius: 16px;
-    outline: 2px solid rgba(255,255,255,0.2);
+    outline: 2px solid var(--color-outline-mid);
     outline-offset: 3px;
     overflow: hidden;
     display: flex;
@@ -83,8 +98,8 @@ const { cards, titleColor = 'rgba(255,255,255,0.9)', textColor = 'rgba(255,255,2
 
   .subsystem-title {
     display: block;
-    font-size: 0.7rem;
-    letter-spacing: 0.2em;
+    font-size: var(--size-label);
+    letter-spacing: var(--tracking-wider);
     text-transform: uppercase;
     padding: 1.2rem 1.5rem 0.8rem;
     font-weight: 600;
@@ -114,7 +129,7 @@ const { cards, titleColor = 'rgba(255,255,255,0.9)', textColor = 'rgba(255,255,2
     flex: 1;
     padding: 1rem 1.5rem 1.5rem;
     font-family: var(--sans);
-    font-size: 0.85rem;
+    font-size: var(--size-base);
     line-height: 1.6;
     font-weight: 300;
     overflow-y: auto;

@@ -8,14 +8,15 @@ interface Props {
   transparent?: boolean;
   noBorder?: boolean;
   noHoverScale?: boolean;
+  cardBg?: string;
 }
 
-const { name, image, gradient = 'var(--gradient-bichittos)', cardSize, noFloat = false, transparent = false, noBorder = false, noHoverScale = false } = Astro.props;
+const { name, image, gradient = 'var(--gradient-bichittos)', cardSize, noFloat = false, transparent = false, noBorder = false, noHoverScale = false, cardBg } = Astro.props;
 const size = cardSize || 120;
 const wrapperWidth = size + 20;
 ---
 
-<div class={`char-card ${noFloat ? 'no-float' : ''} ${transparent ? 'transparent' : ''} ${noBorder ? 'no-border' : ''} ${noHoverScale ? 'no-hover-scale' : ''}`} style={`--card-size: ${size}px; --card-width: ${wrapperWidth}px;`}>
+<div class={`char-card ${noFloat ? 'no-float' : ''} ${transparent ? 'transparent' : ''} ${noBorder ? 'no-border' : ''} ${noHoverScale ? 'no-hover-scale' : ''}`} style={`--card-size: ${size}px; --card-width: ${wrapperWidth}px; ${cardBg ? `--card-bg: ${cardBg};` : ''}`}>
   <div class="char-card-glow" style={`background: ${gradient};`}></div>
   <div class="char-card-img-wrap">
     <img src={image} alt={name} class="char-card-img" draggable="false" />
@@ -43,7 +44,7 @@ const wrapperWidth = size + 20;
   .char-card.transparent .char-card-img-wrap {
     background: transparent;
     box-shadow: none;
-    outline: 2px solid rgba(255,255,255,0.2);
+    outline: 2px solid var(--color-outline-mid);
     outline-offset: 3px;
   }
 
@@ -97,14 +98,14 @@ const wrapperWidth = size + 20;
     height: var(--card-size);
     border-radius: 16px;
     overflow: hidden;
-    background: var(--color-white);
+    background: var(--card-bg, var(--color-white));
     position: relative;
     z-index: 1;
     transition: transform 0.25s ease;
     box-shadow:
       0 12px 40px rgba(0,0,0,0.15),
       0 0 20px rgba(255,255,255,0.15);
-    outline: 2px solid rgba(255,255,255,0.35);
+    outline: 2px solid var(--color-outline-strong);
     outline-offset: 3px;
   }
 
@@ -120,7 +121,7 @@ const wrapperWidth = size + 20;
 
   .char-card.transparent:hover .char-card-img-wrap,
   .char-card.transparent:active .char-card-img-wrap {
-    transform: scale(1.8);
+    transform: scale(1.2);
     outline: none;
   }
 
@@ -134,8 +135,8 @@ const wrapperWidth = size + 20;
 
   .char-card-name {
     font-family: var(--sans);
-    font-size: 0.7rem;
-    letter-spacing: 0.12em;
+    font-size: var(--size-label);
+    letter-spacing: var(--tracking-wide);
     text-transform: uppercase;
     color: var(--color-white);
     font-weight: var(--weight-regular);

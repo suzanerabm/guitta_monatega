@@ -17,7 +17,7 @@ const { label = 'soon', color = 'rgba(255,255,255,0.25)' } = Astro.props;
     height: 100%;
     min-height: 200px;
     border-radius: 16px;
-    outline: 2px solid rgba(255,255,255,0.12);
+    outline: 2px solid var(--color-outline-soft);
     outline-offset: 3px;
     display: flex;
     align-items: center;
@@ -26,7 +26,7 @@ const { label = 'soon', color = 'rgba(255,255,255,0.25)' } = Astro.props;
 
   .soon-panel-label {
     font-family: var(--sans);
-    font-size: 2rem;
+    font-size: var(--size-soon);
     letter-spacing: 0.3em;
     text-transform: uppercase;
     font-weight: 100;

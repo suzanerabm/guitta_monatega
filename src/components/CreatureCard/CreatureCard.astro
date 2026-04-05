@@ -17,7 +17,7 @@ const hasBannerSlot = Astro.slots.has('banner');
 ---
 
 <div class="creature" data-creature>
-  <h2 class="creature-name" style={color1 ? `color: ${color1};` : ''}>{name}</h2>
+  <h1 class="creature-name" style={color1 ? `color: ${color1};` : ''}>{name}</h1>
   <div class="creature-text" style={color2 ? `color: ${color2};` : ''}>
     <slot />
   </div>
@@ -44,14 +44,14 @@ const hasBannerSlot = Astro.slots.has('banner');
 
   .creature-name {
     font-family: var(--sans);
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: var(--size-h2);
     font-weight: 700;
-    letter-spacing: 0.04em;
+    letter-spacing: var(--tracking-tight);
     margin-bottom: 1rem;
   }
 
   .creature-text {
-    font-size: 1.05rem;
+    font-size: var(--size-lg);
     line-height: 1.7;
     font-weight: 300;
     max-width: 600px;

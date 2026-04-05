@@ -18,12 +18,12 @@ const { locale = 'pt-BR' } = Astro.props;
 const t = useTranslations(locale);
 
 const worlds = [
-  { id: 'lunnp1', tag: 'Planeta', name: "LUNN'P1", color: '#00e676', bgColor: '#002e14', color1: '#00e676', color2: '#69f0ae', gradient: 'var(--gradient-lunnp1)', accentColor: 'var(--color-lunnp1-1)', titleColor: '#00e676', textColor: '#69f0ae' },
-  { id: 'eni4', tag: 'Planeta', name: 'ENI-4\u0394', color: '#e8a317', bgColor: '#1a1005', color1: '#e8a317', color2: '#f5c842', gradient: 'var(--gradient-eni4)', accentColor: 'var(--color-eni4-1)', titleColor: '#e8a317', textColor: '#f5c842' },
-  { id: 'triplec', tag: 'Estação Espacial', name: 'TripleC', color: '#00e86a', bgColor: '#0a0818', color1: '#2a2868', color2: '#00e86a', gradient: 'var(--gradient-triplec)', accentColor: 'var(--color-triplec-1)', titleColor: '#2a2868', textColor: '#0e3a1a' },
-  { id: 'orfv', tag: 'Planeta', name: 'ORF-V', color: '#8040c8', bgColor: '#0c0620', color1: '#cf568c', color2: '#40d0e8', gradient: 'var(--gradient-orfv)', accentColor: 'var(--color-orfv-1)', titleColor: '#cf568c', textColor: '#3a1860', bgOpacity: 0.4 },
-  { id: 'z1', tag: 'Planeta', name: 'Z1', color: '#b0b8c4', bgColor: '#12141a', color1: '#b0b8c4', color2: '#d8dce4', gradient: 'var(--gradient-z1)', accentColor: 'var(--color-z1-1)', titleColor: '#b0b8c4', textColor: '#d8dce4' },
-  { id: 'gotto', tag: 'Planeta', name: 'Gotto', color: '#6a4a4a', bgColor: '#1a0e0e', color1: '#6a4a4a', color2: '#c4a8a8', gradient: 'var(--gradient-gotto)', accentColor: 'var(--color-gotto-1)', titleColor: '#6a4a4a', textColor: '#c4a8a8' },
+  { id: 'lunnp1', tag: 'Planeta', name: "LUNN'P1", color: 'var(--color-lunnp1-filter)', bgColor: 'var(--color-lunnp1-filter-bg)', color1: 'var(--color-lunnp1-1)', color2: 'var(--color-lunnp1-3)', gradient: 'var(--gradient-lunnp1)', accentColor: 'var(--color-lunnp1-1)', titleColor: 'var(--color-lunnp1-title)', textColor: 'var(--color-lunnp1-text)' },
+  { id: 'eni4', tag: 'Planeta', name: 'ENI-4\u0394', color: 'var(--color-eni4-filter)', bgColor: 'var(--color-eni4-filter-bg)', color1: 'var(--color-eni4-1)', color2: 'var(--color-eni4-3)', gradient: 'var(--gradient-eni4)', accentColor: 'var(--color-eni4-1)', titleColor: 'var(--color-eni4-title)', textColor: 'var(--color-eni4-text)' },
+  { id: 'triplec', tag: 'Estação Espacial', name: 'TripleC', color: 'var(--color-triplec-filter)', bgColor: 'var(--color-triplec-filter-bg)', color1: 'var(--color-triplec-title)', color2: 'var(--color-triplec-3)', gradient: 'var(--gradient-triplec)', accentColor: 'var(--color-triplec-1)', titleColor: 'var(--color-triplec-title)', textColor: 'var(--color-triplec-text)' },
+  { id: 'orfv', tag: 'Planeta', name: 'ORF-V', color: 'var(--color-orfv-filter)', bgColor: 'var(--color-orfv-filter-bg)', color1: 'var(--color-orfv-title)', color2: 'var(--color-orfv-3)', gradient: 'var(--gradient-orfv)', accentColor: 'var(--color-orfv-1)', titleColor: 'var(--color-orfv-title)', textColor: 'var(--color-orfv-text)', bgOpacity: 0.4 },
+  { id: 'z1', tag: 'Planeta', name: 'Z1', color: 'var(--color-z1-filter)', bgColor: 'var(--color-z1-filter-bg)', color1: 'var(--color-z1-1)', color2: 'var(--color-z1-3)', gradient: 'var(--gradient-z1)', accentColor: 'var(--color-z1-1)', titleColor: 'var(--color-z1-title)', textColor: 'var(--color-z1-text)' },
+  { id: 'gotto', tag: 'Planeta', name: 'Gotto', color: 'var(--color-gotto-filter)', bgColor: 'var(--color-gotto-filter-bg)', color1: 'var(--color-gotto-1)', color2: 'var(--color-gotto-3)', gradient: 'var(--gradient-gotto)', accentColor: 'var(--color-gotto-1)', titleColor: 'var(--color-gotto-title)', textColor: 'var(--color-gotto-text)' },
 ];
 
 // Kammara characters
@@ -205,7 +205,7 @@ const worldsData = worlds.map((world) => ({
       bgOpacity={0.3}
     >
       <Fragment slot="text">
-        <h3>{(t.kammara.section as any).name}</h3>
+        <h2>{(t.kammara.section as any).name}</h2>
         {(t.kammara.section as any).panel.story.map((p: string) => <p>{p}</p>)}
       </Fragment>
       {kammaraChars.length > 0 ? (
@@ -234,37 +234,40 @@ const worldsData = worlds.map((world) => ({
         bgOpacity={(w as any).bgOpacity ?? (w.bgImage ? 0.6 : 1)}
       >
         <Fragment slot="text">
-          <h3>{w.worldName}</h3>
-          {w.panelStory.map((p: string) => <p>{p}</p>)}
+          <h2>{w.worldName}</h2>
+          {w.panelStory.map((p: string) =>
+            p.startsWith('### ') ? <h3>{p.slice(4)}</h3> :
+            p.startsWith('## ') ? <h2>{p.slice(3)}</h2> :
+            <p>{p}</p>
+          )}
         </Fragment>
-        {(w.chars.length > 0 || w.scenes.length > 0) ? (
-          <div class="strips-stack">
-            {w.chars.length > 0 && (
-              <CharacterStrip gradient={w.gradient} characters={w.chars} cardSize={200} noFloat speed={100} transparent />
-            )}
-            {w.scenes.length > 0 && (
-              <CharacterStrip gradient={w.gradient} characters={w.scenes} cardSize={300} noFloat speed={300} transparent noBorder noLoop showArrows />
-            )}
-          </div>
+        {w.chars.length > 0 ? (
+          <CharacterStrip gradient={w.gradient} characters={w.chars} cardSize={300} noFloat speed={100} transparent />
         ) : (
           <SoonPanel label={t.common.soon} color={w.color} />
         )}
       </DSMainCard>
     </CreatureCard>
-    {w.subsystems.filter((s) => s.text.length > 0 && s.text[0] !== 'Placeholder — descreva a cultura aqui.' && s.text[0] !== 'Placeholder — descreva a geografia aqui.' && s.text[0] !== 'Placeholder — descreva a linguagem aqui.' && s.text[0] !== 'Placeholder — descreva o ecossistema aqui.' && s.text[0] !== 'Placeholder — descreva a tecnologia aqui.').length > 0 && (
+    {w.scenes.length > 0 && (
+      <div class="scenes-strip">
+        <CharacterStrip gradient={w.gradient} characters={w.scenes} cardSize={300} noFloat speed={300} transparent noBorder noLoop showArrows arrowColor={w.titleColor} sectionTitle={(t.kammara as any).scenesTitle} />
+      </div>
+    )}
+    {w.subsystems.filter((s) => s.text.length > 0 && !s.text[0].startsWith('Placeholder')).length > 0 && (
       <SubSystem
-        cards={w.subsystems
-          .map((s, i) => ({
-            title: s.title,
-            image: w.subsystemImages[i] || undefined,
-            imageAlt: s.title,
-            texts: s.text,
-          }))
-          .filter((c) => c.texts.length > 0 && !c.texts[0].startsWith('Placeholder'))}
-        titleColor={w.titleColor}
-        textColor={w.textColor}
-        gradient={w.gradient}
-      />
+          sectionTitle={(t.kammara as any).subsystemsTitle}
+          cards={w.subsystems
+            .map((s, i) => ({
+              title: s.title,
+              image: w.subsystemImages[i] || undefined,
+              imageAlt: s.title,
+              texts: s.text,
+            }))
+            .filter((c) => c.texts.length > 0 && !c.texts[0].startsWith('Placeholder'))}
+          titleColor={w.titleColor}
+          textColor={w.textColor}
+          gradient={w.gradient}
+        />
     )}
   </CreatureSection>
 ))}
@@ -286,8 +289,26 @@ const worldsData = worlds.map((world) => ({
     flex: 1;
   }
 
-  .strips-stack .char-strip-wrap {
+  .scenes-strip {
+    padding: 0;
+  }
+
+  .scenes-strip :global(.char-strip-wrap) {
     width: 100%;
+  }
+
+  .scenes-strip :global(.char-strip) {
+    position: relative;
+    top: auto;
+    overflow: hidden;
+  }
+
+  .scenes-strip :global(.char-strip-track) {
+    justify-content: center;
+  }
+
+  .scenes-strip :global(.strip-section-title) {
+    padding: 0 2rem;
   }
 </style>
 
