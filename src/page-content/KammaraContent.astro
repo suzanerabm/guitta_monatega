@@ -4,7 +4,8 @@ import CreatureSection from '../components/CreatureSection/CreatureSection.astro
 import CreatureCard from '../components/CreatureCard/CreatureCard.astro';
 import DSMainCard from '../components/DSMainCard/DSMainCard.astro';
 import CharacterStrip from '../components/CharacterStrip/CharacterStrip.astro';
-import WorldCard from '../components/WorldCard/WorldCard.astro';
+import SubSystem from '../components/SubSystem/SubSystem.astro';
+import SoonPanel from '../components/SoonPanel/SoonPanel.astro';
 import BookGallery from '../components/BookGallery/BookGallery.astro';
 import FilterBar from '../components/FilterBar/FilterBar.astro';
 import ScrollReveal from '../components/ScrollReveal/ScrollReveal.astro';
@@ -17,12 +18,12 @@ const { locale = 'pt-BR' } = Astro.props;
 const t = useTranslations(locale);
 
 const worlds = [
-  { id: 'lunnp1', tag: 'Planeta', name: "LUNN'P1", css: 'wb-lunnp1' },
-  { id: 'eni4', tag: 'Planeta', name: 'ENI-4\u0394', css: 'wb-eni4' },
-  { id: 'triplec', tag: 'Estação Espacial', name: 'TripleC', css: 'wb-triplec' },
-  { id: 'orfv', tag: 'Planeta', name: 'ORF-V', css: 'wb-orfv' },
-  { id: 'z1', tag: 'Planeta', name: 'Z1', css: 'wb-z1' },
-  { id: 'gotto', tag: 'Planeta', name: 'Gotto', css: 'wb-gotto' },
+  { id: 'lunnp1', tag: 'Planeta', name: "LUNN'P1", color: '#00e676', bgColor: '#002e14', color1: '#00e676', color2: '#69f0ae', gradient: 'var(--gradient-lunnp1)', accentColor: 'var(--color-lunnp1-1)', titleColor: '#00e676', textColor: '#69f0ae' },
+  { id: 'eni4', tag: 'Planeta', name: 'ENI-4\u0394', color: '#e8a317', bgColor: '#1a1005', color1: '#e8a317', color2: '#f5c842', gradient: 'var(--gradient-eni4)', accentColor: 'var(--color-eni4-1)', titleColor: '#e8a317', textColor: '#f5c842' },
+  { id: 'triplec', tag: 'Estação Espacial', name: 'TripleC', color: '#00e86a', bgColor: '#0a0818', color1: '#2a2868', color2: '#00e86a', gradient: 'var(--gradient-triplec)', accentColor: 'var(--color-triplec-1)', titleColor: '#2a2868', textColor: '#0e3a1a' },
+  { id: 'orfv', tag: 'Planeta', name: 'ORF-V', color: '#8040c8', bgColor: '#0c0620', color1: '#cf568c', color2: '#40d0e8', gradient: 'var(--gradient-orfv)', accentColor: 'var(--color-orfv-1)', titleColor: '#cf568c', textColor: '#3a1860', bgOpacity: 0.4 },
+  { id: 'z1', tag: 'Planeta', name: 'Z1', color: '#b0b8c4', bgColor: '#12141a', color1: '#b0b8c4', color2: '#d8dce4', gradient: 'var(--gradient-z1)', accentColor: 'var(--color-z1-1)', titleColor: '#b0b8c4', textColor: '#d8dce4' },
+  { id: 'gotto', tag: 'Planeta', name: 'Gotto', color: '#6a4a4a', bgColor: '#1a0e0e', color1: '#6a4a4a', color2: '#c4a8a8', gradient: 'var(--gradient-gotto)', accentColor: 'var(--color-gotto-1)', titleColor: '#6a4a4a', textColor: '#c4a8a8' },
 ];
 
 // Kammara characters
@@ -45,6 +46,51 @@ function getCharacters(creature: string): { name: string; image: string }[] {
 }
 
 const kammaraChars = getCharacters('kammara');
+// Bg for main Kammara section
+const kammaraBgDir = join(CHARS_BASE, 'kammara', '_bg');
+let kammaraBg: string | null = null;
+try {
+  const bgFile = readdirSync(kammaraBgDir).find((f: string) => /\.(jpg|jpeg|png|webp)$/i.test(f));
+  if (bgFile) kammaraBg = `${CHARS_URL}/kammara/_bg/${bgFile}`;
+} catch {}
+
+function getWorldCharacters(worldId: string): { name: string; image: string }[] {
+  const dir = join(CHARS_BASE, 'kammara', worldId);
+  try {
+    return readdirSync(dir)
+      .filter((f: string) => /\.(png|jpg|jpeg|gif|webp|apng)$/i.test(f))
+      .sort()
+      .map((f: string) => ({
+        name: f.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' '),
+        image: `${CHARS_URL}/kammara/${worldId}/${f}`,
+      }));
+  } catch {
+    return [];
+  }
+}
+
+function getSubsystemImages(worldId: string): (string | null)[] {
+  const dir = join(CHARS_BASE, 'kammara', worldId, '_subsystems');
+  try {
+    const files = readdirSync(dir).filter((f: string) => /\.(jpg|jpeg|png|webp)$/i.test(f)).sort();
+    return [0, 1, 2].map(i => {
+      const file = files.find((f: string) => f.startsWith(`${i}.`) || f.startsWith(`${i}-`));
+      return file ? `${CHARS_URL}/kammara/${worldId}/_subsystems/${file}` : null;
+    });
+  } catch {
+    return [null, null, null];
+  }
+}
+
+function getWorldBg(worldId: string): string | null {
+  const bgDir = join(CHARS_BASE, 'kammara', worldId, '_bg');
+  try {
+    const file = readdirSync(bgDir).find((f: string) => /\.(jpg|jpeg|png|webp)$/i.test(f));
+    return file ? `${CHARS_URL}/kammara/${worldId}/_bg/${file}` : null;
+  } catch {
+    return null;
+  }
+}
 
 const BOOKS_BASE = join(process.cwd(), 'public', 'imgs', 'books', 'kammara');
 const BOOKS_URL = '/imgs/books/kammara';
@@ -57,7 +103,7 @@ function findCover(dir: string): string | null {
   return null;
 }
 
-const kammaraBookDefs = (t.kammara.books as any) as { tag: string; title: string }[] || [];
+const kammaraBookDefs = ((t.kammara.section as any).books as { tag: string; title: string }[]) || [];
 const kammaraBooks = kammaraBookDefs.length > 0
   ? kammaraBookDefs.map((def) => {
       const bookDir = join(BOOKS_BASE, def.tag);
@@ -76,6 +122,19 @@ const kammaraBooks = kammaraBookDefs.length > 0
       };
     })
   : [];
+
+// Pre-compute world data for template
+const kammaraWorlds = (t.kammara as any).worlds || {};
+const worldsData = worlds.map((world) => ({
+  ...world,
+  texts: (kammaraWorlds[world.id]?.text || []) as string[],
+  panelStory: (kammaraWorlds[world.id]?.panel?.story || []) as string[],
+  worldName: (kammaraWorlds[world.id]?.name || world.name) as string,
+  chars: getWorldCharacters(world.id),
+  bgImage: getWorldBg(world.id),
+  subsystems: (kammaraWorlds[world.id]?.subsystems || []) as { title: string; text: string[] }[],
+  subsystemImages: getSubsystemImages(world.id),
+}));
 ---
 
 <HeroSection
@@ -95,49 +154,85 @@ const kammaraBooks = kammaraBookDefs.length > 0
   </Fragment>
 </HeroSection>
 
-{kammaraBooks.length > 0 && <BookGallery title={t.kammara.booksTitle} books={kammaraBooks} soonLabel={t.common.soon} />}
+<FilterBar
+  target="creature"
+  allLabel={locale === 'en' ? 'All' : 'Todos'}
+  filters={[
+    { id: 'kammara', label: (t.kammara.section as any).name, color: '#b8a9e8', bgColor: '#0a0a2e' },
+    ...worlds.map(w => ({ id: w.id, label: w.name, color: w.color, bgColor: w.bgColor })),
+  ]}
+/>
 
 <!-- KAMMARA SECTION -->
-<CreatureSection gradient="var(--gradient-kammara)" accentColor="var(--color-kammara-purple)">
-  <CreatureCard name={(t.kammara.section as any).name} color1="#b8a9e8" color2="#d4cbf0">
+<CreatureSection gradient="var(--gradient-kammara)" accentColor="var(--color-kammara-purple)" id="kammara" {...(kammaraBg ? { bgImage: kammaraBg } : {})}>
+  <CreatureCard name={(t.kammara.section as any).name} color1="#1a0a30" color2="#d4cbf0">
     {(t.kammara.section as any).text.map((p: string) => <p>{p}</p>)}
     <DSMainCard
       slot="banner"
-      gradient="var(--gradient-kammara)"
+      gradient="linear-gradient(135deg, #000000, #0a0a2e, #1a1a4e, #000000)"
       height="1400px"
       maxHeight="80vh"
-      titleColor="#b8a9e8"
+      titleColor="#1a0a30"
       textColor="#d4cbf0"
       characters={[]}
+      stripSide
+      bgOpacity={kammaraBg ? 0.6 : 1}
     >
       <Fragment slot="text">
         <h3>{(t.kammara.section as any).name}</h3>
         {(t.kammara.section as any).panel.story.map((p: string) => <p>{p}</p>)}
       </Fragment>
-      {kammaraChars.length > 0 && <CharacterStrip gradient="var(--gradient-kammara)" characters={kammaraChars} />}
+      {kammaraChars.length > 0 ? (
+        <CharacterStrip gradient="var(--gradient-kammara)" characters={kammaraChars} cardSize={500} noFloat speed={120} transparent />
+      ) : (
+        <SoonPanel label={t.common.soon} />
+      )}
     </DSMainCard>
   </CreatureCard>
+  {kammaraBooks.length > 0 && <BookGallery title={t.kammara.booksTitle} books={kammaraBooks} soonLabel={t.common.soon} />}
 </CreatureSection>
 
-<FilterBar
-  target="world"
-  allLabel={locale === 'en' ? 'All' : 'Todos'}
-  filters={worlds.map(w => ({ id: w.id, label: w.name }))}
-/>
-
-{worlds.map((world, i) => (
-  <WorldCard
-    tag={world.tag}
-    name={world.name}
-    id={world.id}
-    gradientClass={world.css}
-    showDivider={i < worlds.length - 1}
-  >
-    <p>{t.kammara.placeholder}</p>
-  </WorldCard>
+{worldsData.map((w) => (
+  <CreatureSection gradient={`var(--gradient-${w.id}-bg)`} accentColor={w.accentColor} id={w.id} {...(w.bgImage ? { bgImage: w.bgImage } : {})}>
+    <CreatureCard name={w.worldName} color1={w.color1} color2={w.color2}>
+      {w.texts.length > 0 ? w.texts.map((p: string) => <p>{p}</p>) : <p>{t.kammara.placeholder}</p>}
+      <DSMainCard
+        slot="banner"
+        gradient={w.gradient}
+        height="1400px"
+        maxHeight="80vh"
+        titleColor={w.titleColor}
+        textColor={w.textColor}
+        characters={[]}
+        stripSide
+        bgOpacity={(w as any).bgOpacity ?? (w.bgImage ? 0.6 : 1)}
+      >
+        <Fragment slot="text">
+          <h3>{w.worldName}</h3>
+          {w.panelStory.map((p: string) => <p>{p}</p>)}
+        </Fragment>
+        {w.chars.length > 0 ? (
+          <CharacterStrip gradient={w.gradient} characters={w.chars} cardSize={500} noFloat speed={120} transparent />
+        ) : (
+          <SoonPanel label={t.common.soon} color={w.color} />
+        )}
+      </DSMainCard>
+    </CreatureCard>
+    {w.subsystems.length > 0 && (
+      <SubSystem
+        cards={w.subsystems.map((s, i) => ({
+          title: s.title,
+          image: w.subsystemImages[i] || undefined,
+          imageAlt: s.title,
+          texts: s.text,
+        }))}
+        titleColor={w.titleColor}
+        textColor={w.textColor}
+      />
+    )}
+  </CreatureSection>
 ))}
 
-<ScrollReveal selector="[data-world]" />
 <ScrollReveal selector="[data-creature]" />
 
 <style>

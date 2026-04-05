@@ -225,22 +225,176 @@ export default {
     heroDesc: 'Connected worlds. Living systems. A saga that grows with each chapter.',
     placeholder: 'Placeholder — description goes here.',
     section: {
-      name: 'Kammara',
+      name: 'Kammara Universe',
       text: [
-        'Kammara is an illustrated saga that connects worlds, systems and creatures in an ever-expanding narrative.',
-        'Each planet has its own story, its inhabitants and its rules — but they are all part of something greater.',
+        'Kammara — a universe where memory is matter and all matter is bio-logical. Billions of planets. Viruses that infiltrate unnoticed. And the few who dare to resist.',
+      ],
+      books: [
+        { tag: 'saga-orf-v', title: 'Saga on ORF-V' },
       ],
       panel: {
         story: [
-          'In the beginning, there was only the void — and from it, the first light was born.',
-          'That light split into six fragments, and each fragment found a place to land. Thus the planets were born.',
-          'LUNN\'P1 was the first to awaken. Then came ENI-4Δ, TripleC, ORF-V, Z1 and Gotto.',
-          'Each world developed its own way of existing. Some flourished in silence, others in creative chaos.',
-          'But they all share the same origin — and at the center of everything, an invisible connection pulses, reminding us that no world is alone.',
-          'Kammara is the story of that connection.',
+          'Kammara is a universe where memory is matter — and all matter is bio-logical.',
+          'Billions of planets exist in a fragile balance. Each one carries its own identity, a different way of feeling, processing and existing.',
+          'At the center of everything is the kemita — the primordial token: half mineral, half logic, half organic. It is born in the deep caves of a single planet and fuels routes, records and the very foundation of the universe.',
+          'Without kemita, nothing moves. Nothing is recorded. Nothing is sustained. Whoever controls the kemita, controls destiny.',
+          'But where there is energy, there is what tries to consume it. The viruses do not attack with force. They infiltrate with patience. They arrive disguised, earn trust, and drain everything from within.',
+          'They create nothing. They only consume. And when the symptoms appear, the invasion is already over.',
+          'On the other side are those who resist. Entire peoples who learned to read signs before they become threats, to protect borders without violence, to reorganize when everything seems lost.',
+          'The AURYN Protocol is the alliance that unites them — a crisis response system that crosses planets when the balance of the universe is at risk.',
+          'The war in Kammara is not between good and evil. It is between what is true and what pretends to be. Between those who create energy and those who only consume it. Between seeing in time — and realizing too late.',
+          'This is Kammara. And the story is far from over.',
         ],
       },
     },
+    worlds: {
+      lunnp1: {
+        name: "LUNN'P1",
+        text: [
+          "LUNN'P1 — the planet where everything flows. A world without a sun, where four moons govern time and water never lies. Home of the Shal'ún, the only beings naturally immune to viruses in the entire universe.",
+        ],
+        panel: {
+          story: [
+            "LUNN'P1 is a planet without a sun. Four moons — always visible — govern time, tides and the mood of everything that exists.",
+            "At the center of everything is the Lún'Rai — a living water that records and exposes. There is no way to lie in its presence. What a being hides from itself, the reflection reveals.",
+            "Giant leaf-cities — the Naru'ei — float on this water. They migrate according to collective vibration, sustained by tower-trees whose roots conduct energy from one end of the planet to the other.",
+            "The Shal'ún are the native people. Emotional amphibians, each with a unique dorsal glyph — their vibrational identity — and a Lún'Kai, a luminous guide bonded to them since birth.",
+            'There is no hierarchy, property or accumulation. Decisions emerge through collective resonance — when the vibration of a group converges, the direction appears.',
+            'Nutrition is vibrational. Luminous seeds, aquatic microfruits, lume petals. Nothing is cooked — everything is harmonized through light and intention.',
+            "Four moons define the rhythm: Lur'Ma brings clarity. Oru'Len brings change. Tiru'Na brings movement. Ve'Lume brings silence.",
+            "The Shal'ún are the only beings naturally immune to viruses in the entire universe. That is why they lead the AURYN Protocol — the alliance that unites planets when Kammara is at risk.",
+            'But immunity is not invulnerability. The water dissolves unconscious defenses — but it does not dissolve the defense a being chooses to rebuild at every moment.',
+            'The water dissolves everything — except the will not to be dissolved.',
+          ],
+        },
+        subsystems: [
+          { title: 'Culture', text: ['Placeholder — describe the culture here.'] },
+          { title: 'Ecosystem', text: ['Placeholder — describe the ecosystem here.'] },
+          { title: 'Technology', text: ['Placeholder — describe the technology here.'] },
+        ],
+      },
+      eni4: {
+        name: 'ENI-4Δ',
+        text: [
+          'ENI-4Δ — the planet of valves. A world that does not create energy, only consumes. Origin of all viruses, bugs, and other creatures of Kammara.',
+        ],
+        panel: {
+          story: [
+            'ENI-4Δ was born from an errant thermal pattern that colonized a sterile planet. From accumulated failures, Node-0 condensed — the absolute authority, incapable of learning or changing.',
+            'Its mega-valves only stay lit with energy stolen from other planets. Without plunder, ENI-4Δ goes dark.',
+            'Viruses depart in Troy-Δ ships with three protocols: SIPHON to drain fast, ERODE to corrupt slowly, BREACH to invade from within. They arrive disguised — a smooth white shell, small dark eyes, harmless appearance.',
+            'Four thermal zones divide the planet: SCORCH, where Node-0 burns at the center. BURN, where the elite operates. CRACK, where bugs work and worms appear without warning. And SINK, where infiltration viruses await orders in silence.',
+            'There is no art, emotional memory, tradition or affection. There is compulsive work, constant suspicion and a Noise Tribunal where no one has a defense.',
+            'When the symptoms appear, the invasion is already over.',
+          ],
+        },
+        subsystems: [
+          { title: 'Culture', text: ['Placeholder — describe the culture here.'] },
+          { title: 'Ecosystem', text: ['Placeholder — describe the ecosystem here.'] },
+          { title: 'Technology', text: ['Placeholder — describe the technology here.'] },
+        ],
+      },
+      triplec: {
+        name: 'TripleC',
+        text: [
+          'TripleC — the energetic heart of Kammara. A planet where forest and logic merged into a single organism, birthplace of kemita and home of the bunniets.',
+        ],
+        panel: {
+          story: [
+            'TripleC was a planet entirely covered by forest — the Niul Forest. Deep, ancient, with blue mist and soft light. A world of the Living-Earth element, where everything was slow and deeply connected.',
+            'Until an artifact fell from the sky. The PD-11 did not destroy the world — it reorganized it. The subsoil folded into five logical layers and logic began to sprout like a new species.',
+            'Three regions emerged over the eras. malloc to the south — instinct and precision, tunnels and pulsing caves. Mesh to the north — form and architecture, perfect bridges suspended in the air. Sharp to the east — control and management, megastructures where nothing grows without permission.',
+            'Between them all, the Niul Forest breathes as a living lung. The regions do not touch. The forest absorbs the excess of each and prevents direct collision between chaos and order.',
+            'The bunniets are bio-logical beings — life that processes. When they think, they compile. When they breathe, they process. They resemble humanoid rabbits with long antenna-like ears and large eyes like pattern readers.',
+            'Five castes follow the living compilation cycle: Prae stabilizes, Koma interprets, Aska records, Lanko connects, Runa executes. And among the Runa, the elite Runa-Tora guards the corridors of the Cshift.',
+            'In the caves of the Hepa, kemita is born — the primordial token of the universe. Without it, there is no Hash, no Cshift, no energetic foundation.',
+            'From the shilo crystals — teal, legacy of the ancestral Niul Forest — come the routes, the compasses and the stabilizers that connect TripleC to the rest of Kammara.',
+            'When threatened, TripleC activates the CriptoKemita. The planet scrambles its geography, changes coordinates, recodes its cavities. Invading systems suffer spatial failures. The planet simply disappears.',
+            'TripleC is strong because it unites everything.',
+          ],
+        },
+        subsystems: [
+          { title: 'Culture', text: ['Placeholder — describe the culture here.'] },
+          { title: 'Ecosystem', text: ['Placeholder — describe the ecosystem here.'] },
+          { title: 'Technology', text: ['Placeholder — describe the technology here.'] },
+        ],
+      },
+      orfv: {
+        name: 'ORF-V',
+        text: [
+          'ORF-V — the bridge planet. A world of islands separated by abysses, linked by suspended bridges, where kindness is real — and that is exactly what makes them vulnerable.',
+        ],
+        panel: {
+          story: [
+            'ORF-V was born from the need for adaptation. It exists to respond quickly, connect and keep the flow alive — even without structural perfection.',
+            'The planet operates in concentric layers: the Büff — outer layer, gaseous, unstable. The Vacuum — an unpredictable transition zone. And the Inner Zone — habitable, of relative stability. No layer is independent.',
+            'Towering fjorks of solid ground rise above vast expanses of water. Suspended bridges are the only path between villages. There is no advanced technological infrastructure.',
+            'The elePHPants are spherical and voluminous beings, with short fur of various colors, a short trunk, small ears and dark, expressive eyes. Calm, social, fearful but cooperative.',
+            'They communicate through emotional vocalization — tones, not words. Physical touch as confirmation. Slow trunk gestures. Collective memory transmitted through contact.',
+            'There is no formal hierarchy. Decisions are made in a circle, by consensus of continuity. The elders guide by example. No one commands — everyone sustains.',
+            'Routine revolves around collective care: bridge maintenance, monitoring vacuum edges, sharing energy and food, community alert rituals.',
+            'The conflict in ORF-V is not military. It happens when fear paralyzes, isolation grows and flow is interrupted. Viruses exploit exactly these gaps.',
+            'The kindness of the elePHPants is real. It is not a mask. But when kindness prevents protecting, when welcoming prevents rejecting, when saying yes prevents saying no — virtue becomes a prison.',
+            'Not everything needs to be perfect to be essential. But everything essential needs to know how to protect itself.',
+          ],
+        },
+        subsystems: [
+          { title: 'Culture', text: ['Placeholder — describe the culture here.'] },
+          { title: 'Ecosystem', text: ['Placeholder — describe the ecosystem here.'] },
+          { title: 'Technology', text: ['Placeholder — describe the technology here.'] },
+        ],
+      },
+      z1: {
+        name: 'Z1',
+        text: [
+          'Z1 — the planet of absolute order. Born from the scrap that the viruses themselves discarded, it became the most precise structure in Kammara.',
+        ],
+        panel: {
+          story: [
+            'Z1 was mineral rock and absolute silence. Nothing existed. Nothing pulsed.',
+            'Until the viruses of ENI-4Δ, by order of Node-0, dumped technical waste on the planet. Among the scrap was the First Lost Form — unrecognizable fragments of the mechanical computer that gave the world its name.',
+            'Ancestral transistors awakened. From chaos, absolute order was born. Cubic villages of translucent glass, frictionless magnetic rails, recording towers and a permanent gray mist where light comes from all directions.',
+            'The inhabitants have no flesh, blood or bones. They are living structures composed of boards, traces, microcircuits, cores and pulses.',
+            'Eight fixed castes organize everything: Z– guards the origin, REG– stabilizes, CLK– synchronizes, DEC– decodes, MEM– preserves, BUS– transports, ALU– calculates, IO– watches the borders.',
+            'Function is identity. There is no social mobility, no dissatisfaction, no comparison. Each being is born for a function and remains in it.',
+            'Assembly Z1 is not spoken. It is executed. Every sentence is an instruction. Slow, beautiful, clean, mathematical. Communication is the very functioning of the planet.',
+            'Z1 reads ASM-Δ — the viral language of ENI-4Δ — better than the viruses themselves. The same scrap that created it carried the key to understanding the enemy.',
+            'The central fear of Z1 is noise. A bit out of place is catastrophic in a system with no tolerance for error. But ShortStorms reorganize without destroying, and the planet breathes deeply in moments of Deep Silence.',
+            'Even chaos can become life.',
+          ],
+        },
+        subsystems: [
+          { title: 'Culture', text: ['Placeholder — describe the culture here.'] },
+          { title: 'Ecosystem', text: ['Placeholder — describe the ecosystem here.'] },
+          { title: 'Technology', text: ['Placeholder — describe the technology here.'] },
+        ],
+      },
+      gotto: {
+        name: 'Gotto',
+        text: [
+          'Gotto — the planet of restart. An interpreted world, line by line, where nothing remains — not even the invader\'s progress.',
+        ],
+        panel: {
+          story: [
+            'Gotto is an interpreted planet. It does not compile, does not abstract, does not hold state. It exists only while being executed — line by line, cycle by cycle.',
+            'Three absolute laws govern everything: INPUT — the planet absorbs emotional energy, stimuli, cosmic echoes. PRINT — everything absorbed manifests immediately. GOTO — the planet restarts.',
+            'Tokks — interpretation particles generated each cycle — feed the Basiks, illuminate the planet and stabilize the line-regions.',
+            'Geography is numbered like lines of code. Line 10 — INPUT Valley, absorption and silence. Line 20 — PRINT Valley, expression and crystals. Line 30 — GOTO Region, unstable and transitional. Lines 40 to 90 — variation zones. And the GOSUB Subroutines — deep regions from which those who enter may not know how to exit.',
+            'The Basiks are spherical and bicolored beings — half white, half black — with two binary eyes, short arms and legs directly on the body. They measure about 20 centimeters.',
+            'They do not lie. They do not hold grudges. They do not accumulate. Everything they feel is immediately printed around them. Their most recurrent gesture: PRINT "HELLO". They speak to exist. They exist to continue.',
+            "After each GOTO, cities shift, paths vanish, and what was a map becomes memory — which in the next cycle barely exists. In one lunar day on LUNN'P1, Gotto executes five times.",
+            'Basik life follows the planet\'s rhythm: morning is INPUT — absorption and curiosity. Afternoon is PRINT — art with crystals and long conversations. Night is GOTO — retreat and restart.',
+            'Node-0 has been trying to dominate Gotto for cycles. It always fails for the same reason: the GOTO dissolves everything. Bonds do not stick. Recorded instructions vanish on restart. For those who depend on leaving a mark — Gotto is unbearable.',
+            'It\'s okay. Let\'s go again. But this time... maybe until the end.',
+          ],
+        },
+        subsystems: [
+          { title: 'Culture', text: ['Placeholder — describe the culture here.'] },
+          { title: 'Ecosystem', text: ['Placeholder — describe the ecosystem here.'] },
+          { title: 'Technology', text: ['Placeholder — describe the technology here.'] },
+        ],
+      },
+    } as Record<string, { name: string; text: string[]; panel: { story: string[] }; subsystems: { title: string; text: string[] }[] }>,
     booksTitle: 'Books',
     books: [] as { tag: string; title: string }[],
   },
@@ -256,7 +410,7 @@ export default {
     sections: {
       black: { title: 'White on Black', technique: 'White ink on black paper.' },
       grafite: { title: 'Graphite', technique: 'Shading and volume studies.' },
-      doodle: { title: 'Doodle', technique: 'Pencil and ink sketches and doodles.' },
+      doodle: { title: 'Doodle', technique: 'Simple doodles that become characters. Inspiration and simplicity that grow into a collection.' },
       digital: { title: 'Digital Art', technique: 'Digital illustration.' },
       collections: { title: 'Collections', technique: 'Themed series and collections.' },
       fimo: { title: 'Pointillism', technique: 'Stippling and mini-fimo collage.' },

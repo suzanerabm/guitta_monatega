@@ -4,14 +4,16 @@ interface Props {
   image: string;
   gradient?: string;
   cardSize?: number;
+  noFloat?: boolean;
+  transparent?: boolean;
 }
 
-const { name, image, gradient = 'var(--gradient-bichittos)', cardSize } = Astro.props;
+const { name, image, gradient = 'var(--gradient-bichittos)', cardSize, noFloat = false, transparent = false } = Astro.props;
 const size = cardSize || 120;
 const wrapperWidth = size + 20;
 ---
 
-<div class="char-card" style={`--card-size: ${size}px; --card-width: ${wrapperWidth}px;`}>
+<div class={`char-card ${noFloat ? 'no-float' : ''} ${transparent ? 'transparent' : ''}`} style={`--card-size: ${size}px; --card-width: ${wrapperWidth}px;`}>
   <div class="char-card-glow" style={`background: ${gradient};`}></div>
   <div class="char-card-img-wrap">
     <img src={image} alt={name} class="char-card-img" />
@@ -33,6 +35,18 @@ const wrapperWidth = size + 20;
 
   .char-card:nth-child(2n) { animation-delay: -1s; }
   .char-card:nth-child(3n) { animation-delay: -2s; }
+
+  .char-card.no-float { animation: none; }
+
+  .char-card.transparent .char-card-img-wrap {
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+  }
+
+  .char-card.transparent .char-card-glow {
+    display: none;
+  }
 
   @keyframes cardFloat {
     0%, 100% { transform: translateY(0); }

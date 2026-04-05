@@ -1,0 +1,137 @@
+---
+/**
+ * SubSystem — Grid de 3 cards
+ * Cada card tem: titulo, foto (esquerda), textos (direita)
+ */
+
+interface SubSystemCard {
+  title: string;
+  image?: string;
+  imageAlt?: string;
+  texts: string[];
+}
+
+interface Props {
+  cards: SubSystemCard[];
+  titleColor?: string;
+  textColor?: string;
+}
+
+const { cards, titleColor = 'rgba(255,255,255,0.9)', textColor = 'rgba(255,255,255,0.7)' } = Astro.props;
+---
+
+<div class="subsystem-grid">
+  {cards.map((card) => (
+    <div class="subsystem-card">
+      <span class="subsystem-title" style={`color: ${titleColor};`}>{card.title}</span>
+      <div class="subsystem-body">
+        <div class="subsystem-image">
+          {card.image ? (
+            <img src={card.image} alt={card.imageAlt || card.title} />
+          ) : (
+            <div class="subsystem-image-placeholder"></div>
+          )}
+        </div>
+        <div class="subsystem-text" style={`color: ${textColor};`}>
+          {card.texts.map((p) => <p>{p}</p>)}
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
+<style>
+  .subsystem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 2rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .subsystem-card {
+    border-radius: 16px;
+    outline: 2px solid rgba(255,255,255,0.2);
+    outline-offset: 3px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .subsystem-title {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 1.2rem 1.5rem 0.8rem;
+    font-weight: 600;
+  }
+
+  .subsystem-body {
+    display: flex;
+    flex: 1;
+    gap: 0;
+  }
+
+  .subsystem-image {
+    flex: 0 0 45%;
+    overflow: hidden;
+  }
+
+  .subsystem-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .subsystem-image-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    background: rgba(255,255,255,0.05);
+  }
+
+  .subsystem-text {
+    flex: 1;
+    padding: 1rem 1.5rem 1.5rem;
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    font-weight: 300;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .subsystem-text::-webkit-scrollbar {
+    display: none;
+  }
+
+  .subsystem-text :global(p) {
+    margin-bottom: 0.6rem;
+  }
+
+  @media (max-width: 768px) {
+    .subsystem-grid {
+      grid-template-columns: 1fr;
+      padding: 1.5rem;
+      gap: 1.2rem;
+    }
+
+    .subsystem-body {
+      flex-direction: column;
+    }
+
+    .subsystem-image {
+      flex: none;
+      height: 180px;
+    }
+
+    .subsystem-text {
+      font-size: 0.8rem;
+      padding: 1rem;
+    }
+  }
+</style>

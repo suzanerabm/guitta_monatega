@@ -94,6 +94,54 @@
   --color-kammara-glow:    rgba(100,80,200,0.2);
   --gradient-kammara:      linear-gradient(135deg, #0a0a2e, #1a1a4e, #2d1b69, #0f3460);
 
+  /* — Palette: LUNN'P1 — verde fluorescente, planeta de água — */
+  --color-lunnp1-1:        #00e676;
+  --color-lunnp1-2:        #00c853;
+  --color-lunnp1-3:        #69f0ae;
+  --color-lunnp1-dark:     #002e14;
+  --gradient-lunnp1:       linear-gradient(135deg, #004d25, #00c853, #00e676);
+  --gradient-lunnp1-bg:    linear-gradient(160deg, #001a0e 0%, #003d1a 40%, #002e14 100%);
+
+  /* — Palette: ENI-4Δ — laranja/amarelo, planeta deserto — */
+  --color-eni4-1:          #e8a317;
+  --color-eni4-2:          #c47f0a;
+  --color-eni4-3:          #f5c842;
+  --color-eni4-dark:       #1a1005;
+  --gradient-eni4:         linear-gradient(135deg, #8a5a0a, #e8a317, #f5c842);
+  --gradient-eni4-bg:      linear-gradient(160deg, #1a1005 0%, #3a2a0a 40%, #2a1c06 100%);
+
+  /* — Palette: TripleC — azul, roxo floresta, verde kemita brilhante — */
+  --color-triplec-1:       #7b4fbf;
+  --color-triplec-2:       #2a5caa;
+  --color-triplec-3:       #00e86a;
+  --color-triplec-dark:    #0a0818;
+  --gradient-triplec:      linear-gradient(135deg, #00e86a 0%, #00e86a 35%, #7b4fbf 70%, #2a5caa 100%);
+  --gradient-triplec-bg:   linear-gradient(160deg, #0a0818 0%, #1a1040 40%, #081a10 100%);
+
+  /* — Palette: ORF-V — roxo profundo, azul ciano — */
+  --color-orfv-1:          #8040c8;
+  --color-orfv-2:          #5a30a0;
+  --color-orfv-3:          #40d0e8;
+  --color-orfv-dark:       #0c0620;
+  --gradient-orfv:         linear-gradient(135deg, #d4829a 0%, #d4829a 70%, #40d0e8 100%);
+  --gradient-orfv-bg:      linear-gradient(160deg, #0c0620 0%, #1a0c40 40%, #081828 100%);
+
+  /* — Palette: Z1 — cinza, prata, branco — */
+  --color-z1-1:            #b0b8c4;
+  --color-z1-2:            #8a929e;
+  --color-z1-3:            #d8dce4;
+  --color-z1-dark:         #12141a;
+  --gradient-z1:           linear-gradient(135deg, #6a7080, #b0b8c4, #d8dce4);
+  --gradient-z1-bg:        linear-gradient(160deg, #12141a 0%, #2a2c34 40%, #1a1c22 100%);
+
+  /* — Palette: Gotto ————————————————————————— */
+  --color-gotto-1:         #4a2a2a;
+  --color-gotto-2:         #3a1a1a;
+  --color-gotto-3:         #6a4a4a;
+  --color-gotto-dark:      #1a0e0e;
+  --gradient-gotto:        linear-gradient(135deg, #2a1a1a, #4a2a2a, #3a1a1a);
+  --gradient-gotto-bg:     linear-gradient(160deg, #1a0e0e 0%, #2a1a1a 40%, #201212 100%);
+
   /* — Palette: Arte ——————————————————————————— */
   --gradient-arte:         linear-gradient(135deg, #f5f5f5, #e8e8e8, #d4d4d4, #f0f0f0);
 

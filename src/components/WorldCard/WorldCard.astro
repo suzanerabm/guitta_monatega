@@ -5,22 +5,41 @@ interface Props {
   id?: string;
   gradientClass: string;
   showDivider?: boolean;
+  stripLayout?: 'banner' | 'side';
 }
 
-const { tag, name, id, gradientClass, showDivider = true } = Astro.props;
+const { tag, name, id, gradientClass, showDivider = true, stripLayout = 'banner' } = Astro.props;
 ---
 
-<div class="world-wrap" {...(id ? { [`data-section-world`]: id } : {})}>
-  <div class="world" data-world>
-    <span class="world-tag">{tag}</span>
-    <h2 class="world-name">{name}</h2>
-    <div class="world-text">
-      <slot />
+<div class={`world-wrap ${stripLayout === 'side' ? 'world-wrap-side' : ''}`} {...(id ? { [`data-section-world`]: id } : {})}>
+  {stripLayout === 'side' ? (
+    <div class="world-row">
+      <div class="world" data-world>
+        <span class="world-tag">{tag}</span>
+        <h2 class="world-name">{name}</h2>
+        <div class="world-text">
+          <slot />
+        </div>
+      </div>
+      <div class="world-strip-side">
+        <slot name="strip" />
+      </div>
     </div>
-  </div>
-  <div class={`world-banner ${gradientClass}`}>
-    <span class="world-banner-label">[ imagem {name} ]</span>
-  </div>
+  ) : (
+    <>
+      <div class="world" data-world>
+        <span class="world-tag">{tag}</span>
+        <h2 class="world-name">{name}</h2>
+        <div class="world-text">
+          <slot />
+        </div>
+      </div>
+      <div class={`world-banner ${gradientClass}`}>
+        <slot name="strip" />
+      </div>
+    </>
+  )}
+  <div class={`world-banner-bg ${gradientClass}`}></div>
   {showDivider && <div class="world-divider"></div>}
 </div>
 
@@ -91,11 +110,51 @@ const { tag, name, id, gradientClass, showDivider = true } = Astro.props;
     color: var(--color-dark-label);
   }
 
-  .wb-lunnp1 { background: linear-gradient(135deg, #1a3a5c, #2d5f8a, #1a4a6a); }
-  .wb-eni4 { background: linear-gradient(135deg, #2a1a3a, #4a2a5a, #3a1a4a); }
-  .wb-triplec { background: linear-gradient(135deg, #1a2a1a, #2a4a2a, #1a3a1a); }
-  .wb-orfv { background: linear-gradient(135deg, #3a2a1a, #5a4a2a, #4a3a1a); }
-  .wb-z1 { background: linear-gradient(135deg, #1a1a2a, #2a2a4a, #1a1a3a); }
+  /* — Side layout: texto esquerda, strip direita — */
+  .world-row {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+
+  .world-wrap-side .world {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .world-strip-side {
+    flex: 0 0 50%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  .world-strip-side :global(.char-strip) {
+    position: relative;
+    top: auto;
+    width: 100%;
+  }
+
+  .world-banner-bg {
+    display: none;
+  }
+
+  .world-wrap-side .world-banner-bg {
+    display: block;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    height: 200px;
+    margin-top: 2rem;
+  }
+
+  .wb-lunnp1 { background: linear-gradient(135deg, #004d25, #00c853, #00e676); }
+  .wb-eni4 { background: linear-gradient(135deg, #8a5a0a, #e8a317, #f5c842); }
+  .wb-triplec { background: linear-gradient(135deg, #00e86a 0%, #00e86a 35%, #7b4fbf 70%, #2a5caa 100%); }
+  .wb-orfv { background: linear-gradient(135deg, #d4829a 0%, #d4829a 70%, #40d0e8 100%); }
+  .wb-z1 { background: linear-gradient(135deg, #6a7080, #b0b8c4, #d8dce4); }
   .wb-gotto { background: linear-gradient(135deg, #2a1a1a, #4a2a2a, #3a1a1a); }
 
   .world-divider {
@@ -108,5 +167,14 @@ const { tag, name, id, gradientClass, showDivider = true } = Astro.props;
   @media (max-width: 768px) {
     .world { padding: 3rem 1.5rem 1.5rem; }
     .world-banner { height: 35vh; min-height: 250px; }
+
+    .world-row {
+      flex-direction: column;
+    }
+
+    .world-strip-side {
+      flex: none;
+      width: 100%;
+    }
   }
 </style>

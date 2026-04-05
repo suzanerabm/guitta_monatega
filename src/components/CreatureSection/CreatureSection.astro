@@ -3,13 +3,20 @@ interface Props {
   gradient: string;
   accentColor?: string;
   id?: string;
+  bgImage?: string;
+  noParallax?: boolean;
 }
 
-const { gradient, accentColor, id } = Astro.props;
+const { gradient, accentColor, id, bgImage, noParallax = false } = Astro.props;
 ---
 
-<section class="creature-section" data-parallax-section {...(id ? { [`data-section-creature`]: id } : {})}>
+<section class={`creature-section ${bgImage ? 'has-bg-image' : ''} ${noParallax ? 'no-parallax' : ''}`} {...(!noParallax ? { 'data-parallax-section': '' } : {})} {...(id ? { [`data-section-creature`]: id } : {})}>
   <div class="creature-section-bg" style={`background: ${gradient};`}></div>
+  {bgImage && (
+    <div class="creature-section-bg-image" data-parallax-bg>
+      <img src={bgImage} alt="" loading="lazy" decoding="async" />
+    </div>
+  )}
   {accentColor && (
     <div class="creature-section-glow" style={`background: radial-gradient(ellipse at 30% 20%, ${accentColor}15 0%, transparent 70%);`}></div>
   )}
@@ -35,7 +42,27 @@ const { gradient, accentColor, id } = Astro.props;
     position: absolute;
     inset: -40% 0;
     z-index: 0;
-    will-change: transform;
+  }
+
+  .no-parallax .creature-section-bg {
+    inset: 0;
+  }
+
+  .creature-section-bg-image {
+    position: absolute;
+    inset: -20% 0;
+    z-index: 0;
+  }
+
+  .no-parallax .creature-section-bg-image {
+    inset: 0;
+  }
+
+  .creature-section-bg-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.55;
   }
 
   .creature-section-glow {
@@ -84,12 +111,16 @@ const { gradient, accentColor, id } = Astro.props;
     function update() {
       const vh = window.innerHeight;
       sections.forEach(section => {
-        const bg = section.querySelector<HTMLElement>('.creature-section-bg');
-        if (!bg) return;
         const rect = section.getBoundingClientRect();
+        // Skip sections not near viewport
+        if (rect.bottom < -200 || rect.top > vh + 200) return;
+        const bg = section.querySelector<HTMLElement>('.creature-section-bg');
+        const bgImg = section.querySelector<HTMLElement>('.creature-section-bg-image');
+        if (!bg) return;
         const progress = (vh - rect.top) / (vh + rect.height);
         const offset = (progress - 0.5) * 100;
         bg.style.transform = `translateY(${offset}%)`;
+        if (bgImg) bgImg.style.transform = `translateY(${offset * 0.5}%)`;
       });
       requestAnimationFrame(update);
     }

@@ -37,6 +37,8 @@ interface Props {
   titleColor?: string;
   textColor?: string;
   mascot?: Mascot;
+  stripSide?: boolean;
+  bgOpacity?: number;
 }
 
 const {
@@ -47,13 +49,15 @@ const {
   titleColor,
   textColor,
   mascot,
+  stripSide = false,
+  bgOpacity = 1,
 } = Astro.props;
 
 const hasText = Astro.slots.has('text');
 ---
 
-<div class="ds-card" style={`height: ${height}; max-height: ${maxHeight};`}>
-  <div class="ds-card-bg" style={`background: ${gradient};`}></div>
+<div class={`ds-card ${stripSide ? 'ds-card-strip-side' : ''}`} style={`height: ${height}; max-height: ${maxHeight};`}>
+  <div class="ds-card-bg" style={`background: ${gradient}; opacity: ${bgOpacity};`}></div>
 
   <div class="ds-card-scene">
     {characters.map((c) => (
@@ -94,7 +98,13 @@ const hasText = Astro.slots.has('text');
     </div>
   )}
 
-  <slot />
+  {stripSide ? (
+    <div class="ds-strip-side">
+      <slot />
+    </div>
+  ) : (
+    <slot />
+  )}
 </div>
 
 <style>
@@ -152,6 +162,43 @@ const hasText = Astro.slots.has('text');
     z-index: 3;
   }
 
+  .ds-card-strip-side .ds-text-wrap {
+    left: auto;
+    right: 50%;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    width: 42%;
+    max-width: 540px;
+    height: 60%;
+    margin-right: 12rem;
+  }
+
+  .ds-card-strip-side :global(.ds-text-scroll) {
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .ds-card-strip-side :global(.ds-text-scroll h3) {
+    font-size: 1.2rem;
+  }
+
+  .ds-strip-side {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .ds-strip-side :global(.char-strip) {
+    position: relative;
+    top: auto;
+    width: 100%;
+  }
+
   @media (max-width: 768px) {
     .ds-card {
       height: auto !important;
@@ -193,6 +240,30 @@ const hasText = Astro.slots.has('text');
     .ds-mascot {
       transform: scale(var(--mascot-mobile-scale));
       top: var(--mascot-mobile-y) !important;
+    }
+
+    .ds-card-strip-side .ds-text-wrap {
+      right: auto !important;
+      transform: none !important;
+      margin-right: 0 !important;
+    }
+
+    .ds-card-strip-side :global(.ds-text-scroll) {
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    .ds-card-strip-side :global(.ds-text-scroll h3) {
+      font-size: 1.05rem;
+    }
+
+    .ds-strip-side {
+      position: relative;
+      right: auto;
+      top: auto;
+      transform: none;
+      width: 100%;
+      margin-top: 1rem;
     }
   }
 </style>

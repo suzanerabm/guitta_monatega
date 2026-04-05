@@ -17,9 +17,11 @@ interface Props {
   side?: 'left' | 'right';
   speed?: number;
   cardSize?: number;
+  noFloat?: boolean;
+  transparent?: boolean;
 }
 
-const { characters, gradient = 'var(--gradient-bichittos)', side = 'right', speed, cardSize } = Astro.props;
+const { characters, gradient = 'var(--gradient-bichittos)', side = 'right', speed, cardSize, noFloat = false, transparent = false } = Astro.props;
 const autoSpeed = speed ?? characters.length * 5;
 const allCards = [...characters, ...characters];
 const uid = `strip-${Math.random().toString(36).slice(2, 8)}`;
@@ -28,7 +30,7 @@ const uid = `strip-${Math.random().toString(36).slice(2, 8)}`;
 <div class={`char-strip char-strip-${side}`}>
   <div class="char-strip-track" data-strip-track={uid} data-speed={autoSpeed}>
     {allCards.map((c) => (
-      <CharacterCard name={c.name} image={c.image} gradient={gradient} cardSize={cardSize} />
+      <CharacterCard name={c.name} image={c.image} gradient={gradient} cardSize={cardSize} noFloat={noFloat} transparent={transparent} />
     ))}
   </div>
 </div>
