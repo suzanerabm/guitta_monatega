@@ -4,6 +4,7 @@ import CreatureSection from '../components/CreatureSection/CreatureSection.astro
 import CreatureCard from '../components/CreatureCard/CreatureCard.astro';
 import DSMainCard from '../components/DSMainCard/DSMainCard.astro';
 import CharacterStrip from '../components/CharacterStrip/CharacterStrip.astro';
+import SceneStrip from '../components/SceneStrip/SceneStrip.astro';
 import SubSystem from '../components/SubSystem/SubSystem.astro';
 import SoonPanel from '../components/SoonPanel/SoonPanel.astro';
 import BookGallery from '../components/BookGallery/BookGallery.astro';
@@ -249,11 +250,6 @@ const worldsData = worlds.map((world) => ({
         )}
       </DSMainCard>
     </CreatureCard>
-    {w.scenes.length > 0 && (
-      <div class="scenes-strip">
-        <CharacterStrip gradient={w.gradient} characters={w.scenes} cardSize={300} noFloat speed={300} transparent noBorder noLoop showArrows arrowColor={w.titleColor} sectionTitle={(t.kammara as any).scenesTitle} labelColor={w.labelColor} />
-      </div>
-    )}
     {w.subsystems.filter((s) => s.text.length > 0 && !s.text[0].startsWith('Placeholder')).length > 0 && (
       <SubSystem
           sectionTitle={(t.kammara as any).subsystemsTitle}
@@ -270,6 +266,14 @@ const worldsData = worlds.map((world) => ({
           textColor={w.textColor}
           gradient={w.gradient}
         />
+    )}
+    {w.scenes.length > 0 && (
+      <SceneStrip
+        scenes={w.scenes}
+        sectionTitle={(t.kammara as any).scenesTitle}
+        arrowColor={w.titleColor}
+        labelColor={w.labelColor}
+      />
     )}
   </CreatureSection>
 ))}
@@ -291,34 +295,23 @@ const worldsData = worlds.map((world) => ({
     flex: 1;
   }
 
-  .scenes-strip {
-    padding: 0;
+  @media (min-width: 1920px) {
+    .char-card {
+      --card-size: 500px !important;
+      --card-width: 560px !important;
+    }
+
+    .ds-card-strip-side {
+      height: 1800px !important;
+      max-height: 90vh !important;
+    }
+
+    .ds-card-strip-side .ds-text-wrap {
+      width: 52% !important;
+      max-width: 800px !important;
+    }
   }
 
-  .scenes-strip :global(.char-strip-wrap) {
-    width: 100%;
-  }
-
-  .scenes-strip :global(.char-strip-wrap),
-  .scenes-strip :global(.char-strip),
-  .scenes-strip :global(.char-strip-track) {
-    overflow: visible !important;
-  }
-
-  .scenes-strip :global(.char-strip) {
-    position: relative;
-    top: auto;
-    z-index: 5;
-  }
-
-  .scenes-strip :global(.char-strip-track) {
-    justify-content: center;
-    padding: 4rem 0;
-  }
-
-  .scenes-strip :global(.strip-section-title) {
-    padding: 0 2rem;
-  }
 </style>
 
 <script>

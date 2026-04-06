@@ -159,6 +159,27 @@ const { cards, titleColor = 'var(--color-text-overlay-bright)', subtitleColor, t
     }
   }
 
+  @media (min-width: 1920px) {
+    .subsystem-section-title {
+      font-size: var(--size-h3);
+    }
+
+    .subsystem-card {
+      height: 550px;
+    }
+
+    .subsystem-title {
+      font-size: var(--size-md);
+      padding: 1.5rem 2rem 1rem;
+    }
+
+    .subsystem-text {
+      font-size: var(--size-lg);
+      padding: 1.5rem 2rem 2rem;
+      line-height: 1.7;
+    }
+  }
+
   @media (max-width: 768px) {
     .subsystem-grid {
       flex-direction: column;

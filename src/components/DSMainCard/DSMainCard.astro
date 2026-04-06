@@ -299,4 +299,16 @@ const hasText = Astro.slots.has('text');
       margin-top: 1rem;
     }
   }
+
+  @media (min-width: 1920px) {
+    .ds-text-wrap {
+      width: 45%;
+      max-width: 680px;
+    }
+
+    .ds-card-strip-side .ds-text-wrap {
+      width: 48%;
+      max-width: 720px;
+    }
+  }
 </style>
