@@ -3,7 +3,7 @@
  * SceneStrip — galeria horizontal de cenas
  * Click abre modal com a imagem grande.
  */
-import { ChevronLeft, ChevronRight, X } from '@lucide/astro';
+import { ChevronLeft, ChevronRight } from '@lucide/astro';
 
 interface Scene {
   name: string;
@@ -15,12 +15,15 @@ interface Props {
   sectionTitle?: string;
   labelColor?: string;
   arrowColor?: string;
+  modalBg?: string;
+  modalBgOpacity?: number;
+  modalTitle?: string;
 }
 
-const { scenes, sectionTitle, labelColor, arrowColor } = Astro.props;
+const { scenes, sectionTitle, labelColor, arrowColor, modalBg, modalBgOpacity = 0.6, modalTitle } = Astro.props;
 ---
 
-<div class="scene-strip-container">
+<div class="scene-strip-container" {...(modalBg ? { 'data-modal-bg': modalBg } : {})} data-modal-bg-opacity={String(modalBgOpacity)} {...(modalTitle ? { 'data-modal-title': modalTitle } : {})}>
   {sectionTitle && (
     <h2 class="scene-strip-title" {...(arrowColor ? { style: `color: ${arrowColor};` } : {})}>{sectionTitle}</h2>
   )}
@@ -46,14 +49,6 @@ const { scenes, sectionTitle, labelColor, arrowColor } = Astro.props;
   </div>
 </div>
 
-<!-- Scene Modal -->
-<div class="scene-modal" data-scene-modal>
-  <button class="scene-modal-close" data-scene-modal-close aria-label="Close">
-    <X size={32} />
-  </button>
-  <img class="scene-modal-img" src="" alt="" />
-  <span class="scene-modal-name"></span>
-</div>
 
 <style>
   .scene-strip-container {
@@ -154,62 +149,6 @@ const { scenes, sectionTitle, labelColor, arrowColor } = Astro.props;
     text-align: center;
   }
 
-  /* — Scene Modal — */
-  .scene-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999;
-    background: rgba(0,0,0,0.9);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-  }
-
-  .scene-modal.active {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .scene-modal-close {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    background: none;
-    border: none;
-    color: var(--color-white);
-    cursor: pointer;
-    opacity: 0.6;
-    transition: opacity var(--ease-default);
-  }
-
-  .scene-modal-close:hover {
-    opacity: 1;
-  }
-
-  .scene-modal-img {
-    max-width: 90vw;
-    max-height: 80vh;
-    object-fit: contain;
-    border-radius: 12px;
-    box-shadow: 0 30px 80px rgba(0,0,0,0.5);
-  }
-
-  .scene-modal-name {
-    font-family: var(--sans);
-    font-size: var(--size-md);
-    letter-spacing: var(--tracking-wider);
-    text-transform: uppercase;
-    color: var(--color-white);
-    opacity: 0.6;
-  }
 
   @media (max-width: 768px) {
     .scene-arrow {
@@ -252,35 +191,20 @@ const { scenes, sectionTitle, labelColor, arrowColor } = Astro.props;
     });
   });
 
-  // Click to open modal
-  const modal = document.querySelector('[data-scene-modal]') as HTMLElement;
-  if (modal) {
-    const modalImg = modal.querySelector('.scene-modal-img') as HTMLImageElement;
-    const modalName = modal.querySelector('.scene-modal-name') as HTMLElement;
+  // Click to open scene in modal
+  document.querySelectorAll<HTMLElement>('.scene-strip-container').forEach(container => {
+    const cards = container.querySelectorAll<HTMLElement>('.scene-card');
+    const images = Array.from(cards).map(c => c.dataset.sceneSrc || '');
 
-    document.querySelectorAll<HTMLElement>('.scene-card').forEach(card => {
+    cards.forEach((card, i) => {
       card.addEventListener('click', () => {
-        const src = card.dataset.sceneSrc;
-        const name = card.dataset.sceneName;
-        if (src && modalImg) {
-          modalImg.src = src;
-          modalImg.alt = name || '';
+        if (typeof (window as any).openModal === 'function') {
+          const bg = container.dataset.modalBg || 'dark';
+          const title = container.dataset.modalTitle || '';
+          const opacity = parseFloat(container.dataset.modalBgOpacity || '0.6');
+          (window as any).openModal(title, '', images, i, bg, opacity);
         }
-        if (name && modalName) modalName.textContent = name;
-        modal.classList.add('active');
       });
     });
-
-    // Close on click background or X
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal || (e.target as HTMLElement).closest('[data-scene-modal-close]')) {
-        modal.classList.remove('active');
-      }
-    });
-
-    // Close on Escape
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') modal.classList.remove('active');
-    });
-  }
+  });
 </script>

@@ -9,6 +9,7 @@ import SubSystem from '../components/SubSystem/SubSystem.astro';
 import SoonPanel from '../components/SoonPanel/SoonPanel.astro';
 import BookGallery from '../components/BookGallery/BookGallery.astro';
 import FilterBar from '../components/FilterBar/FilterBar.astro';
+import Modal from '../components/Modal/Modal.astro';
 import ScrollReveal from '../components/ScrollReveal/ScrollReveal.astro';
 import { useTranslations } from '../i18n/translations';
 import { existsSync, readdirSync, statSync } from 'node:fs';
@@ -250,6 +251,16 @@ const worldsData = worlds.map((world) => ({
         )}
       </DSMainCard>
     </CreatureCard>
+    {w.scenes.length > 0 && (
+      <SceneStrip
+        scenes={w.scenes}
+        sectionTitle={(t.kammara as any).scenesTitle}
+        arrowColor={w.titleColor}
+        labelColor={w.labelColor}
+        modalBg={`var(--gradient-${w.id}-bg)`}
+        modalTitle={(t.kammara as any).scenesTitle}
+      />
+    )}
     {w.subsystems.filter((s) => s.text.length > 0 && !s.text[0].startsWith('Placeholder')).length > 0 && (
       <SubSystem
           sectionTitle={(t.kammara as any).subsystemsTitle}
@@ -267,17 +278,11 @@ const worldsData = worlds.map((world) => ({
           gradient={w.gradient}
         />
     )}
-    {w.scenes.length > 0 && (
-      <SceneStrip
-        scenes={w.scenes}
-        sectionTitle={(t.kammara as any).scenesTitle}
-        arrowColor={w.titleColor}
-        labelColor={w.labelColor}
-      />
-    )}
+    
   </CreatureSection>
 ))}
 
+<Modal />
 <ScrollReveal selector="[data-creature]" />
 
 <style is:global>

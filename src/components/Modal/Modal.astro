@@ -145,7 +145,7 @@ import { X, ChevronLeft, ChevronRight } from '@lucide/astro';
   }
 
   /* Dark theme */
-  .modal-overlay.dark { background: var(--overlay-dark); }
+  .modal-overlay.dark { background: var(--modal-bg, var(--overlay-dark)); }
   .modal-overlay.dark .modal-close { color: var(--color-dark-ink-mid); }
   .modal-overlay.dark .modal-close:hover { color: var(--color-white); }
   .modal-overlay.dark .modal-title { color: var(--color-white); }
@@ -180,27 +180,36 @@ import { X, ChevronLeft, ChevronRight } from '@lucide/astro';
     const file = path.split('/').pop() || '';
     return file
       .replace(/\.[^.]+$/, '')       // remove extension
-      .replace(/[_-]/g, ' ')         // underscores/hyphens to spaces
+      .replace(/[_]/g, ' ')          // underscores to spaces
+      .replace(/^\d+\s*/, '')        // remove leading numbers
       .replace(/\s+/g, ' ')          // collapse spaces
       .trim();
   }
 
   function show() {
     imgEl.src = currentImages[currentIndex];
-    titleEl.textContent = currentTitle;
-    techEl.textContent = formatFilename(currentImages[currentIndex]);
+    const filename = formatFilename(currentImages[currentIndex]);
+    titleEl.textContent = currentTitle || filename;
+    techEl.textContent = currentTitle ? filename : currentTechnique;
     counterEl.textContent = (currentIndex + 1) + ' / ' + currentImages.length;
   }
 
-  (window as any).openModal = function (title: string, technique: string, images: string[], startIndex: number, theme?: string) {
+  (window as any).openModal = function (title: string, technique: string, images: string[], startIndex: number, theme?: string, bgOpacity?: number) {
     currentTitle = title || '';
     currentTechnique = technique || '';
     currentImages = images || [];
     currentIndex = startIndex || 0;
+    overlay.classList.remove('dark');
+    overlay.style.removeProperty('--modal-bg');
+    overlay.style.removeProperty('--modal-bg-opacity');
     if (theme === 'dark') {
       overlay.classList.add('dark');
-    } else {
-      overlay.classList.remove('dark');
+    } else if (theme && theme !== 'light') {
+      overlay.classList.add('dark');
+      overlay.style.setProperty('--modal-bg', theme);
+      if (bgOpacity !== undefined) {
+        overlay.style.setProperty('--modal-bg-opacity', String(bgOpacity));
+      }
     }
     show();
     overlay.classList.add('open');
