@@ -77,7 +77,7 @@ const { cards, titleColor = 'var(--color-text-overlay-bright)', subtitleColor, t
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    height: 300px;
+    height: 400px;
     position: relative;
   }
 
@@ -146,6 +146,17 @@ const { cards, titleColor = 'var(--color-text-overlay-bright)', subtitleColor, t
 
   .subsystem-text :global(p) {
     margin-bottom: 0.6rem;
+  }
+
+  @media (max-width: 1500px) {
+    .subsystem-body {
+      flex-direction: column;
+    }
+
+    .subsystem-image {
+      flex: none;
+      height: 200px;
+    }
   }
 
   @media (max-width: 768px) {

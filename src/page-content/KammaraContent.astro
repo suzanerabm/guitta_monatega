@@ -299,14 +299,21 @@ const worldsData = worlds.map((world) => ({
     width: 100%;
   }
 
+  .scenes-strip :global(.char-strip-wrap),
+  .scenes-strip :global(.char-strip),
+  .scenes-strip :global(.char-strip-track) {
+    overflow: visible !important;
+  }
+
   .scenes-strip :global(.char-strip) {
     position: relative;
     top: auto;
-    overflow: hidden;
+    z-index: 5;
   }
 
   .scenes-strip :global(.char-strip-track) {
     justify-content: center;
+    padding: 4rem 0;
   }
 
   .scenes-strip :global(.strip-section-title) {

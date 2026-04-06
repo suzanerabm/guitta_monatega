@@ -122,13 +122,13 @@
   --gradient-kammara-card: linear-gradient(135deg, #000000, #0a0a2e, #1a1a4e, #000000);
 
   /* — Palette: LUNN'P1 — verde fluorescente, planeta de água — */
-  --color-lunnp1-1:        #021c0f;
-  --color-lunnp1-2:        #00e676;
-  --color-lunnp1-3:        #31e18c;
-  --color-lunnp1-4:        #002e14;   /* verde escuro */
+  --color-lunnp1-1:        #00e676;
+  --color-lunnp1-2:        #00c853;
+  --color-lunnp1-3:        #c6eed6;
+  --color-lunnp1-4:        #59f397;   /* verde escuro */
   --color-lunnp1-5:        #00c853;   /* verde medio */
   --color-lunnp1-6:        #c6eed6;   /* verde profundo */
-  --color-lunnp1-text:     #8669f0;
+  --color-lunnp1-text:     #c6eed6;
   --color-lunnp1-dark:     #002e14;
   --gradient-lunnp1:       linear-gradient(135deg, #004d25, #00c853, #00e676);
   --gradient-lunnp1-bg:    linear-gradient(160deg, #001a0e 0%, #003d1a 40%, #002e14 100%);
