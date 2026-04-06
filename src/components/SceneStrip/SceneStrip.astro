@@ -18,12 +18,13 @@ interface Props {
   modalBg?: string;
   modalBgOpacity?: number;
   modalTitle?: string;
+  modalSubtitle?: string;
 }
 
-const { scenes, sectionTitle, labelColor, arrowColor, modalBg, modalBgOpacity = 0.6, modalTitle } = Astro.props;
+const { scenes, sectionTitle, labelColor, arrowColor, modalBg, modalBgOpacity = 0.6, modalTitle, modalSubtitle } = Astro.props;
 ---
 
-<div class="scene-strip-container" {...(modalBg ? { 'data-modal-bg': modalBg } : {})} data-modal-bg-opacity={String(modalBgOpacity)} {...(modalTitle ? { 'data-modal-title': modalTitle } : {})}>
+<div class="scene-strip-container" {...(modalBg ? { 'data-modal-bg': modalBg } : {})} data-modal-bg-opacity={String(modalBgOpacity)} {...(modalTitle ? { 'data-modal-title': modalTitle } : {})} {...(modalSubtitle ? { 'data-modal-subtitle': modalSubtitle } : {})}>
   {sectionTitle && (
     <h2 class="scene-strip-title" {...(arrowColor ? { style: `color: ${arrowColor};` } : {})}>{sectionTitle}</h2>
   )}
@@ -63,6 +64,7 @@ const { scenes, sectionTitle, labelColor, arrowColor, modalBg, modalBgOpacity = 
     text-transform: uppercase;
     font-weight: var(--weight-semibold);
     padding: 0 2rem;
+    margin-top: 5em;
     margin-bottom: 0.5rem;
   }
 
@@ -144,13 +146,27 @@ const { scenes, sectionTitle, labelColor, arrowColor, modalBg, modalBgOpacity = 
     letter-spacing: var(--tracking-wide);
     text-transform: uppercase;
     color: var(--color-white);
-    font-weight: var(--weight-regular);
+    font-weight: var(--weight-bold);
     text-shadow: 0 1px 8px rgba(0,0,0,0.3);
     text-align: center;
   }
 
 
+  @media (min-width: 1900px) {
+    .scene-strip-title {
+      font-size: var(--size-h3);
+    }
+
+    .scene-card-name {
+      font-size: var(--size-md);
+    }
+  }
+
   @media (max-width: 768px) {
+    .scene-strip-title {
+      margin-top: 2em;
+    }
+
     .scene-arrow {
       display: none;
     }
@@ -200,9 +216,9 @@ const { scenes, sectionTitle, labelColor, arrowColor, modalBg, modalBgOpacity = 
       card.addEventListener('click', () => {
         if (typeof (window as any).openModal === 'function') {
           const bg = container.dataset.modalBg || 'dark';
-          const title = container.dataset.modalTitle || '';
-          const opacity = parseFloat(container.dataset.modalBgOpacity || '0.6');
-          (window as any).openModal(title, '', images, i, bg, opacity);
+          const heroTitle = container.dataset.modalTitle || '';
+          const heroText = container.dataset.modalSubtitle || '';
+          (window as any).openModal('', '', images, i, bg, heroTitle, heroText);
         }
       });
     });

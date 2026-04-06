@@ -9,6 +9,10 @@ import { X, ChevronLeft, ChevronRight } from '@lucide/astro';
 <div class="modal-overlay" id="modalOverlay">
   <button class="modal-close" id="modalClose"><X size={20} strokeWidth={1.5} /></button>
   <div class="modal-body">
+    <div class="modal-hero" id="modalHero" style="display:none;">
+      <h2 class="modal-hero-title" id="modalHeroTitle"></h2>
+      <p class="modal-hero-text" id="modalHeroText"></p>
+    </div>
     <div class="modal-header">
       <h3 class="modal-title" id="modalTitle"></h3>
       <p class="modal-technique" id="modalTechnique"></p>
@@ -145,6 +149,30 @@ import { X, ChevronLeft, ChevronRight } from '@lucide/astro';
   }
 
   /* Dark theme */
+  /* Modal hero block */
+  .modal-hero {
+    padding: 1.5rem 2rem 1rem;
+    max-width: 600px;
+  }
+
+  .modal-hero-title {
+    font-family: var(--sans);
+    font-size: var(--size-h2);
+    font-weight: var(--weight-bold);
+    letter-spacing: var(--tracking-tight);
+    margin-bottom: 0.5rem;
+  }
+
+  .modal-hero-text {
+    font-family: var(--sans);
+    font-size: var(--size-base);
+    line-height: 1.5;
+    font-weight: var(--weight-light);
+  }
+
+  .modal-overlay.dark .modal-hero-title { color: var(--color-white); }
+  .modal-overlay.dark .modal-hero-text { color: var(--color-text-overlay); }
+
   .modal-overlay.dark { background: var(--modal-bg, var(--overlay-dark)); }
   .modal-overlay.dark .modal-close { color: var(--color-dark-ink-mid); }
   .modal-overlay.dark .modal-close:hover { color: var(--color-white); }
@@ -175,6 +203,9 @@ import { X, ChevronLeft, ChevronRight } from '@lucide/astro';
   const titleEl = document.getElementById('modalTitle')!;
   const techEl = document.getElementById('modalTechnique')!;
   const counterEl = document.getElementById('modalCounter')!;
+  const heroEl = document.getElementById('modalHero')!;
+  const heroTitleEl = document.getElementById('modalHeroTitle')!;
+  const heroTextEl = document.getElementById('modalHeroText')!;
 
   function formatFilename(path: string): string {
     const file = path.split('/').pop() || '';
@@ -188,28 +219,30 @@ import { X, ChevronLeft, ChevronRight } from '@lucide/astro';
 
   function show() {
     imgEl.src = currentImages[currentIndex];
-    const filename = formatFilename(currentImages[currentIndex]);
-    titleEl.textContent = currentTitle || filename;
-    techEl.textContent = currentTitle ? filename : currentTechnique;
+    titleEl.textContent = currentTitle;
+    techEl.textContent = currentTechnique || formatFilename(currentImages[currentIndex]);
     counterEl.textContent = (currentIndex + 1) + ' / ' + currentImages.length;
   }
 
-  (window as any).openModal = function (title: string, technique: string, images: string[], startIndex: number, theme?: string, bgOpacity?: number) {
+  (window as any).openModal = function (title: string, technique: string, images: string[], startIndex: number, theme?: string, heroTitle?: string, heroText?: string) {
     currentTitle = title || '';
     currentTechnique = technique || '';
     currentImages = images || [];
     currentIndex = startIndex || 0;
     overlay.classList.remove('dark');
     overlay.style.removeProperty('--modal-bg');
-    overlay.style.removeProperty('--modal-bg-opacity');
+    if (heroTitle || heroText) {
+      heroTitleEl.textContent = heroTitle || '';
+      heroTextEl.textContent = heroText || '';
+      heroEl.style.display = 'block';
+    } else {
+      heroEl.style.display = 'none';
+    }
     if (theme === 'dark') {
       overlay.classList.add('dark');
     } else if (theme && theme !== 'light') {
       overlay.classList.add('dark');
       overlay.style.setProperty('--modal-bg', theme);
-      if (bgOpacity !== undefined) {
-        overlay.style.setProperty('--modal-bg-opacity', String(bgOpacity));
-      }
     }
     show();
     overlay.classList.add('open');

@@ -256,9 +256,10 @@ const worldsData = worlds.map((world) => ({
         scenes={w.scenes}
         sectionTitle={(t.kammara as any).scenesTitle}
         arrowColor={w.titleColor}
-        labelColor={w.labelColor}
+        labelColor={(w as any).subtitleColor}
         modalBg={`var(--gradient-${w.id}-bg)`}
-        modalTitle={(t.kammara as any).scenesTitle}
+        modalTitle={w.worldName}
+        modalSubtitle={w.texts[0] || ''}
       />
     )}
     {w.subsystems.filter((s) => s.text.length > 0 && !s.text[0].startsWith('Placeholder')).length > 0 && (
@@ -300,10 +301,14 @@ const worldsData = worlds.map((world) => ({
     flex: 1;
   }
 
-  @media (min-width: 1920px) {
+  @media (min-width: 1900px) {
     .char-card {
       --card-size: 500px !important;
       --card-width: 560px !important;
+    }
+
+    .char-card-name {
+      font-size: var(--size-md) !important;
     }
 
     .ds-card-strip-side {

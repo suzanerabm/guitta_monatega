@@ -51,9 +51,9 @@ const { cards, titleColor = 'var(--color-text-overlay-bright)', subtitleColor, t
     font-size: var(--size-section);
     letter-spacing: var(--tracking-wider);
     text-transform: uppercase;
-    font-weight: 600;
-    padding: 0.5em 2rem;
-    margin: 5em 2em 0 3em;
+    font-weight: var(--weight-semibold);
+    padding: 0 2rem;
+    margin: 5em 0 0.5rem;
   }
 
   .subsystem-grid {
@@ -108,6 +108,7 @@ const { cards, titleColor = 'var(--color-text-overlay-bright)', subtitleColor, t
 
   .subsystem-body {
     display: flex;
+    flex-direction: column;
     flex: 1;
     gap: 0;
     min-height: 0;
@@ -115,7 +116,8 @@ const { cards, titleColor = 'var(--color-text-overlay-bright)', subtitleColor, t
   }
 
   .subsystem-image {
-    flex: 0 0 45%;
+    flex: none;
+    height: 200px;
     overflow: hidden;
   }
 
@@ -148,20 +150,24 @@ const { cards, titleColor = 'var(--color-text-overlay-bright)', subtitleColor, t
     margin-bottom: 0.6rem;
   }
 
-  @media (max-width: 1500px) {
-    .subsystem-body {
-      flex-direction: column;
-    }
-
-    .subsystem-image {
-      flex: none;
-      height: 200px;
+  @media (min-width: 769px) and (max-width: 1899px) {
+    .subsystem-card {
+      height: 500px;
     }
   }
 
-  @media (min-width: 1920px) {
+  @media (min-width: 1900px) {
     .subsystem-section-title {
       font-size: var(--size-h3);
+    }
+
+    .subsystem-body {
+      flex-direction: row;
+    }
+
+    .subsystem-image {
+      flex: 0 0 45%;
+      height: auto;
     }
 
     .subsystem-card {
@@ -181,6 +187,11 @@ const { cards, titleColor = 'var(--color-text-overlay-bright)', subtitleColor, t
   }
 
   @media (max-width: 768px) {
+    .subsystem-section-title {
+      padding: 0 2rem;
+      margin: 2em 0 0.5rem;
+    }
+
     .subsystem-grid {
       flex-direction: column;
       padding: 1rem 1.5rem;
@@ -197,12 +208,12 @@ const { cards, titleColor = 'var(--color-text-overlay-bright)', subtitleColor, t
     }
 
     .subsystem-body {
-      flex-direction: row;
+      flex-direction: column;
     }
 
     .subsystem-image {
-      flex: 0 0 35%;
-      height: auto;
+      flex: none;
+      height: 200px;
     }
 
     .subsystem-text {
