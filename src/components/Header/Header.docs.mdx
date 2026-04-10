@@ -1,0 +1,35 @@
+import { Meta, Canvas, Story, Controls } from '@storybook/blocks';
+import * as HeaderStories from './Header.stories';
+
+<Meta of={HeaderStories} />
+
+# Header
+
+Componente fixo no topo da página. Mostra o logo "guitta monatega" e o LanguageToggle.
+
+## Quando usar
+
+Em todas as páginas do site, dentro do `LocaleLayout`. É montado uma única vez e persiste durante toda a navegação.
+
+## Comportamento
+
+- **Compact mode:** vira compacto ao scrollar (threshold 80px)
+- **Tinted mode:** quando há um filtro ativo na página (FilterBar com `bgColor`), o header inteiro adopta a cor do filtro via `ChromeTintProvider`
+- **Transparent variant:** página Home usa `transparent={true}` até começar o scroll
+
+## Design tokens usados
+
+- `headerBg` — fundo padrão (light/dark adaptativo)
+- `fg` — cor do texto padrão
+- `textOverlayStrong` — cor do texto quando tinted
+- `space.lg/xl` — padding horizontal
+- `space.md/0.6rem` — padding vertical (compact vs normal)
+
+## Exemplos
+
+<Canvas of={HeaderStories.Default} />
+<Canvas of={HeaderStories.Transparent} />
+
+## Props
+
+<Controls />
