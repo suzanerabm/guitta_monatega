@@ -1,0 +1,46 @@
+import { Meta, Canvas, Story, Controls } from '@storybook/blocks';
+import * as HomeBannerStories from './HomeBanner.stories';
+
+<Meta of={HomeBannerStories} />
+
+# HomeBanner
+
+Banner clicável fullwidth usado na home para apresentar os 3 universos: Bichittos, Kammara e Arte. Cada variante tem decorações próprias animadas.
+
+## Variantes
+
+### Bichittos
+Gradiente colorido (rosa, laranja, amarelo, azul) com 5 bolhas borradas flutuando (`shapeFloat`) e um overlay de glow radial pulsante (`glowShift`).
+
+### Kammara
+Gradiente roxo profundo com 10 estrelas piscando (`starTwinkle`) e um orb gigante luminoso (`kammaraGlow`).
+
+### Arte
+Gradiente cinza claro com 5 traços animados (`strokeDraw`).
+
+## Animações
+
+Todas as keyframes estão registradas em `src/theme/keyframes.ts`. Os elementos decorativos rodam continuamente em loop.
+
+## Comportamento
+
+- Clicável (envolve em `<NextLink>`)
+- Hover no banner → bg-image faz scale 1.03
+- `fullWidth={true}` → ocupa 100vw (usado no banner Arte que fica isolado)
+
+## Design tokens usados
+
+- `palettes.bichittos.gradient` — gradient base do bichittos
+- `palettes.kammara.gradient` — gradient base do kammara
+- `palettes.arte.gradient` — gradient base do arte
+- Keyframes: `fluidBichittos`, `fluidKammara`, `glowShift`, `shapeFloat`, `starTwinkle`, `kammaraGlow`, `strokeDraw`
+
+## Exemplos
+
+<Canvas of={HomeBannerStories.Bichittos} />
+<Canvas of={HomeBannerStories.Kammara} />
+<Canvas of={HomeBannerStories.Arte} />
+
+## Props
+
+<Controls />

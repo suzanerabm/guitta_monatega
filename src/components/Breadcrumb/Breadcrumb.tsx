@@ -1,0 +1,112 @@
+'use client';
+import { Box, Flex, Text } from '@chakra-ui/react';
+import NextLink from 'next/link';
+import { House, ChevronRight, ArrowLeft } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { useChromeTint } from '@/components/ChromeTint';
+
+export interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+interface BreadcrumbProps {
+  items: BreadcrumbItem[];
+  homePath?: string;
+  backLabel?: string;
+}
+
+export function Breadcrumb({
+  items,
+  homePath = '/',
+  backLabel = 'voltar',
+}: BreadcrumbProps) {
+  const [headerHeight, setHeaderHeight] = useState(60);
+  const { tintColor } = useChromeTint();
+
+  // Measure header height dynamically so the breadcrumb sits flush below it
+  useEffect(() => {
+    const measure = () => {
+      const header = document.querySelector('header');
+      if (header) {
+        setHeaderHeight(header.getBoundingClientRect().height);
+      }
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
+    const header = document.querySelector('header');
+    if (header) observer.observe(header);
+    window.addEventListener('scroll', measure, { passive: true });
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', measure);
+    };
+  }, []);
+
+  const linkStyle = {
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: '0.25rem',
+    color: 'inherit',
+    textDecoration: 'none',
+    transition: 'opacity 0.2s ease',
+  } as const;
+
+  return (
+    <Box
+      as="nav"
+      aria-label="breadcrumb"
+      position="fixed"
+      top={`${headerHeight}px`}
+      left={0}
+      right={0}
+      zIndex={99}
+      bg={tintColor || 'overlayLight'}
+      backdropFilter="blur(14px)"
+      px={{ base: '1.5rem', md: '3rem' }}
+      py="0.5rem"
+      display="flex"
+      alignItems="center"
+      justifyContent="space-between"
+      fontSize="0.72rem"
+      letterSpacing="0.1em"
+      textTransform="lowercase"
+      color={tintColor ? 'rgba(255,255,255,0.6)' : 'inkMuted'}
+      transition="background 0.4s ease, color 0.4s ease, transform 0.3s ease, opacity 0.3s ease, top 0.3s ease"
+    >
+      {/* Left: home > current */}
+      <Flex align="center" gap="0.35rem">
+        <NextLink href={homePath} style={linkStyle}>
+          <House size={14} strokeWidth={1.5} />
+          <span>home</span>
+        </NextLink>
+        {items.map((item, i) => (
+          <Flex key={i} align="center" gap="0.35rem">
+            <Box as="span" opacity={0.35} display="inline-flex">
+              <ChevronRight size={12} strokeWidth={1.5} />
+            </Box>
+            {item.href ? (
+              <NextLink href={item.href} style={linkStyle}>
+                {item.label}
+              </NextLink>
+            ) : (
+              <Text as="span" color="inkSoft">
+                {item.label}
+              </Text>
+            )}
+          </Flex>
+        ))}
+      </Flex>
+
+      {/* Right: back arrow */}
+      <NextLink
+        href={homePath}
+        style={linkStyle}
+        title={backLabel}
+      >
+        <ArrowLeft size={14} strokeWidth={1.5} />
+        <span>{backLabel}</span>
+      </NextLink>
+    </Box>
+  );
+}

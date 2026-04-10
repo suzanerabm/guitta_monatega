@@ -1,0 +1,49 @@
+import { Meta, Canvas, Story, Controls } from '@storybook/blocks';
+import * as FilterBarStories from './FilterBar.stories';
+
+<Meta of={FilterBarStories} />
+
+# FilterBar
+
+Barra de filtro sticky logo abaixo do header. Cada filtro pode ter sua própria cor de destaque, e quando ativo, o background do bar e do header todo mudam para essa cor.
+
+## Comportamento
+
+- **Sticky:** mede dinamicamente a altura do header e fica colado nele (zero gap)
+- **Tint mode:** quando um filtro com `bgColor` está ativo, o bar inteiro pega essa cor e os outros botões viram outline branco translúcido
+- **ChromeTint sync:** quando ativa um filtro tintado, atualiza o `ChromeTintProvider` global para tintir também o header
+- **"Todos" / "All":** botão default que limpa o filtro e remove o tint
+
+## Como funciona o tint
+
+```tsx
+<FilterBar
+  filters={[
+    { id: 'napcat', label: 'NapCat', color: '#b5a2dc', bgColor: '#1a1432' },
+    { id: 'zeco', label: 'Zeco', color: '#964712', bgColor: '#f58020' },
+  ]}
+  onFilter={(id) => setActiveFilter(id)}
+/>
+```
+
+Quando o usuário clica em "NapCat":
+1. O filtro `napcat` fica ativo (cor `#1a1432` no fundo)
+2. Os outros filtros viram outline branco translúcido
+3. O header inteiro pega `#1a1432` via ChromeTintProvider
+4. Texto do header e LanguageToggle viram branco translúcido
+
+## Design tokens usados
+
+- `overlayLight` — fundo padrão
+- `borderSoft` — border inferior padrão
+- `border/inkSoft/inkMuted` — botões em modo padrão
+- `textOverlayGhost/bannerLabel/textOverlayDim` — botões em tint mode
+- `space.sm/md/lg` — gaps e paddings
+
+## Exemplos
+
+<Canvas of={FilterBarStories.Bichittos} />
+
+## Props
+
+<Controls />
