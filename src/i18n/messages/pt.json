@@ -94,6 +94,7 @@
       "tomando": "tomando",
       "triste": "triste",
       "tropecando": "tropeçando",
+      "tropecou": "tropeçou",
       "voa": "voando",
       "voando": "voando",
       "vomitando": "vomitando",
@@ -228,17 +229,14 @@
       "cheiodebolinha": {
       "name": "Cheio de Bolinha",
       "text": [
-        "Criaturas avulsas, experimentos e personagens que tem sua própria história."
+        "Cheio de Bolinha é um enorme elefante azul-arroxeado, gentil e educadíssimo, que tem muito medo de ratinhos — e é justamente num dia comum que ele conhece Querie, um ratinho travesso de dentões grandes, cheio de energia e risadinhas. Entre sustos, balões voadores e uma conversa inesperada, os dois descobrem que coragem e cuidado podem nascer de uma amizade improvável. Cheio de Bolinha e Querie estão te esperando para brincar."
       ],
       "panel": {
         "story": [
-          "Nem todo personagem nasce sabendo quem é. Alguns aparecem num rabisco de caderno, outros surgem de um sonho esquecido.",
-          "Querie é um ratinho dentuço que detesta escovar os dentes. Toda vez que alguém fala em escova, ele sai correndo. O problema é que ele adora comer — milho, maçã, tudo que é duro.",
-          "Um dia, mordeu uma espiga com tanta força que ouviu um \"crac\". O dente quebrou. Querie ficou parado, de boca aberta, sem acreditar.",
-          "Desde então, aprendeu a lição? Claro que não. Mas agora come devagar — e faz uma cara muito engraçada quando mastiga.",
-          "Cheio de Bolinha é grande e tem uma orelha redonda e na ponta de seu mini rabinho tem uma bolinha. Por ser tão grande parece corajoso, mas morre de medo de ratinhos. Quando vê um, entra em sai correndo e sobe nas bolhas de sabão para ficar lá no alto, flutuando, até ter certeza de que o perigo passou.",
-          "Malmo chegou quieto, como sempre. Sentou no canto e ficou observando. Não gosta de dividir, não quer falar, e fica bravo por qualquer coisa. Mas no fundo, só quer que alguém sente do lado dele.",
-          "Cada um aqui tem sua própria história. Algumas curtas, outras ainda sendo escritas."
+          "Num canto tranquilo do mundo, onde o vento ajuda sonhos pesados a flutuar, mora Cheio de Bolinha — um elefante enorme, redondo e azul-arroxeado, coberto de manchinhas suaves que as crianças adoram contar. Apesar do tamanho, ele é o bichinho mais medroso que se pode imaginar: tem medo de barulho, de surpresa, de nuvem grande e, principalmente, de ratinhos. Quando o susto aperta, ele amarra seus balões coloridos e sobe devagarzinho pelo céu, pedindo \"licença\" até para o vento. É gentil, educadíssimo e vive se desculpando — mesmo quando não fez nada de errado.",
+          "Do outro lado desse mesmo mundo vive Querie, um ratinho cinza pequenininho com dentões enormes — alguns branquinhos, outros nem tanto. Ele é travesso, teimoso e cheio de risadinhas, sempre mastigando alguma coisa e inventando peças para pregar nos amigos. Odeia escovar os dentes e já perdeu uns quantos por causa disso, mas cobre a boca quando ri, meio sem graça. Querie é daqueles que parecem só bagunça por fora, mas por dentro guardam um coraçãozinho curioso e cheio de vontade de pertencer.",
+          "Quando os caminhos dos dois se cruzam, o susto é grande — afinal, ninguém esperava que um elefante gigante pudesse tremer tanto diante de um ratinho tão pequeno. Mas é exatamente nesse encontro improvável que Cheio de Bolinha e Querie começam a descobrir algo importante: que ter medo não faz de ninguém menor, e que cuidar da gente pode ser tão corajoso quanto enfrentar um gigante. Entre balões que sobem, dentinhos que caem e risadas que escapam pelas patinhas, os dois aprendem que as amizades mais bonitas costumam nascer bem onde menos se espera.",
+          "Cheio de Bolinha e Querie estão te esperando para brincar."
         ]
       }
     },

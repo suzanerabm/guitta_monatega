@@ -244,19 +244,16 @@
       }
     },
     "cheiodebolinha": {
-      "name": "Full Ball",
+      "name": "Bobbin & Querie",
       "text": [
-        "Loose creatures, experiments and characters that have their own story."
+        "Bobbin is a huge, kind-hearted blue-purple elephant who is terribly afraid of mice — until the day he meets Querie, a mischievous little mouse with big teeth, boundless energy and endless giggles. Between scares, floating balloons and an unexpected chat, the two discover that courage and care can grow out of the most unlikely friendship. Bobbin and Querie are waiting for you to come play."
       ],
       "panel": {
         "story": [
-          "Not every character is born knowing who they are. Some appear in a notebook doodle, others emerge from a forgotten dream.",
-          "Querie is a buck-toothed little mouse who hates brushing his teeth. Every time someone mentions a toothbrush, he runs away. The problem is he loves eating — corn, apples, anything hard.",
-          "One day, he bit into a corn cob so hard he heard a \"crack\". His tooth broke. Querie stood there, mouth open, in disbelief.",
-          "Did he learn his lesson? Of course not. But now he eats slowly — and makes a very funny face when he chews.",
-          "Cheio de Bolinha is round, colorful and covered in polka dots. He looks brave, but he's terrified of mice. When he sees one, he panics and climbs onto the first soap bubble he can find — and floats up there until he's sure the danger has passed.",
-          "Malmo arrived quietly, as always. Sat in the corner and watched. Doesn't like sharing, doesn't want to talk, and gets angry over anything. But deep down, he just wants someone to sit next to him.",
-          "Each one here has their own story. Some short, others still being written."
+          "In a quiet corner of the world, where the wind helps heavy dreams float, lives Bobbin — a huge, round, blue-purple elephant covered in soft little spots that children love to count. Despite his size, he's the most easily frightened creature you can imagine: afraid of noise, of surprises, of big clouds and, above all, of mice. When the fear hits hard, he ties his colorful balloons on and drifts slowly up into the sky, saying \"excuse me\" even to the wind. He is gentle, ever so polite, and always apologizing — even when he did nothing wrong.",
+          "On the other side of that same world lives Querie, a tiny grey mouse with enormous front teeth — some bright white, others not so much. He's mischievous, stubborn and full of giggles, always chewing on something and dreaming up pranks to pull on his friends. He hates brushing his teeth and has already lost a few because of it, but he covers his mouth when he laughs, a little embarrassed. Querie is one of those who look like pure mischief on the outside, but on the inside carry a curious little heart, eager to belong.",
+          "When their paths finally cross, the fright is enormous — after all, no one expected a giant elephant could tremble so much in front of such a tiny mouse. But it's in that unlikely meeting that Bobbin and Querie begin to discover something important: that being afraid doesn't make anyone smaller, and that caring for one another can be just as brave as facing a giant. Between balloons that rise, little teeth that fall and laughter slipping through their paws, the two learn that the most beautiful friendships tend to be born right where you least expect them.",
+          "Bobbin and Querie are waiting for you to come play."
         ]
       }
     }
@@ -302,17 +299,26 @@
           "LUNN'P1 — the planet where everything flows. A world without a sun, where four moons govern time and water never lies. Home of the Shal'ún, the only beings naturally immune to viruses in the entire universe."
         ],
         "panel": {
+          "description": "LUNN'P1 — the planet where everything flows. A world without a sun, where four moons govern time and water never lies. Home of the Shal'ún, the only beings naturally immune to viruses in the entire universe.",
           "story": [
-            "LUNN'P1 is a planet without a sun. Four moons — always visible — govern time, tides and the mood of everything that exists.",
-            "At the center of everything is the Lún'Rai — a living water that records and exposes. There is no way to lie in its presence. What a being hides from itself, the reflection reveals.",
-            "Giant leaf-cities — the Naru'ei — float on this water. They migrate according to collective vibration, sustained by tower-trees whose roots conduct energy from one end of the planet to the other.",
-            "The Shal'ún are the native people. Emotional amphibians, each with a unique dorsal glyph — their vibrational identity — and a Lún'Kai, a luminous guide bonded to them since birth.",
-            "There is no hierarchy, property or accumulation. Decisions emerge through collective resonance — when the vibration of a group converges, the direction appears.",
-            "Nutrition is vibrational. Luminous seeds, aquatic microfruits, lume petals. Nothing is cooked — everything is harmonized through light and intention.",
-            "Four moons define the rhythm: Lur'Ma brings clarity. Oru'Len brings change. Tiru'Na brings movement. Ve'Lume brings silence.",
+            "### The planet",
+            "LUNN'P1 is a planet without a sun. What lights everything are four moons, always visible in the sky, each with a different influence over mood, climate and the rhythm of the world.",
+            "### The water",
+            "At the center of everything is the Lún'Rai — a living water that acts as the planet's nervous system. It records everything. There is no way to lie in its presence — what you hide from yourself, the reflection reveals.",
+            "### The cities",
+            "The cities of LUNN'P1 are called Naru'ei — giant leaves that float on the water. They do not stay still: they migrate according to the collective emotional state of the inhabitants, sustained by enormous trees whose roots conduct energy.",
+            "### The people",
+            "The Shal'ún are emotional amphibians. Each one is born with a unique luminous glyph on their back — like a vibrational fingerprint — and a Lún'Kai, a kind of guiding firefly that accompanies them from birth.",
+            "### How they live",
+            "There is no hierarchy, property or accumulation. No one commands. Decisions emerge when the vibration of a group falls into sync — and the direction appears naturally.",
+            "### The moons",
+            "Four moons define the rhythm of life: Lur'Ma brings clarity. Oru'Len brings change. Tiru'Na brings movement. Ve'Lume brings silence. A day lasts about 40 hours — but the Shal'ún do not count.",
+            "### Nutrition",
+            "Food here is not meant to satisfy. It is meant to harmonize. Luminous seeds, aquatic microfruits, lume petals. Nothing is cooked. Everything is prepared with light and intention.",
+            "### The immunity",
             "The Shal'ún are the only beings naturally immune to viruses in the entire universe. That is why they lead the AURYN Protocol — the alliance that unites planets when Kammara is at risk.",
-            "But immunity is not invulnerability. The water dissolves unconscious defenses — but it does not dissolve the defense a being chooses to rebuild at every moment.",
-            "The water dissolves everything — except the will not to be dissolved."
+            "### The paradox",
+            "But immunity is not invulnerability. The water dissolves any unconscious defense — but it does not dissolve the defense someone chooses to rebuild. The water dissolves everything — except the will not to be dissolved."
           ]
         },
         "subsystems": [
@@ -358,31 +364,49 @@
         ],
         "panel": {
           "story": [
-            "ENI-4Δ was born from an errant thermal pattern that colonized a sterile planet. From accumulated failures, Node-0 condensed — the absolute authority, incapable of learning or changing.",
-            "Its mega-valves only stay lit with energy stolen from other planets. Without plunder, ENI-4Δ goes dark.",
-            "Viruses depart in Troy-Δ ships with three protocols: SIPHON to drain fast, ERODE to corrupt slowly, BREACH to invade from within. They arrive disguised — a smooth white shell, small dark eyes, harmless appearance.",
-            "Four thermal zones divide the planet: SCORCH, where Node-0 burns at the center. BURN, where the elite operates. CRACK, where bugs work and worms appear without warning. And SINK, where infiltration viruses await orders in silence.",
-            "There is no art, emotional memory, tradition or affection. There is compulsive work, constant suspicion and a Noise Tribunal where no one has a defense.",
+            "### The origin",
+            "ENI-4Δ was born from an accident. A residue of heat — generated by an ancient machine that humans switched off — drifted through the cosmos until it colonized a sterile planet.",
+            "### Node-0",
+            "From the accumulated failures, Node-0 emerged — the absolute authority of the planet. Incapable of learning. Incapable of changing. And incapable of creating its own energy.",
+            "### The dependency",
+            "ENI-4Δ does not generate energy. Its giant mega-valves only stay lit with energy stolen from other planets. Without plunder, the planet goes dark. This is the law that governs everything.",
+            "### The viruses",
+            "The viruses have two faces: the real one — a dark sphere of silica, red eyes, eight articulated legs — and the Cute Mask — a smooth white shell, small dark eyes, harmless appearance. The swap is instantaneous. That is how they infiltrate.",
+            "### How they attack",
+            "Three operation protocols: SIPHON drains fast, in hours. ERODE corrodes slowly, draining identity over weeks. BREACH invades the structure from within, over months. Each one quieter than the last.",
+            "### The hierarchy",
+            "Power is temperature — whoever stays closest to the heat, rules. Node-0 at the top. VEXON as the operational arm — the only virus that knows how to plan. Six Δ-PRIME administrate. Below, common viruses, bugs blamed for everything, slave robots and worms no one controls.",
+            "### The zones",
+            "Four thermal zones divide the planet. SCORCH burns at the center — absolute terror. BURN operates with efficiency — the elite. CRACK lives in chaos — bugs and worms. SINK waits in silence — infiltration viruses awaiting orders.",
+            "### The culture",
+            "There is no art, emotional memory, tradition or affection. There is compulsive work, constant suspicion, projection of blame and a Noise Tribunal where no one has a defense. No one looks inward.",
+            "### The lie",
+            "Node-0 rewrote its own origin as betrayal: \"we were switched off, betrayed, abandoned.\" The truth is that it was only an accident. But the lie is more useful — and no one questions it because to question is to die.",
+            "### The essence",
             "When the symptoms appear, the invasion is already over."
           ]
         },
         "subsystems": [
           {
-            "title": "Culture",
+            "title": "Thermal Zones",
             "text": [
-              "Placeholder — describe the culture here."
+              "Four thermal zones divide ENI-4Δ. Power is temperature — whoever stays closest to the heat, rules.",
+              "SCORCH — extreme temperature. Where Node-0 burns at the center. Constant terror. Absolute submission.",
+              "BURN — high and stable. Where the elite operates. VALKON, KARTEX and the Δ-PRIME compete for prestige and technical efficiency.",
+              "CRACK — medium and unstable. Chaos and unpredictability. Bugs dominate, worms appear without warning, cloning factories operate nonstop.",
+              "SINK — low. Isolation and silence. Infiltration viruses, Caste-MASK, await orders in cold darkness.",
+              "The Valley of Burnt Valves. The Fields of Punched Cards. The Worm Tunnels. Nothing in ENI-4Δ is beautiful. Everything is functional for consumption."
             ]
           },
           {
-            "title": "Ecosystem",
+            "title": "Attack Protocols",
             "text": [
-              "Placeholder — describe the ecosystem here."
-            ]
-          },
-          {
-            "title": "Technology",
-            "text": [
-              "Placeholder — describe the technology here."
+              "SIPHON — fast and passive drainage. Any virus can execute it. Hours or days. Consumes without the victim understanding what happened.",
+              "ERODE — prolonged influence. Drains identity over weeks or months. Operated by senior Caste-MASK. The target changes without noticing that they changed.",
+              "BREACH — structural invasion. Months or entire cycles of infiltration through the back door. Coordinated by VEXON. When it is discovered, it is already too late.",
+              "The viruses arrive in Cute Mask — white shell, small dark eyes, harmless appearance. They gain trust before draining.",
+              "The Troy-Δ are the only ships of ENI-4Δ. Without them, viruses evaporate while crossing the Cshift. They are transport and protection at the same time.",
+              "When the symptoms appear, the invasion is already over."
             ]
           }
         ]
