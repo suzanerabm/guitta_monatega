@@ -2,6 +2,12 @@ import { Box } from '@chakra-ui/react';
 import type { ReactNode, CSSProperties } from 'react';
 import { DSTextPanel } from '@/components/DSTextPanel';
 
+interface CharacterBreakpoint {
+  x?: number;
+  y?: number;
+  size?: number;
+}
+
 export interface Character {
   image: string;
   x: number;
@@ -10,6 +16,10 @@ export interface Character {
   zIndex?: number;
   mobileY?: number;
   mobileScale?: number;
+  /** Override x, y, size at >=1500px */
+  xl?: CharacterBreakpoint;
+  /** Override x, y, size at >=1920px */
+  xxl?: CharacterBreakpoint;
 }
 
 export interface Mascot {
@@ -60,7 +70,7 @@ export function DSMainCard({
       width="100vw"
       marginLeft="calc(-50vw + 50%)"
       height={{ base: 'auto', md: height }}
-      maxH={{ base: 'none', md: maxHeight }}
+      maxH={{ base: 'none', md: maxHeight, '2xl': '850px' }}
       // Guarantee enough vertical room for the absolute-positioned text-wrap
       // (top:260px + bottom:4rem + min ~280px panel = ~620px floor) on
       // shallow viewports so the panel never gets squashed.
@@ -90,6 +100,33 @@ export function DSMainCard({
             '--mobile-y': `${c.mobileY ?? 20}%`,
             '--mobile-scale': String(c.mobileScale ?? 0.4),
           } as CSSProperties;
+
+          // Build responsive overrides via @media
+          const mobileScale = c.mobileScale ?? 0.4;
+          const mobileSize = Math.round(c.size * mobileScale);
+          const mediaOverrides: Record<string, Record<string, string>> = {
+            // Mobile: scale down and reposition
+            '@media (max-width: 48em)': {
+              width: `${mobileSize}px`,
+              height: `${mobileSize}px`,
+              bottom: `${c.mobileY ?? 90}%`,
+            },
+          };
+          if (c.xl) {
+            const o: Record<string, string> = {};
+            if (c.xl.size != null) { o.width = `${c.xl.size}px`; o.height = `${c.xl.size}px`; }
+            if (c.xl.x != null) o.left = `${c.xl.x}%`;
+            if (c.xl.y != null) o.bottom = `${c.xl.y}%`;
+            if (Object.keys(o).length) mediaOverrides['@media (min-width: 94em)'] = o;
+          }
+          if (c.xxl) {
+            const o: Record<string, string> = {};
+            if (c.xxl.size != null) { o.width = `${c.xxl.size}px`; o.height = `${c.xxl.size}px`; }
+            if (c.xxl.x != null) o.left = `${c.xxl.x}%`;
+            if (c.xxl.y != null) o.bottom = `${c.xxl.y}%`;
+            if (Object.keys(o).length) mediaOverrides['@media (min-width: 120em)'] = o;
+          }
+
           return (
             <Box
               key={`char-${idx}`}
@@ -102,6 +139,7 @@ export function DSMainCard({
               zIndex={c.zIndex || 1}
               transform="translateX(-50%)"
               style={cssVars}
+              css={mediaOverrides}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -154,19 +192,15 @@ export function DSMainCard({
                     marginTop: 0,
                   },
                   // Large desktop (>=1500px): match Astro default — pinned to right:50% with margin-right
+                  // Also handles XL since 120em media queries don't generate in conditional css prop
                   '@media (min-width: 94em)': {
                     left: 'auto',
                     right: '50%',
                     marginRight: '12rem',
                     width: '42%',
-                    maxWidth: '540px',
-                    height: '60%',
-                  },
-                  // XL screens (>=1920px)
-                  '@media (min-width: 120em)': {
-                    width: '48%',
-                    maxWidth: '720px',
-                    height: '75%',
+                    maxWidth: '620px',
+                    height: '50%',
+                    top: '58%',
                   },
                 }
               : {
@@ -195,10 +229,11 @@ export function DSMainCard({
                   },
                   // XL screens (>=1920px)
                   '@media (min-width: 120em)': {
-                    width: '45%',
+                    width: '65%',
                     maxWidth: '680px',
-                    top: '200px',
-                    bottom: '3rem',
+                    top: 'auto',
+                    bottom: '5rem',
+                    height: '55%',
                   },
                 }
           }
@@ -213,6 +248,15 @@ export function DSMainCard({
               right={`${mascot.offsetX ?? 10}%`}
               top={`${mascot.offsetY ?? -40}px`}
               filter="drop-shadow(0 4px 12px rgba(0,0,0,0.2))"
+              css={{
+                '@media (max-width: 48em)': {
+                  width: `${Math.round((mascot.size || 120) * (mascot.mobileScale ?? 0.5))}px`,
+                  height: `${Math.round((mascot.size || 120) * (mascot.mobileScale ?? 0.5))}px`,
+                  right: 'auto',
+                  left: '5%',
+                  top: `${mascot.mobileOffsetY ?? -30}px`,
+                },
+              }}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img

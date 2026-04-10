@@ -182,7 +182,7 @@ export function CharacterStrip({
           <Box
             ref={trackRef}
             display="flex"
-            gap="1rem"
+            gap="0.5rem"
             padding={noLoop ? '0.5rem 0 1rem' : '4rem 0 2rem'}
             width="max-content"
             css={{
