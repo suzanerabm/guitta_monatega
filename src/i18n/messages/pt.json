@@ -1,0 +1,615 @@
+{
+  "common": {
+    "back": "voltar",
+    "siteTitle": "Guitta Monatega",
+    "footerAbout": "sobre guitta monatega",
+    "soon": "em breve",
+    "words": {
+      "acordando": "acordando",
+      "apaixonada": "apaixonada",
+      "apaixonado": "apaixonado",
+      "arvore": "árvore",
+      "atrasado": "atrasado",
+      "banho": "banho",
+      "bebendo": "bebendo",
+      "boa": "boa",
+      "boia": "boia",
+      "boiando": "boiando",
+      "bolinha": "bolinha",
+      "bravo": "bravo",
+      "bricando": "brincando",
+      "burp": "arrotando",
+      "cafe": "tomando café",
+      "cambalhota": "cambalhota",
+      "carnaval": "carnaval",
+      "chef": "chef",
+      "cheio": "cheio",
+      "cheiro": "cheirando",
+      "com": "com",
+      "comendo": "comendo",
+      "contando": "contando",
+      "correndo": "correndo",
+      "costas": "costas",
+      "danca": "dançando",
+      "dancando": "dançando",
+      "de": "de",
+      "default": "default",
+      "dentes": "dentes",
+      "derretendo": "derretendo",
+      "desenhando": "desenhando",
+      "desmaiando": "desmaiando",
+      "dividindo": "dividindo",
+      "doente": "doente",
+      "doodle": "rabisco",
+      "dormindo": "dormindo",
+      "duvida": "dúvida",
+      "escondido": "escondido",
+      "escova": "escova",
+      "falando": "falando",
+      "feliz": "feliz",
+      "frente": "frente",
+      "frio": "frio",
+      "gargalhando": "gargalhando",
+      "geleia": "geleia",
+      "gelo": "gelo",
+      "grilo": "grilo",
+      "historia": "história",
+      "humorado": "humorado",
+      "jogando": "jogando",
+      "jump": "pulando",
+      "love": "amando",
+      "maca": "maçã",
+      "mal": "mal",
+      "medo": "medo",
+      "merengue": "merengue",
+      "mexirico": "mexerico",
+      "milho": "milho",
+      "morango": "morango",
+      "mostrando": "mostrando",
+      "nadando": "nadando",
+      "navegando": "navegando",
+      "neve": "neve",
+      "no": "no",
+      "noite": "noite",
+      "não": "não",
+      "oculos": "óculos",
+      "os": "os",
+      "pendurado": "pendurado",
+      "picole": "picolé",
+      "pijama": "pijama",
+      "piscando": "piscando",
+      "posicoes": "posições",
+      "praia": "praia",
+      "presente": "presente",
+      "pulando": "pulando",
+      "querendo": "querendo",
+      "ruim": "ruim",
+      "sentada": "sentada",
+      "sentado": "sentado",
+      "soneca": "soneca",
+      "sonequinha": "sonequinha",
+      "sorte": "sorte",
+      "sorvete": "sorvete",
+      "tirando": "tirando",
+      "tomando": "tomando",
+      "triste": "triste",
+      "tropecando": "tropeçando",
+      "voa": "voando",
+      "voando": "voando",
+      "vomitando": "vomitando",
+      "xicara": "xícara",
+      "compota": "compota",
+      "cozinhando": "cozinhando",
+      "cena": "cena",
+      "plantacao": "plantação",
+      "dois": "dois",
+      "sois": "sóis",
+      "palacio": "palácio",
+      "corredor": "corredor",
+      "entrada": "entrada",
+      "interior": "interior",
+      "porta": "porta",
+      "regiao": "região",
+      "norte": "norte",
+      "sul": "sul",
+      "vista": "vista",
+      "area": "aérea",
+      "flor": "flor",
+      "lume": "lume",
+      "virus": "vírus"
+    }
+  },
+  "home": {
+    "title": "Guitta Monatega",
+    "heroSub": "arte & universos & personagens",
+    "bichittos": {
+      "label": "Série",
+      "title": "Bichittos",
+      "desc": "Personagens que existem entre o imperfeito e o afeto."
+    },
+    "kammara": {
+      "label": "Universo",
+      "title": "Kammara",
+      "desc": "Mundos conectados. Sistemas bio-logic. Uma saga ilustrada."
+    },
+    "art": {
+      "label": "Galeria de Arte",
+      "title": "Guitta Monatega",
+      "desc": "Ilustração, conceito e draft visual."
+    }
+  },
+  "about": {
+    "pageTitle": "Sobre — Guitta Monatega",
+    "title": "Sobre",
+    "paragraphs": [
+      "Guitta Monatega é designer, ilustradora e criadora de universos autorais.",
+      "Desde a infância, constrói personagens e histórias que habitam um espaço entre o fofo e o inusitado — onde o imperfeito ganha forma, identidade e presença. NapCat, Zeco, Taylo, os bichittos e seus amigos nasceram de cadernos de desenho e ganharam forma em livros, animações e esculturas em miniatura.",
+      "Kammara é seu projeto mais recente — uma saga ilustrada que conecta mundos, sistemas e criaturas em uma narrativa em constante expansão.",
+      "Seu trabalho transita entre técnicas tradicionais e digitais: nanquim, grafite, pontilhismo, crochê, needle felting, modelagem e ilustração digital. Cada peça é construída com tempo, repetição e cuidado, preservando a essência do feito à mão.",
+      "Seu trabalho investiga o encontro entre forma, afeto e construção — onde cada criação carrega uma memória, um gesto e um tempo próprio."
+    ],
+    "universesLabel": "Universos",
+    "contactLabel": "Contato"
+  },
+  "bichittos": {
+    "pageTitle": "Bichittos — Guitta Monatega",
+    "heroLabel": "Série",
+    "heroTitle": "Bichittos",
+    "heroDesc": "Personagens que existem entre o imperfeito e o afeto.",
+    "napcat": {
+      "name": "NapCat",
+      "text": [
+        "NapCat é um gatinho calmo e sonhador que adora tirar pequenos cochilos. Em cada soneca, ele descobre o mundo de um jeitinho especial — sentindo sons, cores e texturas. Ao lado de sua irmã Violeta, NapCat vive momentos simples, cheios de carinho, imaginação e aconchego.",
+        "Venha tirar soneca e sonhar com NapCat e seus amigos."
+      ],
+      "books": [
+        {
+          "tag": "adventures",
+          "title": "Aventuras do NapCat"
+        }
+      ],
+      "panel": {
+        "story": [
+          "NapCat é um gatinho calmo e sonhador que adora tirar pequenos cochilos.",
+          "Em cada soneca, ele descobre o mundo de um jeitinho especial — sentindo sons, cores e texturas.",
+          "Ao lado de sua irmã Violeta, NapCat vive momentos simples, cheios de carinho, imaginação e aconchego.",
+          "Venha tirar soneca com NapCat e seus amigos."
+        ]
+      }
+    },
+    "zeco": {
+      "name": "Zeco",
+      "text": [
+        "Zeco é um pequeno hamster curioso, afetuoso e cheio de imaginação, que sonha em ser chef de cozinha. Entre amigos, natureza e pequenas rotinas, ele cria, compartilha e descobre que as coisas mais importantes estão no cuidado e nos detalhes do dia a dia.",
+        "Zeco e seus amigos estão te esperando para brincar."
+      ],
+      "books": [
+        {
+          "tag": "zeco-estacoes",
+          "title": "Zeco nas Estações"
+        }
+      ],
+      "panel": {
+        "story": [
+          "A coleção Zeco nasceu de uma memória real.",
+          "Zeco foi um pequeno companheiro de infância — sempre por perto, nos momentos simples do dia: estudar, brincar, observar… estar junto. A partir dessa presença, surgiu um universo que transforma lembranças em histórias.",
+          "Os livros acompanham o ritmo das estações, mas com um olhar brasileiro. No sul do país, onde a coleção é inspirada, o outono não pinta tudo de laranja — o verde permanece, o frio chega devagar, e a vida segue em um tempo mais calmo.",
+          "Entre araucárias, o canto da gralha azul e quintais que pedem cuidado, Zeco vive pequenas experiências do cotidiano: arrumar a casa, preparar algo quentinho, observar a natureza, compartilhar momentos.",
+          "Cada livro guarda um pedaço dessa infância — transformada em narrativa, imagem e sensação."
+        ]
+      }
+    },
+    "taylo": {
+      "name": "Taylo",
+      "books": [
+        {
+          "tag": "star-hunter",
+          "title": "O Caçador de Estrelas"
+        }
+      ],
+      "text": [
+        "Taylo é o Colecionador de Estrelas — um guardião silencioso que cuida do brilho que existe em cada um de nós. Ele não compartilha os sonhos de ninguém, pois cada sonho pertence apenas ao seu dono.",
+        "Em sua jornada pela Floresta Azul, ao lado de seu amigo Pitu, Taylo observa o céu e nos lembra que somos como as estrelas: em alguns momentos brilhamos muito, em outros, bem de levinho. Completos do jeito que somos."
+      ],
+      "panel": {
+        "story": [
+          "Taylo é o Colecionador de Estrelas — um guardião silencioso que cuida do brilho que existe em cada um de nós.",
+          "Ele não compartilha os sonhos de ninguém, pois cada sonho pertence apenas ao seu dono, mas observa cada estrela com carinho.",
+          "Mesmo quando uma estrela parece mais fraquinha, Taylo sabe que ela continua lá, do jeitinho dela.",
+          "Em sua jornada pela Floresta Azul, ao lado de seu amigo Pitu, ele passa noites olhando o céu cheio de pontinhos brilhantes.",
+          "E ali, bem quietinho, ele lembra que somos como as estrelas: em alguns momentos brilhamos mais, em outros, bem de levinho.",
+          "E tudo bem ser assim, porque cada brilho tem o seu tempo e o seu jeito.",
+          "Completos do jeito que somos e sempre sonhando."
+        ]
+      }
+    },
+    "booksTitle": "Livros",
+    "bookIllustrated": "Livro ilustrado",
+    "miscelania": {
+      "name": "Miscelânia",
+      "text": [
+        "Criaturas avulsas, experimentos e personagens que tem sua própria história."
+      ],
+      "panel": {
+        "story": [
+          "Nem todo personagem nasce sabendo quem é. Alguns aparecem num rabisco de caderno, outros surgem de um sonho esquecido.",
+          "Querie é um ratinho dentuço que detesta escovar os dentes. Toda vez que alguém fala em escova, ele sai correndo. O problema é que ele adora comer — milho, maçã, tudo que é duro.",
+          "Um dia, mordeu uma espiga com tanta força que ouviu um \"crac\". O dente quebrou. Querie ficou parado, de boca aberta, sem acreditar.",
+          "Desde então, aprendeu a lição? Claro que não. Mas agora come devagar — e faz uma cara muito engraçada quando mastiga.",
+          "Cheio de Bolinha é grande e tem uma orelha redonda e na ponta de seu mini rabinho tem uma bolinha. Por ser tão grande parece corajoso, mas morre de medo de ratinhos. Quando vê um, entra em sai correndo e sobe nas bolhas de sabão para ficar lá no alto, flutuando, até ter certeza de que o perigo passou.",
+          "Malmo chegou quieto, como sempre. Sentou no canto e ficou observando. Não gosta de dividir, não quer falar, e fica bravo por qualquer coisa. Mas no fundo, só quer que alguém sente do lado dele.",
+          "Cada um aqui tem sua própria história. Algumas curtas, outras ainda sendo escritas."
+        ]
+      }
+    }
+  },
+  "kammara": {
+    "pageTitle": "Kammara — Guitta Monatega",
+    "heroLabel": "Saga Ilustrada",
+    "heroTitle": "Kammara",
+    "heroDesc": "Um universo bio-lógico. Uma guerra invisível. Uma saga que está longe de terminar.",
+    "placeholder": "Placeholder — descrição vai aqui.",
+    "scenesTitle": "Cenas",
+    "subsystemsTitle": "Subsistemas",
+    "section": {
+      "name": "Universo Kammara",
+      "text": [
+        "Kammara — um universo onde memória é matéria e toda matéria é bio-lógica. Bilhões de planetas. Vírus que se infiltram sem serem notados. E os poucos que ousam resistir."
+      ],
+      "books": [
+        {
+          "tag": "saga-orf-v",
+          "title": "Saga em ORF-V"
+        }
+      ],
+      "panel": {
+        "story": [
+          "Kammara é um universo onde memória é matéria — e toda matéria é bio-lógica.",
+          "Bilhões de planetas existem num equilíbrio frágil. Cada um carrega uma identidade própria, uma forma diferente de sentir, processar e existir.",
+          "No centro de tudo está a kemita — o token primordial: metade mineral, metade lógica, metade orgânica. Ela nasce nas cavernas profundas de um único planeta e alimenta rotas, registros e a própria fundação do universo.",
+          "Sem kemita, nada se move. Nada se registra. Nada se sustenta. Quem controla a kemita, controla o destino.",
+          "Mas onde há energia, há o que tenta consumi-la. Os vírus não atacam com força. Se infiltram com paciência. Chegam disfarçados, ganham confiança, e drenam tudo por dentro.",
+          "Eles não criam nada. Apenas consomem. E quando os sintomas aparecem, a invasão já terminou.",
+          "Do outro lado estão os que resistem. Povos inteiros que aprenderam a ler sinais antes que virem ameaças, a proteger fronteiras sem violência, a se reorganizar quando tudo parece perdido.",
+          "O Protocol AURYN é a aliança que os une — um sistema de resposta a crises que atravessa planetas quando o equilíbrio do universo está em risco.",
+          "A guerra no Kammara não é entre o bem e o mal. É entre o que é verdadeiro e o que finge ser. Entre quem cria energia e quem apenas a consome. Entre ver a tempo — e perceber tarde demais.",
+          "Este é o Kammara. E a história está longe de terminar."
+        ]
+      }
+    },
+    "worlds": {
+      "lunnp1": {
+        "name": "LUNN'P1",
+        "text": [
+          "LUNN'P1 — o planeta onde tudo flui. Um mundo sem sol, onde quatro luas regem o tempo e a água nunca mente. Lar dos Shal'ún, os únicos seres naturalmente imunes a vírus em todo o universo."
+        ],
+        "panel": {
+          "story": [
+            "### O planeta",
+            "LUNN'P1 é um planeta sem sol. Quem ilumina tudo são quatro luas, sempre visíveis no céu, cada uma com uma influência diferente sobre o humor, o clima e o ritmo do mundo.",
+            "### A água",
+            "No centro de tudo está a Lún'Rai — uma água viva que funciona como o sistema nervoso do planeta. Ela registra tudo. Não há como mentir perto dela — o que você esconde de si mesmo, o reflexo mostra.",
+            "### As cidades",
+            "As cidades de LUNN'P1 se chamam Naru'ei — são folhas gigantes que flutuam sobre a água. Não ficam paradas: migram conforme o estado emocional coletivo dos habitantes, sustentadas por árvores enormes cujas raízes conduzem energia.",
+            "### O povo",
+            "Os Shal'ún são anfíbios emotivos. Cada um nasce com um glifo luminoso único nas costas — como uma impressão digital vibracional — e um Lún'Kai, uma espécie de vagalume guia que o acompanha desde o nascimento.",
+            "### Como vivem",
+            "Não existe hierarquia, propriedade ou acumulação. Ninguém manda. Decisões surgem quando a vibração de um grupo entra em sintonia — e a direção aparece naturalmente.",
+            "### As luas",
+            "Quatro luas definem o ritmo da vida: Lur'Ma traz clareza. Oru'Len traz mudança. Tiru'Na traz movimento. Ve'Lume traz silêncio. Um dia dura cerca de 40 horas — mas os Shal'ún não contam.",
+            "### A alimentação",
+            "A comida aqui não é para saciar. É para harmonizar. Sementes lumínicas, microfrutos da água, pétalas de lume. Nada é cozido. Tudo é preparado com luz e intenção.",
+            "### A imunidade",
+            "Os Shal'ún são os únicos seres naturalmente imunes a vírus em todo o universo. Por isso lideram o Protocol AURYN — a aliança que une planetas quando o Kammara está em risco.",
+            "### O paradoxo",
+            "Mas imunidade não é invulnerabilidade. A água dissolve qualquer defesa inconsciente — mas não dissolve a defesa que alguém escolhe reconstruir. A água dissolve tudo — exceto a vontade de não ser dissolvido."
+          ],
+          "description": "LUNN'P1 — o planeta onde tudo flui. Um mundo sem sol, onde quatro luas regem o tempo e a água nunca mente. Lar dos Shal'ún, os únicos seres naturalmente imunes a vírus em todo o universo."
+        },
+        "subsystems": [
+          {
+            "title": "Flora & Fauna",
+            "text": [
+              "Não há fauna predatória em LUNN'P1. Não há ecossistema de competição. Tudo coexiste.",
+              "As árvores-torre são raízes que subiram. Sustentam as Naru'ei, conduzem vibrações, e conectam a superfície ao fundo da água.",
+              "Os Lún'Kai são guias lumínicos — vagalumes de luz viva, ligados 1:1 a cada Shal'ún desde o nascimento. Onde vai o Shal'ún, vai o Lún'Kai.",
+              "Túri'Kan são tartarugas de transporte vibracional. Cruzam distâncias entre Naru'ei carregando passageiros pelo ritmo da água.",
+              "Peixes-lume e Ori'Shen formam padrões aquáticos que lembram glifos. Arraias-reflexo devolvem ao observador o que ele não quer ver.",
+              "As Lunas-folhas mudam de cor conforme a lua dominante. A flora de Oru'Len é mutável. As raízes ancestrais guardam memórias que nenhum ser vivo lembra."
+            ]
+          },
+          {
+            "title": "Geografia",
+            "text": [
+              "LUNN'P1 não tem zonas secas, metálicas ou urbanas. Tudo é vivo, lumínico e vibracional.",
+              "As Naru'ei são cidades-folha gigantes que flutuam sobre a Lún'Rai. Migram conforme a vibração coletiva — não têm endereço fixo.",
+              "Árvores-torre as sustentam de baixo, com raízes que conduzem energia e som de uma ponta a outra do planeta.",
+              "Lagos ancestrais guardam os dead-pixels — pontos de energia condensada de cada dissolução. Brilham apenas no reflexo da água.",
+              "Fendas vibracionais são pontos de alta concentração de energia Dra'Lum. Regiões profundas, antigas, onde o planeta guarda o que já foi.",
+              "Não existe mapa fixo. As Naru'ei se movem. Os caminhos mudam. A geografia de LUNN'P1 respira."
+            ]
+          },
+          {
+            "title": "Linguagem",
+            "text": [
+              "Em LUNN'P1, existem três formas de comunicação — e nenhuma delas depende de palavras como as conhecemos.",
+              "A Voz Kalún é o idioma falado. Poucos sons, significados profundos. Sem gênero, sem plural rígido. Cada palavra carrega peso vibracional.",
+              "O Código-Lume é a comunicação entre Shal'ún e Lún'Kai. Não é falado nem escrito — é vibração pura traduzida em luz.",
+              "Os Glifos Kalún são linguagem de luz inscrita nas costas de cada Shal'ún. Cada glifo dorsal é único — funciona como identidade vibracional.",
+              "Os Tzir'Kai, anfíbios tradutores, convertem Click-Δ — os sons virais de ENI-4Δ — em Código-Lume. São a ponte entre a linguagem da ameaça e a linguagem da luz.",
+              "Em LUNN'P1, comunicar não é transmitir informação. É compartilhar vibração."
+            ]
+          }
+        ]
+      },
+      "eni4": {
+        "name": "ENI-4Δ",
+        "text": [
+          "ENI-4Δ — o planeta das válvulas. Um mundo que não cria energia, apenas consome. Origem de todos os vírus, bugs, e outras criaturas do Kammara."
+        ],
+        "panel": {
+          "story": [
+            "### A origem",
+            "ENI-4Δ nasceu de um acidente. Um resíduo de calor — gerado por uma máquina ancestral que os humanos desligaram — vagou pelo cosmos até colonizar um planeta estéril.",
+            "### Node-0",
+            "Das falhas acumuladas, surgiu Node-0 — a autoridade absoluta do planeta. Incapaz de aprender. Incapaz de mudar. E incapaz de criar energia própria.",
+            "### A dependência",
+            "ENI-4Δ não gera energia. Suas megaválvulas gigantes só se mantêm acesas com energia roubada de outros planetas. Sem saque, o planeta apaga. Essa é a lei que rege tudo.",
+            "### Os vírus",
+            "Os vírus possuem dois rostos: o real — uma esfera escura de sílica, olhos vermelhos, oito patas articuladas — e a Máscara Cute — uma casca branca e lisa, olhinhos escuros, aparência inofensiva. A troca é instantânea. É assim que se infiltram.",
+            "### Como atacam",
+            "Três protocolos de operação: SIPHON drena rápido, em horas. ERODE corrói devagar, drenando identidade ao longo de semanas. BREACH invade a estrutura por dentro, durante meses. Cada um mais silencioso que o anterior.",
+            "### A hierarquia",
+            "O poder é temperatura — quem fica mais perto do calor, manda. Node-0 no topo. VEXON como braço operacional — o único vírus que sabe planejar. Seis Δ-PRIME administram. Abaixo, vírus comuns, bugs culpados por tudo, robôs escravos e worms que ninguém controla.",
+            "### As zonas",
+            "Quatro zonas térmicas dividem o planeta. SCORCH queima no centro — terror absoluto. BURN opera com eficiência — a elite. CRACK vive em caos — bugs e worms. SINK aguarda em silêncio — vírus de infiltração esperando ordens.",
+            "### A cultura",
+            "Não existe arte, memória emocional, tradição ou afeto. Existe trabalho compulsivo, suspeita constante, projeção de culpa e um Tribunal de Ruído onde ninguém tem defesa. Ninguém olha para dentro.",
+            "### A mentira",
+            "Node-0 reescreveu a própria origem como traição: \"fomos desligados, traídos, abandonados.\" A verdade é que foi apenas um acidente. Mas a mentira é mais útil — e ninguém questiona porque questionar é morrer.",
+            "### A essência",
+            "Quando os sintomas aparecem, a invasão já terminou."
+          ]
+        },
+        "subsystems": [
+          {
+            "title": "Zonas Térmicas",
+            "text": [
+              "Quatro zonas térmicas dividem ENI-4Δ. Poder é temperatura — quem fica mais perto do calor, manda.",
+              "SCORCH — temperatura extrema. Onde Node-0 queima no centro. Terror constante. Submissão absoluta.",
+              "BURN — alta e estável. Onde a elite opera. VALKON, KARTEX e os Δ-PRIME disputam prestígio e eficiência técnica.",
+              "CRACK — média e instável. Caos e imprevisibilidade. Bugs dominam, worms surgem sem aviso, fábricas de clonagem operam sem parar.",
+              "SINK — baixa. Isolamento e silêncio. Vírus de infiltração, Caste-MASK, aguardam ordens na escuridão fria.",
+              "O Vale das Válvulas Queimadas. Os Campos de Cartões Perfurados. Os Túneis de Worms. Nada em ENI-4Δ é bonito. Tudo é funcional para o consumo."
+            ]
+          },
+          {
+            "title": "Protocolos de Ataque",
+            "text": [
+              "SIPHON — drenagem rápida e passiva. Qualquer vírus pode executar. Horas ou dias. Consome sem que a vítima entenda o que aconteceu.",
+              "ERODE — influência prolongada. Drena identidade ao longo de semanas ou meses. Operado por Caste-MASK sênior. O alvo muda sem perceber que mudou.",
+              "BREACH — invasão estrutural. Meses ou ciclos inteiros de infiltração pela porta dos fundos. Coordenado por VEXON. Quando é descoberto, já é tarde.",
+              "Os vírus chegam em Máscara Cute — casca branca, olhinhos escuros, aparência inofensiva. Ganham confiança antes de drenar.",
+              "As Troy-Δ são as únicas naves de ENI-4Δ. Sem elas, vírus evaporam ao atravessar o Cshift. São transporte e proteção ao mesmo tempo.",
+              "Quando os sintomas aparecem, a invasão já terminou."
+            ]
+          }
+        ]
+      },
+      "triplec": {
+        "name": "TripleC",
+        "text": [
+          "TripleC — o coração energético do Kammara. Um planeta onde floresta e lógica se fundiram num único organismo, berço da kemita e lar dos bunniets."
+        ],
+        "panel": {
+          "story": [
+            "TripleC era um planeta inteiramente coberto por floresta — a Niul Forest. Profunda, antiga, com neblina azul e luz suave. Um mundo do elemento Terra-Viva, onde tudo era lento e profundamente conectado.",
+            "Até que um artefato caiu do céu. O PD-11 não destruiu o mundo — o reorganizou. O subsolo se dobrou em cinco camadas lógicas e a lógica começou a germinar como uma espécie nova.",
+            "Três regiões emergiram ao longo das eras. malloc ao sul — instinto e precisão, túneis e cavernas pulsantes. Mesh ao norte — forma e arquitetura, pontes perfeitas suspensas no ar. Sharp ao leste — controle e gestão, megaestruturas onde nada cresce sem permissão.",
+            "Entre todas, a Niul Forest respira como pulmão vivo. As regiões não se tocam. A floresta absorve o excesso de cada uma e impede o choque direto entre caos e ordem.",
+            "Os bunniets são seres bio-lógicos — vida que processa. Quando pensam, compilam. Quando respiram, processam. Parecem coelhos humanoides com orelhas longas como antenas e olhos grandes como leitores de padrões.",
+            "Cinco castas seguem o ciclo de compilação vivo: Prae estabiliza, Koma interpreta, Aska registra, Lanko conecta, Runa executa. E entre os Runa, a elite Runa-Tora guarda os corredores do Cshift.",
+            "Nas cavernas da Hepa nasce a kemita — o token primordial do universo. Sem ela, não há Hash, não há Cshift, não há fundação energética.",
+            "Dos cristais de shilo — teal, herança da Niul Forest ancestral — nascem as rotas, as bússolas e os estabilizadores que conectam TripleC ao resto do Kammara.",
+            "Quando ameaçado, TripleC ativa o CriptoKemita. O planeta embaralha sua geografia, muda coordenadas, recodifica suas cavidades. Sistemas invasores sofrem falhas espaciais. O planeta simplesmente desaparece.",
+            "TripleC é forte porque une tudo."
+          ]
+        },
+        "subsystems": [
+          {
+            "title": "Cultura",
+            "text": [
+              "Placeholder — descreva a cultura aqui."
+            ]
+          },
+          {
+            "title": "Ecossistema",
+            "text": [
+              "Placeholder — descreva o ecossistema aqui."
+            ]
+          },
+          {
+            "title": "Tecnologia",
+            "text": [
+              "Placeholder — descreva a tecnologia aqui."
+            ]
+          }
+        ]
+      },
+      "orfv": {
+        "name": "ORF-V",
+        "text": [
+          "ORF-V — o planeta ponte. Um mundo de ilhas separadas por abismos, ligadas por pontes suspensas, onde a bondade é real — e é exatamente isso que os torna vulneráveis."
+        ],
+        "panel": {
+          "story": [
+            "ORF-V nasceu da necessidade de adaptação. Existe para responder rápido, conectar e manter o fluxo vivo — mesmo sem perfeição estrutural.",
+            "O planeta opera em camadas concêntricas: o Büff — camada externa, gasosa, instável. O Vácuo — zona de transição imprevisível. E a Zona Interna — habitável, de estabilidade relativa. Nenhuma camada é independente.",
+            "Fjorks altíssimos de terra firme se erguem sobre grandes extensões de água. Pontes suspensas são o único caminho entre vilas. Não há infraestrutura tecnológica avançada.",
+            "Os elePHPants são seres esféricos e volumosos, de pelo curto de várias cores, tromba curta, orelhas pequenas e olhos escuros e expressivos. Calmos, sociais, medrosos mas cooperativos.",
+            "Comunicam-se por vocalização emocional — tons, não palavras. Toque físico como confirmação. Gestos lentos de tromba. Memória coletiva transmitida por contato.",
+            "Não há hierarquia formal. Decisões são tomadas em círculo, por consenso de continuidade. Os mais velhos guiam pelo exemplo. Ninguém comanda — todos sustentam.",
+            "A rotina gira em torno do cuidado coletivo: manutenção das pontes, monitoramento das bordas do vácuo, partilha de energia e alimento, rituais de alerta comunitário.",
+            "O conflito de ORF-V não é bélico. Acontece quando o medo paralisa, o isolamento cresce e o fluxo é interrompido. Vírus exploram exatamente essas brechas.",
+            "A gentileza dos elePHPants é real. Não é máscara. Mas quando a bondade impede proteger, quando acolher impede rejeitar, quando dizer sim impede dizer não — a virtude vira prisão.",
+            "Nem tudo precisa ser perfeito para ser essencial. Mas tudo que é essencial precisa saber se proteger."
+          ]
+        },
+        "subsystems": [
+          {
+            "title": "Cultura",
+            "text": [
+              "Placeholder — descreva a cultura aqui."
+            ]
+          },
+          {
+            "title": "Ecossistema",
+            "text": [
+              "Placeholder — descreva o ecossistema aqui."
+            ]
+          },
+          {
+            "title": "Tecnologia",
+            "text": [
+              "Placeholder — descreva a tecnologia aqui."
+            ]
+          }
+        ]
+      },
+      "z1": {
+        "name": "Z1",
+        "text": [
+          "Z1 — o planeta da ordem absoluta. Nasceu do lixo de sucata que os próprios vírus descartaram e se tornou a estrutura mais precisa do Kammara."
+        ],
+        "panel": {
+          "story": [
+            "Z1 era pedra mineral e silêncio absoluto. Nada existia. Nada pulsava.",
+            "Até que os vírus de ENI-4Δ, por ordem de Node-0, despejaram lixo técnico no planeta. Entre a sucata estava a Primeira Forma Perdida — fragmentos irreconhecíveis do computador mecânico que deu nome ao mundo.",
+            "Transistores ancestrais despertaram. Do caos, nasceu a ordem absoluta. Vilas cúbicas de vidro translúcido, trilhos magnéticos sem atrito, torres-registradoras e uma névoa cinza permanente onde a luz vem de todas as direções.",
+            "Os habitantes não possuem carne, sangue ou ossos. São estruturas vivas compostas de placas, trilhas, microcircuitos, núcleos e pulsos.",
+            "Oito castas fixas organizam tudo: Z– guarda a origem, REG– estabiliza, CLK– sincroniza, DEC– decodifica, MEM– preserva, BUS– transporta, ALU– calcula, IO– vigia as fronteiras.",
+            "Função é identidade. Não existe mobilidade social, não existe insatisfação, não existe comparação. Cada ser nasce para uma função e permanece nela.",
+            "Assembly Z1 não é falado. É executado. Toda frase é uma instrução. Lento, belo, limpo, matemático. A comunicação é o próprio funcionamento do planeta.",
+            "Z1 lê ASM-Δ — a linguagem viral de ENI-4Δ — melhor do que os próprios vírus. A mesma sucata que o criou carregava a chave para entender o inimigo.",
+            "O medo central de Z1 é o ruído. Um bit fora do lugar é catastrófico num sistema sem tolerância a erro. Mas ShortStorms reorganizam sem destruir, e o planeta respira fundo nos momentos de Silêncio Profundo.",
+            "Até o caos pode virar vida."
+          ]
+        },
+        "subsystems": [
+          {
+            "title": "Cultura",
+            "text": [
+              "Placeholder — descreva a cultura aqui."
+            ]
+          },
+          {
+            "title": "Ecossistema",
+            "text": [
+              "Placeholder — descreva o ecossistema aqui."
+            ]
+          },
+          {
+            "title": "Tecnologia",
+            "text": [
+              "Placeholder — descreva a tecnologia aqui."
+            ]
+          }
+        ]
+      },
+      "gotto": {
+        "name": "Gotto",
+        "text": [
+          "Gotto — o planeta do reinício. Um mundo interpretado linha por linha, onde nada permanece — nem o progresso do invasor."
+        ],
+        "panel": {
+          "story": [
+            "Gotto é um planeta interpretado. Não compila, não abstrai, não guarda estado. Existe apenas enquanto está sendo executado — linha por linha, ciclo por ciclo.",
+            "Três leis absolutas regem tudo: INPUT — o planeta absorve energia emocional, estímulos, ecos cósmicos. PRINT — tudo que foi absorvido se manifesta imediatamente. GOTO — o planeta reinicia.",
+            "Tokks — partículas de interpretação geradas a cada ciclo — alimentam os Basiks, iluminam o planeta e estabilizam as regiões-linha.",
+            "A geografia é numerada como linhas de código. Linha 10 — Vale INPUT, absorção e silêncio. Linha 20 — Vale PRINT, expressão e cristais. Linha 30 — Região GOTO, instável e transitória. Linhas 40 a 90 — zonas de variação. E as Subrotinas GOSUB — regiões profundas de onde quem entra pode não saber sair.",
+            "Os Basiks são seres esféricos e bicolores — metade branca, metade preta — com dois olhos binários, braços e pernas curtos diretamente no corpo. Medem cerca de 20 centímetros.",
+            "Não mentem. Não guardam rancor. Não acumulam. Tudo que sentem é imediatamente impresso ao redor. Seu gesto mais recorrente: PRINT \"HELLO\". Falam para existir. Existem para continuar.",
+            "Após cada GOTO, as cidades deslocam, os caminhos somem, e o que era mapa se torna memória — que no próximo ciclo quase não existe. Um dia lunar em LUNN'P1, Gotto executa cinco vezes.",
+            "A vida Basik segue o ritmo do planeta: manhã é INPUT — absorção e curiosidade. Tarde é PRINT — arte com cristais e conversas longas. Noite é GOTO — recolhimento e reinício.",
+            "Node-0 tenta dominar Gotto há ciclos. Falha sempre pelo mesmo motivo: o GOTO dissolve tudo. Vínculos não se fixam. Instruções gravadas somem no reinício. Para quem depende de deixar marca — Gotto é insuportável.",
+            "Tudo bem. Vamos de novo. Mas desta vez… talvez até o fim."
+          ]
+        },
+        "subsystems": [
+          {
+            "title": "Cultura",
+            "text": [
+              "Placeholder — descreva a cultura aqui."
+            ]
+          },
+          {
+            "title": "Ecossistema",
+            "text": [
+              "Placeholder — descreva o ecossistema aqui."
+            ]
+          },
+          {
+            "title": "Tecnologia",
+            "text": [
+              "Placeholder — descreva a tecnologia aqui."
+            ]
+          }
+        ]
+      }
+    },
+    "booksTitle": "Livros",
+    "books": []
+  },
+  "art": {
+    "pageTitle": "Arte — Guitta Monatega",
+    "heroLabel": "Galeria de Arte",
+    "heroTitle": "Guitta Monatega",
+    "heroLabelBottom": "- since 1974 -",
+    "filterAll": "Todos",
+    "booksTitle": "Livros de Arte",
+    "books": [
+      {
+        "tag": "Coloring Book",
+        "title": "Livro para Colorir"
+      }
+    ],
+    "sections": {
+      "black": {
+        "title": "Branco no Preto",
+        "technique": "Nanquim branco sobre papel preto"
+      },
+      "grafite": {
+        "title": "Grafite",
+        "technique": "Estudos com sombreamento e volume."
+      },
+      "doodle": {
+        "title": "Doodle",
+        "technique": "Rabiscos simples que viram personagens. Inspiração, simplicidade que viram coleção."
+      },
+      "digital": {
+        "title": "Arte Digital",
+        "technique": "Ilustração digital."
+      },
+      "collections": {
+        "title": "Coleções",
+        "technique": "Séries e coleções temáticas."
+      },
+      "fimo": {
+        "title": "Pontilhismo",
+        "technique": "Pontilhismo e colagem de mini-fimos."
+      },
+      "needle": {
+        "title": "Needle Felting",
+        "technique": "Esculturas em miniatura com agulha e lã."
+      },
+      "clay": {
+        "title": "Clay",
+        "technique": "Modelagem em massinha de biscuit."
+      },
+      "croche": {
+        "title": "Crochê",
+        "technique": "Amigurumi e peças em crochê."
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+import { Meta, Canvas, Story, Controls } from '@storybook/blocks';
+import * as ModalStories from './Modal.stories';
+
+<Meta of={ModalStories} />
+
+# Modal / Gallery
+
+Sistema de modal/lightbox baseado em React Context. Mostra galerias de imagens com navegação por teclado e variantes de tema.
+
+## Arquitetura
+
+- **`ModalProvider`** — Context provider que armazena estado e galerias registradas
+- **`useModal()`** — Hook que dá acesso a `openGallery`, `openModal`, `close`, `next`, `prev`, `registerGallery`
+- **`<Modal />`** — Componente UI renderizado uma vez no layout, lê do context
+
+## Como usar
+
+1. Wrap your layout in `<ModalProvider>` (já está em `app/[locale]/layout.tsx`)
+2. Mount `<Modal />` somewhere in the layout (já está)
+3. Em qualquer componente filho:
+
+```tsx
+const { registerGallery, openGallery } = useModal();
+
+useEffect(() => {
+  registerGallery('my-gallery', ['/img1.jpg', '/img2.jpg']);
+}, []);
+
+<button onClick={() => openGallery('my-gallery', 0, 'Title', 'Subtitle')}>
+  Open
+</button>
+```
+
+## Variantes de tema
+
+- **Default (light):** fundo branco translúcido, imagem com fundo cinza claro
+- **Dark:** fundo preto translúcido, imagem com fundo escuro
+- Trigger via `theme: 'dark'` no `openGallery()`
+
+## Atalhos de teclado
+
+- `Escape` — fecha
+- `←` — imagem anterior (wrap-around)
+- `→` — próxima imagem (wrap-around)
+
+## Design tokens usados
+
+- `modalBgLight/Dark` — fundo do overlay
+- `modalImgBgDark` — fundo da imagem em dark mode
+- `modalNavBgLight/Dark` — fundo do navbar inferior
+- `textOverlayStrong/Faint/Ghost` — cores do texto/borders em dark mode
+- `surface` — fundo da imagem em light mode
+
+## Exemplos
+
+<Canvas of={ModalStories.Default} />
+
+## Props
+
+<Controls />

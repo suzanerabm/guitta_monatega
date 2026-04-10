@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/pt)",
+      "Bash(curl -sI http://localhost:3000/)",
+      "Bash(curl -sI http://localhost:3000/pt)",
+      "Bash(curl -sI http://localhost:3000/pt/about)",
+      "Bash(curl -sI http://localhost:3000/en)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/en/about)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/pt/about)",
+      "Bash(curl -s -o /dev/null -w \"/pt: %{http_code}\\\\n\" http://localhost:3000/pt)",
+      "Bash(curl -s -o /dev/null -w \"/pt/about: %{http_code}\\\\n\" http://localhost:3000/pt/about)",
+      "Bash(curl -s -o /dev/null -w \"/pt/bichittos: %{http_code}\\\\n\" http://localhost:3000/pt/bichittos)",
+      "Bash(curl -s -o /dev/null -w \"/pt/kammara: %{http_code}\\\\n\" http://localhost:3000/pt/kammara)",
+      "Bash(curl -s -o /dev/null -w \"/pt/art: %{http_code}\\\\n\" http://localhost:3000/pt/art)",
+      "Bash(curl -s -o /dev/null -w \"/: %{http_code}\\\\n\" -L http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/pt)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/pt/about)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/en)"
+    ]
+  }
+}

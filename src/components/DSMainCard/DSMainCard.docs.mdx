@@ -1,0 +1,54 @@
+import { Meta, Canvas, Story, Controls } from '@storybook/blocks';
+import * as DSMainCardStories from './DSMainCard.stories';
+
+<Meta of={DSMainCardStories} />
+
+# DSMainCard
+
+Cena fullwidth com personagens posicionados absolutamente sobre um background gradiente. Substitui o banner JPG do design original. Pode opcionalmente conter um painel de texto (`DSTextPanel`), um mascote, e uma strip de personagens.
+
+## Estrutura
+
+```
+DSMainCard
+├── Background gradient
+├── Scene (characters absolutely positioned)
+│   ├── Character 1 (x%, y%, size px, zIndex)
+│   ├── Character 2
+│   └── ...
+├── Text wrap (opcional)
+│   ├── Mascot (opcional)
+│   └── DSTextPanel
+└── Bottom slot (children) — geralmente CharacterStrip
+```
+
+## Posicionamento dos personagens
+
+Cada character é definido com:
+- `x` — posição horizontal em % (0-100)
+- `y` — posição vertical em % medida do fundo (0 = no chão)
+- `size` — largura/altura em px
+- `zIndex` — ordem de empilhamento
+- `mobileY`, `mobileScale` — overrides para mobile (< 768px)
+
+Os arrays de character positions estão centralizados em `src/data/bichittos.ts`.
+
+## Layout variants
+
+- **Default:** texto + mascote + strip empilhados verticalmente
+- **`stripSide={true}`:** texto à esquerda, strip à direita (50%/50%)
+
+## Design tokens usados
+
+- `palettes.{creature}.gradient` — gradient base
+- `creatureColors.{creature}.titleColor/textColor` — cores do painel de texto
+- `space.*` — padding e gaps
+
+## Exemplos
+
+<Canvas of={DSMainCardStories.WithTextPanel} />
+<Canvas of={DSMainCardStories.StripSide} />
+
+## Props
+
+<Controls />
