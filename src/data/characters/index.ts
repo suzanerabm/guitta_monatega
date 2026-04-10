@@ -22,6 +22,7 @@ import bichittosNapcat from "./bichittos/napcat.json";
 import bichittosZeco from "./bichittos/zeco.json";
 import bichittosTaylo from "./bichittos/taylo.json";
 import bichittosMiscelania from "./bichittos/miscelania.json";
+import bichittosCheiodebolinha from "./bichittos/cheiodebolinha.json";
 
 export const charactersByContext: Record<string, Character[]> = {
   "kammara/lunnp1": kammaraLunnp1 as Character[],
@@ -35,6 +36,7 @@ export const charactersByContext: Record<string, Character[]> = {
   "bichittos/zeco": bichittosZeco as Character[],
   "bichittos/taylo": bichittosTaylo as Character[],
   "bichittos/miscelania": bichittosMiscelania as Character[],
+  "bichittos/cheiodebolinha": bichittosCheiodebolinha as Character[],
 };
 
 export type ContextId = keyof typeof charactersByContext;

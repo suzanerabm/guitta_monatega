@@ -90,7 +90,7 @@ export const tokens = defineTokens({
     h2: { value: 'clamp(2.66rem, 5.31vw, 3.98rem)' }, // 42px → 64px
     h3: { value: '1.3rem' },
     h4: { value: '0.75rem' },
-    label: { value: 'clamp(0.5rem, 0.9vw, 0.8rem)' },
+    label: { value: 'clamp(0.7rem, 0.72vw, 0.7rem)' },
     section: { value: '1.2rem' },
     soon: { value: '2rem' },
   },

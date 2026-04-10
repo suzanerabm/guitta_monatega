@@ -17,7 +17,7 @@ export interface CreatureColors {
   textColor: string;
 }
 
-export type CreatureId = 'napcat' | 'zeco' | 'taylo' | 'miscelania';
+export type CreatureId = 'napcat' | 'zeco' | 'taylo' | 'miscelania' | 'cheiodebolinha';
 
 export const creatureColors: Record<CreatureId, CreatureColors> = {
   napcat: {
@@ -41,8 +41,14 @@ export const creatureColors: Record<CreatureId, CreatureColors> = {
   miscelania: {
     name: palettes.miscelania.colors[2], // #8badc4
     text: palettes.miscelania.colors[3], // #b0cfe0
-    titleColor: palettes.miscelania.colors[4], // #081e28
+    titleColor: palettes.miscelania.colors[2], // #8badc4
     textColor: palettes.miscelania.colors[3], // #b0cfe0
+  },
+  cheiodebolinha: {
+    name: palettes.cheiodebolinha.colors[2], // #8badc4
+    text: palettes.cheiodebolinha.colors[3], // #b0cfe0
+    titleColor: palettes.cheiodebolinha.colors[2], // #8badc4
+    textColor: palettes.cheiodebolinha.colors[3], // #b0cfe0
   },
 };
 

@@ -1,5 +1,75 @@
 {
   "characters": {
+    "cheiodebolinha": [
+      {
+        "name": "Cheio Bolinha",
+        "image": "/imgs/characters/cheiodebolinha/Cheio_Bolinha.gif"
+      },
+      {
+        "name": "Cheio Bolinha voando",
+        "image": "/imgs/characters/cheiodebolinha/Cheio_Bolinha_voando.png"
+      },
+      {
+        "name": "Querie",
+        "image": "/imgs/characters/cheiodebolinha/Querie.gif"
+      },
+      {
+        "name": "querie bravo",
+        "image": "/imgs/characters/cheiodebolinha/querie_bravo.gif"
+      },
+      {
+        "name": "querie comendo maca",
+        "image": "/imgs/characters/cheiodebolinha/querie_comendo_maca.gif"
+      },
+      {
+        "name": "querie comendo milho",
+        "image": "/imgs/characters/cheiodebolinha/querie_comendo_milho.gif"
+      },
+      {
+        "name": "querie dancando",
+        "image": "/imgs/characters/cheiodebolinha/querie_dancando.gif"
+      },
+      {
+        "name": "querie desmaia dormindo",
+        "image": "/imgs/characters/cheiodebolinha/querie_desmaia_dormindo.gif"
+      },
+      {
+        "name": "querie dormindo",
+        "image": "/imgs/characters/cheiodebolinha/querie_dormindo.gif"
+      },
+      {
+        "name": "querie feliz",
+        "image": "/imgs/characters/cheiodebolinha/querie_feliz.gif"
+      },
+      {
+        "name": "querie love",
+        "image": "/imgs/characters/cheiodebolinha/querie_love.gif"
+      },
+      {
+        "name": "querie mostra os dentes",
+        "image": "/imgs/characters/cheiodebolinha/querie_mostra_os_dentes.gif"
+      },
+      {
+        "name": "querie piscando",
+        "image": "/imgs/characters/cheiodebolinha/querie_piscando.gif"
+      },
+      {
+        "name": "querie tira oculos",
+        "image": "/imgs/characters/cheiodebolinha/querie_tira_oculos.gif"
+      },
+      {
+        "name": "querie tomando banho",
+        "image": "/imgs/characters/cheiodebolinha/querie_tomando_banho.gif"
+      },
+      {
+        "name": "querie triste",
+        "image": "/imgs/characters/cheiodebolinha/querie_triste.gif"
+      },
+      {
+        "name": "querie vomitando",
+        "image": "/imgs/characters/cheiodebolinha/querie_vomitando.gif"
+      }
+    ],
     "kammara/eni4": [
       {
         "name": "aracne 1",
@@ -78,20 +148,8 @@
     ],
     "miscelania": [
       {
-        "name": "Cheio Bolinha",
-        "image": "/imgs/characters/miscelania/Cheio_Bolinha.gif"
-      },
-      {
-        "name": "Cheio Bolinha voando",
-        "image": "/imgs/characters/miscelania/Cheio_Bolinha_voando.png"
-      },
-      {
         "name": "Malmo Bravo",
         "image": "/imgs/characters/miscelania/Malmo_Bravo.gif"
-      },
-      {
-        "name": "Querie",
-        "image": "/imgs/characters/miscelania/Querie.gif"
       },
       {
         "name": "baby cry",
@@ -132,66 +190,6 @@
       {
         "name": "malmo não quer falar",
         "image": "/imgs/characters/miscelania/malmo_não_quer_falar.jpg"
-      },
-      {
-        "name": "querie bravo",
-        "image": "/imgs/characters/miscelania/querie_bravo.gif"
-      },
-      {
-        "name": "querie comendo maca",
-        "image": "/imgs/characters/miscelania/querie_comendo_maca.gif"
-      },
-      {
-        "name": "querie comendo milho",
-        "image": "/imgs/characters/miscelania/querie_comendo_milho.gif"
-      },
-      {
-        "name": "querie dancando",
-        "image": "/imgs/characters/miscelania/querie_dancando.gif"
-      },
-      {
-        "name": "querie desmaia dormindo",
-        "image": "/imgs/characters/miscelania/querie_desmaia_dormindo.gif"
-      },
-      {
-        "name": "querie dormindo",
-        "image": "/imgs/characters/miscelania/querie_dormindo.gif"
-      },
-      {
-        "name": "querie escova",
-        "image": "/imgs/characters/miscelania/querie_escova.gif"
-      },
-      {
-        "name": "querie feliz",
-        "image": "/imgs/characters/miscelania/querie_feliz.gif"
-      },
-      {
-        "name": "querie love",
-        "image": "/imgs/characters/miscelania/querie_love.gif"
-      },
-      {
-        "name": "querie mostra os dentes",
-        "image": "/imgs/characters/miscelania/querie_mostra_os_dentes.gif"
-      },
-      {
-        "name": "querie piscando",
-        "image": "/imgs/characters/miscelania/querie_piscando.gif"
-      },
-      {
-        "name": "querie tira oculos",
-        "image": "/imgs/characters/miscelania/querie_tira_oculos.gif"
-      },
-      {
-        "name": "querie tomando banho",
-        "image": "/imgs/characters/miscelania/querie_tomando_banho.gif"
-      },
-      {
-        "name": "querie triste",
-        "image": "/imgs/characters/miscelania/querie_triste.gif"
-      },
-      {
-        "name": "querie vomitando",
-        "image": "/imgs/characters/miscelania/querie_vomitando.gif"
       }
     ],
     "napcat": [
@@ -258,270 +256,274 @@
     ],
     "taylo": [
       {
-        "name": "Carmela Caramela",
-        "image": "/imgs/characters/taylo/Carmela_Caramela.gif"
-      },
-      {
-        "name": "Catarina",
-        "image": "/imgs/characters/taylo/Catarina.png"
-      },
-      {
-        "name": "Catarina feliz",
-        "image": "/imgs/characters/taylo/Catarina_feliz.gif"
+        "name": "taylo",
+        "image": "/imgs/characters/taylo/01_taylo.png"
       },
       {
         "name": "Pitu chorando",
-        "image": "/imgs/characters/taylo/Pitu_chorando.gif"
+        "image": "/imgs/characters/taylo/02_Pitu_chorando.gif"
       },
       {
         "name": "Pitu comendo geleia",
-        "image": "/imgs/characters/taylo/Pitu_comendo_geleia.png"
+        "image": "/imgs/characters/taylo/02_Pitu_comendo_geleia.png"
       },
       {
         "name": "Pitu tomando banho",
-        "image": "/imgs/characters/taylo/Pitu_tomando_banho.png"
+        "image": "/imgs/characters/taylo/02_Pitu_tomando_banho.png"
       },
       {
-        "name": "babalina",
-        "image": "/imgs/characters/taylo/babalina.png"
-      },
-      {
-        "name": "babalina dancando",
-        "image": "/imgs/characters/taylo/babalina_dancando.png"
-      },
-      {
-        "name": "candy",
-        "image": "/imgs/characters/taylo/candy.png"
-      },
-      {
-        "name": "candy mágica",
-        "image": "/imgs/characters/taylo/candy_mágica.png"
-      },
-      {
-        "name": "olivia",
-        "image": "/imgs/characters/taylo/olivia.png"
-      },
-      {
-        "name": "olivia feliz",
-        "image": "/imgs/characters/taylo/olivia_feliz.png"
+        "name": "Pitu toy",
+        "image": "/imgs/characters/taylo/02_Pitu_toy.png"
       },
       {
         "name": "pitu",
-        "image": "/imgs/characters/taylo/pitu.png"
+        "image": "/imgs/characters/taylo/02_pitu.png"
+      },
+      {
+        "name": "babalina",
+        "image": "/imgs/characters/taylo/03_babalina.png"
+      },
+      {
+        "name": "babalina dancando",
+        "image": "/imgs/characters/taylo/03_babalina_dancando.png"
+      },
+      {
+        "name": "candy",
+        "image": "/imgs/characters/taylo/04_candy.png"
+      },
+      {
+        "name": "candy mágica",
+        "image": "/imgs/characters/taylo/04_candy_mágica.png"
+      },
+      {
+        "name": "Catarina",
+        "image": "/imgs/characters/taylo/05_Catarina.png"
+      },
+      {
+        "name": "Catarina feliz",
+        "image": "/imgs/characters/taylo/05_Catarina_feliz.gif"
+      },
+      {
+        "name": "Carmela Caramela",
+        "image": "/imgs/characters/taylo/06_Carmela_Caramela.gif"
+      },
+      {
+        "name": "olivia",
+        "image": "/imgs/characters/taylo/07_olivia.png"
+      },
+      {
+        "name": "olivia feliz",
+        "image": "/imgs/characters/taylo/07_olivia_feliz.png"
       },
       {
         "name": "squizo comendo bala",
-        "image": "/imgs/characters/taylo/squizo_comendo_bala.png"
+        "image": "/imgs/characters/taylo/08_squizo_comendo_bala.png"
       },
       {
         "name": "squizo quebrou patinha",
-        "image": "/imgs/characters/taylo/squizo_quebrou_patinha.png"
-      },
-      {
-        "name": "taylo",
-        "image": "/imgs/characters/taylo/taylo.png"
+        "image": "/imgs/characters/taylo/08_squizo_quebrou_patinha.png"
       }
     ],
     "zeco": [
       {
-        "name": "RuiMerengue",
-        "image": "/imgs/characters/zeco/RuiMerengue.png"
-      },
-      {
-        "name": "RuiMerengue com sorte",
-        "image": "/imgs/characters/zeco/RuiMerengue_com_sorte.png"
-      },
-      {
-        "name": "RuiMerengue dormindo",
-        "image": "/imgs/characters/zeco/RuiMerengue_dormindo.png"
-      },
-      {
-        "name": "RuiMerengue no carnaval",
-        "image": "/imgs/characters/zeco/RuiMerengue_no_carnaval.png"
-      },
-      {
-        "name": "Rui Merengue apaixonado",
-        "image": "/imgs/characters/zeco/Rui_Merengue_apaixonado.png"
-      },
-      {
-        "name": "Rui Merengue boiando",
-        "image": "/imgs/characters/zeco/Rui_Merengue_boiando.png"
-      },
-      {
-        "name": "Rui Merengue com duvida",
-        "image": "/imgs/characters/zeco/Rui_Merengue_com_duvida.png"
-      },
-      {
-        "name": "Rui Merengue com frio",
-        "image": "/imgs/characters/zeco/Rui_Merengue_com_frio.png"
-      },
-      {
-        "name": "Rui Merengue com medo",
-        "image": "/imgs/characters/zeco/Rui_Merengue_com_medo.png"
-      },
-      {
-        "name": "Rui Merengue comendo compota",
-        "image": "/imgs/characters/zeco/Rui_Merengue_comendo_compota.png"
-      },
-      {
-        "name": "Rui Merengue comendo morango",
-        "image": "/imgs/characters/zeco/Rui_Merengue_comendo_morango.png"
-      },
-      {
-        "name": "Rui Merengue contando historia",
-        "image": "/imgs/characters/zeco/Rui_Merengue_contando_historia.png"
-      },
-      {
-        "name": "Rui Merengue correndo",
-        "image": "/imgs/characters/zeco/Rui_Merengue_correndo.png"
-      },
-      {
-        "name": "Rui Merengue cozinhando",
-        "image": "/imgs/characters/zeco/Rui_Merengue_cozinhando.png"
-      },
-      {
-        "name": "Rui Merengue joga bolinha",
-        "image": "/imgs/characters/zeco/Rui_Merengue_joga_bolinha.png"
-      },
-      {
-        "name": "Rui Merengue mexirico",
-        "image": "/imgs/characters/zeco/Rui_Merengue_mexirico.png"
-      },
-      {
-        "name": "Rui Merengue navegando",
-        "image": "/imgs/characters/zeco/Rui_Merengue_navegando.png"
-      },
-      {
-        "name": "Rui Merengue tomando sorvete",
-        "image": "/imgs/characters/zeco/Rui_Merengue_tomando_sorvete.png"
-      },
-      {
-        "name": "gelo derretendo",
-        "image": "/imgs/characters/zeco/gelo_derretendo.png"
-      },
-      {
-        "name": "grilo pulando",
-        "image": "/imgs/characters/zeco/grilo_pulando.png"
-      },
-      {
-        "name": "ninha",
-        "image": "/imgs/characters/zeco/ninha.png"
-      },
-      {
-        "name": "ninha apaixonada",
-        "image": "/imgs/characters/zeco/ninha_apaixonada.png"
-      },
-      {
-        "name": "ninha bricando",
-        "image": "/imgs/characters/zeco/ninha_bricando.png"
-      },
-      {
-        "name": "ninha cafe",
-        "image": "/imgs/characters/zeco/ninha_cafe.png"
-      },
-      {
-        "name": "ninha cheiro ruim",
-        "image": "/imgs/characters/zeco/ninha_cheiro_ruim.png"
-      },
-      {
-        "name": "ninha comendo",
-        "image": "/imgs/characters/zeco/ninha_comendo.png"
-      },
-      {
-        "name": "ninha costas",
-        "image": "/imgs/characters/zeco/ninha_costas.png"
-      },
-      {
-        "name": "ninha danca",
-        "image": "/imgs/characters/zeco/ninha_danca.png"
-      },
-      {
-        "name": "ninha feliz",
-        "image": "/imgs/characters/zeco/ninha_feliz.png"
-      },
-      {
-        "name": "ninha nadando",
-        "image": "/imgs/characters/zeco/ninha_nadando.png"
-      },
-      {
-        "name": "ninha praia",
-        "image": "/imgs/characters/zeco/ninha_praia.png"
-      },
-      {
-        "name": "ninha soneca",
-        "image": "/imgs/characters/zeco/ninha_soneca.png"
-      },
-      {
-        "name": "ninha voa",
-        "image": "/imgs/characters/zeco/ninha_voa.png"
-      },
-      {
         "name": "zeco",
-        "image": "/imgs/characters/zeco/zeco.png"
+        "image": "/imgs/characters/zeco/01_zeco.png"
       },
       {
         "name": "zeco acordando",
-        "image": "/imgs/characters/zeco/zeco_acordando.png"
+        "image": "/imgs/characters/zeco/01_zeco_acordando.png"
       },
       {
         "name": "zeco atrasado",
-        "image": "/imgs/characters/zeco/zeco_atrasado.png"
+        "image": "/imgs/characters/zeco/01_zeco_atrasado.png"
       },
       {
         "name": "zeco boa noite",
-        "image": "/imgs/characters/zeco/zeco_boa_noite.png"
+        "image": "/imgs/characters/zeco/01_zeco_boa_noite.png"
       },
       {
         "name": "zeco boiando",
-        "image": "/imgs/characters/zeco/zeco_boiando.png"
+        "image": "/imgs/characters/zeco/01_zeco_boiando.png"
       },
       {
         "name": "zeco comendo picole",
-        "image": "/imgs/characters/zeco/zeco_comendo_picole.png"
+        "image": "/imgs/characters/zeco/01_zeco_comendo_picole.png"
       },
       {
         "name": "zeco de boia",
-        "image": "/imgs/characters/zeco/zeco_de_boia.png"
+        "image": "/imgs/characters/zeco/01_zeco_de_boia.png"
       },
       {
         "name": "zeco desmaiando",
-        "image": "/imgs/characters/zeco/zeco_desmaiando.png"
+        "image": "/imgs/characters/zeco/01_zeco_desmaiando.png"
       },
       {
         "name": "zeco doente",
-        "image": "/imgs/characters/zeco/zeco_doente.png"
+        "image": "/imgs/characters/zeco/01_zeco_doente.png"
       },
       {
         "name": "zeco escondido",
-        "image": "/imgs/characters/zeco/zeco_escondido.png"
+        "image": "/imgs/characters/zeco/01_zeco_escondido.png"
       },
       {
         "name": "zeco falando",
-        "image": "/imgs/characters/zeco/zeco_falando.png"
+        "image": "/imgs/characters/zeco/01_zeco_falando.png"
       },
       {
         "name": "zeco feliz",
-        "image": "/imgs/characters/zeco/zeco_feliz.png"
+        "image": "/imgs/characters/zeco/01_zeco_feliz.png"
       },
       {
         "name": "zeco jump",
-        "image": "/imgs/characters/zeco/zeco_jump.png"
+        "image": "/imgs/characters/zeco/01_zeco_jump.png"
       },
       {
         "name": "zeco piscando",
-        "image": "/imgs/characters/zeco/zeco_piscando.png"
+        "image": "/imgs/characters/zeco/01_zeco_piscando.png"
       },
       {
         "name": "zeco soneca",
-        "image": "/imgs/characters/zeco/zeco_soneca.png"
+        "image": "/imgs/characters/zeco/01_zeco_soneca.png"
       },
       {
         "name": "zeco triste",
-        "image": "/imgs/characters/zeco/zeco_triste.png"
+        "image": "/imgs/characters/zeco/01_zeco_triste.png"
       },
       {
         "name": "zeco tropecou",
-        "image": "/imgs/characters/zeco/zeco_tropecou.png"
+        "image": "/imgs/characters/zeco/01_zeco_tropecou.png"
+      },
+      {
+        "name": "RuiMerengue",
+        "image": "/imgs/characters/zeco/02_RuiMerengue.png"
+      },
+      {
+        "name": "RuiMerengue com sorte",
+        "image": "/imgs/characters/zeco/02_RuiMerengue_com_sorte.png"
+      },
+      {
+        "name": "RuiMerengue dormindo",
+        "image": "/imgs/characters/zeco/02_RuiMerengue_dormindo.png"
+      },
+      {
+        "name": "RuiMerengue no carnaval",
+        "image": "/imgs/characters/zeco/02_RuiMerengue_no_carnaval.png"
+      },
+      {
+        "name": "Rui Merengue apaixonado",
+        "image": "/imgs/characters/zeco/02_Rui_Merengue_apaixonado.png"
+      },
+      {
+        "name": "Rui Merengue boiando",
+        "image": "/imgs/characters/zeco/02_Rui_Merengue_boiando.png"
+      },
+      {
+        "name": "Rui Merengue com duvida",
+        "image": "/imgs/characters/zeco/02_Rui_Merengue_com_duvida.png"
+      },
+      {
+        "name": "Rui Merengue com frio",
+        "image": "/imgs/characters/zeco/02_Rui_Merengue_com_frio.png"
+      },
+      {
+        "name": "Rui Merengue com medo",
+        "image": "/imgs/characters/zeco/02_Rui_Merengue_com_medo.png"
+      },
+      {
+        "name": "Rui Merengue comendo compota",
+        "image": "/imgs/characters/zeco/02_Rui_Merengue_comendo_compota.png"
+      },
+      {
+        "name": "Rui Merengue comendo morango",
+        "image": "/imgs/characters/zeco/02_Rui_Merengue_comendo_morango.png"
+      },
+      {
+        "name": "Rui Merengue contando historia",
+        "image": "/imgs/characters/zeco/02_Rui_Merengue_contando_historia.png"
+      },
+      {
+        "name": "Rui Merengue correndo",
+        "image": "/imgs/characters/zeco/02_Rui_Merengue_correndo.png"
+      },
+      {
+        "name": "Rui Merengue cozinhando",
+        "image": "/imgs/characters/zeco/02_Rui_Merengue_cozinhando.png"
+      },
+      {
+        "name": "Rui Merengue joga bolinha",
+        "image": "/imgs/characters/zeco/02_Rui_Merengue_joga_bolinha.png"
+      },
+      {
+        "name": "Rui Merengue mexirico",
+        "image": "/imgs/characters/zeco/02_Rui_Merengue_mexirico.png"
+      },
+      {
+        "name": "Rui Merengue navegando",
+        "image": "/imgs/characters/zeco/02_Rui_Merengue_navegando.png"
+      },
+      {
+        "name": "Rui Merengue tomando sorvete",
+        "image": "/imgs/characters/zeco/02_Rui_Merengue_tomando_sorvete.png"
+      },
+      {
+        "name": "ninha",
+        "image": "/imgs/characters/zeco/03_ninha.png"
+      },
+      {
+        "name": "ninha apaixonada",
+        "image": "/imgs/characters/zeco/03_ninha_apaixonada.png"
+      },
+      {
+        "name": "ninha bricando",
+        "image": "/imgs/characters/zeco/03_ninha_bricando.png"
+      },
+      {
+        "name": "ninha cafe",
+        "image": "/imgs/characters/zeco/03_ninha_cafe.png"
+      },
+      {
+        "name": "ninha cheiro ruim",
+        "image": "/imgs/characters/zeco/03_ninha_cheiro_ruim.png"
+      },
+      {
+        "name": "ninha comendo",
+        "image": "/imgs/characters/zeco/03_ninha_comendo.png"
+      },
+      {
+        "name": "ninha costas",
+        "image": "/imgs/characters/zeco/03_ninha_costas.png"
+      },
+      {
+        "name": "ninha danca",
+        "image": "/imgs/characters/zeco/03_ninha_danca.png"
+      },
+      {
+        "name": "ninha feliz",
+        "image": "/imgs/characters/zeco/03_ninha_feliz.png"
+      },
+      {
+        "name": "ninha nadando",
+        "image": "/imgs/characters/zeco/03_ninha_nadando.png"
+      },
+      {
+        "name": "ninha praia",
+        "image": "/imgs/characters/zeco/03_ninha_praia.png"
+      },
+      {
+        "name": "ninha soneca",
+        "image": "/imgs/characters/zeco/03_ninha_soneca.png"
+      },
+      {
+        "name": "ninha voa",
+        "image": "/imgs/characters/zeco/03_ninha_voa.png"
+      },
+      {
+        "name": "gelo derretendo",
+        "image": "/imgs/characters/zeco/04_gelo_derretendo.png"
+      },
+      {
+        "name": "grilo pulando",
+        "image": "/imgs/characters/zeco/04_grilo_pulando.png"
       }
     ]
   },
@@ -533,6 +535,7 @@
         "pages": []
       }
     ],
+    "cheiodebolinha": [],
     "kammara": [
       {
         "id": "saga-orf-v",
@@ -608,7 +611,6 @@
     },
     "clay": {
       "thumbs": [
-        "/imgs/art/clay/_thumb/2016-03-18 23.38.15 2.jpg",
         "/imgs/art/clay/_thumb/8307B6DD-D7F2-4486-BF0B-944FB613EC0A_4_5005_c.jpg",
         "/imgs/art/clay/_thumb/D16F4691-74C3-426A-BB0D-DA1D7BC9D542_4_5005_c.jpg",
         "/imgs/art/clay/_thumb/D8D91F95-CA1A-4964-BB52-FCB075B3FF91_4_5005_c.jpg",
@@ -626,7 +628,6 @@
         "/imgs/art/clay/_thumb/rui_merengue_p4.jpg"
       ],
       "full": [
-        "/imgs/art/clay/2016-03-18 23.38.15 2.jpg",
         "/imgs/art/clay/8307B6DD-D7F2-4486-BF0B-944FB613EC0A_4_5005_c.jpeg",
         "/imgs/art/clay/D16F4691-74C3-426A-BB0D-DA1D7BC9D542_4_5005_c.jpeg",
         "/imgs/art/clay/D8D91F95-CA1A-4964-BB52-FCB075B3FF91_4_5005_c.jpeg",
@@ -715,6 +716,7 @@
       ],
       "full": [
         "/imgs/art/digital/Red.jpg",
+        "/imgs/art/digital/arte.png",
         "/imgs/art/digital/espiral.jpg"
       ]
     },
@@ -872,7 +874,6 @@
         "/imgs/art/grafite/_thumb/2_9E2341CF-46A9-46DC-8948-154CA34BF9F4_1_201_a.jpg",
         "/imgs/art/grafite/_thumb/3_885A87F0-4DBC-4886-9CDA-7E3321D0B17E_1_201_a.jpg",
         "/imgs/art/grafite/_thumb/4_905696B0-2EC6-4C1A-8618-42D278097457_1_201_a.jpg",
-        "/imgs/art/grafite/_thumb/5_3D12937F-BEE1-4B79-BDA9-917D28142457_1_201_a 2.jpg",
         "/imgs/art/grafite/_thumb/61_14229301-6A81-4F31-87CB-1F0AF090461A_1_201_a.jpg",
         "/imgs/art/grafite/_thumb/7_240AB6DE-98DB-4E57-AE86-B932843D2959.jpg",
         "/imgs/art/grafite/_thumb/8_BB9CC9C8-A31F-4522-8E0D-974F532C2847_1_105_c.jpg",
@@ -884,7 +885,7 @@
         "/imgs/art/grafite/2_9E2341CF-46A9-46DC-8948-154CA34BF9F4_1_201_a.jpg",
         "/imgs/art/grafite/3_885A87F0-4DBC-4886-9CDA-7E3321D0B17E_1_201_a.jpg",
         "/imgs/art/grafite/4_905696B0-2EC6-4C1A-8618-42D278097457_1_201_a.jpg",
-        "/imgs/art/grafite/5_3D12937F-BEE1-4B79-BDA9-917D28142457_1_201_a 2.jpg",
+        "/imgs/art/grafite/5_3D12937F-BEE1-4B79-BDA9-917D28142457_1_201_a.jpg",
         "/imgs/art/grafite/61_14229301-6A81-4F31-87CB-1F0AF090461A_1_201_a.jpg",
         "/imgs/art/grafite/7_240AB6DE-98DB-4E57-AE86-B932843D2959.jpeg",
         "/imgs/art/grafite/8_BB9CC9C8-A31F-4522-8E0D-974F532C2847_1_105_c.jpeg",
@@ -894,7 +895,7 @@
     "needle": {
       "thumbs": [
         "/imgs/art/needle/_thumb/2016-03-18 22.54.00.jpg",
-        "/imgs/art/needle/_thumb/2016-03-18 22.54.16 2.jpg",
+        "/imgs/art/needle/_thumb/2016-03-18 22.54.16.jpg",
         "/imgs/art/needle/_thumb/2016-03-18 23.41.16.jpg",
         "/imgs/art/needle/_thumb/687316CF-0146-41A5-BDC2-61AA83F48634_1_105_c.jpg",
         "/imgs/art/needle/_thumb/9CA923C5-BA0D-41F9-9FFA-4D00F893BCD4_1_201_a.jpg",
@@ -905,7 +906,6 @@
       ],
       "full": [
         "/imgs/art/needle/2016-03-18 22.54.00.jpg",
-        "/imgs/art/needle/2016-03-18 22.54.16 2.jpg",
         "/imgs/art/needle/2016-03-18 23.41.16.jpg",
         "/imgs/art/needle/687316CF-0146-41A5-BDC2-61AA83F48634_1_105_c.jpeg",
         "/imgs/art/needle/9CA923C5-BA0D-41F9-9FFA-4D00F893BCD4_1_201_a.jpg",

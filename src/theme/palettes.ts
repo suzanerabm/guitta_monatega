@@ -1,6 +1,6 @@
 // src/theme/palettes.ts
 export type PaletteName =
-  | 'bichittos' | 'napcat' | 'zeco' | 'taylo' | 'miscelania'
+  | 'bichittos' | 'napcat' | 'zeco' | 'taylo' | 'miscelania' | 'cheiodebolinha'
   | 'kammara' | 'lunnp1' | 'eni4' | 'triplec' | 'orfv' | 'z1' | 'gotto' | 'arte';
 
 export interface Palette {
@@ -41,6 +41,13 @@ export const palettes: Record<PaletteName, Palette> = {
     gradientBg: 'linear-gradient(160deg, #34843c 0%, #185b1e 40%, #082b0b 100%)',
   },
   miscelania: {
+    colors: ['#c99a2e', '#8a6418', '#e8c968', '#f5e3a8', '#1a1405', '#a67c1f'],
+    text: '#f5e3a8',
+    dark: '#1a1405',
+    gradient: 'linear-gradient(135deg, #8a6418, #c99a2e, #e8c968)',
+    gradientBg: 'linear-gradient(160deg, #1a1405 0%, #3a2a0a 40%, #241a08 100%)',
+  },
+  cheiodebolinha: {
     colors: ['#3a5a8c', '#2c4a6e', '#8badc4', '#b0cfe0', '#081e28', '#1a3a48'],
     text: '#b0cfe0',
     dark: '#0e1a2a',

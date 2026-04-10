@@ -225,6 +225,23 @@
     },
     "booksTitle": "Livros",
     "bookIllustrated": "Livro ilustrado",
+      "cheiodebolinha": {
+      "name": "Cheio de Bolinha",
+      "text": [
+        "Criaturas avulsas, experimentos e personagens que tem sua própria história."
+      ],
+      "panel": {
+        "story": [
+          "Nem todo personagem nasce sabendo quem é. Alguns aparecem num rabisco de caderno, outros surgem de um sonho esquecido.",
+          "Querie é um ratinho dentuço que detesta escovar os dentes. Toda vez que alguém fala em escova, ele sai correndo. O problema é que ele adora comer — milho, maçã, tudo que é duro.",
+          "Um dia, mordeu uma espiga com tanta força que ouviu um \"crac\". O dente quebrou. Querie ficou parado, de boca aberta, sem acreditar.",
+          "Desde então, aprendeu a lição? Claro que não. Mas agora come devagar — e faz uma cara muito engraçada quando mastiga.",
+          "Cheio de Bolinha é grande e tem uma orelha redonda e na ponta de seu mini rabinho tem uma bolinha. Por ser tão grande parece corajoso, mas morre de medo de ratinhos. Quando vê um, entra em sai correndo e sobe nas bolhas de sabão para ficar lá no alto, flutuando, até ter certeza de que o perigo passou.",
+          "Malmo chegou quieto, como sempre. Sentou no canto e ficou observando. Não gosta de dividir, não quer falar, e fica bravo por qualquer coisa. Mas no fundo, só quer que alguém sente do lado dele.",
+          "Cada um aqui tem sua própria história. Algumas curtas, outras ainda sendo escritas."
+        ]
+      }
+    },
     "miscelania": {
       "name": "Miscelânia",
       "text": [

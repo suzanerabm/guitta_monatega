@@ -80,6 +80,7 @@ export function BichittosClient({ data }: Props) {
     { id: 'napcat', label: 'NapCat', color: palettes.napcat.colors[3], bgColor: palettes.napcat.dark },
     { id: 'zeco', label: 'Zeco', color: palettes.zeco.colors[3], bgColor: palettes.zeco.colors[5] },
     { id: 'taylo', label: 'Taylo', color: palettes.taylo.colors[0], bgColor: palettes.taylo.dark },
+    { id: 'cheiodebolinha', label: t('cheiodebolinha.name'), color: palettes.cheiodebolinha.colors[2], bgColor: palettes.cheiodebolinha.dark },
     { id: 'miscelania', label: t('miscelania.name'), color: palettes.miscelania.colors[2], bgColor: palettes.miscelania.dark },
   ];
 

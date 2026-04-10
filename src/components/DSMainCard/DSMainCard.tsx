@@ -16,10 +16,16 @@ export interface Character {
   zIndex?: number;
   mobileY?: number;
   mobileScale?: number;
+  /** Override x, y, size at >=768px (mid-desktop, before xl kicks in at 1500px) */
+  md?: CharacterBreakpoint;
   /** Override x, y, size at >=1500px */
   xl?: CharacterBreakpoint;
   /** Override x, y, size at >=1920px */
   xxl?: CharacterBreakpoint;
+  /** Only show this character from this breakpoint onwards */
+  minBreakpoint?: 'md' | 'xl' | 'xxl';
+  /** CSS animation string (e.g. 'cardFloat 3s ease-in-out infinite') */
+  animation?: string;
 }
 
 export interface Mascot {
@@ -104,27 +110,47 @@ export function DSMainCard({
           // Build responsive overrides via @media
           const mobileScale = c.mobileScale ?? 0.4;
           const mobileSize = Math.round(c.size * mobileScale);
-          const mediaOverrides: Record<string, Record<string, string>> = {
-            // Mobile: scale down and reposition
-            '@media (max-width: 48em)': {
+          const breakpointMap = { md: '48em', xl: '94em', xxl: '120em' } as const;
+          const mediaOverrides: Record<string, Record<string, string>> = {};
+
+          // If minBreakpoint is set, hide by default and show from that breakpoint
+          if (c.minBreakpoint) {
+            mediaOverrides.display = 'none' as unknown as Record<string, string>;
+            mediaOverrides[`@media (min-width: ${breakpointMap[c.minBreakpoint]})`] = {
+              display: 'block',
+            };
+          } else {
+            // Mobile: scale down and reposition (only for always-visible characters)
+            mediaOverrides['@media (max-width: 48em)'] = {
               width: `${mobileSize}px`,
               height: `${mobileSize}px`,
               bottom: `${c.mobileY ?? 90}%`,
-            },
-          };
+            };
+          }
+
+          if (c.md) {
+            const o: Record<string, string> = {};
+            if (c.md.size != null) { o.width = `${c.md.size}px`; o.height = `${c.md.size}px`; }
+            if (c.md.x != null) o.left = `${c.md.x}%`;
+            if (c.md.y != null) o.bottom = `${c.md.y}%`;
+            const existing = mediaOverrides['@media (min-width: 48em)'] ?? {};
+            mediaOverrides['@media (min-width: 48em)'] = { ...existing, ...o };
+          }
           if (c.xl) {
             const o: Record<string, string> = {};
             if (c.xl.size != null) { o.width = `${c.xl.size}px`; o.height = `${c.xl.size}px`; }
             if (c.xl.x != null) o.left = `${c.xl.x}%`;
             if (c.xl.y != null) o.bottom = `${c.xl.y}%`;
-            if (Object.keys(o).length) mediaOverrides['@media (min-width: 94em)'] = o;
+            const existing = mediaOverrides['@media (min-width: 94em)'] ?? {};
+            mediaOverrides['@media (min-width: 94em)'] = { ...existing, ...o };
           }
           if (c.xxl) {
             const o: Record<string, string> = {};
             if (c.xxl.size != null) { o.width = `${c.xxl.size}px`; o.height = `${c.xxl.size}px`; }
             if (c.xxl.x != null) o.left = `${c.xxl.x}%`;
             if (c.xxl.y != null) o.bottom = `${c.xxl.y}%`;
-            if (Object.keys(o).length) mediaOverrides['@media (min-width: 120em)'] = o;
+            const existing = mediaOverrides['@media (min-width: 120em)'] ?? {};
+            mediaOverrides['@media (min-width: 120em)'] = { ...existing, ...o };
           }
 
           return (
@@ -138,6 +164,7 @@ export function DSMainCard({
               height={`${c.size}px`}
               zIndex={c.zIndex || 1}
               transform="translateX(-50%)"
+              animation={c.animation}
               style={cssVars}
               css={mediaOverrides}
             >
