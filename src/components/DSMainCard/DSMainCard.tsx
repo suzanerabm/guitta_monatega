@@ -218,9 +218,11 @@ export function DSMainCard({
                     padding: 0,
                     marginTop: 0,
                   },
-                  // Large desktop (>=1500px): match Astro default — pinned to right:50% with margin-right
-                  // Also handles XL since 120em media queries don't generate in conditional css prop
-                  '@media (min-width: 94em)': {
+                  // Large desktop (>=1600px): match Astro default — pinned to right:50% with margin-right
+                  // Breakpoint raised from 94em (1504px) to 100em (1600px) because
+                  // the right:50% + marginRight:12rem math produces negative left in
+                  // viewports between 1504 and ~1650px, making the panel overflow to the left.
+                  '@media (min-width: 100em)': {
                     left: 'auto',
                     right: '50%',
                     marginRight: '12rem',
@@ -228,6 +230,12 @@ export function DSMainCard({
                     maxWidth: '620px',
                     height: '50%',
                     top: '58%',
+                  },
+                  // XL (>=1920px): align with the subsystem's 2rem left padding
+                  '@media (min-width: 120em)': {
+                    left: '2rem',
+                    right: 'auto',
+                    marginRight: 0,
                   },
                 }
               : {
@@ -333,6 +341,10 @@ export function DSMainCard({
                 transform: 'translateY(-50%)',
                 width: '48%',
                 marginTop: 0,
+              },
+              // XL (>=1920px): strip extends further left to use extra space
+              '@media (min-width: 120em)': {
+                width: '62%',
               },
             }}
           >

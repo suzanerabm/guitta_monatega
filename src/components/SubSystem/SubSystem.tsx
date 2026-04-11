@@ -97,11 +97,8 @@ export function SubSystem({
                 as="h6"
                 position="relative"
                 zIndex={1}
-                fontSize="label"
-                letterSpacing="wider"
-                textTransform="uppercase"
+                textStyle="label"
                 padding="1.2rem 1.5rem 0.8rem"
-                fontWeight="semibold"
                 color={subtitleColor || titleColor}
               >
                 {card.title}

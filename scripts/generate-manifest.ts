@@ -8,25 +8,29 @@ const OUTPUT = path.resolve(process.cwd(), 'src/data/image-manifest.json');
 
 const IMAGE_EXTS = /\.(png|jpg|jpeg|webp|gif|svg)$/i;
 
+// Natural sort: treats numeric prefixes as numbers so "2_x" comes before "10_x".
+const naturalSort = (a: string, b: string) =>
+  a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
+
 function listImages(dir: string): string[] {
   if (!fs.existsSync(dir)) return [];
   return fs.readdirSync(dir)
     .filter((f) => IMAGE_EXTS.test(f))
-    .sort();
+    .sort(naturalSort);
 }
 
 function listDirs(dir: string): string[] {
   if (!fs.existsSync(dir)) return [];
   return fs.readdirSync(dir)
     .filter((f) => fs.statSync(path.join(dir, f)).isDirectory())
-    .sort();
+    .sort(naturalSort);
 }
 
 function cleanName(filename: string): string {
   return filename
     .replace(IMAGE_EXTS, '')
-    .replace(/^\d+[-_]?/, '')
-    .replace(/[_-]/g, ' ')
+    .replace(/^\d+_?/, '')
+    .replace(/_/g, ' ')
     .trim();
 }
 

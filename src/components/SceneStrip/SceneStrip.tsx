@@ -82,15 +82,15 @@ export function SceneStrip({
       {sectionTitle && (
         <Heading
           as="h2"
+          fontFamily="body"
+          fontSize="section"
+          letterSpacing="wider"
+          textTransform="uppercase"
+          fontWeight="semibold"
+          padding="0 2rem"
+          margin="5em 0 0.5rem"
+          color={arrowColor}
           css={{
-            fontSize: 'var(--font-sizes-section, 2rem)',
-            letterSpacing: '0.05em',
-            textTransform: 'uppercase',
-            fontWeight: 600,
-            padding: '0 2rem',
-            marginTop: '5em',
-            marginBottom: '0.5rem',
-            color: arrowColor,
             // Mobile: tighter top margin
             '@media (max-width: 48em)': { marginTop: '2em' },
             // XL screens (>=1900px): larger title

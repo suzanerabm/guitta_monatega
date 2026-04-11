@@ -446,7 +446,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
                 }))}
                 sectionTitle={scenesTitle}
                 arrowColor={palette.colors[1]}
-                labelColor={palette.colors[3]}
+                labelColor={w.id === 'eni4' ? palette.colors[WORLD_COLOR_INDICES[w.id].label] : palette.colors[3]}
                 modalBg={palette.gradientBg}
                 modalTitle={worldName}
                 modalSubtitle={worldText[0] || ''}
@@ -464,7 +464,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
                   }))
                   .filter((c) => c.texts.length > 0 && !c.texts[0].startsWith('Placeholder'))}
                 titleColor={palette.colors[1]}
-                subtitleColor={palette.colors[3]}
+                subtitleColor={w.id === 'eni4' ? palette.colors[WORLD_COLOR_INDICES[w.id].label] : palette.colors[3]}
                 textColor={palette.text}
                 gradient={palette.gradient}
               />
