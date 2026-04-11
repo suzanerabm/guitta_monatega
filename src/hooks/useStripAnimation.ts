@@ -8,6 +8,12 @@ interface StripOptions {
   wrapperRef: RefObject<HTMLElement | null>;
   /** Whether to enable mousemove edge-based playback control */
   enableEdgeControl?: boolean;
+  /**
+   * When true, forces the animation to pause and disables mousemove
+   * edge control. Used while a character card is selected/expanded
+   * so the strip doesn't drift out from under the info panel.
+   */
+  paused?: boolean;
 }
 
 /**
@@ -121,6 +127,8 @@ export function useStripAnimation(
     const CURVE = 2; // >1 = more aggressive near the edge
     const onMouseMove = (e: MouseEvent) => {
       if (!anim) return;
+      // If externally paused, ignore edge control entirely.
+      if (options.paused) return;
       const rect = wrapper.getBoundingClientRect();
       const x = (e.clientX - rect.left) / rect.width;
       if (x < EDGE) {
@@ -154,4 +162,17 @@ export function useStripAnimation(
       wrapper.removeEventListener('mouseleave', onMouseLeave);
     };
   }, [trackRef, options.wrapperRef, options.speed, options.enableEdgeControl]);
+
+  // Separate effect: toggle pause/play on the existing animation when the
+  // `paused` flag changes, without tearing down and recreating it (which
+  // would reset the strip to translateX(0) and make it "jump").
+  useEffect(() => {
+    const anim = animRef.current;
+    if (!anim) return;
+    if (options.paused) {
+      anim.pause();
+    } else {
+      anim.play();
+    }
+  }, [options.paused]);
 }

@@ -33,7 +33,6 @@ export const Default: Story = {
   args: {
     character: mockCharacter,
     locale: 'pt',
-    top: '40px',
   },
 };
 
@@ -41,7 +40,14 @@ export const English: Story = {
   args: {
     character: mockCharacter,
     locale: 'en',
-    top: '40px',
+  },
+};
+
+export const WithCloseButton: Story = {
+  args: {
+    character: mockCharacter,
+    locale: 'pt',
+    onClose: () => {},
   },
 };
 
@@ -59,6 +65,5 @@ export const ShortBio: Story = {
       bio: { pt: 'Guerreiro silencioso.', en: 'Silent warrior.' },
     },
     locale: 'pt',
-    top: '40px',
   },
 };

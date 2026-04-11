@@ -1,5 +1,5 @@
 'use client';
-import { useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Box, Flex, Heading } from '@chakra-ui/react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { CharacterCard } from '@/components/CharacterCard';
@@ -65,10 +65,29 @@ export function CharacterStrip({
 }: CharacterStripProps) {
   const stripRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
-  const [hoveredName, setHoveredName] = useState<string | null>(null);
+  const rootRef = useRef<HTMLDivElement>(null);
+  // Map of card key → DOM element. Populated via ref callbacks in the
+  // render loop; used to hand the selected card's rect to the portal'd
+  // CharacterInfoPanel as its anchor.
+  const cardElsRef = useRef<Map<string, HTMLElement>>(new Map());
+  // Unique key (`${name}-${index}`) of the card currently selected by click.
+  // Using the index prevents both instances of the duplicated loop
+  // ([...characters, ...characters]) from appearing active at once.
+  const [activeKey, setActiveKey] = useState<string | null>(null);
 
   const autoSpeed = speed ?? characters.length * 5;
   const allCards = noLoop ? characters : [...characters, ...characters];
+
+  // Set of character display names that have data in the character JSONs.
+  // Only these cards are interactive (click → opens info panel).
+  const activatableNames = useMemo(() => {
+    if (!contextId) return new Set<string>();
+    const set = new Set<string>();
+    for (const c of characters) {
+      if (findCharacter(contextId, c.name)) set.add(c.name);
+    }
+    return set;
+  }, [characters, contextId]);
 
   // Animation hook is unconditionally called; it bails out if refs aren't ready
   // or if noLoop is true (track ref will be a separate scrollable container).
@@ -76,7 +95,31 @@ export function CharacterStrip({
     speed: autoSpeed,
     wrapperRef: stripRef,
     enableEdgeControl: true,
+    paused: activeKey !== null,
   });
+
+  // Close on Escape, click outside, or page scroll (so the panel doesn't
+  // end up floating detached from its anchor when the user scrolls).
+  useEffect(() => {
+    if (!activeKey) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setActiveKey(null);
+    };
+    const onMouseDown = (e: MouseEvent) => {
+      const root = rootRef.current;
+      if (!root) return;
+      if (!root.contains(e.target as Node)) setActiveKey(null);
+    };
+    const onScroll = () => setActiveKey(null);
+    document.addEventListener('keydown', onKey);
+    document.addEventListener('mousedown', onMouseDown);
+    window.addEventListener('scroll', onScroll);
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.removeEventListener('mousedown', onMouseDown);
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, [activeKey]);
 
   const handleArrow = (dir: -1 | 1) => {
     const el = stripRef.current;
@@ -138,6 +181,7 @@ export function CharacterStrip({
 
   return (
     <Box
+      ref={rootRef}
       position={useAbsolute ? { base: 'relative', md: 'absolute' } : 'relative'}
       top={useAbsolute ? { base: 'auto', md: '20px' } : undefined}
       left={useAbsolute ? { base: 'auto', md: 0 } : undefined}
@@ -194,34 +238,53 @@ export function CharacterStrip({
               '& > *:nth-of-type(3n) > .group': { animationDelay: '-2s' },
             }}
           >
-            {allCards.map((c, i) => (
-              <Box
-                key={`${c.name}-${i}`}
-                position="relative"
-                onMouseEnter={contextId ? () => setHoveredName(c.name) : undefined}
-                onMouseLeave={contextId ? () => setHoveredName(null) : undefined}
-              >
-                <CharacterCard
-                  name={c.name}
-                  image={c.image}
-                  gradient={gradient}
-                  cardSize={cardSize}
-                  noFloat={noFloat}
-                  transparent={transparent}
-                  noBorder={noBorder}
-                  noHoverScale={noHoverScale}
-                  cardBg={cardBg}
-                  labelColor={labelColor}
-                />
-                {contextId && hoveredName === c.name && (
-                  <CharacterInfoPanel
-                    character={findCharacter(contextId, c.name)}
-                    locale={locale}
-                    top="-10px"
+            {allCards.map((c, i) => {
+              const key = `${c.name}-${i}`;
+              const isActivatable = activatableNames.has(c.name);
+              const isActive = activeKey === key;
+              return (
+                <Box
+                  key={key}
+                  ref={(el: HTMLDivElement | null) => {
+                    if (el) cardElsRef.current.set(key, el);
+                    else cardElsRef.current.delete(key);
+                  }}
+                  position="relative"
+                  cursor={isActivatable ? 'pointer' : undefined}
+                  onClick={
+                    isActivatable
+                      ? () => setActiveKey((prev) => (prev === key ? null : key))
+                      : undefined
+                  }
+                >
+                  <CharacterCard
+                    name={c.name}
+                    image={c.image}
+                    gradient={gradient}
+                    cardSize={cardSize}
+                    noFloat={noFloat}
+                    transparent={transparent}
+                    noBorder={noBorder}
+                    noHoverScale={noHoverScale}
+                    cardBg={cardBg}
+                    labelColor={labelColor}
+                    isSelected={isActive}
                   />
+                </Box>
+              );
+            })}
+            {activeKey && contextId && (
+              <CharacterInfoPanel
+                character={findCharacter(
+                  contextId,
+                  // Strip the `-${index}` suffix to get the character name back
+                  activeKey.slice(0, activeKey.lastIndexOf('-'))
                 )}
-              </Box>
-            ))}
+                locale={locale}
+                anchorEl={cardElsRef.current.get(activeKey) ?? null}
+                onClose={() => setActiveKey(null)}
+              />
+            )}
           </Box>
         </Box>
         {showArrows && (

@@ -11,6 +11,13 @@ interface CharacterCardProps {
   noHoverScale?: boolean;
   cardBg?: string;
   labelColor?: string;
+  /**
+   * When true, the card is locked in its "expanded" state (same scale as
+   * hover) even if the cursor isn't over it. Used when a card is clicked
+   * and the info panel is showing — the visual mirrors hover without
+   * depending on pointer state.
+   */
+  isSelected?: boolean;
   'data-testid'?: string;
 }
 
@@ -29,6 +36,7 @@ export function CharacterCard({
   noHoverScale = false,
   cardBg,
   labelColor,
+  isSelected = false,
   'data-testid': testId,
 }: CharacterCardProps) {
   const wrapperWidth = cardSize + 20;
@@ -104,6 +112,10 @@ export function CharacterCard({
           }
         : { transform: 'scale(1.3)' };
 
+  // Selected state: same visuals as hover but applied unconditionally so
+  // the card stays "big" while the info panel is open.
+  const selectedBoxStyles = isSelected ? hoverStyles : undefined;
+
   const nameProps: Record<string, unknown> = {
     textStyle: 'label',
     color: labelColor ?? 'white',
@@ -119,6 +131,11 @@ export function CharacterCard({
       transform: noBorder ? 'translateY(6rem)' : 'translateY(2rem)',
       zIndex: noBorder ? 40 : 1,
     };
+    // Mirror the hover transform when locked as selected.
+    if (isSelected) {
+      nameProps.transform = noBorder ? 'translateY(6rem)' : 'translateY(2rem)';
+      nameProps.zIndex = noBorder ? 40 : 1;
+    }
   }
 
   return (
@@ -130,6 +147,7 @@ export function CharacterCard({
       role="group"
       data-testid={testId}
       data-variant={variants || undefined}
+      data-selected={isSelected || undefined}
       flexShrink={0}
       width={{ base: wrapperWidthPxMobile, md: wrapperWidthPx }}
       display="flex"
@@ -137,7 +155,8 @@ export function CharacterCard({
       alignItems="center"
       gap="0.5rem"
       position="relative"
-      animation={noFloat ? undefined : 'cardFloat 3s ease-in-out infinite'}
+      animation={isSelected || noFloat ? undefined : 'cardFloat 3s ease-in-out infinite'}
+      zIndex={isSelected ? 20 : undefined}
       _hover={{ zIndex: 10 }}
     >
       {showGlow && (
@@ -179,6 +198,7 @@ export function CharacterCard({
         aspectRatio={variantStyles.aspectRatio}
         transformOrigin={variantStyles.transformOrigin}
         _groupHover={hoverStyles}
+        {...(selectedBoxStyles ?? {})}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
