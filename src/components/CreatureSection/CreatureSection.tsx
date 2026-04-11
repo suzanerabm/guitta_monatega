@@ -8,6 +8,13 @@ export interface CreatureSectionProps {
   accentColor?: string;
   id?: string;
   bgImage?: string;
+  /**
+   * Opacity of the `bgImage` layer over the gradient. Defaults to 0.3.
+   * Raise this when the gradient color clashes with the image's palette
+   * (the default blend tints the image heavily on worlds whose gradient
+   * is a saturated non-neutral color, like triplec's purple).
+   */
+  bgOpacity?: number;
   noParallax?: boolean;
   hidden?: boolean;
   children: React.ReactNode;
@@ -18,6 +25,7 @@ export function CreatureSection({
   accentColor,
   id,
   bgImage,
+  bgOpacity = 0.3,
   noParallax = false,
   hidden = false,
   children,
@@ -69,7 +77,7 @@ export function CreatureSection({
               width: '100%',
               height: '100%',
               objectFit: 'cover',
-              opacity: 0.3,
+              opacity: bgOpacity,
               display: 'block',
             }}
           />

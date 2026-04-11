@@ -19,6 +19,12 @@ export interface SceneStripProps {
   modalTitle?: string;
   modalSubtitle?: string;
   galleryId?: string;
+  /**
+   * Override the top margin above the section title ("CENAS"). Defaults
+   * to `5em` (the kammara world default). Used by the triplec sub-regions
+   * to sit closer to the DSTextPanel that precedes them.
+   */
+  titleMarginTop?: string;
 }
 
 export function SceneStrip({
@@ -30,6 +36,7 @@ export function SceneStrip({
   modalTitle,
   modalSubtitle,
   galleryId,
+  titleMarginTop = '5em',
 }: SceneStripProps) {
   const fallbackId = useId();
   const id = galleryId ?? `scene-strip-${fallbackId}`;
@@ -88,7 +95,8 @@ export function SceneStrip({
           textTransform="uppercase"
           fontWeight="semibold"
           padding="0 2rem"
-          margin="5em 0 0.5rem"
+          marginTop={titleMarginTop}
+          marginBottom="0.5rem"
           color={arrowColor}
           css={{
             // Mobile: tighter top margin

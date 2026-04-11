@@ -12,6 +12,9 @@ import type { Character } from "./types";
 import kammaraLunnp1 from "./kammara/lunnp1.json";
 import kammaraEni4 from "./kammara/eni4.json";
 import kammaraTriplec from "./kammara/triplec.json";
+import kammaraTriplecMalloc from "./kammara/triplec-malloc.json";
+import kammaraTriplecMesh from "./kammara/triplec-mesh.json";
+import kammaraTriplecSharp from "./kammara/triplec-sharp.json";
 import kammaraOrfv from "./kammara/orfv.json";
 import kammaraZ1 from "./kammara/z1.json";
 import kammaraGotto from "./kammara/gotto.json";
@@ -28,6 +31,9 @@ export const charactersByContext: Record<string, Character[]> = {
   "kammara/lunnp1": kammaraLunnp1 as Character[],
   "kammara/eni4": kammaraEni4 as Character[],
   "kammara/triplec": kammaraTriplec as Character[],
+  "kammara/triplec/malloc": kammaraTriplecMalloc as Character[],
+  "kammara/triplec/mesh": kammaraTriplecMesh as Character[],
+  "kammara/triplec/sharp": kammaraTriplecSharp as Character[],
   "kammara/orfv": kammaraOrfv as Character[],
   "kammara/z1": kammaraZ1 as Character[],
   "kammara/gotto": kammaraGotto as Character[],

@@ -449,7 +449,87 @@
               "Placeholder — describe the technology here."
             ]
           }
-        ]
+        ],
+        "regions": {
+          "malloc": {
+            "name": "malloc",
+            "tagline": "instinct and precision",
+            "text": [
+              "malloc to the south — instinct and precision. Tunnels and pulsing caves where the planet's memory is allocated, organized and protected. Nothing here is lost without purpose."
+            ],
+            "panel": {
+              "story": [
+                "Placeholder — malloc narrative goes here. Describe the tunnels, the pulsing caves, the Runa caste bunniets who guard the Cshift corridors, and how the region distributes the living memory of TripleC."
+              ]
+            },
+            "subsystems": [
+              {
+                "title": "Caves",
+                "text": ["Placeholder — describe the pulsing caves."]
+              },
+              {
+                "title": "Runa-Tora",
+                "text": ["Placeholder — describe the elite guardians of the corridors."]
+              },
+              {
+                "title": "Allocation",
+                "text": ["Placeholder — describe how memory is allocated."]
+              }
+            ]
+          },
+          "mesh": {
+            "name": "Mesh",
+            "tagline": "form and architecture",
+            "text": [
+              "Mesh to the north — form and architecture. Perfect bridges suspended in the air, networks that connect without touching the ground. It is the region of those who design before they build."
+            ],
+            "panel": {
+              "story": [
+                "Placeholder — Mesh narrative goes here. Describe the suspended bridges, the castes that draw the patterns, and how Mesh is the connective tissue that joins TripleC without weighing it down."
+              ]
+            },
+            "subsystems": [
+              {
+                "title": "Bridges",
+                "text": ["Placeholder — describe the suspended bridges."]
+              },
+              {
+                "title": "Patterns",
+                "text": ["Placeholder — describe the patterns of Mesh."]
+              },
+              {
+                "title": "Weavers",
+                "text": ["Placeholder — describe the weavers of form."]
+              }
+            ]
+          },
+          "sharp": {
+            "name": "Sharp",
+            "tagline": "control and management",
+            "text": [
+              "Sharp to the east — control and management. Megastructures where nothing grows without permission. It is the region of order: precise, rigorous, implacable when needed."
+            ],
+            "panel": {
+              "story": [
+                "Placeholder — Sharp narrative goes here. Describe the megastructures, the administrators of order, and how Sharp decides what enters, what leaves and what is kept in TripleC."
+              ]
+            },
+            "subsystems": [
+              {
+                "title": "Megastructures",
+                "text": ["Placeholder — describe the megastructures."]
+              },
+              {
+                "title": "Order",
+                "text": ["Placeholder — describe the system of order."]
+              },
+              {
+                "title": "Permissions",
+                "text": ["Placeholder — describe how permissions work."]
+              }
+            ]
+          }
+        }
       },
       "orfv": {
         "name": "ORF-V",

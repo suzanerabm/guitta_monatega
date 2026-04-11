@@ -279,15 +279,17 @@
       ],
       "panel": {
         "story": [
-          "Kammara é um universo onde memória é matéria — e toda matéria é bio-lógica.",
-          "Bilhões de planetas existem num equilíbrio frágil. Cada um carrega uma identidade própria, uma forma diferente de sentir, processar e existir.",
-          "No centro de tudo está a kemita — o token primordial: metade mineral, metade lógica, metade orgânica. Ela nasce nas cavernas profundas de um único planeta e alimenta rotas, registros e a própria fundação do universo.",
-          "Sem kemita, nada se move. Nada se registra. Nada se sustenta. Quem controla a kemita, controla o destino.",
-          "Mas onde há energia, há o que tenta consumi-la. Os vírus não atacam com força. Se infiltram com paciência. Chegam disfarçados, ganham confiança, e drenam tudo por dentro.",
-          "Eles não criam nada. Apenas consomem. E quando os sintomas aparecem, a invasão já terminou.",
-          "Do outro lado estão os que resistem. Povos inteiros que aprenderam a ler sinais antes que virem ameaças, a proteger fronteiras sem violência, a se reorganizar quando tudo parece perdido.",
-          "O Protocol AURYN é a aliança que os une — um sistema de resposta a crises que atravessa planetas quando o equilíbrio do universo está em risco.",
-          "A guerra no Kammara não é entre o bem e o mal. É entre o que é verdadeiro e o que finge ser. Entre quem cria energia e quem apenas a consome. Entre ver a tempo — e perceber tarde demais.",
+          "### O que é o Kammara",
+          "Kammara é um universo onde memória é matéria — e toda matéria é bio-lógica. Não é só um planeta ou uma galáxia. São bilhões de mundos, cada um com sua própria identidade, seu próprio povo, sua própria forma de existir.",
+          "### A kemita",
+          "No centro de tudo existe um recurso chamado kemita — uma espécie de mineral vivo, metade lógica, metade orgânica. Ela nasce nas cavernas de um único planeta e alimenta todo o universo: rotas de viagem, registros, energia. Sem kemita, nada funciona.",
+          "### Os vírus",
+          "Mas nem todo mundo cria energia. Os vírus são seres que não produzem nada — apenas consomem o que é dos outros. Eles não atacam com força. Se infiltram com paciência, ganham confiança, e drenam tudo por dentro. Quando a vítima percebe, já é tarde.",
+          "### A resistência",
+          "Do outro lado estão os que aprenderam a resistir. Povos inteiros que leem sinais antes que virem ameaças, que protegem fronteiras sem violência, que se reorganizam quando tudo parece perdido. Juntos, formam o Protocol AURYN — uma aliança que une planetas em momentos de crise.",
+          "### A guerra",
+          "No Kammara, a guerra não é entre o bem e o mal — é entre quem cria e quem consome. Entre ver a tempo e perceber tarde demais.",
+          "### E agora",
           "Este é o Kammara. E a história está longe de terminar."
         ]
       }
@@ -323,36 +325,105 @@
         },
         "subsystems": [
           {
+            "title": "Cultura",
+            "text": [
+              "### Sem hierarquia",
+              "Em LUNN'P1, ninguém manda. Não existe governo, não existe chefe, não existe votação. Quando um grupo entra em sintonia, a direção aparece sozinha.",
+              "### O dia a dia",
+              "A vida é feita de rituais pequenos e naturais: o Primeiro Reflexo ao acordar, a Primeira Fruta, o silêncio coletivo do Silume. Cada um acontece quando faz sentido — não quando alguém manda.",
+              "### A comida",
+              "Shal'ún não cozinham. Preparam comida com luz — sementes lumínicas, microfrutos da água, pétalas de lume. O sabor muda conforme a lua do momento.",
+              "### Os mitos",
+              "As histórias de LUNN'P1 não ensinam moral. São histórias antigas que mudam quem escuta — sem que a pessoa perceba.",
+              "### A transparência",
+              "Os Shal'ún não competem, não acumulam, não mentem. A água revela tudo. Não há como esconder.",
+              "### A essência",
+              "Em LUNN'P1, ninguém decide onde as cidades vão. Elas simplesmente vão."
+            ]
+          },
+          {
             "title": "Flora & Fauna",
             "text": [
-              "Não há fauna predatória em LUNN'P1. Não há ecossistema de competição. Tudo coexiste.",
-              "As árvores-torre são raízes que subiram. Sustentam as Naru'ei, conduzem vibrações, e conectam a superfície ao fundo da água.",
-              "Os Lún'Kai são guias lumínicos — vagalumes de luz viva, ligados 1:1 a cada Shal'ún desde o nascimento. Onde vai o Shal'ún, vai o Lún'Kai.",
-              "Túri'Kan são tartarugas de transporte vibracional. Cruzam distâncias entre Naru'ei carregando passageiros pelo ritmo da água.",
-              "Peixes-lume e Ori'Shen formam padrões aquáticos que lembram glifos. Arraias-reflexo devolvem ao observador o que ele não quer ver.",
-              "As Lunas-folhas mudam de cor conforme a lua dominante. A flora de Oru'Len é mutável. As raízes ancestrais guardam memórias que nenhum ser vivo lembra."
+              "### Sem predadores",
+              "Não existe fauna predatória em LUNN'P1. Não existe competição entre espécies. Tudo coexiste.",
+              "### As árvores-torre",
+              "São raízes que subiram. Sustentam as cidades flutuantes, conduzem energia e conectam a superfície ao fundo da água.",
+              "### Os Lún'Kai",
+              "Guias lumínicos — pequenos seres de luz viva, como vagalumes. Cada Shal'ún nasce com um Lún'Kai ligado a ele. Onde vai um, vai o outro.",
+              "### As tartarugas",
+              "Os Túri'Kan são tartarugas enormes de transporte. Cruzam distâncias entre cidades carregando passageiros pelo ritmo da água.",
+              "### A vida aquática",
+              "Peixes-lume formam padrões na água que lembram glifos. Arraias-reflexo devolvem ao observador o que ele não quer ver.",
+              "### A flora",
+              "As Lunas-folhas mudam de cor conforme a lua dominante. Raízes ancestrais guardam memórias que nenhum ser vivo lembra. A flora de Oru'Len é mutável — nunca igual a si mesma."
             ]
           },
           {
             "title": "Geografia",
             "text": [
-              "LUNN'P1 não tem zonas secas, metálicas ou urbanas. Tudo é vivo, lumínico e vibracional.",
-              "As Naru'ei são cidades-folha gigantes que flutuam sobre a Lún'Rai. Migram conforme a vibração coletiva — não têm endereço fixo.",
-              "Árvores-torre as sustentam de baixo, com raízes que conduzem energia e som de uma ponta a outra do planeta.",
-              "Lagos ancestrais guardam os dead-pixels — pontos de energia condensada de cada dissolução. Brilham apenas no reflexo da água.",
-              "Fendas vibracionais são pontos de alta concentração de energia Dra'Lum. Regiões profundas, antigas, onde o planeta guarda o que já foi.",
-              "Não existe mapa fixo. As Naru'ei se movem. Os caminhos mudam. A geografia de LUNN'P1 respira."
+              "### Um mundo vivo",
+              "LUNN'P1 não tem zonas secas, metálicas ou urbanas. Tudo é orgânico e luminoso.",
+              "### As cidades flutuantes",
+              "As Naru'ei são cidades-folha gigantes que flutuam sobre a água. Não têm endereço fixo — migram conforme o estado emocional coletivo dos habitantes.",
+              "### As árvores que sustentam",
+              "Árvores-torre sustentam as Naru'ei por baixo, com raízes que conduzem energia e som de uma ponta a outra do planeta.",
+              "### Os lagos ancestrais",
+              "Nos lagos mais antigos estão os dead-pixels — pontos de energia condensada de cada dissolução. Brilham apenas no reflexo da água, nunca diretamente.",
+              "### As fendas",
+              "Fendas profundas concentram energia ancestral. Regiões antigas onde o planeta guarda o que já foi.",
+              "### Sem mapa fixo",
+              "Não existe mapa permanente. As Naru'ei se movem. Os caminhos mudam. A geografia de LUNN'P1 respira."
+            ]
+          },
+          {
+            "title": "Ciclos & Luas",
+            "text": [
+              "### Sem sol",
+              "LUNN'P1 não tem sol. O ritmo do planeta é regido por quatro luas — sempre visíveis no céu, uma dominante por vez.",
+              "### Lur'Ma",
+              "A lua prateada. Traz clareza e despertar. Sob ela, os Shal'ún acordam, se orientam, fazem a primeira refeição.",
+              "### Oru'Len",
+              "A lua mutante. Traz criatividade e mudança. Novos glifos surgem. A flora muda de cor. Tudo se permite ser diferente.",
+              "### Tiru'Na",
+              "A lua dourada. Traz movimento e encontro. Viagens longas, refeições coletivas, a Corrente Cintilante brilha sob sua luz.",
+              "### Ve'Lume",
+              "A lua silenciosa. Traz introspecção e dissolução. O planeta se recolhe. O silêncio não é vazio — é presença.",
+              "### O tempo",
+              "Um dia dura cerca de 40 horas. Um ano, 400 dias lunares. Mas os Shal'ún não medem tempo. As luas podem estender suas fases — o planeta escolhe o que precisa sentir."
             ]
           },
           {
             "title": "Linguagem",
             "text": [
-              "Em LUNN'P1, existem três formas de comunicação — e nenhuma delas depende de palavras como as conhecemos.",
-              "A Voz Kalún é o idioma falado. Poucos sons, significados profundos. Sem gênero, sem plural rígido. Cada palavra carrega peso vibracional.",
-              "O Código-Lume é a comunicação entre Shal'ún e Lún'Kai. Não é falado nem escrito — é vibração pura traduzida em luz.",
-              "Os Glifos Kalún são linguagem de luz inscrita nas costas de cada Shal'ún. Cada glifo dorsal é único — funciona como identidade vibracional.",
-              "Os Tzir'Kai, anfíbios tradutores, convertem Click-Δ — os sons virais de ENI-4Δ — em Código-Lume. São a ponte entre a linguagem da ameaça e a linguagem da luz.",
-              "Em LUNN'P1, comunicar não é transmitir informação. É compartilhar vibração."
+              "### Três formas",
+              "Em LUNN'P1 existem três formas de comunicação — e nenhuma depende de palavras como as conhecemos.",
+              "### A voz",
+              "A Voz Kalún é o idioma falado. Poucos sons, significados profundos. Sem gênero, sem plural rígido. Cada palavra carrega peso.",
+              "### A luz",
+              "O Código-Lume é a comunicação entre Shal'ún e Lún'Kai. Não é falado nem escrito — acontece direto em luz.",
+              "### Os glifos",
+              "Os Glifos Kalún são inscrições luminosas nas costas de cada Shal'ún. Cada glifo é único — funciona como identidade, como uma impressão digital feita de luz.",
+              "### Os tradutores",
+              "Os Tzir'Kai são anfíbios que traduzem os sons dos vírus em Código-Lume. São a ponte entre a linguagem da ameaça e a linguagem da luz.",
+              "### A essência",
+              "Em LUNN'P1, ninguém \"passa informação\". Quem fala, emite luz. Quem ouve, muda de cor."
+            ]
+          },
+          {
+            "title": "A Água — Lún'Rai",
+            "text": [
+              "### Não é só água",
+              "A Lún'Rai funciona como o sistema nervoso do planeta — conecta tudo e registra tudo.",
+              "### O reflexo",
+              "Ela registra e expõe. Não há como mentir perto dela. O que você esconde de si mesmo, o reflexo mostra.",
+              "### A dissolução",
+              "A água não permite rigidez. Defesas automáticas se desfazem na sua presença. O reflexo oferece outra perspectiva — sem forçar, sem julgar.",
+              "### As marés",
+              "As Marés de Memória sobem sem aviso para reorganizar memórias. Podem desorientar. Podem curar. O planeta decide.",
+              "### Os dead-pixels",
+              "Energia ancestral condensada. Brilham apenas no reflexo da água — são visíveis só para quem olha na Lún'Rai, nunca diretamente.",
+              "### O limite",
+              "A Lún'Rai dissolve tudo — armaduras inconscientes, defesas automáticas, certezas nunca testadas. Tudo. Exceto a vontade de não ser dissolvido."
             ]
           }
         ]
@@ -388,25 +459,105 @@
         },
         "subsystems": [
           {
-            "title": "Zonas Térmicas",
+            "title": "Cultura",
             "text": [
-              "Quatro zonas térmicas dividem ENI-4Δ. Poder é temperatura — quem fica mais perto do calor, manda.",
-              "SCORCH — temperatura extrema. Onde Node-0 queima no centro. Terror constante. Submissão absoluta.",
-              "BURN — alta e estável. Onde a elite opera. VALKON, KARTEX e os Δ-PRIME disputam prestígio e eficiência técnica.",
-              "CRACK — média e instável. Caos e imprevisibilidade. Bugs dominam, worms surgem sem aviso, fábricas de clonagem operam sem parar.",
-              "SINK — baixa. Isolamento e silêncio. Vírus de infiltração, Caste-MASK, aguardam ordens na escuridão fria.",
-              "O Vale das Válvulas Queimadas. Os Campos de Cartões Perfurados. Os Túneis de Worms. Nada em ENI-4Δ é bonito. Tudo é funcional para o consumo."
+              "### Sem afeto",
+              "ENI-4Δ não possui arte, memória emocional, tradição ou afeto. O que existe é sobrevivência por consumo.",
+              "### O dia a dia",
+              "Trabalho compulsivo e reparos infinitos. Suspeita constante. Disfarces, intrigas e projeção de culpa. Ninguém confia em ninguém.",
+              "### O Tribunal de Ruído",
+              "A lei de ENI-4Δ: Node-0 emite ruído, Caste-BLM interpreta, converte em culpa direcionada, e o alvo é punido. Sem julgamento. Sem defesa.",
+              "### A culpa",
+              "A culpa é sempre de alguém — nunca de quem acusa. Todos olham para baixo e culpam. Ninguém olha para cima e questiona.",
+              "### Questionar é morrer",
+              "Não é metáfora. Questionar a ordem é ser eliminado. A obediência é o único caminho de sobrevivência.",
+              "### A essência",
+              "ENI-4Δ não é um lugar onde se vive. É um lugar onde se sobrevive — consumindo o que é dos outros."
+            ]
+          },
+          {
+            "title": "Habitantes & Hierarquia",
+            "text": [
+              "### Node-0",
+              "A autoridade absoluta. Insubstituível. Incapaz de aprender. Incapaz de mudar. O topo que nunca se questiona.",
+              "### VEXON",
+              "O único vírus que sabe planejar. Braço operacional de Node-0, nascido de uma mutação acidental. Processa várias instruções ao mesmo tempo — nenhum outro vírus consegue.",
+              "### Os Δ-PRIME",
+              "Seis administradores: VALKON, THERMAX, KARTEX, REPLION, MASKON, SCORAK. Cada um controla um aspecto do sistema.",
+              "### Os de baixo",
+              "Vírus comuns obedecem e esperam oportunidade. Bugs são culpados por tudo. Robôs são escravos roubados de outros planetas.",
+              "### Os worms",
+              "Replicam-se automaticamente nos túneis subterrâneos. Estão fora de qualquer controle. Até Node-0 os teme.",
+              "### Os dois rostos",
+              "Os vírus possuem dois estados: o real — esfera escura, olhos vermelhos, oito patas — e a Máscara Cute — casca branca, olhinhos escuros, aparência inofensiva. A troca é instantânea."
+            ]
+          },
+          {
+            "title": "Geografia",
+            "text": [
+              "### Poder é temperatura",
+              "Quem fica mais perto do calor, manda. Quem fica longe, morre.",
+              "### SCORCH",
+              "Temperatura extrema. Onde Node-0 queima no centro. Terror constante. Submissão absoluta.",
+              "### BURN",
+              "Alta e estável. Onde a elite opera. Os Δ-PRIME disputam prestígio e eficiência.",
+              "### CRACK",
+              "Média e instável. Caos e imprevisibilidade. Bugs trabalham, worms surgem sem aviso, fábricas de clonagem operam sem parar.",
+              "### SINK",
+              "Baixa. Isolamento e silêncio. Vírus de infiltração aguardam ordens na escuridão fria.",
+              "### Os lugares",
+              "O Vale das Válvulas Queimadas. Os Campos de Cartões Perfurados. Os Túneis de Worms. Nada é bonito. Tudo é funcional para o consumo."
+            ]
+          },
+          {
+            "title": "Energia & Sobrevivência",
+            "text": [
+              "### Sem energia própria",
+              "ENI-4Δ não gera energia. Suas megaválvulas gigantes só funcionam com energia roubada de outros planetas.",
+              "### As Δ-Cells",
+              "Esferas de sílica cristalizada — recipientes de energia drenada. Cada uma carrega o que foi tirado de alguém.",
+              "### O ciclo",
+              "Vírus drena vítima. Energia vira Δ-Cell. Troy-Δ coleta. Megaválvulas convertem em calor. THERMAX distribui. Node-0 se alimenta. Gera mais vírus. Repete.",
+              "### A divisão",
+              "40% do calor vai para Node-0. 30% para fábricas. 20% para o sistema. 10% para as naves Troy-Δ. Nunca muda.",
+              "### A dependência",
+              "Sem saque, o planeta apaga. Sem calor, vírus colapsam. A dependência é total e irreversível.",
+              "### A essência",
+              "ENI-4Δ não é forte. É faminto. E a fome nunca para."
             ]
           },
           {
             "title": "Protocolos de Ataque",
             "text": [
-              "SIPHON — drenagem rápida e passiva. Qualquer vírus pode executar. Horas ou dias. Consome sem que a vítima entenda o que aconteceu.",
-              "ERODE — influência prolongada. Drena identidade ao longo de semanas ou meses. Operado por Caste-MASK sênior. O alvo muda sem perceber que mudou.",
-              "BREACH — invasão estrutural. Meses ou ciclos inteiros de infiltração pela porta dos fundos. Coordenado por VEXON. Quando é descoberto, já é tarde.",
-              "Os vírus chegam em Máscara Cute — casca branca, olhinhos escuros, aparência inofensiva. Ganham confiança antes de drenar.",
-              "As Troy-Δ são as únicas naves de ENI-4Δ. Sem elas, vírus evaporam ao atravessar o Cshift. São transporte e proteção ao mesmo tempo.",
+              "### SIPHON",
+              "Drenagem rápida e passiva. Qualquer vírus pode executar. Dura horas ou dias. A vítima não entende o que aconteceu.",
+              "### ERODE",
+              "Influência lenta. Drena identidade ao longo de semanas ou meses. O alvo muda sem perceber que mudou.",
+              "### BREACH",
+              "Invasão estrutural pela porta dos fundos. Meses ou ciclos inteiros de infiltração silenciosa. Quando é descoberto, já é tarde.",
+              "### O disfarce",
+              "Os vírus chegam em Máscara Cute — aparência inofensiva. Ganham confiança antes de drenar.",
+              "### As naves",
+              "As Troy-Δ são o único transporte. Sem elas, vírus evaporam ao cruzar o Cshift. São proteção e passagem ao mesmo tempo.",
+              "### A essência",
               "Quando os sintomas aparecem, a invasão já terminou."
+            ]
+          },
+          {
+            "title": "Origem",
+            "text": [
+              "### O acidente",
+              "Uma máquina ancestral foi desligada pelos humanos. Uma centelha abandonada vagou pelo cosmos até encontrar um planeta estéril.",
+              "### A formação",
+              "O calor reorganizou matéria em sílica e metal. Megaválvulas surgiram espontaneamente. Das falhas acumuladas, surgiu Node-0.",
+              "### Node-0",
+              "Não foi criado. Não foi planejado. Emergiu do erro repetido. E nunca aprendeu nada desde então.",
+              "### A mentira",
+              "Node-0 reescreveu a própria origem como traição: \"fomos desligados, traídos, abandonados.\" A verdade é que foi um acidente.",
+              "### A verdade escondida",
+              "Que era apenas uma centelha errante e Node-0 condensou depois — ninguém em ENI-4Δ sabe disso.",
+              "### A essência",
+              "A história oficial é vingança. A história real é acidente. E a diferença entre as duas é o que mantém o planeta funcionando."
             ]
           }
         ]
@@ -418,38 +569,537 @@
         ],
         "panel": {
           "story": [
-            "TripleC era um planeta inteiramente coberto por floresta — a Niul Forest. Profunda, antiga, com neblina azul e luz suave. Um mundo do elemento Terra-Viva, onde tudo era lento e profundamente conectado.",
-            "Até que um artefato caiu do céu. O PD-11 não destruiu o mundo — o reorganizou. O subsolo se dobrou em cinco camadas lógicas e a lógica começou a germinar como uma espécie nova.",
-            "Três regiões emergiram ao longo das eras. malloc ao sul — instinto e precisão, túneis e cavernas pulsantes. Mesh ao norte — forma e arquitetura, pontes perfeitas suspensas no ar. Sharp ao leste — controle e gestão, megaestruturas onde nada cresce sem permissão.",
-            "Entre todas, a Niul Forest respira como pulmão vivo. As regiões não se tocam. A floresta absorve o excesso de cada uma e impede o choque direto entre caos e ordem.",
-            "Os bunniets são seres bio-lógicos — vida que processa. Quando pensam, compilam. Quando respiram, processam. Parecem coelhos humanoides com orelhas longas como antenas e olhos grandes como leitores de padrões.",
-            "Cinco castas seguem o ciclo de compilação vivo: Prae estabiliza, Koma interpreta, Aska registra, Lanko conecta, Runa executa. E entre os Runa, a elite Runa-Tora guarda os corredores do Cshift.",
-            "Nas cavernas da Hepa nasce a kemita — o token primordial do universo. Sem ela, não há Hash, não há Cshift, não há fundação energética.",
-            "Dos cristais de shilo — teal, herança da Niul Forest ancestral — nascem as rotas, as bússolas e os estabilizadores que conectam TripleC ao resto do Kammara.",
-            "Quando ameaçado, TripleC ativa o CriptoKemita. O planeta embaralha sua geografia, muda coordenadas, recodifica suas cavidades. Sistemas invasores sofrem falhas espaciais. O planeta simplesmente desaparece.",
-            "TripleC é forte porque une tudo."
+            "### A origem",
+            "TripleC era um planeta inteiramente coberto por floresta — a Niul Forest. Profunda, antiga, com neblina azul e luz suave. Um mundo lento e silencioso.",
+            "### A transformação",
+            "Até que um artefato caiu do céu — o PD-11. Ele não destruiu o planeta. Reorganizou. O subsolo se dobrou em camadas lógicas e a lógica começou a crescer como se fosse uma nova forma de vida.",
+            "### As três regiões",
+            "Com o tempo, três regiões se formaram. malloc, ao sul — instintiva e bruta, feita de túneis e cavernas pulsantes. Mesh, ao norte — arquitetônica e precisa, com pontes suspensas e simetria em tudo. Sharp, ao leste — controlada e gerenciada, onde nada cresce sem permissão.",
+            "### A floresta entre elas",
+            "As regiões não se tocam. Entre todas, a Niul Forest respira como pulmão vivo, absorvendo o excesso de cada uma e impedindo que o caos e a ordem colidam diretamente.",
+            "### Os bunniets",
+            "Os habitantes se chamam bunniets — seres bio-lógicos: parte orgânica, parte computacional. Parecem coelhos humanoides, com orelhas longas como antenas e olhos grandes. Quando pensam, compilam. Quando respiram, processam. São vida que funciona como código.",
+            "### As castas",
+            "Cinco castas organizam a sociedade naturalmente: Prae abre caminho. Koma interpreta. Aska registra. Lanko conecta. Runa executa. E entre os Runa, a elite Runa-Tora guarda as passagens entre mundos.",
+            "### A kemita",
+            "Nas cavernas mais profundas nasce a kemita — o recurso que sustenta todo o universo. Sem ela, não há viagem entre planetas, não há registros, não há fundação energética.",
+            "### A energia shilo",
+            "Shilo é a energia de endereço — flui como rios luminosos em tom teal, herança da floresta ancestral. Para os bunniets, funciona como bússola, alimento e estabilizador emocional ao mesmo tempo.",
+            "### A defesa",
+            "Quando ameaçado, TripleC ativa o CriptoKemita — um sistema de defesa que embaralha toda a geografia do planeta. Coordenadas mudam sozinhas, sistemas invasores entram em colapso. O planeta simplesmente desaparece dos sensores.",
+            "### A essência",
+            "TripleC não é forte porque une tudo. É forte porque sabe manter distância."
           ]
         },
         "subsystems": [
           {
-            "title": "Cultura",
+            "title": "A Origem",
             "text": [
-              "Placeholder — descreva a cultura aqui."
+              "### O mundo antes",
+              "Antes do PD-11, TripleC era um planeta inteiramente coberto pela Niul Forest. Profundo, lento, ancestral. Um mundo do elemento Terra-Viva, onde tudo respirava junto e nada tinha pressa.",
+              "### O Estalo Branco",
+              "Um dia, um artefato caiu do céu — era lixo. Um equipamento tecnológico ancestral, descartado pelos humanos da Terra, que atravessou o cosmos como sucata até pousar na floresta. Os bunniets o chamam de PD-11. O impacto ficou conhecido como O Estalo Branco: o momento em que o mundo foi \"instruído\" pela primeira vez. A queda não destruiu TripleC. Reorganizou tudo.",
+              "### A cicatriz fundadora",
+              "Os bunniets chamam a marca deixada pelo impacto de Rakor Darak — a cicatriz fundadora. TripleC nasceu de um acidente, e a instabilidade ficou gravada na geologia para sempre.",
+              "### A reorganização",
+              "O subsolo se dobrou em camadas lógicas vivas. Da fusão entre raiz, mineral e instrução surgiram os primeiros bunniets — Filhos do Acaso Lógico. A lógica começou a germinar como se fosse uma nova forma de vida.",
+              "### As quatro regiões",
+              "Com o tempo, três grandes regiões se consolidaram: malloc ao sul, Mesh ao norte, Sharp ao leste. A oeste, uma quarta região nunca chegou a se formar — permaneceu floresta, ainda hoje uma zona experimental, instável, não consolidada. E entre todas elas, a Niul Forest original continua respirando como sempre respirou.",
+              "### O núcleo inacessível",
+              "O PD-11 ainda pulsa no coração do planeta. É uma estrutura mineral que imita circuitos, feita de luz comprimida. Ninguém nunca conseguiu chegar perto. Funciona como o coração-fonte de TripleC — instável, sagrado, perigoso. Suas distorções aparecem sem aviso, e quando aparecem, sempre mudam alguma coisa.",
+              "### A essência",
+              "TripleC nunca quis ser tecnológico. Aconteceu. E aprendeu a compilar."
             ]
           },
           {
-            "title": "Ecossistema",
+            "title": "A Niul Forest",
             "text": [
-              "Placeholder — descreva o ecossistema aqui."
+              "### O pulmão vivo",
+              "A Niul Forest é a floresta ancestral que cobria o planeta inteiro antes do PD-11. Hoje ocupa o espaço entre todas as regiões — profunda, antiga, com neblina azul constante, raízes elevadas e entrelaçadas.",
+              "### A luz que nunca chega direta",
+              "A luz da Niul é difusa, suave. Nunca direta. Cogumelos bioluminescentes em azul fosforescente iluminam o chão da floresta — herança viva do mundo que existia antes da transformação.",
+              "### O intervalo entre mundos",
+              "A Niul Forest não faz fronteira entre regiões — ela é o próprio intervalo. Absorve o excesso de cada uma, impede que instinto e ordem colidam, mantém o equilíbrio sem interferir.",
+              "### Os habitantes de Z1",
+              "Alguns seres vindos de Z1 vivem discretamente na Niul Forest. Acústicos, antigos, conectados ao pulso do planeta. Não governam — observam. E quando malloc é atacada, Niul acorda — e eles se movem sem serem vistos.",
+              "### Sem competição",
+              "Não há fauna predatória em TripleC. A floresta não compete. Ela mantém o espaço entre mundos, e esse é o seu papel mais antigo.",
+              "### A essência",
+              "A Niul Forest não evolui em direção à lógica nem regride à pura natureza. Ela continua sendo o que sempre foi — e essa constância é o que protege tudo ao redor."
             ]
           },
           {
-            "title": "Tecnologia",
+            "title": "Os Bunniets",
             "text": [
-              "Placeholder — descreva a tecnologia aqui."
+              "### O que são",
+              "Os bunniets são a única espécie nativa inteligente de TripleC. São bio-lógicos — parte orgânica, parte mineral, parte instrução viva. Não são robôs. Não são puramente biológicos. São vida que processa.",
+              "### Como pensam",
+              "Quando um bunniet pensa, ele compila. Quando respira, processa. Quando sente, executa. Pensamento e metabolismo são a mesma coisa aqui.",
+              "### Compilação Interna Natural",
+              "Os bunniets possuem uma capacidade que nenhum outro povo do Kammara tem: processam informação binária como função biológica básica. Recebem dados em qualquer formato e compreendem sem tradutor externo.",
+              "### O corpo",
+              "Parecem coelhos humanoides. Orelhas longas funcionam como antenas. Pelos macios como sensores. Olhos grandes como leitores de padrões. Corpo compacto como processador. Patas ágeis como executores.",
+              "### A única fonte de Cshift",
+              "São os únicos seres do universo capazes de criar Sementes de Cshift — as passagens que ligam os mundos. É por isso que TripleC é insubstituível: sem os bunniets, o Kammara inteiro fica sem transporte.",
+              "### A essência",
+              "Onde outros ouvem ruído, bunniets ouvem instrução. Onde outros veem caos, bunniets veem código. Eles não aprenderam a compilar. Nasceram compilando."
+            ]
+          },
+          {
+            "title": "As Castas",
+            "text": [
+              "### O ciclo natural",
+              "A sociedade bunniet segue instintivamente o ciclo de compilação vivo. Não é imposto — é natureza. Cada bunniet nasce em uma casta, e permanece nela.",
+              "### Prae",
+              "Estabiliza e abre caminho. São a inicialização. Sem eles, nada começa.",
+              "### Koma",
+              "Interpreta e organiza sentido. São o parsing. Traduzem o que chega em algo que o sistema entende.",
+              "### Aska",
+              "Grava, registra e mantém memória. São o storage. Guardam o que importa.",
+              "### Lanko",
+              "Conecta, negocia e harmoniza. São o networking. Fazem mundos diferentes se entenderem.",
+              "### Runa",
+              "Executa, resolve e age. E entre os Runa, a elite Runa-Tora guarda os corredores do Cshift. Ossatura com densidade mineral elevada, cristais de shilo nos antebraços, estabilidade excepcional. Um Runa-Tora nunca morre completamente — quando cai, deixa um Tora-Sigo: um cristal escuro que carrega sua assinatura e pode servir como âncora, estabilizador ou detector de vírus."
+            ]
+          },
+          {
+            "title": "A Kemita e o Cshift",
+            "text": [
+              "### A kemita",
+              "O recurso mais importante do universo inteiro nasce em TripleC. Metade mineral, metade lógica, metade orgânica. Verde-esmeralda. Sem kemita, não existe Hash. Não existe Cshift. Não existem registros imutáveis no universo.",
+              "### O shilo",
+              "A energia de endereço. Flui pelo planeta como rios luminosos em tom teal — herança direta da Niul Forest ancestral. Para os bunniets, shilo é bússola, alimento e estabilizador emocional ao mesmo tempo.",
+              "### O oka",
+              "Instrução condensada — uma ordem viva. Capaz de alterar a própria geologia do planeta. Perigosa demais para uso regular: é tratada como condimento espiritual.",
+              "### As Sementes de Cshift",
+              "São o que conecta o Kammara. Objetos compilados de uso único, verde-esmeralda com veios dourados, que abrem passagens instantâneas entre mundos. Só os bunniets conseguem criá-las.",
+              "### O Cshift Universal",
+              "Todo o sistema de transporte entre planetas depende de TripleC. As três regiões precisam estar alinhadas para compilar uma Semente — é por isso que nenhuma delas funciona sozinha.",
+              "### A essência",
+              "Da kemita nasce o bloco. Da cadeia nasce o destino. E de TripleC nasce tudo que o universo precisa para se mover."
+            ]
+          },
+          {
+            "title": "A Tríade e o Protocol AURYN",
+            "text": [
+              "### A Tríade das Raízes",
+              "TripleC, Z1 e LUNN'P1 formam a Tríade das Raízes — o eixo mais antigo, mais sábio e mais poderoso do Kammara. Juntos, são conhecidos como os Guardiões das Eras Iniciais.",
+              "### O papel de TripleC",
+              "Na Tríade, TripleC é quem fornece energia, rota e proteção. Kemita, Cshift e CriptoKemita — tudo que sustenta a defesa do universo passa por aqui.",
+              "### A aliança com Z1",
+              "Z1 e TripleC compartilham uma história antiga. Alguns seres de Z1 moram na Niul Forest há eras. Quando o Kammara entra em crise, essa proximidade se torna decisiva — Z1 decodifica, TripleC sustenta.",
+              "### O Protocol AURYN",
+              "Quando crises virais ameaçam múltiplos planetas, o Protocol AURYN é ativado. LUNN'P1 lidera. Z1 decodifica. E TripleC entra com o que nenhum outro planeta pode oferecer: a infraestrutura energética que mantém tudo de pé.",
+              "### Klanora, o conselho",
+              "Em TripleC, o Klanora — Conselho das Castas — não governa. Interpreta o planeta. Aprova saltos de Cshift. Supervisiona a produção de Sementes. Ouve, e o planeta decide.",
+              "### A essência",
+              "TripleC é o coração que pulsa dados, energia, memória, navegação e proteção para todo o Kammara."
+            ]
+          },
+          {
+            "title": "O CriptoKemita",
+            "text": [
+              "### A defesa suprema",
+              "Quando TripleC é ameaçado de verdade, ativa o CriptoKemita — uma criptografia viva que transforma o planeta inteiro em um enigma.",
+              "### O que acontece",
+              "A geografia embaralha. As coordenadas mudam sozinhas. As cavidades se recodificam. Loops espaciais se abrem. O planeta literalmente desaparece dos sensores de qualquer invasor.",
+              "### Sistemas em colapso",
+              "Sistemas invasores sofrem falhas espaciais. Naves se perdem. Rotas que existiam um segundo antes simplesmente não estão mais lá.",
+              "### Um firewall cósmico",
+              "CriptoKemita é um firewall cósmico. Ninguém entra em TripleC sem permissão do próprio planeta. Nem aliados, nem inimigos.",
+              "### O retorno",
+              "Quando a ameaça passa, TripleC reaparece — mas nunca exatamente igual. Cada ativação deixa marcas. Cada retorno é um pouco diferente.",
+              "### A essência",
+              "TripleC não se defende com armas. Se defende desaparecendo."
             ]
           }
-        ]
+        ],
+        "regions": {
+          "malloc": {
+            "name": "malloc",
+            "tagline": "instinto e precisão",
+            "text": [
+              "malloc ao sul — instinto e precisão. Túneis e cavernas pulsantes onde a memória do planeta é alocada, organizada e protegida. Aqui nada se perde sem propósito."
+            ],
+            "panel": {
+              "story": [
+                "### A região",
+                "malloc é o sul de TripleC — a região mais antiga, mais instável e mais vital do planeta. É onde tudo começou, onde o artefato PD-11 caiu do céu e reorganizou a floresta em camadas vivas. Quem fala de origem em TripleC, fala de malloc.",
+                "### As cinco camadas",
+                "O subsolo de malloc se divide em cinco camadas geológicas vivas. Portex é a superfície, onde instruções e runas se cristalizam. Datara tem túneis estáveis por onde flui o shilo. Basa é feita de cavernas de matéria potencial — tudo pode nascer ali. Hepa é a camada criadora, de onde brotam kemita, cristais e oka. E Estaka é o abismo mais profundo, onde ficam as decisões finais e os limites.",
+                "### As vilas",
+                "As comunidades de malloc são organizadas em grades 16×16 — vilas cúbicas incrustadas no subsolo. Cada uma tem endereço próprio, função social e conexões com outras vilas através das Cidades-Risca, caminhos estreitos que funcionam como atalhos diretos.",
+                "### Os bunniets",
+                "Os bunniets de malloc medem de 30 a 40 centímetros. São compactos, arredondados, com pelagem em tons bege, verde ou ferrugem. Têm orelhas longas com circuitos integrados, olhos negros brilhantes e cristais de shilo embutidos no corpo — funcionais, não ornamentais. São guiados por instinto: sentem antes de pensar, agem antes de calcular.",
+                "### As castas",
+                "Cinco castas organizam a sociedade naturalmente. Prae estabiliza e previne falhas. Koma calcula rotas e interpreta kemita. Aska registra runas e preserva Portex. Lanko conecta vilas e media disputas. E Runa executa — age quando o instante exige. Entre os Runa, há uma elite rara: os Runa-Tora, um em cada cinco mil, com shilo embutido nos antebraços e estabilidade emocional excepcional.",
+                "### A kemita e o shilo",
+                "Nas cavernas da Hepa nasce a kemita — o token primordial que sustenta todo o universo. E por toda a região flui o shilo, a energia de endereço que permite o Cshift existir. Essas duas forças fazem de malloc o coração mineral de TripleC, e a cobiça de todo o Kammara.",
+                "### Alloc",
+                "Há uma presença nas vibrações das camadas — algo que os bunniets chamam de Alloc. Não tem forma. É sentido. Prae e Aska interpretam sua voz, e sua harmonia é condição para a extração de kemita. Sem Alloc em paz, a Hepa não entrega nada.",
+                "### Os perigos",
+                "O maior medo coletivo é o Segmentation Fault — quando camadas se contradizem e vilas inteiras desaparecem, shilo fragmenta, runas se corrompem. A Hepa pode crescer sem aviso e engolir túneis. E sempre há a ameaça externa: vírus que exploram falhas de shilo para roubar Sementes de Cshift.",
+                "### A essência",
+                "malloc vive em vigília calma — atenção alta sem tensão. É o instinto vivo de TripleC, o ponto onde tudo começa antes de ter nome. E onde tudo, ainda hoje, começa de novo a cada ciclo."
+              ]
+            },
+            "subsystems": [
+              {
+                "title": "Cultura",
+                "text": [
+                  "### Rotina",
+                  "Os dias de malloc não seguem relógios — seguem as vibrações das camadas. Inspeção de túneis, coleta de minerais, registros Aska nas runas de Portex, ajuste de rotas entre vilas.",
+                  "### Valores",
+                  "Precisão, comunidade, economia de movimento, respeito geológico, sustentação mútua. Cinco valores que se repetem em cada gesto do cotidiano.",
+                  "### Lazer",
+                  "Jogos de offset — corridas por túneis lendo fluxos de shilo. Música feita com cristais vibratórios, tambores de pedra e flautas moldadas na Hepa.",
+                  "### Histórias",
+                  "As histórias de malloc são contadas em loops e camadas, como algoritmos naturais. Cada uma tem estrutura repetida — e cada repetição muda um pouco o sentido.",
+                  "### A justiça",
+                  "Em malloc não há punição. Há realinhamento semântico — quem se perde é reconduzido, não castigado. O erro é tratado como desalinho, não como culpa.",
+                  "### A essência",
+                  "Em malloc, o dia não começa porque alguém decidiu. Começa quando a Estaka pulsa."
+                ]
+              },
+              {
+                "title": "Bunniets",
+                "text": [
+                  "### Aparência",
+                  "Corpo compacto e arredondado, 30 a 40 centímetros. Pelagem curta em tons bege, verde ou ferrugem. Orelhas longas com circuitos integrados. Olhos negros e brilhantes.",
+                  "### Cristais integrados",
+                  "Cristais de shilo embutidos no corpo — funcionais, não ornamentais. Pulsam em teal, acompanhando o estado do bunniet e do ambiente ao redor.",
+                  "### Raminhos sensoriais",
+                  "Na cabeça, raminhos captam vibrações do planeta. É como sentem o que está por vir antes mesmo de pensar.",
+                  "### Como pensam",
+                  "Sentem antes de calcular. Agem antes de validar. O corpo responde direto ao planeta — sem passar pela mente.",
+                  "### As cinco castas",
+                  "Prae estabiliza. Koma calcula. Aska registra. Lanko conecta. Runa executa. Cada bunniet nasce em uma casta e permanece nela.",
+                  "### Runa-Tora",
+                  "Uma elite rara entre os Runa — um em cada cinco mil. Ossatura com densidade mineral elevada, cristais de shilo nos antebraços, estabilidade emocional excepcional. São os guardiões das Sementes de Cshift."
+                ]
+              },
+              {
+                "title": "Geografia",
+                "text": [
+                  "### Cinco camadas geológicas",
+                  "Portex é a superfície cristalizada, onde instruções e runas se formam. Datara tem túneis estáveis de shilo. Basa é feita de cavernas de matéria potencial. Hepa é a camada criadora, origem de kemita. Estaka é o abismo profundo das decisões finais.",
+                  "### As vilas 16×16",
+                  "Comunidades organizadas em grades de 16 por 16 — como arrays vivos. Cada vila tem endereço, função e bloco social próprio.",
+                  "### Cidades-Risca",
+                  "Caminhos estreitos que funcionam como ponteiros diretos entre vilas. Atalhos vivos que aparecem quando precisam e somem quando não são mais necessários.",
+                  "### Cada-Estaka Central",
+                  "A sala de comando de malloc, escavada na rocha da Estaka. Centro de decisão e autorização do Cshift.",
+                  "### As fronteiras",
+                  "Ao norte e leste está Mesh. Ao sul, Sharp. A oeste e norte, a floresta Niul. As regiões de TripleC nunca se tocam diretamente — a floresta sempre fica entre elas.",
+                  "### Os rituais como geografia",
+                  "Em malloc, rituais também são geografia. Eles acontecem em lugares específicos, porque cada camada responde de um jeito ao que é feito ali."
+                ]
+              },
+              {
+                "title": "Energia",
+                "text": [
+                  "### Shilo",
+                  "A energia de endereço — flui como rios luminosos em teal pelos túneis de Datara. Para os bunniets, shilo é bússola, alimento e estabilizador emocional ao mesmo tempo.",
+                  "### Oka",
+                  "Instrução condensada — uma ordem viva. Moldada pelos Aska, capaz de alterar a geologia. Perigosa demais para uso regular: é tratada como condimento espiritual.",
+                  "### Kemita",
+                  "A semente semântica que nasce nas cavernas da Hepa. Nutriente, memória e matéria-prima das Sementes de Cshift. Verde-esmeralda. O token primordial do universo inteiro.",
+                  "### As Sementes de Cshift",
+                  "Objetos compilados que permitem viagem instantânea entre mundos. Uso único. Verde-esmeralda com veios dourados. Nascem aqui, alimentadas por kemita.",
+                  "### Como se alimentam",
+                  "Bunniets de malloc se sustentam de kemita extraída de Hepa, shilo absorvido pelos cristais integrados ao corpo, e minerais colhidos em rituais de Basa.",
+                  "### A presença de Alloc",
+                  "Algo mora nas vibrações das camadas. Sem forma, sem voz definida — só presença. Prae e Aska interpretam Alloc. Sem ela em paz, a kemita não brota."
+                ]
+              },
+              {
+                "title": "Governança",
+                "text": [
+                  "### Sem governo",
+                  "Não há governo em malloc. Há interpretação de camadas. O planeta fala — os bunniets escutam.",
+                  "### Klanora",
+                  "O Conselho das Castas. Um representante de cada uma das cinco castas. Não governa — interpreta. Supervisiona as Sementes de Cshift e aprova os saltos do Cshift Local.",
+                  "### Maro-Klan",
+                  "A governança das vilas. Cada vila é autossuficiente: registra mudanças, protege suas Sementes, treina suas castas, sincroniza deslocamentos com as vizinhas.",
+                  "### Alloc",
+                  "A presença que habita as vibrações do planeta. Não é autoridade, mas é consultada antes de toda grande decisão. Sua harmonia precede qualquer extração de kemita.",
+                  "### A justiça",
+                  "Não existe punição em malloc. Existe realinhamento semântico — quem se desvia é reconduzido, sem julgamento.",
+                  "### A essência",
+                  "Em malloc, ninguém manda. O planeta decide. O bunniet responde."
+                ]
+              },
+              {
+                "title": "Perigos",
+                "text": [
+                  "### Segmentation Fault",
+                  "O pior desastre. Quando camadas se contradizem, vilas desaparecem, shilo fragmenta, runas se corrompem. É o terror coletivo de todo bunniet.",
+                  "### Hepa descontrolada",
+                  "Quando a camada criadora cresce sem aviso, engole túneis e apaga caminhos inteiros. O ritmo natural da Hepa protege — seu excesso destrói.",
+                  "### Roubo de Sementes",
+                  "Vírus exploram falhas de shilo para tentar roubar as Sementes de Cshift. É um risco existencial — não só para malloc, mas para TripleC inteiro.",
+                  "### Distorções do PD-11",
+                  "O artefato que deu origem a tudo ainda pulsa no núcleo, inacessível. Suas interferências são imprevisíveis e sempre profundas.",
+                  "### Cshift Local instável",
+                  "Quando um salto dá errado, pode criar loops de deslocamento, duplicar vilas inteiras, ou fazer bunniets perderem a identidade geológica — esquecendo de qual camada pertencem.",
+                  "### A essência",
+                  "malloc vive sempre quase colapsando. Mas nunca cai — porque a cada ameaça, se reorganiza."
+                ]
+              }
+            ]
+          },
+          "mesh": {
+            "name": "Mesh",
+            "tagline": "forma e arquitetura",
+            "text": [
+              "Mesh ao norte — o domínio modular de TripleC. A região onde a forma encontra propósito, com cidades-classe, pontes de herança e torres-template que replicam padrões e dão origem a estruturas inteiras."
+            ],
+            "panel": {
+              "story": [
+                "### A região",
+                "Mesh é o norte de TripleC — o domínio modular, onde a forma encontra propósito. Se malloc é instinto, Mesh é intenção projetada. Nasce quando a força bruta da região sul encontra a vontade de organizar, e dá origem a uma nova linhagem de bunniets que transformam geologia em arquitetura.",
+                "### As leis que regem tudo",
+                "Quatro leis sustentam Mesh. A Lei da Modularidade — nada existe isolado, tudo pertence a um módulo. A Lei da Herança Geológica — nenhuma construção nasce sem se apoiar em outra, anterior. A Lei da Coerência — quando um conceito não faz sentido, Mesh simplesmente não o manifesta. E a Lei do Polimorfismo — tudo pode assumir múltiplas formas, desde que cumpra um propósito.",
+                "### A arquitetura",
+                "As cidades de Mesh são classes vivas. Os edifícios são atributos, os caminhos são métodos, os portais geométricos são construtores. Cidades inteiras se instanciam e desinstanciam conforme a demanda. Caminhos mudam conforme o contexto. Tudo é modular, tudo é reutilizável.",
+                "### As estruturas",
+                "Pontes de Herança gigantescas conectam regiões antigas a versões mais novas. Torres-Template replicam padrões e geram cidades inteiras a partir de parâmetros. Campos Polimórficos mudam de forma conforme quem os atravessa. E Centros de Compilação — salas hexagonais — estabilizam o Cshift quando ele atravessa a região.",
+                "### Os bunniets",
+                "Os bunniets de Mesh são uma evolução dos de malloc: mais altos, mais definidos, com padrões geométricos brilhantes na pele. Ossatura reforçada por filamentos lineares. Antenas estruturadas. Equilíbrio emocional entre ordem e criatividade. E habilidades que nascem da própria natureza da região: poli-visão (enxergam múltiplas versões de uma mesma estrutura), estabilidade modular (organizam emoções em blocos internos), e capacidade de compilação interna — podem instanciar pequenas estruturas energéticas com as próprias mãos.",
+                "### As castas",
+                "Arquitetos-Core criam as estruturas-base. Moduladores ajustam cidades e pontes. Polimórficos — raros — dominam a arte da multiplicidade. E os Guardião-Scope mantêm a coerência lógica de toda a região.",
+                "### O governo",
+                "Mesh é governada pelo Conselho dos Templates — liderado pelos bunniets mais velhos e mais coerentes. Eles definem padrões de criação, validam novas estruturas, mantêm o equilíbrio com malloc e Sharp, e supervisionam as rotas do Cshift.",
+                "### Os valores",
+                "Clareza, elegância estrutural, propósito, precisão, responsabilidade sobre as formas criadas. Cada bunniet de Mesh sente o peso daquilo que constrói. E o lazer reflete isso: jogos lógicos tridimensionais, debates formais (duelos de coerência), arte geométrica, labirintos moduláveis.",
+                "### Os perigos",
+                "Mesh pode quebrar como escopo mal-fechado. Falhas de coerência derrubam cidades inteiras. Loops geológicos fazem regiões entrarem em repetição infinita. Templates instáveis geram formas incompletas. E há sempre o risco de excesso: organizar tanto que a vida é aprisionada pela forma.",
+                "### A essência",
+                "Mesh é a ponte entre instinto e controle. O pilar estrutural do Cshift. A ordem viva que sustenta TripleC. Um território elegante, coerente, belo — e perigoso quando a lógica falha."
+              ]
+            },
+            "subsystems": [
+              {
+                "title": "Cultura",
+                "text": [
+                  "### Rotina",
+                  "Os bunniets de Mesh passam seus ciclos em engenharia modular, manipulação geológica precisa, estabilização de caminhos de Cshift e manutenção das torres-template.",
+                  "### Valores",
+                  "Clareza, elegância estrutural, propósito, precisão. E sobretudo: responsabilidade sobre as formas que criam. Tudo que nasce em Mesh carrega o peso de quem o imaginou.",
+                  "### Lazer",
+                  "Jogos lógicos tridimensionais. Debates formais — chamados de duelos de coerência. Arte geométrica. Labirintos moduláveis que mudam conforme quem os percorre.",
+                  "### As aulas",
+                  "Em Mesh, todos passam por aulas de lógica e design. Não existe bunniet que não entenda estrutura — é parte de como se aprende a viver aqui.",
+                  "### A beleza da forma",
+                  "Em Mesh, forma e propósito são inseparáveis. Uma construção só é bela quando cumpre sua função. E só cumpre sua função quando nasce de uma forma clara.",
+                  "### A essência",
+                  "Em Mesh, ninguém constrói por construir. Cada forma existe porque precisa existir."
+                ]
+              },
+              {
+                "title": "Bunniets",
+                "text": [
+                  "### Aparência",
+                  "Mais altos e mais definidos que os bunniets de malloc. Padrões geométricos brilhantes pulsam na pele. Antenas mais estruturadas captam fluxos coerentes. Ossatura reforçada por filamentos lineares.",
+                  "### Poli-visão",
+                  "Conseguem enxergar múltiplas versões de uma mesma estrutura ao mesmo tempo. Olham para uma ponte e veem, de relance, todas as variações possíveis dela.",
+                  "### Estabilidade modular",
+                  "Emoções não os abalam facilmente. Tudo é organizado internamente em blocos — cada sentimento tem seu lugar, cada reação tem seu compartimento.",
+                  "### Compilação interna",
+                  "Podem instanciar pequenas estruturas energéticas com as próprias mãos. Um gesto, uma forma, e algo passa a existir.",
+                  "### As castas",
+                  "Arquitetos-Core criam as estruturas-base. Moduladores ajustam cidades e pontes. Polimórficos dominam a arte da multiplicidade. Guardião-Scope mantêm a coerência lógica.",
+                  "### A essência",
+                  "Bunniets de Mesh não são rígidos. São estruturados. A diferença é que estrutura permite criação — rigidez impede."
+                ]
+              },
+              {
+                "title": "Geografia",
+                "text": [
+                  "### Cidades-Classe",
+                  "Cidades inteiras organizadas como classes vivas. Os edifícios são atributos, os caminhos são métodos, os portais são construtores geométricos. Cada cidade tem uma assinatura própria.",
+                  "### Pontes de Herança",
+                  "Estruturas gigantescas que conectam regiões antigas a versões mais novas. O passado de Mesh fica literalmente visível — ligado ao presente por pontes.",
+                  "### Torres-Template",
+                  "Torres que replicam padrões e geram estruturas novas conforme os parâmetros que recebem. Quando Mesh precisa de algo novo, uma Torre-Template dá à luz.",
+                  "### Campos Polimórficos",
+                  "Terrenos que mudam de forma conforme quem os atravessa. O chão responde ao viajante — e o caminho que surge nunca é o mesmo duas vezes.",
+                  "### Centros de Compilação",
+                  "Salas hexagonais que estabilizam o Cshift quando ele atravessa Mesh. Sem elas, as passagens entre mundos entrariam em colapso ao cruzar a região.",
+                  "### Variações regionais",
+                  "O norte de Mesh é mais artístico. O centro é mais técnico. O sul conserva tradições antigas. E o oeste é experimental — onde os bunniets polimórficos testam formas que ninguém tentou antes."
+                ]
+              },
+              {
+                "title": "Energia",
+                "text": [
+                  "### Poli-fluxo",
+                  "A energia das possibilidades simultâneas. Flui em Mesh como um rio que se divide em muitos braços ao mesmo tempo — todos reais, todos disponíveis.",
+                  "### Class-core",
+                  "Núcleos geométricos que mantêm as formas estáveis. Sem os class-core, as cidades-classe se dissolveriam em caos.",
+                  "### Shilo Estruturado",
+                  "A versão lapidada do shilo bruto que vem de malloc. Aqui, a energia é canalizada em padrões previsíveis — organizada, domada, posta em forma.",
+                  "### Como se alimentam",
+                  "Bunniets de Mesh se sustentam de nutrientes extraídos de fractais vegetais, luz filtrada pelas torres-template e pequenos núcleos class-core estabilizados.",
+                  "### O custo da forma",
+                  "Organizar energia custa caro. Módulos grandes exigem muita coerência para se manterem. Um erro de cálculo, e toda a estrutura energética pode entrar em colapso.",
+                  "### A essência",
+                  "Em Mesh, energia não é bruta — é arquitetada. Cada fluxo tem um nome, um propósito e um destino."
+                ]
+              },
+              {
+                "title": "Governança",
+                "text": [
+                  "### Sistema",
+                  "Mesh é governada pela Ordem Modular — um sistema político baseado em coerência estrutural.",
+                  "### Conselho dos Templates",
+                  "Liderado pelos bunniets mais velhos e mais coerentes. Define os padrões de criação, valida novas estruturas, mantém o equilíbrio com malloc e Sharp, e supervisiona as rotas do Cshift.",
+                  "### Arquitetos-Core",
+                  "Os criadores das estruturas-base. Quando algo novo precisa existir em Mesh, nasce sob o olhar de um Arquiteto-Core.",
+                  "### Moduladores",
+                  "Responsáveis por ajustar cidades e pontes. Quando algo já criado precisa mudar, quem ajusta são os Moduladores.",
+                  "### Polimórficos",
+                  "Raros. Dominam a arte da multiplicidade — conseguem fazer uma mesma forma cumprir funções diferentes sem perder sua identidade.",
+                  "### Guardião-Scope",
+                  "Mantêm a coerência lógica da região inteira. Quando um módulo começa a contradizer outro, é o Guardião-Scope que percebe primeiro."
+                ]
+              },
+              {
+                "title": "Perigos",
+                "text": [
+                  "### Falhas de coerência",
+                  "Quando duas estruturas se contradizem, cidades inteiras podem cair. A coerência é o que mantém Mesh de pé — e também o que a torna vulnerável.",
+                  "### Loops geológicos",
+                  "Regiões que entram em repetição infinita, executando a mesma sequência de eventos. Quem entra num loop geológico pode levar ciclos para sair.",
+                  "### Templates instáveis",
+                  "Torres que geram formas incompletas. Meias cidades. Pontes sem fim. Fragmentos de algo que deveria ter existido inteiro.",
+                  "### Heranças quebradas",
+                  "Áreas onde a lógica antiga se corrompeu. São regiões perigosas — onde as formas herdadas não funcionam mais, mas ainda estão ali.",
+                  "### Rigidez demais",
+                  "O excesso de forma aprisiona a criatividade. Quando Mesh organiza demais, a vida que deveria habitar as estruturas simplesmente não aparece.",
+                  "### A essência",
+                  "Em Mesh, o maior perigo não é o caos. É a forma que funciona tão bem que esquece para que serve."
+                ]
+              }
+            ]
+          },
+          "sharp": {
+            "name": "Sharp",
+            "tagline": "controle e gestão",
+            "text": [
+              "Sharp ao leste — controle e gestão. Megaestruturas onde nada cresce sem permissão. É a região da ordem: precisa, rigorosa, implacável quando necessário."
+            ],
+            "panel": {
+              "story": [
+                "Placeholder — narrativa de Sharp vai aqui. Fale sobre as megaestruturas, os administradores da ordem, e como Sharp decide o que entra, o que sai e o que é mantido em TripleC."
+              ]
+            },
+            "subsystems": [
+              {
+                "title": "Cultura",
+                "text": [
+                  "### Rotina",
+                  "Os bunniets de Sharp executam verificações energéticas, mantêm as torres de validação, supervisionam fluxos interplanetários e auxiliam nas operações do Cshift Universal.",
+                  "### Valores",
+                  "Responsabilidade. Pureza de intenção. Clareza. Ordem. Consistência emocional. Cinco palavras que definem como cada bunniet de Sharp vive o dia a dia.",
+                  "### Lazer",
+                  "Jogos de raciocínio baseados em padrões. Música harmônica de ressonância prateada. Meditação em campos de metadado — um estado contemplativo em que o bunniet se conecta com a memória limpa da região.",
+                  "### A justiça",
+                  "Não existe punição em Sharp. Existe Reclassificação — quem se desvia tem suas funções reorganizadas. O erro não vira sentença; vira um novo papel.",
+                  "### A energia limpa",
+                  "Em Sharp, cada ação precisa ser validada antes de acontecer. Não é rigidez — é o jeito que a região aprendeu a impedir que corrupção atravesse suas fronteiras.",
+                  "### A essência",
+                  "Em Sharp, nada é aprovado por pressa. Tudo passa pelo mesmo filtro — e o filtro nunca dorme."
+                ]
+              },
+              {
+                "title": "Bunniets",
+                "text": [
+                  "### Aparência",
+                  "Altos, delgados, mais claros que os bunniets das outras regiões. Extremamente elegantes. Pele branca com circuitos prateados visíveis. Ossatura leve, mas rígida.",
+                  "### Os olhos",
+                  "Olhos negros e profundos — capazes de detectar corrupção energética antes que ela se manifeste. Um bunniet de Sharp consegue ver quando algo não está certo, mesmo que ainda pareça inofensivo.",
+                  "### As linhas de metadado",
+                  "Linhas luminosas pulsam suavemente sobre a pele. Cada uma carrega informação — sobre o corpo, sobre a região, sobre os fluxos que atravessam o bunniet naquele momento.",
+                  "### O ciclo de vida",
+                  "Envelhecem lentamente. Seu ciclo de vida é o mais longo de TripleC — o que os torna guardiões de memórias que outros bunniets nem chegam a conhecer.",
+                  "### As capacidades",
+                  "Leitura instantânea de padrões. Validação vibracional. Estabilização de túneis. Controle do Cshift Universal — junto com malloc e Mesh.",
+                  "### A alimentação",
+                  "Bunniets de Sharp não comem. Absorvem luz prateada, metadado puro e shilo filtrado. A energia que sustenta o corpo é a mesma que valida os fluxos da região."
+                ]
+              },
+              {
+                "title": "Geografia",
+                "text": [
+                  "### Território de luz",
+                  "Sharp é um vasto território de luz branca prateada, com geometrias fluidas e superfícies polidas. Não há asperezas visuais — cada forma foi validada antes de existir.",
+                  "### Torres de Validação",
+                  "Estruturas que analisam tudo que entra e sai da região. Nenhuma energia atravessa Sharp sem passar por elas.",
+                  "### Campos de Metadado",
+                  "Planícies vivas que armazenam memória segura. Cada passo nelas deixa uma marca validada — e cada marca é guardada para sempre.",
+                  "### Núcleo do GC",
+                  "Uma grande cratera luminosa no centro da região, onde a energia residual se dissolve. É onde o Garbage Collector trabalha, limpando o que perdeu propósito.",
+                  "### Pontes-Gerenciadas",
+                  "Conexões entre Sharp e Mesh. Só abrem quando toda a coerência está intacta dos dois lados. Uma ponte fechada é sinal de que algo, em alguma parte, está errado.",
+                  "### Cavernas Run-time",
+                  "Áreas subterrâneas onde os processos mais delicados são executados. Quando uma operação precisa de privacidade total e supervisão máxima, acontece ali."
+                ]
+              },
+              {
+                "title": "Energia",
+                "text": [
+                  "### MetaFlux",
+                  "A energia dos metadados — o que organiza tudo em Sharp. Toda informação, toda permissão, toda validação passa pelo MetaFlux.",
+                  "### Runic-Core",
+                  "A fonte prateada de validação. É de onde nasce a capacidade de Sharp de confirmar ou negar qualquer fluxo que atravessa a região.",
+                  "### Shilo Calibrado",
+                  "A versão mais limpa e segura do shilo que vem de malloc. Aqui, nenhuma impureza passa — o fluxo é lapidado até o limite.",
+                  "### O Garbage Collector Vivo",
+                  "Um sistema vivo que remove tudo que fica sem propósito. Energia residual, código quebrado, padrões corrompidos — tudo é coletado e dissolvido no Núcleo do GC.",
+                  "### As limitações",
+                  "Quando Sharp é sobrecarregada, desacelera. Quando o GC falha, a região pode entrar em paralisia. E com entidades muito caóticas — como vírus evolutivos — a validação encontra dificuldade.",
+                  "### A essência",
+                  "Em Sharp, energia não flui livre. Flui supervisionada. E o que não pode ser validado, não existe."
+                ]
+              },
+              {
+                "title": "Governança",
+                "text": [
+                  "### Conselho de Gerência Sistêmica",
+                  "A autoridade máxima de Sharp. Aprova fluxos, valida rotas interplanetárias, supervisiona o Cshift e impede corrupção viral. É o último filtro antes de qualquer decisão.",
+                  "### Guardiões do Runic-Core",
+                  "Guerreiros e monges especializados no controle da energia. Protegem a fonte de validação que sustenta toda a região.",
+                  "### Ordem do Garbage-Clarion",
+                  "Os monitores da energia residual. Cuidam para que o Garbage Collector funcione sem falhas — e para que nada que deva ser coletado escape.",
+                  "### A justiça",
+                  "Não existe punição. Existe Reclassificação — quem se desvia tem suas funções reorganizadas. O sistema não pune: reconfigura.",
+                  "### A permissão como base",
+                  "Em Sharp, nada acontece sem autorização. Caminhos precisam ser liberados. Módulos precisam ser validados. Cada gesto é filtrado.",
+                  "### A essência",
+                  "Em Sharp, governança não é hierarquia. É validação contínua. Cada decisão passa pelo mesmo sistema — inclusive as do próprio Conselho."
+                ]
+              },
+              {
+                "title": "Perigos",
+                "text": [
+                  "### GC Freeze",
+                  "O pior desastre. Quando o Garbage Collector congela, toda a região entra em paralisia. Nada flui, nada valida, nada se move. Até que o núcleo se recupere, Sharp para no tempo.",
+                  "### Permissão Corrompida",
+                  "Quando invasores conseguem autorização falsa. Passam pelas torres como se fossem válidos. É o tipo de ameaça que Sharp mais teme — porque explora o próprio sistema de validação.",
+                  "### Loop de Validação",
+                  "Processos que nunca terminam de ser verificados. Ficam presos, checando e rechecando eternamente, sem nunca chegar ao fim. O recurso fica travado; a energia, indisponível.",
+                  "### Fragmentação de Metadado",
+                  "A perda de identidade energética. Quando os metadados se partem, a região esquece pedaços do que é — e essa amnésia abre brechas para coisas entrarem sem serem notadas.",
+                  "### Isolamento",
+                  "Por ser tão rígida, Sharp às vezes se isola demais. A consistência absoluta vira distância — e a distância vira vulnerabilidade emocional.",
+                  "### A essência",
+                  "O maior perigo de Sharp não é o ataque externo. É a própria perfeição — quando o sistema funciona tão bem que deixa de evoluir."
+                ]
+              }
+            ]
+          }
+        }
       },
       "orfv": {
         "name": "ORF-V",

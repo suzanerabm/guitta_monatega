@@ -1,7 +1,8 @@
 // src/theme/palettes.ts
 export type PaletteName =
   | 'bichittos' | 'napcat' | 'zeco' | 'taylo' | 'miscelania' | 'cheiodebolinha'
-  | 'kammara' | 'lunnp1' | 'eni4' | 'triplec' | 'orfv' | 'z1' | 'gotto' | 'arte';
+  | 'kammara' | 'lunnp1' | 'eni4' | 'triplec' | 'orfv' | 'z1' | 'gotto' | 'arte'
+  | 'malloc' | 'mesh' | 'sharp';
 
 export interface Palette {
   colors: string[];
@@ -79,11 +80,47 @@ export const palettes: Record<PaletteName, Palette> = {
     gradientBg: 'linear-gradient(160deg, #1a1005 0%, #3a2a0a 40%, #2a1c06 100%)',
   },
   triplec: {
-    colors: ['#7b4fbf', '#2a5caa', '#00e86a', '#2a2868', '#0e3a1a', '#1a4a30'],
+    colors: ['#7b4fbf', '#2a5caa', '#00e86a', '#6764c0', '#0e3a1a', '#1a4a30'],
     text: '#0e3a1a',
     dark: '#0a0818',
     gradient: 'linear-gradient(135deg, #00e86a 0%, #00e86a 35%, #7b4fbf 70%, #2a5caa 100%)',
-    gradientBg: 'linear-gradient(160deg, #0a0818 0%, #1a1040 40%, #081a10 100%)',
+    // Deep forest green → mid green → dark edges. Harmonizes with the
+    // verdant Niul Forest bg image instead of tinting it purple.
+    gradientBg: 'linear-gradient(160deg, #081a10 0%, #1a3a22 40%, #0e2a18 70%, #081a10 100%)',
+  },
+  // === MALLOC ===
+  // Verde tech + teal shilo. Instinto, cavernas pulsantes, circuitos integrados nas rochas.
+  malloc: {
+    colors: ['#22c55e', '#14b8a6', '#4ade80', '#059669', '#0a3a1f', '#1a4a30'],
+    text: '#0a3a1f',
+    dark: '#050f08',
+    gradient: 'linear-gradient(135deg, #22c55e 0%, #4ade80 30%, #14b8a6 65%, #059669 100%)',
+    // Cavernas profundas de malloc — verde tech pulsante sobre rocha úmida.
+    // O teal do shilo brilha entre as camadas geológicas.
+    gradientBg: 'linear-gradient(160deg, #050f08 0%, #0a2818 35%, #0e3520 65%, #050f08 100%)',
+  },
+  // === MESH ===
+  // Prata-azulado + verde kemita. Arquitetura modular, pontes hexagonais, simetria.
+  mesh: {
+    colors: ['#94a3b8', '#cbd5e1', '#059669', '#22c55e', '#475569', '#1e293b'],
+    text: '#1e293b',
+    dark: '#0a1218',
+    gradient: 'linear-gradient(135deg, #94a3b8 0%, #cbd5e1 30%, #14b8a6 65%, #059669 100%)',
+    // Pontes suspensas e torres-template — azul-marinho profundo com
+    // miolo azul-cobalto. Mais azul, menos cinza/prata do que a versão
+    // original, pra destacar a identidade fria-geométrica da região.
+    gradientBg: 'linear-gradient(160deg, #0a1628 0%, #1a2a48 30%, #2a4a7a 55%, #1a2a48 80%, #0a1628 100%)',
+  },
+  // === SHARP ===
+  // Branco puro + verde claro + azul-prateado. Megacidades seladas, validação, luz fria.
+  sharp: {
+    colors: ['#f1f5f9', '#94a3b8', '#a7f3d0', '#cbd5e1', '#64748b', '#1e293b'],
+    text: '#334155',
+    dark: '#0f172a',
+    gradient: 'linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 35%, #a7f3d0 70%, #94a3b8 100%)',
+    // Megaestruturas seladas com o verde kemita dominando o miolo.
+    // Bordas em azul-marinho profundo pra enquadrar o pulso esmeralda.
+    gradientBg: 'linear-gradient(160deg, #0f172a 0%, #0e3520 30%, #1a6a3a 55%, #0e3520 80%, #0f172a 100%)',
   },
   orfv: {
     colors: ['#8040c8', '#5a30a0', '#40d0e8', '#cf568c', '#3a1860', '#9040a0'],

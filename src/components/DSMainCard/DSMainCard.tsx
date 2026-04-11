@@ -48,6 +48,12 @@ interface DSMainCardProps {
   mascot?: Mascot;
   stripSide?: boolean;
   bgOpacity?: number;
+  /**
+   * Title shown pinned at the top of the DSTextPanel — it stays fixed
+   * while the body text scrolls below. When omitted, fall back to the
+   * legacy behavior (caller puts `<h2>` inside `text`).
+   */
+  textPanelTitle?: string;
   text?: ReactNode;
   children?: ReactNode;
   'data-testid'?: string;
@@ -64,6 +70,7 @@ export function DSMainCard({
   mascot,
   stripSide = false,
   bgOpacity = 1,
+  textPanelTitle,
   text,
   children,
   'data-testid': testId,
@@ -204,38 +211,21 @@ export function DSMainCard({
                   transform: 'none',
                   padding: '0 1rem',
                   marginTop: '10px',
-                  // Medium desktop (769px – 1500px): pinned to left:2rem
+                  // Desktop (>=768px): wide panel anchored to the left,
+                  // taking ~60% of the banner width. The character strip
+                  // gets the remaining ~32% on the right side.
                   '@media (min-width: 48em)': {
                     position: 'absolute',
                     left: '2rem',
                     right: 'auto',
                     top: '50%',
                     bottom: 'auto',
-                    width: '38%',
-                    maxWidth: '540px',
+                    width: '60%',
+                    maxWidth: '900px',
                     height: '60%',
                     transform: 'translateY(-50%)',
                     padding: 0,
                     marginTop: 0,
-                  },
-                  // Large desktop (>=1600px): match Astro default — pinned to right:50% with margin-right
-                  // Breakpoint raised from 94em (1504px) to 100em (1600px) because
-                  // the right:50% + marginRight:12rem math produces negative left in
-                  // viewports between 1504 and ~1650px, making the panel overflow to the left.
-                  '@media (min-width: 100em)': {
-                    left: 'auto',
-                    right: '50%',
-                    marginRight: '12rem',
-                    width: '42%',
-                    maxWidth: '620px',
-                    height: '50%',
-                    top: '58%',
-                  },
-                  // XL (>=1920px): align with the subsystem's 2rem left padding
-                  '@media (min-width: 120em)': {
-                    left: '2rem',
-                    right: 'auto',
-                    marginRight: 0,
                   },
                 }
               : {
@@ -306,11 +296,11 @@ export function DSMainCard({
             </Box>
           )}
           <DSTextPanel
+            title={textPanelTitle}
             titleColor={titleColor}
             subtitleColor={subtitleColor}
             textColor={textColor}
             fillParent={stripSide}
-            kammaraStyle={stripSide}
           >
             {text}
           </DSTextPanel>
@@ -333,18 +323,15 @@ export function DSMainCard({
               width: '100%',
               marginTop: '1rem',
               // Desktop: absolute positioned to the right of the card,
-              // vertically centered — matches Astro .ds-strip-side
+              // vertically centered. The strip gets ~32% of the banner
+              // (the remainder after the 60% text panel + 2rem margins).
               '@media (min-width: 48em)': {
                 position: 'absolute',
                 right: '2rem',
                 top: '50%',
                 transform: 'translateY(-50%)',
-                width: '48%',
+                width: '32%',
                 marginTop: 0,
-              },
-              // XL (>=1920px): strip extends further left to use extra space
-              '@media (min-width: 120em)': {
-                width: '62%',
               },
             }}
           >

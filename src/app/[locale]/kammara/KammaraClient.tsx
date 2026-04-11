@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useMemo, useState } from 'react';
+import { Fragment, useEffect, useMemo, useState } from 'react';
 import { Box, Text } from '@chakra-ui/react';
 import { useTranslations, useLocale } from 'next-intl';
 import { HeroSection } from '@/components/HeroSection';
@@ -10,15 +10,33 @@ import { DSMainCard } from '@/components/DSMainCard';
 import { CharacterStrip } from '@/components/CharacterStrip';
 import { SceneStrip } from '@/components/SceneStrip';
 import { SubSystem } from '@/components/SubSystem';
+import { RegionDivider } from '@/components/RegionDivider';
+import { RegionBanner } from '@/components/RegionBanner';
 import { SoonPanel } from '@/components/SoonPanel';
 import { BookGallery } from '@/components/BookGallery';
 import { useModal } from '@/components/Modal';
-import { palettes, type PaletteName } from '@/theme/palettes';
+import { palettes, type PaletteName, type Palette } from '@/theme/palettes';
 import { kammaraHero, kammaraFilter } from '@/theme/creatures';
 import { translateName } from '@/lib/translateName';
 import { KammaraStarField } from './KammaraStarField';
 
+// ============================================================================
+// Types & constants
+// ============================================================================
+
 type WorldId = 'lunnp1' | 'eni4' | 'triplec' | 'orfv' | 'z1' | 'gotto';
+type TriplecRegionId = 'malloc' | 'mesh' | 'sharp';
+type Locale = 'pt' | 'en';
+
+const TRIPLEC_REGION_IDS = ['malloc', 'mesh', 'sharp'] as const;
+
+interface RegionData {
+  id: TriplecRegionId;
+  chars: { name: string; image: string }[];
+  scenes: { name: string; image: string }[];
+  bgImage: string | null;
+  subsystemImages: (string | null)[];
+}
 
 interface WorldData {
   id: WorldId;
@@ -26,6 +44,8 @@ interface WorldData {
   scenes: { name: string; image: string }[];
   bgImage: string | null;
   subsystemImages: (string | null)[];
+  /** Sub-regions inside a world. Only triplec currently uses this. */
+  regions?: Partial<Record<TriplecRegionId, RegionData>>;
 }
 
 interface KammaraBook {
@@ -55,8 +75,6 @@ const WORLD_NAMES: Record<WorldId, string> = {
  * Astro original where triplec/orfv use their -4 color (colors[3]) as
  * the name instead of -1, because their -1 purple doesn't read well
  * on the dark gradient.
- *
- * Numbers map to palette.colors[N] (0-indexed); -1..-6 in Astro tokens.
  */
 const WORLD_COLOR_INDICES: Record<
   WorldId,
@@ -70,43 +88,140 @@ const WORLD_COLOR_INDICES: Record<
   gotto: { name: 0, text: 2, title: 1, label: 5 },
 };
 
-/**
- * Per-world bgOpacity override. orfv has a custom 0.4, others use the
- * default (0.6 if bgImage present, 1 otherwise).
- */
+/** Per-world bgOpacity override. orfv is dimmer; others default. */
 const WORLD_BG_OPACITY: Partial<Record<WorldId, number>> = {
   orfv: 0.4,
 };
 
+/**
+ * Per-world text color override. When a world's background image has tones
+ * too similar to the palette's `colors[]`, force an explicit color so text
+ * stays legible. Keys: name = h1, text = body copy, title = DSTextPanel h2,
+ * label = strip labels / scene captions / subsystem subtitles.
+ */
+const WORLD_TEXT_OVERRIDE: Partial<
+  Record<WorldId, { name?: string; text?: string; title?: string; label?: string }>
+> = {
+  triplec: {
+    // Only body text forced white; name/title/label keep palette colors.
+    text: '#ffffff',
+  },
+};
+
+interface WorldColors {
+  name: string;
+  text: string;
+  title: string;
+  label: string;
+  /** The legacy `arrowColor` for SceneStrip + `titleColor` for SubSystem */
+  arrow: string;
+  /** The legacy `subtitleColor` for SubSystem + `labelColor` for SceneStrip */
+  subtitle: string;
+  /** The CreatureSection accent (radial tint in the corner) */
+  accent: string;
+}
+
+/**
+ * Resolve the 7 derived colors of a world from its palette + overrides.
+ * Encapsulates the `WORLD_TEXT_OVERRIDE[id] ?? palette.colors[indices[k]]`
+ * pattern so the JSX below is free of `??` chains.
+ */
+function getWorldColors(w: WorldData, palette: Palette): WorldColors {
+  const override = WORLD_TEXT_OVERRIDE[w.id];
+  const idx = WORLD_COLOR_INDICES[w.id];
+  // eni4 uses the palette's label slot for its scene/subsystem subtitle;
+  // every other world uses colors[3]. This was the rule that existed
+  // inline before the refactor and is preserved as-is.
+  const subtitle =
+    override?.label ??
+    (w.id === 'eni4' ? palette.colors[idx.label] : palette.colors[3]);
+  return {
+    name: override?.name ?? palette.colors[idx.name],
+    text: override?.text ?? palette.colors[idx.text],
+    title: override?.title ?? palette.colors[idx.title],
+    label: override?.label ?? palette.colors[idx.label],
+    arrow: override?.title ?? palette.colors[1],
+    subtitle,
+    // triplec gets a custom pastel green accent instead of its palette[0]
+    // purple, because purple fights the forest bg image.
+    accent: w.id === 'triplec' ? '#8ce8a8' : palette.colors[0],
+  };
+}
+
+/** Filter out subsystems that still hold the raw "Placeholder — ..." text. */
+const hasRealContent = (s: { text: string[] }) =>
+  s.text.length > 0 && !s.text[0].startsWith('Placeholder');
+
+/** Render a panel story array as <h2>/<h3>/<p> based on `##`/`###` prefixes. */
+function renderStory(story: string[]) {
+  return story.map((p, i) =>
+    p.startsWith('### ') ? (
+      <h3 key={i}>{p.slice(4)}</h3>
+    ) : p.startsWith('## ') ? (
+      <h2 key={i}>{p.slice(3)}</h2>
+    ) : (
+      <p key={i}>{p}</p>
+    )
+  );
+}
+
+// ============================================================================
+// Main component
+// ============================================================================
+
 export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }: Props) {
   const t = useTranslations('kammara');
   const tCommon = useTranslations('common');
-  const locale = useLocale();
+  const locale = useLocale() as Locale;
   const [activeFilter, setActiveFilter] = useState('all');
   const { registerGallery, openGallery } = useModal();
 
-  // Word dictionary for translating filename-derived character/scene names
+  // Word dictionary used by translateName() for filename-derived labels.
   const words = tCommon.raw('words') as Record<string, string>;
 
+  // ── Safe i18n helpers ──────────────────────────────────────────────────
+  // next-intl throws when a key is missing. These helpers swallow the
+  // error and return a fallback so the JSX stays clean.
+  const safeT = (key: string, fallback = ''): string => {
+    try {
+      return t(key as never);
+    } catch {
+      return fallback;
+    }
+  };
+  const safeTRaw = <T,>(key: string, fallback: T): T => {
+    try {
+      return t.raw(key) as T;
+    } catch {
+      return fallback;
+    }
+  };
+
+  // ── Shared i18n values (same for every world/region) ─────────────────
+  const scenesTitle = safeT('scenesTitle');
+  const subsystemsTitle = safeT('subsystemsTitle');
+  const placeholder = safeT('placeholder');
+  const sectionName = safeT('section.name', 'Kammara');
+  const sectionText = safeTRaw<string[]>('section.text', []);
+  const sectionStory = safeTRaw<string[]>('section.panel.story', []);
+  const bookDefs = safeTRaw<{ tag: string; title: string }[] | undefined>(
+    'section.books',
+    undefined
+  );
+
+  // ── Modal gallery registration for kammara books ──────────────────────
   const bookGalleries = useMemo(() => {
     const out: Record<string, { title: string; pages: string[] }> = {};
-    const defs = (() => {
-      try {
-        return t.raw('section.books') as { tag: string; title: string }[] | undefined;
-      } catch {
-        return undefined;
-      }
-    })();
     for (const book of kammaraBooks) {
       if (book.pages.length === 0) continue;
-      const def = defs?.find((d) => d.tag === book.id);
+      const def = bookDefs?.find((d) => d.tag === book.id);
       out[`book_kammara-${book.id}`] = {
         title: def?.title ?? book.id,
         pages: book.pages,
       };
     }
     return out;
-  }, [kammaraBooks, t]);
+  }, [kammaraBooks, bookDefs]);
 
   useEffect(() => {
     for (const [id, g] of Object.entries(bookGalleries)) {
@@ -114,30 +229,14 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
     }
   }, [bookGalleries, registerGallery]);
 
-  const sectionName = (() => {
-    try {
-      return t('section.name');
-    } catch {
-      return 'Kammara';
-    }
-  })();
+  const handleBookClick = (rawBookId: string) => {
+    const galleryId = `book_kammara-${rawBookId.replace(/^kammara-/, '')}`;
+    const g = bookGalleries[galleryId];
+    if (!g) return;
+    openGallery(galleryId, 0, g.title, '');
+  };
 
-  const sectionText = (() => {
-    try {
-      return t.raw('section.text') as string[];
-    } catch {
-      return [];
-    }
-  })();
-
-  const sectionStory = (() => {
-    try {
-      return t.raw('section.panel.story') as string[];
-    } catch {
-      return [];
-    }
-  })();
-
+  // ── Filter bar ────────────────────────────────────────────────────────
   const filters = [
     { id: 'kammara', label: sectionName, color: kammaraFilter.color, bgColor: kammaraFilter.bgColor },
     ...worlds.map((w) => ({
@@ -151,12 +250,19 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
   const kammaraPalette = palettes.kammara;
   const kammaraHidden = activeFilter !== 'all' && activeFilter !== 'kammara';
 
-  const handleBookClick = (rawBookId: string) => {
-    const galleryId = `book_kammara-${rawBookId.replace(/^kammara-/, '')}`;
-    const g = bookGalleries[galleryId];
-    if (!g) return;
-    openGallery(galleryId, 0, g.title, '');
-  };
+  // ── Per-world content ──────────────────────────────────────────────────
+  // Everything a WorldSection needs is shared here so the sub-component
+  // stays small and easy to read below.
+  const perWorldProps = worlds.map((w) => ({
+    w,
+    palette: palettes[w.id as PaletteName],
+    colors: getWorldColors(w, palettes[w.id as PaletteName]),
+    name: safeT(`worlds.${w.id}.name`, WORLD_NAMES[w.id]),
+    bodyText: safeTRaw<string[]>(`worlds.${w.id}.text`, []),
+    panelStory: safeTRaw<string[]>(`worlds.${w.id}.panel.story`, []),
+    subsystems: safeTRaw<{ title: string; text: string[] }[]>(`worlds.${w.id}.subsystems`, []),
+    hidden: activeFilter !== 'all' && activeFilter !== w.id,
+  }));
 
   return (
     <>
@@ -168,59 +274,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
         textColor={kammaraHero.textColor}
         labelColor={kammaraHero.labelColor}
       >
-        {/* Star field decoration — two layers of small white dots via box-shadow */}
-        <Box
-          aria-hidden
-          position="absolute"
-          top={0}
-          left={0}
-          right={0}
-          bottom={0}
-          pointerEvents="none"
-          css={{
-            '& > span': {
-              position: 'absolute',
-              width: '1px',
-              height: '1px',
-              background: 'transparent',
-              animation: 'twinkleField 6s ease-in-out infinite',
-            },
-            '& > span:nth-of-type(1)': {
-              boxShadow:
-                '25px 15px #fff, 80px 40px #fff, 150px 20px rgba(255,255,255,0.8), 200px 60px #fff, 320px 30px rgba(255,255,255,0.6), 400px 80px #fff, 50px 90px rgba(255,255,255,0.5), 180px 110px #fff, 280px 95px rgba(255,255,255,0.7), 350px 120px #fff, 450px 50px rgba(255,255,255,0.4), 500px 100px #fff, 30px 140px rgba(255,255,255,0.6), 120px 160px #fff, 250px 150px rgba(255,255,255,0.5), 380px 170px #fff, 480px 140px rgba(255,255,255,0.8), 550px 160px #fff, 70px 200px #fff, 160px 220px rgba(255,255,255,0.6), 300px 210px #fff, 420px 230px rgba(255,255,255,0.7), 520px 200px #fff, 600px 220px rgba(255,255,255,0.5), 90px 250px rgba(255,255,255,0.4), 210px 270px #fff, 340px 260px rgba(255,255,255,0.8), 460px 280px #fff, 580px 250px rgba(255,255,255,0.6), 650px 270px #fff, 40px 300px #fff, 130px 320px rgba(255,255,255,0.5), 270px 310px #fff, 390px 330px rgba(255,255,255,0.7), 510px 300px #fff, 630px 320px rgba(255,255,255,0.4), 700px 50px rgba(255,255,255,0.6), 750px 120px #fff, 800px 200px rgba(255,255,255,0.5), 850px 80px #fff, 900px 160px rgba(255,255,255,0.7), 950px 240px #fff, 720px 300px rgba(255,255,255,0.4), 780px 30px #fff, 830px 280px rgba(255,255,255,0.6)',
-            },
-            '& > span:nth-of-type(2)': {
-              animationDelay: '-3s',
-              boxShadow:
-                '60px 35px rgba(255,255,255,0.5), 140px 70px #fff, 230px 45px rgba(255,255,255,0.7), 310px 85px #fff, 410px 55px rgba(255,255,255,0.4), 490px 75px #fff, 100px 130px rgba(255,255,255,0.6), 190px 145px #fff, 290px 125px rgba(255,255,255,0.8), 370px 155px #fff, 460px 135px rgba(255,255,255,0.5), 540px 150px #fff, 75px 190px #fff, 170px 205px rgba(255,255,255,0.7), 260px 195px #fff, 360px 215px rgba(255,255,255,0.4), 440px 190px #fff, 530px 210px rgba(255,255,255,0.6), 110px 260px rgba(255,255,255,0.5), 200px 275px #fff, 330px 265px rgba(255,255,255,0.8), 430px 285px #fff, 520px 260px rgba(255,255,255,0.6), 610px 280px #fff, 680px 100px rgba(255,255,255,0.5), 740px 180px #fff, 810px 130px rgba(255,255,255,0.7), 870px 220px #fff, 930px 100px rgba(255,255,255,0.4), 760px 260px #fff',
-            },
-            // Glow orb
-            '& > span:nth-of-type(3)': {
-              width: '350px',
-              height: '350px',
-              borderRadius: '50%',
-              background: 'radial-gradient(circle, rgba(100,80,200,0.15) 0%, transparent 70%)',
-              top: '25%',
-              left: '50%',
-              transform: 'translateX(-50%)',
-              animation: 'glowPulse 8s ease-in-out infinite',
-              filter: 'blur(20px)',
-              boxShadow: 'none',
-            },
-            '@keyframes twinkleField': {
-              '0%, 100%': { opacity: 0.4 },
-              '50%': { opacity: 1 },
-            },
-            '@keyframes glowPulse': {
-              '0%, 100%': { transform: 'translateX(-50%) scale(1)', opacity: 0.5 },
-              '50%': { transform: 'translateX(-50%) scale(1.3)', opacity: 0.8 },
-            },
-          }}
-        >
-          <span />
-          <span />
-          <span />
-        </Box>
+        <KammaraHeroStars />
       </HeroSection>
 
       <FilterBar
@@ -229,7 +283,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
         onFilter={setActiveFilter}
       />
 
-      {/* KAMMARA META SECTION */}
+      {/* ── KAMMARA META SECTION ───────────────────────────────────────── */}
       <CreatureSection
         id="kammara"
         gradient={kammaraPalette.gradient}
@@ -252,14 +306,8 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
               textColor={kammaraPalette.colors[1]}
               stripSide
               bgOpacity={0.3}
-              text={
-                <>
-                  <h2>{sectionName}</h2>
-                  {sectionStory.map((p, i) => (
-                    <p key={i}>{p}</p>
-                  ))}
-                </>
-              }
+              textPanelTitle={sectionName}
+              text={renderStory(sectionStory)}
             >
               {kammaraChars.length > 0 ? (
                 <CharacterStrip
@@ -274,7 +322,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
                   speed={120}
                   inStripSide
                   contextId="kammara/kammara"
-                  locale={locale as 'pt' | 'en'}
+                  locale={locale}
                 />
               ) : (
                 <SoonPanel label={tCommon('soon')} />
@@ -292,14 +340,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
           <BookGallery
             title={t('booksTitle')}
             books={kammaraBooks.map((b) => {
-              const defs = (() => {
-                try {
-                  return t.raw('section.books') as { tag: string; title: string }[] | undefined;
-                } catch {
-                  return undefined;
-                }
-              })();
-              const def = defs?.find((d) => d.tag === b.id);
+              const def = bookDefs?.find((d) => d.tag === b.id);
               return {
                 id: `kammara-${b.id}`,
                 image: b.cover ?? undefined,
@@ -315,163 +356,346 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
         )}
       </CreatureSection>
 
-      {/* WORLDS */}
-      {worlds.map((w) => {
-        const palette = palettes[w.id as PaletteName];
-        const worldName = (() => {
-          try {
-            return t(`worlds.${w.id}.name` as never);
-          } catch {
-            return WORLD_NAMES[w.id];
-          }
-        })();
-        const worldText = (() => {
-          try {
-            return t.raw(`worlds.${w.id}.text`) as string[];
-          } catch {
-            return [];
-          }
-        })();
-        const panelStory = (() => {
-          try {
-            return t.raw(`worlds.${w.id}.panel.story`) as string[];
-          } catch {
-            return [];
-          }
-        })();
-        const subsystems = (() => {
-          try {
-            return (t.raw(`worlds.${w.id}.subsystems`) as { title: string; text: string[] }[]) || [];
-          } catch {
-            return [];
-          }
-        })();
-
-        const hidden = activeFilter !== 'all' && activeFilter !== w.id;
-        const placeholder = (() => {
-          try {
-            return t('placeholder');
-          } catch {
-            return '';
-          }
-        })();
-        const scenesTitle = (() => {
-          try {
-            return t('scenesTitle');
-          } catch {
-            return '';
-          }
-        })();
-        const subsystemsTitle = (() => {
-          try {
-            return t('subsystemsTitle');
-          } catch {
-            return '';
-          }
-        })();
-
-        return (
-          <CreatureSection
-            key={w.id}
-            id={w.id}
-            gradient={palette.gradientBg}
-            accentColor={palette.colors[0]}
-            bgImage={w.bgImage ?? undefined}
-            hidden={hidden}
-          >
-            <CreatureCard
-              name={worldName}
-              color1={palette.colors[WORLD_COLOR_INDICES[w.id].name]}
-              color2={palette.colors[WORLD_COLOR_INDICES[w.id].text]}
-              banner={
-                <DSMainCard
-                  characters={[]}
-                  gradient={palette.gradient}
-                  height="1400px"
-                  maxHeight="80vh"
-                  titleColor={palette.colors[WORLD_COLOR_INDICES[w.id].title]}
-                  textColor={palette.text}
-                  stripSide
-                  bgOpacity={WORLD_BG_OPACITY[w.id] ?? (w.bgImage ? 0.6 : 1)}
-                  text={
-                    <>
-                      <h2>{worldName}</h2>
-                      {panelStory.map((p, i) =>
-                        p.startsWith('### ') ? (
-                          <h3 key={i}>{p.slice(4)}</h3>
-                        ) : p.startsWith('## ') ? (
-                          <h2 key={i}>{p.slice(3)}</h2>
-                        ) : (
-                          <p key={i}>{p}</p>
-                        )
-                      )}
-                    </>
-                  }
-                >
-                  {w.chars.length > 0 ? (
-                    <CharacterStrip
-                      characters={w.chars.map((c) => ({
-                        ...c,
-                        name: translateName(c.name, words),
-                      }))}
-                      gradient={palette.gradient}
-                      cardSize={300}
-                      noFloat
-                      transparent
-                      labelColor={palette.colors[WORLD_COLOR_INDICES[w.id].label]}
-                      speed={100}
-                      inStripSide
-                      contextId={`kammara/${w.id}`}
-                      locale={locale as 'pt' | 'en'}
-                    />
-                  ) : (
-                    <SoonPanel label={tCommon('soon')} color={palette.colors[0]} />
-                  )}
-                </DSMainCard>
-              }
-            >
-              {worldText.length > 0
-                ? worldText.map((p, i) => (
-                    <Text key={i} mb="0.8rem">
-                      {p}
-                    </Text>
-                  ))
-                : placeholder && <Text>{placeholder}</Text>}
-            </CreatureCard>
-            {w.scenes.length > 0 && (
-              <SceneStrip
-                scenes={w.scenes.map((s) => ({
-                  ...s,
-                  name: translateName(s.name, words),
-                }))}
-                sectionTitle={scenesTitle}
-                arrowColor={palette.colors[1]}
-                labelColor={w.id === 'eni4' ? palette.colors[WORLD_COLOR_INDICES[w.id].label] : palette.colors[3]}
-                modalBg={palette.gradientBg}
-                modalTitle={worldName}
-                modalSubtitle={worldText[0] || ''}
-              />
-            )}
-            {subsystems.filter((s) => s.text.length > 0 && !s.text[0].startsWith('Placeholder')).length > 0 && (
-              <SubSystem
-                sectionTitle={subsystemsTitle}
-                cards={subsystems
-                  .map((s, i) => ({
-                    title: s.title,
-                    image: w.subsystemImages[i] ?? undefined,
-                    imageAlt: s.title,
-                    texts: s.text,
-                  }))
-                  .filter((c) => c.texts.length > 0 && !c.texts[0].startsWith('Placeholder'))}
-                titleColor={palette.colors[1]}
-                subtitleColor={w.id === 'eni4' ? palette.colors[WORLD_COLOR_INDICES[w.id].label] : palette.colors[3]}
-                textColor={palette.text}
-                gradient={palette.gradient}
-              />
-            )}
-          </CreatureSection>
-        );
-      })}
+      {/* ── WORLDS ─────────────────────────────────────────────────────── */}
+      {perWorldProps.map((props) => (
+        <Fragment key={props.w.id}>
+          <WorldSection
+            {...props}
+            words={words}
+            locale={locale}
+            tCommon={tCommon}
+            scenesTitle={scenesTitle}
+            subsystemsTitle={subsystemsTitle}
+            placeholder={placeholder}
+          />
+          {/* TripleC sub-regions — each region is its own CreatureSection */}
+          {props.w.id === 'triplec' &&
+            props.w.regions &&
+            TRIPLEC_REGION_IDS.map((regionId) => {
+              const region = props.w.regions?.[regionId];
+              if (!region) return null;
+              return (
+                <TriplecRegionSection
+                  key={regionId}
+                  regionId={regionId}
+                  region={region}
+                  hidden={props.hidden}
+                  words={words}
+                  locale={locale}
+                  tCommon={tCommon}
+                  scenesTitle={scenesTitle}
+                  subsystemsTitle={subsystemsTitle}
+                  safeT={safeT}
+                  safeTRaw={safeTRaw}
+                />
+              );
+            })}
+        </Fragment>
+      ))}
     </>
+  );
+}
+
+// ============================================================================
+// ═══ WorldSection ═══
+// Renders a single kammara world as a CreatureSection with its banner,
+// optional scenes and subsystems. Matches exactly the behavior the main
+// component had inline before the refactor — no visual changes.
+// ============================================================================
+
+interface WorldSectionProps {
+  w: WorldData;
+  palette: Palette;
+  colors: WorldColors;
+  name: string;
+  bodyText: string[];
+  panelStory: string[];
+  subsystems: { title: string; text: string[] }[];
+  hidden: boolean;
+  words: Record<string, string>;
+  locale: Locale;
+  tCommon: ReturnType<typeof useTranslations>;
+  scenesTitle: string;
+  subsystemsTitle: string;
+  placeholder: string;
+}
+
+function WorldSection({
+  w,
+  palette,
+  colors,
+  name,
+  bodyText,
+  panelStory,
+  subsystems,
+  hidden,
+  words,
+  locale,
+  tCommon,
+  scenesTitle,
+  subsystemsTitle,
+  placeholder,
+}: WorldSectionProps) {
+  const realSubsystems = subsystems.filter(hasRealContent);
+
+  return (
+    <CreatureSection
+      id={w.id}
+      gradient={palette.gradientBg}
+      accentColor={colors.accent}
+      bgImage={w.bgImage ?? undefined}
+      hidden={hidden}
+    >
+      <CreatureCard
+        name={name}
+        color1={colors.name}
+        color2={colors.text}
+        banner={
+          <DSMainCard
+            characters={[]}
+            gradient={palette.gradient}
+            height="1400px"
+            maxHeight="80vh"
+            titleColor={colors.title}
+            textColor={colors.text}
+            stripSide
+            bgOpacity={WORLD_BG_OPACITY[w.id] ?? (w.bgImage ? 0.6 : 1)}
+            textPanelTitle={name}
+            text={renderStory(panelStory)}
+          >
+            {w.chars.length > 0 ? (
+              <CharacterStrip
+                characters={w.chars.map((c) => ({
+                  ...c,
+                  name: translateName(c.name, words),
+                }))}
+                gradient={palette.gradient}
+                cardSize={300}
+                noFloat
+                transparent
+                labelColor={colors.label}
+                speed={100}
+                inStripSide
+                contextId={`kammara/${w.id}`}
+                locale={locale}
+              />
+            ) : (
+              <SoonPanel label={tCommon('soon')} color={palette.colors[0]} />
+            )}
+          </DSMainCard>
+        }
+      >
+        {bodyText.length > 0
+          ? bodyText.map((p, i) => (
+              <Text key={i} mb="0.8rem">
+                {p}
+              </Text>
+            ))
+          : placeholder && <Text>{placeholder}</Text>}
+      </CreatureCard>
+      {w.scenes.length > 0 && (
+        <SceneStrip
+          scenes={w.scenes.map((s) => ({
+            ...s,
+            name: translateName(s.name, words),
+          }))}
+          sectionTitle={scenesTitle}
+          arrowColor={colors.arrow}
+          labelColor={colors.subtitle}
+          modalBg={palette.gradientBg}
+          modalTitle={name}
+          modalSubtitle={bodyText[0] || ''}
+        />
+      )}
+      {realSubsystems.length > 0 && (
+        <SubSystem
+          sectionTitle={subsystemsTitle}
+          cards={realSubsystems.map((s, i) => ({
+            title: s.title,
+            image: w.subsystemImages[i] ?? undefined,
+            imageAlt: s.title,
+            texts: s.text,
+          }))}
+          // Exact same color pipeline as the DSMainCard → DSTextPanel
+          // above, so the subsystem cards and the main story panel stay
+          // visually identical.
+          titleColor={colors.title}
+          textColor={colors.text}
+        />
+      )}
+    </CreatureSection>
+  );
+}
+
+// ============================================================================
+// ═══ TriplecRegionSection ═══
+// Renders one of the TripleC sub-regions (malloc/mesh/sharp) as its own
+// CreatureSection with a RegionDivider band, a RegionBanner and optional
+// scenes/subsystems. All visuals come from the region's own palette entry.
+// ============================================================================
+
+interface TriplecRegionSectionProps {
+  regionId: TriplecRegionId;
+  region: RegionData;
+  hidden: boolean;
+  words: Record<string, string>;
+  locale: Locale;
+  tCommon: ReturnType<typeof useTranslations>;
+  scenesTitle: string;
+  subsystemsTitle: string;
+  safeT: (key: string, fallback?: string) => string;
+  safeTRaw: <T>(key: string, fallback: T) => T;
+}
+
+function TriplecRegionSection({
+  regionId,
+  region,
+  hidden,
+  words,
+  locale,
+  tCommon,
+  scenesTitle,
+  subsystemsTitle,
+  safeT,
+  safeTRaw,
+}: TriplecRegionSectionProps) {
+  const regionPalette = palettes[regionId];
+  const regionColor = regionPalette.colors[0];
+  const keyPrefix = `worlds.triplec.regions.${regionId}`;
+
+  const name = safeT(`${keyPrefix}.name`, regionId);
+  const tagline = safeT(`${keyPrefix}.tagline`);
+  const bodyText = safeTRaw<string[]>(`${keyPrefix}.text`, []);
+  const panelStory = safeTRaw<string[]>(`${keyPrefix}.panel.story`, []);
+  const subsystems = safeTRaw<{ title: string; text: string[] }[]>(
+    `${keyPrefix}.subsystems`,
+    []
+  );
+  const realSubsystems = subsystems.filter(hasRealContent);
+  const contextId = `kammara/triplec/${regionId}`;
+
+  return (
+    <CreatureSection
+      id={`triplec-${regionId}`}
+      gradient={regionPalette.gradientBg}
+      accentColor={regionColor}
+      bgImage={region.bgImage ?? undefined}
+      hidden={hidden}
+    >
+      <RegionDivider
+        parent="TRIPLEC"
+        name={name}
+        tagline={tagline}
+        color={regionColor}
+        data-testid={`region-divider-${regionId}`}
+      />
+      <RegionBanner
+        name={name}
+        color={regionColor}
+        gradient={regionPalette.gradient}
+        characters={region.chars.map((c) => ({
+          ...c,
+          name: translateName(c.name, words),
+        }))}
+        contextId={contextId}
+        locale={locale}
+        soonLabel={tCommon('soon')}
+        data-testid={`region-banner-${regionId}`}
+        story={renderStory(panelStory)}
+      />
+      {region.scenes.length > 0 && (
+        <SceneStrip
+          scenes={region.scenes.map((s) => ({
+            ...s,
+            name: translateName(s.name, words),
+          }))}
+          sectionTitle={scenesTitle}
+          arrowColor={regionColor}
+          labelColor={regionColor}
+          modalBg={regionPalette.gradientBg}
+          modalTitle={name}
+          modalSubtitle={bodyText[0] || ''}
+          titleMarginTop="1.5em"
+        />
+      )}
+      {realSubsystems.length > 0 && (
+        <SubSystem
+          sectionTitle={subsystemsTitle}
+          cards={realSubsystems.map((s, i) => ({
+            title: s.title,
+            image: region.subsystemImages[i] ?? undefined,
+            imageAlt: s.title,
+            texts: s.text,
+          }))}
+          // Same color pipeline as the DSTextPanel in RegionBanner above.
+          titleColor={regionColor}
+          textColor="white"
+        />
+      )}
+    </CreatureSection>
+  );
+}
+
+// ============================================================================
+// ═══ KammaraHeroStars ═══
+// Decorative starfield + glow orb rendered inside the Kammara hero section.
+// Extracted from inline JSX so the main component stays readable — all the
+// box-shadow-heavy star positions live here.
+// ============================================================================
+
+function KammaraHeroStars() {
+  return (
+    <Box
+      aria-hidden
+      position="absolute"
+      top={0}
+      left={0}
+      right={0}
+      bottom={0}
+      pointerEvents="none"
+      css={{
+        '& > span': {
+          position: 'absolute',
+          width: '1px',
+          height: '1px',
+          background: 'transparent',
+          animation: 'twinkleField 6s ease-in-out infinite',
+        },
+        '& > span:nth-of-type(1)': {
+          boxShadow:
+            '25px 15px #fff, 80px 40px #fff, 150px 20px rgba(255,255,255,0.8), 200px 60px #fff, 320px 30px rgba(255,255,255,0.6), 400px 80px #fff, 50px 90px rgba(255,255,255,0.5), 180px 110px #fff, 280px 95px rgba(255,255,255,0.7), 350px 120px #fff, 450px 50px rgba(255,255,255,0.4), 500px 100px #fff, 30px 140px rgba(255,255,255,0.6), 120px 160px #fff, 250px 150px rgba(255,255,255,0.5), 380px 170px #fff, 480px 140px rgba(255,255,255,0.8), 550px 160px #fff, 70px 200px #fff, 160px 220px rgba(255,255,255,0.6), 300px 210px #fff, 420px 230px rgba(255,255,255,0.7), 520px 200px #fff, 600px 220px rgba(255,255,255,0.5), 90px 250px rgba(255,255,255,0.4), 210px 270px #fff, 340px 260px rgba(255,255,255,0.8), 460px 280px #fff, 580px 250px rgba(255,255,255,0.6), 650px 270px #fff, 40px 300px #fff, 130px 320px rgba(255,255,255,0.5), 270px 310px #fff, 390px 330px rgba(255,255,255,0.7), 510px 300px #fff, 630px 320px rgba(255,255,255,0.4), 700px 50px rgba(255,255,255,0.6), 750px 120px #fff, 800px 200px rgba(255,255,255,0.5), 850px 80px #fff, 900px 160px rgba(255,255,255,0.7), 950px 240px #fff, 720px 300px rgba(255,255,255,0.4), 780px 30px #fff, 830px 280px rgba(255,255,255,0.6)',
+        },
+        '& > span:nth-of-type(2)': {
+          animationDelay: '-3s',
+          boxShadow:
+            '60px 35px rgba(255,255,255,0.5), 140px 70px #fff, 230px 45px rgba(255,255,255,0.7), 310px 85px #fff, 410px 55px rgba(255,255,255,0.4), 490px 75px #fff, 100px 130px rgba(255,255,255,0.6), 190px 145px #fff, 290px 125px rgba(255,255,255,0.8), 370px 155px #fff, 460px 135px rgba(255,255,255,0.5), 540px 150px #fff, 75px 190px #fff, 170px 205px rgba(255,255,255,0.7), 260px 195px #fff, 360px 215px rgba(255,255,255,0.4), 440px 190px #fff, 530px 210px rgba(255,255,255,0.6), 110px 260px rgba(255,255,255,0.5), 200px 275px #fff, 330px 265px rgba(255,255,255,0.8), 430px 285px #fff, 520px 260px rgba(255,255,255,0.6), 610px 280px #fff, 680px 100px rgba(255,255,255,0.5), 740px 180px #fff, 810px 130px rgba(255,255,255,0.7), 870px 220px #fff, 930px 100px rgba(255,255,255,0.4), 760px 260px #fff',
+        },
+        // Glow orb
+        '& > span:nth-of-type(3)': {
+          width: '350px',
+          height: '350px',
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(100,80,200,0.15) 0%, transparent 70%)',
+          top: '25%',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          animation: 'glowPulse 8s ease-in-out infinite',
+          filter: 'blur(20px)',
+          boxShadow: 'none',
+        },
+        '@keyframes twinkleField': {
+          '0%, 100%': { opacity: 0.4 },
+          '50%': { opacity: 1 },
+        },
+        '@keyframes glowPulse': {
+          '0%, 100%': { transform: 'translateX(-50%) scale(1)', opacity: 0.5 },
+          '50%': { transform: 'translateX(-50%) scale(1.3)', opacity: 0.8 },
+        },
+      }}
+    >
+      <span />
+      <span />
+      <span />
+    </Box>
   );
 }

@@ -51,9 +51,9 @@ export const NoImages: Story = {
   },
 };
 
-export const WithGradient: Story = {
+export const TintedOutline: Story = {
   args: {
-    gradient: 'linear-gradient(135deg, #667eea, #764ba2)',
+    titleColor: '#00e86a',
     cards: [
       { title: 'Card 1', texts: ['Body 1'] },
       { title: 'Card 2', texts: ['Body 2'] },
