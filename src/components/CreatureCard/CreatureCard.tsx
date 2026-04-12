@@ -40,7 +40,7 @@ export function CreatureCard({
       >
         <Flex gap="0.4rem" align="stretch">
           {adornment && (
-            <Box flexShrink={0} display="flex" alignItems="center">
+            <Box flexShrink={0} display="flex" alignItems="flex-start" pt="0.3rem">
               {adornment}
             </Box>
           )}

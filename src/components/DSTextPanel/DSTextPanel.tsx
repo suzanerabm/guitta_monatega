@@ -39,6 +39,7 @@ interface DSTextPanelProps {
    */
   borderColor?: string;
   showGlyph?: boolean;
+  glyphVariant?: 'planet' | 'universe';
   'data-testid'?: string;
 }
 
@@ -66,6 +67,7 @@ export function DSTextPanel({
   compact = false,
   borderColor,
   showGlyph = false,
+  glyphVariant,
   'data-testid': testId,
 }: DSTextPanelProps) {
   const cssVars = {
@@ -111,7 +113,7 @@ export function DSTextPanel({
         >
           {showGlyph && (
             <Box display="flex" alignItems="center" flexShrink={0}>
-              <GlyphPlanet size="h3" color={titleColor} stretch />
+              <GlyphPlanet size="h3" color={titleColor} stretch variant={glyphVariant} />
             </Box>
           )}
           <Heading

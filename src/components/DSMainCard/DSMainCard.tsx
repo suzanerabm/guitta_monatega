@@ -53,6 +53,7 @@ interface DSMainCardProps {
    * legacy behavior (caller puts `<h2>` inside `text`).
    */
   textPanelTitle?: string;
+  glyphVariant?: 'planet' | 'universe';
   text?: ReactNode;
   children?: ReactNode;
   'data-testid'?: string;
@@ -69,6 +70,7 @@ export function DSMainCard({
   mascot,
   stripSide = false,
   textPanelTitle,
+  glyphVariant,
   text,
   children,
   'data-testid': testId,
@@ -304,6 +306,7 @@ export function DSMainCard({
             textColor={textColor}
             fillParent={stripSide}
             showGlyph={stripSide}
+            glyphVariant={glyphVariant}
           >
             {text}
           </DSTextPanel>

@@ -301,6 +301,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
           name={sectionName}
           color1={kammaraPalette.colors[0]}
           color2={kammaraPalette.colors[1]}
+          adornment={<GlyphPlanet size="h3" color={kammaraPalette.colors[0]} variant="universe" />}
           banner={
             <DSMainCard
               characters={[]}
@@ -310,8 +311,8 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
               titleColor={kammaraPalette.colors[0]}
               textColor={kammaraPalette.colors[1]}
               stripSide
-              bgOpacity={0.3}
               textPanelTitle={sectionName}
+              glyphVariant="universe"
               text={renderStory(sectionStory)}
             >
               {kammaraChars.length > 0 ? (
@@ -458,7 +459,7 @@ function WorldSection({
         name={name}
         color1={colors.name}
         color2={colors.text}
-        adornment={<GlyphPlanet size="h3" color={colors.name} stretch />}
+        adornment={<GlyphPlanet size="h3" color={colors.name} />}
         banner={
           <DSMainCard
             characters={[]}
