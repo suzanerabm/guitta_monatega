@@ -208,6 +208,11 @@ export function CharacterStrip({
           padding="0 2rem"
           margin={inStripSide ? '1rem 0 0.5rem 0' : '5em 2em 0 3em'}
           color={arrowColor}
+          css={{
+            '@media (max-width: 48em)': {
+              color: labelColor || arrowColor,
+            },
+          }}
         >
           {sectionTitle}
         </Heading>

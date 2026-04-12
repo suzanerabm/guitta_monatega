@@ -485,8 +485,8 @@ function WorldSection({
                 cardSize={300}
                 noFloat
                 transparent
-                labelColor={colors.titleDestaque}
-                arrowColor={colors.titleDestaque}
+                labelColor={colors.title}
+                arrowColor={colors.title}
                 sectionTitle={charactersTitle}
                 speed={100}
                 inStripSide
@@ -504,8 +504,8 @@ function WorldSection({
                 }))}
                 sectionTitle={scenesTitle}
                 arrowColor={colors.title}
-                labelColor={colors.titleDestaque}
-                accentColor={colors.titleDestaque}
+                labelColor={colors.title}
+                accentColor={colors.title}
                 modalBg={palette.gradientBg}
                 modalTitle={name}
                 modalSubtitle={bodyText[0] || ''}

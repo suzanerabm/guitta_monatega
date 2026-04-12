@@ -119,7 +119,7 @@ export function SceneStrip({
           marginBottom="0.5rem"
           color={arrowColor}
           css={{
-            '@media (max-width: 48em)': { marginTop: '2em' },
+            '@media (max-width: 48em)': { marginTop: '2em', color: accentColor || arrowColor },
           }}
         >
           {sectionTitle}
