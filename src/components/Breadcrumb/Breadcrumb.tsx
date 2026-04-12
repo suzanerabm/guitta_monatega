@@ -90,13 +90,13 @@ export function Breadcrumb({
         </NextLink>
         {items.map((item, i) => (
           <Flex key={i} align="center" gap="0.35rem">
-            <Box as="span" opacity={0.35}>›</Box>
+            <Box as="span" opacity={0.35} marginBottom={useGlyphs ? '5px' : '0'}>›</Box>
             {item.href ? (
               <NextLink href={item.href} style={linkStyle}>
                 {item.label}
               </NextLink>
             ) : (
-              <Text as="span" color="inkSoft">
+              <Text as="span" color="inkSoft" marginBottom={useGlyphs ? '5px' : '0'}>
                 {item.label}
               </Text>
             )}
