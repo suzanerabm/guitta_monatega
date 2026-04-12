@@ -91,7 +91,7 @@ export const palettes: Record<PaletteName, Palette> = {
     text: '#0e3a1a',
     // Used by FilterBar chrome tint — roxo-profundo vibrante em vez de
     // quase-preto, pra ser perceptível junto com os outros mundos.
-    dark: '#1a1638',
+    dark: '#2d1b69',
     gradient: 'linear-gradient(135deg, #00e86a 0%, #00e86a 35%, #7b4fbf 70%, #2a5caa 100%)',
     // Deep forest green → mid green → dark edges. Harmonizes with the
     // verdant Niul Forest bg image instead of tinting it purple.
