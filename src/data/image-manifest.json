@@ -130,44 +130,56 @@
       {
         "name": "orvian",
         "image": "/imgs/characters/kammara/orfv/orvian.png"
+      },
+      {
+        "name": "orvian1",
+        "image": "/imgs/characters/kammara/orfv/orvian1.png"
+      }
+    ],
+    "kammara/triplec": [
+      {
+        "name": "three bunniet",
+        "image": "/imgs/characters/kammara/triplec/three_bunniet.png"
       }
     ],
     "kammara/triplec/malloc": [
       {
-        "name": "AionVar",
-        "image": "/imgs/characters/kammara/triplec/malloc/2AionVar.png"
+        "name": "Aion Var",
+        "image": "/imgs/characters/kammara/triplec/malloc/Aion_Var.png"
       },
       {
-        "name": "LumaVal 2",
-        "image": "/imgs/characters/kammara/triplec/malloc/2LumaVal_2.png"
+        "name": "Iren Kor",
+        "image": "/imgs/characters/kammara/triplec/malloc/Iren_Kor.png"
       },
       {
-        "name": "Malloc",
-        "image": "/imgs/characters/kammara/triplec/malloc/Malloc.png"
+        "name": "Luma Val",
+        "image": "/imgs/characters/kammara/triplec/malloc/Luma_Val.png"
       }
     ],
     "kammara/triplec/mesh": [
       {
-        "name": "mesh1",
-        "image": "/imgs/characters/kammara/triplec/mesh/mesh1.jpg"
+        "name": "KAEL TORIN bravo",
+        "image": "/imgs/characters/kammara/triplec/mesh/KAEL_TORIN_bravo.png"
       },
       {
-        "name": "mesh2",
-        "image": "/imgs/characters/kammara/triplec/mesh/mesh2.jpg"
+        "name": "KAEL TORIN",
+        "image": "/imgs/characters/kammara/triplec/mesh/KAEL_TORIN.png"
       }
     ],
     "kammara/triplec/sharp": [
       {
-        "name": "AMA2",
-        "image": "/imgs/characters/kammara/triplec/sharp/AMA2.jpg"
+        "name": "SELKA RIN",
+        "image": "/imgs/characters/kammara/triplec/sharp/SELKA RIN.png"
+      }
+    ],
+    "kammara/z1": [
+      {
+        "name": "cast",
+        "image": "/imgs/characters/kammara/z1/cast.png"
       },
       {
-        "name": "EMA",
-        "image": "/imgs/characters/kammara/triplec/sharp/EMA.jpg"
-      },
-      {
-        "name": "EMA1",
-        "image": "/imgs/characters/kammara/triplec/sharp/EMA1.jpg"
+        "name": "emo-1",
+        "image": "/imgs/characters/kammara/z1/emo-1.jpg"
       }
     ],
     "miscelania": [
@@ -1033,111 +1045,140 @@
         "image": "/imgs/characters/kammara/lunnp1/_scenes/regiao_sul.jpg"
       }
     ],
+    "kammara/orfv": [
+      {
+        "name": "ColinaCentral",
+        "image": "/imgs/characters/kammara/orfv/_scenes/6ColinaCentral.png"
+      },
+      {
+        "name": "vila centro 2",
+        "image": "/imgs/characters/kammara/orfv/_scenes/vila_centro_2.jpg"
+      },
+      {
+        "name": "vila centro",
+        "image": "/imgs/characters/kammara/orfv/_scenes/vila_centro.jpg"
+      },
+      {
+        "name": "vila",
+        "image": "/imgs/characters/kammara/orfv/_scenes/vila.jpg"
+      }
+    ],
     "kammara/triplec/malloc": [
       {
-        "name": "regiao central",
-        "image": "/imgs/characters/kammara/triplec/malloc/_scenes/1_regiao_central.jpg"
+        "name": "vila principal",
+        "image": "/imgs/characters/kammara/triplec/malloc/_scenes/1_vila_principal.jpg"
       },
       {
-        "name": "layer",
-        "image": "/imgs/characters/kammara/triplec/malloc/_scenes/2_layer.jpg"
+        "name": "portex camada",
+        "image": "/imgs/characters/kammara/triplec/malloc/_scenes/1portex_camada.jpg"
       },
       {
-        "name": "camada 2",
-        "image": "/imgs/characters/kammara/triplec/malloc/_scenes/3_camada_2.jpg"
+        "name": "portex camada vista cima",
+        "image": "/imgs/characters/kammara/triplec/malloc/_scenes/2portex_camada_vista_cima.jpg"
       },
       {
-        "name": "vista de cima",
-        "image": "/imgs/characters/kammara/triplec/malloc/_scenes/4_vista de cima.jpg"
+        "name": "datex camada",
+        "image": "/imgs/characters/kammara/triplec/malloc/_scenes/3datex_camada.jpg"
       },
       {
-        "name": "poco",
-        "image": "/imgs/characters/kammara/triplec/malloc/_scenes/5_poco.jpg"
+        "name": "datara camada",
+        "image": "/imgs/characters/kammara/triplec/malloc/_scenes/4datara_camada.jpg"
       },
       {
-        "name": "HEPA layer of malloc mines",
-        "image": "/imgs/characters/kammara/triplec/malloc/_scenes/6_HEPA_layer_of_malloc_mines.jpg"
+        "name": "hepa regiao 1",
+        "image": "/imgs/characters/kammara/triplec/malloc/_scenes/5hepa_regiao_1.jpg"
       },
       {
-        "name": "HEPA layer of malloc mines super deep",
-        "image": "/imgs/characters/kammara/triplec/malloc/_scenes/7_HEPA_layer_of_malloc_mines_super_deep.jpg"
+        "name": "malloc camadas regiao2",
+        "image": "/imgs/characters/kammara/triplec/malloc/_scenes/6malloc_camadas_regiao2.jpg"
+      },
+      {
+        "name": "hepa regiao2",
+        "image": "/imgs/characters/kammara/triplec/malloc/_scenes/7hepa_regiao2.jpg"
       },
       {
         "name": "visitando malloc",
-        "image": "/imgs/characters/kammara/triplec/malloc/_scenes/7_visitando_malloc.jpg"
+        "image": "/imgs/characters/kammara/triplec/malloc/_scenes/8visitando_malloc.jpg"
+      },
+      {
+        "name": "lumesha visita Luma Val",
+        "image": "/imgs/characters/kammara/triplec/malloc/_scenes/9lumesha_visita_Luma_Val.jpg"
       }
     ],
     "kammara/triplec/mesh": [
       {
-        "name": "binnuet cshipr",
-        "image": "/imgs/characters/kammara/triplec/mesh/_scenes/binnuet_cshipr.jpg"
+        "name": "vista area vila central",
+        "image": "/imgs/characters/kammara/triplec/mesh/_scenes/1vista_area_vila_central.jpg"
       },
       {
-        "name": "bunniet forest",
-        "image": "/imgs/characters/kammara/triplec/mesh/_scenes/bunniet_forest.jpg"
+        "name": "vila central",
+        "image": "/imgs/characters/kammara/triplec/mesh/_scenes/2vila_central.jpg"
       },
       {
-        "name": "bunniet mehs",
-        "image": "/imgs/characters/kammara/triplec/mesh/_scenes/bunniet_mehs.jpg"
+        "name": "KAEL TORIN ativando Cshift vista aerea",
+        "image": "/imgs/characters/kammara/triplec/mesh/_scenes/KAEL_TORIN_ativando_Cshift_vista_aerea.jpg"
       },
       {
-        "name": "bunniet vista bairro",
-        "image": "/imgs/characters/kammara/triplec/mesh/_scenes/bunniet_vista_bairro.jpg"
+        "name": "KAEL TORIN ativando Cshift",
+        "image": "/imgs/characters/kammara/triplec/mesh/_scenes/KAEL_TORIN_ativando_Cshift.jpg"
       },
       {
-        "name": "nanante",
-        "image": "/imgs/characters/kammara/triplec/mesh/_scenes/nanante.jpg"
-      },
-      {
-        "name": "vista area",
-        "image": "/imgs/characters/kammara/triplec/mesh/_scenes/vista_area.jpg"
+        "name": "Niul forest",
+        "image": "/imgs/characters/kammara/triplec/mesh/_scenes/Niul_forest.jpg"
       }
     ],
     "kammara/triplec/sharp": [
       {
-        "name": "camara defesa 1",
-        "image": "/imgs/characters/kammara/triplec/sharp/_scenes/camara_defesa_1.jpg"
+        "name": "regiao sharp",
+        "image": "/imgs/characters/kammara/triplec/sharp/_scenes/1regiao_sharp.jpg"
       },
       {
-        "name": "camara defesa 2",
-        "image": "/imgs/characters/kammara/triplec/sharp/_scenes/camara_defesa_2.jpg"
+        "name": "praca central",
+        "image": "/imgs/characters/kammara/triplec/sharp/_scenes/3praca_central.jpg"
       },
       {
-        "name": "camara defesa 3",
-        "image": "/imgs/characters/kammara/triplec/sharp/_scenes/camara_defesa_3.jpg"
+        "name": "Câmara de Permissão ativando cshift",
+        "image": "/imgs/characters/kammara/triplec/sharp/_scenes/4Câmara de Permissão_ativando_cshift.jpg"
       },
       {
-        "name": "camara defesa",
-        "image": "/imgs/characters/kammara/triplec/sharp/_scenes/camara_defesa.jpg"
+        "name": "Câmara de Permissão posicao defesa",
+        "image": "/imgs/characters/kammara/triplec/sharp/_scenes/5Câmara de Permissão_posicao_defesa.jpg"
       },
       {
-        "name": "regiao sharp 1",
-        "image": "/imgs/characters/kammara/triplec/sharp/_scenes/regiao_sharp_1.jpg"
+        "name": "plataforma",
+        "image": "/imgs/characters/kammara/triplec/sharp/_scenes/6plataforma.jpg"
+      }
+    ],
+    "kammara/z1": [
+      {
+        "name": "area interna z1",
+        "image": "/imgs/characters/kammara/z1/_scenes/area_interna_z1.jpg"
       },
       {
-        "name": "regiao sharp centro",
-        "image": "/imgs/characters/kammara/triplec/sharp/_scenes/regiao_sharp_centro.jpg"
+        "name": "area interna",
+        "image": "/imgs/characters/kammara/z1/_scenes/area_interna.jpg"
       },
       {
-        "name": "regiao sharp praca central 1",
-        "image": "/imgs/characters/kammara/triplec/sharp/_scenes/regiao_sharp_praca_central_1.jpg"
+        "name": "area interna1",
+        "image": "/imgs/characters/kammara/z1/_scenes/area_interna1.jpg"
       },
       {
-        "name": "regiao sharp praca central 3",
-        "image": "/imgs/characters/kammara/triplec/sharp/_scenes/regiao_sharp_praca_central_3.jpg"
+        "name": "praca central",
+        "image": "/imgs/characters/kammara/z1/_scenes/praca_central.jpg"
       },
       {
-        "name": "regiao sharp praca central 4",
-        "image": "/imgs/characters/kammara/triplec/sharp/_scenes/regiao_sharp_praca_central_4.jpg"
+        "name": "regiao 1",
+        "image": "/imgs/characters/kammara/z1/_scenes/regiao_1.jpg"
       },
       {
-        "name": "regiao sharp praca central",
-        "image": "/imgs/characters/kammara/triplec/sharp/_scenes/regiao_sharp_praca_central.jpg"
+        "name": "transporte coletivo",
+        "image": "/imgs/characters/kammara/z1/_scenes/transporte_coletivo.jpg"
       }
     ]
   },
   "kammaraBgs": {
     "kammara/eni4": "/imgs/characters/kammara/eni4/_bg/imagem_fabrica_com_lixos-gigapixel-cgi-6x.png",
+    "kammara/gotto": "/imgs/characters/kammara/gotto/_bg/fundo_provisorio.jpg",
     "kammara/lunnp1": "/imgs/characters/kammara/lunnp1/_bg/regiao_norte_gemini-2.5-flash-image_Organic_wooden_bridges_connecting_trees_to_each_other_and_to_the_city._Same_styl-0-gigapixel-high fidelity v2-6x.png",
     "kammara/orfv": "/imgs/characters/kammara/orfv/_bg/vista_longa_orf-v-gigapixel-cgi-6x.png",
     "kammara/triplec": "/imgs/characters/kammara/triplec/_bg/niulForest.png",

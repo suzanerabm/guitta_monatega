@@ -75,14 +75,23 @@ export const palettes: Record<PaletteName, Palette> = {
   eni4: {
     colors: ['#e8a317', '#c47f0a', '#f5c842', '#1a1005', '#c47f0a', '#f5c842'],
     text: '#f5c842',
-    dark: '#1a1005',
+    // Used by FilterBar / Header / Breadcrumb as the chrome tint color.
+    // Needs to be visibly "eni4" (not indistinguishable from black) while
+    // still dark enough to host light text.
+    dark: '#3a2608',
     gradient: 'linear-gradient(135deg, #8a5a0a, #e8a317, #f5c842)',
     gradientBg: 'linear-gradient(160deg, #1a1005 0%, #3a2a0a 40%, #2a1c06 100%)',
   },
   triplec: {
-    colors: ['#7b4fbf', '#2a5caa', '#00e86a', '#6764c0', '#0e3a1a', '#1a4a30'],
+    // colors[1] = panel title (lavanda clara, alto contraste sobre bg verde)
+    // colors[2] = body text (verde-menta quase off-white, mantém identidade)
+    // colors[3] = world heading h1 (lavanda ainda mais clara pra máximo destaque)
+    // colors[0/4/5] = usados em gradients e acentos, não viram texto
+    colors: ['#7b4fbf', '#a78bfa', '#d4e8d4', '#c4b5fd', '#0e3a1a', '#1a4a30'],
     text: '#0e3a1a',
-    dark: '#0a0818',
+    // Used by FilterBar chrome tint — roxo-profundo vibrante em vez de
+    // quase-preto, pra ser perceptível junto com os outros mundos.
+    dark: '#1a1638',
     gradient: 'linear-gradient(135deg, #00e86a 0%, #00e86a 35%, #7b4fbf 70%, #2a5caa 100%)',
     // Deep forest green → mid green → dark edges. Harmonizes with the
     // verdant Niul Forest bg image instead of tinting it purple.
@@ -123,9 +132,9 @@ export const palettes: Record<PaletteName, Palette> = {
     gradientBg: 'linear-gradient(160deg, #0f172a 0%, #0e3520 30%, #1a6a3a 55%, #0e3520 80%, #0f172a 100%)',
   },
   orfv: {
-    colors: ['#8040c8', '#5a30a0', '#40d0e8', '#cf568c', '#3a1860', '#9040a0'],
+    colors: ['#cf568c', '#cf568c', '#40d0e8', '#cf568c', '#3a1860', '#9040a0'],
     text: '#3a1860',
-    dark: '#0c0620',
+    dark: '#1e0c48',
     gradient: 'linear-gradient(135deg, #d4829a 0%, #d4829a 70%, #40d0e8 100%)',
     gradientBg: 'linear-gradient(160deg, #0c0620 0%, #1a0c40 40%, #081828 100%)',
   },
@@ -137,11 +146,19 @@ export const palettes: Record<PaletteName, Palette> = {
     gradientBg: 'linear-gradient(160deg, #12141a 0%, #2a2c34 40%, #1a1c22 100%)',
   },
   gotto: {
-    colors: ['#4a2a2a', '#3a1a1a', '#6a4a4a', '#c4a8a8', '#8a6a6a', '#201212'],
-    text: '#c4a8a8',
-    dark: '#1a0e0e',
-    gradient: 'linear-gradient(135deg, #2a1a1a, #4a2a2a, #3a1a1a)',
-    gradientBg: 'linear-gradient(160deg, #1a0e0e 0%, #2a1a1a 40%, #201212 100%)',
+    // Brown family, but with enough luminosity on the text indices to
+    // actually read over the dark gradient background.
+    // colors[0] = accent (CreatureSection radial tint) — sienna saturado
+    // colors[1] = DSTextPanel title — caramelo claro
+    // colors[2] = body text — creme/bege claro
+    // colors[3] = world heading h1 (name "Gotto") — caramelo-rosado claro
+    // colors[4..5] = usados em bordas/sombras
+    colors: ['#a0522d', '#d4a574', '#f5e6d3', '#e8c39e', '#6b3419', '#3d1a0a'],
+    text: '#f5e6d3',
+    // Used by FilterBar chrome tint — marrom profundo perceptível.
+    dark: '#3a1a0a',
+    gradient: 'linear-gradient(135deg, #6b3419, #a0522d, #d4a574)',
+    gradientBg: 'linear-gradient(160deg, #1a0a05 0%, #2a1408 40%, #1f0f06 100%)',
   },
   arte: {
     colors: ['#f5f5f5', '#e8e8e8', '#d4d4d4', '#f0f0f0', '#cccccc', '#999999'],

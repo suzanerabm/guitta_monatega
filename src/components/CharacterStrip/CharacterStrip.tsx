@@ -75,8 +75,13 @@ export function CharacterStrip({
   // ([...characters, ...characters]) from appearing active at once.
   const [activeKey, setActiveKey] = useState<string | null>(null);
 
+  // With 0 or 1 character there's nothing to loop against — force noLoop
+  // so the animation doesn't try to scroll a duplicated single card, and
+  // the strip behaves like a static row.
+  const effectiveNoLoop = noLoop || characters.length <= 1;
+
   const autoSpeed = speed ?? characters.length * 5;
-  const allCards = noLoop ? characters : [...characters, ...characters];
+  const allCards = effectiveNoLoop ? characters : [...characters, ...characters];
 
   // Set of character display names that have data in the character JSONs.
   // Only these cards are interactive (click → opens info panel).
@@ -90,8 +95,8 @@ export function CharacterStrip({
   }, [characters, contextId]);
 
   // Animation hook is unconditionally called; it bails out if refs aren't ready
-  // or if noLoop is true (track ref will be a separate scrollable container).
-  useStripAnimation(noLoop ? { current: null } : trackRef, {
+  // or if effectiveNoLoop is true (track ref will be a separate scrollable container).
+  useStripAnimation(effectiveNoLoop ? { current: null } : trackRef, {
     speed: autoSpeed,
     wrapperRef: stripRef,
     enableEdgeControl: true,
@@ -153,7 +158,7 @@ export function CharacterStrip({
   // Strip container CSS — animated mode uses overflow:hidden so the looping
   // track only shows what fits inside the mask. Static (noLoop) mode allows
   // horizontal scroll for arrow nav.
-  const stripCss: Record<string, unknown> = noLoop
+  const stripCss: Record<string, unknown> = effectiveNoLoop
     ? {
         flex: 1,
         minWidth: 0,
@@ -177,7 +182,7 @@ export function CharacterStrip({
   // variants use relative/flex layout. Inside DSMainCard's stripSide slot,
   // the strip stays in normal flow too (matches Astro's
   // `.ds-strip-side .char-strip { position: relative; top: auto }` override).
-  const useAbsolute = !noLoop && !showArrows && !inStripSide;
+  const useAbsolute = !effectiveNoLoop && !showArrows && !inStripSide;
 
   return (
     <Box
@@ -227,7 +232,7 @@ export function CharacterStrip({
             ref={trackRef}
             display="flex"
             gap="0.5rem"
-            padding={noLoop ? '0.5rem 0 1rem' : '4rem 0 2rem'}
+            padding={effectiveNoLoop ? '0.5rem 0 1rem' : '4rem 0 2rem'}
             width="max-content"
             css={{
               // Stagger the cardFloat animation across cards so they don't

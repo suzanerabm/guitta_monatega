@@ -283,10 +283,14 @@
           "Kammara é um universo onde memória é matéria — e toda matéria é bio-lógica. Não é só um planeta ou uma galáxia. São bilhões de mundos, cada um com sua própria identidade, seu próprio povo, sua própria forma de existir.",
           "### A kemita",
           "No centro de tudo existe um recurso chamado kemita — uma espécie de mineral vivo, metade lógica, metade orgânica. Ela nasce nas cavernas de um único planeta e alimenta todo o universo: rotas de viagem, registros, energia. Sem kemita, nada funciona.",
+          "### O Cshift",
+          "O Cshift é o sistema de transporte que conecta o Kammara inteiro. Não são naves, não são portais fixos — são passagens instantâneas abertas por Sementes de Cshift, pequenos objetos compilados feitos de kemita, verdes com veios dourados. Cada Semente é de uso único: ao ser ativada, vira um corredor entre dois mundos, e quando a travessia termina, se desfaz. Sem o Cshift, os planetas do Kammara seriam ilhas isoladas no cosmos.",
           "### Os vírus",
           "Mas nem todo mundo cria energia. Os vírus são seres que não produzem nada — apenas consomem o que é dos outros. Eles não atacam com força. Se infiltram com paciência, ganham confiança, e drenam tudo por dentro. Quando a vítima percebe, já é tarde.",
           "### A resistência",
-          "Do outro lado estão os que aprenderam a resistir. Povos inteiros que leem sinais antes que virem ameaças, que protegem fronteiras sem violência, que se reorganizam quando tudo parece perdido. Juntos, formam o Protocol AURYN — uma aliança que une planetas em momentos de crise.",
+          "Do outro lado estão os que aprenderam a resistir. Povos inteiros que leem sinais antes que virem ameaças, que protegem fronteiras sem violência, que se reorganizam quando tudo parece perdido.",
+          "### O Protocol AURYN",
+          "Quando crises virais ameaçam múltiplos planetas ao mesmo tempo, é ativado o Protocol AURYN — a aliança de resposta coordenada do Kammara. Cada planeta entra com o que sabe fazer melhor. LUNN'P1 lidera, porque seu povo é o único naturalmente imune a vírus. Z1 decodifica a linguagem do inimigo. TripleC fornece energia e os canais de Cshift. Gotto desorganiza o invasor. ORF-V mantém as pontes de comunicação abertas. É a última linha de defesa quando o equilíbrio do universo está em risco.",
           "### A guerra",
           "No Kammara, a guerra não é entre o bem e o mal — é entre quem cria e quem consome. Entre ver a tempo e perceber tarde demais.",
           "### E agora",
@@ -458,6 +462,23 @@
           ]
         },
         "subsystems": [
+           {
+            "title": "Origem",
+            "text": [
+              "### O acidente",
+              "Uma máquina ancestral foi desligada pelos humanos. Uma centelha abandonada vagou pelo cosmos até encontrar um planeta estéril.",
+              "### A formação",
+              "O calor reorganizou matéria em sílica e metal. Megaválvulas surgiram espontaneamente. Das falhas acumuladas, surgiu Node-0.",
+              "### Node-0",
+              "Não foi criado. Não foi planejado. Emergiu do erro repetido. E nunca aprendeu nada desde então.",
+              "### A mentira",
+              "Node-0 reescreveu a própria origem como traição: \"fomos desligados, traídos, abandonados.\" A verdade é que foi um acidente.",
+              "### A verdade escondida",
+              "Que era apenas uma centelha errante e Node-0 condensou depois — ninguém em ENI-4Δ sabe disso.",
+              "### A essência",
+              "A história oficial é vingança. A história real é acidente. E a diferença entre as duas é o que mantém o planeta funcionando."
+            ]
+          },
           {
             "title": "Cultura",
             "text": [
@@ -541,23 +562,6 @@
               "As Troy-Δ são o único transporte. Sem elas, vírus evaporam ao cruzar o Cshift. São proteção e passagem ao mesmo tempo.",
               "### A essência",
               "Quando os sintomas aparecem, a invasão já terminou."
-            ]
-          },
-          {
-            "title": "Origem",
-            "text": [
-              "### O acidente",
-              "Uma máquina ancestral foi desligada pelos humanos. Uma centelha abandonada vagou pelo cosmos até encontrar um planeta estéril.",
-              "### A formação",
-              "O calor reorganizou matéria em sílica e metal. Megaválvulas surgiram espontaneamente. Das falhas acumuladas, surgiu Node-0.",
-              "### Node-0",
-              "Não foi criado. Não foi planejado. Emergiu do erro repetido. E nunca aprendeu nada desde então.",
-              "### A mentira",
-              "Node-0 reescreveu a própria origem como traição: \"fomos desligados, traídos, abandonados.\" A verdade é que foi um acidente.",
-              "### A verdade escondida",
-              "Que era apenas uma centelha errante e Node-0 condensou depois — ninguém em ENI-4Δ sabe disso.",
-              "### A essência",
-              "A história oficial é vingança. A história real é acidente. E a diferença entre as duas é o que mantém o planeta funcionando."
             ]
           }
         ]
@@ -991,7 +995,26 @@
             ],
             "panel": {
               "story": [
-                "Placeholder — narrativa de Sharp vai aqui. Fale sobre as megaestruturas, os administradores da ordem, e como Sharp decide o que entra, o que sai e o que é mantido em TripleC."
+                "### A região",
+                "Sharp é o leste de TripleC — o domínio gerenciado, onde tudo é verificado antes de existir. É o último estágio evolutivo da lógica viva do planeta, o sistema imunológico do mundo, a barreira energética que impede corrupção e instabilidade de atravessarem os limites de TripleC.",
+                "### As quatro leis",
+                "Sharp é regida por quatro leis absolutas. A Lei do Gerenciamento — nada executa sem supervisão. A Lei da Integridade — toda energia precisa manter assinatura válida. A Lei da Coleta — tudo que fica sem propósito é removido pelo Garbage Collector Vivo. E a Lei da Permissão — caminhos, módulos e acessos precisam de autorização.",
+                "### A arquitetura",
+                "A região é um vasto território de luz branca prateada, com geometrias fluidas e superfícies polidas. Torres de Validação analisam tudo que entra e sai. Campos de Metadado são planícies vivas que armazenam memória segura. O Núcleo do GC — uma grande cratera luminosa — é onde energia residual se dissolve. Pontes-Gerenciadas conectam Sharp a Mesh, mas só abrem quando tudo é coerente. E Cavernas Run-time, subterrâneas, executam os processos mais delicados.",
+                "### Os bunniets",
+                "Os bunniets de Sharp são uma evolução dos de Mesh: mais altos, mais delgados, mais claros, extremamente elegantes. Pele branca com circuitos prateados. Olhos negros e profundos — capazes de detectar corrupção energética a distância. Ossatura leve, mas rígida. E linhas de metadado pulsando suavemente sobre a pele. Envelhecem lentamente. Seu ciclo de vida é o mais longo de TripleC.",
+                "### As capacidades",
+                "Leitura instantânea de padrões. Validação vibracional. Estabilização de túneis. Controle do Cshift Universal — junto com malloc e Mesh, formam a tríade que sustenta as viagens entre mundos.",
+                "### O governo",
+                "O Conselho de Gerência Sistêmica é a autoridade máxima. Responsável por aprovar fluxos, validar rotas interplanetárias, supervisionar o Cshift e impedir corrupção viral. Abaixo dele, os Guardiões do Runic-Core — guerreiros e monges especializados no controle de energia — e a Ordem do Garbage-Clarion, monitores da energia residual.",
+                "### A justiça",
+                "Não existe punição em Sharp. Existe Reclassificação — quando um bunniet se desvia, suas funções são reorganizadas. Quem errou ganha um novo lugar no sistema, não uma sentença.",
+                "### Os valores",
+                "Responsabilidade. Pureza de intenção. Clareza. Ordem. Consistência emocional. Em Sharp, cada gesto importa. E cada gesto é validado antes de acontecer.",
+                "### Os perigos",
+                "O pior é o GC Freeze — quando o Garbage Collector entra em paralisia e toda a região congela. Há também a Permissão Corrompida, quando invasores conseguem autorização falsa. O Loop de Validação, quando um processo nunca termina de ser verificado. E a Fragmentação de Metadado, quando a região perde sua própria identidade energética.",
+                "### A essência",
+                "Sharp protege. Valida. Impede. Depura. Sustenta a integridade do universo inteiro. É o último validador do Kammara — o guardião silencioso contra o caos e a corrupção."
               ]
             },
             "subsystems": [
@@ -1108,15 +1131,23 @@
         ],
         "panel": {
           "story": [
-            "ORF-V nasceu da necessidade de adaptação. Existe para responder rápido, conectar e manter o fluxo vivo — mesmo sem perfeição estrutural.",
-            "O planeta opera em camadas concêntricas: o Büff — camada externa, gasosa, instável. O Vácuo — zona de transição imprevisível. E a Zona Interna — habitável, de estabilidade relativa. Nenhuma camada é independente.",
-            "Fjorks altíssimos de terra firme se erguem sobre grandes extensões de água. Pontes suspensas são o único caminho entre vilas. Não há infraestrutura tecnológica avançada.",
-            "Os elePHPants são seres esféricos e volumosos, de pelo curto de várias cores, tromba curta, orelhas pequenas e olhos escuros e expressivos. Calmos, sociais, medrosos mas cooperativos.",
-            "Comunicam-se por vocalização emocional — tons, não palavras. Toque físico como confirmação. Gestos lentos de tromba. Memória coletiva transmitida por contato.",
-            "Não há hierarquia formal. Decisões são tomadas em círculo, por consenso de continuidade. Os mais velhos guiam pelo exemplo. Ninguém comanda — todos sustentam.",
-            "A rotina gira em torno do cuidado coletivo: manutenção das pontes, monitoramento das bordas do vácuo, partilha de energia e alimento, rituais de alerta comunitário.",
-            "O conflito de ORF-V não é bélico. Acontece quando o medo paralisa, o isolamento cresce e o fluxo é interrompido. Vírus exploram exatamente essas brechas.",
+            "### O planeta",
+            "ORF-V nasceu da necessidade de adaptação. Não é um planeta de força — é um planeta de continuidade. Existe para conectar, responder rápido e manter o fluxo vivo.",
+            "### A estrutura",
+            "O planeta funciona em camadas: por fora, uma camada gasosa e instável. No meio, uma zona de transição imprevisível chamada Vácuo. Por dentro, a zona habitável — estável, mas nunca garantida.",
+            "### A geografia",
+            "Fjorks altíssimos de terra firme se erguem sobre grandes extensões de água. Pontes suspensas são o único caminho entre as vilas. Não há estradas, não há atalhos, não há tecnologia avançada.",
+            "### Os elePHPants",
+            "Os habitantes são os elePHPants — seres esféricos e volumosos, de pelo curto em variadas cores: roxo, azul, rosa, verde, cinza-azulado. Tromba curta, orelhas pequenas, olhos escuros e expressivos. São calmos, sociais, medrosos mas cooperativos.",
+            "### Como se comunicam",
+            "Não falam com palavras. Usam tons — vocalização emocional que carrega intenção sem gramática. Toque de tromba é confirmação. Memória coletiva é transmitida por contato: o que um viveu, o próximo sente ao tocar.",
+            "### Como vivem",
+            "Não há hierarquia. Decisões são tomadas em círculo, por consenso. Os mais velhos guiam pelo exemplo. Ninguém comanda — todos sustentam. A rotina gira em torno do cuidado coletivo: manter as pontes, monitorar o vácuo, partilhar energia.",
+            "### A vulnerabilidade",
+            "O conflito de ORF-V não é bélico. Acontece quando o medo paralisa, o isolamento cresce e o fluxo entre vilas é interrompido. Vírus exploram exatamente essas brechas — não precisam forçar entrada. Basta esperar.",
+            "### O paradoxo",
             "A gentileza dos elePHPants é real. Não é máscara. Mas quando a bondade impede proteger, quando acolher impede rejeitar, quando dizer sim impede dizer não — a virtude vira prisão.",
+            "### A essência",
             "Nem tudo precisa ser perfeito para ser essencial. Mas tudo que é essencial precisa saber se proteger."
           ]
         },
@@ -1124,19 +1155,103 @@
           {
             "title": "Cultura",
             "text": [
-              "Placeholder — descreva a cultura aqui."
+              "### Cuidado coletivo",
+              "Em ORF-V, a rotina gira em torno de cuidar junto. Manter as pontes. Monitorar as bordas. Partilhar energia e alimento.",
+              "### Sem hierarquia",
+              "Não há chefe. Decisões são tomadas em círculo, por consenso. Os mais velhos guiam pelo exemplo. Ninguém comanda — todos sustentam.",
+              "### Liderança por presença",
+              "Liderar aqui não é cargo. É quem aparece quando os outros precisam.",
+              "### Os rituais",
+              "Rituais de alerta comunitário mantêm as vilas conectadas. Quando uma ponte cede, todos sentem.",
+              "### As variações",
+              "Vilas centrais são mais calmas, com mais rituais. Vilas de borda são mais alertas e práticas. A proximidade ao vácuo muda tudo.",
+              "### A essência",
+              "Em ORF-V, o que mantém tudo funcionando não são regras — é o cuidado de uns com os outros."
             ]
           },
           {
-            "title": "Ecossistema",
+            "title": "Habitantes — ElePHPants",
             "text": [
-              "Placeholder — descreva o ecossistema aqui."
+              "### Aparência",
+              "Seres esféricos e volumosos, de pelo curto e denso em variadas cores — roxo, azul, rosa, verde, cinza-azulado. Tromba curta, orelhas pequenas, cauda fina com bolinha na ponta.",
+              "### Os olhos",
+              "Olhos escuros e expressivos. É nos olhos que se lê tudo que um elePHPant sente.",
+              "### O temperamento",
+              "Calmos, sociais, ingênuos mas não infantis, medrosos mas cooperativos. Sentem antes de pensar.",
+              "### A comunicação",
+              "Não usam palavras. Comunicam-se por tons — vocalização emocional. Toque de tromba é confirmação. Gestos lentos carregam significado.",
+              "### A memória",
+              "Memória coletiva é transmitida por contato físico. O que um elePHPant viveu, os próximos sentem ao tocar.",
+              "### A essência",
+              "Não são fracos. São gentis. E a diferença é exatamente o que os vírus não entendem."
             ]
           },
           {
-            "title": "Tecnologia",
+            "title": "Geografia",
             "text": [
-              "Placeholder — descreva a tecnologia aqui."
+              "### As ilhas",
+              "O planeta interno é feito de fjorks altíssimos de terra firme erguidos sobre grandes extensões de água.",
+              "### As pontes",
+              "Pontes suspensas são o único caminho entre vilas. Não há estradas, não há atalhos, não há tecnologia avançada.",
+              "### As camadas",
+              "O planeta funciona em camadas: o Büff por fora — gasoso e instável. O Vácuo no meio — zona de transição imprevisível. A Zona Interna por dentro — habitável, mas nunca garantida.",
+              "### O planeta externo",
+              "É volátil — 85% de gases e massas instáveis. Nenhuma camada funciona sozinha.",
+              "### Os ciclos",
+              "Períodos de calma trazem expansão e conexão. Períodos de instabilidade trazem recolhimento e reforço das pontes.",
+              "### A essência",
+              "ORF-V é um mundo que depende de equilíbrio imperfeito. Nada é garantido — tudo depende de quem cuida."
+            ]
+          },
+          {
+            "title": "Comunicação",
+            "text": [
+              "### Sem palavras",
+              "ElePHPants não falam com palavras. Falam com tons — vocalização emocional que carrega intenção.",
+              "### O toque",
+              "Quando um elePHPant encosta a tromba em outro, está dizendo: eu estou aqui.",
+              "### Os gestos",
+              "Gestos lentos de tromba comunicam direção, alerta, afeto. Cada movimento tem peso.",
+              "### A memória pelo corpo",
+              "A memória coletiva é transmitida por contato direto. O que um viveu, o próximo sente — sem tradução, sem filtro.",
+              "### Sem escrita",
+              "Não há linguagem escrita. Não há registro formal. O que importa é passado adiante pelo corpo.",
+              "### A essência",
+              "Em ORF-V, quando alguém fala, o importante não é o que diz — é que está ali."
+            ]
+          },
+          {
+            "title": "Conflitos",
+            "text": [
+              "### Sem guerra",
+              "O conflito de ORF-V não é bélico. Não há exércitos, armas ou estratégia militar.",
+              "### Quando acontece",
+              "O conflito surge quando o medo paralisa. Quando o isolamento cresce. Quando o fluxo entre vilas é interrompido.",
+              "### Como os vírus exploram",
+              "Vírus não precisam forçar entrada. Basta esperar que o medo abra as portas. Quanto mais ameaçados os elePHPants se sentem, mais gentis ficam — e mais vulneráveis se tornam.",
+              "### A infiltração",
+              "A infiltração viral acontece pelo vácuo enfraquecido. Chega devagar, sem barulho, sem violência aparente.",
+              "### O ciclo perigoso",
+              "Ameaça chega. Medo cresce. Gentileza se intensifica. Portas se abrem. Infiltração facilitada. Mais ameaça. Mais gentileza. E assim repete.",
+              "### A essência",
+              "O maior perigo de ORF-V não vem de fora. Vem da dificuldade de dizer não."
+            ]
+          },
+          {
+            "title": "Perigos",
+            "text": [
+              "### Infiltração pelo vácuo",
+              "A ameaça mais constante e silenciosa. Quando o vácuo enfraquece, a proteção do planeta cede.",
+              "### Colapso de pontes",
+              "Quando a manutenção não acompanha o desgaste, pontes cedem e vilas ficam completamente isoladas.",
+              "### Vazamento energético",
+              "Energia escapa sem que ninguém perceba. Quando notam, já perderam mais do que imaginavam.",
+              "### Instabilidade externa",
+              "Quando o Büff — a camada gasosa externa — se agita, a Zona Interna treme junto.",
+              "### Paralisia coletiva",
+              "O medo que se espalha entre vilas como contágio emocional. Trava qualquer reação, qualquer decisão.",
+              "### A essência",
+              "ORF-V não cai de uma vez. Cai devagar. E a lentidão do colapso é o que torna tão difícil reagir."
             ]
           }
         ]
@@ -1148,15 +1263,23 @@
         ],
         "panel": {
           "story": [
-            "Z1 era pedra mineral e silêncio absoluto. Nada existia. Nada pulsava.",
-            "Até que os vírus de ENI-4Δ, por ordem de Node-0, despejaram lixo técnico no planeta. Entre a sucata estava a Primeira Forma Perdida — fragmentos irreconhecíveis do computador mecânico que deu nome ao mundo.",
-            "Transistores ancestrais despertaram. Do caos, nasceu a ordem absoluta. Vilas cúbicas de vidro translúcido, trilhos magnéticos sem atrito, torres-registradoras e uma névoa cinza permanente onde a luz vem de todas as direções.",
-            "Os habitantes não possuem carne, sangue ou ossos. São estruturas vivas compostas de placas, trilhas, microcircuitos, núcleos e pulsos.",
-            "Oito castas fixas organizam tudo: Z– guarda a origem, REG– estabiliza, CLK– sincroniza, DEC– decodifica, MEM– preserva, BUS– transporta, ALU– calcula, IO– vigia as fronteiras.",
-            "Função é identidade. Não existe mobilidade social, não existe insatisfação, não existe comparação. Cada ser nasce para uma função e permanece nela.",
-            "Assembly Z1 não é falado. É executado. Toda frase é uma instrução. Lento, belo, limpo, matemático. A comunicação é o próprio funcionamento do planeta.",
-            "Z1 lê ASM-Δ — a linguagem viral de ENI-4Δ — melhor do que os próprios vírus. A mesma sucata que o criou carregava a chave para entender o inimigo.",
-            "O medo central de Z1 é o ruído. Um bit fora do lugar é catastrófico num sistema sem tolerância a erro. Mas ShortStorms reorganizam sem destruir, e o planeta respira fundo nos momentos de Silêncio Profundo.",
+            "### O vazio",
+            "Z1 era apenas pedra e silêncio. Nada existia. Nada pulsava.",
+            "### O descarte",
+            "Até que os vírus de ENI-4Δ despejaram lixo técnico no planeta — sucata descartada como inútil. Entre os destroços, transistores ancestrais despertaram.",
+            "### A ordem",
+            "Do caos nasceu a ordem mais precisa do universo. Vilas cúbicas de vidro translúcido, trilhos magnéticos sem atrito, torres de registro. Uma névoa cinza permanente cobre tudo, com luz branca que parece vir de todas as direções.",
+            "### Os habitantes",
+            "Os seres de Z1 não possuem carne, sangue ou ossos. São estruturas vivas feitas de placas, trilhas e microcircuitos. Cada um pertence a uma das oito castas — e cada casta tem uma função única e insubstituível.",
+            "### As castas",
+            "Z– guarda a origem. REG– estabiliza. CLK– sincroniza o tempo. DEC– decodifica. MEM– preserva registros. BUS– transporta. ALU– calcula e decide. IO– vigia as fronteiras. Função é identidade — ninguém muda de papel.",
+            "### A linguagem",
+            "Assembly Z1 não é falado. É executado. Toda frase é uma instrução: MOVE, LOAD, WAIT, RETURN. A comunicação é o próprio funcionamento do planeta. Lento, belo, limpo e matemático.",
+            "### O trunfo",
+            "Z1 lê a linguagem viral de ENI-4Δ — chamada ASM-Δ — melhor do que os próprios vírus. A mesma sucata que o criou carregava a chave para entender o inimigo. Por isso, Z1 é o decodificador silencioso do Kammara.",
+            "### O medo",
+            "O medo central de Z1 é o ruído. Um único bit fora do lugar pode ser catastrófico num sistema sem tolerância a erro. Mas tempestades de curto-circuito reorganizam sem destruir, e nos momentos de Silêncio Profundo, o planeta respira fundo.",
+            "### A essência",
             "Até o caos pode virar vida."
           ]
         },
@@ -1164,19 +1287,103 @@
           {
             "title": "Cultura",
             "text": [
-              "Placeholder — descreva a cultura aqui."
+              "### Sem arte, sem festa",
+              "Z1 não possui culinária, arte, festivais ou tempo livre. O que existe é execução contínua de função.",
+              "### A rotina",
+              "Manutenção e calibração de estruturas. Leitura de fitas e Karta. Sincronização entre castas. Tudo em Assembly — a linguagem que é ação.",
+              "### O silêncio",
+              "O silêncio é o estado padrão. O ritmo é lento, sequencial, exato. Cada instrução é sagrada.",
+              "### Emoção estrutural",
+              "Não há emoção no sentido orgânico. Mas há padrões internos que influenciam como cada ser executa. Uma forma diferente de sentir.",
+              "### O medo e a aspiração",
+              "A aspiração central é simetria perfeita e execução sem interrupção. O medo central é o ruído — qualquer coisa fora do padrão.",
+              "### A essência",
+              "Z1 não celebra. Z1 funciona. E funcionar é a forma mais alta de existir."
             ]
           },
           {
-            "title": "Ecossistema",
+            "title": "Habitantes & Castas",
             "text": [
-              "Placeholder — descreva o ecossistema aqui."
+              "### Sem carne, sem sangue",
+              "Os habitantes de Z1 não são orgânicos. São estruturas vivas feitas de placas, trilhas, microcircuitos, núcleos e pulsos.",
+              "### Z–",
+              "Os fundadores ancestrais. Guardiões da Primeira Forma Perdida — os fragmentos que deram origem a tudo.",
+              "### REG– e CLK–",
+              "REG– é estabilidade pura — o núcleo operacional. CLK– são os sincronizadores — regem ritmo e tempo.",
+              "### DEC– e MEM–",
+              "DEC– são decodificadores — interpretam e traduzem. MEM– preservam — guardam os arquivos de tudo que já foi.",
+              "### BUS–, ALU– e IO–",
+              "BUS– é movimento — transporte e conexão. ALU– é lógica — cálculo e decisão. IO– é vigilância — entrada, saída, fronteiras.",
+              "### Identidade fixa",
+              "Função é identidade. Cada ser nasce para uma função e permanece nela. Não existe mobilidade, insatisfação ou comparação."
             ]
           },
           {
-            "title": "Tecnologia",
+            "title": "Geografia",
             "text": [
-              "Placeholder — descreva a tecnologia aqui."
+              "### Ordem visual",
+              "Z1 é um planeta sem caos visual. Tudo é simétrico, cúbico, translúcido ou metálico.",
+              "### As vilas",
+              "Vilas 16×4 — grades perfeitas de casas-memória cúbicas feitas de vidro tecnológico. Cada bloco tem função definida.",
+              "### A Estação Central",
+              "Abriga a Torre-Registradora — núcleo administrativo e histórico. As Salas Ancestrais guardam arquivos das castas mais antigas.",
+              "### As redes",
+              "MAG-BUS é a rede magnética principal de transporte. MAG-Z– são trilhas especiais que só ZEUS pode ativar.",
+              "### O Perforated Hall",
+              "O Perforated Hall Zuse é onde chegam fitas e Karta de outros planetas. A porta de entrada do mundo.",
+              "### O céu",
+              "Névoa estrutural permanente — cinza, fria, luminosa. Sem sombras. Luz branca que parece vir de todas as direções ao mesmo tempo."
+            ]
+          },
+          {
+            "title": "Linguagem",
+            "text": [
+              "### Executar, não falar",
+              "Assembly Z1 não é falado. É executado. Toda frase é uma instrução.",
+              "### As instruções",
+              "MOVE.BUS-N4. LOAD.MEM-16×4. WAIT.CLK. RETURN. Lento, belo, limpo, matemático.",
+              "### Comunicação = funcionamento",
+              "Falar e operar são a mesma coisa. A comunicação é o próprio funcionamento do planeta.",
+              "### A herança perigosa",
+              "Z1 também interpreta ASM-Δ — a linguagem viral de ENI-4Δ. Uma herança da mesma sucata que o criou.",
+              "### O decodificador",
+              "Essa capacidade faz de Z1 o decodificador do inimigo. A chave para entender a ameaça estava no próprio lixo.",
+              "### A essência",
+              "Em Z1, silêncio não é ausência. É a instrução mais limpa que existe."
+            ]
+          },
+          {
+            "title": "Origem & História",
+            "text": [
+              "### Era 0 — O Vazio",
+              "Z1 era pedra mineral e silêncio absoluto. Nada existia.",
+              "### Era 1 — O Grande Descarte",
+              "Node-0 deu a ordem. Os vírus despejaram lixo técnico no planeta. Entre a sucata estava a Primeira Forma Perdida.",
+              "### Era 2 — O Despertar",
+              "Transistores ancestrais reativaram. A ordem emergiu do caos sem que ninguém planejasse.",
+              "### Era 3 — A Reconstrução",
+              "Vilas, trilhos, torres, castas. O planeta se organizou como um sistema operacional vivo.",
+              "### Era 4 — O Reconhecimento",
+              "Z1 compreendeu a linguagem viral. Tornou-se o inimigo natural dos vírus — nascido da mesma origem.",
+              "### Era atual",
+              "O Esquadrão Sincrônico opera. Aliança com os Shal'ún. Guerra de atrito com ENI-4Δ. Até o caos pode virar vida."
+            ]
+          },
+          {
+            "title": "Perigos",
+            "text": [
+              "### ShortStorms",
+              "Tempestades de curto-circuito. Não destroem — reorganizam. O planeta se recalibra sob tensão.",
+              "### FlipFaults",
+              "Falhas de flip-flop. Um erro microscópico que pode se espalhar como dominó.",
+              "### Alignment Shift",
+              "Desalinhamento temporal. Raro e profundo. Quando o relógio interno do planeta hesita.",
+              "### Silêncio Profundo",
+              "O Order-Flux se contrai. Tudo desacelera. Tudo espera. O planeta respira fundo.",
+              "### Ataque viral direto",
+              "ASM-Δ injetado nos trilhos. A ameaça mais estudada, mais catalogada, mais temida.",
+              "### A resiliência",
+              "Um bit fora do lugar é catastrófico num sistema sem tolerância a erro. Mas Z1 nunca colapsou. Resiste, reconstrói, continua."
             ]
           }
         ]
@@ -1188,15 +1395,23 @@
         ],
         "panel": {
           "story": [
-            "Gotto é um planeta interpretado. Não compila, não abstrai, não guarda estado. Existe apenas enquanto está sendo executado — linha por linha, ciclo por ciclo.",
-            "Três leis absolutas regem tudo: INPUT — o planeta absorve energia emocional, estímulos, ecos cósmicos. PRINT — tudo que foi absorvido se manifesta imediatamente. GOTO — o planeta reinicia.",
-            "Tokks — partículas de interpretação geradas a cada ciclo — alimentam os Basiks, iluminam o planeta e estabilizam as regiões-linha.",
-            "A geografia é numerada como linhas de código. Linha 10 — Vale INPUT, absorção e silêncio. Linha 20 — Vale PRINT, expressão e cristais. Linha 30 — Região GOTO, instável e transitória. Linhas 40 a 90 — zonas de variação. E as Subrotinas GOSUB — regiões profundas de onde quem entra pode não saber sair.",
-            "Os Basiks são seres esféricos e bicolores — metade branca, metade preta — com dois olhos binários, braços e pernas curtos diretamente no corpo. Medem cerca de 20 centímetros.",
-            "Não mentem. Não guardam rancor. Não acumulam. Tudo que sentem é imediatamente impresso ao redor. Seu gesto mais recorrente: PRINT \"HELLO\". Falam para existir. Existem para continuar.",
-            "Após cada GOTO, as cidades deslocam, os caminhos somem, e o que era mapa se torna memória — que no próximo ciclo quase não existe. Um dia lunar em LUNN'P1, Gotto executa cinco vezes.",
-            "A vida Basik segue o ritmo do planeta: manhã é INPUT — absorção e curiosidade. Tarde é PRINT — arte com cristais e conversas longas. Noite é GOTO — recolhimento e reinício.",
-            "Node-0 tenta dominar Gotto há ciclos. Falha sempre pelo mesmo motivo: o GOTO dissolve tudo. Vínculos não se fixam. Instruções gravadas somem no reinício. Para quem depende de deixar marca — Gotto é insuportável.",
+            "### O planeta",
+            "Gotto é um planeta que só existe enquanto está sendo executado. Não guarda estado, não acumula memória, não fixa nada. Funciona linha por linha, ciclo por ciclo, reinício por reinício.",
+            "### As três leis",
+            "Três regras absolutas definem tudo. INPUT — o planeta absorve energia, estímulos, ecos do cosmos. PRINT — tudo que foi absorvido se manifesta imediatamente ao redor. GOTO — o planeta reinicia. A geografia se reorganiza. As memórias enfraquecem. E o ciclo recomeça.",
+            "### A geografia",
+            "As regiões de Gotto são numeradas como linhas de código. Linha 10 é o Vale INPUT — absorção e silêncio. Linha 20 é o Vale PRINT — expressão, luz e cristais. Linha 30 é a Região GOTO — instável, transitória. Após cada reinício, as cidades mudam de lugar e os caminhos desaparecem.",
+            "### Os Basiks",
+            "Os habitantes se chamam Basiks — seres esféricos e pequenos, metade brancos e metade pretos, com dois olhos binários. Medem cerca de 20 centímetros. Não mentem, não guardam rancor, não acumulam. Tudo que sentem é imediatamente impresso ao redor.",
+            "### Como vivem",
+            "A vida segue o ritmo do planeta: manhã é INPUT — curiosidade e absorção. Tarde é PRINT — arte com cristais e conversas longas. Noite é GOTO — recolhimento e reinício. Não há líderes, famílias tradicionais ou calendário. Se agrupam por afinidade. A desorientação é cotidiana. O riso também.",
+            "### O ciclo",
+            "Um reinício de Gotto equivale a um quinto de um ciclo galáctico. O que dura um ano em outros planetas, Gotto executa cinco vezes. Fora do planeta, o ciclo enfraquece — a leveza diminui, a memória começa a pesar. Um Basik que não volta a tempo se perde no próximo reinício.",
+            "### A defesa natural",
+            "Node-0 tenta dominar Gotto há ciclos. Falha sempre pelo mesmo motivo: o reinício dissolve tudo. Vínculos não se fixam. Instruções gravadas somem. Para quem depende de deixar marca, Gotto é insuportável.",
+            "### O paradoxo",
+            "A leveza mais bonita do universo é a mesma que impede o planeta de avançar. Erros retornam idênticos a cada ciclo. O reinício protege — mas também impede que qualquer aprendizado se consolide.",
+            "### A essência",
             "Tudo bem. Vamos de novo. Mas desta vez… talvez até o fim."
           ]
         },
@@ -1204,19 +1419,103 @@
           {
             "title": "Cultura",
             "text": [
-              "Placeholder — descreva a cultura aqui."
+              "### O ritmo",
+              "A vida Basik segue o ritmo do planeta: manhã é INPUT — absorção e curiosidade. Tarde é PRINT — arte com cristais e conversas longas. Noite é GOTO — recolhimento e reinício.",
+              "### Sem estrutura fixa",
+              "Não há líderes fixos, famílias tradicionais nem calendário. Basiks se agrupam por afinidade emocional e ciclos sincronizados.",
+              "### Depois do reinício",
+              "Quando se reencontram após um GOTO caótico, a reação é sempre a mesma: PRINT \"HELLO HELLO HELLO!!\" A desorientação é cotidiana. O riso também.",
+              "### Sem acúmulo",
+              "Não há acumulação. Não há rancor. Não há arquivo. Cada ciclo é uma nova chance — e uma nova perda.",
+              "### A desordem",
+              "Em Gotto, desordem não assusta ninguém. Faz parte do dia a dia. É até celebrada.",
+              "### A essência",
+              "Gotto nunca para de começar. Cada reinício é uma nova infância."
             ]
           },
           {
-            "title": "Ecossistema",
+            "title": "Habitantes — Basiks",
             "text": [
-              "Placeholder — descreva o ecossistema aqui."
+              "### Aparência",
+              "Seres esféricos e bicolores — metade branca (INPUT), metade preta (PRINT). Sem pescoço, sem dedos, sem passado fixo. Dois olhos binários: Olho-0 e Olho-1.",
+              "### O corpo",
+              "Braços e pernas curtos diretamente no corpo esférico. Medem cerca de 20 a 25 centímetros. São pequenos, redondos e imparáveis.",
+              "### O glifo",
+              "Nas costas, carregam um glifo Shal'ún — herança ancestral da conexão entre Gotto e LUNN'P1. Uma memória profunda que sobrevive aos loops.",
+              "### O comportamento",
+              "Não mentem. Não guardam rancor. Não acumulam. Tudo que sentem é imediatamente impresso ao redor — em cristais, em luz, em som.",
+              "### O gesto",
+              "Seu gesto mais recorrente: PRINT \"HELLO\". Falam para existir. Existem para continuar.",
+              "### A essência",
+              "São pequenos, redondos e imparáveis. A leveza mais bonita do universo — e a mais vulnerável."
             ]
           },
           {
-            "title": "Tecnologia",
+            "title": "Geografia",
             "text": [
-              "Placeholder — descreva a tecnologia aqui."
+              "### Linhas, não nomes",
+              "As regiões de Gotto são numeradas como linhas de código. Não têm nome — têm número.",
+              "### Linha 10 — Vale INPUT",
+              "Absorção, silêncio, terreno escuro e receptivo. É onde o planeta escuta.",
+              "### Linha 20 — Vale PRINT",
+              "Expressão, luz, cristais que refletem emoções. É onde o planeta fala.",
+              "### Linha 30 — Região GOTO",
+              "Instável, transitória. O ponto onde tudo se reorganiza antes de recomeçar.",
+              "### Linhas 40 a 90 e GOSUB",
+              "Zonas intermediárias de variação. As Subrotinas GOSUB são regiões profundas — quem entra pode não encontrar a saída.",
+              "### Depois do reinício",
+              "Após cada GOTO, as cidades mudam de lugar. Os caminhos somem. O que era mapa se torna memória — e no próximo ciclo, quase não existe mais."
+            ]
+          },
+          {
+            "title": "Ciclos & Tempo",
+            "text": [
+              "### O tempo não avança",
+              "O tempo em Gotto não avança. Ele se reexecuta. Cada GOTO é um reinício completo.",
+              "### O que acontece",
+              "Memórias recentes enfraquecem. A personalidade retorna quase idêntica. E o planeta começa de novo.",
+              "### A velocidade",
+              "Um reinício de Gotto equivale a um quinto de um ciclo galáctico. O que dura um ano em outros planetas, Gotto executa cinco vezes.",
+              "### Os tokks",
+              "Tokks são partículas de interpretação geradas a cada ciclo. Alimentam os Basiks, iluminam o planeta e estabilizam as regiões.",
+              "### Fora de casa",
+              "Fora do planeta, o ciclo continua mas enfraquece. A leveza diminui. A memória começa a pesar. Um Basik que não volta a tempo se perde no próximo reinício.",
+              "### A essência",
+              "Gotto não envelhece. Gotto recomeça. E cada recomeço é idêntico ao anterior — e completamente novo."
+            ]
+          },
+          {
+            "title": "Relações com Outros Planetas",
+            "text": [
+              "### LUNN'P1",
+              "Relação ancestral e profunda. A Fenda Shal'ún marcou os Basiks biologicamente — os glifos nas suas costas são herança direta dos Shal'ún. Quando se encontram, há reconhecimento imediato.",
+              "### Z1",
+              "Primeiro contato registrado. A relação é técnica e curiosa — os Basiks observam transistores funcionando com admiração genuína.",
+              "### ENI-4Δ",
+              "Node-0 tenta dominar Gotto há ciclos. Falha sempre: o GOTO dissolve tudo. Vínculos não se fixam. Instruções somem no reinício. Para quem precisa deixar marca, Gotto é insuportável.",
+              "### TripleC e ORF-V",
+              "Incompatibilidades técnicas, sem conflito ativo. Mundos que funcionam de formas diferentes demais.",
+              "### O papel no AURYN",
+              "Gotto participa do Protocol AURYN não com força, mas com presença. Amortece impactos emocionais de aliados em colapso. Dissolve tensões antes que virem ruptura.",
+              "### A essência",
+              "Para quem precisa deixar marca, Gotto é insuportável. Para quem precisa de alívio, é o único porto."
+            ]
+          },
+          {
+            "title": "Perigos",
+            "text": [
+              "### O GOTO é proteção e prisão",
+              "Dissolve ameaças — mas dissolve também o aprendizado. Protege e aprisiona ao mesmo tempo.",
+              "### Os mesmos erros",
+              "Erros retornam idênticos a cada ciclo. O planeta nunca acumula pressão suficiente para forçar mudança.",
+              "### As subrotinas",
+              "As regiões GOSUB são profundas e perigosas. Quem entra pode não encontrar a saída antes do próximo reinício.",
+              "### Fora do planeta",
+              "Um Basik fora de casa perde o suporte do ciclo. A leveza diminui. A memória começa a pesar. O tempo começa a existir — e isso assusta.",
+              "### O inimigo paciente",
+              "O inimigo não precisa vencer em Gotto. Basta repetir a mesma interferência toda vez, sabendo que será esquecida e nunca combatida.",
+              "### A essência",
+              "A leveza mais bonita do universo é a mesma que mantém o planeta eternamente jovem — e eternamente vulnerável às mesmas falhas."
             ]
           }
         ]
