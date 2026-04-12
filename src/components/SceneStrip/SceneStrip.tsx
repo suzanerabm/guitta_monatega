@@ -14,6 +14,7 @@ export interface SceneStripProps {
   labelColor?: string;
   arrowColor?: string;
   accentColor?: string;
+  mobileColor?: string;
   modalBg?: string;
   modalBgOpacity?: number;
   modalTitle?: string;
@@ -33,6 +34,7 @@ export function SceneStrip({
   labelColor,
   arrowColor,
   accentColor,
+  mobileColor,
   modalBg,
   modalTitle,
   modalSubtitle,
@@ -117,9 +119,10 @@ export function SceneStrip({
           padding="0 2rem"
           marginTop={titleMarginTop}
           marginBottom="0.5rem"
-          color={arrowColor}
+          color={mobileColor || arrowColor}
           css={{
-            '@media (max-width: 48em)': { marginTop: '2em', color: accentColor || arrowColor },
+            '@media (max-width: 48em)': { marginTop: '2em' },
+            ...(mobileColor ? { '@media (min-width: 48em)': { color: arrowColor } } : {}),
           }}
         >
           {sectionTitle}
@@ -175,7 +178,8 @@ export function SceneStrip({
                     background: 'rgba(0,0,0,0.3)',
                     backdropFilter: 'blur(8px)',
                     outline: '2px solid',
-                    outlineColor: accentColor || 'var(--chakra-colors-outlineMid)',
+                    outlineColor: mobileColor || accentColor || 'var(--chakra-colors-outlineMid)',
+                    '@media (min-width: 48em)': mobileColor ? { outlineColor: accentColor || 'var(--chakra-colors-outlineMid)' } : {},
                     outlineOffset: '3px',
                     boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
                     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
@@ -209,8 +213,11 @@ export function SceneStrip({
                   textStyle="label"
                   textAlign="center"
                   m={0}
-                  color={labelColor ?? 'white'}
+                  color={mobileColor || labelColor || 'white'}
                   textShadow="labelText"
+                  css={mobileColor ? {
+                    '@media (min-width: 48em)': { color: labelColor || 'white' },
+                  } : undefined}
                 >
                   {s.name}
                 </Heading>

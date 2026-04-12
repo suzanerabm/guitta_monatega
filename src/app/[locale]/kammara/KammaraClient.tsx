@@ -485,8 +485,9 @@ function WorldSection({
                 cardSize={300}
                 noFloat
                 transparent
-                labelColor={colors.title}
-                arrowColor={colors.title}
+                labelColor={colors.titleDestaque}
+                arrowColor={colors.titleDestaque}
+                mobileColor={colors.title}
                 sectionTitle={charactersTitle}
                 speed={100}
                 inStripSide
@@ -503,9 +504,10 @@ function WorldSection({
                   name: translateName(s.name, words),
                 }))}
                 sectionTitle={scenesTitle}
-                arrowColor={colors.title}
-                labelColor={colors.title}
-                accentColor={colors.title}
+                arrowColor={colors.titleDestaque}
+                labelColor={colors.titleDestaque}
+                accentColor={colors.titleDestaque}
+                mobileColor={colors.title}
                 modalBg={palette.gradientBg}
                 modalTitle={name}
                 modalSubtitle={bodyText[0] || ''}

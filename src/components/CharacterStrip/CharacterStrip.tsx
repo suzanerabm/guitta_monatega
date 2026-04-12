@@ -27,6 +27,8 @@ export interface CharacterStripProps {
   sectionTitle?: string;
   cardBg?: string;
   labelColor?: string;
+  /** Color override for title and card borders on mobile (≤768px). */
+  mobileColor?: string;
   /**
    * When true (rendered inside DSMainCard's stripSide slot), the strip
    * stays in normal flow instead of using `position: absolute; top: 20px`
@@ -58,6 +60,7 @@ export function CharacterStrip({
   sectionTitle,
   cardBg,
   labelColor,
+  mobileColor,
   inStripSide = false,
   contextId,
   locale = 'pt',
@@ -207,12 +210,10 @@ export function CharacterStrip({
           fontWeight="semibold"
           padding="0 2rem"
           margin={inStripSide ? '1rem 0 0.5rem 0' : '5em 2em 0 3em'}
-          color={arrowColor}
-          css={{
-            '@media (max-width: 48em)': {
-              color: labelColor || arrowColor,
-            },
-          }}
+          color={mobileColor || arrowColor}
+          css={mobileColor ? {
+            '@media (min-width: 48em)': { color: arrowColor },
+          } : undefined}
         >
           {sectionTitle}
         </Heading>
@@ -287,6 +288,7 @@ export function CharacterStrip({
                     noHoverScale={noHoverScale}
                     cardBg={cardBg}
                     labelColor={labelColor}
+                    mobileColor={mobileColor}
                     isSelected={isActive}
                   />
                 </Box>

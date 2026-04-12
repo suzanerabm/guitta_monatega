@@ -11,6 +11,7 @@ interface CharacterCardProps {
   noHoverScale?: boolean;
   cardBg?: string;
   labelColor?: string;
+  mobileColor?: string;
   /**
    * When true, the card is locked in its "expanded" state (same scale as
    * hover) even if the cursor isn't over it. Used when a card is clicked
@@ -36,6 +37,7 @@ export function CharacterCard({
   noHoverScale = false,
   cardBg,
   labelColor,
+  mobileColor,
   isSelected = false,
   'data-testid': testId,
 }: CharacterCardProps) {
@@ -120,12 +122,13 @@ export function CharacterCard({
 
   const nameProps: Record<string, unknown> = {
     textStyle: 'label',
-    color: labelColor ?? 'white',
+    color: mobileColor || labelColor || 'white',
     zIndex: 1,
     textShadow: 'labelText',
     textAlign: 'center',
     transition: 'transform 0.25s ease, opacity 0.25s ease',
     margin: 0,
+    ...(mobileColor ? { css: { '@media (min-width: 48em)': { color: labelColor || 'white' } } } : {}),
   };
 
   if (!noHoverScale) {
@@ -195,12 +198,15 @@ export function CharacterCard({
         transition="transform 0.25s ease"
         boxShadow={variantStyles.boxShadow}
         outline={variantStyles.outline}
-        outlineColor={variantStyles.outlineColor}
+        outlineColor={mobileColor || variantStyles.outlineColor}
         outlineOffset="3px"
         aspectRatio={variantStyles.aspectRatio}
         transformOrigin={variantStyles.transformOrigin}
         _groupHover={hoverStyles}
         {...(selectedBoxStyles ?? {})}
+        css={mobileColor ? {
+          '@media (min-width: 48em)': { outlineColor: variantStyles.outlineColor as string },
+        } : undefined}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
