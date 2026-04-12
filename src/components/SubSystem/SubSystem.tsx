@@ -104,6 +104,9 @@ export function SubSystem({
           padding="0 2rem"
           margin="5em 0 0.5rem"
           color={titleColor}
+          css={{
+            '@media (min-width: 48em) and (max-width: 64em)': { fontSize: '0.85rem' },
+          }}
         >
           {sectionTitle}
         </Heading>
