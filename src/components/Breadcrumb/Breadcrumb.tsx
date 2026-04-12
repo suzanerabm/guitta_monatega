@@ -1,7 +1,7 @@
 'use client';
 import { Box, Flex, Text } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import { House, ChevronRight, ArrowLeft } from 'lucide-react';
+import { House, ChevronRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useChromeTint } from '@/components/ChromeTint';
 
@@ -104,7 +104,15 @@ export function Breadcrumb({
         style={linkStyle}
         title={backLabel}
       >
-        <ArrowLeft size={14} strokeWidth={1.5} />
+        <Box
+          as="span"
+          display="inline-flex"
+          fontFamily='"Apple Symbols", "Symbola", "Noto Sans Symbols 2", "Cambria Math", "Segoe UI Symbol", sans-serif'
+          fontSize="1rem"
+          lineHeight={1}
+        >
+          ⊷
+        </Box>
         <span>{backLabel}</span>
       </NextLink>
     </Box>

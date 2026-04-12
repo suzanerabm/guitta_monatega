@@ -1,7 +1,6 @@
 'use client';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Box, Flex, Heading } from '@chakra-ui/react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { CharacterCard } from '@/components/CharacterCard';
 import { CharacterInfoPanel } from '@/components/CharacterInfoPanel';
 import { useStripAnimation } from '@/hooks/useStripAnimation';
@@ -148,6 +147,10 @@ export function CharacterStrip({
     cursor: 'pointer',
     color: arrowColor ?? 'var(--chakra-colors-textOverlayDim)',
     transition: 'opacity 0.2s ease',
+    fontFamily:
+      '"Apple Symbols", "Symbola", "Noto Sans Symbols 2", "Cambria Math", "Segoe UI Symbol", sans-serif',
+    fontSize: '2.25rem',
+    lineHeight: 1,
     // Astro: .strip-arrow { display: none; } @media (max-width: 768px)
     '@media (max-width: 48em)': { display: 'none' },
   };
@@ -198,12 +201,13 @@ export function CharacterStrip({
       {sectionTitle && (
         <Heading
           as="h2"
+          fontFamily="body"
           fontSize="section"
           letterSpacing="wider"
           textTransform="uppercase"
           fontWeight="semibold"
           padding="0 2rem"
-          margin="5em 2em 0 3em"
+          margin={inStripSide ? '0 0 0.5rem 0' : '5em 2em 0 3em'}
           color={arrowColor}
         >
           {sectionTitle}
@@ -224,7 +228,7 @@ export function CharacterStrip({
             onClick={() => handleArrow(-1)}
             css={{ ...arrowCss, marginRight: '0.5rem' }}
           >
-            <ChevronLeft size={40} />
+            ⊷
           </Box>
         )}
         <Box ref={stripRef} css={stripCss}>
@@ -232,7 +236,13 @@ export function CharacterStrip({
             ref={trackRef}
             display="flex"
             gap="0.5rem"
-            padding={effectiveNoLoop ? '0.5rem 0 1rem' : '4rem 0 2rem'}
+            padding={
+              effectiveNoLoop
+                ? '0.5rem 0 1rem'
+                : inStripSide
+                  ? '0.5rem 0'
+                  : '4rem 0 2rem'
+            }
             width="max-content"
             css={{
               // Stagger the cardFloat animation across cards so they don't
@@ -300,7 +310,7 @@ export function CharacterStrip({
             onClick={() => handleArrow(1)}
             css={{ ...arrowCss, marginLeft: '0.5rem' }}
           >
-            <ChevronRight size={40} />
+            ⊶
           </Box>
         )}
       </Flex>

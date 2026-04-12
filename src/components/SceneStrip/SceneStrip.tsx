@@ -1,7 +1,6 @@
 'use client';
 import { useEffect, useId, useRef } from 'react';
 import { Box, Flex, Heading } from '@chakra-ui/react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useModal } from '@/components/Modal';
 
 export interface SceneStripScene {
@@ -14,6 +13,7 @@ export interface SceneStripProps {
   sectionTitle?: string;
   labelColor?: string;
   arrowColor?: string;
+  accentColor?: string;
   modalBg?: string;
   modalBgOpacity?: number;
   modalTitle?: string;
@@ -32,6 +32,7 @@ export function SceneStrip({
   sectionTitle,
   labelColor,
   arrowColor,
+  accentColor,
   modalBg,
   modalTitle,
   modalSubtitle,
@@ -81,11 +82,15 @@ export function SceneStrip({
     cursor: 'pointer',
     color: arrowColor ?? 'var(--chakra-colors-textOverlayDim)',
     transition: 'opacity 0.2s ease',
+    fontFamily:
+      '"Apple Symbols", "Symbola", "Noto Sans Symbols 2", "Cambria Math", "Segoe UI Symbol", sans-serif',
+    fontSize: '2.25rem',
+    lineHeight: 1,
     '@media (max-width: 48em)': { display: 'none' },
   };
 
   return (
-    <Box position="relative" padding="1rem 0">
+    <Box position="relative">
       {sectionTitle && (
         <Heading
           as="h2"
@@ -99,10 +104,7 @@ export function SceneStrip({
           marginBottom="0.5rem"
           color={arrowColor}
           css={{
-            // Mobile: tighter top margin
             '@media (max-width: 48em)': { marginTop: '2em' },
-            // XL screens (>=1900px): larger title
-            '@media (min-width: 118.75em)': { fontSize: 'var(--chakra-font-sizes-h3)' },
           }}
         >
           {sectionTitle}
@@ -117,7 +119,7 @@ export function SceneStrip({
           data-testid="scene-strip-arrow-left"
           css={arrowCss}
         >
-          <ChevronLeft size={40} />
+          ⊷
         </Box>
         <Box
           ref={scrollRef}
@@ -151,10 +153,13 @@ export function SceneStrip({
               >
                 <Box
                   css={{
-                    width: '300px',
-                    borderRadius: '8px',
-                    overflow: 'hidden',
-                    aspectRatio: '16 / 9',
+                    width: '400px',
+                    height: '225px',
+                    borderRadius: '16px',
+                    background: 'rgba(0,0,0,0.3)',
+                    outline: '1px solid',
+                    outlineColor: accentColor || 'rgba(255,255,255,0.2)',
+                    boxShadow: `0 0 14px 3px ${accentColor || 'rgba(255,255,255,0.3)'}`,
                     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                     '&:hover': {
                       transform: 'scale(1.05)',
@@ -163,9 +168,10 @@ export function SceneStrip({
                     // Mobile (<=768px): smaller cards
                     '@media (max-width: 48em)': { width: '250px' },
                     // XL screens (>=1900px): bigger cards
-                    '@media (min-width: 118.75em)': { width: '500px' },
+                    '@media (min-width: 118.75em)': { width: '550px' },
                   }}
                 >
+                  <Box overflow="hidden" borderRadius="8px" width="100%" height="100%">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={s.image}
@@ -180,6 +186,7 @@ export function SceneStrip({
                       display: 'block',
                     }}
                   />
+                  </Box>
                 </Box>
                 <Heading
                   as="h4"
@@ -203,7 +210,7 @@ export function SceneStrip({
           data-testid="scene-strip-arrow-right"
           css={arrowCss}
         >
-          <ChevronRight size={40} />
+          ⊶
         </Box>
       </Flex>
     </Box>

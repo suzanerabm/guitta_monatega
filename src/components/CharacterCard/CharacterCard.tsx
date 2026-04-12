@@ -76,10 +76,10 @@ export function CharacterCard({
     : transparent
       ? {
           height: sizePx,
-          background: 'transparent',
-          boxShadow: 'none',
-          outline: '2px solid',
-          outlineColor: 'outlineMid',
+          background: 'rgba(0,0,0,0.3)',
+          boxShadow: `0 0 14px 3px ${labelColor || 'rgba(255,255,255,0.3)'}`,
+          outline: '1px solid',
+          outlineColor: labelColor || 'rgba(255,255,255,0.2)',
           borderRadius: '16px',
           aspectRatio: undefined,
           transformOrigin: undefined,
@@ -108,6 +108,7 @@ export function CharacterCard({
       : transparent
         ? {
             transform: 'scale(1.3)',
+            zIndex: 30,
             outline: 'none',
           }
         : { transform: 'scale(1.3)' };

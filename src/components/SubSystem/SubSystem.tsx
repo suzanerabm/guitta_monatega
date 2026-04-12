@@ -1,7 +1,6 @@
 'use client';
 import { useRef } from 'react';
 import { Box, Flex, Heading } from '@chakra-ui/react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export interface SubSystemCard {
   title: string;
@@ -64,6 +63,10 @@ export function SubSystem({
       cursor: 'pointer',
       color: arrowColor ?? titleColor,
       transition: 'opacity 0.2s ease',
+      fontFamily:
+        '"Apple Symbols", "Symbola", "Noto Sans Symbols 2", "Cambria Math", "Segoe UI Symbol", sans-serif',
+      fontSize: '2.25rem',
+      lineHeight: 1,
     },
     // Hide arrows on mobile — rely on native touch scroll instead
     '@media (max-width: 48em)': {
@@ -106,7 +109,7 @@ export function SubSystem({
           style={{ marginRight: '0.5rem' }}
           className="subsystem-arrow"
         >
-          <ChevronLeft size={40} />
+          ⊷
         </button>
         <Box
           ref={scrollRef}
@@ -280,7 +283,7 @@ export function SubSystem({
           style={{ marginLeft: '0.5rem' }}
           className="subsystem-arrow"
         >
-          <ChevronRight size={40} />
+          ⊶
         </button>
       </Flex>
     </Box>

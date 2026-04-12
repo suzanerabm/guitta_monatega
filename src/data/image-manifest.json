@@ -1063,6 +1063,28 @@
         "image": "/imgs/characters/kammara/orfv/_scenes/vila.jpg"
       }
     ],
+    "kammara/triplec": [
+      {
+        "name": "niul Forest",
+        "image": "/imgs/characters/kammara/triplec/_scenes/1_niul_Forest.jpg"
+      },
+      {
+        "name": "niul Forest",
+        "image": "/imgs/characters/kammara/triplec/_scenes/2_niul_Forest.jpg"
+      },
+      {
+        "name": "Lumesha visita LUMA VAL",
+        "image": "/imgs/characters/kammara/triplec/_scenes/4_Lumesha_visita_LUMA_VAL.jpg"
+      },
+      {
+        "name": "Erú’Rin com SELKA RIN",
+        "image": "/imgs/characters/kammara/triplec/_scenes/5Erú’Rin_com_SELKA_RIN.jpg"
+      },
+      {
+        "name": "Cshift portal",
+        "image": "/imgs/characters/kammara/triplec/_scenes/6Cshift_portal.jpg"
+      }
+    ],
     "kammara/triplec/malloc": [
       {
         "name": "vila principal",

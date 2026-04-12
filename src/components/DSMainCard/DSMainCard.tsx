@@ -47,7 +47,6 @@ interface DSMainCardProps {
   textColor?: string;
   mascot?: Mascot;
   stripSide?: boolean;
-  bgOpacity?: number;
   /**
    * Title shown pinned at the top of the DSTextPanel — it stays fixed
    * while the body text scrolls below. When omitted, fall back to the
@@ -69,7 +68,6 @@ export function DSMainCard({
   textColor,
   mascot,
   stripSide = false,
-  bgOpacity = 1,
   textPanelTitle,
   text,
   children,
@@ -98,7 +96,6 @@ export function DSMainCard({
         inset={0}
         zIndex={0}
         background={gradient}
-        opacity={bgOpacity}
       />
 
       {/* Characters scene */}
@@ -211,9 +208,9 @@ export function DSMainCard({
                   transform: 'none',
                   padding: '0 1rem',
                   marginTop: '10px',
-                  // Desktop (>=768px): wide panel anchored to the left,
-                  // taking ~60% of the banner width. The character strip
-                  // gets the remaining ~32% on the right side.
+                  // Desktop (>=768px): narrow panel anchored to the left,
+                  // taking ~20% of the banner width. The character/scene
+                  // strip on the right gets the remaining space.
                   '@media (min-width: 48em)': {
                     position: 'absolute',
                     left: '2rem',
@@ -221,8 +218,8 @@ export function DSMainCard({
                     top: '50%',
                     bottom: 'auto',
                     width: '60%',
-                    maxWidth: '900px',
-                    height: '60%',
+                    maxWidth: '680px',
+                    height: 'calc(100% - 100px)',
                     transform: 'translateY(-50%)',
                     padding: 0,
                     marginTop: 0,
@@ -313,25 +310,35 @@ export function DSMainCard({
           <Box
             data-testid="ds-strip-side"
             zIndex={2}
-            overflow="hidden"
             css={{
               // Mobile: content flow under the text-wrap
               position: 'relative',
               right: 'auto',
               top: 'auto',
+              bottom: 'auto',
               transform: 'none',
               width: '100%',
               marginTop: '1rem',
               // Desktop: absolute positioned to the right of the card,
-              // vertically centered. The strip gets ~32% of the banner
-              // (the remainder after the 60% text panel + 2rem margins).
+              // pinned top and bottom with 20px gutters (matches the text
+              // panel) so the slot hosts a vertical flex column. Multiple
+              // children passed as a fragment are stacked here — each
+              // direct child shares the available height evenly and is
+              // allowed to shrink (minHeight: 0) so internal scrolls work.
+              display: 'flex',
+              flexDirection: 'column',
               '@media (min-width: 48em)': {
                 position: 'absolute',
-                right: '2rem',
-                top: '50%',
-                transform: 'translateY(-50%)',
-                width: '32%',
+                left: 'calc(45% + 2rem + 10px)',
+                right: '0',
+                top: '20px',
+                bottom: '20px',
+                transform: 'none',
+                width: 'auto',
                 marginTop: 0,
+                gap: '20px',
+                justifyContent: 'center',
+                '& > *': { flex: '0 0 auto', minHeight: 0, width: '100%' },
               },
             }}
           >

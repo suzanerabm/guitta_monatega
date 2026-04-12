@@ -1,7 +1,7 @@
 'use client';
 import { useEffect } from 'react';
 import { Box, Flex, Text, Heading } from '@chakra-ui/react';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { X } from 'lucide-react';
 import { useModal } from './ModalProvider';
 import { useChromeTint } from '@/components/ChromeTint';
 
@@ -209,8 +209,11 @@ export function Modal() {
             color: isDark ? 'white' : 'ink',
           }}
           onClick={prev}
+          fontFamily='"Apple Symbols", "Symbola", "Noto Sans Symbols 2", "Cambria Math", "Segoe UI Symbol", sans-serif'
+          fontSize="1.25rem"
+          lineHeight={1}
         >
-          <ChevronLeft size={18} strokeWidth={1.5} />
+          ⊷
         </Box>
 
         <Text
@@ -239,8 +242,11 @@ export function Modal() {
             color: isDark ? 'white' : 'ink',
           }}
           onClick={next}
+          fontFamily='"Apple Symbols", "Symbola", "Noto Sans Symbols 2", "Cambria Math", "Segoe UI Symbol", sans-serif'
+          fontSize="1.25rem"
+          lineHeight={1}
         >
-          <ChevronRight size={18} strokeWidth={1.5} />
+          ⊶
         </Box>
       </Flex>
     </Flex>

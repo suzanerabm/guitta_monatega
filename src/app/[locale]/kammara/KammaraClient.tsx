@@ -112,6 +112,8 @@ interface WorldColors {
   name: string;
   text: string;
   title: string;
+  /** Brighter accent for borders/labels inside the DSMainCard strip side */
+  titleDestaque: string;
   label: string;
   /** The legacy `arrowColor` for SceneStrip + `titleColor` for SubSystem */
   arrow: string;
@@ -139,6 +141,7 @@ function getWorldColors(w: WorldData, palette: Palette): WorldColors {
     name: override?.name ?? palette.colors[idx.name],
     text: override?.text ?? palette.colors[idx.text],
     title: override?.title ?? palette.colors[idx.title],
+    titleDestaque: palette.dark,
     label: override?.label ?? palette.colors[idx.label],
     arrow: override?.title ?? palette.colors[1],
     subtitle,
@@ -198,6 +201,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
   };
 
   // ── Shared i18n values (same for every world/region) ─────────────────
+  const charactersTitle = safeT('charactersTitle');
   const scenesTitle = safeT('scenesTitle');
   const subsystemsTitle = safeT('subsystemsTitle');
   const placeholder = safeT('placeholder');
@@ -319,7 +323,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
                   cardSize={300}
                   noFloat
                   transparent
-                  speed={120}
+                    speed={120}
                   inStripSide
                   contextId="kammara/kammara"
                   locale={locale}
@@ -364,6 +368,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
             words={words}
             locale={locale}
             tCommon={tCommon}
+            charactersTitle={charactersTitle}
             scenesTitle={scenesTitle}
             subsystemsTitle={subsystemsTitle}
             placeholder={placeholder}
@@ -415,6 +420,7 @@ interface WorldSectionProps {
   words: Record<string, string>;
   locale: Locale;
   tCommon: ReturnType<typeof useTranslations>;
+  charactersTitle: string;
   scenesTitle: string;
   subsystemsTitle: string;
   placeholder: string;
@@ -432,6 +438,7 @@ function WorldSection({
   words,
   locale,
   tCommon,
+  charactersTitle,
   scenesTitle,
   subsystemsTitle,
   placeholder,
@@ -463,6 +470,9 @@ function WorldSection({
             textPanelTitle={name}
             text={renderStory(panelStory)}
           >
+            {/* Side column inside the banner: CharacterStrip on top,
+                SceneStrip below. Both share the column height 50/50
+                via the `& > *` flex rule in DSMainCard's stripSide slot. */}
             {w.chars.length > 0 ? (
               <CharacterStrip
                 characters={w.chars.map((c) => ({
@@ -473,7 +483,9 @@ function WorldSection({
                 cardSize={300}
                 noFloat
                 transparent
-                labelColor={colors.label}
+                labelColor={colors.titleDestaque}
+                arrowColor={colors.titleDestaque}
+                sectionTitle={charactersTitle}
                 speed={100}
                 inStripSide
                 contextId={`kammara/${w.id}`}
@@ -481,6 +493,22 @@ function WorldSection({
               />
             ) : (
               <SoonPanel label={tCommon('soon')} color={palette.colors[0]} />
+            )}
+            {w.scenes.length > 0 && (
+              <SceneStrip
+                scenes={w.scenes.map((s) => ({
+                  ...s,
+                  name: translateName(s.name, words),
+                }))}
+                sectionTitle={scenesTitle}
+                arrowColor={colors.titleDestaque}
+                labelColor={colors.titleDestaque}
+                accentColor={colors.titleDestaque}
+                modalBg={palette.gradientBg}
+                modalTitle={name}
+                modalSubtitle={bodyText[0] || ''}
+                titleMarginTop="0"
+              />
             )}
           </DSMainCard>
         }
@@ -493,20 +521,6 @@ function WorldSection({
             ))
           : placeholder && <Text>{placeholder}</Text>}
       </CreatureCard>
-      {w.scenes.length > 0 && (
-        <SceneStrip
-          scenes={w.scenes.map((s) => ({
-            ...s,
-            name: translateName(s.name, words),
-          }))}
-          sectionTitle={scenesTitle}
-          arrowColor={colors.arrow}
-          labelColor={colors.subtitle}
-          modalBg={palette.gradientBg}
-          modalTitle={name}
-          modalSubtitle={bodyText[0] || ''}
-        />
-      )}
       {realSubsystems.length > 0 && (
         <SubSystem
           sectionTitle={subsystemsTitle}
@@ -612,6 +626,7 @@ function TriplecRegionSection({
           sectionTitle={scenesTitle}
           arrowColor={regionColor}
           labelColor={regionColor}
+          accentColor={regionColor}
           modalBg={regionPalette.gradientBg}
           modalTitle={name}
           modalSubtitle={bodyText[0] || ''}
