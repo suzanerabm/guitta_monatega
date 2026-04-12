@@ -343,6 +343,12 @@ export function DSMainCard({
                 justifyContent: 'center',
                 '& > *': { flex: '0 0 auto', minHeight: 0, width: '100%' },
               },
+              // md–lg (768–1024px): reduce strip height so characters
+              // and scenes don't overflow the card.
+              '@media (min-width: 48em) and (max-width: 64em)': {
+                height: 'calc(100% - 40px)',
+                gap: '10px',
+              },
             }}
           >
             {children}

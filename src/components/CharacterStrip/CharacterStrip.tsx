@@ -213,6 +213,7 @@ export function CharacterStrip({
           color={mobileColor || arrowColor}
           css={mobileColor ? {
             '@media (min-width: 48em)': { color: arrowColor },
+            '@media (min-width: 48em) and (max-width: 64em)': { fontSize: '0.85rem' },
           } : undefined}
         >
           {sectionTitle}

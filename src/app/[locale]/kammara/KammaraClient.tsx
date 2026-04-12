@@ -321,7 +321,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
                     name: translateName(c.name, words),
                   }))}
                   gradient={kammaraPalette.gradient}
-                  cardSize={300}
+                  cardSize={200}
                   noFloat
                   transparent
                     speed={120}
@@ -482,7 +482,7 @@ function WorldSection({
                   name: translateName(c.name, words),
                 }))}
                 gradient={palette.gradient}
-                cardSize={300}
+                cardSize={200}
                 noFloat
                 transparent
                 labelColor={colors.titleDestaque}

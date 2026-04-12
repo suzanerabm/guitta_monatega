@@ -122,6 +122,7 @@ export function SceneStrip({
           color={mobileColor || arrowColor}
           css={{
             '@media (max-width: 48em)': { marginTop: '2em' },
+            '@media (min-width: 48em) and (max-width: 64em)': { fontSize: '0.85rem' },
             ...(mobileColor ? { '@media (min-width: 48em)': { color: arrowColor } } : {}),
           }}
         >
