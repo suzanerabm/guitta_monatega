@@ -30,6 +30,7 @@ export function SubSystem({
   subtitleColor,
   textColor = 'textOverlay',
   sectionTitle,
+  arrowColor,
   'data-testid': testId,
 }: SubSystemProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -119,7 +120,7 @@ export function SubSystem({
           aria-label="Previous"
           onClick={() => handleArrow(-1)}
           data-testid="subsystem-arrow-left"
-          style={{ marginRight: '0.5rem', color: canPrev ? 'var(--chakra-colors-glyphIdle)' : 'var(--chakra-colors-glyphDisabled)', cursor: canPrev ? 'pointer' : 'default' }}
+          style={{ marginRight: '0.5rem', color: canPrev ? (arrowColor || 'var(--chakra-colors-glyphIdle)') : 'var(--chakra-colors-glyphDisabled)', cursor: canPrev ? 'pointer' : 'default' }}
           className="subsystem-arrow"
         >
           ⊷
@@ -293,7 +294,7 @@ export function SubSystem({
           aria-label="Next"
           onClick={() => handleArrow(1)}
           data-testid="subsystem-arrow-right"
-          style={{ marginLeft: '0.5rem', color: canNext ? 'var(--chakra-colors-glyphIdle)' : 'var(--chakra-colors-glyphDisabled)', cursor: canNext ? 'pointer' : 'default' }}
+          style={{ marginLeft: '0.5rem', color: canNext ? (arrowColor || 'var(--chakra-colors-glyphIdle)') : 'var(--chakra-colors-glyphDisabled)', cursor: canNext ? 'pointer' : 'default' }}
           className="subsystem-arrow"
         >
           ⊶

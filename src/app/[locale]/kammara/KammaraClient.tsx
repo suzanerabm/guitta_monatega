@@ -503,7 +503,7 @@ function WorldSection({
                   name: translateName(s.name, words),
                 }))}
                 sectionTitle={scenesTitle}
-                arrowColor={colors.titleDestaque}
+                arrowColor={colors.title}
                 labelColor={colors.titleDestaque}
                 accentColor={colors.titleDestaque}
                 modalBg={palette.gradientBg}
@@ -537,6 +537,7 @@ function WorldSection({
           // visually identical.
           titleColor={colors.title}
           textColor={colors.text}
+          arrowColor={colors.title}
         />
       )}
     </CreatureSection>

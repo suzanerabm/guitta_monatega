@@ -44,7 +44,7 @@ export function SceneStrip({
   const scrollRef = useRef<HTMLDivElement>(null);
   const { registerGallery, openGallery } = useModal();
   const [canPrev, setCanPrev] = useState(false);
-  const [canNext, setCanNext] = useState(true);
+  const [canNext, setCanNext] = useState(false);
 
   const updateScrollState = useCallback(() => {
     const el = scrollRef.current;
@@ -132,7 +132,7 @@ export function SceneStrip({
           aria-label="Previous"
           onClick={() => handleArrow(-1)}
           data-testid="scene-strip-arrow-left"
-          css={{ ...arrowCss, color: canPrev ? 'var(--chakra-colors-glyphIdle)' : 'var(--chakra-colors-glyphDisabled)', cursor: canPrev ? 'pointer' : 'default' }}
+          css={{ ...arrowCss, color: canPrev ? (arrowColor || 'var(--chakra-colors-glyphIdle)') : 'var(--chakra-colors-glyphDisabled)', cursor: canPrev ? 'pointer' : 'default' }}
         >
           ⊷
         </Box>
@@ -224,7 +224,7 @@ export function SceneStrip({
           aria-label="Next"
           onClick={() => handleArrow(1)}
           data-testid="scene-strip-arrow-right"
-          css={{ ...arrowCss, color: canNext ? 'var(--chakra-colors-glyphIdle)' : 'var(--chakra-colors-glyphDisabled)', cursor: canNext ? 'pointer' : 'default' }}
+          css={{ ...arrowCss, color: canNext ? (arrowColor || 'var(--chakra-colors-glyphIdle)') : 'var(--chakra-colors-glyphDisabled)', cursor: canNext ? 'pointer' : 'default' }}
         >
           ⊶
         </Box>
