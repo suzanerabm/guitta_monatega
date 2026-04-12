@@ -156,10 +156,13 @@ export function SceneStrip({
                     width: '400px',
                     height: '225px',
                     borderRadius: '16px',
+                    overflow: 'hidden',
                     background: 'rgba(0,0,0,0.3)',
-                    outline: '1px solid',
-                    outlineColor: accentColor || 'rgba(255,255,255,0.2)',
-                    boxShadow: `0 0 14px 3px ${accentColor || 'rgba(255,255,255,0.3)'}`,
+                    backdropFilter: 'blur(8px)',
+                    outline: '2px solid',
+                    outlineColor: accentColor || 'var(--chakra-colors-outlineMid)',
+                    outlineOffset: '3px',
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
                     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                     '&:hover': {
                       transform: 'scale(1.05)',
@@ -171,7 +174,6 @@ export function SceneStrip({
                     '@media (min-width: 118.75em)': { width: '550px' },
                   }}
                 >
-                  <Box overflow="hidden" borderRadius="8px" width="100%" height="100%">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={s.image}
@@ -186,7 +188,6 @@ export function SceneStrip({
                       display: 'block',
                     }}
                   />
-                  </Box>
                 </Box>
                 <Heading
                   as="h4"
