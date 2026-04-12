@@ -109,9 +109,8 @@ export function CharacterCard({
         }
       : transparent
         ? {
-            transform: 'scale(1.3)',
+            transform: 'scale(1.2)',
             zIndex: 30,
-            outline: 'none',
           }
         : { transform: 'scale(1.3)' };
 

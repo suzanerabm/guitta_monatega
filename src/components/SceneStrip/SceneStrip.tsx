@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useId, useRef } from 'react';
+import { useCallback, useEffect, useId, useRef, useState } from 'react';
 import { Box, Flex, Heading } from '@chakra-ui/react';
 import { useModal } from '@/components/Modal';
 
@@ -43,6 +43,15 @@ export function SceneStrip({
   const id = galleryId ?? `scene-strip-${fallbackId}`;
   const scrollRef = useRef<HTMLDivElement>(null);
   const { registerGallery, openGallery } = useModal();
+  const [canPrev, setCanPrev] = useState(false);
+  const [canNext, setCanNext] = useState(true);
+
+  const updateScrollState = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    setCanPrev(el.scrollLeft > 2);
+    setCanNext(el.scrollLeft + el.clientWidth < el.scrollWidth - 2);
+  }, []);
 
   useEffect(() => {
     registerGallery(
@@ -51,6 +60,14 @@ export function SceneStrip({
       scenes.map((s) => s.name)
     );
   }, [id, scenes, registerGallery]);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    updateScrollState();
+    el.addEventListener('scroll', updateScrollState, { passive: true });
+    return () => el.removeEventListener('scroll', updateScrollState);
+  }, [updateScrollState]);
 
   const handleArrow = (dir: -1 | 1) => {
     const el = scrollRef.current;
@@ -80,11 +97,9 @@ export function SceneStrip({
     alignItems: 'center',
     justifyContent: 'center',
     cursor: 'pointer',
-    color: arrowColor ?? 'var(--chakra-colors-textOverlayDim)',
-    transition: 'opacity 0.2s ease',
-    fontFamily:
-      '"Apple Symbols", "Symbola", "Noto Sans Symbols 2", "Cambria Math", "Segoe UI Symbol", sans-serif',
-    fontSize: '2.25rem',
+    transition: 'color 0.2s ease',
+    fontFamily: 'var(--chakra-fonts-glyph)',
+    fontSize: 'var(--chakra-font-sizes-glyph-h1)',
     lineHeight: 1,
     '@media (max-width: 48em)': { display: 'none' },
   };
@@ -117,7 +132,7 @@ export function SceneStrip({
           aria-label="Previous"
           onClick={() => handleArrow(-1)}
           data-testid="scene-strip-arrow-left"
-          css={arrowCss}
+          css={{ ...arrowCss, color: canPrev ? 'var(--chakra-colors-glyphIdle)' : 'var(--chakra-colors-glyphDisabled)', cursor: canPrev ? 'pointer' : 'default' }}
         >
           ⊷
         </Box>
@@ -168,9 +183,9 @@ export function SceneStrip({
                       transform: 'scale(1.05)',
                       boxShadow: 'var(--chakra-shadows-sceneHover)',
                     },
-                    // Mobile (<=768px): smaller cards
                     '@media (max-width: 48em)': { width: '250px' },
-                    // XL screens (>=1900px): bigger cards
+                    // ~800px range: reduce height to fit inside DSMainCard strip
+                    '@media (min-width: 48em) and (max-width: 62em)': { width: '220px', height: '125px' },
                     '@media (min-width: 118.75em)': { width: '550px' },
                   }}
                 >
@@ -209,7 +224,7 @@ export function SceneStrip({
           aria-label="Next"
           onClick={() => handleArrow(1)}
           data-testid="scene-strip-arrow-right"
-          css={arrowCss}
+          css={{ ...arrowCss, color: canNext ? 'var(--chakra-colors-glyphIdle)' : 'var(--chakra-colors-glyphDisabled)', cursor: canNext ? 'pointer' : 'default' }}
         >
           ⊶
         </Box>

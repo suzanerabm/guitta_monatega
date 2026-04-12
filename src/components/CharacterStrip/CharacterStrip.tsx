@@ -147,9 +147,8 @@ export function CharacterStrip({
     cursor: 'pointer',
     color: arrowColor ?? 'var(--chakra-colors-textOverlayDim)',
     transition: 'opacity 0.2s ease',
-    fontFamily:
-      '"Apple Symbols", "Symbola", "Noto Sans Symbols 2", "Cambria Math", "Segoe UI Symbol", sans-serif',
-    fontSize: '2.25rem',
+    fontFamily: 'var(--chakra-fonts-glyph)',
+    fontSize: 'var(--chakra-font-sizes-glyph-h1)',
     lineHeight: 1,
     // Astro: .strip-arrow { display: none; } @media (max-width: 768px)
     '@media (max-width: 48em)': { display: 'none' },
@@ -175,9 +174,9 @@ export function CharacterStrip({
     : {
         flex: 1,
         minWidth: 0,
-        overflow: 'hidden',
-        maskImage,
-        WebkitMaskImage: maskImage,
+        overflow: inStripSide ? 'visible' : 'hidden',
+        maskImage: inStripSide ? 'none' : maskImage,
+        WebkitMaskImage: inStripSide ? 'none' : maskImage,
       };
 
   // Match Astro: .char-strip is absolute top:20px left/right:0 inside the
@@ -207,7 +206,7 @@ export function CharacterStrip({
           textTransform="uppercase"
           fontWeight="semibold"
           padding="0 2rem"
-          margin={inStripSide ? '0 0 0.5rem 0' : '5em 2em 0 3em'}
+          margin={inStripSide ? '1rem 0 0.5rem 0' : '5em 2em 0 3em'}
           color={arrowColor}
         >
           {sectionTitle}
@@ -240,7 +239,7 @@ export function CharacterStrip({
               effectiveNoLoop
                 ? '0.5rem 0 1rem'
                 : inStripSide
-                  ? '0.5rem 0'
+                  ? '0.5rem 1rem'
                   : '4rem 0 2rem'
             }
             width="max-content"

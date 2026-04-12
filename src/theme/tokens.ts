@@ -37,6 +37,9 @@ export const tokens = defineTokens({
     textOverlayStrong: { value: 'rgba(255,255,255,0.85)' },
     textOverlayFaint: { value: 'rgba(255,255,255,0.3)' },
     textOverlayGhost: { value: 'rgba(255,255,255,0.2)' },
+    glyphIdle: { value: 'rgba(255,255,255,0.85)' },
+    glyphHover: { value: 'rgba(255,255,255,0.4)' },
+    glyphDisabled: { value: 'rgba(255,255,255,0.15)' },
     // Bg overlays
     bgOverlay: { value: 'rgba(0,0,0,0.3)' },
     bgOverlayMid: { value: 'rgba(0,0,0,0.4)' },
@@ -63,6 +66,7 @@ export const tokens = defineTokens({
   fonts: {
     body: { value: "'Fira Sans', system-ui, sans-serif" },
     heading: { value: "'Fira Sans', system-ui, sans-serif" },
+    glyph: { value: '"Apple Symbols", "Symbola", "Noto Sans Symbols 2", "Cambria Math", "Segoe UI Symbol", sans-serif' },
   },
   fontSizes: {
     xs: { value: '0.65rem' },
@@ -93,6 +97,9 @@ export const tokens = defineTokens({
     label: { value: 'clamp(0.7rem, 0.72vw, 0.7rem)' },
     section: { value: '1.2rem' },
     soon: { value: '2rem' },
+    glyphH1: { value: '2.4rem' },
+    glyphH2: { value: '2rem' },
+    glyphH3: { value: '1.2rem' },
   },
   fontWeights: {
     thin: { value: '100' },

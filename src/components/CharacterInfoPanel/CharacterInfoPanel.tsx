@@ -1,8 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Box, Text, Heading, IconButton } from '@chakra-ui/react';
-import { X } from 'lucide-react';
+import { Box, Text, Heading } from '@chakra-ui/react';
 import type { Character } from '@/data/characters/types';
 import { getLocalizedName, getLocalizedSpecies, getLocalizedBio, type Locale } from '@/lib/characters';
 
@@ -100,22 +99,6 @@ export function CharacterInfoPanel({
       onMouseDown={(e) => e.stopPropagation()}
       onClick={(e) => e.stopPropagation()}
     >
-      {onClose && (
-        <IconButton
-          aria-label="Close"
-          size="xs"
-          variant="ghost"
-          onClick={onClose}
-          position="absolute"
-          top="0.35rem"
-          right="0.35rem"
-          zIndex={2}
-          color="textOverlay"
-          _hover={{ color: 'white', bg: 'rgba(255,255,255,0.08)' }}
-        >
-          <X size={16} />
-        </IconButton>
-      )}
       <Box
         padding={{ base: '0.9rem 1rem', md: '1rem 1.2rem' }}
         maxH="min(70vh, 500px)"

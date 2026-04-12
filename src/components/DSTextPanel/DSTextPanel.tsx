@@ -1,5 +1,6 @@
-import { Box, Heading } from '@chakra-ui/react';
+import { Box, Flex, Heading } from '@chakra-ui/react';
 import type { ReactNode, CSSProperties } from 'react';
+import { GlyphPlanet } from '@/components/GlyphPlanet';
 
 interface DSTextPanelProps {
   /**
@@ -37,6 +38,7 @@ interface DSTextPanelProps {
    * uses `titleColor`.
    */
   borderColor?: string;
+  showGlyph?: boolean;
   'data-testid'?: string;
 }
 
@@ -63,6 +65,7 @@ export function DSTextPanel({
   fillParent = false,
   compact = false,
   borderColor,
+  showGlyph = false,
   'data-testid': testId,
 }: DSTextPanelProps) {
   const cssVars = {
@@ -95,23 +98,34 @@ export function DSTextPanel({
       }}
     >
       {title && (
-        <Heading
-          as="h2"
+        <Flex
           flexShrink={0}
-          fontFamily="body"
-          fontSize={{ base: '1.3rem', md: '2rem', '2xl': 'clamp(2rem, 4vw, 3rem)' }}
-          fontWeight={700}
-          lineHeight={1.1}
+          align="stretch"
+          gap="0.4rem"
           padding={
             compact
               ? { base: '1rem 2rem 0', md: '1.3rem 1.5rem 0', '2xl': '1.5rem 2rem 0' }
               : { base: '1.5rem 2rem 0', md: '2rem 1.5rem 0', '2xl': '2.5rem 2rem 0' }
           }
           marginBottom={{ base: '0.5rem', md: '0.8rem' }}
-          color={titleColor}
         >
-          {title}
-        </Heading>
+          {showGlyph && (
+            <Box display="flex" alignItems="center" flexShrink={0}>
+              <GlyphPlanet size="h3" color={titleColor} stretch />
+            </Box>
+          )}
+          <Heading
+            as="h2"
+            fontFamily="body"
+            fontSize={{ base: '1.3rem', md: '2rem', '2xl': 'clamp(2rem, 4vw, 3rem)' }}
+            fontWeight={700}
+            lineHeight={1.1}
+            color={titleColor}
+            m={0}
+          >
+            {title}
+          </Heading>
+        </Flex>
       )}
       <Box
         className="ds-text-scroll"

@@ -107,13 +107,13 @@ export function Breadcrumb({
         <Box
           as="span"
           display="inline-flex"
-          fontFamily='"Apple Symbols", "Symbola", "Noto Sans Symbols 2", "Cambria Math", "Segoe UI Symbol", sans-serif'
-          fontSize="1rem"
-          lineHeight={1}
+          fontFamily="glyph"
+          fontSize="glyphH2"
+          lineHeight={0.5}
         >
           ⊷
         </Box>
-        <span>{backLabel}</span>
+        <span style={{ alignSelf: 'flex-end' }}>{backLabel}</span>
       </NextLink>
     </Box>
   );

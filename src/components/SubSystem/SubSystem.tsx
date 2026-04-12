@@ -1,5 +1,5 @@
 'use client';
-import { useRef } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Box, Flex, Heading } from '@chakra-ui/react';
 
 export interface SubSystemCard {
@@ -30,15 +30,30 @@ export function SubSystem({
   subtitleColor,
   textColor = 'textOverlay',
   sectionTitle,
-  arrowColor,
   'data-testid': testId,
 }: SubSystemProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [canPrev, setCanPrev] = useState(false);
+  const [canNext, setCanNext] = useState(true);
+
+  const updateScrollState = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    setCanPrev(el.scrollLeft > 2);
+    setCanNext(el.scrollLeft + el.clientWidth < el.scrollWidth - 2);
+  }, []);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    updateScrollState();
+    el.addEventListener('scroll', updateScrollState, { passive: true });
+    return () => el.removeEventListener('scroll', updateScrollState);
+  }, [updateScrollState]);
 
   const handleArrow = (dir: -1 | 1) => {
     const el = scrollRef.current;
     if (!el) return;
-    // Scroll by roughly one card width + gap per click.
     const step = 380;
     if (typeof el.scrollBy === 'function') {
       el.scrollBy({ left: dir * step, behavior: 'smooth' });
@@ -61,11 +76,9 @@ export function SubSystem({
       alignItems: 'center',
       justifyContent: 'center',
       cursor: 'pointer',
-      color: arrowColor ?? titleColor,
-      transition: 'opacity 0.2s ease',
-      fontFamily:
-        '"Apple Symbols", "Symbola", "Noto Sans Symbols 2", "Cambria Math", "Segoe UI Symbol", sans-serif',
-      fontSize: '2.25rem',
+      transition: 'color 0.2s ease',
+      fontFamily: 'var(--chakra-fonts-glyph)',
+      fontSize: 'var(--chakra-font-sizes-glyph-h1)',
       lineHeight: 1,
     },
     // Hide arrows on mobile — rely on native touch scroll instead
@@ -106,7 +119,7 @@ export function SubSystem({
           aria-label="Previous"
           onClick={() => handleArrow(-1)}
           data-testid="subsystem-arrow-left"
-          style={{ marginRight: '0.5rem' }}
+          style={{ marginRight: '0.5rem', color: canPrev ? 'var(--chakra-colors-glyphIdle)' : 'var(--chakra-colors-glyphDisabled)', cursor: canPrev ? 'pointer' : 'default' }}
           className="subsystem-arrow"
         >
           ⊷
@@ -280,7 +293,7 @@ export function SubSystem({
           aria-label="Next"
           onClick={() => handleArrow(1)}
           data-testid="subsystem-arrow-right"
-          style={{ marginLeft: '0.5rem' }}
+          style={{ marginLeft: '0.5rem', color: canNext ? 'var(--chakra-colors-glyphIdle)' : 'var(--chakra-colors-glyphDisabled)', cursor: canNext ? 'pointer' : 'default' }}
           className="subsystem-arrow"
         >
           ⊶

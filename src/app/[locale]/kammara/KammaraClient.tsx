@@ -13,6 +13,7 @@ import { SubSystem } from '@/components/SubSystem';
 import { RegionDivider } from '@/components/RegionDivider';
 import { RegionBanner } from '@/components/RegionBanner';
 import { SoonPanel } from '@/components/SoonPanel';
+import { GlyphPlanet } from '@/components/GlyphPlanet';
 import { BookGallery } from '@/components/BookGallery';
 import { useModal } from '@/components/Modal';
 import { palettes, type PaletteName, type Palette } from '@/theme/palettes';
@@ -457,6 +458,7 @@ function WorldSection({
         name={name}
         color1={colors.name}
         color2={colors.text}
+        adornment={<GlyphPlanet size="h3" color={colors.name} stretch />}
         banner={
           <DSMainCard
             characters={[]}
@@ -634,18 +636,19 @@ function TriplecRegionSection({
         />
       )}
       {realSubsystems.length > 0 && (
-        <SubSystem
-          sectionTitle={subsystemsTitle}
-          cards={realSubsystems.map((s, i) => ({
-            title: s.title,
-            image: region.subsystemImages[i] ?? undefined,
-            imageAlt: s.title,
-            texts: s.text,
-          }))}
-          // Same color pipeline as the DSTextPanel in RegionBanner above.
-          titleColor={regionColor}
-          textColor="white"
-        />
+        <Box mt="-40px">
+          <SubSystem
+            sectionTitle={subsystemsTitle}
+            cards={realSubsystems.map((s, i) => ({
+              title: s.title,
+              image: region.subsystemImages[i] ?? undefined,
+              imageAlt: s.title,
+              texts: s.text,
+            }))}
+            titleColor={regionColor}
+            textColor="white"
+          />
+        </Box>
       )}
     </CreatureSection>
   );

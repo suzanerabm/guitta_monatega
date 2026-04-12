@@ -1,5 +1,5 @@
 'use client';
-import { Box, Flex } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import type { ReactNode } from 'react';
 import { DSTextPanel } from '@/components/DSTextPanel';
 import { CharacterStrip } from '@/components/CharacterStrip';
@@ -75,11 +75,13 @@ export function RegionBanner({
     <Box
       data-testid={testId ?? 'region-banner'}
       position="relative"
+      zIndex={5}
       width="100vw"
       marginLeft="calc(-50vw + 50%)"
-      overflow="hidden"
+      overflow={{ base: 'visible', md: 'hidden' }}
       mt={{ base: '1rem', md: '2rem' }}
       mb={{ base: '1rem', md: '2rem' }}
+      minH={{ base: 'auto', md: '400px' }}
     >
       {/* Gradient layer */}
       <Box
@@ -108,57 +110,68 @@ export function RegionBanner({
           />
         </Box>
       )}
-      {/* Content layer */}
-      <Flex
-        position="relative"
-        zIndex={1}
-        direction={{ base: 'column', md: 'row' }}
-        align="stretch"
-        gap={{ base: '1rem', md: '1.5rem' }}
-        padding={{ base: '1.5rem 1rem', md: '1.5rem 2rem' }}
+      {/* Text panel — same z-index pattern as DSMainCard: text-wrap at 40,
+          strip at 2, so expanded character cards don't cover the panel. */}
+      <Box
+        position={{ base: 'relative', md: 'absolute' }}
+        zIndex={40}
+        css={{
+          '@media (min-width: 48em)': {
+            left: '2rem',
+            top: '50%',
+            width: '60%',
+            maxWidth: '900px',
+            height: 'calc(100% - 3rem)',
+            transform: 'translateY(-50%)',
+          },
+        }}
+        padding={{ base: '1.5rem 1rem 0', md: 0 }}
+        display="flex"
       >
-        {/* Text panel — fixed width on desktop, full width on mobile.
-            A max-height is required so DSTextPanel's internal overflow:auto
-            actually kicks in; otherwise long content grows the wrapper and
-            the scroll never activates. Panel takes 60% so the character
-            strip on the right has enough room to breathe. */}
-        <Box
-          flex="0 0 auto"
-          width={{ base: '100%', md: '60%' }}
-          maxWidth={{ base: 'none', md: '900px' }}
-          maxHeight={{ base: 'none', md: 'min(70vh, 640px)' }}
-          display="flex"
+        <DSTextPanel
+          title={name}
+          titleColor={color}
+          textColor="white"
+          compact
+          borderColor={color}
         >
-          <DSTextPanel
-            title={name}
-            titleColor={color}
-            textColor="white"
-            compact
-            borderColor={color}
-          >
-            {story}
-          </DSTextPanel>
-        </Box>
-        {/* Character strip — flexes to fill the rest */}
-        <Box flex="1 1 0" minWidth={0} display="flex" alignItems="center">
-          {characters.length > 0 ? (
-            <CharacterStrip
-              characters={characters}
-              gradient={gradient}
-              cardSize={260}
-              noFloat
-              transparent
-              labelColor={color}
-              speed={100}
-              inStripSide
-              contextId={contextId}
-              locale={locale}
-            />
-          ) : (
-            <SoonPanel label={soonLabel} color={color} />
-          )}
-        </Box>
-      </Flex>
+          {story}
+        </DSTextPanel>
+      </Box>
+      {/* Character strip — same z-index as DSMainCard strip-side (2) */}
+      <Box
+        position={{ base: 'relative', md: 'absolute' }}
+        zIndex={2}
+        css={{
+          '@media (min-width: 48em)': {
+            left: 'min(calc(60% + 2rem + 10px), calc(900px + 2rem + 10px))',
+            right: '0',
+            top: '50%',
+            height: 'calc(100% - 3rem)',
+            transform: 'translateY(-50%)',
+          },
+        }}
+        padding={{ base: '1rem', md: 0 }}
+        display="flex"
+        alignItems="center"
+      >
+        {characters.length > 0 ? (
+          <CharacterStrip
+            characters={characters}
+            gradient={gradient}
+            cardSize={260}
+            noFloat
+            transparent
+            labelColor={color}
+            speed={100}
+            inStripSide
+            contextId={contextId}
+            locale={locale}
+          />
+        ) : (
+          <SoonPanel label={soonLabel} color={color} />
+        )}
+      </Box>
     </Box>
   );
 }

@@ -95,6 +95,7 @@ export function DSMainCard({
         position="absolute"
         inset={0}
         zIndex={0}
+        opacity={0.3}
         background={gradient}
       />
 
@@ -192,7 +193,7 @@ export function DSMainCard({
       {text && (
         <Box
           data-testid="ds-text-wrap"
-          zIndex={3}
+          zIndex={40}
           css={
             stripSide
               ? {
@@ -298,6 +299,7 @@ export function DSMainCard({
             subtitleColor={subtitleColor}
             textColor={textColor}
             fillParent={stripSide}
+            showGlyph={stripSide}
           >
             {text}
           </DSTextPanel>
@@ -329,11 +331,12 @@ export function DSMainCard({
               flexDirection: 'column',
               '@media (min-width: 48em)': {
                 position: 'absolute',
-                left: 'calc(45% + 2rem + 10px)',
+                left: 'min(calc(60% + 2rem + 10px), calc(680px + 2rem + 10px))',
                 right: '0',
-                top: '20px',
-                bottom: '20px',
-                transform: 'none',
+                top: '50%',
+                bottom: 'auto',
+                height: 'calc(100% - 100px)',
+                transform: 'translateY(-50%)',
                 width: 'auto',
                 marginTop: 0,
                 gap: '20px',

@@ -1,8 +1,8 @@
 'use client';
 import { useEffect } from 'react';
 import { Box, Flex, Text, Heading } from '@chakra-ui/react';
-import { X } from 'lucide-react';
 import { useModal } from './ModalProvider';
+import { GlyphPlanet } from '@/components/GlyphPlanet';
 import { useChromeTint } from '@/components/ChromeTint';
 
 function formatFilename(path: string): string {
@@ -26,7 +26,6 @@ export function Modal() {
   // 3. Light default
   const effectiveTheme = theme ?? tintColor ?? undefined;
   const isDark = effectiveTheme === 'dark' || (effectiveTheme && effectiveTheme !== 'light');
-  const customBg = effectiveTheme && effectiveTheme !== 'dark' && effectiveTheme !== 'light' ? effectiveTheme : undefined;
 
   useEffect(() => {
     if (!isOpen) return;
@@ -62,13 +61,12 @@ export function Modal() {
       bottom={0}
       zIndex={200}
       direction="column"
-      bg={customBg || (isDark ? 'modalBgDark' : 'modalBgLight')}
+      bg={tintColor || (isDark ? 'modalBgDark' : 'modalBgLight')}
       onClick={close}
     >
       {/* Close button */}
       <Box
         as="button"
-        type="button"
         position="absolute"
         top="lg"
         right="3xl"
@@ -76,87 +74,95 @@ export function Modal() {
         bg="none"
         border="none"
         cursor="pointer"
-        color={isDark ? 'textOverlayDim' : 'inkMuted'}
-        transition="color 0.2s"
-        _hover={{ color: isDark ? 'white' : 'ink' }}
+        color={isDark ? 'glyphIdle' : 'inkMuted'}
+        transition="color 0.3s, transform 0.4s ease-in-out"
+        _hover={{ color: isDark ? 'glyphHover' : 'ink', transform: 'scale(0.6)' }}
+        _active={{ transform: 'scale(0)', opacity: 0 }}
         onClick={(e) => {
           e.stopPropagation();
           close();
         }}
+        fontFamily="glyph"
+        fontSize="glyphH2"
+        lineHeight={1}
+        css={{
+          '@keyframes breathe': {
+            '0%': { transform: 'scale(1)' },
+            '50%': { transform: 'scale(0.6)' },
+            '100%': { transform: 'scale(1)' },
+          },
+          '&:hover': {
+            animation: 'breathe 0.8s ease-in-out',
+          },
+        }}
       >
-        <X size={20} strokeWidth={1.5} />
+        ⊙
       </Box>
 
       {/* Body */}
       <Flex
         direction="column"
         align="center"
-        justify="center"
+        justify="flex-start"
         flex={1}
         px={{ base: 'base', md: '3xl' }}
-        pt={{ base: '4xl', md: '3xl' }}
+        pt={{ base: '2rem', md: '1.5rem' }}
         pb="5rem"
         gap="md"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Hero block (optional) */}
-        {(heroTitle || heroText) && (
-          <Box px="3xl" py="lg" pb="base" maxW="600px" textAlign="center">
-            {heroTitle && (
-              <Heading
-                as="h2"
-                fontSize="h2"
-                fontWeight="bold"
-                letterSpacing="tight"
-                mb="sm"
-                color={isDark ? 'white' : 'ink'}
-              >
-                {heroTitle}
-              </Heading>
-            )}
-            {heroText && (
-              <Text
-                fontSize="base"
-                lineHeight={1.5}
-                fontWeight="light"
-                color={isDark ? 'textOverlay' : 'inkSoft'}
-              >
-                {heroText}
-              </Text>
-            )}
-          </Box>
-        )}
-
-        {/* Header (title + technique) */}
-        <Flex direction="column" align="center" gap="0.2rem">
-          {title && (
+        {/* TITULO [glifo] texto descricao breve */}
+        {(heroTitle || heroText || title) && (
+          <Flex align="center" gap="0.8rem" flexWrap="wrap" justify="center">
             <Heading
-              as="h3"
-              fontSize="2xl"
+              as="h2"
+              fontSize="h2"
               fontWeight="bold"
+              letterSpacing="tight"
               color={isDark ? 'white' : 'ink'}
               m={0}
             >
-              {title}
+              {heroTitle || title}
             </Heading>
-          )}
-          {techniqueText && (
-            <Text
-              fontSize="sm"
-              letterSpacing="wide"
-              textTransform="uppercase"
-              color={isDark ? 'textOverlayFaint' : 'inkMuted'}
-              m={0}
-            >
-              {techniqueText}
-            </Text>
-          )}
-        </Flex>
+            {heroText && (
+              <>
+                <GlyphPlanet
+                  size="h3"
+                  color={isDark ? 'textOverlayGhost' : 'inkMuted'}
+                />
+                <Text
+                  fontSize="sm"
+                  lineHeight={1.5}
+                  fontWeight="light"
+                  color={isDark ? 'textOverlay' : 'inkSoft'}
+                  m={0}
+                  maxW="280px"
+                  textAlign="left"
+                >
+                  {heroText}
+                </Text>
+              </>
+            )}
+          </Flex>
+        )}
+
+        {/* Nome da foto */}
+        {techniqueText && (
+          <Text
+            fontSize="sm"
+            letterSpacing="wide"
+            textTransform="uppercase"
+            color={isDark ? 'textOverlayFaint' : 'inkMuted'}
+            mt="1.5rem"
+          >
+            {techniqueText}
+          </Text>
+        )}
 
         {/* Image */}
         <Flex
           maxW={{ base: '92vw', md: '75vw' }}
-          maxH={{ base: '55vh', md: '65vh' }}
+          maxH={{ base: '50vh', md: '58vh' }}
           align="center"
           justify="center"
           bg={isDark ? 'modalImgBgDark' : 'surface'}
@@ -169,7 +175,7 @@ export function Modal() {
             alt={title}
             style={{
               maxWidth: '100%',
-              maxHeight: '63vh',
+              maxHeight: '56vh',
               objectFit: 'contain',
               borderRadius: '2px',
             }}
@@ -186,64 +192,57 @@ export function Modal() {
         align="center"
         justify="center"
         gap="3xl"
-        py="1.2rem"
+        py="1.6rem"
         bg={isDark ? 'modalNavBgDark' : 'modalNavBgLight'}
         backdropFilter="blur(8px)"
         onClick={(e) => e.stopPropagation()}
       >
         <Box
           as="button"
-          type="button"
           aria-label="Previous"
           bg="none"
-          border="1px solid"
-          borderColor={isDark ? 'textOverlayGhost' : 'border'}
-          color={isDark ? 'textOverlayDim' : 'inkMuted'}
+          border="none"
+          color={isDark ? 'glyphIdle' : 'inkMuted'}
           cursor="pointer"
-          px="base"
-          py="tight"
-          borderRadius="4px"
-          transition="all 0.2s"
+          padding="0.5rem"
+          transition="color 0.2s, transform 0.2s"
           _hover={{
-            borderColor: isDark ? 'white' : 'ink',
-            color: isDark ? 'white' : 'ink',
+            color: isDark ? 'glyphHover' : 'ink',
+            transform: 'scale(1.15)',
           }}
           onClick={prev}
-          fontFamily='"Apple Symbols", "Symbola", "Noto Sans Symbols 2", "Cambria Math", "Segoe UI Symbol", sans-serif'
-          fontSize="1.25rem"
+          fontFamily="glyph"
+          fontSize="glyphH1"
           lineHeight={1}
         >
           ⊷
         </Box>
 
         <Text
-          fontSize="sm"
-          color={isDark ? 'textOverlayFaint' : 'subtle'}
+          fontSize="md"
+          color={isDark ? 'glyphIdle' : 'ink'}
           letterSpacing="wide"
+          fontFamily="glyph"
         >
           {currentIndex + 1} / {images.length}
         </Text>
 
         <Box
           as="button"
-          type="button"
           aria-label="Next"
           bg="none"
-          border="1px solid"
-          borderColor={isDark ? 'textOverlayGhost' : 'border'}
-          color={isDark ? 'textOverlayDim' : 'inkMuted'}
+          border="none"
+          color={isDark ? 'glyphIdle' : 'inkMuted'}
           cursor="pointer"
-          px="base"
-          py="tight"
-          borderRadius="4px"
-          transition="all 0.2s"
+          padding="0.5rem"
+          transition="color 0.2s, transform 0.2s"
           _hover={{
-            borderColor: isDark ? 'white' : 'ink',
-            color: isDark ? 'white' : 'ink',
+            color: isDark ? 'glyphHover' : 'ink',
+            transform: 'scale(1.15)',
           }}
           onClick={next}
-          fontFamily='"Apple Symbols", "Symbola", "Noto Sans Symbols 2", "Cambria Math", "Segoe UI Symbol", sans-serif'
-          fontSize="1.25rem"
+          fontFamily="glyph"
+          fontSize="glyphH1"
           lineHeight={1}
         >
           ⊶
