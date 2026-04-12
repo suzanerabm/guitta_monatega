@@ -225,6 +225,10 @@ export function DSMainCard({
                     padding: 0,
                     marginTop: 0,
                   },
+                  // lg (992–1280px): narrower panel
+                  '@media (min-width: 62em) and (max-width: 80em)': {
+                    width: '45%',
+                  },
                 }
               : {
                   // Mobile content flow
@@ -343,11 +347,14 @@ export function DSMainCard({
                 justifyContent: 'center',
                 '& > *': { flex: '0 0 auto', minHeight: 0, width: '100%' },
               },
-              // md–lg (768–1024px): reduce strip height so characters
-              // and scenes don't overflow the card.
-              '@media (min-width: 48em) and (max-width: 64em)': {
+              // md (768–992px): reduce strip height
+              '@media (min-width: 48em) and (max-width: 62em)': {
                 height: 'calc(100% - 40px)',
                 gap: '10px',
+              },
+              // lg (992–1280px): strip starts after the narrower 45% panel
+              '@media (min-width: 62em) and (max-width: 80em)': {
+                left: 'calc(45% + 2rem + 10px)',
               },
             }}
           >
