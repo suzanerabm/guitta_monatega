@@ -3,6 +3,7 @@ import { Box, Flex, Text } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { useState, useEffect } from 'react';
 import { useChromeTint } from '@/components/ChromeTint';
+import { useScrollHeader } from '@/hooks/useScrollHeader';
 
 export interface BreadcrumbItem {
   label: string;
@@ -24,6 +25,7 @@ export function Breadcrumb({
 }: BreadcrumbProps) {
   const [headerHeight, setHeaderHeight] = useState(60);
   const { tintColor } = useChromeTint();
+  const { isHidden } = useScrollHeader(80);
 
   // Measure header height dynamically so the breadcrumb sits flush below it
   useEffect(() => {
@@ -73,6 +75,7 @@ export function Breadcrumb({
       letterSpacing="0.1em"
       textTransform="lowercase"
       color={tintColor ? 'rgba(255,255,255,0.6)' : 'inkMuted'}
+      transform={isHidden ? 'translateY(-200%)' : 'translateY(0)'}
       transition="background 0.4s ease, color 0.4s ease, transform 0.3s ease, opacity 0.3s ease, top 0.3s ease"
     >
       {/* Left: home > current */}

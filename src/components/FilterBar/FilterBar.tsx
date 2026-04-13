@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Box } from '@chakra-ui/react';
 import { useChromeTint } from '@/components/ChromeTint';
+import { useScrollHeader } from '@/hooks/useScrollHeader';
 
 export interface FilterItem {
   id: string;
@@ -23,6 +24,7 @@ export function FilterBar({ filters, allLabel = 'Todos', onFilter }: FilterBarPr
   // aria-label="breadcrumb").
   const [chromeHeight, setChromeHeight] = useState(60);
   const { setTintColor } = useChromeTint();
+  const { isHidden } = useScrollHeader(80);
   const navRef = useRef<HTMLElement>(null);
 
   // Measure header + breadcrumb heights dynamically so the sticky
@@ -104,7 +106,8 @@ export function FilterBar({ filters, allLabel = 'Todos', onFilter }: FilterBarPr
       ref={navRef}
       as="nav"
       position="sticky"
-      top={`${chromeHeight}px`}
+      top={isHidden ? '0' : `${chromeHeight}px`}
+      transition="top 0.3s ease"
       zIndex={98}
       display="flex"
       alignItems="center"
