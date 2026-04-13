@@ -219,8 +219,13 @@ function buildSubsystems() {
     const subDir = path.join(dir, '_subsystems');
     const images = listImages(subDir);
     if (images.length === 0) return;
-    // Find files that start with 0., 1., 2. (or 0-, 1-, 2-)
-    const slots: (string | null)[] = [0, 1, 2].map((i) => {
+    // Find files that start with 0., 1., 2., ... (or 0-, 1-, 2-, ...)
+    // Dynamically detect the max index from available files.
+    const maxIndex = images.reduce((max, f) => {
+      const match = f.match(/^(\d+)[.\-]/);
+      return match ? Math.max(max, parseInt(match[1], 10)) : max;
+    }, -1);
+    const slots: (string | null)[] = Array.from({ length: maxIndex + 1 }, (_, i) => {
       const file = images.find(
         (f) => f.startsWith(`${i}.`) || f.startsWith(`${i}-`)
       );

@@ -65,7 +65,7 @@ export function Breadcrumb({
       bg={tintColor || 'overlayLight'}
       backdropFilter="blur(14px)"
       px={{ base: '1.5rem', md: '3rem' }}
-      py="0.2rem"
+      py="0.05rem"
       display="flex"
       alignItems="center"
       justifyContent="space-between"

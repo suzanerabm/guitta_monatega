@@ -98,7 +98,7 @@ export const tokens = defineTokens({
     section: { value: '1.2rem' },
     soon: { value: '2rem' },
     glyphH1: { value: '2.4rem' },
-    glyphH2: { value: '2rem' },
+    glyphH2: { value: '1.4rem' },
     glyphH3: { value: '1.2rem' },
   },
   fontWeights: {

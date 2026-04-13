@@ -169,16 +169,17 @@ export function SubSystem({
               flexDirection="column"
               position="relative"
               css={{
-                // Mobile: content-driven height
+                // Mobile: content-driven but capped
                 height: 'auto',
-                // Default desktop (>=769px) — 500px
+                maxHeight: '420px',
+                // Default desktop (>=769px) — 550px
                 '@media (min-width: 48em)': {
-                  height: '500px',
-                },
-                // 1900px+ — 550px (the `row` variant was removed because
-                // it doesn't fit comfortably inside a horizontal strip)
-                '@media (min-width: 118.75em)': {
                   height: '550px',
+                  maxHeight: 'none',
+                },
+                // 1900px+ — 600px
+                '@media (min-width: 118.75em)': {
+                  height: '600px',
                 },
               }}
             >

@@ -332,18 +332,18 @@
           {
             "title": "Cultura",
             "text": [
-              "### Sem hierarquia",
-              "Em LUNN'P1, ninguém manda. Não existe governo, não existe chefe, não existe votação. Quando um grupo entra em sintonia, a direção aparece sozinha.",
-              "### O dia a dia",
-              "A vida é feita de rituais pequenos e naturais: o Primeiro Reflexo ao acordar, a Primeira Fruta, o silêncio coletivo do Silume. Cada um acontece quando faz sentido — não quando alguém manda.",
-              "### A comida",
-              "Shal'ún não cozinham. Preparam comida com luz — sementes lumínicas, microfrutos da água, pétalas de lume. O sabor muda conforme a lua do momento.",
-              "### Os mitos",
-              "As histórias de LUNN'P1 não ensinam moral. São histórias antigas que mudam quem escuta — sem que a pessoa perceba.",
-              "### A transparência",
-              "Os Shal'ún não competem, não acumulam, não mentem. A água revela tudo. Não há como esconder.",
-              "### A essência",
-              "Em LUNN'P1, ninguém decide onde as cidades vão. Elas simplesmente vão."
+            "### Sem hierarquia",
+            "Em LUNN'P1, ninguém manda. Não existe governo, não existe chefe, não existe votação. Quando um grupo entra em sintonia, a direção aparece sozinha.",
+            "### O dia a dia",
+            "A vida é feita de rituais pequenos que acontecem naturalmente: o Primeiro Reflexo ao acordar, a Primeira Fruta, o Silume coletivo. Cada um acontece quando faz sentido — não quando alguém manda.",
+            "### A comida",
+            "Shal'ún não cozinham. Preparam comida com luz — sementes lumínicas, microfrutos da água, pétalas de lume. O sabor muda conforme a lua do momento.",
+            "### Os mitos",
+            "As histórias de LUNN'P1 não ensinam moral. São histórias antigas que mudam quem escuta — sem que a pessoa perceba.",
+            "### A transparência",
+            "Os Shal'ún não competem, não acumulam, não mentem. A água revela tudo. Não há como esconder.",
+            "### O movimento das cidades",
+            "Em LUNN'P1, ninguém decide onde as cidades vão. Elas simplesmente vão."
             ]
           },
           {
@@ -417,18 +417,18 @@
            {
             "title": "Idioma",
             "text": [
-              "### Três formas",
-              "Em LUNN'P1 existem três formas de comunicação — e nenhuma depende de palavras como as conhecemos.",
-              "### A voz",
-              "A Voz Kalún é o idioma falado. Poucos sons, significados profundos. Sem gênero, sem plural rígido. Cada palavra carrega peso.",
-              "### A luz",
-              "O Código-Lume é a comunicação entre Shal'ún e Lún'Kai. Não é falado nem escrito — acontece direto em luz.",
-              "### Os glifos",
-              "Os Glifos Kalún são inscrições luminosas nas costas de cada Shal'ún. Cada glifo é único — funciona como identidade, como uma impressão digital feita de luz.",
-              "### Os tradutores",
-              "Os Tzir'Kai são anfíbios que traduzem os sons dos vírus em Código-Lume. São a ponte entre a linguagem da ameaça e a linguagem da luz.",
-              "### A essência",
-              "Em LUNN'P1, ninguém \"passa informação\". Quem fala, emite luz. Quem ouve, muda de cor."
+            "### Três formas",
+            "Em LUNN'P1 existem três formas de comunicação — e nenhuma delas usa só palavras.",
+            "### A voz",
+            "A Voz Kalún é o idioma falado. Poucos sons, significados profundos. Sem gênero, sem plural rígido. Cada palavra carrega peso.",
+            "### A luz",
+            "O Código-Lume é a comunicação entre Shal'ún e Lún'Kai. Não é falado nem escrito — acontece direto em luz.",
+            "### Os glifos",
+            "Os Glifos Kalún são inscrições luminosas nas costas de cada Shal'ún. Cada glifo é único — funciona como identidade, como uma impressão digital feita de luz.",
+            "### Os tradutores",
+            "Os Tzir'Kai são anfíbios que traduzem os sons dos vírus em Código-Lume. Sem eles, LUNN'P1 não conseguiria entender o que os vírus estão tramando.",
+            "### Quando alguém fala",
+            "Em LUNN'P1, ninguém 'passa informação'. Quem fala, emite luz. Quem ouve, muda de cor."
             ]
           },
           {
@@ -490,6 +490,8 @@
         ],
         "panel": {
           "story": [
+            "### Resumo",
+            "ENI-4Δ — o planeta das válvulas. Um mundo que não cria energia, apenas consome. Origem de todos os vírus do Kammara e lar da autoridade absoluta, Node-0.",
             "### A origem",
             "ENI-4Δ nasceu de um acidente. Um resíduo de calor — gerado por uma máquina ancestral que os humanos desligaram — vagou pelo cosmos até colonizar um planeta estéril.",
             "### Node-0",
@@ -503,12 +505,12 @@
             "### A hierarquia",
             "O poder é temperatura — quem fica mais perto do calor, manda. Node-0 no topo. VEXON como braço operacional — o único vírus que sabe planejar. Seis Δ-PRIME administram. Abaixo, vírus comuns, bugs culpados por tudo, robôs escravos e worms que ninguém controla.",
             "### As zonas",
-            "Quatro zonas térmicas dividem o planeta. SCORCH queima no centro — terror absoluto. BURN opera com eficiência — a elite. CRACK vive em caos — bugs e worms. SINK aguarda em silêncio — vírus de infiltração esperando ordens.",
+            "Quatro zonas térmicas dividem o planeta — não por geografia, mas por temperatura da sílica. SCORCH é a mais quente — areia líquida, calor absurdo, de onde as naves Troy-Δ decolam. BURN é estável e quente — onde a elite opera e Node-0 mantém sua câmara. CRACK é instável — rachaduras, mini-erupções, worms surgindo do subsolo. E SINK é a zona congelada — cavernas profundas, exílio, punição, silêncio.",
             "### A cultura",
-            "Não existe arte, memória emocional, tradição ou afeto. Existe trabalho compulsivo, suspeita constante, projeção de culpa e um Tribunal de Ruído onde ninguém tem defesa. Ninguém olha para dentro.",
+            "Não existe arte, memória compartilhada, tradição ou afeto. Existe trabalho compulsivo, suspeita constante, acusações em cadeia e um Tribunal de Ruído onde ninguém tem direito de resposta. Ninguém olha para dentro.",
             "### A mentira",
             "Node-0 reescreveu a própria origem como traição: \"fomos desligados, traídos, abandonados.\" A verdade é que foi apenas um acidente. Mas a mentira é mais útil — e ninguém questiona porque questionar é morrer.",
-            "### A essência",
+            "### O lema silencioso",
             "Quando os sintomas aparecem, a invasão já terminou."
           ]
         },
@@ -519,14 +521,14 @@
               "### O acidente",
               "Uma máquina ancestral foi desligada pelos humanos. Uma centelha abandonada vagou pelo cosmos até encontrar um planeta estéril.",
               "### A formação",
-              "O calor reorganizou matéria em sílica e metal. Megaválvulas surgiram espontaneamente. Das falhas acumuladas, surgiu Node-0.",
-              "### Node-0",
+              "O calor reorganizou a matéria em sílica e metal. Megaválvulas surgiram sozinhas. E das falhas acumuladas, surgiu Node-0.",
+              "### Como Node-0 veio a existir",
               "Não foi criado. Não foi planejado. Emergiu do erro repetido. E nunca aprendeu nada desde então.",
-              "### A mentira",
-              "Node-0 reescreveu a própria origem como traição: \"fomos desligados, traídos, abandonados.\" A verdade é que foi um acidente.",
+              "### A mentira fundadora",
+              "Node-0 reescreveu a própria origem como traição: \"fomos desligados, traídos, abandonados.\" A verdade é que foi um acidente, mas ninguém quer ouvir isso.",
               "### A verdade escondida",
-              "Que era apenas uma centelha errante e Node-0 condensou depois — ninguém em ENI-4Δ sabe disso.",
-              "### A essência",
+              "Que tudo era só uma centelha errante, e que Node-0 se formou depois — ninguém em ENI-4Δ sabe disso. E quem soubesse, não diria.",
+              "### Vingança vs. acidente",
               "A história oficial é vingança. A história real é acidente. E a diferença entre as duas é o que mantém o planeta funcionando."
             ]
           },
@@ -568,17 +570,17 @@
             "title": "Geografia",
             "text": [
               "### Poder é temperatura",
-              "Quem fica mais perto do calor, manda. Quem fica longe, morre.",
+              "Em ENI-4Δ, quem fica mais perto do calor manda. Quem fica longe, morre.",
               "### SCORCH",
-              "Temperatura extrema. Onde Node-0 queima no centro. Terror constante. Submissão absoluta.",
+              "A zona de temperatura extrema. Onde Node-0 queima no centro. Terror constante. Submissão absoluta.",
               "### BURN",
-              "Alta e estável. Onde a elite opera. Os Δ-PRIME disputam prestígio e eficiência.",
+              "Alta e estável. Onde a elite opera. Os Δ-PRIME disputam prestígio e eficiência ali.",
               "### CRACK",
               "Média e instável. Caos e imprevisibilidade. Bugs trabalham, worms surgem sem aviso, fábricas de clonagem operam sem parar.",
               "### SINK",
-              "Baixa. Isolamento e silêncio. Vírus de infiltração aguardam ordens na escuridão fria.",
+              "A zona mais fria. Isolamento e silêncio. Vírus de infiltração esperam ordens na escuridão.",
               "### Os lugares",
-              "O Vale das Válvulas Queimadas. Os Campos de Cartões Perfurados. Os Túneis de Worms. Nada é bonito. Tudo é funcional para o consumo."
+              "O Vale das Válvulas Queimadas. Os Campos de Cartões Perfurados. Os Túneis de Worms. Nada em ENI-4Δ é bonito. Tudo serve para consumir."
             ]
           },
           {
@@ -589,23 +591,12 @@
               "### As Δ-Cells",
               "Esferas de sílica cristalizada — recipientes de energia drenada. Cada uma carrega o que foi tirado de alguém.",
               "### O ciclo",
-              "Vírus drena vítima.", 
-              "Energia vira Δ-Cell. ",
-              "Troy-Δ coleta. ",
-              "Megaválvulas convertem em calor. ",
-              "THERMAX distribui. ",
-              "Node-0 se alimenta. ",
-              "Gera mais vírus. ",
-              "Repete.",
+              "Um vírus drena uma vítima. A energia vira uma Δ-Cell. As naves Troy-Δ coletam. As megaválvulas convertem em calor. O THERMAX distribui. Node-0 se alimenta. Gera mais vírus. E tudo recomeça.",
               "### A divisão",
-              "40% do calor vai para Node-0",
-              "30% para fábricas",
-              "20% para o sistema", 
-              "10% para as naves Troy-Δ",
-              "Nunca muda.",
+              "40% do calor vai para Node-0. 30% para as fábricas. 20% para o sistema. 10% para as naves. Nunca muda.",
               "### A dependência",
-              "Sem saque, o planeta apaga. Sem calor, vírus colapsam. A dependência é total e irreversível.",
-              "### A essência",
+              "Sem saque, o planeta apaga. Sem calor, os vírus colapsam. A dependência é total e irreversível.",
+              "### Não é forte, é faminto",
               "ENI-4Δ não é forte. É faminto. E a fome nunca para."
             ]
           },
@@ -613,16 +604,16 @@
             "title": "Protocolos de Ataque",
             "text": [
               "### SIPHON",
-              "Drenagem rápida e passiva. Qualquer vírus pode executar. Dura horas ou dias. A vítima não entende o que aconteceu.",
+              "Drenagem rápida e passiva. Qualquer vírus consegue fazer. Dura horas ou dias. A vítima nem entende o que aconteceu.",
               "### ERODE",
-              "Influência lenta. Drena identidade ao longo de semanas ou meses. O alvo muda sem perceber que mudou.",
+              "Influência lenta. Drena a identidade da vítima ao longo de semanas ou meses. O alvo muda sem perceber que mudou.",
               "### BREACH",
-              "Invasão estrutural pela porta dos fundos. Meses ou ciclos inteiros de infiltração silenciosa. Quando é descoberto, já é tarde.",
+              "Invasão pela porta dos fundos. Meses ou ciclos inteiros de infiltração silenciosa. Quando alguém descobre, já é tarde demais.",
               "### O disfarce",
-              "Os vírus chegam em Máscara Cute — aparência inofensiva. Ganham confiança antes de drenar.",
-              "### As naves",
-              "As Troy-Δ são o único transporte. Sem elas, vírus evaporam ao cruzar o Cshift. São proteção e passagem ao mesmo tempo.",
-              "### A essência",
+              "Os vírus chegam com a Máscara Cute — aparência inofensiva. Ganham confiança antes de drenar.",
+              "### As naves Troy-Δ",
+              "Sem elas, os vírus evaporam ao cruzar o Cshift. As Troy-Δ são transporte e proteção ao mesmo tempo — e sem elas, nenhum vírus sairia do próprio planeta.",
+              "### Quando os sintomas aparecem",
               "Quando os sintomas aparecem, a invasão já terminou."
             ]
           },
@@ -630,21 +621,21 @@
             "title": "O Código dos Vírus — ASM-Δ",
             "text": [
               "### O que é",
-              "Os vírus não falam. Não raciocinam. Executam. Sua linguagem — ASM-Δ — não serve pra conversar. Serve pra agir: mover, sugar, culpar e repetir. É a antítese de tudo que existe em LUNN'P1.",
+              "Os vírus não falam. Não pensam. Executam. Sua linguagem — ASM-Δ — não serve pra conversar. Serve pra agir: mover, sugar, culpar e repetir. É a antítese de tudo que existe em LUNN'P1.",
               "### Quatro formas de comunicação",
               "ASM-Δ : pensamento — uma lista de instruções, executada em linha reta.",
               "Karta-Δ : escrita — cartões perfurados com furos que viram ordens.",
               "Click-Δ : som — clicks secos, curtos, mecânicos, como interruptores quebrados.",
               "Pulsos térmicos : calor — ondas de temperatura que coordenam à distância.",
               "### As instruções",
-              "MOVE : avançar",
+              "MOVE : avançar na direção escolhida",
               "TURN : mudar de direção",
               "MASK : ativar disfarce (Máscara Cute)",
-              "UNMASK : desativar disfarce",
-              "SCAN : procurar calor",
+              "UNMASK : desativar disfarce (voltar ao real)",
+              "SCAN : procurar calor por perto",
               "CONSUM : sugar energia do alvo",
               "HEAT : aumentar temperatura interna",
-              "REPL : criar uma cópia inferior",
+              "REPL : criar uma cópia inferior de si mesmo",
               "RET : retornar pra fonte de calor",
               "HALT : parar tudo",
               "ATTACK : descarga ofensiva",
@@ -661,9 +652,7 @@
               "tik-krk : disfarçar",
               "crrk : culpa projetada (BLM).",
               "### Os cartões perfurados (Karta-Δ)",
-              "Cada instrução tem um padrão de furos.",
-              "■ = furo ativo",
-              "□ = vazio",
+              "Cada instrução tem um padrão de furos. ■ = furo ativo, □ = vazio:",
               "CONSUM ■□□■□ — sugar energia",
               "ATTACK ■■■□□ — descarga direta",
               "MOVE ■■□□□ — deslocamento",
@@ -673,7 +662,7 @@
               "SCAN □□■□□ — busca de calor",
               "HALT □□□□■ — parar",
               "### Como um vírus age",
-              "Um vírus não raciocinia. Executa em linha reta: MASK → MOVE → SCAN → CONSUM → REPL → BLM → RET → HALT. Se disfarça. Se move. Procura calor. Suga. Se copia. Culpa outro. Volta. Para. E recomeça.",
+              "Um vírus não pensa. Executa em linha reta: MASK → MOVE → SCAN → CONSUM → REPL → BLM → RET → HALT. Se disfarça. Se move. Procura calor. Suga. Se copia. Culpa outro. Volta. Para. E recomeça.",
               "### Os erros",
               "Δ-Loop : vírus preso repetindo a mesma instrução pra sempre",
               "Δ-Cold : energia acabou, vírus congela",
@@ -684,7 +673,7 @@
               "Karta-Med : operações complexas, só Δ-PRIME leem. ",
               "Karta-MAX : ordens diretas de Node-0 — ninguém questiona.",
               "### O que ASM-Δ diz sobre ENI-4Δ",
-              "Ninguém conversa. Ninguém racionicia. Ninguém assume culpa. Todos executam. E tudo que vive, vive errado."
+              "Ninguém conversa. Ninguém pensa. Ninguém assume culpa. Todos executam. E tudo que vive, vive errado."
             ]
           }
         ]
@@ -850,6 +839,8 @@
             ],
             "panel": {
               "story": [
+                "### Resumo",
+                "malloc — o instinto vivo de TripleC. A região mais antiga e mais vital do planeta, feita de túneis, cavernas pulsantes e cinco camadas geológicas, onde nasce a kemita e tudo começa antes de ter nome.",
                 "### A região",
                 "malloc é o sul de TripleC — a região mais antiga, mais instável e mais vital do planeta. É onde tudo começou, onde o artefato PD-11 caiu do céu e reorganizou a floresta em camadas vivas. Quem fala de origem em TripleC, fala de malloc.",
                 "### As cinco camadas",
@@ -866,7 +857,7 @@
                 "Há uma presença nas vibrações das camadas — algo que os bunniets chamam de Alloc. Não tem forma. É sentido. Prae e Aska interpretam sua voz, e sua harmonia é condição para a extração de kemita. Sem Alloc em paz, a Hepa não entrega nada.",
                 "### Os perigos",
                 "O maior medo coletivo é o Segmentation Fault — quando camadas se contradizem e vilas inteiras desaparecem, shilo fragmenta, runas se corrompem. A Hepa pode crescer sem aviso e engolir túneis. E sempre há a ameaça externa: vírus que exploram falhas de shilo para roubar Sementes de Cshift.",
-                "### A essência",
+                "### Vigília calma",
                 "malloc vive em vigília calma — atenção alta sem tensão. É o instinto vivo de TripleC, o ponto onde tudo começa antes de ter nome. E onde tudo, ainda hoje, começa de novo a cada ciclo."
               ]
             },
@@ -884,7 +875,7 @@
                   "As histórias de malloc são contadas em loops e camadas, como algoritmos naturais. Cada uma tem estrutura repetida — e cada repetição muda um pouco o sentido.",
                   "### A justiça",
                   "Em malloc não há punição. Há realinhamento semântico — quem se perde é reconduzido, não castigado. O erro é tratado como desalinho, não como culpa.",
-                  "### A essência",
+                  "### O ritmo de dentro",
                   "Em malloc, o dia não começa porque alguém decidiu. Começa quando a Estaka pulsa."
                 ]
               },
@@ -913,7 +904,7 @@
                   "### As vilas 16×16",
                   "Comunidades organizadas em grades de 16 por 16 — como arrays vivos. Cada vila tem endereço, função e bloco social próprio.",
                   "### Cidades-Risca",
-                  "Caminhos estreitos que funcionam como ponteiros diretos entre vilas. Atalhos vivos que aparecem quando precisam e somem quando não são mais necessários.",
+                  "Caminhos estreitos que ligam uma vila à outra em linha reta. Atalhos vivos — aparecem quando alguém precisa passar e somem quando ninguém mais está caminhando por ali.",
                   "### Cada-Estaka Central",
                   "A sala de comando de malloc, escavada na rocha da Estaka. Centro de decisão e autorização do Cshift.",
                   "### As fronteiras",
@@ -932,7 +923,7 @@
                   "### Kemita",
                   "A semente semântica que nasce nas cavernas da Hepa. Nutriente, memória e matéria-prima das Sementes de Cshift. Verde-esmeralda. O token primordial do universo inteiro.",
                   "### As Sementes de Cshift",
-                  "Objetos compilados que permitem viagem instantânea entre mundos. Uso único. Verde-esmeralda com veios dourados. Nascem aqui, alimentadas por kemita.",
+                  "Pequenos objetos vivos que permitem viagem instantânea entre mundos. Uso único. Verde-esmeralda com veios dourados. Nascem aqui, alimentadas por kemita.",
                   "### Como se alimentam",
                   "Bunniets de malloc se sustentam de kemita extraída de Hepa, shilo absorvido pelos cristais integrados ao corpo, e minerais colhidos em rituais de Basa.",
                   "### A presença de Alloc",
@@ -952,7 +943,7 @@
                   "A presença que habita as vibrações do planeta. Não é autoridade, mas é consultada antes de toda grande decisão. Sua harmonia precede qualquer extração de kemita.",
                   "### A justiça",
                   "Não existe punição em malloc. Existe realinhamento semântico — quem se desvia é reconduzido, sem julgamento.",
-                  "### A essência",
+                  "### Quem manda é o planeta",
                   "Em malloc, ninguém manda. O planeta decide. O bunniet responde."
                 ]
               },
@@ -969,7 +960,7 @@
                   "O artefato que deu origem a tudo ainda pulsa no núcleo, inacessível. Suas interferências são imprevisíveis e sempre profundas.",
                   "### Cshift Local instável",
                   "Quando um salto dá errado, pode criar loops de deslocamento, duplicar vilas inteiras, ou fazer bunniets perderem a identidade geológica — esquecendo de qual camada pertencem.",
-                  "### A essência",
+                  "### Sempre quase caindo",
                   "malloc vive sempre quase colapsando. Mas nunca cai — porque a cada ameaça, se reorganiza."
                 ]
               }
@@ -1518,6 +1509,8 @@
         ],
         "panel": {
           "story": [
+            "### Resumo",
+            "Gotto — o planeta do reinício. Um mundo interpretado linha por linha, onde nada permanece — nem o progresso do invasor.",
             "### O planeta",
             "Gotto é um planeta que só existe enquanto está sendo executado. Não guarda estado, não acumula memória, não fixa nada. Funciona linha por linha, ciclo por ciclo, reinício por reinício.",
             "### As três leis",
@@ -1532,9 +1525,9 @@
             "Um reinício de Gotto equivale a um quinto de um ciclo galáctico. O que dura um ano em outros planetas, Gotto executa cinco vezes. Fora do planeta, o ciclo enfraquece — a leveza diminui, a memória começa a pesar. Um Basik que não volta a tempo se perde no próximo reinício.",
             "### A defesa natural",
             "Node-0 tenta dominar Gotto há ciclos. Falha sempre pelo mesmo motivo: o reinício dissolve tudo. Vínculos não se fixam. Instruções gravadas somem. Para quem depende de deixar marca, Gotto é insuportável.",
-            "### O paradoxo",
-            "A leveza mais bonita do universo é a mesma que impede o planeta de avançar. Erros retornam idênticos a cada ciclo. O reinício protege — mas também impede que qualquer aprendizado se consolide.",
-            "### A essência",
+            "### A leveza como risco",
+            "A leveza mais bonita do universo é a mesma que impede o planeta de avançar. Os erros voltam iguais a cada ciclo. O reinício protege — mas também impede que qualquer aprendizado fique.",
+            "### A frase que os Basiks dizem",
             "Tudo bem. Vamos de novo. Mas desta vez… talvez até o fim."
           ]
         },
@@ -1543,16 +1536,16 @@
             "title": "Cultura",
             "text": [
               "### O ritmo",
-              "A vida Basik segue o ritmo do planeta: manhã é INPUT — absorção e curiosidade. Tarde é PRINT — arte com cristais e conversas longas. Noite é GOTO — recolhimento e reinício.",
+              "A vida Basik segue o ritmo do planeta. A manhã é o INPUT — hora de absorver, de ficar curioso, de prestar atenção no que chega. A tarde é o PRINT — arte feita com cristais, conversas longas, tudo vindo para fora. A noite é o GOTO — hora de recolher e reiniciar.",
               "### Sem estrutura fixa",
-              "Não há líderes fixos, famílias tradicionais nem calendário. Basiks se agrupam por afinidade emocional e ciclos sincronizados.",
+              "Não há líderes fixos, famílias tradicionais nem calendário. Os Basiks se agrupam por afinidade e por quem está no mesmo ciclo.",
               "### Depois do reinício",
-              "Quando se reencontram após um GOTO caótico, a reação é sempre a mesma: PRINT \"HELLO HELLO HELLO!!\" A desorientação é cotidiana. O riso também.",
+              "Quando se reencontram depois de um GOTO caótico, a reação é sempre a mesma: PRINT \"HELLO HELLO HELLO!!\" A confusão é cotidiana. O riso também.",
               "### Sem acúmulo",
-              "Não há acumulação. Não há rancor. Não há arquivo. Cada ciclo é uma nova chance — e uma nova perda.",
+              "Não há acúmulo. Não há rancor. Não há arquivo. Cada ciclo é uma nova chance — e também uma nova perda.",
               "### A desordem",
               "Em Gotto, desordem não assusta ninguém. Faz parte do dia a dia. É até celebrada.",
-              "### A essência",
+              "### Sempre recomeçando",
               "Gotto nunca para de começar. Cada reinício é uma nova infância."
             ]
           },
@@ -1560,17 +1553,17 @@
             "title": "Habitantes — Basiks",
             "text": [
               "### Aparência",
-              "Seres esféricos e bicolores — metade branca (INPUT), metade preta (PRINT). Sem pescoço, sem dedos, sem passado fixo. Dois olhos binários: Olho-0 e Olho-1.",
+              "Seres esféricos e bicolores — metade branca, metade preta. Sem pescoço, sem dedos, sem passado fixo. Dois olhos binários: o Olho-0 e o Olho-1.",
               "### O corpo",
-              "Braços e pernas curtos diretamente no corpo esférico. Medem cerca de 20 a 25 centímetros. São pequenos, redondos e imparáveis.",
+              "Braços e pernas curtos saem direto do corpo esférico. Medem cerca de 20 a 25 centímetros. São pequenos, redondos e imparáveis.",
               "### O glifo",
-              "Nas costas, carregam um glifo Shal'ún — herança ancestral da conexão entre Gotto e LUNN'P1. Uma memória profunda que sobrevive aos loops.",
+              "Nas costas, carregam um glifo Shal'ún — uma marca antiga que vem da conexão entre Gotto e LUNN'P1. É uma memória profunda que sobrevive a cada reinício.",
               "### O comportamento",
-              "Não mentem. Não guardam rancor. Não acumulam. Tudo que sentem é imediatamente impresso ao redor — em cristais, em luz, em som.",
+              "Não mentem. Não guardam rancor. Não acumulam. Tudo que sentem aparece imediatamente ao redor deles — em cristais, em luz, em som.",
               "### O gesto",
-              "Seu gesto mais recorrente: PRINT \"HELLO\". Falam para existir. Existem para continuar.",
-              "### A essência",
-              "São pequenos, redondos e imparáveis. A leveza mais bonita do universo — e a mais vulnerável."
+              "O gesto mais comum deles: PRINT \"HELLO\". Falam para existir. Existem para continuar.",
+              "### Pequenos e bonitos",
+              "São pequenos, redondos e imparáveis. A leveza mais bonita do universo — e também a mais vulnerável."
             ]
           },
           {
@@ -1585,25 +1578,25 @@
               "### Linha 30 — Região GOTO",
               "Instável, transitória. O ponto onde tudo se reorganiza antes de recomeçar.",
               "### Linhas 40 a 90 e GOSUB",
-              "Zonas intermediárias de variação. As Subrotinas GOSUB são regiões profundas — quem entra pode não encontrar a saída.",
-              "### Depois do reinício",
-              "Após cada GOTO, as cidades mudam de lugar. Os caminhos somem. O que era mapa se torna memória — e no próximo ciclo, quase não existe mais."
+              "Zonas intermediárias, cheias de variação. As Subrotinas GOSUB são regiões profundas — quem entra pode não encontrar a saída.",
+              "### Depois de cada GOTO",
+              "Depois de cada GOTO, as cidades mudam de lugar. Os caminhos somem. O que era mapa vira memória — e no próximo ciclo, quase não existe mais."
             ]
           },
           {
             "title": "Ciclos & Tempo",
             "text": [
               "### O tempo não avança",
-              "O tempo em Gotto não avança. Ele se reexecuta. Cada GOTO é um reinício completo.",
+              "O tempo em Gotto não avança. Ele recomeça. Cada GOTO é um reinício completo.",
               "### O que acontece",
-              "Memórias recentes enfraquecem. A personalidade retorna quase idêntica. E o planeta começa de novo.",
+              "As memórias recentes enfraquecem. A personalidade volta quase igual. E o planeta começa de novo.",
               "### A velocidade",
               "Um reinício de Gotto equivale a um quinto de um ciclo galáctico. O que dura um ano em outros planetas, Gotto executa cinco vezes.",
               "### Os tokks",
-              "Tokks são partículas de interpretação geradas a cada ciclo. Alimentam os Basiks, iluminam o planeta e estabilizam as regiões.",
+              "Os tokks são pequenas partículas que nascem a cada ciclo. Alimentam os Basiks, iluminam o planeta e mantêm as regiões estáveis.",
               "### Fora de casa",
               "Fora do planeta, o ciclo continua mas enfraquece. A leveza diminui. A memória começa a pesar. Um Basik que não volta a tempo se perde no próximo reinício.",
-              "### A essência",
+              "### Não envelhece",
               "Gotto não envelhece. Gotto recomeça. E cada recomeço é idêntico ao anterior — e completamente novo."
             ]
           },
@@ -1611,33 +1604,33 @@
             "title": "Relações com Outros Planetas",
             "text": [
               "### LUNN'P1",
-              "Relação ancestral e profunda. A Fenda Shal'ún marcou os Basiks biologicamente — os glifos nas suas costas são herança direta dos Shal'ún. Quando se encontram, há reconhecimento imediato.",
+              "Relação ancestral e profunda. A Fenda Shal'ún marcou os Basiks no próprio corpo — os glifos nas suas costas são herança direta dos Shal'ún. Quando se encontram, há reconhecimento imediato.",
               "### Z1",
-              "Primeiro contato registrado. A relação é técnica e curiosa — os Basiks observam transistores funcionando com admiração genuína.",
+              "Primeiro contato registrado. A relação é técnica e curiosa — os Basiks observam os transistores de Z1 funcionando com admiração genuína.",
               "### ENI-4Δ",
-              "Node-0 tenta dominar Gotto há ciclos. Falha sempre: o GOTO dissolve tudo. Vínculos não se fixam. Instruções somem no reinício. Para quem precisa deixar marca, Gotto é insuportável.",
+              "Node-0 tenta dominar Gotto há ciclos. Falha sempre pelo mesmo motivo: o GOTO dissolve tudo. Vínculos não se fixam. Instruções somem no reinício. Para quem precisa deixar marca, Gotto é insuportável.",
               "### TripleC e ORF-V",
-              "Incompatibilidades técnicas, sem conflito ativo. Mundos que funcionam de formas diferentes demais.",
+              "Incompatibilidades naturais, sem conflito ativo. São mundos que funcionam de jeitos diferentes demais.",
               "### O papel no AURYN",
-              "Gotto participa do Protocol AURYN não com força, mas com presença. Amortece impactos emocionais de aliados em colapso. Dissolve tensões antes que virem ruptura.",
-              "### A essência",
+              "Gotto participa do Protocol AURYN não com força, mas com presença. Amortece impactos em aliados que estão em colapso. Dissolve tensões antes que virem ruptura.",
+              "### Um porto para quem precisa",
               "Para quem precisa deixar marca, Gotto é insuportável. Para quem precisa de alívio, é o único porto."
             ]
           },
           {
             "title": "Perigos",
             "text": [
-              "### O GOTO é proteção e prisão",
-              "Dissolve ameaças — mas dissolve também o aprendizado. Protege e aprisiona ao mesmo tempo.",
+              "### Proteção e prisão",
+              "O GOTO dissolve ameaças — mas dissolve também o aprendizado. Protege e aprisiona ao mesmo tempo.",
               "### Os mesmos erros",
-              "Erros retornam idênticos a cada ciclo. O planeta nunca acumula pressão suficiente para forçar mudança.",
+              "Os erros voltam iguais a cada ciclo. O planeta nunca acumula pressão suficiente para forçar mudança.",
               "### As subrotinas",
               "As regiões GOSUB são profundas e perigosas. Quem entra pode não encontrar a saída antes do próximo reinício.",
               "### Fora do planeta",
               "Um Basik fora de casa perde o suporte do ciclo. A leveza diminui. A memória começa a pesar. O tempo começa a existir — e isso assusta.",
               "### O inimigo paciente",
-              "O inimigo não precisa vencer em Gotto. Basta repetir a mesma interferência toda vez, sabendo que será esquecida e nunca combatida.",
-              "### A essência",
+              "O inimigo não precisa vencer em Gotto. Basta repetir a mesma interferência toda vez, sabendo que vai ser esquecida e nunca combatida.",
+              "### A leveza como risco",
               "A leveza mais bonita do universo é a mesma que mantém o planeta eternamente jovem — e eternamente vulnerável às mesmas falhas."
             ]
           }

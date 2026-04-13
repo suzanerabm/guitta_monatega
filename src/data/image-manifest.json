@@ -997,10 +997,6 @@
     ],
     "kammara/lunnp1": [
       {
-        "name": "cena com frutas flutuantes",
-        "image": "/imgs/characters/kammara/lunnp1/_scenes/cena_com_frutas_flutuantes.jpg"
-      },
-      {
         "name": "Erú'Rin e Lúm'Esha plantando",
         "image": "/imgs/characters/kammara/lunnp1/_scenes/Erú'Rin_e_Lúm'Esha_plantando.jpg"
       },
@@ -1031,10 +1027,6 @@
       {
         "name": "regiao oeste aerea",
         "image": "/imgs/characters/kammara/lunnp1/_scenes/regiao_oeste_aerea.jpg"
-      },
-      {
-        "name": "regiao oeste com Túri'Kan",
-        "image": "/imgs/characters/kammara/lunnp1/_scenes/regiao_oeste_com_Túri'Kan.jpg"
       },
       {
         "name": "regiao sul aerea",
@@ -1212,18 +1204,24 @@
   "subsystems": {
     "kammara/eni4": [
       "/imgs/characters/kammara/eni4/_subsystems/0.jpg",
-      "/imgs/characters/kammara/eni4/_subsystems/1.png",
-      null
+      "/imgs/characters/kammara/eni4/_subsystems/1.jpg",
+      "/imgs/characters/kammara/eni4/_subsystems/2.jpg",
+      "/imgs/characters/kammara/eni4/_subsystems/3.jpg",
+      "/imgs/characters/kammara/eni4/_subsystems/4.jpg",
+      "/imgs/characters/kammara/eni4/_subsystems/5.png",
+      "/imgs/characters/kammara/eni4/_subsystems/6.jpg"
     ],
     "kammara/lunnp1": [
       "/imgs/characters/kammara/lunnp1/_subsystems/0.jpg",
       "/imgs/characters/kammara/lunnp1/_subsystems/1.jpg",
-      "/imgs/characters/kammara/lunnp1/_subsystems/2.jpg"
+      "/imgs/characters/kammara/lunnp1/_subsystems/2.jpg",
+      "/imgs/characters/kammara/lunnp1/_subsystems/3.jpg",
+      "/imgs/characters/kammara/lunnp1/_subsystems/4.jpg",
+      "/imgs/characters/kammara/lunnp1/_subsystems/5.png",
+      "/imgs/characters/kammara/lunnp1/_subsystems/6.jpg"
     ],
     "kammara/triplec/mesh": [
-      "/imgs/characters/kammara/triplec/mesh/_subsystems/0.jpg",
-      null,
-      null
+      "/imgs/characters/kammara/triplec/mesh/_subsystems/0.jpg"
     ]
   }
 }
