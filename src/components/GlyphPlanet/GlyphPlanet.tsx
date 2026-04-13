@@ -30,9 +30,10 @@ export function GlyphPlanet({
     : {};
 
   if (stretch) {
-    const stretchLine = variant === 'universe'
-      ? { flex: '1 1 0', minHeight: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--chakra-fonts-glyph)', fontSize: 'var(--chakra-font-sizes-glyph-h3)' }
-      : { flex: '1 1 0', minHeight: 0, borderLeft: '1px solid currentColor' };
+    const isUniverse = variant === 'universe';
+    const stretchLineCSS = isUniverse
+      ? { flex: '1 1 0', minHeight: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--chakra-fonts-glyph)' }
+      : { flex: '1 1 0', minHeight: 0, width: '0', borderRight: '1px solid currentColor', alignSelf: 'center' };
 
     return (
       <Box
@@ -45,10 +46,22 @@ export function GlyphPlanet({
         lineHeight={1}
         flexShrink={0}
         height="100%"
+        width="1em"
+        css={{ fontSize: 'var(--chakra-font-sizes-glyph-h3)' }}
       >
-        <Box as="span" css={stretchLine}>{variant === 'universe' ? '⊹' : ''}</Box>
-        <Box as="span" fontFamily="glyph" fontSize={fontSize} lineHeight={1} flexShrink={0}>⊙</Box>
-        <Box as="span" css={stretchLine}>{variant === 'universe' ? '⊹' : ''}</Box>
+        <Box as="span" css={stretchLineCSS}>{isUniverse ? line : ''}</Box>
+        <Box
+          as="span"
+          fontFamily="glyph"
+          fontSize={fontSize}
+          lineHeight={1}
+          flexShrink={0}
+          textAlign="center"
+          width="100%"
+        >
+          ⊙
+        </Box>
+        <Box as="span" css={stretchLineCSS}>{isUniverse ? line : ''}</Box>
       </Box>
     );
   }
