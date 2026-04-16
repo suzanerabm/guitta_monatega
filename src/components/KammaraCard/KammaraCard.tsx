@@ -1,6 +1,6 @@
 'use client';
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
 
 export interface KammaraCardTab {
@@ -70,7 +70,24 @@ export function KammaraCard({
     }, 200);
   };
 
-  const toggleRoulette = () => setRouletteOpen((v) => !v);
+  const hideTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const scheduleHide = () => {
+    if (hideTimer.current) clearTimeout(hideTimer.current);
+    hideTimer.current = setTimeout(() => setRouletteOpen(false), 2500);
+  };
+
+  const showRoulette = () => {
+    if (hideTimer.current) clearTimeout(hideTimer.current);
+    setRouletteOpen(true);
+    scheduleHide();
+  };
+
+  // Auto-hide on mount
+  useEffect(() => {
+    scheduleHide();
+    return () => { if (hideTimer.current) clearTimeout(hideTimer.current); };
+  }, []);
 
   const totalItems = allItems.length;
 
@@ -106,18 +123,15 @@ export function KammaraCard({
         transform="translateY(-50%)"
         zIndex={40}
         overflow="visible"
-        pointerEvents="none"
+        onMouseEnter={showRoulette}
       >
-        {/* Roulette — circular orbit */}
+        {/* Roulette — circular orbit, active always visible */}
         <Box
           position="relative"
           width="140px"
           height="140px"
           css={{
-            opacity: rouletteOpen ? 1 : 0,
-            transform: rouletteOpen ? 'scale(1) translate(-50%, -50%)' : 'scale(0.3) translate(-50%, -50%)',
-            transition: 'opacity 0.4s ease, transform 0.4s ease',
-            pointerEvents: rouletteOpen ? 'auto' : 'none',
+            transform: 'translate(-50%, -50%)',
           }}
         >
           {allItems.map((item, i) => {
@@ -127,6 +141,7 @@ export function KammaraCard({
             const x = Math.cos(angle) * r;
             const y = Math.sin(angle) * r;
             const delay = `${i * -0.4}s`;
+            const visible = isActive || rouletteOpen;
 
             return (
               <Box
@@ -134,7 +149,7 @@ export function KammaraCard({
                 as="button"
                 aria-label={item.label || item.title}
                 title={item.label || item.title}
-                onClick={() => handleSelect(i)}
+                onClick={() => isActive ? showRoulette() : handleSelect(i)}
                 position="absolute"
                 top="50%"
                 left="50%"
@@ -149,9 +164,12 @@ export function KammaraCard({
                 style={{
                   transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
                   animation: `kcFloat${i} 3s ease-in-out infinite ${delay}`,
+                  opacity: visible ? 1 : 0,
+                  pointerEvents: visible ? 'auto' : 'none',
+                  transition: 'opacity 0.4s ease',
                 }}
                 css={{
-                  transition: 'border 0.3s ease, box-shadow 0.3s ease, background 0.3s ease',
+                  transition: 'border 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, opacity 0.4s ease',
                   fontFamily: 'var(--chakra-fonts-glyph)',
                   fontSize: '1.2rem',
                   lineHeight: 1,
@@ -175,38 +193,6 @@ export function KammaraCard({
             );
           })}
         </Box>
-
-        {/* Collapsed state — only active circle visible */}
-        {!rouletteOpen && (
-          <Box
-            as="button"
-            width="44px"
-            height="44px"
-            borderRadius="50%"
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            cursor="pointer"
-            zIndex={30}
-            onClick={toggleRoulette}
-            css={{
-              fontFamily: 'var(--chakra-fonts-glyph)',
-              fontSize: '1.2rem',
-              lineHeight: 1,
-              border: `2px solid ${color}`,
-              background: `radial-gradient(circle at 30% 30%, ${color}80, ${color}30 60%, ${darkColor})`,
-              color: '#fff',
-              boxShadow: `0 0 20px ${color}80, inset 0 1px 0 rgba(255,255,255,0.25)`,
-              animation: 'kcFloat0 3s ease-in-out infinite',
-              pointerEvents: 'auto',
-              '&:hover': {
-                boxShadow: `0 0 28px ${color}aa`,
-              },
-            }}
-          >
-            {activeItem.icon}
-          </Box>
-        )}
       </Box>
 
       {/* ── Card body ──────────────────────────────────── */}
