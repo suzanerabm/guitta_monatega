@@ -38,6 +38,11 @@ const sixItems: KammaraRouletteItem[] = [
 
 const threeItems: KammaraRouletteItem[] = sixItems.slice(0, 3);
 
+const sevenItems: KammaraRouletteItem[] = [
+  ...sixItems,
+  { id: 'glifos', icon: '⊹', label: 'Glifos', title: 'Glifos' },
+];
+
 const twelveItems: KammaraRouletteItem[] = [
   ...sixItems,
   { id: 'glifos', icon: '⊹', label: 'Glifos', title: 'Glifos' },
@@ -68,6 +73,10 @@ export const SixItems: Story = {
 
 export const ThreeItems: Story = {
   render: () => <Interactive items={threeItems} />,
+};
+
+export const SevenItems: Story = {
+  render: () => <Interactive items={sevenItems} />,
 };
 
 export const TwelveItems: Story = {

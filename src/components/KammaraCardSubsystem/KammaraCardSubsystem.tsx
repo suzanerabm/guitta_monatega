@@ -139,10 +139,10 @@ export function KammaraCardSubsystem({
         />
 
         <Flex position="relative" direction="column" width="100%" height="100%">
-          {/* ── Header — dynamic: shows the active subsystem's label.
-              Fixed height so the roulette alignment never shifts when
-              the title length changes. overflow:visible so long titles
-              don't get cropped. */}
+          {/* ── Header — two-row layout:
+              Row 1 (top strip): subsystem declarer glyph, left-aligned.
+              Row 2 (main): [ roulette slot | vertical divider | text column ]
+              The text column stacks: category label, title, active glyph. */}
           <Box
             position="relative"
             flexShrink={0}
@@ -153,35 +153,13 @@ export function KammaraCardSubsystem({
               borderBottom: `1px solid ${color}`,
             }}
           >
-            {/* Banner watermark — crest glyph (world identity) on both sides */}
-            <Flex
-              position="absolute"
-              inset={0}
-              justify="space-between"
-              align="center"
-              padding="0 1.5rem"
-              pointerEvents="none"
-              aria-hidden="true"
-              css={{
-                fontFamily: 'var(--chakra-fonts-glyph)',
-                color: `${color}12`,
-                fontSize: '5rem',
-                lineHeight: 1,
-                overflow: 'hidden',
-              }}
-            >
-              <span>{crestGlyph}</span>
-              <span style={{ fontSize: '8rem' }}>{crestGlyph}</span>
-              <span>{crestGlyph}</span>
-            </Flex>
-
-            {/* Top ornament — semantic declarer "— ⊙ —"
-                (flow-line + center + flow-line) */}
+            {/* Row 1 — subsystem declarer ornament: "— ⊙ —"
+                (flow-line + center + flow-line), centered across the top */}
             <Flex
               justify="center"
               align="center"
               gap="sm"
-              padding="0.5rem 1rem 0"
+              padding={`0.5rem ${CARD_PADDING_X} 0`}
               aria-label="Subsistema"
               position="relative"
               css={{
@@ -192,69 +170,80 @@ export function KammaraCardSubsystem({
               }}
             >
               <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, transparent, ${color}80)` }} />
-              <span style={{ fontSize: '1.3rem' }}>{crestGlyph}</span>
+              <span style={{ fontSize: '1.3rem' }}>⊙</span>
               <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, ${color}80, transparent)` }} />
             </Flex>
 
-            {/* Header text block — centered */}
+            {/* Row 2 — main header grid */}
             <Flex
-              direction="column"
               align="center"
-              gap="2xs"
-              padding={`0.2rem ${CARD_PADDING_X} 0.4rem`}
-              position="relative"
+              padding={`0.4rem ${CARD_PADDING_X} 0.4rem 0.6rem`}
+              gap="sm"
+              height="calc(100% - 2.5rem)"
             >
-              {/* Category tag (e.g. "Subsistema") */}
-              <Text
-                fontSize="xs"
-                letterSpacing="hero"
-                textTransform="uppercase"
-                fontWeight="semibold"
-                color={color}
-                m={0}
-                opacity={0.9}
-              >
-                {category.toUpperCase()}
-              </Text>
+              {/* Left column — roulette slot (visual placeholder; the real
+                  roulette floats absolutely over this area so interactions
+                  don't get clipped). Narrow width leaves more room for the title. */}
+              <Box flexShrink={0} width="80px" />
 
-              {/* Active subsystem label — dynamic, changes with roulette */}
-              <Heading
-                as="h2"
-                fontFamily="body"
-                fontSize="h2"
-                fontWeight="bold"
-                lineHeight={1}
-                color={color}
-                letterSpacing="heroTitle"
-                textAlign="center"
-                m={0}
+              {/* Vertical divider — gradient line between menu and text */}
+              <Box
+                flexShrink={0}
+                width="1px"
+                alignSelf="stretch"
                 css={{
-                  textShadow: `0 0 24px ${color}40`,
-                  wordBreak: 'break-word',
+                  background: `linear-gradient(180deg, transparent 0%, ${color} 30%, ${color} 70%, transparent 100%)`,
+                  boxShadow: `0 0 8px ${color}60`,
                 }}
-              >
-                {activeItem.label.toUpperCase()}
-              </Heading>
-            </Flex>
+              />
 
-            {/* Bottom ornament — "⊹" = ancestral, memory.
-                Framed by gradient lines that echo the "—" flow glyph. */}
-            <Flex
-              justify="center"
-              align="center"
-              gap="tight"
-              padding="0.4rem 1rem 0.6rem"
-              aria-hidden="true"
-              position="relative"
-              css={{
-                fontFamily: 'var(--chakra-fonts-glyph)',
-                fontSize: '0.7rem',
-                color: `${color}99`,
-              }}
-            >
-              <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, transparent, ${color}60)` }} />
-              <span>⊹</span>
-              <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, ${color}60, transparent)` }} />
+              {/* Right column — subtitle + title + glyph, left-aligned */}
+              <Flex direction="column" align="flex-start" gap="xs" flex={1} minW={0}>
+                {/* Subtitle (category — already translated by caller) */}
+                <Text
+                  fontSize="xs"
+                  letterSpacing="hero"
+                  textTransform="uppercase"
+                  fontWeight="semibold"
+                  color={color}
+                  m={0}
+                  opacity={0.9}
+                >
+                  {category.toUpperCase()}
+                </Text>
+
+                {/* Title — dynamic, changes with the active subsystem */}
+                <Heading
+                  as="h2"
+                  fontFamily="body"
+                  fontSize="h2"
+                  fontWeight="bold"
+                  lineHeight={1}
+                  color={color}
+                  letterSpacing="heroTitle"
+                  textAlign="left"
+                  m={0}
+                  css={{
+                    textShadow: `0 0 24px ${color}40`,
+                    wordBreak: 'break-word',
+                  }}
+                >
+                  {activeItem.label.toUpperCase()}
+                </Heading>
+
+                {/* Active subsystem glyph — semantic icon for this subsystem */}
+                <Box
+                  as="span"
+                  fontFamily="glyph"
+                  fontSize="glyphH2"
+                  lineHeight={1}
+                  color={color}
+                  opacity={0.85}
+                  aria-hidden="true"
+                >
+                  {activeItem.icon}
+                </Box>
+              </Flex>
             </Flex>
           </Box>
 
@@ -336,7 +325,8 @@ export function KammaraCardSubsystem({
                 src={activeItem.image}
                 alt={activeItem.imageAlt ?? activeItem.title}
                 width="100%"
-                height="auto"
+                height="150px"
+                objectFit="cover"
                 display="block"
                 marginBottom="base"
                 boxShadow="cardHoverBig"

@@ -11,15 +11,75 @@ export const ROULETTE_GAP_AFTER = 10; // breathing room between sphere and gate 
 export const ROULETTE_SPHERE_GAP = 8;
 
 /**
- * Compute the orbit radius needed to fit N spheres without overlap.
- * The chord between two adjacent points on a circle is 2*r*sin(π/N).
- * For no overlap: 2*r*sin(π/N) >= sphereSize + gap → r >= (sphereSize + gap) / (2*sin(π/N)).
- * Returns the larger of this minimum and the base radius, so we never shrink below it.
+ * Compute the orbit radius needed to fit N spheres without overlap on an
+ * OPEN ARC (active at top + N-1 non-active items stepping clockwise).
+ *
+ * The chord between two adjacent points on a circle is 2*r*sin(θ/2) where
+ * θ is the angular step. For no overlap we need chord ≥ sphere + gap.
+ * With an open arc, the tightest neighbors are adjacent items; since the
+ * arc doesn't close, we just need the step to guarantee non-collision.
+ *
+ * Returns the larger of the required r and the base radius.
  */
 export function computeOrbitRadius(itemCount: number): number {
   if (itemCount <= 1) return ROULETTE_ORBIT_RADIUS;
+  // Use the closed-circle formula as a safe upper bound (more conservative
+  // than needed for an open arc, but guarantees no collision in any case).
   const required = (ROULETTE_SPHERE_SIZE + ROULETTE_SPHERE_GAP) / (2 * Math.sin(Math.PI / itemCount));
   return Math.max(ROULETTE_ORBIT_RADIUS, Math.ceil(required));
+}
+
+/**
+ * Compute (x, y) position for a slot on an OPEN ARC.
+ * - Slot 0 sits at the top of the circle (-90°).
+ * - Slots 1..N-1 march clockwise with the minimum step needed to keep
+ *   adjacent spheres from touching (chord = sphere + gap).
+ */
+function positionForSlot(slotIndex: number, r: number): { x: number; y: number } {
+  if (slotIndex === 0) return { x: 0, y: -r };
+  // Angular step: minimum to keep adjacent chord ≥ SPHERE + GAP.
+  const minStep = 2 * Math.asin((ROULETTE_SPHERE_SIZE + ROULETTE_SPHERE_GAP) / (2 * r));
+  const angle = -Math.PI / 2 + slotIndex * minStep;
+  return { x: Math.cos(angle) * r, y: Math.sin(angle) * r };
+}
+
+/**
+ * Verify NO two spheres collide. Returns true if any pair is closer than
+ * `SPHERE_SIZE + GAP` (i.e. they touch or overlap).
+ */
+function hasCollision(positions: { x: number; y: number }[]): boolean {
+  const minDist = ROULETTE_SPHERE_SIZE + ROULETTE_SPHERE_GAP;
+  for (let i = 0; i < positions.length; i++) {
+    for (let j = i + 1; j < positions.length; j++) {
+      const dx = positions[i].x - positions[j].x;
+      const dy = positions[i].y - positions[j].y;
+      const d = Math.sqrt(dx * dx + dy * dy);
+      if (d < minDist - 0.01) return true; // 0.01 tolerance for float rounding
+    }
+  }
+  return false;
+}
+
+/**
+ * Compute the final layout: radius + positions, GUARANTEED collision-free.
+ * Starts with `computeOrbitRadius(N)`, verifies with `hasCollision`, and if
+ * any pair collides, grows the radius incrementally until none do.
+ * This handles the open-arc case where certain indexes could end up near
+ * the active sphere even when adjacent-pair chord is fine.
+ */
+export function computeArcLayout(itemCount: number): {
+  radius: number;
+  positions: { x: number; y: number }[];
+} {
+  let r = computeOrbitRadius(itemCount);
+  let positions: { x: number; y: number }[] = [];
+  for (let attempt = 0; attempt < 50; attempt++) {
+    positions = Array.from({ length: itemCount }, (_, i) => positionForSlot(i, r));
+    if (!hasCollision(positions)) return { radius: r, positions };
+    r += 4; // grow radius and retry
+  }
+  // Give up (shouldn't happen): return last attempt.
+  return { radius: r, positions };
 }
 
 export interface KammaraRouletteItem {
@@ -63,26 +123,49 @@ export function KammaraRoulette({
 }: KammaraRouletteProps) {
   const [rouletteOpen, setRouletteOpen] = useState(true);
   const [shooting, setShooting] = useState(false);
+  // Mount flag prevents hydration mismatch: server renders an empty shell,
+  // client mounts and then renders the real positions. The collision-free
+  // layout computation can produce subtly different floats on server vs
+  // client, causing React to discard and re-create the subtree.
+  const [mounted, setMounted] = useState(false);
   const hideTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const totalItems = items.length;
-  const r = computeOrbitRadius(totalItems);
+  // Compute collision-free layout: radius + (x,y) for every slot.
+  const layout = computeArcLayout(totalItems);
+  const r = layout.radius;
+
+  const cancelHide = () => {
+    if (hideTimer.current) {
+      clearTimeout(hideTimer.current);
+      hideTimer.current = null;
+    }
+  };
 
   const scheduleHide = () => {
-    if (hideTimer.current) clearTimeout(hideTimer.current);
+    cancelHide();
     hideTimer.current = setTimeout(() => {
       setShooting(true);
       setTimeout(() => {
         setRouletteOpen(false);
         setShooting(false);
       }, 600);
-    }, 6000);
+    }, 2500);
   };
 
   const showRoulette = () => {
-    if (hideTimer.current) clearTimeout(hideTimer.current);
+    cancelHide();
     setRouletteOpen(true);
-    scheduleHide();
+  };
+
+  const handleMouseLeave = () => {
+    // Only start the auto-hide timer when the mouse leaves — not while it
+    // hovers over the roulette. The user stays in control while interacting.
+    if (rouletteOpen) scheduleHide();
   };
 
   useEffect(() => {
@@ -90,30 +173,14 @@ export function KammaraRoulette({
     return () => { if (hideTimer.current) clearTimeout(hideTimer.current); };
   }, []);
 
-  // Compute the angle for each position (0 = active/top, others evenly
-  // distributed around the circle). For odd counts, the active stays at
-  // the top and the remaining items mirror symmetrically — left/right
-  // balanced around the vertical axis.
-  const angleForPosition = (positionIndex: number) => {
-    if (positionIndex === 0) return -Math.PI / 2; // active at top
-    const others = totalItems - 1;
-    // Evenly distribute the remaining `others` around the arc below
-    // (from the right of the top, going clockwise all the way to the
-    // left of the top). Skip the top slot (occupied by the active).
-    // Step = full circle minus the active slot, divided by (others + 1)
-    // so there's symmetric spacing on each side.
-    const arc = 2 * Math.PI; // full circle
-    const step = arc / totalItems;
-    // Position 1 → first slot clockwise from top (right side)
-    // Position N-1 → last slot (left side, just before top)
-    return -Math.PI / 2 + positionIndex * step;
-  };
+  // Positions are pre-computed by `computeArcLayout` which guarantees zero
+  // collisions between any pair of spheres (iteratively grows the radius
+  // if the initial one would cause overlap). Use positions from there.
+  const positionFor = (positionIndex: number) => layout.positions[positionIndex];
 
   // Float keyframes
   const floatKeyframes = items.map((_, positionIndex) => {
-    const angle = angleForPosition(positionIndex);
-    const x = Math.cos(angle) * r;
-    const y = Math.sin(angle) * r;
+    const { x, y } = positionFor(positionIndex);
     return `@keyframes kcFloat${positionIndex} {
       0%, 100% { transform: translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) translateY(0); }
       50% { transform: translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) translateY(-3px); }
@@ -132,6 +199,11 @@ ${Array.from({ length: shootSteps + 1 }).map((_, s) => {
     return `    ${pct.toFixed(0)}% { transform: translate(calc(-50% + ${sx.toFixed(1)}px), calc(-50% + ${sy.toFixed(1)}px)); opacity: ${op.toFixed(2)}; }`;
   }).join('\n')}
   }`;
+
+  // Skip rendering until mounted on the client — prevents hydration mismatch
+  // caused by float math differences between server (Node) and client (browser)
+  // in the collision-free layout computation.
+  if (!mounted) return null;
 
   return (
     <>
@@ -153,6 +225,7 @@ ${Array.from({ length: shootSteps + 1 }).map((_, s) => {
             })}
         overflow="visible"
         onMouseEnter={showRoulette}
+        onMouseLeave={handleMouseLeave}
         width={`${r * 2 + ROULETTE_SPHERE_SIZE}px`}
         height={`${r * 2 + ROULETTE_SPHERE_SIZE}px`}
       >
@@ -166,10 +239,8 @@ ${Array.from({ length: shootSteps + 1 }).map((_, s) => {
               determined by rotating the items list by activeIndex, so
               position 0 (top) always shows the active item's glyph. */}
           {items.map((_, positionIndex) => {
-            // Fixed angle for this position (0 = top, clockwise)
-            const angle = angleForPosition(positionIndex);
-            const x = Math.cos(angle) * r;
-            const y = Math.sin(angle) * r;
+            // Fixed position for this slot (circular for even, vertical columns for odd)
+            const { x, y } = positionFor(positionIndex);
             // Which item lands at this position (rotate list by activeIndex)
             const itemIndex = (activeIndex + positionIndex) % totalItems;
             const item = items[itemIndex];
