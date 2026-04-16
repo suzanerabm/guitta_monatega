@@ -21,8 +21,7 @@ export interface KammaraCardProps {
   name: string;
   category: string;
   subtitle?: string;
-  defaultContent: ReactNode;
-  tabs?: KammaraCardTab[];
+  tabs: KammaraCardTab[];
   stats?: KammaraCardStat[];
   rarity?: number;
   crestGlyph?: string;
@@ -37,8 +36,7 @@ export function KammaraCard({
   name,
   category,
   subtitle,
-  defaultContent,
-  tabs = [],
+  tabs,
   stats = [],
   rarity = 0,
   crestGlyph = '⊙',
@@ -48,17 +46,13 @@ export function KammaraCard({
   theme = 'dark',
   'data-testid': testId,
 }: KammaraCardProps) {
-  const allItems = [
-    { id: null as string | null, icon: crestGlyph, label: category, title: name, content: defaultContent },
-    ...tabs.map((t) => ({ id: t.id as string | null, icon: t.icon, label: t.label, title: t.title, content: t.content })),
-  ];
+  const allItems = tabs;
 
   const [activeIndex, setActiveIndex] = useState(0);
-  const [gateOpen, setGateOpen] = useState(false);
+  const [gateOpen, setGateOpen] = useState(true);
   const [rouletteOpen, setRouletteOpen] = useState(true);
 
   const activeItem = allItems[activeIndex];
-  const isHome = activeIndex === 0;
 
   const isLight = theme === 'light';
   const textColor = isLight ? 'rgba(20,20,30,0.9)' : 'rgba(255,255,255,0.92)';
@@ -69,16 +63,11 @@ export function KammaraCard({
     if (index === activeIndex) {
       return;
     }
-    if (index === 0) {
-      setGateOpen(false);
-      setTimeout(() => setActiveIndex(0), 300);
-    } else {
-      setGateOpen(false);
-      setTimeout(() => {
-        setActiveIndex(index);
-        setGateOpen(true);
-      }, 200);
-    }
+    setGateOpen(false);
+    setTimeout(() => {
+      setActiveIndex(index);
+      setGateOpen(true);
+    }, 200);
   };
 
   const toggleRoulette = () => setRouletteOpen((v) => !v);
@@ -408,7 +397,7 @@ export function KammaraCard({
           <Flex direction="column" flex={1} minW={0} minH={0}>
 
           {/* ── Gate overlay (descends when subsystem selected) ── */}
-          {!isHome && (
+          {(
             <Box
               position="relative"
               flexShrink={0}
@@ -471,7 +460,7 @@ export function KammaraCard({
           )}
 
           {/* Stats bar */}
-          {stats.length > 0 && isHome && (
+          {stats.length > 0 && (
             <Flex flexShrink={0} padding="0.6rem 1.8rem" gap="0.5rem" flexWrap="wrap">
               {stats.map((stat, i) => (
                 <Flex
