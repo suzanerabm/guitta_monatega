@@ -403,9 +403,9 @@ export function KammaraCard({
               flexShrink={0}
               overflow="hidden"
               css={{
-                maxHeight: gateOpen ? '60px' : '0px',
+                height: gateOpen ? '60px' : '0px',
                 opacity: gateOpen ? 1 : 0,
-                transition: 'max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease',
+                transition: 'height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease',
                 background: `linear-gradient(180deg, ${color}20, ${darkColor})`,
                 borderBottom: `1px solid ${color}40`,
               }}
@@ -422,7 +422,7 @@ export function KammaraCard({
               <Flex
                 align="center"
                 justify="flex-start"
-                padding="0.8rem 1.8rem"
+                padding="2.5rem 1.8rem"
                 paddingLeft="calc(1.8rem + 44px + 0.6rem)"
                 position="relative"
               >
