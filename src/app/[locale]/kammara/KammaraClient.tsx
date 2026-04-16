@@ -381,6 +381,8 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
                 darkColor={kammaraPalette.dark}
                 items={galleryItems}
                 minCardWidth={320}
+              minCardWidthMd={316}
+              minCardWidthLg={360}
                 renderCard={(char) => (
                   <Box height={{ base: '460px', md: '600px' }}>
                     <KammaraCharacterCard
@@ -681,6 +683,8 @@ function WorldSection({
               darkColor={worldDark}
               items={galleryItems}
               minCardWidth={320}
+              minCardWidthMd={316}
+              minCardWidthLg={360}
               renderCard={(char) => (
                 <Box height={{ base: '460px', md: '600px' }}>
                   <KammaraCharacterCard
@@ -899,6 +903,8 @@ function TriplecRegionSection({
               darkColor={regionPalette.dark}
               items={galleryItems}
               minCardWidth={320}
+              minCardWidthMd={316}
+              minCardWidthLg={360}
               renderCard={(char) => (
                 <Box height={{ base: '460px', md: '600px' }}>
                   <KammaraCharacterCard

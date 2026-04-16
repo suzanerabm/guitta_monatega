@@ -20,10 +20,23 @@ export interface KammaraCharacterGalleryProps<T> {
    */
   renderCard: (item: T, index: number) => ReactNode;
   /**
-   * Minimum width of a card in px (desktop). The gallery packs as many
-   * as fit horizontally; any overflow paginates. Default: 400.
+   * Minimum width of a card in px (base desktop value, used at md unless
+   * `minCardWidthMd` overrides). The gallery packs as many as fit
+   * horizontally; overflow paginates. Default: 400.
    */
   minCardWidth?: number;
+  /**
+   * Optional override for minimum card width at md (>=768px, <1024px).
+   * Useful when md only fits 2 cards anyway and you want to make them
+   * wider rather than leaving empty space.
+   */
+  minCardWidthMd?: number;
+  /**
+   * Optional override for minimum card width at lg (>=1024px). Lets the
+   * caller make cards bigger on wider screens without the md count
+   * changing. Falls back to `minCardWidth` when not provided.
+   */
+  minCardWidthLg?: number;
   /**
    * Gap between cards in px (desktop). Default: 24.
    */
@@ -73,6 +86,8 @@ export function KammaraCharacterGallery<T>({
   items,
   renderCard,
   minCardWidth = 400,
+  minCardWidthMd,
+  minCardWidthLg,
   cardGap = 24,
   'data-testid': testId,
 }: KammaraCharacterGalleryProps<T>) {
@@ -81,6 +96,7 @@ export function KammaraCharacterGallery<T>({
   // big and legible while paginating through characters.
   const gridRef = useRef<HTMLDivElement>(null);
   const [perPage, setPerPage] = useState(1);
+  const [effectiveCardWidth, setEffectiveCardWidth] = useState(minCardWidth);
   const [page, setPage] = useState(0);
 
   useLayoutEffect(() => {
@@ -89,15 +105,24 @@ export function KammaraCharacterGallery<T>({
 
     const measure = () => {
       const w = el.getBoundingClientRect().width;
-      const isMobile = window.innerWidth < 768;
+      const vw = window.innerWidth;
+      const isMobile = vw < 768;
       if (isMobile) {
         setPerPage(1);
+        setEffectiveCardWidth(minCardWidth);
         return;
       }
-      // Desktop: how many cards of minCardWidth fit side-by-side with cardGap?
+      // Pick the target card width for this breakpoint. Priority:
+      // lg override > md override > base. Allows the caller to widen
+      // cards on any range where the card count won't change anyway.
+      let targetWidth = minCardWidth;
+      if (vw >= 1024 && minCardWidthLg) targetWidth = minCardWidthLg;
+      else if (vw >= 768 && vw < 1024 && minCardWidthMd) targetWidth = minCardWidthMd;
+      setEffectiveCardWidth(targetWidth);
+      // Desktop: how many cards of targetWidth fit side-by-side with cardGap?
       // Formula: (w + gap) / (card + gap) — gives us a clean count.
       // Add 1px of tolerance so sub-pixel rounding doesn't steal a slot.
-      const fit = Math.max(1, Math.floor((w + cardGap + 1) / (minCardWidth + cardGap)));
+      const fit = Math.max(1, Math.floor((w + cardGap + 1) / (targetWidth + cardGap)));
       setPerPage(fit);
     };
 
@@ -111,7 +136,7 @@ export function KammaraCharacterGallery<T>({
       ro.disconnect();
       window.removeEventListener('resize', measure);
     };
-  }, [minCardWidth, cardGap]);
+  }, [minCardWidth, minCardWidthMd, minCardWidthLg, cardGap]);
 
   const totalPages = Math.max(1, Math.ceil(items.length / perPage));
   // Clamp page if items or perPage changed and current page is out of range
@@ -170,11 +195,11 @@ export function KammaraCharacterGallery<T>({
             <Box
               key={i}
               css={{
-                // 80% of the viewport: card starts at the 16px gutter and
-                // stops with ~18vw of the next card peeking in from the
-                // right, so the swipe affordance reads immediately.
-                flex: '0 0 80vw',
-                maxWidth: '80vw',
+                // 72% of the viewport: leaves a visible ~28vw peek of the
+                // next card on the right. Works even on narrow 320px
+                // viewports, where a wider card would swallow the peek.
+                flex: '0 0 72vw',
+                maxWidth: '72vw',
                 scrollSnapAlign: 'start',
                 animation: `kcg-fade-in 0.4s ease-out ${i * 40}ms both`,
               }}
@@ -317,13 +342,16 @@ export function KammaraCharacterGallery<T>({
           {/* ── Cards row ────────────────────────────────
               Always a single horizontal row.
               - Mobile: 1 card per page, full width.
-              - Desktop: as many cards of `minCardWidth` as fit side-by-side,
-                with `cardGap` between them. Overflow paginates. */}
+              - Desktop: as many cards of `minCardWidth` as fit side-by-side.
+                `justify: space-evenly` distributes the leftover horizontal
+                space as breathing room between cards, so the gap grows
+                naturally on wider screens instead of leaving wide blank
+                margins on the sides. Overflow paginates. */}
           <Flex
             ref={gridRef}
             gap={{ base: 'md', md: `${cardGap}px` }}
             minH={0}
-            justify="center"
+            justify={{ base: 'center', md: 'space-evenly' }}
             align="stretch"
             flexWrap="nowrap"
             width="100%"
@@ -336,9 +364,11 @@ export function KammaraCharacterGallery<T>({
                 css={{
                   animation: `kcg-fade-in 0.5s ease-out ${i * 80}ms both`,
                 }}
-                // Mobile: 1 card = full width. Desktop: fixed minCardWidth.
-                flex={{ base: '1 1 100%', md: `0 0 ${minCardWidth}px` }}
-                maxWidth={{ base: '100%', md: `${minCardWidth}px` }}
+                // Mobile: 1 card = full width. Desktop: the effective
+                // card width computed from the current breakpoint (so
+                // lg+ can use the larger `minCardWidthLg`).
+                flex={{ base: '1 1 100%', md: `0 0 ${effectiveCardWidth}px` }}
+                maxWidth={{ base: '100%', md: `${effectiveCardWidth}px` }}
               >
                 {renderCard(item, page * perPage + i)}
               </Box>

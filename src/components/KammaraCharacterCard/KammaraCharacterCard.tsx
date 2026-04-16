@@ -337,24 +337,25 @@ export function KammaraCharacterCard({
                 }}
               >
                 {allAttributes.map((attr, i) => (
-                  <Flex key={i} align="center" gap="sm">
+                  <Flex key={i} align="center" gap={{ base: 'xs', md: 'sm' }}>
                     {/* Label + glyph grouped on the left */}
-                    <Flex align="center" gap="xs" flex="1 1 auto" minW={0}>
+                    <Flex align="center" gap="xs" flex="0 0 auto" minW={0}>
                       <Text
-                        fontSize="xs"
-                        letterSpacing="hero"
+                        fontSize={{ base: '0.6rem', md: 'xs' }}
+                        letterSpacing={{ base: 'wider', md: 'hero' }}
                         textTransform="uppercase"
                         fontWeight="semibold"
                         color={color}
                         m={0}
                         opacity={0.8}
+                        css={{ whiteSpace: 'nowrap' }}
                       >
                         {attr.label}
                       </Text>
                       <Box
                         as="span"
                         fontFamily="glyph"
-                        fontSize="sm"
+                        fontSize={{ base: 'xs', md: 'sm' }}
                         lineHeight={1}
                         color={color}
                         css={{ whiteSpace: 'nowrap', letterSpacing: '0.04em' }}
@@ -363,14 +364,22 @@ export function KammaraCharacterCard({
                         {attr.glyph}
                       </Box>
                     </Flex>
-                    {/* Value on the right */}
+                    {/* Value on the right — flex:1 so it takes the remaining
+                        space and aligns right, with ellipsis on overflow. */}
                     <Text
-                      fontSize="xs"
-                      letterSpacing="hero"
+                      fontSize={{ base: '0.6rem', md: 'xs' }}
+                      letterSpacing={{ base: 'wider', md: 'hero' }}
                       textTransform="uppercase"
                       fontWeight="bold"
                       color="textOverlayBright"
                       m={0}
+                      flex="1 1 auto"
+                      textAlign="right"
+                      css={{
+                        whiteSpace: 'nowrap',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                      }}
                     >
                       {attr.value}
                     </Text>
