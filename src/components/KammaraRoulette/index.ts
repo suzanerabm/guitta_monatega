@@ -6,4 +6,4 @@ export {
   ROULETTE_GAP_AFTER,
   computeOrbitRadius,
 } from './KammaraRoulette';
-export type { KammaraRouletteItem, KammaraRouletteProps } from './KammaraRoulette';
+export type { KammaraRouletteItem, KammaraRouletteProps, KammaraRouletteHandle } from './KammaraRoulette';

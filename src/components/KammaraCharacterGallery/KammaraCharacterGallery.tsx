@@ -130,7 +130,60 @@ export function KammaraCharacterGallery<T>({
   return (
     <>
       <style>{KEYFRAMES}</style>
+
+      {/* ── Mobile (base → md): plain horizontal scroll-snap strip ──
+          No frame, no title, no pagination — on a phone the HUD frame
+          just steals space and the pagination forces users to tap back
+          and forth. A native horizontal swipe is far more natural, so
+          we render every card in a snap scroller and let the user flick. */}
       <Box
+        display={{ base: 'block', md: 'none' }}
+        data-testid={testId ? `${testId}-mobile` : 'kammara-character-gallery-mobile'}
+        width="100%"
+        css={{
+          overflowX: 'auto',
+          overflowY: 'hidden',
+          scrollSnapType: 'x mandatory',
+          WebkitOverflowScrolling: 'touch',
+          scrollbarWidth: 'none',
+          msOverflowStyle: 'none',
+          '&::-webkit-scrollbar': { display: 'none' },
+          // Generous side padding + matching scroll-padding so the first
+          // and last cards land with a comfortable gutter on both sides
+          // (and the card's outline doesn't kiss the viewport edge).
+          padding: '8px 32px',
+          scrollPadding: '0 32px',
+        }}
+      >
+        <Box
+          display="flex"
+          css={{
+            gap: '16px',
+            width: 'max-content',
+          }}
+        >
+          {items.map((item, i) => (
+            <Box
+              key={i}
+              css={{
+                // 78% of the viewport leaves ~22% as margin around the card,
+                // which shows a peek of the neighbor and keeps the outline
+                // away from the screen edges.
+                flex: '0 0 78vw',
+                maxWidth: '78vw',
+                scrollSnapAlign: 'center',
+                animation: `kcg-fade-in 0.4s ease-out ${i * 40}ms both`,
+              }}
+            >
+              {renderCard(item, i)}
+            </Box>
+          ))}
+        </Box>
+      </Box>
+
+      {/* ── Desktop (md+): the full HUD frame with pagination ────── */}
+      <Box
+        display={{ base: 'none', md: 'block' }}
         data-testid={testId ?? 'kammara-character-gallery'}
         position="relative"
         width="100%"

@@ -1,6 +1,6 @@
 'use client';
 import { Box } from '@chakra-ui/react';
-import { useEffect, useRef, useState } from 'react';
+import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react';
 
 // Geometry constants — shared with KammaraCard so the gate label padding
 // and the roulette horizontal offset stay in sync.
@@ -111,7 +111,17 @@ export interface KammaraRouletteProps {
   top?: string;
 }
 
-export function KammaraRoulette({
+/**
+ * Imperative API exposed via a ref. Lets parents "command" the roulette
+ * without coupling their own state to the roulette's internals — handy
+ * when the card wants to close the menu on scroll, for example.
+ */
+export interface KammaraRouletteHandle {
+  /** Closes the roulette (triggers the shooting-star exit animation). */
+  close: () => void;
+}
+
+export const KammaraRoulette = forwardRef<KammaraRouletteHandle, KammaraRouletteProps>(function KammaraRoulette({
   items,
   activeIndex,
   onSelect,
@@ -120,7 +130,7 @@ export function KammaraRoulette({
   mode = 'inline',
   cardPaddingX,
   top = '50%',
-}: KammaraRouletteProps) {
+}, ref) {
   const [rouletteOpen, setRouletteOpen] = useState(true);
   const [shooting, setShooting] = useState(false);
   // Mount flag prevents hydration mismatch: server renders an empty shell,
@@ -129,6 +139,12 @@ export function KammaraRoulette({
   // client, causing React to discard and re-create the subtree.
   const [mounted, setMounted] = useState(false);
   const hideTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // Ref used by the IntersectionObserver below to auto-open the roulette
+  // when the card first scrolls into view. Gives users a visual hint that
+  // there's a menu here — especially important on mobile where the
+  // collapsed state was "invisible".
+  const rootRef = useRef<HTMLDivElement>(null);
+  const hasAutoOpenedRef = useRef(false);
 
   useEffect(() => {
     setMounted(true);
@@ -162,6 +178,23 @@ export function KammaraRoulette({
     setRouletteOpen(true);
   };
 
+  // Imperative close — fires the shooting-star animation and then hides.
+  // Same two-step pattern used by the internal `scheduleHide` so the exit
+  // looks identical whether triggered by the timer or by a parent.
+  const closeRoulette = () => {
+    cancelHide();
+    if (!rouletteOpen) return;
+    setShooting(true);
+    setTimeout(() => {
+      setRouletteOpen(false);
+      setShooting(false);
+    }, 600);
+  };
+
+  useImperativeHandle(ref, () => ({
+    close: closeRoulette,
+  }));
+
   const handleMouseLeave = () => {
     // Only start the auto-hide timer when the mouse leaves — not while it
     // hovers over the roulette. The user stays in control while interacting.
@@ -172,6 +205,36 @@ export function KammaraRoulette({
     scheduleHide();
     return () => { if (hideTimer.current) clearTimeout(hideTimer.current); };
   }, []);
+
+  // Auto-open once when the roulette scrolls into view — the initial
+  // `rouletteOpen=true` state schedules a hide right after mount, so by the
+  // time the user actually scrolls to the card, the roulette is already
+  // closed and looks like a lonely sphere. This observer re-opens it once
+  // the user gets there, which re-schedules a hide from `showRoulette()`.
+  // We only do it once per page load (tracked via `hasAutoOpenedRef`) so
+  // scrolling past and back doesn't re-pop the menu repeatedly.
+  useEffect(() => {
+    if (!mounted) return;
+    const el = rootRef.current;
+    if (!el) return;
+    if (typeof IntersectionObserver === 'undefined') return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting && !hasAutoOpenedRef.current) {
+            hasAutoOpenedRef.current = true;
+            showRoulette();
+            observer.disconnect();
+            break;
+          }
+        }
+      },
+      { threshold: 0.35 },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [mounted]);
 
   // Positions are pre-computed by `computeArcLayout` which guarantees zero
   // collisions between any pair of spheres (iteratively grows the radius
@@ -208,6 +271,7 @@ ${Array.from({ length: shootSteps + 1 }).map((_, s) => {
     <>
       <style>{floatKeyframes}{'\n'}{shootKf}</style>
       <Box
+        ref={rootRef}
         {...(mode === 'absolute'
           ? {
               position: 'absolute' as const,
@@ -334,4 +398,4 @@ ${Array.from({ length: shootSteps + 1 }).map((_, s) => {
       </Box>
     </>
   );
-}
+});

@@ -1,8 +1,8 @@
 'use client';
 import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import type { ReactNode } from 'react';
-import { KammaraRoulette } from '@/components/KammaraRoulette';
+import { KammaraRoulette, type KammaraRouletteHandle } from '@/components/KammaraRoulette';
 
 // Shared layout constant: the card's horizontal padding.
 // The gate label and the roulette position both depend on this value,
@@ -53,6 +53,7 @@ export function KammaraCardSubsystem({
   const allItems = tabs;
 
   const [activeIndex, setActiveIndex] = useState(0);
+  const rouletteRef = useRef<KammaraRouletteHandle>(null);
 
   const activeItem = allItems[activeIndex];
 
@@ -77,16 +78,20 @@ export function KammaraCardSubsystem({
       borderRadius="32px"
       overflow="visible"
     >
-      {/* Roulette positioned inside the card, floating over the top-left
-          of the header. Left is negative so half the orbit sticks out over
-          the card's left edge. */}
+      {/* Roulette positioned at the top-center of the card, inside its
+          bounds. `top: 10px` keeps the active sphere fully inside the
+          card (its upper edge touches the card's top border with a tiny
+          breathing gap) while the rest of the orbit arcs up around it
+          without escaping the card. */}
       <Box
         position="absolute"
-        top="80px"
-        left="-56px"
+        top="10px"
+        left="50%"
         zIndex={40}
+        css={{ transform: 'translateX(-50%)' }}
       >
         <KammaraRoulette
+          ref={rouletteRef}
           items={allItems}
           activeIndex={activeIndex}
           onSelect={handleSelect}
@@ -176,54 +181,18 @@ export function KammaraCardSubsystem({
               <span>{crestGlyph}</span>
             </Flex>
 
-            {/* Row 1 — subsystem declarer ornament: "— ⊙ —"
-                (flow-line + center + flow-line), centered across the top */}
-            <Flex
-              justify="center"
-              align="center"
-              gap="sm"
-              padding={`0.5rem ${CARD_PADDING_X} 0`}
-              aria-label="Subsistema"
-              position="relative"
-              css={{
-                fontFamily: 'var(--chakra-fonts-glyph)',
-                fontSize: '1rem',
-                color: `${color}cc`,
-                letterSpacing: '0.3em',
-              }}
-            >
-              <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, transparent, ${color}80)` }} />
-              <span style={{ fontSize: '1.3rem' }}>⊙</span>
-              <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, ${color}80, transparent)` }} />
-            </Flex>
-
-            {/* Row 2 — main header grid */}
+            {/* Header text column. The declarer "— ⊙ —" used to sit at
+                the very top of the header, but it now closes the title
+                block below instead of floating lonely up top. */}
             <Flex
               align="center"
-              paddingTop="0.4rem"
+              paddingTop={`calc(${CARD_PADDING_X} + 0.3rem)`}
               paddingBottom="0.4rem"
-              paddingLeft="0.6rem"
+              paddingLeft={{ base: '1.2rem', md: CARD_PADDING_X }}
               paddingRight={{ base: '1.2rem', md: CARD_PADDING_X }}
               gap="sm"
-              height="calc(100% - 2.5rem)"
+              height="100%"
             >
-              {/* Left column — roulette slot (visual placeholder; the real
-                  roulette floats absolutely over this area so interactions
-                  don't get clipped). Narrow width leaves more room for the title. */}
-              <Box flexShrink={0} width="80px" />
-
-              {/* Vertical divider — gradient line between menu and text */}
-              <Box
-                flexShrink={0}
-                width="1px"
-                alignSelf="stretch"
-                css={{
-                  background: `linear-gradient(180deg, transparent 0%, ${color} 30%, ${color} 70%, transparent 100%)`,
-                  boxShadow: `0 0 8px ${color}60`,
-                }}
-              />
-
-              {/* Right column — subtitle + title + glyph, left-aligned */}
               <Flex direction="column" align="flex-start" gap="xs" flex={1} minW={0}>
                 {/* Subtitle (category — already translated by caller) */}
                 <Text
@@ -273,6 +242,27 @@ export function KammaraCardSubsystem({
                 <Text textStyle="label" color={color} m={0} opacity={0.9}>
                   {name}
                 </Text>
+
+                {/* Closing declarer "— ⊙ —" right below the title block,
+                    acting as a visual "stamp" that seals the title area. */}
+                <Flex
+                  align="center"
+                  gap="sm"
+                  width="100%"
+                  mt="xs"
+                  aria-label="Subsistema"
+                  pointerEvents="none"
+                  css={{
+                    fontFamily: 'var(--chakra-fonts-glyph)',
+                    fontSize: '1rem',
+                    color: `${color}cc`,
+                    letterSpacing: '0.3em',
+                  }}
+                >
+                  <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, ${color}80, transparent)` }} />
+                  <span style={{ fontSize: '1.3rem' }}>⊙</span>
+                  <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, transparent, ${color}80)` }} />
+                </Flex>
               </Flex>
             </Flex>
           </Box>
@@ -320,12 +310,18 @@ export function KammaraCardSubsystem({
             </Flex>
           )}
 
-          {/* ── Content ────────────────────────── */}
+          {/* ── Content ──────────────────────────
+              When the user scrolls the content, collapse the roulette so
+              it stops covering the reading area. The ref's `close()`
+              fires the shooting-star exit animation once; after that the
+              scroll keeps firing but `close()` is a no-op when already
+              closed (guarded inside the roulette itself). */}
           <Box
             flex={1}
             minH={0}
             overflowY="auto"
             padding="0.8rem 1.8rem 1.2rem"
+            onScroll={() => rouletteRef.current?.close()}
             css={{
               fontFamily: 'var(--chakra-fonts-body)',
               fontSize: '0.88rem',

@@ -13,7 +13,7 @@ import { KammaraCharacterGallery } from '@/components/KammaraCharacterGallery';
 import { getCharactersForContext, getLocalizedBio, getLocalizedName as getCharLocalizedName, getLocalizedSpecies } from '@/lib/characters';
 import { DSMainCard } from '@/components/DSMainCard';
 import { KammaraSceneCollage } from '@/components/KammaraSceneCollage';
-import { KammaraCardSubsystem, KammaraCardSubsystemContainer } from '@/components/KammaraCardSubsystem';
+import { KammaraCardSubsystem, KammaraCardSubsystemContainer, KammaraCardSubsystemHorizontal } from '@/components/KammaraCardSubsystem';
 import { RegionDivider } from '@/components/RegionDivider';
 import { RegionBanner } from '@/components/RegionBanner';
 import { SoonPanel } from '@/components/SoonPanel';
@@ -380,8 +380,9 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
                 color={kammaraPalette.colors[0]}
                 darkColor={kammaraPalette.dark}
                 items={galleryItems}
+                minCardWidth={320}
                 renderCard={(char) => (
-                  <Box height={{ base: '620px', md: '680px' }}>
+                  <Box height={{ base: '460px', md: '600px' }}>
                     <KammaraCharacterCard
                       name={char.name}
                       species={char.species}
@@ -581,33 +582,57 @@ function WorldSection({
           />
         )}
       </DSMainCard>
-      {realSubsystems.length > 0 && (
-        <Box
-          width={{ base: '418px', md: '440px' }}
-          height={{ base: '627px', md: '660px' }}
-          mx="auto"
-          my="2xl"
-          padding="1.5rem"
-          display="flex"
-        >
-          <KammaraCardSubsystem
-            name={name}
-            category={subsystemsTitle}
-            color={palette.colors[0]}
-            darkColor={palette.dark}
-            crestGlyph={worldCrestGlyph(w.id)}
-            tabs={realSubsystems.map((s, i) => ({
-              id: `${w.id}-${i}`,
-              icon: subsystemGlyph(s.title),
-              label: s.title,
-              title: s.title,
-              image: w.subsystemImages[i] ?? undefined,
-              imageAlt: s.title,
-              content: renderStory(s.text),
-            }))}
-          />
-        </Box>
-      )}
+      {realSubsystems.length > 0 && (() => {
+        const tabs = realSubsystems.map((s, i) => ({
+          id: `${w.id}-${i}`,
+          icon: subsystemGlyph(s.title),
+          label: s.title,
+          title: s.title,
+          image: w.subsystemImages[i] ?? undefined,
+          imageAlt: s.title,
+          content: renderStory(s.text),
+        }));
+        return (
+          <>
+            {/* Vertical (mobile only, base → md) — fixed-size card. */}
+            <Box
+              display={{ base: 'flex', md: 'none' }}
+              width="418px"
+              height="627px"
+              mx="auto"
+              my="2xl"
+              padding="1.5rem"
+            >
+              <KammaraCardSubsystem
+                name={name}
+                category={subsystemsTitle}
+                color={palette.colors[0]}
+                darkColor={palette.dark}
+                crestGlyph={worldCrestGlyph(w.id)}
+                tabs={tabs}
+              />
+            </Box>
+            {/* Horizontal — Variant C cinematic (md+). Full width with
+                the same horizontal gutters as the rest of the page. */}
+            <Box
+              display={{ base: 'none', md: 'block' }}
+              width="100%"
+              my="2xl"
+              px={{ base: '25px', md: '2rem', xl: '3rem' }}
+            >
+              <KammaraCardSubsystemHorizontal
+                variant="C"
+                name={name}
+                category={subsystemsTitle}
+                color={palette.colors[0]}
+                darkColor={palette.dark}
+                crestGlyph={worldCrestGlyph(w.id)}
+                tabs={tabs}
+              />
+            </Box>
+          </>
+        );
+      })()}
 
       {/* ── Character gallery — full-width section with KammaraCharacterCard */}
       {(() => {
@@ -651,8 +676,9 @@ function WorldSection({
               color={worldColor}
               darkColor={worldDark}
               items={galleryItems}
+              minCardWidth={320}
               renderCard={(char) => (
-                <Box height={{ base: '620px', md: '680px' }}>
+                <Box height={{ base: '460px', md: '600px' }}>
                   <KammaraCharacterCard
                     name={char.name}
                     species={char.species}
@@ -781,34 +807,57 @@ function TriplecRegionSection({
           modalSubtitle={bodyText[0] || ''}
         />
       )}
-      {realSubsystems.length > 0 && (
-        <Box
-          width={{ base: '418px', md: '440px' }}
-          height={{ base: '627px', md: '660px' }}
-          mx="auto"
-          mt="-40px"
-          mb="2xl"
-          padding="1.5rem"
-          display="flex"
-        >
-          <KammaraCardSubsystem
-            name={name}
-            category={subsystemsTitle}
-            color={regionPalette.colors[0]}
-            darkColor={regionPalette.dark}
-            crestGlyph={worldCrestGlyph(regionId)}
-            tabs={realSubsystems.map((s, i) => ({
-              id: `${regionId}-${i}`,
-              icon: subsystemGlyph(s.title),
-              label: s.title,
-              title: s.title,
-              image: region.subsystemImages[i] ?? undefined,
-              imageAlt: s.title,
-              content: renderStory(s.text),
-            }))}
-          />
-        </Box>
-      )}
+      {realSubsystems.length > 0 && (() => {
+        const tabs = realSubsystems.map((s, i) => ({
+          id: `${regionId}-${i}`,
+          icon: subsystemGlyph(s.title),
+          label: s.title,
+          title: s.title,
+          image: region.subsystemImages[i] ?? undefined,
+          imageAlt: s.title,
+          content: renderStory(s.text),
+        }));
+        return (
+          <>
+            {/* Vertical (mobile only, base → md). */}
+            <Box
+              display={{ base: 'flex', md: 'none' }}
+              width="418px"
+              height="627px"
+              mx="auto"
+              mt="-40px"
+              mb="2xl"
+              padding="1.5rem"
+            >
+              <KammaraCardSubsystem
+                name={name}
+                category={subsystemsTitle}
+                color={regionPalette.colors[0]}
+                darkColor={regionPalette.dark}
+                crestGlyph={worldCrestGlyph(regionId)}
+                tabs={tabs}
+              />
+            </Box>
+            {/* Horizontal — Variant C cinematic (md+). */}
+            <Box
+              display={{ base: 'none', md: 'block' }}
+              width="100%"
+              my="2xl"
+              px={{ base: '25px', md: '2rem', xl: '3rem' }}
+            >
+              <KammaraCardSubsystemHorizontal
+                variant="C"
+                name={name}
+                category={subsystemsTitle}
+                color={regionPalette.colors[0]}
+                darkColor={regionPalette.dark}
+                crestGlyph={worldCrestGlyph(regionId)}
+                tabs={tabs}
+              />
+            </Box>
+          </>
+        );
+      })()}
 
       {/* ── Character gallery for the region ─────────── */}
       {(() => {
@@ -846,8 +895,9 @@ function TriplecRegionSection({
               color={regionPalette.colors[0]}
               darkColor={regionPalette.dark}
               items={galleryItems}
+              minCardWidth={320}
               renderCard={(char) => (
-                <Box height={{ base: '620px', md: '680px' }}>
+                <Box height={{ base: '460px', md: '600px' }}>
                   <KammaraCharacterCard
                     name={char.name}
                     species={char.species}

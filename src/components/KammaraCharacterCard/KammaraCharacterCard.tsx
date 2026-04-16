@@ -250,7 +250,11 @@ export function KammaraCharacterCard({
             }}
           />
 
-          {/* ── Character portrait area ───────────────── */}
+          {/* ── Character portrait area ─────────────────
+              On mobile the card is short (540px) so a full-flex portrait
+              steals too much space from the bio/attributes. Capping the
+              flex basis to 42% of the card keeps the image legible while
+              leaving room for the text below. Desktop stays unchanged. */}
           <Flex
             flex="1 1 auto"
             align="center"
