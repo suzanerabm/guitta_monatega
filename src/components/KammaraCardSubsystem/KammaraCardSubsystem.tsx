@@ -1,13 +1,15 @@
 'use client';
 import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
+import { KammaraRoulette, ROULETTE_SPHERE_SIZE, computeOrbitRadius } from '@/components/KammaraRoulette';
 
 // Shared layout constant: the card's horizontal padding.
 // The gate label and the roulette position both depend on this value,
 // so keep them in sync via this single source of truth.
 export const CARD_PADDING_X = '1.8rem';
 
-export interface KammaraCardTab {
+export interface KammaraCardSubsystemTab {
   id: string;
   icon: string;
   label: string;
@@ -17,18 +19,18 @@ export interface KammaraCardTab {
   content: ReactNode;
 }
 
-export interface KammaraCardStat {
+export interface KammaraCardSubsystemStat {
   icon: string;
   label: string;
   value: string;
 }
 
-export interface KammaraCardProps {
+export interface KammaraCardSubsystemProps {
   name: string;
   category: string;
   subtitle?: string;
-  tabs: KammaraCardTab[];
-  stats?: KammaraCardStat[];
+  tabs: KammaraCardSubsystemTab[];
+  stats?: KammaraCardSubsystemStat[];
   rarity?: number;
   crestGlyph?: string;
   color: string;
@@ -38,7 +40,7 @@ export interface KammaraCardProps {
   'data-testid'?: string;
 }
 
-export function KammaraCard({
+export function KammaraCardSubsystem({
   name,
   category,
   subtitle,
@@ -51,10 +53,33 @@ export function KammaraCard({
   midColor,
   theme = 'dark',
   'data-testid': testId,
-}: KammaraCardProps) {
+}: KammaraCardSubsystemProps) {
   const allItems = tabs;
 
-  const activeIndex = 0;
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [gateOpen, setGateOpen] = useState(true);
+  const [rouletteTop, setRouletteTop] = useState<string>('50%');
+  const cardRef = useRef<HTMLDivElement>(null);
+  const gateRef = useRef<HTMLDivElement>(null);
+
+  // Align the roulette's active sphere (at the top of the orbit) with the
+  // center of the gate. The active sphere sits at y = -ROULETTE_ORBIT_RADIUS
+  // from the roulette's center, so we offset the center downward by that amount.
+  useLayoutEffect(() => {
+    const measure = () => {
+      const card = cardRef.current;
+      const gate = gateRef.current;
+      if (!card || !gate) return;
+      const cardRect = card.getBoundingClientRect();
+      const gateRect = gate.getBoundingClientRect();
+      const gateCenter = gateRect.top + gateRect.height / 2 - cardRect.top;
+      const rouletteCenter = gateCenter + computeOrbitRadius(allItems.length);
+      setRouletteTop(`${rouletteCenter}px`);
+    };
+    measure();
+    window.addEventListener('resize', measure);
+    return () => window.removeEventListener('resize', measure);
+  }, [gateOpen]);
 
   const activeItem = allItems[activeIndex];
 
@@ -63,15 +88,37 @@ export function KammaraCard({
   const mutedText = isLight ? 'inkSoft' : 'bannerLabel';
   const body = midColor ?? darkColor;
 
+  const handleSelect = (index: number) => {
+    if (index === activeIndex) {
+      return;
+    }
+    setGateOpen(false);
+    setTimeout(() => {
+      setActiveIndex(index);
+      setGateOpen(true);
+    }, 200);
+  };
+
   return (
     <Box
-      data-testid={testId ?? 'kammara-card'}
+      ref={cardRef}
+      data-testid={testId ?? 'kammara-card-subsystem'}
       position="relative"
       width="100%"
       height="100%"
       borderRadius="32px"
       overflow="visible"
     >
+      <KammaraRoulette
+        items={allItems}
+        activeIndex={activeIndex}
+        onSelect={handleSelect}
+        color={color}
+        darkColor={darkColor}
+        cardPaddingX={CARD_PADDING_X}
+        top={rouletteTop}
+      />
+
       {/* ── Card body ──────────────────────────────────── */}
       <Box
         position="relative"
@@ -258,6 +305,52 @@ export function KammaraCard({
 
           {/* ── Body content (full width) ── */}
           <Flex direction="column" flex={1} minW={0} minH={0}>
+
+          {/* ── Gate overlay (descends when subsystem selected) ── */}
+          {(
+            <Box
+              ref={gateRef}
+              position="relative"
+              flexShrink={0}
+              overflow="hidden"
+              css={{
+                height: gateOpen ? '60px' : '0px',
+                opacity: gateOpen ? 1 : 0,
+                transition: 'height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease',
+                background: `linear-gradient(180deg, ${color}20, ${darkColor})`,
+                borderBottom: `1px solid ${color}40`,
+              }}
+            >
+              {/* Gate bars — iron gate effect */}
+              <Box
+                position="absolute"
+                inset={0}
+                pointerEvents="none"
+                css={{
+                  backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 8px, ${color}15 8px, ${color}15 9px)`,
+                }}
+              />
+              <Flex
+                align="center"
+                justify="flex-start"
+                height="100%"
+                padding={`0 ${CARD_PADDING_X}`}
+                paddingLeft={`calc(${CARD_PADDING_X} + ${ROULETTE_SPHERE_SIZE}px + 0.6rem)`}
+                position="relative"
+              >
+                <Text
+                  fontSize="xs"
+                  letterSpacing="widest"
+                  textTransform="uppercase"
+                  fontWeight="semibold"
+                  color={color}
+                  m={0}
+                >
+                  {activeItem.label}
+                </Text>
+              </Flex>
+            </Box>
+          )}
 
           {/* Stats bar */}
           {stats.length > 0 && (

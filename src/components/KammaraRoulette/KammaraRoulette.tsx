@@ -1,0 +1,217 @@
+'use client';
+import { Box } from '@chakra-ui/react';
+import { useEffect, useRef, useState } from 'react';
+
+// Geometry constants — shared with KammaraCard so the gate label padding
+// and the roulette horizontal offset stay in sync.
+export const ROULETTE_SPHERE_SIZE = 56; // diameter of each orbiting sphere in px (fits composite glyphs like ⊹⊙⊹)
+export const ROULETTE_ORBIT_RADIUS = 56; // base orbit radius in px — used as minimum; actual radius grows if needed to prevent sphere overlap
+export const ROULETTE_GAP_AFTER = 10; // breathing room between sphere and gate label in px
+/** Minimum gap between two adjacent spheres along the orbit (px). */
+export const ROULETTE_SPHERE_GAP = 8;
+
+/**
+ * Compute the orbit radius needed to fit N spheres without overlap.
+ * The chord between two adjacent points on a circle is 2*r*sin(π/N).
+ * For no overlap: 2*r*sin(π/N) >= sphereSize + gap → r >= (sphereSize + gap) / (2*sin(π/N)).
+ * Returns the larger of this minimum and the base radius, so we never shrink below it.
+ */
+export function computeOrbitRadius(itemCount: number): number {
+  if (itemCount <= 1) return ROULETTE_ORBIT_RADIUS;
+  const required = (ROULETTE_SPHERE_SIZE + ROULETTE_SPHERE_GAP) / (2 * Math.sin(Math.PI / itemCount));
+  return Math.max(ROULETTE_ORBIT_RADIUS, Math.ceil(required));
+}
+
+export interface KammaraRouletteItem {
+  id: string | null;
+  icon: string;
+  label: string;
+  title: string;
+}
+
+export interface KammaraRouletteProps {
+  items: KammaraRouletteItem[];
+  activeIndex: number;
+  onSelect: (index: number) => void;
+  color: string;
+  darkColor: string;
+  /** Horizontal padding of the parent card, used to align the active sphere over the gate label padding. */
+  cardPaddingX: string;
+  /** Vertical position of the active sphere relative to the card (CSS length, e.g. "50%" or "120px"). Default: "50%". */
+  top?: string;
+}
+
+export function KammaraRoulette({
+  items,
+  activeIndex,
+  onSelect,
+  color,
+  darkColor,
+  cardPaddingX,
+  top = '50%',
+}: KammaraRouletteProps) {
+  const [rouletteOpen, setRouletteOpen] = useState(true);
+  const [shooting, setShooting] = useState(false);
+  const hideTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const totalItems = items.length;
+  const r = computeOrbitRadius(totalItems);
+
+  const scheduleHide = () => {
+    if (hideTimer.current) clearTimeout(hideTimer.current);
+    hideTimer.current = setTimeout(() => {
+      setShooting(true);
+      setTimeout(() => {
+        setRouletteOpen(false);
+        setShooting(false);
+      }, 600);
+    }, 2500);
+  };
+
+  const showRoulette = () => {
+    if (hideTimer.current) clearTimeout(hideTimer.current);
+    setRouletteOpen(true);
+    scheduleHide();
+  };
+
+  useEffect(() => {
+    scheduleHide();
+    return () => { if (hideTimer.current) clearTimeout(hideTimer.current); };
+  }, []);
+
+  // Float keyframes
+  const floatKeyframes = items.map((_, i) => {
+    const offsetFromActive = ((i - activeIndex) % totalItems + totalItems) % totalItems;
+    const angle = (offsetFromActive / totalItems) * 2 * Math.PI - Math.PI / 2;
+    const x = Math.cos(angle) * r;
+    const y = Math.sin(angle) * r;
+    return `@keyframes kcFloat${i} {
+      0%, 100% { transform: translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) translateY(0); }
+      50% { transform: translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) translateY(-3px); }
+    }`;
+  }).join('\n');
+
+  // Shooting star keyframe
+  const shootSteps = 20;
+  const shootKf = `@keyframes kcShoot {
+${Array.from({ length: shootSteps + 1 }).map((_, s) => {
+    const pct = (s / shootSteps) * 100;
+    const a = -Math.PI / 2 + (s / shootSteps) * 2 * Math.PI;
+    const sx = Math.cos(a) * r;
+    const sy = Math.sin(a) * r;
+    const op = s < shootSteps * 0.8 ? 1 : 1 - ((s - shootSteps * 0.8) / (shootSteps * 0.2));
+    return `    ${pct.toFixed(0)}% { transform: translate(calc(-50% + ${sx.toFixed(1)}px), calc(-50% + ${sy.toFixed(1)}px)); opacity: ${op.toFixed(2)}; }`;
+  }).join('\n')}
+  }`;
+
+  return (
+    <>
+      <style>{floatKeyframes}{'\n'}{shootKf}</style>
+      <Box
+        position="absolute"
+        top={top}
+        left={`calc(${cardPaddingX} + ${ROULETTE_SPHERE_SIZE / 2}px)`}
+        zIndex={40}
+        overflow="visible"
+        onMouseEnter={showRoulette}
+        css={{
+          // (top, left) marks the LOGICAL CENTER of the orbit.
+          // Offset the box back by half its size so that (top, left) is
+          // the center, not the top-left corner.
+          transform: `translate(-50%, -50%)`,
+        }}
+        width={`${r * 2 + ROULETTE_SPHERE_SIZE}px`}
+        height={`${r * 2 + ROULETTE_SPHERE_SIZE}px`}
+      >
+        <Box
+          position="relative"
+          width="100%"
+          height="100%"
+        >
+          {items.map((item, i) => {
+            const isActive = i === activeIndex;
+            const offsetFromActive = ((i - activeIndex) % totalItems + totalItems) % totalItems;
+            const angle = (offsetFromActive / totalItems) * 2 * Math.PI - Math.PI / 2;
+            const x = Math.cos(angle) * r;
+            const y = Math.sin(angle) * r;
+            const floatDelay = `${i * -0.4}s`;
+            const visible = isActive || rouletteOpen;
+            const shootDelay = shooting && !isActive
+              ? `${(offsetFromActive / totalItems) * 0.6}s`
+              : '0s';
+
+            return (
+              <Box
+                key={item.id ?? 'home'}
+                as="button"
+                aria-label={item.label || item.title}
+                title={item.label || item.title}
+                onClick={() => isActive ? showRoulette() : onSelect(i)}
+                position="absolute"
+                top="50%"
+                left="50%"
+                width={`${ROULETTE_SPHERE_SIZE}px`}
+                height={`${ROULETTE_SPHERE_SIZE}px`}
+                borderRadius="50%"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                cursor="pointer"
+                zIndex={isActive ? 30 : 25}
+                style={{
+                  transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
+                  animation: `kcFloat${i} 3s ease-in-out infinite ${floatDelay}`,
+                  opacity: visible && !shooting ? 1 : isActive ? 1 : 0,
+                  pointerEvents: visible ? 'auto' : 'none',
+                  transitionProperty: 'opacity',
+                  transitionDuration: '0.25s',
+                  transitionTimingFunction: 'ease-out',
+                  transitionDelay: shooting && !isActive ? shootDelay : '0s',
+                }}
+                fontFamily="glyph"
+                fontSize="glyphH3"
+                lineHeight={1}
+                css={{
+                  border: isActive ? `2px solid ${color}` : `1px solid ${color}50`,
+                  background: isActive
+                    ? `radial-gradient(circle at 30% 30%, ${color}80, ${color}30 60%, ${darkColor})`
+                    : `${darkColor}dd`,
+                  color: isActive ? 'var(--chakra-colors-white)' : `${color}aa`,
+                  boxShadow: isActive
+                    ? `0 0 20px ${color}80, inset 0 1px 0 var(--chakra-colors-outlineStrong)`
+                    : `var(--chakra-shadows-card), inset 0 1px 0 var(--chakra-colors-outlineSoft)`,
+                  '&:hover': {
+                    borderColor: color,
+                    boxShadow: `0 0 16px ${color}60`,
+                    color: 'var(--chakra-colors-white)',
+                  },
+                }}
+              >
+                {item.icon}
+              </Box>
+            );
+          })}
+
+          {/* Shooting star particle */}
+          {shooting && (
+            <Box
+              position="absolute"
+              top="50%"
+              left="50%"
+              width="10px"
+              height="10px"
+              borderRadius="50%"
+              pointerEvents="none"
+              css={{
+                background: `radial-gradient(circle, var(--chakra-colors-white) 0%, ${color} 50%, transparent 100%)`,
+                boxShadow: `0 0 14px ${color}, 0 0 28px ${color}90, 0 0 6px var(--chakra-colors-white)`,
+                filter: 'blur(0.5px)',
+                animation: 'kcShoot 0.6s ease-in-out forwards',
+              }}
+            />
+          )}
+        </Box>
+      </Box>
+    </>
+  );
+}

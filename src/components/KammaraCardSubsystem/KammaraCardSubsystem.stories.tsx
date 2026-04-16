@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Box } from '@chakra-ui/react';
-import { KammaraCard } from './KammaraCard';
+import { KammaraCardSubsystem } from './KammaraCardSubsystem';
 
-const meta: Meta<typeof KammaraCard> = {
-  title: 'Kammara/KammaraCard',
-  component: KammaraCard,
+const meta: Meta<typeof KammaraCardSubsystem> = {
+  title: 'Kammara/KammaraCardSubsystem',
+  component: KammaraCardSubsystem,
   tags: ['autodocs'],
   parameters: { layout: 'centered' },
   decorators: [
@@ -17,7 +17,7 @@ const meta: Meta<typeof KammaraCard> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof KammaraCard>;
+type Story = StoryObj<typeof KammaraCardSubsystem>;
 
 // Icons use the semantic Kalún glyph assignments defined in
 // i18n pt.json → characters.kammara.lunnp1.subsystems["Os Glifos Kalún"]:
