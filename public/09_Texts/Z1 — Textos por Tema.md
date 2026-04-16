@@ -1,8 +1,10 @@
 
 
+# ⊷ ⊙ ⊷ Z1
+
 ---
 
-## Cultura
+## ⊶ ⊙ ⊷ Cultura
 
 ### Sem arte, sem festa
 Z1 não tem culinária, arte, festivais ou tempo livre. O que existe é trabalho contínuo, sem pressa e sem pausa.
@@ -24,7 +26,7 @@ Z1 não celebra. Z1 funciona. E funcionar é a forma mais alta de existir.
 
 ---
 
-## Habitantes & Castas
+## ⊙ • ⊙ Habitantes & Castas
 
 ### Sem carne, sem sangue
 Os habitantes de Z1 não são orgânicos. São estruturas vivas feitas de placas, trilhas, microcircuitos, núcleos e pulsos.
@@ -46,7 +48,7 @@ Cada ser nasce para uma função e permanece nela. Não existe mobilidade, não 
 
 ---
 
-## Geografia
+## ⊹ — ⊙ Geografia
 
 ### Ordem visual
 Z1 é um planeta sem caos visual. Tudo é simétrico, cúbico, translúcido ou metálico.
@@ -68,7 +70,7 @@ Névoa permanente — cinza, fria, luminosa. Sem sombras. A luz branca parece vi
 
 ---
 
-## Linguagem
+## ⊶ • • ⊷ Linguagem
 
 ### Executar, não falar
 Assembly Z1 não é falado. É executado. Toda frase é uma instrução que acontece no momento em que é dita.
@@ -90,7 +92,7 @@ Em Z1, silêncio não é ausência. É a instrução mais limpa que existe.
 
 ---
 
-## Origem & História
+## ⊹ ⊹ ⊹ Origem & História
 
 ### Era 0 — O Vazio
 Z1 era pedra mineral e silêncio absoluto. Nada existia. Nada pulsava.
@@ -112,7 +114,7 @@ O Esquadrão Sincrônico opera. A aliança com os Shal'ún está ativa. A guerra
 
 ---
 
-## Perigos
+## ⊶ ⊶ ⊶ Perigos
 
 ### ShortStorms
 Tempestades de curto-circuito. Não destroem — reorganizam. O planeta se recalibra sob tensão, mas não cai.

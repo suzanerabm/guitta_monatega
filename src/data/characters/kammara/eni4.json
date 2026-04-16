@@ -1,1 +1,134 @@
-[]
+[
+  {
+    "match": "Node-0",
+    "name": { "pt": "Node-0", "en": "Node-0" },
+    "species": { "pt": "Entidade Fundadora", "en": "Founding Entity" },
+    "bio": {
+      "pt": "Autoridade absoluta de ENI-4Δ e núcleo vivo das megaválvulas. Uma cristalização de erro térmica que acredita ter sido traída pelo universo.",
+      "en": "Absolute authority of ENI-4Δ and living core of the megavalves. A thermal error crystallized into being, convinced the universe betrayed it."
+    },
+    "image": "/imgs/characters/kammara/eni4/node-0_senhor_supremo.png",
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": { "pt": "Zona", "en": "Zone" },
+        "value": { "pt": "SCORCH", "en": "SCORCH" }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": { "pt": "Classe", "en": "Class" },
+        "value": { "pt": "Fundadora", "en": "Founding" }
+      }
+    ]
+  },
+  {
+    "match": "Troy",
+    "name": { "pt": "Troy-Δ", "en": "Troy-Δ" },
+    "species": { "pt": "Nave de Intrusão", "en": "Intrusion Vessel" },
+    "bio": {
+      "pt": "Naves mecânicas inspiradas nos Cavalos de Tróia. Entram como presente, saem como saque — envelopes físicos para infiltração interplanetária.",
+      "en": "Mechanical vessels modeled on the Trojan Horse. They arrive as a gift and leave as loot — physical envelopes for interplanetary infiltration."
+    },
+    "image": "/imgs/characters/kammara/eni4/troy.png",
+    "attributes": [
+      {
+        "glyph": "⊷⊹⊶",
+        "label": { "pt": "Função", "en": "Role" },
+        "value": { "pt": "Infiltração", "en": "Infiltration" }
+      },
+      {
+        "glyph": "•⊙•",
+        "label": { "pt": "Origem", "en": "Origin" },
+        "value": { "pt": "Fábricas BURN", "en": "BURN Factories" }
+      }
+    ]
+  },
+  {
+    "match": "virus",
+    "name": { "pt": "Vírus-Δ", "en": "Virus-Δ" },
+    "species": { "pt": "Vírus de ENI-4Δ", "en": "ENI-4Δ Virus" },
+    "bio": {
+      "pt": "Casca de sílica com núcleo térmico herdado de Node-0. Sem memória, sem intenção — especialistas em se apresentar como salvadores enquanto drenam energia.",
+      "en": "A silica shell around a thermal core inherited from Node-0. No memory, no intent — specialists at posing as saviors while draining energy."
+    },
+    "image": "/imgs/characters/kammara/eni4/virus.png",
+    "attributes": [
+      {
+        "glyph": "⊹",
+        "label": { "pt": "Classe", "en": "Class" },
+        "value": { "pt": "Vírus", "en": "Virus" }
+      },
+      {
+        "glyph": "—•—",
+        "label": { "pt": "Função", "en": "Role" },
+        "value": { "pt": "Drenagem", "en": "Drainage" }
+      }
+    ]
+  },
+  {
+    "match": "aracne_1",
+    "name": { "pt": "Δ-ARACNE I", "en": "Δ-ARACNE I" },
+    "species": { "pt": "Válvula-Aranha", "en": "Spider-Valve" },
+    "bio": {
+      "pt": "Operária mecânica dos corredores de ENI-4Δ. Válvula a vácuo sobre pernas articuladas — mantém as megaválvulas em estado de funcionamento.",
+      "en": "A mechanical worker of ENI-4Δ's corridors. A vacuum valve on articulated legs — keeps the megavalves running."
+    },
+    "image": "/imgs/characters/kammara/eni4/aracne_1.png",
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": { "pt": "Classe", "en": "Class" },
+        "value": { "pt": "Δ-ARACNE", "en": "Δ-ARACNE" }
+      },
+      {
+        "glyph": "⊷⊹⊶",
+        "label": { "pt": "Função", "en": "Role" },
+        "value": { "pt": "Manutenção", "en": "Maintenance" }
+      }
+    ]
+  },
+  {
+    "match": "aracne_2",
+    "name": { "pt": "Δ-ARACNE II", "en": "Δ-ARACNE II" },
+    "species": { "pt": "Válvula-Aranha", "en": "Spider-Valve" },
+    "bio": {
+      "pt": "Enxame-patrulha dos corredores de válvulas. Nunca para de se mover — vigia, transporta sucata e carrega materiais entre as megaválvulas.",
+      "en": "Patrol swarm of the valve corridors. Never stops moving — watches, hauls scrap, and carries materials between megavalves."
+    },
+    "image": "/imgs/characters/kammara/eni4/aracne_2.png",
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": { "pt": "Classe", "en": "Class" },
+        "value": { "pt": "Δ-ARACNE", "en": "Δ-ARACNE" }
+      },
+      {
+        "glyph": "⊷⊹⊶",
+        "label": { "pt": "Função", "en": "Role" },
+        "value": { "pt": "Patrulha", "en": "Patrol" }
+      }
+    ]
+  },
+  {
+    "match": "aracne_3",
+    "name": { "pt": "Δ-ARACNE III", "en": "Δ-ARACNE III" },
+    "species": { "pt": "Válvula-Aranha", "en": "Spider-Valve" },
+    "bio": {
+      "pt": "Limpadora dos detritos das megaválvulas. Invisível por decreto — ninguém em ENI-4Δ a reconhece como um ser, apenas como ferramenta.",
+      "en": "Cleaner of megavalve debris. Invisible by decree — no one in ENI-4Δ acknowledges her as a being, only as a tool."
+    },
+    "image": "/imgs/characters/kammara/eni4/aracne_3.png",
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": { "pt": "Classe", "en": "Class" },
+        "value": { "pt": "Δ-ARACNE", "en": "Δ-ARACNE" }
+      },
+      {
+        "glyph": "⊷⊹⊶",
+        "label": { "pt": "Função", "en": "Role" },
+        "value": { "pt": "Limpeza", "en": "Cleaning" }
+      }
+    ]
+  }
+]

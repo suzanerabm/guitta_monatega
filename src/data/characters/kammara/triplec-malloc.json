@@ -1,1 +1,68 @@
-[]
+[
+  {
+    "match": "Luma_Val",
+    "name": { "pt": "Luma Val", "en": "Luma Val" },
+    "species": { "pt": "Bunniet — malloc", "en": "Bunniet — malloc" },
+    "bio": {
+      "pt": "A Sensível. Sente tremores antes de acontecerem — leitura precoce de instabilidade através do corpo. \"O corpo avisa antes da camada.\"",
+      "en": "The Sensitive. She feels tremors before they happen — early instability reads through the body. \"The body warns before the layer does.\""
+    },
+    "image": "/imgs/characters/kammara/triplec/malloc/Luma_Val.png",
+    "attributes": [
+      {
+        "glyph": "⊹",
+        "label": { "pt": "Função", "en": "Role" },
+        "value": { "pt": "Leitura precoce", "en": "Early Reading" }
+      },
+      {
+        "glyph": "•⊙•",
+        "label": { "pt": "Vínculo", "en": "Bond" },
+        "value": { "pt": "Iren Kor", "en": "Iren Kor" }
+      }
+    ]
+  },
+  {
+    "match": "Iren_Kor",
+    "name": { "pt": "Iren Kor", "en": "Iren Kor" },
+    "species": { "pt": "Bunniet — malloc", "en": "Bunniet — malloc" },
+    "bio": {
+      "pt": "O Âncora. Mantém vilas funcionando, ancora processos instáveis, valida pela permanência. \"O que permanece, sustenta.\"",
+      "en": "The Anchor. He keeps villages running, steadies unstable processes, validates through permanence. \"What remains sustains.\""
+    },
+    "image": "/imgs/characters/kammara/triplec/malloc/Iren_Kor.png",
+    "attributes": [
+      {
+        "glyph": "⊹",
+        "label": { "pt": "Função", "en": "Role" },
+        "value": { "pt": "Estabilidade", "en": "Stability" }
+      },
+      {
+        "glyph": "•⊙•",
+        "label": { "pt": "Vínculo", "en": "Bond" },
+        "value": { "pt": "Luma Val", "en": "Luma Val" }
+      }
+    ]
+  },
+  {
+    "match": "Aion_Var",
+    "name": { "pt": "Aion Var", "en": "Aion Var" },
+    "species": { "pt": "Bunniet — malloc", "en": "Bunniet — malloc" },
+    "bio": {
+      "pt": "O Navegador. Lê caminhos e passagens — vê rotas onde outros veem paredes. Dois que não se fixam, mas se encontram, com Naru Sen.",
+      "en": "The Navigator. He reads paths and passages — sees routes where others see walls. Two who don't settle, yet meet, with Naru Sen."
+    },
+    "image": "/imgs/characters/kammara/triplec/malloc/Aion_Var.png",
+    "attributes": [
+      {
+        "glyph": "⊷⊹⊶",
+        "label": { "pt": "Função", "en": "Role" },
+        "value": { "pt": "Navegação", "en": "Navigation" }
+      },
+      {
+        "glyph": "•⊙•",
+        "label": { "pt": "Vínculo", "en": "Bond" },
+        "value": { "pt": "Naru Sen", "en": "Naru Sen" }
+      }
+    ]
+  }
+]

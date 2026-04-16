@@ -1,1 +1,46 @@
-[]
+[
+  {
+    "match": "orvian",
+    "name": { "pt": "Orvian", "en": "Orvian" },
+    "species": { "pt": "Orviano", "en": "Orvian" },
+    "bio": {
+      "pt": "A ponte que não cai. Sustenta o fluxo para que outros atravessem — presença estável que não força, apenas aguenta.",
+      "en": "The bridge that does not fall. He sustains the flow so others can cross — a steady presence that does not push, only endures."
+    },
+    "image": "/imgs/characters/kammara/orfv/orvian.png",
+    "attributes": [
+      {
+        "glyph": "⊹",
+        "label": { "pt": "Polaridade", "en": "Polarity" },
+        "value": { "pt": "Yin", "en": "Yin" }
+      },
+      {
+        "glyph": "•⊙•",
+        "label": { "pt": "Função", "en": "Role" },
+        "value": { "pt": "Sustentação", "en": "Sustenance" }
+      }
+    ]
+  },
+  {
+    "match": "orvian1",
+    "name": { "pt": "Orvian II", "en": "Orvian II" },
+    "species": { "pt": "Orviano", "en": "Orvian" },
+    "bio": {
+      "pt": "Outra face dos orvianos — mesma calma, outro caminho. Em ORF-V, sustentar é tanto vocação quanto herança.",
+      "en": "Another face of the Orvians — same calm, different path. In ORF-V, holding is as much a calling as a legacy."
+    },
+    "image": "/imgs/characters/kammara/orfv/orvian1.png",
+    "attributes": [
+      {
+        "glyph": "⊹",
+        "label": { "pt": "Polaridade", "en": "Polarity" },
+        "value": { "pt": "Yin", "en": "Yin" }
+      },
+      {
+        "glyph": "•⊙•",
+        "label": { "pt": "Função", "en": "Role" },
+        "value": { "pt": "Sustentação", "en": "Sustenance" }
+      }
+    ]
+  }
+]

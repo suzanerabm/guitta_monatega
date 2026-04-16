@@ -1,8 +1,10 @@
 
 
+# ⊷ ⊶ Gotto
+
 ---
 
-## Cultura
+## ⊶ ⊙ ⊷ Cultura
 
 ### O ritmo
 A vida Basik segue o ritmo do planeta. A manhã é o INPUT — hora de absorver, de ficar curioso, de prestar atenção no que chega. A tarde é o PRINT — arte feita com cristais, conversas longas, tudo vindo para fora. A noite é o GOTO — hora de recolher e reiniciar.
@@ -24,7 +26,7 @@ Gotto nunca para de começar. Cada reinício é uma nova infância.
 
 ---
 
-## Habitantes — Basiks
+## ⊙ • ⊙ Habitantes — Basiks
 
 ### Aparência
 Seres esféricos e bicolores — metade branca, metade preta. Sem pescoço, sem dedos, sem passado fixo. Dois olhos binários: o Olho-0 e o Olho-1.
@@ -46,7 +48,7 @@ São pequenos, redondos e imparáveis. A leveza mais bonita do universo — e ta
 
 ---
 
-## Geografia
+## ⊹ — ⊙ Geografia
 
 ### Linhas, não nomes
 As regiões de Gotto são numeradas como linhas de código. Não têm nome — têm número.
@@ -68,7 +70,7 @@ Depois de cada GOTO, as cidades mudam de lugar. Os caminhos somem. O que era map
 
 ---
 
-## Ciclos & Tempo
+## ⊶ — ⊶ Ciclos & Tempo
 
 ### O tempo não avança
 O tempo em Gotto não avança. Ele recomeça. Cada GOTO é um reinício completo.
@@ -90,7 +92,7 @@ Gotto não envelhece. Gotto recomeça. E cada recomeço é idêntico ao anterior
 
 ---
 
-## Relações com Outros Planetas
+## ⊶ — ⊙ — ⊷ Relações com Outros Planetas
 
 ### LUNN'P1
 Relação ancestral e profunda. A Fenda Shal'ún marcou os Basiks no próprio corpo — os glifos nas suas costas são herança direta dos Shal'ún. Quando se encontram, há reconhecimento imediato.
@@ -112,7 +114,7 @@ Para quem precisa deixar marca, Gotto é insuportável. Para quem precisa de al�
 
 ---
 
-## Perigos
+## ⊶ ⊶ ⊶ Perigos
 
 ### Proteção e prisão
 O GOTO dissolve ameaças — mas dissolve também o aprendizado. Protege e aprisiona ao mesmo tempo.

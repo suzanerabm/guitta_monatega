@@ -1,8 +1,10 @@
 
 
+# ⊙ ⊙ ⊙ TripleC
+
 ---
 
-## A Origem
+## ⊹ ⊹ ⊹ A Origem
 
 ### O mundo antes
 Antes do PD-11, TripleC era um planeta inteiramente coberto pela Niul Forest. Profundo, lento, ancestral. Um mundo do elemento Terra-Viva, onde tudo respirava junto e nada tinha pressa.
@@ -27,7 +29,7 @@ TripleC nunca quis ser tecnológico. Aconteceu. E aprendeu a transformar o acaso
 
 ---
 
-## A Niul Forest
+## ⊹ — ⊹ A Niul Forest
 
 ### O pulmão vivo
 A Niul Forest é a floresta ancestral que cobria o planeta inteiro antes do PD-11. Hoje ocupa o espaço entre todas as regiões — profunda, antiga, com neblina azul constante, raízes elevadas e entrelaçadas.
@@ -49,7 +51,7 @@ A Niul Forest não evolui em direção à lógica nem volta a ser pura natureza.
 
 ---
 
-## Os Bunniets
+## ⊙ • ⊙ Os Bunniets
 
 ### O que são
 Os bunniets são a única espécie nativa inteligente de TripleC. São bio-lógicos — parte orgânica, parte mineral, parte instrução viva. Não são robôs. Não são puramente biológicos. São vida que pensa com o corpo.
@@ -71,7 +73,7 @@ Onde outros ouvem ruído, bunniets ouvem ordem. Onde outros veem caos, bunniets 
 
 ---
 
-## As Castas
+## • • • • • As Castas
 
 ### O ciclo natural
 A sociedade bunniet segue um ritmo próprio. Não é imposto — é natureza. Cada bunniet nasce em uma casta, e permanece nela. Cinco castas, cada uma com seu papel, e juntas fazem o planeta funcionar.
@@ -93,7 +95,7 @@ Executa, resolve e age. E entre os Runa, a elite Runa-Tora guarda os corredores 
 
 ---
 
-## A Kemita e o Cshift
+## ⊙ ⊹ ⊙ A Kemita e o Cshift
 
 ### A kemita
 O recurso mais importante do universo inteiro nasce em TripleC. Metade mineral, metade lógica, metade orgânica. Verde-esmeralda. Sem kemita, não existe Hash. Não existe Cshift. Não existem registros imutáveis no universo.
@@ -115,7 +117,7 @@ Da kemita nasce o bloco. Da cadeia nasce o destino. E de TripleC nasce tudo que 
 
 ---
 
-## A Tríade e o Protocol AURYN
+## ⊹ ⊙ ⊹ ⊙ ⊹ A Tríade e o Protocol AURYN
 
 ### A Tríade das Raízes
 TripleC, Z1 e LUNN'P1 formam a Tríade das Raízes — o eixo mais antigo, mais sábio e mais poderoso do Kammara. Juntos, são conhecidos como os Guardiões das Eras Iniciais.
@@ -137,7 +139,7 @@ TripleC é o coração que pulsa energia, memória, rotas de viagem e proteção
 
 ---
 
-## O CriptoKemita
+## ⊶ ⊶ ⊶ O CriptoKemita
 
 ### A defesa suprema
 Quando TripleC é ameaçado de verdade, ativa o CriptoKemita — uma criptografia viva que transforma o planeta inteiro em um enigma.

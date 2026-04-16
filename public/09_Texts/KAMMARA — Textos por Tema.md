@@ -1,11 +1,13 @@
 
 
+# ⊹ ⊙ ⊹ Kammara
+
 ### Resumo
 Kammara — um universo onde memória é matéria e toda matéria é bio-lógica. Bilhões de planetas, vírus que se infiltram sem serem notados, e os poucos que ousam resistir.
 
 ---
 
-## O Universo
+## ⊹ ⊙ ⊹ O Universo
 
 ### O que é o Kammara
 Kammara é um universo onde memória é matéria — e toda matéria é bio-lógica. Não é só um planeta ou uma galáxia. São bilhões de mundos, cada um com sua própria identidade, seu próprio povo, sua própria forma de existir.
@@ -24,7 +26,7 @@ O que na Terra era descarte, no Kammara virou semente. E ninguém na Terra jamai
 
 ---
 
-## A Kemita
+## ⊙ ⊹ ⊙ A Kemita
 
 ### O token primordial
 No centro de tudo existe a kemita — um recurso único, metade mineral, metade lógica, metade orgânica. Verde-esmeralda. Nasce nas cavernas profundas de um único planeta e alimenta todo o universo.
@@ -43,7 +45,7 @@ Da kemita nasce o bloco. Da cadeia nasce o destino. E de um único planeta nasce
 
 ---
 
-## O Cshift
+## ⊷ ⊙ ⊶ O Cshift
 
 ### O transporte entre mundos
 O Cshift é o sistema que conecta o Kammara inteiro. Não são naves. Não são portais fixos. São passagens instantâneas abertas por pequenos objetos chamados Sementes de Cshift.
@@ -65,7 +67,7 @@ O Cshift não é só viagem. É o fio invisível que mantém o universo conectad
 
 ---
 
-## Os Vírus
+## ⋄ • ⋄ Os Vírus
 
 ### O que são
 Os vírus são seres que não produzem nada. Apenas consomem. Não criam energia, não geram memória, não sustentam nada por conta própria. Dependem inteiramente do que conseguem tirar dos outros.
@@ -84,7 +86,7 @@ Quando os sintomas aparecem, a invasão já terminou.
 
 ---
 
-## O Protocol AURYN
+## ⊶ ⊹ ⊷ O Protocol AURYN
 
 ### A aliança
 Quando crises virais ameaçam múltiplos planetas ao mesmo tempo, é ativado o Protocol AURYN — a aliança de resposta coordenada do Kammara. Não é uma organização permanente. É um chamado. E quando o chamado soa, os planetas respondem.
@@ -103,7 +105,7 @@ Sozinho, nenhum planeta aguenta. Juntos, o Kammara ainda tem chance.
 
 ---
 
-## A Tríade das Raízes
+## ⊹ ⊙ ⊹ ⊙ ⊹ A Tríade das Raízes
 
 ### Os guardiões
 Três planetas formam o eixo mais antigo, mais sábio e mais poderoso do Kammara: LUNN'P1, Z1 e TripleC. Juntos, são chamados de Guardiões das Eras Iniciais.
@@ -125,7 +127,7 @@ Três planetas diferentes. Uma só raiz. E o universo inteiro apoiado sobre eles
 
 ---
 
-## A Guerra
+## ⋄ ⊶ ⊷ A Guerra
 
 ### Não é entre o bem e o mal
 No Kammara, a guerra não é entre o bem e o mal. É entre quem cria e quem consome. Entre quem sustenta energia viva e quem só sabe drenar a energia dos outros.

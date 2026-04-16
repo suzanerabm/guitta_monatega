@@ -1,8 +1,10 @@
 
 
+# ⊙ — ⊹ — ⊙ LUNN'P1
+
 ---
 
-## Cultura
+## ⊶ ⊙ ⊷ Cultura
 
 ### Sem hierarquia
 Em LUNN'P1, ninguém manda. Não existe governo, não existe chefe, não existe votação. Quando um grupo entra em sintonia, a direção aparece sozinha.
@@ -24,7 +26,7 @@ Em LUNN'P1, ninguém decide onde as cidades vão. Elas simplesmente vão.
 
 ---
 
-## Flora & Fauna
+## • ⊹ • Flora & Fauna
 
 ### Sem predadores
 Não existe fauna predatória em LUNN'P1. Não existe competição entre espécies. Tudo coexiste.
@@ -46,7 +48,7 @@ As Lunas-folhas mudam de cor conforme a lua dominante. Raízes ancestrais guarda
 
 ---
 
-## Geografia
+## ⊹ — ⊙ Geografia
 
 ### Um mundo vivo
 LUNN'P1 não tem zonas secas, metálicas ou urbanas. Tudo é orgânico e luminoso.
@@ -68,7 +70,7 @@ Não existe mapa permanente. As Naru'ei se movem. Os caminhos mudam. A geografia
 
 ---
 
-## Ciclos & Luas
+## ⊶ — ⊶ Ciclos & Luas
 
 ### Sem sol
 LUNN'P1 não tem sol. O ritmo do planeta é regido por quatro luas — sempre visíveis no céu, uma dominante por vez.
@@ -90,7 +92,7 @@ Um dia dura cerca de 40 horas. Um ano, 400 dias lunares. Mas os Shal'ún não me
 
 ---
 
-## Linguagem
+## ⊶ • • ⊷ Linguagem
 
 ### Três formas
 Em LUNN'P1 existem três formas de comunicação — e nenhuma delas usa só palavras.
@@ -112,7 +114,7 @@ Em LUNN'P1, ninguém "passa informação". Quem fala, emite luz. Quem ouve, muda
 
 ---
 
-## Os Glifos Kalún
+## ⊶ • • ⊷ Os Glifos Kalún
 
 ### O que são
 Glifos são símbolos luminosos usados pelos Shal'ún. Não representam palavras — representam estados, intenções, momentos. Cada glifo carrega um significado próprio, e combinados contam histórias inteiras em luz.
@@ -168,7 +170,7 @@ Em momentos importantes, glifos mais complexos aparecem na água, nas raízes ou
 
 ---
 
-## Os Glifos Kalún — Referência Rápida
+## ⊶ • • ⊷ Os Glifos Kalún — Referência Rápida
 
 ### Os seis glifos base
 
@@ -237,7 +239,7 @@ Os glifos não são escritos por alguém — se revelam sozinhos:
 
 ---
 
-## A Água — Lún'Rai
+## — • — A Água — Lún'Rai
 
 ### Não é só água
 A Lún'Rai funciona como o sistema nervoso do planeta — conecta tudo e registra tudo.

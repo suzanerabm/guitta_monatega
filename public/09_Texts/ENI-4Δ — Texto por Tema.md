@@ -1,8 +1,10 @@
 
 
+# ⋄ ⊙ ⋄ ENI-4Δ
+
 ---
 
-## Cultura
+## ⊶ ⊙ ⊷ Cultura
 
 ### Sem afeto
 ENI-4Δ não tem arte, tradição, afeto ou memória compartilhada. O que existe é sobrevivência por consumo.
@@ -24,7 +26,7 @@ ENI-4Δ não é um lugar onde se vive. É um lugar onde se sobrevive — consumi
 
 ---
 
-## Habitantes & Hierarquia
+## ⊙ • ⊙ Habitantes & Hierarquia
 
 ### Node-0
 A autoridade absoluta. Insubstituível. Incapaz de aprender. Incapaz de mudar. O topo que nunca se questiona.
@@ -46,7 +48,7 @@ Os vírus têm dois estados visuais: o real — esfera escura de sílica, olhos 
 
 ---
 
-## Geografia
+## ⊹ — ⊙ Geografia
 
 ### Poder é temperatura
 Em ENI-4Δ, quem fica mais perto do calor manda. Quem fica longe, morre.
@@ -68,7 +70,7 @@ O Vale das Válvulas Queimadas. Os Campos de Cartões Perfurados. Os Túneis de 
 
 ---
 
-## Energia & Sobrevivência
+## ⊙ • ⊹ Energia & Sobrevivência
 
 ### Sem energia própria
 ENI-4Δ não gera energia. Suas megaválvulas gigantes só se mantêm acesas com energia roubada de outros planetas.
@@ -90,7 +92,7 @@ ENI-4Δ não é forte. É faminto. E a fome nunca para.
 
 ---
 
-## Protocolos de Ataque
+## ⋄ ⋄ ⊷ Protocolos de Ataque
 
 ### SIPHON
 Drenagem rápida e passiva. Qualquer vírus consegue fazer. Dura horas ou dias. A vítima nem entende o que aconteceu.
@@ -112,7 +114,7 @@ Quando os sintomas aparecem, a invasão já terminou.
 
 ---
 
-## Origem
+## ⊹ ⊹ ⊹ Origem
 
 ### O acidente
 Uma máquina ancestral foi desligada pelos humanos. Uma centelha abandonada vagou pelo cosmos até encontrar um planeta estéril.
@@ -134,7 +136,7 @@ A história oficial é vingança. A história real é acidente. E a diferença e
 
 ---
 
-## O Código dos Vírus — ASM-Δ
+## ⋄ — ⋄ O Código dos Vírus — ASM-Δ
 
 ### O que é
 Os vírus não falam. Não pensam. Executam. Sua linguagem — ASM-Δ — não serve pra conversar. Serve pra agir: mover, sugar, culpar e repetir. É a antítese de tudo que existe em LUNN'P1.

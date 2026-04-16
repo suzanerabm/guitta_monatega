@@ -84,9 +84,10 @@ export function KammaraCharacterGallery<T>({
   const [page, setPage] = useState(0);
 
   useLayoutEffect(() => {
+    const el = gridRef.current;
+    if (!el) return;
+
     const measure = () => {
-      const el = gridRef.current;
-      if (!el) return;
       const w = el.getBoundingClientRect().width;
       const isMobile = window.innerWidth < 768;
       if (isMobile) {
@@ -95,12 +96,21 @@ export function KammaraCharacterGallery<T>({
       }
       // Desktop: how many cards of minCardWidth fit side-by-side with cardGap?
       // Formula: (w + gap) / (card + gap) — gives us a clean count.
-      const fit = Math.max(1, Math.floor((w + cardGap) / (minCardWidth + cardGap)));
+      // Add 1px of tolerance so sub-pixel rounding doesn't steal a slot.
+      const fit = Math.max(1, Math.floor((w + cardGap + 1) / (minCardWidth + cardGap)));
       setPerPage(fit);
     };
+
     measure();
+    // ResizeObserver picks up container size changes (parent layout shifting,
+    // fonts loading, etc) that window resize wouldn't catch.
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
     window.addEventListener('resize', measure);
-    return () => window.removeEventListener('resize', measure);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener('resize', measure);
+    };
   }, [minCardWidth, cardGap]);
 
   const totalPages = Math.max(1, Math.ceil(items.length / perPage));
@@ -124,10 +134,10 @@ export function KammaraCharacterGallery<T>({
         data-testid={testId ?? 'kammara-character-gallery'}
         position="relative"
         width="100%"
-        padding={{ base: 'md', md: 'lg', xl: 'xl' }}
+        padding={{ base: 'md', md: 'lg' }}
         borderRadius="24px"
         css={{
-          background: `linear-gradient(160deg, ${darkColor}cc 0%, ${darkColor}99 50%, ${darkColor}cc 100%)`,
+          background: `linear-gradient(160deg, ${darkColor}33 0%, ${darkColor}26 50%, ${darkColor}33 100%)`,
           border: `1px solid ${color}40`,
           outline: `1px solid ${color}80`,
           outlineOffset: '4px',

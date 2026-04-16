@@ -1,8 +1,10 @@
 
 
+# ⊶ ⊙ ⊶ ⊙ ⊶ Mesh
+
 ---
 
-## Cultura
+## ⊶ ⊙ ⊷ Cultura
 
 ### Rotina
 Os bunniets de Mesh passam seus ciclos dando forma ao que ainda não existe, moldando a geologia com precisão, estabilizando as passagens de Cshift e cuidando das Torres-Template.
@@ -24,7 +26,7 @@ Em Mesh, ninguém constrói por construir. Cada forma existe porque precisa exis
 
 ---
 
-## Bunniets
+## ⊙ • ⊙ Bunniets
 
 ### Aparência
 Mais altos e mais definidos que os bunniets de malloc. Padrões geométricos brilhantes pulsam na pele. Antenas mais estruturadas captam fluxos coerentes. Ossatura reforçada por filamentos lineares.
@@ -46,7 +48,7 @@ Bunniets de Mesh não são rígidos. São estruturados. A diferença é que estr
 
 ---
 
-## Geografia
+## ⊹ — ⊙ Geografia
 
 ### Cidades vivas
 Cidades inteiras se comportam como organismos. Os edifícios crescem e se recolhem conforme a necessidade. Caminhos surgem onde antes não havia nada. Portais geométricos se abrem e se fecham. Cada cidade tem uma assinatura própria — um jeito só dela de responder ao que acontece dentro.
@@ -68,7 +70,7 @@ O norte de Mesh é mais artístico. O centro é mais técnico. O sul conserva tr
 
 ---
 
-## Energia
+## ⊙ • ⊹ Energia
 
 ### Poli-fluxo
 A energia das possibilidades simultâneas. Flui em Mesh como um rio que se divide em muitos braços ao mesmo tempo — todos reais, todos disponíveis.
@@ -90,7 +92,7 @@ Em Mesh, energia não é bruta — é arquitetada. Cada fluxo tem um nome, um pr
 
 ---
 
-## Governança
+## ⊶ ⊷ ⊙ Governança
 
 ### Sistema
 Mesh é governada pela Ordem Modular — um sistema político baseado em coerência estrutural.
@@ -112,7 +114,7 @@ Mantêm a coerência de toda a região. Quando uma parte começa a contradizer o
 
 ---
 
-## Perigos
+## ⊶ ⊶ ⊶ Perigos
 
 ### Falhas de coerência
 Quando duas estruturas se contradizem, cidades inteiras podem cair. A coerência é o que mantém Mesh de pé — e também o que a torna vulnerável.

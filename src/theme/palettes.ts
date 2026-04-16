@@ -87,7 +87,7 @@ export const palettes: Record<PaletteName, Palette> = {
     // colors[2] = body text (verde-menta quase off-white, mantém identidade)
     // colors[3] = world heading h1 (lavanda ainda mais clara pra máximo destaque)
     // colors[0/4/5] = usados em gradients e acentos, não viram texto
-    colors: ['#3d2266', '#a78bfa', '#d4e8d4', '#c4b5fd', '#0e3a1a', '#1a4a30'],
+    colors: ['#a78bfa', '#b09dea', '#d4e8d4', '#c4b5fd', '#0e3a1a', '#1a4a30'],
     text: '#0e3a1a',
     // Used by FilterBar chrome tint — roxo-profundo vibrante em vez de
     // quase-preto, pra ser perceptível junto com os outros mundos.

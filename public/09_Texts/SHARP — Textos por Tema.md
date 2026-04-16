@@ -1,8 +1,10 @@
 
 
+# ⊹ ⊙ ⊷ Sharp
+
 ---
 
-## Cultura
+## ⊶ ⊙ ⊷ Cultura
 
 ### Rotina
 Os bunniets de Sharp executam verificações energéticas, mantêm as torres de validação, supervisionam fluxos interplanetários e auxiliam nas operações do Cshift Universal.
@@ -24,7 +26,7 @@ Em Sharp, nada é aprovado por pressa. Tudo passa pelo mesmo filtro — e o filt
 
 ---
 
-## Bunniets
+## ⊙ • ⊙ Bunniets
 
 ### Aparência
 Altos, delgados, mais claros que os bunniets das outras regiões. Extremamente elegantes. Pele branca com circuitos prateados visíveis. Ossatura leve, mas rígida.
@@ -46,7 +48,7 @@ Bunniets de Sharp não comem. Absorvem luz prateada, metadado puro e shilo filtr
 
 ---
 
-## Geografia
+## ⊹ — ⊙ Geografia
 
 ### Território de luz
 Sharp é um vasto território de luz branca prateada, com geometrias fluidas e superfícies polidas. Não há asperezas visuais — cada forma foi validada antes de existir.
@@ -68,7 +70,7 @@ Conexões entre Sharp e Mesh. Só abrem quando toda a coerência está intacta d
 
 ---
 
-## Energia
+## ⊙ • ⊹ Energia
 
 ### MetaFlux
 A energia dos metadados — o que organiza tudo em Sharp. Toda informação, toda permissão, toda validação passa pelo MetaFlux.
@@ -90,7 +92,7 @@ Em Sharp, energia não flui livre. Flui supervisionada. E o que não pode ser va
 
 ---
 
-## Governança
+## ⊶ ⊷ ⊙ Governança
 
 ### Conselho de Gerência Sistêmica
 A autoridade máxima de Sharp. Aprova fluxos, valida rotas interplanetárias, supervisiona o Cshift e impede corrupção viral. É o último filtro antes de qualquer decisão.
@@ -112,7 +114,7 @@ Em Sharp, governança não é hierarquia. É validação contínua. Cada decisã
 
 ---
 
-## Perigos
+## ⊶ ⊶ ⊶ Perigos
 
 ### O Congelamento
 O pior desastre. Quando o Coletor Vivo congela, toda a região entra em paralisia. Nada flui, nada é validado, nada se move. Até que o núcleo se recupere, Sharp para no tempo.

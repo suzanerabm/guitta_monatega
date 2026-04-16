@@ -344,18 +344,34 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
           {/* Characters moved to a dedicated KammaraCharacterGallery below. */}
           <SoonPanel label={tCommon('soon')} />
         </DSMainCard>
-        {kammaraChars.length > 0 && (() => {
+        {(() => {
           const contextId = 'kammara/kammara';
           const characterData = getCharactersForContext(contextId);
-          const galleryItems = kammaraChars.map((c) => {
-            const char = characterData.find((cd) => cd.match.toLowerCase().trim() === c.name.toLowerCase().trim());
-            return {
-              name: char ? getCharLocalizedName(char, locale) : translateName(c.name, words),
-              species: char ? getLocalizedSpecies(char, locale) : '',
-              bio: char ? getLocalizedBio(char, locale) : '',
-              image: c.image,
-            };
-          });
+          const galleryItems = characterData
+            .map((char) => {
+              const manifestMatch = kammaraChars.find(
+                (c) => c.name.toLowerCase().trim() === char.match.toLowerCase().trim(),
+              );
+              const image = char.image ?? manifestMatch?.image;
+              if (!image) return null;
+              return {
+                name: getCharLocalizedName(char, locale),
+                species: getLocalizedSpecies(char, locale),
+                bio: getLocalizedBio(char, locale),
+                image,
+                backImage: char.backImage,
+                backTitle: char.backTitle?.[locale],
+                dorsalMeaning: char.dorsalMeaning?.[locale],
+                backMeaning: char.backMeaning?.[locale],
+                attributes: char.attributes?.map((a) => ({
+                  glyph: a.glyph,
+                  label: a.label[locale],
+                  value: a.value[locale],
+                })),
+              };
+            })
+            .filter((x): x is NonNullable<typeof x> => x !== null);
+          if (galleryItems.length === 0) return null;
           return (
             <Box width="100%" my="2xl" px={{ base: "25px", md: "2rem", xl: "3rem" }}>
               <KammaraCharacterGallery
@@ -371,6 +387,11 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
                       species={char.species}
                       bio={char.bio}
                       image={char.image}
+                      backImage={char.backImage}
+                      backTitle={char.backTitle}
+                      dorsalMeaning={char.dorsalMeaning}
+                      backMeaning={char.backMeaning}
+                      attributes={char.attributes}
                       worldName={sectionName}
                       worldCrestGlyph={worldCrestGlyph('kammara')}
                       color={kammaraPalette.colors[0]}
@@ -593,23 +614,39 @@ function WorldSection({
       )}
 
       {/* ── Character gallery — full-width section with KammaraCharacterCard */}
-      {w.chars.length > 0 && (() => {
+      {(() => {
         const worldColor = palette.colors[0];
         const worldDark = palette.dark;
-        const worldMid = palette.colors[4];
         const worldCrest = worldCrestGlyph(w.id);
         const contextId = `kammara/${w.id}`;
         const characterData = getCharactersForContext(contextId);
-        // Match manifest entries with narrative data so each card gets name/species/bio.
-        const galleryItems = w.chars.map((c) => {
-          const char = characterData.find((cd) => cd.match.toLowerCase().trim() === c.name.toLowerCase().trim());
-          return {
-            name: char ? getCharLocalizedName(char, locale) : translateName(c.name, words),
-            species: char ? getLocalizedSpecies(char, locale) : '',
-            bio: char ? getLocalizedBio(char, locale) : '',
-            image: c.image,
-          };
-        });
+        // Kammara characters are driven by the JSON (single source of truth).
+        // Manifest images are a fallback for legacy entries without `image`.
+        const galleryItems = characterData
+          .map((char) => {
+            const manifestMatch = w.chars.find(
+              (c) => c.name.toLowerCase().trim() === char.match.toLowerCase().trim(),
+            );
+            const image = char.image ?? manifestMatch?.image;
+            if (!image) return null;
+            return {
+              name: getCharLocalizedName(char, locale),
+              species: getLocalizedSpecies(char, locale),
+              bio: getLocalizedBio(char, locale),
+              image,
+              backImage: char.backImage,
+              backTitle: char.backTitle?.[locale],
+              dorsalMeaning: char.dorsalMeaning?.[locale],
+              backMeaning: char.backMeaning?.[locale],
+              attributes: char.attributes?.map((a) => ({
+                glyph: a.glyph,
+                label: a.label[locale],
+                value: a.value[locale],
+              })),
+            };
+          })
+          .filter((x): x is NonNullable<typeof x> => x !== null);
+        if (galleryItems.length === 0) return null;
         return (
           <Box width="100%" my="2xl" px={{ base: "25px", md: "2rem", xl: "3rem" }}>
             <KammaraCharacterGallery
@@ -625,11 +662,15 @@ function WorldSection({
                     species={char.species}
                     bio={char.bio}
                     image={char.image}
+                    backImage={char.backImage}
+                    backTitle={char.backTitle}
+                    dorsalMeaning={char.dorsalMeaning}
+                    backMeaning={char.backMeaning}
+                    attributes={char.attributes}
                     worldName={name}
                     worldCrestGlyph={worldCrest}
                     color={worldColor}
                     darkColor={worldDark}
-                    midColor={worldMid}
                   />
                 </Box>
               )}
@@ -777,17 +818,33 @@ function TriplecRegionSection({
       )}
 
       {/* ── Character gallery for the region ─────────── */}
-      {region.chars.length > 0 && (() => {
+      {(() => {
         const characterData = getCharactersForContext(contextId);
-        const galleryItems = region.chars.map((c) => {
-          const char = characterData.find((cd) => cd.match.toLowerCase().trim() === c.name.toLowerCase().trim());
-          return {
-            name: char ? getCharLocalizedName(char, locale) : translateName(c.name, words),
-            species: char ? getLocalizedSpecies(char, locale) : '',
-            bio: char ? getLocalizedBio(char, locale) : '',
-            image: c.image,
-          };
-        });
+        const galleryItems = characterData
+          .map((char) => {
+            const manifestMatch = region.chars.find(
+              (c) => c.name.toLowerCase().trim() === char.match.toLowerCase().trim(),
+            );
+            const image = char.image ?? manifestMatch?.image;
+            if (!image) return null;
+            return {
+              name: getCharLocalizedName(char, locale),
+              species: getLocalizedSpecies(char, locale),
+              bio: getLocalizedBio(char, locale),
+              image,
+              backImage: char.backImage,
+              backTitle: char.backTitle?.[locale],
+              dorsalMeaning: char.dorsalMeaning?.[locale],
+              backMeaning: char.backMeaning?.[locale],
+              attributes: char.attributes?.map((a) => ({
+                glyph: a.glyph,
+                label: a.label[locale],
+                value: a.value[locale],
+              })),
+            };
+          })
+          .filter((x): x is NonNullable<typeof x> => x !== null);
+        if (galleryItems.length === 0) return null;
         return (
           <Box width="100%" my="2xl" px={{ base: "25px", md: "2rem", xl: "3rem" }}>
             <KammaraCharacterGallery
@@ -803,6 +860,11 @@ function TriplecRegionSection({
                     species={char.species}
                     bio={char.bio}
                     image={char.image}
+                    backImage={char.backImage}
+                    backTitle={char.backTitle}
+                    dorsalMeaning={char.dorsalMeaning}
+                    backMeaning={char.backMeaning}
+                    attributes={char.attributes}
                     worldName={name}
                     worldCrestGlyph={worldCrestGlyph(regionId)}
                     color={regionPalette.colors[0]}

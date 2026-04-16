@@ -1,8 +1,10 @@
 
 
+# ⊶ — ⋄ — ⊷ ORF-V
+
 ---
 
-## Cultura
+## ⊶ ⊙ ⊷ Cultura
 
 ### Cuidado coletivo
 Em ORF-V, a rotina gira em torno de cuidar junto. Manter as pontes, vigiar as bordas, partilhar comida e energia. Tudo acontece em grupo.
@@ -24,7 +26,7 @@ Em ORF-V, o que mantém tudo funcionando não são regras. É o cuidado de uns c
 
 ---
 
-## Habitantes — ElePHPants
+## ⊙ • ⊙ Habitantes — ElePHPants
 
 ### Aparência
 Seres esféricos e volumosos, de pelo curto e denso em várias cores — roxo, azul, rosa, verde, cinza-azulado. Tromba curta, orelhas pequenas, cauda fina com uma bolinha na ponta.
@@ -46,7 +48,7 @@ Não são fracos. São gentis. E a diferença é exatamente o que os vírus não
 
 ---
 
-## Geografia
+## ⊹ — ⊙ Geografia
 
 ### As ilhas
 O planeta interno é feito de fjorks altíssimos de terra firme erguidos sobre grandes extensões de água.
@@ -68,7 +70,7 @@ ORF-V é um mundo que vive de equilíbrio imperfeito. Nada é garantido — tudo
 
 ---
 
-## Comunicação
+## ⊶ • • ⊷ Comunicação
 
 ### Sem palavras
 Os elePHPants não falam com palavras. Falam com tons — sons que carregam intenção inteira, sem precisar de gramática.
@@ -90,7 +92,7 @@ Em ORF-V, quando alguém fala, o importante não é o que diz — é que está a
 
 ---
 
-## Conflitos
+## ⊶ ⋄ ⊷ Conflitos
 
 ### Sem guerra
 O conflito de ORF-V não é bélico. Não há exércitos, armas ou estratégia militar.
@@ -112,7 +114,7 @@ O maior perigo de ORF-V não vem de fora. Vem da dificuldade de dizer não.
 
 ---
 
-## Perigos
+## ⊶ ⊶ ⊶ Perigos
 
 ### Infiltração pelo vácuo
 A ameaça mais constante e silenciosa. Quando o vácuo enfraquece, a proteção do planeta cede.

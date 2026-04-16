@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "match": "SELKA RIN",
+    "name": { "pt": "Selka Rin", "en": "Selka Rin" },
+    "species": { "pt": "Bunniet — Sharp", "en": "Bunniet — Sharp" },
+    "bio": {
+      "pt": "Guardiã de decisões difíceis em Sharp — onde se sustenta, contém e encerra. Cada gesto é peso que outros não suportam.",
+      "en": "Keeper of hard calls in Sharp — where things are held, contained, and ended. Every gesture carries weight others can't bear."
+    },
+    "image": "/imgs/characters/kammara/triplec/sharp/SELKA RIN.png",
+    "attributes": [
+      {
+        "glyph": "⊶",
+        "label": { "pt": "Região", "en": "Region" },
+        "value": { "pt": "Sharp", "en": "Sharp" }
+      },
+      {
+        "glyph": "•⊙•",
+        "label": { "pt": "Função", "en": "Role" },
+        "value": { "pt": "Contenção", "en": "Containment" }
+      }
+    ]
+  }
+]

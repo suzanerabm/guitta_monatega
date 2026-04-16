@@ -1,17 +1,117 @@
 [
   {
     "match": "Erú'Rin",
-    "name": {
-      "pt": "Erú'Rin",
-      "en": "Erú'Rin"
-    },
-    "species": {
-      "pt": "Shal'ún",
-      "en": "Shal'ún"
-    },
+    "name": { "pt": "Erú'Rin", "en": "Erú'Rin" },
+    "species": { "pt": "Shal'ún", "en": "Shal'ún" },
     "bio": {
       "pt": "Um dos Shal'ún que cuidam das flores-lume em LUNN'P1. Planta e protege a vegetação luminosa que ilumina as quatro luas do planeta.",
       "en": "One of the Shal'ún who tend to the flor-lume in LUNN'P1. Plants and protects the luminous vegetation that lights up the four moons of the planet."
-    }
+    },
+    "image": "/imgs/characters/kammara/lunnp1/Erú'Rin.png",
+    "backImage": "/imgs/characters/kammara/lunnp1/Erú'Rin_costas.png",
+    "dorsalMeaning": {
+      "pt": "O glifo dorsal de Erú'Rin traduz o caminho de quem cuida das raízes que sustentam o mundo.",
+      "en": "Erú'Rin's dorsal glyph traces the path of one who tends the roots that sustain the world."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊹⊷",
+        "label": { "pt": "Protocolo", "en": "Protocol" },
+        "value": { "pt": "AURYN", "en": "AURYN" }
+      },
+      {
+        "glyph": "—•—",
+        "label": { "pt": "Afinidade", "en": "Affinity" },
+        "value": { "pt": "Água", "en": "Water" }
+      }
+    ]
+  },
+  {
+    "match": "Lúm'Esha",
+    "name": { "pt": "Lúm'Esha", "en": "Lúm'Esha" },
+    "species": { "pt": "Shal'ún", "en": "Shal'ún" },
+    "bio": {
+      "pt": "Presença quente e acolhedora de LUNN'P1. Onde Lúm'Esha passa, o ambiente se reorganiza mais leve — ela não ocupa o espaço, ela o convida.",
+      "en": "The warm, welcoming presence of LUNN'P1. Where Lúm'Esha walks, the environment lightens — she doesn't occupy space, she invites it to open."
+    },
+    "image": "/imgs/characters/kammara/lunnp1/Lúm'Esha.png",
+    "attributes": [
+      {
+        "glyph": "⊶⊹⊷",
+        "label": { "pt": "Protocolo", "en": "Protocol" },
+        "value": { "pt": "AURYN", "en": "AURYN" }
+      },
+      {
+        "glyph": "⊹",
+        "label": { "pt": "Lún'Kai", "en": "Lún'Kai" },
+        "value": { "pt": "Flor-Lume", "en": "Flor-Lume" }
+      }
+    ]
+  },
+  {
+    "match": "Brisa",
+    "name": { "pt": "Brisa", "en": "Brisa" },
+    "species": { "pt": "Lún'Kai", "en": "Lún'Kai" },
+    "bio": {
+      "pt": "Lún'Kai de Erú'Rin. Fragmento senciente do próprio LUNN'P1, brilha em verde-azulado profundo para que seu Shal'ún nunca se perca.",
+      "en": "Erú'Rin's Lún'Kai. A sentient fragment of LUNN'P1 itself, it glows deep cyan-green so its Shal'ún never loses the path."
+    },
+    "image": "/imgs/characters/kammara/lunnp1/Brisa.png",
+    "attributes": [
+      {
+        "glyph": "⊹",
+        "label": { "pt": "Vínculo", "en": "Bond" },
+        "value": { "pt": "Erú'Rin", "en": "Erú'Rin" }
+      },
+      {
+        "glyph": "•⊙•",
+        "label": { "pt": "Luz", "en": "Light" },
+        "value": { "pt": "Verde-água", "en": "Cyan-green" }
+      }
+    ]
+  },
+  {
+    "match": "Tzi'Ki",
+    "name": { "pt": "Tzi'Ki", "en": "Tzi'Ki" },
+    "species": { "pt": "Tzir'Kai", "en": "Tzir'Kai" },
+    "bio": {
+      "pt": "Tzir'Kai de Erú'Rin, tradutor primário do Click-Δ. Um híbrido de grilo e camarão feito de sílica viva — o corpo inteiro funciona como antena sensorial.",
+      "en": "Erú'Rin's Tzir'Kai, primary Click-Δ translator. A cricket-shrimp hybrid made of living silica — its whole body works as a sensory antenna."
+    },
+    "image": "/imgs/characters/kammara/lunnp1/Tzi'Ki .png",
+    "attributes": [
+      {
+        "glyph": "⊷⊹⊶",
+        "label": { "pt": "Função", "en": "Role" },
+        "value": { "pt": "Click-Δ", "en": "Click-Δ" }
+      },
+      {
+        "glyph": "⊹",
+        "label": { "pt": "Vínculo", "en": "Bond" },
+        "value": { "pt": "Erú'Rin", "en": "Erú'Rin" }
+      }
+    ]
+  },
+  {
+    "match": "Túri'Kan",
+    "name": { "pt": "Túri'Kan", "en": "Túri'Kan" },
+    "species": { "pt": "Tartaruga vibracional", "en": "Vibrational Turtle" },
+    "bio": {
+      "pt": "Tartarugas gigantes de casco bioluminescente. Parceiras de viagem dos Shal'ún — não montarias — carregam aldeias inteiras pelas Naru'ei.",
+      "en": "Giant turtles with bioluminescent shells. Travel partners of the Shal'ún — not mounts — they carry whole villages across the Naru'ei."
+    },
+    "image": "/imgs/characters/kammara/lunnp1/Túri’Kan.png",
+    "attributes": [
+      {
+        "glyph": "—•—",
+        "label": { "pt": "Afinidade", "en": "Affinity" },
+        "value": { "pt": "Água", "en": "Water" }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": { "pt": "Função", "en": "Role" },
+        "value": { "pt": "Transporte", "en": "Transport" }
+      }
+    ]
   }
 ]

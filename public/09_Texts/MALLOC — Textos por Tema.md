@@ -1,8 +1,10 @@
 
 
+# • ⊙ malloc
+
 ---
 
-## Cultura
+## ⊶ ⊙ ⊷ Cultura
 
 ### Rotina
 Os dias de malloc não seguem relógios — seguem as vibrações das camadas. Inspeção de túneis, coleta de minerais, registros Aska nas runas de Portex, ajuste de rotas entre vilas.
@@ -24,7 +26,7 @@ Em malloc, o dia não começa porque alguém decidiu. Começa quando a Estaka pu
 
 ---
 
-## Bunniets
+## ⊙ • ⊙ Bunniets
 
 ### Aparência
 Corpo compacto e arredondado, 30 a 40 centímetros. Pelagem curta em tons bege, verde ou ferrugem. Orelhas longas com circuitos integrados. Olhos negros e brilhantes.
@@ -46,7 +48,7 @@ Uma elite rara entre os Runa — um em cada cinco mil. Ossatura com densidade mi
 
 ---
 
-## Geografia
+## ⊹ — ⊙ Geografia
 
 ### Cinco camadas geológicas
 Portex é a superfície cristalizada, onde instruções e runas se formam. Datara tem túneis estáveis de shilo. Basa é feita de cavernas de matéria potencial. Hepa é a camada criadora, origem de kemita. Estaka é o abismo profundo das decisões finais.
@@ -68,7 +70,7 @@ Em malloc, rituais também são geografia. Eles acontecem em lugares específico
 
 ---
 
-## Energia
+## ⊙ • ⊹ Energia
 
 ### Shilo
 A energia de endereço — flui como rios luminosos em teal pelos túneis de Datara. Para os bunniets, shilo é bússola, alimento e estabilizador emocional ao mesmo tempo.
@@ -90,7 +92,7 @@ Algo mora nas vibrações das camadas. Sem forma, sem voz definida — só prese
 
 ---
 
-## Governança
+## ⊶ ⊷ ⊙ Governança
 
 ### Sem governo
 Não há governo em malloc. Há interpretação de camadas. O planeta fala — os bunniets escutam.
@@ -112,7 +114,7 @@ Em malloc, ninguém manda. O planeta decide. O bunniet responde.
 
 ---
 
-## Perigos
+## ⊶ ⊶ ⊶ Perigos
 
 ### Segmentation Fault
 O pior desastre. Quando camadas se contradizem, vilas desaparecem, shilo fragmenta, runas se corrompem. É o terror coletivo de todo bunniet.

@@ -1,1 +1,46 @@
-[]
+[
+  {
+    "match": "cast",
+    "name": { "pt": "Elenco Z1", "en": "Z1 Ensemble" },
+    "species": { "pt": "Castas Vivas", "en": "Living Castes" },
+    "bio": {
+      "pt": "Z1 não possui indivíduos — possui funções vivas. ZEUS, Lai, Aruun, Vexa, Kaal, Synn, Ren e Rhen operam como o ciclo sistêmico do planeta.",
+      "en": "Z1 has no individuals — only living functions. ZEUS, Lai, Aruun, Vexa, Kaal, Synn, Ren and Rhen run the planet's systemic cycle."
+    },
+    "image": "/imgs/characters/kammara/z1/cast.png",
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": { "pt": "Castas", "en": "Castes" },
+        "value": { "pt": "8 funções", "en": "8 functions" }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": { "pt": "Arquétipo", "en": "Archetype" },
+        "value": { "pt": "O Herói", "en": "The Hero" }
+      }
+    ]
+  },
+  {
+    "match": "emo-1",
+    "name": { "pt": "EMO-Δ1", "en": "EMO-Δ1" },
+    "species": { "pt": "Estudo Emocional", "en": "Emotional Study" },
+    "bio": {
+      "pt": "Primeira investigação de afeto em Z1 — um planeta que rejeita o vivo e o imperfeito. Frieza disfarçada de eficiência começa, aqui, a rachar.",
+      "en": "The first inquiry into affect on Z1 — a planet that rejects the living and the imperfect. Coldness disguised as efficiency begins, here, to crack."
+    },
+    "image": "/imgs/characters/kammara/z1/emo-1.jpg",
+    "attributes": [
+      {
+        "glyph": "⊹",
+        "label": { "pt": "Estágio", "en": "Stage" },
+        "value": { "pt": "Δ1", "en": "Δ1" }
+      },
+      {
+        "glyph": "•⊙•",
+        "label": { "pt": "Registro", "en": "Record" },
+        "value": { "pt": "Experimental", "en": "Experimental" }
+      }
+    ]
+  }
+]
