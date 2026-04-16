@@ -51,6 +51,7 @@ export function KammaraCard({
   const [activeIndex, setActiveIndex] = useState(0);
   const [gateOpen, setGateOpen] = useState(true);
   const [rouletteOpen, setRouletteOpen] = useState(true);
+  const [shooting, setShooting] = useState(false);
 
   const activeItem = allItems[activeIndex];
 
@@ -74,7 +75,13 @@ export function KammaraCard({
 
   const scheduleHide = () => {
     if (hideTimer.current) clearTimeout(hideTimer.current);
-    hideTimer.current = setTimeout(() => setRouletteOpen(false), 2500);
+    hideTimer.current = setTimeout(() => {
+      setShooting(true);
+      setTimeout(() => {
+        setRouletteOpen(false);
+        setShooting(false);
+      }, 600);
+    }, 2500);
   };
 
   const showRoulette = () => {
@@ -104,9 +111,22 @@ export function KammaraCard({
     }`;
   }).join('\n');
 
+  // Shooting star keyframe — traces the orbit path
+  const shootSteps = 20;
+  const shootKf = `@keyframes kcShoot {
+${Array.from({ length: shootSteps + 1 }).map((_, s) => {
+    const pct = (s / shootSteps) * 100;
+    const a = -Math.PI / 2 + (s / shootSteps) * 2 * Math.PI;
+    const sx = Math.cos(a) * r;
+    const sy = Math.sin(a) * r;
+    const op = s < shootSteps * 0.8 ? 1 : 1 - ((s - shootSteps * 0.8) / (shootSteps * 0.2));
+    return `    ${pct.toFixed(0)}% { transform: translate(calc(-50% + ${sx.toFixed(1)}px), calc(-50% + ${sy.toFixed(1)}px)); opacity: ${op.toFixed(2)}; }`;
+  }).join('\n')}
+  }`;
+
   return (
     <>
-    <style>{floatKeyframes}</style>
+    <style>{floatKeyframes}{'\n'}{shootKf}</style>
     <Box
       data-testid={testId ?? 'kammara-card'}
       position="relative"
@@ -140,8 +160,12 @@ export function KammaraCard({
             const angle = (offsetFromActive / totalItems) * 2 * Math.PI - Math.PI / 2;
             const x = Math.cos(angle) * r;
             const y = Math.sin(angle) * r;
-            const delay = `${i * -0.4}s`;
+            const floatDelay = `${i * -0.4}s`;
             const visible = isActive || rouletteOpen;
+            // When shooting, each non-active sphere hides with a delay synced to the star passing it
+            const shootDelay = shooting && !isActive
+              ? `${(offsetFromActive / totalItems) * 0.6}s`
+              : '0s';
 
             return (
               <Box
@@ -163,13 +187,15 @@ export function KammaraCard({
                 zIndex={isActive ? 30 : 25}
                 style={{
                   transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
-                  animation: `kcFloat${i} 3s ease-in-out infinite ${delay}`,
-                  opacity: visible ? 1 : 0,
+                  animation: `kcFloat${i} 3s ease-in-out infinite ${floatDelay}`,
+                  opacity: visible && !shooting ? 1 : isActive ? 1 : 0,
                   pointerEvents: visible ? 'auto' : 'none',
-                  transition: 'opacity 0.4s ease',
+                  transitionProperty: 'opacity',
+                  transitionDuration: '0.25s',
+                  transitionTimingFunction: 'ease-out',
+                  transitionDelay: shooting && !isActive ? shootDelay : '0s',
                 }}
                 css={{
-                  transition: 'border 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, opacity 0.4s ease',
                   fontFamily: 'var(--chakra-fonts-glyph)',
                   fontSize: '1.2rem',
                   lineHeight: 1,
@@ -192,6 +218,25 @@ export function KammaraCard({
               </Box>
             );
           })}
+
+          {/* Shooting star particle */}
+          {shooting && (
+            <Box
+              position="absolute"
+              top="50%"
+              left="50%"
+              width="10px"
+              height="10px"
+              borderRadius="50%"
+              pointerEvents="none"
+              css={{
+                background: `radial-gradient(circle, #fff 0%, ${color} 50%, transparent 100%)`,
+                boxShadow: `0 0 14px ${color}, 0 0 28px ${color}90, 0 0 6px #fff`,
+                filter: 'blur(0.5px)',
+                animation: 'kcShoot 0.6s ease-in-out forwards',
+              }}
+            />
+          )}
         </Box>
       </Box>
 
