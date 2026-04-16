@@ -98,11 +98,11 @@ export function KammaraCard({
       borderRadius="32px"
       overflow="visible"
     >
-      {/* ── Roulette menu (floating over card) ───── */}
+      {/* ── Roulette menu (floating over card, centered on gate circle) ───── */}
       <Box
         position="absolute"
         top="50%"
-        left="0"
+        left="calc(1.8rem + 22px)"
         transform="translateY(-50%)"
         zIndex={40}
         overflow="visible"
@@ -115,7 +115,7 @@ export function KammaraCard({
           height="140px"
           css={{
             opacity: rouletteOpen ? 1 : 0,
-            transform: rouletteOpen ? 'scale(1) translateX(-30%)' : 'scale(0.3) translateX(-30%)',
+            transform: rouletteOpen ? 'scale(1) translate(-50%, -50%)' : 'scale(0.3) translate(-50%, -50%)',
             transition: 'opacity 0.4s ease, transform 0.4s ease',
             pointerEvents: rouletteOpen ? 'auto' : 'none',
           }}
@@ -422,29 +422,10 @@ export function KammaraCard({
               <Flex
                 align="center"
                 justify="flex-start"
-                gap="0.6rem"
                 padding="0.8rem 1.8rem"
+                paddingLeft="calc(1.8rem + 44px + 0.6rem)"
                 position="relative"
               >
-                <Box
-                  width="30px"
-                  height="30px"
-                  borderRadius="50%"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  css={{
-                    border: `1.5px solid ${color}`,
-                    background: `radial-gradient(circle at 30% 30%, ${color}50, ${color}15 60%, transparent)`,
-                    boxShadow: `0 0 10px ${color}50`,
-                    fontFamily: 'var(--chakra-fonts-glyph)',
-                    fontSize: '0.9rem',
-                    lineHeight: 1,
-                    color: color,
-                  }}
-                >
-                  {activeItem.icon}
-                </Box>
                 <Text
                   fontSize="0.65rem"
                   letterSpacing="0.25em"
