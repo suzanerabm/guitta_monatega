@@ -8,8 +8,10 @@ import { CreatureSection } from '@/components/CreatureSection';
 import { KammaraPlanetTitle } from '@/components/KammaraPlanetTitle';
 import { KammaraCard } from '@/components/KammaraCard';
 import { KammaraCardRegion } from '@/components/KammaraCardRegion';
+import { KammaraCharacterCard } from '@/components/KammaraCharacterCard';
+import { KammaraCharacterGallery } from '@/components/KammaraCharacterGallery';
+import { getCharactersForContext, getLocalizedBio, getLocalizedName as getCharLocalizedName, getLocalizedSpecies } from '@/lib/characters';
 import { DSMainCard } from '@/components/DSMainCard';
-import { CharacterStrip } from '@/components/CharacterStrip';
 import { SceneStrip } from '@/components/SceneStrip';
 import { KammaraCardSubsystem, KammaraCardSubsystemContainer } from '@/components/KammaraCardSubsystem';
 import { RegionDivider } from '@/components/RegionDivider';
@@ -339,25 +341,47 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
           glyphVariant="universe"
           text={renderStory(sectionStory)}
         >
-          {kammaraChars.length > 0 ? (
-            <CharacterStrip
-              characters={kammaraChars.map((c) => ({
-                ...c,
-                name: translateName(c.name, words),
-              }))}
-              gradient={kammaraPalette.gradient}
-              cardSize={200}
-              noFloat
-              transparent
-              speed={120}
-              inStripSide
-              contextId="kammara/kammara"
-              locale={locale}
-            />
-          ) : (
-            <SoonPanel label={tCommon('soon')} />
-          )}
+          {/* Characters moved to a dedicated KammaraCharacterGallery below. */}
+          <SoonPanel label={tCommon('soon')} />
         </DSMainCard>
+        {kammaraChars.length > 0 && (() => {
+          const contextId = 'kammara/kammara';
+          const characterData = getCharactersForContext(contextId);
+          const galleryItems = kammaraChars.map((c) => {
+            const char = characterData.find((cd) => cd.match.toLowerCase().trim() === c.name.toLowerCase().trim());
+            return {
+              name: char ? getCharLocalizedName(char, locale) : translateName(c.name, words),
+              species: char ? getLocalizedSpecies(char, locale) : '',
+              bio: char ? getLocalizedBio(char, locale) : '',
+              image: c.image,
+            };
+          });
+          return (
+            <Box width="100%" my="2xl" px={{ base: "25px", md: "2rem", xl: "3rem" }}>
+              <KammaraCharacterGallery
+                title={`${charactersTitle} · ${sectionName}`}
+                worldCrestGlyph={worldCrestGlyph('kammara')}
+                color={kammaraPalette.colors[0]}
+                darkColor={kammaraPalette.dark}
+                items={galleryItems}
+                renderCard={(char) => (
+                  <Box height={{ base: '620px', md: '680px' }}>
+                    <KammaraCharacterCard
+                      name={char.name}
+                      species={char.species}
+                      bio={char.bio}
+                      image={char.image}
+                      worldName={sectionName}
+                      worldCrestGlyph={worldCrestGlyph('kammara')}
+                      color={kammaraPalette.colors[0]}
+                      darkColor={kammaraPalette.dark}
+                    />
+                  </Box>
+                )}
+              />
+            </Box>
+          );
+        })()}
         {kammaraBooks.length > 0 && (
           <BookGallery
             title={t('booksTitle')}
@@ -408,6 +432,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
                   tCommon={tCommon}
                   scenesTitle={scenesTitle}
                   subsystemsTitle={subsystemsTitle}
+                  charactersTitle={charactersTitle}
                   safeT={safeT}
                   safeTRaw={safeTRaw}
                 />
@@ -519,31 +544,8 @@ function WorldSection({
           />
         )}
       >
-        {/* Side column inside the banner: CharacterStrip on top,
-            SceneStrip below. Both share the column height 50/50
-            via the `& > *` flex rule in DSMainCard's stripSide slot. */}
-        {w.chars.length > 0 ? (
-          <CharacterStrip
-            characters={w.chars.map((c) => ({
-              ...c,
-              name: translateName(c.name, words),
-            }))}
-            gradient={palette.gradient}
-            cardSize={200}
-            noFloat
-            transparent
-            labelColor={colors.titleDestaque}
-            arrowColor={colors.titleDestaque}
-            mobileColor={colors.title}
-            sectionTitle={charactersTitle}
-            speed={100}
-            inStripSide
-            contextId={`kammara/${w.id}`}
-            locale={locale}
-          />
-        ) : (
-          <SoonPanel label={tCommon('soon')} color={palette.colors[0]} />
-        )}
+        {/* Side column inside the banner: SceneStrip only now. Characters
+            moved to a dedicated KammaraCharacterGallery section below. */}
         {w.scenes.length > 0 && (
           <SceneStrip
             scenes={w.scenes.map((s) => ({
@@ -589,6 +591,52 @@ function WorldSection({
           />
         </Box>
       )}
+
+      {/* ── Character gallery — full-width section with KammaraCharacterCard */}
+      {w.chars.length > 0 && (() => {
+        const worldColor = palette.colors[0];
+        const worldDark = palette.dark;
+        const worldMid = palette.colors[4];
+        const worldCrest = worldCrestGlyph(w.id);
+        const contextId = `kammara/${w.id}`;
+        const characterData = getCharactersForContext(contextId);
+        // Match manifest entries with narrative data so each card gets name/species/bio.
+        const galleryItems = w.chars.map((c) => {
+          const char = characterData.find((cd) => cd.match.toLowerCase().trim() === c.name.toLowerCase().trim());
+          return {
+            name: char ? getCharLocalizedName(char, locale) : translateName(c.name, words),
+            species: char ? getLocalizedSpecies(char, locale) : '',
+            bio: char ? getLocalizedBio(char, locale) : '',
+            image: c.image,
+          };
+        });
+        return (
+          <Box width="100%" my="2xl" px={{ base: "25px", md: "2rem", xl: "3rem" }}>
+            <KammaraCharacterGallery
+              title={`${charactersTitle} · ${name}`}
+              worldCrestGlyph={worldCrest}
+              color={worldColor}
+              darkColor={worldDark}
+              items={galleryItems}
+              renderCard={(char) => (
+                <Box height={{ base: '620px', md: '680px' }}>
+                  <KammaraCharacterCard
+                    name={char.name}
+                    species={char.species}
+                    bio={char.bio}
+                    image={char.image}
+                    worldName={name}
+                    worldCrestGlyph={worldCrest}
+                    color={worldColor}
+                    darkColor={worldDark}
+                    midColor={worldMid}
+                  />
+                </Box>
+              )}
+            />
+          </Box>
+        );
+      })()}
     </CreatureSection>
   );
 }
@@ -609,6 +657,7 @@ interface TriplecRegionSectionProps {
   tCommon: ReturnType<typeof useTranslations>;
   scenesTitle: string;
   subsystemsTitle: string;
+  charactersTitle: string;
   safeT: (key: string, fallback?: string) => string;
   safeTRaw: <T>(key: string, fallback: T) => T;
 }
@@ -622,6 +671,7 @@ function TriplecRegionSection({
   tCommon,
   scenesTitle,
   subsystemsTitle,
+  charactersTitle,
   safeT,
   safeTRaw,
 }: TriplecRegionSectionProps) {
@@ -658,13 +708,6 @@ function TriplecRegionSection({
         name={name}
         color={regionColor}
         gradient={regionPalette.gradient}
-        characters={region.chars.map((c) => ({
-          ...c,
-          name: translateName(c.name, words),
-        }))}
-        contextId={contextId}
-        locale={locale}
-        soonLabel={tCommon('soon')}
         data-testid={`region-banner-${regionId}`}
         story={renderStory(panelStory)}
         renderPanel={({ name: regionName, color: regionPanelColor, story }) => (
@@ -732,6 +775,45 @@ function TriplecRegionSection({
           />
         </Box>
       )}
+
+      {/* ── Character gallery for the region ─────────── */}
+      {region.chars.length > 0 && (() => {
+        const characterData = getCharactersForContext(contextId);
+        const galleryItems = region.chars.map((c) => {
+          const char = characterData.find((cd) => cd.match.toLowerCase().trim() === c.name.toLowerCase().trim());
+          return {
+            name: char ? getCharLocalizedName(char, locale) : translateName(c.name, words),
+            species: char ? getLocalizedSpecies(char, locale) : '',
+            bio: char ? getLocalizedBio(char, locale) : '',
+            image: c.image,
+          };
+        });
+        return (
+          <Box width="100%" my="2xl" px={{ base: "25px", md: "2rem", xl: "3rem" }}>
+            <KammaraCharacterGallery
+              title={`${charactersTitle} · ${name}`}
+              worldCrestGlyph={worldCrestGlyph(regionId)}
+              color={regionPalette.colors[0]}
+              darkColor={regionPalette.dark}
+              items={galleryItems}
+              renderCard={(char) => (
+                <Box height={{ base: '620px', md: '680px' }}>
+                  <KammaraCharacterCard
+                    name={char.name}
+                    species={char.species}
+                    bio={char.bio}
+                    image={char.image}
+                    worldName={name}
+                    worldCrestGlyph={worldCrestGlyph(regionId)}
+                    color={regionPalette.colors[0]}
+                    darkColor={regionPalette.dark}
+                  />
+                </Box>
+              )}
+            />
+          </Box>
+        );
+      })()}
     </CreatureSection>
   );
 }

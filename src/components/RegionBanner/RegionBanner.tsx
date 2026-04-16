@@ -2,26 +2,18 @@
 import { Box } from '@chakra-ui/react';
 import type { ReactNode } from 'react';
 import { DSTextPanel } from '@/components/DSTextPanel';
-import { CharacterStrip } from '@/components/CharacterStrip';
-import { SoonPanel } from '@/components/SoonPanel';
-import type { Locale } from '@/lib/characters';
-
-export interface RegionBannerCharacter {
-  name: string;
-  image: string;
-}
 
 export interface RegionBannerProps {
   /** Region display name, passed to the DSTextPanel as h2. */
   name: string;
   /**
-   * Accent color from the region's palette. Used both as the DSTextPanel
-   * outline color and as the CharacterStrip label color.
+   * Accent color from the region's palette. Used as the DSTextPanel
+   * outline color.
    */
   color: string;
   /**
    * Gradient used as the banner background (the dark layer behind the
-   * panel + strip). Usually `palette.gradient` of the region.
+   * panel). Usually `palette.gradient` of the region.
    */
   gradient: string;
   /**
@@ -31,13 +23,6 @@ export interface RegionBannerProps {
    * itself doesn't parse anything, it just renders `story` as-is.
    */
   story: ReactNode;
-  /** Characters shown on the right side strip. May be empty. */
-  characters: RegionBannerCharacter[];
-  /** i18n context id for the CharacterInfoPanel lookup. */
-  contextId: string;
-  locale: Locale;
-  /** Label shown in the SoonPanel fallback when `characters` is empty. */
-  soonLabel: string;
   /**
    * Background image for the banner (behind the gradient). Optional.
    * When provided, it's rendered with `objectFit: cover` at 30% opacity.
@@ -75,10 +60,6 @@ export function RegionBanner({
   color,
   gradient,
   story,
-  characters,
-  contextId,
-  locale,
-  soonLabel,
   bgImage,
   renderPanel,
   'data-testid': testId,
@@ -152,40 +133,6 @@ export function RegionBanner({
           >
             {story}
           </DSTextPanel>
-        )}
-      </Box>
-      {/* Character strip — same z-index as DSMainCard strip-side (2) */}
-      <Box
-        position={{ base: 'relative', md: 'absolute' }}
-        zIndex={2}
-        css={{
-          '@media (min-width: 48em)': {
-            left: 'min(calc(60% + 2rem + 10px), calc(900px + 2rem + 10px))',
-            right: '0',
-            top: '50%',
-            height: 'calc(100% - 3rem)',
-            transform: 'translateY(-50%)',
-          },
-        }}
-        padding={{ base: '1rem', md: 0 }}
-        display="flex"
-        alignItems="center"
-      >
-        {characters.length > 0 ? (
-          <CharacterStrip
-            characters={characters}
-            gradient={gradient}
-            cardSize={260}
-            noFloat
-            transparent
-            labelColor={color}
-            speed={100}
-            inStripSide
-            contextId={contextId}
-            locale={locale}
-          />
-        ) : (
-          <SoonPanel label={soonLabel} color={color} />
         )}
       </Box>
     </Box>
