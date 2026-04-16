@@ -83,7 +83,7 @@ export function KammaraCardSubsystem({
       <Box
         position="absolute"
         top="80px"
-        left="-40px"
+        left="-56px"
         zIndex={40}
       >
         <KammaraRoulette
@@ -244,7 +244,13 @@ export function KammaraCardSubsystem({
                 <Heading
                   as="h2"
                   fontFamily="body"
-                  fontSize={{ base: '1.8rem', md: '2.2rem' }}
+                  // Shrink the font when the title is long so a lone letter
+                  // doesn't get orphaned on the last line.
+                  fontSize={
+                    activeItem.label.length > 16
+                      ? { base: '1.4rem', md: '1.7rem' }
+                      : { base: '1.8rem', md: '2.2rem' }
+                  }
                   fontWeight="bold"
                   lineHeight={1}
                   color={color}
@@ -253,6 +259,10 @@ export function KammaraCardSubsystem({
                   m={0}
                   css={{
                     textShadow: `0 0 24px ${color}40`,
+                    // `text-wrap: balance` asks the browser to distribute
+                    // words across lines so each line has a similar length,
+                    // preventing orphan letters like a lone "A" on line 2.
+                    textWrap: 'balance',
                     wordBreak: 'break-word',
                   }}
                 >

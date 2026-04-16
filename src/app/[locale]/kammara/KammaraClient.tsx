@@ -18,6 +18,7 @@ import { BookGallery } from '@/components/BookGallery';
 import { useModal } from '@/components/Modal';
 import { palettes, type PaletteName, type Palette } from '@/theme/palettes';
 import { kammaraHero, kammaraFilter } from '@/theme/creatures';
+import { subsystemGlyph, worldCrestGlyph } from '@/theme/kalunGlyphs';
 import { translateName } from '@/lib/translateName';
 import { KammaraStarField } from './KammaraStarField';
 
@@ -182,17 +183,6 @@ function renderStory(story: string[]) {
  *   Os Glifos Kalún → ⊹    (ancestral, memória)
  * Falls back to "⊙" (centro/foco) for any other title.
  */
-function subsystemGlyph(title: string): string {
-  const key = title.toLowerCase().trim();
-  if (key.includes('cultur')) return '⊙';
-  if (key.includes('flora') || key.includes('fauna') || key.includes('ecosystem') || key.includes('ecossist')) return '•';
-  if (key.includes('geograf') || key.includes('geography')) return '—';
-  if (key.includes('ciclo') || key.includes('lua') || key.includes('cycle') || key.includes('moon')) return '⊶⊷';
-  if (key.includes('água') || key.includes('agua') || key.includes('water')) return '⋄';
-  if (key.includes('idioma') || key.includes('language') || key.includes('linguagem')) return '⊹⊙⊹';
-  if (key.includes('glifo') || key.includes('glyph')) return '⊹';
-  return '⊙';
-}
 
 // ============================================================================
 // Main component
@@ -327,7 +317,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
           palette="kammara"
           category="Universo"
           declarer="universe"
-          crestGlyph="⊹"
+          crestGlyph={worldCrestGlyph('kammara')}
           description={
             <>
               {sectionText.map((p, i) => (
@@ -485,7 +475,7 @@ function WorldSection({
         palette={w.id}
         category="Planeta"
         declarer="planet"
-        crestGlyph="⊙"
+        crestGlyph={worldCrestGlyph(w.id)}
         description={
           bodyText.length > 0 ? (
             <>
@@ -515,7 +505,7 @@ function WorldSection({
             category="Planeta"
             color={palette.colors[0]}
             darkColor={palette.dark}
-            crestGlyph="⊙"
+            crestGlyph={worldCrestGlyph(w.id)}
             tabs={[
               {
                 id: `${w.id}-story`,
@@ -585,7 +575,7 @@ function WorldSection({
             category={subsystemsTitle}
             color={palette.colors[0]}
             darkColor={palette.dark}
-            crestGlyph="⊙"
+            crestGlyph={worldCrestGlyph(w.id)}
             tabs={realSubsystems.map((s, i) => ({
               id: `${w.id}-${i}`,
               icon: subsystemGlyph(s.title),
@@ -709,7 +699,7 @@ function TriplecRegionSection({
             category={subsystemsTitle}
             color={regionPalette.colors[0]}
             darkColor={regionPalette.dark}
-            crestGlyph="⊙"
+            crestGlyph={worldCrestGlyph(regionId)}
             tabs={realSubsystems.map((s, i) => ({
               id: `${regionId}-${i}`,
               icon: subsystemGlyph(s.title),

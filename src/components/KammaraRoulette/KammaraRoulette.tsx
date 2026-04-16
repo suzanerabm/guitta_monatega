@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 
 // Geometry constants — shared with KammaraCard so the gate label padding
 // and the roulette horizontal offset stay in sync.
-export const ROULETTE_SPHERE_SIZE = 56; // diameter of each orbiting sphere in px (fits composite glyphs like ⊹⊙⊹)
+export const ROULETTE_SPHERE_SIZE = 64; // diameter of each orbiting sphere in px (fits composite glyphs like ⊹⊙⊹)
 export const ROULETTE_ORBIT_RADIUS = 56; // base orbit radius in px — used as minimum; actual radius grows if needed to prevent sphere overlap
 export const ROULETTE_GAP_AFTER = 10; // breathing room between sphere and gate label in px
 /** Minimum gap between two adjacent spheres along the orbit (px). */
@@ -285,6 +285,11 @@ ${Array.from({ length: shootSteps + 1 }).map((_, s) => {
                 fontFamily="glyph"
                 fontSize="glyphH3"
                 lineHeight={1}
+                // Treat multi-glyph icons as one compact symbol: keep them
+                // on a single line with a tiny breathing gap between chars
+                // so they read as a group without blurring together.
+                letterSpacing="0.04em"
+                whiteSpace="nowrap"
                 css={{
                   border: isActive ? `2px solid ${color}` : `1px solid ${color}50`,
                   background: isActive
