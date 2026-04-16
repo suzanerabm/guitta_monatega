@@ -71,6 +71,7 @@ export function KammaraCard({
       position="relative"
       width="100%"
       height="100%"
+      minH={{ base: '560px', md: 0 }}
       borderRadius="32px"
       overflow="visible"
     >

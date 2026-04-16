@@ -536,6 +536,10 @@ function WorldSection({
           )
         }
       />
+      {/* Wrapper trims the DSMainCard's legacy `mt: 8rem` on mobile so
+          the new KammaraPlanetTitle + KammaraCard sit close together
+          with no empty gap in between. Desktop keeps the default. */}
+      <Box mt={{ base: '-6rem', md: 0 }}>
       <DSMainCard
         characters={[]}
         gradient={palette.gradient}
@@ -582,6 +586,7 @@ function WorldSection({
           />
         )}
       </DSMainCard>
+      </Box>
       {realSubsystems.length > 0 && (() => {
         const tabs = realSubsystems.map((s, i) => ({
           id: `${w.id}-${i}`,

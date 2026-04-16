@@ -148,11 +148,13 @@ export function KammaraCardSubsystem({
           {/* ── Header — two-row layout:
               Row 1 (top strip): subsystem declarer glyph, left-aligned.
               Row 2 (main): [ roulette slot | vertical divider | text column ]
-              The text column stacks: category label, title, active glyph. */}
+              The text column stacks: category label, title, active glyph.
+              Mobile is shorter to leave more room for the content; desktop
+              keeps the taller strip to accommodate the bigger type. */}
           <Box
             position="relative"
             flexShrink={0}
-            height="180px"
+            height={{ base: '130px', md: '180px' }}
             overflow="hidden"
             css={{
               background: `linear-gradient(160deg, ${color}20 0%, ${color}10 50%, ${color}20 100%)`,
