@@ -67,19 +67,16 @@ export function KammaraCard({
 
   const handleSelect = (index: number) => {
     if (index === activeIndex) {
-      setRouletteOpen(false);
       return;
     }
     if (index === 0) {
       setGateOpen(false);
-      setRouletteOpen(false);
       setTimeout(() => setActiveIndex(0), 300);
     } else {
       setGateOpen(false);
       setTimeout(() => {
         setActiveIndex(index);
         setGateOpen(true);
-        setRouletteOpen(false);
       }, 200);
     }
   };
@@ -296,149 +293,119 @@ export function KammaraCard({
           {/* Divider */}
           <Box height="1px" flexShrink={0} css={{ background: `${color}60` }} />
 
-          {/* ── Body row: roulette lateral + content ── */}
-          <Flex direction="row" flex={1} minH={0}>
-            {/* ── Circular roulette (lateral) ────────── */}
-            {/* ── Roulette menu (lateral, z-index high) ───── */}
-            <Flex
-              direction="column"
-              align="center"
-              justify="flex-start"
-              width="70px"
-              flexShrink={0}
+          {/* ── Roulette menu (floating over card) ───── */}
+          <Box
+            position="absolute"
+            top="50%"
+            left="0"
+            transform="translateY(-50%)"
+            zIndex={40}
+            overflow="visible"
+            pointerEvents="none"
+          >
+            {/* Roulette — circular orbit */}
+            <Box
               position="relative"
-              zIndex={20}
-              paddingTop="0.5rem"
-              css={{ borderRight: `1px solid ${color}25` }}
+              width="140px"
+              height="140px"
+              css={{
+                opacity: rouletteOpen ? 1 : 0,
+                transform: rouletteOpen ? 'scale(1) translateX(-30%)' : 'scale(0.3) translateX(-30%)',
+                transition: 'opacity 0.4s ease, transform 0.4s ease',
+                pointerEvents: rouletteOpen ? 'auto' : 'none',
+              }}
             >
-              {/* Roulette — circular, all same size, visible at start */}
+              {allItems.map((item, i) => {
+                const isActive = i === activeIndex;
+                const offsetFromActive = ((i - activeIndex) % totalItems + totalItems) % totalItems;
+                const angle = (offsetFromActive / totalItems) * 2 * Math.PI - Math.PI / 2;
+                const x = Math.cos(angle) * r;
+                const y = Math.sin(angle) * r;
+                const delay = `${i * -0.4}s`;
+
+                return (
+                  <Box
+                    key={item.id ?? 'home'}
+                    as="button"
+                    aria-label={item.label || item.title}
+                    title={item.label || item.title}
+                    onClick={() => handleSelect(i)}
+                    position="absolute"
+                    top="50%"
+                    left="50%"
+                    width="44px"
+                    height="44px"
+                    borderRadius="50%"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                    cursor="pointer"
+                    zIndex={isActive ? 30 : 25}
+                    style={{
+                      transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
+                      animation: `kcFloat${i} 3s ease-in-out infinite ${delay}`,
+                    }}
+                    css={{
+                      transition: 'border 0.3s ease, box-shadow 0.3s ease, background 0.3s ease',
+                      fontFamily: 'var(--chakra-fonts-glyph)',
+                      fontSize: '1.2rem',
+                      lineHeight: 1,
+                      border: isActive ? `2px solid ${color}` : `1px solid ${color}50`,
+                      background: isActive
+                        ? `radial-gradient(circle at 30% 30%, ${color}80, ${color}30 60%, ${darkColor})`
+                        : `${darkColor}dd`,
+                      color: isActive ? '#fff' : `${color}aa`,
+                      boxShadow: isActive
+                        ? `0 0 20px ${color}80, inset 0 1px 0 rgba(255,255,255,0.25)`
+                        : `0 4px 12px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1)`,
+                      '&:hover': {
+                        borderColor: color,
+                        boxShadow: `0 0 16px ${color}60`,
+                        color: '#fff',
+                      },
+                    }}
+                  >
+                    {item.icon}
+                  </Box>
+                );
+              })}
+            </Box>
+
+            {/* Collapsed state — only active circle visible */}
+            {!rouletteOpen && (
               <Box
-                position="relative"
-                width="140px"
-                height="140px"
-                flexShrink={0}
-                alignSelf="center"
-                overflow="visible"
+                as="button"
+                width="44px"
+                height="44px"
+                borderRadius="50%"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                cursor="pointer"
+                zIndex={30}
+                onClick={toggleRoulette}
                 css={{
-                  opacity: rouletteOpen ? 1 : 0,
-                  transform: rouletteOpen ? 'scale(1)' : 'scale(0.3)',
-                  transition: 'opacity 0.4s ease, transform 0.4s ease',
-                  pointerEvents: rouletteOpen ? 'auto' : 'none',
+                  fontFamily: 'var(--chakra-fonts-glyph)',
+                  fontSize: '1.2rem',
+                  lineHeight: 1,
+                  border: `2px solid ${color}`,
+                  background: `radial-gradient(circle at 30% 30%, ${color}80, ${color}30 60%, ${darkColor})`,
+                  color: '#fff',
+                  boxShadow: `0 0 20px ${color}80, inset 0 1px 0 rgba(255,255,255,0.25)`,
+                  animation: 'kcFloat0 3s ease-in-out infinite',
+                  pointerEvents: 'auto',
+                  '&:hover': {
+                    boxShadow: `0 0 28px ${color}aa`,
+                  },
                 }}
               >
-                {allItems.map((item, i) => {
-                  const isActive = i === activeIndex;
-                  const offsetFromActive = ((i - activeIndex) % totalItems + totalItems) % totalItems;
-                  const angle = (offsetFromActive / totalItems) * 2 * Math.PI - Math.PI / 2;
-                  const x = Math.cos(angle) * r;
-                  const y = Math.sin(angle) * r;
-                  const delay = `${i * -0.4}s`;
-
-                  return (
-                    <Box
-                      key={item.id ?? 'home'}
-                      as="button"
-                      aria-label={item.label || item.title}
-                      title={item.label || item.title}
-                      onClick={() => handleSelect(i)}
-                      position="absolute"
-                      top="50%"
-                      left="50%"
-                      width="44px"
-                      height="44px"
-                      borderRadius="50%"
-                      display="flex"
-                      alignItems="center"
-                      justifyContent="center"
-                      cursor="pointer"
-                      zIndex={isActive ? 30 : 25}
-                      style={{
-                        transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
-                        animation: `kcFloat${i} 3s ease-in-out infinite ${delay}`,
-                      }}
-                      css={{
-                        transition: 'border 0.3s ease, box-shadow 0.3s ease, background 0.3s ease',
-                        fontFamily: 'var(--chakra-fonts-glyph)',
-                        fontSize: '1.2rem',
-                        lineHeight: 1,
-                        border: isActive ? `2px solid ${color}` : `1px solid ${color}50`,
-                        background: isActive
-                          ? `radial-gradient(circle at 30% 30%, ${color}80, ${color}30 60%, ${darkColor})`
-                          : `${darkColor}dd`,
-                        color: isActive ? '#fff' : `${color}aa`,
-                        boxShadow: isActive
-                          ? `0 0 20px ${color}80, inset 0 1px 0 rgba(255,255,255,0.25)`
-                          : `0 4px 12px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1)`,
-                        '&:hover': {
-                          borderColor: color,
-                          boxShadow: `0 0 16px ${color}60`,
-                          color: '#fff',
-                        },
-                      }}
-                    >
-                      {item.icon}
-                    </Box>
-                  );
-                })}
+                {activeItem.icon}
               </Box>
+            )}
+          </Box>
 
-              {/* Collapsed state — only active circle visible */}
-              {!rouletteOpen && (
-                <Box
-                  as="button"
-                  width="44px"
-                  height="44px"
-                  borderRadius="50%"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  cursor="pointer"
-                  alignSelf="center"
-                  zIndex={30}
-                  onClick={toggleRoulette}
-                  css={{
-                    fontFamily: 'var(--chakra-fonts-glyph)',
-                    fontSize: '1.2rem',
-                    lineHeight: 1,
-                    border: `2px solid ${color}`,
-                    background: `radial-gradient(circle at 30% 30%, ${color}80, ${color}30 60%, ${darkColor})`,
-                    color: '#fff',
-                    boxShadow: `0 0 20px ${color}80, inset 0 1px 0 rgba(255,255,255,0.25)`,
-                    animation: 'kcFloat0 3s ease-in-out infinite',
-                    '&:hover': {
-                      boxShadow: `0 0 28px ${color}aa`,
-                    },
-                  }}
-                >
-                  {activeItem.icon}
-                </Box>
-              )}
-
-              {/* Active label — vertical, rotated */}
-              {!isHome && (
-                <Text
-                  fontSize="0.5rem"
-                  letterSpacing="0.18em"
-                  textTransform="uppercase"
-                  fontWeight={600}
-                  color={color}
-                  m={0}
-                  mt="0.6rem"
-                  textAlign="center"
-                  opacity={0.85}
-                  css={{
-                    writingMode: 'vertical-rl',
-                    transform: 'rotate(180deg)',
-                    whiteSpace: 'nowrap',
-                  }}
-                >
-                  {activeItem.label}
-                </Text>
-              )}
-            </Flex>
-
-            {/* ── Right side: gate + content + footer ─── */}
-            <Flex direction="column" flex={1} minW={0} minH={0}>
+          {/* ── Body content (full width) ── */}
+          <Flex direction="column" flex={1} minW={0} minH={0}>
 
           {/* ── Gate overlay (descends when subsystem selected) ── */}
           {!isHome && (
@@ -465,9 +432,9 @@ export function KammaraCard({
               />
               <Flex
                 align="center"
-                justify="center"
+                justify="flex-start"
                 gap="0.6rem"
-                padding="0.8rem 1rem"
+                padding="0.8rem 1.8rem"
                 position="relative"
               >
                 <Box
@@ -595,8 +562,7 @@ export function KammaraCard({
               Kammara
             </Text>
           </Flex>
-            </Flex>{/* close right side */}
-          </Flex>{/* close body row */}
+            </Flex>{/* close body content */}
         </Flex>
       </Box>
     </Box>
