@@ -90,13 +90,31 @@ export function KammaraRoulette({
     return () => { if (hideTimer.current) clearTimeout(hideTimer.current); };
   }, []);
 
+  // Compute the angle for each position (0 = active/top, others evenly
+  // distributed around the circle). For odd counts, the active stays at
+  // the top and the remaining items mirror symmetrically — left/right
+  // balanced around the vertical axis.
+  const angleForPosition = (positionIndex: number) => {
+    if (positionIndex === 0) return -Math.PI / 2; // active at top
+    const others = totalItems - 1;
+    // Evenly distribute the remaining `others` around the arc below
+    // (from the right of the top, going clockwise all the way to the
+    // left of the top). Skip the top slot (occupied by the active).
+    // Step = full circle minus the active slot, divided by (others + 1)
+    // so there's symmetric spacing on each side.
+    const arc = 2 * Math.PI; // full circle
+    const step = arc / totalItems;
+    // Position 1 → first slot clockwise from top (right side)
+    // Position N-1 → last slot (left side, just before top)
+    return -Math.PI / 2 + positionIndex * step;
+  };
+
   // Float keyframes
-  const floatKeyframes = items.map((_, i) => {
-    const offsetFromActive = ((i - activeIndex) % totalItems + totalItems) % totalItems;
-    const angle = (offsetFromActive / totalItems) * 2 * Math.PI - Math.PI / 2;
+  const floatKeyframes = items.map((_, positionIndex) => {
+    const angle = angleForPosition(positionIndex);
     const x = Math.cos(angle) * r;
     const y = Math.sin(angle) * r;
-    return `@keyframes kcFloat${i} {
+    return `@keyframes kcFloat${positionIndex} {
       0%, 100% { transform: translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) translateY(0); }
       50% { transform: translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) translateY(-3px); }
     }`;
@@ -149,7 +167,7 @@ ${Array.from({ length: shootSteps + 1 }).map((_, s) => {
               position 0 (top) always shows the active item's glyph. */}
           {items.map((_, positionIndex) => {
             // Fixed angle for this position (0 = top, clockwise)
-            const angle = (positionIndex / totalItems) * 2 * Math.PI - Math.PI / 2;
+            const angle = angleForPosition(positionIndex);
             const x = Math.cos(angle) * r;
             const y = Math.sin(angle) * r;
             // Which item lands at this position (rotate list by activeIndex)
