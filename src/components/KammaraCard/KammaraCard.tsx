@@ -26,10 +26,12 @@ export interface KammaraCardStat {
 export interface KammaraCardProps {
   name: string;
   category: string;
+  /** Archetype / function in the Kammara cosmos (e.g. "Imunidade", "Diálogo-Código"). Shown as a secondary tag next to the category. */
+  role?: string;
+  /** Subtitle as traits — short elements separated by · (e.g. "Lar dos Shal'ún · Água · Imunidade"). */
   subtitle?: string;
   tabs: KammaraCardTab[];
   stats?: KammaraCardStat[];
-  rarity?: number;
   crestGlyph?: string;
   color: string;
   darkColor: string;
@@ -41,10 +43,10 @@ export interface KammaraCardProps {
 export function KammaraCard({
   name,
   category,
+  role,
   subtitle,
   tabs,
   stats = [],
-  rarity = 0,
   crestGlyph = '⊙',
   color,
   darkColor,
@@ -149,107 +151,102 @@ export function KammaraCard({
               <span>{crestGlyph}</span>
             </Flex>
 
-            {/* Top ornament — semantic declarer "— ⊙ —" = PLANET
-                (flow-line + center + flow-line). The lines frame the
-                declarer; the crestGlyph is the planet's identity. */}
-            <Flex
-              justify="center"
-              align="center"
-              gap="sm"
-              padding="0.5rem 1rem 0"
-              aria-label="Planeta"
-              css={{
-                fontFamily: 'var(--chakra-fonts-glyph)',
-                fontSize: '1rem',
-                color: `${color}cc`,
-                letterSpacing: '0.3em',
-              }}
-            >
-              <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, transparent, ${color}80)` }} />
-              <span style={{ fontSize: '1.3rem' }}>{crestGlyph}</span>
-              <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, ${color}80, transparent)` }} />
-            </Flex>
-
-            {/* Category + rarity */}
-            <Flex justify="center" align="center" gap="sm" padding="0.3rem 1.8rem">
-              <Text
-                fontSize="xs"
-                letterSpacing="hero"
-                textTransform="uppercase"
-                fontWeight="semibold"
-                color={color}
-                m={0}
-                opacity={0.9}
+            {/* Header content — left-aligned */}
+            <Flex direction="column" gap="sm" padding={`1rem ${CARD_PADDING_X} 1.2rem`}>
+              {/* Top ornament — semantic declarer "— ⊙ —" = PLANET
+                  (flow-line + center + flow-line). The lines frame the
+                  declarer; the crestGlyph is the planet's identity. */}
+              <Flex
+                align="center"
+                gap="sm"
+                aria-label="Planeta"
+                css={{
+                  fontFamily: 'var(--chakra-fonts-glyph)',
+                  fontSize: '1rem',
+                  color: `${color}cc`,
+                  letterSpacing: '0.3em',
+                }}
               >
-                {category.toUpperCase()}
-              </Text>
-              {rarity > 0 && (
-                <Flex gap="0.15rem">
-                  {Array.from({ length: 5 }).map((_, i) => (
+                <Box width="28px" height="1px" css={{ background: `linear-gradient(90deg, transparent, ${color}80)` }} />
+                <span style={{ fontSize: '1.3rem' }}>{crestGlyph}</span>
+                <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, ${color}80, transparent)` }} />
+              </Flex>
+
+              {/* Category + role tag */}
+              <Flex align="center" gap="sm">
+                <Text
+                  fontSize="xs"
+                  letterSpacing="hero"
+                  textTransform="uppercase"
+                  fontWeight="semibold"
+                  color={color}
+                  m={0}
+                  opacity={0.9}
+                >
+                  {category.toUpperCase()}
+                </Text>
+                {role && (
+                  <>
                     <Box
-                      key={i}
                       as="span"
-                      css={{
-                        fontFamily: 'var(--chakra-fonts-glyph)',
-                        fontSize: '0.6rem',
-                        color: i < rarity ? color : `${color}30`,
-                        lineHeight: 1,
-                      }}
+                      fontFamily="glyph"
+                      fontSize="xs"
+                      lineHeight={1}
+                      css={{ color: `${color}80` }}
+                      aria-hidden="true"
                     >
-                      ⊙
+                      ·
                     </Box>
-                  ))}
-                </Flex>
-              )}
-            </Flex>
+                    <Text
+                      fontSize="xs"
+                      letterSpacing="hero"
+                      textTransform="uppercase"
+                      fontWeight="semibold"
+                      color="textOverlayBright"
+                      m={0}
+                      opacity={0.8}
+                    >
+                      {role}
+                    </Text>
+                  </>
+                )}
+              </Flex>
 
-            {/* Name */}
-            <Heading
-              as="h2"
-              fontFamily="body"
-              fontSize="h2"
-              fontWeight="bold"
-              lineHeight={1}
-              color={color}
-              letterSpacing="heroTitle"
-              textAlign="center"
-              m={0}
-              padding="0.2rem 1.5rem"
-              position="relative"
-            >
-              {name}
-            </Heading>
-
-            {subtitle && (
-              <Text
-                fontSize="xs"
-                color={mutedText}
-                textAlign="center"
+              {/* Name — hero scale, left aligned */}
+              <Heading
+                as="h2"
+                fontFamily="body"
+                fontSize="h2"
+                fontWeight="bold"
+                lineHeight={1}
+                color={color}
+                letterSpacing="heroTitle"
                 m={0}
-                mt="0.15rem"
-                letterSpacing="wide"
+                css={{
+                  textShadow: `0 0 40px ${color}40, 0 4px 20px ${color}30`,
+                }}
               >
-                {subtitle}
-              </Text>
-            )}
+                {name}
+              </Heading>
 
-            {/* Bottom ornament — "⊹" = ancestral, memory.
-                Framed by gradient lines that echo the "—" flow glyph. */}
-            <Flex
-              justify="center"
-              align="center"
-              gap="tight"
-              padding="0.4rem 1rem 0.6rem"
-              aria-hidden="true"
-              css={{
-                fontFamily: 'var(--chakra-fonts-glyph)',
-                fontSize: '0.7rem',
-                color: `${color}99`,
-              }}
-            >
-              <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, transparent, ${color}60)` }} />
-              <span>⊹</span>
-              <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, ${color}60, transparent)` }} />
+              {/* Gradient divider */}
+              <Box
+                height="1px"
+                width="80px"
+                css={{ background: `linear-gradient(90deg, ${color}, transparent)` }}
+              />
+
+              {/* Traits (subtitle) — inline separated list */}
+              {subtitle && (
+                <Text
+                  fontSize="sm"
+                  color={mutedText}
+                  m={0}
+                  letterSpacing="wide"
+                >
+                  {subtitle}
+                </Text>
+              )}
             </Flex>
           </Box>
 
@@ -296,12 +293,13 @@ export function KammaraCard({
             </Flex>
           )}
 
-          {/* ── Content ────────────────────────── */}
+          {/* ── Content — left-aligned ────────────────────────── */}
           <Box
             flex={1}
             minH={0}
             overflowY="auto"
             padding="0.8rem 1.8rem 1.2rem"
+            textAlign="left"
             css={{
               fontFamily: 'var(--chakra-fonts-body)',
               fontSize: '0.88rem',
