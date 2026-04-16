@@ -77,13 +77,23 @@ export function KammaraCardSubsystem({
       borderRadius="32px"
       overflow="visible"
     >
-      <KammaraRoulette
-        items={allItems}
-        activeIndex={activeIndex}
-        onSelect={handleSelect}
-        color={color}
-        darkColor={darkColor}
-      />
+      {/* Roulette positioned inside the card, floating over the top-left
+          of the header. Left is negative so half the orbit sticks out over
+          the card's left edge. */}
+      <Box
+        position="absolute"
+        top="80px"
+        left="-40px"
+        zIndex={40}
+      >
+        <KammaraRoulette
+          items={allItems}
+          activeIndex={activeIndex}
+          onSelect={handleSelect}
+          color={color}
+          darkColor={darkColor}
+        />
+      </Box>
 
       {/* ── Card body — transparent, relies on watermark + halo + outline */}
       <Box
@@ -129,11 +139,15 @@ export function KammaraCardSubsystem({
         />
 
         <Flex position="relative" direction="column" width="100%" height="100%">
-          {/* ── Header — dynamic: shows the active subsystem's label ──────── */}
+          {/* ── Header — dynamic: shows the active subsystem's label.
+              Fixed height so the roulette alignment never shifts when
+              the title length changes. overflow:visible so long titles
+              don't get cropped. */}
           <Box
             position="relative"
             flexShrink={0}
-            overflow="hidden"
+            height="240px"
+            overflow="visible"
             css={{
               background: `linear-gradient(160deg, ${color}20 0%, ${color}10 50%, ${color}20 100%)`,
               borderBottom: `1px solid ${color}`,

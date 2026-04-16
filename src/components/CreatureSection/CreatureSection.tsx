@@ -83,18 +83,6 @@ export function CreatureSection({
           />
         </Box>
       )}
-      {accentColor && (
-        <Box
-          aria-hidden
-          position="absolute"
-          inset="0"
-          zIndex={0}
-          pointerEvents="none"
-          css={{
-            background: `radial-gradient(ellipse at 30% 20%, ${accentColor}15 0%, transparent 70%)`,
-          }}
-        />
-      )}
       <Box
         position="relative"
         zIndex={1}

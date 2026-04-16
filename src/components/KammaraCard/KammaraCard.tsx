@@ -82,7 +82,7 @@ export function KammaraCard({
         borderRadius="32px"
         overflow="hidden"
         css={{
-          background: `linear-gradient(160deg, ${darkColor} 0%, ${body} 45%, ${darkColor} 100%)`,
+          background: `linear-gradient(160deg, ${darkColor}e6 0%, ${body}e6 45%, ${darkColor}e6 100%)`,
           border: `1px solid ${color}40`,
           outline: `2px solid ${color}`,
           outlineOffset: '6px',

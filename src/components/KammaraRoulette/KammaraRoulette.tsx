@@ -143,25 +143,32 @@ ${Array.from({ length: shootSteps + 1 }).map((_, s) => {
           width="100%"
           height="100%"
         >
-          {items.map((item, i) => {
-            const isActive = i === activeIndex;
-            const offsetFromActive = ((i - activeIndex) % totalItems + totalItems) % totalItems;
-            const angle = (offsetFromActive / totalItems) * 2 * Math.PI - Math.PI / 2;
+          {/* Physical circles are FIXED in place — we iterate over positions
+              (0..N-1), not items. The glyph shown at each position is
+              determined by rotating the items list by activeIndex, so
+              position 0 (top) always shows the active item's glyph. */}
+          {items.map((_, positionIndex) => {
+            // Fixed angle for this position (0 = top, clockwise)
+            const angle = (positionIndex / totalItems) * 2 * Math.PI - Math.PI / 2;
             const x = Math.cos(angle) * r;
             const y = Math.sin(angle) * r;
-            const floatDelay = `${i * -0.4}s`;
+            // Which item lands at this position (rotate list by activeIndex)
+            const itemIndex = (activeIndex + positionIndex) % totalItems;
+            const item = items[itemIndex];
+            const isActive = positionIndex === 0;
+            const floatDelay = `${positionIndex * -0.4}s`;
             const visible = isActive || rouletteOpen;
             const shootDelay = shooting && !isActive
-              ? `${(offsetFromActive / totalItems) * 0.6}s`
+              ? `${(positionIndex / totalItems) * 0.6}s`
               : '0s';
 
             return (
               <Box
-                key={item.id ?? 'home'}
+                key={positionIndex}
                 as="button"
                 aria-label={item.label || item.title}
                 title={item.label || item.title}
-                onClick={() => isActive ? showRoulette() : onSelect(i)}
+                onClick={() => isActive ? showRoulette() : onSelect(itemIndex)}
                 position="absolute"
                 top="50%"
                 left="50%"
@@ -175,7 +182,7 @@ ${Array.from({ length: shootSteps + 1 }).map((_, s) => {
                 zIndex={isActive ? 30 : 25}
                 style={{
                   transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
-                  animation: `kcFloat${i} 3s ease-in-out infinite ${floatDelay}`,
+                  animation: `kcFloat${positionIndex} 3s ease-in-out infinite ${floatDelay}`,
                   opacity: visible && !shooting ? 1 : isActive ? 1 : 0,
                   pointerEvents: visible ? 'auto' : 'none',
                   transitionProperty: 'opacity',

@@ -515,7 +515,6 @@ function WorldSection({
             category="Planeta"
             color={palette.colors[0]}
             darkColor={palette.dark}
-            midColor={palette.colors[4]}
             crestGlyph="⊙"
             tabs={[
               {
@@ -573,7 +572,14 @@ function WorldSection({
         )}
       </DSMainCard>
       {realSubsystems.length > 0 && (
-        <KammaraCardSubsystemContainer>
+        <Box
+          width="440px"
+          height="660px"
+          mx="auto"
+          my="2xl"
+          padding="1.5rem"
+          display="flex"
+        >
           <KammaraCardSubsystem
             name={name}
             category={subsystemsTitle}
@@ -590,7 +596,7 @@ function WorldSection({
               content: renderStory(s.text),
             }))}
           />
-        </KammaraCardSubsystemContainer>
+        </Box>
       )}
     </CreatureSection>
   );
@@ -689,7 +695,15 @@ function TriplecRegionSection({
         />
       )}
       {realSubsystems.length > 0 && (
-        <KammaraCardSubsystemContainer mt="-40px">
+        <Box
+          width="440px"
+          height="660px"
+          mx="auto"
+          mt="-40px"
+          mb="2xl"
+          padding="1.5rem"
+          display="flex"
+        >
           <KammaraCardSubsystem
             name={name}
             category={subsystemsTitle}
@@ -706,7 +720,7 @@ function TriplecRegionSection({
               content: renderStory(s.text),
             }))}
           />
-        </KammaraCardSubsystemContainer>
+        </Box>
       )}
     </CreatureSection>
   );
