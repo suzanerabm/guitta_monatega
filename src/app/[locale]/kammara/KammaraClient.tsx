@@ -12,7 +12,7 @@ import { KammaraCharacterCard } from '@/components/KammaraCharacterCard';
 import { KammaraCharacterGallery } from '@/components/KammaraCharacterGallery';
 import { getCharactersForContext, getLocalizedBio, getLocalizedName as getCharLocalizedName, getLocalizedSpecies } from '@/lib/characters';
 import { DSMainCard } from '@/components/DSMainCard';
-import { SceneStrip } from '@/components/SceneStrip';
+import { KammaraSceneCollage } from '@/components/KammaraSceneCollage';
 import { KammaraCardSubsystem, KammaraCardSubsystemContainer } from '@/components/KammaraCardSubsystem';
 import { RegionDivider } from '@/components/RegionDivider';
 import { RegionBanner } from '@/components/RegionBanner';
@@ -565,23 +565,19 @@ function WorldSection({
           />
         )}
       >
-        {/* Side column inside the banner: SceneStrip only now. Characters
+        {/* Side column inside the banner: KammaraSceneCollage. Characters
             moved to a dedicated KammaraCharacterGallery section below. */}
         {w.scenes.length > 0 && (
-          <SceneStrip
+          <KammaraSceneCollage
             scenes={w.scenes.map((s) => ({
               ...s,
               name: translateName(s.name, words),
             }))}
-            sectionTitle={scenesTitle}
-            arrowColor={colors.titleDestaque}
-            labelColor={colors.titleDestaque}
-            accentColor={colors.titleDestaque}
-            mobileColor={colors.title}
+            color={colors.titleDestaque}
+            darkColor={palette.dark}
             modalBg={palette.gradientBg}
             modalTitle={name}
             modalSubtitle={bodyText[0] || ''}
-            titleMarginTop="0"
           />
         )}
       </DSMainCard>
@@ -773,19 +769,16 @@ function TriplecRegionSection({
         )}
       />
       {region.scenes.length > 0 && (
-        <SceneStrip
+        <KammaraSceneCollage
           scenes={region.scenes.map((s) => ({
             ...s,
             name: translateName(s.name, words),
           }))}
-          sectionTitle={scenesTitle}
-          arrowColor={regionColor}
-          labelColor={regionColor}
-          accentColor={regionColor}
+          color={regionColor}
+          darkColor={regionPalette.dark}
           modalBg={regionPalette.gradientBg}
           modalTitle={name}
           modalSubtitle={bodyText[0] || ''}
-          titleMarginTop="1.5em"
         />
       )}
       {realSubsystems.length > 0 && (
