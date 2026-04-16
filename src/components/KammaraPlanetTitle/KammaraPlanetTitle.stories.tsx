@@ -9,12 +9,7 @@ const meta: Meta<typeof KammaraPlanetTitle> = {
   parameters: { layout: 'centered' },
   decorators: [
     (Story) => (
-      <Box
-        width="640px"
-        padding="xl"
-        background="linear-gradient(135deg, #002e14 0%, #003d1a 50%, #002e14 100%)"
-        borderRadius="lg"
-      >
+      <Box width="960px" padding="2xl" bg="darkBg">
         <Story />
       </Box>
     ),
@@ -27,9 +22,25 @@ type Story = StoryObj<typeof KammaraPlanetTitle>;
 export const Lunnp1: Story = {
   args: {
     name: "LUNN'P1",
+    category: 'Planeta',
+    role: 'Imunidade',
     description:
       "LUNN'P1 — o planeta onde tudo flui. Um mundo sem sol, onde quatro luas regem o tempo e a água nunca mente. Lar dos Shal'ún, os únicos seres naturalmente imunes a vírus em todo o universo.",
-    color: '#00e676',
+    palette: 'lunnp1',
+    crestGlyph: '⊙',
+    declarer: 'planet',
+  },
+};
+
+export const Eni4: Story = {
+  args: {
+    name: 'ENI4',
+    category: 'Planeta',
+    role: 'Diálogo-Código',
+    description:
+      'ENI4 — o planeta das máquinas-vivas. Circuitos orgânicos que respiram e sentem. Lar dos que aprenderam a dialogar com o código sem se perder nele.',
+    palette: 'eni4',
+    crestGlyph: '⊶',
     declarer: 'planet',
   },
 };
@@ -37,9 +48,12 @@ export const Lunnp1: Story = {
 export const Universe: Story = {
   args: {
     name: 'Kammara',
+    category: 'Universo',
+    role: 'Origem',
     description:
-      'O universo onde tudo acontece. Cada planeta é um subsistema — cada subsistema, uma região de sentido.',
-    color: '#9c88ff',
+      'O universo Kammara (Kam\'Rin) — onde cada planeta é um subsistema, cada subsistema uma região de sentido. Tudo conectado pela água-memória que atravessa as fronteiras.',
+    palette: 'kammara',
+    crestGlyph: '⊹',
     declarer: 'universe',
   },
 };

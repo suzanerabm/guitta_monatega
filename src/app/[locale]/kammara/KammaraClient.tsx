@@ -5,7 +5,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { HeroSection } from '@/components/HeroSection';
 import { FilterBar } from '@/components/FilterBar';
 import { CreatureSection } from '@/components/CreatureSection';
-import { CreatureCard } from '@/components/CreatureCard';
+import { KammaraPlanetTitle } from '@/components/KammaraPlanetTitle';
 import { DSMainCard } from '@/components/DSMainCard';
 import { CharacterStrip } from '@/components/CharacterStrip';
 import { SceneStrip } from '@/components/SceneStrip';
@@ -13,7 +13,6 @@ import { SubSystem } from '@/components/SubSystem';
 import { RegionDivider } from '@/components/RegionDivider';
 import { RegionBanner } from '@/components/RegionBanner';
 import { SoonPanel } from '@/components/SoonPanel';
-import { GlyphPlanet } from '@/components/GlyphPlanet';
 import { BookGallery } from '@/components/BookGallery';
 import { useModal } from '@/components/Modal';
 import { palettes, type PaletteName, type Palette } from '@/theme/palettes';
@@ -297,51 +296,51 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
         hidden={kammaraHidden}
       >
         <KammaraStarField />
-        <CreatureCard
+        <KammaraPlanetTitle
           name={sectionName}
-          color1={kammaraPalette.colors[0]}
-          color2={kammaraPalette.colors[1]}
-          adornment={<GlyphPlanet size="h3" color={kammaraPalette.colors[0]} variant="universe" />}
-          banner={
-            <DSMainCard
-              characters={[]}
-              gradient={kammaraPalette.gradientBg}
-              height="1400px"
-              maxHeight="80vh"
-              titleColor={kammaraPalette.colors[0]}
-              textColor={kammaraPalette.colors[1]}
-              stripSide
-              textPanelTitle={sectionName}
-              glyphVariant="universe"
-              text={renderStory(sectionStory)}
-            >
-              {kammaraChars.length > 0 ? (
-                <CharacterStrip
-                  characters={kammaraChars.map((c) => ({
-                    ...c,
-                    name: translateName(c.name, words),
-                  }))}
-                  gradient={kammaraPalette.gradient}
-                  cardSize={200}
-                  noFloat
-                  transparent
-                    speed={120}
-                  inStripSide
-                  contextId="kammara/kammara"
-                  locale={locale}
-                />
-              ) : (
-                <SoonPanel label={tCommon('soon')} />
-              )}
-            </DSMainCard>
+          palette="kammara"
+          category="Universo"
+          declarer="universe"
+          crestGlyph="⊹"
+          description={
+            <>
+              {sectionText.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </>
           }
+        />
+        <DSMainCard
+          characters={[]}
+          gradient={kammaraPalette.gradientBg}
+          height="1400px"
+          maxHeight="80vh"
+          titleColor={kammaraPalette.colors[0]}
+          textColor={kammaraPalette.colors[1]}
+          stripSide
+          textPanelTitle={sectionName}
+          glyphVariant="universe"
+          text={renderStory(sectionStory)}
         >
-          {sectionText.map((p, i) => (
-            <Text key={i} mb="0.8rem">
-              {p}
-            </Text>
-          ))}
-        </CreatureCard>
+          {kammaraChars.length > 0 ? (
+            <CharacterStrip
+              characters={kammaraChars.map((c) => ({
+                ...c,
+                name: translateName(c.name, words),
+              }))}
+              gradient={kammaraPalette.gradient}
+              cardSize={200}
+              noFloat
+              transparent
+              speed={120}
+              inStripSide
+              contextId="kammara/kammara"
+              locale={locale}
+            />
+          ) : (
+            <SoonPanel label={tCommon('soon')} />
+          )}
+        </DSMainCard>
         {kammaraBooks.length > 0 && (
           <BookGallery
             title={t('booksTitle')}
@@ -455,77 +454,79 @@ function WorldSection({
       bgImage={w.bgImage ?? undefined}
       hidden={hidden}
     >
-      <CreatureCard
+      <KammaraPlanetTitle
         name={name}
-        color1={colors.name}
-        color2={colors.text}
-        adornment={<GlyphPlanet size="h3" color={colors.name} />}
-        banner={
-          <DSMainCard
-            characters={[]}
-            gradient={palette.gradient}
-            height="1400px"
-            maxHeight="80vh"
-            titleColor={colors.title}
-            textColor={colors.text}
-            stripSide
-            bgOpacity={WORLD_BG_OPACITY[w.id] ?? (w.bgImage ? 0.6 : 1)}
-            textPanelTitle={name}
-            text={renderStory(panelStory)}
-          >
-            {/* Side column inside the banner: CharacterStrip on top,
-                SceneStrip below. Both share the column height 50/50
-                via the `& > *` flex rule in DSMainCard's stripSide slot. */}
-            {w.chars.length > 0 ? (
-              <CharacterStrip
-                characters={w.chars.map((c) => ({
-                  ...c,
-                  name: translateName(c.name, words),
-                }))}
-                gradient={palette.gradient}
-                cardSize={200}
-                noFloat
-                transparent
-                labelColor={colors.titleDestaque}
-                arrowColor={colors.titleDestaque}
-                mobileColor={colors.title}
-                sectionTitle={charactersTitle}
-                speed={100}
-                inStripSide
-                contextId={`kammara/${w.id}`}
-                locale={locale}
-              />
-            ) : (
-              <SoonPanel label={tCommon('soon')} color={palette.colors[0]} />
-            )}
-            {w.scenes.length > 0 && (
-              <SceneStrip
-                scenes={w.scenes.map((s) => ({
-                  ...s,
-                  name: translateName(s.name, words),
-                }))}
-                sectionTitle={scenesTitle}
-                arrowColor={colors.titleDestaque}
-                labelColor={colors.titleDestaque}
-                accentColor={colors.titleDestaque}
-                mobileColor={colors.title}
-                modalBg={palette.gradientBg}
-                modalTitle={name}
-                modalSubtitle={bodyText[0] || ''}
-                titleMarginTop="0"
-              />
-            )}
-          </DSMainCard>
+        palette={w.id}
+        category="Planeta"
+        declarer="planet"
+        crestGlyph="⊙"
+        description={
+          bodyText.length > 0 ? (
+            <>
+              {bodyText.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </>
+          ) : (
+            placeholder
+          )
         }
+      />
+      <DSMainCard
+        characters={[]}
+        gradient={palette.gradient}
+        height="1400px"
+        maxHeight="80vh"
+        titleColor={colors.title}
+        textColor={colors.text}
+        stripSide
+        bgOpacity={WORLD_BG_OPACITY[w.id] ?? (w.bgImage ? 0.6 : 1)}
+        textPanelTitle={name}
+        text={renderStory(panelStory)}
       >
-        {bodyText.length > 0
-          ? bodyText.map((p, i) => (
-              <Text key={i} mb="0.8rem">
-                {p}
-              </Text>
-            ))
-          : placeholder && <Text>{placeholder}</Text>}
-      </CreatureCard>
+        {/* Side column inside the banner: CharacterStrip on top,
+            SceneStrip below. Both share the column height 50/50
+            via the `& > *` flex rule in DSMainCard's stripSide slot. */}
+        {w.chars.length > 0 ? (
+          <CharacterStrip
+            characters={w.chars.map((c) => ({
+              ...c,
+              name: translateName(c.name, words),
+            }))}
+            gradient={palette.gradient}
+            cardSize={200}
+            noFloat
+            transparent
+            labelColor={colors.titleDestaque}
+            arrowColor={colors.titleDestaque}
+            mobileColor={colors.title}
+            sectionTitle={charactersTitle}
+            speed={100}
+            inStripSide
+            contextId={`kammara/${w.id}`}
+            locale={locale}
+          />
+        ) : (
+          <SoonPanel label={tCommon('soon')} color={palette.colors[0]} />
+        )}
+        {w.scenes.length > 0 && (
+          <SceneStrip
+            scenes={w.scenes.map((s) => ({
+              ...s,
+              name: translateName(s.name, words),
+            }))}
+            sectionTitle={scenesTitle}
+            arrowColor={colors.titleDestaque}
+            labelColor={colors.titleDestaque}
+            accentColor={colors.titleDestaque}
+            mobileColor={colors.title}
+            modalBg={palette.gradientBg}
+            modalTitle={name}
+            modalSubtitle={bodyText[0] || ''}
+            titleMarginTop="0"
+          />
+        )}
+      </DSMainCard>
       {realSubsystems.length > 0 && (
         <SubSystem
           sectionTitle={subsystemsTitle}
