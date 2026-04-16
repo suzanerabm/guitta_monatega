@@ -283,7 +283,8 @@ ${Array.from({ length: shootSteps + 1 }).map((_, s) => {
                   transitionDelay: shooting && !isActive ? shootDelay : '0s',
                 }}
                 fontFamily="glyph"
-                fontSize="glyphH3"
+                // Long glyph icons (5+ chars) shrink so they fit inside the sphere.
+                fontSize={item.icon.length >= 5 ? '0.95rem' : 'glyphH3'}
                 lineHeight={1}
                 // Treat multi-glyph icons as one compact symbol: keep them
                 // on a single line with a tiny breathing gap between chars

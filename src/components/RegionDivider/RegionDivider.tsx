@@ -16,10 +16,11 @@ export interface RegionDividerProps {
    */
   name: string;
   /**
-   * Short tagline shown below the name (e.g. "instinto e precisão").
-   * Optional.
+   * Kalún crest glyph of the region (e.g. "⊶⊙⊶⊙⊶" for Mesh).
+   * Shown as a subtle watermark behind the text AND as the semantic
+   * label below the name (replacing the old tagline).
    */
-  tagline?: string;
+  crestGlyph?: string;
   /**
    * Accent color from the world's palette. Used to tint the gradient
    * background, the bottom/top borders and the tagline text.
@@ -47,7 +48,7 @@ export interface RegionDividerProps {
 export function RegionDivider({
   parent,
   name,
-  tagline,
+  crestGlyph,
   color,
   image,
   'data-testid': testId,
@@ -102,6 +103,30 @@ export function RegionDivider({
           />
         </>
       )}
+      {/* Crest glyph watermark — big, subtle, centered behind the name.
+          Signals the region's identity without overpowering the heading. */}
+      {crestGlyph && (
+        <Box
+          aria-hidden="true"
+          position="absolute"
+          inset={0}
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          pointerEvents="none"
+          fontFamily="glyph"
+          lineHeight={1}
+          opacity={0.12}
+          css={{
+            color,
+            fontSize: 'clamp(6rem, 18vw, 14rem)',
+            letterSpacing: '0.04em',
+            whiteSpace: 'nowrap',
+          }}
+        >
+          {crestGlyph}
+        </Box>
+      )}
       <Box
         position="relative"
         zIndex={1}
@@ -132,14 +157,16 @@ export function RegionDivider({
         >
           {name}
         </Heading>
-        {tagline && (
+        {crestGlyph && (
           <Text
             mt={{ base: '0.5rem', md: '0.8rem' }}
-            textStyle="label"
+            fontFamily="glyph"
+            fontSize={{ base: '1rem', md: '1.2rem' }}
             color="textOverlay"
             textShadow="labelText"
+            letterSpacing="0.08em"
           >
-            {tagline}
+            {crestGlyph}
           </Text>
         )}
       </Box>

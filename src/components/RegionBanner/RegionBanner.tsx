@@ -43,6 +43,17 @@ export interface RegionBannerProps {
    * When provided, it's rendered with `objectFit: cover` at 30% opacity.
    */
   bgImage?: string;
+  /**
+   * Custom renderer for the left-side panel. When provided, replaces the
+   * default DSTextPanel. Receives the region's name, color and story so
+   * the custom panel can stay in sync. If omitted, falls back to the
+   * legacy DSTextPanel layout.
+   */
+  renderPanel?: (ctx: {
+    name: string;
+    color: string;
+    story: ReactNode;
+  }) => ReactNode;
   'data-testid'?: string;
 }
 
@@ -69,6 +80,7 @@ export function RegionBanner({
   locale,
   soonLabel,
   bgImage,
+  renderPanel,
   'data-testid': testId,
 }: RegionBannerProps) {
   return (
@@ -128,15 +140,19 @@ export function RegionBanner({
         padding={{ base: '1.5rem 1rem 0', md: 0 }}
         display="flex"
       >
-        <DSTextPanel
-          title={name}
-          titleColor={color}
-          textColor="white"
-          compact
-          borderColor={color}
-        >
-          {story}
-        </DSTextPanel>
+        {renderPanel ? (
+          renderPanel({ name, color, story })
+        ) : (
+          <DSTextPanel
+            title={name}
+            titleColor={color}
+            textColor="white"
+            compact
+            borderColor={color}
+          >
+            {story}
+          </DSTextPanel>
+        )}
       </Box>
       {/* Character strip — same z-index as DSMainCard strip-side (2) */}
       <Box

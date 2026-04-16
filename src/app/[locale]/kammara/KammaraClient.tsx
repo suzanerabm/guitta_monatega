@@ -7,6 +7,7 @@ import { FilterBar } from '@/components/FilterBar';
 import { CreatureSection } from '@/components/CreatureSection';
 import { KammaraPlanetTitle } from '@/components/KammaraPlanetTitle';
 import { KammaraCard } from '@/components/KammaraCard';
+import { KammaraCardRegion } from '@/components/KammaraCardRegion';
 import { DSMainCard } from '@/components/DSMainCard';
 import { CharacterStrip } from '@/components/CharacterStrip';
 import { SceneStrip } from '@/components/SceneStrip';
@@ -629,7 +630,6 @@ function TriplecRegionSection({
   const keyPrefix = `worlds.triplec.regions.${regionId}`;
 
   const name = safeT(`${keyPrefix}.name`, regionId);
-  const tagline = safeT(`${keyPrefix}.tagline`);
   const bodyText = safeTRaw<string[]>(`${keyPrefix}.text`, []);
   const panelStory = safeTRaw<string[]>(`${keyPrefix}.panel.story`, []);
   const subsystems = safeTRaw<{ title: string; text: string[] }[]>(
@@ -650,7 +650,7 @@ function TriplecRegionSection({
       <RegionDivider
         parent="TRIPLEC"
         name={name}
-        tagline={tagline}
+        crestGlyph={worldCrestGlyph(regionId)}
         color={regionColor}
         data-testid={`region-divider-${regionId}`}
       />
@@ -667,6 +667,26 @@ function TriplecRegionSection({
         soonLabel={tCommon('soon')}
         data-testid={`region-banner-${regionId}`}
         story={renderStory(panelStory)}
+        renderPanel={({ name: regionName, color: regionPanelColor, story }) => (
+          <KammaraCardRegion
+            name={regionName}
+            category="Região"
+            parentName="TripleC"
+            parentCrestGlyph={worldCrestGlyph('triplec')}
+            color={regionPanelColor}
+            darkColor={regionPalette.dark}
+            crestGlyph={worldCrestGlyph(regionId)}
+            tabs={[
+              {
+                id: `${regionId}-story`,
+                icon: worldCrestGlyph(regionId),
+                label: regionName,
+                title: regionName,
+                content: story,
+              },
+            ]}
+          />
+        )}
       />
       {region.scenes.length > 0 && (
         <SceneStrip

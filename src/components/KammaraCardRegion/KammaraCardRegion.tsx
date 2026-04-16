@@ -1,15 +1,13 @@
 'use client';
 import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react';
-import { useState } from 'react';
 import type { ReactNode } from 'react';
-import { KammaraRoulette } from '@/components/KammaraRoulette';
 
 // Shared layout constant: the card's horizontal padding.
 // The gate label and the roulette position both depend on this value,
 // so keep them in sync via this single source of truth.
 export const CARD_PADDING_X = '1.8rem';
 
-export interface KammaraCardSubsystemTab {
+export interface KammaraCardRegionTab {
   id: string;
   icon: string;
   label: string;
@@ -19,83 +17,72 @@ export interface KammaraCardSubsystemTab {
   content: ReactNode;
 }
 
-export interface KammaraCardSubsystemStat {
+export interface KammaraCardRegionStat {
   icon: string;
   label: string;
   value: string;
 }
 
-export interface KammaraCardSubsystemProps {
-  /** Planet / region name (kept for aria/data-testid; not shown in the header anymore). */
+export interface KammaraCardRegionProps {
   name: string;
-  /** Category label shown in the header (e.g. "Subsistema"). Pass a translated string. */
   category: string;
-  tabs: KammaraCardSubsystemTab[];
-  stats?: KammaraCardSubsystemStat[];
+  /** Name of the parent planet this region belongs to (e.g. "TripleC"). Required — shown in breadcrumb + footer. */
+  parentName: string;
+  /** Crest glyph of the parent planet. Shown in the breadcrumb + footer, and as a faint background echo behind the region's own crest. */
+  parentCrestGlyph: string;
+  /** Archetype / function in the Kammara cosmos. Shown as a secondary tag next to the category. */
+  role?: string;
+  /** Subtitle as traits — short elements separated by ·. */
+  subtitle?: string;
+  tabs: KammaraCardRegionTab[];
+  stats?: KammaraCardRegionStat[];
   crestGlyph?: string;
   color: string;
   darkColor: string;
+  midColor?: string;
   theme?: 'light' | 'dark';
   'data-testid'?: string;
 }
 
-export function KammaraCardSubsystem({
+export function KammaraCardRegion({
   name,
   category,
+  parentName,
+  parentCrestGlyph,
+  role,
+  subtitle,
   tabs,
   stats = [],
   crestGlyph = '⊙',
   color,
   darkColor,
+  midColor,
   theme = 'dark',
   'data-testid': testId,
-}: KammaraCardSubsystemProps) {
+}: KammaraCardRegionProps) {
   const allItems = tabs;
 
-  const [activeIndex, setActiveIndex] = useState(0);
+  const activeIndex = 0;
 
   const activeItem = allItems[activeIndex];
 
   const isLight = theme === 'light';
   const textColor = isLight ? 'overlayLightSoft' : 'textOverlayBright';
   const mutedText = isLight ? 'inkSoft' : 'bannerLabel';
-
-  const handleSelect = (index: number) => {
-    if (index === activeIndex) {
-      return;
-    }
-    setActiveIndex(index);
-  };
+  const body = midColor ?? darkColor;
 
   return (
     <Box
-      data-testid={testId ?? 'kammara-card-subsystem'}
-      aria-label={name}
+      data-testid={testId ?? 'kammara-card-region'}
       position="relative"
       width="100%"
       height="100%"
       borderRadius="32px"
       overflow="visible"
     >
-      {/* Roulette positioned inside the card, floating over the top-left
-          of the header. Left is negative so half the orbit sticks out over
-          the card's left edge. */}
-      <Box
-        position="absolute"
-        top="80px"
-        left="-56px"
-        zIndex={40}
-      >
-        <KammaraRoulette
-          items={allItems}
-          activeIndex={activeIndex}
-          onSelect={handleSelect}
-          color={color}
-          darkColor={darkColor}
-        />
-      </Box>
-
-      {/* ── Card body — same ~90% opaque gradient as KammaraCard */}
+      {/* ── Card body ────────────────────────────────────
+          Region variant tweak: outline is DASHED (not solid) + lighter
+          offset — signals "this is a fragment, not a whole world". */}
       <Box
         position="relative"
         width="100%"
@@ -103,15 +90,18 @@ export function KammaraCardSubsystem({
         borderRadius="32px"
         overflow="hidden"
         css={{
-          background: `linear-gradient(160deg, ${darkColor}b3 0%, ${darkColor}b3 45%, ${darkColor}b3 100%)`,
+          background: `linear-gradient(160deg, ${darkColor}b3 0%, ${body}b3 45%, ${darkColor}b3 100%)`,
           border: `1px solid ${color}40`,
-          outline: `2px solid ${color}`,
-          outlineOffset: '6px',
+          outline: `1px dashed ${color}`,
+          outlineOffset: '4px',
           boxShadow: `0 20px 60px ${color}50, 0 4px 16px ${color}30, inset 0 1px 0 rgba(255,255,255,0.15)`,
         }}
       >
-        {/* Background watermark */}
+        {/* Background watermark — two layers: parent planet's crest (big, very faint)
+            as a distant echo, and the region's own crest on top (smaller, slightly more visible).
+            Reinforces the "fragment of a bigger world" feeling. */}
         <Box position="absolute" inset={0} pointerEvents="none" overflow="hidden">
+          {/* Parent planet's crest — gigantic, barely visible (3% alpha) */}
           <Box
             position="absolute"
             top="50%"
@@ -119,10 +109,30 @@ export function KammaraCardSubsystem({
             transform="translate(-50%, -50%)"
             css={{
               fontFamily: 'var(--chakra-fonts-glyph)',
-              fontSize: '22rem',
+              fontSize: '24rem',
               lineHeight: 1,
-              color: `${color}06`,
+              color: `${color}05`,
               userSelect: 'none',
+              whiteSpace: 'nowrap',
+              letterSpacing: '0.04em',
+            }}
+          >
+            {parentCrestGlyph}
+          </Box>
+          {/* Region's crest — smaller, slightly brighter, sits in front of the parent echo */}
+          <Box
+            position="absolute"
+            top="50%"
+            left="50%"
+            transform="translate(-50%, -50%)"
+            css={{
+              fontFamily: 'var(--chakra-fonts-glyph)',
+              fontSize: '14rem',
+              lineHeight: 1,
+              color: `${color}0a`,
+              userSelect: 'none',
+              whiteSpace: 'nowrap',
+              letterSpacing: '0.04em',
             }}
           >
             {crestGlyph}
@@ -140,21 +150,17 @@ export function KammaraCardSubsystem({
         />
 
         <Flex position="relative" direction="column" width="100%" height="100%">
-          {/* ── Header — two-row layout:
-              Row 1 (top strip): subsystem declarer glyph, left-aligned.
-              Row 2 (main): [ roulette slot | vertical divider | text column ]
-              The text column stacks: category label, title, active glyph. */}
+          {/* ── Title banner ────────────────────── */}
           <Box
             position="relative"
             flexShrink={0}
-            height="180px"
             overflow="hidden"
             css={{
               background: `linear-gradient(160deg, ${color}20 0%, ${color}10 50%, ${color}20 100%)`,
               borderBottom: `1px solid ${color}`,
             }}
           >
-            {/* Banner watermark — crest glyph echoes across both sides + giant center */}
+            {/* Banner watermark — crest glyph (world identity) on both sides */}
             <Flex
               position="absolute"
               inset={0}
@@ -176,104 +182,130 @@ export function KammaraCardSubsystem({
               <span>{crestGlyph}</span>
             </Flex>
 
-            {/* Row 1 — subsystem declarer ornament: "— ⊙ —"
-                (flow-line + center + flow-line), centered across the top */}
-            <Flex
-              justify="center"
-              align="center"
-              gap="sm"
-              padding={`0.5rem ${CARD_PADDING_X} 0`}
-              aria-label="Subsistema"
-              position="relative"
-              css={{
-                fontFamily: 'var(--chakra-fonts-glyph)',
-                fontSize: '1rem',
-                color: `${color}cc`,
-                letterSpacing: '0.3em',
-              }}
-            >
-              <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, transparent, ${color}80)` }} />
-              <span style={{ fontSize: '1.3rem' }}>⊙</span>
-              <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, ${color}80, transparent)` }} />
-            </Flex>
-
-            {/* Row 2 — main header grid */}
-            <Flex
-              align="center"
-              paddingTop="0.4rem"
-              paddingBottom="0.4rem"
-              paddingLeft="0.6rem"
-              paddingRight={{ base: '1.2rem', md: CARD_PADDING_X }}
-              gap="sm"
-              height="calc(100% - 2.5rem)"
-            >
-              {/* Left column — roulette slot (visual placeholder; the real
-                  roulette floats absolutely over this area so interactions
-                  don't get clipped). Narrow width leaves more room for the title. */}
-              <Box flexShrink={0} width="80px" />
-
-              {/* Vertical divider — gradient line between menu and text */}
-              <Box
-                flexShrink={0}
-                width="1px"
-                alignSelf="stretch"
+            {/* Header content — left-aligned */}
+            <Flex direction="column" gap="sm" padding={`1rem ${CARD_PADDING_X} 1.2rem`}>
+              {/* Kalún breadcrumb — parent planet crest → region crest.
+                  The "⊶" (partida/ir adiante) between them signals "part of".
+                  Reads as: "inside [planet] lies [region]". */}
+              <Flex
+                align="center"
+                gap="sm"
+                aria-label={`${parentName} · ${name}`}
                 css={{
-                  background: `linear-gradient(180deg, transparent 0%, ${color} 30%, ${color} 70%, transparent 100%)`,
-                  boxShadow: `0 0 8px ${color}60`,
+                  fontFamily: 'var(--chakra-fonts-glyph)',
+                  fontSize: '1rem',
+                  color: `${color}cc`,
+                  letterSpacing: '0.12em',
+                  whiteSpace: 'nowrap',
                 }}
-              />
+              >
+                <Box width="20px" height="1px" css={{ background: `linear-gradient(90deg, transparent, ${color}80)` }} />
+                {/* Parent planet crest (smaller, dimmer) */}
+                <span style={{ fontSize: '1rem', opacity: 0.6 }}>{parentCrestGlyph}</span>
+                {/* Connector: "⊶" = partida, abrir caminho → "goes into" */}
+                <span style={{ fontSize: '0.85rem', opacity: 0.5 }}>⊶</span>
+                {/* Region crest (larger, fully visible) */}
+                <span style={{ fontSize: '1.3rem' }}>{crestGlyph}</span>
+                <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, ${color}80, transparent)` }} />
+              </Flex>
 
-              {/* Right column — subtitle + title + glyph, left-aligned */}
-              <Flex direction="column" align="flex-start" gap="xs" flex={1} minW={0}>
-                {/* Subtitle (category — already translated by caller) */}
+              {/* Category + role tag */}
+              <Flex align="center" gap="sm">
                 <Text
                   fontSize="xs"
                   letterSpacing="hero"
                   textTransform="uppercase"
-                  fontWeight="bold"
+                  fontWeight="semibold"
                   color={color}
                   m={0}
                   opacity={0.9}
                 >
                   {category.toUpperCase()}
                 </Text>
-
-                {/* Title — dynamic, changes with the active subsystem.
-                    Uses a clamp tied to the card's own size (not viewport)
-                    so it doesn't blow up on ultra-wide screens. */}
-                <Heading
-                  as="h2"
-                  fontFamily="body"
-                  // Shrink the font when the title is long so a lone letter
-                  // doesn't get orphaned on the last line.
-                  fontSize={
-                    activeItem.label.length > 16
-                      ? { base: '1.4rem', md: '1.7rem' }
-                      : { base: '1.8rem', md: '2.2rem' }
-                  }
-                  fontWeight="bold"
+                {/* Parent planet tag — gives context: this region belongs to X */}
+                <Box
+                  as="span"
+                  fontFamily="glyph"
+                  fontSize="xs"
                   lineHeight={1}
-                  color={color}
-                  letterSpacing="heroTitle"
-                  textAlign="left"
-                  m={0}
-                  css={{
-                    textShadow: `0 0 24px ${color}40`,
-                    // `text-wrap: balance` asks the browser to distribute
-                    // words across lines so each line has a similar length,
-                    // preventing orphan letters like a lone "A" on line 2.
-                    textWrap: 'balance',
-                    wordBreak: 'break-word',
-                  }}
+                  css={{ color: `${color}80` }}
+                  aria-hidden="true"
                 >
-                  {activeItem.label.toUpperCase()}
-                </Heading>
-
-                {/* Planet / region name — uses the app-wide `label` textStyle preset. */}
-                <Text textStyle="label" color={color} m={0} opacity={0.9}>
-                  {name}
+                  ·
+                </Box>
+                <Text
+                  fontSize="xs"
+                  letterSpacing="hero"
+                  textTransform="uppercase"
+                  fontWeight="semibold"
+                  color="textOverlayBright"
+                  m={0}
+                  opacity={0.7}
+                >
+                  {parentName}
                 </Text>
+                {role && (
+                  <>
+                    <Box
+                      as="span"
+                      fontFamily="glyph"
+                      fontSize="xs"
+                      lineHeight={1}
+                      css={{ color: `${color}80` }}
+                      aria-hidden="true"
+                    >
+                      ·
+                    </Box>
+                    <Text
+                      fontSize="xs"
+                      letterSpacing="hero"
+                      textTransform="uppercase"
+                      fontWeight="semibold"
+                      color="textOverlayBright"
+                      m={0}
+                      opacity={0.8}
+                    >
+                      {role}
+                    </Text>
+                  </>
+                )}
               </Flex>
+
+              {/* Name — hero scale, left aligned */}
+              <Heading
+                as="h2"
+                fontFamily="body"
+                fontSize="h2"
+                fontWeight="bold"
+                lineHeight={1}
+                color={color}
+                letterSpacing="heroTitle"
+                m={0}
+                css={{
+                  textShadow: `0 0 40px ${color}40, 0 4px 20px ${color}30`,
+                }}
+              >
+                {name}
+              </Heading>
+
+              {/* Gradient divider */}
+              <Box
+                height="1px"
+                width="80px"
+                css={{ background: `linear-gradient(90deg, ${color}, transparent)` }}
+              />
+
+              {/* Traits (subtitle) — inline separated list */}
+              {subtitle && (
+                <Text
+                  fontSize="sm"
+                  color={mutedText}
+                  m={0}
+                  letterSpacing="wide"
+                >
+                  {subtitle}
+                </Text>
+              )}
             </Flex>
           </Box>
 
@@ -320,12 +352,13 @@ export function KammaraCardSubsystem({
             </Flex>
           )}
 
-          {/* ── Content ────────────────────────── */}
+          {/* ── Content — left-aligned ────────────────────────── */}
           <Box
             flex={1}
             minH={0}
             overflowY="auto"
             padding="0.8rem 1.8rem 1.2rem"
+            textAlign="left"
             css={{
               fontFamily: 'var(--chakra-fonts-body)',
               fontSize: '0.88rem',
@@ -355,8 +388,7 @@ export function KammaraCardSubsystem({
                 src={activeItem.image}
                 alt={activeItem.imageAlt ?? activeItem.title}
                 width="100%"
-                height="150px"
-                objectFit="cover"
+                height="auto"
                 display="block"
                 marginBottom="base"
                 boxShadow="cardHoverBig"
@@ -387,7 +419,7 @@ export function KammaraCardSubsystem({
             {/* "⊹ ⊙ ⊹" = universo, Kammara (Kam'Rin) */}
             <span aria-label="Kammara">⊹ ⊙ ⊹</span>
             <Text fontSize="xs" letterSpacing="hero" textTransform="uppercase" color={mutedText} m={0}>
-              Kammara
+              Kammara · {parentName}
             </Text>
           </Flex>
             </Flex>{/* close body content */}
