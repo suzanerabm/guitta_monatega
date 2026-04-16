@@ -178,14 +178,13 @@ export function KammaraRoulette({
   // if the initial one would cause overlap). Use positions from there.
   const positionFor = (positionIndex: number) => layout.positions[positionIndex];
 
-  // Float keyframes
-  const floatKeyframes = items.map((_, positionIndex) => {
-    const { x, y } = positionFor(positionIndex);
-    return `@keyframes kcFloat${positionIndex} {
-      0%, 100% { transform: translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) translateY(0); }
-      50% { transform: translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) translateY(-3px); }
-    }`;
-  }).join('\n');
+  // Float keyframes — ONLY animates a tiny vertical bounce.
+  // Position is set by inline transform (stable, no conflict).
+  // This keyframe is identical for all spheres.
+  const floatKeyframes = `@keyframes kcFloatBounce {
+    0%, 100% { translate: 0 0; }
+    50% { translate: 0 -3px; }
+  }`;
 
   // Shooting star keyframe
   const shootSteps = 20;
@@ -270,8 +269,12 @@ ${Array.from({ length: shootSteps + 1 }).map((_, s) => {
                 cursor="pointer"
                 zIndex={isActive ? 30 : 25}
                 style={{
+                  // Position via inline transform (stable across re-renders).
+                  // The `kcFloatBounce` animation only adds a tiny vertical
+                  // wobble via the `translate` CSS property, which composes
+                  // on top of `transform` without conflict.
                   transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
-                  animation: `kcFloat${positionIndex} 3s ease-in-out infinite ${floatDelay}`,
+                  animation: `kcFloatBounce 3s ease-in-out infinite ${floatDelay}`,
                   opacity: visible && !shooting ? 1 : isActive ? 1 : 0,
                   pointerEvents: visible ? 'auto' : 'none',
                   transitionProperty: 'opacity',

@@ -146,7 +146,7 @@ export function KammaraCardSubsystem({
           <Box
             position="relative"
             flexShrink={0}
-            height="240px"
+            height="180px"
             overflow="visible"
             css={{
               background: `linear-gradient(160deg, ${color}20 0%, ${color}10 50%, ${color}20 100%)`,
@@ -177,7 +177,10 @@ export function KammaraCardSubsystem({
             {/* Row 2 — main header grid */}
             <Flex
               align="center"
-              padding={`0.4rem ${CARD_PADDING_X} 0.4rem 0.6rem`}
+              paddingTop="0.4rem"
+              paddingBottom="0.4rem"
+              paddingLeft="0.6rem"
+              paddingRight={{ base: '1.2rem', md: CARD_PADDING_X }}
               gap="sm"
               height="calc(100% - 2.5rem)"
             >
@@ -212,11 +215,13 @@ export function KammaraCardSubsystem({
                   {category.toUpperCase()}
                 </Text>
 
-                {/* Title — dynamic, changes with the active subsystem */}
+                {/* Title — dynamic, changes with the active subsystem.
+                    Uses a clamp tied to the card's own size (not viewport)
+                    so it doesn't blow up on ultra-wide screens. */}
                 <Heading
                   as="h2"
                   fontFamily="body"
-                  fontSize="h2"
+                  fontSize={{ base: '1.8rem', md: '2.2rem' }}
                   fontWeight="bold"
                   lineHeight={1}
                   color={color}
