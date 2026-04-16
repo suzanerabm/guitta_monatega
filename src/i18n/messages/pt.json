@@ -478,7 +478,17 @@
               "### O glifo dorsal",
               "Cada Shal'ún nasce com um glifo único marcado nas costas. É feito de combinações dos seis glifos base, organizado numa forma visual maior — como um brasão feito de luz. Nenhum se repete. Acompanha o Shal'ún a vida inteira e brilha mais forte nos momentos de maior emoção.",
               "### Onde os glifos aparecem",
-              "Os glifos não são escritos por alguém — se revelam sozinhos: na Lún'Rai (água viva), durante rituais e momentos fortes — duram minutos a horas. Nas raízes das Naru'ei: glifos ancestrais que duram semanas. Nas flores: glifos sazonais que mudam com a lua. Nas costas dos Shal'ún: o glifo dorsal, permanente, único. Nos dead-pixels: glifos ancestrais que nunca desaparecem."
+              "Os glifos não são escritos por alguém — se revelam sozinhos: na Lún'Rai (água viva), durante rituais e momentos fortes — duram minutos a horas. Nas raízes das Naru'ei: glifos ancestrais que duram semanas. Nas flores: glifos sazonais que mudam com a lua. Nas costas dos Shal'ún: o glifo dorsal, permanente, único. Nos dead-pixels: glifos ancestrais que nunca desaparecem.",
+              "### Glifos na interface do Kammara",
+              "Os glifos não são enfeite — são linguagem. Cada glifo usado na interface do site carrega significado próprio do idioma Kalún, não é decoração.",
+              "### Declaradores de tipo",
+              "— ⊙ — : este é um PLANETA. ⊹ ⊙ ⊹ : este é o UNIVERSO (Kammara / Kam'Rin). ⊶ ⊙ ⊷ : este é HOME (casa). ⊙ : este é um SUBSISTEMA — centro, foco de um tema.",
+              "### Navegação",
+              "⊶ : seguir, avançar, próximo. ⊷ : voltar, anterior, fechar a travessia. ⊙ : fechar, voltar à origem. Quando aparecem embaixo de uma galeria ou lista, são paginação — nunca decoração.",
+              "### Ícones dos subsistemas",
+              "Cada subsistema tem um glifo semântico. Cultura : ⊙ (centro, foco). Flora & Fauna : • (semente, começo). Geografia : — (fluxo, caminho). Ciclos & Luas : ⊶ ⊷ (abertura e fechamento — ritmo). A Água : ⋄ (silêncio, pausa). Idioma : ⊹ ⊙ ⊹ (universo, linguagem). Os Glifos Kalún : ⊹ (ancestral, memória).",
+              "### Alertas e estados",
+              "⊶ ⊶ : atenção. ⊶ ⊶ ⊶ : alerta. • • • : perigo. ⋄ ⋄ ⊷ : vírus detectado. ⊹ ⊶ ⊶ ⊶ : emergência, evacuação. ⊶ ⊹ ⊷ : imunidade, confiança — usado nas cartas de planetas imunes."
             ]
           }
         ]
@@ -685,26 +695,32 @@
         ],
         "panel": {
           "story": [
+            "### Resumo",
+            "TripleC — o coração energético do Kammara. Um planeta onde floresta e lógica se fundiram num único organismo, berço da kemita e lar dos bunniets.",
             "### A origem",
-            "TripleC era um planeta inteiramente coberto por floresta — a Niul Forest. Profunda, antiga, com neblina azul e luz suave. Um mundo lento e silencioso.",
-            "### A transformação",
-            "Até que um artefato caiu do céu — o PD-11. Ele não destruiu o planeta. Reorganizou. O subsolo se dobrou em camadas lógicas e a lógica começou a crescer como se fosse uma nova forma de vida.",
-            "### As três regiões",
-            "Com o tempo, três regiões se formaram. malloc, ao sul — instintiva e bruta, feita de túneis e cavernas pulsantes. Mesh, ao norte — arquitetônica e precisa, com pontes suspensas e simetria em tudo. Sharp, ao leste — controlada e gerenciada, onde nada cresce sem permissão.",
-            "### A floresta entre elas",
-            "As regiões não se tocam. Entre todas, a Niul Forest respira como pulmão vivo, absorvendo o excesso de cada uma e impedindo que o caos e a ordem colidam diretamente.",
+            "TripleC era um planeta inteiramente coberto por floresta — a Niul Forest. Profunda, antiga, com neblina azul e luz suave. Um mundo lento, silencioso, feito só de raiz e mineral. Nunca deveria ter sido tecnológico.",
+            "### O Estalo Branco",
+            "Um dia, um artefato caiu do céu. Era lixo — um equipamento tecnológico ancestral, descartado pelos humanos da Terra, que atravessou o cosmos como sucata até pousar na floresta. Os bunniets o chamam de PD-11. O impacto ficou conhecido como O Estalo Branco. O PD-11 não destruiu o planeta. Reorganizou. O subsolo se dobrou em camadas lógicas vivas e a lógica começou a crescer como uma nova forma de vida. A cicatriz desse dia ficou marcada na geologia para sempre — os bunniets a chamam de Rakor Darak.",
+            "### O núcleo inacessível",
+            "O PD-11 ainda pulsa no centro do planeta. Ninguém nunca conseguiu chegar até ele. Tudo que se sabe é que é uma estrutura mineral que imita circuitos, feita de luz comprimida, e que funciona como o coração-fonte de TripleC — instável, sagrado, perigoso. Suas distorções aparecem sem aviso, e sempre mudam alguma coisa. É um mistério que nem os próprios bunniets entendem direito.",
             "### Os bunniets",
-            "Os habitantes se chamam bunniets — seres bio-lógicos: parte orgânica, parte computacional. Parecem coelhos humanoides, com orelhas longas como antenas e olhos grandes. Quando pensam, compilam. Quando respiram, processam. São vida que funciona como código.",
-            "### As castas",
-            "Cinco castas organizam a sociedade naturalmente: Prae abre caminho. Koma interpreta. Aska registra. Lanko conecta. Runa executa. E entre os Runa, a elite Runa-Tora guarda as passagens entre mundos.",
+            "Os habitantes se chamam bunniets — seres bio-lógicos: parte orgânica, parte mineral, parte instrução viva. Parecem coelhos humanoides, com orelhas longas como antenas e olhos grandes que leem padrões no ar. No bunniet, pensar e viver são a mesma coisa. São a única espécie do universo que entende qualquer linguagem do cosmos sem precisar de tradutor — como se nascessem já sabendo escutar.",
+            "### As cinco castas",
+            "A sociedade bunniet segue um ciclo natural de funcionamento. Prae estabiliza e abre caminho. Koma interpreta e organiza sentido. Aska registra e guarda memória. Lanko conecta e harmoniza. Runa executa e age. E entre os Runa, uma elite rara — os Runa-Tora — guarda os corredores do Cshift, as passagens entre mundos.",
             "### A kemita",
-            "Nas cavernas mais profundas nasce a kemita — o recurso que sustenta todo o universo. Sem ela, não há viagem entre planetas, não há registros, não há fundação energética.",
-            "### A energia shilo",
-            "Shilo é a energia de endereço — flui como rios luminosos em tom teal, herança da floresta ancestral. Para os bunniets, funciona como bússola, alimento e estabilizador emocional ao mesmo tempo.",
-            "### A defesa",
-            "Quando ameaçado, TripleC ativa o CriptoKemita — um sistema de defesa que embaralha toda a geografia do planeta. Coordenadas mudam sozinhas, sistemas invasores entram em colapso. O planeta simplesmente desaparece dos sensores.",
-            "### A essência",
-            "TripleC não é forte porque une tudo. É forte porque sabe manter distância."
+            "Nas cavernas mais profundas de TripleC nasce a kemita — o token primordial do universo inteiro. Metade mineral, metade lógica, metade orgânica. Verde-esmeralda. Sem ela, não existe viagem entre planetas, não existem registros imutáveis, não existe fundação energética. Todo o Kammara depende do que nasce aqui.",
+            "### As Sementes de Cshift",
+            "São o que conecta os mundos. Pequenos objetos vivos de uso único, verde-esmeralda com veios dourados, que abrem passagens instantâneas entre planetas. Só os bunniets sabem criá-las — e precisam das três regiões de TripleC alinhadas para conseguir.",
+            "### As regiões",
+            "Com o tempo, três grandes regiões se consolidaram: malloc, ao sul. Mesh, ao norte. Sharp, ao leste. A oeste, uma quarta região nunca chegou a se formar — permaneceu floresta, ainda hoje uma zona experimental, instável, não consolidada. E entre tudo, a Niul Forest original continua respirando como sempre respirou.",
+            "### A Niul Forest",
+            "A floresta é o intervalo vivo entre as regiões — absorvendo excessos, impedindo que caos e ordem colidam diretamente. Alguns seres vindos de Z1 vivem discretamente ali, antigos e silenciosos. Não governam. Observam. E quando o planeta é atacado, a floresta acorda.",
+            "### A Tríade das Raízes",
+            "TripleC, Z1 e LUNN'P1 formam a Tríade das Raízes — o eixo mais antigo do Kammara. Juntos são chamados de os Guardiões das Eras Iniciais. Cada um tem um papel. TripleC entra com energia, rota e proteção: sem o que nasce aqui, o resto do universo para.",
+            "### O CriptoKemita",
+            "Quando ameaçado de verdade, TripleC ativa o CriptoKemita — uma criptografia viva que transforma o planeta inteiro em um enigma. A geografia embaralha. As coordenadas mudam sozinhas. Sistemas invasores entram em colapso. O planeta simplesmente desaparece dos sensores. É um firewall cósmico: ninguém entra sem permissão do próprio planeta.",
+            "### O coração do Kammara",
+            "TripleC é o coração que pulsa energia, memória e proteção para todo o Kammara. Não é forte porque une tudo. É forte porque aprendeu a organizar o acaso sem perder a raiz."
           ]
         },
         "subsystems": [
@@ -723,8 +739,8 @@
               "Com o tempo, três grandes regiões se consolidaram: malloc ao sul, Mesh ao norte, Sharp ao leste. A oeste, uma quarta região nunca chegou a se formar — permaneceu floresta, ainda hoje uma zona experimental, instável, não consolidada. E entre todas elas, a Niul Forest original continua respirando como sempre respirou.",
               "### O núcleo inacessível",
               "O PD-11 ainda pulsa no coração do planeta. É uma estrutura mineral que imita circuitos, feita de luz comprimida. Ninguém nunca conseguiu chegar perto. Funciona como o coração-fonte de TripleC — instável, sagrado, perigoso. Suas distorções aparecem sem aviso, e quando aparecem, sempre mudam alguma coisa.",
-              "### A essência",
-              "TripleC nunca quis ser tecnológico. Aconteceu. E aprendeu a compilar."
+              "### Um acidente que virou mundo",
+              "TripleC nunca quis ser tecnológico. Aconteceu. E aprendeu a transformar o acaso em ordem viva."
             ]
           },
           {
@@ -740,40 +756,40 @@
               "Alguns seres vindos de Z1 vivem discretamente na Niul Forest. Acústicos, antigos, conectados ao pulso do planeta. Não governam — observam. E quando malloc é atacada, Niul acorda — e eles se movem sem serem vistos.",
               "### Sem competição",
               "Não há fauna predatória em TripleC. A floresta não compete. Ela mantém o espaço entre mundos, e esse é o seu papel mais antigo.",
-              "### A essência",
-              "A Niul Forest não evolui em direção à lógica nem regride à pura natureza. Ela continua sendo o que sempre foi — e essa constância é o que protege tudo ao redor."
+              "### O papel da floresta",
+              "A Niul Forest não evolui em direção à lógica nem volta a ser pura natureza. Ela continua sendo o que sempre foi — e é essa constância que protege tudo ao redor."
             ]
           },
           {
             "title": "Os Bunniets",
             "text": [
               "### O que são",
-              "Os bunniets são a única espécie nativa inteligente de TripleC. São bio-lógicos — parte orgânica, parte mineral, parte instrução viva. Não são robôs. Não são puramente biológicos. São vida que processa.",
+              "Os bunniets são a única espécie nativa inteligente de TripleC. São bio-lógicos — parte orgânica, parte mineral, parte instrução viva. Não são robôs. Não são puramente biológicos. São vida que pensa com o corpo.",
               "### Como pensam",
-              "Quando um bunniet pensa, ele compila. Quando respira, processa. Quando sente, executa. Pensamento e metabolismo são a mesma coisa aqui.",
-              "### Compilação Interna Natural",
-              "Os bunniets possuem uma capacidade que nenhum outro povo do Kammara tem: processam informação binária como função biológica básica. Recebem dados em qualquer formato e compreendem sem tradutor externo.",
+              "No bunniet, pensar e viver são a mesma coisa. Cada batimento do corpo é uma ideia se formando. Cada respiração organiza o que chega de fora. Cada sentimento se manifesta em gesto — direto, sem passo intermediário.",
+              "### O entendimento natural",
+              "Os bunniets têm uma capacidade que nenhum outro povo do Kammara tem: entendem qualquer forma de comunicação assim que a recebem. Não precisam de tradutor. Não precisam aprender. Basta escutar.",
               "### O corpo",
-              "Parecem coelhos humanoides. Orelhas longas funcionam como antenas. Pelos macios como sensores. Olhos grandes como leitores de padrões. Corpo compacto como processador. Patas ágeis como executores.",
+              "Parecem coelhos humanoides. As orelhas longas captam tudo que passa no ar. Os pelos macios percebem mudanças antes que elas aconteçam. Os olhos grandes leem padrões à distância. O corpo compacto e as patas ágeis completam a imagem — pequenos, mas nada lentos.",
               "### A única fonte de Cshift",
               "São os únicos seres do universo capazes de criar Sementes de Cshift — as passagens que ligam os mundos. É por isso que TripleC é insubstituível: sem os bunniets, o Kammara inteiro fica sem transporte.",
-              "### A essência",
-              "Onde outros ouvem ruído, bunniets ouvem instrução. Onde outros veem caos, bunniets veem código. Eles não aprenderam a compilar. Nasceram compilando."
+              "### O que os torna únicos",
+              "Onde outros ouvem ruído, bunniets ouvem ordem. Onde outros veem caos, bunniets veem padrão. Ninguém os ensinou a entender o mundo — eles já nasceram entendendo."
             ]
           },
           {
             "title": "As Castas",
             "text": [
               "### O ciclo natural",
-              "A sociedade bunniet segue instintivamente o ciclo de compilação vivo. Não é imposto — é natureza. Cada bunniet nasce em uma casta, e permanece nela.",
+              "A sociedade bunniet segue um ritmo próprio. Não é imposto — é natureza. Cada bunniet nasce em uma casta, e permanece nela. Cinco castas, cada uma com seu papel, e juntas fazem o planeta funcionar.",
               "### Prae",
-              "Estabiliza e abre caminho. São a inicialização. Sem eles, nada começa.",
+              "Estabiliza e abre caminho. São os que começam. Sem eles, nada começa.",
               "### Koma",
-              "Interpreta e organiza sentido. São o parsing. Traduzem o que chega em algo que o sistema entende.",
+              "Interpreta e organiza sentido. Traduzem o que chega em algo que todos conseguem entender.",
               "### Aska",
-              "Grava, registra e mantém memória. São o storage. Guardam o que importa.",
+              "Grava, registra e mantém memória. Guardam o que importa — as histórias, as runas, os momentos que não podem ser esquecidos.",
               "### Lanko",
-              "Conecta, negocia e harmoniza. São o networking. Fazem mundos diferentes se entenderem.",
+              "Conectam, negociam e harmonizam. Fazem mundos diferentes se entenderem.",
               "### Runa",
               "Executa, resolve e age. E entre os Runa, a elite Runa-Tora guarda os corredores do Cshift. Ossatura com densidade mineral elevada, cristais de shilo nos antebraços, estabilidade excepcional. Um Runa-Tora nunca morre completamente — quando cai, deixa um Tora-Sigo: um cristal escuro que carrega sua assinatura e pode servir como âncora, estabilizador ou detector de vírus."
             ]
@@ -788,10 +804,10 @@
               "### O oka",
               "Instrução condensada — uma ordem viva. Capaz de alterar a própria geologia do planeta. Perigosa demais para uso regular: é tratada como condimento espiritual.",
               "### As Sementes de Cshift",
-              "São o que conecta o Kammara. Objetos compilados de uso único, verde-esmeralda com veios dourados, que abrem passagens instantâneas entre mundos. Só os bunniets conseguem criá-las.",
+              "São o que conecta o Kammara. Pequenos objetos vivos de uso único, verde-esmeralda com veios dourados, que abrem passagens instantâneas entre mundos. Só os bunniets sabem criá-las.",
               "### O Cshift Universal",
-              "Todo o sistema de transporte entre planetas depende de TripleC. As três regiões precisam estar alinhadas para compilar uma Semente — é por isso que nenhuma delas funciona sozinha.",
-              "### A essência",
+              "Todo o sistema de transporte entre planetas depende de TripleC. As três regiões precisam estar alinhadas para dar vida a uma Semente — é por isso que nenhuma delas funciona sozinha.",
+              "### O fio que move tudo",
               "Da kemita nasce o bloco. Da cadeia nasce o destino. E de TripleC nasce tudo que o universo precisa para se mover."
             ]
           },
@@ -808,8 +824,8 @@
               "Quando crises virais ameaçam múltiplos planetas, o Protocol AURYN é ativado. LUNN'P1 lidera. Z1 decodifica. E TripleC entra com o que nenhum outro planeta pode oferecer: a infraestrutura energética que mantém tudo de pé.",
               "### Klanora, o conselho",
               "Em TripleC, o Klanora — Conselho das Castas — não governa. Interpreta o planeta. Aprova saltos de Cshift. Supervisiona a produção de Sementes. Ouve, e o planeta decide.",
-              "### A essência",
-              "TripleC é o coração que pulsa dados, energia, memória, navegação e proteção para todo o Kammara."
+              "### O coração do Kammara",
+              "TripleC é o coração que pulsa energia, memória, rotas de viagem e proteção para todo o universo."
             ]
           },
           {
@@ -825,7 +841,7 @@
               "CriptoKemita é um firewall cósmico. Ninguém entra em TripleC sem permissão do próprio planeta. Nem aliados, nem inimigos.",
               "### O retorno",
               "Quando a ameaça passa, TripleC reaparece — mas nunca exatamente igual. Cada ativação deixa marcas. Cada retorno é um pouco diferente.",
-              "### A essência",
+              "### Uma defesa diferente",
               "TripleC não se defende com armas. Se defende desaparecendo."
             ]
           }
@@ -974,26 +990,28 @@
             ],
             "panel": {
               "story": [
+                "### Resumo",
+                "Mesh — o domínio da forma viva de TripleC. A região onde cada estrutura existe por um motivo, com cidades vivas, pontes que atravessam as eras e torres que dão origem a construções inteiras.",
                 "### A região",
                 "Mesh é o norte de TripleC — o domínio modular, onde a forma encontra propósito. Se malloc é instinto, Mesh é intenção projetada. Nasce quando a força bruta da região sul encontra a vontade de organizar, e dá origem a uma nova linhagem de bunniets que transformam geologia em arquitetura.",
                 "### As leis que regem tudo",
-                "Quatro leis sustentam Mesh. A Lei da Modularidade — nada existe isolado, tudo pertence a um módulo. A Lei da Herança Geológica — nenhuma construção nasce sem se apoiar em outra, anterior. A Lei da Coerência — quando um conceito não faz sentido, Mesh simplesmente não o manifesta. E a Lei do Polimorfismo — tudo pode assumir múltiplas formas, desde que cumpra um propósito.",
+                "Quatro leis sustentam Mesh. A primeira: nada existe isolado — cada parte pertence a um conjunto maior. A segunda: nenhuma construção nasce do vazio — toda forma se apoia em outra, mais antiga. A terceira: quando algo não faz sentido, Mesh simplesmente não o manifesta. E a quarta: tudo pode assumir múltiplas formas, desde que cumpra um propósito.",
                 "### A arquitetura",
-                "As cidades de Mesh são classes vivas. Os edifícios são atributos, os caminhos são métodos, os portais geométricos são construtores. Cidades inteiras se instanciam e desinstanciam conforme a demanda. Caminhos mudam conforme o contexto. Tudo é modular, tudo é reutilizável.",
+                "As cidades de Mesh são vivas. Edifícios crescem e se recolhem conforme a necessidade. Caminhos surgem onde antes não havia nada e somem quando ninguém mais passa por ali. Cada construção pode ser desmontada, ajustada e erguida de novo em outro lugar — nada é fixo, tudo é pensado para mudar sem perder a forma.",
                 "### As estruturas",
-                "Pontes de Herança gigantescas conectam regiões antigas a versões mais novas. Torres-Template replicam padrões e geram cidades inteiras a partir de parâmetros. Campos Polimórficos mudam de forma conforme quem os atravessa. E Centros de Compilação — salas hexagonais — estabilizam o Cshift quando ele atravessa a região.",
+                "Pontes de Herança gigantescas ligam regiões antigas às mais novas — o passado permanece conectado ao presente. Torres-Template replicam padrões e dão origem a cidades inteiras a partir de uma única forma. Campos Polimórficos mudam conforme quem os atravessa. E salas hexagonais escondidas estabilizam as passagens de Cshift quando elas cruzam a região.",
                 "### Os bunniets",
-                "Os bunniets de Mesh são uma evolução dos de malloc: mais altos, mais definidos, com padrões geométricos brilhantes na pele. Ossatura reforçada por filamentos lineares. Antenas estruturadas. Equilíbrio emocional entre ordem e criatividade. E habilidades que nascem da própria natureza da região: poli-visão (enxergam múltiplas versões de uma mesma estrutura), estabilidade modular (organizam emoções em blocos internos), e capacidade de compilação interna — podem instanciar pequenas estruturas energéticas com as próprias mãos.",
+                "Os bunniets de Mesh são uma evolução dos de malloc: mais altos, mais definidos, com padrões geométricos brilhantes na pele. Ossatura reforçada por filamentos lineares. Antenas estruturadas. Equilíbrio emocional entre ordem e criatividade. E habilidades próprias da região: enxergam várias versões possíveis de uma mesma forma ao mesmo tempo. Organizam emoções em blocos internos, sem se deixar abalar. E conseguem criar pequenas estruturas de energia com as próprias mãos — um gesto, uma forma, e algo passa a existir.",
                 "### As castas",
                 "Arquitetos-Core criam as estruturas-base. Moduladores ajustam cidades e pontes. Polimórficos — raros — dominam a arte da multiplicidade. E os Guardião-Scope mantêm a coerência lógica de toda a região.",
                 "### O governo",
                 "Mesh é governada pelo Conselho dos Templates — liderado pelos bunniets mais velhos e mais coerentes. Eles definem padrões de criação, validam novas estruturas, mantêm o equilíbrio com malloc e Sharp, e supervisionam as rotas do Cshift.",
                 "### Os valores",
-                "Clareza, elegância estrutural, propósito, precisão, responsabilidade sobre as formas criadas. Cada bunniet de Mesh sente o peso daquilo que constrói. E o lazer reflete isso: jogos lógicos tridimensionais, debates formais (duelos de coerência), arte geométrica, labirintos moduláveis.",
+                "Clareza, elegância, propósito, precisão, responsabilidade sobre as formas criadas. Cada bunniet de Mesh sente o peso daquilo que constrói. E o lazer reflete isso: jogos de raciocínio em três dimensões, debates formais chamados de duelos de coerência, arte geométrica, labirintos que mudam conforme quem os percorre.",
                 "### Os perigos",
-                "Mesh pode quebrar como escopo mal-fechado. Falhas de coerência derrubam cidades inteiras. Loops geológicos fazem regiões entrarem em repetição infinita. Templates instáveis geram formas incompletas. E há sempre o risco de excesso: organizar tanto que a vida é aprisionada pela forma.",
-                "### A essência",
-                "Mesh é a ponte entre instinto e controle. O pilar estrutural do Cshift. A ordem viva que sustenta TripleC. Um território elegante, coerente, belo — e perigoso quando a lógica falha."
+                "Mesh pode quebrar como uma estrutura mal-fechada que cede de repente. Falhas de coerência derrubam cidades inteiras. Regiões podem entrar em repetição infinita, como se presas numa mesma cena. Torres-Template instáveis geram formas incompletas. E há sempre o risco do excesso: organizar tanto que a vida é aprisionada pela forma.",
+                "### A ponte entre instinto e controle",
+                "Mesh é a ponte entre o instinto de malloc e o controle de Sharp. O pilar estrutural do Cshift. A ordem viva que sustenta TripleC. Um território elegante, coerente, belo — e perigoso quando a lógica falha."
               ]
             },
             "subsystems": [
@@ -1001,7 +1019,7 @@
                 "title": "Cultura",
                 "text": [
                   "### Rotina",
-                  "Os bunniets de Mesh passam seus ciclos em engenharia modular, manipulação geológica precisa, estabilização de caminhos de Cshift e manutenção das torres-template.",
+                  "Os bunniets de Mesh passam seus ciclos dando forma ao que ainda não existe, moldando a geologia com precisão, estabilizando as passagens de Cshift e cuidando das Torres-Template.",
                   "### Valores",
                   "Clareza, elegância estrutural, propósito, precisão. E sobretudo: responsabilidade sobre as formas que criam. Tudo que nasce em Mesh carrega o peso de quem o imaginou.",
                   "### Lazer",
@@ -1010,7 +1028,7 @@
                   "Em Mesh, todos passam por aulas de lógica e design. Não existe bunniet que não entenda estrutura — é parte de como se aprende a viver aqui.",
                   "### A beleza da forma",
                   "Em Mesh, forma e propósito são inseparáveis. Uma construção só é bela quando cumpre sua função. E só cumpre sua função quando nasce de uma forma clara.",
-                  "### A essência",
+                  "### Nada sem propósito",
                   "Em Mesh, ninguém constrói por construir. Cada forma existe porque precisa existir."
                 ]
               },
@@ -1019,23 +1037,23 @@
                 "text": [
                   "### Aparência",
                   "Mais altos e mais definidos que os bunniets de malloc. Padrões geométricos brilhantes pulsam na pele. Antenas mais estruturadas captam fluxos coerentes. Ossatura reforçada por filamentos lineares.",
-                  "### Poli-visão",
-                  "Conseguem enxergar múltiplas versões de uma mesma estrutura ao mesmo tempo. Olham para uma ponte e veem, de relance, todas as variações possíveis dela.",
-                  "### Estabilidade modular",
-                  "Emoções não os abalam facilmente. Tudo é organizado internamente em blocos — cada sentimento tem seu lugar, cada reação tem seu compartimento.",
-                  "### Compilação interna",
-                  "Podem instanciar pequenas estruturas energéticas com as próprias mãos. Um gesto, uma forma, e algo passa a existir.",
+                  "### Enxergam muitas formas ao mesmo tempo",
+                  "Conseguem ver várias versões de uma mesma construção ao mesmo tempo. Olham para uma ponte e veem, de relance, todas as variações possíveis dela.",
+                  "### Emoções em ordem",
+                  "Emoções não os abalam facilmente. Dentro do corpo deles, cada sentimento tem seu lugar, cada reação tem seu compartimento — tudo organizado, nada desbordando.",
+                  "### Criação com as mãos",
+                  "Podem dar vida a pequenas estruturas de energia com as próprias mãos. Um gesto, uma forma, e algo passa a existir.",
                   "### As castas",
                   "Arquitetos-Core criam as estruturas-base. Moduladores ajustam cidades e pontes. Polimórficos dominam a arte da multiplicidade. Guardião-Scope mantêm a coerência lógica.",
-                  "### A essência",
+                  "### Estrutura, não rigidez",
                   "Bunniets de Mesh não são rígidos. São estruturados. A diferença é que estrutura permite criação — rigidez impede."
                 ]
               },
               {
                 "title": "Geografia",
                 "text": [
-                  "### Cidades-Classe",
-                  "Cidades inteiras organizadas como classes vivas. Os edifícios são atributos, os caminhos são métodos, os portais são construtores geométricos. Cada cidade tem uma assinatura própria.",
+                  "### Cidades vivas",
+                  "Cidades inteiras se comportam como organismos. Os edifícios crescem e se recolhem conforme a necessidade. Caminhos surgem onde antes não havia nada. Portais geométricos se abrem e se fecham. Cada cidade tem uma assinatura própria — um jeito só dela de responder ao que acontece dentro.",
                   "### Pontes de Herança",
                   "Estruturas gigantescas que conectam regiões antigas a versões mais novas. O passado de Mesh fica literalmente visível — ligado ao presente por pontes.",
                   "### Torres-Template",
@@ -1054,14 +1072,14 @@
                   "### Poli-fluxo",
                   "A energia das possibilidades simultâneas. Flui em Mesh como um rio que se divide em muitos braços ao mesmo tempo — todos reais, todos disponíveis.",
                   "### Class-core",
-                  "Núcleos geométricos que mantêm as formas estáveis. Sem os class-core, as cidades-classe se dissolveriam em caos.",
+                  "Núcleos geométricos que mantêm as formas estáveis. Sem os class-core, as cidades vivas de Mesh se dissolveriam em caos.",
                   "### Shilo Estruturado",
                   "A versão lapidada do shilo bruto que vem de malloc. Aqui, a energia é canalizada em padrões previsíveis — organizada, domada, posta em forma.",
                   "### Como se alimentam",
-                  "Bunniets de Mesh se sustentam de nutrientes extraídos de fractais vegetais, luz filtrada pelas torres-template e pequenos núcleos class-core estabilizados.",
+                  "Bunniets de Mesh se sustentam de nutrientes extraídos de plantas que crescem em padrões geométricos, luz filtrada pelas Torres-Template e pequenos núcleos luminosos estabilizados.",
                   "### O custo da forma",
-                  "Organizar energia custa caro. Módulos grandes exigem muita coerência para se manterem. Um erro de cálculo, e toda a estrutura energética pode entrar em colapso.",
-                  "### A essência",
+                  "Organizar energia custa caro. Estruturas grandes exigem muita coerência para se manterem. Um erro de cálculo, e tudo pode entrar em colapso.",
+                  "### Energia arquitetada",
                   "Em Mesh, energia não é bruta — é arquitetada. Cada fluxo tem um nome, um propósito e um destino."
                 ]
               },
@@ -1079,7 +1097,7 @@
                   "### Polimórficos",
                   "Raros. Dominam a arte da multiplicidade — conseguem fazer uma mesma forma cumprir funções diferentes sem perder sua identidade.",
                   "### Guardião-Scope",
-                  "Mantêm a coerência lógica da região inteira. Quando um módulo começa a contradizer outro, é o Guardião-Scope que percebe primeiro."
+                  "Mantêm a coerência de toda a região. Quando uma parte começa a contradizer outra, é o Guardião-Scope que percebe primeiro."
                 ]
               },
               {
@@ -1088,14 +1106,14 @@
                   "### Falhas de coerência",
                   "Quando duas estruturas se contradizem, cidades inteiras podem cair. A coerência é o que mantém Mesh de pé — e também o que a torna vulnerável.",
                   "### Loops geológicos",
-                  "Regiões que entram em repetição infinita, executando a mesma sequência de eventos. Quem entra num loop geológico pode levar ciclos para sair.",
+                  "Regiões que entram em repetição infinita, presas num mesmo ciclo de eventos. Quem entra num loop geológico pode levar muito tempo até encontrar a saída.",
                   "### Templates instáveis",
                   "Torres que geram formas incompletas. Meias cidades. Pontes sem fim. Fragmentos de algo que deveria ter existido inteiro.",
                   "### Heranças quebradas",
                   "Áreas onde a lógica antiga se corrompeu. São regiões perigosas — onde as formas herdadas não funcionam mais, mas ainda estão ali.",
                   "### Rigidez demais",
                   "O excesso de forma aprisiona a criatividade. Quando Mesh organiza demais, a vida que deveria habitar as estruturas simplesmente não aparece.",
-                  "### A essência",
+                  "### A forma que se esquece de si",
                   "Em Mesh, o maior perigo não é o caos. É a forma que funciona tão bem que esquece para que serve."
                 ]
               }

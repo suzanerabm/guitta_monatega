@@ -1,0 +1,33 @@
+
+
+### Resumo
+malloc — o instinto vivo de TripleC. A região mais antiga e mais vital do planeta, feita de túneis, cavernas pulsantes e cinco camadas geológicas, onde nasce a kemita e tudo começa antes de ter nome.
+
+---
+
+### A região
+malloc é o sul de TripleC — a região mais antiga, mais instável e mais vital do planeta. É onde tudo começou, onde o artefato PD-11 caiu do céu e reorganizou a floresta em camadas vivas. Quem fala de origem em TripleC, fala de malloc.
+
+### As cinco camadas
+O subsolo de malloc se divide em cinco camadas geológicas vivas. Portex é a superfície, onde instruções e runas se cristalizam. Datara tem túneis estáveis por onde flui o shilo. Basa é feita de cavernas de matéria potencial — tudo pode nascer ali. Hepa é a camada criadora, de onde brotam kemita, cristais e oka. E Estaka é o abismo mais profundo, onde ficam as decisões finais e os limites.
+
+### As vilas
+As comunidades de malloc são organizadas em grades 16×16 — vilas cúbicas incrustadas no subsolo. Cada uma tem endereço próprio, função social e conexões com outras vilas através das Cidades-Risca, caminhos estreitos que funcionam como atalhos diretos.
+
+### Os bunniets
+Os bunniets de malloc medem de 30 a 40 centímetros. São compactos, arredondados, com pelagem em tons bege, verde ou ferrugem. Têm orelhas longas com circuitos integrados, olhos negros brilhantes e cristais de shilo embutidos no corpo — funcionais, não ornamentais. São guiados por instinto: sentem antes de pensar, agem antes de calcular.
+
+### As castas
+Cinco castas organizam a sociedade naturalmente. Prae estabiliza e previne falhas. Koma calcula rotas e interpreta kemita. Aska registra runas e preserva Portex. Lanko conecta vilas e media disputas. E Runa executa — age quando o instante exige. Entre os Runa, há uma elite rara: os Runa-Tora, um em cada cinco mil, com shilo embutido nos antebraços e estabilidade emocional excepcional.
+
+### A kemita e o shilo
+Nas cavernas da Hepa nasce a kemita — o token primordial que sustenta todo o universo. E por toda a região flui o shilo, a energia de endereço que permite o Cshift existir. Essas duas forças fazem de malloc o coração mineral de TripleC, e a cobiça de todo o Kammara.
+
+### Alloc
+Há uma presença nas vibrações das camadas — algo que os bunniets chamam de Alloc. Não tem forma. É sentido. Prae e Aska interpretam sua voz, e sua harmonia é condição para a extração de kemita. Sem Alloc em paz, a Hepa não entrega nada.
+
+### Os perigos
+O maior medo coletivo é o Segmentation Fault — quando camadas se contradizem e vilas inteiras desaparecem, shilo fragmenta, runas se corrompem. A Hepa pode crescer sem aviso e engolir túneis. E sempre há a ameaça externa: vírus que exploram falhas de shilo para roubar Sementes de Cshift.
+
+### Vigília calma
+malloc vive em vigília calma — atenção alta sem tensão. É o instinto vivo de TripleC, o ponto onde tudo começa antes de ter nome. E onde tudo, ainda hoje, começa de novo a cada ciclo.
