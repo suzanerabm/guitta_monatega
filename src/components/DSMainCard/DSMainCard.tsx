@@ -55,6 +55,21 @@ interface DSMainCardProps {
   textPanelTitle?: string;
   glyphVariant?: 'planet' | 'universe';
   text?: ReactNode;
+  /**
+   * Custom renderer for the left-side panel. When provided, replaces the
+   * default DSTextPanel. Receives the DSMainCard color/text props so the
+   * custom panel can stay in sync with the host card's theme.
+   * If omitted, falls back to DSTextPanel with the legacy behavior.
+   */
+  renderPanel?: (ctx: {
+    titleColor?: string;
+    subtitleColor?: string;
+    textColor?: string;
+    title?: string;
+    glyphVariant?: 'planet' | 'universe';
+    stripSide?: boolean;
+    text?: ReactNode;
+  }) => ReactNode;
   children?: ReactNode;
   'data-testid'?: string;
 }
@@ -72,6 +87,7 @@ export function DSMainCard({
   textPanelTitle,
   glyphVariant,
   text,
+  renderPanel,
   children,
   'data-testid': testId,
 }: DSMainCardProps) {
@@ -299,17 +315,29 @@ export function DSMainCard({
               />
             </Box>
           )}
-          <DSTextPanel
-            title={textPanelTitle}
-            titleColor={titleColor}
-            subtitleColor={subtitleColor}
-            textColor={textColor}
-            fillParent={stripSide}
-            showGlyph={stripSide}
-            glyphVariant={glyphVariant}
-          >
-            {text}
-          </DSTextPanel>
+          {renderPanel ? (
+            renderPanel({
+              title: textPanelTitle,
+              titleColor,
+              subtitleColor,
+              textColor,
+              glyphVariant,
+              stripSide,
+              text,
+            })
+          ) : (
+            <DSTextPanel
+              title={textPanelTitle}
+              titleColor={titleColor}
+              subtitleColor={subtitleColor}
+              textColor={textColor}
+              fillParent={stripSide}
+              showGlyph={stripSide}
+              glyphVariant={glyphVariant}
+            >
+              {text}
+            </DSTextPanel>
+          )}
         </Box>
       )}
 

@@ -35,9 +35,19 @@ export interface KammaraRouletteProps {
   onSelect: (index: number) => void;
   color: string;
   darkColor: string;
-  /** Horizontal padding of the parent card, used to align the active sphere over the gate label padding. */
-  cardPaddingX: string;
-  /** Vertical position of the active sphere relative to the card (CSS length, e.g. "50%" or "120px"). Default: "50%". */
+  /**
+   * Layout mode:
+   * - "inline" (default): the roulette sits in the normal flow. The parent
+   *   controls where it goes via layout (flex/grid). Recommended — simpler,
+   *   no measurement, no resize logic.
+   * - "absolute": the roulette is absolutely positioned inside its nearest
+   *   positioned ancestor, aligned horizontally to `cardPaddingX` and
+   *   vertically to `top`. Kept for legacy floating-over-card use.
+   */
+  mode?: 'inline' | 'absolute';
+  /** (absolute mode only) Horizontal padding of the parent card. */
+  cardPaddingX?: string;
+  /** (absolute mode only) Vertical center position relative to the card. */
   top?: string;
 }
 
@@ -47,6 +57,7 @@ export function KammaraRoulette({
   onSelect,
   color,
   darkColor,
+  mode = 'inline',
   cardPaddingX,
   top = '50%',
 }: KammaraRouletteProps) {
@@ -65,7 +76,7 @@ export function KammaraRoulette({
         setRouletteOpen(false);
         setShooting(false);
       }, 600);
-    }, 2500);
+    }, 6000);
   };
 
   const showRoulette = () => {
@@ -108,18 +119,22 @@ ${Array.from({ length: shootSteps + 1 }).map((_, s) => {
     <>
       <style>{floatKeyframes}{'\n'}{shootKf}</style>
       <Box
-        position="absolute"
-        top={top}
-        left={`calc(${cardPaddingX} + ${ROULETTE_SPHERE_SIZE / 2}px)`}
-        zIndex={40}
+        {...(mode === 'absolute'
+          ? {
+              position: 'absolute' as const,
+              top,
+              left: `calc(${cardPaddingX ?? '0px'} + ${ROULETTE_SPHERE_SIZE / 2}px)`,
+              zIndex: 40,
+              css: {
+                // (top, left) marks the LOGICAL CENTER of the orbit.
+                transform: `translate(-50%, -50%)`,
+              },
+            }
+          : {
+              position: 'relative' as const,
+            })}
         overflow="visible"
         onMouseEnter={showRoulette}
-        css={{
-          // (top, left) marks the LOGICAL CENTER of the orbit.
-          // Offset the box back by half its size so that (top, left) is
-          // the center, not the top-left corner.
-          transform: `translate(-50%, -50%)`,
-        }}
         width={`${r * 2 + ROULETTE_SPHERE_SIZE}px`}
         height={`${r * 2 + ROULETTE_SPHERE_SIZE}px`}
       >

@@ -1,8 +1,8 @@
 'use client';
 import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react';
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import type { ReactNode } from 'react';
-import { KammaraRoulette, ROULETTE_SPHERE_SIZE, computeOrbitRadius } from '@/components/KammaraRoulette';
+import { KammaraRoulette } from '@/components/KammaraRoulette';
 
 // Shared layout constant: the card's horizontal padding.
 // The gate label and the roulette position both depend on this value,
@@ -26,16 +26,15 @@ export interface KammaraCardSubsystemStat {
 }
 
 export interface KammaraCardSubsystemProps {
+  /** Planet / region name (kept for aria/data-testid; not shown in the header anymore). */
   name: string;
+  /** Category label shown in the header (e.g. "Subsistema"). Pass a translated string. */
   category: string;
-  subtitle?: string;
   tabs: KammaraCardSubsystemTab[];
   stats?: KammaraCardSubsystemStat[];
-  rarity?: number;
   crestGlyph?: string;
   color: string;
   darkColor: string;
-  midColor?: string;
   theme?: 'light' | 'dark';
   'data-testid'?: string;
 }
@@ -43,66 +42,35 @@ export interface KammaraCardSubsystemProps {
 export function KammaraCardSubsystem({
   name,
   category,
-  subtitle,
   tabs,
   stats = [],
-  rarity = 0,
   crestGlyph = '⊙',
   color,
   darkColor,
-  midColor,
   theme = 'dark',
   'data-testid': testId,
 }: KammaraCardSubsystemProps) {
   const allItems = tabs;
 
   const [activeIndex, setActiveIndex] = useState(0);
-  const [gateOpen, setGateOpen] = useState(true);
-  const [rouletteTop, setRouletteTop] = useState<string>('50%');
-  const cardRef = useRef<HTMLDivElement>(null);
-  const gateRef = useRef<HTMLDivElement>(null);
-
-  // Align the roulette's active sphere (at the top of the orbit) with the
-  // center of the gate. The active sphere sits at y = -ROULETTE_ORBIT_RADIUS
-  // from the roulette's center, so we offset the center downward by that amount.
-  useLayoutEffect(() => {
-    const measure = () => {
-      const card = cardRef.current;
-      const gate = gateRef.current;
-      if (!card || !gate) return;
-      const cardRect = card.getBoundingClientRect();
-      const gateRect = gate.getBoundingClientRect();
-      const gateCenter = gateRect.top + gateRect.height / 2 - cardRect.top;
-      const rouletteCenter = gateCenter + computeOrbitRadius(allItems.length);
-      setRouletteTop(`${rouletteCenter}px`);
-    };
-    measure();
-    window.addEventListener('resize', measure);
-    return () => window.removeEventListener('resize', measure);
-  }, [gateOpen]);
 
   const activeItem = allItems[activeIndex];
 
   const isLight = theme === 'light';
   const textColor = isLight ? 'overlayLightSoft' : 'textOverlayBright';
   const mutedText = isLight ? 'inkSoft' : 'bannerLabel';
-  const body = midColor ?? darkColor;
 
   const handleSelect = (index: number) => {
     if (index === activeIndex) {
       return;
     }
-    setGateOpen(false);
-    setTimeout(() => {
-      setActiveIndex(index);
-      setGateOpen(true);
-    }, 200);
+    setActiveIndex(index);
   };
 
   return (
     <Box
-      ref={cardRef}
       data-testid={testId ?? 'kammara-card-subsystem'}
+      aria-label={name}
       position="relative"
       width="100%"
       height="100%"
@@ -115,11 +83,9 @@ export function KammaraCardSubsystem({
         onSelect={handleSelect}
         color={color}
         darkColor={darkColor}
-        cardPaddingX={CARD_PADDING_X}
-        top={rouletteTop}
       />
 
-      {/* ── Card body ──────────────────────────────────── */}
+      {/* ── Card body — transparent, relies on watermark + halo + outline */}
       <Box
         position="relative"
         width="100%"
@@ -127,7 +93,6 @@ export function KammaraCardSubsystem({
         borderRadius="32px"
         overflow="hidden"
         css={{
-          background: `linear-gradient(160deg, ${darkColor} 0%, ${body} 45%, ${darkColor} 100%)`,
           border: `1px solid ${color}40`,
           outline: `2px solid ${color}`,
           outlineOffset: '6px',
@@ -164,7 +129,7 @@ export function KammaraCardSubsystem({
         />
 
         <Flex position="relative" direction="column" width="100%" height="100%">
-          {/* ── Title banner ────────────────────── */}
+          {/* ── Header — dynamic: shows the active subsystem's label ──────── */}
           <Box
             position="relative"
             flexShrink={0}
@@ -196,15 +161,15 @@ export function KammaraCardSubsystem({
               <span>{crestGlyph}</span>
             </Flex>
 
-            {/* Top ornament — semantic declarer "— ⊙ —" = PLANET
-                (flow-line + center + flow-line). The lines frame the
-                declarer; the crestGlyph is the planet's identity. */}
+            {/* Top ornament — semantic declarer "— ⊙ —"
+                (flow-line + center + flow-line) */}
             <Flex
               justify="center"
               align="center"
               gap="sm"
               padding="0.5rem 1rem 0"
-              aria-label="Planeta"
+              aria-label="Subsistema"
+              position="relative"
               css={{
                 fontFamily: 'var(--chakra-fonts-glyph)',
                 fontSize: '1rem',
@@ -217,8 +182,15 @@ export function KammaraCardSubsystem({
               <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, ${color}80, transparent)` }} />
             </Flex>
 
-            {/* Category + rarity */}
-            <Flex justify="center" align="center" gap="sm" padding="0.3rem 1.8rem">
+            {/* Header text block — centered */}
+            <Flex
+              direction="column"
+              align="center"
+              gap="2xs"
+              padding={`0.2rem ${CARD_PADDING_X} 0.4rem`}
+              position="relative"
+            >
+              {/* Category tag (e.g. "Subsistema") */}
               <Text
                 fontSize="xs"
                 letterSpacing="hero"
@@ -230,55 +202,26 @@ export function KammaraCardSubsystem({
               >
                 {category.toUpperCase()}
               </Text>
-              {rarity > 0 && (
-                <Flex gap="0.15rem">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Box
-                      key={i}
-                      as="span"
-                      css={{
-                        fontFamily: 'var(--chakra-fonts-glyph)',
-                        fontSize: '0.6rem',
-                        color: i < rarity ? color : `${color}30`,
-                        lineHeight: 1,
-                      }}
-                    >
-                      ⊙
-                    </Box>
-                  ))}
-                </Flex>
-              )}
-            </Flex>
 
-            {/* Name */}
-            <Heading
-              as="h2"
-              fontFamily="body"
-              fontSize="h2"
-              fontWeight="bold"
-              lineHeight={1}
-              color={color}
-              letterSpacing="heroTitle"
-              textAlign="center"
-              m={0}
-              padding="0.2rem 1.5rem"
-              position="relative"
-            >
-              {name}
-            </Heading>
-
-            {subtitle && (
-              <Text
-                fontSize="xs"
-                color={mutedText}
+              {/* Active subsystem label — dynamic, changes with roulette */}
+              <Heading
+                as="h2"
+                fontFamily="body"
+                fontSize="h2"
+                fontWeight="bold"
+                lineHeight={1}
+                color={color}
+                letterSpacing="heroTitle"
                 textAlign="center"
                 m={0}
-                mt="0.15rem"
-                letterSpacing="wide"
+                css={{
+                  textShadow: `0 0 24px ${color}40`,
+                  wordBreak: 'break-word',
+                }}
               >
-                {subtitle}
-              </Text>
-            )}
+                {activeItem.label.toUpperCase()}
+              </Heading>
+            </Flex>
 
             {/* Bottom ornament — "⊹" = ancestral, memory.
                 Framed by gradient lines that echo the "—" flow glyph. */}
@@ -288,6 +231,7 @@ export function KammaraCardSubsystem({
               gap="tight"
               padding="0.4rem 1rem 0.6rem"
               aria-hidden="true"
+              position="relative"
               css={{
                 fontFamily: 'var(--chakra-fonts-glyph)',
                 fontSize: '0.7rem',
@@ -305,52 +249,6 @@ export function KammaraCardSubsystem({
 
           {/* ── Body content (full width) ── */}
           <Flex direction="column" flex={1} minW={0} minH={0}>
-
-          {/* ── Gate overlay (descends when subsystem selected) ── */}
-          {(
-            <Box
-              ref={gateRef}
-              position="relative"
-              flexShrink={0}
-              overflow="hidden"
-              css={{
-                height: gateOpen ? '60px' : '0px',
-                opacity: gateOpen ? 1 : 0,
-                transition: 'height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease',
-                background: `linear-gradient(180deg, ${color}20, ${darkColor})`,
-                borderBottom: `1px solid ${color}40`,
-              }}
-            >
-              {/* Gate bars — iron gate effect */}
-              <Box
-                position="absolute"
-                inset={0}
-                pointerEvents="none"
-                css={{
-                  backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 8px, ${color}15 8px, ${color}15 9px)`,
-                }}
-              />
-              <Flex
-                align="center"
-                justify="flex-start"
-                height="100%"
-                padding={`0 ${CARD_PADDING_X}`}
-                paddingLeft={`calc(${CARD_PADDING_X} + ${ROULETTE_SPHERE_SIZE}px + 0.6rem)`}
-                position="relative"
-              >
-                <Text
-                  fontSize="xs"
-                  letterSpacing="widest"
-                  textTransform="uppercase"
-                  fontWeight="semibold"
-                  color={color}
-                  m={0}
-                >
-                  {activeItem.label}
-                </Text>
-              </Flex>
-            </Box>
-          )}
 
           {/* Stats bar */}
           {stats.length > 0 && (

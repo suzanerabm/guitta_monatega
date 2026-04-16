@@ -6,10 +6,11 @@ import { HeroSection } from '@/components/HeroSection';
 import { FilterBar } from '@/components/FilterBar';
 import { CreatureSection } from '@/components/CreatureSection';
 import { KammaraPlanetTitle } from '@/components/KammaraPlanetTitle';
+import { KammaraCard } from '@/components/KammaraCard';
 import { DSMainCard } from '@/components/DSMainCard';
 import { CharacterStrip } from '@/components/CharacterStrip';
 import { SceneStrip } from '@/components/SceneStrip';
-import { SubSystem } from '@/components/SubSystem';
+import { KammaraCardSubsystem, KammaraCardSubsystemContainer } from '@/components/KammaraCardSubsystem';
 import { RegionDivider } from '@/components/RegionDivider';
 import { RegionBanner } from '@/components/RegionBanner';
 import { SoonPanel } from '@/components/SoonPanel';
@@ -166,6 +167,31 @@ function renderStory(story: string[]) {
       <p key={i}>{p}</p>
     )
   );
+}
+
+/**
+ * Map a subsystem title (PT or EN) to its semantic Kalún glyph.
+ * Based on the glossary defined in i18n pt.json →
+ * characters.kammara.lunnp1.subsystems["Os Glifos Kalún"]:
+ *   Cultura         → ⊙    (centro, foco)
+ *   Flora & Fauna   → •    (semente, começo)
+ *   Geografia       → —    (fluxo, caminho)
+ *   Ciclos & Luas   → ⊶⊷   (abertura/fechamento — ritmo)
+ *   A Água          → ⋄    (silêncio, pausa)
+ *   Idioma          → ⊹⊙⊹  (universo, linguagem)
+ *   Os Glifos Kalún → ⊹    (ancestral, memória)
+ * Falls back to "⊙" (centro/foco) for any other title.
+ */
+function subsystemGlyph(title: string): string {
+  const key = title.toLowerCase().trim();
+  if (key.includes('cultur')) return '⊙';
+  if (key.includes('flora') || key.includes('fauna') || key.includes('ecosystem') || key.includes('ecossist')) return '•';
+  if (key.includes('geograf') || key.includes('geography')) return '—';
+  if (key.includes('ciclo') || key.includes('lua') || key.includes('cycle') || key.includes('moon')) return '⊶⊷';
+  if (key.includes('água') || key.includes('agua') || key.includes('water')) return '⋄';
+  if (key.includes('idioma') || key.includes('language') || key.includes('linguagem')) return '⊹⊙⊹';
+  if (key.includes('glifo') || key.includes('glyph')) return '⊹';
+  return '⊙';
 }
 
 // ============================================================================
@@ -483,6 +509,25 @@ function WorldSection({
         bgOpacity={WORLD_BG_OPACITY[w.id] ?? (w.bgImage ? 0.6 : 1)}
         textPanelTitle={name}
         text={renderStory(panelStory)}
+        renderPanel={({ text: panelText }) => (
+          <KammaraCard
+            name={name}
+            category="Planeta"
+            color={palette.colors[0]}
+            darkColor={palette.dark}
+            midColor={palette.colors[4]}
+            crestGlyph="⊙"
+            tabs={[
+              {
+                id: `${w.id}-story`,
+                icon: '⊙',
+                label: name,
+                title: name,
+                content: panelText,
+              },
+            ]}
+          />
+        )}
       >
         {/* Side column inside the banner: CharacterStrip on top,
             SceneStrip below. Both share the column height 50/50
@@ -528,21 +573,24 @@ function WorldSection({
         )}
       </DSMainCard>
       {realSubsystems.length > 0 && (
-        <SubSystem
-          sectionTitle={subsystemsTitle}
-          cards={realSubsystems.map((s, i) => ({
-            title: s.title,
-            image: w.subsystemImages[i] ?? undefined,
-            imageAlt: s.title,
-            texts: s.text,
-          }))}
-          // Exact same color pipeline as the DSMainCard → DSTextPanel
-          // above, so the subsystem cards and the main story panel stay
-          // visually identical.
-          titleColor={colors.title}
-          textColor={colors.text}
-          arrowColor={colors.title}
-        />
+        <KammaraCardSubsystemContainer>
+          <KammaraCardSubsystem
+            name={name}
+            category={subsystemsTitle}
+            color={palette.colors[0]}
+            darkColor={palette.dark}
+            crestGlyph="⊙"
+            tabs={realSubsystems.map((s, i) => ({
+              id: `${w.id}-${i}`,
+              icon: subsystemGlyph(s.title),
+              label: s.title,
+              title: s.title,
+              image: w.subsystemImages[i] ?? undefined,
+              imageAlt: s.title,
+              content: renderStory(s.text),
+            }))}
+          />
+        </KammaraCardSubsystemContainer>
       )}
     </CreatureSection>
   );
@@ -641,19 +689,24 @@ function TriplecRegionSection({
         />
       )}
       {realSubsystems.length > 0 && (
-        <Box mt="-40px">
-          <SubSystem
-            sectionTitle={subsystemsTitle}
-            cards={realSubsystems.map((s, i) => ({
+        <KammaraCardSubsystemContainer mt="-40px">
+          <KammaraCardSubsystem
+            name={name}
+            category={subsystemsTitle}
+            color={regionPalette.colors[0]}
+            darkColor={regionPalette.dark}
+            crestGlyph="⊙"
+            tabs={realSubsystems.map((s, i) => ({
+              id: `${regionId}-${i}`,
+              icon: subsystemGlyph(s.title),
+              label: s.title,
               title: s.title,
               image: region.subsystemImages[i] ?? undefined,
               imageAlt: s.title,
-              texts: s.text,
+              content: renderStory(s.text),
             }))}
-            titleColor={regionColor}
-            textColor="white"
           />
-        </Box>
+        </KammaraCardSubsystemContainer>
       )}
     </CreatureSection>
   );

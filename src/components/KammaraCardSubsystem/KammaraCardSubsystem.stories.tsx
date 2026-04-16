@@ -128,10 +128,8 @@ const lunnp1Tabs = [
 export const Lunnp1: Story = {
   args: {
     name: "LUNN'P1",
-    category: 'Planeta',
-    subtitle: 'Lar dos Shal\'ún · Água · Imunidade',
+    category: 'Subsistema',
     crestGlyph: '⊙',
-    rarity: 4,
     color: '#00e676',
     darkColor: '#002e14',
     midColor: '#003d1a',
