@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useId, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import { Box } from '@chakra-ui/react';
 import { useModal } from '@/components/Modal';
 
@@ -124,6 +124,16 @@ interface DesktopTileProps {
 
 function DesktopTile({ scene, tile, color, index, onClick }: DesktopTileProps) {
   const [loaded, setLoaded] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  // Cached images don't fire onLoad if the <img> mounts after load.
+  useEffect(() => {
+    const el = imgRef.current;
+    if (el && el.complete && el.naturalWidth > 0) {
+      setLoaded(true);
+    }
+  }, []);
+
   return (
     <Box
       as="button"
@@ -174,11 +184,13 @@ function DesktopTile({ scene, tile, color, index, onClick }: DesktopTileProps) {
       />
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
+        ref={imgRef}
         src={scene.image}
         alt={scene.name}
-        loading="lazy"
+        loading="eager"
         decoding="async"
         onLoad={() => setLoaded(true)}
+        onError={() => setLoaded(true)}
         className="ksc-img"
         style={{
           position: 'absolute',
@@ -208,6 +220,18 @@ interface MobileTileProps {
 
 function MobileTile({ scene, color, onClick }: MobileTileProps) {
   const [loaded, setLoaded] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  // Cached images don't fire `onLoad` if the <img> mounts after the load
+  // completed (Safari and Firefox in particular). Check `complete` on
+  // mount and flip to loaded immediately so the tile never stays black.
+  useEffect(() => {
+    const el = imgRef.current;
+    if (el && el.complete && el.naturalWidth > 0) {
+      setLoaded(true);
+    }
+  }, []);
+
   return (
     <Box
       as="button"
@@ -241,11 +265,13 @@ function MobileTile({ scene, color, onClick }: MobileTileProps) {
       />
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
+        ref={imgRef}
         src={scene.image}
         alt={scene.name}
-        loading="lazy"
+        loading="eager"
         decoding="async"
         onLoad={() => setLoaded(true)}
+        onError={() => setLoaded(true)}
         style={{
           position: 'absolute',
           inset: 0,
@@ -411,20 +437,49 @@ export function KammaraSceneCollage({
         </Box>
       </Box>
 
-      {/* Mobile fallback: vertical stack of 16:9 tiles. */}
+      {/* Mobile: horizontal scroll-snap — one scene at a time, swipe to
+          see the next. A vertical stack felt like an endless list of
+          random photos; the swipe strip mirrors what the character
+          gallery does on mobile and keeps the section compact. */}
       <Box
-        display={{ base: 'flex', md: 'none' }}
-        flexDirection="column"
-        css={{ gap: '0.6rem' }}
+        display={{ base: 'block', md: 'none' }}
+        width="100%"
+        css={{
+          overflowX: 'auto',
+          overflowY: 'hidden',
+          scrollSnapType: 'x mandatory',
+          WebkitOverflowScrolling: 'touch',
+          scrollbarWidth: 'none',
+          msOverflowStyle: 'none',
+          '&::-webkit-scrollbar': { display: 'none' },
+          padding: '8px 24px',
+          scrollPadding: '0 24px',
+        }}
       >
-        {scenes.map((scene, i) => (
-          <MobileTile
-            key={`${scene.image}-mobile-${i}`}
-            scene={scene}
-            color={color}
-            onClick={() => handleClick(i)}
-          />
-        ))}
+        <Box
+          display="flex"
+          css={{
+            gap: '16px',
+            width: 'max-content',
+          }}
+        >
+          {scenes.map((scene, i) => (
+            <Box
+              key={`${scene.image}-mobile-${i}`}
+              css={{
+                flex: '0 0 82vw',
+                maxWidth: '82vw',
+                scrollSnapAlign: 'center',
+              }}
+            >
+              <MobileTile
+                scene={scene}
+                color={color}
+                onClick={() => handleClick(i)}
+              />
+            </Box>
+          ))}
+        </Box>
       </Box>
     </Box>
   );

@@ -148,11 +148,12 @@ export function KammaraCharacterGallery<T>({
           scrollbarWidth: 'none',
           msOverflowStyle: 'none',
           '&::-webkit-scrollbar': { display: 'none' },
-          // Generous side padding + matching scroll-padding so the first
-          // and last cards land with a comfortable gutter on both sides
-          // (and the card's outline doesn't kiss the viewport edge).
-          padding: '8px 32px',
-          scrollPadding: '0 32px',
+          // Left padding = gutter of the first card; right padding is
+          // small so the next card always peeks ~10% from the right edge,
+          // making it obvious the user can swipe for more. `scroll-padding`
+          // matches the left padding so the snap point lands flush.
+          padding: '8px 0 8px 16px',
+          scrollPaddingLeft: '16px',
         }}
       >
         <Box
@@ -160,18 +161,21 @@ export function KammaraCharacterGallery<T>({
           css={{
             gap: '16px',
             width: 'max-content',
+            // Right spacer after the last card so it can snap flush with
+            // the same left gutter even when it's the last one.
+            paddingRight: '16px',
           }}
         >
           {items.map((item, i) => (
             <Box
               key={i}
               css={{
-                // 78% of the viewport leaves ~22% as margin around the card,
-                // which shows a peek of the neighbor and keeps the outline
-                // away from the screen edges.
-                flex: '0 0 78vw',
-                maxWidth: '78vw',
-                scrollSnapAlign: 'center',
+                // 80% of the viewport: card starts at the 16px gutter and
+                // stops with ~18vw of the next card peeking in from the
+                // right, so the swipe affordance reads immediately.
+                flex: '0 0 80vw',
+                maxWidth: '80vw',
+                scrollSnapAlign: 'start',
                 animation: `kcg-fade-in 0.4s ease-out ${i * 40}ms both`,
               }}
             >

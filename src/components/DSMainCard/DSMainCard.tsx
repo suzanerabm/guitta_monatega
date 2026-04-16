@@ -215,7 +215,11 @@ export function DSMainCard({
           css={
             stripSide
               ? {
-                  // Mobile (<=768px): full width content-flow, fixed 350px panel
+                  // Mobile (<=768px): full width content-flow. Height is
+                  // `auto` so the panel grows with its content (a fixed
+                  // 350px would get overflowed by the new KammaraCard
+                  // inside `renderPanel`, causing the strip-side children
+                  // below to overlap).
                   position: 'relative',
                   left: 0,
                   right: 'auto',
@@ -223,7 +227,7 @@ export function DSMainCard({
                   bottom: 'auto',
                   width: '100%',
                   maxWidth: 'none',
-                  height: '350px',
+                  height: 'auto',
                   transform: 'none',
                   padding: '0 1rem',
                   marginTop: '10px',
@@ -348,14 +352,17 @@ export function DSMainCard({
             data-testid="ds-strip-side"
             zIndex={2}
             css={{
-              // Mobile: content flow under the text-wrap
+              // Mobile: content flow under the text-wrap. Generous
+              // marginTop so children (KammaraSceneCollage etc) don't
+              // touch the text panel above them — matches the `2xl`
+              // spacing used between the other Kammara cards on the page.
               position: 'relative',
               right: 'auto',
               top: 'auto',
               bottom: 'auto',
               transform: 'none',
               width: '100%',
-              marginTop: '1rem',
+              marginTop: '5rem',
               // Desktop: absolute positioned to the right of the card,
               // pinned top and bottom with 20px gutters (matches the text
               // panel) so the slot hosts a vertical flex column. Multiple

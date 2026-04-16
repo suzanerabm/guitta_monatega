@@ -570,8 +570,7 @@ function WorldSection({
           />
         )}
       >
-        {/* Side column inside the banner: KammaraSceneCollage. Characters
-            moved to a dedicated KammaraCharacterGallery section below. */}
+        {/* Side column inside the banner: KammaraSceneCollage. */}
         {w.scenes.length > 0 && (
           <KammaraSceneCollage
             scenes={w.scenes.map((s) => ({
@@ -599,23 +598,23 @@ function WorldSection({
         }));
         return (
           <>
-            {/* Vertical (mobile only, base → md) — fixed-size card. */}
+            {/* Vertical (mobile only, base → md). */}
             <Box
-              display={{ base: 'flex', md: 'none' }}
-              width="418px"
-              height="627px"
-              mx="auto"
+              display={{ base: 'block', md: 'none' }}
+              width="100%"
               my="2xl"
-              padding="1.5rem"
+              px={{ base: '25px', md: '2rem', xl: '3rem' }}
             >
-              <KammaraCardSubsystem
-                name={name}
-                category={subsystemsTitle}
-                color={palette.colors[0]}
-                darkColor={palette.dark}
-                crestGlyph={worldCrestGlyph(w.id)}
-                tabs={tabs}
-              />
+              <Box width="100%" height="627px">
+                <KammaraCardSubsystem
+                  name={name}
+                  category={subsystemsTitle}
+                  color={palette.colors[0]}
+                  darkColor={palette.dark}
+                  crestGlyph={worldCrestGlyph(w.id)}
+                  tabs={tabs}
+                />
+              </Box>
             </Box>
             {/* Horizontal — Variant C cinematic (md+). Full width with
                 the same horizontal gutters as the rest of the page. */}
@@ -826,22 +825,21 @@ function TriplecRegionSection({
           <>
             {/* Vertical (mobile only, base → md). */}
             <Box
-              display={{ base: 'flex', md: 'none' }}
-              width="418px"
-              height="627px"
-              mx="auto"
-              mt="-40px"
-              mb="2xl"
-              padding="1.5rem"
+              display={{ base: 'block', md: 'none' }}
+              width="100%"
+              my="2xl"
+              px={{ base: '25px', md: '2rem', xl: '3rem' }}
             >
-              <KammaraCardSubsystem
-                name={name}
-                category={subsystemsTitle}
-                color={regionPalette.colors[0]}
-                darkColor={regionPalette.dark}
-                crestGlyph={worldCrestGlyph(regionId)}
-                tabs={tabs}
-              />
+              <Box width="100%" height="627px">
+                <KammaraCardSubsystem
+                  name={name}
+                  category={subsystemsTitle}
+                  color={regionPalette.colors[0]}
+                  darkColor={regionPalette.dark}
+                  crestGlyph={worldCrestGlyph(regionId)}
+                  tabs={tabs}
+                />
+              </Box>
             </Box>
             {/* Horizontal — Variant C cinematic (md+). */}
             <Box

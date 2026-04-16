@@ -69,9 +69,9 @@ export function KammaraCard({
     <Box
       data-testid={testId ?? 'kammara-card'}
       position="relative"
-      width="100%"
-      height="100%"
-      minH={{ base: '560px', md: 0 }}
+      width={{ base: 'calc(100% - 14px)', md: '100%' }}
+      mx={{ base: 'auto', md: 0 }}
+      height={{ base: '520px', md: '100%' }}
       borderRadius="32px"
       overflow="visible"
     >
