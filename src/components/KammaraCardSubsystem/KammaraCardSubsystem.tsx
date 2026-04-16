@@ -236,18 +236,10 @@ export function KammaraCardSubsystem({
                   {activeItem.label.toUpperCase()}
                 </Heading>
 
-                {/* Active subsystem glyph — semantic icon for this subsystem */}
-                <Box
-                  as="span"
-                  fontFamily="glyph"
-                  fontSize="glyphH2"
-                  lineHeight={1}
-                  color={color}
-                  opacity={0.85}
-                  aria-hidden="true"
-                >
-                  {activeItem.icon}
-                </Box>
+                {/* Planet / region name — uses the app-wide `label` textStyle preset. */}
+                <Text textStyle="label" color={color} m={0} opacity={0.9}>
+                  {name}
+                </Text>
               </Flex>
             </Flex>
           </Box>

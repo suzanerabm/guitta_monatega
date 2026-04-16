@@ -573,8 +573,8 @@ function WorldSection({
       </DSMainCard>
       {realSubsystems.length > 0 && (
         <Box
-          width="440px"
-          height="660px"
+          width={{ base: '418px', md: '440px' }}
+          height={{ base: '627px', md: '660px' }}
           mx="auto"
           my="2xl"
           padding="1.5rem"
@@ -696,8 +696,8 @@ function TriplecRegionSection({
       )}
       {realSubsystems.length > 0 && (
         <Box
-          width="440px"
-          height="660px"
+          width={{ base: '418px', md: '440px' }}
+          height={{ base: '627px', md: '660px' }}
           mx="auto"
           mt="-40px"
           mb="2xl"
