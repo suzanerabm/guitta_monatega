@@ -57,3 +57,28 @@ export const LúmEsha: Story = {
     ],
   },
 };
+
+// Vírus — uses the flip as a DUAL-FORM reveal.
+// Front: cute face the vírus shows to the world.
+// Back:  corrupted/true form hidden underneath.
+// Uses `backTitle` to repurpose the back face beyond "Costas".
+export const Virus: Story = {
+  args: {
+    name: 'Vírus',
+    species: 'ENI-4Δ',
+    bio: 'Criaturas que nascem dos circuitos de ENI-4Δ. Na superfície, parecem inofensivas — quase fofas. Debaixo da casca, corrompem, consomem, se multiplicam.',
+    image: '/imgs/characters/kammara/eni4/virus.png',
+    worldName: 'ENI-4Δ',
+    worldCrestGlyph: '⋄⊙⋄',
+    color: '#e8a317',
+    darkColor: '#1a1005',
+    midColor: '#3a2a0a',
+    attributes: [
+      { glyph: '⋄⋄⊷', label: 'Protocolo', value: 'Ataque' },
+      { glyph: '⋄•⋄', label: 'Natureza', value: 'Viral' },
+    ],
+    backImage: '/imgs/characters/kammara/eni4/virus.png',
+    backTitle: 'Forma Corrompida',
+    backMeaning: 'A face fofa é isca. Por trás dela, o vírus revela o que é de verdade: uma instrução faminta, sem afeto, que só existe para consumir ciclos alheios.',
+  },
+};

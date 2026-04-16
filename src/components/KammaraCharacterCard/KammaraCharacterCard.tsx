@@ -43,17 +43,35 @@ export interface KammaraCharacterCardProps {
    */
   attributes?: KammaraCharacterAttribute[];
   /**
-   * Transparent PNG showing the character's back — where the dorsal
-   * glyph is visible in the artwork itself. Providing this alone turns
-   * the card into a flippable card.
+   * Transparent PNG showing the character's back. Providing this alone
+   * turns the card into a flippable card. Some species have a dorsal
+   * glyph visible in the artwork (Shal'ún); others don't (ENI-4Δ et al).
    *
    * The dorsal glyph is a personal brasão unique to each character
    * (NOT part of the Kalún semantic alphabet) — it lives in the image,
-   * not as a text string. Use `dorsalMeaning` to narrate what it means.
+   * not as a text string.
    */
   backImage?: string;
-  /** Narrative explanation of what the dorsal glyph means for this character. */
+  /**
+   * Narrative about the dorsal glyph (only makes sense for species that
+   * carry one). Shown on the back face below the artwork.
+   * When present, the back face heading reads "Glifo Dorsal".
+   */
   dorsalMeaning?: string;
+  /**
+   * Narrative about the character's back (for species without a dorsal
+   * glyph, or when you want to describe the back in its own terms).
+   * Shown on the back face when `dorsalMeaning` is absent.
+   */
+  backMeaning?: string;
+  /**
+   * Custom heading for the back face. When omitted:
+   *   - if `dorsalMeaning` is set → "Glifo Dorsal"
+   *   - otherwise                → "Costas"
+   * Use this to repurpose the flip as an alternate-form reveal, e.g.
+   * "Forma Corrompida", "Versão Sombra", "Lado Lume".
+   */
+  backTitle?: string;
   'data-testid'?: string;
 }
 
@@ -92,6 +110,8 @@ export function KammaraCharacterCard({
   attributes,
   backImage,
   dorsalMeaning,
+  backMeaning,
+  backTitle,
   'data-testid': testId,
 }: KammaraCharacterCardProps) {
   const body = midColor ?? darkColor;
@@ -469,7 +489,7 @@ export function KammaraCharacterCard({
                 m={0}
                 opacity={0.9}
               >
-                Glifo Dorsal
+                {backTitle ?? (dorsalMeaning ? 'Glifo Dorsal' : 'Costas')}
               </Text>
               <Text
                 fontSize="xs"
@@ -538,7 +558,7 @@ export function KammaraCharacterCard({
                 textAlign="center"
                 m={0}
               >
-                {dorsalMeaning ?? 'Glifo dorsal ainda não revelado.'}
+                {dorsalMeaning ?? backMeaning ?? ''}
               </Text>
             </Flex>
 
