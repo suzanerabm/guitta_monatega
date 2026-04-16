@@ -95,7 +95,7 @@ export function KammaraCardSubsystem({
         />
       </Box>
 
-      {/* ── Card body — transparent, relies on watermark + halo + outline */}
+      {/* ── Card body — same ~90% opaque gradient as KammaraCard */}
       <Box
         position="relative"
         width="100%"
@@ -103,6 +103,7 @@ export function KammaraCardSubsystem({
         borderRadius="32px"
         overflow="hidden"
         css={{
+          background: `linear-gradient(160deg, ${darkColor}e6 0%, ${darkColor}e6 45%, ${darkColor}e6 100%)`,
           border: `1px solid ${color}40`,
           outline: `2px solid ${color}`,
           outlineOffset: '6px',
@@ -147,12 +148,34 @@ export function KammaraCardSubsystem({
             position="relative"
             flexShrink={0}
             height="180px"
-            overflow="visible"
+            overflow="hidden"
             css={{
               background: `linear-gradient(160deg, ${color}20 0%, ${color}10 50%, ${color}20 100%)`,
               borderBottom: `1px solid ${color}`,
             }}
           >
+            {/* Banner watermark — crest glyph echoes across both sides + giant center */}
+            <Flex
+              position="absolute"
+              inset={0}
+              justify="space-between"
+              align="center"
+              padding="0 1.5rem"
+              pointerEvents="none"
+              aria-hidden="true"
+              css={{
+                fontFamily: 'var(--chakra-fonts-glyph)',
+                color: `${color}12`,
+                fontSize: '5rem',
+                lineHeight: 1,
+                overflow: 'hidden',
+              }}
+            >
+              <span>{crestGlyph}</span>
+              <span style={{ fontSize: '8rem' }}>{crestGlyph}</span>
+              <span>{crestGlyph}</span>
+            </Flex>
+
             {/* Row 1 — subsystem declarer ornament: "— ⊙ —"
                 (flow-line + center + flow-line), centered across the top */}
             <Flex
@@ -207,7 +230,7 @@ export function KammaraCardSubsystem({
                   fontSize="xs"
                   letterSpacing="hero"
                   textTransform="uppercase"
-                  fontWeight="semibold"
+                  fontWeight="bold"
                   color={color}
                   m={0}
                   opacity={0.9}
