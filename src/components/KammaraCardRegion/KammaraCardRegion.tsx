@@ -92,8 +92,8 @@ export function KammaraCardRegion({
         css={{
           background: `linear-gradient(160deg, ${darkColor}b3 0%, ${body}b3 45%, ${darkColor}b3 100%)`,
           border: `1px solid ${color}40`,
-          outline: `1px dashed ${color}`,
-          outlineOffset: '4px',
+          outline: `2px solid ${color}`,
+          outlineOffset: '6px',
           boxShadow: `0 20px 60px ${color}50, 0 4px 16px ${color}30, inset 0 1px 0 rgba(255,255,255,0.15)`,
         }}
       >

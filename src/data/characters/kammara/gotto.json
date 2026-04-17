@@ -1,1 +1,152 @@
-[]
+[
+  {
+    "match": "Rema",
+    "name": {
+      "pt": "Rema",
+      "en": "Rema"
+    },
+    "species": {
+      "pt": "Basik",
+      "en": "Basik"
+    },
+    "bio": {
+      "pt": "Silêncio entre as notas. Margem que dá forma ao fluxo. Como o REM no código, está presente sem executar. Sua presença cria espaço para que outros se acalmem — permite que o excesso se dissolva naturalmente.",
+      "en": "Silence between the notes. The margin that gives shape to the flow. Like REM in code, she is present without executing. Her presence makes room for others to settle — letting excess dissolve on its own."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Pausa",
+          "en": "Pause"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Regiões REM",
+          "en": "REM Regions"
+        }
+      },
+      {
+        "glyph": "⊶••⊷",
+        "label": {
+          "pt": "Linguagem",
+          "en": "Language"
+        },
+        "value": {
+          "pt": "Basik (REM)",
+          "en": "Basik (REM)"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Pilo",
+    "name": {
+      "pt": "Pilo",
+      "en": "Pilo"
+    },
+    "species": {
+      "pt": "Basik",
+      "en": "Basik"
+    },
+    "bio": {
+      "pt": "Fluxo audível. Correnteza que precisa fazer barulho para confirmar que existe. Sua presença desperta movimento nos outros — quando ele fala, algo acorda. Som que retorna, presença que se confirma pela repetição.",
+      "en": "An audible flow. A current that needs to make noise to confirm it exists. His presence stirs movement in others — when he speaks, something wakes. Sound that returns, presence that confirms itself by repetition."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Eco",
+          "en": "Echo"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Linha 20 (Vale PRINT)",
+          "en": "Line 20 (PRINT Valley)"
+        }
+      },
+      {
+        "glyph": "⊶••⊷",
+        "label": {
+          "pt": "Linguagem",
+          "en": "Language"
+        },
+        "value": {
+          "pt": "Basik (PRINT)",
+          "en": "Basik (PRINT)"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Jump",
+    "name": {
+      "pt": "Jump",
+      "en": "Jump"
+    },
+    "species": {
+      "pt": "Basik",
+      "en": "Basik"
+    },
+    "bio": {
+      "pt": "A mudança em si. Onde outros veem caminho, Jump vê ponto de salto. Não está mais onde estava — a ação surge sem esforço porque resistir ao movimento seria o verdadeiro esforço. Sua presença impede que outros fiquem presos: dissolve apegos por demonstração.",
+      "en": "Change itself. Where others see a path, Jump sees a leap point. He is not where he was — action arises effortlessly because resisting the movement would be the real effort. His presence keeps others from getting stuck: dissolving attachments by example."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Salto",
+          "en": "Leap"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Linha 30 (Penhasco GOTO)",
+          "en": "Line 30 (GOTO Cliff)"
+        }
+      },
+      {
+        "glyph": "⊶••⊷",
+        "label": {
+          "pt": "Linguagem",
+          "en": "Language"
+        },
+        "value": {
+          "pt": "Basik (saltos)",
+          "en": "Basik (jumps)"
+        }
+      }
+    ]
+  }
+]

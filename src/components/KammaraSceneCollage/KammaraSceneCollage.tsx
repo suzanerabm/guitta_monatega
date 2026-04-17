@@ -395,25 +395,21 @@ export function KammaraSceneCollage({
           />
         ))}
 
-        {/* Desktop mosaic — scrollable. Grid keeps the 6-col pattern but
-            rows use a fixed `minmax(100px, 1fr)` so tile heights don't
-            collapse when the number of scenes overflows the frame. */}
+        {/* Desktop mosaic — no internal scroll. If the user wants to see
+            a specific scene they click it and the modal opens, so the
+            inner scroll was redundant and fought with the page scroll. */}
         <Box
           position="absolute"
           top="16px"
           bottom="16px"
           left="16px"
           right="16px"
-          overflowY="auto"
-          overflowX="hidden"
+          overflow="hidden"
           display="grid"
           css={{
             gridTemplateColumns: 'repeat(6, 1fr)',
             gridAutoRows: 'minmax(80px, 1fr)',
             gap: '10px',
-            // Invisible scrollbar (same pattern used elsewhere)
-            scrollbarWidth: 'none',
-            '&::-webkit-scrollbar': { display: 'none' },
             '&:has(.ksc-tile:hover) .ksc-tile:not(:hover)': {
               opacity: 0.45,
               filter: 'blur(1px)',

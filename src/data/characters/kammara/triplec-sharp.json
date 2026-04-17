@@ -1,23 +1,52 @@
 [
   {
     "match": "SELKA RIN",
-    "name": { "pt": "Selka Rin", "en": "Selka Rin" },
-    "species": { "pt": "Bunniet — Sharp", "en": "Bunniet — Sharp" },
+    "name": {
+      "pt": "Selka Rin",
+      "en": "Selka Rin"
+    },
+    "species": {
+      "pt": "Bunniet",
+      "en": "Bunniet"
+    },
     "bio": {
-      "pt": "Guardiã de decisões difíceis em Sharp — onde se sustenta, contém e encerra. Cada gesto é peso que outros não suportam.",
-      "en": "Keeper of hard calls in Sharp — where things are held, contained, and ended. Every gesture carries weight others can't bear."
+      "pt": "O mais simétrico do núcleo Sharp. 65-72 cm, pelagem branca com circuitos prateados visíveis em ângulo, orelhas precisamente alinhadas, olhos negros que escaneiam em camadas. Analisa tudo ao redor em tempo real. Garante que cada coisa esteja correta — funcionar sozinho é insuficiente.",
+      "en": "The most symmetrical of Sharp's core. 65-72 cm, white fur with silver circuits visible at an angle, ears precisely aligned, black eyes that scan in layers. He analyzes everything around in real time. He makes sure each thing is correct — merely working is not enough."
     },
     "image": "/imgs/characters/kammara/triplec/sharp/SELKA RIN.png",
     "attributes": [
       {
-        "glyph": "⊶",
-        "label": { "pt": "Região", "en": "Region" },
-        "value": { "pt": "Sharp", "en": "Sharp" }
+        "glyph": "⊹⊙⊷",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Sharp",
+          "en": "Sharp"
+        }
       },
       {
-        "glyph": "•⊙•",
-        "label": { "pt": "Função", "en": "Role" },
-        "value": { "pt": "Contenção", "en": "Containment" }
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Validador",
+          "en": "Validator"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Arquétipo",
+          "en": "Archetype"
+        },
+        "value": {
+          "pt": "SELO",
+          "en": "SEAL"
+        }
       }
     ]
   }

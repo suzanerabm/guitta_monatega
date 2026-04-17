@@ -1222,6 +1222,11 @@
     ],
     "kammara/triplec/mesh": [
       "/imgs/characters/kammara/triplec/mesh/_subsystems/0.jpg"
+    ],
+    "kammara/triplec/sharp": [
+      "/imgs/characters/kammara/triplec/sharp/_subsystems/0.jpg",
+      "/imgs/characters/kammara/triplec/sharp/_subsystems/1.jpg",
+      "/imgs/characters/kammara/triplec/sharp/_subsystems/2.jpg"
     ]
   }
 }

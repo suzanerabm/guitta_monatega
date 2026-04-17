@@ -107,7 +107,6 @@ export function FilterBar({ filters, allLabel = 'Todos', onFilter }: FilterBarPr
       as="nav"
       position="sticky"
       top={isHidden ? '0' : `${chromeHeight}px`}
-      transition="top 0.3s ease"
       zIndex={98}
       display="flex"
       alignItems="center"

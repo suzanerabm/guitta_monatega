@@ -8,7 +8,7 @@ import type {
 } from './KammaraCardSubsystem';
 
 export interface KammaraCardSubsystemHorizontalProps
-  extends KammaraCardSubsystemProps {
+  extends Omit<KammaraCardSubsystemProps, 'variant'> {
   /**
    * Layout variation:
    *  - `'A'` — "editorial" header on top (crest + title + tabs across),
@@ -17,6 +17,11 @@ export interface KammaraCardSubsystemHorizontalProps
    *    with a translucent info panel floating over it.
    */
   variant?: 'A' | 'C';
+  /**
+   * Border style — mirrors the vertical card: `'default'` is solid
+   * outline, `'region'` is dashed (used in TripleC sub-regions).
+   */
+  borderStyle?: 'default' | 'region';
 }
 
 const CARD_PADDING_X = '1.8rem';
@@ -43,8 +48,10 @@ export function KammaraCardSubsystemHorizontal({
   darkColor,
   theme = 'dark',
   variant = 'A',
+  borderStyle = 'default',
   'data-testid': testId,
 }: KammaraCardSubsystemHorizontalProps) {
+  const isRegion = borderStyle === 'region';
   const [activeIndex, setActiveIndex] = useState(0);
   const activeItem = tabs[activeIndex];
   const rouletteRef = useRef<KammaraRouletteHandle>(null);
@@ -543,11 +550,11 @@ export function KammaraCardSubsystemHorizontal({
         {/* Bottom-right floating info panel — stats + scrollable content. */}
         <Flex
           position="absolute"
-          top={{ base: '12rem', md: '3.5rem' }}
+          top={{ base: '8rem', md: '6rem' }}
           bottom={{ base: '3.5rem', md: '4rem' }}
           right={{ base: '1rem', md: '2rem' }}
-          width={{ base: 'calc(100% - 2rem)', md: '48%' }}
-          maxW="640px"
+          width={{ base: 'calc(100% - 2rem)', md: '60%' }}
+          maxW="710px"
           direction="column"
           gap="md"
           padding={{ base: '1rem', md: '1.4rem 1.6rem' }}

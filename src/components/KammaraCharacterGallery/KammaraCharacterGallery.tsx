@@ -41,6 +41,13 @@ export interface KammaraCharacterGalleryProps<T> {
    * Gap between cards in px (desktop). Default: 24.
    */
   cardGap?: number;
+  /**
+   * Visual variant of the frame.
+   *  - `'default'` (solid outline) — used by planets/worlds
+   *  - `'region'` (dashed outline + lighter border) — used by TripleC
+   *    sub-regions so they read as nested inside the parent world.
+   */
+  variant?: 'default' | 'region';
   'data-testid'?: string;
 }
 
@@ -89,8 +96,10 @@ export function KammaraCharacterGallery<T>({
   minCardWidthMd,
   minCardWidthLg,
   cardGap = 24,
+  variant = 'default',
   'data-testid': testId,
 }: KammaraCharacterGalleryProps<T>) {
+  const isRegion = variant === 'region';
   // Measure the grid's available width so we know how many cards fit per page.
   // Mobile (< md / 768px) always shows 1 card per page to keep each card
   // big and legible while paginating through characters.
@@ -221,7 +230,7 @@ export function KammaraCharacterGallery<T>({
         css={{
           background: `linear-gradient(160deg, ${darkColor}33 0%, ${darkColor}26 50%, ${darkColor}33 100%)`,
           border: `1px solid ${color}40`,
-          outline: `1px solid ${color}80`,
+          outline: isRegion ? `1px solid ${color}` : `1px solid ${color}80`,
           outlineOffset: '4px',
           boxShadow: `0 20px 60px ${color}30, 0 4px 16px ${color}20, inset 0 1px 0 rgba(255,255,255,0.08)`,
         }}

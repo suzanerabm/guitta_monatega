@@ -1,67 +1,154 @@
 [
   {
     "match": "Luma_Val",
-    "name": { "pt": "Luma Val", "en": "Luma Val" },
-    "species": { "pt": "Bunniet — malloc", "en": "Bunniet — malloc" },
+    "name": {
+      "pt": "Luma Val",
+      "en": "Luma Val"
+    },
+    "species": {
+      "pt": "Bunniet",
+      "en": "Bunniet"
+    },
     "bio": {
-      "pt": "A Sensível. Sente tremores antes de acontecerem — leitura precoce de instabilidade através do corpo. \"O corpo avisa antes da camada.\"",
-      "en": "The Sensitive. She feels tremors before they happen — early instability reads through the body. \"The body warns before the layer does.\""
+      "pt": "Bunniet de lógica instintiva, nascida em Datara. Sente as camadas do planeta antes delas tremerem — capta variações de shilo no corpo antes de qualquer instrumento. Avisa, mas não age. Sua presença altera decisões coletivas sem entrar nelas.",
+      "en": "A bunniet of instinctive logic, born in Datara. She senses the planet's layers before they tremble — catching shilo variations in the body before any instrument does. She warns but does not act. Her presence shifts collective decisions without entering them."
     },
     "image": "/imgs/characters/kammara/triplec/malloc/Luma_Val.png",
     "attributes": [
       {
-        "glyph": "⊹",
-        "label": { "pt": "Função", "en": "Role" },
-        "value": { "pt": "Leitura precoce", "en": "Early Reading" }
+        "glyph": "•••••",
+        "label": {
+          "pt": "Casta",
+          "en": "Caste"
+        },
+        "value": {
+          "pt": "Koma",
+          "en": "Koma"
+        }
       },
       {
-        "glyph": "•⊙•",
-        "label": { "pt": "Vínculo", "en": "Bond" },
-        "value": { "pt": "Iren Kor", "en": "Iren Kor" }
+        "glyph": "•⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "malloc",
+          "en": "malloc"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Sentinela",
+          "en": "Sentinel"
+        }
       }
     ]
   },
   {
     "match": "Iren_Kor",
-    "name": { "pt": "Iren Kor", "en": "Iren Kor" },
-    "species": { "pt": "Bunniet — malloc", "en": "Bunniet — malloc" },
+    "name": {
+      "pt": "Iren Kor",
+      "en": "Iren Kor"
+    },
+    "species": {
+      "pt": "Bunniet",
+      "en": "Bunniet"
+    },
     "bio": {
-      "pt": "O Âncora. Mantém vilas funcionando, ancora processos instáveis, valida pela permanência. \"O que permanece, sustenta.\"",
-      "en": "The Anchor. He keeps villages running, steadies unstable processes, validates through permanence. \"What remains sustains.\""
+      "pt": "Bunniet de estabilidade e registro, nascido em Portex. Valida antes de aceitar qualquer informação. Confia no que permanece estável. Sua presença impõe limite sem precisar de palavras — quando entra num espaço, a conversa muda.",
+      "en": "A bunniet of stability and record, born in Portex. Validates before accepting any information. Trusts what remains steady. His presence imposes boundaries without needing words — when he enters a space, the conversation shifts."
     },
     "image": "/imgs/characters/kammara/triplec/malloc/Iren_Kor.png",
     "attributes": [
       {
-        "glyph": "⊹",
-        "label": { "pt": "Função", "en": "Role" },
-        "value": { "pt": "Estabilidade", "en": "Stability" }
+        "glyph": "•••••",
+        "label": {
+          "pt": "Casta",
+          "en": "Caste"
+        },
+        "value": {
+          "pt": "Prae",
+          "en": "Prae"
+        }
       },
       {
-        "glyph": "•⊙•",
-        "label": { "pt": "Vínculo", "en": "Bond" },
-        "value": { "pt": "Luma Val", "en": "Luma Val" }
+        "glyph": "•⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "malloc",
+          "en": "malloc"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Validador",
+          "en": "Validator"
+        }
       }
     ]
   },
   {
     "match": "Aion_Var",
-    "name": { "pt": "Aion Var", "en": "Aion Var" },
-    "species": { "pt": "Bunniet — malloc", "en": "Bunniet — malloc" },
+    "name": {
+      "pt": "Aion Var",
+      "en": "Aion Var"
+    },
+    "species": {
+      "pt": "Bunniet",
+      "en": "Bunniet"
+    },
     "bio": {
-      "pt": "O Navegador. Lê caminhos e passagens — vê rotas onde outros veem paredes. Dois que não se fixam, mas se encontram, com Naru Sen.",
-      "en": "The Navigator. He reads paths and passages — sees routes where others see walls. Two who don't settle, yet meet, with Naru Sen."
+      "pt": "Bunniet nascido em zona de sobreposição instável. Encontra passagem onde outros veem parede. Trânsito contínuo: nem base, nem avanço — caminho. Lê correntes de shilo direto e segue quando o caminho aparece.",
+      "en": "A bunniet born in a zone of unstable overlap. Finds passage where others see a wall. Continuous transit: neither base nor advance — only path. Reads shilo currents directly and moves when the way appears."
     },
     "image": "/imgs/characters/kammara/triplec/malloc/Aion_Var.png",
     "attributes": [
       {
-        "glyph": "⊷⊹⊶",
-        "label": { "pt": "Função", "en": "Role" },
-        "value": { "pt": "Navegação", "en": "Navigation" }
+        "glyph": "•••••",
+        "label": {
+          "pt": "Casta",
+          "en": "Caste"
+        },
+        "value": {
+          "pt": "Runa",
+          "en": "Runa"
+        }
       },
       {
-        "glyph": "•⊙•",
-        "label": { "pt": "Vínculo", "en": "Bond" },
-        "value": { "pt": "Naru Sen", "en": "Naru Sen" }
+        "glyph": "•⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "malloc",
+          "en": "malloc"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Travessia",
+          "en": "Crossing"
+        }
       }
     ]
   }

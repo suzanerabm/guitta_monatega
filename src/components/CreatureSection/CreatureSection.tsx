@@ -15,6 +15,14 @@ export interface CreatureSectionProps {
    * is a saturated non-neutral color, like triplec's purple).
    */
   bgOpacity?: number;
+  /**
+   * When true, the gradient is rendered ON TOP of the image with
+   * mix-blend-mode: multiply. Whites in the gradient become transparent
+   * (letting the image show), colors tint the image, darks intensify.
+   * Use this for regions with bright bg images that wash out normal
+   * gradients (e.g. sharp).
+   */
+  blendGradient?: boolean;
   noParallax?: boolean;
   hidden?: boolean;
   children: React.ReactNode;
@@ -26,6 +34,7 @@ export function CreatureSection({
   id,
   bgImage,
   bgOpacity = 0.3,
+  blendGradient = false,
   noParallax = false,
   hidden = false,
   children,
@@ -48,13 +57,15 @@ export function CreatureSection({
         maxHeight: hidden ? 0 : undefined,
       }}
     >
-      <Box
-        data-testid="creature-section-bg"
-        position="absolute"
-        inset={noParallax ? '0' : '-40% 0'}
-        zIndex={0}
-        style={{ background: gradient }}
-      />
+      {!blendGradient && (
+        <Box
+          data-testid="creature-section-bg"
+          position="absolute"
+          inset={noParallax ? '0' : '-40% 0'}
+          zIndex={0}
+          style={{ background: gradient }}
+        />
+      )}
       {bgImage && (
         <Box
           ref={bgImgRef}
@@ -77,11 +88,23 @@ export function CreatureSection({
               width: '100%',
               height: '100%',
               objectFit: 'cover',
-              opacity: bgOpacity,
+              opacity: blendGradient ? 1 : bgOpacity,
               display: 'block',
             }}
           />
         </Box>
+      )}
+      {blendGradient && (
+        <Box
+          data-testid="creature-section-bg-blend"
+          position="absolute"
+          inset={noParallax ? '0' : '-40% 0'}
+          zIndex={0}
+          style={{
+            background: gradient,
+            mixBlendMode: 'multiply',
+          }}
+        />
       )}
       <Box
         position="relative"

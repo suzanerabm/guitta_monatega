@@ -111,25 +111,25 @@ export const palettes: Record<PaletteName, Palette> = {
   // === MESH ===
   // Prata-azulado + verde kemita. Arquitetura modular, pontes hexagonais, simetria.
   mesh: {
-    colors: ['#94a3b8', '#cbd5e1', '#059669', '#22c55e', '#475569', '#1e293b'],
-    text: '#1e293b',
-    dark: '#0a1218',
-    gradient: 'linear-gradient(135deg, #94a3b8 0%, #cbd5e1 30%, #14b8a6 65%, #059669 100%)',
-    // Pontes suspensas e torres-template — azul-marinho profundo com
-    // miolo azul-cobalto. Mais azul, menos cinza/prata do que a versão
-    // original, pra destacar a identidade fria-geométrica da região.
-    gradientBg: 'linear-gradient(160deg, #0a1628 0%, #1a2a48 30%, #2a4a7a 55%, #1a2a48 80%, #0a1628 100%)',
+    colors: ['#3b82f6', '#60a5fa', '#7c3aed', '#6d28d9', '#1e3a8a', '#1a0f3d'],
+    text: '#1a0f3d',
+    dark: '#080420',
+    gradient: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 30%, #6d28d9 65%, #4c1d95 100%)',
+    // Azul-real + roxo-noite vibrante, porém mais dark que a B. Mantém
+    // saturação alta (blue-600 → violet-700) mas com anchors mais
+    // profundos pra preservar a identidade fria-geométrica.
+    gradientBg: 'linear-gradient(160deg, #080420 0%, #141638 30%, #2e1065 55%, #141638 80%, #080420 100%)',
   },
   // === SHARP ===
   // Branco puro + verde claro + azul-prateado. Megacidades seladas, validação, luz fria.
   sharp: {
-    colors: ['#f1f5f9', '#94a3b8', '#a7f3d0', '#cbd5e1', '#64748b', '#1e293b'],
+    colors: ['#cee4da', '#689674', '#173d14', '#6a87ab', '#64748b', '#1e293b'],
     text: '#334155',
-    dark: '#0f172a',
-    gradient: 'linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 35%, #a7f3d0 70%, #94a3b8 100%)',
-    // Megaestruturas seladas com o verde kemita dominando o miolo.
-    // Bordas em azul-marinho profundo pra enquadrar o pulso esmeralda.
-    gradientBg: 'linear-gradient(160deg, #0f172a 0%, #0e3520 30%, #1a6a3a 55%, #0e3520 80%, #0f172a 100%)',
+    dark: '#03170e',
+    gradient: 'linear-gradient(135deg, #0a0f14 0%, #0c1e16 35%, #0e2a1c 70%, #0a0814 100%)',
+    // Deep dark: slate-escuro → verde-floresta profundo → roxo-noite.
+    // Mantém identidade fria-selada sem clarear demais.
+    gradientBg: 'linear-gradient(160deg, #0a0f14 0%, #0c1e16 30%, #0e2a1c 55%, #1a0f3d 80%, #0a0814 100%)',
   },
   orfv: {
     colors: ['#cf568c', '#cf568c', '#40d0e8', '#cf568c', '#3a1860', '#9040a0'],

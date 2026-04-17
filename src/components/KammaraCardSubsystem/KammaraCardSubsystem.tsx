@@ -36,6 +36,12 @@ export interface KammaraCardSubsystemProps {
   color: string;
   darkColor: string;
   theme?: 'light' | 'dark';
+  /**
+   * Visual variant.
+   *  - `'default'` (solid outline) — planets
+   *  - `'region'` (dashed outline) — TripleC sub-regions
+   */
+  variant?: 'default' | 'region';
   'data-testid'?: string;
 }
 
@@ -48,8 +54,10 @@ export function KammaraCardSubsystem({
   color,
   darkColor,
   theme = 'dark',
+  variant = 'default',
   'data-testid': testId,
 }: KammaraCardSubsystemProps) {
+  const isRegion = variant === 'region';
   const allItems = tabs;
 
   const [activeIndex, setActiveIndex] = useState(0);

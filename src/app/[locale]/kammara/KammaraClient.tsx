@@ -13,6 +13,7 @@ import { KammaraCharacterGallery } from '@/components/KammaraCharacterGallery';
 import { getCharactersForContext, getLocalizedBio, getLocalizedName as getCharLocalizedName, getLocalizedSpecies } from '@/lib/characters';
 import { DSMainCard } from '@/components/DSMainCard';
 import { KammaraSceneCollage } from '@/components/KammaraSceneCollage';
+import { SceneStrip } from '@/components/SceneStrip';
 import { KammaraCardSubsystem, KammaraCardSubsystemContainer, KammaraCardSubsystemHorizontal } from '@/components/KammaraCardSubsystem';
 import { RegionDivider } from '@/components/RegionDivider';
 import { RegionBanner } from '@/components/RegionBanner';
@@ -588,58 +589,6 @@ function WorldSection({
         )}
       </DSMainCard>
       </Box>
-      {realSubsystems.length > 0 && (() => {
-        const tabs = realSubsystems.map((s, i) => ({
-          id: `${w.id}-${i}`,
-          icon: subsystemGlyph(s.title),
-          label: s.title,
-          title: s.title,
-          image: w.subsystemImages[i] ?? undefined,
-          imageAlt: s.title,
-          content: renderStory(s.text),
-        }));
-        return (
-          <>
-            {/* Vertical (mobile only, base → md). */}
-            <Box
-              display={{ base: 'block', md: 'none' }}
-              width="100%"
-              my="2xl"
-              px={{ base: '25px', md: '2rem', xl: '3rem' }}
-            >
-              <Box width="100%" height="627px">
-                <KammaraCardSubsystem
-                  name={name}
-                  category={subsystemsTitle}
-                  color={palette.colors[0]}
-                  darkColor={palette.dark}
-                  crestGlyph={worldCrestGlyph(w.id)}
-                  tabs={tabs}
-                />
-              </Box>
-            </Box>
-            {/* Horizontal — Variant C cinematic (md+). Full width with
-                the same horizontal gutters as the rest of the page. */}
-            <Box
-              display={{ base: 'none', md: 'block' }}
-              width="100%"
-              my="2xl"
-              px={{ base: '25px', md: '2rem', xl: '3rem' }}
-            >
-              <KammaraCardSubsystemHorizontal
-                variant="C"
-                name={name}
-                category={subsystemsTitle}
-                color={palette.colors[0]}
-                darkColor={palette.dark}
-                crestGlyph={worldCrestGlyph(w.id)}
-                tabs={tabs}
-              />
-            </Box>
-          </>
-        );
-      })()}
-
       {/* ── Character gallery — full-width section with KammaraCharacterCard */}
       {(() => {
         const worldColor = palette.colors[0];
@@ -708,6 +657,57 @@ function WorldSection({
           </Box>
         );
       })()}
+      {realSubsystems.length > 0 && (() => {
+        const tabs = realSubsystems.map((s, i) => ({
+          id: `${w.id}-${i}`,
+          icon: subsystemGlyph(s.title),
+          label: s.title,
+          title: s.title,
+          image: w.subsystemImages[i] ?? undefined,
+          imageAlt: s.title,
+          content: renderStory(s.text),
+        }));
+        return (
+          <>
+            {/* Vertical (mobile only, base → md). */}
+            <Box
+              display={{ base: 'block', md: 'none' }}
+              width="100%"
+              my="2xl"
+              px={{ base: '25px', md: '2rem', xl: '3rem' }}
+            >
+              <Box width="100%" height="627px">
+                <KammaraCardSubsystem
+                  name={name}
+                  category={subsystemsTitle}
+                  color={palette.colors[0]}
+                  darkColor={palette.dark}
+                  crestGlyph={worldCrestGlyph(w.id)}
+                  tabs={tabs}
+                />
+              </Box>
+            </Box>
+            {/* Horizontal — Variant C cinematic (md+). Full width with
+                the same horizontal gutters as the rest of the page. */}
+            <Box
+              display={{ base: 'none', md: 'block' }}
+              width="100%"
+              my="2xl"
+              px={{ base: '25px', md: '2rem', xl: '3rem' }}
+            >
+              <KammaraCardSubsystemHorizontal
+                variant="C"
+                name={name}
+                category={subsystemsTitle}
+                color={palette.colors[0]}
+                darkColor={palette.dark}
+                crestGlyph={worldCrestGlyph(w.id)}
+                tabs={tabs}
+              />
+            </Box>
+          </>
+        );
+      })()}
     </CreatureSection>
   );
 }
@@ -766,6 +766,7 @@ function TriplecRegionSection({
       gradient={regionPalette.gradientBg}
       accentColor={regionColor}
       bgImage={region.bgImage ?? undefined}
+      bgOpacity={regionId === 'sharp' ? 0.12 : 0.3}
       hidden={hidden}
     >
       <RegionDivider
@@ -803,69 +804,21 @@ function TriplecRegionSection({
         )}
       />
       {region.scenes.length > 0 && (
-        <KammaraSceneCollage
+        <SceneStrip
           scenes={region.scenes.map((s) => ({
             ...s,
             name: translateName(s.name, words),
           }))}
-          color={regionColor}
-          darkColor={regionPalette.dark}
+          arrowColor={regionColor}
+          accentColor={regionColor}
           modalBg={regionPalette.gradientBg}
           modalTitle={name}
           modalSubtitle={bodyText[0] || ''}
+          titleMarginTop="1.5em"
+          hideLabel
+          variant="region"
         />
       )}
-      {realSubsystems.length > 0 && (() => {
-        const tabs = realSubsystems.map((s, i) => ({
-          id: `${regionId}-${i}`,
-          icon: subsystemGlyph(s.title),
-          label: s.title,
-          title: s.title,
-          image: region.subsystemImages[i] ?? undefined,
-          imageAlt: s.title,
-          content: renderStory(s.text),
-        }));
-        return (
-          <>
-            {/* Vertical (mobile only, base → md). */}
-            <Box
-              display={{ base: 'block', md: 'none' }}
-              width="100%"
-              my="2xl"
-              px={{ base: '25px', md: '2rem', xl: '3rem' }}
-            >
-              <Box width="100%" height="627px">
-                <KammaraCardSubsystem
-                  name={name}
-                  category={subsystemsTitle}
-                  color={regionPalette.colors[0]}
-                  darkColor={regionPalette.dark}
-                  crestGlyph={worldCrestGlyph(regionId)}
-                  tabs={tabs}
-                />
-              </Box>
-            </Box>
-            {/* Horizontal — Variant C cinematic (md+). */}
-            <Box
-              display={{ base: 'none', md: 'block' }}
-              width="100%"
-              my="2xl"
-              px={{ base: '25px', md: '2rem', xl: '3rem' }}
-            >
-              <KammaraCardSubsystemHorizontal
-                variant="C"
-                name={name}
-                category={subsystemsTitle}
-                color={regionPalette.colors[0]}
-                darkColor={regionPalette.dark}
-                crestGlyph={worldCrestGlyph(regionId)}
-                tabs={tabs}
-              />
-            </Box>
-          </>
-        );
-      })()}
-
       {/* ── Character gallery for the region ─────────── */}
       {(() => {
         const characterData = getCharactersForContext(contextId);
@@ -905,6 +858,7 @@ function TriplecRegionSection({
               minCardWidth={320}
               minCardWidthMd={316}
               minCardWidthLg={360}
+              variant="region"
               renderCard={(char) => (
                 <Box height={{ base: '460px', md: '600px' }}>
                   <KammaraCharacterCard
@@ -926,6 +880,58 @@ function TriplecRegionSection({
               )}
             />
           </Box>
+        );
+      })()}
+      {realSubsystems.length > 0 && (() => {
+        const tabs = realSubsystems.map((s, i) => ({
+          id: `${regionId}-${i}`,
+          icon: subsystemGlyph(s.title),
+          label: s.title,
+          title: s.title,
+          image: region.subsystemImages[i] ?? undefined,
+          imageAlt: s.title,
+          content: renderStory(s.text),
+        }));
+        return (
+          <>
+            {/* Vertical (mobile only, base → md). */}
+            <Box
+              display={{ base: 'block', md: 'none' }}
+              width="100%"
+              my="2xl"
+              px={{ base: '25px', md: '2rem', xl: '3rem' }}
+            >
+              <Box width="100%" height="627px">
+                <KammaraCardSubsystem
+                  name={name}
+                  category={subsystemsTitle}
+                  color={regionPalette.colors[0]}
+                  darkColor={regionPalette.dark}
+                  crestGlyph={worldCrestGlyph(regionId)}
+                  tabs={tabs}
+                  variant="region"
+                />
+              </Box>
+            </Box>
+            {/* Horizontal — Variant C cinematic (md+). */}
+            <Box
+              display={{ base: 'none', md: 'block' }}
+              width="100%"
+              my="2xl"
+              px={{ base: '25px', md: '2rem', xl: '3rem' }}
+            >
+              <KammaraCardSubsystemHorizontal
+                variant="C"
+                borderStyle="region"
+                name={name}
+                category={subsystemsTitle}
+                color={regionPalette.colors[0]}
+                darkColor={regionPalette.dark}
+                crestGlyph={worldCrestGlyph(regionId)}
+                tabs={tabs}
+              />
+            </Box>
+          </>
         );
       })()}
     </CreatureSection>

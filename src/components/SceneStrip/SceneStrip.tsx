@@ -26,6 +26,19 @@ export interface SceneStripProps {
    * to sit closer to the DSTextPanel that precedes them.
    */
   titleMarginTop?: string;
+  /**
+   * When true, the per-scene caption below each thumbnail is not rendered.
+   * Useful in contexts where the scene name is redundant (TripleC regions,
+   * where the section already speaks for itself) and we want a leaner look.
+   */
+  hideLabel?: boolean;
+  /**
+   * Visual variant of the thumbnail outline.
+   *  - `'default'` — solid, used by worlds/planets
+   *  - `'region'` — dashed, used by TripleC sub-regions to match the
+   *    other region-scoped cards (KammaraCardRegion family)
+   */
+  variant?: 'default' | 'region';
 }
 
 export function SceneStrip({
@@ -40,7 +53,10 @@ export function SceneStrip({
   modalSubtitle,
   galleryId,
   titleMarginTop = '5em',
+  hideLabel = false,
+  variant = 'default',
 }: SceneStripProps) {
+  const isRegion = variant === 'region';
   const fallbackId = useId();
   const id = galleryId ?? `scene-strip-${fallbackId}`;
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -181,8 +197,10 @@ export function SceneStrip({
                     outline: '2px solid',
                     outlineColor: mobileColor || accentColor || 'var(--chakra-colors-outlineMid)',
                     '@media (min-width: 48em)': mobileColor ? { outlineColor: accentColor || 'var(--chakra-colors-outlineMid)' } : {},
-                    outlineOffset: '3px',
-                    boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
+                    outlineOffset: '6px',
+                    boxShadow: accentColor
+                      ? `0 20px 60px ${accentColor}50, 0 4px 16px ${accentColor}30, inset 0 1px 0 rgba(255,255,255,0.15)`
+                      : '0 8px 32px rgba(0,0,0,0.1)',
                     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                     '&:hover': {
                       transform: 'scale(1.05)',
@@ -209,19 +227,21 @@ export function SceneStrip({
                     }}
                   />
                 </Box>
-                <Heading
-                  as="h4"
-                  textStyle="label"
-                  textAlign="center"
-                  m={0}
-                  color={mobileColor || labelColor || 'white'}
-                  textShadow="labelText"
-                  css={mobileColor ? {
-                    '@media (min-width: 48em)': { color: labelColor || 'white' },
-                  } : undefined}
-                >
-                  {s.name}
-                </Heading>
+                {!hideLabel && (
+                  <Heading
+                    as="h4"
+                    textStyle="label"
+                    textAlign="center"
+                    m={0}
+                    color={mobileColor || labelColor || 'white'}
+                    textShadow="labelText"
+                    css={mobileColor ? {
+                      '@media (min-width: 48em)': { color: labelColor || 'white' },
+                    } : undefined}
+                  >
+                    {s.name}
+                  </Heading>
+                )}
               </button>
             ))}
           </Box>

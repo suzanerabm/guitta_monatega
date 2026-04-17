@@ -1,23 +1,40 @@
 [
   {
-    "match": "three_bunniet",
-    "name": { "pt": "Os Três Bunniets", "en": "The Three Bunniets" },
-    "species": { "pt": "Bunniet", "en": "Bunniet" },
-    "bio": {
-      "pt": "Coelhos humanoides bio-lógicos de TripleC. Orelhas longas como antenas, pelos sensores — um povo por trás das três regiões (malloc, Mesh e Sharp).",
-      "en": "The bio-logical humanoid rabbits of TripleC. Long ears like antennae, fur as sensors — a people behind the three regions (malloc, Mesh and Sharp)."
+    "match": "Zarkol-9",
+    "name": {
+      "pt": "Zarkol-9",
+      "en": "Zarkol-9"
     },
-    "image": "/imgs/characters/kammara/triplec/three_bunniet.png",
+    "species": {
+      "pt": "Engenharia-Observacional",
+      "en": "Observational Engineering"
+    },
+    "bio": {
+      "pt": "Engenheiro enviado de Z1 a TripleC para mapear o mecanismo de integração dos bunniets — autor do Relatório Técnico 41-Z. Concluiu que o mecanismo não é mecanismo: é natureza. Não há dispositivo conector porque não há separação entre operador e sistema. Hoje vive na Floresta Niul.",
+      "en": "Engineer sent from Z1 to TripleC to map the integration mechanism of the bunniets — author of Technical Report 41-Z. He concluded that the mechanism is not a mechanism: it is nature. There is no connector device because there is no separation between operator and system. He now lives in the Niul Forest."
+    },
     "attributes": [
       {
-        "glyph": "⊙",
-        "label": { "pt": "Regiões", "en": "Regions" },
-        "value": { "pt": "malloc · Mesh · Sharp", "en": "malloc · Mesh · Sharp" }
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Análise sistêmica",
+          "en": "System Analysis"
+        }
       },
       {
-        "glyph": "•⊙•",
-        "label": { "pt": "Linguagem", "en": "Language" },
-        "value": { "pt": "Binária universal", "en": "Universal binary" }
+        "glyph": "⊹",
+        "label": {
+          "pt": "Divisão",
+          "en": "Division"
+        },
+        "value": {
+          "pt": "Intercâmbio Técnico",
+          "en": "Technical Exchange"
+        }
       }
     ]
   }

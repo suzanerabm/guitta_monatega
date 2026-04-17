@@ -1,45 +1,311 @@
 [
   {
-    "match": "orvian",
-    "name": { "pt": "Orvian", "en": "Orvian" },
-    "species": { "pt": "Orviano", "en": "Orvian" },
+    "match": "Orvian",
+    "name": {
+      "pt": "Orvian",
+      "en": "Orvian"
+    },
+    "species": {
+      "pt": "ElePHPant",
+      "en": "ElePHPant"
+    },
     "bio": {
-      "pt": "A ponte que não cai. Sustenta o fluxo para que outros atravessem — presença estável que não força, apenas aguenta.",
-      "en": "The bridge that does not fall. He sustains the flow so others can cross — a steady presence that does not push, only endures."
+      "pt": "ElePHPant grande e arredondado, cinza-azulado médio. Tromba expressiva, postura calma e firme. Sustenta o fluxo para que outros atravessem. Pontes parecem mais seguras só por ele estar ali.",
+      "en": "A large, rounded ElePHPant in medium blue-gray. Expressive trunk, calm and steady posture. He holds the flow so others can cross. Bridges feel safer just because he is there."
     },
     "image": "/imgs/characters/kammara/orfv/orvian.png",
+    "backImage": "/imgs/characters/kammara/orfv/orvian1.png",
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Other Side"
+    },
+    "backMeaning": {
+      "pt": "Por trás do pilar, a escuta. Orvian sustenta sem se mostrar inteiro.",
+      "en": "Behind the pillar, listening. Orvian holds without showing his whole self."
+    },
     "attributes": [
       {
-        "glyph": "⊹",
-        "label": { "pt": "Polaridade", "en": "Polarity" },
-        "value": { "pt": "Yin", "en": "Yin" }
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Pilar",
+          "en": "Pillar"
+        }
       },
       {
-        "glyph": "•⊙•",
-        "label": { "pt": "Função", "en": "Role" },
-        "value": { "pt": "Sustentação", "en": "Sustenance" }
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Fjorks Centrais",
+          "en": "Central Fjorks"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
       }
     ]
   },
   {
-    "match": "orvian1",
-    "name": { "pt": "Orvian II", "en": "Orvian II" },
-    "species": { "pt": "Orviano", "en": "Orvian" },
-    "bio": {
-      "pt": "Outra face dos orvianos — mesma calma, outro caminho. Em ORF-V, sustentar é tanto vocação quanto herança.",
-      "en": "Another face of the Orvians — same calm, different path. In ORF-V, holding is as much a calling as a legacy."
+    "match": "Maelik",
+    "name": {
+      "pt": "Maelik",
+      "en": "Maelik"
     },
-    "image": "/imgs/characters/kammara/orfv/orvian1.png",
+    "species": {
+      "pt": "ElePHPant (infectado)",
+      "en": "ElePHPant (infected)"
+    },
+    "bio": {
+      "pt": "A normalidade que mantém as portas abertas. Tudo nele parece funcionar — a gentileza é gesto certo no momento certo. Por dentro, o vírus se instalou onde já existia abertura, e Maelik segue normalizando o que deveria ser questionado. Onde Orvian protege pelo peso, Maelik expõe pela ilusão.",
+      "en": "The normalcy that keeps every door open. Everything about him seems to work — kindness delivered at the right moment. Underneath, the virus installed itself in an opening that was already there, and Maelik keeps normalizing what should be questioned. Where Orvian protects through weight, Maelik exposes through illusion."
+    },
     "attributes": [
       {
-        "glyph": "⊹",
-        "label": { "pt": "Polaridade", "en": "Polarity" },
-        "value": { "pt": "Yin", "en": "Yin" }
+        "glyph": "⊶⋄⊷",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Porta aberta",
+          "en": "Open Door"
+        }
       },
       {
-        "glyph": "•⊙•",
-        "label": { "pt": "Função", "en": "Role" },
-        "value": { "pt": "Sustentação", "en": "Sustenance" }
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Vilas Inferiores dos Fjorks",
+          "en": "Lower Fjork Villages"
+        }
+      },
+      {
+        "glyph": "⋄•⋄",
+        "label": {
+          "pt": "Status",
+          "en": "Status"
+        },
+        "value": {
+          "pt": "BREACH ativo",
+          "en": "BREACH active"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Kallott",
+    "name": {
+      "pt": "Kallott",
+      "en": "Kallott"
+    },
+    "species": {
+      "pt": "ElePHPant",
+      "en": "ElePHPant"
+    },
+    "bio": {
+      "pt": "Interrompe o fluxo quando ele carrega ameaça. Bloqueia, depois se afasta. O Yang mais raro de ORF-V — força direta, jato preciso, confronto sem desperdício. Vive em vilas próximas ao vácuo, separado dos centros.",
+      "en": "He stops the flow when it carries threat. Blocks, then pulls back. The rarest Yang in ORF-V — direct force, precise jet, confrontation without waste. Lives in villages close to the void, away from the centers."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Limite",
+          "en": "Boundary"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Vilas de Borda Extrema",
+          "en": "Far-Edge Villages"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Torwen",
+    "name": {
+      "pt": "Torwen",
+      "en": "Torwen"
+    },
+    "species": {
+      "pt": "ElePHPant",
+      "en": "ElePHPant"
+    },
+    "bio": {
+      "pt": "Sustenta quem ficou para trás. Vilas inteiras mudam de humor quando Torwen está presente — o ar fica mais leve, as pontes parecem mais curtas. Calor suave, presença que não exige nada. Por isso é buscado por todos.",
+      "en": "He holds up those left behind. Entire villages shift in mood when Torwen arrives — the air lightens, bridges feel shorter. Gentle warmth, a presence that demands nothing. That is why everyone looks for him."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Acolhimento",
+          "en": "Welcoming"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Vilas Centrais dos Fjorks",
+          "en": "Central Fjork Villages"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Nylpha",
+    "name": {
+      "pt": "Nylpha",
+      "en": "Nylpha"
+    },
+    "species": {
+      "pt": "ElePHPant",
+      "en": "ElePHPant"
+    },
+    "bio": {
+      "pt": "Sente o fluxo antes dos outros. Percebe mudanças sutis que ainda não têm forma. Age quando o corpo inteiro confirma, não por impulso. Sua percepção salva vidas quando escutada.",
+      "en": "She feels the flow before the others. Notices subtle shifts that still have no form. Acts when her whole body confirms, never on impulse. Her perception saves lives when it is heard."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Antena",
+          "en": "Antenna"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Vilas Superiores",
+          "en": "Upper Villages"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Elickson",
+    "name": {
+      "pt": "Elickson",
+      "en": "Elickson"
+    },
+    "species": {
+      "pt": "ElePHPant",
+      "en": "ElePHPant"
+    },
+    "bio": {
+      "pt": "Vê o fluxo mas fica na margem, observando todos os caminhos possíveis. Por dentro, corre em todas as direções ao mesmo tempo enquanto parece imóvel. Quando finalmente age, age com toda a informação que coletou enquanto esperava.",
+      "en": "He sees the flow but stays on the margin, watching every possible path. Inside, he runs in every direction at once while appearing still. When he finally acts, he acts with everything he gathered while waiting."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Analista",
+          "en": "Analyst"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Vilas de Borda",
+          "en": "Edge Villages"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
       }
     ]
   }

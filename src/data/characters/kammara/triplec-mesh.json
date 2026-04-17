@@ -1,29 +1,61 @@
 [
   {
     "match": "KAEL_TORIN",
-    "name": { "pt": "Kael Torin", "en": "Kael Torin" },
-    "species": { "pt": "Bunniet — Mesh", "en": "Bunniet — Mesh" },
+    "name": {
+      "pt": "Kael Torin",
+      "en": "Kael Torin"
+    },
+    "species": {
+      "pt": "Bunniet",
+      "en": "Bunniet"
+    },
     "bio": {
-      "pt": "O Modulador do Agora. Ajusta estruturas ao contexto presente — simplifica sem empobrecer, mantém sistemas relevantes. \"Forma boa acompanha o tempo.\"",
-      "en": "The Now-Modulator. He adjusts structures to the present context — simplifies without impoverishing, keeps systems relevant. \"Good form keeps up with time.\""
+      "pt": "Bunniet de Mesh, postura levemente inclinada para frente como quem está prestes a agir. Pelagem azul-acinzentada com padrões geométricos dourado-esverdeados em movimento lento. Atua onde a arquitetura precisa mudar sem quebrar — reduz excesso, abre variações, reconfigura caminhos sem empobrecer.",
+      "en": "Mesh bunniet, posture slightly forward like someone about to act. Bluish-grey fur with golden-green geometric patterns shifting slowly. Acts where architecture must change without breaking — trims excess, opens variations, reconfigures paths without impoverishing them."
     },
     "image": "/imgs/characters/kammara/triplec/mesh/KAEL_TORIN.png",
     "backImage": "/imgs/characters/kammara/triplec/mesh/KAEL_TORIN_bravo.png",
-    "backTitle": { "pt": "em Conflito", "en": "in Conflict" },
+    "backTitle": {
+      "pt": "em Conflito",
+      "en": "in Conflict"
+    },
     "backMeaning": {
       "pt": "Quando o contexto rompe — Kael Torin mostra a tensão entre refatorar o presente e respeitar o que foi construído.",
       "en": "When context breaks — Kael Torin reveals the tension between refactoring the present and honoring what was built."
     },
     "attributes": [
       {
-        "glyph": "⊹",
-        "label": { "pt": "Função", "en": "Role" },
-        "value": { "pt": "Refatoração", "en": "Refactoring" }
+        "glyph": "⊶⊙⊶⊙⊶",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Mesh",
+          "en": "Mesh"
+        }
       },
       {
-        "glyph": "•⊙•",
-        "label": { "pt": "Vínculo", "en": "Bond" },
-        "value": { "pt": "Lyren Seka", "en": "Lyren Seka" }
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Modulador",
+          "en": "Modulator"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Arquétipo",
+          "en": "Archetype"
+        },
+        "value": {
+          "pt": "TEMPLATE",
+          "en": "TEMPLATE"
+        }
       }
     ]
   }

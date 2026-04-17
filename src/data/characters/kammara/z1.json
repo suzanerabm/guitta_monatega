@@ -1,45 +1,401 @@
 [
   {
-    "match": "cast",
-    "name": { "pt": "Elenco Z1", "en": "Z1 Ensemble" },
-    "species": { "pt": "Castas Vivas", "en": "Living Castes" },
-    "bio": {
-      "pt": "Z1 não possui indivíduos — possui funções vivas. ZEUS, Lai, Aruun, Vexa, Kaal, Synn, Ren e Rhen operam como o ciclo sistêmico do planeta.",
-      "en": "Z1 has no individuals — only living functions. ZEUS, Lai, Aruun, Vexa, Kaal, Synn, Ren and Rhen run the planet's systemic cycle."
+    "match": "Aruun",
+    "name": {
+      "pt": "Aruun",
+      "en": "Aruun"
     },
-    "image": "/imgs/characters/kammara/z1/cast.png",
+    "species": {
+      "pt": "Transistor vivo",
+      "en": "Living Transistor"
+    },
+    "bio": {
+      "pt": "Transistor metálico clássico, prateado, polido pelo tempo. Perninhas perfeitamente alinhadas. Sustenta estados lógicos: define onde o fluxo pode existir. Quando Aruun está presente, processos desaceleram ao redor — não por lentidão, por estabilidade garantida.",
+      "en": "Classic metallic transistor, silvered and polished by time. Legs perfectly aligned. Sustains logical states: decides where the flow may exist. When Aruun is present, processes slow down nearby — not from sluggishness, but because stability is guaranteed."
+    },
     "attributes": [
       {
-        "glyph": "⊙",
-        "label": { "pt": "Castas", "en": "Castes" },
-        "value": { "pt": "8 funções", "en": "8 functions" }
+        "glyph": "•••••",
+        "label": {
+          "pt": "Casta",
+          "en": "Caste"
+        },
+        "value": {
+          "pt": "REG–",
+          "en": "REG–"
+        }
       },
       {
-        "glyph": "⊹—⊙",
-        "label": { "pt": "Arquétipo", "en": "Archetype" },
-        "value": { "pt": "O Herói", "en": "The Hero" }
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Sustentação de estado",
+          "en": "State Holding"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
       }
     ]
   },
   {
-    "match": "emo-1",
-    "name": { "pt": "EMO-Δ1", "en": "EMO-Δ1" },
-    "species": { "pt": "Estudo Emocional", "en": "Emotional Study" },
-    "bio": {
-      "pt": "Primeira investigação de afeto em Z1 — um planeta que rejeita o vivo e o imperfeito. Frieza disfarçada de eficiência começa, aqui, a rachar.",
-      "en": "The first inquiry into affect on Z1 — a planet that rejects the living and the imperfect. Coldness disguised as efficiency begins, here, to crack."
+    "match": "Kalc",
+    "name": {
+      "pt": "Kalc",
+      "en": "Kalc"
     },
-    "image": "/imgs/characters/kammara/z1/emo-1.jpg",
+    "species": {
+      "pt": "Transistor vivo",
+      "en": "Living Transistor"
+    },
+    "bio": {
+      "pt": "Corpo compacto, encapsulamento metálico denso. Perninhas retas e simétricas. É o ponto onde o fluxo se bifurca e escolhe — lâmina que separa sem ferir. Decide sem hesitar quando outros ainda deliberam.",
+      "en": "Compact body, dense metal casing. Straight, symmetrical legs. The point where the flow forks and chooses — a blade that separates without wounding. Decides without hesitation while others still deliberate."
+    },
     "attributes": [
       {
-        "glyph": "⊹",
-        "label": { "pt": "Estágio", "en": "Stage" },
-        "value": { "pt": "Δ1", "en": "Δ1" }
+        "glyph": "•••••",
+        "label": {
+          "pt": "Casta",
+          "en": "Caste"
+        },
+        "value": {
+          "pt": "ALU–",
+          "en": "ALU–"
+        }
       },
       {
-        "glyph": "•⊙•",
-        "label": { "pt": "Registro", "en": "Record" },
-        "value": { "pt": "Experimental", "en": "Experimental" }
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Decisão lógica",
+          "en": "Logical Decision"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Lai",
+    "name": {
+      "pt": "Lai",
+      "en": "Lai"
+    },
+    "species": {
+      "pt": "Transistor vivo",
+      "en": "Living Transistor"
+    },
+    "bio": {
+      "pt": "Transistor metálico antigo, cilíndrico com listras técnicas, mais terminais que a média. Lê o fluxo antes de entrar nele. Decodifica padrões hostis (ASM-Δ viral) e traduz para que outros ajam com clareza. Quando Lai está ativa, ninguém age por impulso.",
+      "en": "Ancient metallic transistor, cylindrical with technical stripes and more terminals than average. Reads the flow before entering it. Decodes hostile patterns (viral ASM-Δ) and translates them so others can act with clarity. When Lai is active, no one acts on impulse."
+    },
+    "attributes": [
+      {
+        "glyph": "•••••",
+        "label": {
+          "pt": "Casta",
+          "en": "Caste"
+        },
+        "value": {
+          "pt": "DEC–",
+          "en": "DEC–"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Leitura antecipada",
+          "en": "Forward Reading"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Omi",
+    "name": {
+      "pt": "Omi",
+      "en": "Omi"
+    },
+    "species": {
+      "pt": "Transistor vivo",
+      "en": "Living Transistor"
+    },
+    "bio": {
+      "pt": "Transistor alongado com micro sensores distribuídos nas costas. Antenas discretas mas sempre ativas — captam frequências que outros ignoram. Olhos-luz rotacionam lentamente, varrendo o horizonte cósmico. Quando Omi está presente, o ambiente parece mais seguro.",
+      "en": "Elongated transistor with micro-sensors spread across its back. Discreet but ever-active antennae — picking up frequencies others ignore. Light-eyes rotate slowly, sweeping the cosmic horizon. When Omi is present, the environment feels safer."
+    },
+    "attributes": [
+      {
+        "glyph": "•••••",
+        "label": {
+          "pt": "Casta",
+          "en": "Caste"
+        },
+        "value": {
+          "pt": "IO–",
+          "en": "IO–"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Vigilância cósmica",
+          "en": "Cosmic Watch"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Runo",
+    "name": {
+      "pt": "Runo",
+      "en": "Runo"
+    },
+    "species": {
+      "pt": "Transistor vivo",
+      "en": "Living Transistor"
+    },
+    "bio": {
+      "pt": "Transistor pequeno, corpo escuro, leve. Perninhas ligeiramente flexíveis para acompanhar o fluxo. É a correnteza em movimento — leva sem reter. Quando para, algo está errado. Sua presença transmite continuidade.",
+      "en": "Small transistor, dark body, light on its feet. Slightly flexible legs that track the flow. He is the current in motion — carries without holding. When he stops, something is wrong. His presence conveys continuity."
+    },
+    "attributes": [
+      {
+        "glyph": "•••••",
+        "label": {
+          "pt": "Casta",
+          "en": "Caste"
+        },
+        "value": {
+          "pt": "BUS–",
+          "en": "BUS–"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Transporte",
+          "en": "Transport"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Synn",
+    "name": {
+      "pt": "Synn",
+      "en": "Synn"
+    },
+    "species": {
+      "pt": "Transistor vivo",
+      "en": "Living Transistor"
+    },
+    "bio": {
+      "pt": "Transistor escuro, corpo simples, faixa técnica única. Perninhas perfeitamente paralelas, como se nunca tivessem pressa. Luz interna branca pulsa lentamente — regular, constante, inevitável. Onde Synn está, o tempo se organiza.",
+      "en": "Dark transistor, simple body, a single technical stripe. Legs perfectly parallel, as if it had never known hurry. Internal white light pulses slowly — regular, constant, inevitable. Wherever Synn is, time falls into order."
+    },
+    "attributes": [
+      {
+        "glyph": "•••••",
+        "label": {
+          "pt": "Casta",
+          "en": "Caste"
+        },
+        "value": {
+          "pt": "CLK–",
+          "en": "CLK–"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Sincronização",
+          "en": "Synchronization"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Vexa",
+    "name": {
+      "pt": "Vexa",
+      "en": "Vexa"
+    },
+    "species": {
+      "pt": "Transistor vivo",
+      "en": "Living Transistor"
+    },
+    "bio": {
+      "pt": "Corpo escuro, encapsulamento simples, micro linhas técnicas. Perninhas firmes com leve curvatura — sinal de adaptação ao tempo. Preserva o essencial, deixa o resto partir. Memória sem peso. Quando Vexa está presente, o ambiente parece mais profundo.",
+      "en": "Dark body, simple casing, micro technical lines. Firm legs slightly curved — a sign of adaptation to time. She preserves the essential and lets the rest go. Memory without weight. When Vexa is present, the environment feels deeper."
+    },
+    "attributes": [
+      {
+        "glyph": "•••••",
+        "label": {
+          "pt": "Casta",
+          "en": "Caste"
+        },
+        "value": {
+          "pt": "MEM–",
+          "en": "MEM–"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Memória",
+          "en": "Memory"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Zeus",
+    "name": {
+      "pt": "Zeus",
+      "en": "Zeus"
+    },
+    "species": {
+      "pt": "Transistor vivo",
+      "en": "Living Transistor"
+    },
+    "bio": {
+      "pt": "Transistor de potência ancestral, encapsulamento grande, escuro, pesado. Raramente se move — quando o faz, o planeta inteiro percebe. Sem olhos, sem marcas decorativas, apenas presença densa. Luz interna mínima, roxa, perceptível somente durante leituras críticas. Lê o que foi descartado e encontra ordem no abandono.",
+      "en": "Ancient power transistor, large, dark, heavy casing. Rarely moves — when it does, the entire planet notices. No eyes, no decorative marks, only dense presence. Minimal internal purple light, visible only during critical readings. Reads what was discarded and finds order in abandonment."
+    },
+    "attributes": [
+      {
+        "glyph": "•••••",
+        "label": {
+          "pt": "Casta",
+          "en": "Caste"
+        },
+        "value": {
+          "pt": "Z–",
+          "en": "Z–"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Síntese ancestral",
+          "en": "Ancestral Synthesis"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
       }
     ]
   }

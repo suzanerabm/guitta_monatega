@@ -76,6 +76,8 @@ export function Breadcrumb({
       textTransform="lowercase"
       color={tintColor ? 'rgba(255,255,255,0.6)' : 'inkMuted'}
       transform={isHidden ? 'translateY(-200%)' : 'translateY(0)'}
+      opacity={isHidden ? 0 : 1}
+      pointerEvents={isHidden ? 'none' : 'auto'}
       transition="background 0.4s ease, color 0.4s ease, transform 0.3s ease, opacity 0.3s ease, top 0.3s ease"
     >
       {/* Left: home > current */}
