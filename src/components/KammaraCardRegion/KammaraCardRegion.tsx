@@ -40,6 +40,9 @@ export interface KammaraCardRegionProps {
   color: string;
   darkColor: string;
   midColor?: string;
+  /** When provided, tints the header banner background with this color
+   *  instead of `color`. Useful when `color` is too light for a dark bg. */
+  headerBg?: string;
   theme?: 'light' | 'dark';
   'data-testid'?: string;
 }
@@ -57,6 +60,7 @@ export function KammaraCardRegion({
   color,
   darkColor,
   midColor,
+  headerBg,
   theme = 'dark',
   'data-testid': testId,
 }: KammaraCardRegionProps) {
@@ -70,6 +74,7 @@ export function KammaraCardRegion({
   const textColor = isLight ? 'overlayLightSoft' : 'textOverlayBright';
   const mutedText = isLight ? 'inkSoft' : 'bannerLabel';
   const body = midColor ?? darkColor;
+  const hdrBg = headerBg ?? color;
 
   return (
     <Box
@@ -156,7 +161,7 @@ export function KammaraCardRegion({
             flexShrink={0}
             overflow="hidden"
             css={{
-              background: `linear-gradient(160deg, ${color}20 0%, ${color}10 50%, ${color}20 100%)`,
+              background: `linear-gradient(160deg, ${hdrBg}20 0%, ${hdrBg}10 50%, ${hdrBg}20 100%)`,
               borderBottom: `1px solid ${color}`,
             }}
           >

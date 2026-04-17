@@ -774,6 +774,7 @@ function TriplecRegionSection({
         name={name}
         crestGlyph={worldCrestGlyph(regionId)}
         color={regionColor}
+        {...(regionId === 'sharp' ? { bgColor: regionPalette.dark } : {})}
         data-testid={`region-divider-${regionId}`}
       />
       <RegionBanner
@@ -790,6 +791,7 @@ function TriplecRegionSection({
             parentCrestGlyph={worldCrestGlyph('triplec')}
             color={regionPanelColor}
             darkColor={regionPalette.dark}
+            {...(regionId === 'sharp' ? { headerBg: regionPalette.dark } : {})}
             crestGlyph={worldCrestGlyph(regionId)}
             tabs={[
               {

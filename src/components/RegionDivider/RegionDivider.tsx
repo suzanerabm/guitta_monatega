@@ -26,6 +26,10 @@ export interface RegionDividerProps {
    * background, the bottom/top borders and the tagline text.
    */
   color: string;
+  /** Override the gradient background tint independently from `color`. */
+  bgColor?: string;
+  /** Override the default height. */
+  height?: Record<string, string> | string;
   /**
    * Optional background image. When provided, the image is rendered
    * covering the divider with `objectFit: cover`, and the gradient is
@@ -50,16 +54,19 @@ export function RegionDivider({
   name,
   crestGlyph,
   color,
+  bgColor,
+  height: heightProp,
   image,
   'data-testid': testId,
 }: RegionDividerProps) {
+  const bg = bgColor ?? color;
   return (
     <Box
       data-testid={testId ?? 'region-divider'}
       position="relative"
       width="100vw"
       marginLeft="calc(-50vw + 50%)"
-      height={{ base: '140px', md: '180px', '2xl': '220px' }}
+      height={heightProp ?? { base: '140px', md: '180px', '2xl': '220px' }}
       display="flex"
       alignItems="center"
       justifyContent="center"
@@ -72,7 +79,9 @@ export function RegionDivider({
       style={{
         // Soft gradient tinted by the region's accent color. When an image
         // is supplied it sits underneath and this layer becomes the tint.
-        background: `linear-gradient(135deg, ${color}22 0%, ${color}44 50%, ${color}22 100%)`,
+        background: bgColor
+          ? `linear-gradient(135deg, ${bg}88 0%, ${bg}cc 50%, ${bg}88 100%)`
+          : `linear-gradient(135deg, ${bg}22 0%, ${bg}44 50%, ${bg}22 100%)`,
       }}
     >
       {image && (
