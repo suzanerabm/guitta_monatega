@@ -31,8 +31,8 @@
           "en": "Role"
         },
         "value": {
-          "pt": "Autoridade absoluta",
-          "en": "Absolute Authority"
+          "pt": "Senhor Supremo",
+          "en": ""
         }
       },
       {
@@ -115,8 +115,8 @@
       "en": "Troy-Δ"
     },
     "species": {
-      "pt": "Nave de Intrusão",
-      "en": "Intrusion Vessel"
+      "pt": "Δ-TROY",
+      "en": "Δ-TROY"
     },
     "bio": {
       "pt": "Naves mecânicas. Envelopes físicos para infiltração interplanetária. Lê Karta-Δ e executa instruções primitivas. Cria portais térmicos curtos para invasão e coleta. Sem as Troy-Δ, os vírus evaporam ao cruzar o Cshift.",
@@ -200,8 +200,8 @@
           "en": "Role"
         },
         "value": {
-          "pt": "Executor",
-          "en": "Enforcer"
+          "pt": "Líder",
+          "en": "Leader"
         }
       }
     ]
@@ -249,19 +249,8 @@
           "en": "Role"
         },
         "value": {
-          "pt": "Líder Controlador térmico",
-          "en": "Thermal Controller Leader"
-        }
-      },
-      {
-        "glyph": "•⊙•",
-        "label": {
-          "pt": "Origem",
-          "en": "Origin"
-        },
-        "value": {
-          "pt": "Fábricas BURN",
-          "en": "BURN Factories"
+          "pt": "Líder",
+          "en": "Leader"
         }
       }
     ]
@@ -309,19 +298,8 @@
           "en": "Role"
         },
         "value": {
-          "pt": "Líder válvulas",
-          "en": "Valve Leader"
-        }
-      },
-      {
-        "glyph": "•⊙•",
-        "label": {
-          "pt": "Origem",
-          "en": "Origin"
-        },
-        "value": {
-          "pt": "Fábricas BURN",
-          "en": "BURN Factories"
+          "pt": "Líder",
+          "en": "Leader"
         }
       }
     ]
@@ -369,8 +347,8 @@
           "en": "Role"
         },
         "value": {
-          "pt": "Líder Clonagem",
-          "en": "Cloning Leader"
+          "pt": "Líder",
+          "en": "Leader"
         }
       }
     ]
@@ -382,12 +360,12 @@
       "en": "MASKON"
     },
     "species": {
-      "pt": "Vírus",
-      "en": "Virus"
+      "pt": "Vírus Δ-PRIME",
+      "en": "Virus Δ-PRIME"
     },
     "bio": {
-      "pt": "Coordenam infiltrações externas, especialistas em operações ERODE e BREACH. Planejam ataques que levam semanas ou meses. Entram em espaços e saem sem deixar marca.",
-      "en": "They coordinate external infiltrations, specialists in ERODE and BREACH operations. They plan attacks that take weeks or months. They enter spaces and leave without a trace."
+      "pt": "Coordenam infiltrações externas, especialistas em operações ERODE e BREACH. Planejam ataques que levam semanas ou meses.",
+      "en": "They coordinate external infiltrations, specialists in ERODE and BREACH operations. They plan attacks that take weeks or months."
     },
     "image": "/imgs/characters/kammara/eni4/virus_MASKON.png",
     "backImage": "/imgs/characters/kammara/eni4/virus_MASKON_cute.png",
@@ -407,8 +385,8 @@
           "en": "Caste"
         },
         "value": {
-          "pt": "Δ-PRIME / Caste-MASK",
-          "en": "Δ-PRIME / Caste-MASK"
+          "pt": "Caste-MASK",
+          "en": "Caste-MASK"
         }
       },
       {
@@ -418,19 +396,8 @@
           "en": "Role"
         },
         "value": {
-          "pt": "Infiltrador",
-          "en": "Infiltrator"
-        }
-      },
-      {
-        "glyph": "⊶⊶⊶",
-        "label": {
-          "pt": "Zona",
-          "en": "Zone"
-        },
-        "value": {
-          "pt": "SINK",
-          "en": "SINK"
+          "pt": "Líder",
+          "en": "Leader"
         }
       }
     ]
@@ -478,19 +445,8 @@
           "en": "Role"
         },
         "value": {
-          "pt": "Líder Cartógrafo",
-          "en": "Cartographer Leader"
-        }
-      },
-      {
-        "glyph": "•⊙•",
-        "label": {
-          "pt": "Origem",
-          "en": "Origin"
-        },
-        "value": {
-          "pt": "Fábricas BURN",
-          "en": "BURN Factories"
+          "pt": "Líder",
+          "en": "Leader"
         }
       }
     ]
@@ -733,12 +689,12 @@
       {
         "glyph": "⋄",
         "label": {
-          "pt": "Controle",
-          "en": "Control"
+          "pt": "Status",
+          "en": "Status"
         },
         "value": {
-          "pt": "Nenhum",
-          "en": "None"
+          "pt": "Selvagem",
+          "en": "Wild"
         }
       }
     ]
@@ -769,17 +725,6 @@
     },
     "attributes": [
       {
-        "glyph": "⊙",
-        "label": {
-          "pt": "Classe",
-          "en": "Class"
-        },
-        "value": {
-          "pt": "Δ-ERRATA",
-          "en": "Δ-ERRATA"
-        }
-      },
-      {
         "glyph": "⊷⊹⊶",
         "label": {
           "pt": "Função",
@@ -799,6 +744,55 @@
         "value": {
           "pt": "Culpado por tudo",
           "en": "Blamed for Everything"
+        }
+      }
+    ]
+  },
+   {
+    "match": "silrats",
+    "name": {
+      "pt": "Sil'Rats",
+      "en": "Sil'Rats"
+    },
+    "species": {
+      "pt": "Ratos de Sílica",
+      "en": "Silica Rats"
+    },
+    "bio": {
+      "pt": "Praga de ENI-4Δ. Vivem em tudo que é lugar — lixões, fábricas, túneis, bordas da SINK, ao redor das megaválvulas. Assim como os worms, comem lixo, sucata, restos de robôs, tudo o que vem na frente. Selvagens, sem controle de ninguém.",
+      "en": ""
+    },
+    "image": "/imgs/characters/kammara/eni4/rats.png",
+    "backImage": "/imgs/characters/kammara/eni4/rats_bravo.png",
+    "backTitle": {
+      "pt": "AVISO",
+      "en": "WARNING"
+    },
+    "dorsalMeaning": {
+      "pt": "Não chegue perto.",
+      "en": ""
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊶⊶",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+        "value": {
+          "pt": "Core de Gelo",
+          "en": "Ice Core"
+        }
+      },
+      {
+        "glyph": "⋄",
+        "label": {
+          "pt": "Status",
+          "en": "Status"
+        },
+        "value": {
+          "pt": "Selvagem",
+          "en": "Wild"
         }
       }
     ]
@@ -859,66 +853,6 @@
         "value": {
           "pt": "Escravo",
           "en": "Slave"
-        }
-      }
-    ]
-  },
-  {
-    "match": "silrats",
-    "name": {
-      "pt": "Sil'Rats",
-      "en": "Sil'Rats"
-    },
-    "species": {
-      "pt": "Ratos de Sílica",
-      "en": "Silica Rats"
-    },
-    "bio": {
-      "pt": "Praga de ENI-4Δ. Vivem em tudo que é lugar — lixões, fábricas, túneis, bordas da SINK, ao redor das megaválvulas. Assim como os worms, comem lixo, sucata, restos de robôs, tudo o que vem na frente. Selvagens, sem controle de ninguém.",
-      "en": ""
-    },
-    "image": "/imgs/characters/kammara/eni4/rats.png",
-    "backImage": "/imgs/characters/kammara/eni4/rats_bravo.png",
-    "backTitle": {
-      "pt": "AVISO",
-      "en": "WARNING"
-    },
-    "dorsalMeaning": {
-      "pt": "Não chegue perto.",
-      "en": ""
-    },
-    "attributes": [
-      {
-        "glyph": "⊙",
-        "label": {
-          "pt": "Classe",
-          "en": "Class"
-        },
-        "value": {
-          "pt": "Ratos de Sílica",
-          "en": "Silica Rats"
-        }
-      },
-      {
-        "glyph": "⊶⊶⊶",
-        "label": {
-          "pt": "Habitat",
-          "en": "Habitat"
-        },
-        "value": {
-          "pt": "Core de Gelo",
-          "en": "Ice Core"
-        }
-      },
-      {
-        "glyph": "⋄",
-        "label": {
-          "pt": "Status",
-          "en": "Status"
-        },
-        "value": {
-          "pt": "Selvagem",
-          "en": "Wild"
         }
       }
     ]
