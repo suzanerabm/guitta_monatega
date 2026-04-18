@@ -63,7 +63,7 @@
       "en": "The only virus in the universe able to process several instructions at once — born of a rare mutation during cloning. "
     },
     "image": "/imgs/characters/kammara/eni4/VEXON_normal.png",
-    "backImage":  "/imgs/characters/kammara/eni4/VEXON_patas.png",
+    "backImage": "/imgs/characters/kammara/eni4/VEXON_patas.png",
     "backTitle": {
       "pt": "Ataque",
       "en": "Attack"
@@ -109,305 +109,6 @@
     ]
   },
   {
-    "match": "VALKON",
-    "name": {
-      "pt": "VALKON",
-      "en": "VALKON"
-    },
-    "species": {
-      "pt": "Vírus Δ-PRIME",
-      "en": "Virus Δ-PRIME"
-    },
-    "bio": {
-      "pt": "O mais antigo Δ-PRIME, criado nas primeiras falhas térmicas. Supervisiona todas as megaválvulas e o processo de conversão de energia roubada em calor. Conhece cada válvula em detalhe. Vigia, patrulha, reivindica autoria de toda conversão bem-sucedida.",
-      "en": "The oldest Δ-PRIME, forged in the first thermal failures. Oversees all megavalves and the conversion of stolen energy into heat. Knows each valve in detail. Watches, patrols, claims credit for every successful conversion."
-    },
-    "backImage": "",
-    "backTitle": {
-      "pt": "",
-      "en": ""
-    },
-    "dorsalMeaning": {
-      "pt": "Ninguém toca nas minhas válvulas. Ninguém.",
-      "en": "Nobody touches my valves. Nobody."
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Função",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "Supervisor de válvulas",
-          "en": "Valve Supervisor"
-        }
-      },
-      {
-        "glyph": "⊹⊹⊹",
-        "label": {
-          "pt": "Posição",
-          "en": "Rank"
-        },
-        "value": {
-          "pt": "1º Δ-PRIME",
-          "en": "1st Δ-PRIME"
-        }
-      }
-    ]
-  },
-  {
-    "match": "THERMAX",
-    "name": {
-      "pt": "THERMAX",
-      "en": "THERMAX"
-    },
-    "species": {
-      "pt": "Vírus Δ-PRIME",
-      "en": "Virus Δ-PRIME"
-    },
-    "bio": {
-      "pt": "Segundo Δ-PRIME mais antigo, nasceu durante um superaquecimento. Funciona como medidor de calor vivo — termostato do planeta. Decide quanto calor vai para cada parte do sistema. Acusa todos de \"desperdício térmico\" o tempo todo.",
-      "en": "Second oldest Δ-PRIME, born during an overheating event. Works as a living heat gauge — the planet's thermostat. Decides how much heat flows to each part of the system. Accuses everyone of \"thermal waste\" all the time."
-    },
-    "backImage": "",
-    "backTitle": {
-      "pt": "",
-      "en": ""
-    },
-    "dorsalMeaning": {
-      "pt": "Desperdício térmico. Sempre desperdício térmico.",
-      "en": "Thermal waste. Always thermal waste."
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Função",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "Controlador térmico",
-          "en": "Thermal Controller"
-        }
-      },
-      {
-        "glyph": "⊹⊹⊹",
-        "label": {
-          "pt": "Posição",
-          "en": "Rank"
-        },
-        "value": {
-          "pt": "2º Δ-PRIME",
-          "en": "2nd Δ-PRIME"
-        }
-      }
-    ]
-  },
-  {
-    "match": "KARTEX",
-    "name": {
-      "pt": "KARTEX",
-      "en": "KARTEX"
-    },
-    "species": {
-      "pt": "Vírus Δ-PRIME",
-      "en": "Virus Δ-PRIME"
-    },
-    "bio": {
-      "pt": "Terceiro Δ-PRIME mais antigo. Administrador de todas as naves Troy-Δ e das rotas de coleta de Δ-Cells. O Δ-PRIME que mais sabe sobre o universo exterior. Organiza expedições para mundos que ele mesmo mapeia mas nunca visita.",
-      "en": "Third oldest Δ-PRIME. Administrator of all Troy-Δ ships and of the Δ-Cell collection routes. The Δ-PRIME who knows the most about the outer universe. Organizes expeditions to worlds he himself maps but never visits."
-    },
-    "backImage": "",
-    "backTitle": {
-      "pt": "",
-      "en": ""
-    },
-    "dorsalMeaning": {
-      "pt": "As rotas mentem. Os planetas sim.",
-      "en": "The routes lie. The planets do not."
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Função",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "Cartógrafo",
-          "en": "Cartographer"
-        }
-      },
-      {
-        "glyph": "⊹⊹⊹",
-        "label": {
-          "pt": "Posição",
-          "en": "Rank"
-        },
-        "value": {
-          "pt": "3º Δ-PRIME",
-          "en": "3rd Δ-PRIME"
-        }
-      }
-    ]
-  },
-  {
-    "match": "REPLION",
-    "name": {
-      "pt": "REPLION",
-      "en": "REPLION"
-    },
-    "species": {
-      "pt": "Vírus Δ-PRIME",
-      "en": "Virus Δ-PRIME"
-    },
-    "bio": {
-      "pt": "Quarto Δ-PRIME mais antigo. Coordena a clonagem em massa — gerencia as fábricas que produzem novos vírus. O Δ-PRIME mais instável e o que mais produz. Velocidade máxima, qualidade mínima. Culpa os bugs por cada defeito.",
-      "en": "Fourth oldest Δ-PRIME. Coordinates mass cloning — manages the factories that produce new viruses. The most unstable and most productive Δ-PRIME. Maximum speed, minimum quality. Blames the bugs for every defect."
-    },
-    "backImage": "",
-    "backTitle": {
-      "pt": "",
-      "en": ""
-    },
-    "dorsalMeaning": {
-      "pt": "Mais um defeituoso. Deve ser culpa dos bugs.",
-      "en": "Another defective one. Must be the bugs' fault."
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Função",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "Clonagem",
-          "en": "Cloning"
-        }
-      },
-      {
-        "glyph": "⊹⊹⊹",
-        "label": {
-          "pt": "Posição",
-          "en": "Rank"
-        },
-        "value": {
-          "pt": "4º Δ-PRIME",
-          "en": "4th Δ-PRIME"
-        }
-      }
-    ]
-  },
-  {
-    "match": "MASKON",
-    "name": {
-      "pt": "MASKON",
-      "en": "MASKON"
-    },
-    "species": {
-      "pt": "Vírus Δ-PRIME",
-      "en": "Virus Δ-PRIME"
-    },
-    "bio": {
-      "pt": "Quinto Δ-PRIME criado. Coordenador de infiltrações externas, especialista em operações ERODE e BREACH. Opera na SINK — a zona mais fria e isolada do planeta. Planeja ataques que levam semanas ou meses. Entra em espaços e sai sem deixar marca.",
-      "en": "Fifth Δ-PRIME created. Coordinator of external infiltrations, specialist in ERODE and BREACH operations. Operates in the SINK — the coldest, most isolated zone of the planet. Plans attacks that take weeks or months. Enters spaces and leaves without a trace."
-    },
-    "backImage": "",
-    "backTitle": {
-      "pt": "",
-      "en": ""
-    },
-    "dorsalMeaning": {
-      "pt": "Ele nunca diz nada. Por isso ninguém sabe o que ele sabe.",
-      "en": "He never says a thing. That is why no one knows what he knows."
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Função",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "Infiltrador",
-          "en": "Infiltrator"
-        }
-      },
-      {
-        "glyph": "⊶⊶⊶",
-        "label": {
-          "pt": "Zona",
-          "en": "Zone"
-        },
-        "value": {
-          "pt": "SINK",
-          "en": "SINK"
-        }
-      },
-      {
-        "glyph": "⊹⊹⊹",
-        "label": {
-          "pt": "Posição",
-          "en": "Rank"
-        },
-        "value": {
-          "pt": "5º Δ-PRIME",
-          "en": "5th Δ-PRIME"
-        }
-      }
-    ]
-  },
-  {
-    "match": "SCORAK",
-    "name": {
-      "pt": "SCORAK",
-      "en": "SCORAK"
-    },
-    "species": {
-      "pt": "Vírus Δ-PRIME",
-      "en": "Virus Δ-PRIME"
-    },
-    "bio": {
-      "pt": "O Δ-PRIME mais novo e o mais violento. Braço executor de Node-0: aplica as decisões do Tribunal de Ruído. Cada punição é direta, imediata, desproporcional. Pesa mais que qualquer outro Δ-PRIME.",
-      "en": "The youngest and most violent Δ-PRIME. Node-0's executor arm: carries out the decisions of the Noise Tribunal. Every punishment is direct, immediate, disproportionate. Heavier than any other Δ-PRIME."
-    },
-    "backImage": "",
-    "backTitle": {
-      "pt": "",
-      "en": ""
-    },
-    "dorsalMeaning": {
-      "pt": "A punição precisa de alvo.",
-      "en": "Punishment needs a target."
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Função",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "Executor",
-          "en": "Enforcer"
-        }
-      },
-      {
-        "glyph": "⊹⊹⊹",
-        "label": {
-          "pt": "Posição",
-          "en": "Rank"
-        },
-        "value": {
-          "pt": "6º Δ-PRIME",
-          "en": "6th Δ-PRIME"
-        }
-      }
-    ]
-  },
-  {
     "match": "Troy",
     "name": {
       "pt": "Troy-Δ",
@@ -422,7 +123,7 @@
       "en": "Mechanical ships. Physical envelopes for interplanetary infiltration. Read Karta-Δ and execute primitive instructions. Create short thermal portals for invasion and collection. Without the Troy-Δ, viruses evaporate as they cross the Cshift."
     },
     "image": "/imgs/characters/kammara/eni4/troy_pe.png",
-     "backImage": "/imgs/characters/kammara/eni4/troy.png",
+    "backImage": "/imgs/characters/kammara/eni4/troy.png",
     "backTitle": {
       "pt": "Em rota para ataque",
       "en": "En route to attack"
@@ -456,6 +157,347 @@
       }
     ]
   },
+   {
+    "match": "SCORAK",
+    "name": {
+      "pt": "SCORAK",
+      "en": "SCORAK"
+    },
+    "species": {
+      "pt": "Vírus Δ-PRIME",
+      "en": "Vírus Δ-PRIME"
+    },
+    "bio": {
+      "pt": "Tipo de vírus líder — o mais violento. Braço executor de Node-0: aplicam as decisões do Tribunal de Ruído. Cada punição é direta, imediata, desproporcional. Pesam mais que qualquer outro tipo.",
+      "en": "A leader virus type — the most violent. Node-0's executor arm: they carry out the decisions of the Noise Tribunal. Every punishment is direct, immediate, disproportionate. They weigh more than any other type."
+    },
+    "image": "/imgs/characters/kammara/eni4/virus_SCORAK.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "A punição precisa de alvo.",
+      "en": "Punishment needs a target."
+    },
+    "attributes": [
+      {
+        "glyph": "⋄",
+        "label": {
+          "pt": "Casta",
+          "en": "Caste"
+        },
+        "value": {
+          "pt": "Caste-ATTACK",
+          "en": "Caste-ATTACK"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Executor",
+          "en": "Enforcer"
+        }
+      }
+    ]
+  },
+  {
+    "match": "THERMAX",
+    "name": {
+      "pt": "THERMAX",
+      "en": "THERMAX"
+    },
+    "species": {
+      "pt": "Vírus Δ-PRIME",
+      "en": "Virus Δ-PRIME"
+    },
+    "bio": {
+      "pt": "Controladores térmicos do planeta — medem, distribuem e acusam todos de \"desperdício térmico\". Decidem para onde o calor vai.",
+      "en": "Thermal controllers of the planet — they measure, distribute, and accuse everyone of \"thermal waste\". They decide where heat goes."
+    },
+    "image": "/imgs/characters/kammara/eni4/virus_THERMAX.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "Desperdício térmico. Sempre desperdício térmico.",
+      "en": "Thermal waste. Always thermal waste."
+    },
+    "attributes": [
+      {
+        "glyph": "⋄",
+        "label": {
+          "pt": "Casta",
+          "en": "Caste"
+        },
+        "value": {
+          "pt": "Caste-HEAT",
+          "en": "Caste-HEAT"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Líder Controlador térmico",
+          "en": "Thermal Controller Leader"
+        }
+      },
+      {
+        "glyph": "•⊙•",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Fábricas BURN",
+          "en": "BURN Factories"
+        }
+      }
+    ]
+  },
+   {
+    "match": "VALKON",
+    "name": {
+      "pt": "VALKON",
+      "en": "VALKON"
+    },
+    "species": {
+      "pt": "Vírus Δ-PRIME",
+      "en": "Virus Δ-PRIME"
+    },
+    "bio": {
+      "pt": "Supervisionam megaválvulas e a conversão de energia roubada em calor. Conhecem cada válvula em detalhe. Vigiam, patrulham, reivindicam autoria de toda conversão bem-sucedida. Os mais antigos de todos os tipos.",
+      "en": "They oversee megavalves and the conversion of stolen energy into heat. They know each valve in detail. They watch, patrol, and claim credit for every successful conversion. The oldest of all types."
+    },
+    "image": "/imgs/characters/kammara/eni4/VALKON_virus.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "Ninguém toca nas válvulas. Ninguém.",
+      "en": "Nobody touches the valves. Nobody."
+    },
+    "attributes": [
+      {
+        "glyph": "⋄",
+        "label": {
+          "pt": "Casta",
+          "en": "Caste"
+        },
+        "value": {
+          "pt": "Caste-REPAIR",
+          "en": "Caste-REPAIR"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Líder válvulas",
+          "en": "Valve Leader"
+        }
+      },
+      {
+        "glyph": "•⊙•",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Fábricas BURN",
+          "en": "BURN Factories"
+        }
+      }
+    ]
+  },
+  {
+    "match": "REPLION",
+    "name": {
+      "pt": "REPLION",
+      "en": "REPLION"
+    },
+    "species": {
+      "pt": "Vírus Δ-PRIME",
+      "en": "Virus Δ-PRIME"
+    },
+    "bio": {
+      "pt": "Coordenam a clonagem em massa nas fábricas. O tipo mais instável e o que mais produz. Velocidade máxima, qualidade mínima. Culpam os bugs por cada defeito.",
+      "en": "They coordinate mass cloning in the factories. The most unstable type and the one that produces the most. Maximum speed, minimum quality. They blame the bugs for every defect."
+    },
+    "image": "/imgs/characters/kammara/eni4/virus_REPLION.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "Mais um defeituoso. Deve ser culpa dos bugs.",
+      "en": "Another defective one. Must be the bugs' fault."
+    },
+    "attributes": [
+      {
+        "glyph": "⋄",
+        "label": {
+          "pt": "Casta",
+          "en": "Caste"
+        },
+        "value": {
+          "pt": "Caste-REPL",
+          "en": "Caste-REPL"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Líder Clonagem",
+          "en": "Cloning Leader"
+        }
+      }
+    ]
+  },
+   {
+    "match": "MASKON",
+    "name": {
+      "pt": "MASKON",
+      "en": "MASKON"
+    },
+    "species": {
+      "pt": "Vírus",
+      "en": "Virus"
+    },
+    "bio": {
+      "pt": "Coordenam infiltrações externas, especialistas em operações ERODE e BREACH. Planejam ataques que levam semanas ou meses. Entram em espaços e saem sem deixar marca.",
+      "en": "They coordinate external infiltrations, specialists in ERODE and BREACH operations. They plan attacks that take weeks or months. They enter spaces and leave without a trace."
+    },
+    "image": "/imgs/characters/kammara/eni4/virus_MASKON.png",
+    "backImage": "/imgs/characters/kammara/eni4/virus_MASKON_cute.png",
+    "backTitle": {
+      "pt": "Camuflagem",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "Nunca dizem nada. Por isso ninguém sabe o que sabem.",
+      "en": "They never say a thing. That is why no one knows what they know."
+    },
+    "attributes": [
+      {
+        "glyph": "⋄",
+        "label": {
+          "pt": "Casta",
+          "en": "Caste"
+        },
+        "value": {
+          "pt": "Δ-PRIME / Caste-MASK",
+          "en": "Δ-PRIME / Caste-MASK"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Infiltrador",
+          "en": "Infiltrator"
+        }
+      },
+      {
+        "glyph": "⊶⊶⊶",
+        "label": {
+          "pt": "Zona",
+          "en": "Zone"
+        },
+        "value": {
+          "pt": "SINK",
+          "en": "SINK"
+        }
+      }
+    ]
+  },
+  {
+    "match": "KARTEX",
+    "name": {
+      "pt": "KARTEX",
+      "en": "KARTEX"
+    },
+    "species": {
+      "pt": "Vírus Δ-PRIME",
+      "en": "Virus Δ-PRIME"
+    },
+    "bio": {
+      "pt": "Administram naves Troy-Δ e rotas de coleta de Δ-Cells. O tipo que mais sabe sobre o universo exterior. Organizam expedições para mundos que mapeiam mas nunca visitam.",
+      "en": "They administer Troy-Δ ships and Δ-Cell collection routes. The type that knows the most about the outer universe. They organize expeditions to worlds they map but never visit."
+    },
+    "image": "/imgs/characters/kammara/eni4/virus_KARTEX.png",
+    "backImage": "/imgs/characters/kammara/eni4/virus_KARTEX_dentro_troy.jpg",
+    "backTitle": {
+      "pt": "Piloto de Troy-Δ",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "As rotas mentem. Os planetas não.",
+      "en": "The routes lie. The planets do not."
+    },
+    "attributes": [
+      {
+        "glyph": "⋄",
+        "label": {
+          "pt": "Casta",
+          "en": "Caste"
+        },
+        "value": {
+          "pt": "Caste-RET",
+          "en": "Caste-RET"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Líder Cartógrafo",
+          "en": "Cartographer Leader"
+        }
+      },
+      {
+        "glyph": "•⊙•",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Fábricas BURN",
+          "en": "BURN Factories"
+        }
+      }
+    ]
+  },
+  
+ 
+ 
   {
     "match": "virus",
     "name": {
@@ -471,9 +513,9 @@
       "en": ""
     },
     "image": "/imgs/characters/kammara/eni4/virus_soldado.png",
-    "backImage": "/imgs/characters/kammara/eni4/virus.png",
+    "backImage": "/imgs/characters/kammara/eni4/virus_cute.png",
     "backTitle": {
-      "pt": "Mascara fofa",
+      "pt": "Camuflagem",
       "en": "Cute mask"
     },
     "dorsalMeaning": {
