@@ -84,12 +84,24 @@
         "image": "/imgs/characters/kammara/eni4/aracne_3.png"
       },
       {
+        "name": "node-0 senhor supremo costas",
+        "image": "/imgs/characters/kammara/eni4/node-0_senhor_supremo_costas.png"
+      },
+      {
         "name": "node-0 senhor supremo",
         "image": "/imgs/characters/kammara/eni4/node-0_senhor_supremo.png"
       },
       {
+        "name": "troy pe",
+        "image": "/imgs/characters/kammara/eni4/troy_pe.png"
+      },
+      {
         "name": "troy",
         "image": "/imgs/characters/kammara/eni4/troy.png"
+      },
+      {
+        "name": "VEXON",
+        "image": "/imgs/characters/kammara/eni4/VEXON.png"
       },
       {
         "name": "virus",
@@ -97,6 +109,10 @@
       }
     ],
     "kammara/lunnp1": [
+      {
+        "name": "Brisa costas",
+        "image": "/imgs/characters/kammara/lunnp1/Brisa_costas.png"
+      },
       {
         "name": "Brisa",
         "image": "/imgs/characters/kammara/lunnp1/Brisa.png"
@@ -106,20 +122,56 @@
         "image": "/imgs/characters/kammara/lunnp1/Erú'Rin_costas.png"
       },
       {
+        "name": "Erú'Rin costas1",
+        "image": "/imgs/characters/kammara/lunnp1/Erú'Rin_costas1.png"
+      },
+      {
         "name": "Erú'Rin",
         "image": "/imgs/characters/kammara/lunnp1/Erú'Rin.png"
+      },
+      {
+        "name": "Eurin costas com glifo",
+        "image": "/imgs/characters/kammara/lunnp1/Eurin_costas_com_glifo.png"
+      },
+      {
+        "name": "flor lume costas",
+        "image": "/imgs/characters/kammara/lunnp1/flor_lume_costas.png"
       },
       {
         "name": "flor lume",
         "image": "/imgs/characters/kammara/lunnp1/flor_lume.png"
       },
       {
+        "name": "gemini-2.5-flash-image same character. same design and add glifo on the back do not change the glifo de-1 (1)",
+        "image": "/imgs/characters/kammara/lunnp1/gemini-2.5-flash-image_same_character._same_design_and_add_glifo_on_the_back_do_not_change_the_glifo_de-1 (1).jpg"
+      },
+      {
+        "name": "Lúm'Esha costas",
+        "image": "/imgs/characters/kammara/lunnp1/Lúm'Esha_costas.png"
+      },
+      {
+        "name": "Lúm'Esha costas1",
+        "image": "/imgs/characters/kammara/lunnp1/Lúm'Esha_costas1.png"
+      },
+      {
         "name": "Lúm'Esha",
         "image": "/imgs/characters/kammara/lunnp1/Lúm'Esha.png"
       },
       {
+        "name": "Túri’Kan 2",
+        "image": "/imgs/characters/kammara/lunnp1/Túri’Kan_2.png"
+      },
+      {
+        "name": "Túri’Kan costas",
+        "image": "/imgs/characters/kammara/lunnp1/Túri’Kan_costas.png"
+      },
+      {
         "name": "Túri’Kan",
         "image": "/imgs/characters/kammara/lunnp1/Túri’Kan.png"
+      },
+      {
+        "name": "Tzi'Ki  costas",
+        "image": "/imgs/characters/kammara/lunnp1/Tzi'Ki _costas.png"
       },
       {
         "name": "Tzi'Ki",
@@ -128,12 +180,48 @@
     ],
     "kammara/orfv": [
       {
+        "name": "orvian 13",
+        "image": "/imgs/characters/kammara/orfv/1orvian_13.png"
+      },
+      {
+        "name": "orvian costas 2",
+        "image": "/imgs/characters/kammara/orfv/1orvian_costas_2.png"
+      },
+      {
+        "name": "orvian costas",
+        "image": "/imgs/characters/kammara/orfv/1orvian_costas.png"
+      },
+      {
         "name": "orvian",
-        "image": "/imgs/characters/kammara/orfv/orvian.png"
+        "image": "/imgs/characters/kammara/orfv/1orvian.png"
       },
       {
         "name": "orvian1",
-        "image": "/imgs/characters/kammara/orfv/orvian1.png"
+        "image": "/imgs/characters/kammara/orfv/1orvian1.png"
+      },
+      {
+        "name": "maelik",
+        "image": "/imgs/characters/kammara/orfv/2maelik.png"
+      },
+      {
+        "name": "Nylpha",
+        "image": "/imgs/characters/kammara/orfv/3Nylpha.png"
+      },
+      {
+        "name": "Nylpha1",
+        "image": "/imgs/characters/kammara/orfv/3Nylpha1.png"
+      },
+      {
+        "name": "Kallott",
+        "image": "/imgs/characters/kammara/orfv/Kallott.png"
+      },
+      {
+        "name": "LetiK",
+        "image": "/imgs/characters/kammara/orfv/LetiK.png"
+      },
+      {
+        "name": "Torwen",
+        "image": "/imgs/characters/kammara/orfv/Torwen.png"
       }
     ],
     "kammara/triplec": [
@@ -991,11 +1079,71 @@
         "image": "/imgs/characters/kammara/eni4/_scenes/9_Palacio_Node-0-Interior.png"
       },
       {
+        "name": "camara node-0 entrada",
+        "image": "/imgs/characters/kammara/eni4/_scenes/9camara_node-0_entrada.jpg"
+      },
+      {
+        "name": "camara node-0 interior",
+        "image": "/imgs/characters/kammara/eni4/_scenes/9camara_node-0_interior.jpg"
+      },
+      {
         "name": "Fabrica BURN",
-        "image": "/imgs/characters/kammara/eni4/_scenes/10_Fabrica_BURN.jpg"
+        "image": "/imgs/characters/kammara/eni4/_scenes/10Fabrica_BURN.jpg"
+      },
+      {
+        "name": "muro valvulas. formam laritinto",
+        "image": "/imgs/characters/kammara/eni4/_scenes/10muro_valvulas._formam_laritinto.jpg"
+      },
+      {
+        "name": "fabrica frente",
+        "image": "/imgs/characters/kammara/eni4/_scenes/11fabrica_frente.jpg"
+      },
+      {
+        "name": "fabrica interior",
+        "image": "/imgs/characters/kammara/eni4/_scenes/11fabrica_interior.jpg"
+      },
+      {
+        "name": "corte planeta",
+        "image": "/imgs/characters/kammara/eni4/_scenes/12corte_planeta.jpg"
+      },
+      {
+        "name": "zona  SCORCH worms",
+        "image": "/imgs/characters/kammara/eni4/_scenes/13zona_ SCORCH_worms.jpg"
+      },
+      {
+        "name": "zona  SCORCH",
+        "image": "/imgs/characters/kammara/eni4/_scenes/13zona_ SCORCH.jpg"
+      },
+      {
+        "name": "zona CRACK tuneis worms",
+        "image": "/imgs/characters/kammara/eni4/_scenes/15zona_CRACK_tuneis_worms.jpg"
+      },
+      {
+        "name": "zona CRACK tuneis worms",
+        "image": "/imgs/characters/kammara/eni4/_scenes/16zona_CRACK_tuneis_worms.jpg"
+      },
+      {
+        "name": "zona SINK",
+        "image": "/imgs/characters/kammara/eni4/_scenes/17zona_SINK.jpg"
+      },
+      {
+        "name": "megavalvulas onde moram virus bugs",
+        "image": "/imgs/characters/kammara/eni4/_scenes/18megavalvulas_onde_moram_virus_bugs.jpg"
+      },
+      {
+        "name": "sucata bugs",
+        "image": "/imgs/characters/kammara/eni4/_scenes/19sucata_bugs.jpg"
       }
     ],
     "kammara/lunnp1": [
+      {
+        "name": "bolinhas de agua",
+        "image": "/imgs/characters/kammara/lunnp1/_scenes/bolinhas de agua.jpg"
+      },
+      {
+        "name": "cena crancas 1",
+        "image": "/imgs/characters/kammara/lunnp1/_scenes/cena_crancas_1.png"
+      },
       {
         "name": "Erú'Rin e Lúm'Esha plantando",
         "image": "/imgs/characters/kammara/lunnp1/_scenes/Erú'Rin_e_Lúm'Esha_plantando.jpg"
@@ -1039,20 +1187,48 @@
     ],
     "kammara/orfv": [
       {
-        "name": "ColinaCentral",
-        "image": "/imgs/characters/kammara/orfv/_scenes/6ColinaCentral.png"
+        "name": "Colina Central",
+        "image": "/imgs/characters/kammara/orfv/_scenes/2Colina_Central.jpg"
+      },
+      {
+        "name": "Colina Central",
+        "image": "/imgs/characters/kammara/orfv/_scenes/6Colina_Central.png"
+      },
+      {
+        "name": "noite em orfv",
+        "image": "/imgs/characters/kammara/orfv/_scenes/noite_em_orfv.jpg"
+      },
+      {
+        "name": "regiao sudoeste",
+        "image": "/imgs/characters/kammara/orfv/_scenes/regiao_sudoeste.jpg"
+      },
+      {
+        "name": "regiao sul 1",
+        "image": "/imgs/characters/kammara/orfv/_scenes/regiao_sul_1.jpg"
+      },
+      {
+        "name": "regiao sul",
+        "image": "/imgs/characters/kammara/orfv/_scenes/regiao_sul.jpg"
       },
       {
         "name": "vila centro 2",
         "image": "/imgs/characters/kammara/orfv/_scenes/vila_centro_2.jpg"
       },
       {
+        "name": "vila centro 3",
+        "image": "/imgs/characters/kammara/orfv/_scenes/vila_centro_3.jpg"
+      },
+      {
+        "name": "vila centro 4",
+        "image": "/imgs/characters/kammara/orfv/_scenes/vila_centro_4.jpg"
+      },
+      {
         "name": "vila centro",
         "image": "/imgs/characters/kammara/orfv/_scenes/vila_centro.jpg"
       },
       {
-        "name": "vila",
-        "image": "/imgs/characters/kammara/orfv/_scenes/vila.jpg"
+        "name": "vila norte",
+        "image": "/imgs/characters/kammara/orfv/_scenes/vila_norte.jpg"
       }
     ],
     "kammara/triplec": [
@@ -1208,8 +1384,15 @@
       "/imgs/characters/kammara/eni4/_subsystems/2.jpg",
       "/imgs/characters/kammara/eni4/_subsystems/3.jpg",
       "/imgs/characters/kammara/eni4/_subsystems/4.jpg",
-      "/imgs/characters/kammara/eni4/_subsystems/5.png",
-      "/imgs/characters/kammara/eni4/_subsystems/6.jpg"
+      "/imgs/characters/kammara/eni4/_subsystems/5.jpg",
+      "/imgs/characters/kammara/eni4/_subsystems/6.jpg",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "/imgs/characters/kammara/eni4/_subsystems/13.jpg"
     ],
     "kammara/lunnp1": [
       "/imgs/characters/kammara/lunnp1/_subsystems/0.jpg",
@@ -1217,8 +1400,87 @@
       "/imgs/characters/kammara/lunnp1/_subsystems/2.jpg",
       "/imgs/characters/kammara/lunnp1/_subsystems/3.jpg",
       "/imgs/characters/kammara/lunnp1/_subsystems/4.jpg",
-      "/imgs/characters/kammara/lunnp1/_subsystems/5.png",
-      "/imgs/characters/kammara/lunnp1/_subsystems/6.jpg"
+      "/imgs/characters/kammara/lunnp1/_subsystems/5.jpg",
+      "/imgs/characters/kammara/lunnp1/_subsystems/6.jpg",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "/imgs/characters/kammara/lunnp1/_subsystems/14.jpg",
+      "/imgs/characters/kammara/lunnp1/_subsystems/15.png"
+    ],
+    "kammara/orfv": [
+      "/imgs/characters/kammara/orfv/_subsystems/0.jpg",
+      "/imgs/characters/kammara/orfv/_subsystems/1.jpg",
+      "/imgs/characters/kammara/orfv/_subsystems/2.jpg",
+      "/imgs/characters/kammara/orfv/_subsystems/3.png",
+      "/imgs/characters/kammara/orfv/_subsystems/4.jpg",
+      "/imgs/characters/kammara/orfv/_subsystems/5.jpg",
+      null,
+      "/imgs/characters/kammara/orfv/_subsystems/7.jpg",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "/imgs/characters/kammara/orfv/_subsystems/41.jpg",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "/imgs/characters/kammara/orfv/_subsystems/67.jpg"
     ],
     "kammara/triplec/mesh": [
       "/imgs/characters/kammara/triplec/mesh/_subsystems/0.jpg"

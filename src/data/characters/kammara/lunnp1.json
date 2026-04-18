@@ -10,11 +10,11 @@
       "en": "Shal'ún"
     },
     "bio": {
-      "pt": "Nasceu em Ve'Lume, nas águas profundas. Suas maiores capacidades: detectar microfendas, ler reflexos invertidos, acalmar água viva, estabilizar emoções coletivas. Papel no grupo é ancorar e direcionar decisões mais focadas. É o líder do protocolo AURYN.",
-      "en": "Born in Ve'Lume, in the deep waters. His greatest abilities: detecting microfissures, reading inverted reflections, calming living water, stabilizing collective emotions. His role in the group is to anchor and guide sharper decisions. He leads the AURYN protocol."
+      "pt": "Nasceu em Ve'Lume, nas águas profundas. Suas maiores capacidades: detectar microfendas, ler reflexos invertidos, acalmar água viva, estabilizar emoções coletivas. Papel no grupo é ancorar e direcionar decisões mais focadas.",
+      "en": "Born in Ve'Lume, in the deep waters. His greatest abilities: detecting microfissures, reading inverted reflections, calming living water, stabilizing collective emotions. His role in the group is to anchor and guide sharper decisions."
     },
     "image": "/imgs/characters/kammara/lunnp1/Erú'Rin.png",
-    "backImage": "/imgs/characters/kammara/lunnp1/Erú'Rin_costas.png",
+    "backImage": "/imgs/characters/kammara/lunnp1/Erú'Rin_costas1.png",
     "dorsalMeaning": {
       "pt": "Estabilidade profunda e introspecção — o caminho de quem ancora o planeta.",
       "en": "Deep stability and introspection — the path of the one who anchors the planet."
@@ -77,10 +77,15 @@
       "en": "Shal'ún"
     },
     "bio": {
-      "pt": "Nasceu em Oru'Len, com Flor-Lume já brilhando antes da forma se completar — energia abundante de origem. Especialidade: amplificar harmonia em grupos, facilitar conexões, contagiar ambientes com leveza. Move-se em zonas florais móveis e águas rasas. Onde está, o ambiente se reorganiza com mais leveza.",
-      "en": "Born in Oru'Len, with Flor-Lume already glowing before her form completed — abundant energy from the start. Specialty: amplifying group harmony, easing connections, infecting environments with lightness. She moves through mobile floral zones and shallow waters. Wherever she is, the space reorganizes itself with more ease."
+      "pt": "Nasceu em Oru'Len, com Flor-Lume já brilhando antes da forma se completar — energia abundante de origem. Move-se em zonas florais móveis e águas rasas. Onde está, o ambiente se reorganiza com mais leveza.",
+      "en": "Born in Oru'Len, with Flor-Lume already glowing before her form completed — abundant energy from the start. She moves through mobile floral zones and shallow waters. Wherever she is, the space reorganizes itself with more ease."
     },
     "image": "/imgs/characters/kammara/lunnp1/Lúm'Esha.png",
+    "backImage": "/imgs/characters/kammara/lunnp1/Lúm'Esha_costas.png",
+    "dorsalMeaning": {
+      "pt": "Ela convence o caminho a florescer.",
+      "en": ""
+    },
     "attributes": [
       {
         "glyph": "⊶⊷⊙",
@@ -141,6 +146,15 @@
     "bio": {
       "pt": "Nasceu em Ve'Lume, na lua do silêncio ancestral. Lê camadas profundas emocionais e detecta vibrações ocultas — capta o que ainda vai emergir antes da superfície mostrar. Habita o espaço entre o dito e o não-dito. Sua presença revela verdades ocultas e acalma medos sem nome.",
       "en": "Born in Ve'Lume, under the moon of ancestral silence. She reads deep emotional layers and detects hidden vibrations — catching what is about to emerge before the surface shows it. She dwells in the space between what is said and unsaid. Her presence reveals hidden truths and calms nameless fears."
+    },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
     },
     "attributes": [
       {
@@ -203,6 +217,15 @@
       "pt": "Nome Kalún Mü'Rá — \"Movimento Suave / Fluxo que Acompanha\". Encontra o tempo exato de cada momento e convida os outros a acompanhar. Desacelera ambientes agitados e estabiliza ritmos caóticos com calma ativa. Move-se em compasso contínuo.",
       "en": "Kalún name Mü'Rá — \"Gentle Movement / Flow That Follows\". She finds the exact tempo of each moment and invites others to follow. She slows agitated environments and stabilizes chaotic rhythms with active calm. Moves in continuous cadence."
     },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
     "attributes": [
       {
         "glyph": "⊶⊷⊙",
@@ -252,6 +275,15 @@
     "bio": {
       "pt": "Nome Kalún Kái'Tor — \"O Que Vê o Traço da Luz\". Lê rotas lunares e identifica fluxos de água ao instante. Capacidades: previsão de movimento das Naru'ei, detecção de caminhos seguros em migrações, mapeamento de ambientes em segundos. Quando ele aponta, o grupo segue.",
       "en": "Kalún name Kái'Tor — \"The One Who Sees the Trace of Light\". He reads lunar routes and instantly identifies water currents. Abilities: predicting Naru'ei movement, detecting safe paths during migration, mapping environments in seconds. When he points, the group follows."
+    },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
     },
     "attributes": [
       {
@@ -303,6 +335,15 @@
       "pt": "Nome Kalún Kae'Lún — \"Mente que Avança / Pulso-Rápido\". Antecipa o fluxo: enquanto outros acompanham, ele já está três passos à frente, mapeando possibilidades antes de se materializarem. Catalisa mudanças por impulso. Soluciona problemas em velocidade superior à média do grupo.",
       "en": "Kalún name Kae'Lún — \"Mind That Advances / Fast-Pulse\". He anticipates the flow: while others keep up, he is already three steps ahead, mapping possibilities before they materialize. Catalyzes change through impulse. Solves problems faster than the group average."
     },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
     "attributes": [
       {
         "glyph": "⊶⊷⊙",
@@ -352,6 +393,15 @@
     "bio": {
       "pt": "Nome Kalún Té'Lun — \"Luz Firme / Coluna de Brilho\". Cria ponto fixo a partir do qual os outros orbitam com segurança. Sua presença inspira confiança e acalma conflitos pela solidez. Nascido em Lur'Ma, é o eixo imóvel em torno do qual o grupo gira.",
       "en": "Kalún name Té'Lun — \"Steady Light / Column of Brightness\". He creates a fixed point around which others safely orbit. His presence inspires trust and calms conflicts by sheer solidity. Born in Lur'Ma, he is the still axis the group turns around."
+    },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
     },
     "attributes": [
       {
@@ -403,6 +453,15 @@
       "pt": "Nome Kalún Se'Rai — \"A Onda que Toca Antes\". Recebe os ritmos emocionais do ambiente, traduz e devolve fluindo. Espelha conflitos até que se resolvam. Sua presença muda o campo emocional coletivo em silêncio.",
       "en": "Kalún name Se'Rai — \"The Wave That Touches First\". She receives the emotional rhythms of the environment, translates them and returns them flowing. She mirrors conflicts until they dissolve. Her presence shifts the collective emotional field in silence."
     },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
     "attributes": [
       {
         "glyph": "⊶⊷⊙",
@@ -452,6 +511,15 @@
     "bio": {
       "pt": "Nome Kalún Rin'Boro — \"Aquele que Cai e Volta\". Dança com o fluxo: celebra cada momento como movimento e cada queda como oportunidade de riso. Muda ambientes por contágio emocional direto. Transforma peso em leveza ao saltar.",
       "en": "Kalún name Rin'Boro — \"The One Who Falls and Returns\". He dances with the flow: celebrates each moment as movement and each fall as a chance to laugh. Changes environments through direct emotional contagion. Turns weight into lightness with a leap."
+    },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
     },
     "attributes": [
       {
@@ -514,6 +582,15 @@
       "pt": "Nome Kalún Narú'Min — \"A Que Toca a Essência das Folhas\". Conversa com o planeta numa troca contínua entre curiosidade e resposta. Plantas respondem à sua presença de formas visíveis. Cada gesto é diálogo com a natureza viva.",
       "en": "Kalún name Narú'Min — \"The One Who Touches the Essence of Leaves\". She converses with the planet in a continuous exchange of curiosity and response. Plants answer her presence in visible ways. Every gesture is dialogue with the living world."
     },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
     "attributes": [
       {
         "glyph": "⊶⊷⊙",
@@ -565,6 +642,15 @@
       "en": "Silent Lún'Kai. Pulses in deep frequencies while others flicker fast. Stabilizes vibration around it: when Brisa is near, the water grows denser and slower. Communicates in Código-Lume — silent attention, breathe-sense-wait, ancestral depth."
     },
     "image": "/imgs/characters/kammara/lunnp1/Brisa.png",
+    "backImage": "/imgs/characters/kammara/lunnp1/Brisa_costas.png",
+    "dorsalMeaning": {
+      "pt": "Brisa brilha para que Erú'Rin não se perca.",
+      "en": ""
+    },
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Other Side"
+    },
     "attributes": [
       {
         "glyph": "⊶⊹⊷",
@@ -605,6 +691,15 @@
       "en": "Expressive Lún'Kai. Pulses in shimmering rose-light and leaves trails of golden glow on the water — other Shal'ún follow those trails to find Lúm'Esha. On Oru'Len nights, the trails form patterns that look like drawn flowers."
     },
     "image": "/imgs/characters/kammara/lunnp1/flor_lume.png",
+    "backImage": "/imgs/characters/kammara/lunnp1/flor_lume_costas.png",
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Other Side"
+    },
     "attributes": [
       {
         "glyph": "⊶⊹⊷",
@@ -643,6 +738,15 @@
     "bio": {
       "pt": "Lún'Kai espectral. Brilho tão sutil que parece existir ligeiramente fora de fase. Antenas voltadas para baixo, escutam camadas profundas. A água ao redor muda de densidade quando ele está perto. Nas profundezas, emite azul-nebuloso ancestral.",
       "en": "Spectral Lún'Kai. Glow so subtle it seems to exist slightly out of phase. Antennae turned downward, listening to deep layers. The water nearby changes density when it is close. In the depths, it emits an ancestral nebulous blue."
+    },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
     },
     "attributes": [
       {
@@ -683,6 +787,15 @@
       "pt": "Lún'Kai ritmado. Pulso constante como respiração tranquila. Outros Lún'Kai sincronizam ao seu compasso involuntariamente. A água ao redor encontra ritmo: gotículas caem em intervalos regulares, correntes se organizam.",
       "en": "Rhythmic Lún'Kai. Steady pulse like calm breathing. Other Lún'Kai synchronize involuntarily with its beat. The surrounding water finds rhythm: droplets fall in regular intervals, currents organize themselves."
     },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
     "attributes": [
       {
         "glyph": "⊶⊹⊷",
@@ -721,6 +834,15 @@
     "bio": {
       "pt": "Lún'Kai cartógrafo. À distância, parece um traço dourado em movimento, como uma risca de mapa sendo desenhada no ar. Antenas rotacionam em arcos regulares como radares miniaturizados. Sua luz aponta — para uma saída, para um padrão na água, para algo que ninguém mais notou.",
       "en": "Cartographer Lún'Kai. From afar, it looks like a golden moving trace, a map-line being drawn in the air. Antennae rotate in regular arcs like miniature radars. Its light points — to an exit, a pattern on the water, something no one else noticed."
+    },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
     },
     "attributes": [
       {
@@ -761,6 +883,15 @@
       "pt": "Lún'Kai elétrico. Asas batem mais rápido que qualquer outro Lún'Kai — viram um borrão de luz com zumbido fino. Lum'Ka estala em micro-rajadas como faíscas suspensas no ar. O ar ao redor faz os pelos dos Shal'ún se arrepiarem em antecipação.",
       "en": "Electric Lún'Kai. Wings beat faster than any other Lún'Kai — turning into a blur of light with a thin hum. Lum'Ka crackles in micro-bursts like sparks suspended in the air. The air around makes Shal'ún fur bristle in anticipation."
     },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
     "attributes": [
       {
         "glyph": "⊶⊹⊷",
@@ -799,6 +930,15 @@
     "bio": {
       "pt": "Lún'Kai estrutural. Brilho prateado constante e denso, quase metálico. Quando pousa em Télun, fica fixo como se tivesse raízes. Cria estabilidade espacial: a água ondula menos, outros Lún'Kai flutuam com menos deriva. Os mais firmes pousam onde Katé está.",
       "en": "Structural Lún'Kai. Steady, dense silver glow, almost metallic. When it lands on Télun, it stays as if rooted. Creates spatial stability: the water ripples less, other Lún'Kai drift less. The firmest ones land where Katé is."
+    },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
     },
     "attributes": [
       {
@@ -839,6 +979,15 @@
       "pt": "Lún'Kai espelho. A água ao redor se torna mais transparente, mais reveladora — o turvo se clarifica. O pozinho que solta funciona como revelador emocional. Olhos contêm pequenos reflexos da emoção de quem ele observa.",
       "en": "Mirror Lún'Kai. The water nearby turns more transparent, more revealing — the murk clears. The dust it releases works as an emotional revealer. Its eyes hold tiny reflections of the feeling of whoever it watches."
     },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
     "attributes": [
       {
         "glyph": "⊶⊹⊷",
@@ -877,6 +1026,15 @@
     "bio": {
       "pt": "Lún'Kai explosivo. Patinhas mais fortes que outros Lún'Kai, feitas para saltar e quicar. Lum'Ka sai em micro-detonações sincronizadas com cada salto, como faíscas douradas dispersas no ar. Nasceu com 3 impulsos luminosos consecutivos — sinal canônico de \"saltadores naturais\".",
       "en": "Explosive Lún'Kai. Stronger legs than other Lún'Kai, built to leap and bounce. Lum'Ka goes off in micro-detonations in sync with each jump, like golden sparks scattered in the air. Born with three consecutive luminous impulses — the canonical sign of \"natural leapers\"."
+    },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
     },
     "attributes": [
       {
@@ -917,6 +1075,15 @@
       "pt": "Lún'Kai botânico. Cor muda perto de cada planta: verde-lima nas folhas jovens, verde-musgo nas raízes antigas, dourado nas flores. Asas com veias idênticas a nervuras de folhas. Lum'Ka funciona como interface botânica — quando cai sobre uma planta, a planta brilha, pulsa, libera aroma.",
       "en": "Botanical Lún'Kai. Color shifts near each plant: lime-green on young leaves, moss-green on old roots, golden on flowers. Wings with veins identical to leaf ribs. Lum'Ka works as a botanical interface — when it falls on a plant, the plant glows, pulses, releases scent."
     },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
     "attributes": [
       {
         "glyph": "⊶⊹⊷",
@@ -945,8 +1112,8 @@
   {
     "match": "Tzi'Ki",
     "name": {
-      "pt": "Tziki",
-      "en": "Tziki"
+      "pt": "Tzi'Ki",
+      "en": "Tzi'Ki"
     },
     "species": {
       "pt": "Tzir'Kai",
@@ -957,6 +1124,15 @@
       "en": ""
     },
     "image": "/imgs/characters/kammara/lunnp1/Tzi'Ki .png",
+    "backImage": "/imgs/characters/kammara/lunnp1/Tzi'Ki _costas.png",
+    "dorsalMeaning": {
+      "pt": "Tziki vigia porque ouviu o que acontece quando ninguém vigia.",
+      "en": ""
+    },
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Other Side"
+    },
     "attributes": [
       {
         "glyph": "⊶⊹⊷",
@@ -1007,6 +1183,15 @@
       "pt": "Tzir'Kai curioso. Antenas curtas e articuladas, expressivas como dedos curiosos. Olhos arregalados, infantis, captam luz em ângulos únicos. Cauda vibra em padrões rítmicos quase musicais — curtos-curtos-longos. Vai onde os outros não vão e ouve o que outros descartam como ruído.",
       "en": "Curious Tzir'Kai. Short, articulated antennae, as expressive as curious fingers. Wide, childlike eyes catching light at unique angles. The tail vibrates in almost-musical rhythmic patterns — short-short-long. Goes where others don't and hears what others dismiss as noise."
     },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
     "attributes": [
       {
         "glyph": "⊶⊹⊷",
@@ -1045,6 +1230,15 @@
     "bio": {
       "pt": "Tzir'Kai empata. Reflexos violeta ondulam sob a carapaça como aurora boreal presa em vidro vivo. Antenas mais curtas captam camadas que outros Tzir'Kai ignoram: tristeza codificada como agressão, medo disfarçado de ataque, pedido de ajuda no que parece caos. Prefere águas profundas onde a verdade emocional emerge em estado puro.",
       "en": "Empath Tzir'Kai. Violet reflections ripple under the carapace like aurora caught in living glass. Shorter antennae pick up layers other Tzir'Kai ignore: sorrow coded as aggression, fear disguised as attack, a cry for help inside what looks like chaos. Prefers deep waters where emotional truth surfaces raw."
+    },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
     },
     "attributes": [
       {
@@ -1086,6 +1280,15 @@
       "en": "Elder Túri'Kan. Enormous shell with markings that look like constellations, ancient deep eyes. She moves slowly and never stops — she gets where she needs to go. When she emerges, the Shal'ún know it is time to migrate. She answers to vibrations."
     },
     "image": "/imgs/characters/kammara/lunnp1/Túri’Kan.png",
+    "backImage": "/imgs/characters/kammara/lunnp1/Túri’Kan_costas.png",
+    "dorsalMeaning": {
+      "pt": "Marcas do casco — constelações ancestrais",
+      "en": ""
+    },
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Other Side"
+    },
     "attributes": [
       {
         "glyph": "⊹",
@@ -1125,6 +1328,15 @@
       "pt": "Túri'Kan protetora. Casco médio dourado, cabeça grande e expressiva, olhos alertas. Posiciona-se entre viajantes e perigos. Responde imediatamente ao chamado dos Lún'Kai. Shal'ún jovens aprendem a viajar nas costas de Koryn.",
       "en": "Protective Túri'Kan. Medium golden shell, large expressive head, alert eyes. Places herself between travelers and danger. Responds immediately to Lún'Kai calls. Young Shal'ún learn to travel on Koryn's back."
     },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
     "attributes": [
       {
         "glyph": "⊹",
@@ -1163,6 +1375,15 @@
     "bio": {
       "pt": "Túri'Kan jovem. Casco menor com reflexos rosa e dourado, olhos curiosos e brilhantes. Adora brincar com os Lún'Kai. Prefere águas rasas e coloridas. Quando viaja com Lúm'Esha, o brilho dela e o de Flor-Lume formam um espetáculo de luz na água.",
       "en": "Young Túri'Kan. Smaller shell with pink and gold reflections, curious shining eyes. Loves to play with the Lún'Kai. Prefers shallow, colorful waters. When she travels with Lúm'Esha, her glow and Flor-Lume's create a water light show."
+    },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
     },
     "attributes": [
       {

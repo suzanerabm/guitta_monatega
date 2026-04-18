@@ -11,7 +11,7 @@
     },
     "bio": {
       "pt": "Autoridade absoluta de ENI-4Δ. Consome 40% de todo o calor do planeta. Incapaz de aprender, incapaz de mudar — exige que tudo se adapte a ele.",
-      "en": ""
+      "en": "Absolute authority of ENI-4Δ. Consumes 40% of the planet's entire heat. Incapable of learning, incapable of changing — demands that everything adapt to him."
     },
     "image": "/imgs/characters/kammara/eni4/node-0_senhor_supremo.png",
     "backImage": "/imgs/characters/kammara/eni4/node-0_senhor_supremo_costas.png",
@@ -21,7 +21,7 @@
     },
     "dorsalMeaning": {
       "pt": "Até de costas ele exige que você olhe.",
-      "en": ""
+      "en": "Even from behind, he demands that you look."
     },
     "attributes": [
       {
@@ -59,10 +59,19 @@
       "en": "Virus Δ-APEX"
     },
     "bio": {
-      "pt": "Único vírus do universo capaz de processar várias instruções ao mesmo tempo — nasceu de um acidente térmico durante a clonagem. Coordena ataques BREACH e lê Karta-MAX direto de Node-0.",
-      "en": "The only virus in the universe able to process several instructions at once — born of a thermal accident during cloning. Coordinates BREACH attacks and reads Karta-MAX directly from Node-0."
+      "pt": "Único vírus do universo capaz de processar várias instruções ao mesmo tempo — nasceu de uma mutação rara durante a clonagem. ",
+      "en": "The only virus in the universe able to process several instructions at once — born of a rare mutation during cloning. "
     },
-    "image": "/imgs/characters/kammara/eni4/virus.png",
+    "image": "/imgs/characters/kammara/eni4/VEXON_normal.png",
+    "backImage":  "/imgs/characters/kammara/eni4/VEXON_patas.png",
+    "backTitle": {
+      "pt": "Ataque",
+      "en": "Attack"
+    },
+    "dorsalMeaning": {
+      "pt": "Coordena ataques BREACH e lê Karta-MAX direto de Node-0.",
+      "en": "Coordinates BREACH attacks and reads Karta-MAX directly from Node-0."
+    },
     "attributes": [
       {
         "glyph": "⊶⊷⊙",
@@ -110,8 +119,17 @@
       "en": "Virus Δ-PRIME"
     },
     "bio": {
-      "pt": "O mais antigo Δ-PRIME, criado nas primeiras falhas térmicas. Patas articuladas grossas usadas para se ancorar às válvulas. Conhece cada megaválvula em detalhe. Vigia, patrulha, reivindica autoria de toda conversão bem-sucedida. Onde está, fica — e tudo ao redor é \"seu\".",
-      "en": "The oldest Δ-PRIME, forged in the first thermal failures. Thick articulated legs used to anchor onto valves. Knows each megavalve in detail. Watches, patrols, claims credit for every successful conversion. Wherever he is, he stays — and everything around becomes \"his\"."
+      "pt": "O mais antigo Δ-PRIME, criado nas primeiras falhas térmicas. Supervisiona todas as megaválvulas e o processo de conversão de energia roubada em calor. Conhece cada válvula em detalhe. Vigia, patrulha, reivindica autoria de toda conversão bem-sucedida.",
+      "en": "The oldest Δ-PRIME, forged in the first thermal failures. Oversees all megavalves and the conversion of stolen energy into heat. Knows each valve in detail. Watches, patrols, claims credit for every successful conversion."
+    },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "Ninguém toca nas minhas válvulas. Ninguém.",
+      "en": "Nobody touches my valves. Nobody."
     },
     "attributes": [
       {
@@ -149,8 +167,17 @@
       "en": "Virus Δ-PRIME"
     },
     "bio": {
-      "pt": "Segundo Δ-PRIME mais antigo, nasceu durante um Δ-OVERHEAT. Funciona como medidor de calor vivo — termostato do planeta. Decide quanto calor vai para cada parte do sistema com precisão obsessiva. Acusa todos de \"desperdício térmico\" o tempo todo. Mede para existir.",
-      "en": "Second oldest Δ-PRIME, born during a Δ-OVERHEAT event. Works as a living heat gauge — the planet's thermostat. Decides how much heat flows to each part of the system with obsessive precision. Accuses everyone of \"thermal waste\" nonstop. He measures to exist."
+      "pt": "Segundo Δ-PRIME mais antigo, nasceu durante um superaquecimento. Funciona como medidor de calor vivo — termostato do planeta. Decide quanto calor vai para cada parte do sistema. Acusa todos de \"desperdício térmico\" o tempo todo.",
+      "en": "Second oldest Δ-PRIME, born during an overheating event. Works as a living heat gauge — the planet's thermostat. Decides how much heat flows to each part of the system. Accuses everyone of \"thermal waste\" all the time."
+    },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "Desperdício térmico. Sempre desperdício térmico.",
+      "en": "Thermal waste. Always thermal waste."
     },
     "attributes": [
       {
@@ -188,8 +215,17 @@
       "en": "Virus Δ-PRIME"
     },
     "bio": {
-      "pt": "Terceiro Δ-PRIME mais antigo. Casca tem mapas geométricos gravados — micro-fissuras desenhadas pelo próprio uso. Algumas hastes carregam resíduos de atmosferas estrangeiras que persistem após cada coleta. Mapeia mundos que nunca visita. Olha para fora enquanto todos os outros olham para dentro.",
-      "en": "Third oldest Δ-PRIME. His shell carries geometric maps engraved by use — micro-fissures drawn over time. Some rods hold residues of foreign atmospheres that linger after each collection. He maps worlds he never visits. Looks outward while everyone else stares inward."
+      "pt": "Terceiro Δ-PRIME mais antigo. Administrador de todas as naves Troy-Δ e das rotas de coleta de Δ-Cells. O Δ-PRIME que mais sabe sobre o universo exterior. Organiza expedições para mundos que ele mesmo mapeia mas nunca visita.",
+      "en": "Third oldest Δ-PRIME. Administrator of all Troy-Δ ships and of the Δ-Cell collection routes. The Δ-PRIME who knows the most about the outer universe. Organizes expeditions to worlds he himself maps but never visits."
+    },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "As rotas mentem. Os planetas sim.",
+      "en": "The routes lie. The planets do not."
     },
     "attributes": [
       {
@@ -227,8 +263,17 @@
       "en": "Virus Δ-PRIME"
     },
     "bio": {
-      "pt": "Quarto Δ-PRIME mais antigo. Corpo irregular como se a própria replicação tivesse falhado nele. O calor das fábricas mantém a sílica em estado semi-maleável — micro-fissuras se abrem e fecham. O Δ-PRIME mais instável: o que mais culpa os outros enquanto produz mais e mais.",
-      "en": "Fourth oldest Δ-PRIME. His body is irregular, as if replication itself had failed in him. The factory heat keeps the silica half-malleable — micro-fissures open and close. The most unstable Δ-PRIME: the one who blames others the loudest while producing more and more."
+      "pt": "Quarto Δ-PRIME mais antigo. Coordena a clonagem em massa — gerencia as fábricas que produzem novos vírus. O Δ-PRIME mais instável e o que mais produz. Velocidade máxima, qualidade mínima. Culpa os bugs por cada defeito.",
+      "en": "Fourth oldest Δ-PRIME. Coordinates mass cloning — manages the factories that produce new viruses. The most unstable and most productive Δ-PRIME. Maximum speed, minimum quality. Blames the bugs for every defect."
+    },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "Mais um defeituoso. Deve ser culpa dos bugs.",
+      "en": "Another defective one. Must be the bugs' fault."
     },
     "attributes": [
       {
@@ -266,8 +311,17 @@
       "en": "Virus Δ-PRIME"
     },
     "bio": {
-      "pt": "Quinto Δ-PRIME criado, na era de expansão. Patas articuladas delicadas, silenciosas. Entra em espaços invisível e sai sem deixar marca. Opera na SINK — a câmara mais distante de Node-0, onde os descartados vão. Escolheu estar lá porque na SINK ninguém olha. Planeja ataques que levam semanas ou meses.",
-      "en": "Fifth Δ-PRIME, created in the expansion era. Delicate, silent articulated legs. Enters unseen and leaves no trace. Operates in the SINK — the chamber farthest from Node-0, where the discarded end up. He chose it because in the SINK no one looks. Plans attacks that take weeks or months."
+      "pt": "Quinto Δ-PRIME criado. Coordenador de infiltrações externas, especialista em operações ERODE e BREACH. Opera na SINK — a zona mais fria e isolada do planeta. Planeja ataques que levam semanas ou meses. Entra em espaços e sai sem deixar marca.",
+      "en": "Fifth Δ-PRIME created. Coordinator of external infiltrations, specialist in ERODE and BREACH operations. Operates in the SINK — the coldest, most isolated zone of the planet. Plans attacks that take weeks or months. Enters spaces and leaves without a trace."
+    },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "Ele nunca diz nada. Por isso ninguém sabe o que ele sabe.",
+      "en": "He never says a thing. That is why no one knows what he knows."
     },
     "attributes": [
       {
@@ -316,8 +370,17 @@
       "en": "Virus Δ-PRIME"
     },
     "bio": {
-      "pt": "O Δ-PRIME mais novo e o mais violento. Casca rachada com linhas de calor pulsando em ritmo irregular — como uma bomba prestes a explodir. Funciona como o braço executor de Node-0: aplica punições sem aviso, sem julgamento, sem direito de resposta.",
-      "en": "The youngest and most violent Δ-PRIME. Cracked shell with heat lines pulsing in irregular rhythm — like a bomb about to go off. Works as Node-0's executor: metes out punishment without warning, trial, or right of reply."
+      "pt": "O Δ-PRIME mais novo e o mais violento. Braço executor de Node-0: aplica as decisões do Tribunal de Ruído. Cada punição é direta, imediata, desproporcional. Pesa mais que qualquer outro Δ-PRIME.",
+      "en": "The youngest and most violent Δ-PRIME. Node-0's executor arm: carries out the decisions of the Noise Tribunal. Every punishment is direct, immediate, disproportionate. Heavier than any other Δ-PRIME."
+    },
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "A punição precisa de alvo.",
+      "en": "Punishment needs a target."
     },
     "attributes": [
       {
@@ -355,10 +418,19 @@
       "en": "Intrusion Vessel"
     },
     "bio": {
-      "pt": "Naves mecânicas inspiradas nos Cavalos de Tróia. Entram como presente, saem como saque — envelopes físicos para infiltração interplanetária. Transportam Δ-SHADOWs, vírus e hastes de drenagem para fora de ENI-4Δ.",
-      "en": "Mechanical vessels modeled on the Trojan Horse. They arrive as a gift and leave as loot — physical envelopes for interplanetary infiltration. They carry Δ-SHADOWs, viruses and drainage rods out of ENI-4Δ."
+      "pt": "Naves mecânicas. Envelopes físicos para infiltração interplanetária. Lê Karta-Δ e executa instruções primitivas. Cria portais térmicos curtos para invasão e coleta. Sem as Troy-Δ, os vírus evaporam ao cruzar o Cshift.",
+      "en": "Mechanical ships. Physical envelopes for interplanetary infiltration. Read Karta-Δ and execute primitive instructions. Create short thermal portals for invasion and collection. Without the Troy-Δ, viruses evaporate as they cross the Cshift."
     },
-    "image": "/imgs/characters/kammara/eni4/troy.png",
+    "image": "/imgs/characters/kammara/eni4/troy_pe.png",
+     "backImage": "/imgs/characters/kammara/eni4/troy.png",
+    "backTitle": {
+      "pt": "Em rota para ataque",
+      "en": "En route to attack"
+    },
+    "dorsalMeaning": {
+      "pt": "Em rota: transportando dezenas de vírus e bugs para fora de ENI-4Δ.",
+      "en": "En route: carrying dozens of viruses and bugs out of ENI-4Δ."
+    },
     "attributes": [
       {
         "glyph": "⊷⊹⊶",
@@ -391,14 +463,23 @@
       "en": "Virus-Δ"
     },
     "species": {
-      "pt": "Vírus de ENI-4Δ",
-      "en": "ENI-4Δ Virus"
+      "pt": "Vírus-Δ",
+      "en": "Vírus-Δ"
     },
     "bio": {
-      "pt": "Casca de sílica com núcleo térmico herdado de Node-0. Sem memória, sem intenção — especialistas em se apresentar como salvadores enquanto drenam energia. São o exército invisível do planeta, responsáveis pela maior parte das incursões.",
-      "en": "A silica shell around a thermal core inherited from Node-0. No memory, no intent — specialists at posing as saviors while draining energy. They are the planet's invisible army, responsible for most of the incursions."
+      "pt": "O soldado básico de ENI-4Δ. Executa instruções em linha reta: se disfarça, se move, procura calor, suga, se copia, culpa outro, volta.",
+      "en": ""
     },
-    "image": "/imgs/characters/kammara/eni4/virus.png",
+    "image": "/imgs/characters/kammara/eni4/virus_soldado.png",
+    "backImage": "/imgs/characters/kammara/eni4/virus.png",
+    "backTitle": {
+      "pt": "Mascara fofa",
+      "en": "Cute mask"
+    },
+    "dorsalMeaning": {
+      "pt": "Está tudo bem. Eu sou inofensivo.",
+      "en": "Everything is fine. I am harmless."
+    },
     "attributes": [
       {
         "glyph": "⊹",
@@ -407,8 +488,8 @@
           "en": "Class"
         },
         "value": {
-          "pt": "Vírus",
-          "en": "Virus"
+          "pt": "Δ-EXEC",
+          "en": "Δ-EXEC"
         }
       },
       {
@@ -418,8 +499,8 @@
           "en": "Role"
         },
         "value": {
-          "pt": "Drenagem",
-          "en": "Drainage"
+          "pt": "Infiltração e consumo",
+          "en": ""
         }
       }
     ]
@@ -439,6 +520,15 @@
       "en": "A mechanical worker of ENI-4Δ's corridors. A vacuum valve on articulated legs — keeps the megavalves running. Invisible by decree, never stops moving."
     },
     "image": "/imgs/characters/kammara/eni4/aracne_1.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
     "attributes": [
       {
         "glyph": "⊙",
@@ -479,6 +569,15 @@
       "en": "Patrol swarm of the valve corridors. Never stops moving — watches, hauls scrap, and carries materials between megavalves. Controlled by Node-0 or higher viruses, works in swarms."
     },
     "image": "/imgs/characters/kammara/eni4/aracne_2.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
     "attributes": [
       {
         "glyph": "⊙",
@@ -519,6 +618,15 @@
       "en": "Cleaner of megavalve debris. Invisible by decree — no one in ENI-4Δ acknowledges her as a being, only as a tool. When she breaks, she becomes scrap."
     },
     "image": "/imgs/characters/kammara/eni4/aracne_3.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
     "attributes": [
       {
         "glyph": "⊙",
@@ -540,6 +648,235 @@
         "value": {
           "pt": "Limpeza",
           "en": "Cleaning"
+        }
+      }
+    ]
+  },
+  {
+    "match": "worm",
+    "name": {
+      "pt": "Worm",
+      "en": "Worm"
+    },
+    "species": {
+      "pt": "Δ-RECURSE",
+      "en": "Δ-RECURSE"
+    },
+    "bio": {
+      "pt": "Replicam-se sozinhos nos túneis subterrâneos. Devoram sílica, vírus, robôs — tudo que encontram. Distribuem calor, abrem caminhos por colapso. Ninguém consegue controlá-los. Nem Node-0. ",
+      "en": "They replicate on their own in the underground tunnels. They devour silica, viruses, robots — anything they find. They spread heat, open paths through collapse. No one can control them. Not even Node-0."
+    },
+    "image": "/imgs/characters/kammara/eni4/worm.png",
+    "backImage": "/imgs/characters/kammara/eni4/worm.png",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "O que está embaixo decide o que vive em cima. Mantêm o planeta vivo ao mesmo tempo que o ameaçam.",
+      "en": "What lies below decides what lives above. They keep the planet alive and threaten it at the same time."
+    },
+    "attributes": [
+      {
+        "glyph": "⊷⊹⊶",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Replicação",
+          "en": "Replication"
+        }
+      },
+      {
+        "glyph": "⋄",
+        "label": {
+          "pt": "Controle",
+          "en": "Control"
+        },
+        "value": {
+          "pt": "Nenhum",
+          "en": "None"
+        }
+      }
+    ]
+  },
+  {
+    "match": "bug",
+    "name": {
+      "pt": "Bug",
+      "en": "Bug"
+    },
+    "species": {
+      "pt": "Δ-ERRATA",
+      "en": "Δ-ERRATA"
+    },
+    "bio": {
+      "pt": "Falhas vivas. Criados por erros de replicação nas fábricas de REPLION. Fazem manutenção bruta, carregam materiais, limpam. Culpados por tudo que falha — sempre. Todos os vírus os desprezam. O degrau mais baixo da hierarquia que ainda é visível.",
+      "en": "Living failures. Born of replication errors in REPLION's factories. They do rough maintenance, haul materials, clean. Blamed for everything that goes wrong — always. Every virus despises them. The lowest rung of the hierarchy that is still visible."
+    },
+    "image": "/imgs/characters/kammara/eni4/bug.png",
+    "backImage": "/imgs/characters/kammara/eni4/bug.png",
+    "backTitle": {
+      "pt": "Culpa",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "A culpa é sempre do bug.",
+      "en": "It's always the bug's fault."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Classe",
+          "en": "Class"
+        },
+        "value": {
+          "pt": "Δ-ERRATA",
+          "en": "Δ-ERRATA"
+        }
+      },
+      {
+        "glyph": "⊷⊹⊶",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Trabalho bruto",
+          "en": "Rough Labor"
+        }
+      },
+      {
+        "glyph": "⋄",
+        "label": {
+          "pt": "Status",
+          "en": "Status"
+        },
+        "value": {
+          "pt": "Culpado por tudo",
+          "en": "Blamed for Everything"
+        }
+      }
+    ]
+  },
+  {
+    "match": "robo_escravo",
+    "name": {
+      "pt": "Robô Escravo",
+      "en": "Slave Robot"
+    },
+    "species": {
+      "pt": "Δ-AUTOMATA",
+      "en": "Δ-AUTOMATA"
+    },
+    "bio": {
+      "pt": "Máquinas de outros planetas — sequestradas, destruídas, reiniciadas e reaproveitadas. O calor extremo derreteu e recristalizou seus materiais: placas fundidas, circuitos em ruído, memória virada cinza, cabos virados filamentos de sílica. ",
+      "en": "Machines from other planets — kidnapped, destroyed, rebooted, repurposed. Extreme heat melted and recrystallized their materials: fused plates, circuits in static, memory turned to ash, cables turned to silica filaments. "
+    },
+    "image": "/imgs/characters/kammara/eni4/robo_escravo.png",
+    "backImage": "/imgs/characters/kammara/eni4/robo_escravo_exausto.png",
+    "backTitle": {
+      "pt": "Versões zumbificadas",
+      "en": "Zombified versions"
+    },
+    "dorsalMeaning": {
+      "pt": "Versões zumbificadas das máquinas originais. Os únicos seres que sofrem sem entender.",
+      "en": "Zombified versions of the original machines. The only beings that suffer without understanding."
+    },
+    "attributes": [
+      {
+        "glyph": "⊷⊹⊶",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Trabalho forçado",
+          "en": "Forced Labor"
+        }
+      },
+      {
+        "glyph": "•⊙•",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Outros planetas",
+          "en": "Other Planets"
+        }
+      },
+      {
+        "glyph": "⋄",
+        "label": {
+          "pt": "Status",
+          "en": "Status"
+        },
+        "value": {
+          "pt": "Escravo",
+          "en": "Slave"
+        }
+      }
+    ]
+  },
+  {
+    "match": "silrats",
+    "name": {
+      "pt": "Sil'Rats",
+      "en": "Sil'Rats"
+    },
+    "species": {
+      "pt": "Ratos de Sílica",
+      "en": "Silica Rats"
+    },
+    "bio": {
+      "pt": "Praga de ENI-4Δ. Vivem em tudo que é lugar — lixões, fábricas, túneis, bordas da SINK, ao redor das megaválvulas. Assim como os worms, comem lixo, sucata, restos de robôs, tudo o que vem na frente. Selvagens, sem controle de ninguém.",
+      "en": ""
+    },
+    "image": "/imgs/characters/kammara/eni4/rats.png",
+    "backImage": "/imgs/characters/kammara/eni4/rats_bravo.png",
+    "backTitle": {
+      "pt": "AVISO",
+      "en": "WARNING"
+    },
+    "dorsalMeaning": {
+      "pt": "Não chegue perto.",
+      "en": ""
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Classe",
+          "en": "Class"
+        },
+        "value": {
+          "pt": "Ratos de Sílica",
+          "en": "Silica Rats"
+        }
+      },
+      {
+        "glyph": "⊶⊶⊶",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+        "value": {
+          "pt": "Core de Gelo",
+          "en": "Ice Core"
+        }
+      },
+      {
+        "glyph": "⋄",
+        "label": {
+          "pt": "Status",
+          "en": "Status"
+        },
+        "value": {
+          "pt": "Selvagem",
+          "en": "Wild"
         }
       }
     ]

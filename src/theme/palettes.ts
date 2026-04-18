@@ -88,7 +88,7 @@ export const palettes: Record<PaletteName, Palette> = {
     // colors[3] = world heading h1 (lavanda ainda mais clara pra máximo destaque)
     // colors[0/4/5] = usados em gradients e acentos, não viram texto
     colors: ['#a78bfa', '#b09dea', '#d4e8d4', '#c4b5fd', '#0e3a1a', '#1a4a30'],
-    text: '#0e3a1a',
+    text: '#dbe5de',
     // Used by FilterBar chrome tint — roxo-profundo vibrante em vez de
     // quase-preto, pra ser perceptível junto com os outros mundos.
     dark: '#180c36',
@@ -133,7 +133,7 @@ export const palettes: Record<PaletteName, Palette> = {
   },
   orfv: {
     colors: ['#cf568c', '#cf568c', '#40d0e8', '#cf568c', '#3a1860', '#9040a0'],
-    text: '#3a1860',
+    text: '#e2dce9',
     dark: '#1e0c48',
     gradient: 'linear-gradient(135deg, #d4829a 0%, #d4829a 70%, #40d0e8 100%)',
     gradientBg: 'linear-gradient(160deg, #0c0620 0%, #1a0c40 40%, #081828 100%)',

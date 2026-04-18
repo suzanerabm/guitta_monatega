@@ -320,7 +320,14 @@ ${Array.from({ length: shootSteps + 1 }).map((_, s) => {
                 as="button"
                 aria-label={item.label || item.title}
                 title={item.label || item.title}
-                onClick={() => isActive ? showRoulette() : onSelect(itemIndex)}
+                onClick={() => {
+                  if (isActive) {
+                    showRoulette();
+                  } else {
+                    onSelect(itemIndex);
+                    showRoulette();
+                  }
+                }}
                 position="absolute"
                 top="50%"
                 left="50%"
