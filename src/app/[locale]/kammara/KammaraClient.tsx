@@ -197,7 +197,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
   const tCommon = useTranslations('common');
   const locale = useLocale() as Locale;
   const [activeFilter, setActiveFilter] = useState('all');
-  const { registerGallery, openGallery } = useModal();
+  const { registerGallery, openKammaraGallery } = useModal();
 
   // Word dictionary used by translateName() for filename-derived labels.
   const words = tCommon.raw('words') as Record<string, string>;
@@ -257,7 +257,15 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
     const galleryId = `book_kammara-${rawBookId.replace(/^kammara-/, '')}`;
     const g = bookGalleries[galleryId];
     if (!g) return;
-    openGallery(galleryId, 0, g.title, '');
+    openKammaraGallery({
+      galleryId,
+      startIndex: 0,
+      color: kammaraPalette.colors[0],
+      darkColor: kammaraPalette.dark,
+      textColor: kammaraPalette.text,
+      crestGlyph: worldCrestGlyph('kammara'),
+      heroTitle: g.title,
+    });
   };
 
   // ── Filter bar ────────────────────────────────────────────────────────
@@ -341,6 +349,24 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
           textPanelTitle={sectionName}
           glyphVariant="universe"
           text={renderStory(sectionStory)}
+          renderPanel={({ text: panelText }) => (
+            <KammaraCard
+              name={sectionName}
+              category="Universo"
+              color={kammaraPalette.colors[0]}
+              darkColor={kammaraPalette.dark}
+              crestGlyph={worldCrestGlyph('kammara')}
+              tabs={[
+                {
+                  id: 'kammara-story',
+                  icon: '⊙',
+                  label: sectionName,
+                  title: sectionName,
+                  content: panelText,
+                },
+              ]}
+            />
+          )}
         >
           {/* Characters moved to a dedicated KammaraCharacterGallery below. */}
           <SoonPanel label={tCommon('soon')} />
@@ -580,8 +606,10 @@ function WorldSection({
               ...s,
               name: translateName(s.name, words),
             }))}
-            color={colors.titleDestaque}
+            color={palette.colors[0]}
             darkColor={palette.dark}
+            modalTextColor={palette.text}
+            crestGlyph={worldCrestGlyph(w.id)}
             modalBg={palette.gradientBg}
             modalTitle={name}
             modalSubtitle={bodyText[0] || ''}
@@ -813,6 +841,8 @@ function TriplecRegionSection({
           }))}
           arrowColor={regionColor}
           accentColor={regionColor}
+          darkColor={regionPalette.dark}
+          crestGlyph={worldCrestGlyph(regionId)}
           modalBg={regionPalette.gradientBg}
           modalTitle={name}
           modalSubtitle={bodyText[0] || ''}

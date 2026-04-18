@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ModalProvider, Modal } from '@/components/Modal';
+import { ModalProvider, Modal, ModalKammara } from '@/components/Modal';
 import { SceneStrip } from './SceneStrip';
 
 const meta: Meta<typeof SceneStrip> = {
@@ -12,6 +12,7 @@ const meta: Meta<typeof SceneStrip> = {
       <ModalProvider>
         <Story />
         <Modal />
+        <ModalKammara />
       </ModalProvider>
     ),
   ],

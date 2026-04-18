@@ -19,6 +19,10 @@ export interface SceneStripProps {
   modalBgOpacity?: number;
   modalTitle?: string;
   modalSubtitle?: string;
+  /** Crest glyph for Kammara modal watermark. When set, opens ModalKammara. */
+  crestGlyph?: string;
+  /** Dark base color for the Kammara modal. Required when crestGlyph is set. */
+  darkColor?: string;
   galleryId?: string;
   /**
    * Override the top margin above the section title ("CENAS"). Defaults
@@ -51,6 +55,8 @@ export function SceneStrip({
   modalBg,
   modalTitle,
   modalSubtitle,
+  crestGlyph,
+  darkColor,
   galleryId,
   titleMarginTop = '5em',
   hideLabel = false,
@@ -60,7 +66,7 @@ export function SceneStrip({
   const fallbackId = useId();
   const id = galleryId ?? `scene-strip-${fallbackId}`;
   const scrollRef = useRef<HTMLDivElement>(null);
-  const { registerGallery, openGallery } = useModal();
+  const { registerGallery, openGallery, openKammaraGallery } = useModal();
   const [canPrev, setCanPrev] = useState(false);
   const [canNext, setCanNext] = useState(false);
 
@@ -101,7 +107,19 @@ export function SceneStrip({
   // block (large), bg gets the world's gradient, and the per-image caption
   // comes from the gallery `labels` (already-translated scene names).
   const handleSceneClick = (index: number) => {
-    openGallery(id, index, '', '', modalBg, modalTitle, modalSubtitle);
+    if (crestGlyph && accentColor && darkColor) {
+      openKammaraGallery({
+        galleryId: id,
+        startIndex: index,
+        color: accentColor,
+        darkColor,
+        crestGlyph,
+        heroTitle: modalTitle,
+        heroText: modalSubtitle,
+      });
+    } else {
+      openGallery(id, index, '', '', modalBg, modalTitle, modalSubtitle);
+    }
   };
 
   // Arrow CSS uses className-style media query so we can hide on mobile

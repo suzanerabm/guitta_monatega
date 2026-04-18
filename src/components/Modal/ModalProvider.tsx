@@ -18,6 +18,27 @@ interface ModalState {
   theme?: string;
   heroTitle?: string;
   heroText?: string;
+  /** Visual variant: 'default' uses Modal, 'kammara' uses ModalKammara. */
+  variant?: 'default' | 'kammara';
+  /** Accent color for kammara variant. */
+  color?: string;
+  /** Dark base color for kammara variant. */
+  darkColor?: string;
+  /** Text color for kammara variant (palette.text). */
+  textColor?: string;
+  /** Crest glyph for kammara variant watermark. */
+  crestGlyph?: string;
+}
+
+interface KammaraGalleryOpts {
+  galleryId: string;
+  startIndex: number;
+  color: string;
+  darkColor: string;
+  textColor?: string;
+  crestGlyph?: string;
+  heroTitle?: string;
+  heroText?: string;
 }
 
 interface ModalContextType {
@@ -40,6 +61,7 @@ interface ModalContextType {
     heroTitle?: string,
     heroText?: string
   ) => void;
+  openKammaraGallery: (opts: KammaraGalleryOpts) => void;
   close: () => void;
   next: () => void;
   prev: () => void;
@@ -124,6 +146,29 @@ export function ModalProvider({ children }: { children: React.ReactNode }) {
     []
   );
 
+  const openKammaraGallery = useCallback(
+    (opts: KammaraGalleryOpts) => {
+      const gallery = galleriesRef.current[opts.galleryId];
+      if (!gallery) return;
+      setState({
+        isOpen: true,
+        images: gallery.images,
+        labels: gallery.labels,
+        currentIndex: opts.startIndex,
+        title: '',
+        technique: '',
+        variant: 'kammara',
+        color: opts.color,
+        darkColor: opts.darkColor,
+        textColor: opts.textColor,
+        crestGlyph: opts.crestGlyph,
+        heroTitle: opts.heroTitle,
+        heroText: opts.heroText,
+      });
+    },
+    []
+  );
+
   const close = useCallback(() => {
     setState((s) => ({ ...s, isOpen: false }));
   }, []);
@@ -144,7 +189,7 @@ export function ModalProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <ModalContext.Provider
-      value={{ state, openGallery, openModal, close, next, prev, registerGallery }}
+      value={{ state, openGallery, openModal, openKammaraGallery, close, next, prev, registerGallery }}
     >
       {children}
     </ModalContext.Provider>

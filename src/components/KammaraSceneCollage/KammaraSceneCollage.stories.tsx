@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Box } from '@chakra-ui/react';
-import { ModalProvider, Modal } from '@/components/Modal';
+import { ModalProvider, Modal, ModalKammara } from '@/components/Modal';
 import { KammaraSceneCollage } from './KammaraSceneCollage';
 
 const meta: Meta<typeof KammaraSceneCollage> = {
@@ -22,6 +22,7 @@ const meta: Meta<typeof KammaraSceneCollage> = {
           <Story />
         </Box>
         <Modal />
+        <ModalKammara />
       </ModalProvider>
     ),
   ],
@@ -50,6 +51,8 @@ export const Default: Story = {
       <KammaraSceneCollage
         scenes={lunnp1Scenes}
         color="#00e676"
+        darkColor="#002e14"
+        crestGlyph="⊙"
         modalBg="linear-gradient(160deg, #001a0e 0%, #003d1a 40%, #002e14 100%)"
         modalTitle="LUNN'P1"
         modalSubtitle="Cenas do planeta-jardim"

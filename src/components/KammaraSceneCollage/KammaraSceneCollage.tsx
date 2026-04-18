@@ -24,6 +24,10 @@ export interface KammaraSceneCollageProps {
   modalBg?: string;
   modalTitle?: string;
   modalSubtitle?: string;
+  /** Crest glyph shown as watermark in the Kammara modal. */
+  crestGlyph?: string;
+  /** Text color for the Kammara modal (palette.text). */
+  modalTextColor?: string;
   galleryId?: string;
   'data-testid'?: string;
 }
@@ -315,13 +319,15 @@ export function KammaraSceneCollage({
   modalBg,
   modalTitle,
   modalSubtitle,
+  crestGlyph,
+  modalTextColor,
   galleryId,
   'data-testid': testId,
 }: KammaraSceneCollageProps) {
   useEnsureKeyframes();
   const fallbackId = useId();
   const id = galleryId ?? `kammara-scene-collage-${fallbackId}`;
-  const { registerGallery, openGallery } = useModal();
+  const { registerGallery, openKammaraGallery } = useModal();
 
   useEffect(() => {
     registerGallery(
@@ -332,7 +338,16 @@ export function KammaraSceneCollage({
   }, [id, scenes, registerGallery]);
 
   const handleClick = (index: number) => {
-    openGallery(id, index, '', '', modalBg, modalTitle, modalSubtitle);
+    openKammaraGallery({
+      galleryId: id,
+      startIndex: index,
+      color,
+      darkColor,
+      textColor: modalTextColor,
+      crestGlyph,
+      heroTitle: modalTitle,
+      heroText: modalSubtitle,
+    });
   };
 
   return (

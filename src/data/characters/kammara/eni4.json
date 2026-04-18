@@ -10,10 +10,19 @@
       "en": "Founding Entity"
     },
     "bio": {
-      "pt": "Figura humanoide alongada que emerge do chão como extensão do próprio planeta. Cabeça oval lisa com duas fendas horizontais brilhando em âmbar. Sem braços ou pés — a base se funde ao chão como túnica. Padrões espirais Art Nouveau gravados no torso, gavinhas orgânicas fluindo dos ombros. A presença aumenta o calor, distorce o ar, gera grave constante que vibra no corpo.",
-      "en": "Elongated humanoid figure that emerges from the floor as an extension of the planet itself. Smooth oval head with two horizontal slits glowing amber. No arms, no feet — the base fuses into the ground like a robe. Art Nouveau spiral patterns engraved on the torso, organic tendrils flowing from the shoulders. Its presence raises the heat, distorts the air, generates a constant bass hum that vibrates in the body."
+      "pt": "Autoridade absoluta de ENI-4Δ. Consome 40% de todo o calor do planeta. Incapaz de aprender, incapaz de mudar — exige que tudo se adapte a ele.",
+      "en": ""
     },
     "image": "/imgs/characters/kammara/eni4/node-0_senhor_supremo.png",
+    "backImage": "/imgs/characters/kammara/eni4/node-0_senhor_supremo_costas.png",
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Other Side"
+    },
+    "dorsalMeaning": {
+      "pt": "Até de costas ele exige que você olhe.",
+      "en": ""
+    },
     "attributes": [
       {
         "glyph": "⊶⊷⊙",
@@ -50,9 +59,10 @@
       "en": "Virus Δ-APEX"
     },
     "bio": {
-      "pt": "Único vírus do universo capaz de processar várias instruções ao mesmo tempo — nasceu de um acidente térmico durante a clonagem. Coordena ataques BREACH e lê Karta-MAX direto de Node-0. Opera sempre na forma real: a fissura mantém a sílica permanentemente aberta. O silêncio dele indica cálculo em curso.",
-      "en": "The only virus in the universe able to process several instructions at once — born of a thermal accident during cloning. Coordinates BREACH attacks and reads Karta-MAX directly from Node-0. Always operates in real form: the fissure keeps the silica permanently open. His silence means calculation is underway."
+      "pt": "Único vírus do universo capaz de processar várias instruções ao mesmo tempo — nasceu de um acidente térmico durante a clonagem. Coordena ataques BREACH e lê Karta-MAX direto de Node-0.",
+      "en": "The only virus in the universe able to process several instructions at once — born of a thermal accident during cloning. Coordinates BREACH attacks and reads Karta-MAX directly from Node-0."
     },
+    "image": "/imgs/characters/kammara/eni4/virus.png",
     "attributes": [
       {
         "glyph": "⊶⊷⊙",

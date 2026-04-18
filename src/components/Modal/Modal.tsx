@@ -42,7 +42,7 @@ export function Modal() {
     };
   }, [isOpen, close, next, prev]);
 
-  if (!isOpen) return null;
+  if (!isOpen || state.variant === 'kammara') return null;
 
   const currentImage = images[currentIndex];
   // Caption priority:

@@ -424,7 +424,7 @@ export function KammaraCardRegion({
             {/* "⊹ ⊙ ⊹" = universo, Kammara (Kam'Rin) */}
             <span aria-label="Kammara">⊹ ⊙ ⊹</span>
             <Text fontSize="xs" letterSpacing="hero" textTransform="uppercase" color={mutedText} m={0}>
-              Kammara · {parentName}
+              Kammara
             </Text>
           </Flex>
             </Flex>{/* close body content */}
