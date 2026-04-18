@@ -435,7 +435,7 @@ export function KammaraCardSubsystemHorizontal({
           inset={0}
           aria-hidden="true"
           css={{
-            background: `linear-gradient(90deg, ${darkColor}cc 0%, ${darkColor}99 45%, ${darkColor}55 75%, transparent 100%)`,
+            background: `linear-gradient(90deg, ${darkColor}4d 0%, ${darkColor}33 45%, ${darkColor}1a 75%, transparent 100%)`,
           }}
         />
         {/* Top-to-transparent tint so the title area reads clean even
@@ -445,7 +445,7 @@ export function KammaraCardSubsystemHorizontal({
           inset={0}
           aria-hidden="true"
           css={{
-            background: `linear-gradient(180deg, ${darkColor}aa 0%, transparent 45%, transparent 55%, ${darkColor}aa 100%)`,
+            background: `linear-gradient(180deg, ${darkColor}4d 0%, transparent 45%, transparent 55%, ${darkColor}4d 100%)`,
           }}
         />
 

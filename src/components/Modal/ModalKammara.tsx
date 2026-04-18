@@ -90,7 +90,7 @@ export function ModalKammara() {
         borderRadius="28px"
         overflow="hidden"
         css={{
-          background: `linear-gradient(160deg, ${darkColor} 0%, ${darkColor}f5 40%, ${darkColor} 100%)`,
+          background: `${darkColor}d5`,
           border: `1px solid ${color}35`,
           outline: `2px solid ${color}`,
           outlineOffset: '4px',
@@ -205,36 +205,13 @@ export function ModalKammara() {
             </Flex>
           )}
 
-          {/* Image + label colada na borda esquerda da foto */}
-          <Flex
+          {/* Image wrapper — label is relative to the img, not the modal */}
+          <Box
             position="relative"
-            align="flex-end"
+            display="inline-block"
             maxW={{ base: '94vw', md: '90vw' }}
             maxH={{ base: '50vh', md: '62vh' }}
           >
-            {/* Label rotacionada, 2px da foto, alinhada ao bottom */}
-            {techniqueText && (
-              <Text
-                position="absolute"
-                left="-2px"
-                bottom="0"
-                zIndex={1}
-                fontSize="xs"
-                letterSpacing="wide"
-                textTransform="uppercase"
-                color={color}
-                opacity={0.5}
-                m={0}
-                css={{
-                  transform: 'translateX(-100%) rotate(-90deg)',
-                  transformOrigin: 'right bottom',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                {techniqueText}
-              </Text>
-            )}
-
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               key={currentImage}
@@ -244,10 +221,34 @@ export function ModalKammara() {
                 maxWidth: '100%',
                 maxHeight: '60vh',
                 objectFit: 'contain',
-                borderRadius: '2px',
+                borderRadius: '16px',
+                display: 'block',
               }}
             />
-          </Flex>
+
+            {/* Label rotacionada, 2px da borda esquerda da foto, bottom da foto */}
+            {techniqueText && (
+              <Text
+                position="absolute"
+                left="0"
+                bottom="40px"
+                zIndex={1}
+                fontSize="xs"
+                letterSpacing="wide"
+                textTransform="uppercase"
+                color={color}
+                opacity={0.5}
+                m={0}
+                css={{
+                  transform: 'rotate(-90deg)',
+                  transformOrigin: 'left bottom',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {techniqueText}
+              </Text>
+            )}
+          </Box>
         </Flex>
 
         {/* Bottom nav — transparent, planet text color */}
