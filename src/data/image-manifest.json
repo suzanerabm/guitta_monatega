@@ -210,16 +210,20 @@
         "image": "/imgs/characters/kammara/lunnp1/Brisa.png"
       },
       {
-        "name": "Erú'Rin costas",
-        "image": "/imgs/characters/kammara/lunnp1/Erú'Rin_costas.png"
+        "name": "EruRin costas brisa",
+        "image": "/imgs/characters/kammara/lunnp1/EruRin_costas_brisa.png"
       },
       {
-        "name": "Erú'Rin costas1",
-        "image": "/imgs/characters/kammara/lunnp1/Erú'Rin_costas1.png"
+        "name": "EruRin costas",
+        "image": "/imgs/characters/kammara/lunnp1/EruRin_costas.png"
       },
       {
-        "name": "Erú'Rin",
-        "image": "/imgs/characters/kammara/lunnp1/Erú'Rin.png"
+        "name": "EruRin costas1",
+        "image": "/imgs/characters/kammara/lunnp1/EruRin_costas1.png"
+      },
+      {
+        "name": "EruRin",
+        "image": "/imgs/characters/kammara/lunnp1/EruRin.png"
       },
       {
         "name": "Eurin costas com glifo",
@@ -238,36 +242,36 @@
         "image": "/imgs/characters/kammara/lunnp1/gemini-2.5-flash-image_same_character._same_design_and_add_glifo_on_the_back_do_not_change_the_glifo_de-1 (1).jpg"
       },
       {
-        "name": "Lúm'Esha costas",
-        "image": "/imgs/characters/kammara/lunnp1/Lúm'Esha_costas.png"
+        "name": "LumEsha costas",
+        "image": "/imgs/characters/kammara/lunnp1/LumEsha_costas.png"
       },
       {
-        "name": "Lúm'Esha costas1",
-        "image": "/imgs/characters/kammara/lunnp1/Lúm'Esha_costas1.png"
+        "name": "LumEsha costas1",
+        "image": "/imgs/characters/kammara/lunnp1/LumEsha_costas1.png"
       },
       {
-        "name": "Lúm'Esha",
-        "image": "/imgs/characters/kammara/lunnp1/Lúm'Esha.png"
+        "name": "LumEsha",
+        "image": "/imgs/characters/kammara/lunnp1/LumEsha.png"
       },
       {
-        "name": "Túri’Kan 2",
-        "image": "/imgs/characters/kammara/lunnp1/Túri’Kan_2.png"
+        "name": "TuriKan 2",
+        "image": "/imgs/characters/kammara/lunnp1/TuriKan_2.png"
       },
       {
-        "name": "Túri’Kan costas",
-        "image": "/imgs/characters/kammara/lunnp1/Túri’Kan_costas.png"
+        "name": "TuriKan costas",
+        "image": "/imgs/characters/kammara/lunnp1/TuriKan_costas.png"
       },
       {
-        "name": "Túri’Kan",
-        "image": "/imgs/characters/kammara/lunnp1/Túri’Kan.png"
+        "name": "TuriKan",
+        "image": "/imgs/characters/kammara/lunnp1/TuriKan.png"
       },
       {
-        "name": "Tzi'Ki  costas",
-        "image": "/imgs/characters/kammara/lunnp1/Tzi'Ki _costas.png"
+        "name": "TziKi  costas",
+        "image": "/imgs/characters/kammara/lunnp1/TziKi _costas.png"
       },
       {
-        "name": "Tzi'Ki",
-        "image": "/imgs/characters/kammara/lunnp1/Tzi'Ki .png"
+        "name": "TziKi",
+        "image": "/imgs/characters/kammara/lunnp1/TziKi .png"
       }
     ],
     "kammara/orfv": [
@@ -396,12 +400,12 @@
         "image": "/imgs/characters/miscelania/malmo_mal_humorado.jpg"
       },
       {
-        "name": "malmo não quer dividir",
-        "image": "/imgs/characters/miscelania/malmo_não_quer_dividir.jpg"
+        "name": "malmo não quer dividir",
+        "image": "/imgs/characters/miscelania/malmo_não_quer_dividir.jpg"
       },
       {
-        "name": "malmo não quer falar",
-        "image": "/imgs/characters/miscelania/malmo_não_quer_falar.jpg"
+        "name": "malmo não quer falar",
+        "image": "/imgs/characters/miscelania/malmo_não_quer_falar.jpg"
       },
       {
         "name": "malmo",
@@ -504,8 +508,8 @@
         "image": "/imgs/characters/taylo/03_babalina.png"
       },
       {
-        "name": "candy mágica",
-        "image": "/imgs/characters/taylo/04_candy_mágica.png"
+        "name": "candy mágica",
+        "image": "/imgs/characters/taylo/04_candy_mágica.png"
       },
       {
         "name": "candy",
@@ -1229,16 +1233,16 @@
     ],
     "kammara/lunnp1": [
       {
-        "name": "cena crancas 1",
-        "image": "/imgs/characters/kammara/lunnp1/_scenes/cena_crancas_1.png"
+        "name": "cena crianca brincando",
+        "image": "/imgs/characters/kammara/lunnp1/_scenes/cena_crianca_brincando.png"
       },
       {
         "name": "Erú'Rin e Lúm'Esha plantando",
-        "image": "/imgs/characters/kammara/lunnp1/_scenes/Erú'Rin_e_Lúm'Esha_plantando.jpg"
+        "image": "/imgs/characters/kammara/lunnp1/_scenes/Erú'Rin_e_Lúm'Esha_plantando.png"
       },
       {
-        "name": "Ná'Lum pequenas esferas que flutuam",
-        "image": "/imgs/characters/kammara/lunnp1/_scenes/Ná'Lum_pequenas_esferas_que flutuam.jpg"
+        "name": "Ná'Lum pequenas esferas que flutuam",
+        "image": "/imgs/characters/kammara/lunnp1/_scenes/Ná'Lum_pequenas_esferas_que flutuam.jpg"
       },
       {
         "name": "regiao EXTERMO NORTE",
@@ -1337,8 +1341,8 @@
         "image": "/imgs/characters/kammara/triplec/_scenes/4_Lumesha_visita_LUMA_VAL.jpg"
       },
       {
-        "name": "Erú’Rin com SELKA RIN",
-        "image": "/imgs/characters/kammara/triplec/_scenes/5Erú’Rin_com_SELKA_RIN.jpg"
+        "name": "Erú’Rin com SELKA RIN",
+        "image": "/imgs/characters/kammara/triplec/_scenes/5Erú’Rin_com_SELKA_RIN.jpg"
       },
       {
         "name": "Cshift portal",
@@ -1419,12 +1423,12 @@
         "image": "/imgs/characters/kammara/triplec/sharp/_scenes/3praca_central.jpg"
       },
       {
-        "name": "Câmara de Permissão ativando cshift",
-        "image": "/imgs/characters/kammara/triplec/sharp/_scenes/4Câmara de Permissão_ativando_cshift.jpg"
+        "name": "Câmara de Permissão ativando cshift",
+        "image": "/imgs/characters/kammara/triplec/sharp/_scenes/4Câmara de Permissão_ativando_cshift.jpg"
       },
       {
-        "name": "Câmara de Permissão posicao defesa",
-        "image": "/imgs/characters/kammara/triplec/sharp/_scenes/5Câmara de Permissão_posicao_defesa.jpg"
+        "name": "Câmara de Permissão posicao defesa",
+        "image": "/imgs/characters/kammara/triplec/sharp/_scenes/5Câmara de Permissão_posicao_defesa.jpg"
       },
       {
         "name": "plataforma",
@@ -1472,12 +1476,12 @@
   "subsystems": {
     "kammara/eni4": [
       "/imgs/characters/kammara/eni4/_subsystems/0.jpg",
-      "/imgs/characters/kammara/eni4/_subsystems/1.jpg",
-      "/imgs/characters/kammara/eni4/_subsystems/2.jpg",
-      "/imgs/characters/kammara/eni4/_subsystems/3.jpg",
-      "/imgs/characters/kammara/eni4/_subsystems/4.jpg",
-      "/imgs/characters/kammara/eni4/_subsystems/5.jpg",
-      "/imgs/characters/kammara/eni4/_subsystems/6.jpg",
+      "/imgs/characters/kammara/eni4/_subsystems/1-gigapixel-standard v2-6x.png",
+      "/imgs/characters/kammara/eni4/_subsystems/2-gigapixel-standard v2-6x.png",
+      "/imgs/characters/kammara/eni4/_subsystems/3-gigapixel-standard v2-6x.png",
+      "/imgs/characters/kammara/eni4/_subsystems/4-gigapixel-standard v2-6x.png",
+      "/imgs/characters/kammara/eni4/_subsystems/5-gigapixel-standard v2-6x.png",
+      "/imgs/characters/kammara/eni4/_subsystems/6-gigapixel-standard v2-6x.png",
       null,
       null,
       null,
@@ -1487,13 +1491,13 @@
       "/imgs/characters/kammara/eni4/_subsystems/13.jpg"
     ],
     "kammara/lunnp1": [
-      "/imgs/characters/kammara/lunnp1/_subsystems/0.jpg",
-      "/imgs/characters/kammara/lunnp1/_subsystems/1.jpg",
-      "/imgs/characters/kammara/lunnp1/_subsystems/2.jpg",
-      "/imgs/characters/kammara/lunnp1/_subsystems/3.jpg",
+      "/imgs/characters/kammara/lunnp1/_subsystems/0.png",
+      "/imgs/characters/kammara/lunnp1/_subsystems/1.png",
+      "/imgs/characters/kammara/lunnp1/_subsystems/2.png",
+      "/imgs/characters/kammara/lunnp1/_subsystems/3.png",
       "/imgs/characters/kammara/lunnp1/_subsystems/4.jpg",
-      "/imgs/characters/kammara/lunnp1/_subsystems/5.jpg",
-      "/imgs/characters/kammara/lunnp1/_subsystems/6.jpg",
+      "/imgs/characters/kammara/lunnp1/_subsystems/5.png",
+      "/imgs/characters/kammara/lunnp1/_subsystems/6.png",
       null,
       null,
       null,
@@ -1501,7 +1505,7 @@
       null,
       null,
       null,
-      "/imgs/characters/kammara/lunnp1/_subsystems/14.jpg",
+      "/imgs/characters/kammara/lunnp1/_subsystems/14.png",
       "/imgs/characters/kammara/lunnp1/_subsystems/15.png"
     ],
     "kammara/orfv": [
@@ -1575,8 +1579,13 @@
       "/imgs/characters/kammara/orfv/_subsystems/67.jpg"
     ],
     "kammara/triplec": [
-      "/imgs/characters/kammara/triplec/_subsystems/0.jpg",
-      "/imgs/characters/kammara/triplec/_subsystems/1.jpg"
+      "/imgs/characters/kammara/triplec/_subsystems/0-gigapixel-standard v2-6x.png",
+      "/imgs/characters/kammara/triplec/_subsystems/1-gigapixel-standard v2-6x.png",
+      null,
+      null,
+      null,
+      "/imgs/characters/kammara/triplec/_subsystems/5-triade.png",
+      "/imgs/characters/kammara/triplec/_subsystems/6-gigapixel-standard v2-6x.png"
     ],
     "kammara/triplec/mesh": [
       "/imgs/characters/kammara/triplec/mesh/_subsystems/0.jpg"

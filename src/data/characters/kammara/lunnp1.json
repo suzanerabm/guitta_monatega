@@ -13,8 +13,8 @@
       "pt": "Nasceu em Ve'Lume, nas águas profundas. Suas maiores capacidades: detectar microfendas, ler reflexos invertidos, acalmar água viva, estabilizar emoções coletivas. Papel no grupo é ancorar e direcionar decisões mais focadas.",
       "en": "Born in Ve'Lume, in the deep waters. His greatest abilities: detecting microfissures, reading inverted reflections, calming living water, stabilizing collective emotions. His role in the group is to anchor and guide sharper decisions."
     },
-    "image": "/imgs/characters/kammara/lunnp1/Erú'Rin.png",
-    "backImage": "/imgs/characters/kammara/lunnp1/Erú'Rin_costas1.png",
+    "image": "/imgs/characters/kammara/lunnp1/EruRin_costas_brisa.png",
+    "backImage": "/imgs/characters/kammara/lunnp1/EruRin_costas1.png",
     "dorsalMeaning": {
       "pt": "Estabilidade profunda e introspecção — o caminho de quem ancora o planeta.",
       "en": "Deep stability and introspection — the path of the one who anchors the planet."
@@ -80,8 +80,8 @@
       "pt": "Nasceu em Oru'Len, com Flor-Lume já brilhando antes da forma se completar — energia abundante de origem. Move-se em zonas florais móveis e águas rasas. Onde está, o ambiente se reorganiza com mais leveza.",
       "en": "Born in Oru'Len, with Flor-Lume already glowing before her form completed — abundant energy from the start. She moves through mobile floral zones and shallow waters. Wherever she is, the space reorganizes itself with more ease."
     },
-    "image": "/imgs/characters/kammara/lunnp1/Lúm'Esha.png",
-    "backImage": "/imgs/characters/kammara/lunnp1/Lúm'Esha_costas.png",
+    "image": "/imgs/characters/kammara/lunnp1/LumEsha.png",
+    "backImage": "/imgs/characters/kammara/lunnp1/LumEsha_costas.png",
     "dorsalMeaning": {
       "pt": "Ela convence o caminho a florescer.",
       "en": ""
@@ -1123,8 +1123,8 @@
       "pt": "Tzir'Kai vigilante. Tradutor primário de Click-Δ no Protocol AURYN — capta a linguagem dos vírus a longa distância. Onde Erú'Rin estabiliza, Tziki vigia. Funções complementares inseparáveis.",
       "en": ""
     },
-    "image": "/imgs/characters/kammara/lunnp1/Tzi'Ki .png",
-    "backImage": "/imgs/characters/kammara/lunnp1/Tzi'Ki _costas.png",
+    "image": "/imgs/characters/kammara/lunnp1/TziKi .png",
+    "backImage": "/imgs/characters/kammara/lunnp1/TziKi _costas.png",
     "dorsalMeaning": {
       "pt": "Tziki vigia porque ouviu o que acontece quando ninguém vigia.",
       "en": ""

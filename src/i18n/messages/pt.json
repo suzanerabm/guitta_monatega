@@ -434,6 +434,10 @@
           {
             "title": "Os Glifos Kalún",
             "text": [
+               "### O glifo dorsal",
+              "Cada Shal'ún nasce com um glifo único marcado nas costas. É feito de combinações dos seis glifos base, organizado numa forma visual maior — como um brasão feito de luz. Nenhum se repete. Acompanha o Shal'ún a vida inteira e brilha mais forte nos momentos de maior emoção.",
+              "### Onde os glifos aparecem",
+              "Os glifos não são escritos por alguém — se revelam sozinhos: na Lún'Rai (água viva), durante rituais e momentos fortes — duram minutos a horas. Nas raízes das Naru'ei: glifos ancestrais que duram semanas. Nas flores: glifos sazonais que mudam com a lua. Nas costas dos Shal'ún: o glifo dorsal, permanente, único. Nos dead-pixels: glifos ancestrais que nunca desaparecem.",
               "### Os seis glifos base",
               "⊶  partida, início, abrir caminho",
               "⊷  chegada, fim, fechar",
@@ -474,11 +478,7 @@
               "⊶ ⊶ ⊶ alerta",
               "• • • perigo",
               "⋄ ⋄ ⊷  vírus detectado",
-              "⊹ ⊶ ⊶ ⊶ emergência, evacuação",
-              "### O glifo dorsal",
-              "Cada Shal'ún nasce com um glifo único marcado nas costas. É feito de combinações dos seis glifos base, organizado numa forma visual maior — como um brasão feito de luz. Nenhum se repete. Acompanha o Shal'ún a vida inteira e brilha mais forte nos momentos de maior emoção.",
-              "### Onde os glifos aparecem",
-              "Os glifos não são escritos por alguém — se revelam sozinhos: na Lún'Rai (água viva), durante rituais e momentos fortes — duram minutos a horas. Nas raízes das Naru'ei: glifos ancestrais que duram semanas. Nas flores: glifos sazonais que mudam com a lua. Nas costas dos Shal'ún: o glifo dorsal, permanente, único. Nos dead-pixels: glifos ancestrais que nunca desaparecem."
+              "⊹ ⊶ ⊶ ⊶ emergência, evacuação"
             ]
           }
         ]
@@ -771,23 +771,6 @@
               "São os únicos seres do universo capazes de criar Sementes de Cshift — as passagens que ligam os mundos. É por isso que TripleC é insubstituível: sem os bunniets, o Kammara inteiro fica sem transporte.",
               "### O que os torna únicos",
               "Onde outros ouvem ruído, bunniets ouvem ordem. Onde outros veem caos, bunniets veem padrão. Ninguém os ensinou a entender o mundo — eles já nasceram entendendo."
-            ]
-          },
-          {
-            "title": "As Castas",
-            "text": [
-              "### O ciclo natural",
-              "A sociedade bunniet segue um ritmo próprio. Não é imposto — é natureza. Cada bunniet nasce em uma casta, e permanece nela. Cinco castas, cada uma com seu papel, e juntas fazem o planeta funcionar.",
-              "### Prae",
-              "Estabiliza e abre caminho. São os que começam. Sem eles, nada começa.",
-              "### Koma",
-              "Interpreta e organiza sentido. Traduzem o que chega em algo que todos conseguem entender.",
-              "### Aska",
-              "Grava, registra e mantém memória. Guardam o que importa — as histórias, as runas, os momentos que não podem ser esquecidos.",
-              "### Lanko",
-              "Conectam, negociam e harmonizam. Fazem mundos diferentes se entenderem.",
-              "### Runa",
-              "Executa, resolve e age. E entre os Runa, a elite Runa-Tora guarda os corredores do Cshift. Ossatura com densidade mineral elevada, cristais de shilo nos antebraços, estabilidade excepcional. Um Runa-Tora nunca morre completamente — quando cai, deixa um Tora-Sigo: um cristal escuro que carrega sua assinatura e pode servir como âncora, estabilizador ou detector de vírus."
             ]
           },
           {

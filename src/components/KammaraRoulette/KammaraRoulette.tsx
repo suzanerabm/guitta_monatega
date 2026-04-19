@@ -151,8 +151,10 @@ export const KammaraRoulette = forwardRef<KammaraRouletteHandle, KammaraRoulette
   }, []);
 
   const totalItems = items.length;
-  // Compute collision-free layout: radius + (x,y) for every slot.
-  const layout = computeArcLayout(totalItems);
+  // Layout has N+1 slots: slot 0 is the "display" sphere at the top
+  // (shows the currently active item), slots 1..N are the orbital spheres
+  // (one per item, in their fixed positions along the arc).
+  const layout = computeArcLayout(totalItems + 1);
   const r = layout.radius;
 
   const cancelHide = () => {
@@ -297,36 +299,76 @@ ${Array.from({ length: shootSteps + 1 }).map((_, s) => {
           width="100%"
           height="100%"
         >
-          {/* Physical circles are FIXED in place — we iterate over positions
-              (0..N-1), not items. The glyph shown at each position is
-              determined by rotating the items list by activeIndex, so
-              position 0 (top) always shows the active item's glyph. */}
-          {items.map((_, positionIndex) => {
-            // Fixed position for this slot (circular for even, vertical columns for odd)
+          {/* Display sphere (slot 0, top) — always mirrors the active item. */}
+          {(() => {
+            const activeItem = items[activeIndex];
+            if (!activeItem) return null;
+            const { x, y } = positionFor(0);
+            return (
+              <Box
+                key="display"
+                as="button"
+                aria-label={activeItem.label || activeItem.title}
+                title={activeItem.label || activeItem.title}
+                onClick={showRoulette}
+                position="absolute"
+                top="50%"
+                left="50%"
+                width={`${ROULETTE_SPHERE_SIZE}px`}
+                height={`${ROULETTE_SPHERE_SIZE}px`}
+                borderRadius="50%"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                cursor="pointer"
+                zIndex={30}
+                style={{
+                  transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
+                  animation: `kcFloatBounce 3s ease-in-out infinite 0s`,
+                }}
+                fontFamily="glyph"
+                fontSize={activeItem.icon.length >= 5 ? '0.95rem' : 'glyphH3'}
+                lineHeight={1}
+                letterSpacing="0.04em"
+                whiteSpace="nowrap"
+                css={{
+                  border: `2px solid ${color}`,
+                  background: `radial-gradient(circle at 30% 30%, ${color}80, ${color}30 60%, ${darkColor})`,
+                  color: 'var(--chakra-colors-white)',
+                  boxShadow: `0 0 20px ${color}80, inset 0 1px 0 var(--chakra-colors-outlineStrong)`,
+                  '&:hover': {
+                    borderColor: color,
+                    boxShadow: `0 0 16px ${color}60`,
+                  },
+                }}
+              >
+                {activeItem.icon}
+              </Box>
+            );
+          })()}
+
+          {/* Orbital spheres — fixed to their items; iterating over `items`
+              directly means each glyph stays on its own sphere regardless
+              of which is active. Slot 0 is reserved for the display above. */}
+          {items.map((item, itemIndex) => {
+            // Orbital slots start at position 1 (skip 0, reserved for display).
+            const positionIndex = itemIndex + 1;
             const { x, y } = positionFor(positionIndex);
-            // Which item lands at this position (rotate list by activeIndex)
-            const itemIndex = (activeIndex + positionIndex) % totalItems;
-            const item = items[itemIndex];
-            const isActive = positionIndex === 0;
             const floatDelay = `${positionIndex * -0.4}s`;
-            const visible = isActive || rouletteOpen;
-            const shootDelay = shooting && !isActive
-              ? `${(positionIndex / totalItems) * 0.6}s`
+            const visible = rouletteOpen;
+            const shootDelay = shooting
+              ? `${(positionIndex / (totalItems + 1)) * 0.6}s`
               : '0s';
 
             return (
               <Box
-                key={positionIndex}
+                key={itemIndex}
                 as="button"
                 aria-label={item.label || item.title}
                 title={item.label || item.title}
                 onClick={() => {
-                  if (isActive) {
-                    showRoulette();
-                  } else {
-                    onSelect(itemIndex);
-                    showRoulette();
-                  }
+                  onSelect(itemIndex);
+                  showRoulette();
                 }}
                 position="absolute"
                 top="50%"
@@ -338,7 +380,7 @@ ${Array.from({ length: shootSteps + 1 }).map((_, s) => {
                 alignItems="center"
                 justifyContent="center"
                 cursor="pointer"
-                zIndex={isActive ? 30 : 25}
+                zIndex={25}
                 style={{
                   // Position via inline transform (stable across re-renders).
                   // The `kcFloatBounce` animation only adds a tiny vertical
@@ -346,12 +388,12 @@ ${Array.from({ length: shootSteps + 1 }).map((_, s) => {
                   // on top of `transform` without conflict.
                   transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
                   animation: `kcFloatBounce 3s ease-in-out infinite ${floatDelay}`,
-                  opacity: visible && !shooting ? 1 : isActive ? 1 : 0,
+                  opacity: visible && !shooting ? 1 : 0,
                   pointerEvents: visible ? 'auto' : 'none',
                   transitionProperty: 'opacity',
                   transitionDuration: '0.25s',
                   transitionTimingFunction: 'ease-out',
-                  transitionDelay: shooting && !isActive ? shootDelay : '0s',
+                  transitionDelay: shooting ? shootDelay : '0s',
                 }}
                 fontFamily="glyph"
                 // Long glyph icons (5+ chars) shrink so they fit inside the sphere.
@@ -363,14 +405,10 @@ ${Array.from({ length: shootSteps + 1 }).map((_, s) => {
                 letterSpacing="0.04em"
                 whiteSpace="nowrap"
                 css={{
-                  border: isActive ? `2px solid ${color}` : `1px solid ${color}50`,
-                  background: isActive
-                    ? `radial-gradient(circle at 30% 30%, ${color}80, ${color}30 60%, ${darkColor})`
-                    : `${darkColor}dd`,
-                  color: isActive ? 'var(--chakra-colors-white)' : `${color}aa`,
-                  boxShadow: isActive
-                    ? `0 0 20px ${color}80, inset 0 1px 0 var(--chakra-colors-outlineStrong)`
-                    : `var(--chakra-shadows-card), inset 0 1px 0 var(--chakra-colors-outlineSoft)`,
+                  border: `1px solid ${color}50`,
+                  background: `${darkColor}dd`,
+                  color: `${color}aa`,
+                  boxShadow: `var(--chakra-shadows-card), inset 0 1px 0 var(--chakra-colors-outlineSoft)`,
                   '&:hover': {
                     borderColor: color,
                     boxShadow: `0 0 16px ${color}60`,

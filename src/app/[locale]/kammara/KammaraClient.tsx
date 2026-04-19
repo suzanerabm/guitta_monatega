@@ -162,16 +162,96 @@ const hasRealContent = (s: { text: string[] }) =>
   s.text.length > 0 && !s.text[0].startsWith('Placeholder');
 
 /** Render a panel story array as <h2>/<h3>/<p> based on `##`/`###` prefixes. */
-function renderStory(story: string[]) {
-  return story.map((p, i) =>
-    p.startsWith('### ') ? (
-      <h3 key={i}>{p.slice(4)}</h3>
-    ) : p.startsWith('## ') ? (
-      <h2 key={i}>{p.slice(3)}</h2>
-    ) : (
-      <p key={i}>{p}</p>
-    )
-  );
+// Detect a "glyph line": a maximal prefix of Kalún glyph chars (⊶ ⊷ ⊙ ⊹ • — ⋄)
+// and spaces, followed by whitespace, followed by a descriptive label
+// (regular words). Captures the glyph cluster and the label so we can render
+// them as a table row with the glyph colored in the accent hue.
+//
+// Uses a maximal-munch on [glyph chars + spaces] then requires at least one
+// space before a word character — so single-space separators like "⊶ ⊶ atenção"
+// work the same as "⊶ ⊷  voltar".
+const GLYPH_LINE = /^([⊶⊷⊙⊹•—⋄][⊶⊷⊙⊹•—⋄\s]*?)\s+[:\-–—]?\s*([A-Za-zÀ-ÿ].*)$/;
+
+function parseGlyphLine(p: string): { glyph: string; label: string } | null {
+  const m = p.match(GLYPH_LINE);
+  if (!m) return null;
+  const glyph = m[1].trim();
+  const label = m[2].trim();
+  if (!glyph || !label) return null;
+  return { glyph, label };
+}
+
+function renderStory(story: string[], accentColor?: string) {
+  const out: React.ReactElement[] = [];
+  let tableBuf: { glyph: string; label: string }[] = [];
+
+  const flushTable = (key: string) => {
+    if (tableBuf.length === 0) return;
+    const rows = tableBuf;
+    tableBuf = [];
+    out.push(
+      <Box
+        key={key}
+        as="table"
+        width="100%"
+        my="md"
+        css={{
+          borderCollapse: 'separate',
+          borderSpacing: '0',
+          '& td': {
+            padding: '0.5rem 0.75rem',
+            borderBottom: '1px solid rgba(255,255,255,0.08)',
+          },
+          '& tr:last-child td': {
+            borderBottom: 'none',
+          },
+        }}
+      >
+        <Box as="tbody">
+          {rows.map((row, idx) => (
+            <Box as="tr" key={idx}>
+              <Box
+                as="td"
+                fontFamily="glyph"
+                fontSize="1.25rem"
+                textAlign="center"
+                whiteSpace="nowrap"
+                letterSpacing="0.08em"
+                css={{
+                  color: accentColor ?? 'inherit',
+                  width: '6.5rem',
+                  verticalAlign: 'middle',
+                }}
+              >
+                {row.glyph}
+              </Box>
+              <Box as="td" css={{ verticalAlign: 'middle' }}>
+                {row.label}
+              </Box>
+            </Box>
+          ))}
+        </Box>
+      </Box>,
+    );
+  };
+
+  story.forEach((p, i) => {
+    const glyphLine = parseGlyphLine(p);
+    if (glyphLine) {
+      tableBuf.push(glyphLine);
+      return;
+    }
+    flushTable(`table-${i}`);
+    if (p.startsWith('### ')) {
+      out.push(<h3 key={i}>{p.slice(4)}</h3>);
+    } else if (p.startsWith('## ')) {
+      out.push(<h2 key={i}>{p.slice(3)}</h2>);
+    } else {
+      out.push(<p key={i}>{p}</p>);
+    }
+  });
+  flushTable('table-end');
+  return out;
 }
 
 /**
@@ -348,7 +428,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
           stripSide
           textPanelTitle={sectionName}
           glyphVariant="universe"
-          text={renderStory(sectionStory)}
+          text={renderStory(sectionStory, kammaraPalette.colors[0])}
           renderPanel={({ text: panelText }) => (
             <KammaraCard
               name={sectionName}
@@ -580,7 +660,7 @@ function WorldSection({
         stripSide
         bgOpacity={WORLD_BG_OPACITY[w.id] ?? (w.bgImage ? 0.6 : 1)}
         textPanelTitle={name}
-        text={renderStory(panelStory)}
+        text={renderStory(panelStory, palette.colors[0])}
         renderPanel={({ text: panelText }) => (
           <KammaraCard
             name={name}
@@ -694,7 +774,7 @@ function WorldSection({
           title: s.title,
           image: w.subsystemImages[i] ?? undefined,
           imageAlt: s.title,
-          content: renderStory(s.text),
+          content: renderStory(s.text, palette.colors[0]),
         }));
         return (
           <>
@@ -811,7 +891,7 @@ function TriplecRegionSection({
         color={regionColor}
         gradient={regionPalette.gradient}
         data-testid={`region-banner-${regionId}`}
-        story={renderStory(panelStory)}
+        story={renderStory(panelStory, regionPalette.colors[0])}
         renderPanel={({ name: regionName, color: regionPanelColor, story }) => (
           <KammaraCardRegion
             name={regionName}
@@ -923,7 +1003,7 @@ function TriplecRegionSection({
           title: s.title,
           image: region.subsystemImages[i] ?? undefined,
           imageAlt: s.title,
-          content: renderStory(s.text),
+          content: renderStory(s.text, regionPalette.colors[0]),
         }));
         return (
           <>
