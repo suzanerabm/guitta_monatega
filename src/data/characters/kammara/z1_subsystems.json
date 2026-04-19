@@ -1,0 +1,146 @@
+[
+  {
+    "title": {
+      "pt": "Cultura",
+      "en": "Culture"
+    },
+    "text": {
+      "pt": [
+        "### Sem arte, sem festa",
+        "Z1 não possui culinária, arte, festivais ou tempo livre. O que existe é execução contínua de função.",
+        "### A rotina",
+        "Manutenção e calibração de estruturas. Leitura de fitas e Karta. Sincronização entre castas. Tudo em Assembly — a linguagem que é ação.",
+        "### O silêncio",
+        "O silêncio é o estado padrão. O ritmo é lento, sequencial, exato. Cada instrução é sagrada.",
+        "### Emoção estrutural",
+        "Não há emoção no sentido orgânico. Mas há padrões internos que influenciam como cada ser executa. Uma forma diferente de sentir.",
+        "### O medo e a aspiração",
+        "A aspiração central é simetria perfeita e execução sem interrupção. O medo central é o ruído — qualquer coisa fora do padrão.",
+        "### A essência",
+        "Z1 não celebra. Z1 funciona. E funcionar é a forma mais alta de existir."
+      ],
+      "en": [
+        "Placeholder — describe the culture here."
+      ]
+    }
+  },
+  {
+    "title": {
+      "pt": "Habitantes & Castas",
+      "en": "Ecosystem"
+    },
+    "text": {
+      "pt": [
+        "### Sem carne, sem sangue",
+        "Os habitantes de Z1 não são orgânicos. São estruturas vivas feitas de placas, trilhas, microcircuitos, núcleos e pulsos.",
+        "### Z–",
+        "Os fundadores ancestrais. Guardiões da Primeira Forma Perdida — os fragmentos que deram origem a tudo.",
+        "### REG– e CLK–",
+        "REG– é estabilidade pura — o núcleo operacional. CLK– são os sincronizadores — regem ritmo e tempo.",
+        "### DEC– e MEM–",
+        "DEC– são decodificadores — interpretam e traduzem. MEM– preservam — guardam os arquivos de tudo que já foi.",
+        "### BUS–, ALU– e IO–",
+        "BUS– é movimento — transporte e conexão. ALU– é lógica — cálculo e decisão. IO– é vigilância — entrada, saída, fronteiras.",
+        "### Identidade fixa",
+        "Função é identidade. Cada ser nasce para uma função e permanece nela. Não existe mobilidade, insatisfação ou comparação."
+      ],
+      "en": [
+        "Placeholder — describe the ecosystem here."
+      ]
+    }
+  },
+  {
+    "title": {
+      "pt": "Geografia",
+      "en": "Technology"
+    },
+    "text": {
+      "pt": [
+        "### Ordem visual",
+        "Z1 é um planeta sem caos visual. Tudo é simétrico, cúbico, translúcido ou metálico.",
+        "### As vilas",
+        "Vilas 16×4 — grades perfeitas de casas-memória cúbicas feitas de vidro tecnológico. Cada bloco tem função definida.",
+        "### A Estação Central",
+        "Abriga a Torre-Registradora — núcleo administrativo e histórico. As Salas Ancestrais guardam arquivos das castas mais antigas.",
+        "### As redes",
+        "MAG-BUS é a rede magnética principal de transporte. MAG-Z– são trilhas especiais que só ZEUS pode ativar.",
+        "### O Perforated Hall",
+        "O Perforated Hall Zuse é onde chegam fitas e Karta de outros planetas. A porta de entrada do mundo.",
+        "### O céu",
+        "Névoa estrutural permanente — cinza, fria, luminosa. Sem sombras. Luz branca que parece vir de todas as direções ao mesmo tempo."
+      ],
+      "en": [
+        "Placeholder — describe the technology here."
+      ]
+    }
+  },
+  {
+    "title": {
+      "pt": "Linguagem",
+      "en": ""
+    },
+    "text": {
+      "pt": [
+        "### Executar, não falar",
+        "Assembly Z1 não é falado. É executado. Toda frase é uma instrução.",
+        "### As instruções",
+        "MOVE.BUS-N4. LOAD.MEM-16×4. WAIT.CLK. RETURN. Lento, belo, limpo, matemático.",
+        "### Comunicação = funcionamento",
+        "Falar e operar são a mesma coisa. A comunicação é o próprio funcionamento do planeta.",
+        "### A herança perigosa",
+        "Z1 também interpreta ASM-Δ — a linguagem viral de ENI-4Δ. Uma herança da mesma sucata que o criou.",
+        "### O decodificador",
+        "Essa capacidade faz de Z1 o decodificador do inimigo. A chave para entender a ameaça estava no próprio lixo.",
+        "### A essência",
+        "Em Z1, silêncio não é ausência. É a instrução mais limpa que existe."
+      ],
+      "en": []
+    }
+  },
+  {
+    "title": {
+      "pt": "Origem & História",
+      "en": ""
+    },
+    "text": {
+      "pt": [
+        "### Era 0 — O Vazio",
+        "Z1 era pedra mineral e silêncio absoluto. Nada existia.",
+        "### Era 1 — O Grande Descarte",
+        "Node-0 deu a ordem. Os vírus despejaram lixo técnico no planeta. Entre a sucata estava a Primeira Forma Perdida.",
+        "### Era 2 — O Despertar",
+        "Transistores ancestrais reativaram. A ordem emergiu do caos sem que ninguém planejasse.",
+        "### Era 3 — A Reconstrução",
+        "Vilas, trilhos, torres, castas. O planeta se organizou como um sistema operacional vivo.",
+        "### Era 4 — O Reconhecimento",
+        "Z1 compreendeu a linguagem viral. Tornou-se o inimigo natural dos vírus — nascido da mesma origem.",
+        "### Era atual",
+        "O Esquadrão Sincrônico opera. Aliança com os Shal'ún. Guerra de atrito com ENI-4Δ. Até o caos pode virar vida."
+      ],
+      "en": []
+    }
+  },
+  {
+    "title": {
+      "pt": "Perigos",
+      "en": ""
+    },
+    "text": {
+      "pt": [
+        "### ShortStorms",
+        "Tempestades de curto-circuito. Não destroem — reorganizam. O planeta se recalibra sob tensão.",
+        "### FlipFaults",
+        "Falhas de flip-flop. Um erro microscópico que pode se espalhar como dominó.",
+        "### Alignment Shift",
+        "Desalinhamento temporal. Raro e profundo. Quando o relógio interno do planeta hesita.",
+        "### Silêncio Profundo",
+        "O Order-Flux se contrai. Tudo desacelera. Tudo espera. O planeta respira fundo.",
+        "### Ataque viral direto",
+        "ASM-Δ injetado nos trilhos. A ameaça mais estudada, mais catalogada, mais temida.",
+        "### A resiliência",
+        "Um bit fora do lugar é catastrófico num sistema sem tolerância a erro. Mas Z1 nunca colapsou. Resiste, reconstrói, continua."
+      ],
+      "en": []
+    }
+  }
+]

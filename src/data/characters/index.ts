@@ -9,16 +9,16 @@
 import type { Character } from "./types";
 
 // Kammara
-import kammaraLunnp1 from "./kammara/lunnp1.json";
-import kammaraEni4 from "./kammara/eni4.json";
-import kammaraTriplec from "./kammara/triplec.json";
-import kammaraTriplecMalloc from "./kammara/triplec-malloc.json";
-import kammaraTriplecMesh from "./kammara/triplec-mesh.json";
-import kammaraTriplecSharp from "./kammara/triplec-sharp.json";
-import kammaraOrfv from "./kammara/orfv.json";
-import kammaraZ1 from "./kammara/z1.json";
-import kammaraGotto from "./kammara/gotto.json";
-import kammaraKammara from "./kammara/kammara.json";
+import kammaraLunnp1 from "./kammara/lunnp1_characters.json";
+import kammaraEni4 from "./kammara/eni4_characters.json";
+import kammaraTriplec from "./kammara/triplec_characters.json";
+import kammaraTriplecMalloc from "./kammara/triplec-malloc_characters.json";
+import kammaraTriplecMesh from "./kammara/triplec-mesh_characters.json";
+import kammaraTriplecSharp from "./kammara/triplec-sharp_characters.json";
+import kammaraOrfv from "./kammara/orfv_characters.json";
+import kammaraZ1 from "./kammara/z1_characters.json";
+import kammaraGotto from "./kammara/gotto_characters.json";
+import kammaraKammara from "./kammara/kammara_characters.json";
 
 // Bichittos
 import bichittosNapcat from "./bichittos/napcat.json";

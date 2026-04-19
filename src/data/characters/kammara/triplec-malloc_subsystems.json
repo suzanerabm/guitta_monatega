@@ -1,0 +1,146 @@
+[
+  {
+    "title": {
+      "pt": "Cultura",
+      "en": "Caves"
+    },
+    "text": {
+      "pt": [
+        "### Rotina",
+        "Os dias de malloc não seguem relógios — seguem as vibrações das camadas. Inspeção de túneis, coleta de minerais, registros Aska nas runas de Portex, ajuste de rotas entre vilas.",
+        "### Valores",
+        "Precisão, comunidade, economia de movimento, respeito geológico, sustentação mútua. Cinco valores que se repetem em cada gesto do cotidiano.",
+        "### Lazer",
+        "Jogos de offset — corridas por túneis lendo fluxos de shilo. Música feita com cristais vibratórios, tambores de pedra e flautas moldadas na Hepa.",
+        "### Histórias",
+        "As histórias de malloc são contadas em loops e camadas, como algoritmos naturais. Cada uma tem estrutura repetida — e cada repetição muda um pouco o sentido.",
+        "### A justiça",
+        "Em malloc não há punição. Há realinhamento semântico — quem se perde é reconduzido, não castigado. O erro é tratado como desalinho, não como culpa.",
+        "### O ritmo de dentro",
+        "Em malloc, o dia não começa porque alguém decidiu. Começa quando a Estaka pulsa."
+      ],
+      "en": [
+        "Placeholder — describe the pulsing caves."
+      ]
+    }
+  },
+  {
+    "title": {
+      "pt": "Bunniets",
+      "en": "Runa-Tora"
+    },
+    "text": {
+      "pt": [
+        "### Aparência",
+        "Corpo compacto e arredondado, 30 a 40 centímetros. Pelagem curta em tons bege, verde ou ferrugem. Orelhas longas com circuitos integrados. Olhos negros e brilhantes.",
+        "### Cristais integrados",
+        "Cristais de shilo embutidos no corpo — funcionais, não ornamentais. Pulsam em teal, acompanhando o estado do bunniet e do ambiente ao redor.",
+        "### Raminhos sensoriais",
+        "Na cabeça, raminhos captam vibrações do planeta. É como sentem o que está por vir antes mesmo de pensar.",
+        "### Como pensam",
+        "Sentem antes de calcular. Agem antes de validar. O corpo responde direto ao planeta — sem passar pela mente.",
+        "### As cinco castas",
+        "Prae estabiliza. Koma calcula. Aska registra. Lanko conecta. Runa executa. Cada bunniet nasce em uma casta e permanece nela.",
+        "### Runa-Tora",
+        "Uma elite rara entre os Runa — um em cada cinco mil. Ossatura com densidade mineral elevada, cristais de shilo nos antebraços, estabilidade emocional excepcional. São os guardiões das Sementes de Cshift."
+      ],
+      "en": [
+        "Placeholder — describe the elite guardians of the corridors."
+      ]
+    }
+  },
+  {
+    "title": {
+      "pt": "Geografia",
+      "en": "Allocation"
+    },
+    "text": {
+      "pt": [
+        "### Cinco camadas geológicas",
+        "Portex é a superfície cristalizada, onde instruções e runas se formam. Datara tem túneis estáveis de shilo. Basa é feita de cavernas de matéria potencial. Hepa é a camada criadora, origem de kemita. Estaka é o abismo profundo das decisões finais.",
+        "### As vilas 16×16",
+        "Comunidades organizadas em grades de 16 por 16 — como arrays vivos. Cada vila tem endereço, função e bloco social próprio.",
+        "### Cidades-Risca",
+        "Caminhos estreitos que ligam uma vila à outra em linha reta. Atalhos vivos — aparecem quando alguém precisa passar e somem quando ninguém mais está caminhando por ali.",
+        "### Cada-Estaka Central",
+        "A sala de comando de malloc, escavada na rocha da Estaka. Centro de decisão e autorização do Cshift.",
+        "### As fronteiras",
+        "Ao norte e leste está Mesh. Ao sul, Sharp. A oeste e norte, a floresta Niul. As regiões de TripleC nunca se tocam diretamente — a floresta sempre fica entre elas.",
+        "### Os rituais como geografia",
+        "Em malloc, rituais também são geografia. Eles acontecem em lugares específicos, porque cada camada responde de um jeito ao que é feito ali."
+      ],
+      "en": [
+        "Placeholder — describe how memory is allocated."
+      ]
+    }
+  },
+  {
+    "title": {
+      "pt": "Energia",
+      "en": ""
+    },
+    "text": {
+      "pt": [
+        "### Shilo",
+        "A energia de endereço — flui como rios luminosos em teal pelos túneis de Datara. Para os bunniets, shilo é bússola, alimento e estabilizador emocional ao mesmo tempo.",
+        "### Oka",
+        "Instrução condensada — uma ordem viva. Moldada pelos Aska, capaz de alterar a geologia. Perigosa demais para uso regular: é tratada como condimento espiritual.",
+        "### Kemita",
+        "A semente semântica que nasce nas cavernas da Hepa. Nutriente, memória e matéria-prima das Sementes de Cshift. Verde-esmeralda. O token primordial do universo inteiro.",
+        "### As Sementes de Cshift",
+        "Pequenos objetos vivos que permitem viagem instantânea entre mundos. Uso único. Verde-esmeralda com veios dourados. Nascem aqui, alimentadas por kemita.",
+        "### Como se alimentam",
+        "Bunniets de malloc se sustentam de kemita extraída de Hepa, shilo absorvido pelos cristais integrados ao corpo, e minerais colhidos em rituais de Basa.",
+        "### A presença de Alloc",
+        "Algo mora nas vibrações das camadas. Sem forma, sem voz definida — só presença. Prae e Aska interpretam Alloc. Sem ela em paz, a kemita não brota."
+      ],
+      "en": []
+    }
+  },
+  {
+    "title": {
+      "pt": "Governança",
+      "en": ""
+    },
+    "text": {
+      "pt": [
+        "### Sem governo",
+        "Não há governo em malloc. Há interpretação de camadas. O planeta fala — os bunniets escutam.",
+        "### Klanora",
+        "O Conselho das Castas. Um representante de cada uma das cinco castas. Não governa — interpreta. Supervisiona as Sementes de Cshift e aprova os saltos do Cshift Local.",
+        "### Maro-Klan",
+        "A governança das vilas. Cada vila é autossuficiente: registra mudanças, protege suas Sementes, treina suas castas, sincroniza deslocamentos com as vizinhas.",
+        "### Alloc",
+        "A presença que habita as vibrações do planeta. Não é autoridade, mas é consultada antes de toda grande decisão. Sua harmonia precede qualquer extração de kemita.",
+        "### A justiça",
+        "Não existe punição em malloc. Existe realinhamento semântico — quem se desvia é reconduzido, sem julgamento.",
+        "### Quem manda é o planeta",
+        "Em malloc, ninguém manda. O planeta decide. O bunniet responde."
+      ],
+      "en": []
+    }
+  },
+  {
+    "title": {
+      "pt": "Perigos",
+      "en": ""
+    },
+    "text": {
+      "pt": [
+        "### Segmentation Fault",
+        "O pior desastre. Quando camadas se contradizem, vilas desaparecem, shilo fragmenta, runas se corrompem. É o terror coletivo de todo bunniet.",
+        "### Hepa descontrolada",
+        "Quando a camada criadora cresce sem aviso, engole túneis e apaga caminhos inteiros. O ritmo natural da Hepa protege — seu excesso destrói.",
+        "### Roubo de Sementes",
+        "Vírus exploram falhas de shilo para tentar roubar as Sementes de Cshift. É um risco existencial — não só para malloc, mas para TripleC inteiro.",
+        "### Distorções do PD-11",
+        "O artefato que deu origem a tudo ainda pulsa no núcleo, inacessível. Suas interferências são imprevisíveis e sempre profundas.",
+        "### Cshift Local instável",
+        "Quando um salto dá errado, pode criar loops de deslocamento, duplicar vilas inteiras, ou fazer bunniets perderem a identidade geológica — esquecendo de qual camada pertencem.",
+        "### Sempre quase caindo",
+        "malloc vive sempre quase colapsando. Mas nunca cai — porque a cada ameaça, se reorganiza."
+      ],
+      "en": []
+    }
+  }
+]
