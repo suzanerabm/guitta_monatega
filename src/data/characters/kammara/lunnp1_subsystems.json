@@ -92,7 +92,7 @@
   {
     "title": {
       "pt": "Ciclos & Luas",
-      "en": ""
+      "en": "Cycles & Moons"
     },
     "text": {
       "pt": [
@@ -109,13 +109,26 @@
         "### O tempo",
         "Um dia dura cerca de 40 horas. Um ano, 400 dias lunares. Mas os Shal'ún não medem tempo. As luas podem estender suas fases — o planeta escolhe o que precisa sentir."
       ],
-      "en": []
+      "en": [
+        "### The four moons",
+        "The planet's rhythm is ruled by four moons — always visible in the sky, one dominant at a time.",
+        "### Lur'Ma",
+        "The silver moon. Brings clarity and awakening. Under her, the Shal'ún wake up, find their bearings, have their first meal.",
+        "### Oru'Len",
+        "The mutant moon. Brings creativity and change. New glyphs emerge. The flora shifts color. Everything is allowed to be different.",
+        "### Tiru'Na",
+        "The golden moon. Brings movement and gathering. Long journeys, shared meals, the Shimmering Current glows beneath her light.",
+        "### Ve'Lume",
+        "The silent moon. Brings introspection and dissolution. The planet withdraws. The silence is not emptiness — it is presence.",
+        "### Time",
+        "A day lasts about 40 hours. A year, 400 lunar days. But the Shal'ún do not measure time. The moons can stretch their phases — the planet chooses what it needs to feel."
+      ]
     }
   },
   {
     "title": {
       "pt": "A Água — Lún'Rai",
-      "en": ""
+      "en": "The Water — Lún'Rai"
     },
     "text": {
       "pt": [
@@ -132,13 +145,26 @@
         "### O limite",
         "A Lún'Rai dissolve tudo — armaduras inconscientes, defesas automáticas, certezas nunca testadas. Tudo. Exceto a vontade de não ser dissolvido."
       ],
-      "en": []
+      "en": [
+        "### Not just water",
+        "The Lún'Rai works as the planet's nervous system — it connects everything and records everything.",
+        "### The reflection",
+        "It records and exposes. There is no way to lie near it. What you hide from yourself, the reflection shows.",
+        "### Dissolution",
+        "The water allows no rigidity. Automatic defenses melt away in its presence. The reflection offers another perspective — without forcing, without judging.",
+        "### The tides",
+        "The Memory Tides rise without warning to rearrange memories. They can disorient. They can heal. The planet decides.",
+        "### The dead-pixels",
+        "Condensed ancestral energy. They shine only in the water's reflection — visible only to those who look into the Lún'Rai, never directly.",
+        "### The limit",
+        "The Lún'Rai dissolves everything — unconscious armor, automatic defenses, untested certainties. Everything. Except the will not to be dissolved."
+      ]
     }
   },
   {
     "title": {
       "pt": "Idioma",
-      "en": ""
+      "en": "Language"
     },
     "text": {
       "pt": [
@@ -155,18 +181,31 @@
         "### Quando alguém fala",
         "Em LUNN'P1, ninguém 'passa informação'. Quem fala, emite luz. Quem ouve, muda de cor."
       ],
-      "en": []
+      "en": [
+        "### Three forms",
+        "In LUNN'P1 there are three forms of communication — and none of them uses only words.",
+        "### The voice",
+        "Voz Kalún is the spoken language. Few sounds, deep meanings. No gender, no rigid plural. Each word carries weight.",
+        "### The light",
+        "Código-Lume is the communication between Shal'ún and Lún'Kai. It is neither spoken nor written — it happens directly in light.",
+        "### The glyphs",
+        "The Glifos Kalún are luminous inscriptions on each Shal'ún's back. Every glyph is unique — it works like an identity, a fingerprint made of light.",
+        "### The translators",
+        "The Tzir'Kai are amphibians who translate the sounds of viruses into Código-Lume. Without them, LUNN'P1 could not understand what the viruses are plotting.",
+        "### When someone speaks",
+        "In LUNN'P1, no one 'passes information'. Whoever speaks emits light. Whoever listens changes color."
+      ]
     }
   },
   {
     "title": {
       "pt": "Os Glifos Kalún",
-      "en": ""
+      "en": "The Kalún Glyphs"
     },
     "text": {
       "pt": [
         "### O que são",
-       "Glifos são símbolos luminosos produzidos pelos Lún'Kai e lidos pelos Shal'ún. Representam estados, intenções, momentos. Os Lún'Kai emitem, os Shal'ún leem, os Tzir'Kai traduzem sons externos pro mesmo sistema. Juntos formam a rede de comunicação que conecta o planeta inteiro — cada pulso de luz viaja de guia em guia até que toda LUNN'P1 saiba o que está acontecendo.",
+        "Glifos são símbolos luminosos produzidos pelos Lún'Kai e lidos pelos Shal'ún. Representam estados, intenções, momentos. Os Lún'Kai emitem, os Shal'ún leem, os Tzir'Kai traduzem sons externos pro mesmo sistema. Juntos formam a rede de comunicação que conecta o planeta inteiro — cada pulso de luz viaja de guia em guia até que toda LUNN'P1 saiba o que está acontecendo.",
         "### Os seis glifos base",
         "⊶  partida, início, abrir caminho",
         "⊷  chegada, fim, fechar",
@@ -209,7 +248,51 @@
         "⋄ ⋄ ⊷  vírus detectado",
         "⊹ ⊶ ⊶ ⊶ emergência, evacuação"
       ],
-      "en": []
+      "en": [
+        "### What they are",
+        "Glyphs are luminous symbols produced by the Lún'Kai and read by the Shal'ún. They represent states, intentions, moments. The Lún'Kai emit, the Shal'ún read, the Tzir'Kai translate external sounds into the same system. Together they form the communication network that connects the entire planet — each pulse of light travels from guide to guide until all of LUNN'P1 knows what is happening.",
+        "### The six base glyphs",
+        "⊶  departure, beginning, opening a path",
+        "⊷  arrival, ending, closing",
+        "⊙  center, origin, focus",
+        "⊹  depth, ancestral, memory",
+        "•  seed, dot, small beginning",
+        "—  flow, path, direction",
+        "### Navigation",
+        "⊶  follow",
+        "⊷  return",
+        "⊙  close, return to origin",
+        "— ⊙ —  planet",
+        "⊶ ⊙ ⊷  home",
+        "⊹ ⊙ ⊹  universe, Kammara (Kam'Rin)",
+        "### Emotions",
+        "⊶ — ⊷  calm",
+        "• • • ⊹   joy",
+        "• — — •   sadness",
+        "⊶ ⋄ ⊷     fear",
+        "⊶ ⊹ ⊷     trust",
+        "⋄ — ⋄      solitude",
+        "### Intentions",
+        "— — —     move, move forward",
+        "⊷ • ⊶      wait",
+        "⋄           silence, pause",
+        "⊹ • —      heal",
+        "⊶ • • ⊷ : listen",
+        "### Rituals",
+        "⊙ • ⊙ birth",
+        "⊹ — • dissolution, farewell",
+        "⊶ ⊷ ⊙  continuity after loss",
+        "— ⊙ —  deep silence",
+        "⊶ — ⊶  migration, journey",
+        "• ⊹ •  change, transformation",
+        "⊹ ⊹ ⊹ ancestral memory",
+        "### Alerts",
+        "⊶ ⊶ attention",
+        "⊶ ⊶ ⊶ alert",
+        "• • • danger",
+        "⋄ ⋄ ⊷  virus detected",
+        "⊹ ⊶ ⊶ ⊶ emergency, evacuation"
+      ]
     }
   }
 ]

@@ -242,6 +242,14 @@
         "image": "/imgs/characters/kammara/lunnp1/gemini-2.5-flash-image_same_character._same_design_and_add_glifo_on_the_back_do_not_change_the_glifo_de-1 (1).jpg"
       },
       {
+        "name": "Krii costas",
+        "image": "/imgs/characters/kammara/lunnp1/Krii_costas.png"
+      },
+      {
+        "name": "Krii",
+        "image": "/imgs/characters/kammara/lunnp1/Krii.png"
+      },
+      {
         "name": "LumEsha costas",
         "image": "/imgs/characters/kammara/lunnp1/LumEsha_costas.png"
       },
@@ -271,7 +279,7 @@
       },
       {
         "name": "TziKi",
-        "image": "/imgs/characters/kammara/lunnp1/TziKi .png"
+        "image": "/imgs/characters/kammara/lunnp1/TziKi.png"
       }
     ],
     "kammara/orfv": [
@@ -1283,48 +1291,48 @@
     ],
     "kammara/orfv": [
       {
-        "name": "Colina Central",
-        "image": "/imgs/characters/kammara/orfv/_scenes/2Colina_Central.jpg"
+        "name": "vista Fjorks Centrais",
+        "image": "/imgs/characters/kammara/orfv/_scenes/1vista_Fjorks_Centrais.jpg"
       },
       {
         "name": "Colina Central",
-        "image": "/imgs/characters/kammara/orfv/_scenes/6Colina_Central.png"
+        "image": "/imgs/characters/kammara/orfv/_scenes/2Colina_Central.png"
       },
       {
-        "name": "noite em orfv",
-        "image": "/imgs/characters/kammara/orfv/_scenes/noite_em_orfv.jpg"
+        "name": "Iren Kor Vila Central",
+        "image": "/imgs/characters/kammara/orfv/_scenes/3Iren_Kor_Vila_Central.jpg"
       },
       {
-        "name": "regiao sudoeste",
-        "image": "/imgs/characters/kammara/orfv/_scenes/regiao_sudoeste.jpg"
+        "name": "Vila Central",
+        "image": "/imgs/characters/kammara/orfv/_scenes/4Vila_Central.jpg"
       },
       {
-        "name": "regiao sul 1",
-        "image": "/imgs/characters/kammara/orfv/_scenes/regiao_sul_1.jpg"
+        "name": "Vila Leste",
+        "image": "/imgs/characters/kammara/orfv/_scenes/5Vila_Leste.jpg"
       },
       {
-        "name": "regiao sul",
-        "image": "/imgs/characters/kammara/orfv/_scenes/regiao_sul.jpg"
-      },
-      {
-        "name": "vila centro 2",
-        "image": "/imgs/characters/kammara/orfv/_scenes/vila_centro_2.jpg"
-      },
-      {
-        "name": "vila centro 3",
-        "image": "/imgs/characters/kammara/orfv/_scenes/vila_centro_3.jpg"
-      },
-      {
-        "name": "vila centro 4",
-        "image": "/imgs/characters/kammara/orfv/_scenes/vila_centro_4.jpg"
-      },
-      {
-        "name": "vila centro",
-        "image": "/imgs/characters/kammara/orfv/_scenes/vila_centro.jpg"
+        "name": "Maelik Fjorks Oeste",
+        "image": "/imgs/characters/kammara/orfv/_scenes/6Maelik_Fjorks_Oeste.jpg"
       },
       {
         "name": "vila norte",
-        "image": "/imgs/characters/kammara/orfv/_scenes/vila_norte.jpg"
+        "image": "/imgs/characters/kammara/orfv/_scenes/7vila_norte.jpg"
+      },
+      {
+        "name": "Ceu em orf-v",
+        "image": "/imgs/characters/kammara/orfv/_scenes/8Ceu_em_orf-v.jpg"
+      },
+      {
+        "name": "noite em orfv",
+        "image": "/imgs/characters/kammara/orfv/_scenes/9noite_em_orfv.jpg"
+      },
+      {
+        "name": "regiao sul deserta",
+        "image": "/imgs/characters/kammara/orfv/_scenes/10regiao_sul_deserta.jpg"
+      },
+      {
+        "name": "regiao sul deserta",
+        "image": "/imgs/characters/kammara/orfv/_scenes/11regiao_sul_deserta.jpg"
       }
     ],
     "kammara/triplec": [

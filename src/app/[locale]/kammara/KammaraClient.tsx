@@ -755,6 +755,8 @@ function WorldSection({
                 label: a.label[locale],
                 value: a.value[locale],
               })),
+              fairyDust: char.fairyDust,
+              fairyDustBack: char.fairyDustBack,
             };
           })
           .filter((x): x is NonNullable<typeof x> => x !== null);
@@ -782,6 +784,8 @@ function WorldSection({
                     dorsalMeaning={char.dorsalMeaning}
                     backMeaning={char.backMeaning}
                     attributes={char.attributes}
+                    fairyDust={char.fairyDust}
+                    fairyDustBack={char.fairyDustBack}
                     worldName={name}
                     worldCrestGlyph={worldCrest}
                     color={worldColor}
@@ -976,6 +980,8 @@ function TriplecRegionSection({
                 label: a.label[locale],
                 value: a.value[locale],
               })),
+              fairyDust: char.fairyDust,
+              fairyDustBack: char.fairyDustBack,
             };
           })
           .filter((x): x is NonNullable<typeof x> => x !== null);
@@ -1004,6 +1010,8 @@ function TriplecRegionSection({
                     dorsalMeaning={char.dorsalMeaning}
                     backMeaning={char.backMeaning}
                     attributes={char.attributes}
+                    fairyDust={char.fairyDust}
+                    fairyDustBack={char.fairyDustBack}
                     worldName={name}
                     worldCrestGlyph={worldCrestGlyph(regionId)}
                     color={regionPalette.colors[0]}

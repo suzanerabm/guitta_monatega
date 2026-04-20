@@ -63,6 +63,55 @@ export interface Character {
   backMeaning?: I18nString;
   /** Optional list of card attributes (rendered as label · glyph · value rows). */
   attributes?: CharacterAttribute[];
+  /**
+   * Optional magic sparkle overlay on the portrait. Provide at least `color`
+   * (hex). Everything else falls back to the FairyDust component defaults.
+   * Useful for luminous characters (Lún'Kai) that should look magical.
+   */
+  fairyDust?: {
+    color: string;
+    count?: number;
+    size?: number;
+    duration?: number;
+    /** Brightness multiplier for the glow (default 1). */
+    intensity?: number;
+    /**
+     * Restrict the sparkle field to a sub-region of the card image
+     * (percentages). Defaults to the full image when omitted.
+     * Example for a tail glow: { top: 65, left: 40, width: 25, height: 30 }.
+     */
+    area?: { top: number; left: number; width: number; height: number };
+    /**
+     * Emit sparkles from a point with a directional trail. Overrides `area`.
+     *   origin: where the core is (%).
+     *   spread: direction and length of the trail (% offsets).
+     *   falloff: 0..1, higher = denser core.
+     */
+    emit?: {
+      origin: { top: number; left: number };
+      spread: { x: number; y: number };
+      falloff?: number;
+    };
+  };
+  /**
+   * Optional override for the sparkle effect on the card's back face.
+   * Same shape as `fairyDust`. When absent, the front config is reused on
+   * both faces. Useful when the back image has the glowing body part at a
+   * different spot (e.g. the Tzir'Kai tail flipped to the other side).
+   */
+  fairyDustBack?: {
+    color: string;
+    count?: number;
+    size?: number;
+    duration?: number;
+    intensity?: number;
+    area?: { top: number; left: number; width: number; height: number };
+    emit?: {
+      origin: { top: number; left: number };
+      spread: { x: number; y: number };
+      falloff?: number;
+    };
+  };
 }
 
 /**

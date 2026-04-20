@@ -1,6 +1,7 @@
 'use client';
 import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react';
 import { useState } from 'react';
+import { FairyDust } from '@/components/FairyDust';
 
 // Shared with the rest of the Kammara card family — keep in sync.
 export const CARD_PADDING_X = '1.8rem';
@@ -72,6 +73,26 @@ export interface KammaraCharacterCardProps {
    * "Forma Corrompida", "Versão Sombra", "Lado Lume".
    */
   backTitle?: string;
+  /**
+   * Optional magic sparkle effect overlaid on the portrait — useful for
+   * Lún'Kai and other luminous characters. When provided, FairyDust is
+   * rendered on top of the image with the requested color.
+   */
+  fairyDust?: {
+    color: string;
+    count?: number;
+    size?: number;
+    duration?: number;
+    intensity?: number;
+    area?: { top: number; left: number; width: number; height: number };
+    emit?: {
+      origin: { top: number; left: number };
+      spread: { x: number; y: number };
+      falloff?: number;
+    };
+  };
+  /** Optional back-face override — falls back to `fairyDust` when absent. */
+  fairyDustBack?: KammaraCharacterCardProps['fairyDust'];
   'data-testid'?: string;
 }
 
@@ -112,8 +133,12 @@ export function KammaraCharacterCard({
   dorsalMeaning,
   backMeaning,
   backTitle,
+  fairyDust,
+  fairyDustBack,
   'data-testid': testId,
 }: KammaraCharacterCardProps) {
+  // When the back override is missing, the front config is used on both faces.
+  const backDust = fairyDustBack ?? fairyDust;
   const body = midColor ?? darkColor;
   // A card becomes flippable as soon as we have the back image. The dorsal
   // glyph + meaning are optional: characters without a known dorsal glyph
@@ -273,6 +298,17 @@ export function KammaraCharacterCard({
                 filter: `drop-shadow(0 12px 24px ${color}40) drop-shadow(0 4px 8px rgba(0,0,0,0.4))`,
               }}
             />
+            {fairyDust && (
+              <FairyDust
+                color={fairyDust.color}
+                count={fairyDust.count}
+                size={fairyDust.size}
+                duration={fairyDust.duration}
+                intensity={fairyDust.intensity}
+                area={fairyDust.area}
+                emit={fairyDust.emit}
+              />
+            )}
           </Flex>
 
           {/* ── Identity: name + divider + bio + attributes ─── */}
@@ -546,6 +582,17 @@ export function KammaraCharacterCard({
                   filter: `drop-shadow(0 12px 24px ${color}40) drop-shadow(0 4px 8px rgba(0,0,0,0.4))`,
                 }}
               />
+              {backDust && (
+                <FairyDust
+                  color={backDust.color}
+                  count={backDust.count}
+                  size={backDust.size}
+                  duration={backDust.duration}
+                  intensity={backDust.intensity}
+                  area={backDust.area}
+                  emit={backDust.emit}
+                />
+              )}
             </Flex>
 
             {/* Dorsal meaning — narrative only, no text glyph. The dorsal

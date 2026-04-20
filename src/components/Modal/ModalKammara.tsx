@@ -141,13 +141,13 @@ export function ModalKammara() {
         {/* Close button */}
         <Box
           as="button"
+          aria-label="Close"
           position="absolute"
           top="lg"
           right="3xl"
           zIndex={201}
           bg="none"
           border="none"
-          cursor="pointer"
           color={color}
           transition="opacity 0.3s, transform 0.4s ease-in-out"
           _hover={{ opacity: 0.7, transform: 'scale(0.6)' }}
@@ -159,6 +159,10 @@ export function ModalKammara() {
           fontFamily="glyph"
           fontSize="glyphH2"
           lineHeight={1}
+          css={{
+            cursor: 'pointer',
+            '& *': { cursor: 'pointer' },
+          }}
         >
           ⊙
         </Box>
@@ -233,11 +237,10 @@ export function ModalKammara() {
                 left="0"
                 bottom="40px"
                 zIndex={1}
-                fontSize="xs"
+                fontSize="sm"
                 letterSpacing="wide"
                 textTransform="uppercase"
                 color={color}
-                opacity={0.5}
                 m={0}
                 css={{
                   transform: 'rotate(-90deg)',
@@ -270,10 +273,10 @@ export function ModalKammara() {
             bg="none"
             border="none"
             color={navColor}
-            cursor="pointer"
             padding="0.5rem"
             transition="opacity 0.2s, transform 0.2s"
             _hover={{ opacity: 0.7, transform: 'scale(1.15)' }}
+            css={{ cursor: 'pointer', '& *': { cursor: 'pointer' } }}
             onClick={prev}
             fontFamily="glyph"
             fontSize="glyphH1"
@@ -297,10 +300,10 @@ export function ModalKammara() {
             bg="none"
             border="none"
             color={navColor}
-            cursor="pointer"
             padding="0.5rem"
             transition="opacity 0.2s, transform 0.2s"
             _hover={{ opacity: 0.7, transform: 'scale(1.15)' }}
+            css={{ cursor: 'pointer', '& *': { cursor: 'pointer' } }}
             onClick={next}
             fontFamily="glyph"
             fontSize="glyphH1"

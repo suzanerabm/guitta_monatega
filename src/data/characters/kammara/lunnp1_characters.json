@@ -84,7 +84,7 @@
     "backImage": "/imgs/characters/kammara/lunnp1/LumEsha_costas.png",
     "dorsalMeaning": {
       "pt": "Ela convence o caminho a florescer.",
-      "en": ""
+      "en": "She convinces the path to bloom."
     },
     "attributes": [
       {
@@ -638,14 +638,14 @@
       "en": "Lún'Kai"
     },
     "bio": {
-      "pt": "Lún'Kai silencioso. Pulsa em frequências graves enquanto outros piscam rápido. Estabiliza vibração ao redor: quando Brisa está perto, a água fica mais densa e mais lenta. Comunica em Código-Lume — atenção silenciosa, respire-sinta-espere, profundidade ancestral.",
-      "en": "Silent Lún'Kai. Pulses in deep frequencies while others flicker fast. Stabilizes vibration around it: when Brisa is near, the water grows denser and slower. Communicates in Código-Lume — silent attention, breathe-sense-wait, ancestral depth."
+      "pt": "Lún'Kai silencioso. Estabiliza vibração ao redor: quando Brisa está perto, a água fica mais densa e mais lenta.",
+      "en": "Silent Lún'Kai. Stabilizes vibration around it: when Brisa is near, the water grows denser and slower."
     },
-    "image": "/imgs/characters/kammara/lunnp1/Brisa.png",
-    "backImage": "/imgs/characters/kammara/lunnp1/Brisa_costas.png",
+    "image": "/imgs/characters/kammara/lunnp1/brisa_sem_brilho.png",
+    "backImage": "/imgs/characters/kammara/lunnp1/brisa_azul_costas_sem_brilho.png",
     "dorsalMeaning": {
       "pt": "Brisa brilha para que Erú'Rin não se perca.",
-      "en": ""
+      "en": "Brisa shines so Erú'Rin doesn't lose her way."
     },
     "backTitle": {
       "pt": "Outro Lado",
@@ -674,7 +674,38 @@
           "en": "Cyan-green"
         }
       }
-    ]
+    ],
+    "fairyDust": {
+      "color": "#7eeded",
+      "count": 120,
+      "size": 3,
+      "duration": 1.8,
+      "intensity": 2.2,
+      "area": {
+        "top": 15,
+        "left": 20,
+        "width": 60,
+        "height": 65
+      }
+    },
+    "_fairyDust_diagonal": {
+      "color": "#7eeded",
+      "count": 140,
+      "size": 3,
+      "duration": 1.8,
+      "intensity": 2.2,
+      "emit": {
+        "origin": {
+          "top": 88,
+          "left": 58
+        },
+        "spread": {
+          "x": -45,
+          "y": -75
+        },
+        "falloff": 0.25
+      }
+    }
   },
   {
     "match": "Flor-Lume",
@@ -687,14 +718,14 @@
       "en": "Lún'Kai"
     },
     "bio": {
-      "pt": "Lún'Kai expressiva. Pulsa em rosa-lume cintilante e deixa rastros de luz dourada na água por onde passa — outros Shal'ún seguem esses rastros para encontrar Lúm'Esha. Em noites de Oru'Len, os rastros formam padrões que lembram flores desenhadas.",
-      "en": "Expressive Lún'Kai. Pulses in shimmering rose-light and leaves trails of golden glow on the water — other Shal'ún follow those trails to find Lúm'Esha. On Oru'Len nights, the trails form patterns that look like drawn flowers."
+      "pt": "Lún'Kai expressiva. Pulsa em rosa-lume cintilante e deixa rastros de luz dourada na água por onde passa — outros Shal'ún seguem esses rastros para encontrar Lúm'Esha. ",
+      "en": "Expressive Lún'Kai. Pulses in shimmering rose-light and leaves trails of golden glow on the water — other Shal'ún follow those trails to find Lúm'Esha."
     },
     "image": "/imgs/characters/kammara/lunnp1/flor_lume.png",
     "backImage": "/imgs/characters/kammara/lunnp1/flor_lume_costas.png",
     "dorsalMeaning": {
-      "pt": "",
-      "en": ""
+      "pt": "Em noites de Oru'Len, os rastros formam padrões que lembram flores desenhadas.",
+      "en": "On Oru'Len nights, the trails form patterns that look like drawn flowers."
     },
     "backTitle": {
       "pt": "Outro Lado",
@@ -723,7 +754,20 @@
           "en": "Rose-light"
         }
       }
-    ]
+    ],
+    "fairyDust": {
+      "color": "#ff6b9d",
+      "count": 120,
+      "size": 3,
+      "duration": 1.8,
+      "intensity": 2.2,
+      "area": {
+        "top": 15,
+        "left": 20,
+        "width": 60,
+        "height": 65
+      }
+    }
   },
   {
     "match": "Veludo",
@@ -1024,13 +1068,14 @@
       "en": "Lún'Kai"
     },
     "bio": {
-      "pt": "Lún'Kai explosivo. Patinhas mais fortes que outros Lún'Kai, feitas para saltar e quicar. Lum'Ka sai em micro-detonações sincronizadas com cada salto, como faíscas douradas dispersas no ar. Nasceu com 3 impulsos luminosos consecutivos — sinal canônico de \"saltadores naturais\".",
-      "en": "Explosive Lún'Kai. Stronger legs than other Lún'Kai, built to leap and bounce. Lum'Ka goes off in micro-detonations in sync with each jump, like golden sparks scattered in the air. Born with three consecutive luminous impulses — the canonical sign of \"natural leapers\"."
+      "pt": "Lún'Kai explosivo. Patinhas mais fortes que outros Lún'Kai, feitas para saltar e quicar.",
+      "en": "Explosive Lún'Kai. Stronger legs than other Lún'Kai, built to leap and bounce."
     },
-    "backImage": "",
+    "image": "/imgs/characters/kammara/lunnp1/tiru.png",
+    "backImage": "/imgs/characters/kammara/lunnp1/tiru_costas.png",
     "backTitle": {
-      "pt": "",
-      "en": ""
+      "pt": "Outro lado",
+      "en": "Another side"
     },
     "dorsalMeaning": {
       "pt": "",
@@ -1055,11 +1100,24 @@
           "en": "Light"
         },
         "value": {
-          "pt": "Dourado-vibrante",
-          "en": "Vibrant gold"
+          "pt": "Branco",
+          "en": "White"
         }
       }
-    ]
+    ],
+    "fairyDust": {
+      "color": "#fff5dc",
+      "count": 120,
+      "size": 3,
+      "duration": 1.8,
+      "intensity": 2.2,
+      "area": {
+        "top": 15,
+        "left": 20,
+        "width": 60,
+        "height": 65
+      }
+    }
   },
   {
     "match": "Lei",
@@ -1120,14 +1178,14 @@
       "en": "Tzir'Kai"
     },
     "bio": {
-      "pt": "Tzir'Kai vigilante. Tradutor primário de Click-Δ no Protocol AURYN — capta a linguagem dos vírus a longa distância. Onde Erú'Rin estabiliza, Tziki vigia. Funções complementares inseparáveis.",
-      "en": ""
+      "pt": "Tzir'Kai vigilante. Tradutor primário de Click-Δ no Protocol AURYN — capta a linguagem dos vírus a longa distância. Onde Erú'Rin estabiliza, Tziki vigia.",
+      "en": "Vigilant Tzir'Kai. Primary translator of Click-Δ within Protocol AURYN — captures the viral language and converts it into Código-Lume so the rest of LUNN'P1 can understand what is being plotted."
     },
-    "image": "/imgs/characters/kammara/lunnp1/TziKi .png",
+    "image": "/imgs/characters/kammara/lunnp1/TziKi.png",
     "backImage": "/imgs/characters/kammara/lunnp1/TziKi _costas.png",
     "dorsalMeaning": {
       "pt": "Tziki vigia porque ouviu o que acontece quando ninguém vigia.",
-      "en": ""
+      "en": "Tziki keeps watch because he once heard what happens when no one keeps watch."
     },
     "backTitle": {
       "pt": "Outro Lado",
@@ -1167,7 +1225,33 @@
           "en": "AURYN"
         }
       }
-    ]
+    ],
+    "fairyDust": {
+      "color": "#ffd700",
+      "count": 35,
+      "size": 2,
+      "duration": 2,
+      "intensity": 1.8,
+      "area": {
+        "top": 60,
+        "left": 65,
+        "width": 25,
+        "height": 25
+      }
+    },
+    "fairyDustBack": {
+      "color": "#ffd700",
+      "count": 35,
+      "size": 2,
+      "duration": 2,
+      "intensity": 1.8,
+      "area": {
+        "top": 72,
+        "left": 40,
+        "width": 25,
+        "height": 25
+      }
+    }
   },
   {
     "match": "Krii",
@@ -1180,28 +1264,29 @@
       "en": "Tzir'Kai"
     },
     "bio": {
-      "pt": "Tzir'Kai curioso. Antenas curtas e articuladas, expressivas como dedos curiosos. Olhos arregalados, infantis, captam luz em ângulos únicos. Cauda vibra em padrões rítmicos quase musicais — curtos-curtos-longos. Vai onde os outros não vão e ouve o que outros descartam como ruído.",
-      "en": "Curious Tzir'Kai. Short, articulated antennae, as expressive as curious fingers. Wide, childlike eyes catching light at unique angles. The tail vibrates in almost-musical rhythmic patterns — short-short-long. Goes where others don't and hears what others dismiss as noise."
+      "pt": "Tzir'Kai curioso. Vai onde os outros não vão e ouve o que outros descartam como ruído.",
+      "en": "Curious Tzir'Kai. Goes where others don't and hears what others dismiss as noise."
     },
-    "backImage": "",
+    "image": "/imgs/characters/kammara/lunnp1/Krii.png",
+    "backImage": "/imgs/characters/kammara/lunnp1/Krii_costas.png",
     "backTitle": {
-      "pt": "",
-      "en": ""
+      "pt": "Outro lado",
+      "en": "Other side"
     },
     "dorsalMeaning": {
-      "pt": "",
-      "en": ""
+      "pt": "Saltos incrivelmente altos. Consegue traduzir Click-Δ enquanto salta.",
+      "en": "Incredibly high leaps. Can translate Click-Δ mid-jump."
     },
     "attributes": [
       {
-        "glyph": "⊶⊹⊷",
+        "glyph": "⋄⋄⊷",
         "label": {
-          "pt": "Vínculo",
-          "en": "Bond"
+          "pt": "Habilidade",
+          "en": "Skill"
         },
         "value": {
-          "pt": "Rin'Boro",
-          "en": "Rin'Boro"
+          "pt": "Agilidade",
+          "en": "Agility"
         }
       },
       {
@@ -1215,7 +1300,33 @@
           "en": "Gold-green"
         }
       }
-    ]
+    ],
+    "fairyDust": {
+      "color": "#ffd700",
+      "count": 35,
+      "size": 2,
+      "duration": 2,
+      "intensity": 1.8,
+      "area": {
+        "top": 60,
+        "left": 60,
+        "width": 25,
+        "height": 25
+      }
+    },
+    "fairyDustBack": {
+      "color": "#ffd700",
+      "count": 55,
+      "size": 2,
+      "duration": 2,
+      "intensity": 1.8,
+      "area": {
+        "top": 65,
+        "left": 40,
+        "width": 25,
+        "height": 25
+      }
+    }
   },
   {
     "match": "Lumira",
@@ -1228,28 +1339,29 @@
       "en": "Tzir'Kai"
     },
     "bio": {
-      "pt": "Tzir'Kai empata. Reflexos violeta ondulam sob a carapaça como aurora boreal presa em vidro vivo. Antenas mais curtas captam camadas que outros Tzir'Kai ignoram: tristeza codificada como agressão, medo disfarçado de ataque, pedido de ajuda no que parece caos. Prefere águas profundas onde a verdade emocional emerge em estado puro.",
-      "en": "Empath Tzir'Kai. Violet reflections ripple under the carapace like aurora caught in living glass. Shorter antennae pick up layers other Tzir'Kai ignore: sorrow coded as aggression, fear disguised as attack, a cry for help inside what looks like chaos. Prefers deep waters where emotional truth surfaces raw."
+      "pt": "Tzir'Kai empata. Prefere águas profundas onde a verdade emocional emerge em estado puro.",
+      "en": "Empath Tzir'Kai. Prefers deep waters where emotional truth surfaces raw."
     },
-    "backImage": "",
+    "image": "/imgs/characters/kammara/lunnp1/Lumira.png",
+    "backImage": "/imgs/characters/kammara/lunnp1/Lumira_costas.png",
     "backTitle": {
-      "pt": "",
-      "en": ""
+      "pt": "Outro lado",
+      "en": "Other side"
     },
     "dorsalMeaning": {
-      "pt": "",
-      "en": ""
+      "pt": "Traduz nuances emocionais do Click-Δ que outros Tzir'Kai não percebem.",
+      "en": "Translates emotional nuances of Click-Δ that other Tzir'Kai miss."
     },
     "attributes": [
       {
-        "glyph": "⊶⊹⊷",
+        "glyph": "⋄⋄⊷",
         "label": {
-          "pt": "Vínculo",
-          "en": "Bond"
+          "pt": "Habilidade",
+          "en": "Skill"
         },
         "value": {
-          "pt": "Shir'Nai",
-          "en": "Shir'Nai"
+          "pt": "Empatia",
+          "en": "Empathy"
         }
       },
       {
@@ -1263,7 +1375,33 @@
           "en": "Violet translucent"
         }
       }
-    ]
+    ],
+    "fairyDust": {
+      "color": "#a855f7",
+      "count": 55,
+      "size": 2,
+      "duration": 2,
+      "intensity": 1.8,
+      "area": {
+        "top": 60,
+        "left": 65,
+        "width": 25,
+        "height": 25
+      }
+    },
+    "fairyDustBack": {
+      "color": "#a855f7",
+      "count": 55,
+      "size": 2,
+      "duration": 2,
+      "intensity": 1.8,
+      "area": {
+        "top": 68,
+        "left": 60,
+        "width": 25,
+        "height": 25
+      }
+    }
   },
   {
     "match": "Veluma",
@@ -1276,14 +1414,14 @@
       "en": "Túri'Kan"
     },
     "bio": {
-      "pt": "Túri'Kan anciã. Casco enorme com marcas que parecem constelações, olhos antigos e profundos. Move-se devagar e continua sempre — chega aonde precisa chegar. Quando emerge, os Shal'ún sabem que é hora de migrar. Responde a vibrações.",
-      "en": "Elder Túri'Kan. Enormous shell with markings that look like constellations, ancient deep eyes. She moves slowly and never stops — she gets where she needs to go. When she emerges, the Shal'ún know it is time to migrate. She answers to vibrations."
+      "pt": "Túri'Kan anciã. Casco enorme com marcas que parecem constelações, olhos antigos e profundos. Move-se devagar e continua sempre — chega aonde precisa chegar. Quando emerge, os Shal'ún sabem que é hora de migrar.",
+      "en": "Elder Túri'Kan. Enormous shell with markings that look like constellations, ancient deep eyes. She moves slowly and never stops — she gets where she needs to go. When she emerges, the Shal'ún know it is time to migrate."
     },
-    "image": "/imgs/characters/kammara/lunnp1/TuriKan.png",
+    "image": "/imgs/characters/kammara/lunnp1/Veluma.png",
     "backImage": "/imgs/characters/kammara/lunnp1/TuriKan_costas.png",
     "dorsalMeaning": {
       "pt": "Marcas do casco — constelações ancestrais",
-      "en": ""
+      "en": "Shell markings — ancestral constellations"
     },
     "backTitle": {
       "pt": "Outro Lado",
@@ -1328,7 +1466,8 @@
       "pt": "Túri'Kan protetora. Casco médio dourado, cabeça grande e expressiva, olhos alertas. Posiciona-se entre viajantes e perigos. Responde imediatamente ao chamado dos Lún'Kai. Shal'ún jovens aprendem a viajar nas costas de Koryn.",
       "en": "Protective Túri'Kan. Medium golden shell, large expressive head, alert eyes. Places herself between travelers and danger. Responds immediately to Lún'Kai calls. Young Shal'ún learn to travel on Koryn's back."
     },
-    "backImage": "",
+    "image": "/imgs/characters/kammara/lunnp1/TuriKan.png",
+    "backImage": "/imgs/characters/kammara/lunnp1/TuriKan_costas.png",
     "backTitle": {
       "pt": "",
       "en": ""
