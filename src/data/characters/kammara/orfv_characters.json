@@ -10,7 +10,7 @@
       "en": "ElePHPant"
     },
     "bio": {
-      "pt": "Arquiteto-chefe de pontes e estabilizador comunitário de ORF-V. Cuida das pontes que conectam as vilas dos Fjorks — organiza reparos, pede ajuda, coordena o grupo. Transmite confiança silenciosa, mesmo sentindo medo o tempo todo.",
+      "pt": "Cuida das pontes que conectam as vilas dos Fjorks — organiza reparos, coordena o grupo, garante que ninguém fique isolado. Sente medo o tempo todo — e mesmo assim fica.",
       "en": ""
     },
     "image": "/imgs/characters/kammara/orfv/1orvian.png",
@@ -31,7 +31,7 @@
           "en": "Role"
         },
         "value": {
-          "pt": "Arquiteto",
+          "pt": "Cuidador de pontes",
           "en": ""
         }
       },
@@ -43,7 +43,7 @@
         },
         "value": {
           "pt": "Fjorks Centrais",
-          "en": "Central Fjorks"
+          "en": ""
         }
       },
       {
@@ -57,7 +57,11 @@
           "en": "AURYN"
         }
       }
-    ]
+    ],
+    "dorsalMeaning": {
+      "pt": "Se alguém precisa atravessar, eu fico.",
+      "en": ""
+    }
   },
   {
     "match": "Maelik",
@@ -66,11 +70,11 @@
       "en": "Maelik"
     },
     "species": {
-      "pt": "ElePHPant (infectado)",
+      "pt": "ElePHPant",
       "en": "ElePHPant (infected)"
     },
     "bio": {
-      "pt": "A normalidade que mantém as portas abertas. Tudo nele parece funcionar — a gentileza é gesto certo no momento certo. Onde Orvian protege pelo peso, Maelik expõe pela ilusão.",
+      "pt": "Calmo, acessível, genuinamente gentil. Maelik é o elePHPant que cuida sem pedir nada — ajuda quem precisa, mantém rotinas, circula entre vilas como quem nasceu pra isso. Seu nome significa \"aquele que continua\" — e é exatamente o que ele faz.",
       "en": "The normalcy that keeps every door open. Everything about him seems to work — kindness delivered at the right moment. Underneath, the virus installed itself in an opening that was already there, and Maelik keeps normalizing what should be questioned. Where Orvian protects through weight, Maelik exposes through illusion."
     },
     "image": "/imgs/characters/kammara/orfv/2maelik.png",
@@ -80,7 +84,7 @@
       "en": ""
     },
     "dorsalMeaning": {
-      "pt": "",
+      "pt": "Está tudo bem.",
       "en": ""
     },
     "attributes": [
@@ -91,8 +95,8 @@
           "en": "Role"
         },
         "value": {
-          "pt": "Porta aberta",
-          "en": "Open Door"
+          "pt": "Continuidade",
+          "en": ""
         }
       },
       {
@@ -102,19 +106,8 @@
           "en": "Region"
         },
         "value": {
-          "pt": "Vilas Inferiores dos Fjorks",
-          "en": "Lower Fjork Villages"
-        }
-      },
-      {
-        "glyph": "⋄•⋄",
-        "label": {
-          "pt": "Status",
-          "en": "Status"
-        },
-        "value": {
-          "pt": "BREACH ativo",
-          "en": "BREACH active"
+          "pt": "Fjorks Oeste",
+          "en": ""
         }
       }
     ]
@@ -130,7 +123,7 @@
       "en": "ElePHPant"
     },
     "bio": {
-      "pt": "Sente o fluxo antes dos outros. Percebe mudanças sutis que ainda não têm forma. Age quando o corpo inteiro confirma, não por impulso. Sua percepção salva vidas quando escutada.",
+      "pt": "Nylpha é menor que Orvian, mas mais inquieta. Seus olhos observam tudo — escuros, atentos, levemente fundos. Desde jovem, Nylpha percebia mudanças no planeta antes de qualquer sinal físico.",
       "en": "She feels the flow before the others. Notices subtle shifts that still have no form. Acts when her whole body confirms, never on impulse. Her perception saves lives when it is heard."
     },
     "image": "/imgs/characters/kammara/orfv/3Nylpha1.png",
@@ -140,7 +133,7 @@
       "en": ""
     },
     "dorsalMeaning": {
-      "pt": "",
+      "pt": "Algo mudou. Eu sinto.",
       "en": ""
     },
     "attributes": [
@@ -151,8 +144,8 @@
           "en": "Role"
         },
         "value": {
-          "pt": "Antena",
-          "en": "Antenna"
+          "pt": "Sensora de instabilidade",
+          "en": ""
         }
       },
       {
@@ -162,139 +155,8 @@
           "en": "Region"
         },
         "value": {
-          "pt": "Vilas Superiores",
-          "en": "Upper Villages"
-        }
-      },
-      {
-        "glyph": "⊶⊹⊷",
-        "label": {
-          "pt": "Protocolo",
-          "en": "Protocol"
-        },
-        "value": {
-          "pt": "AURYN",
-          "en": "AURYN"
-        }
-      }
-    ]
-  },
-  {
-    "match": "Kallott",
-    "name": {
-      "pt": "Kallott",
-      "en": "Kallott"
-    },
-    "species": {
-      "pt": "ElePHPant",
-      "en": "ElePHPant"
-    },
-    "bio": {
-      "pt": "Interrompe o fluxo quando ele carrega ameaça. Bloqueia, depois se afasta. O Yang mais raro de ORF-V — força direta, jato preciso, confronto sem desperdício. Vive em vilas próximas ao vácuo, separado dos centros.",
-      "en": "He stops the flow when it carries threat. Blocks, then pulls back. The rarest Yang in ORF-V — direct force, precise jet, confrontation without waste. Lives in villages close to the void, away from the centers."
-    },
-    "image": "/imgs/characters/kammara/orfv/Kallott.png",
-    "backImage": "",
-    "backTitle": {
-      "pt": "",
-      "en": ""
-    },
-    "dorsalMeaning": {
-      "pt": "",
-      "en": ""
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Função",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "Limite",
-          "en": "Boundary"
-        }
-      },
-      {
-        "glyph": "⊹—⊙",
-        "label": {
-          "pt": "Região",
-          "en": "Region"
-        },
-        "value": {
-          "pt": "Vilas de Borda Extrema",
-          "en": "Far-Edge Villages"
-        }
-      },
-      {
-        "glyph": "⊶⊹⊷",
-        "label": {
-          "pt": "Protocolo",
-          "en": "Protocol"
-        },
-        "value": {
-          "pt": "AURYN",
-          "en": "AURYN"
-        }
-      }
-    ]
-  },
-  {
-    "match": "Torwen",
-    "name": {
-      "pt": "Torwen",
-      "en": "Torwen"
-    },
-    "species": {
-      "pt": "ElePHPant",
-      "en": "ElePHPant"
-    },
-    "bio": {
-      "pt": "Sustenta quem ficou para trás. Vilas inteiras mudam de humor quando Torwen está presente — o ar fica mais leve, as pontes parecem mais curtas. Calor suave, presença que não exige nada. Por isso é buscado por todos.",
-      "en": "He holds up those left behind. Entire villages shift in mood when Torwen arrives — the air lightens, bridges feel shorter. Gentle warmth, a presence that demands nothing. That is why everyone looks for him."
-    },
-    "image": "/imgs/characters/kammara/orfv/Torwen.png",
-    "backImage": "",
-    "backTitle": {
-      "pt": "",
-      "en": ""
-    },
-    "dorsalMeaning": {
-      "pt": "",
-      "en": ""
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Função",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "Acolhimento",
-          "en": "Welcoming"
-        }
-      },
-      {
-        "glyph": "⊹—⊙",
-        "label": {
-          "pt": "Região",
-          "en": "Region"
-        },
-        "value": {
-          "pt": "Vilas Centrais dos Fjorks",
-          "en": "Central Fjork Villages"
-        }
-      },
-      {
-        "glyph": "⊶⊹⊷",
-        "label": {
-          "pt": "Protocolo",
-          "en": "Protocol"
-        },
-        "value": {
-          "pt": "AURYN",
-          "en": "AURYN"
+          "pt": "Fjorks Norte",
+          "en": ""
         }
       }
     ]
@@ -310,7 +172,7 @@
       "en": "ElePHPant"
     },
     "bio": {
-      "pt": "Vê o fluxo mas fica na margem, observando todos os caminhos possíveis. Por dentro, corre em todas as direções ao mesmo tempo enquanto parece imóvel. Quando finalmente age, age com toda a informação que coletou enquanto esperava.",
+      "pt": "Vê tudo, avalia tudo, calcula riscos — mas não cruza. Os outros a chamam de cautelosa. Ela se chama de responsável.",
       "en": "He sees the flow but stays on the margin, watching every possible path. Inside, he runs in every direction at once while appearing still. When he finally acts, he acts with everything he gathered while waiting."
     },
     "image": "/imgs/characters/kammara/orfv/LetiK.png",
@@ -320,7 +182,7 @@
       "en": ""
     },
     "dorsalMeaning": {
-      "pt": "",
+      "pt": "E se a ponte não aguenta?",
       "en": ""
     },
     "attributes": [
@@ -331,8 +193,8 @@
           "en": "Role"
         },
         "value": {
-          "pt": "Analista",
-          "en": "Analyst"
+          "pt": "Sem função formal",
+          "en": ""
         }
       },
       {
@@ -342,19 +204,106 @@
           "en": "Region"
         },
         "value": {
-          "pt": "Vilas de Borda",
-          "en": "Edge Villages"
+          "pt": "Fjorks Leste",
+          "en": ""
+        }
+      }
+    ]
+  },
+  {
+    "match": "Kallott",
+    "name": {
+      "pt": "Kallott",
+      "en": "Kallott"
+    },
+    "species": {
+      "pt": "ElePHPant",
+      "en": "ElePHPant"
+    },
+    "bio": {
+      "pt": "Kallott age quando os outros hesitam. Dispara jatos de água com a tromba, bloqueia passagens, contém ameaças. Tem reação rápida e resistência física acima da média.",
+      "en": "He stops the flow when it carries threat. Blocks, then pulls back. The rarest Yang in ORF-V — direct force, precise jet, confrontation without waste. Lives in villages close to the void, away from the centers."
+    },
+    "image": "/imgs/characters/kammara/orfv/Kallott.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "Agora.",
+      "en": ""
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Defensor",
+          "en": ""
         }
       },
       {
-        "glyph": "⊶⊹⊷",
+        "glyph": "⊹—⊙",
         "label": {
-          "pt": "Protocolo",
-          "en": "Protocol"
+          "pt": "Região",
+          "en": "Region"
         },
         "value": {
-          "pt": "AURYN",
-          "en": "AURYN"
+          "pt": "Fjorks Leste",
+          "en": ""
+        }
+      }
+    ]
+  },
+  {
+    "match": "Torwen",
+    "name": {
+      "pt": "Torwen",
+      "en": "Torwen"
+    },
+    "species": {
+      "pt": "ElePHPant",
+      "en": "ElePHPant"
+    },
+    "bio": {
+      "pt": "Quando era jovem, o irmão de Torwen ficou paralisado de medo no meio de uma ponte durante uma instabilidade. Ninguém ficou com ele. Quando tudo passou, o irmão estava lá — mas algo nele tinha mudado. Desde esse dia, Torwen é o elePHPant que sempre está cuidando de todos.",
+      "en": "He holds up those left behind. Entire villages shift in mood when Torwen arrives — the air lightens, bridges feel shorter. Gentle warmth, a presence that demands nothing. That is why everyone looks for him."
+    },
+    "image": "/imgs/characters/kammara/orfv/Torwen.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "Eu fico.",
+      "en": ""
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Cuidador comunitário",
+          "en": ""
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Fjorks Centrais",
+          "en": ""
         }
       }
     ]

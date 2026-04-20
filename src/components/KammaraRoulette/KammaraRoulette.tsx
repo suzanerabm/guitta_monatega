@@ -356,6 +356,10 @@ ${Array.from({ length: shootSteps + 1 }).map((_, s) => {
             const { x, y } = positionFor(positionIndex);
             const floatDelay = `${positionIndex * -0.4}s`;
             const visible = rouletteOpen;
+            // Visual-only hint: which orbital matches the current selection.
+            // Does NOT affect visibility/behavior — sphere still closes with
+            // the rest of the orbit, still clickable, etc.
+            const isSelected = itemIndex === activeIndex;
             const shootDelay = shooting
               ? `${(positionIndex / (totalItems + 1)) * 0.6}s`
               : '0s';
@@ -405,10 +409,12 @@ ${Array.from({ length: shootSteps + 1 }).map((_, s) => {
                 letterSpacing="0.04em"
                 whiteSpace="nowrap"
                 css={{
-                  border: `1px solid ${color}50`,
+                  border: isSelected ? `1.5px solid ${color}` : `1px solid ${color}50`,
                   background: `${darkColor}dd`,
-                  color: `${color}aa`,
-                  boxShadow: `var(--chakra-shadows-card), inset 0 1px 0 var(--chakra-colors-outlineSoft)`,
+                  color: isSelected ? color : `${color}aa`,
+                  boxShadow: isSelected
+                    ? `0 0 8px ${color}40, inset 0 1px 0 var(--chakra-colors-outlineSoft)`
+                    : `var(--chakra-shadows-card), inset 0 1px 0 var(--chakra-colors-outlineSoft)`,
                   '&:hover': {
                     borderColor: color,
                     boxShadow: `0 0 16px ${color}60`,

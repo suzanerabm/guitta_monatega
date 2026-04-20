@@ -24,6 +24,12 @@ import { palettes, type PaletteName, type Palette } from '@/theme/palettes';
 import { kammaraHero, kammaraFilter } from '@/theme/creatures';
 import { subsystemGlyph, worldCrestGlyph } from '@/theme/kalunGlyphs';
 import { translateName } from '@/lib/translateName';
+import {
+  getWorldName,
+  getWorldSummary,
+  getWorldPanelStory,
+  getWorldSubsystems,
+} from '@/data/characters/kammara/_worldData';
 import { KammaraStarField } from './KammaraStarField';
 
 // ============================================================================
@@ -171,6 +177,12 @@ const hasRealContent = (s: { text: string[] }) =>
 // space before a word character — so single-space separators like "⊶ ⊶ atenção"
 // work the same as "⊶ ⊷  voltar".
 const GLYPH_LINE = /^([⊶⊷⊙⊹•—⋄][⊶⊷⊙⊹•—⋄\s]*?)\s+[:\-–—]?\s*([A-Za-zÀ-ÿ].*)$/;
+// "TERM : description" — strict: term must be a compact identifier
+// (uppercase codes like MOVE / BLM / Δ-PRIME, short lowercase codes like
+// tk / tk-tk, or punch-card patterns like ■ □ □ ■ □). The separator must
+// be " : " (colon only — dashes/em-dashes are avoided because they show
+// up inside normal sentences).
+const TERM_LINE = /^([A-ZΔ][A-Za-zÀ-ÿ0-9Δ]*(?:[-\s][A-Za-zÀ-ÿ0-9Δ]+)?(?:-[A-Za-zÀ-ÿ0-9Δ]+)*|[a-z]{1,5}(?:-[a-z]{1,5})*|[■□](?:\s*[■□])+)\s+:\s+(.+)$/;
 
 function parseGlyphLine(p: string): { glyph: string; label: string } | null {
   const m = p.match(GLYPH_LINE);
@@ -179,6 +191,15 @@ function parseGlyphLine(p: string): { glyph: string; label: string } | null {
   const label = m[2].trim();
   if (!glyph || !label) return null;
   return { glyph, label };
+}
+
+function parseTermLine(p: string): { glyph: string; label: string } | null {
+  const m = p.match(TERM_LINE);
+  if (!m) return null;
+  const term = m[1].trim();
+  const body = m[2].trim();
+  if (!term || !body) return null;
+  return { glyph: term, label: body };
 }
 
 function renderStory(story: string[], accentColor?: string) {
@@ -208,37 +229,45 @@ function renderStory(story: string[], accentColor?: string) {
         }}
       >
         <Box as="tbody">
-          {rows.map((row, idx) => (
-            <Box as="tr" key={idx}>
-              <Box
-                as="td"
-                fontFamily="glyph"
-                fontSize="1.25rem"
-                textAlign="center"
-                whiteSpace="nowrap"
-                letterSpacing="0.08em"
-                css={{
-                  color: accentColor ?? 'inherit',
-                  width: '6.5rem',
-                  verticalAlign: 'middle',
-                }}
-              >
-                {row.glyph}
+          {rows.map((row, idx) => {
+            // Kalún symbols should render in the glyph font; plain identifiers
+            // (MOVE, BLM, tk, ■ □ □) render in mono/sans so they stay readable.
+            const isKalun = /^[⊶⊷⊙⊹•—⋄\s]+$/.test(row.glyph);
+            return (
+              <Box as="tr" key={idx}>
+                <Box
+                  as="td"
+                  fontFamily={isKalun ? 'glyph' : 'mono'}
+                  fontSize={isKalun ? '1.25rem' : '0.85rem'}
+                  fontWeight="normal"
+                  textAlign={isKalun ? 'center' : 'left'}
+                  whiteSpace="nowrap"
+                  letterSpacing={isKalun ? '0.08em' : '0.04em'}
+                  css={{
+                    color: accentColor ?? 'inherit',
+                    minWidth: '5rem',
+                    width: '1%', /* shrink-wrap to content */
+                    paddingRight: '1rem',
+                    verticalAlign: 'middle',
+                  }}
+                >
+                  {row.glyph}
+                </Box>
+                <Box as="td" css={{ verticalAlign: 'middle' }}>
+                  {row.label}
+                </Box>
               </Box>
-              <Box as="td" css={{ verticalAlign: 'middle' }}>
-                {row.label}
-              </Box>
-            </Box>
-          ))}
+            );
+          })}
         </Box>
       </Box>,
     );
   };
 
   story.forEach((p, i) => {
-    const glyphLine = parseGlyphLine(p);
-    if (glyphLine) {
-      tableBuf.push(glyphLine);
+    const row = parseGlyphLine(p) ?? parseTermLine(p);
+    if (row) {
+      tableBuf.push(row);
       return;
     }
     flushTable(`table-${i}`);
@@ -369,10 +398,10 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
     w,
     palette: palettes[w.id as PaletteName],
     colors: getWorldColors(w, palettes[w.id as PaletteName]),
-    name: safeT(`worlds.${w.id}.name`, WORLD_NAMES[w.id]),
-    bodyText: safeTRaw<string[]>(`worlds.${w.id}.text`, []),
-    panelStory: safeTRaw<string[]>(`worlds.${w.id}.panel.story`, []),
-    subsystems: safeTRaw<{ title: string; text: string[] }[]>(`worlds.${w.id}.subsystems`, []),
+    name: getWorldName(w.id, locale) || WORLD_NAMES[w.id],
+    bodyText: getWorldSummary(w.id, locale),
+    panelStory: getWorldPanelStory(w.id, locale),
+    subsystems: getWorldSubsystems(w.id, locale),
     hidden: activeFilter !== 'all' && activeFilter !== w.id,
   }));
 
@@ -564,8 +593,6 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
                   scenesTitle={scenesTitle}
                   subsystemsTitle={subsystemsTitle}
                   charactersTitle={charactersTitle}
-                  safeT={safeT}
-                  safeTRaw={safeTRaw}
                 />
               );
             })}
@@ -838,8 +865,6 @@ interface TriplecRegionSectionProps {
   scenesTitle: string;
   subsystemsTitle: string;
   charactersTitle: string;
-  safeT: (key: string, fallback?: string) => string;
-  safeTRaw: <T>(key: string, fallback: T) => T;
 }
 
 function TriplecRegionSection({
@@ -852,20 +877,15 @@ function TriplecRegionSection({
   scenesTitle,
   subsystemsTitle,
   charactersTitle,
-  safeT,
-  safeTRaw,
 }: TriplecRegionSectionProps) {
   const regionPalette = palettes[regionId];
   const regionColor = regionPalette.colors[0];
-  const keyPrefix = `worlds.triplec.regions.${regionId}`;
+  const regionWorldId = `triplec-${regionId}`;
 
-  const name = safeT(`${keyPrefix}.name`, regionId);
-  const bodyText = safeTRaw<string[]>(`${keyPrefix}.text`, []);
-  const panelStory = safeTRaw<string[]>(`${keyPrefix}.panel.story`, []);
-  const subsystems = safeTRaw<{ title: string; text: string[] }[]>(
-    `${keyPrefix}.subsystems`,
-    []
-  );
+  const name = getWorldName(regionWorldId, locale) || regionId;
+  const bodyText = getWorldSummary(regionWorldId, locale);
+  const panelStory = getWorldPanelStory(regionWorldId, locale);
+  const subsystems = getWorldSubsystems(regionWorldId, locale);
   const realSubsystems = subsystems.filter(hasRealContent);
   const contextId = `kammara/triplec/${regionId}`;
 

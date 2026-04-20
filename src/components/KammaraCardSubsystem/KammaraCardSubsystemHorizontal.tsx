@@ -497,7 +497,7 @@ export function KammaraCardSubsystemHorizontal({
             fontFamily="body"
             fontSize={
               activeItem.label.length > 16
-                ? { base: '1.5rem', md: '2rem' }
+                ? { base: '1.5rem', md: '2rem', xl: '2.6rem' }
                 : { base: '2rem', md: '2.6rem' }
             }
             fontWeight="bold"
@@ -542,7 +542,7 @@ export function KammaraCardSubsystemHorizontal({
             }}
           >
             <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, ${color}80, transparent)` }} />
-            <span style={{ fontSize: '1.3rem' }}>⊙</span>
+            <span style={{ fontSize: '1.3rem' }}>{activeItem.icon || '⊙'}</span>
             <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, transparent, ${color}80)` }} />
           </Flex>
         </Flex>

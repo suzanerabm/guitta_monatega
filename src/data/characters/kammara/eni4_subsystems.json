@@ -90,7 +90,7 @@
         "### Poder é temperatura",
         "Em ENI-4Δ, quem fica mais perto do calor manda. Quem fica longe, morre.",
         "### Onde vivem",
-        "Não existem cidades. Existem megaválvulas — 16 principais, 52 secundárias e centenas de quebradas espalhadas pelo deserto. Vírus e bugs vivem ao redor delas, como insetos ao redor de lâmpadas quentes. As válvulas geram calor, e calor é vida. Com o tempo, as válvulas organizadas viraram as cidades deles. Quem mora perto das mais quentes tem mais poder.",
+        "Milhares de vírus, bugs, e outros seres de ENI-4Δ vivem ao redor das megaválvulas — 16 principais, 52 secundárias e centenas espalhadas pelo deserto. As válvulas geram calor, e calor é vida. Com o tempo, as válvulas organizadas viraram as cidades deles. Quem mora perto das mais quentes tem mais poder.",
         "### SCORCH",
         "A zona de temperatura extrema. Onde Node-0 queima no centro. Terror constante. Submissão absoluta.",
         "### BURN",
@@ -167,7 +167,8 @@
     "text": {
       "pt": [
         "### O que é",
-        "Os vírus não falam. Não pensam. Executam. Sua linguagem — ASM-Δ — não serve pra conversar. Serve pra agir: mover, sugar, culpar e repetir. É o oposto de qualquer forma de comunicação viva.",
+        "Os vírus não analisam. Executam.",
+        "Sua linguagem — ASM-Δ — não serve pra agir: mover, sugar, culpar e repetir.",
         "### Quatro formas de comunicação",
         "ASM-Δ : pensamento — uma lista de instruções, executada em linha reta",
         "Karta-Δ : escrita — cartões perfurados com furos que viram ordens",
@@ -209,7 +210,7 @@
         "SCAN : □ □ ■ □ □ — busca de calor",
         "HALT : □ □ □ □ ■ — parar",
         "### Como um vírus age",
-        "Um vírus não pensa. Executa em linha reta:",
+        "Um vírus não analisam. Executa em linha reta:",
         "MASK → MOVE → SCAN → CONSUM → REPL → BLM → RET → HALT",
         "Se disfarça. Se move. Procura calor. Suga. Se copia. Culpa outro. Volta. Para. E recomeça.",
         "### Os erros",
@@ -220,9 +221,7 @@
         "### Os três níveis de cartão",
         "Karta-Min : ordens simples, qualquer vírus lê",
         "Karta-Med : operações complexas, só Δ-PRIME leem",
-        "Karta-MAX : ordens diretas de Node-0 — ninguém questiona",
-        "### O que ASM-Δ diz sobre ENI-4Δ",
-        "Ninguém conversa. Ninguém pensa. Ninguém assume culpa. Todos executam."
+        "Karta-MAX : ordens diretas de Node-0 — ninguém questiona"
       ],
       "en": []
     }

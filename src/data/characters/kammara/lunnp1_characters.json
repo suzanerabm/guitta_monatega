@@ -13,7 +13,7 @@
       "pt": "Nasceu em Ve'Lume, nas águas profundas. Suas maiores capacidades: detectar microfendas, ler reflexos invertidos, acalmar água viva, estabilizar emoções coletivas. Papel no grupo é ancorar e direcionar decisões mais focadas.",
       "en": "Born in Ve'Lume, in the deep waters. His greatest abilities: detecting microfissures, reading inverted reflections, calming living water, stabilizing collective emotions. His role in the group is to anchor and guide sharper decisions."
     },
-    "image": "/imgs/characters/kammara/lunnp1/EruRin_costas_brisa.png",
+    "image": "/imgs/characters/kammara/lunnp1/EruRin.png",
     "backImage": "/imgs/characters/kammara/lunnp1/EruRin_costas1.png",
     "dorsalMeaning": {
       "pt": "Estabilidade profunda e introspecção — o caminho de quem ancora o planeta.",
@@ -1279,8 +1279,8 @@
       "pt": "Túri'Kan anciã. Casco enorme com marcas que parecem constelações, olhos antigos e profundos. Move-se devagar e continua sempre — chega aonde precisa chegar. Quando emerge, os Shal'ún sabem que é hora de migrar. Responde a vibrações.",
       "en": "Elder Túri'Kan. Enormous shell with markings that look like constellations, ancient deep eyes. She moves slowly and never stops — she gets where she needs to go. When she emerges, the Shal'ún know it is time to migrate. She answers to vibrations."
     },
-    "image": "/imgs/characters/kammara/lunnp1/Túri’Kan.png",
-    "backImage": "/imgs/characters/kammara/lunnp1/Túri’Kan_costas.png",
+    "image": "/imgs/characters/kammara/lunnp1/TuriKan.png",
+    "backImage": "/imgs/characters/kammara/lunnp1/TuriKan_costas.png",
     "dorsalMeaning": {
       "pt": "Marcas do casco — constelações ancestrais",
       "en": ""
