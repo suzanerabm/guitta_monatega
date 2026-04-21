@@ -10,14 +10,14 @@
       "en": "Shal'ún"
     },
     "bio": {
-      "pt": "Nasceu em Ve'Lume, nas águas profundas. Suas maiores capacidades: detectar microfendas, ler reflexos invertidos, acalmar água viva, estabilizar emoções coletivas. Papel no grupo é ancorar e direcionar decisões mais focadas.",
-      "en": "Born in Ve'Lume, in the deep waters. His greatest abilities: detecting microfissures, reading inverted reflections, calming living water, stabilizing collective emotions. His role in the group is to anchor and guide sharper decisions."
+      "pt": "Nasceu em Ve'Lume, nas águas profundas. Suas maiores capacidades: detectar microfendas, ler reflexos invertidos, acalmar água viva, estabilizar emoções coletivas. ",
+      "en": "Born in Ve'Lume, in the deep waters. His greatest abilities: detecting microfissures, reading inverted reflections, calming living water, stabilizing collective emotions. "
     },
     "image": "/imgs/characters/kammara/lunnp1/EruRin.png",
     "backImage": "/imgs/characters/kammara/lunnp1/EruRin_costas1.png",
     "dorsalMeaning": {
-      "pt": "Estabilidade profunda e introspecção — o caminho de quem ancora o planeta.",
-      "en": "Deep stability and introspection — the path of the one who anchors the planet."
+      "pt": "Papel no grupo é ancorar e direcionar decisões mais focadas. Estabilidade profunda e introspecção — o caminho de quem ancora o planeta.",
+      "en": "His role in the group is to anchor and guide sharper decisions. Deep stability and introspection — the path of the one who anchors the planet."
     },
     "attributes": [
       {
@@ -77,14 +77,14 @@
       "en": "Shal'ún"
     },
     "bio": {
-      "pt": "Nasceu em Oru'Len, com Flor-Lume já brilhando antes da forma se completar — energia abundante de origem. Move-se em zonas florais móveis e águas rasas. Onde está, o ambiente se reorganiza com mais leveza.",
-      "en": "Born in Oru'Len, with Flor-Lume already glowing before her form completed — abundant energy from the start. She moves through mobile floral zones and shallow waters. Wherever she is, the space reorganizes itself with more ease."
+      "pt": "Nasceu em Oru'Len, com Flor-Lume já brilhando antes da forma se completar — energia abundante de origem. Move-se em zonas florais móveis e águas rasas. ",
+      "en": "Born in Oru'Len, with Flor-Lume already glowing before her form completed — abundant energy from the start. She moves through mobile floral zones and shallow waters. "
     },
     "image": "/imgs/characters/kammara/lunnp1/LumEsha.png",
     "backImage": "/imgs/characters/kammara/lunnp1/LumEsha_costas.png",
     "dorsalMeaning": {
-      "pt": "Ela convence o caminho a florescer.",
-      "en": "She convinces the path to bloom."
+      "pt": "Onde está, o ambiente se reorganiza com mais leveza. Ela convence o caminho a florescer.",
+      "en": "Wherever she is, the space reorganizes itself with more ease. She convinces the path to bloom."
     },
     "attributes": [
       {
@@ -780,17 +780,17 @@
       "en": "Lún'Kai"
     },
     "bio": {
-      "pt": "Lún'Kai espectral. Brilho tão sutil que parece existir ligeiramente fora de fase. Antenas voltadas para baixo, escutam camadas profundas. A água ao redor muda de densidade quando ele está perto. Nas profundezas, emite azul-nebuloso ancestral.",
-      "en": "Spectral Lún'Kai. Glow so subtle it seems to exist slightly out of phase. Antennae turned downward, listening to deep layers. The water nearby changes density when it is close. In the depths, it emits an ancestral nebulous blue."
+      "pt": "Lún'Kai espectral. Brilho tão sutil que parece existir ligeiramente fora de fase. Antenas voltadas para baixo, escutam camadas profundas. ",
+      "en": "Spectral Lún'Kai. Glow so subtle it seems to exist slightly out of phase. Antennae turned downward, listening to deep layers. "
     },
-    "backImage": "",
+    "backImage": "/imgs/characters/kammara/lunnp1/veludo_costas.png",
     "backTitle": {
-      "pt": "",
-      "en": ""
+      "pt": "Outro lado",
+      "en": "Another side"
     },
     "dorsalMeaning": {
-      "pt": "",
-      "en": ""
+      "pt": "A água ao redor muda de densidade quando ele está perto. Nas profundezas, emite azul-nebuloso ancestral.",
+      "en": "The water nearby changes density when it is close. In the depths, it emits an ancestral nebulous blue."
     },
     "attributes": [
       {
@@ -828,7 +828,8 @@
         "width": 60,
         "height": 65
       }
-    }
+    },
+    "image": "/imgs/characters/kammara/lunnp1/veludo.png"
   },
   {
     "match": "Sereno",
@@ -841,17 +842,18 @@
       "en": "Lún'Kai"
     },
     "bio": {
-      "pt": "Lún'Kai ritmado. Pulso constante como respiração tranquila. Outros Lún'Kai sincronizam ao seu compasso involuntariamente. A água ao redor encontra ritmo: gotículas caem em intervalos regulares, correntes se organizam.",
-      "en": "Rhythmic Lún'Kai. Steady pulse like calm breathing. Other Lún'Kai synchronize involuntarily with its beat. The surrounding water finds rhythm: droplets fall in regular intervals, currents organize themselves."
+      "pt": "Lún'Kai ritmado. Pulso constante como respiração tranquila. Outros Lún'Kai sincronizam ao seu compasso involuntariamente.",
+      "en": "Rhythmic Lún'Kai. Steady pulse like calm breathing. Other Lún'Kai synchronize involuntarily with its beat. "
     },
-    "backImage": "",
+    "image": "/imgs/characters/kammara/lunnp1/Sereno.png",
+    "backImage": "/imgs/characters/kammara/lunnp1/Sereno_costas.png",
     "backTitle": {
       "pt": "",
       "en": ""
     },
     "dorsalMeaning": {
-      "pt": "",
-      "en": ""
+      "pt": "A água ao redor encontra ritmo: gotículas caem em intervalos regulares, correntes se organizam.",
+      "en": "The surrounding water finds rhythm: droplets fall in regular intervals, currents organize themselves."
     },
     "attributes": [
       {
@@ -872,11 +874,24 @@
           "en": "Light"
         },
         "value": {
-          "pt": "Opalescente",
-          "en": "Opalescent"
+          "pt": "Lilas",
+          "en": ""
         }
       }
-    ]
+    ],
+    "fairyDust": {
+      "color": "#c8a2c8",
+      "count": 50,
+      "size": 3,
+      "duration": 1.8,
+      "intensity": 2.2,
+      "area": {
+        "top": 15,
+        "left": 20,
+        "width": 60,
+        "height": 65
+      }
+    }
   },
   {
     "match": "Lumino",
@@ -889,17 +904,17 @@
       "en": "Lún'Kai"
     },
     "bio": {
-      "pt": "Lún'Kai cartógrafo. À distância, parece um traço dourado em movimento, como uma risca de mapa sendo desenhada no ar. Antenas rotacionam em arcos regulares como radares miniaturizados. Sua luz aponta — para uma saída, para um padrão na água, para algo que ninguém mais notou.",
-      "en": "Cartographer Lún'Kai. From afar, it looks like a golden moving trace, a map-line being drawn in the air. Antennae rotate in regular arcs like miniature radars. Its light points — to an exit, a pattern on the water, something no one else noticed."
+      "pt": "Lún'Kai cartógrafo. À distância, parece um traço dourado em movimento, como uma risca de mapa sendo desenhada no ar.",
+      "en": "Cartographer Lún'Kai. From afar, it looks like a golden moving trace, a map-line being drawn in the air."
     },
-    "backImage": "",
+    "backImage": "/imgs/characters/kammara/lunnp1/Lumino_costas.png",
     "backTitle": {
       "pt": "",
       "en": ""
     },
     "dorsalMeaning": {
-      "pt": "",
-      "en": ""
+      "pt": "Antenas rotacionam em arcos regulares como radares miniaturizados. Sua luz aponta — para uma saída, para um padrão na água, para algo que ninguém mais notou.",
+      "en": "Antennae rotate in regular arcs like miniature radars. Its light points — to an exit, a pattern on the water, something no one else noticed."
     },
     "attributes": [
       {
@@ -937,7 +952,8 @@
         "width": 60,
         "height": 65
       }
-    }
+    },
+    "image": "/imgs/characters/kammara/lunnp1/Lumino.png"
   },
   {
     "match": "Veloz",
@@ -950,17 +966,17 @@
       "en": "Lún'Kai"
     },
     "bio": {
-      "pt": "Lún'Kai elétrico. Asas batem mais rápido que qualquer outro Lún'Kai — viram um borrão de luz com zumbido fino. Lum'Ka estala em micro-rajadas como faíscas suspensas no ar. O ar ao redor faz os pelos dos Shal'ún se arrepiarem em antecipação.",
-      "en": "Electric Lún'Kai. Wings beat faster than any other Lún'Kai — turning into a blur of light with a thin hum. Lum'Ka crackles in micro-bursts like sparks suspended in the air. The air around makes Shal'ún fur bristle in anticipation."
+      "pt": "Lún'Kai elétrico. Asas batem mais rápido que qualquer outro Lún'Kai — viram um borrão de luz com zumbido fino.",
+      "en": "Electric Lún'Kai. Wings beat faster than any other Lún'Kai — turning into a blur of light with a thin hum. "
     },
-    "backImage": "",
+    "backImage": "/imgs/characters/kammara/lunnp1/Veloz_costas.png",
     "backTitle": {
       "pt": "",
       "en": ""
     },
     "dorsalMeaning": {
-      "pt": "",
-      "en": ""
+      "pt": "Lum'Ka estala em micro-rajadas como faíscas suspensas no ar. ",
+      "en": "Lum'Ka crackles in micro-bursts like sparks suspended in the air."
     },
     "attributes": [
       {
@@ -998,7 +1014,8 @@
         "width": 60,
         "height": 65
       }
-    }
+    },
+    "image": "/imgs/characters/kammara/lunnp1/Veloz.png"
   },
   {
     "match": "Katé",
@@ -1062,7 +1079,7 @@
       "pt": "Lún'Kai espelho. A água ao redor se torna mais transparente, mais reveladora — o turvo se clarifica. O pozinho que solta funciona como revelador emocional. Olhos contêm pequenos reflexos da emoção de quem ele observa.",
       "en": "Mirror Lún'Kai. The water nearby turns more transparent, more revealing — the murk clears. The dust it releases works as an emotional revealer. Its eyes hold tiny reflections of the feeling of whoever it watches."
     },
-    "backImage": "",
+    "backImage": "/imgs/characters/kammara/lunnp1/blue_costas.png",
     "backTitle": {
       "pt": "",
       "en": ""
@@ -1107,7 +1124,8 @@
         "width": 60,
         "height": 65
       }
-    }
+    },
+    "image": "/imgs/characters/kammara/lunnp1/blue.png"
   },
   {
     "match": "Tiru",
@@ -1286,7 +1304,7 @@
       "intensity": 1.8,
       "area": {
         "top": 60,
-        "left": 65,
+        "left": 55,
         "width": 25,
         "height": 25
       }
@@ -1298,7 +1316,7 @@
       "duration": 2,
       "intensity": 1.8,
       "area": {
-        "top": 72,
+        "top": 62,
         "left": 40,
         "width": 25,
         "height": 25
@@ -1373,7 +1391,7 @@
       "duration": 2,
       "intensity": 1.8,
       "area": {
-        "top": 65,
+        "top": 55,
         "left": 40,
         "width": 25,
         "height": 25
@@ -1436,7 +1454,7 @@
       "intensity": 1.8,
       "area": {
         "top": 60,
-        "left": 65,
+        "left": 60,
         "width": 25,
         "height": 25
       }
@@ -1448,7 +1466,7 @@
       "duration": 2,
       "intensity": 1.8,
       "area": {
-        "top": 68,
+        "top": 58,
         "left": 60,
         "width": 25,
         "height": 25
