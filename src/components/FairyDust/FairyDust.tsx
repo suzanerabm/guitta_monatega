@@ -139,6 +139,15 @@ export function FairyDust({
       pointerEvents="none"
       aria-hidden="true"
       overflow="hidden"
+      css={{
+        // Keep all sparkle animation costs (paint, composite) isolated to
+        // this subtree — prevents it from triggering repaints elsewhere.
+        contain: 'layout paint',
+        // Skip rendering when off-screen; browser keeps the layout box but
+        // pauses the animations and paints until the card scrolls near.
+        contentVisibility: 'auto',
+        containIntrinsicSize: '400px 500px',
+      }}
     >
       <style>{keyframes}</style>
       {particles.map((p) => {
@@ -153,9 +162,8 @@ export function FairyDust({
             height={`${px}px`}
             borderRadius="50%"
             css={{
-              background: `radial-gradient(circle, #ffffff 0%, ${color} 30%, ${color}aa 55%, transparent 85%)`,
-              filter: 'blur(0.6px)',
-              boxShadow: `0 0 ${px * 2 * intensity}px ${color}, 0 0 ${px * 4 * intensity}px ${color}cc, 0 0 ${px * 8 * intensity}px ${color}60`,
+              background: `radial-gradient(circle, #ffffff 0%, ${color} 35%, transparent 80%)`,
+              boxShadow: `0 0 ${px * 3 * intensity}px ${color}cc`,
               animation: `fairyDustSparkle ${p.pulse}s ease-in-out infinite`,
               animationDelay: `${p.delay}s`,
               willChange: 'opacity, transform',

@@ -815,7 +815,20 @@
           "en": "White-violet"
         }
       }
-    ]
+    ],
+    "fairyDust": {
+      "color": "#e8d8ff",
+      "count": 50,
+      "size": 3,
+      "duration": 1.8,
+      "intensity": 2.2,
+      "area": {
+        "top": 15,
+        "left": 20,
+        "width": 60,
+        "height": 65
+      }
+    }
   },
   {
     "match": "Sereno",
@@ -911,7 +924,20 @@
           "en": "Pale gold"
         }
       }
-    ]
+    ],
+    "fairyDust": {
+      "color": "#ffd700",
+      "count": 50,
+      "size": 3,
+      "duration": 1.8,
+      "intensity": 2.2,
+      "area": {
+        "top": 15,
+        "left": 20,
+        "width": 60,
+        "height": 65
+      }
+    }
   },
   {
     "match": "Veloz",
@@ -959,7 +985,20 @@
           "en": "Electric yellow"
         }
       }
-    ]
+    ],
+    "fairyDust": {
+      "color": "#7cff00",
+      "count": 50,
+      "size": 3,
+      "duration": 1.8,
+      "intensity": 2.2,
+      "area": {
+        "top": 15,
+        "left": 20,
+        "width": 60,
+        "height": 65
+      }
+    }
   },
   {
     "match": "Katé",
@@ -1055,7 +1094,20 @@
           "en": "Silver-blue"
         }
       }
-    ]
+    ],
+    "fairyDust": {
+      "color": "#1e90ff",
+      "count": 50,
+      "size": 3,
+      "duration": 1.8,
+      "intensity": 2.2,
+      "area": {
+        "top": 15,
+        "left": 20,
+        "width": 60,
+        "height": 65
+      }
+    }
   },
   {
     "match": "Tiru",
