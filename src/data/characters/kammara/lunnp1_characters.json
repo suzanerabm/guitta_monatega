@@ -67,575 +67,6 @@
     ]
   },
   {
-    "match": "Lúm'Esha",
-    "name": {
-      "pt": "Lúm'Esha",
-      "en": "Lúm'Esha"
-    },
-    "species": {
-      "pt": "Shal'ún",
-      "en": "Shal'ún"
-    },
-    "bio": {
-      "pt": "Nasceu em Oru'Len, com Flor-Lume já brilhando antes da forma se completar — energia abundante de origem. Move-se em zonas florais móveis e águas rasas. ",
-      "en": "Born in Oru'Len, with Flor-Lume already glowing before her form completed — abundant energy from the start. She moves through mobile floral zones and shallow waters. "
-    },
-    "image": "/imgs/characters/kammara/lunnp1/LumEsha.png",
-    "backImage": "/imgs/characters/kammara/lunnp1/LumEsha_costas.png",
-    "dorsalMeaning": {
-      "pt": "Onde está, o ambiente se reorganiza com mais leveza. Ela convence o caminho a florescer.",
-      "en": "Wherever she is, the space reorganizes itself with more ease. She convinces the path to bloom."
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Função",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "Conectora",
-          "en": "Connector"
-        }
-      },
-      {
-        "glyph": "⊶⊹⊷",
-        "label": {
-          "pt": "Protocolo",
-          "en": "Protocol"
-        },
-        "value": {
-          "pt": "AURYN",
-          "en": "AURYN"
-        }
-      },
-      {
-        "glyph": "⊹",
-        "label": {
-          "pt": "Lún'Kai",
-          "en": "Lún'Kai"
-        },
-        "value": {
-          "pt": "Flor-Lume",
-          "en": "Flor-Lume"
-        }
-      },
-      {
-        "glyph": "⊹",
-        "label": {
-          "pt": "Parceiro",
-          "en": "Partner"
-        },
-        "value": {
-          "pt": "Erú'Rin",
-          "en": "Erú'Rin"
-        }
-      }
-    ]
-  },
-  {
-    "match": "Shir'Nai",
-    "name": {
-      "pt": "Shir'Nai",
-      "en": "Shir'Nai"
-    },
-    "species": {
-      "pt": "Shal'ún",
-      "en": "Shal'ún"
-    },
-    "bio": {
-      "pt": "Nasceu em Ve'Lume, na lua do silêncio ancestral. Lê camadas profundas emocionais e detecta vibrações ocultas — capta o que ainda vai emergir antes da superfície mostrar. Habita o espaço entre o dito e o não-dito. Sua presença revela verdades ocultas e acalma medos sem nome.",
-      "en": "Born in Ve'Lume, under the moon of ancestral silence. She reads deep emotional layers and detects hidden vibrations — catching what is about to emerge before the surface shows it. She dwells in the space between what is said and unsaid. Her presence reveals hidden truths and calms nameless fears."
-    },
-    "image": "/imgs/characters/kammara/lunnp1/shirnai.png",
-    "backImage": "",
-    "backTitle": {
-      "pt": "",
-      "en": ""
-    },
-    "dorsalMeaning": {
-      "pt": "",
-      "en": ""
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Função",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "Sensora",
-          "en": "Sensor"
-        }
-      },
-      {
-        "glyph": "⊶⊹⊷",
-        "label": {
-          "pt": "Protocolo",
-          "en": "Protocol"
-        },
-        "value": {
-          "pt": "AURYN",
-          "en": "AURYN"
-        }
-      },
-      {
-        "glyph": "⊹",
-        "label": {
-          "pt": "Lún'Kai",
-          "en": "Lún'Kai"
-        },
-        "value": {
-          "pt": "Veludo",
-          "en": "Veludo"
-        }
-      },
-      {
-        "glyph": "⊹",
-        "label": {
-          "pt": "Tzir'Kai",
-          "en": "Tzir'Kai"
-        },
-        "value": {
-          "pt": "Lumira",
-          "en": "Lumira"
-        }
-      }
-    ]
-  },
-  {
-    "match": "Müra",
-    "name": {
-      "pt": "Müra",
-      "en": "Müra"
-    },
-    "species": {
-      "pt": "Shal'ún",
-      "en": "Shal'ún"
-    },
-    "bio": {
-      "pt": "Nome Kalún Mü'Rá — \"Movimento Suave / Fluxo que Acompanha\". Encontra o tempo exato de cada momento e convida os outros a acompanhar. Desacelera ambientes agitados e estabiliza ritmos caóticos com calma ativa. Move-se em compasso contínuo.",
-      "en": "Kalún name Mü'Rá — \"Gentle Movement / Flow That Follows\". She finds the exact tempo of each moment and invites others to follow. She slows agitated environments and stabilizes chaotic rhythms with active calm. Moves in continuous cadence."
-    },
-    "image": "/imgs/characters/kammara/lunnp1/mura.png",
-    "backImage": "",
-    "backTitle": {
-      "pt": "",
-      "en": ""
-    },
-    "dorsalMeaning": {
-      "pt": "",
-      "en": ""
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Função",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "Harmonizadora",
-          "en": "Harmonizer"
-        }
-      },
-      {
-        "glyph": "⊶⊹⊷",
-        "label": {
-          "pt": "Protocolo",
-          "en": "Protocol"
-        },
-        "value": {
-          "pt": "AURYN",
-          "en": "AURYN"
-        }
-      },
-      {
-        "glyph": "⊹",
-        "label": {
-          "pt": "Lún'Kai",
-          "en": "Lún'Kai"
-        },
-        "value": {
-          "pt": "Sereno",
-          "en": "Sereno"
-        }
-      }
-    ]
-  },
-  {
-    "match": "Kaitor",
-    "name": {
-      "pt": "Kaitor",
-      "en": "Kaitor"
-    },
-    "species": {
-      "pt": "Shal'ún",
-      "en": "Shal'ún"
-    },
-    "bio": {
-      "pt": "Nome Kalún Kái'Tor — \"O Que Vê o Traço da Luz\". Lê rotas lunares e identifica fluxos de água ao instante. Capacidades: previsão de movimento das Naru'ei, detecção de caminhos seguros em migrações, mapeamento de ambientes em segundos. Quando ele aponta, o grupo segue.",
-      "en": "Kalún name Kái'Tor — \"The One Who Sees the Trace of Light\". He reads lunar routes and instantly identifies water currents. Abilities: predicting Naru'ei movement, detecting safe paths during migration, mapping environments in seconds. When he points, the group follows."
-    },
-    "image": "/imgs/characters/kammara/lunnp1/Kaitor.png",
-    "backImage": "",
-    "backTitle": {
-      "pt": "",
-      "en": ""
-    },
-    "dorsalMeaning": {
-      "pt": "",
-      "en": ""
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Função",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "Navegador",
-          "en": "Navigator"
-        }
-      },
-      {
-        "glyph": "⊶⊹⊷",
-        "label": {
-          "pt": "Protocolo",
-          "en": "Protocol"
-        },
-        "value": {
-          "pt": "AURYN",
-          "en": "AURYN"
-        }
-      },
-      {
-        "glyph": "⊹",
-        "label": {
-          "pt": "Lún'Kai",
-          "en": "Lún'Kai"
-        },
-        "value": {
-          "pt": "Lumino",
-          "en": "Lumino"
-        }
-      }
-    ]
-  },
-  {
-    "match": "Kaelun",
-    "name": {
-      "pt": "Kaelun",
-      "en": "Kaelun"
-    },
-    "species": {
-      "pt": "Shal'ún",
-      "en": "Shal'ún"
-    },
-    "bio": {
-      "pt": "Nome Kalún Kae'Lún — \"Mente que Avança / Pulso-Rápido\". Antecipa o fluxo: enquanto outros acompanham, ele já está três passos à frente, mapeando possibilidades antes de se materializarem. Catalisa mudanças por impulso. Soluciona problemas em velocidade superior à média do grupo.",
-      "en": "Kalún name Kae'Lún — \"Mind That Advances / Fast-Pulse\". He anticipates the flow: while others keep up, he is already three steps ahead, mapping possibilities before they materialize. Catalyzes change through impulse. Solves problems faster than the group average."
-    },
-    "image": "/imgs/characters/kammara/lunnp1/Kaelun.png",
-    "backImage": "",
-    "backTitle": {
-      "pt": "",
-      "en": ""
-    },
-    "dorsalMeaning": {
-      "pt": "",
-      "en": ""
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Função",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "Estrategista",
-          "en": "Strategist"
-        }
-      },
-      {
-        "glyph": "⊶⊹⊷",
-        "label": {
-          "pt": "Protocolo",
-          "en": "Protocol"
-        },
-        "value": {
-          "pt": "AURYN",
-          "en": "AURYN"
-        }
-      },
-      {
-        "glyph": "⊹",
-        "label": {
-          "pt": "Lún'Kai",
-          "en": "Lún'Kai"
-        },
-        "value": {
-          "pt": "Veloz",
-          "en": "Veloz"
-        }
-      }
-    ]
-  },
-  {
-    "match": "Télun",
-    "name": {
-      "pt": "Télun",
-      "en": "Télun"
-    },
-    "species": {
-      "pt": "Shal'ún",
-      "en": "Shal'ún"
-    },
-    "bio": {
-      "pt": "Nome Kalún Té'Lun — \"Luz Firme / Coluna de Brilho\". Cria ponto fixo a partir do qual os outros orbitam com segurança. Sua presença inspira confiança e acalma conflitos pela solidez. Nascido em Lur'Ma, é o eixo imóvel em torno do qual o grupo gira.",
-      "en": "Kalún name Té'Lun — \"Steady Light / Column of Brightness\". He creates a fixed point around which others safely orbit. His presence inspires trust and calms conflicts by sheer solidity. Born in Lur'Ma, he is the still axis the group turns around."
-    },
-    "image": "/imgs/characters/kammara/lunnp1/Telun.png",
-    "backImage": "",
-    "backTitle": {
-      "pt": "",
-      "en": ""
-    },
-    "dorsalMeaning": {
-      "pt": "",
-      "en": ""
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Função",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "Pilar",
-          "en": "Pillar"
-        }
-      },
-      {
-        "glyph": "⊶⊹⊷",
-        "label": {
-          "pt": "Protocolo",
-          "en": "Protocol"
-        },
-        "value": {
-          "pt": "AURYN",
-          "en": "AURYN"
-        }
-      },
-      {
-        "glyph": "⊹",
-        "label": {
-          "pt": "Lún'Kai",
-          "en": "Lún'Kai"
-        },
-        "value": {
-          "pt": "Katé",
-          "en": "Katé"
-        }
-      }
-    ]
-  },
-  {
-    "match": "Serai",
-    "name": {
-      "pt": "Serai",
-      "en": "Serai"
-    },
-    "species": {
-      "pt": "Shal'ún",
-      "en": "Shal'ún"
-    },
-    "bio": {
-      "pt": "Nome Kalún Se'Rai — \"A Onda que Toca Antes\". Recebe os ritmos emocionais do ambiente, traduz e devolve fluindo. Espelha conflitos até que se resolvam. Sua presença muda o campo emocional coletivo em silêncio.",
-      "en": "Kalún name Se'Rai — \"The Wave That Touches First\". She receives the emotional rhythms of the environment, translates them and returns them flowing. She mirrors conflicts until they dissolve. Her presence shifts the collective emotional field in silence."
-    },
-    "image": "/imgs/characters/kammara/lunnp1/Serai.png",
-    "backImage": "",
-    "backTitle": {
-      "pt": "",
-      "en": ""
-    },
-    "dorsalMeaning": {
-      "pt": "",
-      "en": ""
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Função",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "Empata",
-          "en": "Empath"
-        }
-      },
-      {
-        "glyph": "⊶⊹⊷",
-        "label": {
-          "pt": "Protocolo",
-          "en": "Protocol"
-        },
-        "value": {
-          "pt": "AURYN",
-          "en": "AURYN"
-        }
-      },
-      {
-        "glyph": "⊹",
-        "label": {
-          "pt": "Lún'Kai",
-          "en": "Lún'Kai"
-        },
-        "value": {
-          "pt": "Blue",
-          "en": "Blue"
-        }
-      }
-    ]
-  },
-  {
-    "match": "Rin'Boro",
-    "name": {
-      "pt": "Rin'Boro",
-      "en": "Rin'Boro"
-    },
-    "species": {
-      "pt": "Shal'ún",
-      "en": "Shal'ún"
-    },
-    "bio": {
-      "pt": "Nome Kalún Rin'Boro — \"Aquele que Cai e Volta\". Dança com o fluxo: celebra cada momento como movimento e cada queda como oportunidade de riso. Muda ambientes por contágio emocional direto. Transforma peso em leveza ao saltar.",
-      "en": "Kalún name Rin'Boro — \"The One Who Falls and Returns\". He dances with the flow: celebrates each moment as movement and each fall as a chance to laugh. Changes environments through direct emotional contagion. Turns weight into lightness with a leap."
-    },
-     "image": "/imgs/characters/kammara/lunnp1/Rinboro.png",
-    "backImage": "",
-    "backTitle": {
-      "pt": "",
-      "en": ""
-    },
-    "dorsalMeaning": {
-      "pt": "",
-      "en": ""
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Função",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "Saltador",
-          "en": "Leaper"
-        }
-      },
-      {
-        "glyph": "⊶⊹⊷",
-        "label": {
-          "pt": "Protocolo",
-          "en": "Protocol"
-        },
-        "value": {
-          "pt": "AURYN",
-          "en": "AURYN"
-        }
-      },
-      {
-        "glyph": "⊹",
-        "label": {
-          "pt": "Lún'Kai",
-          "en": "Lún'Kai"
-        },
-        "value": {
-          "pt": "Tiru",
-          "en": "Tiru"
-        }
-      },
-      {
-        "glyph": "⊹",
-        "label": {
-          "pt": "Tzir'Kai",
-          "en": "Tzir'Kai"
-        },
-        "value": {
-          "pt": "Krii",
-          "en": "Krii"
-        }
-      }
-    ]
-  },
-  {
-    "match": "Narúmin",
-    "name": {
-      "pt": "Narúmin",
-      "en": "Narúmin"
-    },
-    "species": {
-      "pt": "Shal'ún",
-      "en": "Shal'ún"
-    },
-    "bio": {
-      "pt": "Nome Kalún Narú'Min — \"A Que Toca a Essência das Folhas\". Conversa com o planeta numa troca contínua entre curiosidade e resposta. Plantas respondem à sua presença de formas visíveis. Cada gesto é diálogo com a natureza viva.",
-      "en": "Kalún name Narú'Min — \"The One Who Touches the Essence of Leaves\". She converses with the planet in a continuous exchange of curiosity and response. Plants answer her presence in visible ways. Every gesture is dialogue with the living world."
-    },
-    "image": "/imgs/characters/kammara/lunnp1/narumin.png",
-    "backImage": "",
-    "backTitle": {
-      "pt": "",
-      "en": ""
-    },
-    "dorsalMeaning": {
-      "pt": "",
-      "en": ""
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Função",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "Botânica",
-          "en": "Botanist"
-        }
-      },
-      {
-        "glyph": "⊶⊹⊷",
-        "label": {
-          "pt": "Protocolo",
-          "en": "Protocol"
-        },
-        "value": {
-          "pt": "AURYN",
-          "en": "AURYN"
-        }
-      },
-      {
-        "glyph": "⊹",
-        "label": {
-          "pt": "Lún'Kai",
-          "en": "Lún'Kai"
-        },
-        "value": {
-          "pt": "Lei",
-          "en": "Lei"
-        }
-      }
-    ]
-  },
-  {
     "match": "Brisa",
     "name": {
       "pt": "Brisa",
@@ -716,6 +147,73 @@
     }
   },
   {
+    "match": "Lúm'Esha",
+    "name": {
+      "pt": "Lúm'Esha",
+      "en": "Lúm'Esha"
+    },
+    "species": {
+      "pt": "Shal'ún",
+      "en": "Shal'ún"
+    },
+    "bio": {
+      "pt": "Nasceu em Oru'Len, com Flor-Lume já brilhando antes da forma se completar — energia abundante de origem. Move-se em zonas florais móveis e águas rasas. ",
+      "en": "Born in Oru'Len, with Flor-Lume already glowing before her form completed — abundant energy from the start. She moves through mobile floral zones and shallow waters. "
+    },
+    "image": "/imgs/characters/kammara/lunnp1/LumEsha.png",
+    "backImage": "/imgs/characters/kammara/lunnp1/LumEsha_costas.png",
+    "dorsalMeaning": {
+      "pt": "Onde está, o ambiente se reorganiza com mais leveza. Ela convence o caminho a florescer.",
+      "en": "Wherever she is, the space reorganizes itself with more ease. She convinces the path to bloom."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Conectora",
+          "en": "Connector"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Lún'Kai",
+          "en": "Lún'Kai"
+        },
+        "value": {
+          "pt": "Flor-Lume",
+          "en": "Flor-Lume"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Parceiro",
+          "en": "Partner"
+        },
+        "value": {
+          "pt": "Erú'Rin",
+          "en": "Erú'Rin"
+        }
+      }
+    ]
+  },
+  {
     "match": "Flor-Lume",
     "name": {
       "pt": "Flor-Lume",
@@ -776,6 +274,77 @@
         "height": 65
       }
     }
+  },
+  {
+    "match": "Shir'Nai",
+    "name": {
+      "pt": "Shir'Nai",
+      "en": "Shir'Nai"
+    },
+    "species": {
+      "pt": "Shal'ún",
+      "en": "Shal'ún"
+    },
+    "bio": {
+      "pt": "Nasceu em Ve'Lume, na lua do silêncio ancestral. Lê camadas profundas emocionais e detecta vibrações ocultas — capta o que ainda vai emergir antes da superfície mostrar. Habita o espaço entre o dito e o não-dito. Sua presença revela verdades ocultas e acalma medos sem nome.",
+      "en": "Born in Ve'Lume, under the moon of ancestral silence. She reads deep emotional layers and detects hidden vibrations — catching what is about to emerge before the surface shows it. She dwells in the space between what is said and unsaid. Her presence reveals hidden truths and calms nameless fears."
+    },
+    "image": "/imgs/characters/kammara/lunnp1/shirnai.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Sensora",
+          "en": "Sensor"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Lún'Kai",
+          "en": "Lún'Kai"
+        },
+        "value": {
+          "pt": "Veludo",
+          "en": "Veludo"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Tzir'Kai",
+          "en": "Tzir'Kai"
+        },
+        "value": {
+          "pt": "Lumira",
+          "en": "Lumira"
+        }
+      }
+    ]
   },
   {
     "match": "Veludo",
@@ -840,6 +409,66 @@
     "image": "/imgs/characters/kammara/lunnp1/veludo.png"
   },
   {
+    "match": "Müra",
+    "name": {
+      "pt": "Müra",
+      "en": "Müra"
+    },
+    "species": {
+      "pt": "Shal'ún",
+      "en": "Shal'ún"
+    },
+    "bio": {
+      "pt": "Nome Kalún Mü'Rá — \"Movimento Suave / Fluxo que Acompanha\". Encontra o tempo exato de cada momento e convida os outros a acompanhar. Desacelera ambientes agitados e estabiliza ritmos caóticos com calma ativa. Move-se em compasso contínuo.",
+      "en": "Kalún name Mü'Rá — \"Gentle Movement / Flow That Follows\". She finds the exact tempo of each moment and invites others to follow. She slows agitated environments and stabilizes chaotic rhythms with active calm. Moves in continuous cadence."
+    },
+    "image": "/imgs/characters/kammara/lunnp1/mura.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Harmonizadora",
+          "en": "Harmonizer"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Lún'Kai",
+          "en": "Lún'Kai"
+        },
+        "value": {
+          "pt": "Sereno",
+          "en": "Sereno"
+        }
+      }
+    ]
+  },
+  {
     "match": "Sereno",
     "name": {
       "pt": "Sereno",
@@ -900,6 +529,66 @@
         "height": 65
       }
     }
+  },
+  {
+    "match": "Kaitor",
+    "name": {
+      "pt": "Kaitor",
+      "en": "Kaitor"
+    },
+    "species": {
+      "pt": "Shal'ún",
+      "en": "Shal'ún"
+    },
+    "bio": {
+      "pt": "Nome Kalún Kái'Tor — \"O Que Vê o Traço da Luz\". Lê rotas lunares e identifica fluxos de água ao instante. Capacidades: previsão de movimento das Naru'ei, detecção de caminhos seguros em migrações, mapeamento de ambientes em segundos. Quando ele aponta, o grupo segue.",
+      "en": "Kalún name Kái'Tor — \"The One Who Sees the Trace of Light\". He reads lunar routes and instantly identifies water currents. Abilities: predicting Naru'ei movement, detecting safe paths during migration, mapping environments in seconds. When he points, the group follows."
+    },
+    "image": "/imgs/characters/kammara/lunnp1/Kaitor.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Navegador",
+          "en": "Navigator"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Lún'Kai",
+          "en": "Lún'Kai"
+        },
+        "value": {
+          "pt": "Lumino",
+          "en": "Lumino"
+        }
+      }
+    ]
   },
   {
     "match": "Lumino",
@@ -964,6 +653,66 @@
     "image": "/imgs/characters/kammara/lunnp1/Lumino.png"
   },
   {
+    "match": "Kaelun",
+    "name": {
+      "pt": "Kaelun",
+      "en": "Kaelun"
+    },
+    "species": {
+      "pt": "Shal'ún",
+      "en": "Shal'ún"
+    },
+    "bio": {
+      "pt": "Nome Kalún Kae'Lún — \"Mente que Avança / Pulso-Rápido\". Antecipa o fluxo: enquanto outros acompanham, ele já está três passos à frente, mapeando possibilidades antes de se materializarem. Catalisa mudanças por impulso. Soluciona problemas em velocidade superior à média do grupo.",
+      "en": "Kalún name Kae'Lún — \"Mind That Advances / Fast-Pulse\". He anticipates the flow: while others keep up, he is already three steps ahead, mapping possibilities before they materialize. Catalyzes change through impulse. Solves problems faster than the group average."
+    },
+    "image": "/imgs/characters/kammara/lunnp1/Kaelun.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Estrategista",
+          "en": "Strategist"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Lún'Kai",
+          "en": "Lún'Kai"
+        },
+        "value": {
+          "pt": "Veloz",
+          "en": "Veloz"
+        }
+      }
+    ]
+  },
+  {
     "match": "Veloz",
     "name": {
       "pt": "Veloz",
@@ -977,6 +726,7 @@
       "pt": "Lún'Kai elétrico. Asas batem mais rápido que qualquer outro Lún'Kai — viram um borrão de luz com zumbido fino.",
       "en": "Electric Lún'Kai. Wings beat faster than any other Lún'Kai — turning into a blur of light with a thin hum. "
     },
+    "image": "/imgs/characters/kammara/lunnp1/Veloz.png",
     "backImage": "/imgs/characters/kammara/lunnp1/Veloz_costas.png",
     "backTitle": {
       "pt": "",
@@ -1022,8 +772,67 @@
         "width": 60,
         "height": 65
       }
+    }
+  },
+  {
+    "match": "Télun",
+    "name": {
+      "pt": "Télun",
+      "en": "Télun"
     },
-    "image": "/imgs/characters/kammara/lunnp1/Veloz.png"
+    "species": {
+      "pt": "Shal'ún",
+      "en": "Shal'ún"
+    },
+    "bio": {
+      "pt": "Nome Kalún Té'Lun — \"Luz Firme / Coluna de Brilho\". Cria ponto fixo a partir do qual os outros orbitam com segurança. Sua presença inspira confiança e acalma conflitos pela solidez. Nascido em Lur'Ma, é o eixo imóvel em torno do qual o grupo gira.",
+      "en": "Kalún name Té'Lun — \"Steady Light / Column of Brightness\". He creates a fixed point around which others safely orbit. His presence inspires trust and calms conflicts by sheer solidity. Born in Lur'Ma, he is the still axis the group turns around."
+    },
+    "image": "/imgs/characters/kammara/lunnp1/Telun.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Pilar",
+          "en": "Pillar"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Lún'Kai",
+          "en": "Lún'Kai"
+        },
+        "value": {
+          "pt": "Katé",
+          "en": "Katé"
+        }
+      }
+    ]
   },
   {
     "match": "Katé",
@@ -1039,7 +848,8 @@
       "pt": "Lún'Kai estrutural. Brilho prateado constante e denso, quase metálico. Quando pousa em Télun, fica fixo como se tivesse raízes. Cria estabilidade espacial: a água ondula menos, outros Lún'Kai flutuam com menos deriva. Os mais firmes pousam onde Katé está.",
       "en": "Structural Lún'Kai. Steady, dense silver glow, almost metallic. When it lands on Télun, it stays as if rooted. Creates spatial stability: the water ripples less, other Lún'Kai drift less. The firmest ones land where Katé is."
     },
-    "backImage": "",
+    "image": "/imgs/characters/kammara/lunnp1/kate.png",
+    "backImage": "/imgs/characters/kammara/lunnp1/kate_costas.png",
     "backTitle": {
       "pt": "Outro Lado",
       "en": "Another side"
@@ -1069,6 +879,79 @@
         "value": {
           "pt": "Prateado",
           "en": "Silver"
+        }
+      }
+    ],
+    "fairyDust": {
+      "color": "#c0c0c0",
+      "count": 50,
+      "size": 3,
+      "duration": 1.8,
+      "intensity": 2.2,
+      "area": {
+        "top": 15,
+        "left": 20,
+        "width": 60,
+        "height": 65
+      }
+    }
+  },
+  {
+    "match": "Serai",
+    "name": {
+      "pt": "Serai",
+      "en": "Serai"
+    },
+    "species": {
+      "pt": "Shal'ún",
+      "en": "Shal'ún"
+    },
+    "bio": {
+      "pt": "Nome Kalún Se'Rai — \"A Onda que Toca Antes\". Recebe os ritmos emocionais do ambiente, traduz e devolve fluindo. Espelha conflitos até que se resolvam. Sua presença muda o campo emocional coletivo em silêncio.",
+      "en": "Kalún name Se'Rai — \"The Wave That Touches First\". She receives the emotional rhythms of the environment, translates them and returns them flowing. She mirrors conflicts until they dissolve. Her presence shifts the collective emotional field in silence."
+    },
+    "image": "/imgs/characters/kammara/lunnp1/Serai.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Empata",
+          "en": "Empath"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Lún'Kai",
+          "en": "Lún'Kai"
+        },
+        "value": {
+          "pt": "Blue",
+          "en": "Blue"
         }
       }
     ]
@@ -1136,6 +1019,77 @@
     "image": "/imgs/characters/kammara/lunnp1/blue.png"
   },
   {
+    "match": "Rin'Boro",
+    "name": {
+      "pt": "Rin'Boro",
+      "en": "Rin'Boro"
+    },
+    "species": {
+      "pt": "Shal'ún",
+      "en": "Shal'ún"
+    },
+    "bio": {
+      "pt": "Nome Kalún Rin'Boro — \"Aquele que Cai e Volta\". Dança com o fluxo: celebra cada momento como movimento e cada queda como oportunidade de riso. Muda ambientes por contágio emocional direto. Transforma peso em leveza ao saltar.",
+      "en": "Kalún name Rin'Boro — \"The One Who Falls and Returns\". He dances with the flow: celebrates each moment as movement and each fall as a chance to laugh. Changes environments through direct emotional contagion. Turns weight into lightness with a leap."
+    },
+    "image": "/imgs/characters/kammara/lunnp1/Rinboro.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Saltador",
+          "en": "Leaper"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Lún'Kai",
+          "en": "Lún'Kai"
+        },
+        "value": {
+          "pt": "Tiru",
+          "en": "Tiru"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Tzir'Kai",
+          "en": "Tzir'Kai"
+        },
+        "value": {
+          "pt": "Krii",
+          "en": "Krii"
+        }
+      }
+    ]
+  },
+  {
     "match": "Tiru",
     "name": {
       "pt": "Tiru",
@@ -1196,6 +1150,66 @@
         "height": 65
       }
     }
+  },
+  {
+    "match": "Narúmin",
+    "name": {
+      "pt": "Narúmin",
+      "en": "Narúmin"
+    },
+    "species": {
+      "pt": "Shal'ún",
+      "en": "Shal'ún"
+    },
+    "bio": {
+      "pt": "Nome Kalún Narú'Min — \"A Que Toca a Essência das Folhas\". Conversa com o planeta numa troca contínua entre curiosidade e resposta. Plantas respondem à sua presença de formas visíveis. Cada gesto é diálogo com a natureza viva.",
+      "en": "Kalún name Narú'Min — \"The One Who Touches the Essence of Leaves\". She converses with the planet in a continuous exchange of curiosity and response. Plants answer her presence in visible ways. Every gesture is dialogue with the living world."
+    },
+    "image": "/imgs/characters/kammara/lunnp1/narumin.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Botânica",
+          "en": "Botanist"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Lún'Kai",
+          "en": "Lún'Kai"
+        },
+        "value": {
+          "pt": "Lei",
+          "en": "Lei"
+        }
+      }
+    ]
   },
   {
     "match": "Lei",
