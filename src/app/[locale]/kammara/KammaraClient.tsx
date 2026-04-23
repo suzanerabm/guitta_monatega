@@ -23,7 +23,6 @@ import { useModal } from '@/components/Modal';
 import { palettes, type PaletteName, type Palette } from '@/theme/palettes';
 
 const kammaraHero = palettes.kammara.hero!;
-const kammaraFilter = palettes.kammara.filter!;
 import { subsystemGlyph, worldCrestGlyph } from '@/theme/kalunGlyphs';
 import { translateName } from '@/lib/translateName';
 import {
@@ -381,7 +380,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
 
   // ── Filter bar ────────────────────────────────────────────────────────
   const filters = [
-    { id: 'kammara', label: sectionName, color: kammaraFilter.color, bgColor: kammaraFilter.bgColor },
+    { id: 'kammara', label: sectionName, color: palettes.kammara.colors[0], bgColor: palettes.kammara.dark },
     ...worlds.map((w) => ({
       id: w.id,
       label: WORLD_NAMES[w.id],
@@ -424,6 +423,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
         filters={filters}
         allLabel={locale === 'en' ? 'All' : 'Todos'}
         onFilter={setActiveFilter}
+        defaultTintColor={palettes.kammara.dark}
       />
 
       {/* ── KAMMARA META SECTION ───────────────────────────────────────── */}

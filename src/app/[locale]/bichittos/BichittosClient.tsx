@@ -83,7 +83,7 @@ export function BichittosClient({ data }: Props) {
 
   const filters = [
     { id: 'napcat', label: getCreatureName('napcat', locale as Locale), color: palettes.napcat.colors[3], bgColor: palettes.napcat.dark },
-    { id: 'zeco', label: getCreatureName('zeco', locale as Locale), color: palettes.zeco.colors[3], bgColor: palettes.zeco.colors[5] },
+    { id: 'zeco', label: getCreatureName('zeco', locale as Locale), color: palettes.zeco.colors[3], bgColor: palettes.zeco.dark },
     { id: 'taylo', label: getCreatureName('taylo', locale as Locale), color: palettes.taylo.colors[0], bgColor: palettes.taylo.dark },
     { id: 'cheiodebolinha', label: getCreatureName('cheiodebolinha', locale as Locale), color: palettes.cheiodebolinha.colors[2], bgColor: palettes.cheiodebolinha.dark },
     { id: 'miscelania', label: getCreatureName('miscelania', locale as Locale), color: palettes.miscelania.colors[2], bgColor: palettes.miscelania.dark },
@@ -219,6 +219,9 @@ export function BichittosClient({ data }: Props) {
                         name: translateName(c.name, words),
                       }))}
                       gradient={palette.gradient}
+                      cardBg="rgba(255,255,255,0.12)"
+                      cardSize={150}
+                      labelColor={colors.stripColor ?? colors.titleColor}
                     />
                   )}
                 </DSMainCard>

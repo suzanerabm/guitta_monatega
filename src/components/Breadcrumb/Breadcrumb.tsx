@@ -74,7 +74,7 @@ export function Breadcrumb({
       fontSize="0.72rem"
       letterSpacing="0.1em"
       textTransform="lowercase"
-      color={tintColor ? 'rgba(255,255,255,0.6)' : 'inkMuted'}
+      color={tintColor ? 'rgba(255,255,255,0.9)' : 'inkMuted'}
       transform={isHidden ? 'translateY(-200%)' : 'translateY(0)'}
       opacity={isHidden ? 0 : 1}
       pointerEvents={isHidden ? 'none' : 'auto'}
@@ -101,7 +101,7 @@ export function Breadcrumb({
                 {item.label}
               </NextLink>
             ) : (
-              <Text as="span" color="inkSoft" marginBottom={useGlyphs ? '5px' : '0'}>
+              <Text as="span" color={tintColor ? 'white' : 'inkSoft'} marginBottom={useGlyphs ? '5px' : '0'}>
                 {item.label}
               </Text>
             )}

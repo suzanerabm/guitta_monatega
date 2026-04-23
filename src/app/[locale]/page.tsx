@@ -18,12 +18,12 @@ export default async function HomePage({
 
   return (
     <>
-      <HeroSection
+      {/* <HeroSection
         variant="home"
         title="guitta monatega"
         label={t('heroSub')}
         minHeight="10vh"
-      />
+      /> */}
 
       {/* === Versão com hover/expand (DSCard + Zeco/Ninha/Napcat/Rui) ===
       <DSCard
@@ -73,10 +73,8 @@ export default async function HomePage({
             description={t('art.desc')}
             variant="arte"
             fullWidth
-            height={{ base: '25vh', md: '28vh' }}
+            height={{ base: '35vh', md: '42vh' }}
             minHeight={{ base: '140px', md: '200px' }}
-            order={1}
-            orderSide="right"
           />
         </Box>
         <HomeBanner
@@ -87,8 +85,6 @@ export default async function HomePage({
           variant="bichittos"
           height={{ base: '35vh', md: '42vh' }}
           minHeight={{ base: '180px', md: '280px' }}
-          order={2}
-          orderSide="right"
         />
         <HomeBanner
           href={`${prefix}/kammara`}
@@ -98,8 +94,6 @@ export default async function HomePage({
           variant="kammara"
           height={{ base: '35vh', md: '42vh' }}
           minHeight={{ base: '180px', md: '280px' }}
-          order={3}
-          orderSide="left"
         />
       </Box>
     </>

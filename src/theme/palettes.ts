@@ -37,17 +37,15 @@ export interface Palette {
     tag: string;
     /** Fundo translúcido do DSTextPanel (default: rgba(0,0,0,0.3)). */
     panelBg?: string;
+    /** Cor da legenda e da borda dos cards do CharacterStrip.
+     *  Se não definido, cai em `titleColor`. */
+    stripColor?: string;
   };
   /** HeroSection da página do mundo (bg + cores de texto). Opcional. */
   hero?: {
     background: string;
     textColor: string;
     labelColor: string;
-  };
-  /** FilterBar pill default do mundo. Opcional. */
-  filter?: {
-    color: string;
-    bgColor: string;
   };
 }
 
@@ -62,31 +60,32 @@ export const palettes: Record<PaletteName, Palette> = {
   napcat: {
     colors: ['#4a7eff', '#546db0', '#c4d4ff', '#0f1a4a', '#dde5ff', '#1e3a7a'],
     text: '#c4d4ff',
-    dark: '#0a0f2a',
+    dark: '#2e0429',
     gradient: 'linear-gradient(135deg, #0f1a4a, #0f1a33, #c4d4ff)',
     gradientBg: 'linear-gradient(160deg, #0f1a4a 10%, #1e3a7a 40%, #0f1a4a 100%)',
     bichittos: {
-      name: '#2fd077', // hero "NapCat" grande fora do card
+      name: '#3b0033', // hero "NapCat" grande fora do card
       text: '#c4d4ff',       // texto do CreatureCard externo
-      titleColor: '#2fd077', // h2 "NapCat & Violeta" dentro do painel + borda
+      // titleColor: '#29bade', // h2 "NapCat & Violeta" dentro do painel + borda
+      titleColor: '#c4d4ff', // h2 "NapCat & Violeta" dentro do painel + borda
       textColor: '#c4d4ff',  // parágrafos dentro do painel
-      accent: '#2fd077',     // cantos HUD + fundo/borda pill + dropcap
-      accentAlt: '#2fd077',  // texto da pill
+      accent: '#892b7d',  
+      accentAlt: '#c4d4ff',  // texto da pill
       bgImage: '/imgs/bichittos/bg/napcat.png',
       tag: 'Gato · Sonhador',
+      panelBg: '#2e0429',
       // panelBg: '#3b0033',
-      panelBg: '#01021b',
     },
   },
   zeco: {
     colors: ['#ff8c42', '#ff6b35', '#ffa751', '#f58020', '#f8e8da', '#f58020'],
     text: '#7ed63b',
-    dark: '#1a0e02',
+    dark: '#483727',
     gradient: 'linear-gradient(155deg, #4a2512 0%, #7a3d1a 45%, #c56b2e 100%)',
     gradientBg: 'linear-gradient(160deg, #fece95 0%, #f57f20 40%, #fece95 100%)',
     bichittos: {
-      name: '#483727',
-      text: '#483727',
+      name: 'rgb(245, 128, 32)',
+      text: '#592e06',
       titleColor: '#483727',
       textColor: '#69250c',
       accent: '#483727',
@@ -94,13 +93,14 @@ export const palettes: Record<PaletteName, Palette> = {
       bgImage: '/imgs/bichittos/bg/zeco.png',
       tag: 'Hamster · Quintal',
       // panelBg: 'rgb(249, 190, 130, 0.3)',
-      panelBg: 'rgb(245, 128, 32, 0.8)',
+      panelBg: 'rgb(245, 128, 32, 0.6)',
+      stripColor: '#483727'
     },
   },
   taylo: {
     colors: ['#5d9466', '#427f49', '#277230', '#d7e2dd', '#b6fcc0', '#082b0b'],
     text: '#b6fcc0',
-    dark: '#082b0b',
+    dark: '#103a13',
     gradient: 'linear-gradient(135deg, #5d9466, #427f49, #5d9466)',
     gradientBg: 'linear-gradient(160deg, #34843c 0%, #185b1e 40%, #082b0b 100%)',
     bichittos: {
@@ -135,7 +135,7 @@ export const palettes: Record<PaletteName, Palette> = {
   cheiodebolinha: {
     colors: ['#3a5a8c', '#2c4a6e', '#8badc4', '#b0cfe0', '#081e28', '#1a3a48'],
     text: '#edf0f2',
-    dark: '#0e1a2a',
+    dark: '#0c144e',
     gradient: 'linear-gradient(135deg, #1a299f, #1a299f, #1a299f)',
     gradientBg: 'linear-gradient(160deg, #1a299f 0%, #1a299f 40%, #1a299f 100%)',
     bichittos: {
@@ -163,10 +163,6 @@ export const palettes: Record<PaletteName, Palette> = {
       background: 'linear-gradient(135deg, #0a0a2e, #1a1a4e, #2d1b69, #0f3460, #0a0a2e)',
       textColor: '#ffffff',
       labelColor: 'rgba(255,255,255,0.6)',
-    },
-    filter: {
-      color: '#b8a9e8', // colors[1]
-      bgColor: '#0a0a2e', // dark
     },
   },
   lunnp1: {

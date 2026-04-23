@@ -93,7 +93,7 @@ export function CharacterCard({
           background: bgColor,
           boxShadow: 'cardHover',
           outline: '2px solid',
-          outlineColor: 'outlineStrong',
+          outlineColor: labelColor || 'outlineStrong',
           borderRadius: '16px',
           aspectRatio: undefined,
           transformOrigin: undefined,
