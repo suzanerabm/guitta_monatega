@@ -74,7 +74,7 @@ export function RegionBanner({
       overflow={{ base: 'visible', md: 'hidden' }}
       mt={{ base: '1rem', md: '2rem' }}
       mb={{ base: '1rem', md: '2rem' }}
-      minH={{ base: 'auto', md: '400px' }}
+      minH={{ base: 'auto', md: '400px', lg: '540px', xl: '640px' }}
     >
       {/* Gradient layer */}
       <Box
@@ -117,8 +117,11 @@ export function RegionBanner({
             height: 'calc(100% - 3rem)',
             transform: 'translateY(-50%)',
           },
+          '@media (min-width: 80em)': {
+            left: '3rem',
+          },
         }}
-        padding={{ base: '1.5rem 1rem 0', md: 0 }}
+        padding={{ base: '1.5rem 25px 0', md: 0 }}
         display="flex"
       >
         {renderPanel ? (

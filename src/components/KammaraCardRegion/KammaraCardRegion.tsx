@@ -155,9 +155,164 @@ export function KammaraCardRegion({
         />
 
         <Flex position="relative" direction="column" width="100%" height="100%">
-          {/* Title banner removed — was repetitive with the RegionDivider
-              band above each region. Name/crest/parent still live on
-              RegionDivider + KammaraCharacterGallery headers. */}
+          {/* ── Title banner ────────────────────── */}
+          <Box
+            position="relative"
+            flexShrink={0}
+            overflow="hidden"
+            css={{
+              background: `linear-gradient(160deg, ${hdrBg}20 0%, ${hdrBg}10 50%, ${hdrBg}20 100%)`,
+              borderBottom: `1px solid ${color}`,
+            }}
+          >
+            {/* Banner watermark — crest glyph (world identity) on both sides */}
+            <Flex
+              position="absolute"
+              inset={0}
+              justify="space-between"
+              align="center"
+              padding="0 1.5rem"
+              pointerEvents="none"
+              aria-hidden="true"
+              css={{
+                fontFamily: 'var(--chakra-fonts-glyph)',
+                color: `${color}12`,
+                fontSize: '5rem',
+                lineHeight: 1,
+                overflow: 'hidden',
+              }}
+            >
+              <span>{crestGlyph}</span>
+              <span style={{ fontSize: '8rem' }}>{crestGlyph}</span>
+              <span>{crestGlyph}</span>
+            </Flex>
+
+            {/* Header content — left-aligned */}
+            <Flex direction="column" gap="sm" padding={`1rem ${CARD_PADDING_X} 1.2rem`}>
+              {/* Kalún breadcrumb — parent planet crest → region crest.
+                  The "⊶" (partida/ir adiante) between them signals "part of".
+                  Reads as: "inside [planet] lies [region]". */}
+              <Flex
+                align="center"
+                gap="sm"
+                aria-label={`${parentName} · ${name}`}
+                css={{
+                  fontFamily: 'var(--chakra-fonts-glyph)',
+                  fontSize: '1rem',
+                  color: `${color}cc`,
+                  letterSpacing: '0.12em',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                <Box width="20px" height="1px" css={{ background: `linear-gradient(90deg, transparent, ${color}80)` }} />
+                <span style={{ fontSize: '1rem', opacity: 0.6 }}>{parentCrestGlyph}</span>
+                <span style={{ fontSize: '0.85rem', opacity: 0.5 }}>⊶</span>
+                <span style={{ fontSize: '1.3rem' }}>{crestGlyph}</span>
+                <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, ${color}80, transparent)` }} />
+              </Flex>
+
+              {/* Category + parent + role tag */}
+              <Flex align="center" gap="sm">
+                <Text
+                  fontSize="xs"
+                  letterSpacing="hero"
+                  textTransform="uppercase"
+                  fontWeight="semibold"
+                  color={color}
+                  m={0}
+                  opacity={0.9}
+                >
+                  {category.toUpperCase()}
+                </Text>
+                <Box
+                  as="span"
+                  fontFamily="glyph"
+                  fontSize="xs"
+                  lineHeight={1}
+                  css={{ color: `${color}80` }}
+                  aria-hidden="true"
+                >
+                  ·
+                </Box>
+                <Text
+                  fontSize="xs"
+                  letterSpacing="hero"
+                  textTransform="uppercase"
+                  fontWeight="semibold"
+                  color="textOverlayBright"
+                  m={0}
+                  opacity={0.7}
+                >
+                  {parentName}
+                </Text>
+                {role && (
+                  <>
+                    <Box
+                      as="span"
+                      fontFamily="glyph"
+                      fontSize="xs"
+                      lineHeight={1}
+                      css={{ color: `${color}80` }}
+                      aria-hidden="true"
+                    >
+                      ·
+                    </Box>
+                    <Text
+                      fontSize="xs"
+                      letterSpacing="hero"
+                      textTransform="uppercase"
+                      fontWeight="semibold"
+                      color="textOverlayBright"
+                      m={0}
+                      opacity={0.8}
+                    >
+                      {role}
+                    </Text>
+                  </>
+                )}
+              </Flex>
+
+              {/* Name — hero scale, left aligned */}
+              <Heading
+                as="h2"
+                fontFamily="body"
+                fontSize="h2"
+                fontWeight="bold"
+                lineHeight={1}
+                color={color}
+                letterSpacing="heroTitle"
+                m={0}
+                css={{
+                  textShadow: `0 0 40px ${color}40, 0 4px 20px ${color}30`,
+                }}
+              >
+                {name}
+              </Heading>
+
+              {/* Gradient divider */}
+              <Box
+                height="1px"
+                width="80px"
+                css={{ background: `linear-gradient(90deg, ${color}, transparent)` }}
+              />
+
+              {/* Traits (subtitle) — inline separated list */}
+              {subtitle && (
+                <Text
+                  fontSize="sm"
+                  color={mutedText}
+                  m={0}
+                  letterSpacing="wide"
+                >
+                  {subtitle}
+                </Text>
+              )}
+            </Flex>
+          </Box>
+
+          {/* Divider */}
+          <Box height="1px" flexShrink={0} css={{ background: `${color}60` }} />
+
           {/* ── Body content (full width) ── */}
           <Flex direction="column" flex={1} minW={0} minH={0}>
 
