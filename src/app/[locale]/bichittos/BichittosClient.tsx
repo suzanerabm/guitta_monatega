@@ -89,43 +89,6 @@ export function BichittosClient({ data }: Props) {
     { id: 'miscelania', label: getCreatureName('miscelania', locale as Locale), color: palettes.miscelania.colors[2], bgColor: palettes.miscelania.dark },
   ];
 
-  // Per-creature decoration for the Bichittos section: parallax background
-  // image behind the card and the accent colors used by the new DSTextPanel
-  // creature variant. bgImage paths are placeholders — drop any image into
-  // `public/imgs/bichittos/bg/<id>.jpg` (or .png) to turn the parallax on.
-  const creatureDecor: Record<CreatureId, { bgImage?: string; accent: string; accentAlt: string; tag: string }> = {
-    napcat: {
-      bgImage: '/imgs/bichittos/bg/napcat.png',
-      accent: palettes.napcat.colors[0],
-      accentAlt: palettes.napcat.colors[3],
-      tag: 'Gato · Sonhador',
-    },
-    zeco: {
-      bgImage: '/imgs/bichittos/bg/zeco.png',
-      accent: palettes.zeco.colors[5],
-      accentAlt: palettes.zeco.colors[2],
-      tag: 'Cachorro · Memória',
-    },
-    taylo: {
-      bgImage: '/imgs/bichittos/bg/taylo.jpg',
-      accent: palettes.taylo.colors[0],
-      accentAlt: palettes.taylo.colors[4],
-      tag: 'Amigos · Natureza',
-    },
-    cheiodebolinha: {
-      bgImage: '/imgs/bichittos/bg/cheiodebolinha.png',
-      accent: palettes.cheiodebolinha.colors[2],
-      accentAlt: palettes.cheiodebolinha.colors[3],
-      tag: 'Bobbin',
-    },
-    miscelania: {
-      bgImage: '/imgs/bichittos/bg/miscelania.png',
-      accent: palettes.miscelania.colors[2],
-      accentAlt: palettes.miscelania.colors[3],
-      tag: 'Histórias soltas',
-    },
-  };
-
   return (
     <>
       <HeroSection
@@ -211,7 +174,6 @@ export function BichittosClient({ data }: Props) {
         });
 
         const hidden = activeFilter !== 'all' && activeFilter !== creature.id;
-        const decor = creatureDecor[creature.id];
         const panelTitle = `${name}${creature.id === 'napcat' ? ' & Violeta' : (creature.id === 'zeco' || creature.id === 'taylo') ? ' & Amigos' : ''}`;
 
         return (
@@ -220,7 +182,7 @@ export function BichittosClient({ data }: Props) {
             id={creature.id}
             gradient={palette.gradientBg}
             accentColor={palette.colors[0]}
-            bgImage={decor.bgImage}
+            bgImage={colors.bgImage}
             bgOpacity={0.22}
             hidden={hidden}
           >
@@ -238,9 +200,9 @@ export function BichittosClient({ data }: Props) {
                   textColor={colors.textColor}
                   mascot={creature.id === 'zeco' ? zecoMascot : undefined}
                   textPanelTitle={panelTitle}
-                  creatureAccent={decor.accent}
-                  creatureAccentAlt={decor.accentAlt}
-                  panelBadge={decor.tag}
+                  creatureAccent={colors.accent}
+                  creatureAccentAlt={colors.accentAlt}
+                  panelBadge={colors.tag}
                   text={
                     <>
                       {panelStory.map((p, i) => (

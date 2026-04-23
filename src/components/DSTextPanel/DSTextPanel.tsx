@@ -102,7 +102,7 @@ export function DSTextPanel({
       borderRadius="16px"
       overflow="hidden"
       position="relative"
-      bg="rgba(255, 255, 255, 0.1)"
+      bg="rgba(0, 0, 0, 0.3)"
       backdropFilter="blur(8px)"
       outline="2px solid"
       outlineColor={borderColor ?? titleColor}

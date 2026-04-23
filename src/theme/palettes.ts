@@ -15,18 +15,26 @@ export interface Palette {
   gradient: string;
   gradientBg: string;
   /**
-   * Cores *literais* usadas pelo BichittosClient — só definido para as
+   * Fonte única de verdade para o BichittosClient — só definido para as
    * criaturas do Bichittos. Mudou aqui, mudou na página.
    */
   bichittos?: {
-    /** Cor do nome grande do personagem (hero, fora do card). */
+    /** Cor do nome grande do personagem (hero h1, fora do card). */
     name: string;
     /** Cor do texto curto do CreatureCard (fora do banner). */
     text: string;
-    /** Cor do título <h2> dentro do DSTextPanel. */
+    /** Cor do título <h2> dentro do DSTextPanel + cor da borda do painel. */
     titleColor: string;
     /** Cor dos <p> dentro do DSTextPanel. */
     textColor: string;
+    /** Cor dos cantos HUD, fundo/borda da pill e dropcap. */
+    accent: string;
+    /** Cor do texto da pill (segundo acento, usado no dropcap também). */
+    accentAlt: string;
+    /** Imagem de fundo parallax da seção. */
+    bgImage?: string;
+    /** Texto da pill (ex: "Gato · Sonhador"). */
+    tag: string;
   };
   /** HeroSection da página do mundo (bg + cores de texto). Opcional. */
   hero?: {
@@ -50,16 +58,20 @@ export const palettes: Record<PaletteName, Palette> = {
     gradientBg: 'linear-gradient(135deg, #ff6b9d, #ffa751, #ffe259, #6dd5fa)',
   },
   napcat: {
-    colors: ['#667eea', '#764ba2', '#fefdff', '#450a3c', '#ddd4f4', '#4f0a42'],
-    text: '#ddd4f4',
-    dark: '#1a1432',
-    gradient: 'linear-gradient(135deg, #450a3c, #764ba2, #fefdff)',
-    gradientBg: 'linear-gradient(160deg, #1a1432 0%, #2a1f4a 40%, #1e1638 100%)',
+    colors: ['#4a7eff', '#546db0', '#c4d4ff', '#0f1a4a', '#dde5ff', '#1e3a7a'],
+    text: '#c4d4ff',
+    dark: '#0a0f2a',
+    gradient: 'linear-gradient(135deg, #0f1a4a, #0f1a33, #c4d4ff)',
+    gradientBg: 'linear-gradient(160deg, #0f1a4a 10%, #1e3a7a 40%, #0f1a4a 100%)',
     bichittos: {
-      name: '#450a3c',       // hero "NapCat" grande fora do card
-      text: '#ddd4f4',       // texto do CreatureCard externo
-      titleColor: '#b5a2dc', // h2 "NapCat & Violeta" dentro do painel
-      textColor: '#ddd4f4',  // parágrafos dentro do painel
+      name: 'rgb(7, 5, 31)', // hero "NapCat" grande fora do card
+      text: '#c4d4ff',       // texto do CreatureCard externo
+      titleColor: '#c4d4ff', // h2 "NapCat & Violeta" dentro do painel + borda
+      textColor: '#c4d4ff',  // parágrafos dentro do painel
+      accent: '#4a7eff',     // cantos HUD + fundo/borda pill + dropcap
+      accentAlt: '#c4d4ff',  // texto da pill
+      bgImage: '/imgs/bichittos/bg/napcat.png',
+      tag: 'Gato · Sonhador',
     },
   },
   zeco: {
@@ -69,10 +81,14 @@ export const palettes: Record<PaletteName, Palette> = {
     gradient: 'linear-gradient(155deg, #4a2512 0%, #7a3d1a 45%, #c56b2e 100%)',
     gradientBg: 'linear-gradient(160deg, #fece95 0%, #f57f20 40%, #fece95 100%)',
     bichittos: {
-      name: '#f58020',       // hero "Zeco" grande fora do card
-      text: '#f8e8da',       // texto do CreatureCard externo
-      titleColor: '#f58020', // h2 "Zeco & Amigos" dentro do painel
-      textColor: '#f8e8da',  // parágrafos dentro do painel (claros p/ fundo escuro)
+      name: '#f58020',
+      text: '#f8e8da',
+      titleColor: '#ffa751',
+      textColor: '#f8e8da',
+      accent: '#f58020',
+      accentAlt: '#ffa751',
+      bgImage: '/imgs/bichittos/bg/zeco.png',
+      tag: 'Hamster · Quintal',
     },
   },
   taylo: {
@@ -84,34 +100,46 @@ export const palettes: Record<PaletteName, Palette> = {
     bichittos: {
       name: '#5d9466',
       text: '#d7e2dd',
-      titleColor: '#d7e2dd',
-      textColor: '#b6fcc0',
+      titleColor: '#b6fcc0',
+      textColor: '#d7e2dd',
+      accent: '#5d9466',
+      accentAlt: '#b6fcc0',
+      bgImage: '/imgs/bichittos/bg/taylo.jpg',
+      tag: 'Amigos · Natureza',
     },
   },
   miscelania: {
-    colors: ['#c99a2e', '#8a6418', '#e8c968', '#f5e3a8', '#1a1405', '#a67c1f'],
-    text: '#f5e3a8',
-    dark: '#1a1405',
-    gradient: 'linear-gradient(135deg, #8a6418, #c99a2e, #e8c968)',
-    gradientBg: 'linear-gradient(160deg, #1a1405 0%, #3a2a0a 40%, #241a08 100%)',
+    colors: ['#667eea', '#764ba2', '#fefdff', '#450a3c', '#ddd4f4', '#4f0a42'],
+    text: '#ddd4f4',
+    dark: '#1a1432',
+    gradient: 'linear-gradient(135deg, #450a3c, #764ba2, #fefdff)',
+    gradientBg: 'linear-gradient(160deg, #2a1b5c 0%, #4c2a8a 40%, #2a1b5c 100%)',
     bichittos: {
-      name: '#e8c968',
-      text: '#f5e3a8',
-      titleColor: '#e8c968',
-      textColor: '#f5e3a8',
+      name: '#b5a2dc',
+      text: '#ddd4f4',
+      titleColor: '#b5a2dc',
+      textColor: '#ddd4f4',
+      accent: '#b5a2dc',
+      accentAlt: '#ddd4f4',
+      bgImage: '/imgs/bichittos/bg/miscelania.png',
+      tag: 'Histórias soltas',
     },
   },
   cheiodebolinha: {
     colors: ['#3a5a8c', '#2c4a6e', '#8badc4', '#b0cfe0', '#081e28', '#1a3a48'],
-    text: '#b0cfe0',
+    text: '#edf0f2',
     dark: '#0e1a2a',
-    gradient: 'linear-gradient(135deg, #2c4a6e, #3a5a8c, #5a7a9c)',
-    gradientBg: 'linear-gradient(160deg, #0e1a2a 0%, #1a2a40 40%, #152238 100%)',
+    gradient: 'linear-gradient(135deg, #1a299f, #1a299f, #1a299f)',
+    gradientBg: 'linear-gradient(160deg, #1a299f 0%, #1a299f 40%, #1a299f 100%)',
     bichittos: {
-      name: '#8badc4',
-      text: '#b0cfe0',
-      titleColor: '#8badc4',
-      textColor: '#b0cfe0',
+      name: '#1a299f',
+      text: '#edf0f2',
+      titleColor: '#e9eaf0',
+      textColor: '#edf0f2',
+      accent: '#dbe8f0',
+      accentAlt: '#80828a',
+      bgImage: '/imgs/bichittos/bg/cheiodebolinha.png',
+      tag: 'Bobbin',
     },
   },
   kammara: {
