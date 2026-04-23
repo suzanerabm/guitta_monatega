@@ -204,6 +204,7 @@ export function BichittosClient({ data }: Props) {
                   creatureAccentAlt={colors.accentAlt}
                   panelBadge={colors.tag}
                   panelBg={colors.panelBg}
+                  panelBorderColor={colors.borderColor}
                   text={
                     <>
                       {panelStory.map((p, i) => (

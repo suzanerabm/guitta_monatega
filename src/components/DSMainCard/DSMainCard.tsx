@@ -82,6 +82,8 @@ interface DSMainCardProps {
   panelBadge?: string;
   /** Creature-tinted panel background forwarded to DSTextPanel. */
   panelBg?: string;
+  /** Override the DSTextPanel outline color (falls back to titleColor). */
+  panelBorderColor?: string;
   children?: ReactNode;
   'data-testid'?: string;
 }
@@ -104,6 +106,7 @@ export function DSMainCard({
   creatureAccentAlt,
   panelBadge,
   panelBg,
+  panelBorderColor,
   children,
   'data-testid': testId,
 }: DSMainCardProps) {
@@ -358,6 +361,7 @@ export function DSMainCard({
               creatureAccentAlt={creatureAccentAlt}
               badge={panelBadge}
               panelBg={panelBg}
+              borderColor={panelBorderColor}
             >
               {text}
             </DSTextPanel>

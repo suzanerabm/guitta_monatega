@@ -23,8 +23,12 @@ export interface Palette {
     name: string;
     /** Cor do texto curto do CreatureCard (fora do banner). */
     text: string;
-    /** Cor do título <h2> dentro do DSTextPanel + cor da borda do painel. */
+    /** Cor do título <h2> dentro do DSTextPanel. Se `borderColor` não for
+     *  definido, esta cor também é usada como borda do painel. */
     titleColor: string;
+    /** Cor da borda (outline) do DSTextPanel. Se não definido, cai em
+     *  `titleColor`. Permite descolar título e moldura quando precisar. */
+    borderColor?: string;
     /** Cor dos <p> dentro do DSTextPanel. */
     textColor: string;
     /** Cor dos cantos HUD, fundo/borda da pill e dropcap. */
@@ -64,16 +68,16 @@ export const palettes: Record<PaletteName, Palette> = {
     gradient: 'linear-gradient(135deg, #0f1a4a, #0f1a33, #c4d4ff)',
     gradientBg: 'linear-gradient(160deg, #0f1a4a 10%, #1e3a7a 40%, #0f1a4a 100%)',
     bichittos: {
-      name: '#3b0033', // hero "NapCat" grande fora do card
+      name: '#1e3a7a', // hero "NapCat" grande fora do card
       text: '#c4d4ff',       // texto do CreatureCard externo
       // titleColor: '#29bade', // h2 "NapCat & Violeta" dentro do painel + borda
       titleColor: '#c4d4ff', // h2 "NapCat & Violeta" dentro do painel + borda
       textColor: '#c4d4ff',  // parágrafos dentro do painel
-      accent: '#892b7d',  
+      accent: '#c4d4ff',  
       accentAlt: '#c4d4ff',  // texto da pill
       bgImage: '/imgs/bichittos/bg/napcat.png',
       tag: 'Gato · Sonhador',
-      panelBg: '#2e0429',
+      panelBg: 'rgb(30, 58, 122, 0.8)',
       // panelBg: '#3b0033',
     },
   },
@@ -84,17 +88,19 @@ export const palettes: Record<PaletteName, Palette> = {
     gradient: 'linear-gradient(155deg, #4a2512 0%, #7a3d1a 45%, #c56b2e 100%)',
     gradientBg: 'linear-gradient(160deg, #fece95 0%, #f57f20 40%, #fece95 100%)',
     bichittos: {
-      name: 'rgb(245, 128, 32)',
+      name: '#f58020',
       text: '#592e06',
-      titleColor: '#483727',
-      textColor: '#69250c',
-      accent: '#483727',
-      accentAlt: '#f9be82',
+      titleColor: '#f58020',
+      textColor: '#fece95',
+      accent: '#f58020',
+      accentAlt: '#fece95',
       bgImage: '/imgs/bichittos/bg/zeco.png',
       tag: 'Hamster · Quintal',
-      // panelBg: 'rgb(249, 190, 130, 0.3)',
-      panelBg: 'rgb(245, 128, 32, 0.6)',
-      stripColor: '#483727'
+      panelBg: '#592e06',
+      // panelBg: 'rgb(245, 128, 32, 0.6)',
+      // panelBg: 'rgba(255,255,255,0.12)',
+      stripColor: '#fece95',
+      borderColor: '#fece95',
     },
   },
   taylo: {
