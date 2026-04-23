@@ -35,6 +35,8 @@ export interface Palette {
     bgImage?: string;
     /** Texto da pill (ex: "Gato · Sonhador"). */
     tag: string;
+    /** Fundo translúcido do DSTextPanel (default: rgba(0,0,0,0.3)). */
+    panelBg?: string;
   };
   /** HeroSection da página do mundo (bg + cores de texto). Opcional. */
   hero?: {
@@ -64,14 +66,16 @@ export const palettes: Record<PaletteName, Palette> = {
     gradient: 'linear-gradient(135deg, #0f1a4a, #0f1a33, #c4d4ff)',
     gradientBg: 'linear-gradient(160deg, #0f1a4a 10%, #1e3a7a 40%, #0f1a4a 100%)',
     bichittos: {
-      name: 'rgb(7, 5, 31)', // hero "NapCat" grande fora do card
+      name: '#2fd077', // hero "NapCat" grande fora do card
       text: '#c4d4ff',       // texto do CreatureCard externo
-      titleColor: '#c4d4ff', // h2 "NapCat & Violeta" dentro do painel + borda
+      titleColor: '#2fd077', // h2 "NapCat & Violeta" dentro do painel + borda
       textColor: '#c4d4ff',  // parágrafos dentro do painel
-      accent: '#4a7eff',     // cantos HUD + fundo/borda pill + dropcap
-      accentAlt: '#c4d4ff',  // texto da pill
+      accent: '#2fd077',     // cantos HUD + fundo/borda pill + dropcap
+      accentAlt: '#2fd077',  // texto da pill
       bgImage: '/imgs/bichittos/bg/napcat.png',
       tag: 'Gato · Sonhador',
+      // panelBg: '#3b0033',
+      panelBg: '#01021b',
     },
   },
   zeco: {
@@ -81,14 +85,16 @@ export const palettes: Record<PaletteName, Palette> = {
     gradient: 'linear-gradient(155deg, #4a2512 0%, #7a3d1a 45%, #c56b2e 100%)',
     gradientBg: 'linear-gradient(160deg, #fece95 0%, #f57f20 40%, #fece95 100%)',
     bichittos: {
-      name: '#f58020',
-      text: '#f8e8da',
-      titleColor: '#ffa751',
-      textColor: '#f8e8da',
-      accent: '#f58020',
-      accentAlt: '#ffa751',
+      name: '#483727',
+      text: '#483727',
+      titleColor: '#483727',
+      textColor: '#69250c',
+      accent: '#483727',
+      accentAlt: '#f9be82',
       bgImage: '/imgs/bichittos/bg/zeco.png',
       tag: 'Hamster · Quintal',
+      // panelBg: 'rgb(249, 190, 130, 0.3)',
+      panelBg: 'rgb(245, 128, 32, 0.8)',
     },
   },
   taylo: {
@@ -98,31 +104,32 @@ export const palettes: Record<PaletteName, Palette> = {
     gradient: 'linear-gradient(135deg, #5d9466, #427f49, #5d9466)',
     gradientBg: 'linear-gradient(160deg, #34843c 0%, #185b1e 40%, #082b0b 100%)',
     bichittos: {
-      name: '#5d9466',
+      name: '#eafcb6',
       text: '#d7e2dd',
-      titleColor: '#b6fcc0',
+      titleColor: '#eafcb6',
       textColor: '#d7e2dd',
       accent: '#5d9466',
       accentAlt: '#b6fcc0',
       bgImage: '/imgs/bichittos/bg/taylo.jpg',
       tag: 'Amigos · Natureza',
+      panelBg: 'rgb(8, 43, 11, 0.8)',
     },
   },
   miscelania: {
-    colors: ['#667eea', '#764ba2', '#fefdff', '#450a3c', '#ddd4f4', '#4f0a42'],
+    colors: ['#c266ea', '#764ba2', '#fefdff', '#450a3c', '#ddd4f4', '#4f0a42'],
     text: '#ddd4f4',
     dark: '#1a1432',
-    gradient: 'linear-gradient(135deg, #450a3c, #764ba2, #fefdff)',
-    gradientBg: 'linear-gradient(160deg, #2a1b5c 0%, #4c2a8a 40%, #2a1b5c 100%)',
+    gradient: 'linear-gradient(135deg, #105714, #2a952f, #e3f0e4)',
+    gradientBg: 'linear-gradient(160deg, #2a1b5c 0%, #4c2a8a 40%, #2a952f 100%)',
     bichittos: {
       name: '#b5a2dc',
       text: '#ddd4f4',
-      titleColor: '#b5a2dc',
+      titleColor: '#977ad1',
       textColor: '#ddd4f4',
       accent: '#b5a2dc',
-      accentAlt: '#ddd4f4',
+      accentAlt: '#977ad1',
       bgImage: '/imgs/bichittos/bg/miscelania.png',
-      tag: 'Histórias soltas',
+      tag: 'Mágica',
     },
   },
   cheiodebolinha: {
@@ -132,14 +139,15 @@ export const palettes: Record<PaletteName, Palette> = {
     gradient: 'linear-gradient(135deg, #1a299f, #1a299f, #1a299f)',
     gradientBg: 'linear-gradient(160deg, #1a299f 0%, #1a299f 40%, #1a299f 100%)',
     bichittos: {
-      name: '#1a299f',
+      name: '#3ae9f2',
       text: '#edf0f2',
-      titleColor: '#e9eaf0',
+      titleColor: '#3ae9f2',
       textColor: '#edf0f2',
-      accent: '#dbe8f0',
-      accentAlt: '#80828a',
+      accent: '#3ae9f2',
+      accentAlt: '#83e5ea',
       bgImage: '/imgs/bichittos/bg/cheiodebolinha.png',
-      tag: 'Bobbin',
+      tag: 'Elefante · Medroso',
+      panelBg: 'rgb(47, 49, 113)',
     },
   },
   kammara: {

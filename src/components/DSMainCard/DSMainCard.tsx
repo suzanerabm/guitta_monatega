@@ -80,6 +80,8 @@ interface DSMainCardProps {
   creatureAccentAlt?: string;
   /** Optional pill shown above the panel title. */
   panelBadge?: string;
+  /** Creature-tinted panel background forwarded to DSTextPanel. */
+  panelBg?: string;
   children?: ReactNode;
   'data-testid'?: string;
 }
@@ -101,6 +103,7 @@ export function DSMainCard({
   creatureAccent,
   creatureAccentAlt,
   panelBadge,
+  panelBg,
   children,
   'data-testid': testId,
 }: DSMainCardProps) {
@@ -354,6 +357,7 @@ export function DSMainCard({
               creatureAccent={creatureAccent}
               creatureAccentAlt={creatureAccentAlt}
               badge={panelBadge}
+              panelBg={panelBg}
             >
               {text}
             </DSTextPanel>

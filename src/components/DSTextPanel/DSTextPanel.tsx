@@ -51,6 +51,12 @@ interface DSTextPanelProps {
   creatureAccentAlt?: string;
   /** Optional pill shown above the title (e.g. "NAPCAT · GATO"). */
   badge?: string;
+  /**
+   * Override the panel background. Defaults to `rgba(0,0,0,0.3)` — the
+   * Kammara/SubSystem/RegionBanner idiom. The Bichittos client passes a
+   * creature-tinted translucent color per creature.
+   */
+  panelBg?: string;
   'data-testid'?: string;
 }
 
@@ -82,6 +88,7 @@ export function DSTextPanel({
   creatureAccent,
   creatureAccentAlt,
   badge,
+  panelBg,
   'data-testid': testId,
 }: DSTextPanelProps) {
   const hasCreature = Boolean(creatureAccent);
@@ -102,7 +109,7 @@ export function DSTextPanel({
       borderRadius="16px"
       overflow="hidden"
       position="relative"
-      bg="rgba(0, 0, 0, 0.3)"
+      bg={panelBg ?? 'rgba(0, 0, 0, 0.3)'}
       backdropFilter="blur(8px)"
       outline="2px solid"
       outlineColor={borderColor ?? titleColor}

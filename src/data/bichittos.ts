@@ -26,7 +26,7 @@ export const characterPositions: Record<CreatureId, Character[]> = {
       md: { size: 150 }, xl: { x: 58, size: 250 }, xxl: { x: 55, size: 290 } },
   ],
   miscelania: [
-    { image: '/imgs/characters/miscelania/malmo.png', x: 5, y: 0, size: 100, zIndex: 1 },
+    // { image: '/imgs/characters/miscelania/malmo.png', x: 5, y: 0, size: 100, zIndex: 1 },
     // Ratinhos extras — só no 3xl+
    
   ],
