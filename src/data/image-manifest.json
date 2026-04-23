@@ -552,6 +552,14 @@
     ],
     "miscelania": [
       {
+        "name": "candy fada",
+        "image": "/imgs/characters/miscelania/04_candy_fada.png"
+      },
+      {
+        "name": "candy",
+        "image": "/imgs/characters/miscelania/04_candy.png"
+      },
+      {
         "name": "baby cry",
         "image": "/imgs/characters/miscelania/baby_cry.png"
       },
@@ -566,34 +574,6 @@
       {
         "name": "baby sleep",
         "image": "/imgs/characters/miscelania/baby_sleep.png"
-      },
-      {
-        "name": "baby toy",
-        "image": "/imgs/characters/miscelania/baby_toy.png"
-      },
-      {
-        "name": "bunniet doodle",
-        "image": "/imgs/characters/miscelania/bunniet_doodle.gif"
-      },
-      {
-        "name": "Malmo Bravo",
-        "image": "/imgs/characters/miscelania/Malmo_Bravo.gif"
-      },
-      {
-        "name": "malmo mal humorado",
-        "image": "/imgs/characters/miscelania/malmo_mal_humorado.jpg"
-      },
-      {
-        "name": "malmo não quer dividir",
-        "image": "/imgs/characters/miscelania/malmo_não_quer_dividir.jpg"
-      },
-      {
-        "name": "malmo não quer falar",
-        "image": "/imgs/characters/miscelania/malmo_não_quer_falar.jpg"
-      },
-      {
-        "name": "malmo",
-        "image": "/imgs/characters/miscelania/malmo.png"
       }
     ],
     "napcat": [
@@ -692,14 +672,6 @@
         "image": "/imgs/characters/taylo/03_babalina.png"
       },
       {
-        "name": "candy mágica",
-        "image": "/imgs/characters/taylo/04_candy_mágica.png"
-      },
-      {
-        "name": "candy",
-        "image": "/imgs/characters/taylo/04_candy.png"
-      },
-      {
         "name": "Catarina feliz",
         "image": "/imgs/characters/taylo/05_Catarina_feliz.gif"
       },
@@ -729,10 +701,6 @@
       }
     ],
     "zeco": [
-      {
-        "name": "zeco acordando",
-        "image": "/imgs/characters/zeco/00_zeco_acordando.png"
-      },
       {
         "name": "zeco atrasado",
         "image": "/imgs/characters/zeco/01_zeco_atrasado.png"
@@ -832,10 +800,6 @@
       {
         "name": "Rui Merengue correndo",
         "image": "/imgs/characters/zeco/02_Rui_Merengue_correndo.png"
-      },
-      {
-        "name": "Rui Merengue cozinhando",
-        "image": "/imgs/characters/zeco/02_Rui_Merengue_cozinhando.png"
       },
       {
         "name": "Rui Merengue joga bolinha",
