@@ -1,9 +1,10 @@
 /**
  * Central registry of all character data, keyed by contextId.
  *
- * A contextId combines the universe and the section, e.g. "kammara/lunnp1"
- * or "bichittos/napcat". The CharacterStrip / CharacterInfoPanel use this
- * id to look up which character set is in scope.
+ * A contextId combines the universe and the section, e.g. "kammara/lunnp1".
+ * The CharacterStrip / CharacterInfoPanel use this id to look up which
+ * character set is in scope. Bichittos não aparece aqui — suas histórias
+ * ficam em `./bichittos/stories.json` e são lidas via `_creatureData.ts`.
  */
 
 import type { Character } from "./types";
@@ -20,13 +21,6 @@ import kammaraZ1 from "./kammara/z1_characters.json";
 import kammaraGotto from "./kammara/gotto_characters.json";
 import kammaraKammara from "./kammara/kammara_characters.json";
 
-// Bichittos
-import bichittosNapcat from "./bichittos/napcat.json";
-import bichittosZeco from "./bichittos/zeco.json";
-import bichittosTaylo from "./bichittos/taylo.json";
-import bichittosMiscelania from "./bichittos/miscelania.json";
-import bichittosCheiodebolinha from "./bichittos/cheiodebolinha.json";
-
 export const charactersByContext: Record<string, Character[]> = {
   "kammara/lunnp1": kammaraLunnp1 as Character[],
   "kammara/eni4": kammaraEni4 as Character[],
@@ -38,11 +32,6 @@ export const charactersByContext: Record<string, Character[]> = {
   "kammara/z1": kammaraZ1 as Character[],
   "kammara/gotto": kammaraGotto as Character[],
   "kammara/kammara": kammaraKammara as Character[],
-  "bichittos/napcat": bichittosNapcat as Character[],
-  "bichittos/zeco": bichittosZeco as Character[],
-  "bichittos/taylo": bichittosTaylo as Character[],
-  "bichittos/miscelania": bichittosMiscelania as Character[],
-  "bichittos/cheiodebolinha": bichittosCheiodebolinha as Character[],
 };
 
 export type ContextId = keyof typeof charactersByContext;

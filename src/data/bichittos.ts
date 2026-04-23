@@ -4,7 +4,7 @@
 // (it describes which images go where), so it lives under `data/`, not `theme/`.
 
 import type { Character, Mascot } from '@/components/DSMainCard/DSMainCard';
-import type { CreatureId } from '@/theme/creatures';
+import type { CreatureId } from '@/theme/palettes';
 
 export const characterPositions: Record<CreatureId, Character[]> = {
   napcat: [

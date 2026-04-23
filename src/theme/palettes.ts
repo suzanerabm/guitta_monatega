@@ -4,12 +4,41 @@ export type PaletteName =
   | 'kammara' | 'lunnp1' | 'eni4' | 'triplec' | 'orfv' | 'z1' | 'gotto' | 'arte'
   | 'malloc' | 'mesh' | 'sharp';
 
+/** Criaturas do Bichittos. */
+export type CreatureId =
+  | 'napcat' | 'zeco' | 'taylo' | 'miscelania' | 'cheiodebolinha';
+
 export interface Palette {
   colors: string[];
   text: string;
   dark: string;
   gradient: string;
   gradientBg: string;
+  /**
+   * Cores *literais* usadas pelo BichittosClient — só definido para as
+   * criaturas do Bichittos. Mudou aqui, mudou na página.
+   */
+  bichittos?: {
+    /** Cor do nome grande do personagem (hero, fora do card). */
+    name: string;
+    /** Cor do texto curto do CreatureCard (fora do banner). */
+    text: string;
+    /** Cor do título <h2> dentro do DSTextPanel. */
+    titleColor: string;
+    /** Cor dos <p> dentro do DSTextPanel. */
+    textColor: string;
+  };
+  /** HeroSection da página do mundo (bg + cores de texto). Opcional. */
+  hero?: {
+    background: string;
+    textColor: string;
+    labelColor: string;
+  };
+  /** FilterBar pill default do mundo. Opcional. */
+  filter?: {
+    color: string;
+    bgColor: string;
+  };
 }
 
 export const palettes: Record<PaletteName, Palette> = {
@@ -21,18 +50,30 @@ export const palettes: Record<PaletteName, Palette> = {
     gradientBg: 'linear-gradient(135deg, #ff6b9d, #ffa751, #ffe259, #6dd5fa)',
   },
   napcat: {
-    colors: ['#667eea', '#764ba2', '#fefdff', '#b5a2dc', '#ddd4f4', '#4f0a42'],
+    colors: ['#667eea', '#764ba2', '#fefdff', '#450a3c', '#ddd4f4', '#4f0a42'],
     text: '#ddd4f4',
     dark: '#1a1432',
-    gradient: 'linear-gradient(135deg, #667eea, #764ba2, #fefdff)',
+    gradient: 'linear-gradient(135deg, #450a3c, #764ba2, #fefdff)',
     gradientBg: 'linear-gradient(160deg, #1a1432 0%, #2a1f4a 40%, #1e1638 100%)',
+    bichittos: {
+      name: '#450a3c',       // hero "NapCat" grande fora do card
+      text: '#ddd4f4',       // texto do CreatureCard externo
+      titleColor: '#b5a2dc', // h2 "NapCat & Violeta" dentro do painel
+      textColor: '#ddd4f4',  // parágrafos dentro do painel
+    },
   },
   zeco: {
-    colors: ['#ff8c42', '#ff6b35', '#ffa751', '#964712', '#f9e3cf', '#f58020'],
-    text: '#594733',
+    colors: ['#ff8c42', '#ff6b35', '#ffa751', '#f58020', '#f8e8da', '#f58020'],
+    text: '#7ed63b',
     dark: '#1a0e02',
-    gradient: 'linear-gradient(160deg, #fece95 0%, #fcaf5b 40%, #fece95 100%)',
+    gradient: 'linear-gradient(155deg, #4a2512 0%, #7a3d1a 45%, #c56b2e 100%)',
     gradientBg: 'linear-gradient(160deg, #fece95 0%, #f57f20 40%, #fece95 100%)',
+    bichittos: {
+      name: '#f58020',       // hero "Zeco" grande fora do card
+      text: '#f8e8da',       // texto do CreatureCard externo
+      titleColor: '#f58020', // h2 "Zeco & Amigos" dentro do painel
+      textColor: '#f8e8da',  // parágrafos dentro do painel (claros p/ fundo escuro)
+    },
   },
   taylo: {
     colors: ['#5d9466', '#427f49', '#277230', '#d7e2dd', '#b6fcc0', '#082b0b'],
@@ -40,6 +81,12 @@ export const palettes: Record<PaletteName, Palette> = {
     dark: '#082b0b',
     gradient: 'linear-gradient(135deg, #5d9466, #427f49, #5d9466)',
     gradientBg: 'linear-gradient(160deg, #34843c 0%, #185b1e 40%, #082b0b 100%)',
+    bichittos: {
+      name: '#5d9466',
+      text: '#d7e2dd',
+      titleColor: '#d7e2dd',
+      textColor: '#b6fcc0',
+    },
   },
   miscelania: {
     colors: ['#c99a2e', '#8a6418', '#e8c968', '#f5e3a8', '#1a1405', '#a67c1f'],
@@ -47,6 +94,12 @@ export const palettes: Record<PaletteName, Palette> = {
     dark: '#1a1405',
     gradient: 'linear-gradient(135deg, #8a6418, #c99a2e, #e8c968)',
     gradientBg: 'linear-gradient(160deg, #1a1405 0%, #3a2a0a 40%, #241a08 100%)',
+    bichittos: {
+      name: '#e8c968',
+      text: '#f5e3a8',
+      titleColor: '#e8c968',
+      textColor: '#f5e3a8',
+    },
   },
   cheiodebolinha: {
     colors: ['#3a5a8c', '#2c4a6e', '#8badc4', '#b0cfe0', '#081e28', '#1a3a48'],
@@ -54,6 +107,12 @@ export const palettes: Record<PaletteName, Palette> = {
     dark: '#0e1a2a',
     gradient: 'linear-gradient(135deg, #2c4a6e, #3a5a8c, #5a7a9c)',
     gradientBg: 'linear-gradient(160deg, #0e1a2a 0%, #1a2a40 40%, #152238 100%)',
+    bichittos: {
+      name: '#8badc4',
+      text: '#b0cfe0',
+      titleColor: '#8badc4',
+      textColor: '#b0cfe0',
+    },
   },
   kammara: {
     colors: ['#d4cbf0', '#b8a9e8', '#7a60b0', '#a898d0', '#2d1b69', '#0a0a2e'],
@@ -64,6 +123,15 @@ export const palettes: Record<PaletteName, Palette> = {
     // --gradient-kammara-card: used by DSMainCard inside the kammara section
     // Has solid black bookends so it sits flush over the bg.
     gradientBg: 'linear-gradient(135deg, #000000, #0a0a2e, #1a1a4e, #000000)',
+    hero: {
+      background: 'linear-gradient(135deg, #0a0a2e, #1a1a4e, #2d1b69, #0f3460, #0a0a2e)',
+      textColor: '#ffffff',
+      labelColor: 'rgba(255,255,255,0.6)',
+    },
+    filter: {
+      color: '#b8a9e8', // colors[1]
+      bgColor: '#0a0a2e', // dark
+    },
   },
   lunnp1: {
     colors: ['#00e676', '#00c853', '#c6eed6', '#59f397', '#00c853', '#c6eed6'],
