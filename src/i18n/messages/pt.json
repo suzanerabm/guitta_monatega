@@ -141,14 +141,49 @@
   },
   "about": {
     "pageTitle": "Sobre — Guitta Monatega",
+    "heroLabel": "Biografia",
+    "heroTitle": "Guitta Monatega",
+    "heroSub": "Escritora e ilustradora. Criadora de universos autorais.",
     "title": "Sobre",
-    "paragraphs": [
-      "Guitta Monatega é designer, ilustradora e criadora de universos autorais.",
-      "Desde a infância, constrói personagens e histórias que habitam um espaço entre o fofo e o inusitado — onde o imperfeito ganha forma, identidade e presença. NapCat, Zeco, Taylo, os bichittos e seus amigos nasceram de cadernos de desenho e ganharam forma em livros, animações e esculturas em miniatura.",
-      "Kammara é seu projeto mais recente — uma saga ilustrada que conecta mundos, sistemas e criaturas em uma narrativa em constante expansão.",
-      "Seu trabalho transita entre técnicas tradicionais e digitais: nanquim, grafite, pontilhismo, crochê, needle felting, modelagem e ilustração digital. Cada peça é construída com tempo, repetição e cuidado, preservando a essência do feito à mão.",
-      "Seu trabalho investiga o encontro entre forma, afeto e construção — onde cada criação carrega uma memória, um gesto e um tempo próprio."
+    "date": "2026",
+    "sections": [
+      {
+        "num": "01",
+        "tag": "A Origem",
+        "body": "Desenho desde pequena. Comecei em guardanapos, papéis soltos, margens de caderno — tudo que estivesse por perto."
+      },
+      {
+        "num": "02",
+        "tag": "O Acúmulo",
+        "body": "Com o tempo, os personagens que apareciam naquelas folhas foram ganhando nome, companhia, história. Aos poucos, deixaram de ser desenhos avulsos e viraram o legado Guitta Monatega."
+      },
+      {
+        "num": "03",
+        "tag": "As Três Frentes",
+        "body": "Hoje meu trabalho se organiza em três frentes — cada uma com seu tempo, sua técnica, seu universo."
+      },
+      {
+        "num": "04",
+        "tag": "Bichittos",
+        "body": "O universo afetivo. NapCat, Zeco, Taylo, Cheio de Bolinha e seus amigos. Personagens que existem entre o imperfeito e o afeto, nascidos em cadernos e hoje presentes em livros autorais, animações e esculturas em miniatura."
+      },
+      {
+        "num": "05",
+        "tag": "Kammara",
+        "body": "Onde a história da computação se transforma em mito. A semente veio por volta de 2012 — começaram a surgir planetas, linguagens, criaturas. Em 2019, visitei museus de história da computação para estudar de perto as máquinas que deram origem a tudo. Desde então, venho desenvolvendo esse universo em camadas: cosmologia, personagens, linguagens próprias. Agora apresento o compilado em livros."
+      },
+      {
+        "num": "06",
+        "tag": "A Essência",
+        "body": "Em Kammara, arte e código se entrelaçam e se tornam uma só linguagem. A tecnologia ganha alma, e as dores humanas — ansiedade, baixa autoestima, confusão — ganham forma. Para quem vê só a superfície, é ficção científica. Para quem lê com atenção, é espelho."
+      },
+      {
+        "num": "07",
+        "tag": "O Ofício",
+        "body": "Meu trabalho transita entre a escrita, técnicas tradicionais e digitais — nanquim, grafite, pontilhismo, crochê, needle felting, modelagem, ilustração digital. A palavra e a imagem caminham juntas. Cada peça é construída com tempo, repetição e cuidado, preservando a essência do feito à mão."
+      }
     ],
+    "declaration": "Onde a arte e a computação se equilibram.",
     "universesLabel": "Universos",
     "contactLabel": "Contato"
   },
@@ -727,8 +762,6 @@
               "Antes do PD-11, TripleC era um planeta inteiramente coberto pela Niul Forest. Profundo, lento, ancestral. Um mundo do elemento Terra-Viva, onde tudo respirava junto e nada tinha pressa.",
               "### O Estalo Branco",
               "Um dia, um artefato caiu do céu — era lixo. Um equipamento tecnológico ancestral, descartado pelos humanos da Terra, que atravessou o cosmos como sucata até pousar na floresta. Os bunniets o chamam de PD-11. O impacto ficou conhecido como O Estalo Branco: o momento em que o mundo foi \"instruído\" pela primeira vez. A queda não destruiu TripleC. Reorganizou tudo.",
-              "### A cicatriz fundadora",
-              "Os bunniets chamam a marca deixada pelo impacto de Rakor Darak — a cicatriz fundadora. TripleC nasceu de um acidente, e a instabilidade ficou gravada na geologia para sempre.",
               "### A reorganização",
               "O subsolo se dobrou em camadas lógicas vivas. Da fusão entre raiz, mineral e instrução surgiram os primeiros bunniets — Filhos do Acaso Lógico. A lógica começou a germinar como se fosse uma nova forma de vida.",
               "### As quatro regiões",

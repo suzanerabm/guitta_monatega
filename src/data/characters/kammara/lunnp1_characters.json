@@ -13,7 +13,7 @@
       "pt": "Nasceu em Ve'Lume, nas águas profundas. Suas maiores capacidades: detectar microfendas, ler reflexos invertidos, acalmar água viva, estabilizar emoções coletivas. ",
       "en": "Born in Ve'Lume, in the deep waters. His greatest abilities: detecting microfissures, reading inverted reflections, calming living water, stabilizing collective emotions. "
     },
-    "image": "/imgs/characters/kammara/lunnp1/EruRin.png",
+    "image": "/imgs/characters/kammara/lunnp1/erurin_alta.png",
     "backImage": "/imgs/characters/kammara/lunnp1/EruRin_costas1.png",
     "dorsalMeaning": {
       "pt": "Papel no grupo é ancorar e direcionar decisões mais focadas. Estabilidade profunda e introspecção — o caminho de quem ancora o planeta.",
@@ -69,8 +69,8 @@
       "pt": "Lún'Kai silencioso. Pulsa grave e contínuo enquanto outros piscam rápido, e a água ao redor fica mais densa e mais lenta na sua presença.",
       "en": ""
     },
-    "image": "/imgs/characters/kammara/lunnp1/brisa_sem_brilho.png",
-    "backImage": "/imgs/characters/kammara/lunnp1/brisa_azul_costas_sem_brilho.png",
+    "image": "/imgs/characters/kammara/lunnp1/brisa_alta.png",
+    "backImage": "/imgs/characters/kammara/lunnp1/brisa_alta_costas.png",
     "dorsalMeaning": {
       "pt": "Estabiliza vibração ao redor: quando Brisa está perto, a água fica mais densa e mais lenta. Brisa brilha para que Erú'Rin não se perca.",
       "en": "Stabilizes vibration around it: when Brisa is near, the water grows denser and slower. Brisa shines so Erú'Rin doesn't lose her way."
@@ -205,8 +205,8 @@
       "pt": "Lún'Kai expressiva. Pulsa em rosa-lume cintilante e deixa rastros de luz dourada na água por onde passa — outros Shal'ún seguem esses rastros para encontrar Lúm'Esha. ",
       "en": "Expressive Lún'Kai. Pulses in shimmering rose-light and leaves trails of golden glow on the water — other Shal'ún follow those trails to find Lúm'Esha."
     },
-    "image": "/imgs/characters/kammara/lunnp1/flor_lume.png",
-    "backImage": "/imgs/characters/kammara/lunnp1/flor_lume_costas.png",
+    "image": "/imgs/characters/kammara/lunnp1/flor_lume_alta.png",
+    "backImage": "/imgs/characters/kammara/lunnp1/flor_lume_costas_alta.png",
     "dorsalMeaning": {
       "pt": "Em noites de Oru'Len, os rastros formam padrões que lembram flores desenhadas.",
       "en": "On Oru'Len nights, the trails form patterns that look like drawn flowers."
@@ -242,6 +242,228 @@
     "fairyDust": {
       "color": "#ff6b9d",
       "count": 120,
+      "size": 3,
+      "duration": 1.8,
+      "intensity": 2.2,
+      "area": {
+        "top": 15,
+        "left": 20,
+        "width": 60,
+        "height": 65
+      }
+    }
+  },
+  {
+    "match": "Rin'Boro",
+    "name": {
+      "pt": "Rin'Boro",
+      "en": "Rin'Boro"
+    },
+    "species": {
+      "pt": "Shal'ún",
+      "en": "Shal'ún"
+    },
+    "bio": {
+      "pt": "Nome Kalún Rin'Boro — \"Aquele que Cai e Volta\". Dança com o fluxo: celebra cada momento como movimento e cada queda como oportunidade de riso.",
+      "en": "Kalún name Rin'Boro — \"The One Who Falls and Returns\". He dances with the flow: celebrates each moment as movement and each fall as a chance to laugh."
+    },
+    "image": "/imgs/characters/kammara/lunnp1/Rinboro.png",
+    "backImage": "/imgs/characters/kammara/lunnp1/Rinboro_costas.png",
+    "backTitle": {
+      "pt": "Glifo Dorsal",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "Muda ambientes por contágio emocional direto. Transforma peso em leveza ao saltar.",
+      "en": "Changes environments through direct emotional contagion. Turns weight into lightness with a leap."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙ • ⊹",
+        "label": {
+          "pt": "Dom",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Leveza",
+          "en": ""
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Lún'Kai",
+          "en": "Lún'Kai"
+        },
+        "value": {
+          "pt": "Tiru",
+          "en": "Tiru"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Tiru",
+    "name": {
+      "pt": "Tiru",
+      "en": "Tiru"
+    },
+    "species": {
+      "pt": "Lún'Kai",
+      "en": "Lún'Kai"
+    },
+    "bio": {
+      "pt": "Lún'Kai explosivo. Patinhas mais fortes que outros Lún'Kai, feitas para saltar e quicar.",
+      "en": "Explosive Lún'Kai. Stronger legs than other Lún'Kai, built to leap and bounce."
+    },
+    "image": "/imgs/characters/kammara/lunnp1/tiru.png",
+    "backImage": "/imgs/characters/kammara/lunnp1/tiru_costas.png",
+    "backTitle": {
+      "pt": "Outro lado",
+      "en": "Another side"
+    },
+    "dorsalMeaning": {
+      "pt": "Lum'Ka sai em micro-detonações sincronizadas com cada salto, como faíscas douradas dispersas no ar. Nasceu com 3 impulsos luminosos consecutivos — sinal canônico de \"saltadores naturais\"",
+      "en": ""
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Vínculo",
+          "en": "Bond"
+        },
+        "value": {
+          "pt": "Rin'Boro",
+          "en": "Rin'Boro"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Luz",
+          "en": "Light"
+        },
+        "value": {
+          "pt": "Branco",
+          "en": "White"
+        }
+      }
+    ],
+    "fairyDust": {
+      "color": "#fff5dc",
+      "count": 120,
+      "size": 3,
+      "duration": 1.8,
+      "intensity": 2.2,
+      "area": {
+        "top": 15,
+        "left": 20,
+        "width": 60,
+        "height": 65
+      }
+    }
+  },
+  {
+    "match": "Müra",
+    "name": {
+      "pt": "Müra",
+      "en": "Müra"
+    },
+    "species": {
+      "pt": "Shal'ún",
+      "en": "Shal'ún"
+    },
+    "bio": {
+      "pt": "Nome Kalún Mü'Rá — \"Movimento Suave / Fluxo que Acompanha\". Encontra o tempo exato de cada momento e convida os outros a acompanhar. ",
+      "en": "Kalún name Mü'Rá — \"Gentle Movement / Flow That Follows\". She finds the exact tempo of each moment and invites others to follow."
+    },
+    "image": "/imgs/characters/kammara/lunnp1/mura.png",
+    "backImage": "/imgs/characters/kammara/lunnp1/mura_costas.png",
+    "backTitle": {
+      "pt": "Glifo Dorsal",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "Desacelera ambientes agitados e estabiliza ritmos caóticos com calma ativa. Move-se em compasso contínuo.",
+      "en": "She slows agitated environments and stabilizes chaotic rhythms with active calm. Moves in continuous cadence."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙ • ⊹",
+        "label": {
+          "pt": "Dom",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Harmonizadora",
+          "en": "Harmonizer"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Lún'Kai",
+          "en": "Lún'Kai"
+        },
+        "value": {
+          "pt": "Sereno",
+          "en": "Sereno"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Sereno",
+    "name": {
+      "pt": "Sereno",
+      "en": "Sereno"
+    },
+    "species": {
+      "pt": "Lún'Kai",
+      "en": "Lún'Kai"
+    },
+    "bio": {
+      "pt": "Lún'Kai ritmado. Pulso constante como respiração tranquila. Outros Lún'Kai sincronizam ao seu compasso involuntariamente.",
+      "en": "Rhythmic Lún'Kai. Steady pulse like calm breathing. Other Lún'Kai synchronize involuntarily with its beat. "
+    },
+    "image": "/imgs/characters/kammara/lunnp1/sereno_alta.png",
+    "backImage": "/imgs/characters/kammara/lunnp1/Sereno_2_costas.png",
+    "backTitle": {
+      "pt": "Outro lado",
+      "en": "Another side"
+    },
+    "dorsalMeaning": {
+      "pt": "A água ao redor encontra ritmo: gotículas caem em intervalos regulares, correntes se organizam.",
+      "en": "The surrounding water finds rhythm: droplets fall in regular intervals, currents organize themselves."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Vínculo",
+          "en": "Bond"
+        },
+        "value": {
+          "pt": "Müra",
+          "en": "Müra"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Luz",
+          "en": "Light"
+        },
+        "value": {
+          "pt": "Lilas",
+          "en": ""
+        }
+      }
+    ],
+    "fairyDust": {
+      "color": "#c8a2c8",
+      "count": 50,
       "size": 3,
       "duration": 1.8,
       "intensity": 2.2,
@@ -363,117 +585,6 @@
       }
     },
     "image": "/imgs/characters/kammara/lunnp1/veludo.png"
-  },
-  {
-    "match": "Müra",
-    "name": {
-      "pt": "Müra",
-      "en": "Müra"
-    },
-    "species": {
-      "pt": "Shal'ún",
-      "en": "Shal'ún"
-    },
-    "bio": {
-      "pt": "Nome Kalún Mü'Rá — \"Movimento Suave / Fluxo que Acompanha\". Encontra o tempo exato de cada momento e convida os outros a acompanhar. ",
-      "en": "Kalún name Mü'Rá — \"Gentle Movement / Flow That Follows\". She finds the exact tempo of each moment and invites others to follow."
-    },
-    "image": "/imgs/characters/kammara/lunnp1/mura.png",
-    "backImage": "/imgs/characters/kammara/lunnp1/mura_costas.png",
-    "backTitle": {
-      "pt": "Glifo Dorsal",
-      "en": ""
-    },
-    "dorsalMeaning": {
-      "pt": "Desacelera ambientes agitados e estabiliza ritmos caóticos com calma ativa. Move-se em compasso contínuo.",
-      "en": "She slows agitated environments and stabilizes chaotic rhythms with active calm. Moves in continuous cadence."
-    },
-    "attributes": [
-      {
-        "glyph": "⊙ • ⊹",
-        "label": {
-          "pt": "Dom",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "Harmonizadora",
-          "en": "Harmonizer"
-        }
-      },
-      {
-        "glyph": "⊹",
-        "label": {
-          "pt": "Lún'Kai",
-          "en": "Lún'Kai"
-        },
-        "value": {
-          "pt": "Sereno",
-          "en": "Sereno"
-        }
-      }
-    ]
-  },
-  {
-    "match": "Sereno",
-    "name": {
-      "pt": "Sereno",
-      "en": "Sereno"
-    },
-    "species": {
-      "pt": "Lún'Kai",
-      "en": "Lún'Kai"
-    },
-    "bio": {
-      "pt": "Lún'Kai ritmado. Pulso constante como respiração tranquila. Outros Lún'Kai sincronizam ao seu compasso involuntariamente.",
-      "en": "Rhythmic Lún'Kai. Steady pulse like calm breathing. Other Lún'Kai synchronize involuntarily with its beat. "
-    },
-    "image": "/imgs/characters/kammara/lunnp1/Sereno.png",
-    "backImage": "/imgs/characters/kammara/lunnp1/Sereno_costas.png",
-    "backTitle": {
-      "pt": "Outro lado",
-      "en": "Another side"
-    },
-    "dorsalMeaning": {
-      "pt": "A água ao redor encontra ritmo: gotículas caem em intervalos regulares, correntes se organizam.",
-      "en": "The surrounding water finds rhythm: droplets fall in regular intervals, currents organize themselves."
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊹⊷",
-        "label": {
-          "pt": "Vínculo",
-          "en": "Bond"
-        },
-        "value": {
-          "pt": "Müra",
-          "en": "Müra"
-        }
-      },
-      {
-        "glyph": "⊹",
-        "label": {
-          "pt": "Luz",
-          "en": "Light"
-        },
-        "value": {
-          "pt": "Lilas",
-          "en": ""
-        }
-      }
-    ],
-    "fairyDust": {
-      "color": "#c8a2c8",
-      "count": 50,
-      "size": 3,
-      "duration": 1.8,
-      "intensity": 2.2,
-      "area": {
-        "top": 15,
-        "left": 20,
-        "width": 60,
-        "height": 65
-      }
-    }
   },
   {
     "match": "Kaitor",
@@ -929,117 +1040,6 @@
       }
     },
     "image": "/imgs/characters/kammara/lunnp1/blue.png"
-  },
-  {
-    "match": "Rin'Boro",
-    "name": {
-      "pt": "Rin'Boro",
-      "en": "Rin'Boro"
-    },
-    "species": {
-      "pt": "Shal'ún",
-      "en": "Shal'ún"
-    },
-    "bio": {
-      "pt": "Nome Kalún Rin'Boro — \"Aquele que Cai e Volta\". Dança com o fluxo: celebra cada momento como movimento e cada queda como oportunidade de riso.",
-      "en": "Kalún name Rin'Boro — \"The One Who Falls and Returns\". He dances with the flow: celebrates each moment as movement and each fall as a chance to laugh."
-    },
-    "image": "/imgs/characters/kammara/lunnp1/Rinboro.png",
-    "backImage": "/imgs/characters/kammara/lunnp1/Rinboro_costas.png",
-    "backTitle": {
-      "pt": "Glifo Dorsal",
-      "en": ""
-    },
-    "dorsalMeaning": {
-      "pt": "Muda ambientes por contágio emocional direto. Transforma peso em leveza ao saltar.",
-      "en": "Changes environments through direct emotional contagion. Turns weight into lightness with a leap."
-    },
-    "attributes": [
-      {
-        "glyph": "⊙ • ⊹",
-        "label": {
-          "pt": "Dom",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "Leveza",
-          "en": ""
-        }
-      },
-      {
-        "glyph": "⊹",
-        "label": {
-          "pt": "Lún'Kai",
-          "en": "Lún'Kai"
-        },
-        "value": {
-          "pt": "Tiru",
-          "en": "Tiru"
-        }
-      }
-    ]
-  },
-  {
-    "match": "Tiru",
-    "name": {
-      "pt": "Tiru",
-      "en": "Tiru"
-    },
-    "species": {
-      "pt": "Lún'Kai",
-      "en": "Lún'Kai"
-    },
-    "bio": {
-      "pt": "Lún'Kai explosivo. Patinhas mais fortes que outros Lún'Kai, feitas para saltar e quicar.",
-      "en": "Explosive Lún'Kai. Stronger legs than other Lún'Kai, built to leap and bounce."
-    },
-    "image": "/imgs/characters/kammara/lunnp1/tiru.png",
-    "backImage": "/imgs/characters/kammara/lunnp1/tiru_costas.png",
-    "backTitle": {
-      "pt": "Outro lado",
-      "en": "Another side"
-    },
-    "dorsalMeaning": {
-      "pt": "Lum'Ka sai em micro-detonações sincronizadas com cada salto, como faíscas douradas dispersas no ar. Nasceu com 3 impulsos luminosos consecutivos — sinal canônico de \"saltadores naturais\"",
-      "en": ""
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊹⊷",
-        "label": {
-          "pt": "Vínculo",
-          "en": "Bond"
-        },
-        "value": {
-          "pt": "Rin'Boro",
-          "en": "Rin'Boro"
-        }
-      },
-      {
-        "glyph": "⊹",
-        "label": {
-          "pt": "Luz",
-          "en": "Light"
-        },
-        "value": {
-          "pt": "Branco",
-          "en": "White"
-        }
-      }
-    ],
-    "fairyDust": {
-      "color": "#fff5dc",
-      "count": 120,
-      "size": 3,
-      "duration": 1.8,
-      "intensity": 2.2,
-      "area": {
-        "top": 15,
-        "left": 20,
-        "width": 60,
-        "height": 65
-      }
-    }
   },
   {
     "match": "Narúmin",
