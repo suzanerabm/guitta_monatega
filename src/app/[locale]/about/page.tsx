@@ -165,9 +165,7 @@ export default async function AboutPage({
           mt="3rem"
           py="3rem"
           px={{ base: '1.5rem', md: '2.5rem' }}
-          bg="surface"
-          border="0.5px solid"
-          borderColor="borderSoft"
+          bgImage="linear-gradient(to right, #F58020, #2D1B69)"
           borderRadius="6px"
           textAlign="center"
           opacity={0}
@@ -177,7 +175,7 @@ export default async function AboutPage({
             fontSize="1.12rem"
             fontWeight="light"
             lineHeight={1.65}
-            color="inkSoft"
+            color="white"
             fontStyle="italic"
           >
             {t('declaration')}
