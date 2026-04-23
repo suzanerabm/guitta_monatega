@@ -2,7 +2,6 @@
 import { useEffect } from 'react';
 import { Box, Flex, Text, Heading } from '@chakra-ui/react';
 import { useModal } from './ModalProvider';
-import { GlyphPlanet } from '@/components/GlyphPlanet';
 import { useChromeTint } from '@/components/ChromeTint';
 
 function formatFilename(path: string): string {
@@ -74,16 +73,16 @@ export function Modal() {
         bg="none"
         border="none"
         cursor="pointer"
-        color={isDark ? 'glyphIdle' : 'inkMuted'}
+        color={isDark ? 'textOverlayBright' : 'inkMuted'}
         transition="color 0.3s, transform 0.4s ease-in-out"
-        _hover={{ color: isDark ? 'glyphHover' : 'ink', transform: 'scale(0.6)' }}
+        _hover={{ color: isDark ? 'white' : 'ink', transform: 'scale(0.6)' }}
         _active={{ transform: 'scale(0)', opacity: 0 }}
         onClick={(e) => {
           e.stopPropagation();
           close();
         }}
-        fontFamily="glyph"
-        fontSize="glyphH2"
+        fontSize="h2"
+        fontWeight="light"
         lineHeight={1}
         css={{
           '@keyframes breathe': {
@@ -96,7 +95,7 @@ export function Modal() {
           },
         }}
       >
-        ⊙
+        ×
       </Box>
 
       {/* Body */}
@@ -125,23 +124,17 @@ export function Modal() {
               {heroTitle || title}
             </Heading>
             {heroText && (
-              <>
-                <GlyphPlanet
-                  size="h3"
-                  color={isDark ? 'textOverlayGhost' : 'inkMuted'}
-                />
-                <Text
-                  fontSize="sm"
-                  lineHeight={1.5}
-                  fontWeight="light"
-                  color={isDark ? 'textOverlay' : 'inkSoft'}
-                  m={0}
-                  maxW="280px"
-                  textAlign="left"
-                >
-                  {heroText}
-                </Text>
-              </>
+              <Text
+                fontSize="sm"
+                lineHeight={1.5}
+                fontWeight="light"
+                color={isDark ? 'textOverlay' : 'inkSoft'}
+                m={0}
+                maxW="280px"
+                textAlign="left"
+              >
+                {heroText}
+              </Text>
             )}
           </Flex>
         )}
@@ -202,27 +195,26 @@ export function Modal() {
           aria-label="Previous"
           bg="none"
           border="none"
-          color={isDark ? 'glyphIdle' : 'inkMuted'}
+          color={isDark ? 'textOverlayBright' : 'inkMuted'}
           cursor="pointer"
           padding="0.5rem"
           transition="color 0.2s, transform 0.2s"
           _hover={{
-            color: isDark ? 'glyphHover' : 'ink',
+            color: isDark ? 'white' : 'ink',
             transform: 'scale(1.15)',
           }}
           onClick={prev}
-          fontFamily="glyph"
-          fontSize="glyphH1"
+          fontSize="h1"
+          fontWeight="light"
           lineHeight={1}
         >
-          ⊷
+          ‹
         </Box>
 
         <Text
           fontSize="md"
-          color={isDark ? 'glyphIdle' : 'ink'}
+          color={isDark ? 'textOverlayBright' : 'ink'}
           letterSpacing="wide"
-          fontFamily="glyph"
         >
           {currentIndex + 1} / {images.length}
         </Text>
@@ -232,20 +224,20 @@ export function Modal() {
           aria-label="Next"
           bg="none"
           border="none"
-          color={isDark ? 'glyphIdle' : 'inkMuted'}
+          color={isDark ? 'textOverlayBright' : 'inkMuted'}
           cursor="pointer"
           padding="0.5rem"
           transition="color 0.2s, transform 0.2s"
           _hover={{
-            color: isDark ? 'glyphHover' : 'ink',
+            color: isDark ? 'white' : 'ink',
             transform: 'scale(1.15)',
           }}
           onClick={next}
-          fontFamily="glyph"
-          fontSize="glyphH1"
+          fontSize="h1"
+          fontWeight="light"
           lineHeight={1}
         >
-          ⊶
+          ›
         </Box>
       </Flex>
     </Flex>

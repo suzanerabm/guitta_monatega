@@ -370,6 +370,7 @@ export function KammaraCardSubsystemHorizontal({
       aria-label={name}
       position="relative"
       width="100%"
+      marginBottom="10px"
       borderRadius="32px"
       overflow="visible"
     >

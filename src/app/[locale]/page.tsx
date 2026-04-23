@@ -61,28 +61,10 @@ export default async function HomePage({
       <Box
         display="grid"
         gridTemplateColumns={{ base: '1fr', md: '1fr 1fr' }}
-        gridTemplateRows={{ base: 'auto', md: '1fr auto' }}
+        gridTemplateRows={{ base: 'auto', md: 'auto 1fr' }}
         width="100vw"
         marginLeft="calc(-50vw + 50%)"
       >
-        <HomeBanner
-          href={`${prefix}/bichittos`}
-          label={t('bichittos.label')}
-          title={t('bichittos.title')}
-          description={t('bichittos.desc')}
-          variant="bichittos"
-          height={{ base: '35vh', md: '42vh' }}
-          minHeight={{ base: '180px', md: '280px' }}
-        />
-        <HomeBanner
-          href={`${prefix}/kammara`}
-          label={t('kammara.label')}
-          title={t('kammara.title')}
-          description={t('kammara.desc')}
-          variant="kammara"
-          height={{ base: '35vh', md: '42vh' }}
-          minHeight={{ base: '180px', md: '280px' }}
-        />
         <Box gridColumn={{ base: '1', md: '1 / -1' }}>
           <HomeBanner
             href={`${prefix}/art`}
@@ -93,8 +75,32 @@ export default async function HomePage({
             fullWidth
             height={{ base: '25vh', md: '28vh' }}
             minHeight={{ base: '140px', md: '200px' }}
+            order={1}
+            orderSide="right"
           />
         </Box>
+        <HomeBanner
+          href={`${prefix}/bichittos`}
+          label={t('bichittos.label')}
+          title={t('bichittos.title')}
+          description={t('bichittos.desc')}
+          variant="bichittos"
+          height={{ base: '35vh', md: '42vh' }}
+          minHeight={{ base: '180px', md: '280px' }}
+          order={2}
+          orderSide="right"
+        />
+        <HomeBanner
+          href={`${prefix}/kammara`}
+          label={t('kammara.label')}
+          title={t('kammara.title')}
+          description={t('kammara.desc')}
+          variant="kammara"
+          height={{ base: '35vh', md: '42vh' }}
+          minHeight={{ base: '180px', md: '280px' }}
+          order={3}
+          orderSide="left"
+        />
       </Box>
     </>
   );

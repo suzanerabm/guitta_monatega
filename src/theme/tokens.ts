@@ -88,6 +88,8 @@ export const tokens = defineTokens({
     // Escalam juntos mantendo a hierarquia visual fixa em qualquer viewport.
     bannerLabel: { value: 'clamp(0.53rem, 1.06vw, 0.8rem)' }, // ~3x menor que h2
     bannerDesc: { value: 'clamp(0.66rem, 1.33vw, 1rem)' }, // ~4x menor que h2
+    // Número de ordem no canto dos banners da home (1, 2, 3).
+    bannerOrder: { value: '98px' },
     // Hero page label proporcional ao h1 (ratio ~6:1). Escala junto com
     // o título em qualquer viewport.
     heroLabel: { value: 'clamp(0.5rem, 1.33vw, 1rem)' }, // ~6x menor que h1

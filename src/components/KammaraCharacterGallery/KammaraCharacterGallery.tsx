@@ -1,6 +1,6 @@
 'use client';
 import { Box, Flex, Text } from '@chakra-ui/react';
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
 
 export interface KammaraCharacterGalleryProps<T> {
@@ -56,17 +56,9 @@ export interface KammaraCharacterGalleryProps<T> {
 // so consumers don't need a global CSS file.
 // ---------------------------------------------------------------------------
 const KEYFRAMES = `
-@keyframes kcg-scanline {
-  0%   { background-position: 0 0; }
-  100% { background-position: 0 4px; }
-}
 @keyframes kcg-fade-in {
   from { opacity: 0; transform: translateY(12px); }
   to   { opacity: 1; transform: translateY(0); }
-}
-@keyframes kcg-arrow-glow {
-  0%, 100% { box-shadow: 0 0 12px currentColor, inset 0 0 0 1px currentColor; }
-  50%      { box-shadow: 0 0 24px currentColor, inset 0 0 0 1px currentColor; }
 }
 `;
 
@@ -75,12 +67,10 @@ const KEYFRAMES = `
  *
  * Features:
  *  - HUD-style frame with angular corner decorations.
- *  - Colored gradient bg + subtle scanlines for that CRT/TCG feel.
- *  - Header with world crest, title, and "n / total" counter.
- *  - Responsive grid of cards. Each card keeps its own flip state.
- *  - Pagination: large circular "⊷" / "⊶" buttons flanking dot indicators
- *    with semantic Kalún glyphs (⊷ back, ⊶ forward, ⊙ active page).
- *  - Stagger fade-in animation when cards enter a page.
+ *  - Colored gradient bg for that game-premium feel.
+ *  - Header with world crest, title, and total counter.
+ *  - Horizontal scroll-snap strip of cards on every breakpoint.
+ *  - Stagger fade-in animation on mount.
  *
  * Data-generic: receives `items[]` + `renderCard`, so it can host any kind
  * of character card variant (front-only, flippable, dual-form, etc).
@@ -100,24 +90,20 @@ export function KammaraCharacterGallery<T>({
   'data-testid': testId,
 }: KammaraCharacterGalleryProps<T>) {
   const isRegion = variant === 'region';
-  // Measure the grid's available width so we know how many cards fit per page.
-  // Mobile (< md / 768px) always shows 1 card per page to keep each card
-  // big and legible while paginating through characters.
+  // Measure the container width so we pick the right card width for the
+  // breakpoint. On desktop we render every card inline and let the browser
+  // scroll horizontally — no pagination state needed.
   const gridRef = useRef<HTMLDivElement>(null);
-  const [perPage, setPerPage] = useState(1);
   const [effectiveCardWidth, setEffectiveCardWidth] = useState(minCardWidth);
-  const [page, setPage] = useState(0);
 
   useLayoutEffect(() => {
     const el = gridRef.current;
     if (!el) return;
 
     const measure = () => {
-      const w = el.getBoundingClientRect().width;
       const vw = window.innerWidth;
       const isMobile = vw < 768;
       if (isMobile) {
-        setPerPage(1);
         setEffectiveCardWidth(minCardWidth);
         return;
       }
@@ -128,16 +114,9 @@ export function KammaraCharacterGallery<T>({
       if (vw >= 1024 && minCardWidthLg) targetWidth = minCardWidthLg;
       else if (vw >= 768 && vw < 1024 && minCardWidthMd) targetWidth = minCardWidthMd;
       setEffectiveCardWidth(targetWidth);
-      // Desktop: how many cards of targetWidth fit side-by-side with cardGap?
-      // Formula: (w + gap) / (card + gap) — gives us a clean count.
-      // Add 1px of tolerance so sub-pixel rounding doesn't steal a slot.
-      const fit = Math.max(1, Math.floor((w + cardGap + 1) / (targetWidth + cardGap)));
-      setPerPage(fit);
     };
 
     measure();
-    // ResizeObserver picks up container size changes (parent layout shifting,
-    // fonts loading, etc) that window resize wouldn't catch.
     const ro = new ResizeObserver(measure);
     ro.observe(el);
     window.addEventListener('resize', measure);
@@ -146,20 +125,6 @@ export function KammaraCharacterGallery<T>({
       window.removeEventListener('resize', measure);
     };
   }, [minCardWidth, minCardWidthMd, minCardWidthLg, cardGap]);
-
-  const totalPages = Math.max(1, Math.ceil(items.length / perPage));
-  // Clamp page if items or perPage changed and current page is out of range
-  useEffect(() => {
-    if (page >= totalPages) setPage(Math.max(0, totalPages - 1));
-  }, [page, totalPages]);
-
-  const canPrev = page > 0;
-  const canNext = page < totalPages - 1;
-
-  const visibleItems = items.slice(page * perPage, (page + 1) * perPage);
-
-  const firstIndex = items.length === 0 ? 0 : page * perPage + 1;
-  const lastIndex = Math.min(items.length, (page + 1) * perPage);
 
   return (
     <>
@@ -225,7 +190,10 @@ export function KammaraCharacterGallery<T>({
         data-testid={testId ?? 'kammara-character-gallery'}
         position="relative"
         width="100%"
-        padding={{ base: 'md', md: 'lg' }}
+        marginTop="30px"
+        marginBottom="30px"
+        paddingX={{ base: 'md', md: 'lg' }}
+        paddingY={{ base: 'lg', md: 'xl' }}
         borderRadius="24px"
         css={{
           background: `linear-gradient(160deg, ${darkColor}33 0%, ${darkColor}26 50%, ${darkColor}33 100%)`,
@@ -235,27 +203,6 @@ export function KammaraCharacterGallery<T>({
           boxShadow: `0 20px 60px ${color}30, 0 4px 16px ${color}20, inset 0 1px 0 rgba(255,255,255,0.08)`,
         }}
       >
-        {/* Scanline overlay — subtle CRT feel */}
-        <Box
-          position="absolute"
-          inset={0}
-          pointerEvents="none"
-          aria-hidden="true"
-          css={{
-            backgroundImage: `repeating-linear-gradient(
-              0deg,
-              transparent 0px,
-              transparent 2px,
-              ${color}08 2px,
-              ${color}08 3px
-            )`,
-            mixBlendMode: 'screen',
-            opacity: 0.35,
-            borderRadius: '24px',
-            animation: 'kcg-scanline 8s linear infinite',
-          }}
-        />
-
         {/* Angular corner decorations (TL, TR, BL, BR) — HUD style */}
         {[
           { top: '-4px', left: '-4px', borderTop: '2px', borderLeft: '2px' },
@@ -344,142 +291,61 @@ export function KammaraCharacterGallery<T>({
                 whiteSpace: 'nowrap',
               }}
             >
-              {firstIndex}–{lastIndex} / {items.length}
+              {items.length}
             </Text>
           </Flex>
 
-          {/* ── Cards row ────────────────────────────────
-              Always a single horizontal row.
-              - Mobile: 1 card per page, full width.
-              - Desktop: as many cards of `minCardWidth` as fit side-by-side.
-                `justify: space-evenly` distributes the leftover horizontal
-                space as breathing room between cards, so the gap grows
-                naturally on wider screens instead of leaving wide blank
-                margins on the sides. Overflow paginates. */}
-          <Flex
+          {/* ── Cards row — horizontal scroll-snap strip ────────────
+              Every card renders inline; the user scrolls horizontally
+              through them. Snap aligns the leftmost card of the viewport
+              so scrolling lands on clean card boundaries. A subtle right
+              edge fade hints that more cards exist offscreen. */}
+          <Box
             ref={gridRef}
-            gap={{ base: 'md', md: `${cardGap}px` }}
-            minH={0}
-            justify={{ base: 'center', md: 'space-evenly' }}
-            align="stretch"
-            flexWrap="nowrap"
             width="100%"
+            position="relative"
+            paddingY={{ base: 'md', md: 'lg' }}
+            css={{
+              overflowX: 'auto',
+              overflowY: 'visible',
+              scrollSnapType: 'x mandatory',
+              WebkitOverflowScrolling: 'touch',
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none',
+              '&::-webkit-scrollbar': { display: 'none' },
+              scrollPaddingLeft: '15px',
+              // Right-edge fade: hints scrollable content without stealing
+              // a full pixel column from the card contents.
+              maskImage:
+                'linear-gradient(to right, black 0, black calc(100% - 48px), transparent 100%)',
+              WebkitMaskImage:
+                'linear-gradient(to right, black 0, black calc(100% - 48px), transparent 100%)',
+            }}
           >
-            {visibleItems.map((item, i) => (
-              <Box
-                // Include page in the key so the fade-in animation restarts
-                // every time the page changes.
-                key={`${page}-${i}`}
-                css={{
-                  animation: `kcg-fade-in 0.5s ease-out ${i * 80}ms both`,
-                }}
-                // Mobile: 1 card = full width. Desktop: the effective
-                // card width computed from the current breakpoint (so
-                // lg+ can use the larger `minCardWidthLg`).
-                flex={{ base: '1 1 100%', md: `0 0 ${effectiveCardWidth}px` }}
-                maxWidth={{ base: '100%', md: `${effectiveCardWidth}px` }}
-              >
-                {renderCard(item, page * perPage + i)}
-              </Box>
-            ))}
-          </Flex>
-
-          {/* ── Pagination ──────────────────────────────── */}
-          {totalPages > 1 && (
             <Flex
-              align="center"
-              justify="center"
-              gap={{ base: 'md', md: 'lg' }}
-              paddingTop={{ base: 'sm', md: 'md' }}
+              gap={`${cardGap}px`}
+              align="stretch"
               css={{
-                borderTop: `1px solid ${color}40`,
+                width: 'max-content',
+                paddingLeft: '15px',
+                paddingRight: '40px',
               }}
             >
-              {/* Prev button */}
-              <Box
-                as="button"
-                aria-label="Página anterior"
-                onClick={() => canPrev && setPage((p) => p - 1)}
-                disabled={!canPrev}
-                width="44px"
-                height="44px"
-                borderRadius="50%"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-                fontFamily="glyph"
-                fontSize="lg"
-                lineHeight={1}
-                cursor={canPrev ? 'pointer' : 'default'}
-                css={{
-                  color,
-                  background: canPrev ? `${color}15` : 'transparent',
-                  opacity: canPrev ? 1 : 0.25,
-                  transition: 'opacity 0.2s ease, background 0.2s ease',
-                  animation: canPrev ? 'kcg-arrow-glow 2.5s ease-in-out infinite' : 'none',
-                  '&:hover': canPrev ? { background: `${color}30` } : {},
-                }}
-              >
-                ⊷
-              </Box>
-
-              {/* Page dots (active page is ⊙, others are small bullets) */}
-              <Flex align="center" gap="sm">
-                {Array.from({ length: totalPages }).map((_, i) => {
-                  const isActive = i === page;
-                  return (
-                    <Box
-                      key={i}
-                      as="button"
-                      aria-label={`Ir para página ${i + 1}`}
-                      aria-current={isActive ? 'page' : undefined}
-                      onClick={() => setPage(i)}
-                      cursor="pointer"
-                      fontFamily="glyph"
-                      fontSize={isActive ? 'md' : 'sm'}
-                      lineHeight={1}
-                      css={{
-                        color: isActive ? color : `${color}60`,
-                        transition: 'color 0.2s ease, opacity 0.2s ease',
-                        textShadow: isActive ? `0 0 8px ${color}` : 'none',
-                        '&:hover': { color },
-                      }}
-                    >
-                      {isActive ? '⊙' : '·'}
-                    </Box>
-                  );
-                })}
-              </Flex>
-
-              {/* Next button */}
-              <Box
-                as="button"
-                aria-label="Próxima página"
-                onClick={() => canNext && setPage((p) => p + 1)}
-                disabled={!canNext}
-                width="44px"
-                height="44px"
-                borderRadius="50%"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-                fontFamily="glyph"
-                fontSize="lg"
-                lineHeight={1}
-                cursor={canNext ? 'pointer' : 'default'}
-                css={{
-                  color,
-                  background: canNext ? `${color}15` : 'transparent',
-                  opacity: canNext ? 1 : 0.25,
-                  transition: 'opacity 0.2s ease, background 0.2s ease',
-                  animation: canNext ? 'kcg-arrow-glow 2.5s ease-in-out infinite' : 'none',
-                  '&:hover': canNext ? { background: `${color}30` } : {},
-                }}
-              >
-                ⊶
-              </Box>
+              {items.map((item, i) => (
+                <Box
+                  key={i}
+                  css={{
+                    animation: `kcg-fade-in 0.5s ease-out ${Math.min(i, 6) * 80}ms both`,
+                    scrollSnapAlign: 'start',
+                  }}
+                  flex={`0 0 ${effectiveCardWidth}px`}
+                  maxWidth={`${effectiveCardWidth}px`}
+                >
+                  {renderCard(item, i)}
+                </Box>
+              ))}
             </Flex>
-          )}
+          </Box>
         </Flex>
       </Box>
     </>

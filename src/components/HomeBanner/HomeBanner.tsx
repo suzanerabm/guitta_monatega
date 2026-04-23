@@ -18,6 +18,10 @@ export interface HomeBannerProps {
   labelColor?: string;
   /** Optional description color override. */
   descriptionColor?: string;
+  /** Optional order number shown at a corner of the banner. */
+  order?: number;
+  /** Corner for the order number. Defaults to 'right'. */
+  orderSide?: 'left' | 'right';
 }
 
 import { palettes } from '@/theme/palettes';
@@ -48,6 +52,8 @@ export function HomeBanner({
   titleColor,
   labelColor,
   descriptionColor,
+  order,
+  orderSide = 'right',
 }: HomeBannerProps) {
   const isArte = variant === 'arte';
 
@@ -379,6 +385,25 @@ export function HomeBanner({
             {description}
           </Text>
         </Flex>
+
+        {order !== undefined && (
+          <Text
+            position="absolute"
+            bottom="70px"
+            left={orderSide === 'left' ? '70px' : 'auto'}
+            right={orderSide === 'right' ? '70px' : 'auto'}
+            fontSize="bannerOrder"
+            fontWeight="bold"
+            color={isArte ? 'ink' : 'white'}
+            opacity={0.85}
+            lineHeight={1}
+            textShadow={isArte ? 'none' : 'text'}
+            zIndex={2}
+            pointerEvents="none"
+          >
+            {order}
+          </Text>
+        )}
       </Box>
     </NextLink>
   );
