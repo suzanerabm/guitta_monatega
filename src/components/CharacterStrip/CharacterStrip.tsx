@@ -138,24 +138,24 @@ export function CharacterStrip({
     }
   };
 
-  const arrowCss: Record<string, unknown> = {
+  // Shared Box props for the prev/next arrow buttons. Hidden on mobile
+  // (base → md), shown as a flex button from md+.
+  const arrowBoxProps = {
     flexShrink: 0,
     zIndex: 10,
-    background: 'none',
+    bg: 'none',
     border: 'none',
     padding: '0.5rem',
-    display: 'flex',
+    display: { base: 'none', md: 'flex' },
     alignItems: 'center',
     justifyContent: 'center',
     cursor: 'pointer',
-    color: arrowColor ?? 'var(--chakra-colors-textOverlayDim)',
+    color: arrowColor ?? 'textOverlayDim',
     transition: 'opacity 0.2s ease',
-    fontFamily: 'var(--chakra-fonts-glyph)',
-    fontSize: 'var(--chakra-font-sizes-glyph-h1)',
+    fontFamily: 'glyph',
+    fontSize: 'glyphH1',
     lineHeight: 1,
-    // Astro: .strip-arrow { display: none; } @media (max-width: 768px)
-    '@media (max-width: 48em)': { display: 'none' },
-  };
+  } as const;
 
   const maskImage =
     'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)';
@@ -204,17 +204,17 @@ export function CharacterStrip({
         <Heading
           as="h2"
           fontFamily="body"
-          fontSize="section"
+          fontSize={mobileColor ? { base: 'section', md: '0.85rem', lg: 'section' } : 'section'}
           letterSpacing="wider"
           textTransform="uppercase"
           fontWeight="semibold"
           padding="0 2rem"
           margin={inStripSide ? '1rem 0 0.5rem 0' : '5em 2em 0 3em'}
-          color={mobileColor || arrowColor}
-          css={mobileColor ? {
-            '@media (min-width: 48em)': { color: arrowColor },
-            '@media (min-width: 48em) and (max-width: 64em)': { fontSize: '0.85rem' },
-          } : undefined}
+          color={
+            mobileColor
+              ? { base: mobileColor, md: arrowColor ?? mobileColor }
+              : arrowColor
+          }
         >
           {sectionTitle}
         </Heading>
@@ -228,11 +228,12 @@ export function CharacterStrip({
       >
         {showArrows && (
           <Box
+            {...arrowBoxProps}
             as="button"
             type="button"
             aria-label="Previous"
             onClick={() => handleArrow(-1)}
-            css={{ ...arrowCss, marginRight: '0.5rem' }}
+            marginRight="0.5rem"
           >
             ⊷
           </Box>
@@ -311,11 +312,12 @@ export function CharacterStrip({
         </Box>
         {showArrows && (
           <Box
+            {...arrowBoxProps}
             as="button"
             type="button"
             aria-label="Next"
             onClick={() => handleArrow(1)}
-            css={{ ...arrowCss, marginLeft: '0.5rem' }}
+            marginLeft="0.5rem"
           >
             ⊶
           </Box>

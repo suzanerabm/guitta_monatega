@@ -63,6 +63,15 @@ export function SceneStrip({
   variant = 'default',
 }: SceneStripProps) {
   const isRegion = variant === 'region';
+  // Scene card size per breakpoint — planets use the default grid, regions
+  // get slightly bigger cards from lg+ so they fill the sidebar next to the
+  // region panel. Mobile (base/md) is identical in both variants.
+  const cardWidth: Record<string, string> = isRegion
+    ? { base: '250px', md: '220px', lg: '480px' }
+    : { base: '250px', md: '220px', lg: '400px', '3xl': '550px' };
+  const cardHeight: Record<string, string> = isRegion
+    ? { base: '225px', md: '125px', lg: '270px' }
+    : { base: '225px', md: '125px', lg: '225px' };
   const fallbackId = useId();
   const id = galleryId ?? `scene-strip-${fallbackId}`;
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -122,58 +131,31 @@ export function SceneStrip({
     }
   };
 
-  // Arrow CSS uses className-style media query so we can hide on mobile
-  const arrowCss: Record<string, unknown> = {
-    flexShrink: 0,
-    zIndex: 10,
-    background: 'none',
-    border: 'none',
-    padding: '0.5rem',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    cursor: 'pointer',
-    transition: 'color 0.2s ease',
-    fontFamily: 'var(--chakra-fonts-glyph)',
-    fontSize: 'var(--chakra-font-sizes-glyph-h1)',
-    lineHeight: 1,
-    '@media (max-width: 48em)': { display: 'none' },
-  };
-
   return (
-    <Box position="relative">
+    <Box position="relative" width="100%" minWidth={0}>
       {sectionTitle && (
         <Heading
           as="h2"
           fontFamily="body"
-          fontSize="section"
+          // `lg` is the closest canonical breakpoint to the old 64em cut — the
+          // ~32px difference isn't visually perceptible for this font-size jump.
+          fontSize={{ base: 'section', md: '0.85rem', lg: 'section' }}
           letterSpacing="wider"
           textTransform="uppercase"
           fontWeight="semibold"
           padding="0 2rem"
-          marginTop={titleMarginTop}
+          marginTop={{ base: '2em', md: titleMarginTop }}
           marginBottom="0.5rem"
-          color={mobileColor || arrowColor}
-          css={{
-            '@media (max-width: 48em)': { marginTop: '2em' },
-            '@media (min-width: 48em) and (max-width: 64em)': { fontSize: '0.85rem' },
-            ...(mobileColor ? { '@media (min-width: 48em)': { color: arrowColor } } : {}),
-          }}
+          color={
+            mobileColor
+              ? { base: mobileColor, md: arrowColor ?? mobileColor }
+              : arrowColor
+          }
         >
           {sectionTitle}
         </Heading>
       )}
       <Flex align="center">
-        <Box
-          as="button"
-          type="button"
-          aria-label="Previous"
-          onClick={() => handleArrow(-1)}
-          data-testid="scene-strip-arrow-left"
-          css={{ ...arrowCss, color: canPrev ? (mobileColor || arrowColor || 'var(--chakra-colors-glyphIdle)') : 'var(--chakra-colors-glyphDisabled)', cursor: canPrev ? 'pointer' : 'default' }}
-        >
-          ⊷
-        </Box>
         <Box
           ref={scrollRef}
           flex={1}
@@ -205,29 +187,27 @@ export function SceneStrip({
                 }}
               >
                 <Box
-                  css={{
-                    width: '400px',
-                    height: '225px',
-                    borderRadius: '16px',
-                    overflow: 'hidden',
-                    background: 'rgba(0,0,0,0.3)',
-                    backdropFilter: 'blur(8px)',
-                    outline: '2px solid',
-                    outlineColor: mobileColor || accentColor || 'var(--chakra-colors-outlineMid)',
-                    '@media (min-width: 48em)': mobileColor ? { outlineColor: accentColor || 'var(--chakra-colors-outlineMid)' } : {},
-                    outlineOffset: '6px',
-                    boxShadow: accentColor
+                  width={cardWidth}
+                  height={cardHeight}
+                  borderRadius="16px"
+                  overflow="hidden"
+                  background="rgba(0,0,0,0.3)"
+                  backdropFilter="blur(8px)"
+                  outline="2px solid"
+                  outlineColor={{
+                    base: mobileColor || accentColor || 'outlineMid',
+                    md: accentColor || 'outlineMid',
+                  }}
+                  outlineOffset="6px"
+                  boxShadow={
+                    accentColor
                       ? `0 20px 60px ${accentColor}50, 0 4px 16px ${accentColor}30, inset 0 1px 0 rgba(255,255,255,0.15)`
-                      : '0 8px 32px rgba(0,0,0,0.1)',
-                    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                    '&:hover': {
-                      transform: 'scale(1.05)',
-                      boxShadow: 'var(--chakra-shadows-sceneHover)',
-                    },
-                    '@media (max-width: 48em)': { width: '250px' },
-                    // ~800px range: reduce height to fit inside DSMainCard strip
-                    '@media (min-width: 48em) and (max-width: 62em)': { width: '220px', height: '125px' },
-                    '@media (min-width: 118.75em)': { width: '550px' },
+                      : '0 8px 32px rgba(0,0,0,0.1)'
+                  }
+                  transition="transform 0.3s ease, box-shadow 0.3s ease"
+                  _hover={{
+                    transform: 'scale(1.05)',
+                    boxShadow: 'sceneHover',
                   }}
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -251,11 +231,12 @@ export function SceneStrip({
                     textStyle="label"
                     textAlign="center"
                     m={0}
-                    color={mobileColor || labelColor || 'white'}
+                    color={
+                      mobileColor
+                        ? { base: mobileColor, md: labelColor || 'white' }
+                        : labelColor || 'white'
+                    }
                     textShadow="labelText"
-                    css={mobileColor ? {
-                      '@media (min-width: 48em)': { color: labelColor || 'white' },
-                    } : undefined}
                   >
                     {s.name}
                   </Heading>
@@ -263,16 +244,6 @@ export function SceneStrip({
               </button>
             ))}
           </Box>
-        </Box>
-        <Box
-          as="button"
-          type="button"
-          aria-label="Next"
-          onClick={() => handleArrow(1)}
-          data-testid="scene-strip-arrow-right"
-          css={{ ...arrowCss, color: canNext ? (mobileColor || arrowColor || 'var(--chakra-colors-glyphIdle)') : 'var(--chakra-colors-glyphDisabled)', cursor: canNext ? 'pointer' : 'default' }}
-        >
-          ⊶
         </Box>
       </Flex>
     </Box>

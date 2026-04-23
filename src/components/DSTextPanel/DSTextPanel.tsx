@@ -105,7 +105,9 @@ export function DSTextPanel({
       data-testid={testId}
       className="ds-text-panel"
       width="100%"
-      height="100%"
+      // Mobile: collapse to content-driven height (unless fillParent);
+      // desktop always fills parent.
+      height={{ base: fillParent ? '100%' : 'auto', md: '100%' }}
       borderRadius="16px"
       overflow="hidden"
       position="relative"
@@ -117,12 +119,6 @@ export function DSTextPanel({
       boxShadow="dsPanel"
       display="flex"
       flexDirection="column"
-      css={{
-        // Mobile: collapse to content-driven height (unless fillParent)
-        '@media (max-width: 48em)': {
-          height: fillParent ? '100%' : 'auto',
-        },
-      }}
     >
       {hasCreature && (
         <>
@@ -238,8 +234,24 @@ export function DSTextPanel({
         width="100%"
         flex={1}
         minH={0}
-        overflowY="auto"
+        height={{
+          base: fillParent ? '100%' : 'auto',
+          md: fillParent ? '100%' : 'auto',
+        }}
+        overflowY={{
+          base: fillParent ? 'auto' : 'visible',
+          md: 'auto',
+        }}
         position="relative"
+        // Top/bottom mask gradient. Mobile: no mask except when fillParent
+        // is set (kept a slightly wider top fade there for the stripSide
+        // variant); desktop: tight 3% top fade, softer 92% bottom fade.
+        maskImage={{
+          base: fillParent
+            ? 'linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%)'
+            : 'none',
+          md: 'linear-gradient(to bottom, transparent 0%, black 3%, black 92%, transparent 100%)',
+        }}
         padding={
           compact
             ? title
@@ -254,29 +266,22 @@ export function DSTextPanel({
         lineHeight={{ base: 1.5, md: 1.65 }}
         fontWeight="light"
         css={{
+          // Safari still needs the -webkit- prefix (no Chakra responsive).
+          WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 3%, black 92%, transparent 100%)',
           scrollbarWidth: 'none',
           msOverflowStyle: 'none',
-          // Desktop: top/bottom mask gradient. Mobile: no mask (visible scroll)
-          // Top fade is tight (3%) so the first line doesn't get swallowed;
-          // bottom keeps the softer 92% fade so scroll has a nice cue.
-          '@media (min-width: 48em)': {
-            maskImage:
-              'linear-gradient(to bottom, transparent 0%, black 3%, black 92%, transparent 100%)',
-            WebkitMaskImage:
-              'linear-gradient(to bottom, transparent 0%, black 3%, black 92%, transparent 100%)',
-          },
           '&::-webkit-scrollbar': { display: 'none' },
-          // `& h2` styles here only apply to h2 elements still passed via
-          // `children` (legacy usage). When the caller uses the `title`
-          // prop, the heading is rendered above this box by the parent.
+          // Descendant selectors — can't be expressed as Chakra responsive
+          // props because the target is a child element, not the Box itself.
+          // Allowed exception per AGENTS.md rule 6.
           '& h2': {
-            fontSize: '2rem',
+            fontSize: '1rem',
             fontWeight: 700,
-            marginBottom: '0.8rem',
+            marginBottom: '0.5rem',
             color: 'var(--ds-title-color)',
           },
           '& h3': {
-            fontSize: '0.75rem',
+            fontSize: '0.65rem',
             fontWeight: 600,
             letterSpacing: '0.2em',
             textTransform: 'uppercase',
@@ -288,8 +293,17 @@ export function DSTextPanel({
             marginTop: 0,
           },
           '& p': {
-            marginBottom: '0.8rem',
+            marginBottom: '0.5rem',
             color: 'var(--ds-text-color)',
+          },
+          '@media (min-width: 48em)': {
+            '& h2': { fontSize: '2rem', marginBottom: '0.8rem' },
+            '& h3': { fontSize: '0.75rem' },
+            '& p': { marginBottom: '0.8rem' },
+          },
+          '@media (min-width: 120em)': {
+            '& h2': { fontSize: 'clamp(2rem, 4vw, 3rem)' },
+            '& h3': { fontSize: '1.3rem' },
           },
           ...(hasCreature && {
             '& p:first-of-type::first-letter': {
@@ -303,27 +317,6 @@ export function DSTextPanel({
               textShadow: `0 2px 12px ${accent}66`,
             },
           }),
-          // Mobile (<= 768px) overrides
-          '@media (max-width: 48em)': {
-            height: fillParent ? '100%' : 'auto',
-            overflowY: fillParent ? 'auto' : 'visible',
-            ...(fillParent
-              ? {
-                  maskImage:
-                    'linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%)',
-                  WebkitMaskImage:
-                    'linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%)',
-                }
-              : {}),
-            '& h2': { fontSize: '1rem', marginBottom: '0.5rem' },
-            '& h3': { fontSize: '0.65rem', marginBottom: '0.3rem' },
-            '& p': { marginBottom: '0.5rem' },
-          },
-          // XL screens (>= 1920px)
-          '@media (min-width: 120em)': {
-            '& h2': { fontSize: 'clamp(2rem, 4vw, 3rem)' },
-            '& h3': { fontSize: '1.3rem' },
-          },
         }}
       >
         {children}

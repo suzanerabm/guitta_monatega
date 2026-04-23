@@ -912,6 +912,18 @@ function TriplecRegionSection({
         {...(regionId === 'sharp' ? { bgColor: regionPalette.dark } : {})}
         data-testid={`region-divider-${regionId}`}
       />
+      <Box
+        display={{ base: 'flex', md: 'contents' }}
+        flexDirection="column"
+        gap="2rem"
+        sx={{
+          // Mobile: neutraliza os mt/mb internos dos 3 blocos para que
+          // o único espaçamento vertical venha do `gap` deste Flex.
+          '@media (max-width: 48em)': {
+            '& > *': { marginTop: 0, marginBottom: 0 },
+          },
+        }}
+      >
       <RegionBanner
         name={name}
         color={regionColor}
@@ -939,25 +951,26 @@ function TriplecRegionSection({
             ]}
           />
         )}
-      />
-      {region.scenes.length > 0 && (
-        <SceneStrip
-          scenes={region.scenes.map((s) => ({
-            ...s,
-            name: translateName(s.name, words),
-          }))}
-          arrowColor={regionColor}
-          accentColor={regionColor}
-          darkColor={regionPalette.dark}
-          crestGlyph={worldCrestGlyph(regionId)}
-          modalBg={regionPalette.gradientBg}
-          modalTitle={name}
-          modalSubtitle={bodyText[0] || ''}
-          titleMarginTop="1.5em"
-          hideLabel
-          variant="region"
-        />
-      )}
+      >
+        {region.scenes.length > 0 && (
+          <SceneStrip
+            scenes={region.scenes.map((s) => ({
+              ...s,
+              name: translateName(s.name, words),
+            }))}
+            arrowColor={regionColor}
+            accentColor={regionColor}
+            darkColor={regionPalette.dark}
+            crestGlyph={worldCrestGlyph(regionId)}
+            modalBg={regionPalette.gradientBg}
+            modalTitle={name}
+            modalSubtitle={bodyText[0] || ''}
+            titleMarginTop="1.5em"
+            hideLabel
+            variant="region"
+          />
+        )}
+      </RegionBanner>
       {/* ── Character gallery for the region ─────────── */}
       {(() => {
         const characterData = getCharactersForContext(contextId);
@@ -989,7 +1002,7 @@ function TriplecRegionSection({
           .filter((x): x is NonNullable<typeof x> => x !== null);
         if (galleryItems.length === 0) return null;
         return (
-          <Box width="100%" my="3xl" px={{ base: "25px", md: "2rem", xl: "3rem" }}>
+          <Box width="100%" px={{ base: "25px", md: "2rem", xl: "3rem" }}>
             <KammaraCharacterGallery
               title={`${charactersTitle} · ${name}`}
               worldCrestGlyph={worldCrestGlyph(regionId)}
@@ -1041,8 +1054,8 @@ function TriplecRegionSection({
             <Box
               display={{ base: 'block', md: 'none' }}
               width="100%"
-              my="2xl"
-              px={{ base: '25px', md: '2rem', xl: '3rem' }}
+              pt="3rem"
+              px={{ base: '2rem', md: '2rem', xl: '3rem' }}
             >
               <Box width="100%" height="627px">
                 <KammaraCardSubsystem
@@ -1077,6 +1090,7 @@ function TriplecRegionSection({
           </>
         );
       })()}
+      </Box>
     </CreatureSection>
   );
 }

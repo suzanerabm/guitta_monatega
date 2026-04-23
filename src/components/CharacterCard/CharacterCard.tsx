@@ -122,13 +122,14 @@ export function CharacterCard({
 
   const nameProps: Record<string, unknown> = {
     textStyle: 'label',
-    color: mobileColor || labelColor || 'white',
+    color: mobileColor
+      ? { base: mobileColor, md: labelColor || 'white' }
+      : labelColor || 'white',
     zIndex: 1,
     textShadow: 'labelText',
     textAlign: 'center',
     transition: 'transform 0.25s ease, opacity 0.25s ease',
     margin: 0,
-    ...(mobileColor ? { css: { '@media (min-width: 48em)': { color: labelColor || 'white' } } } : {}),
   };
 
   if (!noHoverScale) {
@@ -198,15 +199,16 @@ export function CharacterCard({
         transition="transform 0.25s ease"
         boxShadow={variantStyles.boxShadow}
         outline={variantStyles.outline}
-        outlineColor={mobileColor || variantStyles.outlineColor}
+        outlineColor={
+          mobileColor
+            ? { base: mobileColor, md: variantStyles.outlineColor as string }
+            : variantStyles.outlineColor
+        }
         outlineOffset="3px"
         aspectRatio={variantStyles.aspectRatio}
         transformOrigin={variantStyles.transformOrigin}
         _groupHover={hoverStyles}
         {...(selectedBoxStyles ?? {})}
-        css={mobileColor ? {
-          '@media (min-width: 48em)': { outlineColor: variantStyles.outlineColor as string },
-        } : undefined}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img

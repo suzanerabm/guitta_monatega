@@ -97,16 +97,15 @@ export function SubSystem({
         <Heading
           as="h2"
           fontFamily="body"
-          fontSize="section"
+          // `lg` (62em) is the closest canonical cut to the old 64em; the
+          // ~32px gap is imperceptible for this font-size tier.
+          fontSize={{ base: 'section', md: '0.85rem', lg: 'section' }}
           letterSpacing="wider"
           textTransform="uppercase"
           fontWeight="semibold"
           padding="0 2rem"
           margin="5em 0 0.5rem"
           color={titleColor}
-          css={{
-            '@media (min-width: 48em) and (max-width: 64em)': { fontSize: '0.85rem' },
-          }}
         >
           {sectionTitle}
         </Heading>
@@ -168,20 +167,8 @@ export function SubSystem({
               display="flex"
               flexDirection="column"
               position="relative"
-              css={{
-                // Mobile: content-driven but capped
-                height: 'auto',
-                maxHeight: '420px',
-                // Default desktop (>=769px) — 550px
-                '@media (min-width: 48em)': {
-                  height: '550px',
-                  maxHeight: 'none',
-                },
-                // 1900px+ — 600px
-                '@media (min-width: 118.75em)': {
-                  height: '600px',
-                },
-              }}
+              height={{ base: 'auto', md: '550px', '2xl': '600px' }}
+              maxHeight={{ base: '420px', md: 'none' }}
             >
               <Heading
                 as="h3"

@@ -39,6 +39,12 @@ export interface RegionBannerProps {
     color: string;
     story: ReactNode;
   }) => ReactNode;
+  /**
+   * Optional side column rendered to the right of the left panel
+   * (on md+). Mirrors the `stripSide` slot of DSMainCard — used to host
+   * a SceneStrip / scene collage next to the region card.
+   */
+  children?: ReactNode;
   'data-testid'?: string;
 }
 
@@ -62,6 +68,7 @@ export function RegionBanner({
   story,
   bgImage,
   renderPanel,
+  children,
   'data-testid': testId,
 }: RegionBannerProps) {
   return (
@@ -69,8 +76,8 @@ export function RegionBanner({
       data-testid={testId ?? 'region-banner'}
       position="relative"
       zIndex={5}
-      width="100vw"
-      marginLeft="calc(-50vw + 50%)"
+      width={{ base: '100%', md: '100vw' }}
+      marginLeft={{ base: '0', md: 'calc(-50vw + 50%)' }}
       overflow={{ base: 'visible', md: 'hidden' }}
       mt={{ base: '1rem', md: '2rem' }}
       mb={{ base: '1rem', md: '2rem' }}
@@ -108,19 +115,12 @@ export function RegionBanner({
       <Box
         position={{ base: 'relative', md: 'absolute' }}
         zIndex={40}
-        css={{
-          '@media (min-width: 48em)': {
-            left: '2rem',
-            top: '50%',
-            width: '60%',
-            maxWidth: '900px',
-            height: 'calc(100% - 3rem)',
-            transform: 'translateY(-50%)',
-          },
-          '@media (min-width: 80em)': {
-            left: '3rem',
-          },
-        }}
+        height={{ base: '60vh', md: 'calc(100% - 3rem)' }}
+        maxHeight={{ base: '520px', md: 'none' }}
+        left={{ md: '2rem', xl: '3rem' }}
+        top={{ md: '50%' }}
+        width={{ md: '60%', lg: '50%', xl: '50%', '2xl': '50%' }}
+        transform={{ md: 'translateY(-50%)' }}
         padding={{ base: '1.5rem 25px 0', md: 0 }}
         display="flex"
       >
@@ -138,6 +138,34 @@ export function RegionBanner({
           </DSTextPanel>
         )}
       </Box>
+      {/* Side column (right) — starts right after the left panel and
+          stretches to the right edge so the SceneStrip takes all the remaining
+          space. On mobile stacks below the panel. */}
+      {children && (
+        <Box
+          position={{ base: 'relative', md: 'absolute' }}
+          zIndex={2}
+          mt={{ base: '4rem', md: 0 }}
+          // left = painelLeft + painelWidth + gap(1rem)
+          //   md  : 2rem + 60% + 1rem   → calc(60% + 3rem)
+          //   lg  : 2rem + 50% + 1rem   → calc(50% + 3rem)
+          //   xl  : 3rem + 50% + 1rem   → calc(50% + 4rem)
+          left={{
+            md: 'calc(60% + 3rem)',
+            lg: 'calc(50% + 3rem)',
+            xl: 'calc(50% + 4rem)',
+          }}
+          right={{ md: '2rem', xl: '3rem' }}
+          top={{ md: '50%' }}
+          height={{ md: 'calc(100% - 3rem)' }}
+          transform={{ md: 'translateY(-50%)' }}
+          display={{ base: 'block', md: 'flex' }}
+          alignItems={{ md: 'center' }}
+          padding={{ base: '1rem 25px 1.5rem', md: 0 }}
+        >
+          {children}
+        </Box>
+      )}
     </Box>
   );
 }

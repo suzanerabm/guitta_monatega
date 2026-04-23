@@ -36,3 +36,34 @@ Regras:
 4. Exceções aceitáveis (valores inline) são casos realmente particulares: uma animação única de um
    componente, um posicionamento pontual, um override isolado. Em caso de dúvida, pergunte antes
    de espalhar.
+
+## Responsividade: props do Chakra, nunca `@media` manual
+
+A única forma aceita de escrever estilos responsivos neste projeto é pelo sistema de breakpoints
+do Chakra — objetos `{ base, sm, md, lg, xl, '2xl', '3xl' }` nas props normais do componente.
+Migramos pra Chakra exatamente pra parar de escrever CSS manual; voltar a escrever `@media` é
+regressão.
+
+Regras:
+1. **Proibido** `css={{ '@media (min-width: ...)': { ... } }}` em componentes. Também proibido
+   `@media (max-width)` — use `base` (default do menor breakpoint) + sobrescreva no breakpoint
+   superior.
+2. **Use props responsive**: `width={{ base: '100%', md: '60%', lg: '50%' }}`,
+   `padding={{ base: '1rem', md: '2rem' }}`, `display={{ base: 'block', md: 'flex' }}`, etc.
+3. Se o valor responsivo cresce muito (4+ breakpoints diferentes ou se aparece em N props),
+   extraia numa variável `const foo: Record<string, string> = { base: ..., md: ..., lg: ... }`
+   e use em `width={foo}`. Isso mantém o JSX legível sem cair em `@media`.
+4. **Breakpoints canônicos** (definidos em `src/theme/index.ts`): `sm` 30em (480px), `md` 48em
+   (768px), `lg` 62em (992px), `xl` 80em (1280px), `2xl` 94em (1500px), `3xl` 120em (1920px).
+   Nunca invente breakpoints arbitrários (`118.75em`, `64em`) — se uma criatura precisa de um
+   corte próprio, adicione um breakpoint ao tema ao invés de hard-coding no componente.
+5. **`@media` só na `<style>` global** que injeta keyframes/reset — nunca dentro de `css={...}` de
+   componente.
+6. **Exceção A — descendentes**: estilos de descendentes com seletor (ex: `'& h2': { fontSize: ... }`)
+   que precisam mudar por breakpoint podem usar `@media` dentro de `css={...}` — não dá pra
+   expressar isso com props responsive porque o elemento alvo não é o Box. Ainda assim, use os
+   breakpoints canônicos do tema (`48em`, `62em`, `80em`, `94em`, `120em`).
+7. **Exceção B — CSS dinâmico**: objetos CSS construídos dinamicamente em loop (ex: posições
+   absolutas por character no DSMainCard, variando por `md/xl/xxl` do config) podem usar chaves
+   `@media` internamente porque Chakra props responsive não aceitam shapes dinâmicos. Use os
+   breakpoints canônicos. Evite criar mais casos desses — só mantenha os que já existem.
