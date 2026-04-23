@@ -70,6 +70,16 @@ interface DSMainCardProps {
     stripSide?: boolean;
     text?: ReactNode;
   }) => ReactNode;
+  /**
+   * When set, turns the inner DSTextPanel into the Bichittos "creature"
+   * variant (HUD corners + dot pattern + dropcap). Forwarded as
+   * `creatureAccent` to the panel.
+   */
+  creatureAccent?: string;
+  /** Secondary accent (dropcap color). Defaults to `creatureAccent`. */
+  creatureAccentAlt?: string;
+  /** Optional pill shown above the panel title. */
+  panelBadge?: string;
   children?: ReactNode;
   'data-testid'?: string;
 }
@@ -88,6 +98,9 @@ export function DSMainCard({
   glyphVariant,
   text,
   renderPanel,
+  creatureAccent,
+  creatureAccentAlt,
+  panelBadge,
   children,
   'data-testid': testId,
 }: DSMainCardProps) {
@@ -338,6 +351,9 @@ export function DSMainCard({
               fillParent={stripSide}
               showGlyph={stripSide}
               glyphVariant={glyphVariant}
+              creatureAccent={creatureAccent}
+              creatureAccentAlt={creatureAccentAlt}
+              badge={panelBadge}
             >
               {text}
             </DSTextPanel>

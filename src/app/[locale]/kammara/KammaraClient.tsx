@@ -21,7 +21,9 @@ import { SoonPanel } from '@/components/SoonPanel';
 import { BookGallery } from '@/components/BookGallery';
 import { useModal } from '@/components/Modal';
 import { palettes, type PaletteName, type Palette } from '@/theme/palettes';
-import { kammaraHero, kammaraFilter } from '@/theme/creatures';
+
+const kammaraHero = palettes.kammara.hero!;
+const kammaraFilter = palettes.kammara.filter!;
 import { subsystemGlyph, worldCrestGlyph } from '@/theme/kalunGlyphs';
 import { translateName } from '@/lib/translateName';
 import {

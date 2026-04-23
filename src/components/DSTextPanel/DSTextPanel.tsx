@@ -40,6 +40,17 @@ interface DSTextPanelProps {
   borderColor?: string;
   showGlyph?: boolean;
   glyphVariant?: 'planet' | 'universe';
+  /**
+   * When set, turns the panel into the Bichittos "creature" variant:
+   * decorative HUD corners in the given color, a subtle dot pattern
+   * background, and a colored dropcap on the first paragraph letter.
+   * The color provided is used as the accent (corners + dropcap).
+   */
+  creatureAccent?: string;
+  /** Secondary accent used for the dropcap and inner corner stroke. */
+  creatureAccentAlt?: string;
+  /** Optional pill shown above the title (e.g. "NAPCAT · GATO"). */
+  badge?: string;
   'data-testid'?: string;
 }
 
@@ -68,8 +79,14 @@ export function DSTextPanel({
   borderColor,
   showGlyph = false,
   glyphVariant,
+  creatureAccent,
+  creatureAccentAlt,
+  badge,
   'data-testid': testId,
 }: DSTextPanelProps) {
+  const hasCreature = Boolean(creatureAccent);
+  const accent = creatureAccent ?? titleColor;
+  const accentAlt = creatureAccentAlt ?? creatureAccent ?? titleColor;
   const cssVars = {
     '--ds-title-color': titleColor,
     '--ds-subtitle-color': subtitleColor || titleColor,
@@ -84,7 +101,8 @@ export function DSTextPanel({
       height="100%"
       borderRadius="16px"
       overflow="hidden"
-      bg="rgba(0,0,0,0.3)"
+      position="relative"
+      bg="rgba(255, 255, 255, 0.1)"
       backdropFilter="blur(8px)"
       outline="2px solid"
       outlineColor={borderColor ?? titleColor}
@@ -99,11 +117,56 @@ export function DSTextPanel({
         },
       }}
     >
+      {hasCreature && (
+        <>
+          {/* Subtle dot pattern layer — adds texture without stealing focus */}
+          <Box
+            position="absolute"
+            inset={0}
+            pointerEvents="none"
+            aria-hidden="true"
+            css={{
+              backgroundImage: `radial-gradient(${accent}22 1px, transparent 1px)`,
+              backgroundSize: '18px 18px',
+              opacity: 0.45,
+            }}
+          />
+          {/* HUD-style angular corners — playful take on the Kammara frame */}
+          {[
+            { top: '-6px', left: '-6px', borderTop: '3px', borderLeft: '3px' },
+            { top: '-6px', right: '-6px', borderTop: '3px', borderRight: '3px' },
+            { bottom: '-6px', left: '-6px', borderBottom: '3px', borderLeft: '3px' },
+            { bottom: '-6px', right: '-6px', borderBottom: '3px', borderRight: '3px' },
+          ].map((pos, i) => (
+            <Box
+              key={i}
+              position="absolute"
+              width="22px"
+              height="22px"
+              pointerEvents="none"
+              aria-hidden="true"
+              css={{
+                top: pos.top,
+                left: pos.left,
+                right: pos.right,
+                bottom: pos.bottom,
+                borderTopWidth: pos.borderTop,
+                borderLeftWidth: pos.borderLeft,
+                borderRightWidth: pos.borderRight,
+                borderBottomWidth: pos.borderBottom,
+                borderStyle: 'solid',
+                borderColor: accent,
+                borderRadius: '4px',
+                boxShadow: `0 0 10px ${accent}80`,
+              }}
+            />
+          ))}
+        </>
+      )}
       {title && (
-        <Flex
+        <Box
+          position="relative"
           flexShrink={0}
-          align="stretch"
-          gap="0.4rem"
           padding={
             compact
               ? { base: '1rem 2rem 0', md: '1.3rem 1.5rem 0', '2xl': '1.5rem 2rem 0' }
@@ -111,23 +174,56 @@ export function DSTextPanel({
           }
           marginBottom={{ base: '0.5rem', md: '0.8rem' }}
         >
-          {showGlyph && (
-            <Box display="flex" alignItems="center" flexShrink={0}>
-              <GlyphPlanet size="h3" color={titleColor} stretch variant={glyphVariant} />
+          {badge && (
+            <Box
+              as="span"
+              display="inline-block"
+              marginBottom="0.6rem"
+              padding="0.25rem 0.7rem"
+              borderRadius="999px"
+              fontSize="xs"
+              letterSpacing="hero"
+              textTransform="uppercase"
+              fontWeight="bold"
+              color={accentAlt}
+              css={{
+                background: `${accent}1f`,
+                border: `1px solid ${accent}66`,
+              }}
+            >
+              {badge}
             </Box>
           )}
-          <Heading
-            as="h2"
-            fontFamily="body"
-            fontSize={{ base: '1.3rem', md: '2rem', '2xl': 'clamp(2rem, 4vw, 3rem)' }}
-            fontWeight={700}
-            lineHeight={1.1}
-            color={titleColor}
-            m={0}
-          >
-            {title}
-          </Heading>
-        </Flex>
+          <Flex align="stretch" gap="0.4rem">
+            {showGlyph && (
+              <Box display="flex" alignItems="center" flexShrink={0}>
+                <GlyphPlanet size="h3" color={titleColor} stretch variant={glyphVariant} />
+              </Box>
+            )}
+            <Heading
+              as="h2"
+              fontFamily="body"
+              fontSize={{ base: '1.3rem', md: '2rem', '2xl': 'clamp(2rem, 4vw, 3rem)' }}
+              fontWeight={700}
+              lineHeight={1.1}
+              color={titleColor}
+              m={0}
+            >
+              {title}
+            </Heading>
+          </Flex>
+          {hasCreature && (
+            <Box
+              marginTop="0.7rem"
+              height="3px"
+              width="80px"
+              borderRadius="999px"
+              css={{
+                background: `linear-gradient(90deg, ${accent}, ${accentAlt}, transparent)`,
+              }}
+            />
+          )}
+        </Box>
       )}
       <Box
         className="ds-text-scroll"
@@ -136,6 +232,7 @@ export function DSTextPanel({
         flex={1}
         minH={0}
         overflowY="auto"
+        position="relative"
         padding={
           compact
             ? title
@@ -187,6 +284,18 @@ export function DSTextPanel({
             marginBottom: '0.8rem',
             color: 'var(--ds-text-color)',
           },
+          ...(hasCreature && {
+            '& p:first-of-type::first-letter': {
+              fontSize: '3.2em',
+              fontWeight: 700,
+              color: accentAlt,
+              float: 'left',
+              lineHeight: 0.9,
+              padding: '0.05em 0.15em 0 0',
+              fontFamily: 'var(--chakra-fonts-body)',
+              textShadow: `0 2px 12px ${accent}66`,
+            },
+          }),
           // Mobile (<= 768px) overrides
           '@media (max-width: 48em)': {
             height: fillParent ? '100%' : 'auto',
