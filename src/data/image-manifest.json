@@ -132,16 +132,12 @@
         "image": "/imgs/characters/kammara/eni4/VEXON_patas.png"
       },
       {
-        "name": "virus cute 1",
-        "image": "/imgs/characters/kammara/eni4/virus_cute_1.jpg"
-      },
-      {
         "name": "virus cute",
         "image": "/imgs/characters/kammara/eni4/virus_cute.png"
       },
       {
         "name": "virus KARTEX dentro troy",
-        "image": "/imgs/characters/kammara/eni4/virus_KARTEX_dentro_troy.jpg"
+        "image": "/imgs/characters/kammara/eni4/virus_KARTEX_dentro_troy.png"
       },
       {
         "name": "virus KARTEX",
@@ -154,10 +150,6 @@
       {
         "name": "virus MASKON",
         "image": "/imgs/characters/kammara/eni4/virus_MASKON.png"
-      },
-      {
-        "name": "virus REPLION",
-        "image": "/imgs/characters/kammara/eni4/virus_REPLION.jpg"
       },
       {
         "name": "virus REPLION",
@@ -176,24 +168,8 @@
         "image": "/imgs/characters/kammara/eni4/virus_THERMAX.png"
       },
       {
-        "name": "VIRUS",
-        "image": "/imgs/characters/kammara/eni4/VIRUS.jpg"
-      },
-      {
         "name": "virus",
         "image": "/imgs/characters/kammara/eni4/virus.png"
-      },
-      {
-        "name": "virus1",
-        "image": "/imgs/characters/kammara/eni4/virus1.jpg"
-      },
-      {
-        "name": "virus2",
-        "image": "/imgs/characters/kammara/eni4/virus2.jpg"
-      },
-      {
-        "name": "virus3",
-        "image": "/imgs/characters/kammara/eni4/virus3.jpg"
       },
       {
         "name": "worm",
@@ -202,32 +178,40 @@
     ],
     "kammara/lunnp1": [
       {
-        "name": "Brisa costas",
-        "image": "/imgs/characters/kammara/lunnp1/Brisa_costas.png"
+        "name": "blue costas",
+        "image": "/imgs/characters/kammara/lunnp1/blue_costas.png"
       },
       {
-        "name": "Brisa",
-        "image": "/imgs/characters/kammara/lunnp1/Brisa.png"
+        "name": "blue",
+        "image": "/imgs/characters/kammara/lunnp1/blue.png"
       },
       {
-        "name": "EruRin brisa",
-        "image": "/imgs/characters/kammara/lunnp1/EruRin_brisa.png"
+        "name": "brisa azul costas sem brilho",
+        "image": "/imgs/characters/kammara/lunnp1/brisa_azul_costas_sem_brilho.png"
       },
       {
-        "name": "EruRin costas",
-        "image": "/imgs/characters/kammara/lunnp1/EruRin_costas.png"
+        "name": "brisa sem brilho",
+        "image": "/imgs/characters/kammara/lunnp1/brisa_sem_brilho.png"
+      },
+      {
+        "name": "EruRin 230",
+        "image": "/imgs/characters/kammara/lunnp1/EruRin_230.png"
       },
       {
         "name": "EruRin costas1",
         "image": "/imgs/characters/kammara/lunnp1/EruRin_costas1.png"
       },
       {
-        "name": "EruRin",
-        "image": "/imgs/characters/kammara/lunnp1/EruRin.png"
+        "name": "EruRin new",
+        "image": "/imgs/characters/kammara/lunnp1/EruRin_new.png"
       },
       {
-        "name": "Eurin costas com glifo",
-        "image": "/imgs/characters/kammara/lunnp1/Eurin_costas_com_glifo.png"
+        "name": "EruRin pq",
+        "image": "/imgs/characters/kammara/lunnp1/EruRin_pq.png"
+      },
+      {
+        "name": "Erurin",
+        "image": "/imgs/characters/kammara/lunnp1/Erurin.png"
       },
       {
         "name": "flor lume costas",
@@ -238,16 +222,56 @@
         "image": "/imgs/characters/kammara/lunnp1/flor_lume.png"
       },
       {
-        "name": "gemini-2.5-flash-image same character. same design and add glifo on the back do not change the glifo de-1 (1)",
-        "image": "/imgs/characters/kammara/lunnp1/gemini-2.5-flash-image_same_character._same_design_and_add_glifo_on_the_back_do_not_change_the_glifo_de-1 (1).jpg"
+        "name": "kaelun costas",
+        "image": "/imgs/characters/kammara/lunnp1/kaelun_costas.png"
       },
       {
-        "name": "Krii costas",
-        "image": "/imgs/characters/kammara/lunnp1/Krii_costas.png"
+        "name": "Kaelun",
+        "image": "/imgs/characters/kammara/lunnp1/Kaelun.png"
+      },
+      {
+        "name": "kaitor costas",
+        "image": "/imgs/characters/kammara/lunnp1/kaitor_costas.png"
+      },
+      {
+        "name": "kaitor",
+        "image": "/imgs/characters/kammara/lunnp1/kaitor.png"
+      },
+      {
+        "name": "kate costas",
+        "image": "/imgs/characters/kammara/lunnp1/kate_costas.png"
+      },
+      {
+        "name": "kate",
+        "image": "/imgs/characters/kammara/lunnp1/kate.png"
+      },
+      {
+        "name": "Koryn",
+        "image": "/imgs/characters/kammara/lunnp1/Koryn.png"
+      },
+      {
+        "name": "krii costas",
+        "image": "/imgs/characters/kammara/lunnp1/krii_costas.png"
       },
       {
         "name": "Krii",
         "image": "/imgs/characters/kammara/lunnp1/Krii.png"
+      },
+      {
+        "name": "lei costas verde",
+        "image": "/imgs/characters/kammara/lunnp1/lei_costas_verde.png"
+      },
+      {
+        "name": "lei costas",
+        "image": "/imgs/characters/kammara/lunnp1/lei_costas.png"
+      },
+      {
+        "name": "lei verde",
+        "image": "/imgs/characters/kammara/lunnp1/lei_verde.png"
+      },
+      {
+        "name": "lei",
+        "image": "/imgs/characters/kammara/lunnp1/lei.png"
       },
       {
         "name": "LumEsha costas",
@@ -262,8 +286,88 @@
         "image": "/imgs/characters/kammara/lunnp1/LumEsha.png"
       },
       {
-        "name": "TuriKan 2",
-        "image": "/imgs/characters/kammara/lunnp1/TuriKan_2.png"
+        "name": "Lumino costas",
+        "image": "/imgs/characters/kammara/lunnp1/Lumino_costas.png"
+      },
+      {
+        "name": "Lumino",
+        "image": "/imgs/characters/kammara/lunnp1/Lumino.png"
+      },
+      {
+        "name": "Lumira costas",
+        "image": "/imgs/characters/kammara/lunnp1/Lumira_costas.png"
+      },
+      {
+        "name": "Lumira",
+        "image": "/imgs/characters/kammara/lunnp1/Lumira.png"
+      },
+      {
+        "name": "mura costas",
+        "image": "/imgs/characters/kammara/lunnp1/mura_costas.png"
+      },
+      {
+        "name": "mura",
+        "image": "/imgs/characters/kammara/lunnp1/mura.png"
+      },
+      {
+        "name": "narumin costas",
+        "image": "/imgs/characters/kammara/lunnp1/narumin_costas.png"
+      },
+      {
+        "name": "narumin",
+        "image": "/imgs/characters/kammara/lunnp1/narumin.png"
+      },
+      {
+        "name": "rinboro costas",
+        "image": "/imgs/characters/kammara/lunnp1/rinboro_costas.png"
+      },
+      {
+        "name": "rinboro",
+        "image": "/imgs/characters/kammara/lunnp1/rinboro.png"
+      },
+      {
+        "name": "Serai costas",
+        "image": "/imgs/characters/kammara/lunnp1/Serai_costas.png"
+      },
+      {
+        "name": "Serai",
+        "image": "/imgs/characters/kammara/lunnp1/Serai.png"
+      },
+      {
+        "name": "Sereno costas",
+        "image": "/imgs/characters/kammara/lunnp1/Sereno_costas.png"
+      },
+      {
+        "name": "sereno",
+        "image": "/imgs/characters/kammara/lunnp1/sereno.png"
+      },
+      {
+        "name": "shalun",
+        "image": "/imgs/characters/kammara/lunnp1/shalun.png"
+      },
+      {
+        "name": "shirnai costas",
+        "image": "/imgs/characters/kammara/lunnp1/shirnai_costas.png"
+      },
+      {
+        "name": "shirnai",
+        "image": "/imgs/characters/kammara/lunnp1/shirnai.png"
+      },
+      {
+        "name": "telun costas",
+        "image": "/imgs/characters/kammara/lunnp1/telun_costas.png"
+      },
+      {
+        "name": "Telun",
+        "image": "/imgs/characters/kammara/lunnp1/Telun.png"
+      },
+      {
+        "name": "tiru costas",
+        "image": "/imgs/characters/kammara/lunnp1/tiru_costas.png"
+      },
+      {
+        "name": "tiru",
+        "image": "/imgs/characters/kammara/lunnp1/tiru.png"
       },
       {
         "name": "TuriKan costas",
@@ -280,6 +384,26 @@
       {
         "name": "TziKi",
         "image": "/imgs/characters/kammara/lunnp1/TziKi.png"
+      },
+      {
+        "name": "Veloz costas",
+        "image": "/imgs/characters/kammara/lunnp1/Veloz_costas.png"
+      },
+      {
+        "name": "Veloz",
+        "image": "/imgs/characters/kammara/lunnp1/Veloz.png"
+      },
+      {
+        "name": "veludo costas",
+        "image": "/imgs/characters/kammara/lunnp1/veludo_costas.png"
+      },
+      {
+        "name": "veludo",
+        "image": "/imgs/characters/kammara/lunnp1/veludo.png"
+      },
+      {
+        "name": "Veluma",
+        "image": "/imgs/characters/kammara/lunnp1/Veluma.png"
       }
     ],
     "kammara/orfv": [
@@ -356,6 +480,22 @@
       {
         "name": "KAEL TORIN",
         "image": "/imgs/characters/kammara/triplec/mesh/KAEL_TORIN.png"
+      },
+      {
+        "name": "mesh 2",
+        "image": "/imgs/characters/kammara/triplec/mesh/mesh_2.png"
+      },
+      {
+        "name": "mesh12",
+        "image": "/imgs/characters/kammara/triplec/mesh/mesh12.png"
+      },
+      {
+        "name": "mesh13",
+        "image": "/imgs/characters/kammara/triplec/mesh/mesh13.png"
+      },
+      {
+        "name": "mesh14",
+        "image": "/imgs/characters/kammara/triplec/mesh/mesh14.png"
       }
     ],
     "kammara/triplec/sharp": [
@@ -1249,8 +1389,8 @@
         "image": "/imgs/characters/kammara/lunnp1/_scenes/Erú'Rin_e_Lúm'Esha_plantando.png"
       },
       {
-        "name": "Ná'Lum pequenas esferas que flutuam",
-        "image": "/imgs/characters/kammara/lunnp1/_scenes/Ná'Lum_pequenas_esferas_que flutuam.jpg"
+        "name": "Ná'Lum pequenas esferas que flutuam",
+        "image": "/imgs/characters/kammara/lunnp1/_scenes/Ná'Lum_pequenas_esferas_que flutuam.jpg"
       },
       {
         "name": "regiao EXTERMO NORTE",
@@ -1503,18 +1643,9 @@
       "/imgs/characters/kammara/lunnp1/_subsystems/1.png",
       "/imgs/characters/kammara/lunnp1/_subsystems/2.png",
       "/imgs/characters/kammara/lunnp1/_subsystems/3.png",
-      "/imgs/characters/kammara/lunnp1/_subsystems/4.jpg",
+      "/imgs/characters/kammara/lunnp1/_subsystems/4.png",
       "/imgs/characters/kammara/lunnp1/_subsystems/5.png",
-      "/imgs/characters/kammara/lunnp1/_subsystems/6.png",
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      "/imgs/characters/kammara/lunnp1/_subsystems/14.png",
-      "/imgs/characters/kammara/lunnp1/_subsystems/15.png"
+      "/imgs/characters/kammara/lunnp1/_subsystems/6.png"
     ],
     "kammara/orfv": [
       "/imgs/characters/kammara/orfv/_subsystems/0-gigapixel-standard v2-6x.png",
@@ -112646,9 +112777,12 @@
       "/imgs/characters/kammara/triplec/mesh/_subsystems/0.jpg"
     ],
     "kammara/triplec/sharp": [
-      "/imgs/characters/kammara/triplec/sharp/_subsystems/0.jpg",
+      null,
       "/imgs/characters/kammara/triplec/sharp/_subsystems/1.jpg",
-      "/imgs/characters/kammara/triplec/sharp/_subsystems/2.jpg"
+      "/imgs/characters/kammara/triplec/sharp/_subsystems/2.jpg",
+      null,
+      null,
+      "/imgs/characters/kammara/triplec/sharp/_subsystems/5.jpg"
     ]
   }
 }
