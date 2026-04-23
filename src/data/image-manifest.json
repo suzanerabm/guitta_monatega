@@ -186,6 +186,14 @@
         "image": "/imgs/characters/kammara/lunnp1/blue.png"
       },
       {
+        "name": "brisa alta costas",
+        "image": "/imgs/characters/kammara/lunnp1/brisa_alta_costas.png"
+      },
+      {
+        "name": "brisa alta",
+        "image": "/imgs/characters/kammara/lunnp1/brisa_alta.png"
+      },
+      {
         "name": "brisa azul costas sem brilho",
         "image": "/imgs/characters/kammara/lunnp1/brisa_azul_costas_sem_brilho.png"
       },
@@ -196,6 +204,10 @@
       {
         "name": "EruRin 230",
         "image": "/imgs/characters/kammara/lunnp1/EruRin_230.png"
+      },
+      {
+        "name": "erurin alta",
+        "image": "/imgs/characters/kammara/lunnp1/erurin_alta.png"
       },
       {
         "name": "EruRin costas1",
@@ -214,12 +226,24 @@
         "image": "/imgs/characters/kammara/lunnp1/Erurin.png"
       },
       {
+        "name": "flor lume alta",
+        "image": "/imgs/characters/kammara/lunnp1/flor_lume_alta.png"
+      },
+      {
+        "name": "flor lume costas alta",
+        "image": "/imgs/characters/kammara/lunnp1/flor_lume_costas_alta.png"
+      },
+      {
         "name": "flor lume costas",
         "image": "/imgs/characters/kammara/lunnp1/flor_lume_costas.png"
       },
       {
         "name": "flor lume",
         "image": "/imgs/characters/kammara/lunnp1/flor_lume.png"
+      },
+      {
+        "name": "flor-lume-alta",
+        "image": "/imgs/characters/kammara/lunnp1/flor-lume-alta.png"
       },
       {
         "name": "kaelun costas",
@@ -278,10 +302,6 @@
         "image": "/imgs/characters/kammara/lunnp1/LumEsha_costas.png"
       },
       {
-        "name": "LumEsha costas1",
-        "image": "/imgs/characters/kammara/lunnp1/LumEsha_costas1.png"
-      },
-      {
         "name": "LumEsha",
         "image": "/imgs/characters/kammara/lunnp1/LumEsha.png"
       },
@@ -332,6 +352,22 @@
       {
         "name": "Serai",
         "image": "/imgs/characters/kammara/lunnp1/Serai.png"
+      },
+      {
+        "name": "sereno 2 costas",
+        "image": "/imgs/characters/kammara/lunnp1/sereno_2_costas.png"
+      },
+      {
+        "name": "sereno 2",
+        "image": "/imgs/characters/kammara/lunnp1/sereno_2.png"
+      },
+      {
+        "name": "sereno 3",
+        "image": "/imgs/characters/kammara/lunnp1/sereno_3.png"
+      },
+      {
+        "name": "sereno alta",
+        "image": "/imgs/characters/kammara/lunnp1/sereno_alta.png"
       },
       {
         "name": "Sereno costas",
@@ -695,7 +731,7 @@
     "zeco": [
       {
         "name": "zeco acordando",
-        "image": "/imgs/characters/zeco/01_zeco_acordando.png"
+        "image": "/imgs/characters/zeco/00_zeco_acordando.png"
       },
       {
         "name": "zeco atrasado",
