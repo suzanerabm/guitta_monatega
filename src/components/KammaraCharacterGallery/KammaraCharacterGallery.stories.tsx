@@ -29,7 +29,7 @@ export default meta;
 type Story = StoryObj<typeof KammaraCharacterGallery>;
 
 // ---------------------------------------------------------------------------
-// Mock data — uses what exists in /public/imgs/characters/kammara/lunnp1.
+// Mock data — uses what exists in /public/imgs/kammara/lunnp1.
 // Repeats characters just so we have enough to paginate.
 // ---------------------------------------------------------------------------
 
@@ -48,19 +48,19 @@ const lunnp1Chars: Char[] = [
     name: "Erú'Rin",
     species: "Shal'ún",
     bio: "Um dos Shal'ún que cuidam das flores-lume em LUNN'P1. Planta e protege a vegetação luminosa que ilumina as quatro luas do planeta.",
-    image: "/imgs/characters/kammara/lunnp1/EruRin_230.png",
+    image: "/imgs/kammara/lunnp1/EruRin_230.png",
     attributes: [
       { glyph: '⊶⊹⊷', label: 'Protocolo', value: 'AURYN' },
       { glyph: '—•—', label: 'Afinidade', value: 'Água' },
     ],
-    backImage: "/imgs/characters/kammara/lunnp1/EruRin_costas1.png",
+    backImage: "/imgs/kammara/lunnp1/EruRin_costas1.png",
     dorsalMeaning: "O glifo dorsal de Erú'Rin traduz o caminho de quem cuida das raízes que sustentam o mundo.",
   },
   {
     name: "Lúm'Esha",
     species: "Shal'ún",
     bio: "Guardiã das marés de memória. Conhece cada ciclo lunar e guia os rituais de dissolução na Lún'Rai.",
-    image: "/imgs/characters/kammara/lunnp1/LumEsha.png",
+    image: "/imgs/kammara/lunnp1/LumEsha.png",
     attributes: [
       { glyph: '⊶⊹⊷', label: 'Protocolo', value: 'AURYN' },
       { glyph: '⊹', label: 'Guardiã', value: "Lún'Rai" },
@@ -70,7 +70,7 @@ const lunnp1Chars: Char[] = [
     name: "Brisa",
     species: "Shal'ún",
     bio: "Jovem Shal'ún que escuta o vento entre as cidades flutuantes. Sua risada acalma as marés nervosas.",
-    image: "/imgs/characters/kammara/lunnp1/brisa_sem_brilho.png",
+    image: "/imgs/kammara/lunnp1/brisa_sem_brilho.png",
     attributes: [
       { glyph: '⊶⊹⊷', label: 'Protocolo', value: 'AURYN' },
     ],
@@ -79,7 +79,7 @@ const lunnp1Chars: Char[] = [
     name: "Túri'Kan",
     species: "Tartaruga vibracional",
     bio: "Os Túri'Kan atravessam as Naru'ei carregando Shal'ún e suas histórias. Silenciosos, firmes, antigos.",
-    image: "/imgs/characters/kammara/lunnp1/TuriKan.png",
+    image: "/imgs/kammara/lunnp1/TuriKan.png",
     attributes: [
       { glyph: '—•—', label: 'Afinidade', value: 'Água' },
       { glyph: '⊹—⊙', label: 'Função', value: 'Transporte' },

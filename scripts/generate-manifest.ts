@@ -8,6 +8,20 @@ const OUTPUT = path.resolve(process.cwd(), 'src/data/image-manifest.json');
 
 const IMAGE_EXTS = /\.(png|jpg|jpeg|webp|gif|svg)$/i;
 
+// Bichittos creatures live at public/imgs/bichittos/<creature>/…
+const BICHITTOS_ROOT = 'bichittos';
+const BICHITTOS_CREATURES = [
+  'napcat',
+  'zeco',
+  'taylo',
+  'cheiodebolinha',
+  'miscelania',
+] as const;
+
+// Kammara worlds live at public/imgs/kammara/<world>/…
+// (A Kammara hub section lives at public/imgs/kammara/_bg, no world.)
+const KAMMARA_ROOT = 'kammara';
+
 // Natural sort: treats numeric prefixes as numbers so "2_x" comes before "10_x".
 const naturalSort = (a: string, b: string) =>
   a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
@@ -34,57 +48,67 @@ function cleanName(filename: string): string {
     .trim();
 }
 
-// Build characters manifest
+// Build characters manifest.
 //
-// Directory depth supported:
-//   creature/                    → key: "creature"            (e.g. bichittos creatures)
-//   creature/sub/                → key: "creature/sub"        (e.g. kammara worlds)
-//   creature/sub/region/         → key: "creature/sub/region" (e.g. triplec regions)
+// New folder layout (after the April 2026 reorg):
+//   public/imgs/bichittos/<creature>/*.png         → key: "<creature>"
+//   public/imgs/kammara/<world>/*.png              → key: "kammara/<world>"
+//   public/imgs/kammara/<world>/<region>/*.png     → key: "kammara/<world>/<region>"
 //
-// The third level lets a single kammara world (e.g. triplec) split its
-// content into named regions (malloc/mesh/sharp). Each region gets its
-// own characters, scenes and subsystems via matching subfolders.
+// The "kammara/" prefix on the key mirrors the old shape so the JSON data
+// files (`kammara/<world>_characters.json`, etc.) can keep using the same
+// context ids (`kammara/lunnp1`, `kammara/triplec/malloc`, ...).
 function buildCharacters() {
-  const charsDir = path.join(IMGS, 'characters');
   const result: Record<string, { name: string; image: string }[]> = {};
 
-  for (const creature of listDirs(charsDir)) {
-    const creatureDir = path.join(charsDir, creature);
-    const subDirs = listDirs(creatureDir);
-    const directImages = listImages(creatureDir);
-
-    if (directImages.length > 0) {
-      result[creature] = directImages.map((f) => ({
+  // Bichittos: flat creatures (no sub-worlds).
+  const bichittosDir = path.join(IMGS, BICHITTOS_ROOT);
+  for (const creature of BICHITTOS_CREATURES) {
+    const creatureDir = path.join(bichittosDir, creature);
+    const images = listImages(creatureDir);
+    if (images.length > 0) {
+      result[creature] = images.map((f) => ({
         name: cleanName(f),
-        image: `/imgs/characters/${creature}/${f}`,
+        image: `/imgs/${BICHITTOS_ROOT}/${creature}/${f}`,
+      }));
+    }
+  }
+
+  // Kammara: worlds, plus optional regions inside a world.
+  const kammaraDir = path.join(IMGS, KAMMARA_ROOT);
+  // Direct kammara/*.png (the hub has no character images today but keep
+  // the support for future use).
+  const hubImages = listImages(kammaraDir);
+  if (hubImages.length > 0) {
+    result.kammara = hubImages.map((f) => ({
+      name: cleanName(f),
+      image: `/imgs/${KAMMARA_ROOT}/${f}`,
+    }));
+  }
+
+  for (const world of listDirs(kammaraDir)) {
+    if (world.startsWith('_')) continue;
+    const worldDir = path.join(kammaraDir, world);
+    const worldImages = listImages(worldDir);
+    if (worldImages.length > 0) {
+      result[`kammara/${world}`] = worldImages.map((f) => ({
+        name: cleanName(f),
+        image: `/imgs/${KAMMARA_ROOT}/${world}/${f}`,
       }));
     }
 
-    // Sub-directories (e.g., kammara worlds)
-    for (const sub of subDirs) {
-      if (sub.startsWith('_')) continue;
-      const subDir = path.join(creatureDir, sub);
-      const subImages = listImages(subDir);
-      if (subImages.length > 0) {
-        result[`${creature}/${sub}`] = subImages.map((f) => ({
+    for (const region of listDirs(worldDir)) {
+      if (region.startsWith('_')) continue;
+      const regionImages = listImages(path.join(worldDir, region));
+      if (regionImages.length > 0) {
+        result[`kammara/${world}/${region}`] = regionImages.map((f) => ({
           name: cleanName(f),
-          image: `/imgs/characters/${creature}/${sub}/${f}`,
+          image: `/imgs/${KAMMARA_ROOT}/${world}/${region}/${f}`,
         }));
-      }
-
-      // Region subdirectories inside the sub (e.g. triplec/malloc).
-      for (const region of listDirs(subDir)) {
-        if (region.startsWith('_')) continue;
-        const regionImages = listImages(path.join(subDir, region));
-        if (regionImages.length > 0) {
-          result[`${creature}/${sub}/${region}`] = regionImages.map((f) => ({
-            name: cleanName(f),
-            image: `/imgs/characters/${creature}/${sub}/${region}/${f}`,
-          }));
-        }
       }
     }
   }
+
   return result;
 }
 
@@ -128,13 +152,9 @@ function buildArt() {
   return result;
 }
 
-// Build scenes manifest
-//
-// Reads `_scenes/` directories at two levels:
-//   creature/sub/_scenes           → key: "creature/sub"
-//   creature/sub/region/_scenes    → key: "creature/sub/region"
+// Build scenes manifest — looks for `_scenes/` inside each kammara world
+// and region. Manifest keys keep the `kammara/<world>[/<region>]` shape.
 function buildScenes() {
-  const charsDir = path.join(IMGS, 'characters');
   const result: Record<string, { name: string; image: string }[]> = {};
 
   const collect = (dir: string, key: string, urlPrefix: string) => {
@@ -148,22 +168,20 @@ function buildScenes() {
     }));
   };
 
-  for (const creature of listDirs(charsDir)) {
-    const creatureDir = path.join(charsDir, creature);
-    for (const sub of listDirs(creatureDir)) {
-      if (sub.startsWith('_')) continue;
-      const subDir = path.join(creatureDir, sub);
-      collect(subDir, `${creature}/${sub}`, `/imgs/characters/${creature}/${sub}`);
+  const kammaraDir = path.join(IMGS, KAMMARA_ROOT);
+  for (const world of listDirs(kammaraDir)) {
+    if (world.startsWith('_')) continue;
+    const worldDir = path.join(kammaraDir, world);
+    collect(worldDir, `kammara/${world}`, `/imgs/${KAMMARA_ROOT}/${world}`);
 
-      for (const region of listDirs(subDir)) {
-        if (region.startsWith('_')) continue;
-        const regionDir = path.join(subDir, region);
-        collect(
-          regionDir,
-          `${creature}/${sub}/${region}`,
-          `/imgs/characters/${creature}/${sub}/${region}`
-        );
-      }
+    for (const region of listDirs(worldDir)) {
+      if (region.startsWith('_')) continue;
+      const regionDir = path.join(worldDir, region);
+      collect(
+        regionDir,
+        `kammara/${world}/${region}`,
+        `/imgs/${KAMMARA_ROOT}/${world}/${region}`,
+      );
     }
   }
   return result;
@@ -172,9 +190,9 @@ function buildScenes() {
 // Build kammara world backgrounds — each world has a `_bg/` directory
 // with a single image used as the parallax background for that section.
 // Worlds that are split into regions (e.g. triplec) can also have a
-// `_bg/` inside each region directory.
+// `_bg/` inside each region directory. The kammara hub reads from
+// public/imgs/kammara/_bg/ (not tied to any world).
 function buildKammaraBgs() {
-  const charsDir = path.join(IMGS, 'characters');
   const result: Record<string, string> = {};
 
   const collect = (dir: string, key: string, urlPrefix: string) => {
@@ -185,15 +203,14 @@ function buildKammaraBgs() {
     }
   };
 
-  // Direct kammara/_bg for the main section
-  collect(path.join(charsDir, 'kammara'), 'kammara', '/imgs/characters/kammara');
+  const kammaraDir = path.join(IMGS, KAMMARA_ROOT);
+  // Hub bg lives at public/imgs/kammara/_bg/
+  collect(kammaraDir, 'kammara', `/imgs/${KAMMARA_ROOT}`);
 
-  // kammara/{world}/_bg + kammara/{world}/{region}/_bg
-  const kammaraDir = path.join(charsDir, 'kammara');
   for (const world of listDirs(kammaraDir)) {
     if (world.startsWith('_')) continue;
     const worldDir = path.join(kammaraDir, world);
-    collect(worldDir, `kammara/${world}`, `/imgs/characters/kammara/${world}`);
+    collect(worldDir, `kammara/${world}`, `/imgs/${KAMMARA_ROOT}/${world}`);
 
     for (const region of listDirs(worldDir)) {
       if (region.startsWith('_')) continue;
@@ -201,7 +218,7 @@ function buildKammaraBgs() {
       collect(
         regionDir,
         `kammara/${world}/${region}`,
-        `/imgs/characters/kammara/${world}/${region}`
+        `/imgs/${KAMMARA_ROOT}/${world}/${region}`,
       );
     }
   }
@@ -212,33 +229,30 @@ function buildKammaraBgs() {
 // inside a world) has a `_subsystems/` directory with 0.xxx, 1.xxx, 2.xxx
 // for the 3 subsystem cards.
 function buildSubsystems() {
-  const charsDir = path.join(IMGS, 'characters');
   const result: Record<string, (string | null)[]> = {};
 
   const collect = (dir: string, key: string, urlPrefix: string) => {
     const subDir = path.join(dir, '_subsystems');
     const images = listImages(subDir);
     if (images.length === 0) return;
-    // Find files that start with 0., 1., 2., ... (or 0-, 1-, 2-, ...)
-    // Dynamically detect the max index from available files.
     const maxIndex = images.reduce((max, f) => {
       const match = f.match(/^(\d+)[.\-]/);
       return match ? Math.max(max, parseInt(match[1], 10)) : max;
     }, -1);
     const slots: (string | null)[] = Array.from({ length: maxIndex + 1 }, (_, i) => {
       const file = images.find(
-        (f) => f.startsWith(`${i}.`) || f.startsWith(`${i}-`)
+        (f) => f.startsWith(`${i}.`) || f.startsWith(`${i}-`),
       );
       return file ? `${urlPrefix}/_subsystems/${file}` : null;
     });
     result[key] = slots;
   };
 
-  const kammaraDir = path.join(charsDir, 'kammara');
+  const kammaraDir = path.join(IMGS, KAMMARA_ROOT);
   for (const world of listDirs(kammaraDir)) {
     if (world.startsWith('_')) continue;
     const worldDir = path.join(kammaraDir, world);
-    collect(worldDir, `kammara/${world}`, `/imgs/characters/kammara/${world}`);
+    collect(worldDir, `kammara/${world}`, `/imgs/${KAMMARA_ROOT}/${world}`);
 
     for (const region of listDirs(worldDir)) {
       if (region.startsWith('_')) continue;
@@ -246,7 +260,7 @@ function buildSubsystems() {
       collect(
         regionDir,
         `kammara/${world}/${region}`,
-        `/imgs/characters/kammara/${world}/${region}`
+        `/imgs/${KAMMARA_ROOT}/${world}/${region}`,
       );
     }
   }

@@ -54,9 +54,9 @@ function KammaraTrigger() {
     <Button
       onClick={() => {
         registerGallery('km-demo', [
-          "/imgs/characters/kammara/lunnp1/_scenes/Erú'Rin_e_Lúm'Esha_plantando.jpg",
-          '/imgs/characters/kammara/lunnp1/_scenes/cena_com_frutas_flutuantes.jpg',
-          '/imgs/characters/kammara/lunnp1/_scenes/regiao_EXTERMO_NORTE.jpg',
+          "/imgs/kammara/lunnp1/_scenes/Erú'Rin_e_Lúm'Esha_plantando.jpg",
+          '/imgs/kammara/lunnp1/_scenes/cena_com_frutas_flutuantes.jpg',
+          '/imgs/kammara/lunnp1/_scenes/regiao_EXTERMO_NORTE.jpg',
         ], ['Plantando', 'Frutas Flutuantes', 'Extremo Norte']);
         openKammaraGallery({
           galleryId: 'km-demo',

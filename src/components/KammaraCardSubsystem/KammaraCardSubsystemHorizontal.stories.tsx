@@ -32,7 +32,7 @@ const lunnp1Tabs = [
     icon: '⊙',
     label: 'Cultura',
     title: 'Cultura',
-    image: '/imgs/characters/kammara/lunnp1/_scenes/regiao_leste.jpg',
+    image: '/imgs/kammara/lunnp1/_scenes/regiao_leste.jpg',
     imageAlt: 'Região Leste',
     content: (
       <>
@@ -50,7 +50,7 @@ const lunnp1Tabs = [
     icon: '•',
     label: 'Flora & Fauna',
     title: 'Flora & Fauna',
-    image: '/imgs/characters/kammara/lunnp1/_scenes/cena_com_frutas_flutuantes.jpg',
+    image: '/imgs/kammara/lunnp1/_scenes/cena_com_frutas_flutuantes.jpg',
     imageAlt: 'Frutas flutuantes',
     content: (
       <>
@@ -66,7 +66,7 @@ const lunnp1Tabs = [
     icon: '—',
     label: 'Geografia',
     title: 'Geografia',
-    image: '/imgs/characters/kammara/lunnp1/_scenes/regiao_EXTERMO_NORTE.jpg',
+    image: '/imgs/kammara/lunnp1/_scenes/regiao_EXTERMO_NORTE.jpg',
     imageAlt: 'Extremo Norte',
     content: (
       <>
@@ -80,7 +80,7 @@ const lunnp1Tabs = [
     icon: '⊶⊷',
     label: 'Ciclos & Luas',
     title: 'Ciclos & Luas',
-    image: '/imgs/characters/kammara/lunnp1/_scenes/regiao_leste_aerea.jpg',
+    image: '/imgs/kammara/lunnp1/_scenes/regiao_leste_aerea.jpg',
     imageAlt: 'Leste aérea',
     content: (
       <>
@@ -94,7 +94,7 @@ const lunnp1Tabs = [
     icon: '⋄',
     label: 'A Água',
     title: "A Água — Lún'Rai",
-    image: "/imgs/characters/kammara/lunnp1/_scenes/Erú'Rin_e_Lúm'Esha_plantando.jpg",
+    image: "/imgs/kammara/lunnp1/_scenes/Erú'Rin_e_Lúm'Esha_plantando.jpg",
     imageAlt: "Plantando",
     content: (
       <>

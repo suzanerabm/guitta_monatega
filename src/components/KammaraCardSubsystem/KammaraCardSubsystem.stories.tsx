@@ -76,7 +76,7 @@ const lunnp1Tabs = [
     icon: '⊶⊷',
     label: 'Ciclos & Luas',
     title: 'Ciclos & Luas',
-    image: '/imgs/characters/kammara/lunnp1/_subsystems/3.jpg',
+    image: '/imgs/kammara/lunnp1/_subsystems/3.jpg',
     imageAlt: 'Quatro luas de LUNN\'P1',
     content: (
       <>

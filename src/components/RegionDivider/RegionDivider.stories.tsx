@@ -97,6 +97,6 @@ export const WithBackgroundImage: Story = {
     name: 'Malloc',
     tagline: 'instinto e precisão',
     color: '#22c55e',
-    image: '/imgs/characters/kammara/triplec/_bg/1_neoForest.jpg',
+    image: '/imgs/kammara/triplec/_bg/1_neoForest.jpg',
   },
 };

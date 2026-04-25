@@ -27,7 +27,7 @@ export const WithBgImage: Story = {
     <CreatureSection
       gradient="linear-gradient(135deg, #1a1432, #2a1f4a)"
       accentColor="#667eea"
-      bgImage="/imgs/characters/kammara/lunnp1/_scenes/regiao_leste_aerea.jpg"
+      bgImage="/imgs/kammara/lunnp1/_scenes/regiao_leste_aerea.jpg"
     >
       <div style={{ padding: '4rem', color: 'white' }}>With background image</div>
     </CreatureSection>

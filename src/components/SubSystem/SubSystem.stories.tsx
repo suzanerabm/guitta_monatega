@@ -24,17 +24,17 @@ export const ThreeWithImages: Story = {
     cards: [
       {
         title: 'Geografia',
-        image: '/imgs/characters/kammara/lunnp1/_subsystems/0.png',
+        image: '/imgs/kammara/lunnp1/_subsystems/0.png',
         texts: ['Densas camadas de água doce.', 'Auroras visíveis da órbita.'],
       },
       {
         title: 'Cultura',
-        image: '/imgs/characters/kammara/lunnp1/_scenes/regiao_leste.jpg',
+        image: '/imgs/kammara/lunnp1/_scenes/regiao_leste.jpg',
         texts: ['Sociedade matriarcal.', 'Música feita com plantas.'],
       },
       {
         title: 'Fauna',
-        image: '/imgs/characters/kammara/lunnp1/_scenes/cena_com_frutas_flutuantes.jpg',
+        image: '/imgs/kammara/lunnp1/_scenes/cena_com_frutas_flutuantes.jpg',
         texts: ['Frutas que flutuam ao amadurecer.', 'Espécies bioluminescentes.'],
       },
     ],

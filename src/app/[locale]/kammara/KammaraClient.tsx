@@ -916,9 +916,10 @@ function TriplecRegionSection({
         display={{ base: 'flex', md: 'contents' }}
         flexDirection="column"
         gap="2rem"
-        sx={{
+        css={{
           // Mobile: neutraliza os mt/mb internos dos 3 blocos para que
           // o único espaçamento vertical venha do `gap` deste Flex.
+          // (Exceção B do AGENTS.md: seletor de descendente `& > *`.)
           '@media (max-width: 48em)': {
             '& > *': { marginTop: 0, marginBottom: 0 },
           },

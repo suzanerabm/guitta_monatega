@@ -33,11 +33,11 @@ type Story = StoryObj<typeof KammaraSceneCollage>;
 
 // Real LUNN'P1 scenes (first 5 for the Apple-style mosaic)
 const lunnp1Scenes = [
-  { name: 'Plantando', image: "/imgs/characters/kammara/lunnp1/_scenes/Erú'Rin_e_Lúm'Esha_plantando.jpg" },
-  { name: 'Frutas Flutuantes', image: '/imgs/characters/kammara/lunnp1/_scenes/cena_com_frutas_flutuantes.jpg' },
-  { name: 'Extremo Norte', image: '/imgs/characters/kammara/lunnp1/_scenes/regiao_EXTERMO_NORTE.jpg' },
-  { name: 'Região Leste', image: '/imgs/characters/kammara/lunnp1/_scenes/regiao_leste.jpg' },
-  { name: 'Leste Aérea', image: '/imgs/characters/kammara/lunnp1/_scenes/regiao_leste_aerea.jpg' },
+  { name: 'Plantando', image: "/imgs/kammara/lunnp1/_scenes/Erú'Rin_e_Lúm'Esha_plantando.jpg" },
+  { name: 'Frutas Flutuantes', image: '/imgs/kammara/lunnp1/_scenes/cena_com_frutas_flutuantes.jpg' },
+  { name: 'Extremo Norte', image: '/imgs/kammara/lunnp1/_scenes/regiao_EXTERMO_NORTE.jpg' },
+  { name: 'Região Leste', image: '/imgs/kammara/lunnp1/_scenes/regiao_leste.jpg' },
+  { name: 'Leste Aérea', image: '/imgs/kammara/lunnp1/_scenes/regiao_leste_aerea.jpg' },
 ];
 
 /**

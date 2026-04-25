@@ -132,7 +132,7 @@ export function BichittosBannerWithNinha({
       >
         <Box
           as="img"
-          src="/imgs/characters/zeco/zeco_escondido.png"
+          src="/imgs/bichittos/zeco/zeco_escondido.png"
           alt=""
           aria-hidden
           height="100%"
@@ -167,7 +167,7 @@ export function BichittosBannerWithNinha({
       >
         <Box
           as="img"
-          src="/imgs/characters/napcat/napcat_soneca.png"
+          src="/imgs/bichittos/napcat/napcat_soneca.png"
           alt=""
           aria-hidden
           height="100%"
@@ -195,7 +195,7 @@ export function BichittosBannerWithNinha({
       >
         <Box
           as="img"
-          src="/imgs/characters/zeco/Rui_Merengue_joga_bolinha.png"
+          src="/imgs/bichittos/zeco/Rui_Merengue_joga_bolinha.png"
           alt=""
           aria-hidden
           height="100%"
@@ -225,7 +225,7 @@ export function BichittosBannerWithNinha({
       >
         <Box
           as="img"
-          src="/imgs/characters/zeco/ninha_apaixonada.png"
+          src="/imgs/bichittos/zeco/ninha_apaixonada.png"
           alt=""
           aria-hidden
           height="90%"

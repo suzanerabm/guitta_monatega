@@ -76,12 +76,15 @@ export function RegionBanner({
       data-testid={testId ?? 'region-banner'}
       position="relative"
       zIndex={5}
-      width={{ base: '100%', md: '100vw' }}
-      marginLeft={{ base: '0', md: 'calc(-50vw + 50%)' }}
-      overflow={{ base: 'visible', md: 'hidden' }}
+      // Full-bleed only from lg+ when the panel is absolute-positioned.
+      // Below that (mobile + md) the banner respects the page grid so the
+      // panel + scene strip stack naturally inside the container.
+      width={{ base: '100%', lg: '100vw' }}
+      marginLeft={{ base: '0', lg: 'calc(-50vw + 50%)' }}
+      overflow={{ base: 'visible', lg: 'hidden' }}
       mt={{ base: '1rem', md: '2rem' }}
       mb={{ base: '1rem', md: '2rem' }}
-      minH={{ base: 'auto', md: '400px', lg: '540px', xl: '640px' }}
+      minH={{ base: 'auto', lg: '540px', xl: '640px' }}
     >
       {/* Gradient layer */}
       <Box
@@ -111,17 +114,19 @@ export function RegionBanner({
         </Box>
       )}
       {/* Text panel — same z-index pattern as DSMainCard: text-wrap at 40,
-          strip at 2, so expanded character cards don't cover the panel. */}
+          strip at 2, so expanded character cards don't cover the panel.
+          Breakpoints: base + md (768–991) → full width, stacks with the
+          scene strip below. lg+ (992+) → floats to the left at 50%. */}
       <Box
-        position={{ base: 'relative', md: 'absolute' }}
+        position={{ base: 'relative', lg: 'absolute' }}
         zIndex={40}
-        height={{ base: '60vh', md: 'calc(100% - 3rem)' }}
-        maxHeight={{ base: '520px', md: 'none' }}
-        left={{ md: '2rem', xl: '3rem' }}
-        top={{ md: '50%' }}
-        width={{ md: '60%', lg: '50%', xl: '50%', '2xl': '50%' }}
-        transform={{ md: 'translateY(-50%)' }}
-        padding={{ base: '1.5rem 25px 0', md: 0 }}
+        height={{ base: '60vh', lg: 'calc(100% - 3rem)' }}
+        maxHeight={{ base: '520px', lg: 'none' }}
+        left={{ lg: '2rem', xl: '3rem' }}
+        top={{ lg: '50%' }}
+        width={{ base: '100%', lg: '50%' }}
+        transform={{ lg: 'translateY(-50%)' }}
+        padding={{ base: '1.5rem 25px 0', lg: 0 }}
         display="flex"
       >
         {renderPanel ? (
@@ -138,30 +143,25 @@ export function RegionBanner({
           </DSTextPanel>
         )}
       </Box>
-      {/* Side column (right) — starts right after the left panel and
-          stretches to the right edge so the SceneStrip takes all the remaining
-          space. On mobile stacks below the panel. */}
+      {/* Side column (right) — stacks below the panel on base + md; floats
+          to the right of the panel from lg+. Left offset is calculated so
+          the strip starts right after the panel with a 1rem gap. */}
       {children && (
         <Box
-          position={{ base: 'relative', md: 'absolute' }}
+          position={{ base: 'relative', lg: 'absolute' }}
           zIndex={2}
-          mt={{ base: '4rem', md: 0 }}
-          // left = painelLeft + painelWidth + gap(1rem)
-          //   md  : 2rem + 60% + 1rem   → calc(60% + 3rem)
-          //   lg  : 2rem + 50% + 1rem   → calc(50% + 3rem)
-          //   xl  : 3rem + 50% + 1rem   → calc(50% + 4rem)
+          mt={{ base: '4rem', lg: 0 }}
           left={{
-            md: 'calc(60% + 3rem)',
             lg: 'calc(50% + 3rem)',
             xl: 'calc(50% + 4rem)',
           }}
-          right={{ md: '2rem', xl: '3rem' }}
-          top={{ md: '50%' }}
-          height={{ md: 'calc(100% - 3rem)' }}
-          transform={{ md: 'translateY(-50%)' }}
-          display={{ base: 'block', md: 'flex' }}
-          alignItems={{ md: 'center' }}
-          padding={{ base: '1rem 25px 1.5rem', md: 0 }}
+          right={{ lg: '2rem', xl: '3rem' }}
+          top={{ lg: '50%' }}
+          height={{ lg: 'calc(100% - 3rem)' }}
+          transform={{ lg: 'translateY(-50%)' }}
+          display={{ base: 'block', lg: 'flex' }}
+          alignItems={{ lg: 'center' }}
+          padding={{ base: '1rem 25px 1.5rem', lg: 0 }}
         >
           {children}
         </Box>

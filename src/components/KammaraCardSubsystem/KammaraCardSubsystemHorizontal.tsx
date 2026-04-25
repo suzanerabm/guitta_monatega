@@ -55,13 +55,29 @@ export function KammaraCardSubsystemHorizontal({
   const [activeIndex, setActiveIndex] = useState(0);
   const activeItem = tabs[activeIndex];
   const rouletteRef = useRef<KammaraRouletteHandle>(null);
+  // Swapping the body content when the user picks a new tab resets the
+  // scroller to the top, which fires a synthetic `onScroll` that would
+  // otherwise close the roulette. This flag tells the scroll handler to
+  // ignore the very next event after a tab change.
+  const suppressNextScroll = useRef(false);
 
   const isLight = theme === 'light';
   const textColor = isLight ? 'overlayLightSoft' : 'textOverlayBright';
   const mutedText = isLight ? 'inkSoft' : 'bannerLabel';
 
   const handleSelect = (index: number) => {
-    if (index !== activeIndex) setActiveIndex(index);
+    if (index !== activeIndex) {
+      suppressNextScroll.current = true;
+      setActiveIndex(index);
+    }
+  };
+
+  const handleBodyScroll = () => {
+    if (suppressNextScroll.current) {
+      suppressNextScroll.current = false;
+      return;
+    }
+    rouletteRef.current?.close();
   };
 
   // ---------------------------------------------------------------------
@@ -580,7 +596,7 @@ export function KammaraCardSubsystemHorizontal({
             flex={1}
             minH={0}
             overflowY="auto"
-            onScroll={() => rouletteRef.current?.close()}
+            onScroll={handleBodyScroll}
             css={{
               paddingTop: '1rem',
               fontFamily: 'var(--chakra-fonts-body)',
