@@ -238,5 +238,411 @@
         }
       }
     ]
+  },
+  {
+    "match": "Estrela-Borboleta Geometrica",
+    "name": {
+      "pt": "Estrela-Borboleta Geométrica",
+      "en": "Geometric Star-Butterfly"
+    },
+    "species": {
+      "pt": "Variação geométrica das Espirolas — Mesh",
+      "en": "Geometric variant of the Espirolas — Mesh"
+    },
+    "bio": {
+      "pt": "Borboleta em formato de estrela de 5 pontas — variação geométrica de Mesh. Voa em padrões matemáticos perfeitos. Detalhamento canônico em progresso.",
+      "en": "Butterfly shaped as a 5-pointed star — geometric variant of Mesh. Flies in perfect mathematical patterns. Canonical detailing in progress."
+    },
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Cada ponto que faço é uma equação.",
+      "en": "Every point I trace is an equation."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+        "value": {
+          "pt": "Mesh — voo em padrões matemáticos",
+          "en": "Mesh — mathematical-pattern flight"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Epíteto",
+          "en": "Epithet"
+        },
+        "value": {
+          "pt": "A simetria que voa",
+          "en": "The symmetry that flies"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Status",
+          "en": "Status"
+        },
+        "value": {
+          "pt": "Detalhamento pendente",
+          "en": "Detailing pending"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Caracol-Espiral",
+    "name": {
+      "pt": "Caracol-Espiral",
+      "en": "Spiral Snail"
+    },
+    "species": {
+      "pt": "Caracol-Fibonacci de Mesh",
+      "en": "Fibonacci snail of Mesh"
+    },
+    "bio": {
+      "pt": "Corpo simples curvo (meia-lua) com 4 patas em formato de espiral + casca em espiral matemática. Antenas-bean canônicas. Lento, geométrico, Fibonacci vivo. Detalhamento canônico em progresso.",
+      "en": "Simple curved (half-moon) body with 4 spiral-shaped legs + a mathematically spiralled shell. Canonical bean-antennae. Slow, geometric, a living Fibonacci. Canonical detailing in progress."
+    },
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Eu chego enrolando, mas chego.",
+      "en": "I arrive coiling, but I arrive."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+        "value": {
+          "pt": "Mesh",
+          "en": "Mesh"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Epíteto",
+          "en": "Epithet"
+        },
+        "value": {
+          "pt": "O que enrola o tempo no caminho",
+          "en": "The one who coils time into the path"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Status",
+          "en": "Status"
+        },
+        "value": {
+          "pt": "Detalhamento pendente",
+          "en": "Detailing pending"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Cobra-Caracol",
+    "name": {
+      "pt": "Cobra-Caracol",
+      "en": "Snail-Snake"
+    },
+    "species": {
+      "pt": "Serpente-Fibonacci de Mesh",
+      "en": "Fibonacci serpent of Mesh"
+    },
+    "bio": {
+      "pt": "Corpo de serpente alongado com cauda em espiral Fibonacci, escamas/listras verticais no corpo. Antenas-bean canônicas. Alongada-geométrica, alien. Detalhamento canônico em progresso.",
+      "en": "Elongated serpent body with a Fibonacci-spiral tail and vertical scales/stripes along the body. Canonical bean-antennae. Long, geometric, alien. Canonical detailing in progress."
+    },
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Sigo a curva exata e ela me leva.",
+      "en": "I follow the exact curve and it carries me."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+        "value": {
+          "pt": "Mesh",
+          "en": "Mesh"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Epíteto",
+          "en": "Epithet"
+        },
+        "value": {
+          "pt": "A que termina onde começa",
+          "en": "She who ends where she begins"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Status",
+          "en": "Status"
+        },
+        "value": {
+          "pt": "Detalhamento pendente",
+          "en": "Detailing pending"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Elefantinho-Polimorfico",
+    "name": {
+      "pt": "Elefantinho-Polimórfico",
+      "en": "Polymorphic Little Elephant"
+    },
+    "species": {
+      "pt": "Polimórfico de Mesh",
+      "en": "Polymorphic of Mesh"
+    },
+    "bio": {
+      "pt": "Elefante pequeno alien com tromba em espiral pra trás (sobre a cabeça/lombo), corpo robusto. Capacidade polimórfica — muda forma da tromba/corpo (referência canônica a polimorfismo em C++). Detalhamento canônico em progresso.",
+      "en": "Small alien elephant with a trunk that spirals backwards (over the head and back), robust body. Polymorphic ability — reshapes trunk/body (canonical reference to polymorphism in C++). Canonical detailing in progress."
+    },
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Sou eu mesmo em todas as formas.",
+      "en": "I am myself in every form."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+        "value": {
+          "pt": "Mesh",
+          "en": "Mesh"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Epíteto",
+          "en": "Epithet"
+        },
+        "value": {
+          "pt": "O que muda sem deixar de ser",
+          "en": "The one who changes without ceasing to be"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Status",
+          "en": "Status"
+        },
+        "value": {
+          "pt": "Detalhamento pendente",
+          "en": "Detailing pending"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Peixe-Assimetrico",
+    "name": {
+      "pt": "Peixe-Assimétrico",
+      "en": "Asymmetric Fish"
+    },
+    "species": {
+      "pt": "Peixe geometrizado — origem Mesh, fauna global aquática",
+      "en": "Geometrised fish — Mesh origin, global aquatic fauna"
+    },
+    "bio": {
+      "pt": "Corpo dividido em duas partes desproporcionais (parte menor cubica/retangular em cima + parte maior arredondada embaixo com listras paralelas). Olho enorme único saindo da extremidade. Primeira espécie a transbordar entre regiões — nasceu nos canais geometrizados de Mesh, hoje vive em todas as águas. Detalhamento canônico em progresso.",
+      "en": "Body split into two disproportionate parts (a smaller boxy/rectangular upper part + a larger rounded lower part with parallel stripes). One huge single eye on the edge. First species to overflow between regions — born in the geometrised channels of Mesh, today lives in every water. Canonical detailing in progress."
+    },
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Saí de onde fui feito sem deixar de ser feito de lá.",
+      "en": "I left where I was made without ceasing to be made there."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+        "value": {
+          "pt": "Origem em Mesh — hoje em todas as águas",
+          "en": "Mesh origin — today in every water"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Epíteto",
+          "en": "Epithet"
+        },
+        "value": {
+          "pt": "O que se permitiu sair de onde nasceu",
+          "en": "The one who let himself leave where he was born"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Status",
+          "en": "Status"
+        },
+        "value": {
+          "pt": "Detalhamento pendente",
+          "en": "Detailing pending"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Felino Quadrado",
+    "name": {
+      "pt": "Felino Quadrado",
+      "en": "Square Feline"
+    },
+    "species": {
+      "pt": "Variação modular dos Felinos Polimórficos de Mesh",
+      "en": "Modular variant of the Mesh Polymorphic Felines"
+    },
+    "bio": {
+      "pt": "Felino fofo com cabeça quadrada/retangular (forma geometrizada), 2 orelhinhas, bigodes, coroa de plumas no topo, cauda longa curvada, 4 patinhas. Possível variação dos Felinos Polimórficos canônicos com forma fixa. Detalhamento canônico em progresso.",
+      "en": "Cute feline with a square/rectangular head (geometrised shape), 2 small ears, whiskers, a feather crown on top, long curved tail, 4 small paws. Likely a fixed-form variant of the canonical Polymorphic Felines. Canonical detailing in progress."
+    },
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Mantenho a forma porque ela me serve bem.",
+      "en": "I keep this form because it serves me well."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+        "value": {
+          "pt": "Mesh",
+          "en": "Mesh"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Epíteto",
+          "en": "Epithet"
+        },
+        "value": {
+          "pt": "A elegância que não muda",
+          "en": "The elegance that does not change"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Status",
+          "en": "Status"
+        },
+        "value": {
+          "pt": "Detalhamento pendente",
+          "en": "Detailing pending"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Dinossauro Alongado",
+    "name": {
+      "pt": "Dinossauro Alongado",
+      "en": "Elongated Dinosaur"
+    },
+    "species": {
+      "pt": "Caminhante elegante de Mesh",
+      "en": "Elegant walker of Mesh"
+    },
+    "bio": {
+      "pt": "Criatura com pescoço longo curvo, cabeça pequena com olhinho e sorrisinho, cauda longa, 2 patinhas finas. Caminhante elegante simétrico-alongado. Detalhamento canônico em progresso.",
+      "en": "Creature with a long curved neck, small head with a tiny eye and small smile, long tail, 2 slim legs. Elegant elongated-symmetric walker. Canonical detailing in progress."
+    },
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Atravesso a forma como quem atravessa um pensamento.",
+      "en": "I cross form the way one crosses a thought."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+        "value": {
+          "pt": "Mesh — entre as estruturas modulares",
+          "en": "Mesh — among the modular structures"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Epíteto",
+          "en": "Epithet"
+        },
+        "value": {
+          "pt": "O que caminha entre as pontes sem fazer barulho",
+          "en": "The one who walks between bridges without sound"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Status",
+          "en": "Status"
+        },
+        "value": {
+          "pt": "Detalhamento pendente",
+          "en": "Detailing pending"
+        }
+      }
+    ]
   }
 ]

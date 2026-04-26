@@ -416,8 +416,16 @@
     ],
     "kammara/eni4": [
       {
+        "name": "aracne 1 costas",
+        "image": "/imgs/kammara/eni4/aracne_1_costas.png"
+      },
+      {
         "name": "aracne 1",
         "image": "/imgs/kammara/eni4/aracne_1.png"
+      },
+      {
+        "name": "aracne 2 costas",
+        "image": "/imgs/kammara/eni4/aracne_2_costas.png"
       },
       {
         "name": "aracne 2",
@@ -426,6 +434,10 @@
       {
         "name": "aracne 3",
         "image": "/imgs/kammara/eni4/aracne_3.png"
+      },
+      {
+        "name": "bug costas",
+        "image": "/imgs/kammara/eni4/bug_costas.png"
       },
       {
         "name": "bug",
@@ -448,12 +460,24 @@
         "image": "/imgs/kammara/eni4/rats.png"
       },
       {
+        "name": "REPLION costas",
+        "image": "/imgs/kammara/eni4/REPLION_costas.png"
+      },
+      {
         "name": "robo escravo exausto",
         "image": "/imgs/kammara/eni4/robo_escravo_exausto.png"
       },
       {
         "name": "robo escravo",
         "image": "/imgs/kammara/eni4/robo_escravo.png"
+      },
+      {
+        "name": "SCORAK costas",
+        "image": "/imgs/kammara/eni4/SCORAK_costas.png"
+      },
+      {
+        "name": "THERMAX costas",
+        "image": "/imgs/kammara/eni4/THERMAX_costas.png"
       },
       {
         "name": "troy pe",
@@ -464,8 +488,16 @@
         "image": "/imgs/kammara/eni4/troy.png"
       },
       {
+        "name": "VALKON costas",
+        "image": "/imgs/kammara/eni4/VALKON_costas.png"
+      },
+      {
         "name": "VALKON virus",
         "image": "/imgs/kammara/eni4/VALKON_virus.png"
+      },
+      {
+        "name": "VEXON costas",
+        "image": "/imgs/kammara/eni4/VEXON_costas.png"
       },
       {
         "name": "VEXON normal",
@@ -496,6 +528,10 @@
         "image": "/imgs/kammara/eni4/virus_MASKON.png"
       },
       {
+        "name": "virus normal costas",
+        "image": "/imgs/kammara/eni4/virus_normal_costas.png"
+      },
+      {
         "name": "virus REPLION",
         "image": "/imgs/kammara/eni4/virus_REPLION.png"
       },
@@ -514,6 +550,10 @@
       {
         "name": "virus",
         "image": "/imgs/kammara/eni4/virus.png"
+      },
+      {
+        "name": "worm costas",
+        "image": "/imgs/kammara/eni4/worm_costas.png"
       },
       {
         "name": "worm",
@@ -834,8 +874,84 @@
     ],
     "kammara/triplec": [
       {
+        "name": "aguia tripleC-gigapixel-standard v2-6x",
+        "image": "/imgs/kammara/triplec/aguia_tripleC-gigapixel-standard v2-6x.png"
+      },
+      {
+        "name": "bean frente",
+        "image": "/imgs/kammara/triplec/bean_frente.png"
+      },
+      {
+        "name": "bean lado",
+        "image": "/imgs/kammara/triplec/bean_lado.png"
+      },
+      {
+        "name": "borboleta azul-gigapixel-standard v2-6x",
+        "image": "/imgs/kammara/triplec/borboleta_azul-gigapixel-standard v2-6x.png"
+      },
+      {
+        "name": "borboleta-gigapixel-standard v2-6x copy",
+        "image": "/imgs/kammara/triplec/borboleta-gigapixel-standard v2-6x copy.png"
+      },
+      {
+        "name": "bunniet with volpita",
+        "image": "/imgs/kammara/triplec/bunniet_with_volpita.png"
+      },
+      {
+        "name": "galinha 1 costas",
+        "image": "/imgs/kammara/triplec/galinha_1_costas.png"
+      },
+      {
+        "name": "galinha 1 frente",
+        "image": "/imgs/kammara/triplec/galinha_1_frente.png"
+      },
+      {
+        "name": "lai costas",
+        "image": "/imgs/kammara/triplec/lai_costas.png"
+      },
+      {
+        "name": "lai",
+        "image": "/imgs/kammara/triplec/lai.png"
+      },
+      {
+        "name": "OMI costas",
+        "image": "/imgs/kammara/triplec/OMI_costas.png"
+      },
+      {
+        "name": "OMI",
+        "image": "/imgs/kammara/triplec/OMI.png"
+      },
+      {
+        "name": "passaro 1 costas",
+        "image": "/imgs/kammara/triplec/passaro_1_costas.png"
+      },
+      {
+        "name": "passaro 1 frente",
+        "image": "/imgs/kammara/triplec/passaro_1_frente.png"
+      },
+      {
         "name": "three bunniet",
         "image": "/imgs/kammara/triplec/three_bunniet.png"
+      },
+      {
+        "name": "VEXA costas",
+        "image": "/imgs/kammara/triplec/VEXA_costas.png"
+      },
+      {
+        "name": "VEXA",
+        "image": "/imgs/kammara/triplec/VEXA.png"
+      },
+      {
+        "name": "volpita adulta-gigapixel-standard v2-6x",
+        "image": "/imgs/kammara/triplec/volpita_adulta-gigapixel-standard v2-6x.png"
+      },
+      {
+        "name": "ZARKOL-9 costas",
+        "image": "/imgs/kammara/triplec/ZARKOL-9_costas.png"
+      },
+      {
+        "name": "ZARKOL-9",
+        "image": "/imgs/kammara/triplec/ZARKOL-9.png"
       }
     ],
     "kammara/triplec/malloc": [
@@ -850,6 +966,26 @@
       {
         "name": "Luma Val",
         "image": "/imgs/kammara/triplec/malloc/Luma_Val.png"
+      },
+      {
+        "name": "Mewlites costas",
+        "image": "/imgs/kammara/triplec/malloc/Mewlites_costas.png"
+      },
+      {
+        "name": "Mewlites deLado",
+        "image": "/imgs/kammara/triplec/malloc/Mewlites_deLado.png"
+      },
+      {
+        "name": "robo cristal",
+        "image": "/imgs/kammara/triplec/malloc/robo_cristal.png"
+      },
+      {
+        "name": "Shilo-Inseto costas",
+        "image": "/imgs/kammara/triplec/malloc/Shilo-Inseto_costas.png"
+      },
+      {
+        "name": "Shilo-Inseto frente",
+        "image": "/imgs/kammara/triplec/malloc/Shilo-Inseto_frente.png"
       }
     ],
     "kammara/triplec/mesh": [
@@ -892,6 +1028,22 @@
       {
         "name": "emo-1",
         "image": "/imgs/kammara/z1/emo-1.jpg"
+      },
+      {
+        "name": "Kaal",
+        "image": "/imgs/kammara/z1/Kaal.png"
+      },
+      {
+        "name": "Ren",
+        "image": "/imgs/kammara/z1/Ren.png"
+      },
+      {
+        "name": "Vexa",
+        "image": "/imgs/kammara/z1/Vexa.png"
+      },
+      {
+        "name": "zeus",
+        "image": "/imgs/kammara/z1/zeus.png"
       }
     ]
   },
@@ -1495,6 +1647,10 @@
       {
         "name": "Cshift portal",
         "image": "/imgs/kammara/triplec/_scenes/6Cshift_portal.jpg"
+      },
+      {
+        "name": "bunniet with volpitas",
+        "image": "/imgs/kammara/triplec/_scenes/bunniet_with_volpitas.png"
       }
     ],
     "kammara/triplec/malloc": [

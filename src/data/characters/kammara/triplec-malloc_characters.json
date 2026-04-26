@@ -178,5 +178,237 @@
         }
       }
     ]
+  },
+  {
+    "match": "Mewlites",
+    "name": {
+      "pt": "Mewlites",
+      "en": "Mewlites"
+    },
+    "species": {
+      "pt": "Felinos translúcidos da Hepa — só pós-PD11",
+      "en": "Translucent felines of Hepa — post-PD11 only"
+    },
+    "bio": {
+      "pt": "Felinos translúcidos verde-esmeralda — da mesma cor da kemita, como se fossem almas dela. Porte de gato pequeno. Seguem shilo, detectam instabilidade, cantam padrões vibratórios, avisam quando uma rota está morrendo. Quando um Cshift falha, os mewlites desaparecem por alguns instantes — comportamento ainda não compreendido.",
+      "en": "Translucent emerald-green felines — the very colour of kemita, as if they were its souls. Small-cat sized. They follow shilo, detect instability, sing vibratory patterns, warn when a route is dying. When a Cshift fails, the mewlites vanish for a few moments — behaviour still not understood."
+    },
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Eu sou a kemita ainda em movimento.",
+      "en": "I am the kemita still in motion."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+        "value": {
+          "pt": "Hepa, entre os cristais de kemita",
+          "en": "Hepa, among kemita crystals"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Almas vivas da kemita",
+          "en": "Living souls of kemita"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Epíteto",
+          "en": "Epithet"
+        },
+        "value": {
+          "pt": "As almas que respiram a kemita",
+          "en": "The souls that breathe the kemita"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Shilo-Insetos",
+    "name": {
+      "pt": "Shilo-Insetos",
+      "en": "Shilo-Insects"
+    },
+    "species": {
+      "pt": "Insetos translúcidos das microcorrentes shilo — só pós-PD11",
+      "en": "Translucent insects of the shilo microcurrents — post-PD11 only"
+    },
+    "bio": {
+      "pt": "Insetos translúcidos que se alimentam de microcorrentes de shilo. Marcam caminhos íntegros, dispersam-se quando há conflito de camadas, servem de guia natural para bunniets. Sabem instintivamente quando um percurso está prestes a colapsar.",
+      "en": "Translucent insects that feed on shilo microcurrents. They mark intact paths, scatter when layers clash, and serve as natural guides for the bunniets. They know instinctively when a route is about to collapse."
+    },
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Onde brilho, ainda há caminho.",
+      "en": "Where I glow, there is still a path."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+        "value": {
+          "pt": "Paredes das cavernas de malloc, entre veios de shilo",
+          "en": "Malloc cavern walls, among shilo veins"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Guias naturais dos bunniets",
+          "en": "Natural guides of the bunniets"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Epíteto",
+          "en": "Epithet"
+        },
+        "value": {
+          "pt": "Os que mostram o caminho que ainda existe",
+          "en": "The ones who show the path that still exists"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Cristalinos Hepa",
+    "name": {
+      "pt": "Cristalinos Hepa",
+      "en": "Hepa Crystallines"
+    },
+    "species": {
+      "pt": "Drones cristalinos vivos — só pós-PD11",
+      "en": "Living crystalline drones — post-PD11 only"
+    },
+    "bio": {
+      "pt": "Entidades semi-minerais que vibram com padrões harmônicos. Reorganizam geometrias instáveis, mantêm a expansão sob relativa ordem. Comportamento lembra pequenos drones naturais — flutuam, vibram, ajustam o espaço.",
+      "en": "Semi-mineral beings that vibrate with harmonic patterns. They reorganise unstable geometries and keep the expansion under relative order. Their behaviour resembles small natural drones — floating, vibrating, tuning the space."
+    },
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Eu coloco no lugar o que se move sem rumo.",
+      "en": "I place in order what moves without aim."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+        "value": {
+          "pt": "Bolsões vivos da Hepa",
+          "en": "Living pockets of Hepa"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Drones naturais da harmonia",
+          "en": "Natural drones of harmony"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Epíteto",
+          "en": "Epithet"
+        },
+        "value": {
+          "pt": "Os que harmonizam o que cresce",
+          "en": "The ones who harmonise what grows"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Estakors",
+    "name": {
+      "pt": "Estakors",
+      "en": "Estakors"
+    },
+    "species": {
+      "pt": "Criaturas minerais profundas da Estaka — só pós-PD11",
+      "en": "Deep mineral beings of Estaka — post-PD11 only"
+    },
+    "bio": {
+      "pt": "Criaturas nativas da Estaka — corpo mineral, comportamento solitário. Consomem fragmentos de instrução quebrada, estabilizam áreas de sobrecarga profunda, alertam sobre risco extremo. Quando sobem até Portex, a vila inteira é evacuada — é mau presságio.",
+      "en": "Native creatures of Estaka — mineral body, solitary behaviour. They consume fragments of broken instruction, stabilise areas of deep overload, and warn of extreme risk. When they rise to Portex, the whole village is evacuated — it is a bad omen."
+    },
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Eu termino o que não pode continuar.",
+      "en": "I end what cannot continue."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+        "value": {
+          "pt": "Estaka — núcleo profundo do planeta",
+          "en": "Estaka — deep core of the planet"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Consumidores de fragmentos quebrados",
+          "en": "Consumers of broken fragments"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Epíteto",
+          "en": "Epithet"
+        },
+        "value": {
+          "pt": "Os que comem o erro do mundo",
+          "en": "The ones who eat the world's error"
+        }
+      }
+    ]
   }
 ]
