@@ -1,0 +1,212 @@
+{
+  "categories": [
+    {
+      "id": "cultural",
+      "label": { "pt": "Eventos Interplanetários", "en": "Cultural & Festivities" }
+    },
+    {
+      "id": "scientific",
+      "label": { "pt": "Eventos Científicos", "en": "Scientific Events" }
+    },
+    {
+      "id": "arquive",
+      "label": { "pt": "Arquivo e Biblioteca Interplanetários", "en": "Archive" }
+    }
+  ],
+  "events": [
+    {
+      "id": "festival-quatro-luas",
+      "category": "cultural",
+      "subcategory": { "pt": "Festival", "en": "Festival" },
+      "planet": "lunnp1",
+      "title": {
+        "pt": "Festival das Quatro Luas",
+        "en": "Festival of the Four Moons"
+      },
+      "date": {
+        "pt": "Em 10 ciclos",
+        "en": "In 10 cycles"
+      },
+      "location": {
+        "pt": "Naru'ei Centrais, LUNN'P1",
+        "en": "Central Naru'ei, LUNN'P1"
+      },
+      "cshiftAddress": "0201744e",
+      "description": {
+        "pt": "O dia mais especial de LUNN'P1. Quando Lur'Ma, Oru'Len, Tiru'Na e Ve'Lume ocupam o mesmo céu, os Shal'ún se reúnem nas Naru'ei. Após a Saga ORF-V, o festival passou a receber bunniets de TripleC e elePHPants de ORF-V.",
+        "en": "The most special day on LUNN'P1. When Lur'Ma, Oru'Len, Tiru'Na and Ve'Lume share the same sky, the Shal'ún gather on the Naru'ei. After the ORF-V Saga, the festival began welcoming bunniets from TripleC and elePHPants from ORF-V."
+      },
+      "href": "/kammara/lunnp1"
+    },
+    {
+      "id": "lupnul-fest",
+      "category": "cultural",
+      "subcategory": { "pt": "Festival", "en": "Festival" },
+      "planet": "orfv",
+      "title": {
+        "pt": "Lüp'Nül Fest — Festival das Duas Luas",
+        "en": "Lüp'Nül Fest — Festival of the Two Moons"
+      },
+      "date": {
+        "pt": "Em 24 ciclos",
+        "en": "In 24 cycles"
+      },
+      "location": {
+        "pt": "Fjorks do Sul",
+        "en": "All Fjorks"
+      },
+      "cshiftAddress": "b7e0fc1d",
+      "description": {
+        "pt": "O maior evento cultural de ORF-V e o Ano Novo do planeta. Começa de dia com o Phruit'Dëy — a colheita coletiva das phruits — e segue em quatro momentos. Quando Lüp e Nül se alinham, o planeta inteiro pausa em silêncio até uma criança elePHPant dizer Resume.",
+        "en": "ORF-V's greatest cultural event and the planet's New Year. It begins by day with Phruit'Dëy — the collective phruit harvest — and follows four moments. When Lüp and Nül align, the entire planet pauses in silence until an elePHPant child says Resume."
+      },
+      "href": "/kammara/orfv"
+    },
+    {
+      "id": "grande-corrida-tres-regioes",
+      "category": "cultural",
+      "subcategory": { "pt": "Festa", "en": "Celebration" },
+      "planet": "triplec",
+      "title": {
+        "pt": "A Grande Corrida das Três Regiões",
+        "en": "The Great Race of the Three Regions"
+      },
+      "date": {
+        "pt": "Em 6 ciclos",
+        "en": "In 6 cycles"
+      },
+      "location": {
+        "pt": "Sharp",
+        "en": "Sharp"
+      },
+      "cshiftAddress": "86760350",
+      "description": {
+        "pt": "Bunniets das três regiões atravessam o planeta juntos — de malloc até Sharp, passando pela Niul Forest. Não é competição: é celebração. Não importa quem chega primeiro, importa que todos cheguem. Os Z1 de Niul observam e aprovam o caminho.",
+        "en": "Bunniets from the three regions cross the planet together — from malloc to Sharp, through the Niul Forest. It is not a competition: it is a celebration. It does not matter who arrives first; what matters is that everyone arrives. The Z1 of Niul watch and approve the path."
+      },
+      "href": "/kammara/triplec"
+    },
+    {
+      "id": "festival-orulen",
+      "category": "cultural",
+      "subcategory": { "pt": "Festival", "en": "Festival" },
+      "planet": "lunnp1",
+      "title": {
+        "pt": "Festival Oru'Len",
+        "en": "Oru'Len Festival"
+      },
+      "date": {
+        "pt": "Em 3 ciclos",
+        "en": "In 3 cycles"
+      },
+      "location": {
+        "pt": "Naru'ei do Sul, LUNN'P1",
+        "en": "Southern Naru'ei, LUNN'P1"
+      },
+      "cshiftAddress": "ae38c83c",
+      "description": {
+        "pt": "Tradição de uma das Naru'ei do sul de LUNN'P1, sob a lua Oru'Len — a lua que muda de cor constantemente. Durante o festival, toda a cidade muda de cor simultaneamente, em sincronia com a lua dominante.",
+        "en": "Tradition of one of the southern Naru'ei of LUNN'P1, beneath the moon Oru'Len — the moon that constantly shifts color. During the festival, the entire city changes color simultaneously, in sync with the dominant moon."
+      },
+      "href": "/kammara/lunnp1"
+    },
+    {
+      "id": "saga-orfv",
+      "category": "cultural",
+      "subcategory": { "pt": "Científicos", "en": "Scientific" },
+      "planet": "triplec",
+      "title": {
+        "pt": "SILK — Simpósio Interplanetário Lumínico do Kammara",
+        "en": "SILK — Interplanetary Luminic Symposium of Kammara"
+      },
+      "date": {
+        "pt": "Em 15 ciclos",
+        "en": "In 15 cycles"
+      },
+      "location": {
+        "pt": "Câmara de Permissão, Sharp, TripleC",
+        "en": "Permission Chamber, Sharp, TripleC"
+      },
+      "cshiftAddress": "af119446",
+      "description": {
+        "pt": "Principal fórum científico interplanetário do Kammara. Sediado na Câmara de Permissão (Sharp/TripleC), reúne pesquisadores de todos os planetas aliados em cosmogonia, arqueologia técnica, engenharia vibracional e estabilidade interplanetária. Fundado no Ano Galático 9.037 por TripleC e a Casta DEC- de Z1.",
+        "en": "Kammara's leading interplanetary scientific forum. Hosted at the Permission Chamber (Sharp/TripleC), it gathers researchers from all allied planets in cosmogony, technical archaeology, vibrational engineering, and interplanetary stability. Founded in Galactic Year 9,037 by TripleC and the DEC- Caste of Z1."
+      },
+      "href": "/kammara/triplec"
+    },
+    {
+      "id": "saga-orfv",
+      "category": "arquive",
+      "subcategory": { "pt": "Livro", "en": "Book" },
+      "planet": "orfv",
+      "title": {
+        "pt": "Saga em ORF-V",
+        "en": "ORF-V Sagas"
+      },
+      "date": {
+        "pt": "Em 15 ciclos",
+        "en": "In 15 cycles"
+      },
+      "location": {
+        "pt": "Amazon",
+        "en": "Amazon"
+      },
+      "cshiftAddress": "ads56d68",
+      "description": {
+        "pt": "Primeiro livro disponivel na Amazon",
+        "en": ""
+      },
+      "backgroundImage": "/imgs/books/kammara/saga-orf-v/cover.jpg",
+      "href": "/kammara/triplec"
+    },{
+      "id": "saga-lunnp1",
+      "category": "arquive",
+      "subcategory": { "pt": "Livro", "en": "Book" },
+      "planet": "lunnp1",
+      "title": {
+        "pt": "Saga em LUNN'P1",
+        "en": ""
+      },
+      "date": {
+        "pt": "Em 15 ciclos",
+        "en": "In 15 cycles"
+      },
+      "location": {
+        "pt": "Amazon",
+        "en": "Amazon"
+      },
+      "cshiftAddress": "ads56d68",
+      "description": {
+        "pt": "Primeiro livro disponivel na Amazon",
+        "en": ""
+      },
+      "backgroundImage": "/imgs/books/kammara/saga-orf-v/cover.png",
+      "href": "/kammara/triplec"
+    },
+    {
+      "id": "saga-enica",
+      "category": "arquive",
+      "subcategory": { "pt": "Livro", "en": "Book" },
+      "planet": "eni4",
+      "title": {
+        "pt": "Saga em ENI-4Δ",
+        "en": ""
+      },
+      "date": {
+        "pt": "Em 15 ciclos",
+        "en": "In 15 cycles"
+      },
+      "location": {
+        "pt": "Amazon",
+        "en": "Amazon"
+      },
+      "cshiftAddress": "ads56d68",
+      "description": {
+        "pt": "Primeiro livro disponivel na Amazon",
+        "en": ""
+      },
+      "backgroundImage": "/imgs/books/kammara/saga-orf-v/eniac.jpg",
+      "href": "/kammara/triplec"
+    }
+  ]
+}

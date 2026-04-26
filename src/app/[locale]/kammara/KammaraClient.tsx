@@ -21,6 +21,8 @@ import { SoonPanel } from '@/components/SoonPanel';
 import { BookGallery } from '@/components/BookGallery';
 import { KammaraProgressHeatmap } from '@/components/KammaraProgressHeatmap';
 import kammaraProgressData from '@/data/kammara_progress.json';
+import { KammaraEvents } from '@/components/KammaraEvents';
+import kammaraEventsData from '@/data/kammara_events.json';
 import { useModal } from '@/components/Modal';
 import { palettes, type PaletteName, type Palette } from '@/theme/palettes';
 
@@ -546,27 +548,55 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
             </Box>
           );
         })()}
-        {kammaraBooks.length > 0 && (
-          <BookGallery
-            title={t('booksTitle')}
-            books={kammaraBooks.map((b) => {
-              const def = bookDefs?.find((d) => d.tag === b.id);
-              return {
-                id: `kammara-${b.id}`,
-                image: b.cover ?? undefined,
-                alt: def?.title ?? b.id,
-                label: def?.title ?? b.id,
-                soon: b.pages.length === 0,
-              };
-            })}
-            soonLabel={tCommon('soon')}
-            onBookClick={handleBookClick}
-            tone="overlay"
+        {/* BookGallery temporariamente removida da página Kammara — props
+            (kammaraBooks, bookDefs) e handlers (handleBookClick) seguem
+            ativos pra reativação rápida. */}
+
+        {/* ── PRÓXIMOS EVENTOS — eventos in-universe de Kammara ──────────
+            A `Box` externa controla padding + imagem de fundo da seção.
+            Pra trocar a imagem: jogue um arquivo em
+            `public/imgs/kammara/_events_bg.png` (ou ajuste o path no
+            `backgroundImage`). O overlay garante leitura mesmo se a
+            imagem for clara. */}
+        <Box
+          width="100%"
+          my="3xl"
+          px={{ base: '25px', md: '2rem', xl: '3rem' }}
+          pt={{ base: '2rem', md: '3rem' }}
+          pb="60px"
+          position="relative"
+          overflow="hidden"
+          backgroundImage="url(/imgs/kammara/_events_bg.png)"
+          backgroundSize="cover"
+          backgroundPosition="center"
+        >
+          <Box
+            position="absolute"
+            inset={0}
+            bg="blackAlpha.700"
+            zIndex={0}
+            aria-hidden="true"
           />
-        )}
+          <Box position="relative" zIndex={1}>
+            <KammaraEvents
+              title={locale === 'en' ? 'Upcoming Events' : 'Próximos Eventos'}
+              kicker={sectionName}
+              categories={kammaraEventsData.categories}
+              events={kammaraEventsData.events}
+              locale={locale}
+              color={kammaraPalette.colors[0]}
+              darkColor={kammaraPalette.dark}
+            />
+          </Box>
+        </Box>
 
         {/* ── PRÓXIMOS PLANETAS — heatmap de progresso ───────────────── */}
-        <Box width="100%" my="3xl" px={{ base: '25px', md: '2rem', xl: '3rem' }}>
+        <Box
+          width="100%"
+          mt="calc(var(--chakra-spacing-3xl) + 60px)"
+          mb="calc(var(--chakra-spacing-3xl) + 60px)"
+          px={{ base: '25px', md: '2rem', xl: '3rem' }}
+        >
           <KammaraProgressHeatmap
             title={locale === 'en' ? 'Upcoming Worlds' : 'Próximos Planetas'}
             subline={sectionName}

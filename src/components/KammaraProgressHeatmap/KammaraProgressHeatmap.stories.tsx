@@ -3,7 +3,7 @@ import { KammaraProgressHeatmap } from './KammaraProgressHeatmap';
 import progressData from '@/data/kammara_progress.json';
 
 const meta: Meta<typeof KammaraProgressHeatmap> = {
-  title: 'Components/KammaraProgressHeatmap',
+  title: 'Kammara/KammaraProgressHeatmap',
   component: KammaraProgressHeatmap,
   tags: ['autodocs'],
   parameters: { layout: 'fullscreen' },
