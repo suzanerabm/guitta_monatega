@@ -400,7 +400,7 @@ function EventCard({ event, locale, color, darkColor }: EventCardProps) {
         )}
         {event.cshiftAddress && (
           <p>
-            <strong>{cshiftLabel}:</strong> {event.cshiftAddress}
+            <strong>{cshiftLabel}:</strong> ⊷⊙⊶[{event.cshiftAddress}]
           </p>
         )}
         <p>{event.description[locale]}</p>
