@@ -19,6 +19,8 @@ import { RegionDivider } from '@/components/RegionDivider';
 import { RegionBanner } from '@/components/RegionBanner';
 import { SoonPanel } from '@/components/SoonPanel';
 import { BookGallery } from '@/components/BookGallery';
+import { KammaraProgressHeatmap } from '@/components/KammaraProgressHeatmap';
+import kammaraProgressData from '@/data/kammara_progress.json';
 import { useModal } from '@/components/Modal';
 import { palettes, type PaletteName, type Palette } from '@/theme/palettes';
 
@@ -562,6 +564,19 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
             tone="overlay"
           />
         )}
+
+        {/* ── PRÓXIMOS PLANETAS — heatmap de progresso ───────────────── */}
+        <Box width="100%" my="3xl" px={{ base: '25px', md: '2rem', xl: '3rem' }}>
+          <KammaraProgressHeatmap
+            title={locale === 'en' ? 'Upcoming Worlds' : 'Próximos Planetas'}
+            subline={sectionName}
+            categories={kammaraProgressData.categories}
+            planets={kammaraProgressData.planets}
+            locale={locale}
+            color={kammaraPalette.colors[0]}
+            darkColor={kammaraPalette.dark}
+          />
+        </Box>
       </CreatureSection>
 
       {/* ── WORLDS ─────────────────────────────────────────────────────── */}

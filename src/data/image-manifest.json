@@ -874,8 +874,16 @@
     ],
     "kammara/triplec": [
       {
-        "name": "aguia tripleC-gigapixel-standard v2-6x",
-        "image": "/imgs/kammara/triplec/aguia_tripleC-gigapixel-standard v2-6x.png"
+        "name": "aguia costas",
+        "image": "/imgs/kammara/triplec/aguia_costas.png"
+      },
+      {
+        "name": "aguia",
+        "image": "/imgs/kammara/triplec/aguia.png"
+      },
+      {
+        "name": "bean costas",
+        "image": "/imgs/kammara/triplec/bean_costas.png"
       },
       {
         "name": "bean frente",
@@ -890,20 +898,24 @@
         "image": "/imgs/kammara/triplec/borboleta_azul-gigapixel-standard v2-6x.png"
       },
       {
-        "name": "borboleta-gigapixel-standard v2-6x copy",
-        "image": "/imgs/kammara/triplec/borboleta-gigapixel-standard v2-6x copy.png"
+        "name": "borboleta costas",
+        "image": "/imgs/kammara/triplec/borboleta_costas.png"
       },
       {
-        "name": "bunniet with volpita",
-        "image": "/imgs/kammara/triplec/bunniet_with_volpita.png"
+        "name": "borboleta-gigapixel-standard v2-6x",
+        "image": "/imgs/kammara/triplec/borboleta-gigapixel-standard v2-6x.png"
       },
       {
-        "name": "galinha 1 costas",
-        "image": "/imgs/kammara/triplec/galinha_1_costas.png"
+        "name": "borboleta",
+        "image": "/imgs/kammara/triplec/borboleta.png"
       },
       {
-        "name": "galinha 1 frente",
-        "image": "/imgs/kammara/triplec/galinha_1_frente.png"
+        "name": "Camuoide costas",
+        "image": "/imgs/kammara/triplec/Camuoide_costas.png"
+      },
+      {
+        "name": "Camuoide frente1",
+        "image": "/imgs/kammara/triplec/Camuoide_frente1.png"
       },
       {
         "name": "lai costas",
@@ -914,6 +926,14 @@
         "image": "/imgs/kammara/triplec/lai.png"
       },
       {
+        "name": "niuloide costas",
+        "image": "/imgs/kammara/triplec/niuloide_costas.png"
+      },
+      {
+        "name": "niuloide",
+        "image": "/imgs/kammara/triplec/niuloide.png"
+      },
+      {
         "name": "OMI costas",
         "image": "/imgs/kammara/triplec/OMI_costas.png"
       },
@@ -922,16 +942,32 @@
         "image": "/imgs/kammara/triplec/OMI.png"
       },
       {
-        "name": "passaro 1 costas",
-        "image": "/imgs/kammara/triplec/passaro_1_costas.png"
+        "name": "plumoide 1 costas",
+        "image": "/imgs/kammara/triplec/plumoide_1_costas.png"
       },
       {
-        "name": "passaro 1 frente",
-        "image": "/imgs/kammara/triplec/passaro_1_frente.png"
+        "name": "plumoide 1 frente",
+        "image": "/imgs/kammara/triplec/plumoide_1_frente.png"
+      },
+      {
+        "name": "Shilo-Inseto costas",
+        "image": "/imgs/kammara/triplec/Shilo-Inseto_costas.png"
+      },
+      {
+        "name": "Shilo-Inseto frente",
+        "image": "/imgs/kammara/triplec/Shilo-Inseto_frente.png"
       },
       {
         "name": "three bunniet",
         "image": "/imgs/kammara/triplec/three_bunniet.png"
+      },
+      {
+        "name": "Treezitoide costas",
+        "image": "/imgs/kammara/triplec/Treezitoide_costas.png"
+      },
+      {
+        "name": "Treezitoide",
+        "image": "/imgs/kammara/triplec/Treezitoide.png"
       },
       {
         "name": "VEXA costas",
@@ -942,8 +978,28 @@
         "image": "/imgs/kammara/triplec/VEXA.png"
       },
       {
-        "name": "volpita adulta-gigapixel-standard v2-6x",
-        "image": "/imgs/kammara/triplec/volpita_adulta-gigapixel-standard v2-6x.png"
+        "name": "volpita baby",
+        "image": "/imgs/kammara/triplec/volpita_baby.png"
+      },
+      {
+        "name": "volpita costas",
+        "image": "/imgs/kammara/triplec/volpita_costas.png"
+      },
+      {
+        "name": "volpita",
+        "image": "/imgs/kammara/triplec/volpita.png"
+      },
+      {
+        "name": "ypito rosa",
+        "image": "/imgs/kammara/triplec/ypito_rosa.png"
+      },
+      {
+        "name": "ypito roxo costas",
+        "image": "/imgs/kammara/triplec/ypito_roxo_costas.png"
+      },
+      {
+        "name": "ypito roxo",
+        "image": "/imgs/kammara/triplec/ypito_roxo.png"
       },
       {
         "name": "ZARKOL-9 costas",
@@ -1647,10 +1703,6 @@
       {
         "name": "Cshift portal",
         "image": "/imgs/kammara/triplec/_scenes/6Cshift_portal.jpg"
-      },
-      {
-        "name": "bunniet with volpitas",
-        "image": "/imgs/kammara/triplec/_scenes/bunniet_with_volpitas.png"
       }
     ],
     "kammara/triplec/malloc": [
@@ -112946,7 +112998,7 @@
       "/imgs/kammara/triplec/mesh/_subsystems/4.png"
     ],
     "kammara/triplec/sharp": [
-      null,
+      "/imgs/kammara/triplec/sharp/_subsystems/0.png",
       "/imgs/kammara/triplec/sharp/_subsystems/1.jpg",
       "/imgs/kammara/triplec/sharp/_subsystems/2.jpg",
       null,

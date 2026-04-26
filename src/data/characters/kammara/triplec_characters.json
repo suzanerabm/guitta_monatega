@@ -98,55 +98,6 @@
     ]
   },
   {
-    "match": "Camuoide",
-    "name": {
-      "pt": "Camu",
-      "en": "Camu"
-    },
-    "species": {
-      "pt": "Camuoide",
-      "en": "Camuoid"
-    },
-    "bio": {
-      "pt": "Anfíbio de habitat — vive tanto nas copas das árvores quanto dentro das cachoeiras de TripleC. Reflete a energia próxima na cor (esmeralda perto de kemita, teal perto de shilo, verde-folha em ambiente neutro).",
-      "en": "Habitat amphibian — lives both in the tree canopies and inside the waterfalls of TripleC. Mirrors nearby energy in its color (emerald near kemita, teal near shilo, leaf-green in neutral places). "
-    },
-    "image": "/imgs/kammara/triplec/Camuoide_frente1.png",
-    "backImage": "/imgs/kammara/triplec/Camuoide_costas.png",
-    "backTitle": {
-      "pt": "Verso",
-      "en": "Verse"
-    },
-    "dorsalMeaning": {
-      "pt": "A luz vem de mim quando o meu chega.",
-      "en": "The light comes from me when my own arrives."
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Habitat",
-          "en": "Habitat"
-        },
-        "value": {
-          "pt": "Copas da Niul",
-          "en": "Niul canopies"
-        }
-      },
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Função",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "Sensor energético",
-          "en": "Energy sensor"
-        }
-      }
-    ]
-  },
-  {
     "match": "Seal Beans",
     "name": {
       "pt": "Seal Beans",
@@ -195,7 +146,56 @@
       }
     ]
   },
-  {
+   {
+    "match": "Treezitoide",
+    "name": {
+      "pt": "Treezi",
+      "en": "Treezi"
+    },
+    "species": {
+      "pt": "Treezitoide",
+      "en": "Treezitoid"
+    },
+    "bio": {
+      "pt": "Pequenino do mesmo porte dos personagens Z1.  Esperto, observador nato. Aliado próximo dos bunniets e dos Z1. Filho direto do impacto do PD-11.",
+      "en": "Tiny one, same size as Z1 characters. Smart, born observer. Close ally of bunniets and Z1. Direct child of the PD-11 impact."
+    },
+    "image": "/imgs/kammara/triplec/Treezitoide.png",
+    "backImage": "/imgs/kammara/triplec/Treezitoide_costas.png",
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Vive em comunidades dentro de árvores — casinhas escavadas em troncos da Niul Forest. Compartilha as árvores com personagens Z1, formando vilas mistas Treezit-Z1. Vejo de dois jeitos ao mesmo tempo.",
+      "en": "Lives in communities inside trees — small homes carved in Niul Forest trunks. Shares the trees with Z1 characters, forming mixed Treezit-Z1 villages. I see in two ways at once."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+         "value": {
+          "pt": "Multi-regional",
+          "en": "Multi-regional"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Guardião",
+          "en": "Silent"
+        }
+      }
+    ]
+  },
+   {
     "match": "Plumoide",
     "name": {
       "pt": "Pluma",
@@ -244,6 +244,56 @@
       }
     ]
   },
+  {
+    "match": "Niuloide",
+    "name": {
+      "pt": "Niuloide",
+      "en": "Niuloid"
+    },
+    "species": {
+      "pt": "Niuloide",
+      "en": "Niuloid"
+    },
+    "bio": {
+      "pt": "Voa entre raízes elevadas e copas baixas levando sementes pelo bico — distribui plantas pequenas pelo planeta, mantém a regeneração da floresta. ",
+      "en": "Flies between raised roots and low canopies carrying seeds in its beak — spreads small plants across the planet and keeps the forest regenerating. "
+    },
+    "image": "/imgs/kammara/triplec/niuloide.png",
+    "backImage": "/imgs/kammara/triplec/niuloide_costas.png",
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Canta em frequências que outros bunniets reconhecem como sinal de área segura. Onde meu canto chega, o bosque está em paz.",
+      "en": "Sings in frequencies the bunniets recognise as a 'safe area' signal. Where my song arrives, the grove is at peace."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+        "value": {
+          "pt": "Niul Forest",
+          "en": "Niul Forest"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Semeador",
+          "en": "Seed distributor"
+        }
+      }
+    ]
+  },
+ 
   {
     "match": "Espirola",
     "name": {
@@ -343,28 +393,28 @@
     ]
   },
   {
-    "match": "Treezitoide",
+    "match": "Camuoide",
     "name": {
-      "pt": "Treezi",
-      "en": "Treezi"
+      "pt": "Camu",
+      "en": "Camu"
     },
     "species": {
-      "pt": "Treezitoide",
-      "en": "Treezitoid"
+      "pt": "Camuoide",
+      "en": "Camuoid"
     },
     "bio": {
-      "pt": "Pequenino do mesmo porte dos personagens Z1.  Esperto, observador nato. Aliado próximo dos bunniets e dos Z1. Filho direto do impacto do PD-11.",
-      "en": "Tiny one, same size as Z1 characters. Smart, born observer. Close ally of bunniets and Z1. Direct child of the PD-11 impact."
+      "pt": "Anfíbio de habitat — vive tanto nas copas das árvores quanto dentro das cachoeiras de TripleC. Reflete a energia próxima na cor (esmeralda perto de kemita, teal perto de shilo, verde-folha em ambiente neutro).",
+      "en": "Habitat amphibian — lives both in the tree canopies and inside the waterfalls of TripleC. Mirrors nearby energy in its color (emerald near kemita, teal near shilo, leaf-green in neutral places). "
     },
-    "image": "/imgs/kammara/triplec/Treezitoide.png",
-    "backImage": "/imgs/kammara/triplec/Treezitoide_costas.png",
+    "image": "/imgs/kammara/triplec/Camuoide_frente1.png",
+    "backImage": "/imgs/kammara/triplec/Camuoide_costas.png",
     "backTitle": {
       "pt": "Verso",
       "en": "Verse"
     },
     "dorsalMeaning": {
-      "pt": "Vive em comunidades dentro de árvores — casinhas escavadas em troncos da Niul Forest. Compartilha as árvores com personagens Z1, formando vilas mistas Treezit-Z1. Vejo de dois jeitos ao mesmo tempo.",
-      "en": "Lives in communities inside trees — small homes carved in Niul Forest trunks. Shares the trees with Z1 characters, forming mixed Treezit-Z1 villages. I see in two ways at once."
+      "pt": "A luz vem de mim quando o meu chega.",
+      "en": "The light comes from me when my own arrives."
     },
     "attributes": [
       {
@@ -373,9 +423,9 @@
           "pt": "Habitat",
           "en": "Habitat"
         },
-         "value": {
-          "pt": "Multi-regional",
-          "en": "Multi-regional"
+        "value": {
+          "pt": "Copas da Niul",
+          "en": "Niul canopies"
         }
       },
       {
@@ -385,8 +435,8 @@
           "en": "Role"
         },
         "value": {
-          "pt": "Guardião",
-          "en": "Silent"
+          "pt": "Sensor energético",
+          "en": "Energy sensor"
         }
       }
     ]
@@ -436,6 +486,17 @@
         "value": {
           "pt": "Intercâmbio Técnico",
           "en": "Technical Exchange"
+        }
+      },
+       {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Planeta Z1",
+          "en": "Z1 Planet"
         }
       }
     ]
@@ -496,6 +557,17 @@
         "value": {
           "pt": "AURYN",
           "en": "AURYN"
+        }
+      },
+       {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Planeta Z1",
+          "en": "Z1 Planet"
         }
       }
     ]
@@ -558,6 +630,18 @@
           "en": "AURYN"
         }
       }
+      ,
+       {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Planeta Z1",
+          "en": "Z1 Planet"
+        }
+      }
     ]
   },
   {
@@ -616,6 +700,17 @@
         "value": {
           "pt": "AURYN",
           "en": "AURYN"
+        }
+      },
+       {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Planeta Z1",
+          "en": "Z1 Planet"
         }
       }
     ]
