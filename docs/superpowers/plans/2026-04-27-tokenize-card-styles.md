@@ -213,13 +213,15 @@ Use the `padding="0 lg"` form — Chakra v3 spacing tokens work in shorthand.
 
 | Line | Old | New |
 |---|---|---|
-| 262 | `padding: '0.6rem 1.8rem'` (outer Flex) | inline: keep `'0.6rem 1.8rem'` (composite — out of scope) BUT switch to `padding="cozy 1.8rem"` since `0.6rem === cozy` |
+| 262 | `padding: '0.6rem 1.8rem'` (outer Flex) | KEEP inline with comment `/* composite — keep inline */` |
+| 268 | `padding: '0.35rem 0.6rem'` (stats pill) | KEEP inline with comment `/* composite — keep inline */` |
 
-Actually, `1.8rem` is **not** a token. Choices: (a) accept partial — `padding="cozy 1.8rem"` keeps the cozy half; (b) add `cardPaddingX` = `1.8rem` token.
+**Decision (revised after implementation):** Composite paddings stay fully inline. The previous draft of this step proposed adding a `cardPaddingX: { value: '1.8rem' }` token + applying `padding="cozy cardPaddingX"` partial substitution. That was discarded for two reasons:
 
-**Decision:** add `cardPaddingX: { value: '1.8rem' }` as a new spacing token in this task (not Task 0, since it's only used here and in Steps 3, 4, 5). Apply with `padding="cozy cardPaddingX"`.
+1. The component already exports a file-level constant `CARD_PADDING_X = '1.8rem'` (used by the gate-label/roulette positioning logic). Adding a token would duplicate the source of truth.
+2. Partial tokenization on multi-axis paddings creates ambiguous patterns — readers have to decide which half is meaningful. Keeping the literal with `/* composite — keep inline */` is clearer.
 
-For line 268 (`padding: '0.35rem 0.6rem'`): both halves are non-tokens. Keep inline with a comment that "stats pill" composite padding is unique and not worth tokenizing.
+Apply this same rule to `'0.4rem 1.5rem'` (footer), `'0.8rem 1.8rem 1.2rem'` (content), `'0.35rem 0.6rem'` (stats pill), and `'0.6rem 1.8rem'` (stats outer) — all four composite paddings stay inline. Do this for Tasks 3, 4, 5 and 6 too.
 
 - [ ] **Step 2.5: Replace content-block fonts and margins (lines 302, 306, 316, 318, 321, 322, 325)**
 
@@ -255,9 +257,8 @@ git add src/components/KammaraCard/KammaraCard.tsx src/theme/tokens.ts
 git commit -m "refactor(KammaraCard): replace inline literals with tokens
 
 Migrates the world-card body, footer and watermark glyph sizes to
-the new card-family tokens. Adds spacing.cardPaddingX (1.8rem) used
-by the stats bar and content block here and in the other card
-components.
+the new card-family tokens. Composite paddings stay inline with
+/* composite — keep inline */ comments (see revised Step 2.4).
 
 No visual change."
 ```
@@ -298,7 +299,7 @@ Same pattern as KammaraCard — `1rem` → `md`, `0.85rem` → `base`, `1.3rem` 
 
 - [ ] **Step 3.4: Replace content + footer (lines 321, 327, 361, 365, 375, 377, 380, 381, 384, 410, 415, 416)**
 
-Same mapping as Task 2 (Steps 2.5 + 2.6). All composite paddings (`'0.6rem 1.8rem'`, `'0.35rem 0.6rem'`, `'0.8rem 1.8rem 1.2rem'`, `'0.4rem 1.5rem'`) get the partial-token treatment with `cardPaddingX` where applicable.
+Same mapping as Task 2 (Steps 2.5 + 2.6). All composite paddings (`'0.6rem 1.8rem'`, `'0.35rem 0.6rem'`, `'0.8rem 1.8rem 1.2rem'`, `'0.4rem 1.5rem'`) stay fully inline with `/* composite — keep inline */` comments — see revised Step 2.4 for rationale.
 
 - [ ] **Step 3.5: Type-check + visual check**
 
@@ -341,7 +342,7 @@ No visual change."
 | 178 | `padding="0 1.5rem"` | `padding="0 lg"` |
 | 200 | `paddingBottom: '0.4rem'` | inline keep — value not in catalogue (would create one-off) |
 | 201 | `paddingLeft: '1.2rem'` (and Right) | inline keep — composite tab spacing not worth tokenizing |
-| 288 | composite | partial: `padding="cozy cardPaddingX"` |
+| 288 | composite (`'0.6rem 1.8rem'`) | inline keep |
 | 294 | composite (`'0.35rem 0.6rem'`) | inline keep |
 | 333 | composite (`'0.8rem 1.8rem 1.2rem'`) | inline keep |
 | 383 | composite (`'0.4rem 1.5rem'`) | inline keep |
