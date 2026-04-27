@@ -175,13 +175,13 @@ export function DSTextPanel({
               ? { base: '1rem 2rem 0', md: '1.3rem 1.5rem 0', '2xl': '1.5rem 2rem 0' }
               : { base: '1.5rem 2rem 0', md: '2rem 1.5rem 0', '2xl': '2.5rem 2rem 0' }
           }
-          marginBottom={{ base: '0.5rem', md: '0.8rem' }}
+          marginBottom={{ base: 'sm', md: 'md' }}
         >
           {badge && (
             <Box
               as="span"
               display="inline-block"
-              marginBottom="0.6rem"
+              marginBottom="cozy"
               padding="0.25rem 0.7rem"
               borderRadius="999px"
               fontSize="xs"
@@ -203,10 +203,16 @@ export function DSTextPanel({
                 <GlyphPlanet size="h3" color={titleColor} stretch variant={glyphVariant} />
               </Box>
             )}
+            {/* Title fontSizes:
+                - base uses h3 token (1.3rem).
+                - md (2rem) and 2xl (clamp(2rem, 4vw, 3rem)) have no matching
+                  token in the catalogue and are kept inline by design — adding
+                  a panel-only token for a single use site would be over-
+                  engineering. */}
             <Heading
               as="h2"
               fontFamily="body"
-              fontSize={{ base: '1.3rem', md: '2rem', '2xl': 'clamp(2rem, 4vw, 3rem)' }}
+              fontSize={{ base: 'h3', md: '2rem', '2xl': 'clamp(2rem, 4vw, 3rem)' }}
               fontWeight={700}
               lineHeight={1.1}
               color={titleColor}
@@ -217,7 +223,7 @@ export function DSTextPanel({
           </Flex>
           {hasCreature && (
             <Box
-              marginTop="0.7rem"
+              marginTop="snug"
               height="3px"
               width="80px"
               borderRadius="999px"
@@ -262,7 +268,9 @@ export function DSTextPanel({
               : { base: '1.5rem 2rem', md: '2rem 1.5rem', '2xl': '2.5rem 2rem' }
         }
         fontFamily="body"
-        fontSize={{ base: '0.8rem', md: '1rem', '2xl': 'lg' }}
+        // `0.8rem` is the mobile body text — not tokenized because it only
+        // appears here and is responsively bumped to `md` on desktop.
+        fontSize={{ base: '0.8rem', md: 'md', '2xl': 'lg' }}
         lineHeight={{ base: 1.5, md: 1.65 }}
         fontWeight="light"
         css={{
@@ -275,37 +283,46 @@ export function DSTextPanel({
           // props because the target is a child element, not the Box itself.
           // Allowed exception per AGENTS.md rule 6.
           '& h2': {
-            fontSize: '1rem',
+            fontSize: 'token(fontSizes.md)',
             fontWeight: 700,
-            marginBottom: '0.5rem',
+            marginBottom: 'token(spacing.sm)',
             color: 'var(--ds-title-color)',
           },
           '& h3': {
-            fontSize: '0.65rem',
+            fontSize: 'token(fontSizes.xs)',
             fontWeight: 600,
-            letterSpacing: '0.2em',
+            letterSpacing: 'token(letterSpacings.wider)',
             textTransform: 'uppercase',
-            marginTop: '1.2rem',
-            marginBottom: '0.3rem',
+            marginTop: 'token(spacing.cardSection)',
+            marginBottom: 'token(spacing.cardLabelGap)',
             color: 'var(--ds-subtitle-color)',
           },
           '& h3:first-child': {
             marginTop: 0,
           },
           '& p': {
-            marginBottom: '0.5rem',
+            marginBottom: 'token(spacing.sm)',
             color: 'var(--ds-text-color)',
           },
           '@media (min-width: 48em)': {
-            '& h2': { fontSize: '2rem', marginBottom: '0.8rem' },
-            '& h3': { fontSize: '0.75rem' },
-            '& p': { marginBottom: '0.8rem' },
+            // Panel-only h2 size at 48em+ — the global `h2` token uses a
+            // different clamp curve. Tokenizing for one panel would create
+            // a single-use token, so kept inline by design.
+            '& h2': { fontSize: '2rem', marginBottom: 'token(spacing.md)' },
+            '& h3': { fontSize: 'token(fontSizes.h4)' },
+            '& p': { marginBottom: 'token(spacing.md)' },
           },
           '@media (min-width: 120em)': {
+            // Panel-only clamp at 120em+ — different from the h2 token
+            // (clamp(2.66rem, 5.31vw, 3.98rem)). Tokenizing would create a
+            // single-use token, so kept inline by design.
             '& h2': { fontSize: 'clamp(2rem, 4vw, 3rem)' },
-            '& h3': { fontSize: '1.3rem' },
+            '& h3': { fontSize: 'token(fontSizes.h3)' },
           },
           ...(hasCreature && {
+            // Dropcap for the creature variant — semantically unique decorative
+            // effect; tokenizing 3.2em / 0.05em / 0.15em would create tokens
+            // used by exactly one CSS rule. Kept inline by design.
             '& p:first-of-type::first-letter': {
               fontSize: '3.2em',
               fontWeight: 700,

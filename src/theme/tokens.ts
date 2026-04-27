@@ -153,7 +153,7 @@ export const tokens = defineTokens({
     '3xl': { value: '2rem' }, // 32px
     '4xl': { value: '4rem' }, // 64px
     '5xl': { value: '8rem' }, // 128px (hero pt)
-    cardSection: { value: '1.1rem' },
+    cardSection: { value: '1.2rem' },
     cardLabelGap: { value: '0.3rem' },
     cardBodyParagraph: { value: '0.7rem' },
   },
