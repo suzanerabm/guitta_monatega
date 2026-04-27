@@ -58,5 +58,54 @@
         }
       }
     ]
+  },
+  {
+    "match": "Felino Quadrado",
+    "name": {
+      "pt": "Felino Quadrado",
+      "en": "Square Feline"
+    },
+    "species": {
+      "pt": "Quadroide",
+      "en": "Quadroid"
+    },
+    "bio": {
+      "pt": "Variação rara dos Felinos Polimórficos — em vez de mudar de forma, escolheu uma e ficou. Cabeça quadrada, coroa de plumas, branco com circuitos verde-esmeralda. Símbolo da escolha consciente.",
+      "en": "A rare variant of the Polymorphic Felines — instead of shifting form, it chose one and stayed. Square head, feather crown, white with emerald-green circuits. A symbol of conscious choice."
+    },
+    "image": "/imgs/kammara/triplec/sharp/bichitto-frente.png",
+    "backImage": "/imgs/kammara/triplec/sharp/bichitto-costas.png",
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Mantenho a forma porque ela me serve bem.",
+      "en": "I keep this form because it serves me well."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+        "value": {
+          "pt": "Sharp",
+          "en": "Sharp"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Vigia",
+          "en": "Watcher"
+        }
+      }
+    ]
   }
 ]
