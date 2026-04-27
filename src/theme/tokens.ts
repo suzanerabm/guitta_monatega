@@ -99,6 +99,20 @@ export const tokens = defineTokens({
     label: { value: 'clamp(0.7rem, 0.72vw, 0.7rem)' },
     section: { value: '1.2rem' },
     soon: { value: '2rem' },
+    // ── Card-family typography (DSTextPanel + Kammara*Card*) ──────
+    cardBody: { value: '0.88rem' },
+    cardLabel: { value: '0.62rem' },
+    cardFooter: { value: '0.9rem' },
+    // Decorative crest watermarks rendered behind card titles
+    glyphWatermarkXl: { value: '24rem' },
+    glyphWatermarkLg: { value: '22rem' },
+    glyphWatermarkMd: { value: '14rem' },
+    glyphWatermarkSmCenter: { value: '8rem' },
+    glyphWatermarkSmSides: { value: '5rem' },
+    // Sizes specific to KammaraCardSubsystemHorizontal
+    glyphWatermarkXxl: { value: '28rem' },
+    glyphWatermarkSmCenterAlt: { value: '7rem' },
+    glyphWatermarkMdAlt: { value: '12rem' },
     glyphH1: { value: '2.4rem' },
     glyphH2: { value: '1.4rem' },
     glyphH3: { value: '1.2rem' },
@@ -119,6 +133,7 @@ export const tokens = defineTokens({
     widest: { value: '0.25em' },
     hero: { value: '0.3em' },
     heroTitle: { value: '0.06em' },
+    cardLabel: { value: '0.22em' },
   },
   spacing: {
     // Original scale (kept backward-compatible)
@@ -138,6 +153,9 @@ export const tokens = defineTokens({
     '3xl': { value: '2rem' }, // 32px
     '4xl': { value: '4rem' }, // 64px
     '5xl': { value: '8rem' }, // 128px (hero pt)
+    cardSection: { value: '1.1rem' },
+    cardLabelGap: { value: '0.3rem' },
+    cardBodyParagraph: { value: '0.7rem' },
   },
   shadows: {
     sm: { value: '0 4px 20px rgba(0,0,0,0.08)' },
