@@ -137,7 +137,7 @@ export function KammaraCardSubsystemHorizontal({
               transform="translate(-50%, -50%)"
               css={{
                 fontFamily: 'var(--chakra-fonts-glyph)',
-                fontSize: '28rem',
+                fontSize: 'token(fontSizes.glyphWatermarkXxl)',
                 lineHeight: 1,
                 color: `${color}08`,
                 userSelect: 'none',
@@ -179,19 +179,19 @@ export function KammaraCardSubsystemHorizontal({
                 inset={0}
                 justify="space-between"
                 align="center"
-                padding="0 1.5rem"
+                padding="0 lg"
                 pointerEvents="none"
                 aria-hidden="true"
                 css={{
                   fontFamily: 'var(--chakra-fonts-glyph)',
                   color: `${color}12`,
-                  fontSize: '5rem',
+                  fontSize: 'token(fontSizes.glyphWatermarkSmSides)',
                   lineHeight: 1,
                   overflow: 'hidden',
                 }}
               >
                 <span>{crestGlyph}</span>
-                <span style={{ fontSize: '7rem' }}>{crestGlyph}</span>
+                <Box as="span" fontSize="glyphWatermarkSmCenterAlt">{crestGlyph}</Box>
                 <span>{crestGlyph}</span>
               </Flex>
 
@@ -255,13 +255,13 @@ export function KammaraCardSubsystemHorizontal({
                     pointerEvents="none"
                     css={{
                       fontFamily: 'var(--chakra-fonts-glyph)',
-                      fontSize: '1rem',
+                      fontSize: 'token(fontSizes.md)',
                       color: `${color}cc`,
-                      letterSpacing: '0.3em',
+                      letterSpacing: 'token(letterSpacings.hero)',
                     }}
                   >
                     <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, ${color}80, transparent)` }} />
-                    <span style={{ fontSize: '1.3rem' }}>⊙</span>
+                    <Box as="span" fontSize="h3">⊙</Box>
                     <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, transparent, ${color}80)` }} />
                   </Flex>
                 </Flex>
@@ -274,7 +274,7 @@ export function KammaraCardSubsystemHorizontal({
               direction={{ base: 'column', md: 'row' }}
               align="stretch"
               gap="lg"
-              padding={{ base: '1.2rem', md: '1.6rem 2rem' }}
+              padding={{ base: '1.2rem', md: '1.6rem 2rem' }} /* composite — keep inline */
               minH={0}
             >
               {/* Image column — 16:9 aspect ratio. Grows up to ~50% on
@@ -324,21 +324,21 @@ export function KammaraCardSubsystemHorizontal({
                   minH={0}
                   css={{
                     fontFamily: 'var(--chakra-fonts-body)',
-                    fontSize: '0.95rem',
+                    fontSize: '0.95rem', /* no matching token — Variant A body slightly larger than cardBody by design */
                     lineHeight: 1.7,
                     fontWeight: 300,
                     color: textColor,
                     '& h3': {
-                      fontSize: '0.65rem',
+                      fontSize: 'token(fontSizes.xs)',
                       fontWeight: 600,
-                      letterSpacing: '0.22em',
+                      letterSpacing: 'token(letterSpacings.cardLabel)',
                       textTransform: 'uppercase',
                       color: color,
-                      marginTop: '1.1rem',
-                      marginBottom: '0.3rem',
+                      marginTop: '1.1rem', /* different from cardSection (1.2rem) — no matching token */
+                      marginBottom: 'token(spacing.cardLabelGap)',
                     },
                     '& h3:first-of-type': { marginTop: 0 },
-                    '& p': { marginBottom: '0.8rem' },
+                    '& p': { marginBottom: 'token(spacing.md)' },
                   }}
                 >
                   {activeItem.content}
@@ -351,14 +351,14 @@ export function KammaraCardSubsystemHorizontal({
               flexShrink={0}
               justify="space-between"
               align="center"
-              padding="0.4rem 1.5rem"
+              padding="0.4rem 1.5rem" /* composite — keep inline */
               position="relative"
               css={{
                 borderTop: `1px solid ${color}25`,
                 background: `linear-gradient(0deg, ${color}10, transparent)`,
                 fontFamily: 'var(--chakra-fonts-glyph)',
-                fontSize: '0.9rem',
-                letterSpacing: '0.3em',
+                fontSize: 'token(fontSizes.cardFooter)',
+                letterSpacing: 'token(letterSpacings.hero)',
               }}
               color={mutedText}
             >
@@ -386,7 +386,7 @@ export function KammaraCardSubsystemHorizontal({
       aria-label={name}
       position="relative"
       width="100%"
-      marginBottom="10px"
+      marginBottom="10px" /* 10px exact — no matching token */
       borderRadius="32px"
       overflow="visible"
     >
@@ -475,7 +475,7 @@ export function KammaraCardSubsystemHorizontal({
           pointerEvents="none"
           css={{
             fontFamily: 'var(--chakra-fonts-glyph)',
-            fontSize: '12rem',
+            fontSize: 'token(fontSizes.glyphWatermarkMdAlt)',
             lineHeight: 1,
             color: `${color}14`,
             userSelect: 'none',
@@ -552,14 +552,14 @@ export function KammaraCardSubsystemHorizontal({
             pointerEvents="none"
             css={{
               fontFamily: 'var(--chakra-fonts-glyph)',
-              fontSize: '1rem',
+              fontSize: 'token(fontSizes.md)',
               color: `${color}cc`,
-              letterSpacing: '0.3em',
+              letterSpacing: 'token(letterSpacings.hero)',
               textShadow: `0 0 12px ${darkColor}`,
             }}
           >
             <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, ${color}80, transparent)` }} />
-            <span style={{ fontSize: '1.3rem' }}>{activeItem.icon || '⊙'}</span>
+            <Box as="span" fontSize="h3">{activeItem.icon || '⊙'}</Box>
             <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, transparent, ${color}80)` }} />
           </Flex>
         </Flex>
@@ -574,7 +574,7 @@ export function KammaraCardSubsystemHorizontal({
           maxW="710px"
           direction="column"
           gap="md"
-          padding={{ base: '1rem', md: '1.4rem 1.6rem' }}
+          padding={{ base: '1rem', md: '1.4rem 1.6rem' }} /* composite — keep inline */
           borderRadius="20px"
           css={{
             background: `linear-gradient(160deg, ${darkColor}d9 0%, ${darkColor}b3 60%, ${darkColor}d9 100%)`,
@@ -598,9 +598,9 @@ export function KammaraCardSubsystemHorizontal({
             overflowY="auto"
             onScroll={handleBodyScroll}
             css={{
-              paddingTop: '1rem',
+              paddingTop: 'token(spacing.base)',
               fontFamily: 'var(--chakra-fonts-body)',
-              fontSize: '0.88rem',
+              fontSize: 'token(fontSizes.cardBody)',
               lineHeight: 1.65,
               fontWeight: 300,
               color: textColor,
@@ -612,16 +612,16 @@ export function KammaraCardSubsystemHorizontal({
               WebkitMaskImage:
                 'linear-gradient(to bottom, transparent 0%, black 4%, black 94%, transparent 100%)',
               '& h3': {
-                fontSize: '0.62rem',
+                fontSize: 'token(fontSizes.cardLabel)',
                 fontWeight: 600,
-                letterSpacing: '0.22em',
+                letterSpacing: 'token(letterSpacings.cardLabel)',
                 textTransform: 'uppercase',
                 color: color,
-                marginTop: '1.1rem',
-                marginBottom: '0.3rem',
+                marginTop: '1.1rem', /* different from cardSection (1.2rem) — no matching token */
+                marginBottom: 'token(spacing.cardLabelGap)',
               },
               '& h3:first-of-type': { marginTop: 0 },
-              '& p': { marginBottom: '0.7rem' },
+              '& p': { marginBottom: 'token(spacing.cardBodyParagraph)' },
             }}
           >
             {activeItem.content}
@@ -636,13 +636,13 @@ export function KammaraCardSubsystemHorizontal({
           bottom={0}
           justify="space-between"
           align="center"
-          padding="0.4rem 1.5rem"
+          padding="0.4rem 1.5rem" /* composite — keep inline */
           css={{
             borderTop: `1px solid ${color}40`,
             background: `linear-gradient(0deg, ${darkColor}dd, ${darkColor}66)`,
             fontFamily: 'var(--chakra-fonts-glyph)',
-            fontSize: '0.9rem',
-            letterSpacing: '0.3em',
+            fontSize: 'token(fontSizes.cardFooter)',
+            letterSpacing: 'token(letterSpacings.hero)',
           }}
           color={mutedText}
         >
@@ -680,13 +680,13 @@ function StatsBar({
   compact?: boolean;
 }) {
   return (
-    <Flex flexShrink={0} gap="0.5rem" flexWrap="wrap">
+    <Flex flexShrink={0} gap="sm" flexWrap="wrap">
       {stats.map((stat, i) => (
         <Flex
           key={i}
           direction="column"
-          gap="0.1rem"
-          padding={compact ? '0.3rem 0.5rem' : '0.4rem 0.7rem'}
+          gap="0.1rem" /* no matching token */
+          padding={compact ? '0.3rem 0.5rem' : '0.4rem 0.7rem'} /* composite — keep inline */
           css={{
             background: `${color}15`,
             border: `1px solid ${color}40`,
