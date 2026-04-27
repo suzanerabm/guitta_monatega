@@ -152,12 +152,12 @@ export function KammaraEventCard({
             transform="translate(-50%, -50%)"
             css={{
               fontFamily: 'var(--chakra-fonts-glyph)',
-              fontSize: '24rem',
+              fontSize: 'token(fontSizes.glyphWatermarkXl)',
               lineHeight: 1,
               color: `${color}05`,
               userSelect: 'none',
               whiteSpace: 'nowrap',
-              letterSpacing: '0.04em',
+              letterSpacing: 'token(letterSpacings.tight)',
             }}
           >
             {parentCrestGlyph}
@@ -170,12 +170,12 @@ export function KammaraEventCard({
             transform="translate(-50%, -50%)"
             css={{
               fontFamily: 'var(--chakra-fonts-glyph)',
-              fontSize: '14rem',
+              fontSize: 'token(fontSizes.glyphWatermarkMd)',
               lineHeight: 1,
               color: `${color}0a`,
               userSelect: 'none',
               whiteSpace: 'nowrap',
-              letterSpacing: '0.04em',
+              letterSpacing: 'token(letterSpacings.tight)',
             }}
           >
             {crestGlyph}
@@ -209,19 +209,19 @@ export function KammaraEventCard({
               inset={0}
               justify="space-between"
               align="center"
-              padding="0 1.5rem"
+              padding="0 lg"
               pointerEvents="none"
               aria-hidden="true"
               css={{
                 fontFamily: 'var(--chakra-fonts-glyph)',
                 color: `${color}12`,
-                fontSize: '5rem',
+                fontSize: 'token(fontSizes.glyphWatermarkSmSides)',
                 lineHeight: 1,
                 overflow: 'hidden',
               }}
             >
               <span>{crestGlyph}</span>
-              <span style={{ fontSize: '8rem' }}>{crestGlyph}</span>
+              <Box as="span" fontSize="glyphWatermarkSmCenter">{crestGlyph}</Box>
               <span>{crestGlyph}</span>
             </Flex>
 
@@ -235,14 +235,14 @@ export function KammaraEventCard({
                 aria-label={name}
                 css={{
                   fontFamily: 'var(--chakra-fonts-glyph)',
-                  fontSize: '1rem',
+                  fontSize: 'token(fontSizes.md)',
                   color: `${color}cc`,
-                  letterSpacing: '0.12em',
+                  letterSpacing: 'token(letterSpacings.wide)',
                   whiteSpace: 'nowrap',
                 }}
               >
                 <Box width="20px" height="1px" css={{ background: `linear-gradient(90deg, transparent, ${color}80)` }} />
-                <span style={{ fontSize: '1.3rem' }}>{crestGlyph}</span>
+                <Box as="span" fontSize="h3">{crestGlyph}</Box>
                 <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, ${color}80, transparent)` }} />
               </Flex>
 
@@ -355,13 +355,13 @@ export function KammaraEventCard({
 
           {/* Stats bar */}
           {stats.length > 0 && (
-            <Flex flexShrink={0} padding="0.6rem 1.8rem" gap="0.5rem" flexWrap="wrap">
+            <Flex flexShrink={0} padding="0.6rem 1.8rem" /* composite — keep inline */ gap="sm" flexWrap="wrap">
               {stats.map((stat, i) => (
                 <Flex
                   key={i}
                   direction="column"
-                  gap="0.1rem"
-                  padding="0.35rem 0.6rem"
+                  gap="0.1rem" /* no matching token */
+                  padding="0.35rem 0.6rem" /* composite — keep inline */
                   css={{
                     background: `${color}15`,
                     border: `1px solid ${color}40`,
@@ -395,11 +395,11 @@ export function KammaraEventCard({
             flex={1}
             minH={0}
             overflowY="auto"
-            padding="0.8rem 1.8rem 1.2rem"
+            padding="0.8rem 1.8rem 1.2rem" /* composite — keep inline */
             textAlign="left"
             css={{
               fontFamily: 'var(--chakra-fonts-body)',
-              fontSize: '0.88rem',
+              fontSize: 'token(fontSizes.cardBody)',
               lineHeight: 1.65,
               fontWeight: 300,
               color: textColor,
@@ -409,29 +409,29 @@ export function KammaraEventCard({
               maskImage: 'linear-gradient(to bottom, transparent 0%, black 4%, black 94%, transparent 100%)',
               WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 4%, black 94%, transparent 100%)',
               '& h3': {
-                fontSize: '0.62rem',
+                fontSize: 'token(fontSizes.cardLabel)',
                 fontWeight: 600,
-                letterSpacing: '0.22em',
+                letterSpacing: 'token(letterSpacings.cardLabel)',
                 textTransform: 'uppercase',
                 color: color,
-                marginTop: '1.1rem',
-                marginBottom: '0.3rem',
+                marginTop: '1.1rem', /* different from cardSection (1.2rem); event-card-specific gap */
+                marginBottom: 'token(spacing.cardLabelGap)',
               },
               '& h3:first-of-type': { marginTop: 0 },
               // Metadata rows render as `<p><strong>LABEL:</strong> value</p>`.
               // The <strong> is the accent eyebrow inline with its
               // value; rows stack tight so they read as a block.
-              '& p': { marginBottom: '0.25rem' },
+              '& p': { marginBottom: '0.25rem' /* no matching token */ },
               '& p strong': {
                 fontWeight: 600,
-                fontSize: '0.6rem',
-                letterSpacing: '0.22em',
+                fontSize: '0.6rem', /* no matching token — strong-label slightly smaller than cardLabel by design */
+                letterSpacing: 'token(letterSpacings.cardLabel)',
                 textTransform: 'uppercase',
                 color,
-                marginRight: '0.4rem',
+                marginRight: '0.4rem', /* no matching token */
               },
               '& p.kec-description': {
-                marginTop: '0.9rem',
+                marginTop: '0.9rem', /* no matching token */
                 marginBottom: 0,
               },
             }}
@@ -459,13 +459,13 @@ export function KammaraEventCard({
             flexShrink={0}
             justify="space-between"
             align="center"
-            padding="0.4rem 1.5rem"
+            padding="0.4rem 1.5rem" /* composite — keep inline */
             css={{
               borderTop: `1px solid ${color}25`,
               background: `linear-gradient(0deg, ${color}10, transparent)`,
               fontFamily: 'var(--chakra-fonts-glyph)',
-              fontSize: '0.8rem',
-              letterSpacing: '0.3em',
+              fontSize: '0.8rem', /* no matching token — cardFooter is 0.9rem */
+              letterSpacing: 'token(letterSpacings.hero)',
             }}
             color={mutedText}
           >
