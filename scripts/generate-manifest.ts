@@ -225,47 +225,12 @@ function buildKammaraBgs() {
   return result;
 }
 
-// Build subsystem images — each kammara world (and optionally each region
-// inside a world) has a `_subsystems/` directory with 0.xxx, 1.xxx, 2.xxx
-// for the 3 subsystem cards.
-function buildSubsystems() {
-  const result: Record<string, (string | null)[]> = {};
-
-  const collect = (dir: string, key: string, urlPrefix: string) => {
-    const subDir = path.join(dir, '_subsystems');
-    const images = listImages(subDir);
-    if (images.length === 0) return;
-    const maxIndex = images.reduce((max, f) => {
-      const match = f.match(/^(\d+)[.\-]/);
-      return match ? Math.max(max, parseInt(match[1], 10)) : max;
-    }, -1);
-    const slots: (string | null)[] = Array.from({ length: maxIndex + 1 }, (_, i) => {
-      const file = images.find(
-        (f) => f.startsWith(`${i}.`) || f.startsWith(`${i}-`),
-      );
-      return file ? `${urlPrefix}/_subsystems/${file}` : null;
-    });
-    result[key] = slots;
-  };
-
-  const kammaraDir = path.join(IMGS, KAMMARA_ROOT);
-  for (const world of listDirs(kammaraDir)) {
-    if (world.startsWith('_')) continue;
-    const worldDir = path.join(kammaraDir, world);
-    collect(worldDir, `kammara/${world}`, `/imgs/${KAMMARA_ROOT}/${world}`);
-
-    for (const region of listDirs(worldDir)) {
-      if (region.startsWith('_')) continue;
-      const regionDir = path.join(worldDir, region);
-      collect(
-        regionDir,
-        `kammara/${world}/${region}`,
-        `/imgs/${KAMMARA_ROOT}/${world}/${region}`,
-      );
-    }
-  }
-  return result;
-}
+// (Subsystem images are no longer tracked here — they live as `img`
+//  inside each `_subsystems.json` file under
+//  `src/data/characters/kammara/`. The manifest used to mirror the
+//  on-disk numeric slots, but that indirection forced contributors to
+//  guess slot indices when adding new images. The JSON itself is now
+//  the single source of truth.)
 
 const manifest = {
   characters: buildCharacters(),
@@ -273,7 +238,6 @@ const manifest = {
   art: buildArt(),
   scenes: buildScenes(),
   kammaraBgs: buildKammaraBgs(),
-  subsystems: buildSubsystems(),
 };
 
 fs.mkdirSync(path.dirname(OUTPUT), { recursive: true });
@@ -284,4 +248,3 @@ console.log(`- Books: ${Object.keys(manifest.books).length} sections`);
 console.log(`- Art: ${Object.keys(manifest.art).length} sections`);
 console.log(`- Scenes: ${Object.keys(manifest.scenes).length} worlds`);
 console.log(`- Kammara bgs: ${Object.keys(manifest.kammaraBgs).length} entries`);
-console.log(`- Subsystems: ${Object.keys(manifest.subsystems).length} worlds`);

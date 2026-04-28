@@ -25,6 +25,17 @@
     },
     "attributes": [
       {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Nativo",
+          "en": "Native"
+        }
+      },
+      {
         "glyph": "⊶⊷⊙",
         "label": {
           "pt": "Habitat",
@@ -74,6 +85,17 @@
     },
     "attributes": [
       {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Nativo",
+          "en": "Native"
+        }
+      },
+      {
         "glyph": "⊶⊷⊙",
         "label": {
           "pt": "Habitat",
@@ -91,8 +113,8 @@
           "en": "Role"
         },
         "value": {
-          "pt": "Observador silencioso",
-          "en": "Silent observer"
+          "pt": "Observador",
+          "en": "Observer"
         }
       }
     ]
@@ -122,6 +144,17 @@
       "en": "When I am well, the world sees me."
     },
     "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Nativo",
+          "en": "Native"
+        }
+      },
       {
         "glyph": "⊶⊷⊙",
         "label": {
@@ -172,6 +205,17 @@
     },
     "attributes": [
       {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Nativo",
+          "en": "Native"
+        }
+      },
+      {
         "glyph": "⊶⊷⊙",
         "label": {
           "pt": "Habitat",
@@ -209,7 +253,7 @@
       "pt": "Ave central do ecossistema TripleC. Sociável, cantora, vive em pequenos grupos. Funções múltiplas: canto que avisa, alimentação que limpa o solo, presença próxima das vilas, transporte de pólen pelo penacho.",
       "en": "Central bird of the TripleC ecosystem. Sociable, singer, lives in small groups. Multiple roles: warning song, ground-cleaning feeding, near-village presence, pollen transport through the crest."
     },
-    "image": "/imgs/kammara/triplec/plumoide_1_frente.png",
+    "image": "/imgs/kammara/triplec/plumoide_1_frente-new.png",
     "backImage": "/imgs/kammara/triplec/plumoide_1_costas.png",
     "backTitle": {
       "pt": "Verso",
@@ -220,6 +264,17 @@
       "en": "I sing and the world lights up with me."
     },
     "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Nativo",
+          "en": "Native"
+        }
+      },
       {
         "glyph": "⊶⊷⊙",
         "label": {
@@ -247,8 +302,8 @@
   {
     "match": "Niuloide",
     "name": {
-      "pt": "Niuloide",
-      "en": "Niuloid"
+      "pt": "Nilo",
+      "en": "Nilo"
     },
     "species": {
       "pt": "Niuloide",
@@ -269,6 +324,17 @@
       "en": "Sings in frequencies the bunniets recognise as a 'safe area' signal. Where my song arrives, the grove is at peace."
     },
     "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Nativo",
+          "en": "Native"
+        }
+      },
       {
         "glyph": "⊶⊷⊙",
         "label": {
@@ -320,6 +386,17 @@
     },
     "attributes": [
       {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Nativo",
+          "en": "Native"
+        }
+      },
+      {
         "glyph": "⊶⊷⊙",
         "label": {
           "pt": "Habitat",
@@ -369,6 +446,17 @@
     },
     "attributes": [
       {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Nativo",
+          "en": "Native"
+        }
+      },
+      {
         "glyph": "⊶⊷⊙",
         "label": {
           "pt": "Habitat",
@@ -417,6 +505,17 @@
       "en": "The light comes from me when my own arrives."
     },
     "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Nativo",
+          "en": "Native"
+        }
+      },
       {
         "glyph": "⊶⊷⊙",
         "label": {

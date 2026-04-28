@@ -205,14 +205,14 @@
     },
     "attributes": [
       {
-        "glyph": "⊶⊷⊙",
+        "glyph": "⊙",
         "label": {
-          "pt": "Habitat",
-          "en": "Habitat"
+          "pt": "Origem",
+          "en": "Origin"
         },
         "value": {
-          "pt": "Portex",
-          "en": "Portex"
+          "pt": "Malloc",
+          "en": "Malloc"
         }
       },
       {
@@ -235,8 +235,8 @@
       "en": "Mewlites"
     },
     "species": {
-      "pt": "Felinos",
-      "en": "Felines"
+      "pt": "Mewlites",
+      "en": "Mewlites"
     },
     "bio": {
       "pt": "Seguem shilo, detectam instabilidade, cantam padrões vibratórios, avisam quando uma rota está morrendo. Quando um Cshift falha, os mewlites desaparecem por alguns instantes — comportamento ainda não compreendido.",
@@ -254,14 +254,14 @@
     },
     "attributes": [
       {
-        "glyph": "⊶⊷⊙",
+        "glyph": "⊙",
         "label": {
-          "pt": "Habitat",
-          "en": "Habitat"
+          "pt": "Origem",
+          "en": "Origin"
         },
         "value": {
-          "pt": "Hepa",
-          "en": "Hepa"
+          "pt": "Malloc",
+          "en": "Malloc"
         }
       },
       {
@@ -303,14 +303,14 @@
     },
     "attributes": [
       {
-        "glyph": "⊶⊷⊙",
+        "glyph": "⊙",
         "label": {
-          "pt": "Habitat",
-          "en": "Habitat"
+          "pt": "Origem",
+          "en": "Origin"
         },
         "value": {
-          "pt": "Shilo",
-          "en": "Shilo"
+          "pt": "Malloc",
+          "en": "Malloc"
         }
       },
       {
@@ -352,14 +352,14 @@
     },
     "attributes": [
       {
-        "glyph": "⊶⊷⊙",
+        "glyph": "⊙",
         "label": {
-          "pt": "Habitat",
-          "en": "Habitat"
+          "pt": "Origem",
+          "en": "Origin"
         },
         "value": {
-          "pt": "Hepa",
-          "en": "Hepa"
+          "pt": "Malloc",
+          "en": "Malloc"
         }
       },
       {
@@ -401,14 +401,14 @@
     },
     "attributes": [
       {
-        "glyph": "⊶⊷⊙",
+        "glyph": "⊙",
         "label": {
-          "pt": "Habitat",
-          "en": "Habitat"
+          "pt": "Origem",
+          "en": "Origin"
         },
         "value": {
-          "pt": "Estaka",
-          "en": "Estaka"
+          "pt": "Malloc",
+          "en": "Malloc"
         }
       },
       {

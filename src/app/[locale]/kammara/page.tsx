@@ -5,8 +5,8 @@ import {
   getBooks,
   getBookPages,
   getKammaraBg,
-  getSubsystemImages,
 } from '@/lib/images';
+import { getWorldSubsystemImages } from '@/data/characters/kammara/_worldData';
 import { KammaraClient } from './KammaraClient';
 
 const WORLD_IDS = ['lunnp1', 'eni4', 'triplec', 'orfv', 'z1', 'gotto'] as const;
@@ -26,7 +26,7 @@ export default async function KammaraPage({
       chars: getCharacters(`kammara/${id}`),
       scenes: getScenes(`kammara/${id}`),
       bgImage: getKammaraBg(`kammara/${id}`),
-      subsystemImages: getSubsystemImages(`kammara/${id}`),
+      subsystemImages: getWorldSubsystemImages(id),
     };
     // Only triplec has sub-regions. Read their content in parallel so the
     // client has everything it needs without extra fetch logic.
@@ -39,7 +39,7 @@ export default async function KammaraPage({
             chars: getCharacters(`kammara/triplec/${regionId}`),
             scenes: getScenes(`kammara/triplec/${regionId}`),
             bgImage: getKammaraBg(`kammara/triplec/${regionId}`),
-            subsystemImages: getSubsystemImages(`kammara/triplec/${regionId}`),
+            subsystemImages: getWorldSubsystemImages(`triplec-${regionId}`),
           },
         ])
       );

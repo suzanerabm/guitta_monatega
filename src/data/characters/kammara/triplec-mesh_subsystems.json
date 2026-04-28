@@ -4,6 +4,7 @@
       "pt": "Cultura",
       "en": "Bridges"
     },
+    "img": "/imgs/kammara/triplec/mesh/_subsystems/0.jpg",
     "text": {
       "pt": [
         "### Rotina",
@@ -29,6 +30,7 @@
       "pt": "Bunniets",
       "en": "Patterns"
     },
+    "img": "/imgs/kammara/triplec/mesh/_subsystems/1.png",
     "text": {
       "pt": [
         "### Aparência",
@@ -54,6 +56,7 @@
       "pt": "Geografia",
       "en": "Weavers"
     },
+    "img": "/imgs/kammara/triplec/mesh/_subsystems/2.png",
     "text": {
       "pt": [
         "### Cidades vivas",
@@ -76,9 +79,52 @@
   },
   {
     "title": {
+      "pt": "Fauna & Flora",
+      "en": "Fauna & Flora"
+    },
+    "img": "/imgs/kammara/triplec/mesh/_subsystems/3.jpg",
+    "text": {
+      "pt": [
+        "### Vida que se organiza",
+        "Em Mesh, a vida não cresce por instinto. Ela se organiza. Cada planta, cada bicho existe para sustentar uma forma — estabilizar, sinalizar, conectar, corrigir. Nada é gratuito, nada é puramente ornamental.",
+        "### Arbóreas Hexafolhas",
+        "Árvores de tronco mineral-polimérico com copas perfeitamente simétricas. Ancoram cidades-classe e absorvem o excesso de mekasen. Quando o Cshift treme, suas folhas giram lentamente, recalculando o espaço.",
+        "### Fractais Vivos",
+        "Plantas que se replicam seguindo padrões matemáticos. Preenchem vazios, redistribuem energia, sinalizam regiões mal definidas. Quando um contrato estrutural quebra, os fractais param no meio — denunciam o erro só de pararem.",
+        "### Vinhas-Lan",
+        "Descendentes diretas das Vinhas-Var de malloc. Conectam estruturas, reforçam Pontes de Herança, indicam rotas válidas. Durante a CriptoKemita, soltam-se temporariamente, desconectando tudo que não é essencial.",
+        "### Musgos de Coerência",
+        "Crescem apenas em superfícies estáveis. Onde tem musgo, o chão é confiável. Onde não tem musgo, ninguém pisa.",
+        "### Felinos Polimórficos",
+        "Criaturas elegantes que ajustam a forma conforme o ambiente. Leem o contexto antes de qualquer outro animal. Quando um espaço está errado, eles se recusam a entrar.",
+        "### Aves-Classe",
+        "Voam em padrões matemáticos pelas cidades-template. Mapeiam o que é estável, sincronizam regiões, monitoram fluxos de energia. Se uma Ave-Classe erra o padrão, é porque o espaço abaixo está comprometido.",
+        "### Entidades Fractais Menores",
+        "Pequenas formas semi-energéticas que aparecem quando algo falha. Preenchem lacunas temporárias, amortecem colapsos iminentes. Desaparecem assim que a estrutura se estabiliza.",
+        "### Guardiões de Campo",
+        "Criaturas raras, quase imóveis. Mantêm os Campos Polimórficos coerentes e atacam apenas quando alguém viola o espaço — nunca antes.",
+        "### Fiboide",
+        "Caracol branco lento, com casca em espiral Fibonacci e circuitos verde-esmeralda. Bunniets observam seu ritmo pra calibrar paciência. Onde ele passa, o tempo se reorganiza atrás dele.",
+        "### Sineroide",
+        "Serpente alongada que termina em espiral Fibonacci na cauda. Desliza só em curvas exatas, nunca em linha reta. Bunniets seguem seu caminho pra encontrar a rota mais elegante entre dois pontos.",
+        "### Polymoide",
+        "Pequeno alien de corpo gota branco. O polimorfismo está só na tromba — ela muda de forma livremente, mas a essência permanece. Bunniets aprendem com ele que trocar de forma não é trocar de identidade.",
+        "### Manoo",
+        "Marsupial alien rastreador da floresta de Mesh. Vive perto das Plumoides em troca simbiótica: come os ovos delas e, em troca, rastreia comida com seu faro apurado.",
+        "### Nibu",
+        "Pet doméstico das casas bunniets de Mesh. Quietinho, quentinho, esquenta o pé e dá carinho. Onde tem bunniet com frio, tem Nibu por perto.",
+        "### Ecossistema Integrado",
+        "Quando tudo funciona em Mesh, o mundo parece perfeitamente silencioso. O silêncio, aqui, é sinal de sucesso — significa que cada forma está cumprindo seu propósito."
+      ],
+      "en": []
+    }
+  },
+  {
+    "title": {
       "pt": "Energia",
       "en": ""
     },
+    "img": "/imgs/kammara/triplec/mesh/_subsystems/4.png",
     "text": {
       "pt": [
         "### Poli-fluxo",
@@ -102,6 +148,7 @@
       "pt": "Governança",
       "en": ""
     },
+    "img": "",
     "text": {
       "pt": [
         "### Sistema",
@@ -125,6 +172,7 @@
       "pt": "Perigos",
       "en": ""
     },
+    "img": "",
     "text": {
       "pt": [
         "### Falhas de coerência",
@@ -139,6 +187,30 @@
         "O excesso de forma aprisiona a criatividade. Quando Mesh organiza demais, a vida que deveria habitar as estruturas simplesmente não aparece.",
         "### A forma que se esquece de si",
         "Em Mesh, o maior perigo não é o caos. É a forma que funciona tão bem que esquece para que serve."
+      ],
+      "en": []
+    }
+  },
+  {
+    "title": {
+      "pt": "Tradições",
+      "en": "Traditions"
+    },
+    "img": "",
+    "text": {
+      "pt": [
+        "### Cultura por estrutura",
+        "Em Mesh, a cultura é praticada como se constrói: por estrutura, não por explosão. As tradições não são festas barulhentas — são práticas que sustentam coerência ao longo do tempo.",
+        "### Duelos de Coerência",
+        "Tradição central de Mesh. Os bunniets disputam quem sustenta melhor uma forma sob pressão. Não vence quem grita mais alto — vence quem mantém estrutura quando tudo poderia ceder.",
+        "### Travessia das Pontes de Herança",
+        "Tradição que percorre as Pontes de Herança ligando as regiões antigas às novas. Os bunniets atravessam todas as pontes em fila silenciosa, reconhecendo cada construção do passado.",
+        "### Narrativa-Árvore",
+        "Nas Pontes de Herança Antiga, microculturas inteiras se reúnem para narrar histórias em forma de árvore de decisão — cada bifurcação é uma escolha que a região já fez, e contar a história é manter viva a memória das possibilidades.",
+        "### Encontros Polimórficos",
+        "Nos Campos Polimórficos Permanentes, comunidades inteiras se reúnem para praticar transformação contínua. Cada participante experimenta múltiplas formas de si — e volta com mais flexibilidade pra própria coerência.",
+        "### A essência",
+        "Em Mesh, ninguém celebra para esquecer o cotidiano. Celebra-se para reforçar a forma — porque tradição, aqui, é estrutura que se mantém atravessando o tempo."
       ],
       "en": []
     }

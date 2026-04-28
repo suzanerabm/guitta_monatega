@@ -29,6 +29,13 @@ export interface WorldStory {
 
 export interface WorldSubsystem {
   title: Bilingual<string>;
+  /**
+   * Optional image path for this subsystem (relative to /public).
+   * Empty string means "no image". Replaces the legacy
+   * `subsystemImages` array that lived in image-manifest.json —
+   * the JSON itself is now the single source of truth.
+   */
+  img?: string;
   text: Bilingual<string[]>;
 }
 
@@ -83,7 +90,7 @@ export function getWorldPanelStory(worldId: string, locale: Locale): string[] {
 export function getWorldSubsystems(
   worldId: string,
   locale: Locale,
-): { title: string; text: string[] }[] {
+): { title: string; text: string[]; img: string }[] {
   const subs = SUBSYSTEMS[worldId];
   if (!subs) return [];
   return subs.map((s) => {
@@ -94,12 +101,25 @@ export function getWorldSubsystems(
     const textInLocale = s.text[locale];
     const hasTitle = !!titleInLocale;
     const hasText = Array.isArray(textInLocale) && textInLocale.some((p) => p && p.trim());
+    const img = s.img || '';
     if (hasTitle && hasText) {
-      return { title: titleInLocale!, text: textInLocale };
+      return { title: titleInLocale!, text: textInLocale, img };
     }
     return {
       title: s.title.pt || '',
       text: s.text.pt || [],
+      img,
     };
   });
+}
+
+/**
+ * Returns the array of subsystem image paths for a world.
+ * Replaces the manifest-backed `getSubsystemImages` helper.
+ * Empty strings stay as empty (caller treats them as "no image").
+ */
+export function getWorldSubsystemImages(worldId: string): (string | null)[] {
+  const subs = SUBSYSTEMS[worldId];
+  if (!subs) return [];
+  return subs.map((s) => (s.img && s.img.trim() ? s.img : null));
 }

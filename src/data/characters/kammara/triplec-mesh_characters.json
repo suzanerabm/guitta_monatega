@@ -205,10 +205,10 @@
     },
     "attributes": [
       {
-        "glyph": "⊶⊷⊙",
+        "glyph": "⊙",
         "label": {
-          "pt": "Habitat",
-          "en": "Habitat"
+          "pt": "Origem",
+          "en": "Origin"
         },
         "value": {
           "pt": "Mesh",
@@ -224,6 +224,55 @@
         "value": {
           "pt": "Marcador de tempo",
           "en": "Time-marker"
+        }
+      }
+    ]
+  },
+  {
+    "match": "nibu",
+    "name": {
+      "pt": "Nibu",
+      "en": "Nibu"
+    },
+    "species": {
+      "pt": "Cumulus",
+      "en": "Cumulus"
+    },
+    "bio": {
+      "pt": "Pet doméstico das casas bunniets de Mesh — quietinho, quentinho, esquenta o pé e dá carinho. Companheiro morno, aquecedor afetivo, presença sem barulho.",
+      "en": "Household pet of the Mesh bunniets — quiet, warm, heats the feet and gives affection. Warm companion, cozy warmer, presence without noise."
+    },
+    "image": "/imgs/kammara/triplec/mesh/nibu.png",
+    "backImage": "/imgs/kammara/triplec/mesh/nibu-costas.png",
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Another Side"
+    },
+    "dorsalMeaning": {
+      "pt": "Estou sempre onde precisam de mim.",
+      "en": "I'm always where I'm needed."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Mesh",
+          "en": "Mesh"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Aquecedor afetivo",
+          "en": "Affective warmer"
         }
       }
     ]
@@ -254,10 +303,10 @@
     },
     "attributes": [
       {
-        "glyph": "⊶⊷⊙",
+        "glyph": "⊙",
         "label": {
-          "pt": "Habitat",
-          "en": "Habitat"
+          "pt": "Origem",
+          "en": "Origin"
         },
         "value": {
           "pt": "Mesh",
@@ -303,10 +352,10 @@
     },
     "attributes": [
       {
-        "glyph": "⊶⊷⊙",
+        "glyph": "⊙",
         "label": {
-          "pt": "Habitat",
-          "en": "Habitat"
+          "pt": "Origem",
+          "en": "Origin"
         },
         "value": {
           "pt": "Mesh",
@@ -352,10 +401,10 @@
     },
     "attributes": [
       {
-        "glyph": "⊶⊷⊙",
+        "glyph": "⊙",
         "label": {
-          "pt": "Habitat",
-          "en": "Habitat"
+          "pt": "Origem",
+          "en": "Origin"
         },
         "value": {
           "pt": "Mesh",
@@ -371,104 +420,6 @@
         "value": {
           "pt": "Rastreador",
           "en": "Tracker"
-        }
-      }
-    ]
-  },
-  {
-    "match": "Dinossauro Alongado",
-    "name": {
-      "pt": "Logg",
-      "en": "Logg"
-    },
-    "species": {
-      "pt": "Longoide",
-      "en": "Longoid"
-    },
-    "bio": {
-      "pt": "Caminhante elegante bípede de Mesh, branco com circuitos verde-esmeralda — pescoço longo curvo, cauda equilibrando.",
-      "en": "Elegant bipedal walker of Mesh, white with emerald-green circuits — long curved neck, balancing tail."
-    },
-    "image": "/imgs/kammara/triplec/mesh/dino-lado-gigapixel-standard-v2-6x.png",
-    "backImage": "/imgs/kammara/triplec/mesh/dino-costas.png",
-    "backTitle": {
-      "pt": "Verso",
-      "en": "Verse"
-    },
-    "dorsalMeaning": {
-      "pt": "Atravesso a forma como quem atravessa um pensamento.",
-      "en": "I cross form the way one crosses a thought."
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Habitat",
-          "en": "Habitat"
-        },
-        "value": {
-          "pt": "Mesh",
-          "en": "Mesh"
-        }
-      },
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Função",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "Conector silencioso",
-          "en": "Silent connector"
-        }
-      }
-    ]
-  },
-  {
-    "match": "Peixe-Assimetrico",
-    "name": {
-      "pt": "Suigui",
-      "en": "Suigui"
-    },
-    "species": {
-      "pt": "Asymoide",
-      "en": "Asymoid"
-    },
-    "bio": {
-      "pt": "Peixe assimétrico nascido nos canais de Mesh — primeira espécie a transbordar entre regiões, hoje vive em todas as águas de TripleC.",
-      "en": "Asymmetric fish born in the Mesh channels — first species to overflow between regions, today lives in every water of TripleC."
-    },
-    "image": "/imgs/kammara/triplec/mesh/peixe_nadando.png",
-    "backImage": "/imgs/kammara/triplec/mesh/peixe_back.png",
-    "backTitle": {
-      "pt": "Verso",
-      "en": "Verse"
-    },
-    "dorsalMeaning": {
-      "pt": "Saí de onde fui feito sem deixar de ser feito de lá.",
-      "en": "I left where I was made without ceasing to be made there."
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Habitat",
-          "en": "Habitat"
-        },
-        "value": {
-          "pt": "Águas de TripleC",
-          "en": "Waters of TripleC"
-        }
-      },
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Função",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "Transbordador",
-          "en": "Overflow"
         }
       }
     ]

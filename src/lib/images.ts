@@ -52,14 +52,3 @@ export function getKammaraBg(key: string): string | null {
   return bgs?.[key] ?? null;
 }
 
-/**
- * Get the 3 subsystem images for a kammara world.
- * Returns an array of 3 elements (image path or null) corresponding to
- * the 0./1./2. slots in the world's _subsystems directory.
- */
-export function getSubsystemImages(key: string): (string | null)[] {
-  const subs = (
-    manifest as unknown as { subsystems?: Record<string, (string | null)[]> }
-  ).subsystems;
-  return subs?.[key] ?? [null, null, null];
-}
