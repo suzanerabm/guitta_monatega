@@ -7,6 +7,13 @@ import type { ReactNode } from 'react';
 // so keep them in sync via this single source of truth.
 export const CARD_PADDING_X = '1.8rem';
 
+const CARD_HEIGHT: Record<string, string> = {
+  base: 'auto',
+  md: '400px',
+  xl: '520px',
+  '3xl': '600px',
+};
+
 export interface KammaraEventCardTab {
   id: string;
   icon: string;
@@ -91,12 +98,10 @@ export function KammaraEventCard({
       data-testid={testId ?? 'kammara-event-card'}
       position="relative"
       width="100%"
-      // Cards with a bgImage take a "book cover" portrait shape (2:3),
-      // which makes them visually taller/larger in the grid.
-      // Text-only cards have a fixed shorter height so they stay compact
-      // regardless of the description length.
-      height={bgImage ? 'auto' : { base: 'auto', md: '400px', xl: '480px' }}
-      aspectRatio={bgImage ? { base: 'auto', md: '2 / 3' } : undefined}
+      // Cards with a bgImage take a softer 3:4 portrait — capped at a
+      // sensible max-width so they don't balloon on wide grids.
+      // Text-only cards keep their fixed compact height.
+      height={CARD_HEIGHT}
       borderRadius="32px"
       overflow="visible"
     >

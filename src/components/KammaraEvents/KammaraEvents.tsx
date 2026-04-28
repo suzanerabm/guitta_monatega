@@ -219,10 +219,11 @@ function CategoryBlock({
         display="grid"
         gridTemplateColumns={{
           base: '1fr',
-          md: 'repeat(3, minmax(0, 1fr))',
-          xl: 'repeat(4, minmax(0, 1fr))',
+          md: 'repeat(auto-fit, minmax(260px, 320px))',
+          xl: 'repeat(auto-fit, minmax(280px, 360px))',
         }}
-        gap={{ base: '1.2rem', md: '2rem', xl: '2.4rem' }}
+        gap={{ base: '1.2rem', md: '1.4rem', xl: '1.4rem' }}
+        justifyContent="start"
       >
         {events.map((ev) => (
           <EventCard

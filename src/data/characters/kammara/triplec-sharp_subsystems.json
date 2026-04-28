@@ -2,9 +2,9 @@
   {
     "title": {
       "pt": "Cultura",
-      "en": "Megastructures"
+      "en": ""
     },
-    "img": "/imgs/kammara/triplec/sharp/_subsystems/0.png",
+    "img": "/imgs/kammara/triplec/sharp/_subsystems/Cultura.jpg",
     "text": {
       "pt": [
         "### Rotina",
@@ -28,9 +28,9 @@
   {
     "title": {
       "pt": "Bunniets",
-      "en": "Order"
+      "en": ""
     },
-    "img": "/imgs/kammara/triplec/sharp/_subsystems/1.png",
+    "img": "/imgs/kammara/triplec/sharp/_subsystems/Bunniets.jpg",
     "text": {
       "pt": [
         "### Aparência",
@@ -54,9 +54,9 @@
   {
     "title": {
       "pt": "Geografia",
-      "en": "Permissions"
+      "en": ""
     },
-    "img": "/imgs/kammara/triplec/sharp/_subsystems/2.png",
+    "img": "/imgs/kammara/triplec/sharp/_subsystems/Geografia.jpg",
     "text": {
       "pt": [
         "### Território de luz",
@@ -82,7 +82,7 @@
       "pt": "Energia",
       "en": ""
     },
-    "img": "/imgs/kammara/triplec/sharp/_subsystems/3.png",
+    "img": "/imgs/kammara/triplec/sharp/_subsystems/Energia.jpg",
     "text": {
       "pt": [
         "### MetaFlux",
@@ -106,7 +106,7 @@
       "pt": "Governança",
       "en": ""
     },
-    "img": "/imgs/kammara/triplec/sharp/_subsystems/4.png",
+    "img": "/imgs/kammara/triplec/sharp/_subsystems/Governanca.jpg",
     "text": {
       "pt": [
         "### Conselho de Gerência Sistêmica",
@@ -130,7 +130,7 @@
       "pt": "Perigos",
       "en": ""
     },
-    "img": "/imgs/kammara/triplec/sharp/_subsystems/5.jpg",
+    "img": "/imgs/kammara/triplec/sharp/_subsystems/Perigos.jpg",
     "text": {
       "pt": [
         "### GC Freeze",

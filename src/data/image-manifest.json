@@ -417,18 +417,18 @@
     "kammara": [
       {
         "name": "events bg",
-        "image": "/imgs/kammara/_events_bg_.png"
-      },
-      {
-        "name": "events bg",
         "image": "/imgs/kammara/_events_bg.jpg"
-      },
-      {
-        "name": "events bg1",
-        "image": "/imgs/kammara/_events_bg1.jpg"
       }
     ],
     "kammara/eni4": [
+      {
+        "name": ".rats~imageoptim",
+        "image": "/imgs/kammara/eni4/.rats~imageoptim.png"
+      },
+      {
+        "name": ".VALKON costas~imageoptim",
+        "image": "/imgs/kammara/eni4/.VALKON_costas~imageoptim.png"
+      },
       {
         "name": "aracne 1 costas",
         "image": "/imgs/kammara/eni4/aracne_1_costas.png"
@@ -470,10 +470,6 @@
         "image": "/imgs/kammara/eni4/rats_bravo.png"
       },
       {
-        "name": "rats",
-        "image": "/imgs/kammara/eni4/rats.png"
-      },
-      {
         "name": "REPLION costas",
         "image": "/imgs/kammara/eni4/REPLION_costas.png"
       },
@@ -500,10 +496,6 @@
       {
         "name": "troy",
         "image": "/imgs/kammara/eni4/troy.png"
-      },
-      {
-        "name": "VALKON costas",
-        "image": "/imgs/kammara/eni4/VALKON_costas.png"
       },
       {
         "name": "VALKON virus",
@@ -908,10 +900,6 @@
         "image": "/imgs/kammara/triplec/bean_lado.png"
       },
       {
-        "name": "borboleta azul-gigapixel-standard v2-6x",
-        "image": "/imgs/kammara/triplec/borboleta_azul-gigapixel-standard v2-6x.png"
-      },
-      {
         "name": "borboleta costas",
         "image": "/imgs/kammara/triplec/borboleta_costas.png"
       },
@@ -972,10 +960,6 @@
         "image": "/imgs/kammara/triplec/Shilo-Inseto_frente.png"
       },
       {
-        "name": "three bunniet",
-        "image": "/imgs/kammara/triplec/three_bunniet.png"
-      },
-      {
         "name": "Treezitoide costas",
         "image": "/imgs/kammara/triplec/Treezitoide_costas.png"
       },
@@ -1002,10 +986,6 @@
       {
         "name": "volpita",
         "image": "/imgs/kammara/triplec/volpita.png"
-      },
-      {
-        "name": "ypito rosa",
-        "image": "/imgs/kammara/triplec/ypito_rosa.png"
       },
       {
         "name": "ypito roxo costas",
@@ -1152,10 +1132,6 @@
         "image": "/imgs/kammara/triplec/mesh/mesh14.png"
       },
       {
-        "name": "nibu verde",
-        "image": "/imgs/kammara/triplec/mesh/nibu_verde.png"
-      },
-      {
         "name": "nibu-costas",
         "image": "/imgs/kammara/triplec/mesh/nibu-costas.png"
       },
@@ -1214,27 +1190,11 @@
         "image": "/imgs/kammara/triplec/sharp/tilu_costas.png"
       },
       {
-        "name": "tilu dormindo",
-        "image": "/imgs/kammara/triplec/sharp/tilu_dormindo.png"
-      },
-      {
         "name": "tilu-frente-gigapixel-standard-v2-6x",
         "image": "/imgs/kammara/triplec/sharp/tilu-frente-gigapixel-standard-v2-6x.png"
-      },
-      {
-        "name": "tilu-frente",
-        "image": "/imgs/kammara/triplec/sharp/tilu-frente.png"
-      },
-      {
-        "name": "tilu",
-        "image": "/imgs/kammara/triplec/sharp/tilu.png"
       }
     ],
     "kammara/z1": [
-      {
-        "name": "cast",
-        "image": "/imgs/kammara/z1/cast.png"
-      },
       {
         "name": "emo-1",
         "image": "/imgs/kammara/z1/emo-1.jpg"
@@ -1299,54 +1259,51 @@
   "art": {
     "black": {
       "thumbs": [
-        "/imgs/art/black/_thumb/1_32C78239-A11A-45C4-87ED-520E2E19C58E_1_105_c.jpg",
-        "/imgs/art/black/_thumb/2_DE86BB57-487A-41A3-88E2-F0ABC7938583_1_105_c.jpg",
-        "/imgs/art/black/_thumb/3_6BAC4A41-7327-4F2B-B449-1EEE7C43A71C_1_105_c.jpg",
-        "/imgs/art/black/_thumb/4_32F1755D-D369-48C5-9F06-C572BC62A073_1_102_a.jpg",
-        "/imgs/art/black/_thumb/9E6B7D29-98CC-48BB-A39C-8CBDBC5B6A08_1_105_c.jpg",
-        "/imgs/art/black/_thumb/49ECFAE1-2380-485A-A86A-8F6CECFDC342_1_105_c.jpg",
-        "/imgs/art/black/_thumb/74B91A77-D4CC-4A23-BFE8-6D25EC1733F3_1_105_c.jpg",
-        "/imgs/art/black/_thumb/094DDD20-5A18-40D0-8E14-FBB6480C492D_1_201_a.jpg",
-        "/imgs/art/black/_thumb/7688388C-2201-4181-A521-94A4473FE00F_1_201_a.jpg",
-        "/imgs/art/black/_thumb/45594716-B23F-40D2-B6B9-46474FF78A29_1_105_c.jpg",
-        "/imgs/art/black/_thumb/B4B0DF85-A04B-4048-87A2-4E7AB85B892B_1_105_c.jpg",
-        "/imgs/art/black/_thumb/CE3886BE-1CBF-4A3D-8F48-85963C0E01A0_1_105_c.jpg",
-        "/imgs/art/black/_thumb/D8DF32A4-2B04-411C-84EF-F5FDBBC83046_1_105_c.jpg",
-        "/imgs/art/black/_thumb/D96066B2-6DE4-49BF-9910-7D1CFB70D3E1_1_105_c.jpg",
-        "/imgs/art/black/_thumb/DB9842A9-5CC9-4349-BAB9-6F688C9D96EF_1_105_c.jpg",
-        "/imgs/art/black/_thumb/E5777D55-1B80-472B-8D7C-00A1CE304892_1_105_c.jpg",
-        "/imgs/art/black/_thumb/F8C0CE29-8EF1-4D71-A48C-75E57C2162C5_1_105_c.jpg",
-        "/imgs/art/black/_thumb/F6803508-3885-4F4B-A29A-99B06FBB514B_1_201_a.jpg"
+        "/imgs/art/black/_thumb/1-arte.jpg",
+        "/imgs/art/black/_thumb/2-arte.jpg",
+        "/imgs/art/black/_thumb/3-arte.jpg",
+        "/imgs/art/black/_thumb/4-arte.jpg",
+        "/imgs/art/black/_thumb/5-arte.jpg",
+        "/imgs/art/black/_thumb/6-arte.jpg",
+        "/imgs/art/black/_thumb/7-arte.jpg",
+        "/imgs/art/black/_thumb/8-arte.jpg",
+        "/imgs/art/black/_thumb/9-arte.jpg",
+        "/imgs/art/black/_thumb/10-arte.jpg",
+        "/imgs/art/black/_thumb/11-arte.jpg",
+        "/imgs/art/black/_thumb/12-arte.jpg",
+        "/imgs/art/black/_thumb/13-arte.jpg",
+        "/imgs/art/black/_thumb/14-arte.jpg",
+        "/imgs/art/black/_thumb/15-arte.jpg",
+        "/imgs/art/black/_thumb/16-arte.jpg",
+        "/imgs/art/black/_thumb/17-arte.jpg",
+        "/imgs/art/black/_thumb/18-arte.jpg"
       ],
       "full": [
         "/imgs/art/black/1-arte.jpg",
         "/imgs/art/black/2-arte.jpg",
-        "/imgs/art/black/3-arte.jpeg",
-        "/imgs/art/black/4-arte.jpeg",
+        "/imgs/art/black/3-arte.jpg",
+        "/imgs/art/black/4-arte.jpg",
         "/imgs/art/black/5-arte.jpg",
-        "/imgs/art/black/6-arte.jpeg",
-        "/imgs/art/black/7-arte.jpeg",
+        "/imgs/art/black/6-arte.jpg",
+        "/imgs/art/black/7-arte.jpg",
         "/imgs/art/black/8-arte.jpg",
         "/imgs/art/black/9-arte.jpg",
-        "/imgs/art/black/10-arte.jpeg",
-        "/imgs/art/black/11-arte.jpeg",
-        "/imgs/art/black/12-arte.jpeg",
-        "/imgs/art/black/13-arte.jpeg",
-        "/imgs/art/black/14-arte.jpeg",
-        "/imgs/art/black/15-arte.jpeg",
-        "/imgs/art/black/16-arte.jpeg",
-        "/imgs/art/black/17-arte.png",
+        "/imgs/art/black/10-arte.jpg",
+        "/imgs/art/black/11-arte.jpg",
+        "/imgs/art/black/12-arte.jpg",
+        "/imgs/art/black/13-arte.jpg",
+        "/imgs/art/black/14-arte.jpg",
+        "/imgs/art/black/15-arte.jpg",
+        "/imgs/art/black/16-arte.jpg",
+        "/imgs/art/black/17-arte.jpg",
         "/imgs/art/black/18-arte.jpg"
       ]
     },
     "clay": {
       "thumbs": [
-        "/imgs/art/clay/_thumb/8307B6DD-D7F2-4486-BF0B-944FB613EC0A_4_5005_c.jpg",
-        "/imgs/art/clay/_thumb/D8D91F95-CA1A-4964-BB52-FCB075B3FF91_4_5005_c.jpg",
-        "/imgs/art/clay/_thumb/D16F4691-74C3-426A-BB0D-DA1D7BC9D542_4_5005_c.jpg",
+        "/imgs/art/clay/_thumb/colecao.jpg",
         "/imgs/art/clay/_thumb/DSC04267.jpg",
         "/imgs/art/clay/_thumb/DSC04269.jpg",
-        "/imgs/art/clay/_thumb/F68C5852-8F24-47D7-B6C6-FA5B1D644607_1_201_a.jpg",
         "/imgs/art/clay/_thumb/IMG_3099.jpg",
         "/imgs/art/clay/_thumb/IMG_3100.jpg",
         "/imgs/art/clay/_thumb/natcat_dormindo.jpg",
@@ -1355,24 +1312,27 @@
         "/imgs/art/clay/_thumb/rui_merengue_flor.jpg",
         "/imgs/art/clay/_thumb/rui_merengue_morango.jpg",
         "/imgs/art/clay/_thumb/rui_merengue_p1.jpg",
-        "/imgs/art/clay/_thumb/rui_merengue_p4.jpg"
+        "/imgs/art/clay/_thumb/rui_merengue_p4.jpg",
+        "/imgs/art/clay/_thumb/shalun_massinha_1.jpg",
+        "/imgs/art/clay/_thumb/shalun_massinha.jpg",
+        "/imgs/art/clay/_thumb/virus_varios.jpg"
       ],
       "full": [
-        "/imgs/art/clay/8307B6DD-D7F2-4486-BF0B-944FB613EC0A_4_5005_c.jpeg",
-        "/imgs/art/clay/D8D91F95-CA1A-4964-BB52-FCB075B3FF91_4_5005_c.jpeg",
-        "/imgs/art/clay/D16F4691-74C3-426A-BB0D-DA1D7BC9D542_4_5005_c.jpeg",
+        "/imgs/art/clay/colecao.jpg",
         "/imgs/art/clay/DSC04267.JPG",
         "/imgs/art/clay/DSC04269.JPG",
-        "/imgs/art/clay/F68C5852-8F24-47D7-B6C6-FA5B1D644607_1_201_a.jpeg",
-        "/imgs/art/clay/IMG_3099.jpeg",
-        "/imgs/art/clay/IMG_3100.jpeg",
+        "/imgs/art/clay/IMG_3099.jpg",
+        "/imgs/art/clay/IMG_3100.jpg",
         "/imgs/art/clay/natcat_dormindo.jpg",
         "/imgs/art/clay/rui_merengue_2.JPG",
         "/imgs/art/clay/rui_merengue_3.JPG",
         "/imgs/art/clay/rui_merengue_flor.JPG",
         "/imgs/art/clay/rui_merengue_morango.JPG",
         "/imgs/art/clay/rui_merengue_p1.JPG",
-        "/imgs/art/clay/rui_merengue_p4.JPG"
+        "/imgs/art/clay/rui_merengue_p4.JPG",
+        "/imgs/art/clay/shalun_massinha_1.jpg",
+        "/imgs/art/clay/shalun_massinha.jpg",
+        "/imgs/art/clay/virus_varios.jpg"
       ]
     },
     "collections": {
@@ -1381,8 +1341,6 @@
         "/imgs/art/collections/_thumb/Colecao_camaleao.jpg",
         "/imgs/art/collections/_thumb/Colecao_Cats.jpg",
         "/imgs/art/collections/_thumb/Colecao_Dogs.jpg",
-        "/imgs/art/collections/_thumb/Colecao_Miscelania_1.jpg",
-        "/imgs/art/collections/_thumb/Colecao_Miscelania_2.jpg",
         "/imgs/art/collections/_thumb/Colecao_Miscelania.jpg",
         "/imgs/art/collections/_thumb/Colecao_Mouse.jpg",
         "/imgs/art/collections/_thumb/Colecao_NapCat.jpg",
@@ -1394,8 +1352,6 @@
         "/imgs/art/collections/Colecao_camaleao.jpg",
         "/imgs/art/collections/Colecao_Cats.jpg",
         "/imgs/art/collections/Colecao_Dogs.jpg",
-        "/imgs/art/collections/Colecao_Miscelania_1.jpg",
-        "/imgs/art/collections/Colecao_Miscelania_2.jpg",
         "/imgs/art/collections/Colecao_Miscelania.jpg",
         "/imgs/art/collections/Colecao_Mouse.jpg",
         "/imgs/art/collections/Colecao_NapCat.jpg",
@@ -1422,30 +1378,31 @@
         "/imgs/art/croche/_thumb/vaso50_0DE1F62F-809B-4153-BA5C-86D6F006F05C_1_105_c.jpg"
       ],
       "full": [
-        "/imgs/art/croche/1almofada_4_C51B3D10-81DC-406B-A52C-D0D0E84469C9_1_105_c.jpeg",
-        "/imgs/art/croche/2almofada_5_FFCD5E18-27D0-4774-9FBE-58D033BB4EA1_1_105_c.jpeg",
-        "/imgs/art/croche/3bbA681A987-374D-419F-950D-AB822E77D4BD_1_105_c.jpeg",
-        "/imgs/art/croche/4bb_E91299F1-D534-4EF3-B2B8-E09020653842_1_105_c.jpeg",
-        "/imgs/art/croche/7705E301-05B4-47C5-85F5-6FB3E9BB1970_1_105_c.jpeg",
-        "/imgs/art/croche/7758A78C-1A44-4621-B157-F6BB22B32509_1_105_c.jpeg",
-        "/imgs/art/croche/ED5456C8-609E-4FD5-A758-EA37CD2DB304_1_105_c.jpeg",
-        "/imgs/art/croche/mickey1E840FC00-2D7D-4A07-B55F-E43E584781E0_1_105_c.jpeg",
-        "/imgs/art/croche/po_5_po217A7DF4-2D0B-4038-AE15-A801C08B52F9_1_105_c.jpeg",
-        "/imgs/art/croche/puf707CA33C-C712-4C14-B725-971608C187BA_1_201_a.jpeg",
-        "/imgs/art/croche/teABF0BCE9-0539-4FCA-8322-83EB9B76D4CB_1_105_c.jpeg",
-        "/imgs/art/croche/tenisCBE58E60-7A6F-48A8-B9F7-D8F4C7FD7BB1_1_105_c.jpeg",
-        "/imgs/art/croche/vaso9B844291-C672-4AFB-B7CF-654EC8929912_1_105_c.jpeg",
-        "/imgs/art/croche/vaso9BBB7DEA-5AAA-43BC-8D47-52DBAA389AAF_1_201_a.jpeg",
-        "/imgs/art/croche/vaso50_0DE1F62F-809B-4153-BA5C-86D6F006F05C_1_105_c.jpeg"
+        "/imgs/art/croche/1almofada_4_C51B3D10-81DC-406B-A52C-D0D0E84469C9_1_105_c.jpg",
+        "/imgs/art/croche/2almofada_5_FFCD5E18-27D0-4774-9FBE-58D033BB4EA1_1_105_c.jpg",
+        "/imgs/art/croche/3bbA681A987-374D-419F-950D-AB822E77D4BD_1_105_c.jpg",
+        "/imgs/art/croche/4bb_E91299F1-D534-4EF3-B2B8-E09020653842_1_105_c.jpg",
+        "/imgs/art/croche/7705E301-05B4-47C5-85F5-6FB3E9BB1970_1_105_c.jpg",
+        "/imgs/art/croche/7758A78C-1A44-4621-B157-F6BB22B32509_1_105_c.jpg",
+        "/imgs/art/croche/ED5456C8-609E-4FD5-A758-EA37CD2DB304_1_105_c.jpg",
+        "/imgs/art/croche/mickey1E840FC00-2D7D-4A07-B55F-E43E584781E0_1_105_c.jpg",
+        "/imgs/art/croche/po_5_po217A7DF4-2D0B-4038-AE15-A801C08B52F9_1_105_c.jpg",
+        "/imgs/art/croche/puf707CA33C-C712-4C14-B725-971608C187BA_1_201_a.jpg",
+        "/imgs/art/croche/teABF0BCE9-0539-4FCA-8322-83EB9B76D4CB_1_105_c.jpg",
+        "/imgs/art/croche/tenisCBE58E60-7A6F-48A8-B9F7-D8F4C7FD7BB1_1_105_c.jpg",
+        "/imgs/art/croche/vaso9B844291-C672-4AFB-B7CF-654EC8929912_1_105_c.jpg",
+        "/imgs/art/croche/vaso9BBB7DEA-5AAA-43BC-8D47-52DBAA389AAF_1_201_a.jpg",
+        "/imgs/art/croche/vaso50_0DE1F62F-809B-4153-BA5C-86D6F006F05C_1_105_c.jpg"
       ]
     },
     "digital": {
       "thumbs": [
+        "/imgs/art/digital/_thumb/arte.jpg",
         "/imgs/art/digital/_thumb/espiral.jpg",
         "/imgs/art/digital/_thumb/Red.jpg"
       ],
       "full": [
-        "/imgs/art/digital/arte.png",
+        "/imgs/art/digital/arte.jpg",
         "/imgs/art/digital/espiral.jpg",
         "/imgs/art/digital/Red.jpg"
       ]
@@ -1499,9 +1456,7 @@
         "/imgs/art/doodle/_thumb/ratinho.jpg",
         "/imgs/art/doodle/_thumb/simple_mouse.jpg",
         "/imgs/art/doodle/_thumb/squizo_1.jpg",
-        "/imgs/art/doodle/_thumb/squizo_2.jpg",
         "/imgs/art/doodle/_thumb/squizo_3.jpg",
-        "/imgs/art/doodle/_thumb/squizo_4.jpg",
         "/imgs/art/doodle/_thumb/squizo_5.jpg",
         "/imgs/art/doodle/_thumb/taylo_conceito.jpg",
         "/imgs/art/doodle/_thumb/taylo_doodle.jpg",
@@ -1509,116 +1464,104 @@
         "/imgs/art/doodle/_thumb/ypito.jpg"
       ],
       "full": [
-        "/imgs/art/doodle/,miscelania_doodles_4.jpeg",
+        "/imgs/art/doodle/,miscelania_doodles_4.jpg",
         "/imgs/art/doodle/babalina_doodle_2.jpg",
-        "/imgs/art/doodle/babalina_doodle.jpeg",
+        "/imgs/art/doodle/babalina_doodle.jpg",
         "/imgs/art/doodle/bean_1.jpg",
         "/imgs/art/doodle/bears.jpg",
-        "/imgs/art/doodle/bichinho1.jpeg",
-        "/imgs/art/doodle/bichitta_com_laco.jpeg",
+        "/imgs/art/doodle/bichinho1.jpg",
+        "/imgs/art/doodle/bichitta_com_laco.jpg",
         "/imgs/art/doodle/bichitto_1.jpg",
-        "/imgs/art/doodle/bichitto_colorido.jpeg",
+        "/imgs/art/doodle/bichitto_colorido.jpg",
         "/imgs/art/doodle/bird_1.jpg",
-        "/imgs/art/doodle/bird_2.jpeg",
+        "/imgs/art/doodle/bird_2.jpg",
         "/imgs/art/doodle/bird_3.jpg",
-        "/imgs/art/doodle/birds_3.jpeg",
-        "/imgs/art/doodle/bolha_rato_bola_e_familia.jpeg",
+        "/imgs/art/doodle/birds_3.jpg",
+        "/imgs/art/doodle/bolha_rato_bola_e_familia.jpg",
         "/imgs/art/doodle/bolha_rato_bola.jpg",
         "/imgs/art/doodle/bunniet_doodle.jpg",
-        "/imgs/art/doodle/cats.jpeg",
-        "/imgs/art/doodle/Charming_dog.jpeg",
+        "/imgs/art/doodle/cats.jpg",
+        "/imgs/art/doodle/Charming_dog.jpg",
         "/imgs/art/doodle/chmurka_1.jpg",
-        "/imgs/art/doodle/chmurka_2.jpeg",
-        "/imgs/art/doodle/CoCoders_devs.jpeg",
+        "/imgs/art/doodle/chmurka_2.jpg",
+        "/imgs/art/doodle/CoCoders_devs.jpg",
         "/imgs/art/doodle/curioso.jpg",
         "/imgs/art/doodle/dog.jpg",
-        "/imgs/art/doodle/dogs_mouse.jpeg",
-        "/imgs/art/doodle/eduardo_doodle.jpeg",
+        "/imgs/art/doodle/dogs_mouse.jpg",
+        "/imgs/art/doodle/eduardo_doodle.jpg",
         "/imgs/art/doodle/familia.jpg",
         "/imgs/art/doodle/fox.jpg",
         "/imgs/art/doodle/fuinha.jpg",
-        "/imgs/art/doodle/miscelania_doodles_2.jpeg",
-        "/imgs/art/doodle/miscelania_doodles_3.jpeg",
-        "/imgs/art/doodle/miscelania_doodles_4.jpeg",
+        "/imgs/art/doodle/miscelania_doodles_2.jpg",
+        "/imgs/art/doodle/miscelania_doodles_3.jpg",
+        "/imgs/art/doodle/miscelania_doodles_4.jpg",
         "/imgs/art/doodle/miscelania_doodles_5.jpg",
         "/imgs/art/doodle/miscelania_doodles_6.jpg",
         "/imgs/art/doodle/miscelania_doodles_7.jpg",
         "/imgs/art/doodle/miscelania_doodles_8.jpg",
         "/imgs/art/doodle/miscelania_doodles_9.jpg",
         "/imgs/art/doodle/miscelania_doodles_11.jpg",
-        "/imgs/art/doodle/miscelania_doodles.jpeg",
+        "/imgs/art/doodle/miscelania_doodles.jpg",
         "/imgs/art/doodle/pia_2.jpg",
         "/imgs/art/doodle/pia.jpg",
-        "/imgs/art/doodle/pontinho.jpeg",
-        "/imgs/art/doodle/raposa_bruxo.jpeg",
+        "/imgs/art/doodle/pontinho.jpg",
+        "/imgs/art/doodle/raposa_bruxo.jpg",
         "/imgs/art/doodle/raposa.jpg",
         "/imgs/art/doodle/raposinhas.jpg",
-        "/imgs/art/doodle/ratinho.jpeg",
         "/imgs/art/doodle/ratinho.jpg",
-        "/imgs/art/doodle/simple_mouse.jpeg",
-        "/imgs/art/doodle/squizo_1.jpeg",
-        "/imgs/art/doodle/squizo_2.jpg",
-        "/imgs/art/doodle/squizo_3.jpeg",
-        "/imgs/art/doodle/squizo_4.jpg",
-        "/imgs/art/doodle/squizo_5.jpeg",
-        "/imgs/art/doodle/taylo_conceito.jpeg",
-        "/imgs/art/doodle/taylo_doodle.jpeg",
+        "/imgs/art/doodle/simple_mouse.jpg",
+        "/imgs/art/doodle/squizo_1.jpg",
+        "/imgs/art/doodle/squizo_3.jpg",
+        "/imgs/art/doodle/squizo_5.jpg",
+        "/imgs/art/doodle/taylo_conceito.jpg",
+        "/imgs/art/doodle/taylo_doodle.jpg",
         "/imgs/art/doodle/virus_doodle.jpg",
         "/imgs/art/doodle/ypito.jpg"
       ]
     },
     "fimo": {
       "thumbs": [
-        "/imgs/art/fimo/_thumb/1D1884BE7-7D39-4C86-8A0B-95AC736B5814_1_105_c.jpg",
-        "/imgs/art/fimo/_thumb/2CCFFCDBE-F009-4729-98A5-BD36CCFCC30A_1_201_a.jpg",
-        "/imgs/art/fimo/_thumb/2Pitu.jpg",
-        "/imgs/art/fimo/_thumb/A445D241-7271-4575-99BA-85B99A239B6A_1_105_c.jpg",
-        "/imgs/art/fimo/_thumb/AD21FF83-881A-4B28-9C0E-9B658282F262_1_201_a.jpg",
         "/imgs/art/fimo/_thumb/Anjo.jpg",
         "/imgs/art/fimo/_thumb/Candy.jpg",
         "/imgs/art/fimo/_thumb/CheioDeBolinha.jpg",
         "/imgs/art/fimo/_thumb/Degrade.jpg",
         "/imgs/art/fimo/_thumb/Leep.jpg",
-        "/imgs/art/fimo/_thumb/Oli.jpg",
-        "/imgs/art/fimo/_thumb/zD9450336-B883-40F3-B5D0-74786472DA7E_1_201_a.jpg"
+        "/imgs/art/fimo/_thumb/olivia.jpg",
+        "/imgs/art/fimo/_thumb/passarinho.jpg",
+        "/imgs/art/fimo/_thumb/passaro.jpg",
+        "/imgs/art/fimo/_thumb/Peixe.jpg",
+        "/imgs/art/fimo/_thumb/pitu.jpg",
+        "/imgs/art/fimo/_thumb/RuiMerengue.jpg",
+        "/imgs/art/fimo/_thumb/Snake.jpg"
       ],
       "full": [
-        "/imgs/art/fimo/1D1884BE7-7D39-4C86-8A0B-95AC736B5814_1_105_c.jpeg",
-        "/imgs/art/fimo/2CCFFCDBE-F009-4729-98A5-BD36CCFCC30A_1_201_a.jpg",
-        "/imgs/art/fimo/2Pitu.jpg",
-        "/imgs/art/fimo/A445D241-7271-4575-99BA-85B99A239B6A_1_105_c.jpeg",
-        "/imgs/art/fimo/AD21FF83-881A-4B28-9C0E-9B658282F262_1_201_a.jpg",
         "/imgs/art/fimo/Anjo.jpg",
         "/imgs/art/fimo/Candy.jpg",
         "/imgs/art/fimo/CheioDeBolinha.jpg",
         "/imgs/art/fimo/Degrade.jpg",
         "/imgs/art/fimo/Leep.jpg",
-        "/imgs/art/fimo/Oli.jpg",
-        "/imgs/art/fimo/zD9450336-B883-40F3-B5D0-74786472DA7E_1_201_a.jpg"
+        "/imgs/art/fimo/olivia.jpg",
+        "/imgs/art/fimo/passarinho.jpg",
+        "/imgs/art/fimo/passaro.jpg",
+        "/imgs/art/fimo/Peixe.jpg",
+        "/imgs/art/fimo/pitu.jpg",
+        "/imgs/art/fimo/RuiMerengue.jpg",
+        "/imgs/art/fimo/Snake.jpg"
       ]
     },
     "grafite": {
       "thumbs": [
         "/imgs/art/grafite/_thumb/0_E703E356-D3AC-4E33-B426-E568D59E4D23_1_105_c.jpg",
-        "/imgs/art/grafite/_thumb/1_AF7F3207-EDD5-4980-B6DE-79ABBCA7AF0B_1_201_a.jpg",
         "/imgs/art/grafite/_thumb/2_9E2341CF-46A9-46DC-8948-154CA34BF9F4_1_201_a.jpg",
         "/imgs/art/grafite/_thumb/3_885A87F0-4DBC-4886-9CDA-7E3321D0B17E_1_201_a.jpg",
-        "/imgs/art/grafite/_thumb/4_905696B0-2EC6-4C1A-8618-42D278097457_1_201_a.jpg",
         "/imgs/art/grafite/_thumb/7_240AB6DE-98DB-4E57-AE86-B932843D2959.jpg",
-        "/imgs/art/grafite/_thumb/8_BB9CC9C8-A31F-4522-8E0D-974F532C2847_1_105_c.jpg",
-        "/imgs/art/grafite/_thumb/9_72F649D6-52EC-4822-89C6-4AC576BD243B_1_201_a.jpg",
         "/imgs/art/grafite/_thumb/61_14229301-6A81-4F31-87CB-1F0AF090461A_1_201_a.jpg"
       ],
       "full": [
-        "/imgs/art/grafite/0_E703E356-D3AC-4E33-B426-E568D59E4D23_1_105_c.jpeg",
-        "/imgs/art/grafite/1_AF7F3207-EDD5-4980-B6DE-79ABBCA7AF0B_1_201_a.jpg",
+        "/imgs/art/grafite/0_E703E356-D3AC-4E33-B426-E568D59E4D23_1_105_c.jpg",
         "/imgs/art/grafite/2_9E2341CF-46A9-46DC-8948-154CA34BF9F4_1_201_a.jpg",
         "/imgs/art/grafite/3_885A87F0-4DBC-4886-9CDA-7E3321D0B17E_1_201_a.jpg",
-        "/imgs/art/grafite/4_905696B0-2EC6-4C1A-8618-42D278097457_1_201_a.jpg",
-        "/imgs/art/grafite/5_3D12937F-BEE1-4B79-BDA9-917D28142457_1_201_a.jpg",
-        "/imgs/art/grafite/7_240AB6DE-98DB-4E57-AE86-B932843D2959.jpeg",
-        "/imgs/art/grafite/8_BB9CC9C8-A31F-4522-8E0D-974F532C2847_1_105_c.jpeg",
-        "/imgs/art/grafite/9_72F649D6-52EC-4822-89C6-4AC576BD243B_1_201_a.jpg",
+        "/imgs/art/grafite/7_240AB6DE-98DB-4E57-AE86-B932843D2959.jpg",
         "/imgs/art/grafite/61_14229301-6A81-4F31-87CB-1F0AF090461A_1_201_a.jpg"
       ]
     },
@@ -1626,7 +1569,6 @@
       "thumbs": [
         "/imgs/art/needle/_thumb/9CA923C5-BA0D-41F9-9FFA-4D00F893BCD4_1_201_a.jpg",
         "/imgs/art/needle/_thumb/2016-03-18 22.54.00.jpg",
-        "/imgs/art/needle/_thumb/2016-03-18 22.54.16.jpg",
         "/imgs/art/needle/_thumb/2016-03-18 23.41.16.jpg",
         "/imgs/art/needle/_thumb/687316CF-0146-41A5-BDC2-61AA83F48634_1_105_c.jpg",
         "/imgs/art/needle/_thumb/A7BE845B-0284-4EDD-B025-C97998AE46A3_1_105_c.jpg",
@@ -1638,11 +1580,11 @@
         "/imgs/art/needle/9CA923C5-BA0D-41F9-9FFA-4D00F893BCD4_1_201_a.jpg",
         "/imgs/art/needle/2016-03-18 22.54.00.jpg",
         "/imgs/art/needle/2016-03-18 23.41.16.jpg",
-        "/imgs/art/needle/687316CF-0146-41A5-BDC2-61AA83F48634_1_105_c.jpeg",
-        "/imgs/art/needle/A7BE845B-0284-4EDD-B025-C97998AE46A3_1_105_c.jpeg",
-        "/imgs/art/needle/EE79C5BE-6A4A-4251-9E36-344CB8352DC5_1_105_c.jpeg",
-        "/imgs/art/needle/EE84448E-8C45-408E-92F8-509266003D28_1_105_c.jpeg",
-        "/imgs/art/needle/IMG_3101.jpeg"
+        "/imgs/art/needle/687316CF-0146-41A5-BDC2-61AA83F48634_1_105_c.jpg",
+        "/imgs/art/needle/A7BE845B-0284-4EDD-B025-C97998AE46A3_1_105_c.jpg",
+        "/imgs/art/needle/EE79C5BE-6A4A-4251-9E36-344CB8352DC5_1_105_c.jpg",
+        "/imgs/art/needle/EE84448E-8C45-408E-92F8-509266003D28_1_105_c.jpg",
+        "/imgs/art/needle/IMG_3101.jpg"
       ]
     }
   },
@@ -1682,7 +1624,7 @@
       },
       {
         "name": "Palacio Node-0-Interior",
-        "image": "/imgs/kammara/eni4/_scenes/9_Palacio_Node-0-Interior.png"
+        "image": "/imgs/kammara/eni4/_scenes/9_Palacio_Node-0-Interior.jpg"
       },
       {
         "name": "camara node-0 entrada",
@@ -1744,15 +1686,15 @@
     "kammara/lunnp1": [
       {
         "name": "cena crianca brincando",
-        "image": "/imgs/kammara/lunnp1/_scenes/cena_crianca_brincando.png"
+        "image": "/imgs/kammara/lunnp1/_scenes/cena_crianca_brincando.jpg"
       },
       {
-        "name": "Erú'Rin e Lúm'Esha plantando",
-        "image": "/imgs/kammara/lunnp1/_scenes/Erú'Rin_e_Lúm'Esha_plantando.png"
+        "name": "EruRin e LumEsha plantando",
+        "image": "/imgs/kammara/lunnp1/_scenes/EruRin_e_LumEsha_plantando.jpg"
       },
       {
-        "name": "Ná'Lum pequenas esferas que flutuam",
-        "image": "/imgs/kammara/lunnp1/_scenes/Ná'Lum_pequenas_esferas_que flutuam.jpg"
+        "name": "NaLum pequenas esferas que flutuam",
+        "image": "/imgs/kammara/lunnp1/_scenes/NaLum_pequenas_esferas_que flutuam.jpg"
       },
       {
         "name": "regiao EXTERMO NORTE",
@@ -1798,7 +1740,7 @@
       },
       {
         "name": "Colina Central",
-        "image": "/imgs/kammara/orfv/_scenes/2Colina_Central.png"
+        "image": "/imgs/kammara/orfv/_scenes/2Colina_Central.jpg"
       },
       {
         "name": "Iren Kor Vila Central",
@@ -1851,8 +1793,8 @@
         "image": "/imgs/kammara/triplec/_scenes/4_Lumesha_visita_LUMA_VAL.jpg"
       },
       {
-        "name": "Erú’Rin com SELKA RIN",
-        "image": "/imgs/kammara/triplec/_scenes/5Erú’Rin_com_SELKA_RIN.jpg"
+        "name": "Erú’Rin com SELKA RIN",
+        "image": "/imgs/kammara/triplec/_scenes/5Erú’Rin_com_SELKA_RIN.jpg"
       },
       {
         "name": "Cshift portal",
@@ -1882,7 +1824,7 @@
       },
       {
         "name": "malloc mina cshift",
-        "image": "/imgs/kammara/triplec/malloc/_scenes/4malloc_mina_cshift.png"
+        "image": "/imgs/kammara/triplec/malloc/_scenes/4malloc_mina_cshift.jpg"
       },
       {
         "name": "hepa regiao 1",
@@ -1933,12 +1875,12 @@
         "image": "/imgs/kammara/triplec/sharp/_scenes/3praca_central.jpg"
       },
       {
-        "name": "Câmara de Permissão ativando cshift",
-        "image": "/imgs/kammara/triplec/sharp/_scenes/4Câmara de Permissão_ativando_cshift.jpg"
+        "name": "Câmara de Permissão ativando cshift",
+        "image": "/imgs/kammara/triplec/sharp/_scenes/4Câmara de Permissão_ativando_cshift.jpg"
       },
       {
-        "name": "Câmara de Permissão posicao defesa",
-        "image": "/imgs/kammara/triplec/sharp/_scenes/5Câmara de Permissão_posicao_defesa.jpg"
+        "name": "Câmara de Permissão posicao defesa",
+        "image": "/imgs/kammara/triplec/sharp/_scenes/5Câmara de Permissão_posicao_defesa.jpg"
       },
       {
         "name": "plataforma",
@@ -1973,14 +1915,14 @@
     ]
   },
   "kammaraBgs": {
-    "kammara/eni4": "/imgs/kammara/eni4/_bg/imagem_fabrica_com_lixos-gigapixel-cgi-6x.png",
+    "kammara/eni4": "/imgs/kammara/eni4/_bg/imagem_fabrica_com_lixos-gigapixel-cgi-6x.jpg",
     "kammara/gotto": "/imgs/kammara/gotto/_bg/fundo_provisorio.jpg",
-    "kammara/lunnp1": "/imgs/kammara/lunnp1/_bg/regiao_norte.png",
-    "kammara/orfv": "/imgs/kammara/orfv/_bg/vista_longa_orf-v-gigapixel-cgi-6x.png",
-    "kammara/triplec": "/imgs/kammara/triplec/_bg/niulForest.png",
+    "kammara/lunnp1": "/imgs/kammara/lunnp1/_bg/regiao_norte.jpg",
+    "kammara/orfv": "/imgs/kammara/orfv/_bg/vista_longa_orf-v-gigapixel-cgi-6x.jpg",
+    "kammara/triplec": "/imgs/kammara/triplec/_bg/niulForest.jpg",
     "kammara/triplec/malloc": "/imgs/kammara/triplec/malloc/_bg/1_regiao_central_malloc.jpg",
     "kammara/triplec/mesh": "/imgs/kammara/triplec/mesh/_bg/vista_area.jpg",
-    "kammara/triplec/sharp": "/imgs/kammara/triplec/sharp/_bg/area_sharp.png",
-    "kammara/z1": "/imgs/kammara/z1/_bg/estacao_central_z1_alta.png"
+    "kammara/triplec/sharp": "/imgs/kammara/triplec/sharp/_bg/area_sharp.jpg",
+    "kammara/z1": "/imgs/kammara/z1/_bg/estacao_central_z1_alta.jpg"
   }
 }

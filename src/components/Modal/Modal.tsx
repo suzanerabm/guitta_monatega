@@ -102,7 +102,7 @@ export function Modal() {
       <Flex
         direction="column"
         align="center"
-        justify="flex-start"
+        justify="center"
         flex={1}
         px={{ base: 'base', md: '3xl' }}
         pt={{ base: '2rem', md: '1.5rem' }}
@@ -204,7 +204,7 @@ export function Modal() {
             transform: 'scale(1.15)',
           }}
           onClick={prev}
-          fontSize="h1"
+          fontSize="h3"
           fontWeight="light"
           lineHeight={1}
         >
@@ -233,7 +233,7 @@ export function Modal() {
             transform: 'scale(1.15)',
           }}
           onClick={next}
-          fontSize="h1"
+          fontSize="h3"
           fontWeight="light"
           lineHeight={1}
         >

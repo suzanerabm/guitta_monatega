@@ -23,11 +23,11 @@ const IMAGE_EXTS = /\.(png|jpg|jpeg|webp|gif|svg|avif)$/i;
 // "critical" is almost certainly a gigapixel-style upscale that leaked
 // into /public instead of staying as a local master file.
 const TARGETS: Record<string, { ideal: number; critical: number; label: string }> = {
-  _bg:          { ideal: 1.5 * 1024 * 1024, critical: 5 * 1024 * 1024, label: 'background (2400×1500, JPG 82%)' },
-  _scenes:      { ideal:   1 * 1024 * 1024, critical: 3 * 1024 * 1024, label: 'scene (1200×750, JPG 85%)' },
-  _subsystems:  { ideal:   1 * 1024 * 1024, critical: 3 * 1024 * 1024, label: 'subsystem (1600×1000, JPG 85%)' },
-  _thumb:       { ideal: 300 * 1024,        critical: 800 * 1024,      label: 'art thumb (600×400, JPG 80%)' },
-  default:      { ideal: 600 * 1024,        critical: 2 * 1024 * 1024, label: 'character / misc (1200×1200, PNG otim.)' },
+  _bg:          { ideal: 1.5 * 1024 * 1024, critical: 5 * 1024 * 1024, label: 'background (longest side 1920, JPG 82%)' },
+  _scenes:      { ideal:   1 * 1024 * 1024, critical: 3 * 1024 * 1024, label: 'scene (longest side 1200, JPG 82%)' },
+  _subsystems:  { ideal: 1.6 * 1024 * 1024, critical: 4 * 1024 * 1024, label: 'subsystem (longest side 2000, JPG 85%)' },
+  _thumb:       { ideal:  60 * 1024,        critical: 150 * 1024,      label: 'art thumb (longest side 300, JPEG 75%)' },
+  default:      { ideal: 600 * 1024,        critical: 2 * 1024 * 1024, label: 'character / misc' },
 };
 
 interface Entry {
@@ -37,12 +37,16 @@ interface Entry {
   category: keyof typeof TARGETS;
 }
 
+// Folders skipped entirely — local-only backups that never ship to git.
+const IGNORED_DIRS = new Set(['_bkp']);
+
 function walk(dir: string, out: Entry[]) {
   if (!fs.existsSync(dir)) return;
   for (const name of fs.readdirSync(dir)) {
     const full = path.join(dir, name);
     const stat = fs.statSync(full);
     if (stat.isDirectory()) {
+      if (IGNORED_DIRS.has(name)) continue;
       walk(full, out);
       continue;
     }
@@ -93,13 +97,39 @@ entries.sort(sortDesc);
 const totalBytes = entries.reduce((s, e) => s + e.size, 0);
 const critical = entries.filter((e) => e.size > TARGETS[e.category].critical);
 const overIdeal = entries.filter((e) => e.size > TARGETS[e.category].ideal);
-const top30 = entries.slice(0, 30);
+const top30 = overIdeal.slice(0, 30);
 const perFolder = byTopFolder(entries);
 
 const lines: string[] = [];
 lines.push(`# 🖼️  Image weight audit`);
 lines.push('');
 lines.push(`_Generated ${new Date().toISOString().slice(0, 19).replace('T', ' ')}_`);
+lines.push('');
+
+// Pipeline note ------------------------------------------------------------
+lines.push('## Pipeline');
+lines.push('');
+lines.push('Imagens em `public/imgs/` são processadas por 3 scripts em `scripts/`');
+lines.push('(rode tudo com `npm run prepare-art`):');
+lines.push('');
+lines.push('1. **`resize-art-fulls.ts`** — resize in-place via macOS `sips`, normaliza pra `.jpg`.');
+lines.push('   Targets atuais:');
+lines.push('   - `art/<section>/*` → longest side 500, JPG 82');
+lines.push('   - `kammara/**/_scenes/*` → longest side 1200, JPG 82');
+lines.push('   - `kammara/**/_subsystems/*` → longest side 2000, JPG **85** (near-full-width)');
+lines.push('   - `{kammara,bichittos}/**/_bg/*` → longest side 1920, JPG 82');
+lines.push('');
+lines.push('   Após renomear `.png`→`.jpg`, o script reescreve referências em `src/data/**/*.json`');
+lines.push('   pra ficar em sync com o disco. Inclui passada de **reconciliação** que cura refs');
+lines.push('   `.png/.jpeg/.webp/.heic` órfãs trocando por `.jpg` quando o sibling existe.');
+lines.push('');
+lines.push('2. **`generate-thumbs.ts`** — recria `art/<section>/_thumb/*.jpg` longest side 300, JPG 75.');
+lines.push('   Wipa o folder antes de gerar pra remover thumbs órfãos.');
+lines.push('');
+lines.push('3. **`audit-images.ts`** — gera este report. Top 30 só lista arquivos acima do alvo.');
+lines.push('');
+lines.push('**Padrão:** PNG só pra UI / transparência crítica. Arte vai como JPG 82-85% — o sweet');
+lines.push('spot onde o ganho de peso é máximo sem perda visual perceptível.');
 lines.push('');
 
 // Summary ------------------------------------------------------------------
@@ -136,12 +166,16 @@ lines.push('');
 // Top 30 offenders ---------------------------------------------------------
 lines.push('## Top 30 arquivos mais pesados');
 lines.push('');
-lines.push(`| Peso | Classificação | Caminho |`);
-lines.push(`|---|---|---|`);
-for (const e of top30) {
-  const t = TARGETS[e.category];
-  const tag = e.size > t.critical ? '🔴 crítico' : e.size > t.ideal ? '🟠 acima' : '🟢 ok';
-  lines.push(`| ${fmtSize(e.size)} | ${tag} (${t.label}) | \`${e.path}\` |`);
+if (top30.length === 0) {
+  lines.push('_Nenhum arquivo acima do alvo 🎉_');
+} else {
+  lines.push(`| Peso | Classificação | Caminho |`);
+  lines.push(`|---|---|---|`);
+  for (const e of top30) {
+    const t = TARGETS[e.category];
+    const tag = e.size > t.critical ? '🔴 crítico' : '🟠 acima';
+    lines.push(`| ${fmtSize(e.size)} | ${tag} (${t.label}) | \`${e.path}\` |`);
+  }
 }
 lines.push('');
 

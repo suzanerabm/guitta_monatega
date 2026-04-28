@@ -75,7 +75,7 @@ export const palettes: Record<PaletteName, Palette> = {
       textColor: '#c4d4ff',  // parágrafos dentro do painel
       accent: '#c4d4ff',  
       accentAlt: '#c4d4ff',  // texto da pill
-      bgImage: '/imgs/bichittos/_bg/napcat.png',
+      bgImage: '/imgs/bichittos/_bg/napcat.jpg',
       tag: 'Gato · Sonhador',
       panelBg: 'rgb(30, 58, 122, 0.8)',
       // panelBg: '#3b0033',
@@ -94,7 +94,7 @@ export const palettes: Record<PaletteName, Palette> = {
       textColor: '#fece95',
       accent: '#f58020',
       accentAlt: '#fece95',
-      bgImage: '/imgs/bichittos/_bg/zeco.png',
+      bgImage: '/imgs/bichittos/_bg/zeco.jpg',
       tag: 'Hamster · Quintal',
       panelBg: '#592e06',
       // panelBg: 'rgb(245, 128, 32, 0.6)',
@@ -151,7 +151,7 @@ export const palettes: Record<PaletteName, Palette> = {
       textColor: '#edf0f2',
       accent: '#3ae9f2',
       accentAlt: '#83e5ea',
-      bgImage: '/imgs/bichittos/_bg/cheiodebolinha.png',
+      bgImage: '/imgs/bichittos/_bg/cheiodebolinha.jpg',
       tag: 'Elefante · Medroso',
       panelBg: 'rgb(47, 49, 113)',
     },
