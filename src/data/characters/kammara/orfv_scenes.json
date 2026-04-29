@@ -1,0 +1,79 @@
+[
+  {
+    "image": "/imgs/kammara/orfv/_scenes/1vista_Fjorks_Centrais.jpg",
+    "label": {
+      "pt": "vista Fjorks Centrais",
+      "en": "vista Fjorks Centrais"
+    }
+  },
+  {
+    "image": "/imgs/kammara/orfv/_scenes/2Colina_Central.jpg",
+    "label": {
+      "pt": "Colina Central",
+      "en": "Colina Central"
+    }
+  },
+  {
+    "image": "/imgs/kammara/orfv/_scenes/3Iren_Kor_Vila_Central.jpg",
+    "label": {
+      "pt": "Iren Kor Vila Central",
+      "en": "Iren Kor Vila Central"
+    }
+  },
+  {
+    "image": "/imgs/kammara/orfv/_scenes/4Vila_Central.jpg",
+    "label": {
+      "pt": "Vila Central",
+      "en": "Vila Central"
+    }
+  },
+  {
+    "image": "/imgs/kammara/orfv/_scenes/5Vila_Leste.jpg",
+    "label": {
+      "pt": "Vila Leste",
+      "en": "Vila Leste"
+    }
+  },
+  {
+    "image": "/imgs/kammara/orfv/_scenes/6Maelik_Fjorks_Oeste.jpg",
+    "label": {
+      "pt": "Maelik Fjorks Oeste",
+      "en": "Maelik Fjorks Oeste"
+    }
+  },
+  {
+    "image": "/imgs/kammara/orfv/_scenes/7vila_norte.jpg",
+    "label": {
+      "pt": "vila norte",
+      "en": "vila norte"
+    }
+  },
+  {
+    "image": "/imgs/kammara/orfv/_scenes/8Ceu_em_orf-v.jpg",
+    "label": {
+      "pt": "Ceu em orf-v",
+      "en": "Ceu em orf-v"
+    }
+  },
+  {
+    "image": "/imgs/kammara/orfv/_scenes/9noite_em_orfv.jpg",
+    "label": {
+      "pt": "noite em orfv",
+      "en": "noite em orfv"
+    }
+  },
+  {
+    "image": "/imgs/kammara/orfv/_scenes/10regiao_sul_deserta.jpg",
+    "label": {
+      "pt": "regiao sul deserta",
+      "en": "regiao sul deserta"
+    }
+  },
+  {
+    "image": "/imgs/kammara/orfv/_scenes/11regiao_sul_deserta.jpg",
+    "label": {
+      "pt": "regiao sul deserta",
+      "en": "regiao sul deserta"
+    }
+  }
+]

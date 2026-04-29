@@ -1,0 +1,44 @@
+[
+  {
+    "image": "/imgs/kammara/triplec/sharp/_scenes/1regiao_sharp.jpg",
+    "label": {
+      "pt": "regiao sharp",
+      "en": "regiao sharp"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/sharp/_scenes/3praca_central.jpg",
+    "label": {
+      "pt": "praca central",
+      "en": "praca central"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/sharp/_scenes/4Camara-de-Permissao_ativando_cshift.jpg",
+    "label": {
+      "pt": "Camara-de-Permissao ativando cshift",
+      "en": "Camara-de-Permissao ativando cshift"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/sharp/_scenes/5Camara-de-Permissao_posicao_defesa.jpg",
+    "label": {
+      "pt": "Camara-de-Permissao posicao defesa",
+      "en": "Camara-de-Permissao posicao defesa"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/sharp/_scenes/6plataforma.jpg",
+    "label": {
+      "pt": "plataforma",
+      "en": "plataforma"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/sharp/_scenes/7Vista_panoramica.jpg",
+    "label": {
+      "pt": "Vista panoramica",
+      "en": "Vista panoramica"
+    }
+  }
+]

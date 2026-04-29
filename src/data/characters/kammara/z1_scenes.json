@@ -1,0 +1,44 @@
+[
+  {
+    "image": "/imgs/kammara/z1/_scenes/area_interna_z1.jpg",
+    "label": {
+      "pt": "area interna z1",
+      "en": "area interna z1"
+    }
+  },
+  {
+    "image": "/imgs/kammara/z1/_scenes/area_interna.jpg",
+    "label": {
+      "pt": "area interna",
+      "en": "area interna"
+    }
+  },
+  {
+    "image": "/imgs/kammara/z1/_scenes/area_interna1.jpg",
+    "label": {
+      "pt": "area interna1",
+      "en": "area interna1"
+    }
+  },
+  {
+    "image": "/imgs/kammara/z1/_scenes/praca_central.jpg",
+    "label": {
+      "pt": "praca central",
+      "en": "praca central"
+    }
+  },
+  {
+    "image": "/imgs/kammara/z1/_scenes/regiao_1.jpg",
+    "label": {
+      "pt": "regiao 1",
+      "en": "regiao 1"
+    }
+  },
+  {
+    "image": "/imgs/kammara/z1/_scenes/transporte_coletivo.jpg",
+    "label": {
+      "pt": "transporte coletivo",
+      "en": "transporte coletivo"
+    }
+  }
+]

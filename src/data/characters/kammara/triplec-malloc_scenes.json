@@ -1,0 +1,72 @@
+[
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/1_vila_principal.jpg",
+    "label": {
+      "pt": "vila principal",
+      "en": "vila principal"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/1portex_camada.jpg",
+    "label": {
+      "pt": "portex camada",
+      "en": "portex camada"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/2portex_camada_vista_cima.jpg",
+    "label": {
+      "pt": "portex camada vista cima",
+      "en": "portex camada vista cima"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/3datex_camada.jpg",
+    "label": {
+      "pt": "datex camada",
+      "en": "datex camada"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/4datara_camada.jpg",
+    "label": {
+      "pt": "datara camada",
+      "en": "datara camada"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/4malloc_mina_cshift.jpg",
+    "label": {
+      "pt": "malloc mina cshift",
+      "en": "malloc mina cshift"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/5hepa_regiao_1.jpg",
+    "label": {
+      "pt": "hepa regiao 1",
+      "en": "hepa regiao 1"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/6malloc_camadas_regiao2.jpg",
+    "label": {
+      "pt": "malloc camadas regiao2",
+      "en": "malloc camadas regiao2"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/7hepa_regiao2.jpg",
+    "label": {
+      "pt": "hepa regiao2",
+      "en": "hepa regiao2"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/9lumesha_visita_Luma_Val.jpg",
+    "label": {
+      "pt": "lumesha visita Luma Val",
+      "en": "lumesha visita Luma Val"
+    }
+  }
+]

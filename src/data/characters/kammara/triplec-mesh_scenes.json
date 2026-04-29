@@ -1,0 +1,37 @@
+[
+  {
+    "image": "/imgs/kammara/triplec/mesh/_scenes/1vista_area_vila_central.jpg",
+    "label": {
+      "pt": "vista area vila central",
+      "en": "vista area vila central"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/mesh/_scenes/2vila_central.jpg",
+    "label": {
+      "pt": "vila central",
+      "en": "vila central"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/mesh/_scenes/KAEL_TORIN_ativando_Cshift_vista_aerea.jpg",
+    "label": {
+      "pt": "KAEL TORIN ativando Cshift vista aerea",
+      "en": "KAEL TORIN ativando Cshift vista aerea"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/mesh/_scenes/KAEL_TORIN_ativando_Cshift.jpg",
+    "label": {
+      "pt": "KAEL TORIN ativando Cshift",
+      "en": "KAEL TORIN ativando Cshift"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/mesh/_scenes/Niul_forest.jpg",
+    "label": {
+      "pt": "Niul forest",
+      "en": "Niul forest"
+    }
+  }
+]

@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import {
   getCharacters,
-  getScenes,
   getBooks,
   getBookPages,
   getKammaraBg,
 } from '@/lib/images';
-import { getWorldSubsystemImages } from '@/data/characters/kammara/_worldData';
+import { getWorldSubsystemImages, getWorldScenes } from '@/data/characters/kammara/_worldData';
+import type { Locale } from '@/lib/characters';
 import { KammaraClient } from './KammaraClient';
 
 export async function generateMetadata({
@@ -33,12 +33,13 @@ export default async function KammaraPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const loc = locale as Locale;
 
   const worlds = WORLD_IDS.map((id) => {
     const base = {
       id,
       chars: getCharacters(`kammara/${id}`),
-      scenes: getScenes(`kammara/${id}`),
+      scenes: getWorldScenes(id, loc),
       bgImage: getKammaraBg(`kammara/${id}`),
       subsystemImages: getWorldSubsystemImages(id),
     };
@@ -51,7 +52,7 @@ export default async function KammaraPage({
           {
             id: regionId,
             chars: getCharacters(`kammara/triplec/${regionId}`),
-            scenes: getScenes(`kammara/triplec/${regionId}`),
+            scenes: getWorldScenes(`triplec-${regionId}`, loc),
             bgImage: getKammaraBg(`kammara/triplec/${regionId}`),
             subsystemImages: getWorldSubsystemImages(`triplec-${regionId}`),
           },

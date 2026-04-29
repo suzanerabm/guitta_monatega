@@ -2,22 +2,30 @@ import type { Locale } from '@/lib/characters';
 
 import eni4Story from './eni4_story.json';
 import eni4Subs from './eni4_subsystems.json';
+import eni4Scenes from './eni4_scenes.json';
 import gottoStory from './gotto_story.json';
 import gottoSubs from './gotto_subsystems.json';
 import lunnp1Story from './lunnp1_story.json';
 import lunnp1Subs from './lunnp1_subsystems.json';
+import lunnp1Scenes from './lunnp1_scenes.json';
 import orfvStory from './orfv_story.json';
 import orfvSubs from './orfv_subsystems.json';
+import orfvScenes from './orfv_scenes.json';
 import triplecStory from './triplec_story.json';
 import triplecSubs from './triplec_subsystems.json';
+import triplecScenes from './triplec_scenes.json';
 import triplecMallocStory from './triplec-malloc_story.json';
 import triplecMallocSubs from './triplec-malloc_subsystems.json';
+import triplecMallocScenes from './triplec-malloc_scenes.json';
 import triplecMeshStory from './triplec-mesh_story.json';
 import triplecMeshSubs from './triplec-mesh_subsystems.json';
+import triplecMeshScenes from './triplec-mesh_scenes.json';
 import triplecSharpStory from './triplec-sharp_story.json';
 import triplecSharpSubs from './triplec-sharp_subsystems.json';
+import triplecSharpScenes from './triplec-sharp_scenes.json';
 import z1Story from './z1_story.json';
 import z1Subs from './z1_subsystems.json';
+import z1Scenes from './z1_scenes.json';
 
 type Bilingual<T> = { pt: T; en: T };
 
@@ -37,6 +45,13 @@ export interface WorldSubsystem {
    */
   img?: string;
   text: Bilingual<string[]>;
+}
+
+export interface WorldScene {
+  /** Image path relative to /public (e.g. "/imgs/kammara/lunnp1/_scenes/foo.jpg"). */
+  image: string;
+  /** Curated label per locale — replaces filename-derived names + word dictionary. */
+  label: Bilingual<string>;
 }
 
 const STORIES: Record<string, WorldStory> = {
@@ -61,6 +76,17 @@ const SUBSYSTEMS: Record<string, WorldSubsystem[]> = {
   'triplec-mesh': triplecMeshSubs as WorldSubsystem[],
   'triplec-sharp': triplecSharpSubs as WorldSubsystem[],
   z1: z1Subs as WorldSubsystem[],
+};
+
+const SCENES: Record<string, WorldScene[]> = {
+  eni4: eni4Scenes as WorldScene[],
+  lunnp1: lunnp1Scenes as WorldScene[],
+  orfv: orfvScenes as WorldScene[],
+  triplec: triplecScenes as WorldScene[],
+  'triplec-malloc': triplecMallocScenes as WorldScene[],
+  'triplec-mesh': triplecMeshScenes as WorldScene[],
+  'triplec-sharp': triplecSharpScenes as WorldScene[],
+  z1: z1Scenes as WorldScene[],
 };
 
 export function getWorldName(worldId: string, locale: Locale): string {
@@ -122,4 +148,22 @@ export function getWorldSubsystemImages(worldId: string): (string | null)[] {
   const subs = SUBSYSTEMS[worldId];
   if (!subs) return [];
   return subs.map((s) => (s.img && s.img.trim() ? s.img : null));
+}
+
+/**
+ * Returns the curated scene list for a world, with the label resolved
+ * to the requested locale. Replaces the legacy manifest + word
+ * dictionary path — labels live next to the images they describe in
+ * <world>_scenes.json.
+ */
+export function getWorldScenes(
+  worldId: string,
+  locale: Locale,
+): { name: string; image: string }[] {
+  const scenes = SCENES[worldId];
+  if (!scenes) return [];
+  return scenes.map((s) => ({
+    image: s.image,
+    name: s.label[locale]?.trim() || s.label.pt || '',
+  }));
 }

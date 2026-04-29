@@ -1,0 +1,37 @@
+[
+  {
+    "image": "/imgs/kammara/triplec/_scenes/1_niul_Forest.jpg",
+    "label": {
+      "pt": "niul Forest",
+      "en": "niul Forest"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/_scenes/2_niul_Forest.jpg",
+    "label": {
+      "pt": "niul Forest",
+      "en": "niul Forest"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/_scenes/4_Lumesha_visita_LUMA_VAL.jpg",
+    "label": {
+      "pt": "Lumesha visita LUMA VAL",
+      "en": "Lumesha visita LUMA VAL"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/_scenes/5EruRin_com_SELKA_RIN.jpg",
+    "label": {
+      "pt": "EruRin com SELKA RIN",
+      "en": "EruRin com SELKA RIN"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/_scenes/6Cshift_portal.jpg",
+    "label": {
+      "pt": "Cshift portal",
+      "en": "Cshift portal"
+    }
+  }
+]

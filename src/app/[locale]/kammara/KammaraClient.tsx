@@ -759,10 +759,7 @@ function WorldSection({
         {/* Side column inside the banner: KammaraSceneCollage. */}
         {w.scenes.length > 0 && (
           <KammaraSceneCollage
-            scenes={w.scenes.map((s) => ({
-              ...s,
-              name: translateName(s.name, words),
-            }))}
+            scenes={w.scenes}
             color={palette.colors[0]}
             darkColor={palette.dark}
             modalTextColor={palette.text}
@@ -1002,10 +999,7 @@ function TriplecRegionSection({
       >
         {region.scenes.length > 0 && (
           <SceneStrip
-            scenes={region.scenes.map((s) => ({
-              ...s,
-              name: translateName(s.name, words),
-            }))}
+            scenes={region.scenes}
             arrowColor={regionColor}
             accentColor={regionColor}
             darkColor={regionPalette.dark}
