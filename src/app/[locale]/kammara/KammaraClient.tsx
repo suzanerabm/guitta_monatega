@@ -105,11 +105,6 @@ const WORLD_COLOR_INDICES: Record<
   gotto: { name: 0, text: 2, title: 1, label: 5 },
 };
 
-/** Per-world bgOpacity override. orfv is dimmer; others default. */
-const WORLD_BG_OPACITY: Partial<Record<WorldId, number>> = {
-  orfv: 0.4,
-};
-
 /**
  * Per-world text color override. When a world's background image has tones
  * too similar to the palette's `colors[]`, force an explicit color so text
@@ -732,7 +727,6 @@ function WorldSection({
         titleColor={colors.title}
         textColor={colors.text}
         stripSide
-        bgOpacity={WORLD_BG_OPACITY[w.id] ?? (w.bgImage ? 0.6 : 1)}
         textPanelTitle={name}
         text={renderStory(panelStory, palette.colors[0])}
         renderPanel={({ text: panelText }) => (

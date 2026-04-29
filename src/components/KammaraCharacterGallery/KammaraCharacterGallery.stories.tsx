@@ -95,7 +95,6 @@ export const Lunnp1: Story = {
       color={lunnp1Base.color}
       darkColor={lunnp1Base.darkColor}
       items={lunnp1Chars}
-      perPage={{ base: 1, md: 2, xl: 3 }}
       renderCard={(char) => (
         <Box height={{ base: '620px', md: '680px' }}>
           <KammaraCharacterCard {...char} {...lunnp1Base} />
@@ -120,7 +119,6 @@ export const WithPagination: Story = {
       color={lunnp1Base.color}
       darkColor={lunnp1Base.darkColor}
       items={manyChars}
-      perPage={{ base: 1, md: 2, xl: 3 }}
       renderCard={(char) => (
         <Box height={{ base: '620px', md: '680px' }}>
           <KammaraCharacterCard {...char} {...lunnp1Base} />
@@ -139,7 +137,6 @@ export const TwoColumns: Story = {
       color={lunnp1Base.color}
       darkColor={lunnp1Base.darkColor}
       items={lunnp1Chars}
-      perPage={{ base: 1, md: 2 }}
       renderCard={(char) => (
         <Box height={{ base: '620px', md: '720px' }}>
           <KammaraCharacterCard {...char} {...lunnp1Base} />

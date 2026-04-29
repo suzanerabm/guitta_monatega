@@ -131,7 +131,6 @@ export const Lunnp1: Story = {
     category: 'Planeta',
     subtitle: 'Lar dos Shal\'ún · Água · Imunidade',
     crestGlyph: '⊙',
-    rarity: 4,
     color: '#00e676',
     darkColor: '#002e14',
     midColor: '#003d1a',

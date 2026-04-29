@@ -15,13 +15,13 @@ vi.mock('@/hooks/useScrollHeader', () => ({
 
 describe('Header', () => {
   it('renders site name', () => {
-    render(<Header homePath="/" currentPath="/" />);
+    render(<Header homePath="/" />);
     expect(screen.getByText('guitta')).toBeInTheDocument();
     expect(screen.getByText(/monatega/)).toBeInTheDocument();
   });
 
   it('links to home path', () => {
-    render(<Header homePath="/en" currentPath="/en" />);
+    render(<Header homePath="/en" />);
     const link = screen.getByRole('link', { name: /guitta/i });
     expect(link).toHaveAttribute('href', '/en');
   });

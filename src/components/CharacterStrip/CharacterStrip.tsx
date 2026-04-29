@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { Box, Flex, Heading } from '@chakra-ui/react';
+import { Box, Flex, Heading, chakra } from '@chakra-ui/react';
 import { CharacterCard } from '@/components/CharacterCard';
 import { CharacterInfoPanel } from '@/components/CharacterInfoPanel';
 import { useStripAnimation } from '@/hooks/useStripAnimation';
@@ -227,16 +227,15 @@ export function CharacterStrip({
         padding={showArrows ? '0 0.5rem' : undefined}
       >
         {showArrows && (
-          <Box
+          <chakra.button
             {...arrowBoxProps}
-            as="button"
             type="button"
             aria-label="Previous"
             onClick={() => handleArrow(-1)}
             marginRight="0.5rem"
           >
             ⊷
-          </Box>
+          </chakra.button>
         )}
         <Box ref={stripRef} css={stripCss}>
           <Box
@@ -311,16 +310,15 @@ export function CharacterStrip({
           </Box>
         </Box>
         {showArrows && (
-          <Box
+          <chakra.button
             {...arrowBoxProps}
-            as="button"
             type="button"
             aria-label="Next"
             onClick={() => handleArrow(1)}
             marginLeft="0.5rem"
           >
             ⊶
-          </Box>
+          </chakra.button>
         )}
       </Flex>
     </Box>

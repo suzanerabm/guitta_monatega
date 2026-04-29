@@ -1,1 +1,1 @@
-export { RegionBanner, type RegionBannerProps, type RegionBannerCharacter } from './RegionBanner';
+export { RegionBanner, type RegionBannerProps } from './RegionBanner';

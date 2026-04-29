@@ -132,7 +132,6 @@ export const Lunnp1: Story = {
     crestGlyph: '⊙',
     color: '#00e676',
     darkColor: '#002e14',
-    midColor: '#003d1a',
     tabs: lunnp1Tabs,
   },
 };

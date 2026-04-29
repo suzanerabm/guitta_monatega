@@ -28,7 +28,6 @@ const meta: Meta<typeof RegionDivider> = {
   argTypes: {
     color: { control: 'color' },
     name: { control: 'text' },
-    tagline: { control: 'text' },
     parent: { control: 'text' },
     image: { control: 'text' },
   },
@@ -41,7 +40,6 @@ export const Malloc: Story = {
   args: {
     parent: 'TRIPLEC',
     name: 'malloc',
-    tagline: 'instinto e precisão',
     color: '#22c55e',
   },
 };
@@ -50,7 +48,6 @@ export const Mesh: Story = {
   args: {
     parent: 'TRIPLEC',
     name: 'Mesh',
-    tagline: 'forma e arquitetura',
     color: '#94a3b8',
   },
 };
@@ -59,7 +56,6 @@ export const Sharp: Story = {
   args: {
     parent: 'TRIPLEC',
     name: 'Sharp',
-    tagline: 'controle e gestão',
     color: '#f1f5f9',
   },
 };
@@ -67,16 +63,6 @@ export const Sharp: Story = {
 /** No parent eyebrow label above the name. */
 export const WithoutParent: Story = {
   args: {
-    name: 'Malloc',
-    tagline: 'instinto e precisão',
-    color: '#22c55e',
-  },
-};
-
-/** No tagline below the name. */
-export const WithoutTagline: Story = {
-  args: {
-    parent: 'TRIPLEC',
     name: 'Malloc',
     color: '#22c55e',
   },
@@ -95,7 +81,6 @@ export const WithBackgroundImage: Story = {
   args: {
     parent: 'TRIPLEC',
     name: 'Malloc',
-    tagline: 'instinto e precisão',
     color: '#22c55e',
     image: '/imgs/kammara/triplec/_bg/1_neoForest.jpg',
   },
