@@ -21,6 +21,7 @@ import { SoonPanel } from '@/components/SoonPanel';
 import { BookGallery } from '@/components/BookGallery';
 import { KammaraProgressHeatmap } from '@/components/KammaraProgressHeatmap';
 import kammaraProgressData from '@/data/kammara_progress.json';
+import { isKammaraPublished, kammaraInProgress } from '@/lib/visibility';
 import { KammaraEvents } from '@/components/KammaraEvents';
 import kammaraEventsData from '@/data/kammara_events.json';
 import { useModal } from '@/components/Modal';
@@ -377,10 +378,17 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
     });
   };
 
+  // Mundos com launchValue >= 100 (média das 7 categorias em
+  // kammara_progress.json). Os incompletos aparecem APENAS no heatmap
+  // de "Próximos Planetas" — não no filtro, no menu ou como seção da
+  // página. Quando chegam a 100, somem do heatmap e entram em tudo
+  // o resto.
+  const publishedWorlds = worlds.filter((w) => isKammaraPublished(w.id));
+
   // ── Filter bar ────────────────────────────────────────────────────────
   const filters = [
     { id: 'kammara', label: sectionName, color: palettes.kammara.colors[0], bgColor: palettes.kammara.dark },
-    ...worlds.map((w) => ({
+    ...publishedWorlds.map((w) => ({
       id: w.id,
       label: WORLD_NAMES[w.id],
       color: palettes[w.id as PaletteName].colors[0],
@@ -394,7 +402,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
   // ── Per-world content ──────────────────────────────────────────────────
   // Everything a WorldSection needs is shared here so the sub-component
   // stays small and easy to read below.
-  const perWorldProps = worlds.map((w) => ({
+  const perWorldProps = publishedWorlds.map((w) => ({
     w,
     palette: palettes[w.id as PaletteName],
     colors: getWorldColors(w, palettes[w.id as PaletteName]),
@@ -596,7 +604,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
             title={locale === 'en' ? 'Upcoming Worlds' : 'Próximos Planetas'}
             subline={sectionName}
             categories={kammaraProgressData.categories}
-            planets={kammaraProgressData.planets}
+            planets={kammaraInProgress()}
             locale={locale}
             color={kammaraPalette.colors[0]}
             darkColor={kammaraPalette.dark}

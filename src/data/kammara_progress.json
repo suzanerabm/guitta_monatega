@@ -10,10 +10,75 @@
   ],
   "planets": [
     {
+      "id": "lunnp1",
+      "name": { "pt": "LUNN'P1", "en": "LUNN'P1" },
+      "progress": {
+        "lore": 100,
+        "personagens": 100,
+        "criaturas": 100,
+        "design-conceito": 100,
+        "characters-design": 100,
+        "cenas": 100,
+        "website": 100
+      }
+    },
+    {
+      "id": "eni4",
+      "name": { "pt": "ENI-4Δ", "en": "ENI-4Δ" },
+      "progress": {
+        "lore": 100,
+        "personagens": 100,
+        "criaturas": 100,
+        "design-conceito": 100,
+        "characters-design": 100,
+        "cenas": 100,
+        "website": 100
+      }
+    },
+    {
+      "id": "triplec",
+      "name": { "pt": "TripleC", "en": "TripleC" },
+      "progress": {
+        "lore": 100,
+        "personagens": 100,
+        "criaturas": 100,
+        "design-conceito": 100,
+        "characters-design": 100,
+        "cenas": 100,
+        "website": 100
+      }
+    },
+    {
+      "id": "orfv",
+      "name": { "pt": "ORF-V", "en": "ORF-V" },
+      "progress": {
+        "lore": 100,
+        "personagens": 100,
+        "criaturas": 100,
+        "design-conceito": 100,
+        "characters-design": 100,
+        "cenas": 100,
+        "website": 100
+      }
+    },
+    {
       "id": "z1",
       "name": { "pt": "Z1", "en": "Z1" },
       "progress": {
         "lore": 96,
+        "personagens": 0,
+        "criaturas": 0,
+        "design-conceito": 0,
+        "characters-design": 0,
+        "cenas": 0,
+        "website": 0
+      }
+    },
+    {
+      "id": "gotto",
+      "name": { "pt": "Gotto", "en": "Gotto" },
+      "progress": {
+        "lore": 0,
         "personagens": 0,
         "criaturas": 0,
         "design-conceito": 0,
