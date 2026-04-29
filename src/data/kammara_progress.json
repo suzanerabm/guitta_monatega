@@ -66,8 +66,8 @@
       "name": { "pt": "Z1", "en": "Z1" },
       "progress": {
         "lore": 96,
-        "personagens": 0,
-        "criaturas": 0,
+        "personagens": 35,
+        "criaturas": 10,
         "design-conceito": 0,
         "characters-design": 0,
         "cenas": 0,
@@ -78,8 +78,8 @@
       "id": "gotto",
       "name": { "pt": "Gotto", "en": "Gotto" },
       "progress": {
-        "lore": 0,
-        "personagens": 0,
+        "lore": 95,
+        "personagens": 5,
         "criaturas": 0,
         "design-conceito": 0,
         "characters-design": 0,

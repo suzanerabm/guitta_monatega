@@ -11,6 +11,7 @@ import { CharacterStrip } from '@/components/CharacterStrip';
 import { BookGallery } from '@/components/BookGallery';
 import { useModal } from '@/components/Modal';
 import { palettes, type CreatureId } from '@/theme/palettes';
+import { isBichittoPublished } from '@/lib/visibility';
 import { characterPositions, zecoMascot } from '@/data/bichittos';
 import {
   getCreatureName,
@@ -87,7 +88,7 @@ export function BichittosClient({ data }: Props) {
     { id: 'taylo', label: getCreatureName('taylo', locale as Locale), color: palettes.taylo.colors[0], bgColor: palettes.taylo.dark },
     { id: 'cheiodebolinha', label: getCreatureName('cheiodebolinha', locale as Locale), color: palettes.cheiodebolinha.colors[2], bgColor: palettes.cheiodebolinha.dark },
     { id: 'miscelania', label: getCreatureName('miscelania', locale as Locale), color: palettes.miscelania.colors[2], bgColor: palettes.miscelania.dark },
-  ];
+  ].filter((f) => isBichittoPublished(f.id));
 
   return (
     <>
