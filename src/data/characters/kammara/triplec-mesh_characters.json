@@ -1,0 +1,427 @@
+[
+  {
+    "match": "KAEL_TORIN",
+    "name": {
+      "pt": "Kael Torin",
+      "en": "Kael Torin"
+    },
+    "species": {
+      "pt": "Bunniet",
+      "en": "Bunniet"
+    },
+    "bio": {
+      "pt": "Bunniet de Mesh, postura levemente inclinada para frente como quem está prestes a agir. Pelagem azul-acinzentada com padrões geométricos dourado-esverdeados em movimento lento. Atua onde a arquitetura precisa mudar sem quebrar — reduz excesso, abre variações, reconfigura caminhos sem empobrecer.",
+      "en": "Mesh bunniet, posture slightly forward like someone about to act. Bluish-grey fur with golden-green geometric patterns shifting slowly. Acts where architecture must change without breaking — trims excess, opens variations, reconfigures paths without impoverishing them."
+    },
+    "image": "/imgs/kammara/triplec/mesh/KAEL_TORIN.png",
+    "backImage": "/imgs/kammara/triplec/mesh/KAEL_TORIN_bravo.png",
+    "backTitle": {
+      "pt": "em Conflito",
+      "en": "in Conflict"
+    },
+    "backMeaning": {
+      "pt": "Quando o contexto rompe — Kael Torin mostra a tensão entre refatorar o presente e respeitar o que foi construído.",
+      "en": "When context breaks — Kael Torin reveals the tension between refactoring the present and honoring what was built."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊙⊶⊙⊶",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Mesh",
+          "en": "Mesh"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Modulador",
+          "en": "Modulator"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Arquétipo",
+          "en": "Archetype"
+        },
+        "value": {
+          "pt": "TEMPLATE",
+          "en": "TEMPLATE"
+        }
+      }
+    ]
+  },
+  {
+    "match": "DORAN_KES",
+    "name": {
+      "pt": "Doran Kes",
+      "en": "Doran Kes"
+    },
+    "species": {
+      "pt": "Bunniet",
+      "en": "Bunniet"
+    },
+    "bio": {
+      "pt": "Bunniet de Mesh, postura levemente inclinada para frente como quem está prestes a agir. Pelagem azul-acinzentada com padrões geométricos dourado-esverdeados em movimento lento. Atua onde a arquitetura precisa mudar sem quebrar — reduz excesso, abre variações, reconfigura caminhos sem empobrecer.",
+      "en": "Mesh bunniet, posture slightly forward like someone about to act. Bluish-grey fur with golden-green geometric patterns shifting slowly. Acts where architecture must change without breaking — trims excess, opens variations, reconfigures paths without impoverishing them."
+    },
+    "image": "/imgs/kammara/triplec/mesh/mesh13.png",
+    "backImage": "/imgs/kammara/triplec/mesh/KAEL_TORIN_bravo.png",
+    "backTitle": {
+      "pt": "em Conflito",
+      "en": "in Conflict"
+    },
+    "backMeaning": {
+      "pt": "Quando o contexto rompe — Kael Torin mostra a tensão entre refatorar o presente e respeitar o que foi construído.",
+      "en": "When context breaks — Kael Torin reveals the tension between refactoring the present and honoring what was built."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊙⊶⊙⊶",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Mesh",
+          "en": "Mesh"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Modulador",
+          "en": "Modulator"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Arquétipo",
+          "en": "Archetype"
+        },
+        "value": {
+          "pt": "TEMPLATE",
+          "en": "TEMPLATE"
+        }
+      }
+    ]
+  },
+  {
+    "match": "ELLEN VAR",
+    "name": {
+      "pt": "Ellen Var",
+      "en": "Ellen Var"
+    },
+    "species": {
+      "pt": "Bunniet",
+      "en": "Bunniet"
+    },
+    "bio": {
+      "pt": "Bunniet de Mesh, postura levemente inclinada para frente como quem está prestes a agir. Pelagem azul-acinzentada com padrões geométricos dourado-esverdeados em movimento lento. Atua onde a arquitetura precisa mudar sem quebrar — reduz excesso, abre variações, reconfigura caminhos sem empobrecer.",
+      "en": "Mesh bunniet, posture slightly forward like someone about to act. Bluish-grey fur with golden-green geometric patterns shifting slowly. Acts where architecture must change without breaking — trims excess, opens variations, reconfigures paths without impoverishing them."
+    },
+    "image": "/imgs/kammara/triplec/mesh/mesh12.png",
+    "backImage": "/imgs/kammara/triplec/mesh/KAEL_TORIN_bravo.png",
+    "backTitle": {
+      "pt": "em Conflito",
+      "en": "in Conflict"
+    },
+    "backMeaning": {
+      "pt": "Quando o contexto rompe — Kael Torin mostra a tensão entre refatorar o presente e respeitar o que foi construído.",
+      "en": "When context breaks — Kael Torin reveals the tension between refactoring the present and honoring what was built."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊙⊶⊙⊶",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Mesh",
+          "en": "Mesh"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Modulador",
+          "en": "Modulator"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Arquétipo",
+          "en": "Archetype"
+        },
+        "value": {
+          "pt": "TEMPLATE",
+          "en": "TEMPLATE"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Caracol-Espiral",
+    "name": {
+      "pt": "Fibo",
+      "en": "Fibo"
+    },
+    "species": {
+      "pt": "Fiboide",
+      "en": "Fiboid"
+    },
+    "bio": {
+      "pt": "Caracol lento e geométrico de Mesh. Bunniets observam seu ritmo pra calibrar paciência — quem vai rápido demais sente o tempo errado.",
+      "en": "Slow, geometric snail of Mesh. Bunniets watch its rhythm to calibrate patience — whoever goes too fast feels time wrongly."
+    },
+    "image": "/imgs/kammara/triplec/mesh/caracol-frente.png",
+    "backImage": "/imgs/kammara/triplec/mesh/caracol-costas.png",
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Eu chego enrolando, mas chego.",
+      "en": "I arrive coiling, but I arrive."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Mesh",
+          "en": "Mesh"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Marcador de tempo",
+          "en": "Time-marker"
+        }
+      }
+    ]
+  },
+  {
+    "match": "nibu",
+    "name": {
+      "pt": "Nibu",
+      "en": "Nibu"
+    },
+    "species": {
+      "pt": "Cumulus",
+      "en": "Cumulus"
+    },
+    "bio": {
+      "pt": "Pet doméstico das casas bunniets de Mesh — quietinho, quentinho, esquenta o pé e dá carinho. Companheiro morno, aquecedor afetivo, presença sem barulho.",
+      "en": "Household pet of the Mesh bunniets — quiet, warm, heats the feet and gives affection. Warm companion, cozy warmer, presence without noise."
+    },
+    "image": "/imgs/kammara/triplec/mesh/nibu.png",
+    "backImage": "/imgs/kammara/triplec/mesh/nibu-costas.png",
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Another Side"
+    },
+    "dorsalMeaning": {
+      "pt": "Estou sempre onde precisam de mim.",
+      "en": "I'm always where I'm needed."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Mesh",
+          "en": "Mesh"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Aquecedor afetivo",
+          "en": "Affective warmer"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Cobra-Caracol",
+    "name": {
+      "pt": "Sinnati",
+      "en": "Sinnati"
+    },
+    "species": {
+      "pt": "Sinnati",
+      "en": "Sinnati"
+    },
+    "bio": {
+      "pt": "Serpente branca alongada com cauda em espiral Fibonacci e circuitos verde-esmeralda. Desliza só em curvas exatas.",
+      "en": "Long white serpent with a Fibonacci-spiral tail and emerald-green circuits. Slides only along exact curves."
+    },
+    "image": "/imgs/kammara/triplec/mesh/cobra-frente-gigapixel-standard v2-6x.png",
+    "backImage": "/imgs/kammara/triplec/mesh/cobra-costas.png",
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Sigo a curva exata e ela me leva.",
+      "en": "I follow the exact curve and it carries me."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Mesh",
+          "en": "Mesh"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Conectora curva",
+          "en": "Curve-connector"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Poly",
+    "name": {
+      "pt": "Poly",
+      "en": "Poly"
+    },
+    "species": {
+      "pt": "Polymoide",
+      "en": "Polymoid"
+    },
+    "bio": {
+      "pt": "Pequeno alien branco brincalhão — a tromba está em movimento constante, mudando de forma conforme o que ele quer expressar (espiral, gancho, pincel). ",
+      "en": "Small playful white alien — the trunk is in constant motion, reshaping according to what he wants to express (spiral, hook, brush). "
+    },
+    "image": "/imgs/kammara/triplec/mesh/elefante-frente.png",
+    "backImage": "/imgs/kammara/triplec/mesh/elefante-costas.png",
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Sou eu mesmo em todas as formas. Bunniets aprendem com ele que trocar de forma não é trocar de identidade.",
+      "en": "I am myself in every form. Bunniets learn from him that changing form is not changing identity."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Mesh",
+          "en": "Mesh"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Reorganizador",
+          "en": "Form-reorganizer"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Manoo",
+    "name": {
+      "pt": "Manoo",
+      "en": "Manoo"
+    },
+    "species": {
+      "pt": "Marsupoide",
+      "en": "Marsupoid"
+    },
+    "bio": {
+      "pt": "Marsupial alien rastreador da floresta de Mesh, vive perto das Plumoides. Troca favores com elas: come os ovos que elas botam, e em troca rastreia comida com seu faro apurado.",
+      "en": "Alien marsupial tracker of the Mesh forest, lives near the Plumoides. Trades favors with them: eats the eggs they lay, and in return tracks down food with his sharp sense of smell."
+    },
+    "image": "/imgs/kammara/triplec/mesh/manu-frente.png",
+    "backImage": "/imgs/kammara/triplec/mesh/manu-costas.png",
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Cada cheiro tem um caminho.",
+      "en": "Every scent has a path."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Mesh",
+          "en": "Mesh"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Rastreador",
+          "en": "Tracker"
+        }
+      }
+    ]
+  }
+]

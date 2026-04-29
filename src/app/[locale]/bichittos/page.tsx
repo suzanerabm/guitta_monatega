@@ -10,7 +10,7 @@ export default async function BichittosPage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const creatures = ['napcat', 'zeco', 'taylo', 'miscelania'] as const;
+  const creatures = ['napcat', 'zeco', 'taylo', 'cheiodebolinha', 'miscelania'] as const;
 
   const data = creatures.map((id) => ({
     id,

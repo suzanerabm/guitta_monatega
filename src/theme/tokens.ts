@@ -37,6 +37,9 @@ export const tokens = defineTokens({
     textOverlayStrong: { value: 'rgba(255,255,255,0.85)' },
     textOverlayFaint: { value: 'rgba(255,255,255,0.3)' },
     textOverlayGhost: { value: 'rgba(255,255,255,0.2)' },
+    glyphIdle: { value: 'rgba(255,255,255,0.85)' },
+    glyphHover: { value: 'rgba(255,255,255,0.4)' },
+    glyphDisabled: { value: 'rgba(255,255,255,0.15)' },
     // Bg overlays
     bgOverlay: { value: 'rgba(0,0,0,0.3)' },
     bgOverlayMid: { value: 'rgba(0,0,0,0.4)' },
@@ -63,6 +66,7 @@ export const tokens = defineTokens({
   fonts: {
     body: { value: "'Fira Sans', system-ui, sans-serif" },
     heading: { value: "'Fira Sans', system-ui, sans-serif" },
+    glyph: { value: '"Apple Symbols", "Symbola", "Noto Sans Symbols 2", "Cambria Math", "Segoe UI Symbol", sans-serif' },
   },
   fontSizes: {
     xs: { value: '0.65rem' },
@@ -84,15 +88,20 @@ export const tokens = defineTokens({
     // Escalam juntos mantendo a hierarquia visual fixa em qualquer viewport.
     bannerLabel: { value: 'clamp(0.53rem, 1.06vw, 0.8rem)' }, // ~3x menor que h2
     bannerDesc: { value: 'clamp(0.66rem, 1.33vw, 1rem)' }, // ~4x menor que h2
+    // Número de ordem no canto dos banners da home (1, 2, 3).
+    bannerOrder: { value: '98px' },
     // Hero page label proporcional ao h1 (ratio ~6:1). Escala junto com
     // o título em qualquer viewport.
     heroLabel: { value: 'clamp(0.5rem, 1.33vw, 1rem)' }, // ~6x menor que h1
     h2: { value: 'clamp(2.66rem, 5.31vw, 3.98rem)' }, // 42px → 64px
     h3: { value: '1.3rem' },
     h4: { value: '0.75rem' },
-    label: { value: '0.825rem' },
+    label: { value: 'clamp(0.7rem, 0.72vw, 0.7rem)' },
     section: { value: '1.2rem' },
     soon: { value: '2rem' },
+    glyphH1: { value: '2.4rem' },
+    glyphH2: { value: '1.4rem' },
+    glyphH3: { value: '1.2rem' },
   },
   fontWeights: {
     thin: { value: '100' },

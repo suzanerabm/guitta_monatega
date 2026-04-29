@@ -1,4 +1,4 @@
-import { Box, Heading } from '@chakra-ui/react';
+import { Box, Flex, Heading } from '@chakra-ui/react';
 import type { ReactNode, CSSProperties } from 'react';
 
 interface CreatureCardProps {
@@ -6,6 +6,7 @@ interface CreatureCardProps {
   bannerImage?: string;
   color1?: string;
   color2?: string;
+  adornment?: ReactNode;
   children: ReactNode;
   banner?: ReactNode;
   strip?: ReactNode;
@@ -17,6 +18,7 @@ export function CreatureCard({
   bannerImage,
   color1,
   color2,
+  adornment,
   children,
   banner,
   strip,
@@ -30,31 +32,40 @@ export function CreatureCard({
       <Box
         data-creature
         data-testid={testId}
-        maxW="1000px"
+        maxW="1200px"
         mx="auto"
         px={{ base: '1.5rem', md: '3rem' }}
         pt={{ base: '1.5rem', md: '5rem' }}
         pb={{ base: '1rem', md: '2rem' }}
       >
-        <Heading
-          as="h1"
-          fontSize={{ base: '1.5rem', md: 'h2' }}
-          fontWeight="bold"
-          letterSpacing="tight"
-          mb="1rem"
-          style={nameStyle}
-        >
-          {name}
-        </Heading>
-        <Box
-          fontSize={{ base: '0.9rem', md: 'lg' }}
-          lineHeight={1.7}
-          fontWeight="light"
-          maxW="600px"
-          style={textStyle}
-        >
-          {children}
-        </Box>
+        <Flex gap="0.4rem" align="stretch">
+          {adornment && (
+            <Box flexShrink={0} display="flex" alignItems="flex-start" pt="0.3rem">
+              {adornment}
+            </Box>
+          )}
+          <Box>
+            <Heading
+              as="h1"
+              fontSize={{ base: '1.5rem', md: 'h2' }}
+              fontWeight="bold"
+              letterSpacing="tight"
+              mb="1rem"
+              style={nameStyle}
+            >
+              {name}
+            </Heading>
+            <Box
+              fontSize={{ base: '0.9rem', md: 'lg' }}
+              lineHeight={1.7}
+              fontWeight="light"
+              maxW="600px"
+              style={textStyle}
+            >
+              {children}
+            </Box>
+          </Box>
+        </Flex>
       </Box>
       {banner
         ? banner

@@ -1,9 +1,9 @@
 'use client';
 import { Box, Flex, Text } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import { House, ChevronRight, ArrowLeft } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useChromeTint } from '@/components/ChromeTint';
+import { useScrollHeader } from '@/hooks/useScrollHeader';
 
 export interface BreadcrumbItem {
   label: string;
@@ -14,15 +14,18 @@ interface BreadcrumbProps {
   items: BreadcrumbItem[];
   homePath?: string;
   backLabel?: string;
+  useGlyphs?: boolean;
 }
 
 export function Breadcrumb({
   items,
   homePath = '/',
   backLabel = 'voltar',
+  useGlyphs = false,
 }: BreadcrumbProps) {
   const [headerHeight, setHeaderHeight] = useState(60);
   const { tintColor } = useChromeTint();
+  const { isHidden } = useScrollHeader(80);
 
   // Measure header height dynamically so the breadcrumb sits flush below it
   useEffect(() => {
@@ -64,33 +67,41 @@ export function Breadcrumb({
       bg={tintColor || 'overlayLight'}
       backdropFilter="blur(14px)"
       px={{ base: '1.5rem', md: '3rem' }}
-      py="0.5rem"
+      py="0.05rem"
       display="flex"
       alignItems="center"
       justifyContent="space-between"
       fontSize="0.72rem"
       letterSpacing="0.1em"
       textTransform="lowercase"
-      color={tintColor ? 'rgba(255,255,255,0.6)' : 'inkMuted'}
+      color={tintColor ? 'rgba(255,255,255,0.9)' : 'inkMuted'}
+      transform={isHidden ? 'translateY(-200%)' : 'translateY(0)'}
+      opacity={isHidden ? 0 : 1}
+      pointerEvents={isHidden ? 'none' : 'auto'}
       transition="background 0.4s ease, color 0.4s ease, transform 0.3s ease, opacity 0.3s ease, top 0.3s ease"
     >
       {/* Left: home > current */}
       <Flex align="center" gap="0.35rem">
         <NextLink href={homePath} style={linkStyle}>
-          <House size={14} strokeWidth={1.5} />
-          <span>home</span>
+          {useGlyphs ? (
+            <Box as="span" display="inline-flex" alignItems="center" fontFamily="glyph" lineHeight={1} verticalAlign="middle">
+              <Box as="span" fontSize="glyphH1">⊶</Box>
+              <Box as="span" fontSize="glyphH2">⊙</Box>
+              <Box as="span" fontSize="glyphH1">⊷</Box>
+            </Box>
+          ) : (
+            <span>home</span>
+          )}
         </NextLink>
         {items.map((item, i) => (
           <Flex key={i} align="center" gap="0.35rem">
-            <Box as="span" opacity={0.35} display="inline-flex">
-              <ChevronRight size={12} strokeWidth={1.5} />
-            </Box>
+            <Box as="span" opacity={0.35} marginBottom={useGlyphs ? '5px' : '0'}>›</Box>
             {item.href ? (
               <NextLink href={item.href} style={linkStyle}>
                 {item.label}
               </NextLink>
             ) : (
-              <Text as="span" color="inkSoft">
+              <Text as="span" color={tintColor ? 'white' : 'inkSoft'} marginBottom={useGlyphs ? '5px' : '0'}>
                 {item.label}
               </Text>
             )}
@@ -98,14 +109,27 @@ export function Breadcrumb({
         ))}
       </Flex>
 
-      {/* Right: back arrow */}
+      {/* Right: back */}
       <NextLink
         href={homePath}
         style={linkStyle}
         title={backLabel}
       >
-        <ArrowLeft size={14} strokeWidth={1.5} />
-        <span>{backLabel}</span>
+        {useGlyphs ? (
+          <Box
+            as="span"
+            display="inline-flex"
+            alignItems="center"
+            fontFamily="glyph"
+            fontSize="glyphH1"
+            lineHeight={1}
+            verticalAlign="middle"
+          >
+            ⊷
+          </Box>
+        ) : (
+          <span>{backLabel}</span>
+        )}
       </NextLink>
     </Box>
   );

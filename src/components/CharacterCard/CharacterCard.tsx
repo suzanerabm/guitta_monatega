@@ -11,6 +11,14 @@ interface CharacterCardProps {
   noHoverScale?: boolean;
   cardBg?: string;
   labelColor?: string;
+  mobileColor?: string;
+  /**
+   * When true, the card is locked in its "expanded" state (same scale as
+   * hover) even if the cursor isn't over it. Used when a card is clicked
+   * and the info panel is showing — the visual mirrors hover without
+   * depending on pointer state.
+   */
+  isSelected?: boolean;
   'data-testid'?: string;
 }
 
@@ -29,6 +37,8 @@ export function CharacterCard({
   noHoverScale = false,
   cardBg,
   labelColor,
+  mobileColor,
+  isSelected = false,
   'data-testid': testId,
 }: CharacterCardProps) {
   const wrapperWidth = cardSize + 20;
@@ -68,10 +78,12 @@ export function CharacterCard({
     : transparent
       ? {
           height: sizePx,
-          background: 'transparent',
-          boxShadow: 'none',
+          background: 'rgba(0,0,0,0.3)',
+          backdropFilter: 'blur(8px)',
           outline: '2px solid',
-          outlineColor: 'outlineMid',
+          outlineColor: labelColor || 'outlineMid',
+          outlineOffset: '3px',
+          boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
           borderRadius: '16px',
           aspectRatio: undefined,
           transformOrigin: undefined,
@@ -81,7 +93,7 @@ export function CharacterCard({
           background: bgColor,
           boxShadow: 'cardHover',
           outline: '2px solid',
-          outlineColor: 'outlineStrong',
+          outlineColor: labelColor || 'outlineStrong',
           borderRadius: '16px',
           aspectRatio: undefined,
           transformOrigin: undefined,
@@ -99,14 +111,20 @@ export function CharacterCard({
         }
       : transparent
         ? {
-            transform: 'scale(1.3)',
-            outline: 'none',
+            transform: 'scale(1.2)',
+            zIndex: 30,
           }
         : { transform: 'scale(1.3)' };
 
+  // Selected state: same visuals as hover but applied unconditionally so
+  // the card stays "big" while the info panel is open.
+  const selectedBoxStyles = isSelected ? hoverStyles : undefined;
+
   const nameProps: Record<string, unknown> = {
     textStyle: 'label',
-    color: labelColor ?? 'white',
+    color: mobileColor
+      ? { base: mobileColor, md: labelColor || 'white' }
+      : labelColor || 'white',
     zIndex: 1,
     textShadow: 'labelText',
     textAlign: 'center',
@@ -119,6 +137,11 @@ export function CharacterCard({
       transform: noBorder ? 'translateY(6rem)' : 'translateY(2rem)',
       zIndex: noBorder ? 40 : 1,
     };
+    // Mirror the hover transform when locked as selected.
+    if (isSelected) {
+      nameProps.transform = noBorder ? 'translateY(6rem)' : 'translateY(2rem)';
+      nameProps.zIndex = noBorder ? 40 : 1;
+    }
   }
 
   return (
@@ -130,6 +153,7 @@ export function CharacterCard({
       role="group"
       data-testid={testId}
       data-variant={variants || undefined}
+      data-selected={isSelected || undefined}
       flexShrink={0}
       width={{ base: wrapperWidthPxMobile, md: wrapperWidthPx }}
       display="flex"
@@ -137,7 +161,8 @@ export function CharacterCard({
       alignItems="center"
       gap="0.5rem"
       position="relative"
-      animation={noFloat ? undefined : 'cardFloat 3s ease-in-out infinite'}
+      animation={isSelected || noFloat ? undefined : 'cardFloat 3s ease-in-out infinite'}
+      zIndex={isSelected ? 20 : undefined}
       _hover={{ zIndex: 10 }}
     >
       {showGlow && (
@@ -174,11 +199,16 @@ export function CharacterCard({
         transition="transform 0.25s ease"
         boxShadow={variantStyles.boxShadow}
         outline={variantStyles.outline}
-        outlineColor={variantStyles.outlineColor}
+        outlineColor={
+          mobileColor
+            ? { base: mobileColor, md: variantStyles.outlineColor as string }
+            : variantStyles.outlineColor
+        }
         outlineOffset="3px"
         aspectRatio={variantStyles.aspectRatio}
         transformOrigin={variantStyles.transformOrigin}
         _groupHover={hoverStyles}
+        {...(selectedBoxStyles ?? {})}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img

@@ -4,20 +4,22 @@ import { useStripAnimation } from './useStripAnimation';
 import { useRef } from 'react';
 
 describe('useStripAnimation', () => {
-  it('returns pause and resume functions', () => {
-    const { result } = renderHook(() => {
-      const ref = useRef<HTMLDivElement>(null);
-      return useStripAnimation(ref, { speed: 30, direction: 'left', pauseOnHover: true });
-    });
-    expect(typeof result.current.pause).toBe('function');
-    expect(typeof result.current.resume).toBe('function');
-  });
-
-  it('does not throw when ref is null', () => {
+  it('does not throw when refs are null', () => {
     expect(() => {
       renderHook(() => {
-        const ref = useRef<HTMLDivElement>(null);
-        useStripAnimation(ref, { speed: 30, direction: 'left', pauseOnHover: false });
+        const trackRef = useRef<HTMLDivElement>(null);
+        const wrapperRef = useRef<HTMLDivElement>(null);
+        useStripAnimation(trackRef, { speed: 30, wrapperRef });
+      });
+    }).not.toThrow();
+  });
+
+  it('accepts the paused flag without throwing', () => {
+    expect(() => {
+      renderHook(() => {
+        const trackRef = useRef<HTMLDivElement>(null);
+        const wrapperRef = useRef<HTMLDivElement>(null);
+        useStripAnimation(trackRef, { speed: 30, wrapperRef, paused: true });
       });
     }).not.toThrow();
   });

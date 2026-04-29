@@ -1,0 +1,427 @@
+[
+  {
+    "match": "Luma_Val",
+    "name": {
+      "pt": "Luma Val",
+      "en": "Luma Val"
+    },
+    "species": {
+      "pt": "Bunniet",
+      "en": "Bunniet"
+    },
+    "bio": {
+      "pt": "Bunniet de lógica instintiva, nascida em Datara. Sente as camadas do planeta antes delas tremerem — capta variações de shilo no corpo antes de qualquer instrumento. Avisa, mas não age. Sua presença altera decisões coletivas sem entrar nelas.",
+      "en": "A bunniet of instinctive logic, born in Datara. She senses the planet's layers before they tremble — catching shilo variations in the body before any instrument does. She warns but does not act. Her presence shifts collective decisions without entering them."
+    },
+    "image": "/imgs/kammara/triplec/malloc/Luma_Val.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
+    "attributes": [
+      {
+        "glyph": "•••••",
+        "label": {
+          "pt": "Casta",
+          "en": "Caste"
+        },
+        "value": {
+          "pt": "Koma",
+          "en": "Koma"
+        }
+      },
+      {
+        "glyph": "•⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "malloc",
+          "en": "malloc"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Sentinela",
+          "en": "Sentinel"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Iren_Kor",
+    "name": {
+      "pt": "Iren Kor",
+      "en": "Iren Kor"
+    },
+    "species": {
+      "pt": "Bunniet",
+      "en": "Bunniet"
+    },
+    "bio": {
+      "pt": "Bunniet de estabilidade e registro, nascido em Portex. Valida antes de aceitar qualquer informação. Confia no que permanece estável. Sua presença impõe limite sem precisar de palavras — quando entra num espaço, a conversa muda.",
+      "en": "A bunniet of stability and record, born in Portex. Validates before accepting any information. Trusts what remains steady. His presence imposes boundaries without needing words — when he enters a space, the conversation shifts."
+    },
+    "image": "/imgs/kammara/triplec/malloc/Iren_Kor.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
+    "attributes": [
+      {
+        "glyph": "•••••",
+        "label": {
+          "pt": "Casta",
+          "en": "Caste"
+        },
+        "value": {
+          "pt": "Prae",
+          "en": "Prae"
+        }
+      },
+      {
+        "glyph": "•⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "malloc",
+          "en": "malloc"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Validador",
+          "en": "Validator"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Aion_Var",
+    "name": {
+      "pt": "Aion Var",
+      "en": "Aion Var"
+    },
+    "species": {
+      "pt": "Bunniet",
+      "en": "Bunniet"
+    },
+    "bio": {
+      "pt": "Bunniet nascido em zona de sobreposição instável. Encontra passagem onde outros veem parede. Trânsito contínuo: nem base, nem avanço — caminho. Lê correntes de shilo direto e segue quando o caminho aparece.",
+      "en": "A bunniet born in a zone of unstable overlap. Finds passage where others see a wall. Continuous transit: neither base nor advance — only path. Reads shilo currents directly and moves when the way appears."
+    },
+    "image": "/imgs/kammara/triplec/malloc/Aion_Var.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
+    "attributes": [
+      {
+        "glyph": "•••••",
+        "label": {
+          "pt": "Casta",
+          "en": "Caste"
+        },
+        "value": {
+          "pt": "Runa",
+          "en": "Runa"
+        }
+      },
+      {
+        "glyph": "•⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "malloc",
+          "en": "malloc"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Travessia",
+          "en": "Crossing"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Stelipa",
+    "name": {
+      "pt": "Stelipa",
+      "en": "Stelipa"
+    },
+    "species": {
+      "pt": "Stelipa",
+      "en": "Stelipa"
+    },
+    "bio": {
+      "pt": "Voa em padrões matemáticos fixos pelas runas cristalizadas — cada rota traça uma sequência diferente. Bunniets Aska observam o trajeto pra ler qual instrução está ativa naquele dia. Onde Stelipa pousa, runa brilha mais forte. Não poliniza flores: poliniza runas.",
+      "en": "Flies in fixed mathematical patterns across the crystallised runes — each route traces a different sequence. Aska bunniets watch the trajectory to read which instruction is active that day. Where Stelipa lands, the rune glows brighter. It does not pollinate flowers: it pollinates runes."
+    },
+    "image": "/imgs/kammara/triplec/malloc/borboleta-frente.png",
+    "backImage": "/imgs/kammara/triplec/malloc/borboleta-costas.png",
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Cada ponto que faço é uma equação.",
+      "en": "Every point I trace is an equation."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Malloc",
+          "en": "Malloc"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Mensageira",
+          "en": "Messenger"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Mewlites",
+    "name": {
+      "pt": "Mewlites",
+      "en": "Mewlites"
+    },
+    "species": {
+      "pt": "Mewlites",
+      "en": "Mewlites"
+    },
+    "bio": {
+      "pt": "Seguem shilo, detectam instabilidade, cantam padrões vibratórios, avisam quando uma rota está morrendo. Quando um Cshift falha, os mewlites desaparecem por alguns instantes — comportamento ainda não compreendido.",
+      "en": "They follow shilo, detect instability, sing vibratory patterns, warn when a route is dying. When a Cshift fails, the mewlites vanish for a few moments — behaviour still not understood."
+    },
+    "image": "/imgs/kammara/triplec/malloc/Mewlites_deLado.png",
+    "backImage": "/imgs/kammara/triplec/malloc/Mewlites_costas.png",
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Another Side"
+    },
+    "dorsalMeaning": {
+      "pt": "Eu sou a kemita ainda em movimento.",
+      "en": "I am the kemita still in motion."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Malloc",
+          "en": "Malloc"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Defesa",
+          "en": "Defense"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Trilume",
+    "name": {
+      "pt": "Trilume",
+      "en": "Trilume"
+    },
+    "species": {
+      "pt": "Trilume",
+      "en": "Trilume"
+    },
+    "bio": {
+      "pt": "Insetos translúcidos que se alimentam de microcorrentes de shilo. Marcam caminhos íntegros, dispersam-se quando há conflito de camadas, servem de guia natural para bunniets. Sabem instintivamente quando um percurso está prestes a colapsar.",
+      "en": "Translucent insects that feed on shilo microcurrents. They mark intact paths, scatter when layers clash, and serve as natural guides for the bunniets. They know instinctively when a route is about to collapse."
+    },
+    "image": "/imgs/kammara/triplec/malloc/Shilo-Inseto_frente.png",
+    "backImage": "/imgs/kammara/triplec/malloc/Shilo-Inseto_costas.png",
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Another Side"
+    },
+    "dorsalMeaning": {
+      "pt": "Onde brilho, ainda há caminho.",
+      "en": "Where I glow, there is still a path."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Malloc",
+          "en": "Malloc"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Guias",
+          "en": "Guides"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Krystos",
+    "name": {
+      "pt": "Krystos",
+      "en": "Krystos"
+    },
+    "species": {
+      "pt": "Krystos",
+      "en": "Krystos"
+    },
+    "bio": {
+      "pt": "Semi-minerais que mudam de cor com o ambiente (branco, azul-shilo, verde-kemita). Atrapalham bunniets flutuando, vibrando e sumindo — persistentes, sem dano. Se chegam ao fundo sem serem espantados pelos Mewlites, encaixam com Estakor e provocam terremoto.",
+      "en": ""
+    },
+    "image": "/imgs/kammara/triplec/malloc/robo_cristal.png",
+    "backImage": "/imgs/kammara/triplec/malloc/robo_cristal_costas.png",
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Another Side"
+    },
+    "dorsalMeaning": {
+      "pt": "Eu sou da cor de onde estou.",
+      "en": ""
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Malloc",
+          "en": "Malloc"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Infiltrador",
+          "en": ""
+        }
+      }
+    ]
+  },
+  {
+    "match": "Estakors",
+    "name": {
+      "pt": "Estakors",
+      "en": "Estakors"
+    },
+    "species": {
+      "pt": "Estakors",
+      "en": "Estakors"
+    },
+    "bio": {
+      "pt": "Quebram fragmentos de instrução, desestabilizam áreas profundas, atraem risco onde antes havia silêncio. Nunca sobem da Estaka — moram fundo, e a única coisa que a superfície sente deles é o tremor depois do encaixe com Krystos.",
+      "en": ""
+    },
+    "image": "/imgs/kammara/triplec/malloc/Estakors-frente.png",
+    "backImage": "/imgs/kammara/triplec/malloc/Estakors.png",
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Eu quebro o que ainda podia seguir. Um encaixe perfeito provoca terremoto.",
+      "en": ""
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Malloc",
+          "en": "Malloc"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Desestabilizadores",
+          "en": ""
+        }
+      }
+    ]
+  }
+]

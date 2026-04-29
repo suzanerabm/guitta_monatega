@@ -45,6 +45,7 @@ export function AutoBreadcrumb() {
       items={[{ label }]}
       homePath={homePath}
       backLabel={backLabel}
+      useGlyphs={segment === 'kammara'}
     />
   );
 }

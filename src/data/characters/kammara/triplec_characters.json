@@ -1,0 +1,817 @@
+[
+  {
+    "match": "Volpita",
+    "name": {
+      "pt": "Volpita",
+      "en": "Volpita"
+    },
+    "species": {
+      "pt": "Volpitoide",
+      "en": "Volpitoid"
+    },
+    "bio": {
+      "pt": "Sentinela natural de TripleC. Aparece antes de eventos energéticos importantes — bunniets observam o brilho da cauda em espiral pra antecipar instabilidades. Sente antes de qualquer outro animal quando um portal de Cshift vai abrir.",
+      "en": "Natural sentinel of TripleC. Appears before important energy events — bunniets watch the glow of her spiral tail to anticipate instabilities. She feels a Cshift portal opening before any other animal."
+    },
+    "image": "/imgs/kammara/triplec/Volpita.png",
+    "backImage": "/imgs/kammara/triplec/Volpita_costas.png",
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Eu chego antes do que está chegando.",
+      "en": "I arrive before what is arriving."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Nativo",
+          "en": "Native"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+        "value": {
+          "pt": "Multi-regional",
+          "en": "Multi-regional"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Sentinela natural",
+          "en": "Natural sentinel"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Ypito",
+    "name": {
+      "pt": "Ypito",
+      "en": "Ypito"
+    },
+    "species": {
+      "pt": "Ypitoide",
+      "en": "Ypitoid"
+    },
+    "bio": {
+      "pt": "Quando um Ypito te encara, é porque algo está prestes a mudar. Observador silencioso de TripleC — fica imóvel observando por horas, aparece e some sem aviso. Não foge fácil.",
+      "en": "When a Ypito stares at you, it is because something is about to change. Silent observer of TripleC — stays still watching for hours, appears and vanishes without warning. Hard to scare off."
+    },
+    "image": "/imgs/kammara/triplec/ypito_roxo.png",
+     "backImage": "/imgs/kammara/triplec/ypito_roxo_costas.png",
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Eu observo o que ninguém olha.",
+      "en": "I watch what no one looks at."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Nativo",
+          "en": "Native"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+        "value": {
+          "pt": "Multi-regional",
+          "en": "Multi-regional"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Observador",
+          "en": "Observer"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Seal Beans",
+    "name": {
+      "pt": "Seal Beans",
+      "en": "Seal Beans"
+    },
+    "species": {
+      "pt": "Sealbeanoide",
+      "en": "Sealbeanoid"
+    },
+    "bio": {
+      "pt": "Trepa em galhos baixos com 2 ventosas, descansa em plantas grandes. Muda de cor como o Camuoide e brilha quando está feliz e seguro — bunniets observam o brilho pra saber se o pet está bem.",
+      "en": "Climbs low branches with 2 suction pads, rests on large plants. Changes color like the Camuoid and glows when happy and safe — bunniets watch the glow to know if their pet is well."
+    },
+    "image": "/imgs/kammara/triplec/bean_lado.png",
+    "backImage": "/imgs/kammara/triplec/bean_costas.png",
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Quando estou bem, o mundo me vê.",
+      "en": "When I am well, the world sees me."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Nativo",
+          "en": "Native"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+        "value": {
+          "pt": "Multi-regional",
+          "en": "Multi-regional"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Carinho",
+          "en": "Love"
+        }
+      }
+    ]
+  },
+   {
+    "match": "Treezitoide",
+    "name": {
+      "pt": "Treezi",
+      "en": "Treezi"
+    },
+    "species": {
+      "pt": "Treezitoide",
+      "en": "Treezitoid"
+    },
+    "bio": {
+      "pt": "Pequenino do mesmo porte dos personagens Z1.  Esperto, observador nato. Aliado próximo dos bunniets e dos Z1. Filho direto do impacto do PD-11.",
+      "en": "Tiny one, same size as Z1 characters. Smart, born observer. Close ally of bunniets and Z1. Direct child of the PD-11 impact."
+    },
+    "image": "/imgs/kammara/triplec/Treezitoide.png",
+    "backImage": "/imgs/kammara/triplec/Treezitoide_costas.png",
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Vive em comunidades dentro de árvores — casinhas escavadas em troncos da Niul Forest. Compartilha as árvores com personagens Z1, formando vilas mistas Treezit-Z1. Vejo de dois jeitos ao mesmo tempo.",
+      "en": "Lives in communities inside trees — small homes carved in Niul Forest trunks. Shares the trees with Z1 characters, forming mixed Treezit-Z1 villages. I see in two ways at once."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Nativo",
+          "en": "Native"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+         "value": {
+          "pt": "Multi-regional",
+          "en": "Multi-regional"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Guardião",
+          "en": "Silent"
+        }
+      }
+    ]
+  },
+   {
+    "match": "Plumoide",
+    "name": {
+      "pt": "Pluma",
+      "en": "Pluma"
+    },
+    "species": {
+      "pt": "Plumoide",
+      "en": "Plumoid"
+    },
+    "bio": {
+      "pt": "Ave central do ecossistema TripleC. Sociável, cantora, vive em pequenos grupos. Funções múltiplas: canto que avisa, alimentação que limpa o solo, presença próxima das vilas, transporte de pólen pelo penacho.",
+      "en": "Central bird of the TripleC ecosystem. Sociable, singer, lives in small groups. Multiple roles: warning song, ground-cleaning feeding, near-village presence, pollen transport through the crest."
+    },
+    "image": "/imgs/kammara/triplec/plumoide_1_frente-new.png",
+    "backImage": "/imgs/kammara/triplec/plumoide_1_costas.png",
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Canto e o mundo se acende comigo.",
+      "en": "I sing and the world lights up with me."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Nativo",
+          "en": "Native"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+        "value": {
+          "pt": "Multi-regional",
+          "en": "Multi-regional"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Polinizadora",
+          "en": "Pollinator"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Niuloide",
+    "name": {
+      "pt": "Nilo",
+      "en": "Nilo"
+    },
+    "species": {
+      "pt": "Niuloide",
+      "en": "Niuloid"
+    },
+    "bio": {
+      "pt": "Voa entre raízes elevadas e copas baixas levando sementes pelo bico — distribui plantas pequenas pelo planeta, mantém a regeneração da floresta. ",
+      "en": "Flies between raised roots and low canopies carrying seeds in its beak — spreads small plants across the planet and keeps the forest regenerating. "
+    },
+    "image": "/imgs/kammara/triplec/niuloide.png",
+    "backImage": "/imgs/kammara/triplec/niuloide_costas.png",
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Canta em frequências que outros bunniets reconhecem como sinal de área segura. Onde meu canto chega, o bosque está em paz.",
+      "en": "Sings in frequencies the bunniets recognise as a 'safe area' signal. Where my song arrives, the grove is at peace."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Nativo",
+          "en": "Native"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+        "value": {
+          "pt": "Niul Forest",
+          "en": "Niul Forest"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Semeador",
+          "en": "Seed distributor"
+        }
+      }
+    ]
+  },
+ 
+  {
+    "match": "Espirola",
+    "name": {
+      "pt": "Espirola",
+      "en": "Espirola"
+    },
+    "species": {
+      "pt": "Espirola",
+      "en": "Espirola"
+    },
+    "bio": {
+      "pt": "Pode se tornar completamente invisível na versão híbrida — some do plano visível sem rastro. Por isso serve de espiã e companheira dos bunniets em missões de reconhecimento.",
+      "en": "Smarter than other animals, bordering on sentience. In its hybrid form she can turn completely invisible — vanishes from the visible plane without a trace. That is why she serves as a spy and companion of the bunniets on recon missions."
+    },
+    "image": "/imgs/kammara/triplec/borboleta.png",
+    "backImage": "/imgs/kammara/triplec/borboleta_costas.png",
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Sou o passo que ninguém ouve.",
+      "en": "I am the step no one hears."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Nativo",
+          "en": "Native"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+        "value": {
+          "pt": "Niul Forest",
+          "en": "Niul Forest"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Espiã",
+          "en": "Spy"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Soaroide",
+    "name": {
+      "pt": "Soar",
+      "en": "Soar"
+    },
+    "species": {
+      "pt": "Soaroide",
+      "en": "Soaroid"
+    },
+    "bio": {
+      "pt": "Predador aéreo majestoso, alta na cadeia mas raramente predador. oa grandes distâncias rápido entre as 4 regiões, levando informações urgentes.",
+      "en": "Majestic aerial predator, high in the chain but rarely a hunter. Watches the whole planet from above, ally of the bunniets. Flies long distances fast between the 4 regions, carrying urgent news."
+    },
+    "image": "/imgs/kammara/triplec/aguia.png",
+    "backImage": "/imgs/kammara/triplec/aguia_costas.png",
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Carrego o que ninguém viu para quem precisa ver.",
+      "en": "I carry what no one saw to whoever must see."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Nativo",
+          "en": "Native"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+        "value": {
+          "pt": "Topo das cachoeiras",
+          "en": "Top of the waterfalls"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Vigia do alto",
+          "en": "Sky watcher"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Camuoide",
+    "name": {
+      "pt": "Camu",
+      "en": "Camu"
+    },
+    "species": {
+      "pt": "Camuoide",
+      "en": "Camuoid"
+    },
+    "bio": {
+      "pt": "Anfíbio de habitat — vive tanto nas copas das árvores quanto dentro das cachoeiras de TripleC. Reflete a energia próxima na cor (esmeralda perto de kemita, teal perto de shilo, verde-folha em ambiente neutro).",
+      "en": "Habitat amphibian — lives both in the tree canopies and inside the waterfalls of TripleC. Mirrors nearby energy in its color (emerald near kemita, teal near shilo, leaf-green in neutral places). "
+    },
+    "image": "/imgs/kammara/triplec/Camuoide_frente1.png",
+    "backImage": "/imgs/kammara/triplec/Camuoide_costas.png",
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "A luz vem de mim quando o meu chega.",
+      "en": "The light comes from me when my own arrives."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Nativo",
+          "en": "Native"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Habitat",
+          "en": "Habitat"
+        },
+        "value": {
+          "pt": "Copas da Niul",
+          "en": "Niul canopies"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Sensor energético",
+          "en": "Energy sensor"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Zarkol-9",
+    "name": {
+      "pt": "Zarkol-9",
+      "en": "Zarkol-9"
+    },
+    "species": {
+      "pt": "Transistor",
+      "en": "Transistor"
+    },
+    "bio": {
+      "pt": "Engenheiro enviado de Z1 a TripleC para mapear o mecanismo de integração dos bunniets — autor do Relatório Técnico 41-Z. Hoje vive na Floresta Niul.",
+      "en": "Engineer sent from Z1 to TripleC to map the integration mechanism of the bunniets — author of Technical Report 41-Z. He now lives in the Niul Forest."
+    },
+    "image": "/imgs/kammara/triplec/ZARKOL-9.png",
+    "backImage": "/imgs/kammara/triplec/ZARKOL-9_costas.png",
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Another Side"
+    },
+    "dorsalMeaning": {
+      "pt": "Concluiu que o mecanismo não é mecanismo: é natureza. Não há dispositivo conector porque não há separação entre operador e sistema.",
+      "en": "He concluded that the mechanism is not a mechanism: it is nature. There is no connector device because there is no separation between operator and system. He now lives in the Niul Forest."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Análise sistêmica",
+          "en": "System Analysis"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Divisão",
+          "en": "Division"
+        },
+        "value": {
+          "pt": "Intercâmbio Técnico",
+          "en": "Technical Exchange"
+        }
+      },
+       {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Planeta Z1",
+          "en": "Z1 Planet"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Omi",
+    "name": {
+      "pt": "Omi",
+      "en": "Omi"
+    },
+    "species": {
+      "pt": "Transistor",
+      "en": "Transistor"
+    },
+    "bio": {
+      "pt": "Olhos-luz rotacionam lentamente, varrendo o horizonte cósmico. Quando Omi está presente, o ambiente parece mais seguro. Hoje vive na Floresta Niul.",
+      "en": "Light-eyes rotate slowly, sweeping the cosmic horizon. When Omi is present, the environment feels safer. He now lives in the Niul Forest."
+    },
+    "image": "/imgs/kammara/triplec/OMI.png",
+    "backImage": "/imgs/kammara/triplec/OMI_costas.png",
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Another Side"
+    },
+    "dorsalMeaning": {
+      "pt": "O universo fala. Eu apenas escuto.",
+      "en": ""
+    },
+    "attributes": [
+      {
+        "glyph": "•••••",
+        "label": {
+          "pt": "Casta",
+          "en": "Caste"
+        },
+        "value": {
+          "pt": "IO–",
+          "en": "IO–"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Vigilância cósmica",
+          "en": "Cosmic Watch"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
+      },
+       {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Planeta Z1",
+          "en": "Z1 Planet"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Vexa",
+    "name": {
+      "pt": "Vexa",
+      "en": "Vexa"
+    },
+    "species": {
+      "pt": "Transistor",
+      "en": "Transistor"
+    },
+    "bio": {
+      "pt": "Preserva o essencial, deixa o resto partir. Memória sem peso. Quando Vexa está presente, o ambiente parece mais profundo. Hoje vive na Floresta Niul.",
+      "en": "She preserves the essential and lets the rest go. Memory without weight. When Vexa is present, the environment feels deeper. She now lives in the Niul Forest."
+    },
+    "image": "/imgs/kammara/triplec/vexa.png",
+    "backImage": "/imgs/kammara/triplec/vexa_costas.png",
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Another Side"
+    },
+    "dorsalMeaning": {
+      "pt": "Nem tudo que fica deve pesar.",
+      "en": ""
+    },
+    "attributes": [
+      {
+        "glyph": "•••••",
+        "label": {
+          "pt": "Casta",
+          "en": "Caste"
+        },
+        "value": {
+          "pt": "MEM–",
+          "en": "MEM–"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Memória",
+          "en": "Memory"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
+      }
+      ,
+       {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Planeta Z1",
+          "en": "Z1 Planet"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Lai",
+    "name": {
+      "pt": "Lai",
+      "en": "Lai"
+    },
+    "species": {
+      "pt": "Transistor",
+      "en": "Transistor"
+    },
+    "bio": {
+      "pt": "Lê o fluxo antes de entrar nele. Decodifica padrões hostis (ASM-Δ viral) e traduz para que outros ajam com clareza. Quando Lai está ativa, ninguém age por impulso. Hoje vive na Floresta Niul.",
+      "en": "Reads the flow before entering it. Decodes hostile patterns (viral ASM-Δ) and translates them so others can act with clarity. When Lai is active, no one acts on impulse. She now lives in the Niul Forest."
+    },
+    "image": "/imgs/kammara/triplec/lai.png",
+    "backImage": "/imgs/kammara/triplec/lai_costas.png",
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Another Side"
+    },
+    "dorsalMeaning": {
+      "pt": "Alguns perigos precisam ser lidos.",
+      "en": ""
+    },
+    "attributes": [
+      {
+        "glyph": "•••••",
+        "label": {
+          "pt": "Casta",
+          "en": "Caste"
+        },
+        "value": {
+          "pt": "DEC–",
+          "en": "DEC–"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Leitura antecipada",
+          "en": "Forward Reading"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
+      },
+       {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Planeta Z1",
+          "en": "Z1 Planet"
+        }
+      }
+    ]
+  }
+]

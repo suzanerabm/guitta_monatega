@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Box } from '@chakra-ui/react';
 import { useChromeTint } from '@/components/ChromeTint';
+import { useScrollHeader } from '@/hooks/useScrollHeader';
 
 export interface FilterItem {
   id: string;
@@ -14,15 +15,23 @@ interface FilterBarProps {
   filters: FilterItem[];
   allLabel?: string;
   onFilter: (filterId: string) => void;
+  /**
+   * Tint color used by the chrome when the "all" pill is active (no
+   * specific filter selected). Lets a page like /kammara open already
+   * tinted with the universe's base color instead of falling back to
+   * the neutral default.
+   */
+  defaultTintColor?: string;
 }
 
-export function FilterBar({ filters, allLabel = 'Todos', onFilter }: FilterBarProps) {
+export function FilterBar({ filters, allLabel = 'Todos', onFilter, defaultTintColor }: FilterBarProps) {
   const [active, setActive] = useState('all');
   // Combined height of the chrome that sits above the FilterBar:
   // fixed header + fixed breadcrumb (the breadcrumb is the one with
   // aria-label="breadcrumb").
   const [chromeHeight, setChromeHeight] = useState(60);
   const { setTintColor } = useChromeTint();
+  const { isHidden } = useScrollHeader(80);
   const navRef = useRef<HTMLElement>(null);
 
   // Measure header + breadcrumb heights dynamically so the sticky
@@ -48,12 +57,15 @@ export function FilterBar({ filters, allLabel = 'Todos', onFilter }: FilterBarPr
     };
   }, []);
 
-  // Sync tint color with the chrome (header)
+  // Sync tint color with the chrome (header). When no specific filter
+  // is selected (id === 'all'), fall back to `defaultTintColor` so pages
+  // can arrive already tinted with their universe color.
   useEffect(() => {
     const f = filters.find((x) => x.id === active);
-    setTintColor(f?.bgColor ?? null);
+    const tint = f?.bgColor ?? (active === 'all' ? defaultTintColor : undefined) ?? null;
+    setTintColor(tint);
     return () => setTintColor(null);
-  }, [active, filters, setTintColor]);
+  }, [active, filters, setTintColor, defaultTintColor]);
 
   const handleClick = (id: string) => {
     setActive(id);
@@ -94,17 +106,20 @@ export function FilterBar({ filters, allLabel = 'Todos', onFilter }: FilterBarPr
   };
 
   // When a filter with bgColor is active, the whole bar takes that color
-  // and all non-active buttons become white-translucent.
+  // and all non-active buttons become white-translucent. When no specific
+  // filter is selected (id === 'all'), fall back to `defaultTintColor`
+  // so pages open already tinted instead of flashing white.
   const activeFilter = filters.find((f) => f.id === active);
-  const barBg = activeFilter?.bgColor || 'overlayLight';
-  const tintMode = !!activeFilter?.bgColor;
+  const activeTint = activeFilter?.bgColor ?? (active === 'all' ? defaultTintColor : undefined);
+  const barBg = activeTint || 'overlayLight';
+  const tintMode = !!activeTint;
 
   return (
     <Box
       ref={navRef}
       as="nav"
       position="sticky"
-      top={`${chromeHeight}px`}
+      top={isHidden ? '0' : `${chromeHeight}px`}
       zIndex={98}
       display="flex"
       alignItems="center"

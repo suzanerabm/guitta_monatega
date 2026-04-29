@@ -19,8 +19,8 @@ type Story = StoryObj<typeof DSMainCard>;
 
 // Real characters from the napcat universe
 const characters = [
-  { image: '/imgs/characters/napcat/napcat-sonequinha.png', x: 55, y: 0, size: 360, zIndex: 2 },
-  { image: '/imgs/characters/napcat/violeta.png', x: 82, y: 0, size: 350, zIndex: 1 },
+  { image: '/imgs/bichittos/napcat/napcat-sonequinha.png', x: 55, y: 0, size: 360, zIndex: 2 },
+  { image: '/imgs/bichittos/napcat/violeta.png', x: 82, y: 0, size: 350, zIndex: 1 },
 ];
 
 const sampleText = (
@@ -59,7 +59,7 @@ export const WithMascot: Story = {
       textColor="#ddd4f4"
       text={sampleText}
       mascot={{
-        image: '/imgs/characters/napcat/napcat.png',
+        image: '/imgs/bichittos/napcat/napcat.png',
         size: 120,
         offsetX: 8,
         offsetY: -40,

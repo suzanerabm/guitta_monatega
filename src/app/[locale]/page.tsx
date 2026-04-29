@@ -18,12 +18,12 @@ export default async function HomePage({
 
   return (
     <>
-      <HeroSection
+      {/* <HeroSection
         variant="home"
         title="guitta monatega"
         label={t('heroSub')}
         minHeight="10vh"
-      />
+      /> */}
 
       {/* === Versão com hover/expand (DSCard + Zeco/Ninha/Napcat/Rui) ===
       <DSCard
@@ -61,10 +61,22 @@ export default async function HomePage({
       <Box
         display="grid"
         gridTemplateColumns={{ base: '1fr', md: '1fr 1fr' }}
-        gridTemplateRows={{ base: 'auto', md: '1fr auto' }}
+        gridTemplateRows={{ base: 'auto', md: 'auto 1fr' }}
         width="100vw"
         marginLeft="calc(-50vw + 50%)"
       >
+        <Box gridColumn={{ base: '1', md: '1 / -1' }}>
+          <HomeBanner
+            href={`${prefix}/art`}
+            label={t('art.label')}
+            title={t('art.title')}
+            description={t('art.desc')}
+            variant="arte"
+            fullWidth
+            height={{ base: '35vh', md: '42vh' }}
+            minHeight={{ base: '140px', md: '200px' }}
+          />
+        </Box>
         <HomeBanner
           href={`${prefix}/bichittos`}
           label={t('bichittos.label')}
@@ -83,18 +95,6 @@ export default async function HomePage({
           height={{ base: '35vh', md: '42vh' }}
           minHeight={{ base: '180px', md: '280px' }}
         />
-        <Box gridColumn={{ base: '1', md: '1 / -1' }}>
-          <HomeBanner
-            href={`${prefix}/art`}
-            label={t('art.label')}
-            title={t('art.title')}
-            description={t('art.desc')}
-            variant="arte"
-            fullWidth
-            height={{ base: '25vh', md: '28vh' }}
-            minHeight={{ base: '140px', md: '200px' }}
-          />
-        </Box>
       </Box>
     </>
   );

@@ -1,0 +1,172 @@
+{
+  "napcat": {
+    "name": {
+      "pt": "NapCat",
+      "en": "NapCat"
+    },
+    "text": {
+      "pt": [
+        "NapCat é um gatinho calmo e sonhador que adora tirar pequenos cochilos. Em cada soneca, ele descobre o mundo de um jeitinho especial — sentindo sons, cores e texturas. Ao lado de sua irmã Violeta, NapCat vive momentos simples, cheios de carinho, imaginação e aconchego.",
+        "Venha tirar soneca e sonhar com NapCat e seus amigos."
+      ],
+      "en": [
+        "NapCat is a calm and dreamy kitten who loves taking little naps. In each nap, he discovers the world in his own special way — feeling sounds, colors and textures. Alongside his sister Violeta, NapCat lives simple moments, full of warmth, imagination and coziness.",
+        "Come take a nap and dream with NapCat and his friends."
+      ]
+    },
+    "panel": {
+      "story": {
+        "pt": [
+          "NapCat é um gatinho calmo e sonhador que adora tirar pequenos cochilos.",
+          "Em cada soneca, ele descobre o mundo de um jeitinho especial — sentindo sons, cores e texturas.",
+          "Ao lado de sua irmã Violeta, NapCat vive momentos simples, cheios de carinho, imaginação e aconchego.",
+          "Venha tirar soneca com NapCat e seus amigos."
+        ],
+        "en": [
+          "NapCat is a calm and dreamy kitten who loves taking little naps.",
+          "In each nap, he discovers the world in his own special way — feeling sounds, colors and textures.",
+          "Alongside his sister Violeta, NapCat lives simple moments, full of warmth, imagination and coziness.",
+          "Come take a nap with NapCat and his friends."
+        ]
+      }
+    }
+  },
+  "zeco": {
+    "name": {
+      "pt": "Zeco",
+      "en": "Zeco"
+    },
+    "text": {
+      "pt": [
+        "Zeco é um pequeno hamster curioso, afetuoso e cheio de imaginação, que sonha em ser chef de cozinha. Entre amigos, natureza e pequenas rotinas, ele cria, compartilha e descobre que as coisas mais importantes estão no cuidado e nos detalhes do dia a dia.",
+        "Zeco e seus amigos estão te esperando para brincar."
+      ],
+      "en": [
+        "Zeco is a small hamster who is curious, affectionate, and full of imagination, and he dreams of becoming a chef. Among friends, nature, and everyday moments, he creates, shares, and discovers that the most important things are found in care and in the little details of daily life.",
+        "Zeco and his friends are waiting for you to play."
+      ]
+    },
+    "panel": {
+      "story": {
+        "pt": [
+          "A coleção Zeco nasceu de uma memória real.",
+          "Zeco foi um pequeno companheiro de infância — sempre por perto, nos momentos simples do dia: estudar, brincar, observar… estar junto. A partir dessa presença, surgiu um universo que transforma lembranças em histórias.",
+          "Os livros acompanham o ritmo das estações, mas com um olhar brasileiro. No sul do país, onde a coleção é inspirada, o outono não pinta tudo de laranja — o verde permanece, o frio chega devagar, e a vida segue em um tempo mais calmo.",
+          "Entre araucárias, o canto da gralha azul e quintais que pedem cuidado, Zeco vive pequenas experiências do cotidiano: arrumar a casa, preparar algo quentinho, observar a natureza, compartilhar momentos.",
+          "Cada livro guarda um pedaço dessa infância — transformada em narrativa, imagem e sensação."
+        ],
+        "en": [
+          "The Zeco collection was born from a real memory.",
+          "Zeco was a small childhood companion — always nearby, present in the simple moments of the day: studying, playing, observing… simply being together. From this presence, a universe emerged that transforms memories into stories.",
+          "The books follow the rhythm of the seasons, but through a Brazilian lens. In the south of the country, where the collection is inspired, autumn doesn't paint everything orange — the green remains, the cold arrives slowly, and life moves at a calmer pace.",
+          "Among araucaria trees, the song of the azure jay, and backyards that invite care, Zeco lives small everyday experiences: tidying up, preparing something warm, observing nature, sharing moments.",
+          "Each book holds a piece of that childhood — transformed into narrative, image, and feeling."
+        ]
+      }
+    }
+  },
+  "taylo": {
+    "name": {
+      "pt": "Taylo",
+      "en": "Taylo"
+    },
+    "text": {
+      "pt": [
+        "Taylo é o Colecionador de Estrelas — um guardião silencioso que cuida do brilho que existe em cada um de nós. Ele não compartilha os sonhos de ninguém, pois cada sonho pertence apenas ao seu dono.",
+        "Em sua jornada pela Floresta Azul, ao lado de seu amigo Pitu, Taylo observa o céu e nos lembra que somos como as estrelas: em alguns momentos brilhamos muito, em outros, bem de levinho. Completos do jeito que somos."
+      ],
+      "en": [
+        "Taylo is the Star Collector — a silent guardian who cares for the light within each of us. He does not share anyone’s dreams, because each dream belongs only to its owner. On his journey through the Blue Forest, alongside his friend Pitu, Taylo looks at the sky and reminds us that we are like the stars: sometimes we shine brighter, and other times, more softly.",
+        "Complete just as we are, always dreaming."
+      ]
+    },
+    "panel": {
+      "story": {
+        "pt": [
+          "Taylo é o Colecionador de Estrelas — um guardião silencioso que cuida do brilho que existe em cada um de nós.",
+          "Ele não compartilha os sonhos de ninguém, pois cada sonho pertence apenas ao seu dono, mas observa cada estrela com carinho.",
+          "Mesmo quando uma estrela parece mais fraquinha, Taylo sabe que ela continua lá, do jeitinho dela.",
+          "Em sua jornada pela Floresta Azul, ao lado de seu amigo Pitu, ele passa noites olhando o céu cheio de pontinhos brilhantes.",
+          "E ali, bem quietinho, ele lembra que somos como as estrelas: em alguns momentos brilhamos mais, em outros, bem de levinho.",
+          "E tudo bem ser assim, porque cada brilho tem o seu tempo e o seu jeito.",
+          "Completos do jeito que somos e sempre sonhando."
+        ],
+        "en": [
+          "Taylo is the Star Collector — a silent guardian who cares for the light within each of us.",
+          "He does not share anyone’s dreams, because each dream belongs only to its owner, but he watches over each star with care.",
+          "Even when a star seems a little dim, Taylo knows it is still there, shining in its own way.",
+          "On his journey through the Blue Forest, alongside his friend Pitu, he spends his nights looking at the sky filled with tiny glowing lights.",
+          "And in those quiet moments, he reminds us that we are like the stars: sometimes we shine brighter, and other times, more softly.",
+          "And that is perfectly okay, because every light has its own time and its own way.",
+          "Complete just as we are, always dreaming."
+        ]
+      }
+    }
+  },
+  "cheiodebolinha": {
+    "name": {
+      "pt": "Cheio de Bolinha",
+      "en": "Bobbin & Querie"
+    },
+    "text": {
+      "pt": [
+        "Cheio de Bolinha é um enorme elefante azul-arroxeado, gentil e educadíssimo, que tem muito medo de ratinhos — e é justamente num dia comum que ele conhece Querie, um ratinho travesso de dentões grandes, cheio de energia e risadinhas. Entre sustos, balões voadores e uma conversa inesperada, os dois descobrem que coragem e cuidado podem nascer de uma amizade improvável. Cheio de Bolinha e Querie estão te esperando para brincar."
+      ],
+      "en": [
+        "Bobbin is a huge, kind-hearted blue-purple elephant who is terribly afraid of mice — until the day he meets Querie, a mischievous little mouse with big teeth, boundless energy and endless giggles. Between scares, floating balloons and an unexpected chat, the two discover that courage and care can grow out of the most unlikely friendship. Bobbin and Querie are waiting for you to come play."
+      ]
+    },
+    "panel": {
+      "story": {
+        "pt": [
+          "Num canto tranquilo do mundo, onde o vento ajuda sonhos pesados a flutuar, mora Cheio de Bolinha — um elefante enorme, redondo e azul-arroxeado, coberto de manchinhas suaves que as crianças adoram contar. Apesar do tamanho, ele é o bichinho mais medroso que se pode imaginar: tem medo de barulho, de surpresa, de nuvem grande e, principalmente, de ratinhos. Quando o susto aperta, ele amarra seus balões coloridos e sobe devagarzinho pelo céu, pedindo \"licença\" até para o vento. É gentil, educadíssimo e vive se desculpando — mesmo quando não fez nada de errado.",
+          "Do outro lado desse mesmo mundo vive Querie, um ratinho cinza pequenininho com dentões enormes — alguns branquinhos, outros nem tanto. Ele é travesso, teimoso e cheio de risadinhas, sempre mastigando alguma coisa e inventando peças para pregar nos amigos. Odeia escovar os dentes e já perdeu uns quantos por causa disso, mas cobre a boca quando ri, meio sem graça. Querie é daqueles que parecem só bagunça por fora, mas por dentro guardam um coraçãozinho curioso e cheio de vontade de pertencer.",
+          "Quando os caminhos dos dois se cruzam, o susto é grande — afinal, ninguém esperava que um elefante gigante pudesse tremer tanto diante de um ratinho tão pequeno. Mas é exatamente nesse encontro improvável que Cheio de Bolinha e Querie começam a descobrir algo importante: que ter medo não faz de ninguém menor, e que cuidar da gente pode ser tão corajoso quanto enfrentar um gigante. Entre balões que sobem, dentinhos que caem e risadas que escapam pelas patinhas, os dois aprendem que as amizades mais bonitas costumam nascer bem onde menos se espera.",
+          "Cheio de Bolinha e Querie estão te esperando para brincar."
+        ],
+        "en": [
+          "In a quiet corner of the world, where the wind helps heavy dreams float, lives Bobbin — a huge, round, blue-purple elephant covered in soft little spots that children love to count. Despite his size, he's the most easily frightened creature you can imagine: afraid of noise, of surprises, of big clouds and, above all, of mice. When the fear hits hard, he ties his colorful balloons on and drifts slowly up into the sky, saying \"excuse me\" even to the wind. He is gentle, ever so polite, and always apologizing — even when he did nothing wrong.",
+          "On the other side of that same world lives Querie, a tiny grey mouse with enormous front teeth — some bright white, others not so much. He's mischievous, stubborn and full of giggles, always chewing on something and dreaming up pranks to pull on his friends. He hates brushing his teeth and has already lost a few because of it, but he covers his mouth when he laughs, a little embarrassed. Querie is one of those who look like pure mischief on the outside, but on the inside carry a curious little heart, eager to belong.",
+          "When their paths finally cross, the fright is enormous — after all, no one expected a giant elephant could tremble so much in front of such a tiny mouse. But it's in that unlikely meeting that Bobbin and Querie begin to discover something important: that being afraid doesn't make anyone smaller, and that caring for one another can be just as brave as facing a giant. Between balloons that rise, little teeth that fall and laughter slipping through their paws, the two learn that the most beautiful friendships tend to be born right where you least expect them.",
+          "Bobbin and Querie are waiting for you to come play."
+        ]
+      }
+    }
+  },
+  "miscelania": {
+    "name": {
+      "pt": "Fada Candy",
+      "en": ""
+    },
+    "text": {
+      "pt": [
+        "A fada que faz qq nenem dormir e sarar."
+      ],
+      "en": [
+        ""
+      ]
+    },
+    "panel": {
+      "story": {
+        "pt": [
+          "Nem todo personagem nasce sabendo quem é. Alguns aparecem num rabisco de caderno, outros surgem de um sonho esquecido.",
+          "Querie é um ratinho dentuço que detesta escovar os dentes. Toda vez que alguém fala em escova, ele sai correndo. O problema é que ele adora comer — milho, maçã, tudo que é duro.",
+          "Um dia, mordeu uma espiga com tanta força que ouviu um \"crac\". O dente quebrou. Querie ficou parado, de boca aberta, sem acreditar.",
+          "Desde então, aprendeu a lição? Claro que não. Mas agora come devagar — e faz uma cara muito engraçada quando mastiga.",
+          "Cheio de Bolinha é grande e tem uma orelha redonda e na ponta de seu mini rabinho tem uma bolinha. Por ser tão grande parece corajoso, mas morre de medo de ratinhos. Quando vê um, entra em sai correndo e sobe nas bolhas de sabão para ficar lá no alto, flutuando, até ter certeza de que o perigo passou.",
+          "Malmo chegou quieto, como sempre. Sentou no canto e ficou observando. Não gosta de dividir, não quer falar, e fica bravo por qualquer coisa. Mas no fundo, só quer que alguém sente do lado dele.",
+          "Cada um aqui tem sua própria história. Algumas curtas, outras ainda sendo escritas."
+        ],
+        "en": [
+          "Not every character is born knowing who they are. Some appear in a notebook doodle, others emerge from a forgotten dream.",
+          "Querie is a buck-toothed little mouse who hates brushing his teeth. Every time someone mentions a toothbrush, he runs away. The problem is he loves eating — corn, apples, anything hard.",
+          "One day, he bit into a corn cob so hard he heard a \"crack\". His tooth broke. Querie stood there, mouth open, in disbelief.",
+          "Did he learn his lesson? Of course not. But now he eats slowly — and makes a very funny face when he chews.",
+          "Cheio de Bolinha is round, colorful and covered in polka dots. He looks brave, but he's terrified of mice. When he sees one, he panics and climbs onto the first soap bubble he can find — and floats up there until he's sure the danger has passed.",
+          "Malmo arrived quietly, as always. Sat in the corner and watched. Doesn't like sharing, doesn't want to talk, and gets angry over anything. But deep down, he just wants someone to sit next to him.",
+          "Each one here has their own story. Some short, others still being written."
+        ]
+      }
+    }
+  }
+}

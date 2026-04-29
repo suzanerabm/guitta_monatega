@@ -47,3 +47,6 @@ playwright-report/
 test-results/
 dist/
 .astro/
+
+# image asset backups (kept locally, never pushed)
+_bkp/

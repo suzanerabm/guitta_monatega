@@ -12,7 +12,7 @@ const char = {
 
 describe('CharacterInfoPanel', () => {
   it('renders name, species and bio in pt', () => {
-    renderWithChakra(<CharacterInfoPanel character={char} locale="pt" />);
+    renderWithChakra(<CharacterInfoPanel character={char} locale="pt" anchorEl={null} />);
     expect(screen.getByText("Erú'Rin")).toBeInTheDocument();
     expect(screen.getByText("Shal'ún")).toBeInTheDocument();
     expect(screen.getByText('Um guardião das flores.')).toBeInTheDocument();
@@ -20,7 +20,7 @@ describe('CharacterInfoPanel', () => {
 
   it('renders nothing when character is null', () => {
     const { container } = renderWithChakra(
-      <CharacterInfoPanel character={null} locale="pt" />
+      <CharacterInfoPanel character={null} locale="pt" anchorEl={null} />
     );
     expect(container.innerHTML).toBe('');
   });

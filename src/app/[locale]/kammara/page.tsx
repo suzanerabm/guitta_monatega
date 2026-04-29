@@ -5,11 +5,12 @@ import {
   getBooks,
   getBookPages,
   getKammaraBg,
-  getSubsystemImages,
 } from '@/lib/images';
+import { getWorldSubsystemImages } from '@/data/characters/kammara/_worldData';
 import { KammaraClient } from './KammaraClient';
 
 const WORLD_IDS = ['lunnp1', 'eni4', 'triplec', 'orfv', 'z1', 'gotto'] as const;
+const TRIPLEC_REGIONS = ['malloc', 'mesh', 'sharp'] as const;
 
 export default async function KammaraPage({
   params,
@@ -19,13 +20,33 @@ export default async function KammaraPage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const worlds = WORLD_IDS.map((id) => ({
-    id,
-    chars: getCharacters(`kammara/${id}`),
-    scenes: getScenes(`kammara/${id}`),
-    bgImage: getKammaraBg(`kammara/${id}`),
-    subsystemImages: getSubsystemImages(`kammara/${id}`),
-  }));
+  const worlds = WORLD_IDS.map((id) => {
+    const base = {
+      id,
+      chars: getCharacters(`kammara/${id}`),
+      scenes: getScenes(`kammara/${id}`),
+      bgImage: getKammaraBg(`kammara/${id}`),
+      subsystemImages: getWorldSubsystemImages(id),
+    };
+    // Only triplec has sub-regions. Read their content in parallel so the
+    // client has everything it needs without extra fetch logic.
+    if (id === 'triplec') {
+      const regions = Object.fromEntries(
+        TRIPLEC_REGIONS.map((regionId) => [
+          regionId,
+          {
+            id: regionId,
+            chars: getCharacters(`kammara/triplec/${regionId}`),
+            scenes: getScenes(`kammara/triplec/${regionId}`),
+            bgImage: getKammaraBg(`kammara/triplec/${regionId}`),
+            subsystemImages: getWorldSubsystemImages(`triplec-${regionId}`),
+          },
+        ])
+      );
+      return { ...base, regions };
+    }
+    return base;
+  });
 
   const kammaraBooks = getBooks('kammara').map((b) => ({
     ...b,

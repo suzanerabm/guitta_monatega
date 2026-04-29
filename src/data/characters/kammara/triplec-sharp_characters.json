@@ -1,0 +1,356 @@
+[
+  {
+    "match": "SELKA RIN",
+    "name": {
+      "pt": "Selka Rin",
+      "en": "Selka Rin"
+    },
+    "species": {
+      "pt": "Bunniet",
+      "en": "Bunniet"
+    },
+    "bio": {
+      "pt": "O mais simétrico do núcleo Sharp. 65-72 cm, pelagem branca com circuitos prateados visíveis em ângulo, orelhas precisamente alinhadas, olhos negros que escaneiam em camadas. Analisa tudo ao redor em tempo real. Garante que cada coisa esteja correta — funcionar sozinho é insuficiente.",
+      "en": "The most symmetrical of Sharp's core. 65-72 cm, white fur with silver circuits visible at an angle, ears precisely aligned, black eyes that scan in layers. He analyzes everything around in real time. He makes sure each thing is correct — merely working is not enough."
+    },
+    "image": "/imgs/kammara/triplec/sharp/SELKA RIN.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
+    "attributes": [
+      {
+        "glyph": "⊹⊙⊷",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Sharp",
+          "en": "Sharp"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Validador",
+          "en": "Validator"
+        }
+      },
+      {
+        "glyph": "⊹",
+        "label": {
+          "pt": "Arquétipo",
+          "en": "Archetype"
+        },
+        "value": {
+          "pt": "SELO",
+          "en": "SEAL"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Kurr",
+    "name": {
+      "pt": "Kurr",
+      "en": "Kurr"
+    },
+    "species": {
+      "pt": "Kurr",
+      "en": "Kurr"
+    },
+    "bio": {
+      "pt": "Faxineira noturna de Sharp — aparece nas horas de baixa atividade, recolhe resíduos físicos e energéticos, e se desativa em silêncio quando termina. Nunca durante o dia.",
+      "en": "Sharp's night cleaner — appears during low-activity hours, gathers physical and energy residues, and quietly deactivates when finished. Never during the day."
+    },
+    "image": "/imgs/kammara/triplec/sharp/Kurr.png",
+    "backImage": "/imgs/kammara/triplec/sharp/kurr-costas.png",
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Termino o que ninguém viu.",
+      "en": "I finish what no one saw."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Sharp",
+          "en": "Sharp"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Limpeza noturna",
+          "en": "Night cleaner"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Tilu",
+    "name": {
+      "pt": "Tilu",
+      "en": "Tilu"
+    },
+    "species": {
+      "pt": "Tiluoide",
+      "en": "Tiluoid"
+    },
+    "bio": {
+      "pt": "Bicho de estimação fofo de Sharp — adora brincar com as crianças bunniets, corre, se esconde, aparece. Onde tem criança rindo, tem Tilu por perto.",
+      "en": "Sharp's adorable pet — loves to play with the bunniet children, runs, hides, pops up. Where there's a child laughing, Tilu is nearby."
+    },
+    "image": "/imgs/kammara/triplec/sharp/tilu-frente-gigapixel-standard-v2-6x.png",
+    "backImage": "/imgs/kammara/triplec/sharp/tilu_costas.png",
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Onde tem riso, eu apareço. Mas agora vou tirar soneca.",
+      "en": "Where there's laughter, I show up. But now I'm taking a nap."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Sharp",
+          "en": "Sharp"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Companheiro brincalhão",
+          "en": "Playful companion"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Doopoide",
+    "name": {
+      "pt": "DooPe",
+      "en": "DooPe"
+    },
+    "species": {
+      "pt": "Doopoide",
+      "en": "Doopoid"
+    },
+    "bio": {
+      "pt": "Fareja tudo — kemita, shilo, vírus, Krystos, comida, caminho. Sapeca como o Tilu, vive aprontando junto.",
+      "en": "Sniffs everything — kemita, shilo, virus, Krystos, food, path. Mischievous like Tilu, always up to something together."
+    },
+    "image": "/imgs/kammara/triplec/sharp/dog.png",
+    "backImage": "/imgs/kammara/triplec/sharp/dog_costas.png",
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Sigo o cheiro até o fim, e o fim sempre tem alguém esperando.",
+      "en": "I follow the scent to the end, and the end always has someone waiting."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Sharp",
+          "en": "Sharp"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Farejador",
+          "en": "Sniffer"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Dinossauro Alongado",
+    "name": {
+      "pt": "Logg",
+      "en": "Logg"
+    },
+    "species": {
+      "pt": "Longoide",
+      "en": "Longoid"
+    },
+    "bio": {
+      "pt": "Caminhante elegante bípede de Sharp — pescoço longo curvo, cauda equilibrando. Atravessa as torres seladas como quem atravessa um pensamento: sem pressa, sem deixar marca.",
+      "en": "Elegant bipedal walker of Sharp — long curved neck, balancing tail. Crosses the sealed towers the way one crosses a thought: unhurried, leaving no trace."
+    },
+    "image": "/imgs/kammara/triplec/sharp/dino-lado-gigapixel-standard-v2-6x.png",
+    "backImage": "/imgs/kammara/triplec/sharp/dino-costas.png",
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Atravesso a forma como quem atravessa um pensamento.",
+      "en": "I cross form the way one crosses a thought."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Sharp",
+          "en": "Sharp"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Conector silencioso",
+          "en": "Silent connector"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Suigui",
+    "name": {
+      "pt": "Suigui",
+      "en": "Suigui"
+    },
+    "species": {
+      "pt": "Asymoide",
+      "en": "Asymoid"
+    },
+    "bio": {
+      "pt": "Peixe assimétrico nascido nos canais selados de Sharp — primeira espécie a transbordar entre regiões, hoje vive em todas as águas de TripleC.",
+      "en": "Asymmetric fish born in the sealed channels of Sharp — first species to overflow between regions, today lives in every water of TripleC."
+    },
+    "image": "/imgs/kammara/triplec/sharp/peixe_nadando.png",
+    "backImage": "/imgs/kammara/triplec/sharp/peixe_back.png",
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Saí de onde fui feito sem deixar de ser feito de lá.",
+      "en": "I left where I was made without ceasing to be made there."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Sharp",
+          "en": "Sharp"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Transbordador",
+          "en": "Overflow"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Lim",
+    "name": {
+      "pt": "Lim",
+      "en": "Lim"
+    },
+    "species": {
+      "pt": "Sense-logic",
+      "en": "Sense-logic"
+    },
+    "bio": {
+      "pt": "Pequeno inseto sensor de Sharp — fica parado a maior parte do tempo, só acende quando detecta variação no campo. Alerta vivo, discreto, imperceptível pra quem não está olhando.",
+      "en": "Small Sharp sensor insect — stays still most of the time, only lights up when it detects field variation. A living alert, discreet, imperceptible to those not looking."
+    },
+    "image": "/imgs/kammara/triplec/sharp/Lim.png",
+    "backImage": "/imgs/kammara/triplec/sharp/Lim_alerta.png",
+    "backTitle": {
+      "pt": "Verso",
+      "en": "Verse"
+    },
+    "dorsalMeaning": {
+      "pt": "Eu acendo quando algo muda.",
+      "en": "I light up when something changes."
+    },
+    "attributes": [
+      {
+        "glyph": "⊙",
+        "label": {
+          "pt": "Origem",
+          "en": "Origin"
+        },
+        "value": {
+          "pt": "Sharp",
+          "en": "Sharp"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Sensor",
+          "en": "Sensor"
+        }
+      }
+    ]
+  }
+]

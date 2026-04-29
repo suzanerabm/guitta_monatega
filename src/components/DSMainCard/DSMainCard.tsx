@@ -2,6 +2,12 @@ import { Box } from '@chakra-ui/react';
 import type { ReactNode, CSSProperties } from 'react';
 import { DSTextPanel } from '@/components/DSTextPanel';
 
+interface CharacterBreakpoint {
+  x?: number;
+  y?: number;
+  size?: number;
+}
+
 export interface Character {
   image: string;
   x: number;
@@ -10,6 +16,16 @@ export interface Character {
   zIndex?: number;
   mobileY?: number;
   mobileScale?: number;
+  /** Override x, y, size at >=768px (mid-desktop, before xl kicks in at 1500px) */
+  md?: CharacterBreakpoint;
+  /** Override x, y, size at >=1500px */
+  xl?: CharacterBreakpoint;
+  /** Override x, y, size at >=1920px */
+  xxl?: CharacterBreakpoint;
+  /** Only show this character from this breakpoint onwards */
+  minBreakpoint?: 'md' | 'xl' | 'xxl';
+  /** CSS animation string (e.g. 'cardFloat 3s ease-in-out infinite') */
+  animation?: string;
 }
 
 export interface Mascot {
@@ -31,8 +47,43 @@ interface DSMainCardProps {
   textColor?: string;
   mascot?: Mascot;
   stripSide?: boolean;
-  bgOpacity?: number;
+  /**
+   * Title shown pinned at the top of the DSTextPanel — it stays fixed
+   * while the body text scrolls below. When omitted, fall back to the
+   * legacy behavior (caller puts `<h2>` inside `text`).
+   */
+  textPanelTitle?: string;
+  glyphVariant?: 'planet' | 'universe';
   text?: ReactNode;
+  /**
+   * Custom renderer for the left-side panel. When provided, replaces the
+   * default DSTextPanel. Receives the DSMainCard color/text props so the
+   * custom panel can stay in sync with the host card's theme.
+   * If omitted, falls back to DSTextPanel with the legacy behavior.
+   */
+  renderPanel?: (ctx: {
+    titleColor?: string;
+    subtitleColor?: string;
+    textColor?: string;
+    title?: string;
+    glyphVariant?: 'planet' | 'universe';
+    stripSide?: boolean;
+    text?: ReactNode;
+  }) => ReactNode;
+  /**
+   * When set, turns the inner DSTextPanel into the Bichittos "creature"
+   * variant (HUD corners + dot pattern + dropcap). Forwarded as
+   * `creatureAccent` to the panel.
+   */
+  creatureAccent?: string;
+  /** Secondary accent (dropcap color). Defaults to `creatureAccent`. */
+  creatureAccentAlt?: string;
+  /** Optional pill shown above the panel title. */
+  panelBadge?: string;
+  /** Creature-tinted panel background forwarded to DSTextPanel. */
+  panelBg?: string;
+  /** Override the DSTextPanel outline color (falls back to titleColor). */
+  panelBorderColor?: string;
   children?: ReactNode;
   'data-testid'?: string;
 }
@@ -47,8 +98,15 @@ export function DSMainCard({
   textColor,
   mascot,
   stripSide = false,
-  bgOpacity = 1,
+  textPanelTitle,
+  glyphVariant,
   text,
+  renderPanel,
+  creatureAccent,
+  creatureAccentAlt,
+  panelBadge,
+  panelBg,
+  panelBorderColor,
   children,
   'data-testid': testId,
 }: DSMainCardProps) {
@@ -60,7 +118,7 @@ export function DSMainCard({
       width="100vw"
       marginLeft="calc(-50vw + 50%)"
       height={{ base: 'auto', md: height }}
-      maxH={{ base: 'none', md: maxHeight }}
+      maxH={{ base: 'none', md: maxHeight, '2xl': '850px' }}
       // Guarantee enough vertical room for the absolute-positioned text-wrap
       // (top:260px + bottom:4rem + min ~280px panel = ~620px floor) on
       // shallow viewports so the panel never gets squashed.
@@ -74,8 +132,8 @@ export function DSMainCard({
         position="absolute"
         inset={0}
         zIndex={0}
+        opacity={0.3}
         background={gradient}
-        opacity={bgOpacity}
       />
 
       {/* Characters scene */}
@@ -90,6 +148,53 @@ export function DSMainCard({
             '--mobile-y': `${c.mobileY ?? 20}%`,
             '--mobile-scale': String(c.mobileScale ?? 0.4),
           } as CSSProperties;
+
+          // Build responsive overrides via @media
+          const mobileScale = c.mobileScale ?? 0.4;
+          const mobileSize = Math.round(c.size * mobileScale);
+          const breakpointMap = { md: '48em', xl: '94em', xxl: '120em' } as const;
+          const mediaOverrides: Record<string, Record<string, string>> = {};
+
+          // If minBreakpoint is set, hide by default and show from that breakpoint
+          if (c.minBreakpoint) {
+            mediaOverrides.display = 'none' as unknown as Record<string, string>;
+            mediaOverrides[`@media (min-width: ${breakpointMap[c.minBreakpoint]})`] = {
+              display: 'block',
+            };
+          } else {
+            // Mobile: scale down and reposition (only for always-visible characters)
+            mediaOverrides['@media (max-width: 48em)'] = {
+              width: `${mobileSize}px`,
+              height: `${mobileSize}px`,
+              bottom: `${c.mobileY ?? 90}%`,
+            };
+          }
+
+          if (c.md) {
+            const o: Record<string, string> = {};
+            if (c.md.size != null) { o.width = `${c.md.size}px`; o.height = `${c.md.size}px`; }
+            if (c.md.x != null) o.left = `${c.md.x}%`;
+            if (c.md.y != null) o.bottom = `${c.md.y}%`;
+            const existing = mediaOverrides['@media (min-width: 48em)'] ?? {};
+            mediaOverrides['@media (min-width: 48em)'] = { ...existing, ...o };
+          }
+          if (c.xl) {
+            const o: Record<string, string> = {};
+            if (c.xl.size != null) { o.width = `${c.xl.size}px`; o.height = `${c.xl.size}px`; }
+            if (c.xl.x != null) o.left = `${c.xl.x}%`;
+            if (c.xl.y != null) o.bottom = `${c.xl.y}%`;
+            const existing = mediaOverrides['@media (min-width: 94em)'] ?? {};
+            mediaOverrides['@media (min-width: 94em)'] = { ...existing, ...o };
+          }
+          if (c.xxl) {
+            const o: Record<string, string> = {};
+            if (c.xxl.size != null) { o.width = `${c.xxl.size}px`; o.height = `${c.xxl.size}px`; }
+            if (c.xxl.x != null) o.left = `${c.xxl.x}%`;
+            if (c.xxl.y != null) o.bottom = `${c.xxl.y}%`;
+            const existing = mediaOverrides['@media (min-width: 120em)'] ?? {};
+            mediaOverrides['@media (min-width: 120em)'] = { ...existing, ...o };
+          }
+
           return (
             <Box
               key={`char-${idx}`}
@@ -101,7 +206,9 @@ export function DSMainCard({
               height={`${c.size}px`}
               zIndex={c.zIndex || 1}
               transform="translateX(-50%)"
+              animation={c.animation}
               style={cssVars}
+              css={mediaOverrides}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -123,11 +230,15 @@ export function DSMainCard({
       {text && (
         <Box
           data-testid="ds-text-wrap"
-          zIndex={3}
+          zIndex={40}
           css={
             stripSide
               ? {
-                  // Mobile (<=768px): full width content-flow, fixed 350px panel
+                  // Mobile (<=768px): full width content-flow. Height is
+                  // `auto` so the panel grows with its content (a fixed
+                  // 350px would get overflowed by the new KammaraCard
+                  // inside `renderPanel`, causing the strip-side children
+                  // below to overlap).
                   position: 'relative',
                   left: 0,
                   right: 'auto',
@@ -135,38 +246,29 @@ export function DSMainCard({
                   bottom: 'auto',
                   width: '100%',
                   maxWidth: 'none',
-                  height: '350px',
+                  height: 'auto',
                   transform: 'none',
                   padding: '0 1rem',
                   marginTop: '10px',
-                  // Medium desktop (769px – 1500px): pinned to left:2rem
+                  // Desktop (>=768px): narrow panel anchored to the left,
+                  // taking ~20% of the banner width. The character/scene
+                  // strip on the right gets the remaining space.
                   '@media (min-width: 48em)': {
                     position: 'absolute',
                     left: '2rem',
                     right: 'auto',
                     top: '50%',
                     bottom: 'auto',
-                    width: '38%',
-                    maxWidth: '540px',
-                    height: '60%',
+                    width: '60%',
+                    maxWidth: '680px',
+                    height: 'calc(100% - 100px)',
                     transform: 'translateY(-50%)',
                     padding: 0,
                     marginTop: 0,
                   },
-                  // Large desktop (>=1500px): match Astro default — pinned to right:50% with margin-right
-                  '@media (min-width: 94em)': {
-                    left: 'auto',
-                    right: '50%',
-                    marginRight: '12rem',
-                    width: '42%',
-                    maxWidth: '540px',
-                    height: '60%',
-                  },
-                  // XL screens (>=1920px)
-                  '@media (min-width: 120em)': {
-                    width: '48%',
-                    maxWidth: '720px',
-                    height: '75%',
+                  // lg (992–1280px): narrower panel
+                  '@media (min-width: 62em) and (max-width: 80em)': {
+                    width: '45%',
                   },
                 }
               : {
@@ -195,10 +297,11 @@ export function DSMainCard({
                   },
                   // XL screens (>=1920px)
                   '@media (min-width: 120em)': {
-                    width: '45%',
+                    width: '65%',
                     maxWidth: '680px',
-                    top: '200px',
-                    bottom: '3rem',
+                    top: 'auto',
+                    bottom: '5rem',
+                    height: '55%',
                   },
                 }
           }
@@ -213,6 +316,15 @@ export function DSMainCard({
               right={`${mascot.offsetX ?? 10}%`}
               top={`${mascot.offsetY ?? -40}px`}
               filter="drop-shadow(0 4px 12px rgba(0,0,0,0.2))"
+              css={{
+                '@media (max-width: 48em)': {
+                  width: `${Math.round((mascot.size || 120) * (mascot.mobileScale ?? 0.5))}px`,
+                  height: `${Math.round((mascot.size || 120) * (mascot.mobileScale ?? 0.5))}px`,
+                  right: 'auto',
+                  left: '5%',
+                  top: `${mascot.mobileOffsetY ?? -30}px`,
+                },
+              }}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -226,15 +338,34 @@ export function DSMainCard({
               />
             </Box>
           )}
-          <DSTextPanel
-            titleColor={titleColor}
-            subtitleColor={subtitleColor}
-            textColor={textColor}
-            fillParent={stripSide}
-            kammaraStyle={stripSide}
-          >
-            {text}
-          </DSTextPanel>
+          {renderPanel ? (
+            renderPanel({
+              title: textPanelTitle,
+              titleColor,
+              subtitleColor,
+              textColor,
+              glyphVariant,
+              stripSide,
+              text,
+            })
+          ) : (
+            <DSTextPanel
+              title={textPanelTitle}
+              titleColor={titleColor}
+              subtitleColor={subtitleColor}
+              textColor={textColor}
+              fillParent={stripSide}
+              showGlyph={stripSide}
+              glyphVariant={glyphVariant}
+              creatureAccent={creatureAccent}
+              creatureAccentAlt={creatureAccentAlt}
+              badge={panelBadge}
+              panelBg={panelBg}
+              borderColor={panelBorderColor}
+            >
+              {text}
+            </DSTextPanel>
+          )}
         </Box>
       )}
 
@@ -244,24 +375,48 @@ export function DSMainCard({
           <Box
             data-testid="ds-strip-side"
             zIndex={2}
-            overflow="hidden"
             css={{
-              // Mobile: content flow under the text-wrap
+              // Mobile: content flow under the text-wrap. Generous
+              // marginTop so children (KammaraSceneCollage etc) don't
+              // touch the text panel above them — matches the `2xl`
+              // spacing used between the other Kammara cards on the page.
               position: 'relative',
               right: 'auto',
               top: 'auto',
+              bottom: 'auto',
               transform: 'none',
               width: '100%',
-              marginTop: '1rem',
+              marginTop: '5rem',
               // Desktop: absolute positioned to the right of the card,
-              // vertically centered — matches Astro .ds-strip-side
+              // pinned top and bottom with 20px gutters (matches the text
+              // panel) so the slot hosts a vertical flex column. Multiple
+              // children passed as a fragment are stacked here — each
+              // direct child shares the available height evenly and is
+              // allowed to shrink (minHeight: 0) so internal scrolls work.
+              display: 'flex',
+              flexDirection: 'column',
               '@media (min-width: 48em)': {
                 position: 'absolute',
-                right: '2rem',
+                left: 'min(calc(60% + 2rem + 10px), calc(680px + 2rem + 10px))',
+                right: '0',
                 top: '50%',
+                bottom: 'auto',
+                height: 'calc(100% - 100px)',
                 transform: 'translateY(-50%)',
-                width: '48%',
+                width: 'auto',
                 marginTop: 0,
+                gap: '20px',
+                justifyContent: 'center',
+                '& > *': { flex: '0 0 auto', minHeight: 0, width: '100%' },
+              },
+              // md (768–992px): reduce strip height
+              '@media (min-width: 48em) and (max-width: 62em)': {
+                height: 'calc(100% - 40px)',
+                gap: '10px',
+              },
+              // lg (992–1280px): strip starts after the narrower 45% panel
+              '@media (min-width: 62em) and (max-width: 80em)': {
+                left: 'calc(45% + 2rem + 10px)',
               },
             }}
           >

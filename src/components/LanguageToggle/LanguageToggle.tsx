@@ -31,8 +31,6 @@ export function LanguageToggle({ currentPath }: LanguageToggleProps) {
         fontWeight: 500,
         letterSpacing: '0.12em',
         textTransform: 'uppercase',
-        borderBottom: '1px solid currentColor',
-        paddingBottom: '1px',
         textDecoration: 'none',
         transition: 'color 0.4s ease, opacity 0.2s ease',
       }}

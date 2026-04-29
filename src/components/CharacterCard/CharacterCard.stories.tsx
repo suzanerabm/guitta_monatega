@@ -12,7 +12,7 @@ type Story = StoryObj<typeof CharacterCard>;
 
 const baseArgs = {
   name: 'NapCat',
-  image: '/imgs/characters/napcat/napcat-dormindo.png',
+  image: '/imgs/bichittos/napcat/napcat-dormindo.png',
   gradient: 'linear-gradient(135deg, #667eea, #764ba2)',
 };
 

@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { Box } from '@chakra-ui/react';
+import { Box, chakra } from '@chakra-ui/react';
 import { HomeBanner } from '@/components/HomeBanner';
 import { palettes } from '@/theme/palettes';
 
@@ -130,9 +130,8 @@ export function BichittosBannerWithNinha({
         }}
         zIndex={999}
       >
-        <Box
-          as="img"
-          src="/imgs/characters/zeco/zeco_escondido.png"
+        <chakra.img
+          src="/imgs/bichittos/zeco/zeco_escondido.png"
           alt=""
           aria-hidden
           height="100%"
@@ -165,9 +164,8 @@ export function BichittosBannerWithNinha({
         }}
         zIndex={0}
       >
-        <Box
-          as="img"
-          src="/imgs/characters/napcat/napcat_soneca.png"
+        <chakra.img
+          src="/imgs/bichittos/napcat/napcat_soneca.png"
           alt=""
           aria-hidden
           height="100%"
@@ -193,9 +191,8 @@ export function BichittosBannerWithNinha({
         }}
         zIndex={400}
       >
-        <Box
-          as="img"
-          src="/imgs/characters/zeco/Rui_Merengue_joga_bolinha.png"
+        <chakra.img
+          src="/imgs/bichittos/zeco/Rui_Merengue_joga_bolinha.png"
           alt=""
           aria-hidden
           height="100%"
@@ -223,9 +220,8 @@ export function BichittosBannerWithNinha({
           opacity: 1,
         }}
       >
-        <Box
-          as="img"
-          src="/imgs/characters/zeco/ninha_apaixonada.png"
+        <chakra.img
+          src="/imgs/bichittos/zeco/ninha_apaixonada.png"
           alt=""
           aria-hidden
           height="90%"

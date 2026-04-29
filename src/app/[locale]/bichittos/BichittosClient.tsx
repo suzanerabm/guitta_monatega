@@ -10,10 +10,15 @@ import { DSMainCard } from '@/components/DSMainCard';
 import { CharacterStrip } from '@/components/CharacterStrip';
 import { BookGallery } from '@/components/BookGallery';
 import { useModal } from '@/components/Modal';
-import { palettes } from '@/theme/palettes';
-import { creatureColors, type CreatureId } from '@/theme/creatures';
+import { palettes, type CreatureId } from '@/theme/palettes';
 import { characterPositions, zecoMascot } from '@/data/bichittos';
+import {
+  getCreatureName,
+  getCreatureText,
+  getCreaturePanelStory,
+} from '@/data/characters/bichittos/_creatureData';
 import { translateName } from '@/lib/translateName';
+import type { Locale } from '@/lib/characters';
 
 export interface BichittosCreatureData {
   id: CreatureId;
@@ -77,10 +82,11 @@ export function BichittosClient({ data }: Props) {
   };
 
   const filters = [
-    { id: 'napcat', label: 'NapCat', color: palettes.napcat.colors[3], bgColor: palettes.napcat.dark },
-    { id: 'zeco', label: 'Zeco', color: palettes.zeco.colors[3], bgColor: palettes.zeco.colors[5] },
-    { id: 'taylo', label: 'Taylo', color: palettes.taylo.colors[0], bgColor: palettes.taylo.dark },
-    { id: 'miscelania', label: t('miscelania.name'), color: palettes.miscelania.colors[2], bgColor: palettes.miscelania.dark },
+    { id: 'napcat', label: getCreatureName('napcat', locale as Locale), color: palettes.napcat.colors[3], bgColor: palettes.napcat.dark },
+    { id: 'zeco', label: getCreatureName('zeco', locale as Locale), color: palettes.zeco.colors[3], bgColor: palettes.zeco.dark },
+    { id: 'taylo', label: getCreatureName('taylo', locale as Locale), color: palettes.taylo.colors[0], bgColor: palettes.taylo.dark },
+    { id: 'cheiodebolinha', label: getCreatureName('cheiodebolinha', locale as Locale), color: palettes.cheiodebolinha.colors[2], bgColor: palettes.cheiodebolinha.dark },
+    { id: 'miscelania', label: getCreatureName('miscelania', locale as Locale), color: palettes.miscelania.colors[2], bgColor: palettes.miscelania.dark },
   ];
 
   return (
@@ -144,10 +150,10 @@ export function BichittosClient({ data }: Props) {
 
       {data.map((creature) => {
         const palette = palettes[creature.id];
-        const colors = creatureColors[creature.id];
-        const text = t.raw(`${creature.id}.text`) as string[];
-        const panelStory = t.raw(`${creature.id}.panel.story`) as string[];
-        const name = t(`${creature.id}.name`);
+        const colors = palettes[creature.id].bichittos!;
+        const text = getCreatureText(creature.id, locale as Locale);
+        const panelStory = getCreaturePanelStory(creature.id, locale as Locale);
+        const name = getCreatureName(creature.id, locale as Locale);
         const bookDefs = ((): { tag: string; title: string }[] | undefined => {
           try {
             if (!t.has(`${creature.id}.books` as never)) return undefined;
@@ -168,6 +174,7 @@ export function BichittosClient({ data }: Props) {
         });
 
         const hidden = activeFilter !== 'all' && activeFilter !== creature.id;
+        const panelTitle = `${name}${creature.id === 'napcat' ? ' & Violeta' : (creature.id === 'zeco' || creature.id === 'taylo') ? ' & Amigos' : ''}`;
 
         return (
           <CreatureSection
@@ -175,6 +182,8 @@ export function BichittosClient({ data }: Props) {
             id={creature.id}
             gradient={palette.gradientBg}
             accentColor={palette.colors[0]}
+            bgImage={colors.bgImage}
+            bgOpacity={0.22}
             hidden={hidden}
           >
             <CreatureCard
@@ -190,13 +199,14 @@ export function BichittosClient({ data }: Props) {
                   titleColor={colors.titleColor}
                   textColor={colors.textColor}
                   mascot={creature.id === 'zeco' ? zecoMascot : undefined}
+                  textPanelTitle={panelTitle}
+                  creatureAccent={colors.accent}
+                  creatureAccentAlt={colors.accentAlt}
+                  panelBadge={colors.tag}
+                  panelBg={colors.panelBg}
+                  panelBorderColor={colors.borderColor}
                   text={
                     <>
-                      <h2>
-                        {name}
-                        {creature.id === 'napcat' && ' & Violeta'}
-                        {(creature.id === 'zeco' || creature.id === 'taylo') && ' & Amigos'}
-                      </h2>
                       {panelStory.map((p, i) => (
                         <p key={i}>{p}</p>
                       ))}
@@ -210,6 +220,9 @@ export function BichittosClient({ data }: Props) {
                         name: translateName(c.name, words),
                       }))}
                       gradient={palette.gradient}
+                      cardBg="rgba(255,255,255,0.12)"
+                      cardSize={150}
+                      labelColor={colors.stripColor ?? colors.titleColor}
                     />
                   )}
                 </DSMainCard>

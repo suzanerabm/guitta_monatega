@@ -13,12 +13,12 @@ type Story = StoryObj<typeof CharacterStrip>;
 
 // Real characters from the project
 const chars = [
-  { name: 'NapCat', image: '/imgs/characters/napcat/napcat-dormindo.png' },
-  { name: 'Cambalhota', image: '/imgs/characters/napcat/napcat-cambalhota.png' },
-  { name: 'Pijama', image: '/imgs/characters/napcat/napcat-pijama.png' },
-  { name: 'Sonequinha', image: '/imgs/characters/napcat/napcat-sonequinha.png' },
-  { name: 'Gargalhando', image: '/imgs/characters/napcat/napcat-gargalhando.png' },
-  { name: 'Desenhando', image: '/imgs/characters/napcat/napcat-desenhando.png' },
+  { name: 'NapCat', image: '/imgs/bichittos/napcat/napcat-dormindo.png' },
+  { name: 'Cambalhota', image: '/imgs/bichittos/napcat/napcat-cambalhota.png' },
+  { name: 'Pijama', image: '/imgs/bichittos/napcat/napcat-pijama.png' },
+  { name: 'Sonequinha', image: '/imgs/bichittos/napcat/napcat-sonequinha.png' },
+  { name: 'Gargalhando', image: '/imgs/bichittos/napcat/napcat-gargalhando.png' },
+  { name: 'Desenhando', image: '/imgs/bichittos/napcat/napcat-desenhando.png' },
 ];
 
 export const Default: Story = { args: { characters: chars } };

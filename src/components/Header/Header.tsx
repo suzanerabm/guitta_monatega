@@ -11,7 +11,7 @@ interface HeaderProps {
 }
 
 export function Header({ homePath, transparent = false }: HeaderProps) {
-  const { isCompact } = useScrollHeader(80);
+  const { isCompact, isHidden } = useScrollHeader(80);
   const { tintColor } = useChromeTint();
 
   // Tint takes precedence over transparent/headerBg
@@ -36,9 +36,10 @@ export function Header({ homePath, transparent = false }: HeaderProps) {
       bg={bg}
       backdropFilter={transparent && !isCompact ? 'none' : 'blur(14px)'}
       color={textColor}
-      transition="background 0.4s ease, color 0.4s ease, all 0.3s ease"
       px={{ base: 'lg', md: 'xl' }}
       py={isCompact ? '0.6rem' : { base: '1.2rem', md: 'md' }}
+      transform={isHidden ? 'translateY(-200%)' : 'translateY(0)'}
+      transition="background 0.4s ease, color 0.4s ease, transform 0.3s ease, padding 0.3s ease, font-size 0.3s ease"
     >
       <Flex justify="space-between" align="center">
         <Box

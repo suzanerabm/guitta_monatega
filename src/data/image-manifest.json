@@ -1,527 +1,1219 @@
 {
   "characters": {
-    "kammara/eni4": [
-      {
-        "name": "aracne 1",
-        "image": "/imgs/characters/kammara/eni4/aracne_1.png"
-      },
-      {
-        "name": "aracne 2",
-        "image": "/imgs/characters/kammara/eni4/aracne_2.png"
-      },
-      {
-        "name": "aracne 3",
-        "image": "/imgs/characters/kammara/eni4/aracne_3.png"
-      },
-      {
-        "name": "node 0 senhor supremo",
-        "image": "/imgs/characters/kammara/eni4/node-0_senhor_supremo.png"
-      },
-      {
-        "name": "troy",
-        "image": "/imgs/characters/kammara/eni4/troy.png"
-      },
-      {
-        "name": "virus",
-        "image": "/imgs/characters/kammara/eni4/virus.png"
-      }
-    ],
-    "kammara/lunnp1": [
-      {
-        "name": "Brisa",
-        "image": "/imgs/characters/kammara/lunnp1/Brisa.png"
-      },
-      {
-        "name": "Erú'Rin",
-        "image": "/imgs/characters/kammara/lunnp1/Erú'Rin.png"
-      },
-      {
-        "name": "Erú'Rin costas",
-        "image": "/imgs/characters/kammara/lunnp1/Erú'Rin_costas.png"
-      },
-      {
-        "name": "Lúm'Esha",
-        "image": "/imgs/characters/kammara/lunnp1/Lúm'Esha.png"
-      },
-      {
-        "name": "Túri’Kan",
-        "image": "/imgs/characters/kammara/lunnp1/Túri’Kan.png"
-      },
-      {
-        "name": "Tzi'Ki",
-        "image": "/imgs/characters/kammara/lunnp1/Tzi'Ki .png"
-      },
-      {
-        "name": "flor lume",
-        "image": "/imgs/characters/kammara/lunnp1/flor_lume.png"
-      }
-    ],
-    "kammara/orfv": [
-      {
-        "name": "orvian",
-        "image": "/imgs/characters/kammara/orfv/orvian.png"
-      }
-    ],
-    "kammara/triplec": [
-      {
-        "name": "AionVar",
-        "image": "/imgs/characters/kammara/triplec/2AionVar.png"
-      },
-      {
-        "name": "LumaVal 2",
-        "image": "/imgs/characters/kammara/triplec/2LumaVal_2.png"
-      },
-      {
-        "name": "Malloc",
-        "image": "/imgs/characters/kammara/triplec/Malloc.png"
-      }
-    ],
-    "miscelania": [
-      {
-        "name": "Cheio Bolinha",
-        "image": "/imgs/characters/miscelania/Cheio_Bolinha.gif"
-      },
-      {
-        "name": "Cheio Bolinha voando",
-        "image": "/imgs/characters/miscelania/Cheio_Bolinha_voando.png"
-      },
-      {
-        "name": "Malmo Bravo",
-        "image": "/imgs/characters/miscelania/Malmo_Bravo.gif"
-      },
-      {
-        "name": "Querie",
-        "image": "/imgs/characters/miscelania/Querie.gif"
-      },
-      {
-        "name": "baby cry",
-        "image": "/imgs/characters/miscelania/baby_cry.png"
-      },
-      {
-        "name": "baby pacifier",
-        "image": "/imgs/characters/miscelania/baby_pacifier.png"
-      },
-      {
-        "name": "baby sick",
-        "image": "/imgs/characters/miscelania/baby_sick.png"
-      },
-      {
-        "name": "baby sleep",
-        "image": "/imgs/characters/miscelania/baby_sleep.png"
-      },
-      {
-        "name": "baby toy",
-        "image": "/imgs/characters/miscelania/baby_toy.png"
-      },
-      {
-        "name": "bunniet doodle",
-        "image": "/imgs/characters/miscelania/bunniet_doodle.gif"
-      },
-      {
-        "name": "malmo",
-        "image": "/imgs/characters/miscelania/malmo.png"
-      },
-      {
-        "name": "malmo mal humorado",
-        "image": "/imgs/characters/miscelania/malmo_mal_humorado.jpg"
-      },
-      {
-        "name": "malmo não quer dividir",
-        "image": "/imgs/characters/miscelania/malmo_não_quer_dividir.jpg"
-      },
-      {
-        "name": "malmo não quer falar",
-        "image": "/imgs/characters/miscelania/malmo_não_quer_falar.jpg"
-      },
-      {
-        "name": "querie bravo",
-        "image": "/imgs/characters/miscelania/querie_bravo.gif"
-      },
-      {
-        "name": "querie comendo maca",
-        "image": "/imgs/characters/miscelania/querie_comendo_maca.gif"
-      },
-      {
-        "name": "querie comendo milho",
-        "image": "/imgs/characters/miscelania/querie_comendo_milho.gif"
-      },
-      {
-        "name": "querie dancando",
-        "image": "/imgs/characters/miscelania/querie_dancando.gif"
-      },
-      {
-        "name": "querie desmaia dormindo",
-        "image": "/imgs/characters/miscelania/querie_desmaia_dormindo.gif"
-      },
-      {
-        "name": "querie dormindo",
-        "image": "/imgs/characters/miscelania/querie_dormindo.gif"
-      },
-      {
-        "name": "querie escova",
-        "image": "/imgs/characters/miscelania/querie_escova.gif"
-      },
-      {
-        "name": "querie feliz",
-        "image": "/imgs/characters/miscelania/querie_feliz.gif"
-      },
-      {
-        "name": "querie love",
-        "image": "/imgs/characters/miscelania/querie_love.gif"
-      },
-      {
-        "name": "querie mostra os dentes",
-        "image": "/imgs/characters/miscelania/querie_mostra_os_dentes.gif"
-      },
-      {
-        "name": "querie piscando",
-        "image": "/imgs/characters/miscelania/querie_piscando.gif"
-      },
-      {
-        "name": "querie tira oculos",
-        "image": "/imgs/characters/miscelania/querie_tira_oculos.gif"
-      },
-      {
-        "name": "querie tomando banho",
-        "image": "/imgs/characters/miscelania/querie_tomando_banho.gif"
-      },
-      {
-        "name": "querie triste",
-        "image": "/imgs/characters/miscelania/querie_triste.gif"
-      },
-      {
-        "name": "querie vomitando",
-        "image": "/imgs/characters/miscelania/querie_vomitando.gif"
-      }
-    ],
     "napcat": [
       {
-        "name": "napcat burp",
-        "image": "/imgs/characters/napcat/napcat-burp.gif"
-      },
-      {
-        "name": "napcat cambalhota",
-        "image": "/imgs/characters/napcat/napcat-cambalhota.png"
-      },
-      {
-        "name": "napcat desenhando",
-        "image": "/imgs/characters/napcat/napcat-desenhando.png"
-      },
-      {
-        "name": "napcat dormindo",
-        "image": "/imgs/characters/napcat/napcat-dormindo.png"
-      },
-      {
-        "name": "napcat gargalhando",
-        "image": "/imgs/characters/napcat/napcat-gargalhando.png"
-      },
-      {
-        "name": "napcat pijama",
-        "image": "/imgs/characters/napcat/napcat-pijama.png"
-      },
-      {
-        "name": "napcat sonequinha",
-        "image": "/imgs/characters/napcat/napcat-sonequinha.png"
-      },
-      {
-        "name": "napcat",
-        "image": "/imgs/characters/napcat/napcat.png"
-      },
-      {
         "name": "napcat pendurado",
-        "image": "/imgs/characters/napcat/napcat_pendurado.png"
-      },
-      {
-        "name": "napcat soneca",
-        "image": "/imgs/characters/napcat/napcat_soneca.png"
+        "image": "/imgs/bichittos/napcat/napcat_pendurado.png"
       },
       {
         "name": "napcat soneca pijama",
-        "image": "/imgs/characters/napcat/napcat_soneca_pijama.png"
+        "image": "/imgs/bichittos/napcat/napcat_soneca_pijama.png"
       },
       {
-        "name": "violeta",
-        "image": "/imgs/characters/napcat/violeta.png"
+        "name": "napcat soneca",
+        "image": "/imgs/bichittos/napcat/napcat_soneca.png"
+      },
+      {
+        "name": "napcat-burp",
+        "image": "/imgs/bichittos/napcat/napcat-burp.gif"
+      },
+      {
+        "name": "napcat-cambalhota",
+        "image": "/imgs/bichittos/napcat/napcat-cambalhota.png"
+      },
+      {
+        "name": "napcat-desenhando",
+        "image": "/imgs/bichittos/napcat/napcat-desenhando.png"
+      },
+      {
+        "name": "napcat-dormindo",
+        "image": "/imgs/bichittos/napcat/napcat-dormindo.png"
+      },
+      {
+        "name": "napcat-gargalhando",
+        "image": "/imgs/bichittos/napcat/napcat-gargalhando.png"
+      },
+      {
+        "name": "napcat-pijama",
+        "image": "/imgs/bichittos/napcat/napcat-pijama.png"
+      },
+      {
+        "name": "napcat-sonequinha",
+        "image": "/imgs/bichittos/napcat/napcat-sonequinha.png"
+      },
+      {
+        "name": "napcat",
+        "image": "/imgs/bichittos/napcat/napcat.png"
       },
       {
         "name": "violeta dormindo",
-        "image": "/imgs/characters/napcat/violeta_dormindo.png"
+        "image": "/imgs/bichittos/napcat/violeta_dormindo.png"
       },
       {
         "name": "violeta sentada",
-        "image": "/imgs/characters/napcat/violeta_sentada.png"
+        "image": "/imgs/bichittos/napcat/violeta_sentada.png"
       },
       {
         "name": "violeta soneca",
-        "image": "/imgs/characters/napcat/violeta_soneca.png"
-      }
-    ],
-    "taylo": [
-      {
-        "name": "Carmela Caramela",
-        "image": "/imgs/characters/taylo/Carmela_Caramela.gif"
+        "image": "/imgs/bichittos/napcat/violeta_soneca.png"
       },
       {
-        "name": "Catarina",
-        "image": "/imgs/characters/taylo/Catarina.png"
-      },
-      {
-        "name": "Catarina feliz",
-        "image": "/imgs/characters/taylo/Catarina_feliz.gif"
-      },
-      {
-        "name": "Pitu chorando",
-        "image": "/imgs/characters/taylo/Pitu_chorando.gif"
-      },
-      {
-        "name": "Pitu comendo geleia",
-        "image": "/imgs/characters/taylo/Pitu_comendo_geleia.png"
-      },
-      {
-        "name": "Pitu tomando banho",
-        "image": "/imgs/characters/taylo/Pitu_tomando_banho.png"
-      },
-      {
-        "name": "babalina",
-        "image": "/imgs/characters/taylo/babalina.png"
-      },
-      {
-        "name": "babalina dancando",
-        "image": "/imgs/characters/taylo/babalina_dancando.png"
-      },
-      {
-        "name": "candy",
-        "image": "/imgs/characters/taylo/candy.png"
-      },
-      {
-        "name": "candy mágica",
-        "image": "/imgs/characters/taylo/candy_mágica.png"
-      },
-      {
-        "name": "olivia",
-        "image": "/imgs/characters/taylo/olivia.png"
-      },
-      {
-        "name": "olivia feliz",
-        "image": "/imgs/characters/taylo/olivia_feliz.png"
-      },
-      {
-        "name": "pitu",
-        "image": "/imgs/characters/taylo/pitu.png"
-      },
-      {
-        "name": "squizo comendo bala",
-        "image": "/imgs/characters/taylo/squizo_comendo_bala.png"
-      },
-      {
-        "name": "squizo quebrou patinha",
-        "image": "/imgs/characters/taylo/squizo_quebrou_patinha.png"
-      },
-      {
-        "name": "taylo",
-        "image": "/imgs/characters/taylo/taylo.png"
+        "name": "violeta",
+        "image": "/imgs/bichittos/napcat/violeta.png"
       }
     ],
     "zeco": [
       {
-        "name": "RuiMerengue",
-        "image": "/imgs/characters/zeco/RuiMerengue.png"
-      },
-      {
-        "name": "RuiMerengue com sorte",
-        "image": "/imgs/characters/zeco/RuiMerengue_com_sorte.png"
-      },
-      {
-        "name": "RuiMerengue dormindo",
-        "image": "/imgs/characters/zeco/RuiMerengue_dormindo.png"
-      },
-      {
-        "name": "RuiMerengue no carnaval",
-        "image": "/imgs/characters/zeco/RuiMerengue_no_carnaval.png"
-      },
-      {
-        "name": "Rui Merengue apaixonado",
-        "image": "/imgs/characters/zeco/Rui_Merengue_apaixonado.png"
-      },
-      {
-        "name": "Rui Merengue boiando",
-        "image": "/imgs/characters/zeco/Rui_Merengue_boiando.png"
-      },
-      {
-        "name": "Rui Merengue com duvida",
-        "image": "/imgs/characters/zeco/Rui_Merengue_com_duvida.png"
-      },
-      {
-        "name": "Rui Merengue com frio",
-        "image": "/imgs/characters/zeco/Rui_Merengue_com_frio.png"
-      },
-      {
-        "name": "Rui Merengue com medo",
-        "image": "/imgs/characters/zeco/Rui_Merengue_com_medo.png"
-      },
-      {
-        "name": "Rui Merengue comendo compota",
-        "image": "/imgs/characters/zeco/Rui_Merengue_comendo_compota.png"
-      },
-      {
-        "name": "Rui Merengue comendo morango",
-        "image": "/imgs/characters/zeco/Rui_Merengue_comendo_morango.png"
-      },
-      {
-        "name": "Rui Merengue contando historia",
-        "image": "/imgs/characters/zeco/Rui_Merengue_contando_historia.png"
-      },
-      {
-        "name": "Rui Merengue correndo",
-        "image": "/imgs/characters/zeco/Rui_Merengue_correndo.png"
-      },
-      {
-        "name": "Rui Merengue cozinhando",
-        "image": "/imgs/characters/zeco/Rui_Merengue_cozinhando.png"
-      },
-      {
-        "name": "Rui Merengue joga bolinha",
-        "image": "/imgs/characters/zeco/Rui_Merengue_joga_bolinha.png"
-      },
-      {
-        "name": "Rui Merengue mexirico",
-        "image": "/imgs/characters/zeco/Rui_Merengue_mexirico.png"
-      },
-      {
-        "name": "Rui Merengue navegando",
-        "image": "/imgs/characters/zeco/Rui_Merengue_navegando.png"
-      },
-      {
-        "name": "Rui Merengue tomando sorvete",
-        "image": "/imgs/characters/zeco/Rui_Merengue_tomando_sorvete.png"
-      },
-      {
-        "name": "gelo derretendo",
-        "image": "/imgs/characters/zeco/gelo_derretendo.png"
-      },
-      {
-        "name": "grilo pulando",
-        "image": "/imgs/characters/zeco/grilo_pulando.png"
-      },
-      {
-        "name": "ninha",
-        "image": "/imgs/characters/zeco/ninha.png"
-      },
-      {
-        "name": "ninha apaixonada",
-        "image": "/imgs/characters/zeco/ninha_apaixonada.png"
-      },
-      {
-        "name": "ninha bricando",
-        "image": "/imgs/characters/zeco/ninha_bricando.png"
-      },
-      {
-        "name": "ninha cafe",
-        "image": "/imgs/characters/zeco/ninha_cafe.png"
-      },
-      {
-        "name": "ninha cheiro ruim",
-        "image": "/imgs/characters/zeco/ninha_cheiro_ruim.png"
-      },
-      {
-        "name": "ninha comendo",
-        "image": "/imgs/characters/zeco/ninha_comendo.png"
-      },
-      {
-        "name": "ninha costas",
-        "image": "/imgs/characters/zeco/ninha_costas.png"
-      },
-      {
-        "name": "ninha danca",
-        "image": "/imgs/characters/zeco/ninha_danca.png"
-      },
-      {
-        "name": "ninha feliz",
-        "image": "/imgs/characters/zeco/ninha_feliz.png"
-      },
-      {
-        "name": "ninha nadando",
-        "image": "/imgs/characters/zeco/ninha_nadando.png"
-      },
-      {
-        "name": "ninha praia",
-        "image": "/imgs/characters/zeco/ninha_praia.png"
-      },
-      {
-        "name": "ninha soneca",
-        "image": "/imgs/characters/zeco/ninha_soneca.png"
-      },
-      {
-        "name": "ninha voa",
-        "image": "/imgs/characters/zeco/ninha_voa.png"
-      },
-      {
-        "name": "zeco",
-        "image": "/imgs/characters/zeco/zeco.png"
-      },
-      {
-        "name": "zeco acordando",
-        "image": "/imgs/characters/zeco/zeco_acordando.png"
-      },
-      {
         "name": "zeco atrasado",
-        "image": "/imgs/characters/zeco/zeco_atrasado.png"
+        "image": "/imgs/bichittos/zeco/01_zeco_atrasado.png"
       },
       {
         "name": "zeco boa noite",
-        "image": "/imgs/characters/zeco/zeco_boa_noite.png"
+        "image": "/imgs/bichittos/zeco/01_zeco_boa_noite.png"
       },
       {
         "name": "zeco boiando",
-        "image": "/imgs/characters/zeco/zeco_boiando.png"
+        "image": "/imgs/bichittos/zeco/01_zeco_boiando.png"
       },
       {
         "name": "zeco comendo picole",
-        "image": "/imgs/characters/zeco/zeco_comendo_picole.png"
+        "image": "/imgs/bichittos/zeco/01_zeco_comendo_picole.png"
       },
       {
         "name": "zeco de boia",
-        "image": "/imgs/characters/zeco/zeco_de_boia.png"
+        "image": "/imgs/bichittos/zeco/01_zeco_de_boia.png"
       },
       {
         "name": "zeco desmaiando",
-        "image": "/imgs/characters/zeco/zeco_desmaiando.png"
+        "image": "/imgs/bichittos/zeco/01_zeco_desmaiando.png"
       },
       {
         "name": "zeco doente",
-        "image": "/imgs/characters/zeco/zeco_doente.png"
+        "image": "/imgs/bichittos/zeco/01_zeco_doente.png"
       },
       {
         "name": "zeco escondido",
-        "image": "/imgs/characters/zeco/zeco_escondido.png"
+        "image": "/imgs/bichittos/zeco/01_zeco_escondido.png"
       },
       {
         "name": "zeco falando",
-        "image": "/imgs/characters/zeco/zeco_falando.png"
+        "image": "/imgs/bichittos/zeco/01_zeco_falando.png"
       },
       {
         "name": "zeco feliz",
-        "image": "/imgs/characters/zeco/zeco_feliz.png"
+        "image": "/imgs/bichittos/zeco/01_zeco_feliz.png"
       },
       {
         "name": "zeco jump",
-        "image": "/imgs/characters/zeco/zeco_jump.png"
+        "image": "/imgs/bichittos/zeco/01_zeco_jump.png"
       },
       {
         "name": "zeco piscando",
-        "image": "/imgs/characters/zeco/zeco_piscando.png"
+        "image": "/imgs/bichittos/zeco/01_zeco_piscando.png"
       },
       {
         "name": "zeco soneca",
-        "image": "/imgs/characters/zeco/zeco_soneca.png"
+        "image": "/imgs/bichittos/zeco/01_zeco_soneca.png"
       },
       {
         "name": "zeco triste",
-        "image": "/imgs/characters/zeco/zeco_triste.png"
+        "image": "/imgs/bichittos/zeco/01_zeco_triste.png"
       },
       {
         "name": "zeco tropecou",
-        "image": "/imgs/characters/zeco/zeco_tropecou.png"
+        "image": "/imgs/bichittos/zeco/01_zeco_tropecou.png"
+      },
+      {
+        "name": "zeco",
+        "image": "/imgs/bichittos/zeco/01_zeco.png"
+      },
+      {
+        "name": "Rui Merengue apaixonado",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_apaixonado.png"
+      },
+      {
+        "name": "Rui Merengue boiando",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_boiando.png"
+      },
+      {
+        "name": "Rui Merengue com duvida",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_com_duvida.png"
+      },
+      {
+        "name": "Rui Merengue com frio",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_com_frio.png"
+      },
+      {
+        "name": "Rui Merengue com medo",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_com_medo.png"
+      },
+      {
+        "name": "Rui Merengue comendo compota",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_comendo_compota.png"
+      },
+      {
+        "name": "Rui Merengue comendo morango",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_comendo_morango.png"
+      },
+      {
+        "name": "Rui Merengue contando historia",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_contando_historia.png"
+      },
+      {
+        "name": "Rui Merengue correndo",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_correndo.png"
+      },
+      {
+        "name": "Rui Merengue joga bolinha",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_joga_bolinha.png"
+      },
+      {
+        "name": "Rui Merengue mexirico",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_mexirico.png"
+      },
+      {
+        "name": "Rui Merengue navegando",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_navegando.png"
+      },
+      {
+        "name": "Rui Merengue tomando sorvete",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_tomando_sorvete.png"
+      },
+      {
+        "name": "RuiMerengue com sorte",
+        "image": "/imgs/bichittos/zeco/02_RuiMerengue_com_sorte.png"
+      },
+      {
+        "name": "RuiMerengue dormindo",
+        "image": "/imgs/bichittos/zeco/02_RuiMerengue_dormindo.png"
+      },
+      {
+        "name": "RuiMerengue no carnaval",
+        "image": "/imgs/bichittos/zeco/02_RuiMerengue_no_carnaval.png"
+      },
+      {
+        "name": "RuiMerengue",
+        "image": "/imgs/bichittos/zeco/02_RuiMerengue.png"
+      },
+      {
+        "name": "ninha apaixonada",
+        "image": "/imgs/bichittos/zeco/03_ninha_apaixonada.png"
+      },
+      {
+        "name": "ninha bricando",
+        "image": "/imgs/bichittos/zeco/03_ninha_bricando.png"
+      },
+      {
+        "name": "ninha cafe",
+        "image": "/imgs/bichittos/zeco/03_ninha_cafe.png"
+      },
+      {
+        "name": "ninha cheiro ruim",
+        "image": "/imgs/bichittos/zeco/03_ninha_cheiro_ruim.png"
+      },
+      {
+        "name": "ninha comendo",
+        "image": "/imgs/bichittos/zeco/03_ninha_comendo.png"
+      },
+      {
+        "name": "ninha costas",
+        "image": "/imgs/bichittos/zeco/03_ninha_costas.png"
+      },
+      {
+        "name": "ninha danca",
+        "image": "/imgs/bichittos/zeco/03_ninha_danca.png"
+      },
+      {
+        "name": "ninha feliz",
+        "image": "/imgs/bichittos/zeco/03_ninha_feliz.png"
+      },
+      {
+        "name": "ninha nadando",
+        "image": "/imgs/bichittos/zeco/03_ninha_nadando.png"
+      },
+      {
+        "name": "ninha praia",
+        "image": "/imgs/bichittos/zeco/03_ninha_praia.png"
+      },
+      {
+        "name": "ninha soneca",
+        "image": "/imgs/bichittos/zeco/03_ninha_soneca.png"
+      },
+      {
+        "name": "ninha voa",
+        "image": "/imgs/bichittos/zeco/03_ninha_voa.png"
+      },
+      {
+        "name": "ninha",
+        "image": "/imgs/bichittos/zeco/03_ninha.png"
+      },
+      {
+        "name": "gelo derretendo",
+        "image": "/imgs/bichittos/zeco/04_gelo_derretendo.png"
+      },
+      {
+        "name": "grilo pulando",
+        "image": "/imgs/bichittos/zeco/04_grilo_pulando.png"
+      }
+    ],
+    "taylo": [
+      {
+        "name": "taylo",
+        "image": "/imgs/bichittos/taylo/01_taylo.png"
+      },
+      {
+        "name": "Pitu chorando",
+        "image": "/imgs/bichittos/taylo/02_Pitu_chorando.gif"
+      },
+      {
+        "name": "Pitu comendo geleia",
+        "image": "/imgs/bichittos/taylo/02_Pitu_comendo_geleia.png"
+      },
+      {
+        "name": "Pitu tomando banho",
+        "image": "/imgs/bichittos/taylo/02_Pitu_tomando_banho.png"
+      },
+      {
+        "name": "Pitu toy",
+        "image": "/imgs/bichittos/taylo/02_Pitu_toy.png"
+      },
+      {
+        "name": "pitu",
+        "image": "/imgs/bichittos/taylo/02_pitu.png"
+      },
+      {
+        "name": "babalina dancando",
+        "image": "/imgs/bichittos/taylo/03_babalina_dancando.png"
+      },
+      {
+        "name": "babalina",
+        "image": "/imgs/bichittos/taylo/03_babalina.png"
+      },
+      {
+        "name": "Catarina feliz",
+        "image": "/imgs/bichittos/taylo/05_Catarina_feliz.gif"
+      },
+      {
+        "name": "Catarina",
+        "image": "/imgs/bichittos/taylo/05_Catarina.png"
+      },
+      {
+        "name": "Carmela Caramela",
+        "image": "/imgs/bichittos/taylo/06_Carmela_Caramela.gif"
+      },
+      {
+        "name": "olivia feliz",
+        "image": "/imgs/bichittos/taylo/07_olivia_feliz.png"
+      },
+      {
+        "name": "olivia",
+        "image": "/imgs/bichittos/taylo/07_olivia.png"
+      },
+      {
+        "name": "squizo comendo bala",
+        "image": "/imgs/bichittos/taylo/08_squizo_comendo_bala.png"
+      },
+      {
+        "name": "squizo quebrou patinha",
+        "image": "/imgs/bichittos/taylo/08_squizo_quebrou_patinha.png"
+      }
+    ],
+    "cheiodebolinha": [
+      {
+        "name": "Cheio Bolinha voando",
+        "image": "/imgs/bichittos/cheiodebolinha/Cheio_Bolinha_voando.png"
+      },
+      {
+        "name": "Cheio Bolinha",
+        "image": "/imgs/bichittos/cheiodebolinha/Cheio_Bolinha.gif"
+      },
+      {
+        "name": "querie bravo",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_bravo.gif"
+      },
+      {
+        "name": "querie comendo maca",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_comendo_maca.gif"
+      },
+      {
+        "name": "querie comendo milho",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_comendo_milho.gif"
+      },
+      {
+        "name": "querie dancando",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_dancando.gif"
+      },
+      {
+        "name": "querie desmaia dormindo",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_desmaia_dormindo.gif"
+      },
+      {
+        "name": "querie dormindo",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_dormindo.gif"
+      },
+      {
+        "name": "querie feliz",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_feliz.gif"
+      },
+      {
+        "name": "querie love",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_love.gif"
+      },
+      {
+        "name": "querie mostra os dentes",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_mostra_os_dentes.gif"
+      },
+      {
+        "name": "querie piscando",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_piscando.gif"
+      },
+      {
+        "name": "querie tira oculos",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_tira_oculos.gif"
+      },
+      {
+        "name": "querie tomando banho",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_tomando_banho.gif"
+      },
+      {
+        "name": "querie triste",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_triste.gif"
+      },
+      {
+        "name": "querie vomitando",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_vomitando.gif"
+      },
+      {
+        "name": "Querie",
+        "image": "/imgs/bichittos/cheiodebolinha/Querie.gif"
+      }
+    ],
+    "miscelania": [
+      {
+        "name": "candy fada",
+        "image": "/imgs/bichittos/miscelania/04_candy_fada.png"
+      },
+      {
+        "name": "candy",
+        "image": "/imgs/bichittos/miscelania/04_candy.png"
+      },
+      {
+        "name": "baby cry",
+        "image": "/imgs/bichittos/miscelania/baby_cry.png"
+      },
+      {
+        "name": "baby pacifier",
+        "image": "/imgs/bichittos/miscelania/baby_pacifier.png"
+      },
+      {
+        "name": "baby sick",
+        "image": "/imgs/bichittos/miscelania/baby_sick.png"
+      },
+      {
+        "name": "baby sleep",
+        "image": "/imgs/bichittos/miscelania/baby_sleep.png"
+      }
+    ],
+    "kammara": [
+      {
+        "name": "events bg",
+        "image": "/imgs/kammara/_events_bg.jpg"
+      }
+    ],
+    "kammara/eni4": [
+      {
+        "name": ".rats~imageoptim",
+        "image": "/imgs/kammara/eni4/.rats~imageoptim.png"
+      },
+      {
+        "name": ".VALKON costas~imageoptim",
+        "image": "/imgs/kammara/eni4/.VALKON_costas~imageoptim.png"
+      },
+      {
+        "name": "aracne 1 costas",
+        "image": "/imgs/kammara/eni4/aracne_1_costas.png"
+      },
+      {
+        "name": "aracne 1",
+        "image": "/imgs/kammara/eni4/aracne_1.png"
+      },
+      {
+        "name": "aracne 2 costas",
+        "image": "/imgs/kammara/eni4/aracne_2_costas.png"
+      },
+      {
+        "name": "aracne 2",
+        "image": "/imgs/kammara/eni4/aracne_2.png"
+      },
+      {
+        "name": "aracne 3",
+        "image": "/imgs/kammara/eni4/aracne_3.png"
+      },
+      {
+        "name": "bug costas",
+        "image": "/imgs/kammara/eni4/bug_costas.png"
+      },
+      {
+        "name": "bug",
+        "image": "/imgs/kammara/eni4/bug.png"
+      },
+      {
+        "name": "node-0 senhor supremo costas",
+        "image": "/imgs/kammara/eni4/node-0_senhor_supremo_costas.png"
+      },
+      {
+        "name": "node-0 senhor supremo",
+        "image": "/imgs/kammara/eni4/node-0_senhor_supremo.png"
+      },
+      {
+        "name": "rats bravo",
+        "image": "/imgs/kammara/eni4/rats_bravo.png"
+      },
+      {
+        "name": "REPLION costas",
+        "image": "/imgs/kammara/eni4/REPLION_costas.png"
+      },
+      {
+        "name": "robo escravo exausto",
+        "image": "/imgs/kammara/eni4/robo_escravo_exausto.png"
+      },
+      {
+        "name": "robo escravo",
+        "image": "/imgs/kammara/eni4/robo_escravo.png"
+      },
+      {
+        "name": "SCORAK costas",
+        "image": "/imgs/kammara/eni4/SCORAK_costas.png"
+      },
+      {
+        "name": "THERMAX costas",
+        "image": "/imgs/kammara/eni4/THERMAX_costas.png"
+      },
+      {
+        "name": "troy pe",
+        "image": "/imgs/kammara/eni4/troy_pe.png"
+      },
+      {
+        "name": "troy",
+        "image": "/imgs/kammara/eni4/troy.png"
+      },
+      {
+        "name": "VALKON virus",
+        "image": "/imgs/kammara/eni4/VALKON_virus.png"
+      },
+      {
+        "name": "VEXON costas",
+        "image": "/imgs/kammara/eni4/VEXON_costas.png"
+      },
+      {
+        "name": "VEXON normal",
+        "image": "/imgs/kammara/eni4/VEXON_normal.png"
+      },
+      {
+        "name": "VEXON patas",
+        "image": "/imgs/kammara/eni4/VEXON_patas.png"
+      },
+      {
+        "name": "virus cute",
+        "image": "/imgs/kammara/eni4/virus_cute.png"
+      },
+      {
+        "name": "virus KARTEX dentro troy",
+        "image": "/imgs/kammara/eni4/virus_KARTEX_dentro_troy.png"
+      },
+      {
+        "name": "virus KARTEX",
+        "image": "/imgs/kammara/eni4/virus_KARTEX.png"
+      },
+      {
+        "name": "virus MASKON cute",
+        "image": "/imgs/kammara/eni4/virus_MASKON_cute.png"
+      },
+      {
+        "name": "virus MASKON",
+        "image": "/imgs/kammara/eni4/virus_MASKON.png"
+      },
+      {
+        "name": "virus normal costas",
+        "image": "/imgs/kammara/eni4/virus_normal_costas.png"
+      },
+      {
+        "name": "virus REPLION",
+        "image": "/imgs/kammara/eni4/virus_REPLION.png"
+      },
+      {
+        "name": "virus SCORAK",
+        "image": "/imgs/kammara/eni4/virus_SCORAK.png"
+      },
+      {
+        "name": "virus soldado",
+        "image": "/imgs/kammara/eni4/virus_soldado.png"
+      },
+      {
+        "name": "virus THERMAX",
+        "image": "/imgs/kammara/eni4/virus_THERMAX.png"
+      },
+      {
+        "name": "virus",
+        "image": "/imgs/kammara/eni4/virus.png"
+      },
+      {
+        "name": "worm costas",
+        "image": "/imgs/kammara/eni4/worm_costas.png"
+      },
+      {
+        "name": "worm",
+        "image": "/imgs/kammara/eni4/worm.png"
+      }
+    ],
+    "kammara/lunnp1": [
+      {
+        "name": "blue costas",
+        "image": "/imgs/kammara/lunnp1/blue_costas.png"
+      },
+      {
+        "name": "blue",
+        "image": "/imgs/kammara/lunnp1/blue.png"
+      },
+      {
+        "name": "brisa alta costas",
+        "image": "/imgs/kammara/lunnp1/brisa_alta_costas.png"
+      },
+      {
+        "name": "brisa alta",
+        "image": "/imgs/kammara/lunnp1/brisa_alta.png"
+      },
+      {
+        "name": "brisa azul costas sem brilho",
+        "image": "/imgs/kammara/lunnp1/brisa_azul_costas_sem_brilho.png"
+      },
+      {
+        "name": "brisa sem brilho",
+        "image": "/imgs/kammara/lunnp1/brisa_sem_brilho.png"
+      },
+      {
+        "name": "EruRin 230",
+        "image": "/imgs/kammara/lunnp1/EruRin_230.png"
+      },
+      {
+        "name": "erurin alta",
+        "image": "/imgs/kammara/lunnp1/erurin_alta.png"
+      },
+      {
+        "name": "EruRin costas1",
+        "image": "/imgs/kammara/lunnp1/EruRin_costas1.png"
+      },
+      {
+        "name": "EruRin new",
+        "image": "/imgs/kammara/lunnp1/EruRin_new.png"
+      },
+      {
+        "name": "EruRin pq",
+        "image": "/imgs/kammara/lunnp1/EruRin_pq.png"
+      },
+      {
+        "name": "Erurin",
+        "image": "/imgs/kammara/lunnp1/Erurin.png"
+      },
+      {
+        "name": "flor lume alta",
+        "image": "/imgs/kammara/lunnp1/flor_lume_alta.png"
+      },
+      {
+        "name": "flor lume costas alta",
+        "image": "/imgs/kammara/lunnp1/flor_lume_costas_alta.png"
+      },
+      {
+        "name": "flor lume costas",
+        "image": "/imgs/kammara/lunnp1/flor_lume_costas.png"
+      },
+      {
+        "name": "flor lume",
+        "image": "/imgs/kammara/lunnp1/flor_lume.png"
+      },
+      {
+        "name": "flor-lume-alta",
+        "image": "/imgs/kammara/lunnp1/flor-lume-alta.png"
+      },
+      {
+        "name": "kaelun costas",
+        "image": "/imgs/kammara/lunnp1/kaelun_costas.png"
+      },
+      {
+        "name": "Kaelun",
+        "image": "/imgs/kammara/lunnp1/Kaelun.png"
+      },
+      {
+        "name": "kaitor costas",
+        "image": "/imgs/kammara/lunnp1/kaitor_costas.png"
+      },
+      {
+        "name": "kaitor",
+        "image": "/imgs/kammara/lunnp1/kaitor.png"
+      },
+      {
+        "name": "kate costas",
+        "image": "/imgs/kammara/lunnp1/kate_costas.png"
+      },
+      {
+        "name": "kate",
+        "image": "/imgs/kammara/lunnp1/kate.png"
+      },
+      {
+        "name": "Koryn",
+        "image": "/imgs/kammara/lunnp1/Koryn.png"
+      },
+      {
+        "name": "krii costas",
+        "image": "/imgs/kammara/lunnp1/krii_costas.png"
+      },
+      {
+        "name": "Krii",
+        "image": "/imgs/kammara/lunnp1/Krii.png"
+      },
+      {
+        "name": "lei costas verde",
+        "image": "/imgs/kammara/lunnp1/lei_costas_verde.png"
+      },
+      {
+        "name": "lei costas",
+        "image": "/imgs/kammara/lunnp1/lei_costas.png"
+      },
+      {
+        "name": "lei verde",
+        "image": "/imgs/kammara/lunnp1/lei_verde.png"
+      },
+      {
+        "name": "lei",
+        "image": "/imgs/kammara/lunnp1/lei.png"
+      },
+      {
+        "name": "LumEsha costas",
+        "image": "/imgs/kammara/lunnp1/LumEsha_costas.png"
+      },
+      {
+        "name": "LumEsha",
+        "image": "/imgs/kammara/lunnp1/LumEsha.png"
+      },
+      {
+        "name": "Lumino costas",
+        "image": "/imgs/kammara/lunnp1/Lumino_costas.png"
+      },
+      {
+        "name": "Lumino",
+        "image": "/imgs/kammara/lunnp1/Lumino.png"
+      },
+      {
+        "name": "Lumira costas",
+        "image": "/imgs/kammara/lunnp1/Lumira_costas.png"
+      },
+      {
+        "name": "Lumira",
+        "image": "/imgs/kammara/lunnp1/Lumira.png"
+      },
+      {
+        "name": "mura costas",
+        "image": "/imgs/kammara/lunnp1/mura_costas.png"
+      },
+      {
+        "name": "mura",
+        "image": "/imgs/kammara/lunnp1/mura.png"
+      },
+      {
+        "name": "narumin costas",
+        "image": "/imgs/kammara/lunnp1/narumin_costas.png"
+      },
+      {
+        "name": "narumin",
+        "image": "/imgs/kammara/lunnp1/narumin.png"
+      },
+      {
+        "name": "rinboro costas",
+        "image": "/imgs/kammara/lunnp1/rinboro_costas.png"
+      },
+      {
+        "name": "rinboro",
+        "image": "/imgs/kammara/lunnp1/rinboro.png"
+      },
+      {
+        "name": "Serai costas",
+        "image": "/imgs/kammara/lunnp1/Serai_costas.png"
+      },
+      {
+        "name": "Serai",
+        "image": "/imgs/kammara/lunnp1/Serai.png"
+      },
+      {
+        "name": "sereno 2 costas",
+        "image": "/imgs/kammara/lunnp1/sereno_2_costas.png"
+      },
+      {
+        "name": "sereno 2",
+        "image": "/imgs/kammara/lunnp1/sereno_2.png"
+      },
+      {
+        "name": "sereno 3",
+        "image": "/imgs/kammara/lunnp1/sereno_3.png"
+      },
+      {
+        "name": "sereno alta",
+        "image": "/imgs/kammara/lunnp1/sereno_alta.png"
+      },
+      {
+        "name": "Sereno costas",
+        "image": "/imgs/kammara/lunnp1/Sereno_costas.png"
+      },
+      {
+        "name": "sereno",
+        "image": "/imgs/kammara/lunnp1/sereno.png"
+      },
+      {
+        "name": "shalun",
+        "image": "/imgs/kammara/lunnp1/shalun.png"
+      },
+      {
+        "name": "shirnai costas",
+        "image": "/imgs/kammara/lunnp1/shirnai_costas.png"
+      },
+      {
+        "name": "shirnai",
+        "image": "/imgs/kammara/lunnp1/shirnai.png"
+      },
+      {
+        "name": "telun costas",
+        "image": "/imgs/kammara/lunnp1/telun_costas.png"
+      },
+      {
+        "name": "Telun",
+        "image": "/imgs/kammara/lunnp1/Telun.png"
+      },
+      {
+        "name": "tiru costas",
+        "image": "/imgs/kammara/lunnp1/tiru_costas.png"
+      },
+      {
+        "name": "tiru",
+        "image": "/imgs/kammara/lunnp1/tiru.png"
+      },
+      {
+        "name": "TuriKan costas",
+        "image": "/imgs/kammara/lunnp1/TuriKan_costas.png"
+      },
+      {
+        "name": "TuriKan",
+        "image": "/imgs/kammara/lunnp1/TuriKan.png"
+      },
+      {
+        "name": "TziKi  costas",
+        "image": "/imgs/kammara/lunnp1/TziKi _costas.png"
+      },
+      {
+        "name": "TziKi",
+        "image": "/imgs/kammara/lunnp1/TziKi.png"
+      },
+      {
+        "name": "Veloz costas",
+        "image": "/imgs/kammara/lunnp1/Veloz_costas.png"
+      },
+      {
+        "name": "Veloz",
+        "image": "/imgs/kammara/lunnp1/Veloz.png"
+      },
+      {
+        "name": "veludo costas",
+        "image": "/imgs/kammara/lunnp1/veludo_costas.png"
+      },
+      {
+        "name": "veludo",
+        "image": "/imgs/kammara/lunnp1/veludo.png"
+      },
+      {
+        "name": "Veluma",
+        "image": "/imgs/kammara/lunnp1/Veluma.png"
+      }
+    ],
+    "kammara/orfv": [
+      {
+        "name": "orvian 13",
+        "image": "/imgs/kammara/orfv/1orvian_13.png"
+      },
+      {
+        "name": "orvian costas 2",
+        "image": "/imgs/kammara/orfv/1orvian_costas_2.png"
+      },
+      {
+        "name": "orvian costas",
+        "image": "/imgs/kammara/orfv/1orvian_costas.png"
+      },
+      {
+        "name": "orvian",
+        "image": "/imgs/kammara/orfv/1orvian.png"
+      },
+      {
+        "name": "orvian1",
+        "image": "/imgs/kammara/orfv/1orvian1.png"
+      },
+      {
+        "name": "maelik",
+        "image": "/imgs/kammara/orfv/2maelik.png"
+      },
+      {
+        "name": "Nylpha",
+        "image": "/imgs/kammara/orfv/3Nylpha.png"
+      },
+      {
+        "name": "Nylpha1",
+        "image": "/imgs/kammara/orfv/3Nylpha1.png"
+      },
+      {
+        "name": "Kallott",
+        "image": "/imgs/kammara/orfv/Kallott.png"
+      },
+      {
+        "name": "LetiK",
+        "image": "/imgs/kammara/orfv/LetiK.png"
+      },
+      {
+        "name": "Torwen",
+        "image": "/imgs/kammara/orfv/Torwen.png"
+      }
+    ],
+    "kammara/triplec": [
+      {
+        "name": "aguia costas",
+        "image": "/imgs/kammara/triplec/aguia_costas.png"
+      },
+      {
+        "name": "aguia",
+        "image": "/imgs/kammara/triplec/aguia.png"
+      },
+      {
+        "name": "bean costas",
+        "image": "/imgs/kammara/triplec/bean_costas.png"
+      },
+      {
+        "name": "bean frente",
+        "image": "/imgs/kammara/triplec/bean_frente.png"
+      },
+      {
+        "name": "bean lado",
+        "image": "/imgs/kammara/triplec/bean_lado.png"
+      },
+      {
+        "name": "borboleta costas",
+        "image": "/imgs/kammara/triplec/borboleta_costas.png"
+      },
+      {
+        "name": "borboleta-gigapixel-standard v2-6x",
+        "image": "/imgs/kammara/triplec/borboleta-gigapixel-standard v2-6x.png"
+      },
+      {
+        "name": "borboleta",
+        "image": "/imgs/kammara/triplec/borboleta.png"
+      },
+      {
+        "name": "Camuoide costas",
+        "image": "/imgs/kammara/triplec/Camuoide_costas.png"
+      },
+      {
+        "name": "Camuoide frente1",
+        "image": "/imgs/kammara/triplec/Camuoide_frente1.png"
+      },
+      {
+        "name": "lai costas",
+        "image": "/imgs/kammara/triplec/lai_costas.png"
+      },
+      {
+        "name": "lai",
+        "image": "/imgs/kammara/triplec/lai.png"
+      },
+      {
+        "name": "niuloide costas",
+        "image": "/imgs/kammara/triplec/niuloide_costas.png"
+      },
+      {
+        "name": "niuloide",
+        "image": "/imgs/kammara/triplec/niuloide.png"
+      },
+      {
+        "name": "OMI costas",
+        "image": "/imgs/kammara/triplec/OMI_costas.png"
+      },
+      {
+        "name": "OMI",
+        "image": "/imgs/kammara/triplec/OMI.png"
+      },
+      {
+        "name": "plumoide 1 costas",
+        "image": "/imgs/kammara/triplec/plumoide_1_costas.png"
+      },
+      {
+        "name": "plumoide 1 frente-new",
+        "image": "/imgs/kammara/triplec/plumoide_1_frente-new.png"
+      },
+      {
+        "name": "Shilo-Inseto costas",
+        "image": "/imgs/kammara/triplec/Shilo-Inseto_costas.png"
+      },
+      {
+        "name": "Shilo-Inseto frente",
+        "image": "/imgs/kammara/triplec/Shilo-Inseto_frente.png"
+      },
+      {
+        "name": "Treezitoide costas",
+        "image": "/imgs/kammara/triplec/Treezitoide_costas.png"
+      },
+      {
+        "name": "Treezitoide",
+        "image": "/imgs/kammara/triplec/Treezitoide.png"
+      },
+      {
+        "name": "VEXA costas",
+        "image": "/imgs/kammara/triplec/VEXA_costas.png"
+      },
+      {
+        "name": "VEXA",
+        "image": "/imgs/kammara/triplec/VEXA.png"
+      },
+      {
+        "name": "volpita baby",
+        "image": "/imgs/kammara/triplec/volpita_baby.png"
+      },
+      {
+        "name": "volpita costas",
+        "image": "/imgs/kammara/triplec/volpita_costas.png"
+      },
+      {
+        "name": "volpita",
+        "image": "/imgs/kammara/triplec/volpita.png"
+      },
+      {
+        "name": "ypito roxo costas",
+        "image": "/imgs/kammara/triplec/ypito_roxo_costas.png"
+      },
+      {
+        "name": "ypito roxo",
+        "image": "/imgs/kammara/triplec/ypito_roxo.png"
+      },
+      {
+        "name": "ZARKOL-9 costas",
+        "image": "/imgs/kammara/triplec/ZARKOL-9_costas.png"
+      },
+      {
+        "name": "ZARKOL-9",
+        "image": "/imgs/kammara/triplec/ZARKOL-9.png"
+      }
+    ],
+    "kammara/triplec/malloc": [
+      {
+        "name": "Aion Var",
+        "image": "/imgs/kammara/triplec/malloc/Aion_Var.png"
+      },
+      {
+        "name": "borboleta-costas",
+        "image": "/imgs/kammara/triplec/malloc/borboleta-costas.png"
+      },
+      {
+        "name": "borboleta-frente",
+        "image": "/imgs/kammara/triplec/malloc/borboleta-frente.png"
+      },
+      {
+        "name": "Estakors-frente",
+        "image": "/imgs/kammara/triplec/malloc/Estakors-frente.png"
+      },
+      {
+        "name": "Estakors",
+        "image": "/imgs/kammara/triplec/malloc/Estakors.png"
+      },
+      {
+        "name": "Iren Kor",
+        "image": "/imgs/kammara/triplec/malloc/Iren_Kor.png"
+      },
+      {
+        "name": "Luma Val",
+        "image": "/imgs/kammara/triplec/malloc/Luma_Val.png"
+      },
+      {
+        "name": "Mewlites costas",
+        "image": "/imgs/kammara/triplec/malloc/Mewlites_costas.png"
+      },
+      {
+        "name": "Mewlites deLado",
+        "image": "/imgs/kammara/triplec/malloc/Mewlites_deLado.png"
+      },
+      {
+        "name": "robo cristal costas",
+        "image": "/imgs/kammara/triplec/malloc/robo_cristal_costas.png"
+      },
+      {
+        "name": "robo cristal",
+        "image": "/imgs/kammara/triplec/malloc/robo_cristal.png"
+      },
+      {
+        "name": "Shilo-Inseto costas",
+        "image": "/imgs/kammara/triplec/malloc/Shilo-Inseto_costas.png"
+      },
+      {
+        "name": "Shilo-Inseto frente",
+        "image": "/imgs/kammara/triplec/malloc/Shilo-Inseto_frente.png"
+      },
+      {
+        "name": "vespa-costas",
+        "image": "/imgs/kammara/triplec/malloc/vespa-costas.jpg"
+      },
+      {
+        "name": "vespa",
+        "image": "/imgs/kammara/triplec/malloc/vespa.jpg"
+      }
+    ],
+    "kammara/triplec/mesh": [
+      {
+        "name": "caracol-costas",
+        "image": "/imgs/kammara/triplec/mesh/caracol-costas.png"
+      },
+      {
+        "name": "caracol-frente",
+        "image": "/imgs/kammara/triplec/mesh/caracol-frente.png"
+      },
+      {
+        "name": "claude costas",
+        "image": "/imgs/kammara/triplec/mesh/claude_costas.png"
+      },
+      {
+        "name": "claude",
+        "image": "/imgs/kammara/triplec/mesh/claude.png"
+      },
+      {
+        "name": "cobra-costas",
+        "image": "/imgs/kammara/triplec/mesh/cobra-costas.png"
+      },
+      {
+        "name": "cobra-frente-gigapixel-standard v2-6x",
+        "image": "/imgs/kammara/triplec/mesh/cobra-frente-gigapixel-standard v2-6x.png"
+      },
+      {
+        "name": "elefante-costas",
+        "image": "/imgs/kammara/triplec/mesh/elefante-costas.png"
+      },
+      {
+        "name": "elefante-frente",
+        "image": "/imgs/kammara/triplec/mesh/elefante-frente.png"
+      },
+      {
+        "name": "KAEL TORIN bravo",
+        "image": "/imgs/kammara/triplec/mesh/KAEL_TORIN_bravo.png"
+      },
+      {
+        "name": "KAEL TORIN",
+        "image": "/imgs/kammara/triplec/mesh/KAEL_TORIN.png"
+      },
+      {
+        "name": "manu-costas",
+        "image": "/imgs/kammara/triplec/mesh/manu-costas.png"
+      },
+      {
+        "name": "manu-frente",
+        "image": "/imgs/kammara/triplec/mesh/manu-frente.png"
+      },
+      {
+        "name": "mesh 2",
+        "image": "/imgs/kammara/triplec/mesh/mesh_2.png"
+      },
+      {
+        "name": "mesh12",
+        "image": "/imgs/kammara/triplec/mesh/mesh12.png"
+      },
+      {
+        "name": "mesh13",
+        "image": "/imgs/kammara/triplec/mesh/mesh13.png"
+      },
+      {
+        "name": "mesh14",
+        "image": "/imgs/kammara/triplec/mesh/mesh14.png"
+      },
+      {
+        "name": "nibu-costas",
+        "image": "/imgs/kammara/triplec/mesh/nibu-costas.png"
+      },
+      {
+        "name": "nibu",
+        "image": "/imgs/kammara/triplec/mesh/nibu.png"
+      }
+    ],
+    "kammara/triplec/sharp": [
+      {
+        "name": "dino-costas",
+        "image": "/imgs/kammara/triplec/sharp/dino-costas.png"
+      },
+      {
+        "name": "dino-lado-gigapixel-standard-v2-6x",
+        "image": "/imgs/kammara/triplec/sharp/dino-lado-gigapixel-standard-v2-6x.png"
+      },
+      {
+        "name": "dog costas",
+        "image": "/imgs/kammara/triplec/sharp/dog_costas.png"
+      },
+      {
+        "name": "dog",
+        "image": "/imgs/kammara/triplec/sharp/dog.png"
+      },
+      {
+        "name": "kurr-costas",
+        "image": "/imgs/kammara/triplec/sharp/kurr-costas.png"
+      },
+      {
+        "name": "Kurr",
+        "image": "/imgs/kammara/triplec/sharp/Kurr.png"
+      },
+      {
+        "name": "lim alerta",
+        "image": "/imgs/kammara/triplec/sharp/lim_alerta.png"
+      },
+      {
+        "name": "lim",
+        "image": "/imgs/kammara/triplec/sharp/lim.png"
+      },
+      {
+        "name": "peixe back",
+        "image": "/imgs/kammara/triplec/sharp/peixe_back.png"
+      },
+      {
+        "name": "peixe nadando",
+        "image": "/imgs/kammara/triplec/sharp/peixe_nadando.png"
+      },
+      {
+        "name": "SELKA RIN",
+        "image": "/imgs/kammara/triplec/sharp/SELKA RIN.png"
+      },
+      {
+        "name": "tilu costas",
+        "image": "/imgs/kammara/triplec/sharp/tilu_costas.png"
+      },
+      {
+        "name": "tilu-frente-gigapixel-standard-v2-6x",
+        "image": "/imgs/kammara/triplec/sharp/tilu-frente-gigapixel-standard-v2-6x.png"
+      }
+    ],
+    "kammara/z1": [
+      {
+        "name": "emo-1",
+        "image": "/imgs/kammara/z1/emo-1.jpg"
+      },
+      {
+        "name": "Kaal",
+        "image": "/imgs/kammara/z1/Kaal.png"
+      },
+      {
+        "name": "Ren",
+        "image": "/imgs/kammara/z1/Ren.png"
+      },
+      {
+        "name": "Vexa",
+        "image": "/imgs/kammara/z1/Vexa.png"
+      },
+      {
+        "name": "zeus",
+        "image": "/imgs/kammara/z1/zeus.png"
       }
     ]
   },
@@ -533,10 +1225,11 @@
         "pages": []
       }
     ],
+    "cheiodebolinha": [],
     "kammara": [
       {
         "id": "saga-orf-v",
-        "cover": "/imgs/books/kammara/saga-orf-v/cover.png",
+        "cover": "/imgs/books/kammara/saga-orf-v/cover.jpg",
         "pages": []
       }
     ],
@@ -566,55 +1259,51 @@
   "art": {
     "black": {
       "thumbs": [
-        "/imgs/art/black/_thumb/094DDD20-5A18-40D0-8E14-FBB6480C492D_1_201_a.jpg",
-        "/imgs/art/black/_thumb/1_32C78239-A11A-45C4-87ED-520E2E19C58E_1_105_c.jpg",
-        "/imgs/art/black/_thumb/2_DE86BB57-487A-41A3-88E2-F0ABC7938583_1_105_c.jpg",
-        "/imgs/art/black/_thumb/3_6BAC4A41-7327-4F2B-B449-1EEE7C43A71C_1_105_c.jpg",
-        "/imgs/art/black/_thumb/45594716-B23F-40D2-B6B9-46474FF78A29_1_105_c.jpg",
-        "/imgs/art/black/_thumb/49ECFAE1-2380-485A-A86A-8F6CECFDC342_1_105_c.jpg",
-        "/imgs/art/black/_thumb/4_32F1755D-D369-48C5-9F06-C572BC62A073_1_102_a.jpg",
-        "/imgs/art/black/_thumb/74B91A77-D4CC-4A23-BFE8-6D25EC1733F3_1_105_c.jpg",
-        "/imgs/art/black/_thumb/7688388C-2201-4181-A521-94A4473FE00F_1_201_a.jpg",
-        "/imgs/art/black/_thumb/9E6B7D29-98CC-48BB-A39C-8CBDBC5B6A08_1_105_c.jpg",
-        "/imgs/art/black/_thumb/B4B0DF85-A04B-4048-87A2-4E7AB85B892B_1_105_c.jpg",
-        "/imgs/art/black/_thumb/CE3886BE-1CBF-4A3D-8F48-85963C0E01A0_1_105_c.jpg",
-        "/imgs/art/black/_thumb/D8DF32A4-2B04-411C-84EF-F5FDBBC83046_1_105_c.jpg",
-        "/imgs/art/black/_thumb/D96066B2-6DE4-49BF-9910-7D1CFB70D3E1_1_105_c.jpg",
-        "/imgs/art/black/_thumb/DB9842A9-5CC9-4349-BAB9-6F688C9D96EF_1_105_c.jpg",
-        "/imgs/art/black/_thumb/E5777D55-1B80-472B-8D7C-00A1CE304892_1_105_c.jpg",
-        "/imgs/art/black/_thumb/F6803508-3885-4F4B-A29A-99B06FBB514B_1_201_a.jpg",
-        "/imgs/art/black/_thumb/F8C0CE29-8EF1-4D71-A48C-75E57C2162C5_1_105_c.jpg"
+        "/imgs/art/black/_thumb/1-arte.jpg",
+        "/imgs/art/black/_thumb/2-arte.jpg",
+        "/imgs/art/black/_thumb/3-arte.jpg",
+        "/imgs/art/black/_thumb/4-arte.jpg",
+        "/imgs/art/black/_thumb/5-arte.jpg",
+        "/imgs/art/black/_thumb/6-arte.jpg",
+        "/imgs/art/black/_thumb/7-arte.jpg",
+        "/imgs/art/black/_thumb/8-arte.jpg",
+        "/imgs/art/black/_thumb/9-arte.jpg",
+        "/imgs/art/black/_thumb/10-arte.jpg",
+        "/imgs/art/black/_thumb/11-arte.jpg",
+        "/imgs/art/black/_thumb/12-arte.jpg",
+        "/imgs/art/black/_thumb/13-arte.jpg",
+        "/imgs/art/black/_thumb/14-arte.jpg",
+        "/imgs/art/black/_thumb/15-arte.jpg",
+        "/imgs/art/black/_thumb/16-arte.jpg",
+        "/imgs/art/black/_thumb/17-arte.jpg",
+        "/imgs/art/black/_thumb/18-arte.jpg"
       ],
       "full": [
-        "/imgs/art/black/094DDD20-5A18-40D0-8E14-FBB6480C492D_1_201_a.jpg",
-        "/imgs/art/black/1_32C78239-A11A-45C4-87ED-520E2E19C58E_1_105_c.jpeg",
-        "/imgs/art/black/2_DE86BB57-487A-41A3-88E2-F0ABC7938583_1_105_c.jpeg",
-        "/imgs/art/black/3_6BAC4A41-7327-4F2B-B449-1EEE7C43A71C_1_105_c.jpeg",
-        "/imgs/art/black/45594716-B23F-40D2-B6B9-46474FF78A29_1_105_c.jpeg",
-        "/imgs/art/black/49ECFAE1-2380-485A-A86A-8F6CECFDC342_1_105_c.jpeg",
-        "/imgs/art/black/4_32F1755D-D369-48C5-9F06-C572BC62A073_1_102_a.jpeg",
-        "/imgs/art/black/74B91A77-D4CC-4A23-BFE8-6D25EC1733F3_1_105_c.jpeg",
-        "/imgs/art/black/7688388C-2201-4181-A521-94A4473FE00F_1_201_a.jpg",
-        "/imgs/art/black/9E6B7D29-98CC-48BB-A39C-8CBDBC5B6A08_1_105_c.jpeg",
-        "/imgs/art/black/B4B0DF85-A04B-4048-87A2-4E7AB85B892B_1_105_c.jpeg",
-        "/imgs/art/black/CE3886BE-1CBF-4A3D-8F48-85963C0E01A0_1_105_c.jpeg",
-        "/imgs/art/black/D8DF32A4-2B04-411C-84EF-F5FDBBC83046_1_105_c.jpeg",
-        "/imgs/art/black/D96066B2-6DE4-49BF-9910-7D1CFB70D3E1_1_105_c.jpeg",
-        "/imgs/art/black/DB9842A9-5CC9-4349-BAB9-6F688C9D96EF_1_105_c.jpeg",
-        "/imgs/art/black/E5777D55-1B80-472B-8D7C-00A1CE304892_1_105_c.jpeg",
-        "/imgs/art/black/F6803508-3885-4F4B-A29A-99B06FBB514B_1_201_a.jpg",
-        "/imgs/art/black/F8C0CE29-8EF1-4D71-A48C-75E57C2162C5_1_105_c.jpeg"
+        "/imgs/art/black/1-arte.jpg",
+        "/imgs/art/black/2-arte.jpg",
+        "/imgs/art/black/3-arte.jpg",
+        "/imgs/art/black/4-arte.jpg",
+        "/imgs/art/black/5-arte.jpg",
+        "/imgs/art/black/6-arte.jpg",
+        "/imgs/art/black/7-arte.jpg",
+        "/imgs/art/black/8-arte.jpg",
+        "/imgs/art/black/9-arte.jpg",
+        "/imgs/art/black/10-arte.jpg",
+        "/imgs/art/black/11-arte.jpg",
+        "/imgs/art/black/12-arte.jpg",
+        "/imgs/art/black/13-arte.jpg",
+        "/imgs/art/black/14-arte.jpg",
+        "/imgs/art/black/15-arte.jpg",
+        "/imgs/art/black/16-arte.jpg",
+        "/imgs/art/black/17-arte.jpg",
+        "/imgs/art/black/18-arte.jpg"
       ]
     },
     "clay": {
       "thumbs": [
-        "/imgs/art/clay/_thumb/2016-03-18 23.38.15 2.jpg",
-        "/imgs/art/clay/_thumb/8307B6DD-D7F2-4486-BF0B-944FB613EC0A_4_5005_c.jpg",
-        "/imgs/art/clay/_thumb/D16F4691-74C3-426A-BB0D-DA1D7BC9D542_4_5005_c.jpg",
-        "/imgs/art/clay/_thumb/D8D91F95-CA1A-4964-BB52-FCB075B3FF91_4_5005_c.jpg",
+        "/imgs/art/clay/_thumb/colecao.jpg",
         "/imgs/art/clay/_thumb/DSC04267.jpg",
         "/imgs/art/clay/_thumb/DSC04269.jpg",
-        "/imgs/art/clay/_thumb/F68C5852-8F24-47D7-B6C6-FA5B1D644607_1_201_a.jpg",
         "/imgs/art/clay/_thumb/IMG_3099.jpg",
         "/imgs/art/clay/_thumb/IMG_3100.jpg",
         "/imgs/art/clay/_thumb/natcat_dormindo.jpg",
@@ -623,52 +1312,50 @@
         "/imgs/art/clay/_thumb/rui_merengue_flor.jpg",
         "/imgs/art/clay/_thumb/rui_merengue_morango.jpg",
         "/imgs/art/clay/_thumb/rui_merengue_p1.jpg",
-        "/imgs/art/clay/_thumb/rui_merengue_p4.jpg"
+        "/imgs/art/clay/_thumb/rui_merengue_p4.jpg",
+        "/imgs/art/clay/_thumb/shalun_massinha_1.jpg",
+        "/imgs/art/clay/_thumb/shalun_massinha.jpg",
+        "/imgs/art/clay/_thumb/virus_varios.jpg"
       ],
       "full": [
-        "/imgs/art/clay/2016-03-18 23.38.15 2.jpg",
-        "/imgs/art/clay/8307B6DD-D7F2-4486-BF0B-944FB613EC0A_4_5005_c.jpeg",
-        "/imgs/art/clay/D16F4691-74C3-426A-BB0D-DA1D7BC9D542_4_5005_c.jpeg",
-        "/imgs/art/clay/D8D91F95-CA1A-4964-BB52-FCB075B3FF91_4_5005_c.jpeg",
+        "/imgs/art/clay/colecao.jpg",
         "/imgs/art/clay/DSC04267.JPG",
         "/imgs/art/clay/DSC04269.JPG",
-        "/imgs/art/clay/F68C5852-8F24-47D7-B6C6-FA5B1D644607_1_201_a.jpeg",
-        "/imgs/art/clay/IMG_3099.jpeg",
-        "/imgs/art/clay/IMG_3100.jpeg",
+        "/imgs/art/clay/IMG_3099.jpg",
+        "/imgs/art/clay/IMG_3100.jpg",
         "/imgs/art/clay/natcat_dormindo.jpg",
         "/imgs/art/clay/rui_merengue_2.JPG",
         "/imgs/art/clay/rui_merengue_3.JPG",
         "/imgs/art/clay/rui_merengue_flor.JPG",
         "/imgs/art/clay/rui_merengue_morango.JPG",
         "/imgs/art/clay/rui_merengue_p1.JPG",
-        "/imgs/art/clay/rui_merengue_p4.JPG"
+        "/imgs/art/clay/rui_merengue_p4.JPG",
+        "/imgs/art/clay/shalun_massinha_1.jpg",
+        "/imgs/art/clay/shalun_massinha.jpg",
+        "/imgs/art/clay/virus_varios.jpg"
       ]
     },
     "collections": {
       "thumbs": [
         "/imgs/art/collections/_thumb/Colecao_Birds.jpg",
+        "/imgs/art/collections/_thumb/Colecao_camaleao.jpg",
         "/imgs/art/collections/_thumb/Colecao_Cats.jpg",
         "/imgs/art/collections/_thumb/Colecao_Dogs.jpg",
         "/imgs/art/collections/_thumb/Colecao_Miscelania.jpg",
-        "/imgs/art/collections/_thumb/Colecao_Miscelania_1.jpg",
-        "/imgs/art/collections/_thumb/Colecao_Miscelania_2.jpg",
         "/imgs/art/collections/_thumb/Colecao_Mouse.jpg",
         "/imgs/art/collections/_thumb/Colecao_NapCat.jpg",
         "/imgs/art/collections/_thumb/Colecao_SealBeans.jpg",
-        "/imgs/art/collections/_thumb/Colecao_camaleao.jpg",
         "/imgs/art/collections/_thumb/Colecao_taylo.jpg"
       ],
       "full": [
         "/imgs/art/collections/Colecao_Birds.jpg",
+        "/imgs/art/collections/Colecao_camaleao.jpg",
         "/imgs/art/collections/Colecao_Cats.jpg",
         "/imgs/art/collections/Colecao_Dogs.jpg",
         "/imgs/art/collections/Colecao_Miscelania.jpg",
-        "/imgs/art/collections/Colecao_Miscelania_1.jpg",
-        "/imgs/art/collections/Colecao_Miscelania_2.jpg",
         "/imgs/art/collections/Colecao_Mouse.jpg",
         "/imgs/art/collections/Colecao_NapCat.jpg",
         "/imgs/art/collections/Colecao_SealBeans.jpg",
-        "/imgs/art/collections/Colecao_camaleao.jpg",
         "/imgs/art/collections/Colecao_taylo.jpg"
       ]
     },
@@ -686,45 +1373,45 @@
         "/imgs/art/croche/_thumb/puf707CA33C-C712-4C14-B725-971608C187BA_1_201_a.jpg",
         "/imgs/art/croche/_thumb/teABF0BCE9-0539-4FCA-8322-83EB9B76D4CB_1_105_c.jpg",
         "/imgs/art/croche/_thumb/tenisCBE58E60-7A6F-48A8-B9F7-D8F4C7FD7BB1_1_105_c.jpg",
-        "/imgs/art/croche/_thumb/vaso50_0DE1F62F-809B-4153-BA5C-86D6F006F05C_1_105_c.jpg",
         "/imgs/art/croche/_thumb/vaso9B844291-C672-4AFB-B7CF-654EC8929912_1_105_c.jpg",
-        "/imgs/art/croche/_thumb/vaso9BBB7DEA-5AAA-43BC-8D47-52DBAA389AAF_1_201_a.jpg"
+        "/imgs/art/croche/_thumb/vaso9BBB7DEA-5AAA-43BC-8D47-52DBAA389AAF_1_201_a.jpg",
+        "/imgs/art/croche/_thumb/vaso50_0DE1F62F-809B-4153-BA5C-86D6F006F05C_1_105_c.jpg"
       ],
       "full": [
-        "/imgs/art/croche/1almofada_4_C51B3D10-81DC-406B-A52C-D0D0E84469C9_1_105_c.jpeg",
-        "/imgs/art/croche/2almofada_5_FFCD5E18-27D0-4774-9FBE-58D033BB4EA1_1_105_c.jpeg",
-        "/imgs/art/croche/3bbA681A987-374D-419F-950D-AB822E77D4BD_1_105_c.jpeg",
-        "/imgs/art/croche/4bb_E91299F1-D534-4EF3-B2B8-E09020653842_1_105_c.jpeg",
-        "/imgs/art/croche/7705E301-05B4-47C5-85F5-6FB3E9BB1970_1_105_c.jpeg",
-        "/imgs/art/croche/7758A78C-1A44-4621-B157-F6BB22B32509_1_105_c.jpeg",
-        "/imgs/art/croche/ED5456C8-609E-4FD5-A758-EA37CD2DB304_1_105_c.jpeg",
-        "/imgs/art/croche/mickey1E840FC00-2D7D-4A07-B55F-E43E584781E0_1_105_c.jpeg",
-        "/imgs/art/croche/po_5_po217A7DF4-2D0B-4038-AE15-A801C08B52F9_1_105_c.jpeg",
-        "/imgs/art/croche/puf707CA33C-C712-4C14-B725-971608C187BA_1_201_a.jpeg",
-        "/imgs/art/croche/teABF0BCE9-0539-4FCA-8322-83EB9B76D4CB_1_105_c.jpeg",
-        "/imgs/art/croche/tenisCBE58E60-7A6F-48A8-B9F7-D8F4C7FD7BB1_1_105_c.jpeg",
-        "/imgs/art/croche/vaso50_0DE1F62F-809B-4153-BA5C-86D6F006F05C_1_105_c.jpeg",
-        "/imgs/art/croche/vaso9B844291-C672-4AFB-B7CF-654EC8929912_1_105_c.jpeg",
-        "/imgs/art/croche/vaso9BBB7DEA-5AAA-43BC-8D47-52DBAA389AAF_1_201_a.jpeg"
+        "/imgs/art/croche/1almofada_4_C51B3D10-81DC-406B-A52C-D0D0E84469C9_1_105_c.jpg",
+        "/imgs/art/croche/2almofada_5_FFCD5E18-27D0-4774-9FBE-58D033BB4EA1_1_105_c.jpg",
+        "/imgs/art/croche/3bbA681A987-374D-419F-950D-AB822E77D4BD_1_105_c.jpg",
+        "/imgs/art/croche/4bb_E91299F1-D534-4EF3-B2B8-E09020653842_1_105_c.jpg",
+        "/imgs/art/croche/7705E301-05B4-47C5-85F5-6FB3E9BB1970_1_105_c.jpg",
+        "/imgs/art/croche/7758A78C-1A44-4621-B157-F6BB22B32509_1_105_c.jpg",
+        "/imgs/art/croche/ED5456C8-609E-4FD5-A758-EA37CD2DB304_1_105_c.jpg",
+        "/imgs/art/croche/mickey1E840FC00-2D7D-4A07-B55F-E43E584781E0_1_105_c.jpg",
+        "/imgs/art/croche/po_5_po217A7DF4-2D0B-4038-AE15-A801C08B52F9_1_105_c.jpg",
+        "/imgs/art/croche/puf707CA33C-C712-4C14-B725-971608C187BA_1_201_a.jpg",
+        "/imgs/art/croche/teABF0BCE9-0539-4FCA-8322-83EB9B76D4CB_1_105_c.jpg",
+        "/imgs/art/croche/tenisCBE58E60-7A6F-48A8-B9F7-D8F4C7FD7BB1_1_105_c.jpg",
+        "/imgs/art/croche/vaso9B844291-C672-4AFB-B7CF-654EC8929912_1_105_c.jpg",
+        "/imgs/art/croche/vaso9BBB7DEA-5AAA-43BC-8D47-52DBAA389AAF_1_201_a.jpg",
+        "/imgs/art/croche/vaso50_0DE1F62F-809B-4153-BA5C-86D6F006F05C_1_105_c.jpg"
       ]
     },
     "digital": {
       "thumbs": [
-        "/imgs/art/digital/_thumb/Red.jpg",
-        "/imgs/art/digital/_thumb/espiral.jpg"
+        "/imgs/art/digital/_thumb/arte.jpg",
+        "/imgs/art/digital/_thumb/espiral.jpg",
+        "/imgs/art/digital/_thumb/Red.jpg"
       ],
       "full": [
-        "/imgs/art/digital/Red.jpg",
-        "/imgs/art/digital/espiral.jpg"
+        "/imgs/art/digital/arte.jpg",
+        "/imgs/art/digital/espiral.jpg",
+        "/imgs/art/digital/Red.jpg"
       ]
     },
     "doodle": {
       "thumbs": [
         "/imgs/art/doodle/_thumb/,miscelania_doodles_4.jpg",
-        "/imgs/art/doodle/_thumb/Charming_dog.jpg",
-        "/imgs/art/doodle/_thumb/CoCoders_devs.jpg",
-        "/imgs/art/doodle/_thumb/babalina_doodle.jpg",
         "/imgs/art/doodle/_thumb/babalina_doodle_2.jpg",
+        "/imgs/art/doodle/_thumb/babalina_doodle.jpg",
         "/imgs/art/doodle/_thumb/bean_1.jpg",
         "/imgs/art/doodle/_thumb/bears.jpg",
         "/imgs/art/doodle/_thumb/bichinho1.jpg",
@@ -735,12 +1422,14 @@
         "/imgs/art/doodle/_thumb/bird_2.jpg",
         "/imgs/art/doodle/_thumb/bird_3.jpg",
         "/imgs/art/doodle/_thumb/birds_3.jpg",
-        "/imgs/art/doodle/_thumb/bolha_rato_bola.jpg",
         "/imgs/art/doodle/_thumb/bolha_rato_bola_e_familia.jpg",
+        "/imgs/art/doodle/_thumb/bolha_rato_bola.jpg",
         "/imgs/art/doodle/_thumb/bunniet_doodle.jpg",
         "/imgs/art/doodle/_thumb/cats.jpg",
+        "/imgs/art/doodle/_thumb/Charming_dog.jpg",
         "/imgs/art/doodle/_thumb/chmurka_1.jpg",
         "/imgs/art/doodle/_thumb/chmurka_2.jpg",
+        "/imgs/art/doodle/_thumb/CoCoders_devs.jpg",
         "/imgs/art/doodle/_thumb/curioso.jpg",
         "/imgs/art/doodle/_thumb/dog.jpg",
         "/imgs/art/doodle/_thumb/dogs_mouse.jpg",
@@ -748,8 +1437,6 @@
         "/imgs/art/doodle/_thumb/familia.jpg",
         "/imgs/art/doodle/_thumb/fox.jpg",
         "/imgs/art/doodle/_thumb/fuinha.jpg",
-        "/imgs/art/doodle/_thumb/miscelania_doodles.jpg",
-        "/imgs/art/doodle/_thumb/miscelania_doodles_11.jpg",
         "/imgs/art/doodle/_thumb/miscelania_doodles_2.jpg",
         "/imgs/art/doodle/_thumb/miscelania_doodles_3.jpg",
         "/imgs/art/doodle/_thumb/miscelania_doodles_4.jpg",
@@ -758,18 +1445,18 @@
         "/imgs/art/doodle/_thumb/miscelania_doodles_7.jpg",
         "/imgs/art/doodle/_thumb/miscelania_doodles_8.jpg",
         "/imgs/art/doodle/_thumb/miscelania_doodles_9.jpg",
-        "/imgs/art/doodle/_thumb/pia.jpg",
+        "/imgs/art/doodle/_thumb/miscelania_doodles_11.jpg",
+        "/imgs/art/doodle/_thumb/miscelania_doodles.jpg",
         "/imgs/art/doodle/_thumb/pia_2.jpg",
+        "/imgs/art/doodle/_thumb/pia.jpg",
         "/imgs/art/doodle/_thumb/pontinho.jpg",
-        "/imgs/art/doodle/_thumb/raposa.jpg",
         "/imgs/art/doodle/_thumb/raposa_bruxo.jpg",
+        "/imgs/art/doodle/_thumb/raposa.jpg",
         "/imgs/art/doodle/_thumb/raposinhas.jpg",
         "/imgs/art/doodle/_thumb/ratinho.jpg",
         "/imgs/art/doodle/_thumb/simple_mouse.jpg",
         "/imgs/art/doodle/_thumb/squizo_1.jpg",
-        "/imgs/art/doodle/_thumb/squizo_2.jpg",
         "/imgs/art/doodle/_thumb/squizo_3.jpg",
-        "/imgs/art/doodle/_thumb/squizo_4.jpg",
         "/imgs/art/doodle/_thumb/squizo_5.jpg",
         "/imgs/art/doodle/_thumb/taylo_conceito.jpg",
         "/imgs/art/doodle/_thumb/taylo_doodle.jpg",
@@ -777,142 +1464,127 @@
         "/imgs/art/doodle/_thumb/ypito.jpg"
       ],
       "full": [
-        "/imgs/art/doodle/,miscelania_doodles_4.jpeg",
-        "/imgs/art/doodle/Charming_dog.jpeg",
-        "/imgs/art/doodle/CoCoders_devs.jpeg",
-        "/imgs/art/doodle/babalina_doodle.jpeg",
+        "/imgs/art/doodle/,miscelania_doodles_4.jpg",
         "/imgs/art/doodle/babalina_doodle_2.jpg",
+        "/imgs/art/doodle/babalina_doodle.jpg",
         "/imgs/art/doodle/bean_1.jpg",
         "/imgs/art/doodle/bears.jpg",
-        "/imgs/art/doodle/bichinho1.jpeg",
-        "/imgs/art/doodle/bichitta_com_laco.jpeg",
+        "/imgs/art/doodle/bichinho1.jpg",
+        "/imgs/art/doodle/bichitta_com_laco.jpg",
         "/imgs/art/doodle/bichitto_1.jpg",
-        "/imgs/art/doodle/bichitto_colorido.jpeg",
+        "/imgs/art/doodle/bichitto_colorido.jpg",
         "/imgs/art/doodle/bird_1.jpg",
-        "/imgs/art/doodle/bird_2.jpeg",
+        "/imgs/art/doodle/bird_2.jpg",
         "/imgs/art/doodle/bird_3.jpg",
-        "/imgs/art/doodle/birds_3.jpeg",
+        "/imgs/art/doodle/birds_3.jpg",
+        "/imgs/art/doodle/bolha_rato_bola_e_familia.jpg",
         "/imgs/art/doodle/bolha_rato_bola.jpg",
-        "/imgs/art/doodle/bolha_rato_bola_e_familia.jpeg",
         "/imgs/art/doodle/bunniet_doodle.jpg",
-        "/imgs/art/doodle/cats.jpeg",
+        "/imgs/art/doodle/cats.jpg",
+        "/imgs/art/doodle/Charming_dog.jpg",
         "/imgs/art/doodle/chmurka_1.jpg",
-        "/imgs/art/doodle/chmurka_2.jpeg",
+        "/imgs/art/doodle/chmurka_2.jpg",
+        "/imgs/art/doodle/CoCoders_devs.jpg",
         "/imgs/art/doodle/curioso.jpg",
         "/imgs/art/doodle/dog.jpg",
-        "/imgs/art/doodle/dogs_mouse.jpeg",
-        "/imgs/art/doodle/eduardo_doodle.jpeg",
+        "/imgs/art/doodle/dogs_mouse.jpg",
+        "/imgs/art/doodle/eduardo_doodle.jpg",
         "/imgs/art/doodle/familia.jpg",
         "/imgs/art/doodle/fox.jpg",
         "/imgs/art/doodle/fuinha.jpg",
-        "/imgs/art/doodle/miscelania_doodles.jpeg",
-        "/imgs/art/doodle/miscelania_doodles_11.jpg",
-        "/imgs/art/doodle/miscelania_doodles_2.jpeg",
-        "/imgs/art/doodle/miscelania_doodles_3.jpeg",
-        "/imgs/art/doodle/miscelania_doodles_4.jpeg",
+        "/imgs/art/doodle/miscelania_doodles_2.jpg",
+        "/imgs/art/doodle/miscelania_doodles_3.jpg",
+        "/imgs/art/doodle/miscelania_doodles_4.jpg",
         "/imgs/art/doodle/miscelania_doodles_5.jpg",
         "/imgs/art/doodle/miscelania_doodles_6.jpg",
         "/imgs/art/doodle/miscelania_doodles_7.jpg",
         "/imgs/art/doodle/miscelania_doodles_8.jpg",
         "/imgs/art/doodle/miscelania_doodles_9.jpg",
-        "/imgs/art/doodle/pia.jpg",
+        "/imgs/art/doodle/miscelania_doodles_11.jpg",
+        "/imgs/art/doodle/miscelania_doodles.jpg",
         "/imgs/art/doodle/pia_2.jpg",
-        "/imgs/art/doodle/pontinho.jpeg",
+        "/imgs/art/doodle/pia.jpg",
+        "/imgs/art/doodle/pontinho.jpg",
+        "/imgs/art/doodle/raposa_bruxo.jpg",
         "/imgs/art/doodle/raposa.jpg",
-        "/imgs/art/doodle/raposa_bruxo.jpeg",
         "/imgs/art/doodle/raposinhas.jpg",
-        "/imgs/art/doodle/ratinho.jpeg",
         "/imgs/art/doodle/ratinho.jpg",
-        "/imgs/art/doodle/simple_mouse.jpeg",
-        "/imgs/art/doodle/squizo_1.jpeg",
-        "/imgs/art/doodle/squizo_2.jpg",
-        "/imgs/art/doodle/squizo_3.jpeg",
-        "/imgs/art/doodle/squizo_4.jpg",
-        "/imgs/art/doodle/squizo_5.jpeg",
-        "/imgs/art/doodle/taylo_conceito.jpeg",
-        "/imgs/art/doodle/taylo_doodle.jpeg",
+        "/imgs/art/doodle/simple_mouse.jpg",
+        "/imgs/art/doodle/squizo_1.jpg",
+        "/imgs/art/doodle/squizo_3.jpg",
+        "/imgs/art/doodle/squizo_5.jpg",
+        "/imgs/art/doodle/taylo_conceito.jpg",
+        "/imgs/art/doodle/taylo_doodle.jpg",
         "/imgs/art/doodle/virus_doodle.jpg",
         "/imgs/art/doodle/ypito.jpg"
       ]
     },
     "fimo": {
       "thumbs": [
-        "/imgs/art/fimo/_thumb/1D1884BE7-7D39-4C86-8A0B-95AC736B5814_1_105_c.jpg",
-        "/imgs/art/fimo/_thumb/2CCFFCDBE-F009-4729-98A5-BD36CCFCC30A_1_201_a.jpg",
-        "/imgs/art/fimo/_thumb/2Pitu.jpg",
-        "/imgs/art/fimo/_thumb/A445D241-7271-4575-99BA-85B99A239B6A_1_105_c.jpg",
-        "/imgs/art/fimo/_thumb/AD21FF83-881A-4B28-9C0E-9B658282F262_1_201_a.jpg",
         "/imgs/art/fimo/_thumb/Anjo.jpg",
         "/imgs/art/fimo/_thumb/Candy.jpg",
         "/imgs/art/fimo/_thumb/CheioDeBolinha.jpg",
         "/imgs/art/fimo/_thumb/Degrade.jpg",
         "/imgs/art/fimo/_thumb/Leep.jpg",
-        "/imgs/art/fimo/_thumb/Oli.jpg",
-        "/imgs/art/fimo/_thumb/zD9450336-B883-40F3-B5D0-74786472DA7E_1_201_a.jpg"
+        "/imgs/art/fimo/_thumb/olivia.jpg",
+        "/imgs/art/fimo/_thumb/passarinho.jpg",
+        "/imgs/art/fimo/_thumb/passaro.jpg",
+        "/imgs/art/fimo/_thumb/Peixe.jpg",
+        "/imgs/art/fimo/_thumb/pitu.jpg",
+        "/imgs/art/fimo/_thumb/RuiMerengue.jpg",
+        "/imgs/art/fimo/_thumb/Snake.jpg"
       ],
       "full": [
-        "/imgs/art/fimo/1D1884BE7-7D39-4C86-8A0B-95AC736B5814_1_105_c.jpeg",
-        "/imgs/art/fimo/2CCFFCDBE-F009-4729-98A5-BD36CCFCC30A_1_201_a.jpg",
-        "/imgs/art/fimo/2Pitu.jpg",
-        "/imgs/art/fimo/A445D241-7271-4575-99BA-85B99A239B6A_1_105_c.jpeg",
-        "/imgs/art/fimo/AD21FF83-881A-4B28-9C0E-9B658282F262_1_201_a.jpg",
         "/imgs/art/fimo/Anjo.jpg",
         "/imgs/art/fimo/Candy.jpg",
         "/imgs/art/fimo/CheioDeBolinha.jpg",
         "/imgs/art/fimo/Degrade.jpg",
         "/imgs/art/fimo/Leep.jpg",
-        "/imgs/art/fimo/Oli.jpg",
-        "/imgs/art/fimo/zD9450336-B883-40F3-B5D0-74786472DA7E_1_201_a.jpg"
+        "/imgs/art/fimo/olivia.jpg",
+        "/imgs/art/fimo/passarinho.jpg",
+        "/imgs/art/fimo/passaro.jpg",
+        "/imgs/art/fimo/Peixe.jpg",
+        "/imgs/art/fimo/pitu.jpg",
+        "/imgs/art/fimo/RuiMerengue.jpg",
+        "/imgs/art/fimo/Snake.jpg"
       ]
     },
     "grafite": {
       "thumbs": [
         "/imgs/art/grafite/_thumb/0_E703E356-D3AC-4E33-B426-E568D59E4D23_1_105_c.jpg",
-        "/imgs/art/grafite/_thumb/1_AF7F3207-EDD5-4980-B6DE-79ABBCA7AF0B_1_201_a.jpg",
         "/imgs/art/grafite/_thumb/2_9E2341CF-46A9-46DC-8948-154CA34BF9F4_1_201_a.jpg",
         "/imgs/art/grafite/_thumb/3_885A87F0-4DBC-4886-9CDA-7E3321D0B17E_1_201_a.jpg",
-        "/imgs/art/grafite/_thumb/4_905696B0-2EC6-4C1A-8618-42D278097457_1_201_a.jpg",
-        "/imgs/art/grafite/_thumb/5_3D12937F-BEE1-4B79-BDA9-917D28142457_1_201_a 2.jpg",
-        "/imgs/art/grafite/_thumb/61_14229301-6A81-4F31-87CB-1F0AF090461A_1_201_a.jpg",
         "/imgs/art/grafite/_thumb/7_240AB6DE-98DB-4E57-AE86-B932843D2959.jpg",
-        "/imgs/art/grafite/_thumb/8_BB9CC9C8-A31F-4522-8E0D-974F532C2847_1_105_c.jpg",
-        "/imgs/art/grafite/_thumb/9_72F649D6-52EC-4822-89C6-4AC576BD243B_1_201_a.jpg"
+        "/imgs/art/grafite/_thumb/61_14229301-6A81-4F31-87CB-1F0AF090461A_1_201_a.jpg"
       ],
       "full": [
-        "/imgs/art/grafite/0_E703E356-D3AC-4E33-B426-E568D59E4D23_1_105_c.jpeg",
-        "/imgs/art/grafite/1_AF7F3207-EDD5-4980-B6DE-79ABBCA7AF0B_1_201_a.jpg",
+        "/imgs/art/grafite/0_E703E356-D3AC-4E33-B426-E568D59E4D23_1_105_c.jpg",
         "/imgs/art/grafite/2_9E2341CF-46A9-46DC-8948-154CA34BF9F4_1_201_a.jpg",
         "/imgs/art/grafite/3_885A87F0-4DBC-4886-9CDA-7E3321D0B17E_1_201_a.jpg",
-        "/imgs/art/grafite/4_905696B0-2EC6-4C1A-8618-42D278097457_1_201_a.jpg",
-        "/imgs/art/grafite/5_3D12937F-BEE1-4B79-BDA9-917D28142457_1_201_a 2.jpg",
-        "/imgs/art/grafite/61_14229301-6A81-4F31-87CB-1F0AF090461A_1_201_a.jpg",
-        "/imgs/art/grafite/7_240AB6DE-98DB-4E57-AE86-B932843D2959.jpeg",
-        "/imgs/art/grafite/8_BB9CC9C8-A31F-4522-8E0D-974F532C2847_1_105_c.jpeg",
-        "/imgs/art/grafite/9_72F649D6-52EC-4822-89C6-4AC576BD243B_1_201_a.jpg"
+        "/imgs/art/grafite/7_240AB6DE-98DB-4E57-AE86-B932843D2959.jpg",
+        "/imgs/art/grafite/61_14229301-6A81-4F31-87CB-1F0AF090461A_1_201_a.jpg"
       ]
     },
     "needle": {
       "thumbs": [
+        "/imgs/art/needle/_thumb/9CA923C5-BA0D-41F9-9FFA-4D00F893BCD4_1_201_a.jpg",
         "/imgs/art/needle/_thumb/2016-03-18 22.54.00.jpg",
-        "/imgs/art/needle/_thumb/2016-03-18 22.54.16 2.jpg",
         "/imgs/art/needle/_thumb/2016-03-18 23.41.16.jpg",
         "/imgs/art/needle/_thumb/687316CF-0146-41A5-BDC2-61AA83F48634_1_105_c.jpg",
-        "/imgs/art/needle/_thumb/9CA923C5-BA0D-41F9-9FFA-4D00F893BCD4_1_201_a.jpg",
         "/imgs/art/needle/_thumb/A7BE845B-0284-4EDD-B025-C97998AE46A3_1_105_c.jpg",
         "/imgs/art/needle/_thumb/EE79C5BE-6A4A-4251-9E36-344CB8352DC5_1_105_c.jpg",
         "/imgs/art/needle/_thumb/EE84448E-8C45-408E-92F8-509266003D28_1_105_c.jpg",
         "/imgs/art/needle/_thumb/IMG_3101.jpg"
       ],
       "full": [
-        "/imgs/art/needle/2016-03-18 22.54.00.jpg",
-        "/imgs/art/needle/2016-03-18 22.54.16 2.jpg",
-        "/imgs/art/needle/2016-03-18 23.41.16.jpg",
-        "/imgs/art/needle/687316CF-0146-41A5-BDC2-61AA83F48634_1_105_c.jpeg",
         "/imgs/art/needle/9CA923C5-BA0D-41F9-9FFA-4D00F893BCD4_1_201_a.jpg",
-        "/imgs/art/needle/A7BE845B-0284-4EDD-B025-C97998AE46A3_1_105_c.jpeg",
-        "/imgs/art/needle/EE79C5BE-6A4A-4251-9E36-344CB8352DC5_1_105_c.jpeg",
-        "/imgs/art/needle/EE84448E-8C45-408E-92F8-509266003D28_1_105_c.jpeg",
-        "/imgs/art/needle/IMG_3101.jpeg"
+        "/imgs/art/needle/2016-03-18 22.54.00.jpg",
+        "/imgs/art/needle/2016-03-18 23.41.16.jpg",
+        "/imgs/art/needle/687316CF-0146-41A5-BDC2-61AA83F48634_1_105_c.jpg",
+        "/imgs/art/needle/A7BE845B-0284-4EDD-B025-C97998AE46A3_1_105_c.jpg",
+        "/imgs/art/needle/EE79C5BE-6A4A-4251-9E36-344CB8352DC5_1_105_c.jpg",
+        "/imgs/art/needle/EE84448E-8C45-408E-92F8-509266003D28_1_105_c.jpg",
+        "/imgs/art/needle/IMG_3101.jpg"
       ]
     }
   },
@@ -920,105 +1592,341 @@
     "kammara/eni4": [
       {
         "name": "Dois sois",
-        "image": "/imgs/characters/kammara/eni4/_scenes/1_Dois_sois.jpg"
+        "image": "/imgs/kammara/eni4/_scenes/1_Dois_sois.jpg"
       },
       {
-        "name": "Palacio Node 0",
-        "image": "/imgs/characters/kammara/eni4/_scenes/1_Palacio_Node-0.jpg"
+        "name": "Palacio Node-0",
+        "image": "/imgs/kammara/eni4/_scenes/1_Palacio_Node-0.jpg"
       },
       {
-        "name": "Palacio Node 0",
-        "image": "/imgs/characters/kammara/eni4/_scenes/3_Palacio_Node-0.jpg"
+        "name": "Palacio Node-0",
+        "image": "/imgs/kammara/eni4/_scenes/3_Palacio_Node-0.jpg"
       },
       {
-        "name": "Palacio Node 0",
-        "image": "/imgs/characters/kammara/eni4/_scenes/4_Palacio_Node-0.jpg"
+        "name": "Palacio Node-0",
+        "image": "/imgs/kammara/eni4/_scenes/4_Palacio_Node-0.jpg"
       },
       {
-        "name": "Palacio Node 0 Entrada",
-        "image": "/imgs/characters/kammara/eni4/_scenes/5_Palacio_Node-0-Entrada.jpg"
+        "name": "Palacio Node-0-Entrada",
+        "image": "/imgs/kammara/eni4/_scenes/5_Palacio_Node-0-Entrada.jpg"
       },
       {
-        "name": "Palacio Node 0 Corredor",
-        "image": "/imgs/characters/kammara/eni4/_scenes/6_Palacio_Node-0-Corredor.jpg"
+        "name": "Palacio Node-0-Corredor",
+        "image": "/imgs/kammara/eni4/_scenes/6_Palacio_Node-0-Corredor.jpg"
       },
       {
-        "name": "Palacio Node 0 Porta",
-        "image": "/imgs/characters/kammara/eni4/_scenes/7_Palacio_Node-0-Porta.jpg"
+        "name": "Palacio Node-0-Porta",
+        "image": "/imgs/kammara/eni4/_scenes/7_Palacio_Node-0-Porta.jpg"
       },
       {
-        "name": "Palacio Node 0 Interior",
-        "image": "/imgs/characters/kammara/eni4/_scenes/8_Palacio_Node-0-Interior.jpg"
+        "name": "Palacio Node-0-Interior",
+        "image": "/imgs/kammara/eni4/_scenes/8_Palacio_Node-0-Interior.jpg"
+      },
+      {
+        "name": "Palacio Node-0-Interior",
+        "image": "/imgs/kammara/eni4/_scenes/9_Palacio_Node-0-Interior.jpg"
+      },
+      {
+        "name": "camara node-0 entrada",
+        "image": "/imgs/kammara/eni4/_scenes/9camara_node-0_entrada.jpg"
+      },
+      {
+        "name": "camara node-0 interior",
+        "image": "/imgs/kammara/eni4/_scenes/9camara_node-0_interior.jpg"
+      },
+      {
+        "name": "Fabrica BURN",
+        "image": "/imgs/kammara/eni4/_scenes/10Fabrica_BURN.jpg"
+      },
+      {
+        "name": "muro valvulas. formam laritinto",
+        "image": "/imgs/kammara/eni4/_scenes/10muro_valvulas._formam_laritinto.jpg"
+      },
+      {
+        "name": "fabrica frente",
+        "image": "/imgs/kammara/eni4/_scenes/11fabrica_frente.jpg"
+      },
+      {
+        "name": "fabrica interior",
+        "image": "/imgs/kammara/eni4/_scenes/11fabrica_interior.jpg"
+      },
+      {
+        "name": "corte planeta",
+        "image": "/imgs/kammara/eni4/_scenes/12corte_planeta.jpg"
+      },
+      {
+        "name": "zona  SCORCH worms",
+        "image": "/imgs/kammara/eni4/_scenes/13zona_ SCORCH_worms.jpg"
+      },
+      {
+        "name": "zona  SCORCH",
+        "image": "/imgs/kammara/eni4/_scenes/13zona_ SCORCH.jpg"
+      },
+      {
+        "name": "zona CRACK tuneis worms",
+        "image": "/imgs/kammara/eni4/_scenes/15zona_CRACK_tuneis_worms.jpg"
+      },
+      {
+        "name": "zona CRACK tuneis worms",
+        "image": "/imgs/kammara/eni4/_scenes/16zona_CRACK_tuneis_worms.jpg"
+      },
+      {
+        "name": "zona SINK",
+        "image": "/imgs/kammara/eni4/_scenes/17zona_SINK.jpg"
+      },
+      {
+        "name": "megavalvulas onde moram virus bugs",
+        "image": "/imgs/kammara/eni4/_scenes/18megavalvulas_onde_moram_virus_bugs.jpg"
+      },
+      {
+        "name": "sucata bugs",
+        "image": "/imgs/kammara/eni4/_scenes/19sucata_bugs.jpg"
       }
     ],
     "kammara/lunnp1": [
       {
-        "name": "Erú'Rin e Lúm'Esha plantando",
-        "image": "/imgs/characters/kammara/lunnp1/_scenes/Erú'Rin_e_Lúm'Esha_plantando.jpg"
+        "name": "cena crianca brincando",
+        "image": "/imgs/kammara/lunnp1/_scenes/cena_crianca_brincando.jpg"
       },
       {
-        "name": "cena com frutas flutuantes",
-        "image": "/imgs/characters/kammara/lunnp1/_scenes/cena_com_frutas_flutuantes.jpg"
+        "name": "EruRin e LumEsha plantando",
+        "image": "/imgs/kammara/lunnp1/_scenes/EruRin_e_LumEsha_plantando.jpg"
+      },
+      {
+        "name": "NaLum pequenas esferas que flutuam",
+        "image": "/imgs/kammara/lunnp1/_scenes/NaLum_pequenas_esferas_que flutuam.jpg"
       },
       {
         "name": "regiao EXTERMO NORTE",
-        "image": "/imgs/characters/kammara/lunnp1/_scenes/regiao_EXTERMO_NORTE.jpg"
-      },
-      {
-        "name": "regiao leste",
-        "image": "/imgs/characters/kammara/lunnp1/_scenes/regiao_leste.jpg"
+        "image": "/imgs/kammara/lunnp1/_scenes/regiao_EXTERMO_NORTE.jpg"
       },
       {
         "name": "regiao leste aerea",
-        "image": "/imgs/characters/kammara/lunnp1/_scenes/regiao_leste_aerea.jpg"
+        "image": "/imgs/kammara/lunnp1/_scenes/regiao_leste_aerea.jpg"
       },
       {
-        "name": "regiao norte",
-        "image": "/imgs/characters/kammara/lunnp1/_scenes/regiao_norte.jpg"
+        "name": "regiao leste",
+        "image": "/imgs/kammara/lunnp1/_scenes/regiao_leste.jpg"
       },
       {
         "name": "regiao norte vista area 1",
-        "image": "/imgs/characters/kammara/lunnp1/_scenes/regiao_norte_vista_area_1.jpg"
+        "image": "/imgs/kammara/lunnp1/_scenes/regiao_norte_vista_area_1.jpg"
       },
       {
         "name": "regiao norte vista area 2",
-        "image": "/imgs/characters/kammara/lunnp1/_scenes/regiao_norte_vista_area_2.jpg"
+        "image": "/imgs/kammara/lunnp1/_scenes/regiao_norte_vista_area_2.jpg"
+      },
+      {
+        "name": "regiao norte",
+        "image": "/imgs/kammara/lunnp1/_scenes/regiao_norte.jpg"
       },
       {
         "name": "regiao oeste aerea",
-        "image": "/imgs/characters/kammara/lunnp1/_scenes/regiao_oeste_aerea.jpg"
-      },
-      {
-        "name": "regiao oeste com Túri'Kan",
-        "image": "/imgs/characters/kammara/lunnp1/_scenes/regiao_oeste_com_Túri'Kan.jpg"
-      },
-      {
-        "name": "regiao sul",
-        "image": "/imgs/characters/kammara/lunnp1/_scenes/regiao_sul.jpg"
+        "image": "/imgs/kammara/lunnp1/_scenes/regiao_oeste_aerea.jpg"
       },
       {
         "name": "regiao sul aerea",
-        "image": "/imgs/characters/kammara/lunnp1/_scenes/regiao_sul_aerea.jpg"
+        "image": "/imgs/kammara/lunnp1/_scenes/regiao_sul_aerea.jpg"
+      },
+      {
+        "name": "regiao sul",
+        "image": "/imgs/kammara/lunnp1/_scenes/regiao_sul.jpg"
+      }
+    ],
+    "kammara/orfv": [
+      {
+        "name": "vista Fjorks Centrais",
+        "image": "/imgs/kammara/orfv/_scenes/1vista_Fjorks_Centrais.jpg"
+      },
+      {
+        "name": "Colina Central",
+        "image": "/imgs/kammara/orfv/_scenes/2Colina_Central.jpg"
+      },
+      {
+        "name": "Iren Kor Vila Central",
+        "image": "/imgs/kammara/orfv/_scenes/3Iren_Kor_Vila_Central.jpg"
+      },
+      {
+        "name": "Vila Central",
+        "image": "/imgs/kammara/orfv/_scenes/4Vila_Central.jpg"
+      },
+      {
+        "name": "Vila Leste",
+        "image": "/imgs/kammara/orfv/_scenes/5Vila_Leste.jpg"
+      },
+      {
+        "name": "Maelik Fjorks Oeste",
+        "image": "/imgs/kammara/orfv/_scenes/6Maelik_Fjorks_Oeste.jpg"
+      },
+      {
+        "name": "vila norte",
+        "image": "/imgs/kammara/orfv/_scenes/7vila_norte.jpg"
+      },
+      {
+        "name": "Ceu em orf-v",
+        "image": "/imgs/kammara/orfv/_scenes/8Ceu_em_orf-v.jpg"
+      },
+      {
+        "name": "noite em orfv",
+        "image": "/imgs/kammara/orfv/_scenes/9noite_em_orfv.jpg"
+      },
+      {
+        "name": "regiao sul deserta",
+        "image": "/imgs/kammara/orfv/_scenes/10regiao_sul_deserta.jpg"
+      },
+      {
+        "name": "regiao sul deserta",
+        "image": "/imgs/kammara/orfv/_scenes/11regiao_sul_deserta.jpg"
+      }
+    ],
+    "kammara/triplec": [
+      {
+        "name": "niul Forest",
+        "image": "/imgs/kammara/triplec/_scenes/1_niul_Forest.jpg"
+      },
+      {
+        "name": "niul Forest",
+        "image": "/imgs/kammara/triplec/_scenes/2_niul_Forest.jpg"
+      },
+      {
+        "name": "Lumesha visita LUMA VAL",
+        "image": "/imgs/kammara/triplec/_scenes/4_Lumesha_visita_LUMA_VAL.jpg"
+      },
+      {
+        "name": "Erú’Rin com SELKA RIN",
+        "image": "/imgs/kammara/triplec/_scenes/5Erú’Rin_com_SELKA_RIN.jpg"
+      },
+      {
+        "name": "Cshift portal",
+        "image": "/imgs/kammara/triplec/_scenes/6Cshift_portal.jpg"
+      }
+    ],
+    "kammara/triplec/malloc": [
+      {
+        "name": "vila principal",
+        "image": "/imgs/kammara/triplec/malloc/_scenes/1_vila_principal.jpg"
+      },
+      {
+        "name": "portex camada",
+        "image": "/imgs/kammara/triplec/malloc/_scenes/1portex_camada.jpg"
+      },
+      {
+        "name": "portex camada vista cima",
+        "image": "/imgs/kammara/triplec/malloc/_scenes/2portex_camada_vista_cima.jpg"
+      },
+      {
+        "name": "datex camada",
+        "image": "/imgs/kammara/triplec/malloc/_scenes/3datex_camada.jpg"
+      },
+      {
+        "name": "datara camada",
+        "image": "/imgs/kammara/triplec/malloc/_scenes/4datara_camada.jpg"
+      },
+      {
+        "name": "malloc mina cshift",
+        "image": "/imgs/kammara/triplec/malloc/_scenes/4malloc_mina_cshift.jpg"
+      },
+      {
+        "name": "hepa regiao 1",
+        "image": "/imgs/kammara/triplec/malloc/_scenes/5hepa_regiao_1.jpg"
+      },
+      {
+        "name": "malloc camadas regiao2",
+        "image": "/imgs/kammara/triplec/malloc/_scenes/6malloc_camadas_regiao2.jpg"
+      },
+      {
+        "name": "hepa regiao2",
+        "image": "/imgs/kammara/triplec/malloc/_scenes/7hepa_regiao2.jpg"
+      },
+      {
+        "name": "lumesha visita Luma Val",
+        "image": "/imgs/kammara/triplec/malloc/_scenes/9lumesha_visita_Luma_Val.jpg"
+      }
+    ],
+    "kammara/triplec/mesh": [
+      {
+        "name": "vista area vila central",
+        "image": "/imgs/kammara/triplec/mesh/_scenes/1vista_area_vila_central.jpg"
+      },
+      {
+        "name": "vila central",
+        "image": "/imgs/kammara/triplec/mesh/_scenes/2vila_central.jpg"
+      },
+      {
+        "name": "KAEL TORIN ativando Cshift vista aerea",
+        "image": "/imgs/kammara/triplec/mesh/_scenes/KAEL_TORIN_ativando_Cshift_vista_aerea.jpg"
+      },
+      {
+        "name": "KAEL TORIN ativando Cshift",
+        "image": "/imgs/kammara/triplec/mesh/_scenes/KAEL_TORIN_ativando_Cshift.jpg"
+      },
+      {
+        "name": "Niul forest",
+        "image": "/imgs/kammara/triplec/mesh/_scenes/Niul_forest.jpg"
+      }
+    ],
+    "kammara/triplec/sharp": [
+      {
+        "name": "regiao sharp",
+        "image": "/imgs/kammara/triplec/sharp/_scenes/1regiao_sharp.jpg"
+      },
+      {
+        "name": "praca central",
+        "image": "/imgs/kammara/triplec/sharp/_scenes/3praca_central.jpg"
+      },
+      {
+        "name": "Câmara de Permissão ativando cshift",
+        "image": "/imgs/kammara/triplec/sharp/_scenes/4Câmara de Permissão_ativando_cshift.jpg"
+      },
+      {
+        "name": "Câmara de Permissão posicao defesa",
+        "image": "/imgs/kammara/triplec/sharp/_scenes/5Câmara de Permissão_posicao_defesa.jpg"
+      },
+      {
+        "name": "plataforma",
+        "image": "/imgs/kammara/triplec/sharp/_scenes/6plataforma.jpg"
+      },
+      {
+        "name": "Vista panoramica",
+        "image": "/imgs/kammara/triplec/sharp/_scenes/7Vista_panoramica.jpg"
+      }
+    ],
+    "kammara/z1": [
+      {
+        "name": "area interna z1",
+        "image": "/imgs/kammara/z1/_scenes/area_interna_z1.jpg"
+      },
+      {
+        "name": "area interna",
+        "image": "/imgs/kammara/z1/_scenes/area_interna.jpg"
+      },
+      {
+        "name": "area interna1",
+        "image": "/imgs/kammara/z1/_scenes/area_interna1.jpg"
+      },
+      {
+        "name": "praca central",
+        "image": "/imgs/kammara/z1/_scenes/praca_central.jpg"
+      },
+      {
+        "name": "regiao 1",
+        "image": "/imgs/kammara/z1/_scenes/regiao_1.jpg"
+      },
+      {
+        "name": "transporte coletivo",
+        "image": "/imgs/kammara/z1/_scenes/transporte_coletivo.jpg"
       }
     ]
   },
   "kammaraBgs": {
-    "kammara/eni4": "/imgs/characters/kammara/eni4/_bg/imagem_fabrica_com_lixos-gigapixel-cgi-6x.png",
-    "kammara/lunnp1": "/imgs/characters/kammara/lunnp1/_bg/regiao_norte_gemini-2.5-flash-image_Organic_wooden_bridges_connecting_trees_to_each_other_and_to_the_city._Same_styl-0-gigapixel-high fidelity v2-6x.png",
-    "kammara/orfv": "/imgs/characters/kammara/orfv/_bg/vista_longa_orf-v-gigapixel-cgi-6x.png",
-    "kammara/triplec": "/imgs/characters/kammara/triplec/_bg/universal_upscale_0_769aab2f-50e9-4358-b381-06bc9be39de0_0-gigapixel-high fidelity v2-6x.png",
-    "kammara/z1": "/imgs/characters/kammara/z1/_bg/estacao_central_z1_alta.png"
-  },
-  "subsystems": {
-    "kammara/eni4": [
-      "/imgs/characters/kammara/eni4/_subsystems/0.jpg",
-      "/imgs/characters/kammara/eni4/_subsystems/1.png",
-      null
-    ],
-    "kammara/lunnp1": [
-      "/imgs/characters/kammara/lunnp1/_subsystems/0.png",
-      null,
-      null
-    ]
+    "kammara/eni4": "/imgs/kammara/eni4/_bg/imagem_fabrica_com_lixos-gigapixel-cgi-6x.jpg",
+    "kammara/gotto": "/imgs/kammara/gotto/_bg/fundo_provisorio.jpg",
+    "kammara/lunnp1": "/imgs/kammara/lunnp1/_bg/regiao_norte.jpg",
+    "kammara/orfv": "/imgs/kammara/orfv/_bg/vista_longa_orf-v-gigapixel-cgi-6x.jpg",
+    "kammara/triplec": "/imgs/kammara/triplec/_bg/niulForest.jpg",
+    "kammara/triplec/malloc": "/imgs/kammara/triplec/malloc/_bg/1_regiao_central_malloc.jpg",
+    "kammara/triplec/mesh": "/imgs/kammara/triplec/mesh/_bg/vista_area.jpg",
+    "kammara/triplec/sharp": "/imgs/kammara/triplec/sharp/_bg/area_sharp.jpg",
+    "kammara/z1": "/imgs/kammara/z1/_bg/estacao_central_z1_alta.jpg"
   }
 }

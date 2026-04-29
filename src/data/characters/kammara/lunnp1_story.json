@@ -1,0 +1,56 @@
+{
+  "name": {
+    "pt": "LUNN'P1",
+    "en": "LUNN'P1"
+  },
+  "summary": {
+    "pt": [
+      "LUNN'P1 — o planeta onde tudo flui. Um mundo sem sol, onde quatro luas regem o tempo e a água nunca mente. Lar dos Shal'ún, os únicos seres naturalmente imunes a vírus em todo o universo."
+    ],
+    "en": [
+      "LUNN'P1 — the planet where everything flows. A world without a sun, where four moons govern time and water never lies. Home of the Shal'ún, the only beings naturally immune to viruses in the entire universe."
+    ]
+  },
+  "panel": {
+    "story": {
+      "pt": [
+        "### Quatro luas",
+        "LUNN'P1 é iluminado por quatro luas que estão sempre visíveis no céu, cada uma com uma influência diferente sobre o humor, o clima e o ritmo do mundo. Quatro luas definem o ritmo da vida: Lur'Ma traz clareza. Oru'Len traz mudança. Tiru'Na traz movimento. Ve'Lume traz silêncio.",
+        "### A água",
+        "No centro de tudo está a Lún'Rai — uma água viva que funciona como o sistema nervoso do planeta. Ela registra tudo. Não há como mentir perto dela — o que você esconde de si mesmo, o reflexo mostra.",
+        "### As cidades",
+        "As cidades de LUNN'P1 se chamam Naru'ei — são folhas gigantes que flutuam sobre a água. Não ficam paradas: migram conforme o estado emocional coletivo dos habitantes, sustentadas por árvores enormes cujas raízes conduzem energia.",
+        "### O povo",
+        "Os Shal'ún são anfíbios emotivos. Cada um nasce com um glifo luminoso único nas costas — como uma impressão digital vibracional — e um Lún'Kai, uma espécie de vagalume guia que o acompanha desde o nascimento.",
+        "### Como vivem",
+        "Não existe hierarquia, propriedade ou acumulação. Ninguém manda. Decisões surgem quando a vibração de um grupo entra em sintonia — e a direção aparece naturalmente.",
+        "### A alimentação",
+        "A comida aqui não é para saciar. É para harmonizar. Sementes lumínicas, microfrutos da água, pétalas de lume. Nada é cozido. Tudo é preparado com luz e intenção.",
+        "### A imunidade",
+        "Os Shal'ún são os únicos seres naturalmente imunes a vírus em todo o universo. Por isso lideram o Protocol AURYN — a aliança que une planetas quando o Kammara está em risco.",
+        "### O paradoxo",
+        "Mas imunidade não é invulnerabilidade. A água dissolve qualquer defesa inconsciente — mas não dissolve a defesa que alguém escolhe reconstruir. A água dissolve tudo — exceto a vontade de não ser dissolvido."
+      ],
+      "en": [
+        "### The planet",
+        "LUNN'P1 is a planet without a sun. What lights everything are four moons, always visible in the sky, each with a different influence over mood, climate and the rhythm of the world.",
+        "### The water",
+        "At the center of everything is the Lún'Rai — a living water that acts as the planet's nervous system. It records everything. There is no way to lie in its presence — what you hide from yourself, the reflection reveals.",
+        "### The cities",
+        "The cities of LUNN'P1 are called Naru'ei — giant leaves that float on the water. They do not stay still: they migrate according to the collective emotional state of the inhabitants, sustained by enormous trees whose roots conduct energy.",
+        "### The people",
+        "The Shal'ún are emotional amphibians. Each one is born with a unique luminous glyph on their back — like a vibrational fingerprint — and a Lún'Kai, a kind of guiding firefly that accompanies them from birth.",
+        "### How they live",
+        "There is no hierarchy, property or accumulation. No one commands. Decisions emerge when the vibration of a group falls into sync — and the direction appears naturally.",
+        "### The moons",
+        "Four moons define the rhythm of life: Lur'Ma brings clarity. Oru'Len brings change. Tiru'Na brings movement. Ve'Lume brings silence. A day lasts about 40 hours — but the Shal'ún do not count.",
+        "### Nutrition",
+        "Food here is not meant to satisfy. It is meant to harmonize. Luminous seeds, aquatic microfruits, lume petals. Nothing is cooked. Everything is prepared with light and intention.",
+        "### The immunity",
+        "The Shal'ún are the only beings naturally immune to viruses in the entire universe. That is why they lead the AURYN Protocol — the alliance that unites planets when Kammara is at risk.",
+        "### The paradox",
+        "But immunity is not invulnerability. The water dissolves any unconscious defense — but it does not dissolve the defense someone chooses to rebuild. The water dissolves everything — except the will not to be dissolved."
+      ]
+    }
+  }
+}

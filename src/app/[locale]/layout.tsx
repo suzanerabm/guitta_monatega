@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { ModalProvider, Modal } from '@/components/Modal';
+import { ModalProvider, Modal, ModalKammara } from '@/components/Modal';
 import { ChromeTintProvider } from '@/components/ChromeTint';
 import { AutoBreadcrumb } from '@/components/Breadcrumb';
 
@@ -37,6 +37,7 @@ export default async function LocaleLayout({
           <main>{children}</main>
           <Footer aboutPath={aboutPath} aboutLabel={t('footerAbout')} />
           <Modal />
+          <ModalKammara />
         </ModalProvider>
       </ChromeTintProvider>
     </NextIntlClientProvider>
