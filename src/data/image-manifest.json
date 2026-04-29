@@ -1885,6 +1885,10 @@
       {
         "name": "plataforma",
         "image": "/imgs/kammara/triplec/sharp/_scenes/6plataforma.jpg"
+      },
+      {
+        "name": "Vista panoramica",
+        "image": "/imgs/kammara/triplec/sharp/_scenes/7Vista_panoramica.jpg"
       }
     ],
     "kammara/z1": [

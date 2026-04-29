@@ -1,6 +1,6 @@
 # 🖼️  Image weight audit
 
-_Generated 2026-04-28 23:51:45_
+_Generated 2026-04-29 01:11:13_
 
 ## Pipeline
 
@@ -30,8 +30,8 @@ spot onde o ganho de peso é máximo sem perda visual perceptível.
 
 | Métrica | Valor |
 |---|---|
-| Total de imagens | **739** |
-| Peso total | **88.8 MB** |
+| Total de imagens | **747** |
+| Peso total | **95.6 MB** |
 | Acima do alvo (ideal por tipo) | **0** (0%) |
 | Críticos (> 2× o alvo) | **0** |
 
@@ -49,7 +49,7 @@ spot onde o ganho de peso é máximo sem perda visual perceptível.
 
 | Pasta | Imagens | Peso |
 |---|---|---|
-| `kammara` | 332 | 71.4 MB |
+| `kammara` | 340 | 78.2 MB |
 | `art` | 276 | 10.7 MB |
 | `bichittos` | 118 | 5.5 MB |
 | `books` | 8 | 1021 KB |
