@@ -1,4 +1,5 @@
-import { setRequestLocale } from 'next-intl/server';
+import type { Metadata } from 'next';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import {
   getCharacters,
   getScenes,
@@ -8,6 +9,16 @@ import {
 } from '@/lib/images';
 import { getWorldSubsystemImages } from '@/data/characters/kammara/_worldData';
 import { KammaraClient } from './KammaraClient';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'kammara' });
+  return { title: t('pageTitle') };
+}
 
 const WORLD_IDS = ['lunnp1', 'eni4', 'triplec', 'orfv', 'z1', 'gotto'] as const;
 const TRIPLEC_REGIONS = ['malloc', 'mesh', 'sharp'] as const;

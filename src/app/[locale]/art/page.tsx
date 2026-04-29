@@ -1,6 +1,17 @@
-import { setRequestLocale } from 'next-intl/server';
+import type { Metadata } from 'next';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getArtImages } from '@/lib/images';
 import { ArtClient } from './ArtClient';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'art' });
+  return { title: t('pageTitle') };
+}
 
 const SECTION_IDS = [
   'black',

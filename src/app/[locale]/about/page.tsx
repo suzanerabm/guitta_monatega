@@ -1,6 +1,17 @@
+import type { Metadata } from 'next';
 import { Box, Heading, Text, Flex, Link as ChakraLink } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'about' });
+  return { title: t('pageTitle') };
+}
 
 type Section = {
   num: string;

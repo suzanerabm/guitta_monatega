@@ -1,10 +1,10 @@
 {
   "categories": [
-    { "id": "lore", "label": { "pt": "Lore", "en": "Lore" } },
-    { "id": "personagens", "label": { "pt": "Personagens", "en": "Characters" } },
-    { "id": "criaturas", "label": { "pt": "Criaturas", "en": "Creatures" } },
+    { "id": "lore", "label": { "pt": "Conceito Fundamento", "en": "Worldbuilding" } },
+    { "id": "personagens", "label": { "pt": "Criação Personagens", "en": "Character Writing" } },
+    { "id": "criaturas", "label": { "pt": "Criação Criaturas", "en": "Creature Writing" } },
     { "id": "design-conceito", "label": { "pt": "Design Conceito", "en": "Concept Design" } },
-    { "id": "characters-design", "label": { "pt": "Design dos Personagens", "en": "Character Design" } },
+    { "id": "characters-design", "label": { "pt": "Design Personagens", "en": "Character Design" } },
     { "id": "cenas", "label": { "pt": "Cenas", "en": "Scenes" } },
     { "id": "website", "label": { "pt": "Website", "en": "Website" } }
   ],
@@ -69,9 +69,9 @@
         "personagens": 35,
         "criaturas": 10,
         "design-conceito": 0,
-        "characters-design": 0,
-        "cenas": 0,
-        "website": 0
+        "characters-design": 90,
+        "cenas": 40,
+        "website": 50
       }
     },
     {
@@ -79,19 +79,19 @@
       "name": { "pt": "Gotto", "en": "Gotto" },
       "progress": {
         "lore": 95,
-        "personagens": 5,
+        "personagens": 25,
         "criaturas": 0,
         "design-conceito": 0,
-        "characters-design": 0,
+        "characters-design": 60,
         "cenas": 0,
-        "website": 0
+        "website": 20
       }
     },
     {
       "id": "hash",
       "name": { "pt": "Hash", "en": "Hash" },
       "progress": {
-        "lore": 3,
+        "lore": 15,
         "personagens": 0,
         "criaturas": 0,
         "design-conceito": 0,
@@ -104,7 +104,7 @@
       "id": "bluecity",
       "name": { "pt": "BlueCity", "en": "BlueCity" },
       "progress": {
-        "lore": 2,
+        "lore": 12,
         "personagens": 0,
         "criaturas": 0,
         "design-conceito": 0,

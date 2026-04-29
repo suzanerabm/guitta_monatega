@@ -1,7 +1,18 @@
-import { setRequestLocale } from 'next-intl/server';
+import type { Metadata } from 'next';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getCharacters, getBooks, getBookPages } from '@/lib/images';
 import { isBichittoPublished } from '@/lib/visibility';
 import { BichittosClient } from './BichittosClient';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'bichittos' });
+  return { title: t('pageTitle') };
+}
 
 export default async function BichittosPage({
   params,
