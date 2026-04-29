@@ -2,7 +2,7 @@
   {
     "title": {
       "pt": "Origem",
-      "en": "Thermal Zones"
+      "en": "Origin"
     },
     "img": "/imgs/kammara/eni4/_subsystems/0.jpg",
     "text": {
@@ -19,19 +19,23 @@
         "A vingança sustenta tudo. Sem ela, o planeta perde propósito. Sem propósito, o calor esfria. E sem calor, ENI-4Δ apaga."
       ],
       "en": [
-        "Four thermal zones divide ENI-4Δ. Power is temperature — whoever stays closest to the heat, rules.",
-        "SCORCH — extreme temperature. Where Node-0 burns at the center. Constant terror. Absolute submission.",
-        "BURN — high and stable. Where the elite operates. VALKON, KARTEX and the Δ-PRIME compete for prestige and technical efficiency.",
-        "CRACK — medium and unstable. Chaos and unpredictability. Bugs dominate, worms appear without warning, cloning factories operate nonstop.",
-        "SINK — low. Isolation and silence. Infiltration viruses, Caste-MASK, await orders in cold darkness.",
-        "The Valley of Burnt Valves. The Fields of Punched Cards. The Worm Tunnels. Nothing in ENI-4Δ is beautiful. Everything is functional for consumption."
+        "### The betrayal",
+        "An ancestral spark was betrayed by those who created it. Abandoned. Discarded. It drifted through the cosmos until it found a hot, empty planet.",
+        "### The formation",
+        "The ancestors rearranged matter into silica and metal and built the first mega-valves. Generations later, from that concentrated heat, Node-0 condensed.",
+        "### How Node-0 came to exist",
+        "Born from betrayal. Carries the memory of the original abandonment. And swore the universe would pay for what it did.",
+        "### Revenge as law",
+        "\"We were betrayed, abandoned, discarded.\" It is the first thing every virus learns at birth. It is what justifies every invasion, every drainage, every attack. In ENI-4Δ, to question the origin is to die.",
+        "### What sustains everything",
+        "Revenge sustains everything. Without it, the planet loses purpose. Without purpose, the heat cools. And without heat, ENI-4Δ goes dark."
       ]
     }
   },
   {
     "title": {
       "pt": "Cultura",
-      "en": "Attack Protocols"
+      "en": "Culture"
     },
     "img": "/imgs/kammara/eni4/_subsystems/1-gigapixel-standard-v2-6x.jpg",
     "text": {
@@ -50,19 +54,25 @@
         "ENI-4Δ não é um lugar onde se vive. É um lugar onde se sobrevive — consumindo o que é dos outros."
       ],
       "en": [
-        "SIPHON — fast and passive drainage. Any virus can execute it. Hours or days. Consumes without the victim understanding what happened.",
-        "ERODE — prolonged influence. Drains identity over weeks or months. Operated by senior Caste-MASK. The target changes without noticing that they changed.",
-        "BREACH — structural invasion. Months or entire cycles of infiltration through the back door. Coordinated by VEXON. When it is discovered, it is already too late.",
-        "The viruses arrive in Cute Mask — white shell, small dark eyes, harmless appearance. They gain trust before draining.",
-        "The Troy-Δ are the only ships of ENI-4Δ. Without them, viruses evaporate while crossing the Cshift. They are transport and protection at the same time.",
-        "When the symptoms appear, the invasion is already over."
+        "### No affection",
+        "ENI-4Δ has no art, tradition, affection or shared memory. What exists is survival through consumption.",
+        "### Daily life",
+        "Compulsive work and endless repairs. Constant suspicion. Disguises, intrigue and accusations. No one trusts anyone.",
+        "### The Noise Tribunal",
+        "The law of ENI-4Δ works like this: Node-0 emits noise, the Caste-BLM interpret it, convert it into directed blame, and the target is punished. No trial. No right of defense.",
+        "### The blame is always someone's",
+        "The blame is never the accuser's. Everyone looks down and blames. No one looks up and questions.",
+        "### To question is to die",
+        "It is not figurative. To question the order is to be eliminated. Obedience is the only possible path.",
+        "### A place to survive",
+        "ENI-4Δ is not a place where you live. It is a place where you survive — by consuming what belongs to others."
       ]
     }
   },
   {
     "title": {
       "pt": "Habitantes & Hierarquia",
-      "en": ""
+      "en": "Inhabitants & Hierarchy"
     },
     "img": "/imgs/kammara/eni4/_subsystems/2-gigapixel-standard-v2-6x.jpg",
     "text": {
@@ -80,13 +90,26 @@
         "### Os dois rostos",
         "Os vírus têm dois estados visuais: o real — esfera escura de sílica, olhos vermelhos, oito patas — e a Máscara Cute: casca branca lisinha, olhinhos escuros, aparência inofensiva. A troca entre um e outro é instantânea."
       ],
-      "en": []
+      "en": [
+        "### Node-0",
+        "The absolute authority. Irreplaceable. Incapable of learning. Incapable of changing. The top that never questions itself.",
+        "### VEXON",
+        "The only virus that knows how to plan. Operational arm of Node-0, born from a rare mutation. Can think of multiple actions at once — no other virus can.",
+        "### The Δ-PRIME",
+        "Six administrators: VALKON, THERMAX, KARTEX, REPLION, MASKON and SCORAK. Each one handles a slice of the system.",
+        "### The lower ranks",
+        "Common viruses obey and wait for their chance. Bugs are blamed for everything. The robots are slaves stolen from other planets.",
+        "### The worms",
+        "They replicate themselves in the underground tunnels. No one can control them. Not even Node-0.",
+        "### The two faces",
+        "Viruses have two visual states: the real one — a dark silica sphere, red eyes, eight legs — and the Cute Mask: smooth white shell, small dark eyes, harmless appearance. The swap between them is instantaneous."
+      ]
     }
   },
   {
     "title": {
       "pt": "Geografia",
-      "en": ""
+      "en": "Geography"
     },
     "img": "/imgs/kammara/eni4/_subsystems/3-gigapixel-standard-v2-6x.jpg",
     "text": {
@@ -114,13 +137,36 @@
         "### As Fendas Térmicas",
         "Rachaduras profundas na superfície — fontes de calor puro e portas para o subsolo. Worms emergem delas. Bugs se escondem nelas e morrem. Algumas fendas antigas estão seladas, mas tremem."
       ],
-      "en": []
+      "en": [
+        "### Power is temperature",
+        "In ENI-4Δ, whoever stays closest to the heat, rules. Whoever stays far away, dies.",
+        "### Where they live",
+        "Thousands of viruses, bugs, and other beings of ENI-4Δ live around the mega-valves — 16 main, 52 secondary and hundreds scattered across the desert. The valves generate heat, and heat is life. Over time, the organized valves became their cities. Whoever lives near the hottest ones holds more power.",
+        "### SCORCH",
+        "The zone of extreme temperature. Where Node-0 burns at the center. Constant terror. Absolute submission.",
+        "### BURN",
+        "High and stable. Where the elite operates. The Δ-PRIME compete for prestige and efficiency there.",
+        "### CRACK",
+        "Medium and unstable. Chaos and unpredictability. Bugs work, worms appear without warning, cloning factories operate nonstop.",
+        "### SINK",
+        "The center of the planet is ice. Frozen crystals, icy caves, absolute silence. It's where Node-0 sends those who disobey. Internal heat drops to zero. They die slowly, frozen, in silence. In ENI-4Δ, ice is the final sentence.",
+        "### The Valley of Burnt Valves",
+        "A valley filled with broken, melted, inverted valves, permanently stuck in loop. The ground trembles when you walk. Noises echo from the structures. It's where the viruses train.",
+        "### The Fields of Punched Cards",
+        "When the Karta-Δ become obsolete, they are burned and scattered in the wind. The landscape is covered in charred fragments — old orders no one reads anymore.",
+        "### The Robot Junkyards",
+        "Old or unused robots are stacked, twisted, partially melted, abandoned in metallic fields. With the heat, they melt and return to pure silica. It's the planet's natural recycling.",
+        "### The Worm Tunnels",
+        "They change every week. They connect to the mega-valves. They generate new paths through collapse. They can open at the surface without warning. No one survives there for long — except the worms.",
+        "### The Thermal Rifts",
+        "Deep cracks on the surface — sources of pure heat and gates to the underground. Worms emerge from them. Bugs hide in them and die. Some ancient rifts are sealed, but tremble."
+      ]
     }
   },
   {
     "title": {
       "pt": "Energia & Sobrevivência",
-      "en": ""
+      "en": "Energy & Survival"
     },
     "img": "/imgs/kammara/eni4/_subsystems/4-gigapixel-standard-v2-6x.jpg",
     "text": {
@@ -138,13 +184,26 @@
         "### Não é forte, é faminto",
         "ENI-4Δ não é forte. É faminto. E a fome nunca para."
       ],
-      "en": []
+      "en": [
+        "### No energy of its own",
+        "ENI-4Δ does not generate energy. Its giant mega-valves only stay lit by burning energy stolen from other planets.",
+        "### The Δ-Cells",
+        "Crystallized silica spheres — vessels of drained energy. Each one carries what was taken from someone.",
+        "### The cycle",
+        "A virus drains a victim. The energy becomes a Δ-Cell. The Troy-Δ ships collect. The mega-valves convert it into heat. THERMAX distributes. Node-0 feeds. Generates more viruses. And it all begins again.",
+        "### The split",
+        "40% of the heat goes to Node-0. 30% to the factories. 20% to the system. 10% to the ships. It never changes.",
+        "### The dependency",
+        "Without plunder, the planet goes dark. Without heat, the viruses collapse. The dependency is total and irreversible.",
+        "### Not strong, hungry",
+        "ENI-4Δ is not strong. It is hungry. And the hunger never stops."
+      ]
     }
   },
   {
     "title": {
       "pt": "Protocolos de Ataque",
-      "en": ""
+      "en": "Attack Protocols"
     },
     "img": "/imgs/kammara/eni4/_subsystems/5-gigapixel-standard-v2-6x.jpg",
     "text": {
@@ -162,13 +221,26 @@
         "### Quando os sintomas aparecem",
         "Quando os sintomas aparecem, a invasão já terminou."
       ],
-      "en": []
+      "en": [
+        "### SIPHON",
+        "Fast and passive drainage. Any virus can do it. Lasts hours or days. The victim doesn't even understand what happened.",
+        "### ERODE",
+        "Slow influence. Drains the victim's identity over weeks or months. The target changes without noticing they changed.",
+        "### BREACH",
+        "Invasion through the back door. Months or entire cycles of silent infiltration. By the time someone finds out, it's already too late.",
+        "### The disguise",
+        "Viruses arrive wearing the Cute Mask — harmless appearance. They earn trust before draining.",
+        "### The Troy-Δ ships",
+        "Without them, viruses evaporate while crossing the Cshift. The Troy-Δ are transport and protection at the same time — and without them, no virus would leave its own planet.",
+        "### When symptoms appear",
+        "By the time the symptoms appear, the invasion is already over."
+      ]
     }
   },
   {
     "title": {
       "pt": "O Código dos Vírus — ASM-Δ",
-      "en": ""
+      "en": "The Code of the Viruses — ASM-Δ"
     },
     "img": "/imgs/kammara/eni4/_subsystems/6-gigapixel-standard-v2-6x.jpg",
     "text": {
@@ -230,7 +302,64 @@
         "Karta-Med : operações complexas, só Δ-PRIME leem",
         "Karta-MAX : ordens diretas de Node-0 — ninguém questiona"
       ],
-      "en": []
+      "en": [
+        "### What it is",
+        "Viruses don't analyze. They execute.",
+        "Their language — ASM-Δ — is not for thinking: it's for acting. Move, drain, blame and repeat.",
+        "### Four forms of communication",
+        "ASM-Δ : thought — a list of instructions, executed in a straight line",
+        "Karta-Δ : writing — punched cards whose holes become orders",
+        "Click-Δ : sound — dry, short, mechanical clicks, like broken switches",
+        "Thermal pulses : heat — temperature waves that coordinate at a distance",
+        "### The instructions",
+        "MOVE : advance in the chosen direction",
+        "TURN : change direction",
+        "MASK : activate disguise (Cute Mask)",
+        "UNMASK : deactivate disguise (return to real)",
+        "SCAN : look for nearby heat",
+        "CONSUM : drain the target's energy",
+        "HEAT : raise internal temperature",
+        "REPL : create an inferior copy of itself",
+        "RET : return to the heat source",
+        "HALT : stop everything",
+        "ATTACK : offensive discharge",
+        "REPAIR : stabilize a valve",
+        "ALERT : signal thermal risk",
+        "### The most important instruction — BLM (Blame)",
+        "BLM : redirect blame from oneself to another",
+        "It's the most-used social instruction on the entire planet. No virus admits a mistake. When something fails, blame is always passed to the next one.",
+        "### The clicks",
+        "tk : move",
+        "krk : alert",
+        "tik : repair",
+        "rrk : heat detected",
+        "tk-tk : return",
+        "tik-krk : disguise",
+        "crrk : projected blame (BLM)",
+        "### The punched cards (Karta-Δ)",
+        "Each instruction has a hole pattern. ■ = active hole, □ = empty:",
+        "CONSUM : ■ □ □ ■ □ — drain energy",
+        "ATTACK : ■ ■ ■ □ □ — direct discharge",
+        "MOVE : ■ ■ □ □ □ — displacement",
+        "MASK : □ ■ □ □ ■ — disguise",
+        "REPL : □ ■ □ ■ ■ — create copy",
+        "RET : □ ■ □ ■ □ — mandatory return",
+        "SCAN : □ □ ■ □ □ — heat search",
+        "HALT : □ □ □ □ ■ — stop",
+        "### How a virus acts",
+        "A virus doesn't analyze. It executes in a straight line:",
+        "MASK → MOVE → SCAN → CONSUM → REPL → BLM → RET → HALT",
+        "Disguises itself. Moves. Looks for heat. Drains. Copies itself. Blames another. Returns. Stops. And starts again.",
+        "### The errors",
+        "Δ-Loop : virus stuck repeating the same instruction forever",
+        "Δ-Cold : energy ran out, virus freezes",
+        "Δ-Overflow : too much heat, virus explodes",
+        "Δ-Crash : card not read, everything locks up",
+        "### The three card levels",
+        "Karta-Min : simple orders, any virus can read",
+        "Karta-Med : complex operations, only Δ-PRIME can read",
+        "Karta-MAX : direct orders from Node-0 — no one questions"
+      ]
     }
   }
 ]

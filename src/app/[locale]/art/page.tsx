@@ -13,11 +13,11 @@ export async function generateMetadata({
   return { title: t('pageTitle') };
 }
 
-const SECTION_IDS = [
-  'black',
-  'grafite',
+const SECTION_IDS = [ 
   'doodle',
-  'digital',
+  'grafite',
+  'black',
+  // 'digital',
   'collections',
   'fimo',
   'needle',

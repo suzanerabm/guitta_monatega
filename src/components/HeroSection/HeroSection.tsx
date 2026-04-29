@@ -111,7 +111,7 @@ export function HeroSection({
       direction="column"
       align="center"
       justify="center"
-      gap="clamp(0.4rem, 1vw, 0.8rem)"
+      gap="0"
       bg={background}
       minH={minHeight ?? '15vh'}
       pt="5xl"
@@ -131,7 +131,7 @@ export function HeroSection({
         zIndex={1}
         opacity={0}
         animation="fadeIn 0.8s ease 0.1s forwards"
-        mb="clamp(0.5rem, 1.5vw, 1.25rem)"
+        mb="0"
       >
         {label}
       </Text>
@@ -161,7 +161,7 @@ export function HeroSection({
           zIndex={1}
           opacity={0}
           animation="fadeIn 0.8s ease 0.3s forwards"
-          mt="clamp(0.5rem, 1.5vw, 1.25rem)"
+          mt="0"
         >
           {labelBottom}
         </Text>
@@ -178,7 +178,7 @@ export function HeroSection({
           maxW="450px"
           zIndex={1}
           animation="fadeIn 1s ease 0.4s forwards"
-          mt="clamp(0.3rem, 1vw, 1.25rem)"
+          mt="0"
         >
           {description}
         </Text>

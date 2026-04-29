@@ -129,23 +129,23 @@
       "desc": "Characters that live between the imperfect and affection."
     },
     "kammara": {
-      "label": "Saga",
+      "label": "Universe",
       "title": "Kammara",
-      "desc": "Connected worlds. Living systems. An illustrated saga."
+      "desc": "A universe where memory becomes matter."
     },
     "art": {
-      "label": "Portfolio",
+      "label": "ART GALLERY",
       "title": "Guitta Monatega",
-      "desc": "Illustration, concept art and visual design."
+      "desc": "Myth Designer • Writer • Illustrator"
     }
   },
   "about": {
     "pageTitle": "About — Guitta Monatega",
     "heroLabel": "Biography",
     "heroTitle": "Guitta Monatega",
-    "heroSub": "Writer and illustrator. Creator of original universes.",
+    "heroSub": "Myth Designer • Writer • Illustrator",
     "title": "About",
-    "date": "2026",
+    "date": "- Since 1974 -",
     "sections": [
       {
         "num": "01",
@@ -221,9 +221,9 @@
   },
   "kammara": {
     "pageTitle": "Kammara — Guitta Monatega",
-    "heroLabel": "Illustrated Saga",
+    "heroLabel": "Universe",
     "heroTitle": "Kammara",
-    "heroDesc": "A bio-logical universe. An invisible war. A saga far from over.",
+    "heroDesc": "A universe where memory becomes matter.",
     "placeholder": "Placeholder — description goes here.",
     "charactersTitle": "Characters",
     "scenesTitle": "Scenes",
@@ -258,7 +258,7 @@
   },
   "art": {
     "pageTitle": "Art — Guitta Monatega",
-    "heroLabel": "Portfolio",
+    "heroLabel": "ART GALLERY",
     "heroTitle": "Guitta Monatega",
     "heroLabelBottom": "- since 1974 -",
     "filterAll": "All",
@@ -272,39 +272,39 @@
     "sections": {
       "black": {
         "title": "White on Black",
-        "technique": "White ink on black paper."
+        "technique": "White ink on black paper. Contrast, silence, and light revealed through the line."
       },
       "grafite": {
         "title": "Graphite",
-        "technique": "Shading and volume studies."
+        "technique": "Form, shadow, and expression. Where observation becomes depth."
       },
       "doodle": {
         "title": "Doodle",
-        "technique": "Simple doodles that become characters. Inspiration and simplicity that grow into a collection."
+        "technique": "The beginning of everything. Simple sketches that later became characters, stories, and worlds."
       },
       "digital": {
         "title": "Digital Art",
-        "technique": "Digital illustration."
+        "technique": "Digital illustration where color, atmosphere, and visual direction expand worlds first born by hand."
       },
       "collections": {
         "title": "Collections",
-        "technique": "Themed series and collections."
+        "technique": "Thematic series where different pieces connect and build continuous visual narratives."
       },
       "fimo": {
         "title": "Pointillism",
-        "technique": "Stippling and mini-fimo collage."
+        "technique": "Built through patience. Each dot creates texture, rhythm, and permanence."
       },
       "needle": {
         "title": "Needle Felting",
-        "technique": "Miniature sculptures with needle and wool."
+        "technique": "Soft sculpture in motion. When illustration leaves the page and becomes touchable."
       },
       "clay": {
-        "title": "Clay",
-        "technique": "Biscuit clay modeling."
+        "title": "Clay Art",
+        "technique": "Ideas shaped by hand. Small sculptures where imagination turns into form."
       },
       "croche": {
         "title": "Crochet",
-        "technique": "Amigurumi and crochet pieces."
+        "technique": "Thread and memory. Handmade forms shaped with rhythm, warmth, and care."
       }
     }
   }

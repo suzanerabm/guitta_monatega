@@ -11,13 +11,13 @@
     },
     "bio": {
       "pt": "Cuida das pontes que conectam as vilas dos Fjorks — organiza reparos, coordena o grupo, garante que ninguém fique isolado. Sente medo o tempo todo — e mesmo assim fica.",
-      "en": ""
+      "en": "Cares for the bridges that connect the Fjork villages — organizes repairs, coordinates the group, makes sure no one is left isolated. Feels fear all the time — and stays anyway."
     },
     "image": "/imgs/kammara/orfv/1orvian.png",
     "backImage": "/imgs/kammara/orfv/1orvian_costas.png",
     "backTitle": {
       "pt": "Outro Lado",
-      "en": "Other Side"
+      "en": "Another Side"
     },
     "backMeaning": {
       "pt": "Por trás do pilar, a escuta. Orvian sustenta sem se mostrar inteiro.",
@@ -32,7 +32,7 @@
         },
         "value": {
           "pt": "Cuidador de pontes",
-          "en": ""
+          "en": "Bridge keeper"
         }
       },
       {
@@ -43,7 +43,7 @@
         },
         "value": {
           "pt": "Fjorks Centrais",
-          "en": ""
+          "en": "Central Fjorks"
         }
       },
       {
@@ -60,7 +60,7 @@
     ],
     "dorsalMeaning": {
       "pt": "Se alguém precisa atravessar, eu fico.",
-      "en": ""
+      "en": "If someone needs to cross, I stay."
     }
   },
   {
@@ -71,11 +71,11 @@
     },
     "species": {
       "pt": "ElePHPant",
-      "en": "ElePHPant (infected)"
+      "en": "ElePHPant"
     },
     "bio": {
       "pt": "Calmo, acessível, genuinamente gentil. Maelik é o elePHPant que cuida sem pedir nada — ajuda quem precisa, mantém rotinas, circula entre vilas como quem nasceu pra isso. Seu nome significa \"aquele que continua\" — e é exatamente o que ele faz.",
-      "en": "The normalcy that keeps every door open. Everything about him seems to work — kindness delivered at the right moment. Underneath, the virus installed itself in an opening that was already there, and Maelik keeps normalizing what should be questioned. Where Orvian protects through weight, Maelik exposes through illusion."
+      "en": "Calm, approachable, genuinely kind. Maelik is the ElePHPant who cares without asking anything in return — helps those who need, keeps routines, moves between villages as if born for it. His name means \"the one who continues\" — and that's exactly what he does."
     },
     "image": "/imgs/kammara/orfv/2maelik.png",
     "backImage": "",
@@ -85,7 +85,7 @@
     },
     "dorsalMeaning": {
       "pt": "Está tudo bem.",
-      "en": ""
+      "en": "Everything is fine."
     },
     "attributes": [
       {
@@ -96,7 +96,7 @@
         },
         "value": {
           "pt": "Continuidade",
-          "en": ""
+          "en": "Continuity"
         }
       },
       {
@@ -107,7 +107,7 @@
         },
         "value": {
           "pt": "Fjorks Oeste",
-          "en": ""
+          "en": "Western Fjorks"
         }
       }
     ]
@@ -124,7 +124,7 @@
     },
     "bio": {
       "pt": "Nylpha é menor que Orvian, mas mais inquieta. Seus olhos observam tudo — escuros, atentos, levemente fundos. Desde jovem, Nylpha percebia mudanças no planeta antes de qualquer sinal físico.",
-      "en": "She feels the flow before the others. Notices subtle shifts that still have no form. Acts when her whole body confirms, never on impulse. Her perception saves lives when it is heard."
+      "en": "Nylpha is smaller than Orvian, but more restless. Her eyes observe everything — dark, attentive, slightly sunken. Ever since she was young, Nylpha noticed changes in the planet before any physical sign."
     },
     "image": "/imgs/kammara/orfv/3Nylpha1.png",
     "backImage": "",
@@ -134,7 +134,7 @@
     },
     "dorsalMeaning": {
       "pt": "Algo mudou. Eu sinto.",
-      "en": ""
+      "en": "Something has changed. I feel it."
     },
     "attributes": [
       {
@@ -145,7 +145,7 @@
         },
         "value": {
           "pt": "Sensora de instabilidade",
-          "en": ""
+          "en": "Instability sensor"
         }
       },
       {
@@ -156,7 +156,7 @@
         },
         "value": {
           "pt": "Fjorks Norte",
-          "en": ""
+          "en": "Northern Fjorks"
         }
       }
     ]
@@ -173,7 +173,7 @@
     },
     "bio": {
       "pt": "Vê tudo, avalia tudo, calcula riscos — mas não cruza. Os outros a chamam de cautelosa. Ela se chama de responsável.",
-      "en": "He sees the flow but stays on the margin, watching every possible path. Inside, he runs in every direction at once while appearing still. When he finally acts, he acts with everything he gathered while waiting."
+      "en": "Sees everything, evaluates everything, calculates risks — but doesn't cross. The others call her cautious. She calls herself responsible."
     },
     "image": "/imgs/kammara/orfv/LetiK.png",
     "backImage": "",
@@ -183,7 +183,7 @@
     },
     "dorsalMeaning": {
       "pt": "E se a ponte não aguenta?",
-      "en": ""
+      "en": "What if the bridge doesn't hold?"
     },
     "attributes": [
       {
@@ -194,7 +194,7 @@
         },
         "value": {
           "pt": "Sem função formal",
-          "en": ""
+          "en": "No formal role"
         }
       },
       {
@@ -205,7 +205,7 @@
         },
         "value": {
           "pt": "Fjorks Leste",
-          "en": ""
+          "en": "Eastern Fjorks"
         }
       }
     ]
@@ -222,7 +222,7 @@
     },
     "bio": {
       "pt": "Kallott age quando os outros hesitam. Dispara jatos de água com a tromba, bloqueia passagens, contém ameaças. Tem reação rápida e resistência física acima da média.",
-      "en": "He stops the flow when it carries threat. Blocks, then pulls back. The rarest Yang in ORF-V — direct force, precise jet, confrontation without waste. Lives in villages close to the void, away from the centers."
+      "en": "Kallott acts when the others hesitate. Fires jets of water with his trunk, blocks passages, contains threats. Quick reaction and above-average physical resilience."
     },
     "image": "/imgs/kammara/orfv/Kallott.png",
     "backImage": "",
@@ -232,7 +232,7 @@
     },
     "dorsalMeaning": {
       "pt": "Agora.",
-      "en": ""
+      "en": "Now."
     },
     "attributes": [
       {
@@ -243,7 +243,7 @@
         },
         "value": {
           "pt": "Defensor",
-          "en": ""
+          "en": "Defender"
         }
       },
       {
@@ -254,7 +254,7 @@
         },
         "value": {
           "pt": "Fjorks Leste",
-          "en": ""
+          "en": "Eastern Fjorks"
         }
       }
     ]
@@ -271,7 +271,7 @@
     },
     "bio": {
       "pt": "Quando era jovem, o irmão de Torwen ficou paralisado de medo no meio de uma ponte durante uma instabilidade. Ninguém ficou com ele. Quando tudo passou, o irmão estava lá — mas algo nele tinha mudado. Desde esse dia, Torwen é o elePHPant que sempre está cuidando de todos.",
-      "en": "He holds up those left behind. Entire villages shift in mood when Torwen arrives — the air lightens, bridges feel shorter. Gentle warmth, a presence that demands nothing. That is why everyone looks for him."
+      "en": "When he was young, Torwen's brother froze with fear in the middle of a bridge during an instability. No one stayed with him. When it was all over, his brother was there — but something in him had changed. Since that day, Torwen is the ElePHPant who is always taking care of everyone."
     },
     "image": "/imgs/kammara/orfv/Torwen.png",
     "backImage": "",
@@ -281,7 +281,7 @@
     },
     "dorsalMeaning": {
       "pt": "Eu fico.",
-      "en": ""
+      "en": "I stay."
     },
     "attributes": [
       {
@@ -292,7 +292,7 @@
         },
         "value": {
           "pt": "Cuidador comunitário",
-          "en": ""
+          "en": "Community caretaker"
         }
       },
       {
@@ -303,7 +303,7 @@
         },
         "value": {
           "pt": "Fjorks Centrais",
-          "en": ""
+          "en": "Central Fjorks"
         }
       }
     ]

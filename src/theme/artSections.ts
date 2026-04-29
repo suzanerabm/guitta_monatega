@@ -24,62 +24,68 @@ export type ArtSectionId =
   | 'clay'
   | 'croche';
 
-// Shared tech (subtitle) color used by every light-themed section.
-const DARK_TECH_OVERLAY = 'rgba(51,51,51,0.5)';
+// Subtitle (technique) color overlays — same alpha for both modes so
+// the relationship between title and subtitle stays consistent.
+const DARK_TECH_OVERLAY = 'rgba(26,26,26,0.55)';
+const LIGHT_TECH_OVERLAY = 'rgba(255,255,255,0.55)';
 
+// Monochrome scale walking the page top-to-bottom following the order
+// in /art/page.tsx. Starts almost-white (doodle = the blank notebook),
+// darkens until black (the climax), then keeps descending into mature
+// greys for the tactile/finished crafts.
 export const artSectionMeta: Record<ArtSectionId, ArtSectionMeta> = {
+  doodle: {
+    bg: '#fafafa',
+    titleColor: '#1a1a1a',
+    techColor: DARK_TECH_OVERLAY,
+    large: true,
+  },
+  grafite: {
+    bg: '#e8e8e8',
+    titleColor: '#1a1a1a',
+    techColor: DARK_TECH_OVERLAY,
+    large: true,
+  },
   black: {
     bg: '#1a1a1a',
     titleColor: '#ffffff',
-    techColor: 'rgba(255,255,255,0.5)',
+    techColor: LIGHT_TECH_OVERLAY,
     large: false,
     theme: 'dark',
   },
-  grafite: {
-    bg: '#f0eeeb',
-    titleColor: '#333333',
-    techColor: DARK_TECH_OVERLAY,
-    large: true,
-  },
-  doodle: {
-    bg: '#f5f3ef',
-    titleColor: '#333333',
-    techColor: DARK_TECH_OVERLAY,
-    large: true,
-  },
   digital: {
-    bg: '#eae8f0',
-    titleColor: '#333333',
+    bg: '#d4d4d4',
+    titleColor: '#1a1a1a',
     techColor: DARK_TECH_OVERLAY,
     large: false,
   },
   collections: {
-    bg: '#f3f0e8',
-    titleColor: '#333333',
+    bg: '#dcdcdc',
+    titleColor: '#1a1a1a',
     techColor: DARK_TECH_OVERLAY,
     large: false,
   },
   fimo: {
-    bg: '#eef2e8',
-    titleColor: '#333333',
+    bg: '#cfcfcf',
+    titleColor: '#1a1a1a',
     techColor: DARK_TECH_OVERLAY,
     large: false,
   },
   needle: {
-    bg: '#e8eef2',
-    titleColor: '#333333',
+    bg: '#c2c2c2',
+    titleColor: '#1a1a1a',
     techColor: DARK_TECH_OVERLAY,
     large: false,
   },
   clay: {
-    bg: '#f2ede8',
-    titleColor: '#333333',
+    bg: '#b8b8b8',
+    titleColor: '#1a1a1a',
     techColor: DARK_TECH_OVERLAY,
     large: false,
   },
   croche: {
-    bg: '#f0e8f2',
-    titleColor: '#333333',
+    bg: '#aeaeae',
+    titleColor: '#1a1a1a',
     techColor: DARK_TECH_OVERLAY,
     large: false,
   },

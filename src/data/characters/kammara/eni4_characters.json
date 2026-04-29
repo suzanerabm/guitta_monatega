@@ -32,7 +32,7 @@
         },
         "value": {
           "pt": "Senhor Supremo",
-          "en": ""
+          "en": "Supreme Lord"
         }
       },
       {
@@ -371,7 +371,7 @@
     "backImage": "/imgs/kammara/eni4/virus_MASKON_cute.png",
     "backTitle": {
       "pt": "Camuflagem",
-      "en": ""
+      "en": "Camouflage"
     },
     "dorsalMeaning": {
       "pt": "Nunca dizem nada. Por isso ninguém sabe o que sabem.",
@@ -420,7 +420,7 @@
     "backImage": "/imgs/kammara/eni4/virus_KARTEX_dentro_troy.png",
     "backTitle": {
       "pt": "Piloto de Troy-Δ",
-      "en": ""
+      "en": "Troy-Δ Pilot"
     },
     "dorsalMeaning": {
       "pt": "As rotas mentem. Os planetas não.",
@@ -466,7 +466,7 @@
     },
     "bio": {
       "pt": "O soldado básico de ENI-4Δ. Executa instruções em linha reta: se disfarça, se move, procura calor, suga, se copia, culpa outro, volta.",
-      "en": ""
+      "en": "The basic soldier of ENI-4Δ. Executes instructions in a straight line: disguises, moves, seeks heat, drains, copies itself, blames another, returns."
     },
     "image": "/imgs/kammara/eni4/virus_soldado.png",
     "backImage": "/imgs/kammara/eni4/virus_cute.png",
@@ -498,7 +498,7 @@
         },
         "value": {
           "pt": "Infiltração e consumo",
-          "en": ""
+          "en": "Infiltration and consumption"
         }
       }
     ]
@@ -717,7 +717,7 @@
     "backImage": "/imgs/kammara/eni4/bug_costas.png",
     "backTitle": {
       "pt": "Culpa",
-      "en": ""
+      "en": "Blame"
     },
     "dorsalMeaning": {
       "pt": "A culpa é sempre do bug.",
@@ -760,7 +760,7 @@
     },
     "bio": {
       "pt": "Praga de ENI-4Δ. Vivem em tudo que é lugar — lixões, fábricas, túneis, bordas da SINK, ao redor das megaválvulas. Assim como os worms, comem lixo, sucata, restos de robôs, tudo o que vem na frente.",
-      "en": ""
+      "en": "Plague of ENI-4Δ. They live everywhere — junkyards, factories, tunnels, the edges of SINK, around the mega-valves. Like the worms, they eat trash, scrap, robot remains, anything that comes their way."
     },
     "image": "/imgs/kammara/eni4/rats.png",
     "backImage": "/imgs/kammara/eni4/rats_bravo.png",
@@ -770,7 +770,7 @@
     },
     "dorsalMeaning": {
       "pt": "Não chegue perto.",
-      "en": ""
+      "en": "Don't come close."
     },
     "attributes": [
       {

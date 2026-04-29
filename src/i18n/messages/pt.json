@@ -122,7 +122,7 @@
   },
   "home": {
     "title": "Guitta Monatega",
-    "heroSub": "arte & universos & personagens",
+    "heroSub": "Arte, conceito e construção de universos.",
     "bichittos": {
       "label": "Série",
       "title": "Bichittos",
@@ -131,21 +131,21 @@
     "kammara": {
       "label": "Universo",
       "title": "Kammara",
-      "desc": "Mundos conectados. Sistemas bio-logic. Uma saga ilustrada."
+      "desc": "Um universo onde memória é matéria."
     },
     "art": {
       "label": "Galeria de Arte",
       "title": "Guitta Monatega",
-      "desc": "Ilustração, conceito e draft visual."
+      "desc": "Myth Designer • Escritora • Ilustradora"
     }
   },
   "about": {
     "pageTitle": "Sobre — Guitta Monatega",
     "heroLabel": "Biografia",
     "heroTitle": "Guitta Monatega",
-    "heroSub": "Escritora e ilustradora. Criadora de universos autorais.",
+    "heroSub": "Myth Designer • Escritora • Ilustradora",
     "title": "Sobre",
-    "date": "2026",
+    "date": "- Desde 1974 -",
     "sections": [
       {
         "num": "01",
@@ -164,18 +164,18 @@
       },
       {
         "num": "04",
+        "tag": "O Ofício",
+        "body": "Meu trabalho transita entre a escrita, técnicas tradicionais e digitais — nanquim, grafite, pontilhismo, crochê, needle felting, modelagem, ilustração digital. A palavra e a imagem caminham juntas. Cada peça é construída com tempo, repetição e cuidado, preservando a essência do feito à mão."
+      },
+      {
+        "num": "05",
         "tag": "Bichittos",
         "body": "O universo afetivo. NapCat, Zeco, Taylo, Cheio de Bolinha e seus amigos. Personagens que existem entre o imperfeito e o afeto, nascidos em cadernos e hoje presentes em livros autorais, animações e esculturas em miniatura."
       },
       {
-        "num": "05",
+        "num": "06",
         "tag": "Kammara",
         "body": "Onde a história da computação se transforma em mito. A semente veio por volta de 2012 — começaram a surgir planetas, linguagens, criaturas. Em 2019, visitei museus de história da computação para estudar de perto as máquinas que deram origem a tudo. Desde então, venho desenvolvendo esse universo em camadas: cosmologia, personagens, linguagens próprias. Agora apresento o compilado em livros."
-      },
-      {
-        "num": "06",
-        "tag": "O Ofício",
-        "body": "Meu trabalho transita entre a escrita, técnicas tradicionais e digitais — nanquim, grafite, pontilhismo, crochê, needle felting, modelagem, ilustração digital. A palavra e a imagem caminham juntas. Cada peça é construída com tempo, repetição e cuidado, preservando a essência do feito à mão."
       }
     ],
     "declaration": "Onde a arte e a computação se equilibram.",
@@ -273,39 +273,39 @@
     "sections": {
       "black": {
         "title": "Branco no Preto",
-        "technique": "Nanquim branco sobre papel preto"
+        "technique": "Nanquim branco sobre papel preto. Contraste, silêncio e luz revelados pelo traço."
       },
       "grafite": {
         "title": "Grafite",
-        "technique": "Estudos com sombreamento e volume."
+        "technique": "Forma, sombra e expressão. Onde a observação se transforma em profundidade."
       },
       "doodle": {
         "title": "Doodle",
-        "technique": "Rabiscos simples que viram personagens. Inspiração, simplicidade que viram coleção."
+        "technique": "O começo de tudo. Personagens que nasceram como rabisco e se tornaram universo."
       },
       "digital": {
         "title": "Arte Digital",
-        "technique": "Ilustração digital."
+        "technique": "Ilustração digital onde cor, atmosfera e direção visual expandem o universo criado à mão."
       },
       "collections": {
         "title": "Coleções",
-        "technique": "Séries e coleções temáticas."
+        "technique": "Séries temáticas onde diferentes obras se conectam e constroem narrativas visuais contínuas."
       },
       "fimo": {
         "title": "Pontilhismo",
-        "technique": "Pontilhismo e colagem de mini-fimos."
+        "technique": "Construído com paciência. Cada ponto cria textura, ritmo e permanência."
       },
       "needle": {
         "title": "Needle Felting",
-        "technique": "Esculturas em miniatura com agulha e lã."
+        "technique": "Escultura macia em movimento. Quando a ilustração sai do papel e se torna toque."
       },
       "clay": {
-        "title": "Clay",
-        "technique": "Modelagem em massinha de biscuit."
+        "title": "Clay Art",
+        "technique": "Ideias moldadas à mão. Pequenas esculturas onde a imaginação ganha forma."
       },
       "croche": {
         "title": "Crochê",
-        "technique": "Amigurumi e peças em crochê."
+        "technique": "Linha e memória. Formas feitas à mão com ritmo, afeto e delicadeza."
       }
     }
   }

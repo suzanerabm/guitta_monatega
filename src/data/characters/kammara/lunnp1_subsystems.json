@@ -2,7 +2,7 @@
   {
     "title": {
       "pt": "Cultura",
-      "en": "Flora & Fauna"
+      "en": "Culture"
     },
     "img": "/imgs/kammara/lunnp1/_subsystems/0.jpg",
     "text": {
@@ -21,19 +21,25 @@
         "Em LUNN'P1, ninguém decide onde as cidades vão. Elas simplesmente vão."
       ],
       "en": [
-        "There is no predatory fauna on LUNN'P1. No competitive ecosystem. Everything coexists.",
-        "Tower-trees are roots that rose. They sustain the Naru'ei, conduct vibrations, and connect the surface to the water's depths.",
-        "The Lún'Kai are luminous guides — living light fireflies, bonded 1:1 to each Shal'ún since birth. Where the Shal'ún goes, the Lún'Kai follows.",
-        "Túri'Kan are vibrational transport turtles. They cross distances between Naru'ei carrying passengers through the water's rhythm.",
-        "Lume-fish and Ori'Shen form aquatic patterns that resemble glyphs. Mirror-rays reflect back what the observer doesn't want to see.",
-        "Luna-leaves change color according to the dominant moon. Oru'Len flora is mutable. Ancestral roots hold memories no living being remembers."
+        "### No hierarchy",
+        "On LUNN'P1, no one commands. There is no government, no chief, no vote. When a group falls into sync, the direction appears on its own.",
+        "### Daily life",
+        "Life is made of small rituals that happen naturally: the First Reflection upon waking, the First Fruit, the collective Silume. Each one happens when it makes sense — not when someone says so.",
+        "### Food",
+        "Shal'ún don't cook. They prepare food with light — luminous seeds, aquatic microfruits, lume petals. The taste shifts with the moon of the moment.",
+        "### The myths",
+        "The stories of LUNN'P1 don't teach morals. They're ancient stories that change whoever listens — without the person noticing.",
+        "### Transparency",
+        "The Shal'ún don't compete, don't accumulate, don't lie. The water reveals everything. There is no way to hide.",
+        "### The movement of the cities",
+        "On LUNN'P1, no one decides where the cities go. They simply go."
       ]
     }
   },
   {
     "title": {
       "pt": "Flora & Fauna",
-      "en": "Geography"
+      "en": "Flora & Fauna"
     },
     "img": "/imgs/kammara/lunnp1/_subsystems/1.jpg",
     "text": {
@@ -52,19 +58,25 @@
         "As Lunas-folhas mudam de cor conforme a lua dominante. Raízes ancestrais guardam memórias que nenhum ser vivo lembra. A flora de Oru'Len é mutável — nunca igual a si mesma."
       ],
       "en": [
-        "LUNN'P1 has no dry, metallic or urban zones. Everything is alive, luminous and vibrational.",
-        "The Naru'ei are giant leaf-cities that float on the Lún'Rai. They migrate according to collective vibration — they have no fixed address.",
-        "Tower-trees sustain them from below, with roots that conduct energy and sound from one end of the planet to the other.",
-        "Ancestral lakes hold the dead-pixels — condensed energy points from each dissolution. They glow only in the water's reflection.",
-        "Vibrational rifts are points of high Dra'Lum energy concentration. Deep, ancient regions where the planet keeps what once was.",
-        "There is no fixed map. The Naru'ei move. Paths change. The geography of LUNN'P1 breathes."
+        "### No predators",
+        "There is no predatory fauna on LUNN'P1. No competition between species. Everything coexists.",
+        "### The tower-trees",
+        "They are roots that rose. They sustain the floating cities, conduct energy, and connect the surface to the water's depths.",
+        "### The Lún'Kai",
+        "Luminous guides — small beings of living light, like fireflies. Each Shal'ún is born with a Lún'Kai bonded to them. Where one goes, the other follows.",
+        "### The turtles",
+        "The Túri'Kan are enormous transport turtles. They cross distances between cities carrying passengers through the rhythm of the water.",
+        "### Aquatic life",
+        "Lume-fish form patterns in the water that resemble glyphs. Mirror-rays return to the observer what they don't want to see.",
+        "### The flora",
+        "Luna-leaves change color according to the dominant moon. Ancestral roots hold memories no living being remembers. The flora of Oru'Len is mutable — never the same as itself."
       ]
     }
   },
   {
     "title": {
       "pt": "Geografia",
-      "en": "Language"
+      "en": "Geography"
     },
     "img": "/imgs/kammara/lunnp1/_subsystems/2.jpg",
     "text": {
@@ -83,12 +95,18 @@
         "Não existe mapa permanente. As Naru'ei se movem. Os caminhos mudam. A geografia de LUNN'P1 respira."
       ],
       "en": [
-        "On LUNN'P1, there are three forms of communication — and none of them depend on words as we know them.",
-        "The Kalún Voice is the spoken language. Few sounds, deep meanings. No gender, no rigid plural. Each word carries vibrational weight.",
-        "The Lume-Code is the communication between Shal'ún and Lún'Kai. It is neither spoken nor written — it is pure vibration translated into light.",
-        "The Kalún Glyphs are light language inscribed on each Shal'ún's back. Each dorsal glyph is unique — it functions as vibrational identity.",
-        "The Tzir'Kai, amphibian translators, convert Click-Δ — the viral sounds of ENI-4Δ — into Lume-Code. They are the bridge between the language of threat and the language of light.",
-        "On LUNN'P1, to communicate is not to transmit information. It is to share vibration."
+        "### A living world",
+        "LUNN'P1 has no dry, metallic or urban zones. Everything is organic and luminous.",
+        "### The floating cities",
+        "The Naru'ei are giant leaf-cities that float on the water. They have no fixed address — they migrate according to the collective emotional state of the inhabitants.",
+        "### The trees that sustain",
+        "Tower-trees sustain the Naru'ei from below, with roots that conduct energy and sound from one end of the planet to the other.",
+        "### The ancestral lakes",
+        "In the oldest lakes lie the dead-pixels — points of condensed energy from each dissolution. They shine only in the water's reflection, never directly.",
+        "### The rifts",
+        "Deep rifts concentrate ancestral energy. Ancient regions where the planet keeps what once was.",
+        "### No fixed map",
+        "There is no permanent map. The Naru'ei move. The paths change. The geography of LUNN'P1 breathes."
       ]
     }
   },
