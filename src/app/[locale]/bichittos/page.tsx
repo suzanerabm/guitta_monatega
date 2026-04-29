@@ -11,7 +11,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'bichittos' });
-  return { title: t('pageTitle') };
+  return {
+    title: t('pageTitle'),
+    icons: { icon: '/icons/bichittos.png' },
+  };
 }
 
 export default async function BichittosPage({
