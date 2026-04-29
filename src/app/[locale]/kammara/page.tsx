@@ -17,7 +17,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'kammara' });
-  return { title: t('pageTitle') };
+  return {
+    title: t('pageTitle'),
+    icons: { icon: '/icons/kammara.svg' },
+  };
 }
 
 const WORLD_IDS = ['lunnp1', 'eni4', 'triplec', 'orfv', 'z1', 'gotto'] as const;
