@@ -267,8 +267,8 @@
       "pt": "Nome Kalún Rin'Boro — \"Aquele que Cai e Volta\". Dança com o fluxo: celebra cada momento como movimento e cada queda como oportunidade de riso.",
       "en": "Kalún name Rin'Boro — \"The One Who Falls and Returns\". He dances with the flow: celebrates each moment as movement and each fall as a chance to laugh."
     },
-    "image": "/imgs/kammara/lunnp1/Rinboro.png",
-    "backImage": "/imgs/kammara/lunnp1/Rinboro_costas.png",
+    "image": "/imgs/kammara/lunnp1/rinboro.png",
+    "backImage": "/imgs/kammara/lunnp1/rinboro_costas.png",
     "backTitle": {
       "pt": "Glifo Dorsal",
       "en": ""
@@ -428,7 +428,7 @@
       "en": "Rhythmic Lún'Kai. Steady pulse like calm breathing. Other Lún'Kai synchronize involuntarily with its beat. "
     },
     "image": "/imgs/kammara/lunnp1/sereno_alta.png",
-    "backImage": "/imgs/kammara/lunnp1/Sereno_2_costas.png",
+    "backImage": "/imgs/kammara/lunnp1/sereno_2_costas.png",
     "backTitle": {
       "pt": "Outro lado",
       "en": "Another side"
@@ -600,8 +600,8 @@
       "pt": "Nome Kalún Kái'Tor — \"O Que Vê o Traço da Luz\". Lê rotas lunares e identifica fluxos de água ao instante.",
       "en": "Kalún name Kái'Tor — \"The One Who Sees the Trace of Light\"."
     },
-    "image": "/imgs/kammara/lunnp1/Kaitor.png",
-    "backImage": "/imgs/kammara/lunnp1/Kaitor_costas.png",
+    "image": "/imgs/kammara/lunnp1/kaitor.png",
+    "backImage": "/imgs/kammara/lunnp1/kaitor_costas.png",
     "backTitle": {
       "pt": "Glifo Dorsal",
       "en": ""
@@ -712,7 +712,7 @@
       "en": "Kalún name Kae'Lún — \"Mind That Advances / Fast-Pulse\". He anticipates the flow: while others keep up, he is already three steps ahead, mapping possibilities before they materialize."
     },
     "image": "/imgs/kammara/lunnp1/Kaelun.png",
-    "backImage": "/imgs/kammara/lunnp1/Kaelun_costas.png",
+    "backImage": "/imgs/kammara/lunnp1/kaelun_costas.png",
     "backTitle": {
       "pt": "Glifo Dorsal",
       "en": ""
@@ -823,7 +823,7 @@
       "en": "Kalún name Té'Lun — \"Steady Light / Column of Brightness\"."
     },
     "image": "/imgs/kammara/lunnp1/Telun.png",
-    "backImage": "/imgs/kammara/lunnp1/Telun_costas.png",
+    "backImage": "/imgs/kammara/lunnp1/telun_costas.png",
     "backTitle": {
       "pt": "Glifo Dorsal",
       "en": ""
@@ -1253,7 +1253,7 @@
       "en": "Curious Tzir'Kai. Goes where others don't and hears what others dismiss as noise."
     },
     "image": "/imgs/kammara/lunnp1/Krii.png",
-    "backImage": "/imgs/kammara/lunnp1/Krii_costas.png",
+    "backImage": "/imgs/kammara/lunnp1/krii_costas.png",
     "backTitle": {
       "pt": "Outro lado",
       "en": "Other side"

@@ -13,8 +13,8 @@
       "pt": "Sentinela natural de TripleC. Aparece antes de eventos energéticos importantes — bunniets observam o brilho da cauda em espiral pra antecipar instabilidades. Sente antes de qualquer outro animal quando um portal de Cshift vai abrir.",
       "en": "Natural sentinel of TripleC. Appears before important energy events — bunniets watch the glow of her spiral tail to anticipate instabilities. She feels a Cshift portal opening before any other animal."
     },
-    "image": "/imgs/kammara/triplec/Volpita.png",
-    "backImage": "/imgs/kammara/triplec/Volpita_costas.png",
+    "image": "/imgs/kammara/triplec/volpita.png",
+    "backImage": "/imgs/kammara/triplec/volpita_costas.png",
     "backTitle": {
       "pt": "Verso",
       "en": "Verse"
@@ -685,8 +685,8 @@
       "pt": "Preserva o essencial, deixa o resto partir. Memória sem peso. Quando Vexa está presente, o ambiente parece mais profundo. Hoje vive na Floresta Niul.",
       "en": "She preserves the essential and lets the rest go. Memory without weight. When Vexa is present, the environment feels deeper. She now lives in the Niul Forest."
     },
-    "image": "/imgs/kammara/triplec/vexa.png",
-    "backImage": "/imgs/kammara/triplec/vexa_costas.png",
+    "image": "/imgs/kammara/triplec/VEXA.png",
+    "backImage": "/imgs/kammara/triplec/VEXA_costas.png",
     "backTitle": {
       "pt": "Outro Lado",
       "en": "Another Side"

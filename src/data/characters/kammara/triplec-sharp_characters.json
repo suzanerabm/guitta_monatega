@@ -318,8 +318,8 @@
       "pt": "Pequeno inseto sensor de Sharp — fica parado a maior parte do tempo, só acende quando detecta variação no campo. Alerta vivo, discreto, imperceptível pra quem não está olhando.",
       "en": "Small Sharp sensor insect — stays still most of the time, only lights up when it detects field variation. A living alert, discreet, imperceptible to those not looking."
     },
-    "image": "/imgs/kammara/triplec/sharp/Lim.png",
-    "backImage": "/imgs/kammara/triplec/sharp/Lim_alerta.png",
+    "image": "/imgs/kammara/triplec/sharp/lim.png",
+    "backImage": "/imgs/kammara/triplec/sharp/lim_alerta.png",
     "backTitle": {
       "pt": "Verso",
       "en": "Verse"
