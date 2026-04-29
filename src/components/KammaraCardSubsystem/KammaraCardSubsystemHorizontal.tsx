@@ -479,7 +479,6 @@ export function KammaraCardSubsystemHorizontal({
             lineHeight: 1,
             color: `${color}14`,
             userSelect: 'none',
-            textShadow: `0 0 24px ${darkColor}`,
           }}
         >
           {crestGlyph}
@@ -505,7 +504,7 @@ export function KammaraCardSubsystemHorizontal({
             color={color}
             m={0}
             opacity={0.9}
-            css={{ textShadow: `0 2px 8px ${darkColor}` }}
+            css={{ textShadow: `0 2px 8px ${color}` }}
           >
             {category.toUpperCase()}
           </Text>
@@ -523,7 +522,7 @@ export function KammaraCardSubsystemHorizontal({
             letterSpacing="heroTitle"
             m={0}
             css={{
-              textShadow: `0 0 28px ${darkColor}, 0 0 12px ${color}40`,
+              textShadow: `0 0 28px ${color}, 0 0 12px ${color}40`,
               textWrap: 'balance',
               wordBreak: 'break-word',
             }}
@@ -535,7 +534,7 @@ export function KammaraCardSubsystemHorizontal({
             color={color}
             m={0}
             opacity={0.95}
-            css={{ textShadow: `0 2px 8px ${darkColor}` }}
+            css={{ textShadow: `0 2px 8px ${color}` }}
           >
             {name}
           </Text>
@@ -555,7 +554,7 @@ export function KammaraCardSubsystemHorizontal({
               fontSize: '1rem',
               color: `${color}cc`,
               letterSpacing: '0.3em',
-              textShadow: `0 0 12px ${darkColor}`,
+              textShadow: `0 0 12px ${color}`,
             }}
           >
             <Box flex={1} height="1px" css={{ background: `linear-gradient(90deg, ${color}80, transparent)` }} />
