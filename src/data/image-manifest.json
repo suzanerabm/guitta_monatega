@@ -417,17 +417,17 @@
     "kammara": [
       {
         "name": "events bg",
-        "image": "/imgs/kammara/_events_bg.jpg"
+        "image": "/imgs/kammara/events_bg.jpg"
       }
     ],
     "kammara/eni4": [
       {
         "name": ".rats~imageoptim",
-        "image": "/imgs/kammara/eni4/.rats~imageoptim.png"
+        "image": "/imgs/kammara/eni4/.ratsimageoptim.png"
       },
       {
         "name": ".VALKON costas~imageoptim",
-        "image": "/imgs/kammara/eni4/.VALKON_costas~imageoptim.png"
+        "image": "/imgs/kammara/eni4/.VALKON_costasimageoptim.png"
       },
       {
         "name": "aracne 1 costas",
@@ -805,7 +805,7 @@
       },
       {
         "name": "TziKi  costas",
-        "image": "/imgs/kammara/lunnp1/TziKi _costas.png"
+        "image": "/imgs/kammara/lunnp1/TziKi-costas.png"
       },
       {
         "name": "TziKi",
@@ -905,7 +905,7 @@
       },
       {
         "name": "borboleta-gigapixel-standard v2-6x",
-        "image": "/imgs/kammara/triplec/borboleta-gigapixel-standard v2-6x.png"
+        "image": "/imgs/kammara/triplec/borboleta-gigapixel-standard-v2-6x.png"
       },
       {
         "name": "borboleta",
@@ -1089,7 +1089,7 @@
       },
       {
         "name": "cobra-frente-gigapixel-standard v2-6x",
-        "image": "/imgs/kammara/triplec/mesh/cobra-frente-gigapixel-standard v2-6x.png"
+        "image": "/imgs/kammara/triplec/mesh/cobra-frente-gigapixel-standard-v2-6x.png"
       },
       {
         "name": "elefante-costas",
@@ -1183,7 +1183,7 @@
       },
       {
         "name": "SELKA RIN",
-        "image": "/imgs/kammara/triplec/sharp/SELKA RIN.png"
+        "image": "/imgs/kammara/triplec/sharp/SELKA-RIN.png"
       },
       {
         "name": "tilu costas",
@@ -1409,7 +1409,7 @@
     },
     "doodle": {
       "thumbs": [
-        "/imgs/art/doodle/_thumb/,miscelania_doodles_4.jpg",
+        "/imgs/art/doodle/_thumb/miscelania_doodles_4-1.jpg",
         "/imgs/art/doodle/_thumb/babalina_doodle_2.jpg",
         "/imgs/art/doodle/_thumb/babalina_doodle.jpg",
         "/imgs/art/doodle/_thumb/bean_1.jpg",
@@ -1464,7 +1464,7 @@
         "/imgs/art/doodle/_thumb/ypito.jpg"
       ],
       "full": [
-        "/imgs/art/doodle/,miscelania_doodles_4.jpg",
+        "/imgs/art/doodle/miscelania_doodles_4-1.jpg",
         "/imgs/art/doodle/babalina_doodle_2.jpg",
         "/imgs/art/doodle/babalina_doodle.jpg",
         "/imgs/art/doodle/bean_1.jpg",
@@ -1568,8 +1568,8 @@
     "needle": {
       "thumbs": [
         "/imgs/art/needle/_thumb/9CA923C5-BA0D-41F9-9FFA-4D00F893BCD4_1_201_a.jpg",
-        "/imgs/art/needle/_thumb/2016-03-18 22.54.00.jpg",
-        "/imgs/art/needle/_thumb/2016-03-18 23.41.16.jpg",
+        "/imgs/art/needle/_thumb/2016-03-18-22.54.00.jpg",
+        "/imgs/art/needle/_thumb/2016-03-18-23.41.16.jpg",
         "/imgs/art/needle/_thumb/687316CF-0146-41A5-BDC2-61AA83F48634_1_105_c.jpg",
         "/imgs/art/needle/_thumb/A7BE845B-0284-4EDD-B025-C97998AE46A3_1_105_c.jpg",
         "/imgs/art/needle/_thumb/EE79C5BE-6A4A-4251-9E36-344CB8352DC5_1_105_c.jpg",
@@ -1578,8 +1578,8 @@
       ],
       "full": [
         "/imgs/art/needle/9CA923C5-BA0D-41F9-9FFA-4D00F893BCD4_1_201_a.jpg",
-        "/imgs/art/needle/2016-03-18 22.54.00.jpg",
-        "/imgs/art/needle/2016-03-18 23.41.16.jpg",
+        "/imgs/art/needle/2016-03-18-22.54.00.jpg",
+        "/imgs/art/needle/2016-03-18-23.41.16.jpg",
         "/imgs/art/needle/687316CF-0146-41A5-BDC2-61AA83F48634_1_105_c.jpg",
         "/imgs/art/needle/A7BE845B-0284-4EDD-B025-C97998AE46A3_1_105_c.jpg",
         "/imgs/art/needle/EE79C5BE-6A4A-4251-9E36-344CB8352DC5_1_105_c.jpg",
@@ -1656,11 +1656,11 @@
       },
       {
         "name": "zona  SCORCH worms",
-        "image": "/imgs/kammara/eni4/_scenes/13zona_ SCORCH_worms.jpg"
+        "image": "/imgs/kammara/eni4/_scenes/13zona-SCORCH_worms.jpg"
       },
       {
         "name": "zona  SCORCH",
-        "image": "/imgs/kammara/eni4/_scenes/13zona_ SCORCH.jpg"
+        "image": "/imgs/kammara/eni4/_scenes/13zona-SCORCH.jpg"
       },
       {
         "name": "zona CRACK tuneis worms",
@@ -1694,7 +1694,7 @@
       },
       {
         "name": "NaLum pequenas esferas que flutuam",
-        "image": "/imgs/kammara/lunnp1/_scenes/NaLum_pequenas_esferas_que flutuam.jpg"
+        "image": "/imgs/kammara/lunnp1/_scenes/NaLum_pequenas_esferas_que-flutuam.jpg"
       },
       {
         "name": "regiao EXTERMO NORTE",

@@ -50,3 +50,7 @@ dist/
 
 # image asset backups (kept locally, never pushed)
 _bkp/
+
+# ImageOptim artifacts (sidecar files it leaves behind)
+*~imageoptim*
+.*imageoptim*
