@@ -142,6 +142,8 @@ export function HeroSection({
         fontWeight="bold"
         letterSpacing="heroTitle"
         textTransform="uppercase"
+        textAlign="center"
+        lineHeight={1.05}
         zIndex={1}
         opacity={0}
         animation="fadeIn 1s ease 0.2s forwards"

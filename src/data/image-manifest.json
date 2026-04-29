@@ -422,14 +422,6 @@
     ],
     "kammara/eni4": [
       {
-        "name": ".rats~imageoptim",
-        "image": "/imgs/kammara/eni4/.ratsimageoptim.png"
-      },
-      {
-        "name": ".VALKON costas~imageoptim",
-        "image": "/imgs/kammara/eni4/.VALKON_costasimageoptim.png"
-      },
-      {
         "name": "aracne 1 costas",
         "image": "/imgs/kammara/eni4/aracne_1_costas.png"
       },
@@ -804,7 +796,7 @@
         "image": "/imgs/kammara/lunnp1/TuriKan.png"
       },
       {
-        "name": "TziKi  costas",
+        "name": "TziKi-costas",
         "image": "/imgs/kammara/lunnp1/TziKi-costas.png"
       },
       {
@@ -904,7 +896,7 @@
         "image": "/imgs/kammara/triplec/borboleta_costas.png"
       },
       {
-        "name": "borboleta-gigapixel-standard v2-6x",
+        "name": "borboleta-gigapixel-standard-v2-6x",
         "image": "/imgs/kammara/triplec/borboleta-gigapixel-standard-v2-6x.png"
       },
       {
@@ -1088,7 +1080,7 @@
         "image": "/imgs/kammara/triplec/mesh/cobra-costas.png"
       },
       {
-        "name": "cobra-frente-gigapixel-standard v2-6x",
+        "name": "cobra-frente-gigapixel-standard-v2-6x",
         "image": "/imgs/kammara/triplec/mesh/cobra-frente-gigapixel-standard-v2-6x.png"
       },
       {
@@ -1182,7 +1174,7 @@
         "image": "/imgs/kammara/triplec/sharp/peixe_nadando.png"
       },
       {
-        "name": "SELKA RIN",
+        "name": "SELKA-RIN",
         "image": "/imgs/kammara/triplec/sharp/SELKA-RIN.png"
       },
       {
@@ -1225,7 +1217,6 @@
         "pages": []
       }
     ],
-    "cheiodebolinha": [],
     "kammara": [
       {
         "id": "saga-orf-v",
@@ -1233,7 +1224,6 @@
         "pages": []
       }
     ],
-    "miscelania": [],
     "napcat": [
       {
         "id": "adventures",
@@ -1241,13 +1231,7 @@
         "pages": []
       }
     ],
-    "taylo": [
-      {
-        "id": "star-hunter",
-        "cover": null,
-        "pages": []
-      }
-    ],
+    "taylo": [],
     "zeco": [
       {
         "id": "zeco-estacoes",
@@ -1409,7 +1393,6 @@
     },
     "doodle": {
       "thumbs": [
-        "/imgs/art/doodle/_thumb/miscelania_doodles_4-1.jpg",
         "/imgs/art/doodle/_thumb/babalina_doodle_2.jpg",
         "/imgs/art/doodle/_thumb/babalina_doodle.jpg",
         "/imgs/art/doodle/_thumb/bean_1.jpg",
@@ -1439,6 +1422,7 @@
         "/imgs/art/doodle/_thumb/fuinha.jpg",
         "/imgs/art/doodle/_thumb/miscelania_doodles_2.jpg",
         "/imgs/art/doodle/_thumb/miscelania_doodles_3.jpg",
+        "/imgs/art/doodle/_thumb/miscelania_doodles_4-1.jpg",
         "/imgs/art/doodle/_thumb/miscelania_doodles_4.jpg",
         "/imgs/art/doodle/_thumb/miscelania_doodles_5.jpg",
         "/imgs/art/doodle/_thumb/miscelania_doodles_6.jpg",
@@ -1464,7 +1448,6 @@
         "/imgs/art/doodle/_thumb/ypito.jpg"
       ],
       "full": [
-        "/imgs/art/doodle/miscelania_doodles_4-1.jpg",
         "/imgs/art/doodle/babalina_doodle_2.jpg",
         "/imgs/art/doodle/babalina_doodle.jpg",
         "/imgs/art/doodle/bean_1.jpg",
@@ -1494,6 +1477,7 @@
         "/imgs/art/doodle/fuinha.jpg",
         "/imgs/art/doodle/miscelania_doodles_2.jpg",
         "/imgs/art/doodle/miscelania_doodles_3.jpg",
+        "/imgs/art/doodle/miscelania_doodles_4-1.jpg",
         "/imgs/art/doodle/miscelania_doodles_4.jpg",
         "/imgs/art/doodle/miscelania_doodles_5.jpg",
         "/imgs/art/doodle/miscelania_doodles_6.jpg",
@@ -1655,11 +1639,11 @@
         "image": "/imgs/kammara/eni4/_scenes/12corte_planeta.jpg"
       },
       {
-        "name": "zona  SCORCH worms",
+        "name": "zona-SCORCH worms",
         "image": "/imgs/kammara/eni4/_scenes/13zona-SCORCH_worms.jpg"
       },
       {
-        "name": "zona  SCORCH",
+        "name": "zona-SCORCH",
         "image": "/imgs/kammara/eni4/_scenes/13zona-SCORCH.jpg"
       },
       {
@@ -1693,7 +1677,7 @@
         "image": "/imgs/kammara/lunnp1/_scenes/EruRin_e_LumEsha_plantando.jpg"
       },
       {
-        "name": "NaLum pequenas esferas que flutuam",
+        "name": "NaLum pequenas esferas que-flutuam",
         "image": "/imgs/kammara/lunnp1/_scenes/NaLum_pequenas_esferas_que-flutuam.jpg"
       },
       {
@@ -1793,8 +1777,8 @@
         "image": "/imgs/kammara/triplec/_scenes/4_Lumesha_visita_LUMA_VAL.jpg"
       },
       {
-        "name": "Erú’Rin com SELKA RIN",
-        "image": "/imgs/kammara/triplec/_scenes/5Erú’Rin_com_SELKA_RIN.jpg"
+        "name": "EruRin com SELKA RIN",
+        "image": "/imgs/kammara/triplec/_scenes/5EruRin_com_SELKA_RIN.jpg"
       },
       {
         "name": "Cshift portal",
@@ -1875,12 +1859,12 @@
         "image": "/imgs/kammara/triplec/sharp/_scenes/3praca_central.jpg"
       },
       {
-        "name": "Câmara de Permissão ativando cshift",
-        "image": "/imgs/kammara/triplec/sharp/_scenes/4Câmara de Permissão_ativando_cshift.jpg"
+        "name": "Camara-de-Permissao ativando cshift",
+        "image": "/imgs/kammara/triplec/sharp/_scenes/4Camara-de-Permissao_ativando_cshift.jpg"
       },
       {
-        "name": "Câmara de Permissão posicao defesa",
-        "image": "/imgs/kammara/triplec/sharp/_scenes/5Câmara de Permissão_posicao_defesa.jpg"
+        "name": "Camara-de-Permissao posicao defesa",
+        "image": "/imgs/kammara/triplec/sharp/_scenes/5Camara-de-Permissao_posicao_defesa.jpg"
       },
       {
         "name": "plataforma",

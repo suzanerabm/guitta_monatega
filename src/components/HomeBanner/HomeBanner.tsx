@@ -368,6 +368,8 @@ export function HomeBanner({
             color={titleColor ?? (isArte ? 'ink' : 'white')}
             letterSpacing="normal"
             textTransform="uppercase"
+            textAlign="center"
+            lineHeight={1.05}
             textShadow={isArte ? 'none' : 'text'}
             transition="color 0.4s ease"
           >
