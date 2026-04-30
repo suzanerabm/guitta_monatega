@@ -40,9 +40,19 @@ export function Footer({
       color={textColor}
       transition="background 0.4s ease, color 0.4s ease"
     >
-      <Flex direction="column" align="center" gap="md">
-        <Box w="30px" h="1px" bg={tintColor ? 'textOverlayStrong' : 'borderColor'} />
-        <Flex gap="lg" align="center">
+      <Flex
+        direction="column"
+        align="center"
+        justify="center"
+        gap="md"
+        width="100%"
+      >
+        <Box
+          w="30px"
+          h="1px"
+          bg={tintColor ? 'textOverlayStrong' : 'borderColor'}
+        />
+        <Flex gap="lg" align="center" justify="center">
           <NextLink href={aboutPath} style={linkStyle}>
             {aboutLabel}
           </NextLink>
