@@ -265,14 +265,14 @@ export default async function AboutPage({
           </Text>
           <Flex direction="column" gap="0.5rem">
             <ChakraLink
-              href="mailto:placeholder@email.com"
+              href="mailto:guitta.monatega@gmail.com"
               fontSize="1rem"
               color="ink"
               fontWeight="regular"
               transition="color 0.2s"
               _hover={{ color: 'inkMuted', textDecoration: 'none' }}
             >
-              placeholder@email.com
+              guitta.monatega@gmail.com
             </ChakraLink>
           </Flex>
         </Box>

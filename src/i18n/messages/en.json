@@ -321,7 +321,7 @@
       },
       {
         "tag": "Cookies",
-        "body": "This site does not use its own cookies for tracking or advertising. There may be technical cookies set by the underlying infrastructure (Cloudflare, Vercel) solely to deliver content — none of them identifies an individual."
+        "body": "This site does not use its own cookies for tracking or advertising. There may be technical cookies set by the underlying infrastructure (Cloudflare, Vercel) solely to deliver content — none of them identifies an individual. That is why this site does not show a cookie consent banner: no cookie of ours requires that permission under LGPD or GDPR."
       },
       {
         "tag": "Nature of this site",
