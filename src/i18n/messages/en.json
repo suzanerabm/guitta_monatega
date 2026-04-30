@@ -150,38 +150,33 @@
     "sections": [
       {
         "num": "01",
-        "tag": "The Beginning",
-        "body": "I've been drawing since I was little. I started on napkins, loose sheets of paper, the margins of notebooks — anything within reach."
+        "tag": "The Origin",
+        "body": "I've drawn since I was little. It started on napkins, loose sheets of paper, the margins of notebooks — anything within reach."
       },
       {
         "num": "02",
-        "tag": "The Gathering",
-        "body": "Over time, the characters appearing on those pages began to gain names, company, stories. Little by little, they stopped being scattered drawings and became the Guitta Monatega legacy."
+        "tag": "The Accumulation",
+        "body": "Over time, the characters that kept appearing on those pages began to take on names, company, stories. Little by little, they stopped being scattered drawings and became the Guitta Monatega legacy."
       },
       {
         "num": "03",
-        "tag": "Three Paths",
-        "body": "Today my work unfolds along three paths — each with its own time, technique, and world."
+        "tag": "The Three Fronts",
+        "body": "Today my work unfolds along three fronts — each with its own time, its own craft, its own universe."
       },
       {
         "num": "04",
-        "tag": "Bichittos",
-        "body": "The affectionate universe. NapCat, Zeco, Taylo, Cheio de Bolinha and their friends. Characters that live between the imperfect and affection, born in sketchbooks and now present in original books, animations, and miniature sculptures."
+        "tag": "The Craft",
+        "body": "My work moves between writing and traditional and digital techniques — ink, graphite, stippling, crochet, needle felting, sculpting, digital illustration. Word and image walk together. Each piece is built with time, repetition, and care, preserving the essence of what is made by hand."
       },
       {
         "num": "05",
-        "tag": "Kammara",
-        "body": "Where the history of computing turns into myth. The seed came around 2012 — planets, languages, and creatures began to surface. In 2019, I visited museums of computing history to study up close the machines that gave rise to everything. Since then, I've been developing this universe in layers: cosmology, characters, original languages. Now I present the compilation in books."
+        "tag": "Bichittos",
+        "body": "The affectionate universe. NapCat, Zeco, Taylo, Cheio de Bolinha and their friends. Characters that live between the imperfect and the tender, born in sketchbooks and now present in original books, animations, and miniature sculptures."
       },
       {
         "num": "06",
-        "tag": "The Essence",
-        "body": "In Kammara, art and code intertwine into a single language. Technology gains a soul, and human pains — anxiety, low self-esteem, confusion — take form. To those who see only the surface, it is science fiction. To those who read with attention, it is a mirror."
-      },
-      {
-        "num": "07",
-        "tag": "The Craft",
-        "body": "My work moves between writing and traditional and digital techniques — ink, graphite, stippling, crochet, needle felting, sculpting, digital illustration. Word and image walk together. Each piece is shaped with time, repetition, and care, preserving the essence of handmade creation."
+        "tag": "Kammara",
+        "body": "Where the history of computing becomes myth. The seed appeared around 2012 — planets, languages, and creatures began to surface. In 2019, I visited museums of computing history to study up close the machines that gave rise to everything. Since then, I've been developing this universe in layers: cosmology, characters, original languages. Now I'm gathering the work into books."
       }
     ],
     "declaration": "Where art and computing meet in balance.",
