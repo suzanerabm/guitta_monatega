@@ -8,13 +8,22 @@ vi.mock('next/link', () => ({
 }));
 
 describe('Footer', () => {
-  it('renders about link', () => {
-    render(<Footer aboutPath="/about" aboutLabel="sobre guitta monatega" />);
+  const baseProps = {
+    aboutPath: '/about',
+    aboutLabel: 'sobre guitta monatega',
+    privacyPath: '/privacy',
+    privacyLabel: 'privacidade',
+  };
+
+  it('renders about and privacy links', () => {
+    render(<Footer {...baseProps} />);
     expect(screen.getByText('sobre guitta monatega')).toBeInTheDocument();
+    expect(screen.getByText('privacidade')).toBeInTheDocument();
   });
 
-  it('links to about path', () => {
-    render(<Footer aboutPath="/about" aboutLabel="about" />);
-    expect(screen.getByRole('link')).toHaveAttribute('href', '/about');
+  it('links to the right paths', () => {
+    render(<Footer {...baseProps} />);
+    expect(screen.getByText('sobre guitta monatega').closest('a')).toHaveAttribute('href', '/about');
+    expect(screen.getByText('privacidade').closest('a')).toHaveAttribute('href', '/privacy');
   });
 });

@@ -27,6 +27,7 @@ export default async function LocaleLayout({
   const t = await getTranslations({ locale, namespace: 'common' });
   const homePath = `/${locale}`;
   const aboutPath = `/${locale}/about`;
+  const privacyPath = `/${locale}/privacy`;
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
@@ -35,7 +36,12 @@ export default async function LocaleLayout({
           <Header homePath={homePath} />
           <AutoBreadcrumb />
           <main>{children}</main>
-          <Footer aboutPath={aboutPath} aboutLabel={t('footerAbout')} />
+          <Footer
+            aboutPath={aboutPath}
+            aboutLabel={t('footerAbout')}
+            privacyPath={privacyPath}
+            privacyLabel={t('footerPrivacy')}
+          />
           <Modal />
           <ModalKammara />
         </ModalProvider>

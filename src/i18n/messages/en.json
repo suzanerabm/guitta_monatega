@@ -3,6 +3,7 @@
     "back": "back",
     "siteTitle": "Guitta Monatega",
     "footerAbout": "about guitta monatega",
+    "footerPrivacy": "privacy",
     "soon": "coming soon",
     "words": {
       "acordando": "waking up",
@@ -307,5 +308,42 @@
         "technique": "Thread and memory. Handmade forms shaped with rhythm, warmth, and care."
       }
     }
+  },
+  "privacy": {
+    "pageTitle": "Privacy — Guitta Monatega",
+    "title": "Privacy",
+    "lastUpdate": "Last updated: April 30, 2026",
+    "intro": "This site is a personal portfolio and a conceptual space for original works. It does not collect identifiable personal data, does not use tracking cookies, and does not commercialize visitor information. The terms below govern privacy, intellectual property, and permitted use of the content.",
+    "sections": [
+      {
+        "tag": "What we measure",
+        "body": "Anonymous, aggregated statistics (visits, countries, devices) via Vercel Analytics. No cookies, no individual identification, no cross-site tracking."
+      },
+      {
+        "tag": "Cookies",
+        "body": "This site does not use its own cookies for tracking or advertising. There may be technical cookies set by the underlying infrastructure (Cloudflare, Vercel) solely to deliver content — none of them identifies an individual."
+      },
+      {
+        "tag": "Nature of this site",
+        "body": "This is a concept and portfolio site. It gathers fictional universes, characters, illustrations, narrative systems, and visual studies of personal authorship. All content presented here is part of original works under continuous development."
+      },
+      {
+        "tag": "Intellectual property",
+        "body": "All content on this site — including artwork, illustrations, texts, proper names, characters, creatures, universes (Kammara, Bichittos, and others), linguistic systems, glyphs, symbols, and other creative elements — is the exclusive intellectual property of Guitta Monatega and is protected under Brazilian copyright law (Law 9.610/98) and international treaties. Any reproduction, redistribution, modification, use in training of artificial intelligence models, or commercial use is forbidden without express written permission."
+      },
+      {
+        "tag": "Use of AI in production",
+        "body": "Some images on this site were generated with the assistance of AI tools. In every case, generation occurred under the explicit creative direction of the author: specialized prompts were developed from previously conceived doodles, hand-drawn sketches, character studies, palettes, and authorial visual references. AI tools acted as an instrument of assisted execution — analogous to a digital brush, a 3D sculpting tool, or any other technical resource — and did not replace conceptual, narrative, or aesthetic authorship. The resulting work is considered a derivative creation of a personal authorial process and, as such, remains the author's intellectual property."
+      },
+      {
+        "tag": "Reservation of rights",
+        "body": "The author expressly reserves the right not to allow this content to be used for training, fine-tuning, or any form of inclusion in generative AI systems, training databases, public or commercial datasets. This reservation applies to all textual and visual content on this site."
+      },
+      {
+        "tag": "Contact",
+        "body": "For privacy questions, licensing, authorized use, partnerships, or removal requests, please reach out via the email below."
+      }
+    ],
+    "contact": "guitta.monatega@gmail.com"
   }
 }
