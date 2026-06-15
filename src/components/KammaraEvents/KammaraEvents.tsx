@@ -1,6 +1,7 @@
 'use client';
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import { KammaraEventCard } from '@/components/KammaraEventCard';
+import { HorizontalCardStrip } from '@/components/HorizontalCardStrip';
 import { palettes, type PaletteName } from '@/theme/palettes';
 import { worldCrestGlyph } from '@/theme/kalunGlyphs';
 import { getWorldName } from '@/data/characters/kammara/_worldData';
@@ -215,15 +216,10 @@ function CategoryBlock({
         </Heading>
       </Flex>
 
-      <Box
-        display="grid"
-        gridTemplateColumns={{
-          base: '1fr',
-          md: 'repeat(auto-fit, minmax(260px, 320px))',
-          xl: 'repeat(auto-fit, minmax(280px, 360px))',
-        }}
-        gap={{ base: '1.2rem', md: '1.4rem', xl: '1.4rem' }}
-        justifyContent="start"
+      <HorizontalCardStrip
+        arrowColor={color}
+        gap="1.4rem"
+        data-testid="kammara-events-strip"
       >
         {events.map((ev) => (
           <EventCard
@@ -234,7 +230,7 @@ function CategoryBlock({
             darkColor={darkColor}
           />
         ))}
-      </Box>
+      </HorizontalCardStrip>
     </Box>
   );
 }
@@ -268,7 +264,14 @@ function EventCard({ event, locale, color, darkColor }: EventCardProps) {
   const category = subcategory ?? '';
   const eventGlyph = event.glyph || meta.glyph;
 
+  // The strip no longer sizes cards (the old grid did), so each event card
+  // carries its own responsive width: nearly full-viewport on mobile (with a
+  // peek of the next card), fixed widths from md up to mirror the old grid.
   return (
+    <Box
+      width={{ base: '85vw', md: '320px', xl: '360px' }}
+      maxW={{ base: '480px', md: 'none' }}
+    >
     <KammaraEventCard
       name={event.title[locale]}
       category={category}
@@ -306,6 +309,7 @@ function EventCard({ event, locale, color, darkColor }: EventCardProps) {
         },
       ]}
     />
+    </Box>
   );
 }
 

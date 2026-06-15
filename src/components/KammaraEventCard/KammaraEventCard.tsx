@@ -7,8 +7,11 @@ import type { ReactNode } from 'react';
 // so keep them in sync via this single source of truth.
 export const CARD_PADDING_X = '1.8rem';
 
+// Fixed height at every breakpoint so cards in a row stay uniform — no
+// card grows taller than its neighbours when its description runs long.
+// The body content scrolls/clamps inside instead of stretching the card.
 const CARD_HEIGHT: Record<string, string> = {
-  base: 'auto',
+  base: '440px',
   md: '400px',
   xl: '520px',
   '3xl': '600px',

@@ -50,7 +50,9 @@ describe('KammaraEvents', () => {
       />,
     );
     expect(screen.getByText('Evento da Lua')).toBeInTheDocument();
-    expect(screen.getByText('lunnp1')).toBeInTheDocument();
+    // The card resolves the planet id to its canonical display name
+    // via getWorldName(): 'lunnp1' → "LUNN'P1".
+    expect(screen.getByText("LUNN'P1")).toBeInTheDocument();
     expect(screen.getByText('Próximo ciclo')).toBeInTheDocument();
     expect(screen.getByText('Descrição PT')).toBeInTheDocument();
   });
