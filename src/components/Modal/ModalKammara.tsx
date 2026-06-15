@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 import { Box, Flex, Text, Heading } from '@chakra-ui/react';
 import { useModal } from './ModalProvider';
+import { ZoomableImage } from '@/components/ZoomableImage';
 
 function formatFilename(path: string): string {
   const file = path.split('/').pop() || '';
@@ -209,49 +210,66 @@ export function ModalKammara() {
             </Flex>
           )}
 
-          {/* Image wrapper — label is relative to the img, not the modal */}
-          <Box
-            position="relative"
-            display="inline-block"
-            maxW={{ base: '94vw', md: '90vw' }}
-            maxH={{ base: '50vh', md: '62vh' }}
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              key={currentImage}
-              src={currentImage}
-              alt={heroTitle || ''}
-              style={{
-                maxWidth: '100%',
-                maxHeight: '60vh',
-                objectFit: 'contain',
-                borderRadius: '16px',
-                display: 'block',
-              }}
-            />
+          {/* Image + label. Mobile: label sits horizontally below the photo
+              (the side label is hard to read sideways on a phone, and the
+              image is bigger here — 70vh). Desktop: label is rotated and
+              anchored to the photo's bottom-left, as before. Zoom/pan is
+              handled by ZoomableImage so the gesture stays inside the modal
+              instead of zooming the page. */}
+          <Flex direction="column" align="center" gap="sm">
+            <Box
+              position="relative"
+              display="inline-block"
+              width={{ base: '94vw', md: 'auto' }}
+              maxW={{ base: '94vw', md: '90vw' }}
+              maxH={{ base: '70vh', md: '62vh' }}
+            >
+              <ZoomableImage
+                key={currentImage}
+                src={currentImage}
+                alt={heroTitle || ''}
+                maxHeight="70vh"
+              />
 
-            {/* Label rotacionada, 2px da borda esquerda da foto, bottom da foto */}
+              {/* Side label (desktop only) — rotated, bottom-left of photo. */}
+              {techniqueText && (
+                <Text
+                  display={{ base: 'none', md: 'block' }}
+                  position="absolute"
+                  left="0"
+                  bottom="40px"
+                  zIndex={1}
+                  fontSize="sm"
+                  letterSpacing="wide"
+                  textTransform="uppercase"
+                  color={color}
+                  m={0}
+                  css={{
+                    transform: 'rotate(-90deg)',
+                    transformOrigin: 'left bottom',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  {techniqueText}
+                </Text>
+              )}
+            </Box>
+
+            {/* Bottom label (mobile only) — horizontal, under the photo. */}
             {techniqueText && (
               <Text
-                position="absolute"
-                left="0"
-                bottom="40px"
-                zIndex={1}
+                display={{ base: 'block', md: 'none' }}
                 fontSize="sm"
                 letterSpacing="wide"
                 textTransform="uppercase"
+                textAlign="center"
                 color={color}
                 m={0}
-                css={{
-                  transform: 'rotate(-90deg)',
-                  transformOrigin: 'left bottom',
-                  whiteSpace: 'nowrap',
-                }}
               >
                 {techniqueText}
               </Text>
             )}
-          </Box>
+          </Flex>
         </Flex>
 
         {/* Bottom nav — transparent, planet text color */}
