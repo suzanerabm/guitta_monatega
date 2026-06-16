@@ -25,7 +25,7 @@ export const Lunnp1: Story = {
     category: 'Planeta',
     role: 'Imunidade',
     description:
-      "LUNN'P1 — o planeta onde tudo flui. Um mundo sem sol, onde quatro luas regem o tempo e a água nunca mente. Lar dos Shal'ún, os únicos seres naturalmente imunes a vírus em todo o universo.",
+      "LUNN'P1 — o planeta onde tudo flui. Um mundo onde as quatro luas regem o tempo. Lar dos Shal'ún, os únicos seres naturalmente imunes a vírus em todo o universo.",
     palette: 'lunnp1',
     crestGlyph: '⊙',
     declarer: 'planet',
