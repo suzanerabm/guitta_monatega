@@ -2,7 +2,7 @@
   {
     "title": {
       "pt": "Cultura",
-      "en": ""
+      "en": "Culture"
     },
     "img": "/imgs/kammara/triplec/mesh/_subsystems/cultura-gigapixel-standard-v2-6x.jpg",
     "text": {
@@ -21,14 +21,25 @@
         "Em Mesh, ninguém constrói por construir. Cada forma existe porque precisa existir."
       ],
       "en": [
-        "Placeholder — describe the suspended bridges."
+        "### Routine",
+        "The bunniets of Mesh spend their cycles giving form to what does not yet exist, shaping geology with precision, stabilizing the Cshift passages and tending the Template-Towers.",
+        "### Values",
+        "Clarity, structural elegance, purpose, precision. And above all: responsibility for the forms they create. Everything born in Mesh carries the weight of the one who imagined it.",
+        "### Leisure",
+        "Three-dimensional logic games. Formal debates — called coherence duels. Geometric art. Modular labyrinths that change according to who walks them.",
+        "### Classes",
+        "In Mesh, everyone goes through classes in logic and design. There is no bunniet who does not understand structure — it is part of how one learns to live here.",
+        "### The beauty of form",
+        "In Mesh, form and purpose are inseparable. A construction is only beautiful when it fulfills its function. And it only fulfills its function when it is born of a clear form.",
+        "### Nothing without purpose",
+        "In Mesh, no one builds for the sake of building. Each form exists because it needs to exist."
       ]
     }
   },
   {
     "title": {
       "pt": "Bunniets",
-      "en": ""
+      "en": "Bunniets"
     },
     "img": "/imgs/kammara/triplec/mesh/_subsystems/bunniets_2.jpg",
     "text": {
@@ -47,14 +58,25 @@
         "Bunniets de Mesh não são rígidos. São estruturados. A diferença é que estrutura permite criação — rigidez impede."
       ],
       "en": [
-        "Placeholder — describe the patterns of Mesh."
+        "### Appearance",
+        "Taller and more defined than the bunniets of malloc. Bright geometric patterns pulse on the skin. More structured antennae pick up coherent flows. Bone structure reinforced by linear filaments.",
+        "### They see many forms at once",
+        "They can see several versions of the same construction at once. They look at a bridge and glimpse, at a glance, all its possible variations.",
+        "### Emotions in order",
+        "Emotions do not shake them easily. Within their bodies, each feeling has its place, each reaction its compartment — all organized, nothing overflowing.",
+        "### Creation with their hands",
+        "They can bring small structures of energy to life with their own hands. A gesture, a form, and something comes into being.",
+        "### The castes",
+        "Core-Architects create the base structures. Modulators adjust cities and bridges. Polymorphics master the art of multiplicity. Scope-Guardians keep the logical coherence.",
+        "### Structure, not rigidity",
+        "The bunniets of Mesh are not rigid. They are structured. The difference is that structure allows creation — rigidity prevents it."
       ]
     }
   },
   {
     "title": {
       "pt": "Geografia",
-      "en": ""
+      "en": "Geography"
     },
     "img": "/imgs/kammara/triplec/mesh/_subsystems/geografia-gigapixel-standard-v2-6x.jpg",
     "text": {
@@ -73,14 +95,25 @@
         "O norte de Mesh é mais artístico. O centro é mais técnico. O sul conserva tradições antigas. E o oeste é experimental — onde os bunniets polimórficos testam formas que ninguém tentou antes."
       ],
       "en": [
-        "Placeholder — describe the weavers of form."
+        "### Living cities",
+        "Entire cities behave like organisms. Buildings grow and withdraw as needed. Paths appear where there was nothing before. Geometric portals open and close. Each city has its own signature — a way all its own of responding to what happens within it.",
+        "### Heritage Bridges",
+        "Gigantic structures that connect old regions to newer versions. Mesh's past becomes literally visible — linked to the present by bridges.",
+        "### Template-Towers",
+        "Towers that replicate patterns and generate new structures according to the parameters they receive. When Mesh needs something new, a Template-Tower gives birth to it.",
+        "### Polymorphic Fields",
+        "Terrains that change shape according to who crosses them. The ground responds to the traveler — and the path that appears is never the same twice.",
+        "### Compilation Centers",
+        "Hexagonal chambers that stabilize the Cshift as it crosses Mesh. Without them, the passages between worlds would collapse when crossing the region.",
+        "### Regional variations",
+        "The north of Mesh is more artistic. The center is more technical. The south preserves ancient traditions. And the west is experimental — where the polymorphic bunniets test forms no one has tried before."
       ]
     }
   },
   {
     "title": {
       "pt": "Energia",
-      "en": ""
+      "en": "Energy"
     },
     "img": "/imgs/kammara/triplec/mesh/_subsystems/energia_plantacao-gigapixel-standard-6x.jpg",
     "text": {
@@ -98,13 +131,26 @@
         "### Energia arquitetada",
         "Em Mesh, energia não é bruta — é arquitetada. Cada fluxo tem um nome, um propósito e um destino."
       ],
-      "en": []
+      "en": [
+        "### Poly-flux",
+        "The energy of simultaneous possibilities. It flows in Mesh like a river that splits into many branches at once — all real, all available.",
+        "### Class-core",
+        "Geometric cores that keep forms stable. Without the class-cores, the living cities of Mesh would dissolve into chaos.",
+        "### Structured Shilo",
+        "The refined version of the raw shilo that comes from malloc. Here, the energy is channeled into predictable patterns — organized, tamed, set into form.",
+        "### How they feed",
+        "The bunniets of Mesh sustain themselves on nutrients drawn from plants that grow in geometric patterns, light filtered through the Template-Towers, and small stabilized luminous cores.",
+        "### The cost of form",
+        "Organizing energy is costly. Large structures demand great coherence to hold themselves up. One miscalculation, and everything can collapse.",
+        "### Architected energy",
+        "In Mesh, energy is not raw — it is architected. Each flow has a name, a purpose and a destination."
+      ]
     }
   },
   {
     "title": {
       "pt": "Governança",
-      "en": ""
+      "en": "Governance"
     },
     "img": "/imgs/kammara/triplec/mesh/_subsystems/governanca.jpg",
     "text": {
@@ -122,13 +168,26 @@
         "### Guardião-Scope",
         "Mantêm a coerência de toda a região. Quando uma parte começa a contradizer outra, é o Guardião-Scope que percebe primeiro."
       ],
-      "en": []
+      "en": [
+        "### System",
+        "Mesh is governed by the Modular Order — a political system based on structural coherence.",
+        "### Council of Templates",
+        "Led by the oldest and most coherent bunniets. It defines the patterns of creation, validates new structures, keeps the balance with malloc and Sharp, and oversees the Cshift routes.",
+        "### Core-Architects",
+        "The creators of the base structures. When something new needs to exist in Mesh, it is born under the gaze of a Core-Architect.",
+        "### Modulators",
+        "Responsible for adjusting cities and bridges. When something already created needs to change, it is the Modulators who adjust it.",
+        "### Polymorphics",
+        "Rare. They master the art of multiplicity — they can make a single form fulfill different functions without losing its identity.",
+        "### Scope-Guardians",
+        "They keep the coherence of the whole region. When one part begins to contradict another, it is the Scope-Guardian who notices first."
+      ]
     }
   },
   {
     "title": {
       "pt": "Perigos",
-      "en": ""
+      "en": "Dangers"
     },
     "img": "/imgs/kammara/triplec/mesh/_subsystems/perigos-gigapixel-standard-v2-6x.jpg",
     "text": {
@@ -146,7 +205,20 @@
         "### A forma que se esquece de si",
         "Em Mesh, o maior perigo não é o caos. É a forma que funciona tão bem que esquece para que serve."
       ],
-      "en": []
+      "en": [
+        "### Coherence failures",
+        "When two structures contradict each other, entire cities can fall. Coherence is what keeps Mesh standing — and also what makes it vulnerable.",
+        "### Geological loops",
+        "Regions that fall into infinite repetition, trapped in the same cycle of events. Those who enter a geological loop may take a long time to find the way out.",
+        "### Unstable templates",
+        "Towers that generate incomplete forms. Half cities. Endless bridges. Fragments of something that should have existed whole.",
+        "### Broken inheritances",
+        "Areas where the old logic has corrupted. They are dangerous regions — where the inherited forms no longer work, but are still there.",
+        "### Too much rigidity",
+        "An excess of form imprisons creativity. When Mesh organizes too much, the life that should inhabit the structures simply does not appear.",
+        "### The form that forgets itself",
+        "In Mesh, the greatest danger is not chaos. It is the form that works so well that it forgets what it is for."
+      ]
     }
   }
 ]
