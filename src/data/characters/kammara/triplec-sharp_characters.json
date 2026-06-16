@@ -10,8 +10,8 @@
       "en": "Bunniet"
     },
     "bio": {
-      "pt": "O mais simétrico do núcleo Sharp. 65-72 cm, pelagem branca com circuitos prateados visíveis em ângulo, orelhas precisamente alinhadas, olhos negros que escaneiam em camadas. Analisa tudo ao redor em tempo real. Garante que cada coisa esteja correta — funcionar sozinho é insuficiente.",
-      "en": "The most symmetrical of Sharp's core. 65-72 cm, white fur with silver circuits visible at an angle, ears precisely aligned, black eyes that scan in layers. He analyzes everything around in real time. He makes sure each thing is correct — merely working is not enough."
+      "pt": "Engenheira de precisão de Sharp — validadora absoluta. Analisa tudo ao redor em tempo real e garante que cada coisa esteja correta — funcionar sozinho é insuficiente. 88 ciclos de existência.",
+      "en": "Precision engineer of Sharp — absolute validator. She analyzes everything around her in real time and ensures each thing is correct — working on its own is not enough. 88 cycles of existence."
     },
     "image": "/imgs/kammara/triplec/sharp/SELKA-RIN.png",
     "backImage": "",
@@ -42,19 +42,106 @@
           "en": "Role"
         },
         "value": {
-          "pt": "Validador",
+          "pt": "Validadora",
           "en": "Validator"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Neran_Vel",
+    "name": {
+      "pt": "NERAN VEL",
+      "en": "NERAN VEL"
+    },
+    "species": {
+      "pt": "Bunniet",
+      "en": "Bunniet"
+    },
+    "bio": {
+      "pt": "O mais antigo em operação de Sharp. Impede que crises aconteçam. Detecta microfadigas, recalibra tensões silenciosas, garante que o sistema continue funcionando amanhã e nos cem ciclos seguintes. 156 ciclos de existência.",
+      "en": "The oldest in operation in Sharp. He keeps crises from happening. He detects micro-fatigues, recalibrates silent tensions, ensures the system keeps working tomorrow and for the hundred cycles after. 156 cycles of existence."
+    },
+    "image": "/imgs/kammara/triplec/sharp/Neran_Vel.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
+    "attributes": [
+      {
+        "glyph": "⊹⊙⊷",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Sharp",
+          "en": "Sharp"
         }
       },
       {
-        "glyph": "⊹",
+        "glyph": "⊶⊷⊙",
         "label": {
-          "pt": "Arquétipo",
-          "en": "Archetype"
+          "pt": "Função",
+          "en": "Role"
         },
         "value": {
-          "pt": "SELO",
-          "en": "SEAL"
+          "pt": "Sustentador",
+          "en": "Sustainer"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Veris_Anon",
+    "name": {
+      "pt": "VERIS ANON",
+      "en": "VERIS ANON"
+    },
+    "species": {
+      "pt": "Bunniet",
+      "en": "Bunniet"
+    },
+    "bio": {
+      "pt": "Autora do Relatório Técnico 88-S — o primeiro estudo biológico comparativo entre bunniets das três regiões. Documentou o que significa ser bio-lógico: a fusão entre matéria orgânica da Niul Forest e padrão do PD-11.",
+      "en": "Author of Technical Report 88-S — the first comparative biological study among bunniets of the three regions. She documented what it means to be bio-logical: the fusion between organic matter of the Niul Forest and the pattern of the PD-11."
+    },
+    "image": "/imgs/kammara/triplec/sharp/Veris_Anon.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "",
+      "en": ""
+    },
+    "attributes": [
+      {
+        "glyph": "⊹⊙⊷",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Sharp",
+          "en": "Sharp"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Bióloga Sistêmica",
+          "en": "Systemic Biologist"
         }
       }
     ]

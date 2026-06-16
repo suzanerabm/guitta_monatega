@@ -338,7 +338,7 @@
     },
     "bio": {
       "pt": "Semi-minerais que mudam de cor com o ambiente (branco, azul-shilo, verde-kemita). Atrapalham bunniets flutuando, vibrando e sumindo — persistentes, sem dano. Se chegam ao fundo sem serem espantados pelos Mewlites, encaixam com Estakor e provocam terremoto.",
-      "en": ""
+      "en": "Semi-minerals that change color with their surroundings (white, shilo-blue, kemita-green). They hinder bunniets by floating, vibrating and vanishing — persistent, harmless. If they reach the depths without being scared off by the Mewlites, they fit with an Estakor and trigger an earthquake."
     },
     "image": "/imgs/kammara/triplec/malloc/robo_cristal.png",
     "backImage": "/imgs/kammara/triplec/malloc/robo_cristal_costas.png",
@@ -348,7 +348,7 @@
     },
     "dorsalMeaning": {
       "pt": "Eu sou da cor de onde estou.",
-      "en": ""
+      "en": "I am the color of wherever I am."
     },
     "attributes": [
       {
@@ -370,7 +370,7 @@
         },
         "value": {
           "pt": "Infiltrador",
-          "en": ""
+          "en": "Infiltrator"
         }
       }
     ]
@@ -387,7 +387,7 @@
     },
     "bio": {
       "pt": "Quebram fragmentos de instrução, desestabilizam áreas profundas, atraem risco onde antes havia silêncio. Nunca sobem da Estaka — moram fundo, e a única coisa que a superfície sente deles é o tremor depois do encaixe com Krystos.",
-      "en": ""
+      "en": "They break instruction fragments, destabilize deep areas, draw risk where there was once silence. They never rise from the Estaka — they dwell deep, and the only thing the surface feels of them is the tremor after the fit with a Krystos."
     },
     "image": "/imgs/kammara/triplec/malloc/Estakors-frente.png",
     "backImage": "/imgs/kammara/triplec/malloc/Estakors.png",
@@ -397,7 +397,7 @@
     },
     "dorsalMeaning": {
       "pt": "Eu quebro o que ainda podia seguir. Um encaixe perfeito provoca terremoto.",
-      "en": ""
+      "en": "I break what could still go on. A perfect fit triggers an earthquake."
     },
     "attributes": [
       {
@@ -419,7 +419,7 @@
         },
         "value": {
           "pt": "Desestabilizadores",
-          "en": ""
+          "en": "Destabilizers"
         }
       }
     ]
