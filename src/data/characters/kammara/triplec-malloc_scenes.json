@@ -3,70 +3,70 @@
     "image": "/imgs/kammara/triplec/malloc/_scenes/1_vila_principal.jpg",
     "label": {
       "pt": "vila principal",
-      "en": "vila principal"
+      "en": "main village"
     }
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/1portex_camada.jpg",
     "label": {
       "pt": "portex camada",
-      "en": "portex camada"
+      "en": "portex layer"
     }
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/2portex_camada_vista_cima.jpg",
     "label": {
       "pt": "portex camada vista cima",
-      "en": "portex camada vista cima"
+      "en": "portex layer top view"
     }
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/3datex_camada.jpg",
     "label": {
       "pt": "datex camada",
-      "en": "datex camada"
+      "en": "datex layer"
     }
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/4datara_camada.jpg",
     "label": {
       "pt": "datara camada",
-      "en": "datara camada"
+      "en": "datara layer"
     }
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/4malloc_mina_cshift.jpg",
     "label": {
       "pt": "malloc mina cshift",
-      "en": "malloc mina cshift"
+      "en": "malloc cshift mine"
     }
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/5hepa_regiao_1.jpg",
     "label": {
       "pt": "hepa regiao 1",
-      "en": "hepa regiao 1"
+      "en": "hepa region 1"
     }
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/6malloc_camadas_regiao2.jpg",
     "label": {
       "pt": "malloc camadas regiao2",
-      "en": "malloc camadas regiao2"
+      "en": "malloc layers region 2"
     }
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/7hepa_regiao2.jpg",
     "label": {
       "pt": "hepa regiao2",
-      "en": "hepa regiao2"
+      "en": "hepa region 2"
     }
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/9lumesha_visita_Luma_Val.jpg",
     "label": {
       "pt": "lumesha visita Luma Val",
-      "en": "lumesha visita Luma Val"
+      "en": "Lumesha visits LUMA VAL"
     }
   }
 ]
