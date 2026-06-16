@@ -2,8 +2,8 @@
   {
     "match": "Luma_Val",
     "name": {
-      "pt": "Luma Val",
-      "en": "Luma Val"
+      "pt": "LUMA VAL",
+      "en": "LUMA VAL"
     },
     "species": {
       "pt": "Bunniet",
@@ -62,8 +62,8 @@
   {
     "match": "Iren_Kor",
     "name": {
-      "pt": "Iren Kor",
-      "en": "Iren Kor"
+      "pt": "IREN KOR",
+      "en": "IREN KOR"
     },
     "species": {
       "pt": "Bunniet",
@@ -122,8 +122,8 @@
   {
     "match": "Aion_Var",
     "name": {
-      "pt": "Aion Var",
-      "en": "Aion Var"
+      "pt": "AION VAR",
+      "en": "AION VAR"
     },
     "species": {
       "pt": "Bunniet",

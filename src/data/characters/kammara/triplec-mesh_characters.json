@@ -2,8 +2,8 @@
   {
     "match": "KAEL_TORIN",
     "name": {
-      "pt": "Kael Torin",
-      "en": "Kael Torin"
+      "pt": "KAEL TORIN",
+      "en": "KAEL TORIN"
     },
     "species": {
       "pt": "Bunniet",
@@ -51,8 +51,8 @@
   {
     "match": "DORAN_KES",
     "name": {
-      "pt": "Doran Kes",
-      "en": "Doran Kes"
+      "pt": "DORAN KES",
+      "en": "DORAN KES"
     },
     "species": {
       "pt": "Bunniet",
@@ -100,8 +100,8 @@
   {
     "match": "ELLEN VAR",
     "name": {
-      "pt": "Ellen Var",
-      "en": "Ellen Var"
+      "pt": "ELLEN VAR",
+      "en": "ELLEN VAR"
     },
     "species": {
       "pt": "Bunniet",
