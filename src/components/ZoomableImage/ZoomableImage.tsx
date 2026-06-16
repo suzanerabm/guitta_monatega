@@ -207,7 +207,9 @@ export function ZoomableImage({
       justifyContent="center"
       overflow="hidden"
       width="100%"
+      height={maxHeight === '100%' ? '100%' : undefined}
       maxH={maxHeight}
+      minH={0}
       borderRadius={borderRadius}
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}

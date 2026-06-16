@@ -139,20 +139,24 @@ export function ModalKammara() {
           {crestGlyph}
         </Box>
 
-        {/* Close button */}
+        {/* Close button — sized as a comfortable touch target (≥44px) with
+            the glyph centered, so it's easy to tap on mobile. The hover
+            scale animates the inner glyph only, keeping the hit area stable. */}
         <Box
           as="button"
           aria-label="Close"
           position="absolute"
-          top="lg"
-          right="3xl"
+          top={{ base: 'sm', md: 'md' }}
+          right={{ base: 'sm', md: 'lg' }}
           zIndex={201}
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          minW="48px"
+          minH="48px"
           bg="none"
           border="none"
           color={color}
-          transition="opacity 0.3s, transform 0.4s ease-in-out"
-          _hover={{ opacity: 0.7, transform: 'scale(0.6)' }}
-          _active={{ transform: 'scale(0)', opacity: 0 }}
           onClick={(e) => {
             e.stopPropagation();
             close();
@@ -163,20 +167,31 @@ export function ModalKammara() {
           css={{
             cursor: 'pointer',
             '& *': { cursor: 'pointer' },
+            '& .km-close-glyph': {
+              display: 'block',
+              transition: 'opacity 0.3s, transform 0.4s ease-in-out',
+            },
+            '&:hover .km-close-glyph': { opacity: 0.7, transform: 'scale(0.6)' },
+            '&:active .km-close-glyph': { transform: 'scale(0)', opacity: 0 },
           }}
         >
-          ⊙
+          <span className="km-close-glyph">⊙</span>
         </Box>
 
-        {/* Body */}
+        {/* Body — `minH={0}` lets the flex child actually shrink so the image
+            box can be capped by available height instead of overflowing. The
+            generous bottom padding reserves room for the absolute bottom nav
+            (pagination) so it never sits on top of the image. */}
         <Flex
           direction="column"
           align="center"
           justify="center"
           flex={1}
+          minH={0}
           px={{ base: 'base', md: '3xl' }}
-          pb="4rem"
-          gap="xl"
+          pt={{ base: '3.5rem', md: '4rem' }}
+          pb={{ base: '5rem', md: '6rem' }}
+          gap={{ base: 'md', md: 'lg' }}
           onClick={(e) => e.stopPropagation()}
         >
           {/* Title + description */}
@@ -216,19 +231,28 @@ export function ModalKammara() {
               anchored to the photo's bottom-left, as before. Zoom/pan is
               handled by ZoomableImage so the gesture stays inside the modal
               instead of zooming the page. */}
-          <Flex direction="column" align="center" gap="sm">
+          <Flex
+            direction="column"
+            align="center"
+            gap="sm"
+            minH={0}
+            flex={1}
+            width="100%"
+          >
             <Box
               position="relative"
-              display="inline-block"
-              width={{ base: '94vw', md: 'auto' }}
+              display="flex"
+              justifyContent="center"
+              minH={0}
+              flex={1}
+              width={{ base: '94vw', md: '100%' }}
               maxW={{ base: '94vw', md: '90vw' }}
-              maxH={{ base: '70vh', md: '62vh' }}
             >
               <ZoomableImage
                 key={currentImage}
                 src={currentImage}
                 alt={heroTitle || ''}
-                maxHeight="70vh"
+                maxHeight="100%"
               />
 
               {/* Side label (desktop only) — rotated, bottom-left of photo. */}
