@@ -2,7 +2,7 @@
   {
     "title": {
       "pt": "Cultura",
-      "en": ""
+      "en": "Culture"
     },
     "img": "/imgs/kammara/triplec/sharp/_subsystems/Cultura.jpg",
     "text": {
@@ -12,23 +12,34 @@
         "### Valores",
         "Responsabilidade. Pureza de intenção. Clareza. Ordem. Consistência emocional. Cinco palavras que definem como cada bunniet de Sharp vive o dia a dia.",
         "### Lazer",
-        "Jogos de raciocínio baseados em padrões. Música harmônica de ressonância prateada. Meditação em campos de metadado — um estado contemplativo em que o bunniet se conecta com a memória limpa da região.",
+        "Jogos de raciocínio baseados em padrões. Música harmônica de ressonância prateada. Descanso nos Campos de Metadado — um estado contemplativo em que o bunniet para e escuta a memória limpa da região.",
         "### A justiça",
         "Não existe punição em Sharp. Existe Reclassificação — quem se desvia tem suas funções reorganizadas. O erro não vira sentença; vira um novo papel.",
         "### A energia limpa",
         "Em Sharp, cada ação precisa ser validada antes de acontecer. Não é rigidez — é o jeito que a região aprendeu a impedir que corrupção atravesse suas fronteiras.",
-        "### A essência",
+        "### O filtro que nunca dorme",
         "Em Sharp, nada é aprovado por pressa. Tudo passa pelo mesmo filtro — e o filtro nunca dorme."
       ],
       "en": [
-        "Placeholder — describe the megastructures."
+        "### Routine",
+        "The bunniets of Sharp run energetic checks, maintain the validation towers, oversee interplanetary flows and assist in the operations of the Universal Cshift.",
+        "### Values",
+        "Responsibility. Purity of intention. Clarity. Order. Emotional consistency. Five words that define how every bunniet of Sharp lives day to day.",
+        "### Leisure",
+        "Pattern-based reasoning games. Harmonic music of silver resonance. Rest in the Metadata Fields — a contemplative state in which the bunniet stops and listens to the clean memory of the region.",
+        "### Justice",
+        "There is no punishment in Sharp. There is Reclassification — whoever strays has their functions reorganized. Error does not become a sentence; it becomes a new role.",
+        "### Clean energy",
+        "In Sharp, every action must be validated before it happens. It is not rigidity — it is how the region learned to keep corruption from crossing its borders.",
+        "### The filter that never sleeps",
+        "In Sharp, nothing is approved in haste. Everything passes through the same filter — and the filter never sleeps."
       ]
     }
   },
   {
     "title": {
       "pt": "Bunniets",
-      "en": ""
+      "en": "Bunniets"
     },
     "img": "/imgs/kammara/triplec/sharp/_subsystems/Bunniets.jpg",
     "text": {
@@ -42,19 +53,30 @@
         "### O ciclo de vida",
         "Envelhecem lentamente. Seu ciclo de vida é o mais longo de TripleC — o que os torna guardiões de memórias que outros bunniets nem chegam a conhecer.",
         "### As capacidades",
-        "Leitura instantânea de padrões. Validação vibracional. Estabilização de túneis. Controle do Cshift Universal — junto com malloc e Mesh.",
+        "Leitura instantânea de padrões. Validação imediata de qualquer fluxo de energia. Estabilização de túneis. Controle do Cshift Universal — junto com malloc e Mesh.",
         "### A alimentação",
         "Bunniets de Sharp não comem. Absorvem luz prateada, metadado puro e shilo filtrado. A energia que sustenta o corpo é a mesma que valida os fluxos da região."
       ],
       "en": [
-        "Placeholder — describe the system of order."
+        "### Appearance",
+        "Tall, slim, paler than the bunniets of the other regions. Extremely elegant. White skin with visible silver circuits. A light but rigid bone structure.",
+        "### The eyes",
+        "Deep black eyes — able to detect energetic corruption before it manifests. A bunniet of Sharp can see when something is not right, even when it still seems harmless.",
+        "### The metadata lines",
+        "Luminous lines pulse softly over the skin. Each one carries information — about the body, about the region, about the flows passing through the bunniet at that moment.",
+        "### The life cycle",
+        "They age slowly. Their life cycle is the longest in TripleC — which makes them guardians of memories that other bunniets never even come to know.",
+        "### The capabilities",
+        "Instant reading of patterns. Immediate validation of any energy flow. Stabilization of tunnels. Control of the Universal Cshift — together with malloc and Mesh.",
+        "### Nourishment",
+        "The bunniets of Sharp do not eat. They absorb silver light, pure metadata and filtered shilo. The energy that sustains the body is the same that validates the region's flows."
       ]
     }
   },
   {
     "title": {
       "pt": "Geografia",
-      "en": ""
+      "en": "Geography"
     },
     "img": "/imgs/kammara/triplec/sharp/_subsystems/Geografia2.jpg",
     "text": {
@@ -65,22 +87,33 @@
         "Estruturas que analisam tudo que entra e sai da região. Nenhuma energia atravessa Sharp sem passar por elas.",
         "### Campos de Metadado",
         "Planícies vivas que armazenam memória segura. Cada passo nelas deixa uma marca validada — e cada marca é guardada para sempre.",
-        "### Núcleo do GC",
-        "Uma grande cratera luminosa no centro da região, onde a energia residual se dissolve. É onde o Garbage Collector trabalha, limpando o que perdeu propósito.",
+        "### Núcleo da Coleta",
+        "Uma grande cratera luminosa no centro da região, onde a energia residual se dissolve. É onde o Coletor Vivo trabalha, limpando tudo o que perdeu propósito.",
         "### Pontes-Gerenciadas",
         "Conexões entre Sharp e Mesh. Só abrem quando toda a coerência está intacta dos dois lados. Uma ponte fechada é sinal de que algo, em alguma parte, está errado.",
         "### Cavernas Run-time",
-        "Áreas subterrâneas onde os processos mais delicados são executados. Quando uma operação precisa de privacidade total e supervisão máxima, acontece ali."
+        "Áreas subterrâneas onde as operações mais delicadas acontecem. Quando algo precisa de privacidade total e supervisão máxima, é ali que se faz."
       ],
       "en": [
-        "Placeholder — describe how permissions work."
+        "### Territory of light",
+        "Sharp is a vast territory of silvery white light, with fluid geometries and polished surfaces. There is no visual roughness — every form was validated before it existed.",
+        "### Validation Towers",
+        "Structures that analyze everything entering and leaving the region. No energy crosses Sharp without passing through them.",
+        "### Metadata Fields",
+        "Living plains that store safe memory. Each step on them leaves a validated mark — and each mark is kept forever.",
+        "### The Collection Core",
+        "A great luminous crater at the center of the region, where residual energy dissolves. It is where the Living Collector works, cleaning away everything that has lost its purpose.",
+        "### Managed-Bridges",
+        "Connections between Sharp and Mesh. They only open when all coherence is intact on both sides. A closed bridge is a sign that something, somewhere, is wrong.",
+        "### Run-time Caves",
+        "Underground areas where the most delicate operations happen. When something needs total privacy and maximum supervision, it is done there."
       ]
     }
   },
   {
     "title": {
       "pt": "Energia",
-      "en": ""
+      "en": "Energy"
     },
     "img": "/imgs/kammara/triplec/sharp/_subsystems/energia-gigapixel-standard-6x.jpg",
     "text": {
@@ -91,20 +124,33 @@
         "A fonte prateada de validação. É de onde nasce a capacidade de Sharp de confirmar ou negar qualquer fluxo que atravessa a região.",
         "### Shilo Calibrado",
         "A versão mais limpa e segura do shilo que vem de malloc. Aqui, nenhuma impureza passa — o fluxo é lapidado até o limite.",
-        "### O Garbage Collector Vivo",
-        "Um sistema vivo que remove tudo que fica sem propósito. Energia residual, código quebrado, padrões corrompidos — tudo é coletado e dissolvido no Núcleo do GC.",
+        "### O Coletor Vivo",
+        "Um sistema vivo que remove tudo o que fica sem propósito. Energia residual, formas quebradas, padrões corrompidos — tudo é recolhido e dissolvido no Núcleo da Coleta.",
         "### As limitações",
-        "Quando Sharp é sobrecarregada, desacelera. Quando o GC falha, a região pode entrar em paralisia. E com entidades muito caóticas — como vírus evolutivos — a validação encontra dificuldade.",
-        "### A essência",
+        "Quando Sharp é sobrecarregada, desacelera. Quando o Coletor Vivo falha, a região pode entrar em paralisia. E com criaturas muito caóticas — como vírus evolutivos — a validação encontra dificuldade.",
+        "### Energia supervisionada",
         "Em Sharp, energia não flui livre. Flui supervisionada. E o que não pode ser validado, não existe."
       ],
-      "en": []
+      "en": [
+        "### MetaFlux",
+        "The energy of metadata — what organizes everything in Sharp. All information, all permission, all validation passes through the MetaFlux.",
+        "### Runic-Core",
+        "The silver source of validation. It is where Sharp's ability to confirm or deny any flow crossing the region is born.",
+        "### Calibrated Shilo",
+        "The cleanest and safest version of the shilo that comes from malloc. Here, no impurity passes — the flow is refined to the very limit.",
+        "### The Living Collector",
+        "A living system that removes everything left without purpose. Residual energy, broken forms, corrupted patterns — all of it is gathered and dissolved in the Collection Core.",
+        "### The limitations",
+        "When Sharp is overloaded, it slows down. When the Living Collector fails, the region can fall into paralysis. And with very chaotic creatures — such as evolutionary viruses — validation runs into difficulty.",
+        "### Supervised energy",
+        "In Sharp, energy does not flow freely. It flows supervised. And what cannot be validated does not exist."
+      ]
     }
   },
   {
     "title": {
       "pt": "Governança",
-      "en": ""
+      "en": "Governance"
     },
     "img": "/imgs/kammara/triplec/sharp/_subsystems/Governanca.jpg",
     "text": {
@@ -113,40 +159,66 @@
         "A autoridade máxima de Sharp. Aprova fluxos, valida rotas interplanetárias, supervisiona o Cshift e impede corrupção viral. É o último filtro antes de qualquer decisão.",
         "### Guardiões do Runic-Core",
         "Guerreiros e monges especializados no controle da energia. Protegem a fonte de validação que sustenta toda a região.",
-        "### Ordem do Garbage-Clarion",
-        "Os monitores da energia residual. Cuidam para que o Garbage Collector funcione sem falhas — e para que nada que deva ser coletado escape.",
+        "### Ordem do Clarion",
+        "Os guardiões da energia residual. Cuidam para que o Coletor Vivo funcione sem falhas — e para que nada que precisa ser recolhido escape.",
         "### A justiça",
         "Não existe punição. Existe Reclassificação — quem se desvia tem suas funções reorganizadas. O sistema não pune: reconfigura.",
         "### A permissão como base",
-        "Em Sharp, nada acontece sem autorização. Caminhos precisam ser liberados. Módulos precisam ser validados. Cada gesto é filtrado.",
-        "### A essência",
+        "Em Sharp, nada acontece sem autorização. Caminhos precisam ser liberados. Estruturas precisam ser validadas. Cada gesto é filtrado.",
+        "### Validação contínua",
         "Em Sharp, governança não é hierarquia. É validação contínua. Cada decisão passa pelo mesmo sistema — inclusive as do próprio Conselho."
       ],
-      "en": []
+      "en": [
+        "### Council of Systemic Management",
+        "The supreme authority of Sharp. It approves flows, validates interplanetary routes, oversees the Cshift and prevents viral corruption. It is the last filter before any decision.",
+        "### Guardians of the Runic-Core",
+        "Warriors and monks specialized in energy control. They protect the source of validation that sustains the whole region.",
+        "### Order of the Clarion",
+        "The guardians of residual energy. They make sure the Living Collector works without fail — and that nothing that needs to be gathered escapes.",
+        "### Justice",
+        "There is no punishment. There is Reclassification — whoever strays has their functions reorganized. The system does not punish: it reconfigures.",
+        "### Permission as the foundation",
+        "In Sharp, nothing happens without authorization. Paths must be cleared. Structures must be validated. Every gesture is filtered.",
+        "### Continuous validation",
+        "In Sharp, governance is not hierarchy. It is continuous validation. Every decision passes through the same system — including those of the Council itself."
+      ]
     }
   },
   {
     "title": {
       "pt": "Perigos",
-      "en": ""
+      "en": "Dangers"
     },
     "img": "/imgs/kammara/triplec/sharp/_subsystems/perigo.jpg",
     "text": {
       "pt": [
-        "### GC Freeze",
-        "O pior desastre. Quando o Garbage Collector congela, toda a região entra em paralisia. Nada flui, nada valida, nada se move. Até que o núcleo se recupere, Sharp para no tempo.",
+        "### O Congelamento",
+        "O pior desastre. Quando o Coletor Vivo congela, toda a região entra em paralisia. Nada flui, nada é validado, nada se move. Até que o núcleo se recupere, Sharp para no tempo.",
         "### Permissão Corrompida",
         "Quando invasores conseguem autorização falsa. Passam pelas torres como se fossem válidos. É o tipo de ameaça que Sharp mais teme — porque explora o próprio sistema de validação.",
         "### Loop de Validação",
-        "Processos que nunca terminam de ser verificados. Ficam presos, checando e rechecando eternamente, sem nunca chegar ao fim. O recurso fica travado; a energia, indisponível.",
+        "Processos que nunca terminam de ser verificados. Ficam presos, checando e rechecando eternamente, sem nunca chegar ao fim. Tudo que dependia daquela verificação fica travado; a energia, indisponível.",
         "### Fragmentação de Metadado",
         "A perda de identidade energética. Quando os metadados se partem, a região esquece pedaços do que é — e essa amnésia abre brechas para coisas entrarem sem serem notadas.",
         "### Isolamento",
-        "Por ser tão rígida, Sharp às vezes se isola demais. A consistência absoluta vira distância — e a distância vira vulnerabilidade emocional.",
-        "### A essência",
+        "Por ser tão rígida, Sharp às vezes se isola demais. A consistência absoluta vira distância — e a distância vira fragilidade.",
+        "### Quando a perfeição para",
         "O maior perigo de Sharp não é o ataque externo. É a própria perfeição — quando o sistema funciona tão bem que deixa de evoluir."
       ],
-      "en": []
+      "en": [
+        "### The Freeze",
+        "The worst disaster. When the Living Collector freezes, the whole region falls into paralysis. Nothing flows, nothing is validated, nothing moves. Until the core recovers, Sharp stands still in time.",
+        "### Corrupted Permission",
+        "When invaders obtain false authorization. They pass through the towers as if they were valid. It is the kind of threat Sharp fears most — because it exploits the validation system itself.",
+        "### Validation Loop",
+        "Processes that never finish being verified. They get stuck, checking and rechecking forever, never reaching the end. Everything that depended on that verification is locked; the energy, unavailable.",
+        "### Metadata Fragmentation",
+        "The loss of energetic identity. When the metadata breaks apart, the region forgets pieces of what it is — and that amnesia opens gaps for things to enter unnoticed.",
+        "### Isolation",
+        "Being so rigid, Sharp sometimes isolates itself too much. Absolute consistency becomes distance — and distance becomes fragility.",
+        "### When perfection stops",
+        "Sharp's greatest danger is not the external attack. It is its own perfection — when the system works so well that it stops evolving."
+      ]
     }
   }
 ]
