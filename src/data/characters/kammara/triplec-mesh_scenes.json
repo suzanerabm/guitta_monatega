@@ -54,5 +54,26 @@
       "pt": "dentro do apartamento",
       "en": "inside apartment"
     }
+  },
+  {
+    "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_familia.jpg",
+    "label": {
+      "pt": "família",
+      "en": "family"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_sala.jpg",
+    "label": {
+      "pt": "sala",
+      "en": "living room"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_quarto.jpg",
+    "label": {
+      "pt": "quarto",
+      "en": "bedroom"
+    }
   }
 ]

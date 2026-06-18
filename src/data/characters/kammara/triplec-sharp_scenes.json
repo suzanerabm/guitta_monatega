@@ -61,5 +61,33 @@
       "pt": "quarto",
       "en": "bedroom"
     }
+  },
+  {
+    "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_fluxo_energia.jpg",
+    "label": {
+      "pt": "fluxo de energia",
+      "en": "energy flow"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_pets.jpg",
+    "label": {
+      "pt": "pets",
+      "en": "pets"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_quarto.jpg",
+    "label": {
+      "pt": "quarto",
+      "en": "bedroom"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_sala.jpg",
+    "label": {
+      "pt": "sala",
+      "en": "living room"
+    }
   }
 ]

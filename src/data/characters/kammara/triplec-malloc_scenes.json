@@ -68,5 +68,96 @@
       "pt": "lumesha visita Luma Val",
       "en": "Lumesha visits LUMA VAL"
     }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_vila.jpg",
+    "label": {
+      "pt": "vila",
+      "en": "village"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_vila_1.jpg",
+    "label": {
+      "pt": "vila 1",
+      "en": "village 1"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_vila_2.jpg",
+    "label": {
+      "pt": "vila 2",
+      "en": "village 2"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_vila_3.jpg",
+    "label": {
+      "pt": "vila 3",
+      "en": "village 3"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_vila_4.jpg",
+    "label": {
+      "pt": "vila 4",
+      "en": "village 4"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_tunel.jpg",
+    "label": {
+      "pt": "túnel",
+      "en": "tunnel"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_sala.jpg",
+    "label": {
+      "pt": "sala",
+      "en": "living room"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_quarto.jpg",
+    "label": {
+      "pt": "quarto",
+      "en": "bedroom"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_forest.jpg",
+    "label": {
+      "pt": "floresta",
+      "en": "forest"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_correndo.jpg",
+    "label": {
+      "pt": "correndo",
+      "en": "running"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_em_mesh.jpg",
+    "label": {
+      "pt": "em Mesh",
+      "en": "in Mesh"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_visita_mesh.jpg",
+    "label": {
+      "pt": "visita a Mesh",
+      "en": "visit to Mesh"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_visita_sharp.jpg",
+    "label": {
+      "pt": "visita a Sharp",
+      "en": "visit to Sharp"
+    }
   }
 ]
