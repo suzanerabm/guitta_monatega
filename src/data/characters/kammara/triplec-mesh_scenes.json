@@ -33,5 +33,26 @@
       "pt": "Niul forest",
       "en": "Niul Forest"
     }
+  },
+  {
+    "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_praca.jpg",
+    "label": {
+      "pt": "praça",
+      "en": "plaza"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_praca_vista_cima.jpg",
+    "label": {
+      "pt": "praça vista de cima",
+      "en": "plaza top view"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_dentro_ap.jpg",
+    "label": {
+      "pt": "dentro do apartamento",
+      "en": "inside apartment"
+    }
   }
 ]

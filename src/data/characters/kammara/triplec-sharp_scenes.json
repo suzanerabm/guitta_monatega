@@ -40,5 +40,26 @@
       "pt": "Vista panoramica",
       "en": "panoramic view"
     }
+  },
+  {
+    "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_vista.jpg",
+    "label": {
+      "pt": "vista",
+      "en": "view"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_cena_interna_sala.jpg",
+    "label": {
+      "pt": "sala interna",
+      "en": "interior room"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_cena_quarto.jpg",
+    "label": {
+      "pt": "quarto",
+      "en": "bedroom"
+    }
   }
 ]
