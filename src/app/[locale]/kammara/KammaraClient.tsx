@@ -488,7 +488,12 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
         >
           {/* Characters moved to a dedicated KammaraCharacterGallery below.
               The side slot now holds the saga cover poster. */}
-          <KammaraSagaPoster background="/imgs/kammara/orfv/_scenes/9noite_em_orfv.jpg" />
+          <KammaraSagaPoster
+            background="/imgs/kammara/orfv/_scenes/9noite_em_orfv.jpg"
+            // title="Saga em ORF-V"
+            subtitle="S · A · G · A ··· O · R · F · V"
+            // footerLabel="Kammara"
+          />
         </DSMainCard>
         {(() => {
           const contextId = 'kammara/kammara';
