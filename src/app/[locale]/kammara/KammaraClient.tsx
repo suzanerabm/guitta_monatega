@@ -808,7 +808,7 @@ function WorldSection({
           .filter((x): x is NonNullable<typeof x> => x !== null);
         if (galleryItems.length === 0) return null;
         return (
-          <Box width="100%" my="3xl" px={{ base: "25px", md: "2rem", xl: "3rem" }}>
+          <Box width="100%" my={{ base: '3xl', lg: '5xl' }} px={{ base: "25px", md: "2rem", xl: "3rem" }}>
             <KammaraCharacterGallery
               title={`${charactersTitle} · ${name}`}
               worldCrestGlyph={worldCrest}
@@ -859,7 +859,7 @@ function WorldSection({
             <Box
               display={{ base: 'block', md: 'none' }}
               width="100%"
-              my="2xl"
+              my={{ base: '2xl', lg: '5xl' }}
               px={{ base: '25px', md: '2rem', xl: '3rem' }}
             >
               <Box width="100%" height="627px">
@@ -878,7 +878,7 @@ function WorldSection({
             <Box
               display={{ base: 'none', md: 'block' }}
               width="100%"
-              my="2xl"
+              my={{ base: '2xl', lg: '5xl' }}
               px={{ base: '25px', md: '2rem', xl: '3rem' }}
             >
               <KammaraCardSubsystemHorizontal
@@ -1115,7 +1115,7 @@ function TriplecRegionSection({
             <Box
               display={{ base: 'none', md: 'block' }}
               width="100%"
-              my="2xl"
+              my={{ base: '2xl', lg: '5xl' }}
               px={{ base: '25px', md: '2rem', xl: '3rem' }}
             >
               <KammaraCardSubsystemHorizontal
