@@ -17,7 +17,7 @@ import { SceneStrip } from '@/components/SceneStrip';
 import { KammaraCardSubsystem, KammaraCardSubsystemContainer, KammaraCardSubsystemHorizontal } from '@/components/KammaraCardSubsystem';
 import { RegionDivider } from '@/components/RegionDivider';
 import { RegionBanner } from '@/components/RegionBanner';
-import { SoonPanel } from '@/components/SoonPanel';
+import { KammaraSagaPoster } from '@/components/KammaraSagaPoster';
 import { BookGallery } from '@/components/BookGallery';
 import { KammaraProgressHeatmap } from '@/components/KammaraProgressHeatmap';
 import kammaraProgressData from '@/data/kammara_progress.json';
@@ -486,8 +486,9 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
             />
           )}
         >
-          {/* Characters moved to a dedicated KammaraCharacterGallery below. */}
-          <SoonPanel label={tCommon('soon')} />
+          {/* Characters moved to a dedicated KammaraCharacterGallery below.
+              The side slot now holds the saga cover poster. */}
+          <KammaraSagaPoster background="/imgs/kammara/orfv/_scenes/9noite_em_orfv.jpg" />
         </DSMainCard>
         {(() => {
           const contextId = 'kammara/kammara';
