@@ -6,6 +6,10 @@ import { useModal } from '@/components/Modal';
 export interface SceneStripScene {
   name: string;
   image: string;
+  /** When set, this scene is a looping video instead of an image. It plays
+   *  in the card (muted, autoplay, loop) and is NOT opened in the modal —
+   *  `image` is used as its poster while it loads. */
+  video?: string;
 }
 
 export interface SceneStripProps {
@@ -90,7 +94,8 @@ export function SceneStrip({
     registerGallery(
       id,
       scenes.map((s) => s.image),
-      scenes.map((s) => s.name)
+      scenes.map((s) => s.name),
+      scenes.map((s) => s.video)
     );
   }, [id, scenes, registerGallery]);
 
@@ -210,20 +215,42 @@ export function SceneStrip({
                     boxShadow: 'sceneHover',
                   }}
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={s.image}
-                    alt={s.name}
-                    draggable={false}
-                    loading="lazy"
-                    decoding="async"
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      display: 'block',
-                    }}
-                  />
+                  {s.video ? (
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      poster={s.image}
+                      preload="metadata"
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        display: 'block',
+                      }}
+                    >
+                      {s.video.endsWith('.mp4') && (
+                        <source src={s.video.replace(/\.mp4$/, '.webm')} type="video/webm" />
+                      )}
+                      <source src={s.video} type="video/mp4" />
+                    </video>
+                  ) : (
+                    /* eslint-disable-next-line @next/next/no-img-element */
+                    <img
+                      src={s.image}
+                      alt={s.name}
+                      draggable={false}
+                      loading="lazy"
+                      decoding="async"
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        display: 'block',
+                      }}
+                    />
+                  )}
                 </Box>
                 {!hideLabel && (
                   <Heading

@@ -52,6 +52,9 @@ export interface WorldScene {
   image: string;
   /** Curated label per locale — replaces filename-derived names + word dictionary. */
   label: Bilingual<string>;
+  /** Optional looping video for this scene (region strips only). The image
+   *  acts as its poster. */
+  video?: string;
 }
 
 const STORIES: Record<string, WorldStory> = {
@@ -159,11 +162,12 @@ export function getWorldSubsystemImages(worldId: string): (string | null)[] {
 export function getWorldScenes(
   worldId: string,
   locale: Locale,
-): { name: string; image: string }[] {
+): { name: string; image: string; video?: string }[] {
   const scenes = SCENES[worldId];
   if (!scenes) return [];
   return scenes.map((s) => ({
     image: s.image,
     name: s.label[locale]?.trim() || s.label.pt || '',
+    ...(s.video ? { video: s.video } : {}),
   }));
 }

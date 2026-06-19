@@ -5,6 +5,9 @@ interface Gallery {
   images: string[];
   /** Optional per-image labels (already-localized strings). */
   labels?: string[];
+  /** Optional per-item video src, parallel to `images`. When set for an
+   *  index, that item is a looping video (the image acts as its poster). */
+  videos?: (string | undefined)[];
 }
 
 interface ModalState {
@@ -12,6 +15,8 @@ interface ModalState {
   images: string[];
   /** Per-image labels parallel to `images`. Used as caption when set. */
   labels?: string[];
+  /** Per-item video src parallel to `images`. */
+  videos?: (string | undefined)[];
   currentIndex: number;
   title: string;
   technique: string;
@@ -65,7 +70,12 @@ interface ModalContextType {
   close: () => void;
   next: () => void;
   prev: () => void;
-  registerGallery: (id: string, images: string[], labels?: string[]) => void;
+  registerGallery: (
+    id: string,
+    images: string[],
+    labels?: string[],
+    videos?: (string | undefined)[]
+  ) => void;
 }
 
 const ModalContext = createContext<ModalContextType | null>(null);
@@ -89,8 +99,13 @@ export function ModalProvider({ children }: { children: React.ReactNode }) {
   const galleriesRef = useRef<Record<string, Gallery>>({});
 
   const registerGallery = useCallback(
-    (id: string, images: string[], labels?: string[]) => {
-      galleriesRef.current[id] = { images, labels };
+    (
+      id: string,
+      images: string[],
+      labels?: string[],
+      videos?: (string | undefined)[]
+    ) => {
+      galleriesRef.current[id] = { images, labels, videos };
     },
     []
   );
@@ -111,6 +126,7 @@ export function ModalProvider({ children }: { children: React.ReactNode }) {
         isOpen: true,
         images: gallery.images,
         labels: gallery.labels,
+        videos: gallery.videos,
         currentIndex: startIndex,
         title,
         technique,
@@ -154,6 +170,7 @@ export function ModalProvider({ children }: { children: React.ReactNode }) {
         isOpen: true,
         images: gallery.images,
         labels: gallery.labels,
+        videos: gallery.videos,
         currentIndex: opts.startIndex,
         title: '',
         technique: '',

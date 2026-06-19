@@ -26,6 +26,7 @@ export function ModalKammara() {
     isOpen,
     images,
     labels,
+    videos,
     currentIndex,
     heroTitle,
     heroText,
@@ -54,6 +55,7 @@ export function ModalKammara() {
   if (!isOpen || variant !== 'kammara') return null;
 
   const currentImage = images[currentIndex];
+  const currentVideo = videos?.[currentIndex];
   const techniqueText =
     labels?.[currentIndex] || formatFilename(currentImage);
   const navColor = textColor ?? color;
@@ -248,12 +250,36 @@ export function ModalKammara() {
               width={{ base: '94vw', md: '100%' }}
               maxW={{ base: '94vw', md: '90vw' }}
             >
-              <ZoomableImage
-                key={currentImage}
-                src={currentImage}
-                alt={heroTitle || ''}
-                maxHeight="100%"
-              />
+              {currentVideo ? (
+                <video
+                  key={currentVideo}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  controls
+                  poster={currentImage}
+                  style={{
+                    maxWidth: '100%',
+                    maxHeight: '100%',
+                    objectFit: 'contain',
+                    borderRadius: '16px',
+                    display: 'block',
+                  }}
+                >
+                  {currentVideo.endsWith('.mp4') && (
+                    <source src={currentVideo.replace(/\.mp4$/, '.webm')} type="video/webm" />
+                  )}
+                  <source src={currentVideo} type="video/mp4" />
+                </video>
+              ) : (
+                <ZoomableImage
+                  key={currentImage}
+                  src={currentImage}
+                  alt={heroTitle || ''}
+                  maxHeight="100%"
+                />
+              )}
 
               {/* Side label (desktop only) — rotated, bottom-left of photo. */}
               {techniqueText && (

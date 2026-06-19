@@ -51,7 +51,7 @@ const TRIPLEC_REGION_IDS = ['malloc', 'mesh', 'sharp'] as const;
 interface RegionData {
   id: TriplecRegionId;
   chars: { name: string; image: string }[];
-  scenes: { name: string; image: string }[];
+  scenes: { name: string; image: string; video?: string }[];
   bgImage: string | null;
   subsystemImages: (string | null)[];
 }
@@ -59,7 +59,7 @@ interface RegionData {
 interface WorldData {
   id: WorldId;
   chars: { name: string; image: string }[];
-  scenes: { name: string; image: string }[];
+  scenes: { name: string; image: string; video?: string }[];
   bgImage: string | null;
   subsystemImages: (string | null)[];
   /** Sub-regions inside a world. Only triplec currently uses this. */
