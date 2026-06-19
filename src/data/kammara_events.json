@@ -46,8 +46,8 @@
       "cshiftAddress": "b7e0fc1d",
       "backgroundVideo": "/imgs/kammara/orfv/_videos/festa_orfv.mp4",
       "description": {
-        "pt": "O maior evento cultural de ORF-V e o Ano Novo do planeta. Começa de dia com o Phruit'Dëy — a colheita coletiva das phruits — e segue em quatro momentos. Quando Lüp e Nül se alinham, o planeta inteiro pausa em silêncio até uma criança elePHPant dizer Resume.",
-        "en": "ORF-V's greatest cultural event and the planet's New Year. It begins by day with Phruit'Dëy — the collective phruit harvest — and follows four moments. When Lüp and Nül align, the entire planet pauses in silence until an elePHPant child says Resume."
+        "pt": "O maior evento cultural de ORF-V e o Ano Novo do planeta — celebrado quando Lüp e Nül, as duas luas, se alinham no céu. O dia começa com o Phruit'Dëy, a colheita coletiva das phruits, e a noite termina no silêncio sagrado do alinhamento. Primeiro se colhe, depois se festeja, depois se faz silêncio.",
+        "en": "ORF-V's greatest cultural event and the planet's New Year — celebrated when Lüp and Nül, the two moons, align in the sky. The day begins with the Phruit'Dëy, the collective phruit harvest, and the night ends in the sacred silence of the alignment. First we harvest, then we feast, then we pause."
       },
       "href": "/kammara/orfv"
     },
@@ -184,60 +184,6 @@
         "en": ""
       },
       "backgroundImage": "/imgs/books/kammara/saga-orf-v/cover.jpg",
-      "href": "/kammara/triplec"
-    },
-    {
-      "id": "saga-lunnp1",
-      "category": "arquive",
-      "subcategory": {
-        "pt": "Livro",
-        "en": "Book"
-      },
-      "planet": "lunnp1",
-      "title": {
-        "pt": "Saga em LUNN'P1",
-        "en": ""
-      },
-      "date": {
-        "pt": "Em 15 ciclos",
-        "en": "In 15 cycles"
-      },
-      "location": {
-        "pt": "Amazon",
-        "en": "Amazon"
-      },
-      "description": {
-        "pt": "Primeiro livro disponivel na Amazon",
-        "en": ""
-      },
-      "backgroundImage": "/imgs/books/kammara/saga-orf-v/cover.png",
-      "href": "/kammara/triplec"
-    },
-    {
-      "id": "saga-enica",
-      "category": "arquive",
-      "subcategory": {
-        "pt": "Livro",
-        "en": "Book"
-      },
-      "planet": "eni4",
-      "title": {
-        "pt": "Saga em ENI-4Δ",
-        "en": ""
-      },
-      "date": {
-        "pt": "Em 15 ciclos",
-        "en": "In 15 cycles"
-      },
-      "location": {
-        "pt": "Amazon",
-        "en": "Amazon"
-      },
-      "description": {
-        "pt": "Primeiro livro disponivel na Amazon",
-        "en": ""
-      },
-      "backgroundImage": "/imgs/books/kammara/saga-orf-v/eniac.jpg",
       "href": "/kammara/triplec"
     }
   ]

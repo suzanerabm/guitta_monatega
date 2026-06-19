@@ -209,11 +209,18 @@ export function KammaraEventCard({
         />
 
         <Flex position="relative" direction="column" width="100%" height="100%">
-          {/* ── Title banner ────────────────────── */}
+          {/* ── Title banner ──────────────────────
+              Fixed minimum height so cards in a row align: a 1-line title and
+              a 3-line title reserve the same header space, keeping the CICLO /
+              LOCAL / CSHIFT rows below them level across cards. */}
           <Box
             position="relative"
             flexShrink={0}
             overflow="hidden"
+            display="flex"
+            flexDirection="column"
+            justifyContent="flex-end"
+            minHeight={{ base: '184px', md: '176px', xl: '196px' }}
             css={{
               background: hdrBg,
               borderBottom: `1px solid ${color}`,
