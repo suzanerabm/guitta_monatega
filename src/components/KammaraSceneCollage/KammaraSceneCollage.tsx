@@ -6,6 +6,10 @@ import { useModal } from '@/components/Modal';
 export interface KammaraSceneCollageScene {
   name: string;
   image: string;
+  /** Optional looping video. Video scenes are NOT shown as tiles in the
+   *  collage (the mosaic stays image-only), but they DO take part in the
+   *  modal gallery — so you reach them by paging through the modal. */
+  video?: string;
 }
 
 export interface KammaraSceneCollageProps {
@@ -334,6 +338,7 @@ export function KammaraSceneCollage({
       id,
       scenes.map((s) => s.image),
       scenes.map((s) => s.name),
+      scenes.map((s) => s.video),
     );
   }, [id, scenes, registerGallery]);
 
@@ -435,16 +440,19 @@ export function KammaraSceneCollage({
             },
           }}
         >
-          {scenes.map((scene, i) => (
-            <DesktopTile
-              key={`${scene.image}-${i}`}
-              scene={scene}
-              tile={tileForIndex(i)}
-              color={color}
-              index={i}
-              onClick={() => handleClick(i)}
-            />
-          ))}
+          {scenes
+            .map((scene, i) => ({ scene, i }))
+            .filter(({ scene }) => !scene.video)
+            .map(({ scene, i }, tileIdx) => (
+              <DesktopTile
+                key={`${scene.image}-${i}`}
+                scene={scene}
+                tile={tileForIndex(tileIdx)}
+                color={color}
+                index={tileIdx}
+                onClick={() => handleClick(i)}
+              />
+            ))}
         </Box>
       </Box>
 
@@ -474,22 +482,25 @@ export function KammaraSceneCollage({
             width: 'max-content',
           }}
         >
-          {scenes.map((scene, i) => (
-            <Box
-              key={`${scene.image}-mobile-${i}`}
-              css={{
-                flex: '0 0 82vw',
-                maxWidth: '82vw',
-                scrollSnapAlign: 'center',
-              }}
-            >
-              <MobileTile
-                scene={scene}
-                color={color}
-                onClick={() => handleClick(i)}
-              />
-            </Box>
-          ))}
+          {scenes
+            .map((scene, i) => ({ scene, i }))
+            .filter(({ scene }) => !scene.video)
+            .map(({ scene, i }) => (
+              <Box
+                key={`${scene.image}-mobile-${i}`}
+                css={{
+                  flex: '0 0 82vw',
+                  maxWidth: '82vw',
+                  scrollSnapAlign: 'center',
+                }}
+              >
+                <MobileTile
+                  scene={scene}
+                  color={color}
+                  onClick={() => handleClick(i)}
+                />
+              </Box>
+            ))}
         </Box>
       </Box>
     </Box>

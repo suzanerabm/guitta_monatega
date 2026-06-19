@@ -1,5 +1,13 @@
 [
   {
+    "image": "/imgs/kammara/orfv/_videos/festa_orfv_poster.jpg",
+    "label": {
+      "pt": "Lüp'Nül Fest",
+      "en": "Lüp'Nül Fest"
+    },
+    "video": "/imgs/kammara/orfv/_videos/festa_orfv.mp4"
+  },
+  {
     "image": "/imgs/kammara/orfv/_scenes/1vista_Fjorks_Centrais.jpg",
     "label": {
       "pt": "vista Fjorks Centrais",
