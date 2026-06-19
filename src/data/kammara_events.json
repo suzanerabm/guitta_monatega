@@ -2,22 +2,62 @@
   "categories": [
     {
       "id": "cultural",
-      "label": { "pt": "Eventos Interplanetários", "en": "Cultural & Festivities" }
+      "label": {
+        "pt": "Eventos Interplanetários",
+        "en": "Cultural & Festivities"
+      }
     },
     {
       "id": "scientific",
-      "label": { "pt": "Eventos Científicos", "en": "Scientific Events" }
+      "label": {
+        "pt": "Eventos Científicos",
+        "en": "Scientific Events"
+      }
     },
     {
       "id": "arquive",
-      "label": { "pt": "Arquivo e Biblioteca Interplanetários", "en": "Archive" }
+      "label": {
+        "pt": "Arquivo e Biblioteca Interplanetários",
+        "en": "Archive"
+      }
     }
   ],
   "events": [
     {
+      "id": "lupnul-fest",
+      "category": "cultural",
+      "subcategory": {
+        "pt": "Festival",
+        "en": "Festival"
+      },
+      "planet": "orfv",
+      "title": {
+        "pt": "Lüp'Nül Fest — Festival das Duas Luas",
+        "en": "Lüp'Nül Fest — Festival of the Two Moons"
+      },
+      "date": {
+        "pt": "Em 2 ciclos",
+        "en": "In 2 cycles"
+      },
+      "location": {
+        "pt": "Fjorks do Sul",
+        "en": "All Fjorks"
+      },
+      "cshiftAddress": "b7e0fc1d",
+      "backgroundVideo": "/imgs/kammara/orfv/_videos/festa_orfv.mp4",
+      "description": {
+        "pt": "O maior evento cultural de ORF-V e o Ano Novo do planeta. Começa de dia com o Phruit'Dëy — a colheita coletiva das phruits — e segue em quatro momentos. Quando Lüp e Nül se alinham, o planeta inteiro pausa em silêncio até uma criança elePHPant dizer Resume.",
+        "en": "ORF-V's greatest cultural event and the planet's New Year. It begins by day with Phruit'Dëy — the collective phruit harvest — and follows four moments. When Lüp and Nül align, the entire planet pauses in silence until an elePHPant child says Resume."
+      },
+      "href": "/kammara/orfv"
+    },
+    {
       "id": "festival-quatro-luas",
       "category": "cultural",
-      "subcategory": { "pt": "Festival", "en": "Festival" },
+      "subcategory": {
+        "pt": "Festival",
+        "en": "Festival"
+      },
       "planet": "lunnp1",
       "title": {
         "pt": "Festival das Quatro Luas",
@@ -39,42 +79,20 @@
       "href": "/kammara/lunnp1"
     },
     {
-      "id": "lupnul-fest",
-      "category": "cultural",
-      "subcategory": { "pt": "Festival", "en": "Festival" },
-      "planet": "orfv",
-      "title": {
-        "pt": "Lüp'Nül Fest — Festival das Duas Luas",
-        "en": "Lüp'Nül Fest — Festival of the Two Moons"
-      },
-      "date": {
-        "pt": "Em 24 ciclos",
-        "en": "In 24 cycles"
-      },
-      "location": {
-        "pt": "Fjorks do Sul",
-        "en": "All Fjorks"
-      },
-      "cshiftAddress": "b7e0fc1d",
-      "backgroundVideo": "/imgs/kammara/orfv/_videos/festa_orfv.mp4",
-      "description": {
-        "pt": "O maior evento cultural de ORF-V e o Ano Novo do planeta. Começa de dia com o Phruit'Dëy — a colheita coletiva das phruits — e segue em quatro momentos. Quando Lüp e Nül se alinham, o planeta inteiro pausa em silêncio até uma criança elePHPant dizer Resume.",
-        "en": "ORF-V's greatest cultural event and the planet's New Year. It begins by day with Phruit'Dëy — the collective phruit harvest — and follows four moments. When Lüp and Nül align, the entire planet pauses in silence until an elePHPant child says Resume."
-      },
-      "href": "/kammara/orfv"
-    },
-    {
       "id": "grande-corrida-tres-regioes",
       "category": "cultural",
-      "subcategory": { "pt": "Festa", "en": "Celebration" },
+      "subcategory": {
+        "pt": "Festa",
+        "en": "Celebration"
+      },
       "planet": "triplec",
       "title": {
         "pt": "A Grande Corrida das Três Regiões",
         "en": "The Great Race of the Three Regions"
       },
       "date": {
-        "pt": "Em 6 ciclos",
-        "en": "In 6 cycles"
+        "pt": "Em 16 ciclos",
+        "en": "In 16 cycles"
       },
       "location": {
         "pt": "Sharp",
@@ -90,15 +108,18 @@
     {
       "id": "festival-orulen",
       "category": "cultural",
-      "subcategory": { "pt": "Festival", "en": "Festival" },
+      "subcategory": {
+        "pt": "Festival",
+        "en": "Festival"
+      },
       "planet": "lunnp1",
       "title": {
         "pt": "Festival Oru'Len",
         "en": "Oru'Len Festival"
       },
       "date": {
-        "pt": "Em 3 ciclos",
-        "en": "In 3 cycles"
+        "pt": "Em 23 ciclos",
+        "en": "In 23 cycles"
       },
       "location": {
         "pt": "Naru'ei do Sul, LUNN'P1",
@@ -114,15 +135,18 @@
     {
       "id": "simposio-silk",
       "category": "cultural",
-      "subcategory": { "pt": "Científicos", "en": "Scientific" },
+      "subcategory": {
+        "pt": "Científicos",
+        "en": "Scientific"
+      },
       "planet": "triplec",
       "title": {
         "pt": "SILK — Simpósio Interplanetário Lumínico do Kammara",
         "en": "SILK — Interplanetary Luminic Symposium of Kammara"
       },
       "date": {
-        "pt": "Em 15 ciclos",
-        "en": "In 15 cycles"
+        "pt": "Em 35 ciclos",
+        "en": "In 35 cycles"
       },
       "location": {
         "pt": "Câmara de Permissão, Sharp, TripleC",
@@ -138,31 +162,37 @@
     {
       "id": "saga-orfv",
       "category": "arquive",
-      "subcategory": { "pt": "Livro", "en": "Book" },
+      "subcategory": {
+        "pt": "Livro",
+        "en": "Book"
+      },
       "planet": "orfv",
       "title": {
         "pt": "Saga em ORF-V",
         "en": "ORF-V Sagas"
       },
       "date": {
-        "pt": "Em 15 ciclos",
-        "en": "In 15 cycles"
+        "pt": "Em 55 ciclos",
+        "en": "In 55 cycles"
       },
       "location": {
         "pt": "Amazon",
         "en": "Amazon"
       },
-      "cshiftAddress": "ads56d68",
       "description": {
         "pt": "Primeiro livro disponivel na Amazon",
         "en": ""
       },
       "backgroundImage": "/imgs/books/kammara/saga-orf-v/cover.jpg",
       "href": "/kammara/triplec"
-    },{
+    },
+    {
       "id": "saga-lunnp1",
       "category": "arquive",
-      "subcategory": { "pt": "Livro", "en": "Book" },
+      "subcategory": {
+        "pt": "Livro",
+        "en": "Book"
+      },
       "planet": "lunnp1",
       "title": {
         "pt": "Saga em LUNN'P1",
@@ -176,7 +206,6 @@
         "pt": "Amazon",
         "en": "Amazon"
       },
-      "cshiftAddress": "ads56d68",
       "description": {
         "pt": "Primeiro livro disponivel na Amazon",
         "en": ""
@@ -187,7 +216,10 @@
     {
       "id": "saga-enica",
       "category": "arquive",
-      "subcategory": { "pt": "Livro", "en": "Book" },
+      "subcategory": {
+        "pt": "Livro",
+        "en": "Book"
+      },
       "planet": "eni4",
       "title": {
         "pt": "Saga em ENI-4Δ",
@@ -201,7 +233,6 @@
         "pt": "Amazon",
         "en": "Amazon"
       },
-      "cshiftAddress": "ads56d68",
       "description": {
         "pt": "Primeiro livro disponivel na Amazon",
         "en": ""

@@ -13,10 +13,10 @@ export const CARD_PADDING_X = '1.8rem';
 // Taller cards so the video strip (which sits below the title) fits without
 // squeezing the description.
 const CARD_HEIGHT: Record<string, string> = {
-  base: '520px',
-  md: '500px',
-  xl: '620px',
-  '3xl': '700px',
+  base: '580px',
+  md: '560px',
+  xl: '680px',
+  '3xl': '760px',
 };
 
 export interface KammaraEventCardTab {
@@ -383,6 +383,12 @@ export function KammaraEventCard({
                 preload="metadata"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
               >
+                {/* Offer a webm sibling first (smaller); fall back to the mp4.
+                    Derived by swapping the extension, so callers just pass the
+                    .mp4 path. Browsers that lack the webm skip to the mp4. */}
+                {bgVideo.endsWith('.mp4') && (
+                  <source src={bgVideo.replace(/\.mp4$/, '.webm')} type="video/webm" />
+                )}
                 <source src={bgVideo} type="video/mp4" />
               </video>
               {/* Soft fade at the strip's base into the card body below. */}
