@@ -53,6 +53,9 @@ export interface KammaraEvent {
    * absolute URLs (starting with http) open in a new tab.
    */
   href?: string;
+  /** Custom label for the link button (default: "Ver na Amazon" / "View on
+   *  Amazon"). Only shown when `href` is an external URL. */
+  linkLabel?: { pt: string; en: string };
 }
 
 export interface KammaraEventsProps {
@@ -273,8 +276,23 @@ function EventCard({ event, locale, color, darkColor }: EventCardProps) {
   // The strip no longer sizes cards (the old grid did), so each event card
   // carries its own responsive width: nearly full-viewport on mobile (with a
   // peek of the next card), fixed widths from md up to mirror the old grid.
+  // When the event has an href, the whole card becomes a link. External URLs
+  // (http…) open in a new tab; internal paths navigate in place.
+  const isExternal = !!event.href && /^https?:\/\//.test(event.href);
+  const linkProps = event.href
+    ? {
+        as: 'a' as const,
+        href: event.href,
+        ...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {}),
+        cursor: 'pointer',
+        textDecoration: 'none',
+        display: 'block',
+      }
+    : {};
+
   return (
     <Box
+      {...linkProps}
       width={{ base: '85vw', md: '320px', xl: '360px' }}
       maxW={{ base: '480px', md: 'none' }}
     >
@@ -311,6 +329,25 @@ function EventCard({ event, locale, color, darkColor }: EventCardProps) {
                 </p>
               )}
               <p className="kec-description">{event.description[locale]}</p>
+              {isExternal && (
+                <span
+                  style={{
+                    display: 'inline-block',
+                    marginTop: '0.8rem',
+                    padding: '0.4rem 0.9rem',
+                    border: `1px solid ${accent}`,
+                    borderRadius: '999px',
+                    color: accent,
+                    fontSize: '0.72rem',
+                    letterSpacing: '0.12em',
+                    textTransform: 'uppercase',
+                    fontWeight: 600,
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  {event.linkLabel?.[locale] ?? (locale === 'en' ? 'View on Amazon' : 'Ver na Amazon')} ↗
+                </span>
+              )}
             </>
           ),
         },

@@ -75,5 +75,12 @@
       "pt": "regiao sul deserta",
       "en": "regiao sul deserta"
     }
+  },
+  {
+    "image": "/imgs/kammara/orfv/_scenes/12festival.jpg",
+    "label": {
+      "pt": "festival",
+      "en": "festival"
+    }
   }
 ]

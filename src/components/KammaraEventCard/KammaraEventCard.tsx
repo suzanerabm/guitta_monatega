@@ -153,17 +153,28 @@ export function KammaraEventCard({
                 display: 'block',
               }}
             />
+            {/* Legibility scrim over the background image — just enough to
+                keep the body text readable without hiding the scenery. Lighter
+                overall: a gentle darkening behind the text that fades out so
+                the bottom of the image stays clearly visible. */}
+            <Box
+              position="absolute"
+              inset={0}
+              css={{
+                background: `linear-gradient(180deg, ${darkColor}80 0%, ${darkColor}99 40%, ${darkColor}4d 72%, transparent 100%)`,
+              }}
+            />
           </Box>
         )}
 
-        {/* Background watermark — two layers: parent planet's crest (big, very faint)
-            as a distant echo, and the region's own crest on top (smaller, slightly more visible).
-            Reinforces the "fragment of a bigger world" feeling. */}
+        {/* Background watermark — the parent planet's crest (big, very faint),
+            sitting low in the card near the footer. */}
         <Box position="absolute" inset={0} pointerEvents="none" overflow="hidden">
-          {/* Parent planet's crest — gigantic, barely visible (3% alpha) */}
+          {/* Parent planet's crest — gigantic, barely visible (3% alpha).
+              Sits low in the card, near the footer. */}
           <Box
             position="absolute"
-            top="50%"
+            top="82%"
             left="50%"
             transform="translate(-50%, -50%)"
             css={{
@@ -177,24 +188,6 @@ export function KammaraEventCard({
             }}
           >
             {parentCrestGlyph}
-          </Box>
-          {/* Region's crest — smaller, slightly brighter, sits in front of the parent echo */}
-          <Box
-            position="absolute"
-            top="50%"
-            left="50%"
-            transform="translate(-50%, -50%)"
-            css={{
-              fontFamily: 'var(--chakra-fonts-glyph)',
-              fontSize: '14rem',
-              lineHeight: 1,
-              color: `${color}0a`,
-              userSelect: 'none',
-              whiteSpace: 'nowrap',
-              letterSpacing: '0.04em',
-            }}
-          >
-            {crestGlyph}
           </Box>
         </Box>
 
@@ -226,12 +219,14 @@ export function KammaraEventCard({
               borderBottom: `1px solid ${color}`,
             }}
           >
-            {/* Banner watermark — crest glyph (world identity) on both sides */}
+            {/* Banner watermark — crest glyph (world identity) on both sides.
+                Anchored toward the top of the banner (not centered) so the
+                glyphs sit higher, behind the breadcrumb/kicker. */}
             <Flex
               position="absolute"
               inset={0}
               justify="space-between"
-              align="center"
+              align="flex-start"
               padding="0 1.5rem"
               pointerEvents="none"
               aria-hidden="true"
@@ -241,6 +236,7 @@ export function KammaraEventCard({
                 fontSize: '5rem',
                 lineHeight: 1,
                 overflow: 'hidden',
+                transform: 'translateY(-12%)',
               }}
             >
               <span>{crestGlyph}</span>
