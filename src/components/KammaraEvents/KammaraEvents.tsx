@@ -40,6 +40,12 @@ export interface KammaraEvent {
    * sits behind the translucent panel so the image reads through it.
    */
   backgroundImage?: string;
+  /**
+   * Optional looping background video for THIS card. Takes precedence over
+   * `backgroundImage`, which then serves as its poster. Path relative to
+   * `/public` (e.g. `/imgs/kammara/orfv/_videos/festa_orfv.mp4`).
+   */
+  backgroundVideo?: string;
   description: { pt: string; en: string };
   /**
    * Optional destination. When present, the card becomes a clickable
@@ -282,6 +288,7 @@ function EventCard({ event, locale, color, darkColor }: EventCardProps) {
       darkColor={accentDark}
       headerBg={accentDark}
       bgImage={event.backgroundImage}
+      bgVideo={event.backgroundVideo}
       tabs={[
         {
           id: event.id,

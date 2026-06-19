@@ -10,11 +10,13 @@ export const CARD_PADDING_X = '1.8rem';
 // Fixed height at every breakpoint so cards in a row stay uniform — no
 // card grows taller than its neighbours when its description runs long.
 // The body content scrolls/clamps inside instead of stretching the card.
+// Taller cards so the video strip (which sits below the title) fits without
+// squeezing the description.
 const CARD_HEIGHT: Record<string, string> = {
-  base: '440px',
-  md: '400px',
-  xl: '520px',
-  '3xl': '600px',
+  base: '520px',
+  md: '500px',
+  xl: '620px',
+  '3xl': '700px',
 };
 
 export interface KammaraEventCardTab {
@@ -56,6 +58,10 @@ export interface KammaraEventCardProps {
   /** Optional background image, sits at the very bottom of the card
    *  behind every other layer (gradient, watermarks, halo, content). */
   bgImage?: string;
+  /** Optional looping background video — same slot as `bgImage`, taking
+   *  precedence over it. Muted + autoplay + loop; `bgImage` acts as the
+   *  poster while it loads. */
+  bgVideo?: string;
   theme?: 'light' | 'dark';
   'data-testid'?: string;
 }
@@ -81,6 +87,7 @@ export function KammaraEventCard({
   midColor,
   headerBg,
   bgImage,
+  bgVideo,
   theme = 'dark',
   'data-testid': testId,
 }: KammaraEventCardProps) {
@@ -125,10 +132,11 @@ export function KammaraEventCard({
           boxShadow: `0 20px 60px ${color}50, 0 4px 16px ${color}30, inset 0 1px 0 rgba(255,255,255,0.15)`,
         }}
       >
-        {/* Optional background image — bottommost layer of the card body.
+        {/* Optional background media — bottommost layer of the card body.
             All subsequent layers (gradient, watermarks, halo, header
             banner) sit on top, so the image only shows through their
-            transparent parts. */}
+            transparent parts. (A `bgVideo`, when present, gets its own crisp
+            strip at the top of the card instead — see below.) */}
         {bgImage && (
           <Box position="absolute" inset={0} pointerEvents="none" zIndex={0}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -354,6 +362,41 @@ export function KammaraEventCard({
               )}
             </Flex>
           </Box>
+
+          {/* ── Video strip ──────────────────────
+              A crisp looping video right below the title (no text or scrim
+              over it) so the clip reads clearly. Only rendered when the event
+              provides `bgVideo`; `bgImage` serves as its poster. */}
+          {bgVideo && (
+            <Box
+              position="relative"
+              flexShrink={0}
+              overflow="hidden"
+              height={{ base: '150px', md: '160px', xl: '190px' }}
+            >
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                poster={bgImage}
+                preload="metadata"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              >
+                <source src={bgVideo} type="video/mp4" />
+              </video>
+              {/* Soft fade at the strip's base into the card body below. */}
+              <Box
+                position="absolute"
+                bottom={0}
+                left={0}
+                right={0}
+                height="35%"
+                pointerEvents="none"
+                css={{ background: `linear-gradient(0deg, ${body}, transparent)` }}
+              />
+            </Box>
+          )}
 
           {/* Divider */}
           <Box height="1px" flexShrink={0} css={{ background: `${color}60` }} />
