@@ -64,6 +64,11 @@ export interface WorldScene {
 }
 
 export interface WorldDrop {
+  /**
+   * Set to false to hide this drop without deleting it (JSON has no comments).
+   * Omitted/true → shown. Lets you park a clip in the JSON and toggle it.
+   */
+  enabled?: boolean;
   /** Video path (.mp4). The .webm sibling is offered automatically. */
   video: string;
   /** Poster image shown while the video loads. */
@@ -205,9 +210,12 @@ export function getWorldDrops(
 ): { video: string; poster: string; label: string }[] {
   const drops = DROPS[worldId];
   if (!drops) return [];
-  return drops.map((d) => ({
-    video: d.video,
-    poster: d.poster,
-    label: d.label[locale]?.trim() || d.label.pt || '',
-  }));
+  return drops
+    // `enabled: false` parks a clip in the JSON without showing it.
+    .filter((d) => d.enabled !== false)
+    .map((d) => ({
+      video: d.video,
+      poster: d.poster,
+      label: d.label[locale]?.trim() || d.label.pt || '',
+    }));
 }

@@ -1,5 +1,13 @@
 [
   {
+    "video": "/imgs/kammara/triplec/sharp/_videos/volpita_feliz.mp4",
+    "poster": "/imgs/kammara/triplec/sharp/_videos/volpita_feliz_poster.jpg",
+    "label": {
+      "pt": "Volpita feliz",
+      "en": "Happy Volpita"
+    }
+  },
+  {
     "video": "/imgs/kammara/triplec/sharp/_videos/pets_playing.mp4",
     "poster": "/imgs/kammara/triplec/sharp/_videos/pets_playing_poster.jpg",
     "label": {
@@ -8,19 +16,12 @@
     }
   },
   {
+    "enabled": false,
     "video": "/imgs/kammara/triplec/sharp/_videos/bunniet_com_volpita.mp4",
     "poster": "/imgs/kammara/triplec/sharp/_videos/bunniet_com_volpita_poster.jpg",
     "label": {
       "pt": "Bunniet com Volpita",
       "en": "Bunniet with Volpita"
-    }
-  },
-  {
-    "video": "/imgs/kammara/triplec/sharp/_videos/volpita_feliz.mp4",
-    "poster": "/imgs/kammara/triplec/sharp/_videos/volpita_feliz_poster.jpg",
-    "label": {
-      "pt": "Volpita feliz",
-      "en": "Happy Volpita"
     }
   }
 ]
