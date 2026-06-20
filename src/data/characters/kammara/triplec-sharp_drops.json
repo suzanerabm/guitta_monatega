@@ -14,5 +14,13 @@
       "pt": "Bunniet com Volpita",
       "en": "Bunniet with Volpita"
     }
+  },
+  {
+    "video": "/imgs/kammara/triplec/sharp/_videos/volpita_feliz.mp4",
+    "poster": "/imgs/kammara/triplec/sharp/_videos/volpita_feliz_poster.jpg",
+    "label": {
+      "pt": "Volpita feliz",
+      "en": "Happy Volpita"
+    }
   }
 ]
