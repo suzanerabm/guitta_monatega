@@ -23,19 +23,19 @@
     }
   },
   {
-    "video": "/imgs/kammara/triplec/mesh/_videos/mesh_praca.mp4",
-    "poster": "/imgs/kammara/triplec/mesh/_videos/mesh_praca_poster.jpg",
-    "label": {
-      "pt": "Praça de Mesh",
-      "en": "Mesh square"
-    }
-  },
-  {
     "video": "/imgs/kammara/triplec/mesh/_videos/manoo_dormindo.mp4",
     "poster": "/imgs/kammara/triplec/mesh/_videos/manoo_dormindo_poster.jpg",
     "label": {
       "pt": "Manoo dormindo",
       "en": "Manoo sleeping"
+    }
+  },
+  {
+    "video": "/imgs/kammara/triplec/mesh/_videos/mesh_praca.mp4",
+    "poster": "/imgs/kammara/triplec/mesh/_videos/mesh_praca_poster.jpg",
+    "label": {
+      "pt": "Praça de Mesh",
+      "en": "Mesh square"
     }
   }
 ]

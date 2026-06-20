@@ -11,8 +11,8 @@
     "video": "/imgs/kammara/triplec/sharp/_videos/pets_playing.mp4",
     "poster": "/imgs/kammara/triplec/sharp/_videos/pets_playing_poster.jpg",
     "label": {
-      "pt": "Pets brincando",
-      "en": "Pets playing"
+      "pt": "DooPe e Tilu brincando",
+      "en": "DooPe and Tilu playing"
     }
   },
     {
@@ -34,6 +34,14 @@
     }
   },
   {
+    "video": "/imgs/kammara/triplec/sharp/_videos/kurr_expandindo.mp4",
+    "poster": "/imgs/kammara/triplec/sharp/_videos/kurr_expandindo_poster.jpg",
+    "label": {
+      "pt": "Kurr expandindo",
+      "en": "Kurr expanding"
+    }
+  },
+  {
     "video": "/imgs/kammara/triplec/sharp/_videos/bunniet_sala.mp4",
     "poster": "/imgs/kammara/triplec/sharp/_videos/bunniet_sala_poster.jpg",
     "label": {
@@ -41,7 +49,6 @@
       "en": "Bunniet in the room"
     }
   },
-
   {
     "enabled": false,
     "video": "/imgs/kammara/triplec/sharp/_videos/bunniet_com_volpita.mp4",
@@ -49,14 +56,6 @@
     "label": {
       "pt": "Bunniet com Volpita",
       "en": "Bunniet with Volpita"
-    }
-  },
-  {
-    "video": "/imgs/kammara/triplec/sharp/_videos/kurr_expandindo.mp4",
-    "poster": "/imgs/kammara/triplec/sharp/_videos/kurr_expandindo_poster.jpg",
-    "label": {
-      "pt": "Kurr expandindo",
-      "en": "Kurr expanding"
     }
   }
 ]
