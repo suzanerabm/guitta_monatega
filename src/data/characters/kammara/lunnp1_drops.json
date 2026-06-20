@@ -8,6 +8,14 @@
     }
   },
   {
+    "video": "/imgs/kammara/lunnp1/_videos/veluma.mp4",
+    "poster": "/imgs/kammara/lunnp1/_videos/veluma_poster.jpg",
+    "label": {
+      "pt": "Veluma",
+      "en": "Veluma"
+    }
+  },
+  {
     "video": "/imgs/kammara/lunnp1/_videos/erurin_acenando.mp4",
     "poster": "/imgs/kammara/lunnp1/_videos/erurin_acenando_poster.jpg",
     "label": {

@@ -6,5 +6,13 @@
       "pt": "Praça de Mesh",
       "en": "Mesh square"
     }
+  },
+  {
+    "video": "/imgs/kammara/triplec/mesh/_videos/vista_aerea.mp4",
+    "poster": "/imgs/kammara/triplec/mesh/_videos/vista_aerea_poster.jpg",
+    "label": {
+      "pt": "Vista aérea",
+      "en": "Aerial view"
+    }
   }
 ]

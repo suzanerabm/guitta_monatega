@@ -6,5 +6,13 @@
       "pt": "Correndo pra Mesh",
       "en": "Running to Mesh"
     }
+  },
+  {
+    "video": "/imgs/kammara/triplec/malloc/_videos/malloc_cidade.mp4",
+    "poster": "/imgs/kammara/triplec/malloc/_videos/malloc_cidade_poster.jpg",
+    "label": {
+      "pt": "Cidade de malloc",
+      "en": "malloc city"
+    }
   }
 ]
