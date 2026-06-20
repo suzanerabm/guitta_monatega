@@ -50,5 +50,13 @@
       "pt": "Bunniet com Volpita",
       "en": "Bunniet with Volpita"
     }
+  },
+  {
+    "video": "/imgs/kammara/triplec/sharp/_videos/kurr_expandindo.mp4",
+    "poster": "/imgs/kammara/triplec/sharp/_videos/kurr_expandindo_poster.jpg",
+    "label": {
+      "pt": "Kurr expandindo",
+      "en": "Kurr expanding"
+    }
   }
 ]
