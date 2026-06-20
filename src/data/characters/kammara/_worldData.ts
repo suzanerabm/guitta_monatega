@@ -16,6 +16,7 @@ import orfvDrops from './orfv_drops.json';
 import triplecStory from './triplec_story.json';
 import triplecSubs from './triplec_subsystems.json';
 import triplecScenes from './triplec_scenes.json';
+import triplecDrops from './triplec_drops.json';
 import triplecMallocStory from './triplec-malloc_story.json';
 import triplecMallocSubs from './triplec-malloc_subsystems.json';
 import triplecMallocScenes from './triplec-malloc_scenes.json';
@@ -26,6 +27,7 @@ import triplecMeshScenes from './triplec-mesh_scenes.json';
 import triplecSharpStory from './triplec-sharp_story.json';
 import triplecSharpSubs from './triplec-sharp_subsystems.json';
 import triplecSharpScenes from './triplec-sharp_scenes.json';
+import triplecSharpDrops from './triplec-sharp_drops.json';
 import z1Story from './z1_story.json';
 import z1Subs from './z1_subsystems.json';
 import z1Scenes from './z1_scenes.json';
@@ -189,7 +191,9 @@ export function getWorldScenes(
 const DROPS: Record<string, WorldDrop[]> = {
   lunnp1: lunnp1Drops as WorldDrop[],
   orfv: orfvDrops as WorldDrop[],
+  triplec: triplecDrops as WorldDrop[],
   'triplec-malloc': triplecMallocDrops as WorldDrop[],
+  'triplec-sharp': triplecSharpDrops as WorldDrop[],
 };
 
 /** Localized drops (small clips) for a world. Empty when the world has none. */
