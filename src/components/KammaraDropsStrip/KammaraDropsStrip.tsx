@@ -146,24 +146,71 @@ export function KammaraDropsStrip({
   if (drops.length === 0) return null;
 
   return (
-    <Box
-      data-testid={testId ?? 'kammara-drops-strip'}
-      position="relative"
-      width="100%"
-      borderRadius="24px"
-      paddingX={{ base: 'md', md: 'lg' }}
-      paddingY={{ base: 'lg', md: 'xl' }}
-      css={{
-        // Frame HUD like the character gallery — same translucent gradient
-        // (more transparent than the cards) + accent border + outline.
-        background: `linear-gradient(160deg, ${darkColor}33 0%, ${darkColor}26 50%, ${darkColor}33 100%)`,
-        border: `1px solid ${color}40`,
-        outline: `1px solid ${color}80`,
-        outlineOffset: '4px',
-        boxShadow: `0 20px 60px ${color}30, 0 4px 16px ${color}20, inset 0 1px 0 rgba(255,255,255,0.08)`,
-      }}
-    >
+    <>
       <style>{KEYFRAMES}</style>
+
+      {/* ── Mobile (base → md): plain swipe strip, no frame/title ──
+          Same call as KammaraCharacterGallery: on a phone the HUD frame just
+          steals width (and the cards end up overflowing it), so we drop the
+          frame entirely and let the user flick through a snap scroller. */}
+      <Box
+        display={{ base: 'block', md: 'none' }}
+        data-testid={testId ? `${testId}-mobile` : 'kammara-drops-strip-mobile'}
+        width="100%"
+        css={{
+          overflowX: 'auto',
+          overflowY: 'hidden',
+          scrollSnapType: 'x mandatory',
+          WebkitOverflowScrolling: 'touch',
+          scrollbarWidth: 'none',
+          msOverflowStyle: 'none',
+          '&::-webkit-scrollbar': { display: 'none' },
+          // Left gutter for the first card; small right padding so the next
+          // card peeks, signalling there's more to swipe.
+          padding: '8px 0 8px 16px',
+          scrollPaddingLeft: '16px',
+        }}
+      >
+        <Box display="flex" css={{ gap: '16px', width: 'max-content', paddingRight: '16px' }}>
+          {drops.map((drop, i) => (
+            <Box
+              key={`${drop.video}-${i}`}
+              css={{ flex: '0 0 84vw', maxWidth: '84vw', scrollSnapAlign: 'start' }}
+            >
+              <DropCard
+                drop={drop}
+                index={i}
+                worldName={worldName}
+                crestGlyph={crestGlyph}
+                color={color}
+                mid={mid}
+                darkColor={darkColor}
+                onClick={() => handleClick(i)}
+              />
+            </Box>
+          ))}
+        </Box>
+      </Box>
+
+      {/* ── Desktop (md+): the full HUD frame with title + arrows ── */}
+      <Box
+        display={{ base: 'none', md: 'block' }}
+        data-testid={testId ?? 'kammara-drops-strip'}
+        position="relative"
+        width="100%"
+        borderRadius="24px"
+        paddingX={{ base: 'md', md: 'lg' }}
+        paddingY={{ base: 'lg', md: 'xl' }}
+        css={{
+          // Frame HUD like the character gallery — same translucent gradient
+          // (more transparent than the cards) + accent border + outline.
+          background: `linear-gradient(160deg, ${darkColor}33 0%, ${darkColor}26 50%, ${darkColor}33 100%)`,
+          border: `1px solid ${color}40`,
+          outline: `1px solid ${color}80`,
+          outlineOffset: '4px',
+          boxShadow: `0 20px 60px ${color}30, 0 4px 16px ${color}20, inset 0 1px 0 rgba(255,255,255,0.08)`,
+        }}
+      >
 
       {/* Angular HUD corner decorations (TL, TR, BL, BR) */}
       {[
@@ -256,7 +303,8 @@ export function KammaraDropsStrip({
           </chakra.button>
         </Flex>
       </Flex>
-    </Box>
+      </Box>
+    </>
   );
 }
 
