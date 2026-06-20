@@ -3,6 +3,7 @@ import type { Locale } from '@/lib/characters';
 import eni4Story from './eni4_story.json';
 import eni4Subs from './eni4_subsystems.json';
 import eni4Scenes from './eni4_scenes.json';
+import eni4Drops from './eni4_drops.json';
 import gottoStory from './gotto_story.json';
 import gottoSubs from './gotto_subsystems.json';
 import lunnp1Story from './lunnp1_story.json';
@@ -196,6 +197,7 @@ export function getWorldScenes(
 //    pattern as SCENES. Each world's Drops section reads this. ──
 const DROPS: Record<string, WorldDrop[]> = {
   lunnp1: lunnp1Drops as WorldDrop[],
+  eni4: eni4Drops as WorldDrop[],
   orfv: orfvDrops as WorldDrop[],
   triplec: triplecDrops as WorldDrop[],
   'triplec-malloc': triplecMallocDrops as WorldDrop[],

@@ -1,0 +1,18 @@
+[
+  {
+    "video": "/imgs/kammara/eni4/_videos/palacio_node0.mp4",
+    "poster": "/imgs/kammara/eni4/_videos/palacio_node0_poster.jpg",
+    "label": {
+      "pt": "Palácio Node0",
+      "en": "Node0 palace"
+    }
+  },
+  {
+    "video": "/imgs/kammara/eni4/_videos/fabrica.mp4",
+    "poster": "/imgs/kammara/eni4/_videos/fabrica_poster.jpg",
+    "label": {
+      "pt": "Fábrica",
+      "en": "Factory"
+    }
+  }
+]

@@ -8,6 +8,14 @@
     }
   },
   {
+    "video": "/imgs/kammara/triplec/_videos/Nilo_familia.mp4",
+    "poster": "/imgs/kammara/triplec/_videos/Nilo_familia_poster.jpg",
+    "label": {
+      "pt": "Família de Nilo",
+      "en": "Nilo's family"
+    }
+  },
+  {
     "video": "/imgs/kammara/triplec/_videos/lumesha_encontra_luma_val.mp4",
     "poster": "/imgs/kammara/triplec/_videos/lumesha_encontra_luma_val_poster.jpg",
     "label": {
@@ -16,11 +24,11 @@
     }
   },
   {
-    "video": "/imgs/kammara/triplec/_videos/Nilo_familia.mp4",
-    "poster": "/imgs/kammara/triplec/_videos/Nilo_familia_poster.jpg",
+    "video": "/imgs/kammara/triplec/_videos/soar_voando.mp4",
+    "poster": "/imgs/kammara/triplec/_videos/soar_voando_poster.jpg",
     "label": {
-      "pt": "Família de Nilo",
-      "en": "Nilo's family"
+      "pt": "Soar voando",
+      "en": "Soar flying"
     }
   }
 ]
