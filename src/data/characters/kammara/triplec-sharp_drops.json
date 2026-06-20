@@ -15,7 +15,17 @@
       "en": "Pets playing"
     }
   },
+    {
+    "video": "/imgs/kammara/triplec/sharp/_videos/ativando_cshift.mp4",
+    "poster": "/imgs/kammara/triplec/sharp/_videos/ativando_cshift_poster.jpg",
+    "label": {
+      "pt": "Ativando C-Shift",
+      "en": "Activating C-Shift"
+    }
+  },
   {
+    
+    "enabled": false,
     "video": "/imgs/kammara/triplec/sharp/_videos/bunniet_niul_forest.mp4",
     "poster": "/imgs/kammara/triplec/sharp/_videos/bunniet_niul_forest_poster.jpg",
     "label": {
@@ -31,14 +41,7 @@
       "en": "Bunniet in the room"
     }
   },
-  {
-    "video": "/imgs/kammara/triplec/sharp/_videos/ativando_cshift.mp4",
-    "poster": "/imgs/kammara/triplec/sharp/_videos/ativando_cshift_poster.jpg",
-    "label": {
-      "pt": "Ativando C-Shift",
-      "en": "Activating C-Shift"
-    }
-  },
+
   {
     "enabled": false,
     "video": "/imgs/kammara/triplec/sharp/_videos/bunniet_com_volpita.mp4",
