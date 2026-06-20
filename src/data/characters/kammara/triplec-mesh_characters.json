@@ -16,8 +16,8 @@
     "image": "/imgs/kammara/triplec/mesh/KAEL_TORIN.png",
     "backImage": "/imgs/kammara/triplec/mesh/KAELTORIN_costas.png",
     "backTitle": {
-      "pt": "em Conflito",
-      "en": "in Conflict"
+      "pt": "Do Outro Lado",
+      "en": "Another Side"
     },
     "backMeaning": {
       "pt": "Forma boa acompanha o tempo.",
@@ -65,12 +65,12 @@
     "image": "/imgs/kammara/triplec/mesh/DORAN_KES.png",
     "backImage": "/imgs/kammara/triplec/mesh/DORAN_KES_costas.png",
     "backTitle": {
-      "pt": "em Conflito",
-      "en": "in Conflict"
+      "pt": "Do Outro Lado",
+      "en": "Another Side"
     },
     "backMeaning": {
-      "pt": "",
-      "en": ""
+      "pt": "Sem limite, a forma se desfaz",
+      "en": "Without a limit, the form falls apart."
     },
     "attributes": [
       {
@@ -114,12 +114,12 @@
     "image": "/imgs/kammara/triplec/mesh/EllenVar.png",
     "backImage": "/imgs/kammara/triplec/mesh/EllenVar_costas.png",
     "backTitle": {
-      "pt": "em Conflito",
-      "en": "in Conflict"
+      "pt": "Do Outro Lado",
+      "en": "Another Side"
     },
     "backMeaning": {
-      "pt": "",
-      "en": ""
+      "pt": "Cria para durar",
+      "en": "Creates to last."
     },
     "attributes": [
       {
