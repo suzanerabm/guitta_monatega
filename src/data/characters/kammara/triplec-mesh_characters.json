@@ -14,7 +14,7 @@
       "en": "Adaptive Modulator of Mesh. He works between those who create new structures and those who protect the existing ones, adapting the architecture so it keeps working in the present."
     },
     "image": "/imgs/kammara/triplec/mesh/KAEL_TORIN.png",
-    "backImage": "",
+    "backImage": "/imgs/kammara/triplec/mesh/KAELTORIN_costas.png",
     "backTitle": {
       "pt": "em Conflito",
       "en": "in Conflict"
@@ -62,8 +62,8 @@
       "pt": "Decide onde uma forma pode existir. Guarda contornos e fronteiras de cada estrutura. Quem entra numa sala com Doran Kes sente, antes de entender, que há um limite.",
       "en": "He decides where a form may exist. He guards the contours and borders of each structure. Whoever enters a room with Doran Kes feels, before understanding, that there is a limit."
     },
-    "image": "/imgs/kammara/triplec/mesh/mesh12.png",
-    "backImage": "",
+    "image": "/imgs/kammara/triplec/mesh/DORAN_KES.png",
+    "backImage": "/imgs/kammara/triplec/mesh/DORAN_KES_costas.png",
     "backTitle": {
       "pt": "em Conflito",
       "en": "in Conflict"
@@ -112,7 +112,7 @@
       "en": "She designs structures that span generations. She creates the foundations on which other forms rest. Much of what exists in Mesh today rests on decisions made by Ellen Var long before its current inhabitants were born."
     },
     "image": "/imgs/kammara/triplec/mesh/EllenVar.png",
-    "backImage": "",
+    "backImage": "/imgs/kammara/triplec/mesh/EllenVar_costas.png",
     "backTitle": {
       "pt": "em Conflito",
       "en": "in Conflict"
