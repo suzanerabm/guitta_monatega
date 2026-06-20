@@ -14,5 +14,13 @@
       "pt": "LumEsha encontra Luma Val",
       "en": "LumEsha meets Luma Val"
     }
+  },
+  {
+    "video": "/imgs/kammara/triplec/_videos/Nilo_familia.mp4",
+    "poster": "/imgs/kammara/triplec/_videos/Nilo_familia_poster.jpg",
+    "label": {
+      "pt": "Família de Nilo",
+      "en": "Nilo's family"
+    }
   }
 ]

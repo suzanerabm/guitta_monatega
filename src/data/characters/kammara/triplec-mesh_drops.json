@@ -6,6 +6,14 @@
       "en": "Aerial view"
     }
   },
+   {
+    "video": "/imgs/kammara/triplec/mesh/_videos/mesh_dormindo.mp4",
+    "poster": "/imgs/kammara/triplec/mesh/_videos/mesh_dormindo_poster.jpg",
+    "label": {
+      "pt": "Bunniet de Mesh dormindo",
+      "en": "Mesh's bunniet sleeping"
+    }
+  },
   {
     "video": "/imgs/kammara/triplec/mesh/_videos/na_hora_do_almoco.mp4",
     "poster": "/imgs/kammara/triplec/mesh/_videos/na_hora_do_almoco_poster.jpg",
@@ -20,14 +28,6 @@
     "label": {
       "pt": "Praça de Mesh",
       "en": "Mesh square"
-    }
-  },
-  {
-    "video": "/imgs/kammara/triplec/mesh/_videos/mesh_dormindo.mp4",
-    "poster": "/imgs/kammara/triplec/mesh/_videos/mesh_dormindo_poster.jpg",
-    "label": {
-      "pt": "Mesh dormindo",
-      "en": "Mesh sleeping"
     }
   }
 ]
