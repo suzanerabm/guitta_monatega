@@ -33,5 +33,19 @@
       "pt": "Cshift portal",
       "en": "Cshift portal"
     }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_forest.jpg",
+    "label": {
+      "pt": "floresta",
+      "en": "forest"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_correndo.jpg",
+    "label": {
+      "pt": "correndo",
+      "en": "running"
+    }
   }
 ]

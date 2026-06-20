@@ -49,20 +49,6 @@
     }
   },
   {
-    "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_dentro_ap.jpg",
-    "label": {
-      "pt": "dentro do apartamento",
-      "en": "inside apartment"
-    }
-  },
-  {
-    "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_familia.jpg",
-    "label": {
-      "pt": "família",
-      "en": "family"
-    }
-  },
-  {
     "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_sala.jpg",
     "label": {
       "pt": "sala",
@@ -74,6 +60,20 @@
     "label": {
       "pt": "quarto",
       "en": "bedroom"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_em_mesh.jpg",
+    "label": {
+      "pt": "em Mesh",
+      "en": "in Mesh"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_visita_mesh.jpg",
+    "label": {
+      "pt": "visita a Mesh",
+      "en": "visit to Mesh"
     }
   }
 ]

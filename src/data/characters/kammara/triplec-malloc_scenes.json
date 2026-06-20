@@ -37,8 +37,15 @@
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/4malloc_mina_cshift.jpg",
     "label": {
-      "pt": "malloc mina cshift",
-      "en": "malloc cshift mine"
+      "pt": "malloc mina kemita",
+      "en": "malloc kemita mine"
+    }
+  },
+   {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_tunel.jpg",
+    "label": {
+      "pt": "túnel",
+      "en": "tunnel"
     }
   },
   {
@@ -60,13 +67,6 @@
     "label": {
       "pt": "hepa regiao2",
       "en": "hepa region 2"
-    }
-  },
-  {
-    "image": "/imgs/kammara/triplec/malloc/_scenes/9lumesha_visita_Luma_Val.jpg",
-    "label": {
-      "pt": "lumesha visita Luma Val",
-      "en": "Lumesha visits LUMA VAL"
     }
   },
   {
@@ -105,13 +105,6 @@
     }
   },
   {
-    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_tunel.jpg",
-    "label": {
-      "pt": "túnel",
-      "en": "tunnel"
-    }
-  },
-  {
     "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_sala.jpg",
     "label": {
       "pt": "sala",
@@ -123,41 +116,6 @@
     "label": {
       "pt": "quarto",
       "en": "bedroom"
-    }
-  },
-  {
-    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_forest.jpg",
-    "label": {
-      "pt": "floresta",
-      "en": "forest"
-    }
-  },
-  {
-    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_correndo.jpg",
-    "label": {
-      "pt": "correndo",
-      "en": "running"
-    }
-  },
-  {
-    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_em_mesh.jpg",
-    "label": {
-      "pt": "em Mesh",
-      "en": "in Mesh"
-    }
-  },
-  {
-    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_visita_mesh.jpg",
-    "label": {
-      "pt": "visita a Mesh",
-      "en": "visit to Mesh"
-    }
-  },
-  {
-    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_visita_sharp.jpg",
-    "label": {
-      "pt": "visita a Sharp",
-      "en": "visit to Sharp"
     }
   }
 ]

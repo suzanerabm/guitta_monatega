@@ -7,6 +7,14 @@
     }
   },
   {
+    "video": "/imgs/kammara/triplec/mesh/_videos/na_hora_do_almoco.mp4",
+    "poster": "/imgs/kammara/triplec/mesh/_videos/na_hora_do_almoco_poster.jpg",
+    "label": {
+      "pt": "Na hora do almoço",
+      "en": "Lunchtime"
+    }
+  },
+  {
     "video": "/imgs/kammara/triplec/mesh/_videos/mesh_praca.mp4",
     "poster": "/imgs/kammara/triplec/mesh/_videos/mesh_praca_poster.jpg",
     "label": {
@@ -15,11 +23,11 @@
     }
   },
   {
-    "video": "/imgs/kammara/triplec/mesh/_videos/na_hora_do_almoco.mp4",
-    "poster": "/imgs/kammara/triplec/mesh/_videos/na_hora_do_almoco_poster.jpg",
+    "video": "/imgs/kammara/triplec/mesh/_videos/mesh_dormindo.mp4",
+    "poster": "/imgs/kammara/triplec/mesh/_videos/mesh_dormindo_poster.jpg",
     "label": {
-      "pt": "Na hora do almoço",
-      "en": "Lunchtime"
+      "pt": "Mesh dormindo",
+      "en": "Mesh sleeping"
     }
   }
 ]

@@ -1,4 +1,11 @@
-[
+[{
+    "video": "/imgs/kammara/triplec/malloc/_videos/malloc_runnnin_mesh.mp4",
+    "poster": "/imgs/kammara/triplec/malloc/_videos/malloc_runnnin_mesh_poster.jpg",
+    "label": {
+      "pt": "Correndo pra Mesh",
+      "en": "Running to Mesh"
+    }
+  },
    {
     "video": "/imgs/kammara/triplec/malloc/_videos/minas.mp4",
     "poster": "/imgs/kammara/triplec/malloc/_videos/minas_poster.jpg",
@@ -16,13 +23,14 @@
     }
   },
   {
-    "video": "/imgs/kammara/triplec/malloc/_videos/malloc_runnnin_mesh.mp4",
-    "poster": "/imgs/kammara/triplec/malloc/_videos/malloc_runnnin_mesh_poster.jpg",
+    "video": "/imgs/kammara/triplec/malloc/_videos/elevador_mina.mp4",
+    "poster": "/imgs/kammara/triplec/malloc/_videos/elevador_mina_poster.jpg",
     "label": {
-      "pt": "Correndo pra Mesh",
-      "en": "Running to Mesh"
+      "pt": "Elevador da mina",
+      "en": "Mine elevator"
     }
   },
+
   {
     "video": "/imgs/kammara/triplec/malloc/_videos/malloc_cidade.mp4",
     "poster": "/imgs/kammara/triplec/malloc/_videos/malloc_cidade_poster.jpg",

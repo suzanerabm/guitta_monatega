@@ -30,36 +30,8 @@
   {
     "image": "/imgs/kammara/triplec/sharp/_scenes/6plataforma.jpg",
     "label": {
-      "pt": "plataforma",
-      "en": "platform"
-    }
-  },
-  {
-    "image": "/imgs/kammara/triplec/sharp/_scenes/7Vista_panoramica.jpg",
-    "label": {
-      "pt": "Vista panoramica",
-      "en": "panoramic view"
-    }
-  },
-  {
-    "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_vista.jpg",
-    "label": {
-      "pt": "vista",
-      "en": "view"
-    }
-  },
-  {
-    "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_cena_interna_sala.jpg",
-    "label": {
-      "pt": "sala interna",
-      "en": "interior room"
-    }
-  },
-  {
-    "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_cena_quarto.jpg",
-    "label": {
-      "pt": "quarto",
-      "en": "bedroom"
+      "pt": "Praça Central",
+      "en": "Central Plaza"
     }
   },
   {
@@ -69,25 +41,49 @@
       "en": "energy flow"
     }
   },
-  {
-    "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_pets.jpg",
+  
+   {
+    "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_cena_interna_sala.jpg",
     "label": {
-      "pt": "pets",
-      "en": "pets"
+      "pt": "sala interna",
+      "en": "interior room"
     }
   },
   {
+    "image": "/imgs/kammara/triplec/sharp/_scenes/7Vista_panoramica.jpg",
+    "label": {
+      "pt": "Vista panoramica",
+      "en": "panoramic view"
+    }
+  },
+
+  {
+    "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_cena_quarto.jpg",
+    "label": {
+      "pt": "quarto dos bebes",
+      "en": "babies's bedroom"
+    }
+  },
+  
+  {
     "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_quarto.jpg",
     "label": {
-      "pt": "quarto",
-      "en": "bedroom"
+      "pt": "quarto master",
+      "en": "master bedroom"
     }
   },
   {
     "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_sala.jpg",
     "label": {
-      "pt": "sala",
+      "pt": "sala ",
       "en": "living room"
+    }
+  },
+   {
+    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_visita_sharp.jpg",
+    "label": {
+      "pt": "visita a Sharp",
+      "en": "visit to Sharp"
     }
   }
 ]
