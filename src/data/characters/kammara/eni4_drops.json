@@ -3,16 +3,24 @@
     "video": "/imgs/kammara/eni4/_videos/palacio_node0.mp4",
     "poster": "/imgs/kammara/eni4/_videos/palacio_node0_poster.jpg",
     "label": {
-      "pt": "Palácio Node0",
-      "en": "Node0 palace"
+      "pt": "Palácio Node-0",
+      "en": "Node-0 palace"
     }
   },
   {
     "video": "/imgs/kammara/eni4/_videos/fabrica.mp4",
     "poster": "/imgs/kammara/eni4/_videos/fabrica_poster.jpg",
     "label": {
-      "pt": "Fábrica",
-      "en": "Factory"
+      "pt": "Fábrica BURN",
+      "en": "BURN Factory"
+    }
+  },
+  {
+    "video": "/imgs/kammara/eni4/_videos/marcha_aracnes.mp4",
+    "poster": "/imgs/kammara/eni4/_videos/marcha_aracnes_poster.jpg",
+    "label": {
+      "pt": "Marcha dos Aracnes",
+      "en": "March of the Aracnes"
     }
   }
 ]
