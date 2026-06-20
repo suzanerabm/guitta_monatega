@@ -30,5 +30,13 @@
       "pt": "Plantas flutuantes",
       "en": "Floating plants"
     }
+  },
+  {
+    "video": "/imgs/kammara/lunnp1/_videos/tziki_lumira_brincando.mp4",
+    "poster": "/imgs/kammara/lunnp1/_videos/tziki_lumira_brincando_poster.jpg",
+    "label": {
+      "pt": "Tzi'Ki e Lumira brincando",
+      "en": "Tzi'Ki and Lumira playing"
+    }
   }
 ]
