@@ -24,6 +24,7 @@ import triplecMallocDrops from './triplec-malloc_drops.json';
 import triplecMeshStory from './triplec-mesh_story.json';
 import triplecMeshSubs from './triplec-mesh_subsystems.json';
 import triplecMeshScenes from './triplec-mesh_scenes.json';
+import triplecMeshDrops from './triplec-mesh_drops.json';
 import triplecSharpStory from './triplec-sharp_story.json';
 import triplecSharpSubs from './triplec-sharp_subsystems.json';
 import triplecSharpScenes from './triplec-sharp_scenes.json';
@@ -193,6 +194,7 @@ const DROPS: Record<string, WorldDrop[]> = {
   orfv: orfvDrops as WorldDrop[],
   triplec: triplecDrops as WorldDrop[],
   'triplec-malloc': triplecMallocDrops as WorldDrop[],
+  'triplec-mesh': triplecMeshDrops as WorldDrop[],
   'triplec-sharp': triplecSharpDrops as WorldDrop[],
 };
 
