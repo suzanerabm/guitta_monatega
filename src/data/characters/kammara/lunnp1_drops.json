@@ -22,5 +22,13 @@
       "pt": "EruRin acenando",
       "en": "EruRin waving"
     }
+  },
+  {
+    "video": "/imgs/kammara/lunnp1/_videos/plantas_flutuantes.mp4",
+    "poster": "/imgs/kammara/lunnp1/_videos/plantas_flutuantes_poster.jpg",
+    "label": {
+      "pt": "Plantas flutuantes",
+      "en": "Floating plants"
+    }
   }
 ]

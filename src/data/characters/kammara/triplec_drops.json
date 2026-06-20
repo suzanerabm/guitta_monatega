@@ -30,5 +30,13 @@
       "pt": "Soar voando",
       "en": "Soar flying"
     }
+  },
+  {
+    "video": "/imgs/kammara/triplec/_videos/tripleC_creatures.mp4",
+    "poster": "/imgs/kammara/triplec/_videos/tripleC_creatures_poster.jpg",
+    "label": {
+      "pt": "Criaturas de TripleC",
+      "en": "TripleC creatures"
+    }
   }
 ]

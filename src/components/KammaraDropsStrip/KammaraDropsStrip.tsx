@@ -326,7 +326,7 @@ function DropCard({ drop, index, worldName, crestGlyph, color, mid, darkColor, o
       onClick={onClick}
       data-testid={`drop-card-${index}`}
       flexShrink={0}
-      width={{ base: '84vw', md: '560px' }}
+      width={{ base: '84vw', md: '560px', xl: '660px', '2xl': '760px' }}
       maxW={{ base: '500px', md: 'none' }}
       position="relative"
       overflow="hidden"

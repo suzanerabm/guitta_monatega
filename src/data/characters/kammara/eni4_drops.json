@@ -7,6 +7,22 @@
       "en": "Node-0 palace"
     }
   },
+    {
+    "video": "/imgs/kammara/eni4/_videos/tuneis_com_worms.mp4",
+    "poster": "/imgs/kammara/eni4/_videos/tuneis_com_worms_poster.jpg",
+    "label": {
+      "pt": "Túneis com Worms",
+      "en": "Tunnels with Worms"
+    }
+  },
+  {
+    "video": "/imgs/kammara/eni4/_videos/marcha_aracnes.mp4",
+    "poster": "/imgs/kammara/eni4/_videos/marcha_aracnes_poster.jpg",
+    "label": {
+      "pt": "Marcha dos Aracnes",
+      "en": "March of the Aracnes"
+    }
+  },
   {
     "video": "/imgs/kammara/eni4/_videos/fabrica.mp4",
     "poster": "/imgs/kammara/eni4/_videos/fabrica_poster.jpg",
@@ -16,11 +32,19 @@
     }
   },
   {
-    "video": "/imgs/kammara/eni4/_videos/marcha_aracnes.mp4",
-    "poster": "/imgs/kammara/eni4/_videos/marcha_aracnes_poster.jpg",
+    "video": "/imgs/kammara/eni4/_videos/camera_calor_node-0.mp4",
+    "poster": "/imgs/kammara/eni4/_videos/camera_calor_node-0_poster.jpg",
     "label": {
-      "pt": "Marcha dos Aracnes",
-      "en": "March of the Aracnes"
+      "pt": "Câmera de calor Node-0",
+      "en": "Node-0 heat chamber"
+    }
+  },
+  {
+    "video": "/imgs/kammara/eni4/_videos/regiao_lixo.mp4",
+    "poster": "/imgs/kammara/eni4/_videos/regiao_lixo_poster.jpg",
+    "label": {
+      "pt": "Região do lixo",
+      "en": "Wasteland region"
     }
   }
 ]
