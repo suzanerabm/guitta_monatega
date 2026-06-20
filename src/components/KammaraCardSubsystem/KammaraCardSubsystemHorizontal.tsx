@@ -576,7 +576,7 @@ export function KammaraCardSubsystemHorizontal({
           padding={{ base: '1rem', md: '1.4rem 1.6rem' }}
           borderRadius="20px"
           css={{
-            background: `linear-gradient(160deg, ${darkColor}d9 0%, ${darkColor}b3 60%, ${darkColor}d9 100%)`,
+            background: `linear-gradient(160deg, ${darkColor}cc 0%, ${darkColor}99 60%, ${darkColor}cc 100%)`,
             border: `1px solid ${color}50`,
             boxShadow: `0 10px 32px rgba(0,0,0,0.6), 0 0 28px ${color}25, inset 0 1px 0 rgba(255,255,255,0.08)`,
             backdropFilter: 'blur(10px)',

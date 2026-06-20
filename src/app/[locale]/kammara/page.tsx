@@ -6,7 +6,7 @@ import {
   getBookPages,
   getKammaraBg,
 } from '@/lib/images';
-import { getWorldSubsystemImages, getWorldScenes } from '@/data/characters/kammara/_worldData';
+import { getWorldSubsystemImages, getWorldScenes, getWorldDrops } from '@/data/characters/kammara/_worldData';
 import type { Locale } from '@/lib/characters';
 import { KammaraClient } from './KammaraClient';
 
@@ -40,6 +40,7 @@ export default async function KammaraPage({
       id,
       chars: getCharacters(`kammara/${id}`),
       scenes: getWorldScenes(id, loc),
+      drops: getWorldDrops(id, loc),
       bgImage: getKammaraBg(`kammara/${id}`),
       subsystemImages: getWorldSubsystemImages(id),
     };
@@ -53,6 +54,7 @@ export default async function KammaraPage({
             id: regionId,
             chars: getCharacters(`kammara/triplec/${regionId}`),
             scenes: getWorldScenes(`triplec-${regionId}`, loc),
+            drops: getWorldDrops(`triplec-${regionId}`, loc),
             bgImage: getKammaraBg(`kammara/triplec/${regionId}`),
             subsystemImages: getWorldSubsystemImages(`triplec-${regionId}`),
           },

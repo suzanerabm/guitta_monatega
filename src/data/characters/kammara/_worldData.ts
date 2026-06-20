@@ -8,15 +8,18 @@ import gottoSubs from './gotto_subsystems.json';
 import lunnp1Story from './lunnp1_story.json';
 import lunnp1Subs from './lunnp1_subsystems.json';
 import lunnp1Scenes from './lunnp1_scenes.json';
+import lunnp1Drops from './lunnp1_drops.json';
 import orfvStory from './orfv_story.json';
 import orfvSubs from './orfv_subsystems.json';
 import orfvScenes from './orfv_scenes.json';
+import orfvDrops from './orfv_drops.json';
 import triplecStory from './triplec_story.json';
 import triplecSubs from './triplec_subsystems.json';
 import triplecScenes from './triplec_scenes.json';
 import triplecMallocStory from './triplec-malloc_story.json';
 import triplecMallocSubs from './triplec-malloc_subsystems.json';
 import triplecMallocScenes from './triplec-malloc_scenes.json';
+import triplecMallocDrops from './triplec-malloc_drops.json';
 import triplecMeshStory from './triplec-mesh_story.json';
 import triplecMeshSubs from './triplec-mesh_subsystems.json';
 import triplecMeshScenes from './triplec-mesh_scenes.json';
@@ -55,6 +58,15 @@ export interface WorldScene {
   /** Optional looping video for this scene (region strips only). The image
    *  acts as its poster. */
   video?: string;
+}
+
+export interface WorldDrop {
+  /** Video path (.mp4). The .webm sibling is offered automatically. */
+  video: string;
+  /** Poster image shown while the video loads. */
+  poster: string;
+  /** Caption per locale. */
+  label: Bilingual<string>;
 }
 
 const STORIES: Record<string, WorldStory> = {
@@ -169,5 +181,27 @@ export function getWorldScenes(
     image: s.image,
     name: s.label[locale]?.trim() || s.label.pt || '',
     ...(s.video ? { video: s.video } : {}),
+  }));
+}
+
+// ── Drops (small clips) per world, sourced from <world>_drops.json — same
+//    pattern as SCENES. Each world's Drops section reads this. ──
+const DROPS: Record<string, WorldDrop[]> = {
+  lunnp1: lunnp1Drops as WorldDrop[],
+  orfv: orfvDrops as WorldDrop[],
+  'triplec-malloc': triplecMallocDrops as WorldDrop[],
+};
+
+/** Localized drops (small clips) for a world. Empty when the world has none. */
+export function getWorldDrops(
+  worldId: string,
+  locale: Locale,
+): { video: string; poster: string; label: string }[] {
+  const drops = DROPS[worldId];
+  if (!drops) return [];
+  return drops.map((d) => ({
+    video: d.video,
+    poster: d.poster,
+    label: d.label[locale]?.trim() || d.label.pt || '',
   }));
 }

@@ -2,6 +2,7 @@
 import { useCallback, useEffect, useId, useRef, useState } from 'react';
 import { Box, Flex, Heading } from '@chakra-ui/react';
 import { useModal } from '@/components/Modal';
+import { KammaraWatermark } from '@/components/KammaraWatermark';
 
 export interface SceneStripScene {
   name: string;
@@ -192,6 +193,7 @@ export function SceneStrip({
                 }}
               >
                 <Box
+                  position="relative"
                   width={cardWidth}
                   height={cardHeight}
                   borderRadius="16px"
@@ -250,6 +252,10 @@ export function SceneStrip({
                         display: 'block',
                       }}
                     />
+                  )}
+                  {/* Origin stamp — only in the Kammara variant (crest set). */}
+                  {crestGlyph && modalTitle && (
+                    <KammaraWatermark crestGlyph={crestGlyph} worldName={modalTitle} size="card" />
                   )}
                 </Box>
                 {!hideLabel && (

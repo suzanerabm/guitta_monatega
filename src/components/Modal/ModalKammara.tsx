@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { Box, Flex, Text, Heading } from '@chakra-ui/react';
 import { useModal } from './ModalProvider';
 import { ZoomableImage } from '@/components/ZoomableImage';
+import { KammaraWatermark } from '@/components/KammaraWatermark';
 
 function formatFilename(path: string): string {
   const file = path.split('/').pop() || '';
@@ -279,6 +280,12 @@ export function ModalKammara() {
                   alt={heroTitle || ''}
                   maxHeight="100%"
                 />
+              )}
+
+              {/* Origin stamp over the media — same crest + world mark as the
+                  cards. Non-interactive, so video controls and zoom still work. */}
+              {variant === 'kammara' && heroTitle && (
+                <KammaraWatermark crestGlyph={crestGlyph} worldName={heroTitle} size="modal" placement="center" />
               )}
 
               {/* Side label (desktop only) — rotated, bottom-left of photo. */}

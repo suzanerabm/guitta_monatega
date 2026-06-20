@@ -18,6 +18,7 @@ import { KammaraCardSubsystem, KammaraCardSubsystemContainer, KammaraCardSubsyst
 import { RegionDivider } from '@/components/RegionDivider';
 import { RegionBanner } from '@/components/RegionBanner';
 import { KammaraSagaPoster } from '@/components/KammaraSagaPoster';
+import { KammaraDropsStrip } from '@/components/KammaraDropsStrip';
 import { BookGallery } from '@/components/BookGallery';
 import { KammaraProgressHeatmap } from '@/components/KammaraProgressHeatmap';
 import kammaraProgressData from '@/data/kammara_progress.json';
@@ -52,6 +53,7 @@ interface RegionData {
   id: TriplecRegionId;
   chars: { name: string; image: string }[];
   scenes: { name: string; image: string; video?: string }[];
+  drops: { video: string; poster: string; label: string }[];
   bgImage: string | null;
   subsystemImages: (string | null)[];
 }
@@ -60,6 +62,7 @@ interface WorldData {
   id: WorldId;
   chars: { name: string; image: string }[];
   scenes: { name: string; image: string; video?: string }[];
+  drops: { video: string; poster: string; label: string }[];
   bgImage: string | null;
   subsystemImages: (string | null)[];
   /** Sub-regions inside a world. Only triplec currently uses this. */
@@ -900,6 +903,25 @@ function WorldSection({
           </>
         );
       })()}
+      {w.drops.length > 0 && (
+        <Box
+          display="block"
+          width="100%"
+          my={{ base: '2xl', lg: '5xl' }}
+          px={{ base: '25px', md: '2rem', xl: '3rem' }}
+        >
+          <KammaraDropsStrip
+            sectionTitle={`Drops · ${name}`}
+            worldName={name}
+            crestGlyph={worldCrestGlyph(w.id)}
+            color={colors.accent}
+            darkColor={palette.dark}
+            modalSubtitle={bodyText[0] || ''}
+            modalTextColor={palette.text}
+            drops={w.drops}
+          />
+        </Box>
+      )}
     </CreatureSection>
   );
 }
@@ -1138,6 +1160,25 @@ function TriplecRegionSection({
           </>
         );
       })()}
+      {region.drops.length > 0 && (
+        <Box
+          display="block"
+          width="100%"
+          my={{ base: '2xl', lg: '5xl' }}
+          px={{ base: '25px', md: '2rem', xl: '3rem' }}
+        >
+          <KammaraDropsStrip
+            sectionTitle={`Drops · ${name}`}
+            worldName={name}
+            crestGlyph={worldCrestGlyph(regionId)}
+            color={regionColor}
+            darkColor={regionPalette.dark}
+            modalSubtitle={bodyText[0] || ''}
+            modalTextColor={regionPalette.text}
+            drops={region.drops}
+          />
+        </Box>
+      )}
       </Box>
     </CreatureSection>
   );

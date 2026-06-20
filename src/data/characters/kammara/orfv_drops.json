@@ -1,0 +1,34 @@
+[
+  {
+    "video": "/imgs/kammara/orfv/_videos/festa_orfv.mp4",
+    "poster": "/imgs/kammara/orfv/_videos/festa_orfv_poster.jpg",
+    "label": {
+      "pt": "Lüp'Nül Fest",
+      "en": "Lüp'Nül Fest"
+    }
+  },
+  {
+    "video": "/imgs/kammara/orfv/_videos/melik_andando_para_festival.mp4",
+    "poster": "/imgs/kammara/orfv/_videos/melik_andando_para_festival_poster.jpg",
+    "label": {
+      "pt": "Maelik a caminho do festival",
+      "en": "Maelik heading to the festival"
+    }
+  },
+  {
+    "video": "/imgs/kammara/orfv/_videos/bisa_ativando_protocolo.mp4",
+    "poster": "/imgs/kammara/orfv/_videos/bisa_ativando_protocolo_poster.jpg",
+    "label": {
+      "pt": "Brisa ativando o protocolo",
+      "en": "Brisa activating the protocol"
+    }
+  },
+  {
+    "video": "/imgs/kammara/orfv/_videos/troys_atacando.mp4",
+    "poster": "/imgs/kammara/orfv/_videos/troys_atacando_poster.jpg",
+    "label": {
+      "pt": "Troys atacando",
+      "en": "Troys attacking"
+    }
+  }
+]
