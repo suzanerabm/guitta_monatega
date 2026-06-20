@@ -1,4 +1,20 @@
 [
+   {
+    "video": "/imgs/kammara/triplec/malloc/_videos/minas.mp4",
+    "poster": "/imgs/kammara/triplec/malloc/_videos/minas_poster.jpg",
+    "label": {
+      "pt": "Minas",
+      "en": "Mines"
+    }
+  },
+  {
+    "video": "/imgs/kammara/triplec/malloc/_videos/interior_mina.mp4",
+    "poster": "/imgs/kammara/triplec/malloc/_videos/interior_mina_poster.jpg",
+    "label": {
+      "pt": "Interior da mina",
+      "en": "Mine interior"
+    }
+  },
   {
     "video": "/imgs/kammara/triplec/malloc/_videos/malloc_runnnin_mesh.mp4",
     "poster": "/imgs/kammara/triplec/malloc/_videos/malloc_runnnin_mesh_poster.jpg",
@@ -13,22 +29,6 @@
     "label": {
       "pt": "Vila de malloc",
       "en": "malloc village"
-    }
-  },
-  {
-    "video": "/imgs/kammara/triplec/malloc/_videos/minas.mp4",
-    "poster": "/imgs/kammara/triplec/malloc/_videos/minas_poster.jpg",
-    "label": {
-      "pt": "Minas",
-      "en": "Mines"
-    }
-  },
-  {
-    "video": "/imgs/kammara/triplec/malloc/_videos/interior_mina.mp4",
-    "poster": "/imgs/kammara/triplec/malloc/_videos/interior_mina_poster.jpg",
-    "label": {
-      "pt": "Interior da mina",
-      "en": "Mine interior"
     }
   }
 ]

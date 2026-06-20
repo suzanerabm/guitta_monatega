@@ -13,5 +13,13 @@
       "pt": "Praça de Mesh",
       "en": "Mesh square"
     }
+  },
+  {
+    "video": "/imgs/kammara/triplec/mesh/_videos/na_hora_do_almoco.mp4",
+    "poster": "/imgs/kammara/triplec/mesh/_videos/na_hora_do_almoco_poster.jpg",
+    "label": {
+      "pt": "Na hora do almoço",
+      "en": "Lunchtime"
+    }
   }
 ]
