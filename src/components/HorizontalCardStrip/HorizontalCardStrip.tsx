@@ -127,6 +127,9 @@ export function HorizontalCardStrip({
         data-testid={testId ? `${testId}-track` : 'hcs-track'}
         css={{
           overflowX: 'auto',
+          // Contain the swipe so reaching the end doesn't fire the browser's
+          // back/forward navigation gesture.
+          overscrollBehaviorX: 'contain',
           scrollbarWidth: 'none',
           msOverflowStyle: 'none',
           '&::-webkit-scrollbar': { display: 'none' },

@@ -169,6 +169,9 @@ export function SceneStrip({
           minWidth={0}
           css={{
             overflowX: 'auto',
+            // Swipe past the end stays in the slider instead of triggering the
+            // browser back/forward gesture (which sent users to 404 / home).
+            overscrollBehaviorX: 'contain',
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
             '&::-webkit-scrollbar': { display: 'none' },

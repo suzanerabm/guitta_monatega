@@ -1,4 +1,4 @@
-import { screen } from '@testing-library/react';
+import { screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect, beforeAll } from 'vitest';
 import { renderWithChakra } from '@/test-utils';
 import { LazyVideo } from './LazyVideo';
@@ -25,5 +25,22 @@ describe('LazyVideo', () => {
     expect(screen.getByAltText('Clipe A')).toBeInTheDocument();
     // ...and the heavy <video> is NOT mounted yet (the whole point).
     expect(container.querySelector('video')).toBeNull();
+  });
+
+  it('mounts the <video> on hover (playOn="hover")', () => {
+    // jsdom video has no play(); stub it so the handler doesn't throw.
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    window.HTMLMediaElement.prototype.play = () => Promise.resolve();
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    window.HTMLMediaElement.prototype.pause = () => {};
+
+    const { container } = renderWithChakra(
+      <LazyVideo src="/v/a.mp4" poster="/p/a.jpg" alt="Clipe A" playOn="hover" />,
+    );
+    // Starts as poster only.
+    expect(container.querySelector('video')).toBeNull();
+    // Hovering the wrapper mounts and plays the video.
+    fireEvent.mouseEnter(container.firstElementChild as Element);
+    expect(container.querySelector('video')).not.toBeNull();
   });
 });

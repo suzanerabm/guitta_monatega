@@ -141,6 +141,9 @@ export function KammaraCharacterGallery<T>({
         width="100%"
         css={{
           overflowX: 'auto',
+          // Contain horizontal swipes so reaching the end doesn't fire the
+          // browser back/forward gesture (sent users to 404 / home).
+          overscrollBehaviorX: 'contain',
           overflowY: 'hidden',
           scrollSnapType: 'x mandatory',
           WebkitOverflowScrolling: 'touch',
@@ -307,6 +310,7 @@ export function KammaraCharacterGallery<T>({
             paddingY={{ base: 'md', md: 'lg' }}
             css={{
               overflowX: 'auto',
+              overscrollBehaviorX: 'contain',
               overflowY: 'visible',
               scrollSnapType: 'x mandatory',
               WebkitOverflowScrolling: 'touch',

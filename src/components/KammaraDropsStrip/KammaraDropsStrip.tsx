@@ -160,6 +160,8 @@ export function KammaraDropsStrip({
         width="100%"
         css={{
           overflowX: 'auto',
+          // Keep horizontal swipes inside the slider — see desktop block.
+          overscrollBehaviorX: 'contain',
           overflowY: 'hidden',
           scrollSnapType: 'x mandatory',
           WebkitOverflowScrolling: 'touch',
@@ -274,6 +276,10 @@ export function KammaraDropsStrip({
             minWidth={0}
             css={{
               overflowX: 'auto',
+              // Keep horizontal swipes inside the slider: without this, a swipe
+              // past the end triggers the browser's back/forward gesture (404 /
+              // jumps home). See specs/2026-06-21-performance-*.
+              overscrollBehaviorX: 'contain',
               scrollbarWidth: 'none',
               msOverflowStyle: 'none',
               '&::-webkit-scrollbar': { display: 'none' },
