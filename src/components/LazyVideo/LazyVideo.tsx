@@ -84,52 +84,44 @@ export function LazyVideo({
     display: 'block',
   };
 
-  // Tracks whether the pointer is currently over the card. Needed because the
-  // <video> may only finish loading AFTER mouse-enter (preload="none" means no
-  // data yet on the first hover); when it becomes playable we only auto-play if
-  // the pointer is still there.
-  const hoveringRef = useRef(false);
+  // `hovering` is STATE (not a ref) so the play effect below re-runs when it
+  // changes. The bug before: play() was fired in onEnter via requestAnimationFrame,
+  // but the <video> often hadn't mounted yet (setActive is async) — so the play
+  // raced the mount and only "sometimes" worked. Driving play from an effect
+  // that depends on both `active` and `hovering` guarantees the <video> exists.
+  const [hovering, setHovering] = useState(false);
 
-  // Robustly start playback. On the first hover the freshly-mounted <video>
-  // often has no data yet, so play() rejects; we then wait for `canplay` and
-  // try once more (if the pointer is still over the card). This is what fixed
-  // "only some clips play" — slower-to-buffer clips were losing the first race.
-  const tryPlay = (v: HTMLVideoElement | null) => {
+  useEffect(() => {
+    if (playOn !== 'hover') return;
+    const v = videoRef.current;
     if (!v) return;
-    v.play().catch(() => {
-      const onCanPlay = () => {
-        v.removeEventListener('canplay', onCanPlay);
-        if (hoveringRef.current) v.play().catch(() => {});
-      };
+    if (hovering) {
+      v.loop = true;
+      stoppingRef.current = false;
+      // Try now; if there's no data yet (preload="none"), retry on canplay.
+      const play = () => v.play().catch(() => {});
+      play();
+      const onCanPlay = () => v.play().catch(() => {});
       v.addEventListener('canplay', onCanPlay);
-    });
-  };
+      return () => v.removeEventListener('canplay', onCanPlay);
+    }
+    // Pointer left: let the current loop finish, then stop (see onEnded).
+    v.loop = false;
+    stoppingRef.current = true;
+  }, [hovering, active, playOn]);
 
-  // Hover handlers (no-op unless playOn === 'hover'). Once activated the
-  // <video> STAYS mounted — on leave we let the current loop finish, so there's
-  // no abrupt cut and re-hover is instant.
+  // Hover handlers (no-op unless playOn === 'hover'). Mounting the <video> and
+  // playing it are split: onEnter just flips state; the effect above does the
+  // actual play once the element is in the DOM.
   const onEnter =
     playOn === 'hover'
       ? () => {
-          hoveringRef.current = true;
-          stoppingRef.current = false; // re-entering cancels a pending stop
+          setHovering(true);
           setActive(true);
-          const v = videoRef.current;
-          if (v) v.loop = true;
-          // The <video> may have just mounted; give it a tick before play().
-          requestAnimationFrame(() => tryPlay(videoRef.current));
         }
       : undefined;
   const onLeave =
-    playOn === 'hover'
-      ? () => {
-          hoveringRef.current = false;
-          // Don't pause now — let it play to the end of this loop, then stop.
-          stoppingRef.current = true;
-          const v = videoRef.current;
-          if (v) v.loop = false; // disable loop so it fires `ended` this round
-        }
-      : undefined;
+    playOn === 'hover' ? () => setHovering(false) : undefined;
 
   // When the clip reaches the end after the pointer left, stop and reset to the
   // first frame (which matches the poster). If the pointer came back meanwhile,
