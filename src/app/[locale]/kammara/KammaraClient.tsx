@@ -309,7 +309,10 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
   const t = useTranslations('kammara');
   const tCommon = useTranslations('common');
   const locale = useLocale() as Locale;
-  const [activeFilter, setActiveFilter] = useState('all');
+  // No "all" on /kammara: it would mount every world at once and freeze the
+  // page. We open on the Kammara intro and mount one world at a time — the
+  // intro section stays mounted always; each world mounts only when active.
+  const [activeFilter, setActiveFilter] = useState('kammara');
   const { registerGallery, openKammaraGallery } = useModal();
 
   // Word dictionary used by translateName() for filename-derived labels.
@@ -400,11 +403,13 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
   ];
 
   const kammaraPalette = palettes.kammara;
-  const kammaraHidden = activeFilter !== 'all' && activeFilter !== 'kammara';
+  const kammaraHidden = activeFilter !== 'kammara';
 
   // ── Per-world content ──────────────────────────────────────────────────
   // Everything a WorldSection needs is shared here so the sub-component
-  // stays small and easy to read below.
+  // stays small and easy to read below. With no "all", exactly one section is
+  // active: only the active world is MOUNTED (its images/videos exist in the
+  // DOM); the rest aren't rendered at all, which is what keeps the page light.
   const perWorldProps = publishedWorlds.map((w) => ({
     w,
     palette: palettes[w.id as PaletteName],
@@ -413,7 +418,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
     bodyText: getWorldSummary(w.id, locale),
     panelStory: getWorldPanelStory(w.id, locale),
     subsystems: getWorldSubsystems(w.id, locale),
-    hidden: activeFilter !== 'all' && activeFilter !== w.id,
+    mount: activeFilter === w.id,
   }));
 
   return (
@@ -431,7 +436,8 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
 
       <FilterBar
         filters={filters}
-        allLabel={locale === 'en' ? 'All' : 'Todos'}
+        showAll={false}
+        defaultActive="kammara"
         onFilter={setActiveFilter}
         defaultTintColor={palettes.kammara.dark}
       />
@@ -622,10 +628,15 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
       </CreatureSection>
 
       {/* ── WORLDS ─────────────────────────────────────────────────────── */}
-      {perWorldProps.map((props) => (
+      {/* Only the active world is rendered — inactive worlds are fully
+          unmounted (not just hidden), so their images/videos leave the DOM
+          and stop downloading. This is the core of the performance fix. */}
+      {perWorldProps.map((props) =>
+        !props.mount ? null : (
         <Fragment key={props.w.id}>
           <WorldSection
             {...props}
+            hidden={false}
             words={words}
             locale={locale}
             tCommon={tCommon}
@@ -645,7 +656,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
                   key={regionId}
                   regionId={regionId}
                   region={region}
-                  hidden={props.hidden}
+                  hidden={false}
                   words={words}
                   locale={locale}
                   tCommon={tCommon}
@@ -656,7 +667,8 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
               );
             })}
         </Fragment>
-      ))}
+        ),
+      )}
     </>
   );
 }

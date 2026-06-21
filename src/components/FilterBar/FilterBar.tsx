@@ -22,10 +22,30 @@ interface FilterBarProps {
    * the neutral default.
    */
   defaultTintColor?: string;
+  /**
+   * Whether to show the leading "all" pill. Default true. Pages that mount
+   * one section at a time (e.g. /kammara, for performance) set this false so
+   * there is no "show everything" option — there's always exactly one filter
+   * active.
+   */
+  showAll?: boolean;
+  /**
+   * Which filter id is active on first render. Defaults to 'all'. When
+   * `showAll` is false, pass the id of the first filter so the bar opens on a
+   * real section instead of the (now absent) "all".
+   */
+  defaultActive?: string;
 }
 
-export function FilterBar({ filters, allLabel = 'Todos', onFilter, defaultTintColor }: FilterBarProps) {
-  const [active, setActive] = useState('all');
+export function FilterBar({
+  filters,
+  allLabel = 'Todos',
+  onFilter,
+  defaultTintColor,
+  showAll = true,
+  defaultActive,
+}: FilterBarProps) {
+  const [active, setActive] = useState(defaultActive ?? 'all');
   // Combined height of the chrome that sits above the FilterBar:
   // fixed header + fixed breadcrumb (the breadcrumb is the one with
   // aria-label="breadcrumb").
@@ -134,12 +154,14 @@ export function FilterBar({ filters, allLabel = 'Todos', onFilter, defaultTintCo
       borderColor="borderSoft"
       transition="background 0.4s ease, top 0.3s ease, transform 0.3s ease, opacity 0.3s ease"
     >
-      <FilterButton
-        label={allLabel}
-        active={active === 'all'}
-        tintMode={tintMode}
-        onClick={() => handleClick('all')}
-      />
+      {showAll && (
+        <FilterButton
+          label={allLabel}
+          active={active === 'all'}
+          tintMode={tintMode}
+          onClick={() => handleClick('all')}
+        />
+      )}
       {filters.map((f) => (
         <FilterButton
           key={f.id}
