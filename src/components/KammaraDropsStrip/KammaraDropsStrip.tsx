@@ -187,6 +187,7 @@ export function KammaraDropsStrip({
                 mid={mid}
                 darkColor={darkColor}
                 onClick={() => handleClick(i)}
+                playOn="visible"
               />
             </Box>
           ))}
@@ -294,6 +295,7 @@ export function KammaraDropsStrip({
                   mid={mid}
                   darkColor={darkColor}
                   onClick={() => handleClick(i)}
+                  playOn="hover"
                 />
               ))}
             </Flex>
@@ -318,9 +320,11 @@ interface DropCardProps {
   mid: string;
   darkColor: string;
   onClick: () => void;
+  /** How the clip starts playing — 'hover' on desktop, 'visible' on mobile. */
+  playOn: 'hover' | 'visible';
 }
 
-function DropCard({ drop, index, worldName, crestGlyph, color, mid, darkColor, onClick }: DropCardProps) {
+function DropCard({ drop, index, worldName, crestGlyph, color, mid, darkColor, onClick, playOn }: DropCardProps) {
   return (
     <chakra.button
       type="button"
@@ -413,8 +417,9 @@ function DropCard({ drop, index, worldName, crestGlyph, color, mid, darkColor, o
           boxShadow: `inset 0 0 0 1px ${color}40, 0 8px 24px rgba(0,0,0,0.35)`,
         }}
       >
-        {/* Lazy: only loads/plays when near the viewport — see LazyVideo. */}
-        <LazyVideo src={drop.video} poster={drop.poster} alt={drop.label} fit="cover" />
+        {/* Lazy: poster until its trigger fires (hover on desktop, visibility
+            on mobile where there's no hover). See LazyVideo. */}
+        <LazyVideo src={drop.video} poster={drop.poster} alt={drop.label} fit="cover" playOn={playOn} />
 
         {/* Origin stamp over the clip — see KammaraWatermark. */}
         <KammaraWatermark crestGlyph={crestGlyph} worldName={worldName} size="card" />
