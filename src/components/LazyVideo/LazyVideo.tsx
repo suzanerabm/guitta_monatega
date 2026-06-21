@@ -50,25 +50,34 @@ export function LazyVideo({
   // `active` = mount the <video>. For hover it tracks the pointer; for visible
   // it latches true on first intersection (cheap re-entry afterwards).
   const [active, setActive] = useState(false);
+  // Whether the trigger says "should be playing": pointer-over for hover,
+  // in-viewport for visible. The play happens in an effect (below) that also
+  // depends on `active`, so play() never races the <video> mount — that race
+  // was the "sometimes it doesn't play" bug.
+  const [wantPlay, setWantPlay] = useState(false);
   // Hover graceful-stop: when the pointer leaves we DON'T cut the clip mid-way.
   // We let the current loop finish and stop at the end. `stopping` records that
   // intent so the `ended` handler knows to halt (and re-entering cancels it).
   const stoppingRef = useRef(false);
 
+  // `visible` mode: an observer flips `active`/`wantPlay` when the card enters
+  // or leaves the viewport — so a strip of clips only ever plays the few on
+  // screen, never all of a world's videos at once.
   useEffect(() => {
     if (playOn !== 'visible') return;
     const el = wrapRef.current;
     if (!el || typeof IntersectionObserver === 'undefined') {
       setActive(true);
+      setWantPlay(true);
       return;
     }
     const obs = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setActive(true);
-          videoRef.current?.play?.().catch(() => {});
+          setWantPlay(true);
         } else {
-          videoRef.current?.pause?.();
+          setWantPlay(false);
         }
       },
       { rootMargin },
@@ -84,44 +93,45 @@ export function LazyVideo({
     display: 'block',
   };
 
-  // `hovering` is STATE (not a ref) so the play effect below re-runs when it
-  // changes. The bug before: play() was fired in onEnter via requestAnimationFrame,
-  // but the <video> often hadn't mounted yet (setActive is async) — so the play
-  // raced the mount and only "sometimes" worked. Driving play from an effect
-  // that depends on both `active` and `hovering` guarantees the <video> exists.
-  const [hovering, setHovering] = useState(false);
-
+  // The single source of truth for play/pause. Runs after the <video> mounts
+  // (depends on `active`), so the element always exists when we call play().
   useEffect(() => {
-    if (playOn !== 'hover') return;
     const v = videoRef.current;
     if (!v) return;
-    if (hovering) {
-      v.loop = true;
+    if (wantPlay) {
       stoppingRef.current = false;
-      // Try now; if there's no data yet (preload="none"), retry on canplay.
+      // `visible` loops natively; `hover` controls loop via JS so it can finish
+      // the current round after the pointer leaves (see onEnded).
+      if (playOn === 'hover') v.loop = true;
       const play = () => v.play().catch(() => {});
       play();
+      // preload="none" may mean no data on the first trigger — retry on canplay.
       const onCanPlay = () => v.play().catch(() => {});
       v.addEventListener('canplay', onCanPlay);
       return () => v.removeEventListener('canplay', onCanPlay);
     }
-    // Pointer left: let the current loop finish, then stop (see onEnded).
-    v.loop = false;
-    stoppingRef.current = true;
-  }, [hovering, active, playOn]);
+    // Trigger off:
+    if (playOn === 'hover') {
+      // Let the current loop finish, then stop (see onEnded).
+      v.loop = false;
+      stoppingRef.current = true;
+    } else {
+      // Visible mode: just pause where it is; resumes when it scrolls back in.
+      v.pause();
+    }
+  }, [wantPlay, active, playOn]);
 
-  // Hover handlers (no-op unless playOn === 'hover'). Mounting the <video> and
-  // playing it are split: onEnter just flips state; the effect above does the
-  // actual play once the element is in the DOM.
+  // Hover handlers (no-op unless playOn === 'hover'). They only flip state; the
+  // effect above does the actual play once the <video> is in the DOM.
   const onEnter =
     playOn === 'hover'
       ? () => {
-          setHovering(true);
+          setWantPlay(true);
           setActive(true);
         }
       : undefined;
   const onLeave =
-    playOn === 'hover' ? () => setHovering(false) : undefined;
+    playOn === 'hover' ? () => setWantPlay(false) : undefined;
 
   // When the clip reaches the end after the pointer left, stop and reset to the
   // first frame (which matches the poster). If the pointer came back meanwhile,

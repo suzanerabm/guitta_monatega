@@ -301,7 +301,7 @@ export function KammaraDropsStrip({
                   mid={mid}
                   darkColor={darkColor}
                   onClick={() => handleClick(i)}
-                  playOn="hover"
+                  playOn="visible"
                 />
               ))}
             </Flex>
