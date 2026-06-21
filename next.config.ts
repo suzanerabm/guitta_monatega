@@ -23,6 +23,15 @@ const nextConfig: NextConfig = {
         source: '/:path*',
         headers: securityHeaders,
       },
+      {
+        // Imagens e vídeos em /imgs são imutáveis (mudam de nome quando mudam
+        // de conteúdo). Cache forte de 1 ano evita rebaixar a cada visita —
+        // parte do plano de performance (specs/2026-06-21-performance-*).
+        source: '/imgs/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
     ];
   },
 };

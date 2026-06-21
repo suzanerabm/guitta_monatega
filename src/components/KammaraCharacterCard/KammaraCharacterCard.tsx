@@ -291,6 +291,8 @@ export function KammaraCharacterCard({
             <Image
               src={image}
               alt={imageAlt ?? name}
+              loading="lazy"
+              decoding="async"
               maxWidth="100%"
               maxHeight="100%"
               objectFit="contain"
@@ -575,6 +577,8 @@ export function KammaraCharacterCard({
               <Image
                 src={backImage}
                 alt={`Costas de ${name}`}
+                loading="lazy"
+                decoding="async"
                 maxWidth="100%"
                 maxHeight="100%"
                 objectFit="contain"

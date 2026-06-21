@@ -3,6 +3,7 @@ import { useCallback, useEffect, useId, useRef, useState } from 'react';
 import { Box, Flex, Heading } from '@chakra-ui/react';
 import { useModal } from '@/components/Modal';
 import { KammaraWatermark } from '@/components/KammaraWatermark';
+import { LazyVideo } from '@/components/LazyVideo';
 
 export interface SceneStripScene {
   name: string;
@@ -218,25 +219,7 @@ export function SceneStrip({
                   }}
                 >
                   {s.video ? (
-                    <video
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      poster={s.image}
-                      preload="metadata"
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                        display: 'block',
-                      }}
-                    >
-                      {s.video.endsWith('.mp4') && (
-                        <source src={s.video.replace(/\.mp4$/, '.webm')} type="video/webm" />
-                      )}
-                      <source src={s.video} type="video/mp4" />
-                    </video>
+                    <LazyVideo src={s.video} poster={s.image} alt={s.name} fit="cover" />
                   ) : (
                     /* eslint-disable-next-line @next/next/no-img-element */
                     <img

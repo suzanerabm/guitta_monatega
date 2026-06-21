@@ -47,11 +47,6 @@ export function Footer({
         gap="md"
         width="100%"
       >
-        <Box
-          w="30px"
-          h="1px"
-          bg={tintColor ? 'textOverlayStrong' : 'borderColor'}
-        />
         <Flex gap="lg" align="center" justify="center">
           <NextLink href={aboutPath} style={linkStyle}>
             {aboutLabel}

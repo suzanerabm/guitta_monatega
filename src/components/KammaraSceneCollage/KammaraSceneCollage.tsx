@@ -195,7 +195,7 @@ function DesktopTile({ scene, tile, color, index, onClick }: DesktopTileProps) {
         ref={imgRef}
         src={scene.image}
         alt={scene.name}
-        loading="eager"
+        loading="lazy"
         decoding="async"
         onLoad={() => setLoaded(true)}
         onError={() => setLoaded(true)}
@@ -276,7 +276,7 @@ function MobileTile({ scene, color, onClick }: MobileTileProps) {
         ref={imgRef}
         src={scene.image}
         alt={scene.name}
-        loading="eager"
+        loading="lazy"
         decoding="async"
         onLoad={() => setLoaded(true)}
         onError={() => setLoaded(true)}

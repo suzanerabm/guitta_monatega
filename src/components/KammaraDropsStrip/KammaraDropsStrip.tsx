@@ -3,6 +3,7 @@ import { useCallback, useEffect, useId, useRef, useState } from 'react';
 import { Box, Flex, Text, chakra } from '@chakra-ui/react';
 import { useModal } from '@/components/Modal';
 import { KammaraWatermark } from '@/components/KammaraWatermark';
+import { LazyVideo } from '@/components/LazyVideo';
 
 export interface KammaraDrop {
   /** Video src (.mp4). The .webm sibling is offered automatically. */
@@ -412,20 +413,8 @@ function DropCard({ drop, index, worldName, crestGlyph, color, mid, darkColor, o
           boxShadow: `inset 0 0 0 1px ${color}40, 0 8px 24px rgba(0,0,0,0.35)`,
         }}
       >
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster={drop.poster}
-          preload="metadata"
-          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-        >
-          {drop.video.endsWith('.mp4') && (
-            <source src={drop.video.replace(/\.mp4$/, '.webm')} type="video/webm" />
-          )}
-          <source src={drop.video} type="video/mp4" />
-        </video>
+        {/* Lazy: only loads/plays when near the viewport — see LazyVideo. */}
+        <LazyVideo src={drop.video} poster={drop.poster} alt={drop.label} fit="cover" />
 
         {/* Origin stamp over the clip — see KammaraWatermark. */}
         <KammaraWatermark crestGlyph={crestGlyph} worldName={worldName} size="card" />

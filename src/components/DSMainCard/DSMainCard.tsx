@@ -214,6 +214,8 @@ export function DSMainCard({
               <img
                 src={c.image}
                 alt=""
+                loading="lazy"
+                decoding="async"
                 style={{
                   width: '100%',
                   height: '100%',
@@ -330,6 +332,8 @@ export function DSMainCard({
               <img
                 src={mascot.image}
                 alt=""
+                loading="lazy"
+                decoding="async"
                 style={{
                   width: '100%',
                   height: '100%',
