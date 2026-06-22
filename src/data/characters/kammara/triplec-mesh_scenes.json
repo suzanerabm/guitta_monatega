@@ -75,5 +75,33 @@
       "pt": "visita a Mesh",
       "en": "visit to Mesh"
     }
+  },
+  {
+    "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_dentro_ap.jpg",
+    "label": {
+      "pt": "dentro do apartamento",
+      "en": "inside the apartment"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_familia.jpg",
+    "label": {
+      "pt": "família",
+      "en": "family"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/mesh/_scenes/manoo_dormindo.jpg",
+    "label": {
+      "pt": "Manoo dormindo",
+      "en": "Manoo sleeping"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/mesh/_scenes/kurr_expandindo.jpg",
+    "label": {
+      "pt": "Kurr expandindo",
+      "en": "Kurr expanding"
+    }
   }
 ]
