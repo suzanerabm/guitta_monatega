@@ -44,19 +44,33 @@ export function KammaraDropsMosaic({
           position="relative"
           width="100%"
           aspectRatio="16 / 9"
-          borderRadius="14px"
-          overflow="hidden"
+          // Breathing border: a padded frame around each clip so the video
+          // sits inside an even margin instead of touching the edge.
+          padding={{ base: '8px', md: '10px' }}
+          borderRadius="16px"
           css={{
-            boxShadow: `inset 0 0 0 1px ${color}40, 0 8px 24px rgba(0,0,0,0.35)`,
+            background: `linear-gradient(160deg, ${color}14, ${color}08)`,
+            border: `1px solid ${color}33`,
           }}
         >
-          <LazyVideo
-            src={clip.video}
-            poster={clip.poster}
-            alt={clip.label}
-            fit="cover"
-            playOn="visible"
-          />
+          <Box
+            position="relative"
+            width="100%"
+            height="100%"
+            borderRadius="10px"
+            overflow="hidden"
+            css={{
+              boxShadow: `inset 0 0 0 1px ${color}40, 0 8px 24px rgba(0,0,0,0.35)`,
+            }}
+          >
+            <LazyVideo
+              src={clip.video}
+              poster={clip.poster}
+              alt={clip.label}
+              fit="cover"
+              playOn="visible"
+            />
+          </Box>
         </Box>
       ))}
     </Grid>
