@@ -279,18 +279,19 @@ export function ModalKammara() {
           gap={{ base: '0', md: 'lg' }}
           onClick={(e) => e.stopPropagation()}
         >
-          {/* Title + description. Desktop mostra título + descrição. No mobile
-              EM PÉ (retrato) mostramos só o nome do planeta (heroTitle) — sobra
-              espaço e dá identidade. Em paisagem a altura é curta, então some.
-              `showMobileTitle` = clean mobile em retrato com nome disponível. */}
+          {/* Title + description. Desktop: nome + descrição lado a lado. No
+              mobile EM PÉ (retrato): nome em cima e descrição EMBAIXO (coluna),
+              que tem espaço sobrando. Em paisagem (altura curta) o bloco some.
+              `showMobileTitle` = clean mobile em retrato. */}
           {(() => {
-            const showMobileTitle = isCleanMobile && !isLandscape && !!heroTitle;
+            const showMobileTitle = isCleanMobile && !isLandscape;
             if (!heroTitle && !heroText) return null;
             return (
               <Flex
                 display={{ base: showMobileTitle ? 'flex' : 'none', md: 'flex' }}
+                direction={{ base: 'column', md: 'row' }}
                 align="center"
-                gap="0.8rem"
+                gap={{ base: '0.5rem', md: '0.8rem' }}
                 flexWrap="wrap"
                 justify="center"
               >
@@ -305,17 +306,16 @@ export function ModalKammara() {
                 >
                   {heroTitle}
                 </Heading>
-                {/* Descrição só no desktop — no mobile fica só o nome. */}
+                {/* Descrição: aparece no retrato mobile (embaixo) e no desktop. */}
                 {heroText && (
                   <Text
-                    display={{ base: 'none', md: 'block' }}
                     fontSize="sm"
                     lineHeight={1.5}
                     fontWeight="light"
                     color={navColor}
                     m={0}
                     maxW="280px"
-                    textAlign="left"
+                    textAlign={{ base: 'center', md: 'left' }}
                     opacity={0.7}
                   >
                     {heroText}
