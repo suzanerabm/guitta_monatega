@@ -260,42 +260,51 @@ export function ModalKammara() {
           gap={{ base: '0', md: 'lg' }}
           onClick={(e) => e.stopPropagation()}
         >
-          {/* Title + description */}
-          {(heroTitle || heroText) && (
-            <Flex
-              display={{ base: 'none', md: 'flex' }}
-              align="center"
-              gap="0.8rem"
-              flexWrap="wrap"
-              justify="center"
-            >
-              <Heading
-                as="h2"
-                fontSize="h2"
-                fontWeight="bold"
-                letterSpacing="tight"
-                color={color}
-                m={0}
-                css={{ textShadow: `0 0 24px ${color}40` }}
+          {/* Title + description. Desktop mostra título + descrição. No mobile
+              EM PÉ (retrato) mostramos só o nome do planeta (heroTitle) — sobra
+              espaço e dá identidade. Em paisagem a altura é curta, então some.
+              `showMobileTitle` = clean mobile em retrato com nome disponível. */}
+          {(() => {
+            const showMobileTitle = isCleanMobile && !isLandscape && !!heroTitle;
+            if (!heroTitle && !heroText) return null;
+            return (
+              <Flex
+                display={{ base: showMobileTitle ? 'flex' : 'none', md: 'flex' }}
+                align="center"
+                gap="0.8rem"
+                flexWrap="wrap"
+                justify="center"
               >
-                {heroTitle}
-              </Heading>
-              {heroText && (
-                <Text
-                  fontSize="sm"
-                  lineHeight={1.5}
-                  fontWeight="light"
-                  color={navColor}
+                <Heading
+                  as="h2"
+                  fontSize="h2"
+                  fontWeight="bold"
+                  letterSpacing="tight"
+                  color={color}
                   m={0}
-                  maxW="280px"
-                  textAlign="left"
-                  opacity={0.7}
+                  css={{ textShadow: `0 0 24px ${color}40` }}
                 >
-                  {heroText}
-                </Text>
-              )}
-            </Flex>
-          )}
+                  {heroTitle}
+                </Heading>
+                {/* Descrição só no desktop — no mobile fica só o nome. */}
+                {heroText && (
+                  <Text
+                    display={{ base: 'none', md: 'block' }}
+                    fontSize="sm"
+                    lineHeight={1.5}
+                    fontWeight="light"
+                    color={navColor}
+                    m={0}
+                    maxW="280px"
+                    textAlign="left"
+                    opacity={0.7}
+                  >
+                    {heroText}
+                  </Text>
+                )}
+              </Flex>
+            );
+          })()}
 
           {/* Image + label. Mobile: label sits horizontally below the photo
               (the side label is hard to read sideways on a phone, and the
@@ -351,7 +360,7 @@ export function ModalKammara() {
                 <img
                   key={currentImage}
                   src={currentImage}
-                  alt={heroTitle || ''}
+                  alt={heroTitle || techniqueText || ''}
                   style={{
                     maxWidth: '100%',
                     maxHeight: '100%',
@@ -364,7 +373,7 @@ export function ModalKammara() {
                 <ZoomableImage
                   key={currentImage}
                   src={currentImage}
-                  alt={heroTitle || ''}
+                  alt={heroTitle || techniqueText || ''}
                   maxHeight="100%"
                 />
               )}
