@@ -21,3 +21,19 @@ class MockResizeObserver {
   disconnect = vi.fn();
 }
 globalThis.ResizeObserver = MockResizeObserver as unknown as typeof ResizeObserver;
+
+// Polyfill matchMedia for jsdom. Defaults every query to non-matching
+// (desktop-like). Tests that need a specific match override window.matchMedia.
+globalThis.matchMedia =
+  globalThis.matchMedia ||
+  ((query: string) =>
+    ({
+      matches: false,
+      media: query,
+      onchange: null,
+      addEventListener: vi.fn(),
+      removeEventListener: vi.fn(),
+      addListener: vi.fn(),
+      removeListener: vi.fn(),
+      dispatchEvent: vi.fn(),
+    }) as unknown as MediaQueryList);
