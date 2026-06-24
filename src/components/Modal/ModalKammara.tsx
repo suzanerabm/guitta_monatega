@@ -426,7 +426,7 @@ export function ModalKammara() {
                     minH="48px"
                     bg="none"
                     border="none"
-                    color={navColor}
+                    color={color}
                     fontFamily="glyph"
                     fontSize="glyphH1"
                     lineHeight={1}
@@ -457,7 +457,7 @@ export function ModalKammara() {
                     minH="48px"
                     bg="none"
                     border="none"
-                    color={navColor}
+                    color={color}
                     fontFamily="glyph"
                     fontSize="glyphH1"
                     lineHeight={1}
@@ -528,7 +528,7 @@ export function ModalKammara() {
             aria-label="Previous"
             bg="none"
             border="none"
-            color={navColor}
+            color={color}
             padding="0.5rem"
             transition="opacity 0.2s, transform 0.2s"
             _hover={{ opacity: 0.7, transform: 'scale(1.15)' }}
@@ -555,7 +555,7 @@ export function ModalKammara() {
             aria-label="Next"
             bg="none"
             border="none"
-            color={navColor}
+            color={color}
             padding="0.5rem"
             transition="opacity 0.2s, transform 0.2s"
             _hover={{ opacity: 0.7, transform: 'scale(1.15)' }}
