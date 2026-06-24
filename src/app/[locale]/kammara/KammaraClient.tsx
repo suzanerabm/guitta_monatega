@@ -1,7 +1,9 @@
 'use client';
-import { Fragment, useEffect, useMemo, useRef, useState } from 'react';
+import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import { Box, Flex, Grid, Text } from '@chakra-ui/react';
 import { useTranslations, useLocale } from 'next-intl';
+import { resolveInitialFilter } from './resolveInitialFilter';
 import { HeroSection } from '@/components/HeroSection';
 import { FilterBar } from '@/components/FilterBar';
 import { CreatureSection } from '@/components/CreatureSection';
@@ -315,7 +317,38 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
   // No "all" on /kammara: it would mount every world at once and freeze the
   // page. We open on the Kammara intro and mount one world at a time — the
   // intro section stays mounted always; each world mounts only when active.
-  const [activeFilter, setActiveFilter] = useState('kammara');
+  //
+  // O planeta ativo vive na URL como `?planeta=lunnp1`, então refresh e link
+  // compartilhado reabrem o mundo certo. O estado inicial lê esse param (só
+  // aceita mundos publicados; senão cai na vitrine 'kammara').
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const publishedIds = useMemo(
+    () => worlds.filter((w) => isKammaraPublished(w.id)).map((w) => w.id),
+    [worlds],
+  );
+  const [activeFilter, setActiveFilter] = useState(() =>
+    resolveInitialFilter(searchParams.get('planeta'), publishedIds),
+  );
+
+  // Troca o filtro E sincroniza a URL (?planeta=<id>), sem recarregar nem
+  // empilhar histórico (replace). 'kammara' remove o param. Todos os pontos de
+  // entrada (menu, cards, mosaico) passam por aqui.
+  const handleSelectFilter = useCallback(
+    (id: string) => {
+      setActiveFilter(id);
+      const params = new URLSearchParams(searchParams.toString());
+      if (id === 'kammara') params.delete('planeta');
+      else params.set('planeta', id);
+      const query = params.toString();
+      router.replace(query ? `${pathname}?${query}` : pathname, {
+        scroll: false,
+      });
+    },
+    [router, pathname, searchParams],
+  );
+
   const { registerGallery, openKammaraGallery } = useModal();
 
   // Word dictionary used by translateName() for filename-derived labels.
@@ -498,7 +531,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
         showAll={false}
         defaultActive="kammara"
         active={activeFilter}
-        onFilter={setActiveFilter}
+        onFilter={handleSelectFilter}
         defaultTintColor={palettes.kammara.dark}
       />
 
@@ -561,7 +594,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
         >
           {/* Side slot: a curated mosaic of drops (kammara_mosaic.json) — a
               living sample of the universe next to the intro text. */}
-          <KammaraDropsMosaic clips={mosaicClips} color={kammaraPalette.colors[0]} onSelectWorld={setActiveFilter} />
+          <KammaraDropsMosaic clips={mosaicClips} color={kammaraPalette.colors[0]} onSelectWorld={handleSelectFilter} />
         </DSMainCard>
         </Box>
 
@@ -592,7 +625,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
                 color={w.color}
                 darkColor={w.darkColor}
                 badges={w.tags}
-                onSelect={setActiveFilter}
+                onSelect={handleSelectFilter}
               />
             ))}
           </Grid>
