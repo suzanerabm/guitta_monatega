@@ -75,6 +75,32 @@ export function ModalKammara() {
 
   const { isCleanMobile, isLandscape } = useMobileModal();
 
+  // Swipe-to-navigate on mobile. Records the touch start, and on touch end
+  // fires next()/prev() when the horizontal travel dominates (>=50px and
+  // clearly more horizontal than vertical). On mobile the media is a plain
+  // <img> (no ZoomableImage), so nothing competes for the gesture. Only armed
+  // on the clean-mobile layout.
+  const touchStart = useRef<{ x: number; y: number } | null>(null);
+  const onMediaTouchStart = (e: React.TouchEvent) => {
+    if (!isCleanMobile || e.touches.length !== 1) {
+      touchStart.current = null;
+      return;
+    }
+    touchStart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+  };
+  const onMediaTouchEnd = (e: React.TouchEvent) => {
+    const start = touchStart.current;
+    touchStart.current = null;
+    if (!start || !isCleanMobile) return;
+    const t = e.changedTouches[0];
+    if (!t) return;
+    const dx = t.clientX - start.x;
+    const dy = t.clientY - start.y;
+    if (Math.abs(dx) < 50 || Math.abs(dx) <= Math.abs(dy)) return;
+    if (dx < 0) next();
+    else prev();
+  };
+
   useEffect(() => {
     if (!isOpen || variant !== 'kammara') return;
     document.body.style.overflow = 'hidden';
@@ -293,6 +319,8 @@ export function ModalKammara() {
               flex={1}
               width={{ base: '94vw', md: '100%' }}
               maxW={{ base: '94vw', md: '90vw' }}
+              onTouchStart={onMediaTouchStart}
+              onTouchEnd={onMediaTouchEnd}
             >
               {currentVideo ? (
                 <video
