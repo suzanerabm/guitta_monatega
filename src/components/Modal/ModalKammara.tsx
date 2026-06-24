@@ -236,7 +236,13 @@ export function ModalKammara() {
         >
           {/* Title + description */}
           {(heroTitle || heroText) && (
-            <Flex align="center" gap="0.8rem" flexWrap="wrap" justify="center">
+            <Flex
+              display={{ base: 'none', md: 'flex' }}
+              align="center"
+              gap="0.8rem"
+              flexWrap="wrap"
+              justify="center"
+            >
               <Heading
                 as="h2"
                 fontSize="h2"
@@ -349,25 +355,13 @@ export function ModalKammara() {
               )}
             </Box>
 
-            {/* Bottom label (mobile only) — horizontal, under the photo. */}
-            {techniqueText && (
-              <Text
-                display={{ base: 'block', md: 'none' }}
-                fontSize="sm"
-                letterSpacing="wide"
-                textTransform="uppercase"
-                textAlign="center"
-                color={color}
-                m={0}
-              >
-                {techniqueText}
-              </Text>
-            )}
+            {/* Bottom label removido: no mobile o modal é clean (sem label). */}
           </Flex>
         </Flex>
 
         {/* Bottom nav — transparent, planet text color */}
         <Flex
+          display={{ base: 'none', md: 'flex' }}
           position="absolute"
           bottom={0}
           left={0}
