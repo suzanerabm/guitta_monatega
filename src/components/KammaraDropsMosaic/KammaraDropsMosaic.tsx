@@ -35,6 +35,16 @@ export interface KammaraDropsMosaicProps {
  * Each clip carries its world's origin stamp (KammaraWatermark, bottom-right)
  * and an optional `href` that turns the tile into a link.
  */
+// More clips (columns) on bigger screens instead of bigger videos. md (768)
+// stays single-column like 480 — two columns there looked bad. Kept as a typed
+// Record so the 3xl breakpoint (not in Chakra's grid prop union) type-checks.
+const MOSAIC_COLUMNS: Record<string, string> = {
+  base: '1fr',
+  lg: '1fr 1fr',
+  '2xl': 'repeat(3, 1fr)',
+  '3xl': 'repeat(4, 1fr)',
+};
+
 export function KammaraDropsMosaic({
   clips,
   color,
@@ -44,9 +54,13 @@ export function KammaraDropsMosaic({
   return (
     <Grid
       data-testid={testId ?? 'kammara-drops-mosaic'}
-      gridTemplateColumns="1fr 1fr"
+      gridTemplateColumns={MOSAIC_COLUMNS}
       gap={{ base: 'sm', md: 'md' }}
+      // Keep the mosaic inside its slot — width:100% + minW:0 stops it from
+      // overflowing the column on wide screens.
       width="100%"
+      minWidth={0}
+      maxWidth="100%"
       // Breathing room around the whole mosaic so the clips don't touch the
       // edge of the side slot — just padding, no border.
       padding={{ base: 'md', md: 'lg' }}
