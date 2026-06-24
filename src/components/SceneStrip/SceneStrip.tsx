@@ -1,5 +1,5 @@
 'use client';
-import { useCallback, useEffect, useId, useRef, useState } from 'react';
+import { useEffect, useId, useRef } from 'react';
 import { Box, Flex, Heading } from '@chakra-ui/react';
 import { useModal } from '@/components/Modal';
 import { KammaraWatermark } from '@/components/KammaraWatermark';
@@ -80,17 +80,10 @@ export function SceneStrip({
     : { base: '225px', md: '125px', lg: '225px' };
   const fallbackId = useId();
   const id = galleryId ?? `scene-strip-${fallbackId}`;
+  // Scrollable track ref. The strip navigates by native touch/trackpad swipe
+  // (no prev/next arrows), so we only need the ref for the gallery wiring.
   const scrollRef = useRef<HTMLDivElement>(null);
   const { registerGallery, openGallery, openKammaraGallery } = useModal();
-  const [canPrev, setCanPrev] = useState(false);
-  const [canNext, setCanNext] = useState(false);
-
-  const updateScrollState = useCallback(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    setCanPrev(el.scrollLeft > 2);
-    setCanNext(el.scrollLeft + el.clientWidth < el.scrollWidth - 2);
-  }, []);
 
   useEffect(() => {
     registerGallery(
@@ -100,24 +93,6 @@ export function SceneStrip({
       scenes.map((s) => s.video)
     );
   }, [id, scenes, registerGallery]);
-
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    updateScrollState();
-    el.addEventListener('scroll', updateScrollState, { passive: true });
-    return () => el.removeEventListener('scroll', updateScrollState);
-  }, [updateScrollState]);
-
-  const handleArrow = (dir: -1 | 1) => {
-    const el = scrollRef.current;
-    if (!el) return;
-    if (typeof el.scrollBy === 'function') {
-      el.scrollBy({ left: dir * 300, behavior: 'smooth' });
-    } else {
-      el.scrollLeft += dir * 300;
-    }
-  };
 
   // For Kammara-style scene modals: world name + description go in the hero
   // block (large), bg gets the world's gradient, and the per-image caption

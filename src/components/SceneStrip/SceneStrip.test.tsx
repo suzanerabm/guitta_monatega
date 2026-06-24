@@ -40,16 +40,6 @@ describe('SceneStrip', () => {
     expect(screen.getByRole('heading', { name: 'SCENES' })).toBeInTheDocument();
   });
 
-  it('renders previous and next arrow buttons', () => {
-    renderWithChakra(
-      <Wrapper>
-        <SceneStrip scenes={scenes} />
-      </Wrapper>
-    );
-    expect(screen.getByLabelText('Previous')).toBeInTheDocument();
-    expect(screen.getByLabelText('Next')).toBeInTheDocument();
-  });
-
   it('clicking a scene opens the modal with that image', () => {
     renderWithChakra(
       <Wrapper>

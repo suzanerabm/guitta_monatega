@@ -12,7 +12,12 @@ const char = {
 
 describe('CharacterInfoPanel', () => {
   it('renders name, species and bio in pt', () => {
-    renderWithChakra(<CharacterInfoPanel character={char} locale="pt" anchorEl={null} />);
+    // The panel positions itself against an anchor element; without one it
+    // renders nothing by design (see the null-character test below). Give it a
+    // real anchor so the content actually mounts.
+    const anchorEl = document.createElement('div');
+    document.body.appendChild(anchorEl);
+    renderWithChakra(<CharacterInfoPanel character={char} locale="pt" anchorEl={anchorEl} />);
     expect(screen.getByText("Erú'Rin")).toBeInTheDocument();
     expect(screen.getByText("Shal'ún")).toBeInTheDocument();
     expect(screen.getByText('Um guardião das flores.')).toBeInTheDocument();

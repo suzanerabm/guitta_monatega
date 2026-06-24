@@ -9,8 +9,10 @@ describe('FairyDust', () => {
 
   it('renders the requested number of particles', () => {
     const { container } = wrap(<FairyDust count={12} />);
-    // The component inserts a <style> tag + one div per particle inside an outer wrapper.
-    const particles = container.querySelectorAll('div > div');
+    // Particles are the divs inside the aria-hidden wrapper. Scoping to that
+    // wrapper avoids counting the wrapper Box itself (a plain `div > div`
+    // selector also matched the outer Box, yielding 13).
+    const particles = container.querySelectorAll('[aria-hidden="true"] > div');
     expect(particles.length).toBe(12);
   });
 
@@ -21,7 +23,7 @@ describe('FairyDust', () => {
 
   it('produces the same layout on re-render (deterministic)', () => {
     const { container, rerender } = wrap(<FairyDust count={5} />);
-    const firstRun = Array.from(container.querySelectorAll('div > div')).map((el) =>
+    const firstRun = Array.from(container.querySelectorAll('[aria-hidden="true"] > div')).map((el) =>
       (el as HTMLElement).style.top,
     );
     rerender(
@@ -29,7 +31,7 @@ describe('FairyDust', () => {
         <FairyDust count={5} />
       </ChakraProvider>,
     );
-    const secondRun = Array.from(container.querySelectorAll('div > div')).map((el) =>
+    const secondRun = Array.from(container.querySelectorAll('[aria-hidden="true"] > div')).map((el) =>
       (el as HTMLElement).style.top,
     );
     expect(secondRun).toEqual(firstRun);

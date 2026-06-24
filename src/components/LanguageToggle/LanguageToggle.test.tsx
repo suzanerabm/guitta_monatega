@@ -3,8 +3,10 @@ import { renderWithChakra as render } from '@/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { LanguageToggle } from './LanguageToggle';
 
-vi.mock('next-intl', () => ({
-  useLocale: () => 'pt-BR',
+// The component derives the locale from the URL via usePathname; `currentPath`
+// (when given) overrides it, so the tests drive everything through that prop.
+vi.mock('next/navigation', () => ({
+  usePathname: () => '/pt',
 }));
 
 vi.mock('next/link', () => ({
@@ -12,8 +14,17 @@ vi.mock('next/link', () => ({
 }));
 
 describe('LanguageToggle', () => {
-  it('renders EN when locale is pt-BR', () => {
-    render(<LanguageToggle currentPath="/" />);
-    expect(screen.getByText('EN')).toBeInTheDocument();
+  it('shows PT and links to /en when on a pt path', () => {
+    render(<LanguageToggle currentPath="/pt/" />);
+    const link = screen.getByText('PT');
+    expect(link).toBeInTheDocument();
+    expect(link).toHaveAttribute('href', '/en/');
+  });
+
+  it('shows EN and links to /pt when on an en path', () => {
+    render(<LanguageToggle currentPath="/en/kammara" />);
+    const link = screen.getByText('EN');
+    expect(link).toBeInTheDocument();
+    expect(link).toHaveAttribute('href', '/pt/kammara');
   });
 });
