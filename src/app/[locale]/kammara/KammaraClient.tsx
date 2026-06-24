@@ -25,6 +25,7 @@ import kammaraProgressData from '@/data/kammara_progress.json';
 import { isKammaraPublished, kammaraInProgress } from '@/lib/visibility';
 import { KammaraEvents } from '@/components/KammaraEvents';
 import kammaraEventsData from '@/data/kammara_events.json';
+import { KammaraWorldPortals } from '@/components/KammaraWorldPortals';
 import { useModal } from '@/components/Modal';
 import { palettes, type PaletteName, type Palette } from '@/theme/palettes';
 
@@ -405,6 +406,17 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
   const kammaraPalette = palettes.kammara;
   const kammaraHidden = activeFilter !== 'kammara';
 
+  // Portais do grid: um por mundo publicado, com nome/cor/imagem resolvidos.
+  // Clicar num portal aciona o mesmo setActiveFilter do FilterBar (monta a
+  // seção daquele mundo).
+  const worldPortals = publishedWorlds.map((w) => ({
+    id: w.id,
+    name: getWorldName(w.id, locale) || WORLD_NAMES[w.id],
+    color: palettes[w.id as PaletteName].colors[0],
+    darkColor: palettes[w.id as PaletteName].dark,
+    image: w.bgImage ?? undefined,
+  }));
+
   // ── Per-world content ──────────────────────────────────────────────────
   // Everything a WorldSection needs is shared here so the sub-component
   // stays small and easy to read below. With no "all", exactly one section is
@@ -428,6 +440,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
         title={t('heroTitle')}
         description={t('heroDesc')}
         background={kammaraHero.background}
+        backgroundImage="/imgs/books/kammara/saga-orf-v/cover.jpg"
         textColor={kammaraHero.textColor}
         labelColor={kammaraHero.labelColor}
       >
@@ -504,6 +517,12 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
             // footerLabel="Kammara"
           />
         </DSMainCard>
+
+        {/* ── Grid de portais dos mundos — o coração da vitrine. Clicar num
+            portal aciona o filtro (monta a seção daquele mundo). ── */}
+        <Box width="100%" my={{ base: '2xl', lg: '4xl' }} px={{ base: '25px', md: '2rem', xl: '3rem' }}>
+          <KammaraWorldPortals portals={worldPortals} onSelect={setActiveFilter} />
+        </Box>
         {(() => {
           const contextId = 'kammara/kammara';
           const characterData = getCharactersForContext(contextId);
