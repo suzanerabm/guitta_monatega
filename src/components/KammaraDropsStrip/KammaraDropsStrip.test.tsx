@@ -25,14 +25,14 @@ function render() {
 }
 
 describe('KammaraDropsStrip', () => {
-  // The component renders TWO strips — a frameless mobile swipe strip and the
-  // desktop HUD frame — and CSS (not the DOM) hides one per breakpoint. So each
-  // card/label appears twice in jsdom; use getAllBy* for those. The title and
-  // arrows live only in the desktop frame, so they stay unique.
-  it('renders one card per drop (in each breakpoint strip)', () => {
+  // The component renders TWO strips — a frameless mobile swipe strip (just the
+  // clip) and the desktop HUD frame (the full DropCard). Only the desktop frame
+  // carries the `drop-card-*` testid, so each appears once. Labels/world name
+  // show in both, so those use getAllBy*.
+  it('renders one DropCard per drop in the desktop frame', () => {
     render();
-    expect(screen.getAllByTestId('drop-card-0')).toHaveLength(2);
-    expect(screen.getAllByTestId('drop-card-1')).toHaveLength(2);
+    expect(screen.getByTestId('drop-card-0')).toBeInTheDocument();
+    expect(screen.getByTestId('drop-card-1')).toBeInTheDocument();
   });
 
   it('shows each drop label and the world name', () => {

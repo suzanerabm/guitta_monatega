@@ -983,11 +983,13 @@ function WorldSection({
           my={{ base: '2xl', lg: '5xl' }}
           px={{ base: '25px', md: '2rem', xl: '3rem' }}
         >
+          {/* TripleC's accent is forced green elsewhere, but the drops strip
+              uses the world's real color (palette[0]) — roxo for TripleC. */}
           <KammaraDropsStrip
             sectionTitle={`Drops · ${name}`}
             worldName={name}
             crestGlyph={worldCrestGlyph(w.id)}
-            color={colors.accent}
+            color={palette.colors[0]}
             darkColor={palette.dark}
             modalSubtitle={bodyText[0] || ''}
             modalTextColor={palette.text}

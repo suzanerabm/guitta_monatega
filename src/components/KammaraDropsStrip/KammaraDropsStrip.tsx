@@ -168,30 +168,38 @@ export function KammaraDropsStrip({
           scrollbarWidth: 'none',
           msOverflowStyle: 'none',
           '&::-webkit-scrollbar': { display: 'none' },
-          // Left gutter for the first card; small right padding so the next
-          // card peeks, signalling there's more to swipe.
-          padding: '8px 0 8px 16px',
+          // One clip per screen, full-width like the home mosaic. Even 16px
+          // gutters, snap-padding matched both sides so each clip lands flush.
+          padding: '8px 16px',
           scrollPaddingLeft: '16px',
+          scrollPaddingRight: '16px',
         }}
       >
-        <Box display="flex" css={{ gap: '16px', width: 'max-content', paddingRight: '16px' }}>
+        <Box display="flex" css={{ gap: '16px', width: 'max-content' }}>
+          {/* Mobile: just the clip (no HUD frame/header/footer) — same clean
+              full-width tile as the home mosaic, so it's easy to see on a phone. */}
           {drops.map((drop, i) => (
-            <Box
+            <chakra.button
               key={`${drop.video}-${i}`}
-              css={{ flex: '0 0 84vw', maxWidth: '84vw', scrollSnapAlign: 'start' }}
+              type="button"
+              onClick={() => handleClick(i)}
+              aria-label={drop.label}
+              position="relative"
+              flexShrink={0}
+              width="calc(100vw - 32px)"
+              maxW="calc(100vw - 32px)"
+              aspectRatio="16 / 9"
+              borderRadius="14px"
+              overflow="hidden"
+              cursor="pointer"
+              css={{
+                scrollSnapAlign: 'start',
+                boxShadow: `inset 0 0 0 1px ${color}40, 0 8px 24px rgba(0,0,0,0.35)`,
+              }}
             >
-              <DropCard
-                drop={drop}
-                index={i}
-                worldName={worldName}
-                crestGlyph={crestGlyph}
-                color={color}
-                mid={mid}
-                darkColor={darkColor}
-                onClick={() => handleClick(i)}
-                playOn="visible"
-              />
-            </Box>
+              <LazyVideo src={drop.video} poster={drop.poster} alt={drop.label} fit="cover" playOn="visible" />
+              <KammaraWatermark crestGlyph={crestGlyph} worldName={worldName} size="card" />
+            </chakra.button>
           ))}
         </Box>
       </Box>

@@ -293,8 +293,8 @@ function EventCard({ event, locale, color, darkColor }: EventCardProps) {
   return (
     <Box
       {...linkProps}
-      width={{ base: '85vw', md: '320px', xl: '360px' }}
-      maxW={{ base: '480px', md: 'none' }}
+      width={{ base: 'calc(100vw - 82px)', md: '320px', xl: '360px' }}
+      maxW={{ base: 'calc(100vw - 82px)', md: 'none' }}
     >
     <KammaraEventCard
       name={event.title[locale]}

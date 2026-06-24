@@ -44,7 +44,7 @@ export function HorizontalCardStrip({
   children,
   arrowColor,
   gap = '1.5rem',
-  cardPadding = { base: '1rem 1.5rem', md: '0.5rem 2rem 2rem' },
+  cardPadding = { base: '1rem 16px', md: '0.5rem 2rem 2rem' },
   'data-testid': testId,
 }: HorizontalCardStripProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -133,8 +133,12 @@ export function HorizontalCardStrip({
           scrollbarWidth: 'none',
           msOverflowStyle: 'none',
           '&::-webkit-scrollbar': { display: 'none' },
-          maskImage: MASK_IMAGE,
-          WebkitMaskImage: MASK_IMAGE,
+          // Edge fade only from md up (alongside the arrows). On mobile it ate
+          // a visible slice of the full-width card, so we drop it there.
+          '@media (min-width: 48em)': {
+            maskImage: MASK_IMAGE,
+            WebkitMaskImage: MASK_IMAGE,
+          },
         }}
       >
         <Flex gap={gap} padding={cardPadding} width="max-content" align="stretch">

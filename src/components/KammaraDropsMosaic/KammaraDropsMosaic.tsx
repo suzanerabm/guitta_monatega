@@ -42,7 +42,8 @@ export interface KammaraDropsMosaicProps {
  * and an optional `href` that turns the tile into a link.
  */
 const MOSAIC_COLUMNS: Record<string, string> = {
-  base: '1fr 1fr',
+  base: '1fr',
+  sm: '1fr 1fr',
   md: '1fr',
   lg: '1fr 1fr',
   '2xl': 'repeat(3, 1fr)',
@@ -110,7 +111,7 @@ export function KammaraDropsMosaic({
         //  - base (0–479): first 6     - sm (480–767): all
         //  - md (768–991): first 5     - lg/xl: all
         //  - 2xl (1500–1919): first 9  - 3xl (≥1920): first 12 (4 cols × 3)
-        const inBase = i < 6;
+        const inBase = i < 4;
         const inMd = i < 5;
         const in2xl = i < 9;
         const in3xl = i < 12;
