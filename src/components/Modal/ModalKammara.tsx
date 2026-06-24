@@ -1,5 +1,5 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Box, Flex, Text, Heading } from '@chakra-ui/react';
 import { useModal } from './ModalProvider';
 import { ZoomableImage } from '@/components/ZoomableImage';
@@ -13,6 +13,41 @@ function formatFilename(path: string): string {
     .replace(/^\d+\s*/, '')
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+// Reads two media queries to drive the mobile-clean modal layout:
+//  - isCleanMobile: phone-sized OR a phone held sideways (landscape with a
+//    short viewport). The width cut alone (<=48em) misses a landscape phone,
+//    whose width is ~850px; the orientation+max-height clause catches it
+//    without affecting wide desktops in landscape (their height is >>48em).
+//  - isLandscape: true when the device is turned sideways, so the media can
+//    take the full height.
+// SSR-safe: starts false (desktop layout) and syncs on mount.
+function useMobileModal() {
+  const [isCleanMobile, setIsCleanMobile] = useState(false);
+  const [isLandscape, setIsLandscape] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) return;
+    const cleanQuery = window.matchMedia(
+      '(max-width: 48em), (orientation: landscape) and (max-height: 48em)',
+    );
+    const landscapeQuery = window.matchMedia('(orientation: landscape)');
+
+    const sync = () => {
+      setIsCleanMobile(cleanQuery.matches);
+      setIsLandscape(landscapeQuery.matches);
+    };
+    sync();
+    cleanQuery.addEventListener('change', sync);
+    landscapeQuery.addEventListener('change', sync);
+    return () => {
+      cleanQuery.removeEventListener('change', sync);
+      landscapeQuery.removeEventListener('change', sync);
+    };
+  }, []);
+
+  return { isCleanMobile, isLandscape };
 }
 
 /**
@@ -37,6 +72,8 @@ export function ModalKammara() {
     crestGlyph = '⊙',
     variant,
   } = state;
+
+  const { isCleanMobile, isLandscape } = useMobileModal();
 
   useEffect(() => {
     if (!isOpen || variant !== 'kammara') return;
