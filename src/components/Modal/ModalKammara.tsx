@@ -145,22 +145,24 @@ export function ModalKammara() {
         css={{ background: 'rgba(0,0,0,0.7)' }}
       />
 
-      {/* Floating card */}
+      {/* Floating card. Em paisagem (celular virado) a margem encolhe pra
+          ~6px e o card vira quase fullscreen — é onde a altura é escassa e a
+          gente quer a mídia o maior possível. Retrato/desktop mantêm os 20px. */}
       <Flex
         position="fixed"
-        top="20px"
-        left="20px"
-        right="20px"
-        bottom="20px"
+        top={isLandscape ? '6px' : '20px'}
+        left={isLandscape ? '6px' : '20px'}
+        right={isLandscape ? '6px' : '20px'}
+        bottom={isLandscape ? '6px' : '20px'}
         zIndex={200}
         direction="column"
-        borderRadius="28px"
+        borderRadius={isLandscape ? '16px' : '28px'}
         overflow="hidden"
         css={{
           background: `${darkColor}d5`,
           border: `1px solid ${color}35`,
           outline: `2px solid ${color}`,
-          outlineOffset: '4px',
+          outlineOffset: isLandscape ? '2px' : '4px',
           boxShadow: `0 30px 80px rgba(0,0,0,0.7), 0 0 60px ${color}15, 0 0 120px ${color}08`,
         }}
       >
@@ -254,9 +256,9 @@ export function ModalKammara() {
           justify="center"
           flex={1}
           minH={0}
-          px={{ base: '0.5rem', md: '3xl' }}
-          pt={{ base: '3rem', md: '4rem' }}
-          pb={{ base: '0.5rem', md: '6rem' }}
+          px={isLandscape ? '4px' : { base: '0.5rem', md: '3xl' }}
+          pt={isLandscape ? '4px' : { base: '3rem', md: '4rem' }}
+          pb={isLandscape ? '4px' : { base: '0.5rem', md: '6rem' }}
           gap={{ base: '0', md: 'lg' }}
           onClick={(e) => e.stopPropagation()}
         >
