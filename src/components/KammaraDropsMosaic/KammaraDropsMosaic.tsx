@@ -10,12 +10,12 @@ export interface MosaicClip {
   poster: string;
   /** Caption (used as alt text). */
   label: string;
+  /** World id (e.g. 'lunnp1') — clicking the tile opens this world. */
+  worldId: string;
   /** World display name (e.g. 'ORF-V') — shown as the origin stamp. */
   worldName: string;
   /** Kalún crest glyph of the world — shown with the name. */
   crestGlyph: string;
-  /** Optional link: when set, the tile becomes a clickable anchor. */
-  href?: string;
 }
 
 export interface KammaraDropsMosaicProps {
@@ -23,6 +23,12 @@ export interface KammaraDropsMosaicProps {
   clips: MosaicClip[];
   /** Accent color (palette.colors[0]) — drives borders/glow. */
   color: string;
+  /**
+   * Called with the clip's worldId when a tile is clicked — wire it to the
+   * page's filter (setActiveFilter) so the tile opens its world, since there
+   * are no per-world routes.
+   */
+  onSelectWorld?: (worldId: string) => void;
   'data-testid'?: string;
 }
 
@@ -46,6 +52,7 @@ const MOSAIC_COLUMNS: Record<string, string> = {
 export function KammaraDropsMosaic({
   clips,
   color,
+  onSelectWorld,
   'data-testid': testId,
 }: KammaraDropsMosaicProps) {
   if (clips.length === 0) return null;
@@ -91,11 +98,11 @@ export function KammaraDropsMosaic({
         // previous one as the screen widens):
         //  - base (0–479): first 6     - sm (480–767): all
         //  - md (768–991): first 5     - lg/xl: all
-        //  - 2xl (1500–1919): first 9  - 3xl (≥1920): first 8
+        //  - 2xl (1500–1919): first 9  - 3xl (≥1920): first 12 (4 cols × 3)
         const inBase = i < 6;
         const inMd = i < 5;
         const in2xl = i < 9;
-        const in3xl = i < 8;
+        const in3xl = i < 12;
         const display = {
           base: inBase ? 'block' : 'none',
           sm: 'block',
@@ -104,12 +111,15 @@ export function KammaraDropsMosaic({
           '2xl': in2xl ? 'block' : 'none',
           '3xl': in3xl ? 'block' : 'none',
         };
-        // Linkable tile becomes an anchor; otherwise a plain box.
-        return clip.href ? (
-          <chakra.a
+        // Clicking opens the clip's world (no per-world routes, so we drive the
+        // page filter). Falls back to a plain box if no handler is provided.
+        return onSelectWorld ? (
+          <chakra.button
             key={`${clip.video}-${i}`}
-            href={clip.href}
-            display={display ?? 'block'}
+            type="button"
+            onClick={() => onSelectWorld(clip.worldId)}
+            aria-label={`Abrir ${clip.worldName}`}
+            display={display}
             position="relative"
             width="100%"
             aspectRatio="16 / 9"
@@ -119,7 +129,7 @@ export function KammaraDropsMosaic({
             css={sharedCss}
           >
             {tile}
-          </chakra.a>
+          </chakra.button>
         ) : (
           <Box
             key={`${clip.video}-${i}`}

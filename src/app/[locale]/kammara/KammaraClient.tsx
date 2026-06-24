@@ -419,14 +419,14 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
   }));
 
   // Mosaico de drops curado (src/data/kammara_mosaic.json), localizado. Cada
-  // clip carrega a marca do seu planeta (nome + glifo) e um href opcional.
+  // clip carrega a marca do seu planeta (nome + glifo); clicar abre o mundo.
   const mosaicClips = kammaraMosaicData.map((c) => ({
     video: c.video,
     poster: c.poster,
     label: c.label[locale] ?? c.label.pt,
+    worldId: c.world,
     worldName: getWorldName(c.world, locale) || WORLD_NAMES[c.world as WorldId] || c.world,
     crestGlyph: worldCrestGlyph(c.world),
-    href: c.href || undefined,
   }));
 
   // ── Per-world content ──────────────────────────────────────────────────
@@ -522,7 +522,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
         >
           {/* Side slot: a curated mosaic of drops (kammara_mosaic.json) — a
               living sample of the universe next to the intro text. */}
-          <KammaraDropsMosaic clips={mosaicClips} color={kammaraPalette.colors[0]} />
+          <KammaraDropsMosaic clips={mosaicClips} color={kammaraPalette.colors[0]} onSelectWorld={setActiveFilter} />
         </DSMainCard>
 
         {/* ── Grid de portais dos mundos — o coração da vitrine. Clicar num
