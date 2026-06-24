@@ -35,6 +35,14 @@ export interface KammaraDropsMosaicProps {
  * Each clip carries its world's origin stamp (KammaraWatermark, bottom-right)
  * and an optional `href` that turns the tile into a link.
  */
+const MOSAIC_COLUMNS: Record<string, string> = {
+  base: '1fr 1fr',
+  md: '1fr',
+  lg: '1fr 1fr',
+  '2xl': 'repeat(3, 1fr)',
+  '3xl': 'repeat(4, 1fr)',
+};
+
 export function KammaraDropsMosaic({
   clips,
   color,
@@ -44,11 +52,15 @@ export function KammaraDropsMosaic({
   return (
     <Grid
       data-testid={testId ?? 'kammara-drops-mosaic'}
-      // Two columns everywhere EXCEPT the md band (768–991), where it's a
-      // single column (lg brings the second column back from 992px up).
-      gridTemplateColumns={{ base: '1fr 1fr', md: '1fr', lg: '1fr 1fr' }}
+      // 2 cols by default; 1 col in the md band (768–991); 2 cols from lg; and
+      // 3 cols on very wide screens (3xl = 1920+) so the videos don't stretch
+      // huge — more columns keeps each clip a sane size. (Typed Record because
+      // Chakra's grid prop union doesn't include the 3xl breakpoint.)
+      gridTemplateColumns={MOSAIC_COLUMNS}
       gap={{ base: 'sm', md: 'md' }}
       width="100%"
+      // Center the mosaic (matters on the wide 3xl grid where it's capped).
+      marginX="auto"
       // Breathing room around the whole mosaic so the clips don't touch the
       // edge of the side slot — just padding, no border.
       padding={{ base: 'md', md: 'lg' }}
@@ -75,9 +87,22 @@ export function KammaraDropsMosaic({
         const sharedCss = {
           boxShadow: `inset 0 0 0 1px ${color}40, 0 8px 24px rgba(0,0,0,0.35)`,
         } as const;
-        // In the md band (768–991) only the first 5 clips show; everywhere else
-        // all of them do. (Hidden via display so the grid count adapts.)
-        const display = i < 5 ? undefined : { base: 'block', md: 'none', lg: 'block' };
+        // How many clips show per breakpoint band (each entry overrides the
+        // previous one as the screen widens):
+        //  - base: all      - md (768–991): first 5
+        //  - lg/xl: all      - 2xl (1500–1919): first 6
+        //  - 3xl (≥1920): first 8
+        // `position` index decides which bands hide this clip.
+        const inMd = i < 5;
+        const in2xl = i < 9;
+        const in3xl = i < 8;
+        const display = {
+          base: 'block',
+          md: inMd ? 'block' : 'none',
+          lg: 'block',
+          '2xl': in2xl ? 'block' : 'none',
+          '3xl': in3xl ? 'block' : 'none',
+        };
         // Linkable tile becomes an anchor; otherwise a plain box.
         return clip.href ? (
           <chakra.a
