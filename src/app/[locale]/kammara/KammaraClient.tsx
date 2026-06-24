@@ -429,18 +429,6 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
     href: c.href || undefined,
   }));
 
-  // Capas dos livros para o BookGallery (a capa saga-orf-v vive aqui).
-  const bookCovers = kammaraBooks.map((book) => {
-    const def = bookDefs?.find((d) => d.tag === book.id);
-    const title = def?.title ?? book.id;
-    return {
-      id: book.id,
-      image: book.cover ?? undefined,
-      alt: title,
-      label: title,
-    };
-  });
-
   // ── Per-world content ──────────────────────────────────────────────────
   // Everything a WorldSection needs is shared here so the sub-component
   // stays small and easy to read below. With no "all", exactly one section is
@@ -464,7 +452,6 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
         title={t('heroTitle')}
         description={t('heroDesc')}
         background={kammaraHero.background}
-        backgroundImage="/imgs/books/kammara/saga-orf-v/cover.jpg"
         textColor={kammaraHero.textColor}
         labelColor={kammaraHero.labelColor}
       >
@@ -605,17 +592,9 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
             </Box>
           );
         })()}
-        {/* ── LIVROS — a capa da Saga em ORF-V vive aqui ── */}
-        {bookCovers.length > 0 && (
-          <Box width="100%" my={{ base: '2xl', lg: '4xl' }} px={{ base: '25px', md: '2rem', xl: '3rem' }}>
-            <BookGallery
-              title={safeT('booksTitle', 'Livros')}
-              books={bookCovers}
-              onBookClick={handleBookClick}
-              tone="overlay"
-            />
-          </Box>
-        )}
+        {/* BookGallery temporariamente removida da página Kammara — props
+            (kammaraBooks, bookDefs) e handlers (handleBookClick) seguem
+            ativos pra reativação rápida. */}
 
         {/* ── PRÓXIMOS EVENTOS — eventos in-universe de Kammara ──────────
             A `Box` externa controla padding + imagem de fundo da seção.
