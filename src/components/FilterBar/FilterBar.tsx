@@ -35,6 +35,13 @@ interface FilterBarProps {
    * real section instead of the (now absent) "all".
    */
   defaultActive?: string;
+  /**
+   * Controlled active filter id. When provided, the bar reflects this value
+   * instead of its own internal state — lets the page drive which pill is lit
+   * (e.g. when a planet card elsewhere on the page calls onFilter and the
+   * page wants the menu to follow). Omit to keep the bar self-managed.
+   */
+  active?: string;
 }
 
 export function FilterBar({
@@ -44,8 +51,11 @@ export function FilterBar({
   defaultTintColor,
   showAll = true,
   defaultActive,
+  active: controlledActive,
 }: FilterBarProps) {
-  const [active, setActive] = useState(defaultActive ?? 'all');
+  const [internalActive, setInternalActive] = useState(defaultActive ?? 'all');
+  // Controlled when the page passes `active`; otherwise self-managed.
+  const active = controlledActive ?? internalActive;
   // Combined height of the chrome that sits above the FilterBar:
   // fixed header + fixed breadcrumb (the breadcrumb is the one with
   // aria-label="breadcrumb").
@@ -88,8 +98,13 @@ export function FilterBar({
   }, [active, filters, setTintColor, defaultTintColor]);
 
   const handleClick = (id: string) => {
-    setActive(id);
+    setInternalActive(id);
     onFilter(id);
+
+    // When the page controls `active`, it also owns scrolling (so a planet
+    // card elsewhere and the menu share one code path). Skip the internal
+    // scroll to avoid a double smooth-scroll fight.
+    if (controlledActive !== undefined) return;
 
     // 'all' jumps to the very top of the page so the user sees the hero
     // again — fire immediately, no need to wait for re-render.
@@ -138,6 +153,7 @@ export function FilterBar({
     <Box
       ref={navRef}
       as="nav"
+      aria-label="filters"
       position="sticky"
       top={isHidden ? '0' : `${chromeHeight}px`}
       zIndex={98}

@@ -1,5 +1,5 @@
 'use client';
-import { Fragment, useEffect, useMemo, useState } from 'react';
+import { Fragment, useEffect, useMemo, useRef, useState } from 'react';
 import { Box, Flex, Grid, Text } from '@chakra-ui/react';
 import { useTranslations, useLocale } from 'next-intl';
 import { HeroSection } from '@/components/HeroSection';
@@ -372,6 +372,37 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
     }
   }, [bookGalleries, registerGallery]);
 
+  // Scroll the freshly-activated section to just below the sticky FilterBar
+  // whenever the active world changes. This is the single scroll path for BOTH
+  // the menu pills and the planet entry cards (the FilterBar defers its own
+  // scroll to us while controlled). We skip the first render so opening the
+  // page on the Kammara intro doesn't yank the viewport down. The 550ms delay
+  // matches the section's hidden→visible max-height transition: the new world
+  // only just mounted, so its [data-section-creature] needs a beat to settle
+  // into final coordinates before we measure.
+  const didMountScroll = useRef(false);
+  useEffect(() => {
+    if (!didMountScroll.current) {
+      didMountScroll.current = true;
+      return;
+    }
+    const timer = window.setTimeout(() => {
+      const bar = document.querySelector('nav[aria-label="filters"]');
+      const target = document.querySelector(
+        `[data-section-creature="${activeFilter}"]`,
+      );
+      if (!target) return;
+      const barBottom = bar ? bar.getBoundingClientRect().bottom : 0;
+      const offset = barBottom + 10;
+      const top =
+        (target as HTMLElement).getBoundingClientRect().top +
+        window.scrollY -
+        offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }, 550);
+    return () => window.clearTimeout(timer);
+  }, [activeFilter]);
+
   const handleBookClick = (rawBookId: string) => {
     const galleryId = `book_kammara-${rawBookId.replace(/^kammara-/, '')}`;
     const g = bookGalleries[galleryId];
@@ -466,6 +497,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
         filters={filters}
         showAll={false}
         defaultActive="kammara"
+        active={activeFilter}
         onFilter={setActiveFilter}
         defaultTintColor={palettes.kammara.dark}
       />
