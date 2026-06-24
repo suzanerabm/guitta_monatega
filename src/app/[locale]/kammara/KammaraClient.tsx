@@ -890,7 +890,7 @@ function WorldSection({
           .filter((x): x is NonNullable<typeof x> => x !== null);
         if (galleryItems.length === 0) return null;
         return (
-          <Box width="100%" my={{ base: '3xl', lg: '5xl' }} px={{ base: "25px", md: "2rem", xl: "3rem" }}>
+          <Box width="100%" my={{ base: '2xl', lg: '5xl' }} px={{ base: "25px", md: "2rem", xl: "3rem" }}>
             <KammaraCharacterGallery
               title={`${charactersTitle} · ${name}`}
               worldCrestGlyph={worldCrest}
