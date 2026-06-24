@@ -20,6 +20,9 @@ export interface KammaraPlanetTitleProps {
   role?: string;
   /** Declarer variant: "planet" (— ⊙ —) or "universe" (⊹ ⊙ ⊹). Default: planet. */
   declarer?: 'planet' | 'universe';
+  /** Max width of the description column. Default '640px'. The Kammara intro
+   *  passes a wider value so its longer text breathes more. */
+  descriptionMaxWidth?: string;
   'data-testid'?: string;
 }
 
@@ -42,6 +45,7 @@ export function KammaraPlanetTitle({
   crestGlyph = '⊙',
   role,
   declarer = 'planet',
+  descriptionMaxWidth = '640px',
   'data-testid': testId,
 }: KammaraPlanetTitleProps) {
   const p = palettes[palette];
@@ -249,7 +253,7 @@ export function KammaraPlanetTitle({
               fontSize="bannerDesc"
               color="textOverlayBright"
               lineHeight={1.6}
-              maxWidth="640px"
+              maxWidth={descriptionMaxWidth}
               css={{
                 '& p': { margin: 0, marginBottom: '0.5rem' },
                 '& p:last-child': { marginBottom: 0 },

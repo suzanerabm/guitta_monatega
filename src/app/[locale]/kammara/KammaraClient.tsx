@@ -470,6 +470,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
           category="Universo"
           declarer="universe"
           crestGlyph={worldCrestGlyph('kammara')}
+          descriptionMaxWidth="880px"
           description={
             <>
               {sectionText.map((p, i) => (
