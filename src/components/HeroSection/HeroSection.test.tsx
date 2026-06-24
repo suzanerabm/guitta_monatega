@@ -22,4 +22,18 @@ describe('HeroSection', () => {
     renderWithChakra(<HeroSection label="art" title="Arte" background="#fff" />);
     expect(screen.getByText('Arte')).toBeInTheDocument();
   });
+
+  it('applies a background image when backgroundImage is set', () => {
+    const { container } = renderWithChakra(
+      <HeroSection
+        label="saga"
+        title="Kammara"
+        background="#000"
+        backgroundImage="/imgs/books/kammara/saga-orf-v/cover.jpg"
+      />,
+    );
+    expect(container.innerHTML).toContain(
+      '/imgs/books/kammara/saga-orf-v/cover.jpg',
+    );
+  });
 });

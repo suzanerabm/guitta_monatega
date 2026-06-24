@@ -17,6 +17,8 @@ interface HeroSectionProps {
    */
   titleSize?: string;
   background?: string;
+  /** Optional cover/background image painted over the `background` color. */
+  backgroundImage?: string;
   textColor?: string;
   labelColor?: string;
   minHeight?: string;
@@ -37,6 +39,7 @@ export function HeroSection({
   labelBottom,
   titleSize,
   background,
+  backgroundImage,
   textColor,
   labelColor,
   minHeight,
@@ -113,6 +116,18 @@ export function HeroSection({
       justify="center"
       gap="0"
       bg={background}
+      // Cover image is a dynamic, per-page value (the book cover), so it's set
+      // inline rather than via a token — painted over the `bg` color.
+      style={
+        backgroundImage
+          ? {
+              backgroundImage: `url(${backgroundImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+            }
+          : undefined
+      }
       minH={minHeight ?? '15vh'}
       pt="5xl"
       pb={{ base: 'xl', md: '4xl' }}
