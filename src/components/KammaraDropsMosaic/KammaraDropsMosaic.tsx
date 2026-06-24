@@ -44,7 +44,9 @@ export function KammaraDropsMosaic({
   return (
     <Grid
       data-testid={testId ?? 'kammara-drops-mosaic'}
-      gridTemplateColumns="1fr 1fr"
+      // Two columns everywhere EXCEPT the md band (768–991), where it's a
+      // single column (lg brings the second column back from 992px up).
+      gridTemplateColumns={{ base: '1fr 1fr', md: '1fr', lg: '1fr 1fr' }}
       gap={{ base: 'sm', md: 'md' }}
       width="100%"
       // Breathing room around the whole mosaic so the clips don't touch the
@@ -73,13 +75,16 @@ export function KammaraDropsMosaic({
         const sharedCss = {
           boxShadow: `inset 0 0 0 1px ${color}40, 0 8px 24px rgba(0,0,0,0.35)`,
         } as const;
+        // In the md band (768–991) only the first 5 clips show; everywhere else
+        // all of them do. (Hidden via display so the grid count adapts.)
+        const display = i < 5 ? undefined : { base: 'block', md: 'none', lg: 'block' };
         // Linkable tile becomes an anchor; otherwise a plain box.
         return clip.href ? (
           <chakra.a
             key={`${clip.video}-${i}`}
             href={clip.href}
+            display={display ?? 'block'}
             position="relative"
-            display="block"
             width="100%"
             aspectRatio="16 / 9"
             borderRadius="14px"
@@ -92,6 +97,7 @@ export function KammaraDropsMosaic({
         ) : (
           <Box
             key={`${clip.video}-${i}`}
+            display={display}
             position="relative"
             width="100%"
             aspectRatio="16 / 9"
