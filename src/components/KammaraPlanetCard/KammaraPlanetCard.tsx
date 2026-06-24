@@ -85,7 +85,8 @@ export function KammaraPlanetCard({
       <Box
         position="relative"
         width="100%"
-        height={{ base: '440px', md: '360px' }}
+        height={{ base: 'auto', md: '360px' }}
+        minHeight={{ base: '440px', md: '360px' }}
         borderRadius="32px"
         overflow="hidden"
       >
@@ -152,13 +153,16 @@ export function KammaraPlanetCard({
           {crestGlyph}
         </Box>
 
-        {/* ── Left: title block + intro text ── */}
+        {/* ── Left: title block + intro text ──
+            Mobile (base/sm): normal flow so text + badges stack, never overlap.
+            md+: absolute, anchored top-left, 40% wide (the cinematic layout). */}
         <Flex
-          position="absolute"
-          top={{ base: '2.4rem', md: '3rem' }}
-          left={{ base: '1.4rem', md: '2.8rem' }}
+          position={{ base: 'relative', md: 'absolute' }}
+          top={{ md: '3rem' }}
+          left={{ md: '2.8rem' }}
           direction="column"
-          maxW={{ base: 'calc(100% - 2.8rem)', md: '40%' }}
+          maxW={{ base: '100%', md: '40%' }}
+          padding={{ base: '2.4rem 1.4rem 0', md: 0 }}
           zIndex={3}
         >
           <Text
@@ -219,17 +223,21 @@ export function KammaraPlanetCard({
           </Text>
         </Flex>
 
-        {/* ── Right: fact badges ── */}
+        {/* ── Right: fact badges ──
+            Mobile: normal flow, stacked below the text. md+: absolute right,
+            vertically centered (the cinematic layout). */}
         {badges.length > 0 && (
           <Flex
-            position="absolute"
-            top="50%"
-            right={{ base: '1.4rem', md: '2.5rem' }}
-            transform="translateY(-50%)"
+            position={{ base: 'relative', md: 'absolute' }}
+            top={{ md: '50%' }}
+            right={{ md: '2.5rem' }}
+            transform={{ md: 'translateY(-50%)' }}
             direction="column"
-            gap="sm"
+            gap={{ base: 'md', md: 'sm' }}
             zIndex={3}
-            minW="140px"
+            minW={{ base: 'auto', md: '140px' }}
+            padding={{ base: '2rem 1.4rem 3.2rem', md: 0 }}
+            css={{ alignSelf: 'flex-start' }}
           >
             {badges.map((b, i) => (
               <KammaraStatBadge

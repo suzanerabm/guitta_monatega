@@ -1,6 +1,6 @@
 'use client';
 import { Fragment, useEffect, useMemo, useState } from 'react';
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex, Grid, Text } from '@chakra-ui/react';
 import { useTranslations, useLocale } from 'next-intl';
 import { HeroSection } from '@/components/HeroSection';
 import { FilterBar } from '@/components/FilterBar';
@@ -542,8 +542,9 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
 
         {/* ── Cards de entrada dos mundos — o coração da vitrine. Clicar num
             card aciona o filtro (monta a seção daquele mundo). ── */}
-        <Box width="100%" my={{ base: '2xl', lg: '4xl' }} px={{ base: '25px', md: '2rem', xl: '3rem' }}>
-          <Flex direction="column" gap={{ base: 'md', md: 'lg' }}>
+        <Box width="100%" my={{ base: 'xl', lg: '4xl' }} px={{ base: '25px', md: '2rem', xl: '3rem' }}>
+          {/* 1 coluna até xl; 2 colunas a partir de 1280px (xl). */}
+          <Grid gridTemplateColumns={{ base: '1fr', xl: '1fr 1fr' }} gap="lg">
             {worldCards.map((w) => (
               <KammaraPlanetCard
                 key={w.id}
@@ -558,7 +559,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
                 onSelect={setActiveFilter}
               />
             ))}
-          </Flex>
+          </Grid>
         </Box>
         {(() => {
           const contextId = 'kammara/kammara';
