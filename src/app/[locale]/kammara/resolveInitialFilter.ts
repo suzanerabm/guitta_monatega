@@ -1,6 +1,6 @@
 /**
  * Decide qual filtro/planeta abrir no carregamento da página, a partir do
- * query param `?planeta=` e da lista de mundos publicados.
+ * query param `?planet=` e da lista de mundos publicados.
  *
  * Regras:
  *  - param ausente, vazio ou inválido → 'kammara' (a vitrine do universo).
