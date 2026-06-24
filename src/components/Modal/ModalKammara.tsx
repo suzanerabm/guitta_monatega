@@ -543,7 +543,7 @@ export function ModalKammara() {
 
           <Text
             fontSize="md"
-            color={navColor}
+            color={color}
             letterSpacing="wide"
             fontFamily="glyph"
           >
