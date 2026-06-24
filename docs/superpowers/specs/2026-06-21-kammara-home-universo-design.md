@@ -17,14 +17,17 @@ clima único de cada um). A página deve preservar e vender essa unicidade.
 
 ## Estrutura (5 atos, scroll de cima pra baixo)
 
-1. **Hero cinemático** — vídeo em loop full-screen (um dos clipes do universo)
-   com o nome KAMMARA por cima e uma frase de impacto. Imersão total no
-   primeiro segundo (estilo trailer AAA / Netflix). Só encanta — não explica.
+1. **Hero — a capa do livro** (AJUSTE 2026-06-24). Em vez de vídeo full-screen,
+   o hero usa a **capa do livro** (`/imgs/books/kammara/saga-orf-v/cover.jpg`)
+   como imagem principal — posiciona o Kammara como uma obra/saga já no primeiro
+   olhar. O nome KAMMARA e o clima saem da própria capa. (A ideia de vídeo loop
+   foi descartada a pedido da Suzane.)
 
-2. **Logline** — uma única frase de impacto que situa o universo (ex.: "Seis
-   mundos. Uma só rede viva."). Mínimo texto, máximo respiro; faz a ponte do
-   hero pros mundos sem quebrar o clima. Decisão: **uma frase só** (não
-   parágrafo) pra não cortar o embalo cinematográfico.
+2. **O texto do Kammara — MANTER** (AJUSTE 2026-06-24). NÃO virar uma logline
+   curta: o texto de apresentação do universo é importante e fica. O ajuste é
+   **deixá-lo mais largo** (mais respiro/largura na coluna), com bom destaque.
+   Fonte do texto: `kammara.section.text` e/ou `kammara.section.panel.story` no
+   i18n (pt/en) — já existe, é o "Kammara — um universo onde memória é matéria…".
 
 3. **Os mundos — grid de portais** (o coração). Cada mundo é um cartão grande
    com sua cor/clima/imagem de fundo, todos lado a lado, estilo *menu de
@@ -41,7 +44,9 @@ clima único de cada um). A página deve preservar e vender essa unicidade.
 
 ## Decisões já tomadas (visual companion)
 
-- Hero: **A — loop cinematográfico full-screen** (vs. planetas flutuando / preto-revela).
+- Hero: ~~A — loop cinematográfico full-screen~~ → **REVISADO: a capa do livro**
+  (`saga-orf-v/cover.jpg`) como imagem do hero. Posiciona como obra/saga.
+- Texto do Kammara: **MANTER** (não virar logline curta), só deixar mais largo.
 - Mundos: **A — grid de portais** (vs. faixas full-width / carrossel).
 - Logline: **uma frase só** (escolha do agente, sem preferência forte da Suzane).
 
