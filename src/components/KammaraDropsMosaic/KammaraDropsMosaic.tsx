@@ -89,15 +89,16 @@ export function KammaraDropsMosaic({
         } as const;
         // How many clips show per breakpoint band (each entry overrides the
         // previous one as the screen widens):
-        //  - base: all      - md (768–991): first 5
-        //  - lg/xl: all      - 2xl (1500–1919): first 6
-        //  - 3xl (≥1920): first 8
-        // `position` index decides which bands hide this clip.
+        //  - base (0–479): first 6     - sm (480–767): all
+        //  - md (768–991): first 5     - lg/xl: all
+        //  - 2xl (1500–1919): first 9  - 3xl (≥1920): first 8
+        const inBase = i < 6;
         const inMd = i < 5;
         const in2xl = i < 9;
         const in3xl = i < 8;
         const display = {
-          base: 'block',
+          base: inBase ? 'block' : 'none',
+          sm: 'block',
           md: inMd ? 'block' : 'none',
           lg: 'block',
           '2xl': in2xl ? 'block' : 'none',
