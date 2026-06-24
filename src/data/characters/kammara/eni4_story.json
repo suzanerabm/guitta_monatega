@@ -76,16 +76,6 @@
     },
     {
       "label": {
-        "pt": "Clima",
-        "en": "Climate"
-      },
-      "value": {
-        "pt": "Tórrido",
-        "en": "Torrid"
-      }
-    },
-    {
-      "label": {
         "pt": "Energia",
         "en": "Energy"
       },

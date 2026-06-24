@@ -62,16 +62,6 @@
     },
     {
       "label": {
-        "pt": "Clima",
-        "en": "Climate"
-      },
-      "value": {
-        "pt": "Ventoso",
-        "en": "Windy"
-      }
-    },
-    {
-      "label": {
         "pt": "Energia",
         "en": "Energy"
       },

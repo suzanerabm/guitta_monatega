@@ -494,6 +494,9 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
             </>
           }
         />
+        {/* Same trim as the planets: cancel the DSMainCard's legacy mobile
+            `mt: 8rem` so the intro title + card sit close, no empty gap. */}
+        <Box mt={{ base: '-6rem', md: 0 }}>
         <DSMainCard
           characters={[]}
           gradient={kammaraPalette.gradientBg}
@@ -528,6 +531,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
               living sample of the universe next to the intro text. */}
           <KammaraDropsMosaic clips={mosaicClips} color={kammaraPalette.colors[0]} onSelectWorld={setActiveFilter} />
         </DSMainCard>
+        </Box>
 
         {/* ── Título "Planetas" — mesmo componente da intro do universo.
             Textos vêm do i18n (kammara.planetsTitle / planetsDesc). ── */}

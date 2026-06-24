@@ -72,16 +72,6 @@
     },
     {
       "label": {
-        "pt": "Clima",
-        "en": "Climate"
-      },
-      "value": {
-        "pt": "Mutável",
-        "en": "Mutable"
-      }
-    },
-    {
-      "label": {
         "pt": "Energia",
         "en": "Energy"
       },

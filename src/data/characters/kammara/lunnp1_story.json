@@ -13,24 +13,44 @@
   },
   "tags": [
     {
-      "label": { "pt": "Habitantes", "en": "Inhabitants" },
-      "value": { "pt": "Shal'ún", "en": "Shal'ún" }
+      "label": {
+        "pt": "Habitantes",
+        "en": "Inhabitants"
+      },
+      "value": {
+        "pt": "Shal'ún",
+        "en": "Shal'ún"
+      }
     },
     {
-      "label": { "pt": "Idioma", "en": "Language" },
-      "value": { "pt": "Kalún", "en": "Kalún" }
+      "label": {
+        "pt": "Idioma",
+        "en": "Language"
+      },
+      "value": {
+        "pt": "Kalún",
+        "en": "Kalún"
+      }
     },
     {
-      "label": { "pt": "Clima", "en": "Climate" },
-      "value": { "pt": "Úmido", "en": "Humid" }
+      "label": {
+        "pt": "Energia",
+        "en": "Energy"
+      },
+      "value": {
+        "pt": "Luz",
+        "en": "Light"
+      }
     },
     {
-      "label": { "pt": "Energia", "en": "Energy" },
-      "value": { "pt": "Luz", "en": "Light" }
-    },
-    {
-      "label": { "pt": "Transporte", "en": "Transport" },
-      "value": { "pt": "Túri'Kan", "en": "Túri'Kan" }
+      "label": {
+        "pt": "Transporte",
+        "en": "Transport"
+      },
+      "value": {
+        "pt": "Túri'Kan",
+        "en": "Túri'Kan"
+      }
     }
   ],
   "panel": {

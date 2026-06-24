@@ -70,16 +70,6 @@
     },
     {
       "label": {
-        "pt": "Clima",
-        "en": "Climate"
-      },
-      "value": {
-        "pt": "Gélido",
-        "en": "Frigid"
-      }
-    },
-    {
-      "label": {
         "pt": "Energia",
         "en": "Energy"
       },

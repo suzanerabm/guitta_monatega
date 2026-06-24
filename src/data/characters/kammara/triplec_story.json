@@ -86,16 +86,6 @@
     },
     {
       "label": {
-        "pt": "Clima",
-        "en": "Climate"
-      },
-      "value": {
-        "pt": "Brumoso",
-        "en": "Misty"
-      }
-    },
-    {
-      "label": {
         "pt": "Energia",
         "en": "Energy"
       },

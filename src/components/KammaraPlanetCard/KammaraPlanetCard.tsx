@@ -1,5 +1,5 @@
 'use client';
-import { Box, Flex, Heading, Text, chakra } from '@chakra-ui/react';
+import { Box, Flex, Grid, Heading, Text, chakra } from '@chakra-ui/react';
 import { KammaraStatBadge } from '@/components/KammaraStatBadge';
 
 export interface PlanetBadge {
@@ -227,17 +227,19 @@ export function KammaraPlanetCard({
             Mobile: normal flow, stacked below the text. md+: absolute right,
             vertically centered (the cinematic layout). */}
         {badges.length > 0 && (
-          <Flex
+          <Grid
             position={{ base: 'relative', md: 'absolute' }}
             top={{ md: '50%' }}
             right={{ md: '2.5rem' }}
             transform={{ md: 'translateY(-50%)' }}
-            direction="column"
-            gap={{ base: 'md', md: 'sm' }}
+            // Mobile: 2 columns side-by-side so the card stays short. md+: a
+            // single vertical column (the cinematic right rail).
+            gridTemplateColumns={{ base: '1fr 1fr', md: '1fr' }}
+            gap="sm"
             zIndex={3}
             minW={{ base: 'auto', md: '140px' }}
-            padding={{ base: '2rem 1.4rem 3.2rem', md: 0 }}
-            css={{ alignSelf: 'flex-start' }}
+            padding={{ base: '1.4rem 1.4rem 3rem', md: 0 }}
+            alignSelf="flex-start"
           >
             {badges.map((b, i) => (
               <KammaraStatBadge
@@ -248,7 +250,7 @@ export function KammaraPlanetCard({
                 darkColor={darkColor}
               />
             ))}
-          </Flex>
+          </Grid>
         )}
 
         {/* ── Footer — same recipe as KammaraCardSubsystemHorizontal: glyph
