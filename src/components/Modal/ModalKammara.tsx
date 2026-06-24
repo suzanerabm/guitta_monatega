@@ -81,8 +81,12 @@ export function ModalKammara() {
   // <img> (no ZoomableImage), so nothing competes for the gesture. Only armed
   // on the clean-mobile layout.
   const touchStart = useRef<{ x: number; y: number } | null>(null);
+  // Swipe só em RETRATO. Em paisagem o arraste horizontal conflitava com o
+  // gesto de "voltar" do Safari (saía/reiniciava o modal), então lá a
+  // navegação é por setas laterais (abaixo) e o swipe fica desligado.
+  const swipeEnabled = isCleanMobile && !isLandscape;
   const onMediaTouchStart = (e: React.TouchEvent) => {
-    if (!isCleanMobile || e.touches.length !== 1) {
+    if (!swipeEnabled || e.touches.length !== 1) {
       touchStart.current = null;
       return;
     }
@@ -91,7 +95,7 @@ export function ModalKammara() {
   const onMediaTouchEnd = (e: React.TouchEvent) => {
     const start = touchStart.current;
     touchStart.current = null;
-    if (!start || !isCleanMobile) return;
+    if (!start || !swipeEnabled) return;
     const t = e.changedTouches[0];
     if (!t) return;
     const dx = t.clientX - start.x;
@@ -260,9 +264,9 @@ export function ModalKammara() {
           justify="center"
           flex={1}
           minH={0}
-          px={{ base: '0.5rem', md: '3xl' }}
-          pt={isLandscape ? '0.75rem' : { base: '3rem', md: '4rem' }}
-          pb={isLandscape ? '0.5rem' : { base: '0.5rem', md: '6rem' }}
+          px={isLandscape ? '0' : { base: '0.5rem', md: '3xl' }}
+          pt={isLandscape ? '0.25rem' : { base: '3rem', md: '4rem' }}
+          pb={isLandscape ? '0.25rem' : { base: '3.5rem', md: '6rem' }}
           gap={{ base: '0', md: 'lg' }}
           onClick={(e) => e.stopPropagation()}
         >
@@ -332,8 +336,8 @@ export function ModalKammara() {
               justifyContent="center"
               minH={0}
               flex={1}
-              width={isLandscape ? '99%' : { base: '94vw', md: '100%' }}
-              maxW={isLandscape ? '99%' : { base: '94vw', md: '90vw' }}
+              width={isLandscape ? '100%' : { base: '94vw', md: '100%' }}
+              maxW={isLandscape ? '100%' : { base: '94vw', md: '90vw' }}
               onTouchStart={onMediaTouchStart}
               onTouchEnd={onMediaTouchEnd}
             >
@@ -384,6 +388,76 @@ export function ModalKammara() {
                 />
               )}
 
+              {/* Setas laterais — SÓ em paisagem. Substituem o swipe (que
+                  conflitava com o "voltar" do Safari). Flutuam sobre as bordas
+                  da mídia, fáceis pro polegar de quem segura o aparelho deitado. */}
+              {isLandscape && (
+                <>
+                  <Box
+                    as="button"
+                    aria-label="Previous"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      prev();
+                    }}
+                    position="absolute"
+                    left="0"
+                    top="50%"
+                    zIndex={2}
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                    minW="48px"
+                    minH="48px"
+                    bg="none"
+                    border="none"
+                    color={navColor}
+                    fontFamily="glyph"
+                    fontSize="glyphH1"
+                    lineHeight={1}
+                    css={{
+                      cursor: 'pointer',
+                      transform: 'translateY(-50%)',
+                      textShadow: `0 2px 10px ${darkColor}`,
+                      '& *': { cursor: 'pointer' },
+                    }}
+                  >
+                    ⊷
+                  </Box>
+                  <Box
+                    as="button"
+                    aria-label="Next"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      next();
+                    }}
+                    position="absolute"
+                    right="0"
+                    top="50%"
+                    zIndex={2}
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                    minW="48px"
+                    minH="48px"
+                    bg="none"
+                    border="none"
+                    color={navColor}
+                    fontFamily="glyph"
+                    fontSize="glyphH1"
+                    lineHeight={1}
+                    css={{
+                      cursor: 'pointer',
+                      transform: 'translateY(-50%)',
+                      textShadow: `0 2px 10px ${darkColor}`,
+                      '& *': { cursor: 'pointer' },
+                    }}
+                  >
+                    ⊶
+                  </Box>
+                </>
+              )}
+
               {/* Origin stamp over the media — same crest + world mark as the
                   cards. Non-interactive, so video controls and zoom still work. */}
               {variant === 'kammara' && heroTitle && (
@@ -418,9 +492,11 @@ export function ModalKammara() {
           </Flex>
         </Flex>
 
-        {/* Bottom nav — transparent, planet text color */}
+        {/* Bottom nav — setas no rodapé. Aparece em RETRATO (mobile) e no
+            DESKTOP; em PAISAGEM some (lá as setas vão pras laterais). O
+            contador só no desktop (no mobile o modal é clean, sem paginação). */}
         <Flex
-          display={{ base: 'none', md: 'flex' }}
+          display={isLandscape ? 'none' : 'flex'}
           position="absolute"
           bottom={0}
           left={0}
@@ -428,7 +504,7 @@ export function ModalKammara() {
           align="center"
           justify="center"
           gap="3xl"
-          py="1.6rem"
+          py={{ base: '1rem', md: '1.6rem' }}
           bg="transparent"
           onClick={(e) => e.stopPropagation()}
         >
@@ -451,6 +527,7 @@ export function ModalKammara() {
           </Box>
 
           <Text
+            display={{ base: 'none', md: 'block' }}
             fontSize="md"
             color={navColor}
             letterSpacing="wide"
