@@ -344,6 +344,22 @@ export function ModalKammara() {
                   )}
                   <source src={currentVideo} type="video/mp4" />
                 </video>
+              ) : isCleanMobile ? (
+                // Mobile: plain image, no zoom/pan. The media already fills the
+                // screen and pinch would fight the swipe. objectFit contain
+                // keeps the whole frame visible.
+                <img
+                  key={currentImage}
+                  src={currentImage}
+                  alt={heroTitle || ''}
+                  style={{
+                    maxWidth: '100%',
+                    maxHeight: '100%',
+                    objectFit: 'contain',
+                    borderRadius: '16px',
+                    display: 'block',
+                  }}
+                />
               ) : (
                 <ZoomableImage
                   key={currentImage}
