@@ -1,6 +1,6 @@
 'use client';
 import { Fragment, useEffect, useMemo, useState } from 'react';
-import { Box, Text } from '@chakra-ui/react';
+import { Box, Flex, Text } from '@chakra-ui/react';
 import { useTranslations, useLocale } from 'next-intl';
 import { HeroSection } from '@/components/HeroSection';
 import { FilterBar } from '@/components/FilterBar';
@@ -24,7 +24,7 @@ import kammaraProgressData from '@/data/kammara_progress.json';
 import { isKammaraPublished, kammaraInProgress } from '@/lib/visibility';
 import { KammaraEvents } from '@/components/KammaraEvents';
 import kammaraEventsData from '@/data/kammara_events.json';
-import { KammaraWorldPortals } from '@/components/KammaraWorldPortals';
+import { KammaraPlanetCard } from '@/components/KammaraPlanetCard';
 import { KammaraDropsMosaic } from '@/components/KammaraDropsMosaic';
 import kammaraMosaicData from '@/data/kammara_mosaic.json';
 import { useModal } from '@/components/Modal';
@@ -38,6 +38,7 @@ import {
   getWorldSummary,
   getWorldPanelStory,
   getWorldSubsystems,
+  getWorldTags,
 } from '@/data/characters/kammara/_worldData';
 import { KammaraStarField } from './KammaraStarField';
 
@@ -407,12 +408,15 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
   const kammaraPalette = palettes.kammara;
   const kammaraHidden = activeFilter !== 'kammara';
 
-  // Portais do grid: um por mundo publicado, com nome/cor/imagem resolvidos.
-  // Clicar num portal aciona o mesmo setActiveFilter do FilterBar (monta a
-  // seção daquele mundo).
-  const worldPortals = publishedWorlds.map((w) => ({
+  // Cards de entrada: um por mundo publicado, com nome/texto/tags/imagem/cor
+  // resolvidos dos dados do mundo (sem duplicar conteúdo). Clicar aciona o
+  // mesmo setActiveFilter do FilterBar (monta a seção daquele mundo).
+  const worldCards = publishedWorlds.map((w) => ({
     id: w.id,
     name: getWorldName(w.id, locale) || WORLD_NAMES[w.id],
+    summary: (getWorldSummary(w.id, locale)[0] ?? ''),
+    tags: getWorldTags(w.id, locale),
+    crestGlyph: worldCrestGlyph(w.id),
     color: palettes[w.id as PaletteName].colors[0],
     darkColor: palettes[w.id as PaletteName].dark,
     image: w.bgImage ?? undefined,
@@ -525,10 +529,36 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
           <KammaraDropsMosaic clips={mosaicClips} color={kammaraPalette.colors[0]} onSelectWorld={setActiveFilter} />
         </DSMainCard>
 
-        {/* ── Grid de portais dos mundos — o coração da vitrine. Clicar num
-            portal aciona o filtro (monta a seção daquele mundo). ── */}
+        {/* ── Título "Planetas" — mesmo componente da intro do universo.
+            Textos vêm do i18n (kammara.planetsTitle / planetsDesc). ── */}
+        <KammaraPlanetTitle
+          name={safeT('planetsTitle', 'Planetas')}
+          palette="kammara"
+          category={sectionName}
+          declarer="universe"
+          crestGlyph={worldCrestGlyph('kammara')}
+          description={safeT('planetsDesc', '')}
+        />
+
+        {/* ── Cards de entrada dos mundos — o coração da vitrine. Clicar num
+            card aciona o filtro (monta a seção daquele mundo). ── */}
         <Box width="100%" my={{ base: '2xl', lg: '4xl' }} px={{ base: '25px', md: '2rem', xl: '3rem' }}>
-          <KammaraWorldPortals portals={worldPortals} onSelect={setActiveFilter} />
+          <Flex direction="column" gap={{ base: 'md', md: 'lg' }}>
+            {worldCards.map((w) => (
+              <KammaraPlanetCard
+                key={w.id}
+                id={w.id}
+                name={w.name}
+                summary={w.summary}
+                image={w.image}
+                crestGlyph={w.crestGlyph}
+                color={w.color}
+                darkColor={w.darkColor}
+                badges={w.tags}
+                onSelect={setActiveFilter}
+              />
+            ))}
+          </Flex>
         </Box>
         {(() => {
           const contextId = 'kammara/kammara';

@@ -62,5 +62,57 @@
         "TripleC is strong because it learned to organize chance without losing its root. What is born here keeps the rest of the universe in motion."
       ]
     }
-  }
+  },
+  "tags": [
+    {
+      "label": {
+        "pt": "Habitantes",
+        "en": "Inhabitants"
+      },
+      "value": {
+        "pt": "Bunniets",
+        "en": "Bunniets"
+      }
+    },
+    {
+      "label": {
+        "pt": "Idioma",
+        "en": "Language"
+      },
+      "value": {
+        "pt": "Kamora",
+        "en": "Kamora"
+      }
+    },
+    {
+      "label": {
+        "pt": "Clima",
+        "en": "Climate"
+      },
+      "value": {
+        "pt": "Brumoso",
+        "en": "Misty"
+      }
+    },
+    {
+      "label": {
+        "pt": "Energia",
+        "en": "Energy"
+      },
+      "value": {
+        "pt": "Kemita",
+        "en": "Kemita"
+      }
+    },
+    {
+      "label": {
+        "pt": "Transporte",
+        "en": "Transport"
+      },
+      "value": {
+        "pt": "Cshift",
+        "en": "Cshift"
+      }
+    }
+  ]
 }

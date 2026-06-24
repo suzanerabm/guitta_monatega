@@ -52,5 +52,57 @@
         "By the time the symptoms appear, the invasion is already over."
       ]
     }
-  }
+  },
+  "tags": [
+    {
+      "label": {
+        "pt": "Habitantes",
+        "en": "Inhabitants"
+      },
+      "value": {
+        "pt": "Vírus",
+        "en": "Viruses"
+      }
+    },
+    {
+      "label": {
+        "pt": "Idioma",
+        "en": "Language"
+      },
+      "value": {
+        "pt": "ASM-Δ",
+        "en": "ASM-Δ"
+      }
+    },
+    {
+      "label": {
+        "pt": "Clima",
+        "en": "Climate"
+      },
+      "value": {
+        "pt": "Tórrido",
+        "en": "Torrid"
+      }
+    },
+    {
+      "label": {
+        "pt": "Energia",
+        "en": "Energy"
+      },
+      "value": {
+        "pt": "Calor",
+        "en": "Heat"
+      }
+    },
+    {
+      "label": {
+        "pt": "Transporte",
+        "en": "Transport"
+      },
+      "value": {
+        "pt": "Troy-Δ",
+        "en": "Troy-Δ"
+      }
+    }
+  ]
 }

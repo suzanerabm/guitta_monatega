@@ -38,5 +38,57 @@
         "Not everything needs to be perfect to be essential. But everything essential needs to know how to protect itself."
       ]
     }
-  }
+  },
+  "tags": [
+    {
+      "label": {
+        "pt": "Habitantes",
+        "en": "Inhabitants"
+      },
+      "value": {
+        "pt": "ElePHPants",
+        "en": "ElePHPants"
+      }
+    },
+    {
+      "label": {
+        "pt": "Idioma",
+        "en": "Language"
+      },
+      "value": {
+        "pt": "LanPHPe",
+        "en": "LanPHPe"
+      }
+    },
+    {
+      "label": {
+        "pt": "Clima",
+        "en": "Climate"
+      },
+      "value": {
+        "pt": "Ventoso",
+        "en": "Windy"
+      }
+    },
+    {
+      "label": {
+        "pt": "Energia",
+        "en": "Energy"
+      },
+      "value": {
+        "pt": "Conexão",
+        "en": "Connection"
+      }
+    },
+    {
+      "label": {
+        "pt": "Transporte",
+        "en": "Transport"
+      },
+      "value": {
+        "pt": "Pontes",
+        "en": "Bridges"
+      }
+    }
+  ]
 }

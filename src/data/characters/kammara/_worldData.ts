@@ -36,10 +36,18 @@ import z1Scenes from './z1_scenes.json';
 
 type Bilingual<T> = { pt: T; en: T };
 
+/** A fact "tag" shown on the planet card (label + value, both bilingual). */
+export interface WorldTag {
+  label: Bilingual<string>;
+  value: Bilingual<string>;
+}
+
 export interface WorldStory {
   name: Bilingual<string>;
   summary: Bilingual<string[]>;
   panel: { story: Bilingual<string[]> };
+  /** Optional fact tags for the planet entry card. */
+  tags?: WorldTag[];
 }
 
 export interface WorldSubsystem {
@@ -135,6 +143,19 @@ export function getWorldPanelStory(worldId: string, locale: Locale): string[] {
   if (!s) return [];
   const v = s.panel.story[locale];
   return hasRealContent(v) ? v : s.panel.story.pt || [];
+}
+
+/** Localized fact tags (label + value) for a world's entry card. */
+export function getWorldTags(
+  worldId: string,
+  locale: Locale,
+): { label: string; value: string }[] {
+  const s = STORIES[worldId];
+  if (!s?.tags) return [];
+  return s.tags.map((t) => ({
+    label: t.label[locale]?.trim() || t.label.pt || '',
+    value: t.value[locale]?.trim() || t.value.pt || '',
+  }));
 }
 
 export function getWorldSubsystems(

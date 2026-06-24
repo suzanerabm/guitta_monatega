@@ -46,5 +46,57 @@
         "Even chaos can become life."
       ]
     }
-  }
+  },
+  "tags": [
+    {
+      "label": {
+        "pt": "Habitantes",
+        "en": "Inhabitants"
+      },
+      "value": {
+        "pt": "Transistores",
+        "en": "Transistors"
+      }
+    },
+    {
+      "label": {
+        "pt": "Idioma",
+        "en": "Language"
+      },
+      "value": {
+        "pt": "Assembly",
+        "en": "Assembly"
+      }
+    },
+    {
+      "label": {
+        "pt": "Clima",
+        "en": "Climate"
+      },
+      "value": {
+        "pt": "Gélido",
+        "en": "Frigid"
+      }
+    },
+    {
+      "label": {
+        "pt": "Energia",
+        "en": "Energy"
+      },
+      "value": {
+        "pt": "Lógica",
+        "en": "Logic"
+      }
+    },
+    {
+      "label": {
+        "pt": "Transporte",
+        "en": "Transport"
+      },
+      "value": {
+        "pt": "Trilhos",
+        "en": "Rails"
+      }
+    }
+  ]
 }

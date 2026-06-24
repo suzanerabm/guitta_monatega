@@ -48,5 +48,57 @@
         "It's okay. Let's go again. But this time... maybe until the end."
       ]
     }
-  }
+  },
+  "tags": [
+    {
+      "label": {
+        "pt": "Habitantes",
+        "en": "Inhabitants"
+      },
+      "value": {
+        "pt": "Basiks",
+        "en": "Basiks"
+      }
+    },
+    {
+      "label": {
+        "pt": "Idioma",
+        "en": "Language"
+      },
+      "value": {
+        "pt": "BASIC",
+        "en": "BASIC"
+      }
+    },
+    {
+      "label": {
+        "pt": "Clima",
+        "en": "Climate"
+      },
+      "value": {
+        "pt": "Mutável",
+        "en": "Mutable"
+      }
+    },
+    {
+      "label": {
+        "pt": "Energia",
+        "en": "Energy"
+      },
+      "value": {
+        "pt": "Tokks",
+        "en": "Tokks"
+      }
+    },
+    {
+      "label": {
+        "pt": "Transporte",
+        "en": "Transport"
+      },
+      "value": {
+        "pt": "Cshift",
+        "en": "Cshift"
+      }
+    }
+  ]
 }

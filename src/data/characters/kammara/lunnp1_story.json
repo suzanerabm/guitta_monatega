@@ -11,6 +11,28 @@
       "LUNN'P1 — the planet where everything flows. A world without a sun, where four moons govern time and water never lies. Home of the Shal'ún, the only beings naturally immune to viruses in the entire universe."
     ]
   },
+  "tags": [
+    {
+      "label": { "pt": "Habitantes", "en": "Inhabitants" },
+      "value": { "pt": "Shal'ún", "en": "Shal'ún" }
+    },
+    {
+      "label": { "pt": "Idioma", "en": "Language" },
+      "value": { "pt": "Kalún", "en": "Kalún" }
+    },
+    {
+      "label": { "pt": "Clima", "en": "Climate" },
+      "value": { "pt": "Úmido", "en": "Humid" }
+    },
+    {
+      "label": { "pt": "Energia", "en": "Energy" },
+      "value": { "pt": "Luz", "en": "Light" }
+    },
+    {
+      "label": { "pt": "Transporte", "en": "Transport" },
+      "value": { "pt": "Túri'Kan", "en": "Túri'Kan" }
+    }
+  ],
   "panel": {
     "story": {
       "pt": [

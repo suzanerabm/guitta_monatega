@@ -256,7 +256,9 @@
         ]
       }
     },
-    "booksTitle": "Livros"
+    "booksTitle": "Livros",
+    "planetsTitle": "Planetas",
+    "planetsDesc": "Os mundos de Kammara — cada um um universo próprio."
   },
   "art": {
     "pageTitle": "Arte — Guitta Monatega",

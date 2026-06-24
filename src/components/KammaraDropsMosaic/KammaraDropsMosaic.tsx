@@ -71,6 +71,17 @@ export function KammaraDropsMosaic({
       // Breathing room around the whole mosaic so the clips don't touch the
       // edge of the side slot — just padding, no border.
       padding={{ base: 'md', md: 'lg' }}
+      css={{
+        // Ultra-wide monitors (3440px etc.): cap the whole mosaic's width and
+        // center it, so the 4-column grid fills a sane area instead of
+        // stretching each clip until the 16:9 cover crops it. The grid stays
+        // symmetric — no big empty gap.
+        '@media (min-width: 2200px)': {
+          maxWidth: '1800px',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+        },
+      }}
     >
       {clips.map((clip, i) => {
         const tile = (
