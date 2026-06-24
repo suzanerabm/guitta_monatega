@@ -145,25 +145,29 @@ export function ModalKammara() {
         css={{ background: 'rgba(0,0,0,0.7)' }}
       />
 
-      {/* Floating card. Em paisagem (celular virado) a margem encolhe pra
-          ~6px e o card vira quase fullscreen — é onde a altura é escassa e a
-          gente quer a mídia o maior possível. Retrato/desktop mantêm os 20px. */}
+      {/* Floating card — IDÊNTICO em retrato e paisagem (20px de margem). O
+          retrato já ocupa a tela bem e não trava; paisagem usa a MESMA fórmula
+          em vez de um fullscreen próprio (que fazia o iPhone "se perder" ao
+          girar). A foto cresce sozinha porque em paisagem ela é deitada.
+          overscroll/touch contidos pro gesto não vazar pro Safari. */}
       <Flex
         position="fixed"
-        top={isLandscape ? '6px' : '20px'}
-        left={isLandscape ? '6px' : '20px'}
-        right={isLandscape ? '6px' : '20px'}
-        bottom={isLandscape ? '6px' : '20px'}
+        top="20px"
+        left="20px"
+        right="20px"
+        bottom="20px"
         zIndex={200}
         direction="column"
-        borderRadius={isLandscape ? '16px' : '28px'}
+        borderRadius="28px"
         overflow="hidden"
         css={{
           background: `${darkColor}d5`,
           border: `1px solid ${color}35`,
           outline: `2px solid ${color}`,
-          outlineOffset: isLandscape ? '2px' : '4px',
+          outlineOffset: '4px',
           boxShadow: `0 30px 80px rgba(0,0,0,0.7), 0 0 60px ${color}15, 0 0 120px ${color}08`,
+          overscrollBehavior: 'contain',
+          touchAction: 'pan-y',
         }}
       >
         {/* Crest watermark — accent color, 15% opacity via hex alpha */}
@@ -256,9 +260,9 @@ export function ModalKammara() {
           justify="center"
           flex={1}
           minH={0}
-          px={isLandscape ? '4px' : { base: '0.5rem', md: '3xl' }}
-          pt={isLandscape ? '4px' : { base: '3rem', md: '4rem' }}
-          pb={isLandscape ? '4px' : { base: '0.5rem', md: '6rem' }}
+          px={{ base: '0.5rem', md: '3xl' }}
+          pt={{ base: '3rem', md: '4rem' }}
+          pb={{ base: '0.5rem', md: '6rem' }}
           gap={{ base: '0', md: 'lg' }}
           onClick={(e) => e.stopPropagation()}
         >
@@ -328,8 +332,8 @@ export function ModalKammara() {
               justifyContent="center"
               minH={0}
               flex={1}
-              width={isLandscape ? '100%' : { base: '94vw', md: '100%' }}
-              maxW={isLandscape ? '100%' : { base: '94vw', md: '90vw' }}
+              width={{ base: '94vw', md: '100%' }}
+              maxW={{ base: '94vw', md: '90vw' }}
               onTouchStart={onMediaTouchStart}
               onTouchEnd={onMediaTouchEnd}
             >
