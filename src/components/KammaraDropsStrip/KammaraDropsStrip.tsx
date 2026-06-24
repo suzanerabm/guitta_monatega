@@ -186,7 +186,12 @@ export function KammaraDropsStrip({
               aria-label={drop.label}
               position="relative"
               flexShrink={0}
-              width="calc(100vw - 32px)"
+              // Largura = o MENOR entre "quase a tela" (retrato) e "o que cabe
+              // na altura mantendo 16/9" (paisagem). Em retrato a 1ª opção vence
+              // (sobra altura); ao girar, a altura fica curta e a 2ª vence — o
+              // tile encolhe junto e o vídeo NÃO esmaga. min() resolve nos dois
+              // sem detectar orientação. 90vh deixa respiro pro menu/barras.
+              width="min(calc(100vw - 32px), calc(90vh * 16 / 9))"
               maxW="calc(100vw - 32px)"
               aspectRatio="16 / 9"
               borderRadius="14px"
