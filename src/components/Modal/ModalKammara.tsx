@@ -254,10 +254,10 @@ export function ModalKammara() {
           justify="center"
           flex={1}
           minH={0}
-          px={{ base: 'base', md: '3xl' }}
-          pt={{ base: '3.5rem', md: '4rem' }}
-          pb={{ base: '5rem', md: '6rem' }}
-          gap={{ base: 'md', md: 'lg' }}
+          px={{ base: '0.5rem', md: '3xl' }}
+          pt={{ base: '3rem', md: '4rem' }}
+          pb={{ base: '0.5rem', md: '6rem' }}
+          gap={{ base: '0', md: 'lg' }}
           onClick={(e) => e.stopPropagation()}
         >
           {/* Title + description */}
@@ -317,8 +317,8 @@ export function ModalKammara() {
               justifyContent="center"
               minH={0}
               flex={1}
-              width={{ base: '94vw', md: '100%' }}
-              maxW={{ base: '94vw', md: '90vw' }}
+              width={isLandscape ? '100%' : { base: '94vw', md: '100%' }}
+              maxW={isLandscape ? '100%' : { base: '94vw', md: '90vw' }}
               onTouchStart={onMediaTouchStart}
               onTouchEnd={onMediaTouchEnd}
             >
