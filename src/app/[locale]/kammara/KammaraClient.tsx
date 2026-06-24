@@ -17,7 +17,6 @@ import { SceneStrip } from '@/components/SceneStrip';
 import { KammaraCardSubsystem, KammaraCardSubsystemContainer, KammaraCardSubsystemHorizontal } from '@/components/KammaraCardSubsystem';
 import { RegionDivider } from '@/components/RegionDivider';
 import { RegionBanner } from '@/components/RegionBanner';
-import { KammaraSagaPoster } from '@/components/KammaraSagaPoster';
 import { KammaraDropsStrip } from '@/components/KammaraDropsStrip';
 import { BookGallery } from '@/components/BookGallery';
 import { KammaraProgressHeatmap } from '@/components/KammaraProgressHeatmap';
@@ -26,6 +25,8 @@ import { isKammaraPublished, kammaraInProgress } from '@/lib/visibility';
 import { KammaraEvents } from '@/components/KammaraEvents';
 import kammaraEventsData from '@/data/kammara_events.json';
 import { KammaraWorldPortals } from '@/components/KammaraWorldPortals';
+import { KammaraDropsMosaic } from '@/components/KammaraDropsMosaic';
+import kammaraMosaicData from '@/data/kammara_mosaic.json';
 import { useModal } from '@/components/Modal';
 import { palettes, type PaletteName, type Palette } from '@/theme/palettes';
 
@@ -417,6 +418,13 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
     image: w.bgImage ?? undefined,
   }));
 
+  // Mosaico de drops curado (src/data/kammara_mosaic.json), localizado.
+  const mosaicClips = kammaraMosaicData.map((c) => ({
+    video: c.video,
+    poster: c.poster,
+    label: c.label[locale] ?? c.label.pt,
+  }));
+
   // ── Per-world content ──────────────────────────────────────────────────
   // Everything a WorldSection needs is shared here so the sub-component
   // stays small and easy to read below. With no "all", exactly one section is
@@ -509,14 +517,9 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
             />
           )}
         >
-          {/* Characters moved to a dedicated KammaraCharacterGallery below.
-              The side slot now holds the saga cover poster. */}
-          <KammaraSagaPoster
-            background="/imgs/kammara/orfv/_scenes/9noite_em_orfv.jpg"
-            // title="Saga em ORF-V"
-            subtitle="S · A · G · A ··· O · R · F · V"
-            // footerLabel="Kammara"
-          />
+          {/* Side slot: a curated mosaic of drops (kammara_mosaic.json) — a
+              living sample of the universe next to the intro text. */}
+          <KammaraDropsMosaic clips={mosaicClips} color={kammaraPalette.colors[0]} />
         </DSMainCard>
 
         {/* ── Grid de portais dos mundos — o coração da vitrine. Clicar num

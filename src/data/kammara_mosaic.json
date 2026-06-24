@@ -1,0 +1,32 @@
+[
+  {
+    "video": "/imgs/kammara/eni4/_videos/tuneis_com_worms.mp4",
+    "poster": "/imgs/kammara/eni4/_videos/tuneis_com_worms_poster.jpg",
+    "label": { "pt": "Túneis com Worms", "en": "Tunnels with Worms" }
+  },
+  {
+    "video": "/imgs/kammara/orfv/_videos/festa_orfv.mp4",
+    "poster": "/imgs/kammara/orfv/_videos/festa_orfv_poster.jpg",
+    "label": { "pt": "Lüp'Nül Fest", "en": "Lüp'Nül Fest" }
+  },
+  {
+    "video": "/imgs/kammara/lunnp1/_videos/plantas_flutuantes.mp4",
+    "poster": "/imgs/kammara/lunnp1/_videos/plantas_flutuantes_poster.jpg",
+    "label": { "pt": "Plantas flutuantes", "en": "Floating plants" }
+  },
+  {
+    "video": "/imgs/kammara/triplec/sharp/_videos/volpita_feliz.mp4",
+    "poster": "/imgs/kammara/triplec/sharp/_videos/volpita_feliz_poster.jpg",
+    "label": { "pt": "Volpita feliz", "en": "Happy Volpita" }
+  },
+  {
+    "video": "/imgs/kammara/triplec/mesh/_videos/vista_aerea.mp4",
+    "poster": "/imgs/kammara/triplec/mesh/_videos/vista_aerea_poster.jpg",
+    "label": { "pt": "Vista aérea", "en": "Aerial view" }
+  },
+  {
+    "video": "/imgs/kammara/triplec/malloc/_videos/minas.mp4",
+    "poster": "/imgs/kammara/triplec/malloc/_videos/minas_poster.jpg",
+    "label": { "pt": "Minas", "en": "Mines" }
+  }
+]
