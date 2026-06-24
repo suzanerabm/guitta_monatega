@@ -15,35 +15,44 @@ function formatFilename(path: string): string {
     .trim();
 }
 
-// Reads two media queries to drive the mobile-clean modal layout:
-//  - isCleanMobile: phone-sized OR a phone held sideways (landscape with a
-//    short viewport). The width cut alone (<=48em) misses a landscape phone,
-//    whose width is ~850px; the orientation+max-height clause catches it
-//    without affecting wide desktops in landscape (their height is >>48em).
-//  - isLandscape: true when the device is turned sideways, so the media can
+// Drives the mobile-clean modal layout from the live window dimensions:
+//  - isCleanMobile: phone-sized (<=768px wide) OR a phone held sideways
+//    (landscape with a short viewport — a landscape phone is ~850px wide but
+//    short, so the width cut alone would miss it).
+//  - isLandscape: device turned sideways (width > height), so the media can
 //    take the full height.
-// SSR-safe: starts false (desktop layout) and syncs on mount.
+// SSR-safe: starts false (desktop layout) and syncs on mount. Uses
+// resize/orientationchange (not matchMedia 'change') because iOS Safari fires
+// the matchMedia change unreliably on rotation.
 function useMobileModal() {
   const [isCleanMobile, setIsCleanMobile] = useState(false);
   const [isLandscape, setIsLandscape] = useState(false);
 
   useEffect(() => {
-    if (typeof window === 'undefined' || !window.matchMedia) return;
-    const cleanQuery = window.matchMedia(
-      '(max-width: 48em), (orientation: landscape) and (max-height: 48em)',
-    );
-    const landscapeQuery = window.matchMedia('(orientation: landscape)');
+    if (typeof window === 'undefined') return;
 
+    // Detecta orientação/tamanho direto pelas dimensões da janela. No iOS
+    // Safari o evento `change` do matchMedia('(orientation: landscape)') é
+    // pouco confiável na rotação (chega tarde ou não chega), o que deixava o
+    // modal "preso" no layout de retrato com a tela já deitada. Medir
+    // innerWidth/innerHeight em `resize` + `orientationchange` é o que o iOS
+    // atualiza de forma confiável após girar.
     const sync = () => {
-      setIsCleanMobile(cleanQuery.matches);
-      setIsLandscape(landscapeQuery.matches);
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      const landscape = w > h;
+      // Mobile-clean: largura de celular (<=768px) OU deitado num viewport
+      // curto (celular virado tem ~850px de largura mas altura baixa).
+      const cleanMobile = w <= 768 || (landscape && h <= 768);
+      setIsLandscape(landscape);
+      setIsCleanMobile(cleanMobile);
     };
     sync();
-    cleanQuery.addEventListener('change', sync);
-    landscapeQuery.addEventListener('change', sync);
+    window.addEventListener('resize', sync);
+    window.addEventListener('orientationchange', sync);
     return () => {
-      cleanQuery.removeEventListener('change', sync);
-      landscapeQuery.removeEventListener('change', sync);
+      window.removeEventListener('resize', sync);
+      window.removeEventListener('orientationchange', sync);
     };
   }, []);
 
@@ -388,10 +397,12 @@ export function ModalKammara() {
                 />
               )}
 
-              {/* Setas laterais — SÓ em paisagem. Substituem o swipe (que
-                  conflitava com o "voltar" do Safari). Flutuam sobre as bordas
-                  da mídia, fáceis pro polegar de quem segura o aparelho deitado. */}
-              {isLandscape && (
+              {/* Setas laterais — SÓ no MOBILE em paisagem. Substituem o swipe
+                  (que conflitava com o "voltar" do Safari). Flutuam sobre as
+                  bordas da mídia, fáceis pro polegar de quem segura o aparelho
+                  deitado. No desktop widescreen (também paisagem) NÃO aparecem —
+                  lá vale a nav-rodapé. */}
+              {isCleanMobile && isLandscape && (
                 <>
                   <Box
                     as="button"
@@ -493,10 +504,10 @@ export function ModalKammara() {
         </Flex>
 
         {/* Bottom nav — setas no rodapé. Aparece em RETRATO (mobile) e no
-            DESKTOP; em PAISAGEM some (lá as setas vão pras laterais). O
-            contador só no desktop (no mobile o modal é clean, sem paginação). */}
+            DESKTOP (inclusive widescreen, que é paisagem mas não-mobile). Só
+            some no MOBILE deitado, onde as setas vão pras laterais. */}
         <Flex
-          display={isLandscape ? 'none' : 'flex'}
+          display={isCleanMobile && isLandscape ? 'none' : 'flex'}
           position="absolute"
           bottom={0}
           left={0}
@@ -527,7 +538,6 @@ export function ModalKammara() {
           </Box>
 
           <Text
-            display={{ base: 'none', md: 'block' }}
             fontSize="md"
             color={navColor}
             letterSpacing="wide"

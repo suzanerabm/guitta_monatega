@@ -1,5 +1,5 @@
 import { screen, fireEvent } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, beforeEach } from 'vitest';
 import { useEffect } from 'react';
 import { renderWithChakra } from '@/test-utils';
 import { ModalProvider, useModal } from '@/components/Modal';
@@ -33,6 +33,23 @@ function render() {
 }
 
 describe('ModalKammara', () => {
+  // Force a clear desktop viewport so the modal renders its desktop layout
+  // (single bottom nav with Previous/Next). jsdom's default 1024x768 would be
+  // read as a short landscape phone by useMobileModal and show the mobile
+  // side-arrows instead, duplicating the Next label.
+  beforeEach(() => {
+    Object.defineProperty(window, 'innerWidth', {
+      configurable: true,
+      writable: true,
+      value: 1280,
+    });
+    Object.defineProperty(window, 'innerHeight', {
+      configurable: true,
+      writable: true,
+      value: 800,
+    });
+  });
+
   it('shows the current image when open', () => {
     render();
     const imgs = screen.getAllByRole('img') as HTMLImageElement[];
