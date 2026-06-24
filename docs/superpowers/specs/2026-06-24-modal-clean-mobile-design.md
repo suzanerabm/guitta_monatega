@@ -44,8 +44,11 @@ muda.
 - Botão fechar **✕** no canto superior direito (já existe).
 - Marca d'água discreta (`KammaraWatermark` — glifo + nome do planeta) sobre a
   mídia. **Continua.**
-- Zoom/pan da imagem (`ZoomableImage`), vídeo com `controls`, navegação por
-  teclado (setas/Esc) — tudo intacto.
+- Vídeo com `controls` e navegação por teclado (setas/Esc) — intactos.
+
+**O que muda além do layout:** no mobile o **zoom é removido** — com a mídia já
+ocupando a tela e o swipe, o pinch é desnecessário e atrapalharia o gesto.
+Mobile usa um `<img>` simples; o desktop mantém o `ZoomableImage` (zoom/pan).
 
 **Um comportamento mobile, dois respiros pela orientação real do aparelho:**
 
