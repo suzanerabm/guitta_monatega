@@ -329,7 +329,11 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
     [worlds],
   );
   const [activeFilter, setActiveFilter] = useState(() =>
-    resolveInitialFilter(searchParams.get('planet'), publishedIds),
+    // `planet` é o param atual; `planeta` é o legado em PT (links antigos).
+    resolveInitialFilter(
+      searchParams.get('planet') ?? searchParams.get('planeta'),
+      publishedIds,
+    ),
   );
 
   // Troca o filtro E sincroniza a URL (?planet=<id>), sem recarregar nem
@@ -339,6 +343,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
     (id: string) => {
       setActiveFilter(id);
       const params = new URLSearchParams(searchParams.toString());
+      params.delete('planeta'); // limpa o param legado (PT) se estiver na URL
       if (id === 'kammara') params.delete('planet');
       else params.set('planet', id);
       const query = params.toString();
