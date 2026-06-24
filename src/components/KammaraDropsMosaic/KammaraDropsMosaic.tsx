@@ -1,6 +1,7 @@
 'use client';
-import { Box, Grid } from '@chakra-ui/react';
+import { Box, Grid, chakra } from '@chakra-ui/react';
 import { LazyVideo } from '@/components/LazyVideo';
+import { KammaraWatermark } from '@/components/KammaraWatermark';
 
 export interface MosaicClip {
   /** Video src (.mp4). The .webm sibling is offered automatically by LazyVideo. */
@@ -9,6 +10,12 @@ export interface MosaicClip {
   poster: string;
   /** Caption (used as alt text). */
   label: string;
+  /** World display name (e.g. 'ORF-V') — shown as the origin stamp. */
+  worldName: string;
+  /** Kalún crest glyph of the world — shown with the name. */
+  crestGlyph: string;
+  /** Optional link: when set, the tile becomes a clickable anchor. */
+  href?: string;
 }
 
 export interface KammaraDropsMosaicProps {
@@ -24,6 +31,9 @@ export interface KammaraDropsMosaicProps {
  * Kammara intro. Each tile is a LazyVideo in `visible` mode, so only the tiles
  * on screen ever play/download — keeping the page light (same contract as the
  * drops strip). Curated via src/data/kammara_mosaic.json.
+ *
+ * Each clip carries its world's origin stamp (KammaraWatermark, bottom-right)
+ * and an optional `href` that turns the tile into a link.
  */
 export function KammaraDropsMosaic({
   clips,
@@ -41,27 +51,58 @@ export function KammaraDropsMosaic({
       // edge of the side slot — just padding, no border.
       padding={{ base: 'md', md: 'lg' }}
     >
-      {clips.map((clip, i) => (
-        <Box
-          key={`${clip.video}-${i}`}
-          position="relative"
-          width="100%"
-          aspectRatio="16 / 9"
-          borderRadius="14px"
-          overflow="hidden"
-          css={{
-            boxShadow: `inset 0 0 0 1px ${color}40, 0 8px 24px rgba(0,0,0,0.35)`,
-          }}
-        >
-          <LazyVideo
-            src={clip.video}
-            poster={clip.poster}
-            alt={clip.label}
-            fit="cover"
-            playOn="visible"
-          />
-        </Box>
-      ))}
+      {clips.map((clip, i) => {
+        const tile = (
+          <>
+            <LazyVideo
+              src={clip.video}
+              poster={clip.poster}
+              alt={clip.label}
+              fit="cover"
+              playOn="visible"
+            />
+            {/* Origin stamp: world glyph + name, bottom-right (same component
+                as the drop cards). */}
+            <KammaraWatermark
+              crestGlyph={clip.crestGlyph}
+              worldName={clip.worldName}
+              size="card"
+            />
+          </>
+        );
+        const sharedCss = {
+          boxShadow: `inset 0 0 0 1px ${color}40, 0 8px 24px rgba(0,0,0,0.35)`,
+        } as const;
+        // Linkable tile becomes an anchor; otherwise a plain box.
+        return clip.href ? (
+          <chakra.a
+            key={`${clip.video}-${i}`}
+            href={clip.href}
+            position="relative"
+            display="block"
+            width="100%"
+            aspectRatio="16 / 9"
+            borderRadius="14px"
+            overflow="hidden"
+            cursor="pointer"
+            css={sharedCss}
+          >
+            {tile}
+          </chakra.a>
+        ) : (
+          <Box
+            key={`${clip.video}-${i}`}
+            position="relative"
+            width="100%"
+            aspectRatio="16 / 9"
+            borderRadius="14px"
+            overflow="hidden"
+            css={sharedCss}
+          >
+            {tile}
+          </Box>
+        );
+      })}
     </Grid>
   );
 }

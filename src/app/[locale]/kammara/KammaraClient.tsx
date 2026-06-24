@@ -418,11 +418,15 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
     image: w.bgImage ?? undefined,
   }));
 
-  // Mosaico de drops curado (src/data/kammara_mosaic.json), localizado.
+  // Mosaico de drops curado (src/data/kammara_mosaic.json), localizado. Cada
+  // clip carrega a marca do seu planeta (nome + glifo) e um href opcional.
   const mosaicClips = kammaraMosaicData.map((c) => ({
     video: c.video,
     poster: c.poster,
     label: c.label[locale] ?? c.label.pt,
+    worldName: getWorldName(c.world, locale) || WORLD_NAMES[c.world as WorldId] || c.world,
+    crestGlyph: worldCrestGlyph(c.world),
+    href: c.href || undefined,
   }));
 
   // Capas dos livros para o BookGallery (a capa saga-orf-v vive aqui).
