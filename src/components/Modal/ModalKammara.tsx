@@ -94,6 +94,10 @@ export function ModalKammara() {
   // gesto de "voltar" do Safari (saía/reiniciava o modal), então lá a
   // navegação é por setas laterais (abaixo) e o swipe fica desligado.
   const swipeEnabled = isCleanMobile && !isLandscape;
+  // Celular DEITADO de verdade. `isLandscape` sozinho também é true num monitor
+  // desktop widescreen — usar ele puro pra layout quebrava o desktop (sumia a
+  // legenda lateral, colava o texto na margem). Layout só muda no mobile-deitado.
+  const mobileLandscape = isCleanMobile && isLandscape;
   const onMediaTouchStart = (e: React.TouchEvent) => {
     if (!swipeEnabled || e.touches.length !== 1) {
       touchStart.current = null;
@@ -273,9 +277,9 @@ export function ModalKammara() {
           justify="center"
           flex={1}
           minH={0}
-          px={isLandscape ? '0' : { base: '0.5rem', md: '3xl' }}
-          pt={isLandscape ? '0.25rem' : { base: '3rem', md: '4rem' }}
-          pb={isLandscape ? '0.25rem' : { base: '3.5rem', md: '6rem' }}
+          px={mobileLandscape ? '0' : { base: '0.5rem', md: '3xl' }}
+          pt={mobileLandscape ? '0.25rem' : { base: '3rem', md: '4rem' }}
+          pb={mobileLandscape ? '0.25rem' : { base: '3.5rem', md: '6rem' }}
           gap={{ base: '0', md: 'lg' }}
           onClick={(e) => e.stopPropagation()}
         >
@@ -345,8 +349,8 @@ export function ModalKammara() {
               justifyContent="center"
               minH={0}
               flex={1}
-              width={isLandscape ? '100%' : { base: '94vw', md: '100%' }}
-              maxW={isLandscape ? '100%' : { base: '94vw', md: '90vw' }}
+              width={mobileLandscape ? '100%' : { base: '94vw', md: '100%' }}
+              maxW={mobileLandscape ? '100%' : { base: '94vw', md: '90vw' }}
               onTouchStart={onMediaTouchStart}
               onTouchEnd={onMediaTouchEnd}
             >
