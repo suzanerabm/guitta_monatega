@@ -195,8 +195,8 @@ export function BichittosClient({ data }: Props) {
                 <DSMainCard
                   characters={characterPositions[creature.id] ?? []}
                   gradient={palette.gradient}
-                  height="1400px"
-                  maxHeight="80vh"
+                  height="1700px"
+                  maxHeight="90vh"
                   titleColor={colors.titleColor}
                   textColor={colors.textColor}
                   mascot={creature.id === 'zeco' ? zecoMascot : undefined}
@@ -206,13 +206,17 @@ export function BichittosClient({ data }: Props) {
                   panelBadge={colors.tag}
                   panelBg={colors.panelBg}
                   panelBorderColor={colors.borderColor}
-                  text={
-                    <>
-                      {panelStory.map((p, i) => (
-                        <p key={i}>{p}</p>
-                      ))}
-                    </>
-                  }
+                  // Painel de texto escondido TEMPORARIAMENTE: sem `text`, o
+                  // DSMainCard não renderiza o painel (título/tag/descrição).
+                  // A cena + strip de personagens continuam. Pra reativar,
+                  // descomente o bloco `text={...}` abaixo.
+                  // text={
+                  //   <>
+                  //     {panelStory.map((p, i) => (
+                  //       <p key={i}>{p}</p>
+                  //     ))}
+                  //   </>
+                  // }
                 >
                   {creature.chars.length > 0 && (
                     <CharacterStrip
@@ -222,7 +226,7 @@ export function BichittosClient({ data }: Props) {
                       }))}
                       gradient={palette.gradient}
                       cardBg="rgba(255,255,255,0.12)"
-                      cardSize={150}
+                      cardSize={260}
                       labelColor={colors.stripColor ?? colors.titleColor}
                     />
                   )}

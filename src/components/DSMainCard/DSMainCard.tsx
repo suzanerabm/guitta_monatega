@@ -162,8 +162,11 @@ export function DSMainCard({
               display: 'block',
             };
           } else {
-            // Mobile: scale down and reposition (only for always-visible characters)
-            mediaOverrides['@media (max-width: 48em)'] = {
+            // Mobile: scale down and reposition (only for always-visible characters).
+            // `max-width: 47.98em` (não 48em) pra NÃO sobrepor o `min-width: 48em`
+            // do bloco `c.md` abaixo: em exatamente 768px (48em) os dois media
+            // queries batiam juntos e os personagens bugavam (de cabeça pra baixo).
+            mediaOverrides['@media (max-width: 47.98em)'] = {
               width: `${mobileSize}px`,
               height: `${mobileSize}px`,
               bottom: `${c.mobileY ?? 90}%`,

@@ -94,16 +94,48 @@ export function useStripAnimation(
     });
     if (pendingImgs <= 0 && imgs.length > 0) start();
 
-    // Mobile: pause on touch
+    // Mobile: swipe-to-scrub. A animação corre sozinha; ao tocar ela pausa, e
+    // ao arrastar o strip ACOMPANHA o dedo (deslocando o currentTime da
+    // animação proporcional ao arraste). Ao soltar, a animação retoma de onde
+    // parou — então os dois convivem (auto-scroll + swipe manual).
     if (isMobile) {
-      const onTouchStart = () => anim?.pause();
-      const onTouchEnd = () => anim?.play();
+      let startX = 0;
+      let startTime = 0;
+      let dragging = false;
+      const onTouchStart = (e: TouchEvent) => {
+        if (!anim) return;
+        anim.pause();
+        dragging = true;
+        startX = e.touches[0].clientX;
+        startTime = (anim.currentTime as number | null) ?? 0;
+      };
+      const onTouchMove = (e: TouchEvent) => {
+        if (!anim || !dragging) return;
+        const dx = e.touches[0].clientX - startX;
+        const halfWidth = track.scrollWidth / 2;
+        if (halfWidth <= 0) return;
+        // Converte o deslocamento em px do dedo pra tempo da animação:
+        // o ciclo inteiro (speed*1000ms) corresponde a halfWidth px. Arrastar
+        // pra a esquerda (dx<0) avança no tempo; pra a direita recua. Mantém
+        // dentro de [0, duração] com módulo pra o loop infinito não travar.
+        const duration = options.speed * 1000;
+        const deltaTime = (-dx / halfWidth) * duration;
+        let next = (startTime + deltaTime) % duration;
+        if (next < 0) next += duration;
+        anim.currentTime = next;
+      };
+      const onTouchEnd = () => {
+        dragging = false;
+        anim?.play();
+      };
       wrapper.addEventListener('touchstart', onTouchStart, { passive: true });
+      wrapper.addEventListener('touchmove', onTouchMove, { passive: true });
       wrapper.addEventListener('touchend', onTouchEnd);
       return () => {
         ro.disconnect();
         anim?.cancel();
         wrapper.removeEventListener('touchstart', onTouchStart);
+        wrapper.removeEventListener('touchmove', onTouchMove);
         wrapper.removeEventListener('touchend', onTouchEnd);
       };
     }
