@@ -302,15 +302,29 @@ export function BichittosClient({ data }: Props) {
                 gap={{ base: '2rem', md: '2.5rem' }}
                 alignItems="stretch"
               >
-                {/* Box do TEXTO (história) */}
+                {/* Box do TEXTO (história) — mesma altura do box do livro
+                    (height 100% no Grid stretch); scroll interno quando a
+                    história é longa. */}
                 {panelStory.length > 0 && (
                   <Box
                     borderRadius="20px"
                     p={{ base: '1.5rem', md: '2rem' }}
+                    height="100%"
+                    maxHeight={{ base: '420px', md: '560px' }}
+                    overflowY="auto"
                     css={{
                       background: 'rgba(0,0,0,0.28)',
                       outline: `2px solid ${boxBorder}`,
                       outlineOffset: '6px',
+                      // Scrollbar discreta na cor do bichitto.
+                      scrollbarWidth: 'thin',
+                      scrollbarColor: `${boxBorder} transparent`,
+                      '&::-webkit-scrollbar': { width: '6px' },
+                      '&::-webkit-scrollbar-thumb': {
+                        background: boxBorder,
+                        borderRadius: '999px',
+                      },
+                      '&::-webkit-scrollbar-track': { background: 'transparent' },
                     }}
                   >
                     {panelStory.map((p, i) => (
@@ -332,6 +346,7 @@ export function BichittosClient({ data }: Props) {
                   <Box
                     borderRadius="20px"
                     p={{ base: '1.5rem', md: '2rem' }}
+                    height="100%"
                     css={{
                       background: 'rgba(0,0,0,0.28)',
                       outline: `2px solid ${boxBorder}`,
