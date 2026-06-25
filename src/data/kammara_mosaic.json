@@ -14,18 +14,17 @@
     "href": ""
   },
   {
-    "world": "orfv",
-    "video": "/imgs/kammara/orfv/_videos/festa_orfv.mp4",
-    "poster": "/imgs/kammara/orfv/_videos/festa_orfv_poster.jpg",
-    "label": { "pt": "Lüp'Nül Fest", "en": "Lüp'Nül Fest" },
-    "href": ""
-  },
- 
-  {
     "world": "triplec",
     "video": "/imgs/kammara/triplec/_videos/soar_voando.mp4",
     "poster": "/imgs/kammara/triplec/_videos/soar_voando.jpg",
     "label": { "pt": "Soar", "en": "Soar" },
+    "href": ""
+  },
+  {
+    "world": "orfv",
+    "video": "/imgs/kammara/orfv/_videos/festa_orfv.mp4",
+    "poster": "/imgs/kammara/orfv/_videos/festa_orfv_poster.jpg",
+    "label": { "pt": "Lüp'Nül Fest", "en": "Lüp'Nül Fest" },
     "href": ""
   },
   {
