@@ -23,6 +23,12 @@ export interface CreatureSectionProps {
    * gradients (e.g. sharp).
    */
   blendGradient?: boolean;
+  /**
+   * objectFit da imagem de fundo. Default `'cover'` (preenche e corta as
+   * bordas — Kammara depende disso). Os bichittos passam `'contain'` quando
+   * querem mostrar a cena de fundo INTEIRA, sem cortar.
+   */
+  bgFit?: 'cover' | 'contain';
   noParallax?: boolean;
   hidden?: boolean;
   children: React.ReactNode;
@@ -35,6 +41,7 @@ export function CreatureSection({
   bgImage,
   bgOpacity = 0.3,
   blendGradient = false,
+  bgFit = 'cover',
   noParallax = false,
   hidden = false,
   children,
@@ -87,7 +94,7 @@ export function CreatureSection({
             style={{
               width: '100%',
               height: '100%',
-              objectFit: 'cover',
+              objectFit: bgFit,
               opacity: blendGradient ? 1 : bgOpacity,
               display: 'block',
             }}

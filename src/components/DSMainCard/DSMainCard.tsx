@@ -40,6 +40,24 @@ export interface Mascot {
 interface DSMainCardProps {
   characters: Character[];
   gradient?: string;
+  /**
+   * Opacidade da camada de gradiente que cobre o card (ds-card-bg).
+   * Default 0.3 (Kammara depende). Os bichittos baixam pra deixar a cena/
+   * fundo aparecer mais por baixo do overlay de cor.
+   */
+  cardBgOpacity?: number;
+  /**
+   * Quando true, adiciona um degradê escuro na base do card (sombra de
+   * baixo) — dá profundidade e assenta os personagens. Default false
+   * (Kammara não usa).
+   */
+  bottomShadow?: boolean;
+  /**
+   * Degradê direcional por cima do fundo (transparente no topo → esta cor
+   * embaixo). Passe a cor do bichitto pra dar atmosfera/assentar a cena.
+   * Quando omitido, nenhuma camada extra é renderizada.
+   */
+  bgGradientOverlay?: string;
   height?: string;
   maxHeight?: string;
   titleColor?: string;
@@ -91,6 +109,9 @@ interface DSMainCardProps {
 export function DSMainCard({
   characters,
   gradient = 'linear-gradient(135deg, var(--chakra-colors-darkBg), var(--chakra-colors-ink))',
+  cardBgOpacity = 0.3,
+  bottomShadow = false,
+  bgGradientOverlay,
   height = '50vh',
   maxHeight = '80vh',
   titleColor,
@@ -125,6 +146,13 @@ export function DSMainCard({
       minH={{ base: 'auto', md: '700px' }}
       overflow={{ base: 'visible', md: 'hidden' }}
       mt={{ base: '8rem', md: '2.5rem' }}
+      // Sombra de elevação na borda do card — em CIMA e EMBAIXO, pra ele
+      // parecer flutuando/destacado dos dois lados. Só quando `bottomShadow`.
+      boxShadow={
+        bottomShadow
+          ? '0 20px 50px rgba(0,0,0,0.35), 0 -20px 50px rgba(0,0,0,0.35), 0 8px 20px rgba(0,0,0,0.25), 0 -8px 20px rgba(0,0,0,0.25)'
+          : undefined
+      }
     >
       {/* Background gradient layer */}
       <Box
@@ -132,9 +160,27 @@ export function DSMainCard({
         position="absolute"
         inset={0}
         zIndex={0}
-        opacity={0.3}
+        opacity={cardBgOpacity}
         background={gradient}
       />
+
+      {/* Degradê + frosted glass (estilo Apple) por cima do fundo —
+          transparente no topo → cor do bichitto embaixo, com leve blur do
+          que está atrás. Só quando `bgGradientOverlay` é passado. */}
+      {bgGradientOverlay && (
+        <Box
+          data-testid="ds-bg-overlay"
+          position="absolute"
+          inset={0}
+          zIndex={0}
+          pointerEvents="none"
+          css={{
+            background: `linear-gradient(to bottom, transparent 0%, ${bgGradientOverlay}22 60%, ${bgGradientOverlay}55 100%)`,
+            backdropFilter: 'blur(4px)',
+            WebkitBackdropFilter: 'blur(4px)',
+          }}
+        />
+      )}
 
       {/* Characters scene */}
       <Box

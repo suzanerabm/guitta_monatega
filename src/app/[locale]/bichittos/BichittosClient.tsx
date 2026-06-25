@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useMemo, useState } from 'react';
-import { Box, Text } from '@chakra-ui/react';
+import { Box, Grid, Text, chakra } from '@chakra-ui/react';
 import { useTranslations, useLocale } from 'next-intl';
 import { HeroSection } from '@/components/HeroSection';
 import { FilterBar } from '@/components/FilterBar';
@@ -8,11 +8,12 @@ import { CreatureSection } from '@/components/CreatureSection';
 import { CreatureCard } from '@/components/bichittos/CreatureCard';
 import { DSMainCard } from '@/components/DSMainCard';
 import { CharacterStrip } from '@/components/bichittos/CharacterStrip';
+import { BichittoVideoCarousel } from '@/components/bichittos/BichittoVideoCarousel';
 import { BookGallery } from '@/components/BookGallery';
 import { useModal } from '@/components/Modal';
 import { palettes, type CreatureId } from '@/theme/palettes';
 import { isBichittoPublished } from '@/lib/visibility';
-import { characterPositions, zecoMascot } from '@/data/bichittos';
+import { characterPositions, zecoMascot, bichittoVideos } from '@/data/bichittos';
 import {
   getCreatureName,
   getCreatureText,
@@ -152,6 +153,9 @@ export function BichittosClient({ data }: Props) {
       {data.map((creature) => {
         const palette = palettes[creature.id];
         const colors = palettes[creature.id].bichittos!;
+        // Cor da borda dos boxes. Só o Zeco define `borderColor` na paleta;
+        // os outros caem no titleColor pra todos terem a mesma borda.
+        const boxBorder = colors.borderColor ?? colors.titleColor;
         const text = getCreatureText(creature.id, locale as Locale);
         const panelStory = getCreaturePanelStory(creature.id, locale as Locale);
         const name = getCreatureName(creature.id, locale as Locale);
@@ -195,8 +199,11 @@ export function BichittosClient({ data }: Props) {
                 <DSMainCard
                   characters={characterPositions[creature.id] ?? []}
                   gradient={palette.gradient}
-                  height="1700px"
-                  maxHeight="90vh"
+                  cardBgOpacity={0.7}
+                  bottomShadow
+                  bgGradientOverlay={palette.dark}
+                  height="2000px"
+                  maxHeight="800px"
                   titleColor={colors.titleColor}
                   textColor={colors.textColor}
                   mascot={creature.id === 'zeco' ? zecoMascot : undefined}
@@ -230,28 +237,161 @@ export function BichittosClient({ data }: Props) {
                       labelColor={colors.stripColor ?? colors.titleColor}
                     />
                   )}
+                  {/* Vídeo DENTRO do DSMain — só em xl+ (>1280px), centralizado
+                      na horizontal, no vão à esquerda do personagem. Nas telas
+                      menores ele aparece fora (bloco abaixo). */}
+                  {(bichittoVideos[creature.id]?.length ?? 0) > 0 && (
+                    <Box
+                      display={{ base: 'none', xl: 'block' }}
+                      position="absolute"
+                      left="0"
+                      right="0"
+                      bottom="3rem"
+                      zIndex={5}
+                    >
+                      {/* Mesmo container do card de baixo (1200px centralizado +
+                          px 3rem) pra alinhar à esquerda com ele. */}
+                      <Box maxW="1200px" mx="auto" px="3rem">
+                        <BichittoVideoCarousel
+                          videos={bichittoVideos[creature.id]!}
+                          color={colors.stripColor ?? colors.titleColor}
+                        />
+                      </Box>
+                    </Box>
+                  )}
                 </DSMainCard>
               }
             >
               {text.map((p, i) => (
-                <Text key={i} mb="0.8rem">
+                <Text
+                  key={i}
+                  mb="0.8rem"
+                  fontWeight={i === text.length - 1 ? 'bold' : undefined}
+                >
                   {p}
                 </Text>
               ))}
             </CreatureCard>
-            {books.length > 0 && (
-              <BookGallery
-                title={t('booksTitle')}
-                books={books}
-                soonLabel={tCommon('soon')}
-                tone="overlay"
-                onBookClick={(bookId) => {
-                  // bookId is `${creature.id}-${b.id}`; strip the creature prefix
-                  const rawBookId = bookId.slice(creature.id.length + 1);
-                  handleBookClick(creature.id, rawBookId);
-                }}
-              />
+            {/* Carrossel de vídeo "um por vez" — fora do DSMain, só ATÉ xl
+                (≤1280px). Em xl+ ele aparece DENTRO do DSMain (acima). */}
+            {(bichittoVideos[creature.id]?.length ?? 0) > 0 && (
+              <Box
+                display={{ base: 'block', xl: 'none' }}
+                maxW="1200px"
+                mx="auto"
+                px={{ base: '1.5rem', md: '3rem' }}
+                pb={{ base: '1rem', md: '1.5rem' }}
+              >
+                <BichittoVideoCarousel
+                  videos={bichittoVideos[creature.id]!}
+                  color={colors.stripColor ?? colors.titleColor}
+                />
+              </Box>
             )}
+            {/* Dois boxes lado a lado (desktop) / empilhados (mobile):
+                LIVRO (capa + título + botão) e TEXTO (a história). Estilo
+                inspirado no card "Última Aventura" mas com a borda dos
+                bichittos (outline + offset, na cor da criatura). */}
+            <Box maxW="1200px" mx="auto" px={{ base: '1.5rem', md: '3rem' }} py={{ base: '1.5rem', md: '2.5rem' }}>
+              <Grid
+                templateColumns={
+                  books.length > 0 && books[0]
+                    ? { base: '1fr', md: '1fr 1fr' }
+                    : '1fr'
+                }
+                gap={{ base: '2rem', md: '2.5rem' }}
+                alignItems="stretch"
+              >
+                {/* Box do TEXTO (história) */}
+                {panelStory.length > 0 && (
+                  <Box
+                    borderRadius="20px"
+                    p={{ base: '1.5rem', md: '2rem' }}
+                    css={{
+                      background: 'rgba(0,0,0,0.28)',
+                      outline: `2px solid ${boxBorder}`,
+                      outlineOffset: '6px',
+                    }}
+                  >
+                    {panelStory.map((p, i) => (
+                      <Text
+                        key={i}
+                        mb="0.8rem"
+                        fontSize={{ base: '0.9rem', md: 'md' }}
+                        lineHeight={1.7}
+                        color={colors.textColor}
+                      >
+                        {p}
+                      </Text>
+                    ))}
+                  </Box>
+                )}
+
+                {/* Box do LIVRO (capa + título + botão) */}
+                {books.length > 0 && books[0] && (
+                  <Box
+                    borderRadius="20px"
+                    p={{ base: '1.5rem', md: '2rem' }}
+                    css={{
+                      background: 'rgba(0,0,0,0.28)',
+                      outline: `2px solid ${boxBorder}`,
+                      outlineOffset: '6px',
+                    }}
+                  >
+                    <Text
+                      fontSize="xs"
+                      letterSpacing="hero"
+                      textTransform="uppercase"
+                      fontWeight="bold"
+                      color={colors.textColor}
+                      mb="1rem"
+                    >
+                      {t('booksTitle')}
+                    </Text>
+                    {books[0].image && (
+                      <chakra.img
+                        src={books[0].image}
+                        alt={books[0].alt}
+                        width="100%"
+                        borderRadius="12px"
+                        mb="1rem"
+                        css={{
+                          outline: `2px solid ${boxBorder}`,
+                          outlineOffset: '4px',
+                          display: 'block',
+                          objectFit: 'cover',
+                        }}
+                      />
+                    )}
+                    <Text fontSize={{ base: 'lg', md: 'xl' }} fontWeight="bold" color={colors.textColor} mb="1rem">
+                      {books[0].label}
+                    </Text>
+                    {!books[0].soon && (
+                      <chakra.button
+                        type="button"
+                        onClick={() => handleBookClick(creature.id, books[0].id.slice(creature.id.length + 1))}
+                        css={{
+                          display: 'inline-block',
+                          outline: `2px solid ${boxBorder}`,
+                          outlineOffset: '3px',
+                          borderRadius: '999px',
+                          padding: '0.5rem 1.4rem',
+                          color: colors.textColor,
+                          fontSize: '0.85rem',
+                          fontWeight: 700,
+                          letterSpacing: '0.08em',
+                          textTransform: 'uppercase',
+                          cursor: 'pointer',
+                          background: 'transparent',
+                        }}
+                      >
+                        Ler história ✦
+                      </chakra.button>
+                    )}
+                  </Box>
+                )}
+              </Grid>
+            </Box>
           </CreatureSection>
         );
       })}

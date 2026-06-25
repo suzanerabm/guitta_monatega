@@ -33,8 +33,8 @@ export const characterPositions: Record<CreatureId, Character[]> = {
   cheiodebolinha: [
     { image: '/imgs/bichittos/cheiodebolinha/querie_dancando.gif', x: 55, y: 0, size: 100, zIndex: 2, mobileY: 85, mobileScale: 0.55,
       md: { size: 95 }, xl: { x: 58, size: 125 }, xxl: { x: 55, size: 125 } },
-    { image: '/imgs/bichittos/cheiodebolinha/Cheio_Bolinha_voando.png', x: 75, y: 30, size: 200, zIndex: 1, mobileY: 100, mobileScale: 0.7,
-      md: { size: 275 }, xl: { x: 72, size: 325 }, xxl: { x: 78, size: 475 }, animation: 'floatDeep 4s ease-in-out infinite' },
+    { image: '/imgs/bichittos/cheiodebolinha/Cheio_Bolinha_voando.png', x: 60, y: 30, size: 200, zIndex: 1, mobileY: 100, mobileScale: 0.7,
+      md: { size: 275 }, xl: { x: 57, size: 325 }, xxl: { x: 63, size: 475 }, animation: 'floatDeep 4s ease-in-out infinite' },
     // Ratinhos extras — só no 3xl+
     { image: '/imgs/bichittos/cheiodebolinha/querie_bravo.gif', x: 70, y: 0, size: 100, zIndex: 2, minBreakpoint: 'xxl' },
     { image: '/imgs/bichittos/cheiodebolinha/querie_love.gif', x: 80, y: 0, size: 100, zIndex: 2, minBreakpoint: 'xxl' },
@@ -50,4 +50,33 @@ export const zecoMascot: Mascot = {
   offsetY: -70,
   mobileScale: 0.5,
   mobileOffsetY: -30,
+};
+
+/** Um clipe de vídeo de um bichitto (carrossel "1 por vez" na página). */
+export interface BichittoVideo {
+  /** Caminho do .mp4 (relativo a /public). O .webm irmão é oferecido sozinho. */
+  src: string;
+  /** Imagem de capa mostrada até o vídeo tocar. */
+  poster: string;
+  /** Rótulo curto do clipe. */
+  label: string;
+}
+
+/**
+ * Vídeos por bichitto. Só aparecem na página os bichittos que têm itens aqui
+ * (hoje só o Zeco). Adicione entradas conforme novos vídeos forem criados.
+ */
+export const bichittoVideos: Partial<Record<CreatureId, BichittoVideo[]>> = {
+  zeco: [
+    {
+      src: '/imgs/bichittos/zeco/zeco_jogando_bolinha.mp4',
+      poster: '/imgs/bichittos/zeco/zeco_jogando_bolinha_poster.jpg',
+      label: 'Jogando bolinha',
+    },
+    {
+      src: '/imgs/bichittos/zeco/zeco_jogando_ioio.mp4',
+      poster: '/imgs/bichittos/zeco/zeco_jogando_ioio_poster.jpg',
+      label: 'Jogando ioiô',
+    },
+  ],
 };

@@ -68,14 +68,14 @@ export const palettes: Record<PaletteName, Palette> = {
     gradient: 'linear-gradient(135deg, #0f1a4a, #0f1a33, #c4d4ff)',
     gradientBg: 'linear-gradient(160deg, #0f1a4a 10%, #1e3a7a 40%, #0f1a4a 100%)',
     bichittos: {
-      name: '#1e3a7a', // hero "NapCat" grande fora do card
+      name: '#c4d4ff', // hero "NapCat" grande fora do card
       text: '#c4d4ff',       // texto do CreatureCard externo
       // titleColor: '#29bade', // h2 "NapCat & Violeta" dentro do painel + borda
       titleColor: '#c4d4ff', // h2 "NapCat & Violeta" dentro do painel + borda
       textColor: '#c4d4ff',  // parágrafos dentro do painel
       accent: '#c4d4ff',  
       accentAlt: '#c4d4ff',  // texto da pill
-      bgImage: '/imgs/bichittos/_bg/napcat.jpg',
+      bgImage: '/imgs/bichittos/_bg/violeta_caminha.jpg',
       tag: 'Gato · Sonhador',
       panelBg: 'rgb(30, 58, 122, 0.8)',
       // panelBg: '#3b0033',
@@ -88,13 +88,13 @@ export const palettes: Record<PaletteName, Palette> = {
     gradient: 'linear-gradient(155deg, #4a2512 0%, #7a3d1a 45%, #c56b2e 100%)',
     gradientBg: 'linear-gradient(160deg, #fece95 0%, #f57f20 40%, #fece95 100%)',
     bichittos: {
-      name: '#f58020',
+      name: '#483727',
       text: '#592e06',
       titleColor: '#f58020',
       textColor: '#fece95',
       accent: '#f58020',
       accentAlt: '#fece95',
-      bgImage: '/imgs/bichittos/_bg/zeco.jpg',
+      bgImage: '/imgs/bichittos/_bg/primaveracena_12_ipe.png',
       tag: 'Hamster · Quintal',
       panelBg: '#592e06',
       // panelBg: 'rgb(245, 128, 32, 0.6)',
@@ -116,7 +116,7 @@ export const palettes: Record<PaletteName, Palette> = {
       textColor: '#d7e2dd',
       accent: '#5d9466',
       accentAlt: '#b6fcc0',
-      bgImage: '/imgs/bichittos/_bg/taylo.jpg',
+      bgImage: '/imgs/bichittos/_bg/estrela_ceu.jpg',
       tag: 'Amigos · Natureza',
       panelBg: 'rgb(8, 43, 11, 0.8)',
     },
@@ -151,7 +151,7 @@ export const palettes: Record<PaletteName, Palette> = {
       textColor: '#edf0f2',
       accent: '#3ae9f2',
       accentAlt: '#83e5ea',
-      bgImage: '/imgs/bichittos/_bg/cheiodebolinha.jpg',
+      bgImage: '/imgs/bichittos/_bg/ceu_nuvem.png',
       tag: 'Elefante · Medroso',
       panelBg: 'rgb(47, 49, 113)',
     },
