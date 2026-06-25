@@ -44,13 +44,18 @@ export function CreatureCard({
               {adornment}
             </Box>
           )}
-          <Box>
+          <Flex
+            direction={{ base: 'column', md: 'row' }}
+            align={{ base: 'flex-start', md: 'center' }}
+            gap={{ base: '0.75rem', md: '2rem' }}
+            width="100%"
+          >
             <Heading
               as="h1"
               fontSize={{ base: '1.5rem', md: 'h2' }}
               fontWeight="bold"
               letterSpacing="tight"
-              mb="1rem"
+              flexShrink={0}
               style={nameStyle}
             >
               {name}
@@ -64,7 +69,7 @@ export function CreatureCard({
             >
               {children}
             </Box>
-          </Box>
+          </Flex>
         </Flex>
       </Box>
       {banner

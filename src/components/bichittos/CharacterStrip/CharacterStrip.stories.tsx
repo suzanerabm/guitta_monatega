@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { CharacterStrip } from './CharacterStrip';
 
 const meta: Meta<typeof CharacterStrip> = {
-  title: 'Components/CharacterStrip',
+  title: 'Bichittos/CharacterStrip',
   component: CharacterStrip,
   tags: ['autodocs'],
   parameters: { layout: 'fullscreen' },

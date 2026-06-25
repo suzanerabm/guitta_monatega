@@ -14,7 +14,7 @@ const mockCharacter: Character = {
 };
 
 const meta: Meta<typeof CharacterInfoPanel> = {
-  title: 'Components/CharacterInfoPanel',
+  title: 'Bichittos/CharacterInfoPanel',
   component: CharacterInfoPanel,
   tags: ['autodocs'],
   decorators: [

@@ -1,8 +1,8 @@
 'use client';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Box, Flex, Heading, chakra } from '@chakra-ui/react';
-import { CharacterCard } from '@/components/CharacterCard';
-import { CharacterInfoPanel } from '@/components/CharacterInfoPanel';
+import { CharacterCard } from '@/components/bichittos/CharacterCard';
+import { CharacterInfoPanel } from '@/components/bichittos/CharacterInfoPanel';
 import { useStripAnimation } from '@/hooks/useStripAnimation';
 import { findCharacter, type Locale } from '@/lib/characters';
 
