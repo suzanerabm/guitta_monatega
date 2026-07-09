@@ -66,12 +66,12 @@
       "name": { "pt": "Z1", "en": "Z1" },
       "progress": {
         "lore": 96,
-        "personagens": 35,
-        "criaturas": 10,
-        "design-conceito": 0,
-        "characters-design": 90,
+        "personagens": 95,
+        "criaturas": 100,
+        "design-conceito": 70,
+        "characters-design": 100,
         "cenas": 40,
-        "website": 50
+        "website": 90
       }
     },
     {
@@ -79,12 +79,12 @@
       "name": { "pt": "Gotto", "en": "Gotto" },
       "progress": {
         "lore": 100,
-        "personagens": 25,
-        "criaturas": 0,
+        "personagens": 90,
+        "criaturas": 100,
         "design-conceito": 60,
-        "characters-design": 60,
-        "cenas": 0,
-        "website": 20
+        "characters-design": 90,
+        "cenas": 50,
+        "website": 60
       }
     },
     {
