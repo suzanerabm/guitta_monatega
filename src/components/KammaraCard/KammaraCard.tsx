@@ -36,6 +36,8 @@ export interface KammaraCardProps {
   color: string;
   darkColor: string;
   midColor?: string;
+  /** Opacidade (hex, ex. 'b3'=70% | 'e6'=90') do fundo do card. Default 'b3'. */
+  cardBgAlpha?: string;
   theme?: 'light' | 'dark';
   'data-testid'?: string;
 }
@@ -51,6 +53,7 @@ export function KammaraCard({
   color,
   darkColor,
   midColor,
+  cardBgAlpha = 'b3',
   theme = 'dark',
   'data-testid': testId,
 }: KammaraCardProps) {
@@ -83,7 +86,7 @@ export function KammaraCard({
         borderRadius="32px"
         overflow="hidden"
         css={{
-          background: `linear-gradient(160deg, ${darkColor}b3 0%, ${body}b3 45%, ${darkColor}b3 100%)`,
+          background: `linear-gradient(160deg, ${darkColor}${cardBgAlpha} 0%, ${body}${cardBgAlpha} 45%, ${darkColor}${cardBgAlpha} 100%)`,
           border: `1px solid ${color}40`,
           outline: `2px solid ${color}`,
           outlineOffset: '6px',

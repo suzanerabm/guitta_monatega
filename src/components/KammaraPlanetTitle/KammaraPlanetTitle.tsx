@@ -53,7 +53,7 @@ export function KammaraPlanetTitle({
   //   color     = primary accent (name, glyph tint, halo)
   //   darkColor = deep base for the gradient background
   //   body      = mid-tone for the gradient middle (palette.colors[4] when present)
-  const color = p.colors[0];
+  const color = p.heroColor ?? p.colors[0];
   const darkColor = p.dark;
   const body = p.colors[4] ?? darkColor;
 

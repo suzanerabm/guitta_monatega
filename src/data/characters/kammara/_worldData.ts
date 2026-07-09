@@ -7,6 +7,7 @@ import eni4Drops from './eni4_drops.json';
 import gottoStory from './gotto_story.json';
 import gottoSubs from './gotto_subsystems.json';
 import gottoScenes from './gotto_scenes.json';
+import gottoDrops from './gotto_drops.json';
 import diggStory from './digg_story.json';
 import diggSubs from './digg_subsystems.json';
 import diggScenes from './digg_scenes.json';
@@ -236,6 +237,7 @@ const DROPS: Record<string, WorldDrop[]> = {
   lunnp1: lunnp1Drops as WorldDrop[],
   eni4: eni4Drops as WorldDrop[],
   orfv: orfvDrops as WorldDrop[],
+  gotto: gottoDrops as WorldDrop[],
   digg: diggDrops as WorldDrop[],
   memphis: memphisDrops as WorldDrop[],
   triplec: triplecDrops as WorldDrop[],

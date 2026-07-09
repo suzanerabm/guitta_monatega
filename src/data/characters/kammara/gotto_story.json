@@ -5,47 +5,57 @@
   },
   "summary": {
     "pt": [
-      "Gotto — o planeta do reinício. Um mundo interpretado linha por linha, onde nada permanece — nem o progresso do invasor."
+      "Gotto — o planeta do reinício. Um mundo que acontece um pouco de cada vez e recomeça do zero, onde nada permanece — nem o progresso do invasor."
     ],
     "en": [
-      "Gotto — the planet of restart. An interpreted world, line by line, where nothing remains — not even the invader's progress."
+      "Gotto — the planet of restart. A world that happens a little at a time and begins again from scratch, where nothing remains — not even the invader's progress."
     ]
   },
   "panel": {
     "story": {
       "pt": [
         "### Resumo",
-        "Gotto — o planeta do reinício. Um mundo interpretado linha por linha, onde nada permanece — nem o progresso do invasor.",
+        "Gotto — o planeta do reinício. Um mundo que acontece um pouco de cada vez e recomeça do zero, onde nada permanece — nem o progresso do invasor.",
         "### O planeta",
-        "Gotto é um planeta que só existe enquanto está sendo executado. Não guarda estado, não acumula memória, não fixa nada. Funciona linha por linha, ciclo por ciclo, reinício por reinício.",
+        "Gotto é um planeta interpretado. Não compila, não abstrai, não guarda estado. Existe apenas enquanto está sendo executado — linha por linha, ciclo por ciclo, reinício por reinício.",
         "### As três leis",
-        "Três regras absolutas definem tudo. INPUT — o planeta absorve energia, estímulos, ecos do cosmos. PRINT — tudo que foi absorvido se manifesta imediatamente ao redor. GOTO — o planeta reinicia. A geografia se reorganiza. As memórias enfraquecem. E o ciclo recomeça.",
+        "Gotto opera por três leis absolutas. INPUT (Linha 10) — o planeta absorve energia emocional, estímulos externos, ecos cósmicos. PRINT (Linha 20) — tudo que foi absorvido se manifesta imediatamente: cristais, luz, comportamento. GOTO (Linha 30) — o planeta reinicia, a geografia se reorganiza, as memórias enfraquecem e o ciclo recomeça. Esse ciclo não é simbólico: é estrutural. O mundo só continua sendo enquanto continua sendo lido.",
         "### A geografia",
-        "As regiões de Gotto são numeradas como linhas de código. Linha 10 é o Vale INPUT — absorção e silêncio. Linha 20 é o Vale PRINT — expressão, luz e cristais. Linha 30 é a Região GOTO — instável, transitória. Após cada reinício, as cidades mudam de lugar e os caminhos desaparecem.",
+        "A geografia de Gotto é numerada como linhas de código — as regiões não têm nome, têm número. Linha 10 é o Vale INPUT (absorção e silêncio). Linha 20 é o Vale PRINT (expressão, luz e cristais). Linha 30 é a Região GOTO (instável, transitória). Linhas 40 a 90 são zonas intermediárias, e as Subrotinas GOSUB são regiões profundas de onde quem entra pode não saber sair. Após cada GOTO, as cidades deslocam e os caminhos somem — o que era mapa torna-se memória, e a memória, no próximo ciclo, quase não existe.",
         "### Os Basiks",
-        "Os habitantes se chamam Basiks — seres esféricos e pequenos, metade brancos e metade pretos, com dois olhos binários. Medem cerca de 20 centímetros. Não mentem, não guardam rancor, não acumulam. Tudo que sentem é imediatamente impresso ao redor.",
+        "Os habitantes são os Basiks: seres esféricos e bicolores, metade branca (INPUT), metade preta (PRINT), sem pescoço, sem dedos, sem passado fixo. Têm dois olhos binários — Olho-0 e Olho-1 — e um glifo Shal'ún nas costas, herança da Fenda ancestral que sobrevive entre os loops. Medem cerca de 20 a 25 centímetros. Não mentem, não guardam rancor, não acumulam: tudo que sentem é impresso imediatamente ao redor. Seu gesto mais recorrente é PRINT \"HELLO\" — falam para existir, existem para continuar.",
         "### Como vivem",
-        "A vida segue o ritmo do planeta: manhã é INPUT — curiosidade e absorção. Tarde é PRINT — arte com cristais e conversas longas. Noite é GOTO — recolhimento e reinício. Não há líderes, famílias tradicionais ou calendário. Se agrupam por afinidade. A desorientação é cotidiana. O riso também.",
-        "### O ciclo",
-        "Um reinício de Gotto equivale a um quinto de um ciclo galáctico. O que dura um ano em outros planetas, Gotto executa cinco vezes. Fora do planeta, o ciclo enfraquece — a leveza diminui, a memória começa a pesar. Um Basik que não volta a tempo se perde no próximo reinício.",
-        "### A defesa natural",
-        "Node-0 tenta dominar Gotto há ciclos. Falha sempre pelo mesmo motivo: o reinício dissolve tudo. Vínculos não se fixam. Instruções gravadas somem. Para quem depende de deixar marca, Gotto é insuportável.",
+        "A vida Basik segue o ritmo do planeta: manhã é INPUT (absorção, curiosidade, abertura), tarde é PRINT (arte com cristais, conversas longas), noite é GOTO (recolhimento, reorganização, reinício). Não têm líderes fixos, famílias tradicionais nem calendário — agrupam-se por afinidade emocional e ciclos sincronizados. Quando se reencontram após um GOTO caótico: PRINT \"HELLO HELLO HELLO!!\" A desorientação é cotidiana. O riso também.",
+        "### Ciclos e tempo",
+        "O tempo em Gotto não avança — ele se reexecuta. Um GOTO de Gotto equivale a um quinto de um ciclo galáctico: o que dura um ano em LUNN'P1, Gotto executa cinco vezes. Fora do planeta, o ciclo continua mas enfraquece: a leveza diminui, a memória começa a pesar, e um Basik que não retorna a tempo não volta do próximo GOTO — a linha é comentada longe de casa. Os tokks, partículas de interpretação geradas a cada ciclo, alimentam os Basiks, iluminam o planeta e estabilizam as regiões-linha.",
+        "### O papel no Kammara",
+        "Gotto não lidera, não domina, não resolve conflitos. Ele dissolve. Amortece impactos emocionais de aliados em colapso, dissipa tensões antes que virem ruptura e acolhe quem chega perdido. Node-0 nunca venceu em Gotto — não por imunidade, mas porque nada permanece: vínculos não se fixam, instruções gravadas somem no reinício. Para quem depende de deixar marca, Gotto é insuportável.",
         "### A leveza como risco",
-        "A leveza mais bonita do universo é a mesma que impede o planeta de avançar. Os erros voltam iguais a cada ciclo. O reinício protege — mas também impede que qualquer aprendizado fique.",
+        "A leveza mais bonita do universo é a mesma que impede o planeta de avançar. Os erros voltam idênticos a cada ciclo, e o mundo nunca acumula pressão suficiente para forçar uma mudança. O reinício protege — mas dissolve também o aprendizado. O loop só se quebra se alguém decidir não recomeçar: permanecer com o desconforto, concluir em vez de reiniciar. A Linha 40.",
         "### A frase que os Basiks dizem",
         "Tudo bem. Vamos de novo. Mas desta vez… talvez até o fim."
       ],
       "en": [
-        "Gotto is an interpreted planet. It does not compile, does not abstract, does not hold state. It exists only while being executed — line by line, cycle by cycle.",
-        "Three absolute laws govern everything: INPUT — the planet absorbs emotional energy, stimuli, cosmic echoes. PRINT — everything absorbed manifests immediately. GOTO — the planet restarts.",
-        "Tokks — interpretation particles generated each cycle — feed the Basiks, illuminate the planet and stabilize the line-regions.",
-        "Geography is numbered like lines of code. Line 10 — INPUT Valley, absorption and silence. Line 20 — PRINT Valley, expression and crystals. Line 30 — GOTO Region, unstable and transitional. Lines 40 to 90 — variation zones. And the GOSUB Subroutines — deep regions from which those who enter may not know how to exit.",
-        "The Basiks are spherical and bicolored beings — half white, half black — with two binary eyes, short arms and legs directly on the body. They measure about 20 centimeters.",
-        "They do not lie. They do not hold grudges. They do not accumulate. Everything they feel is immediately printed around them. Their most recurrent gesture: PRINT \"HELLO\". They speak to exist. They exist to continue.",
-        "After each GOTO, cities shift, paths vanish, and what was a map becomes memory — which in the next cycle barely exists. In one lunar day on LUNN'P1, Gotto executes five times.",
-        "Basik life follows the planet's rhythm: morning is INPUT — absorption and curiosity. Afternoon is PRINT — art with crystals and long conversations. Night is GOTO — retreat and restart.",
-        "Node-0 has been trying to dominate Gotto for cycles. It always fails for the same reason: the GOTO dissolves everything. Bonds do not stick. Recorded instructions vanish on restart. For those who depend on leaving a mark — Gotto is unbearable.",
-        "It's okay. Let's go again. But this time... maybe until the end."
+        "### Summary",
+        "Gotto — the planet of restart. A world that happens a little at a time and begins again from scratch, where nothing remains — not even the invader's progress.",
+        "### The planet",
+        "Gotto is an interpreted planet. It does not compile, does not abstract, does not hold state. It exists only while being executed — line by line, cycle by cycle, restart by restart.",
+        "### The three laws",
+        "Gotto runs on three absolute laws. INPUT (Line 10) — the planet absorbs emotional energy, external stimuli, cosmic echoes. PRINT (Line 20) — everything absorbed manifests immediately: crystals, light, behavior. GOTO (Line 30) — the planet restarts, the geography reorganizes, memories weaken and the cycle begins again. This cycle is not symbolic: it is structural. The world only keeps being while it keeps being read.",
+        "### The geography",
+        "Gotto's geography is numbered like lines of code — the regions have no name, they have a number. Line 10 is INPUT Valley (absorption and silence). Line 20 is PRINT Valley (expression, light and crystals). Line 30 is the GOTO Region (unstable, transitional). Lines 40 to 90 are intermediate zones, and the GOSUB Subroutines are deep regions from which those who enter may not know how to exit. After each GOTO, the cities shift and the paths vanish — what was a map becomes memory, and memory, in the next cycle, barely exists.",
+        "### The Basiks",
+        "The inhabitants are the Basiks: spherical, two-toned beings, half white (INPUT), half black (PRINT), with no neck, no fingers, no fixed past. They have two binary eyes — Eye-0 and Eye-1 — and a Shal'ún glyph on their backs, an inheritance from the ancestral Rift that survives between loops. They measure about 20 to 25 centimeters. They don't lie, hold no grudges, don't accumulate: everything they feel is printed immediately around them. Their most recurrent gesture is PRINT \"HELLO\" — they speak to exist, they exist to continue.",
+        "### How they live",
+        "Basik life follows the planet's rhythm: morning is INPUT (absorption, curiosity, openness), afternoon is PRINT (art with crystals, long conversations), night is GOTO (retreat, reorganization, restart). They have no fixed leaders, traditional families or calendar — they gather by emotional affinity and synchronized cycles. When they meet again after a chaotic GOTO: PRINT \"HELLO HELLO HELLO!!\" Disorientation is everyday. So is laughter.",
+        "### Cycles and time",
+        "Time in Gotto doesn't move forward — it re-executes. One GOTO of Gotto equals a fifth of a galactic cycle: what lasts a year on LUNN'P1, Gotto runs five times. Off the planet, the cycle continues but weakens: the lightness fades, memory begins to weigh, and a Basik that doesn't return in time doesn't come back from the next GOTO — the line is commented out far from home. The tokks, particles of interpretation generated each cycle, feed the Basiks, light the planet and stabilize the line-regions.",
+        "### The role in Kammara",
+        "Gotto does not lead, does not dominate, does not resolve conflicts. It dissolves. It cushions the emotional impacts of allies in collapse, dissipates tensions before they become rupture, and welcomes those who arrive lost. Node-0 has never won in Gotto — not out of immunity, but because nothing remains: bonds don't hold, recorded instructions vanish on restart. For anyone who depends on leaving a mark, Gotto is unbearable.",
+        "### Lightness as risk",
+        "The most beautiful lightness in the universe is the same one that keeps the planet from moving forward. The mistakes come back identical every cycle, and the world never builds up enough pressure to force a change. The restart protects — but it also dissolves learning. The loop only breaks if someone decides not to begin again: to stay with the discomfort, to conclude instead of restart. Line 40.",
+        "### What the Basiks say",
+        "It's okay. Let's go again. But this time… maybe until the end."
       ]
     }
   },
@@ -78,16 +88,6 @@
       "value": {
         "pt": "Tokks",
         "en": "Tokks"
-      }
-    },
-    {
-      "label": {
-        "pt": "Transporte",
-        "en": "Transport"
-      },
-      "value": {
-        "pt": "Cshift",
-        "en": "Cshift"
       }
     }
   ]

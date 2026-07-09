@@ -15,6 +15,10 @@ export interface Palette {
   dark: string;
   gradient: string;
   gradientBg: string;
+  /** Cor primária do hero (KammaraPlanetTitle): nome grande, glifo, halos.
+   *  Default: colors[0]. Use quando o hero precisa de cor própria (ex: Gotto,
+   *  cujo card usa colors[0] claro mas o hero fica melhor em uva). */
+  heroColor?: string;
   /**
    * Fonte única de verdade para o BichittosClient — só definido para as
    * criaturas do Bichittos. Mudou aqui, mudou na página.
@@ -253,20 +257,25 @@ export const palettes: Record<PaletteName, Palette> = {
     gradientBg: 'linear-gradient(160deg, #12141a 0%, #2a2c34 40%, #1a1c22 100%)',
   },
   gotto: {
-    // Degradê pêssego → turquesa escuro, com luminosidade suficiente nos
-    // índices de texto para ler sobre o fundo escuro.
-    // colors[0] = accent (CreatureSection radial tint) — turquesa
-    // colors[1] = DSTextPanel title — pêssego claro
-    // colors[2] = body text — pêssego-creme claro
-    // colors[3] = world heading h1 (name "Gotto") — pêssego-rosado claro
-    // colors[4..5] = usados em bordas/sombras (turquesas profundos)
-    colors: ['#4bbfb0', '#ffcda8', '#ffe6d3', '#ffb99a', '#1d4f4c', '#0e2a2a'],
-    text: '#ffe6d3',
-    // Used by FilterBar chrome tint — turquesa profundo perceptível.
-    dark: '#13403c',
-    // Degradê pêssego → turquesa escuro: pêssego dominante, turquesa na base.
-    gradient: 'linear-gradient(135deg, #ffe0c8 0%, #ffcda8 30%, #ffb99a 55%, #2f8f86 100%)',
-    gradientBg: 'linear-gradient(160deg, #0c2422 0%, #123a37 35%, #0e2826 100%)',
+    // Fundo do PLANETA claro (degradê creme→pêssego→lavanda), mas os CARDS
+    // com fundo escuro (dark = roxo-uva) — igual aos outros planetas. Por
+    // isso os textos/accents dos cards (colors[0..2]) são CLAROS, e só o
+    // "Gotto" grande solto (colors[3], sobre o fundo claro) é escuro.
+    // colors[0] = accent + título/subtítulo dos cards (h3, "PLANETA", nome) — pêssego
+    // colors[1] = title do painel (DSMainCard) — pêssego claro
+    // colors[2] = body text dos cards — creme claro
+    // colors[3] = world heading h1 (name "Gotto" solto, sobre fundo claro) — uva escuro
+    // colors[4..5] = usados em bordas/sombras
+    colors: ['#ffcda8', '#ffe0c8', '#f7eee4', '#532e77', '#7a5a90', '#4a3560'],
+    text: '#f7eee4',
+    // Hero (nome grande + PLANETA + glifo) em uva — só o hero; os cards
+    // continuam usando colors[0] (pêssego).
+    heroColor: '#5e2b8f',
+    // Fundo translúcido dos cards — roxo-uva profundo (card escuro).
+    dark: '#360b5e',
+    // Degradê creme → pêssego → lavanda pálido (fundo do planeta).
+    gradient: 'linear-gradient(135deg, #f5e6d3 0%, #e8c4a8 50%, #d4bbdb 100%)',
+    gradientBg: 'linear-gradient(160deg, #f5e6d3 0%, #e8c4a8 50%, #d4bbdb 100%)',
   },
   digg: {
     // Degradê marrom → verde kemita. Placeholder inicial — ajustar com a arte final.

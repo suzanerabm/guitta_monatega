@@ -899,6 +899,7 @@ function WorldSection({
             category="Planeta"
             color={palette.colors[0]}
             darkColor={palette.dark}
+            cardBgAlpha={w.id === 'gotto' ? 'e6' : undefined}
             crestGlyph={worldCrestGlyph(w.id)}
             tabs={[
               {

@@ -4,7 +4,7 @@
       "pt": "Cultura",
       "en": "Culture"
     },
-    "img": "",
+    "img": "/imgs/kammara/gotto/_subsystems/cultura_vila.jpg",
     "text": {
       "pt": [
         "### O ritmo",
@@ -21,16 +21,27 @@
         "Gotto nunca para de começar. Cada reinício é uma nova infância."
       ],
       "en": [
-        "Placeholder — describe the culture here."
+        "### The rhythm",
+        "Basik life follows the rhythm of the planet. Morning is the INPUT — time to absorb, to be curious, to pay attention to what arrives. Afternoon is the PRINT — art made with crystals, long conversations, everything coming out. Night is the GOTO — time to gather in and restart.",
+        "### No fixed structure",
+        "There are no fixed leaders, no traditional families, no calendar. The Basiks gather by affinity and by whoever is in the same cycle.",
+        "### After the restart",
+        "When they meet again after a chaotic GOTO, the reaction is always the same: PRINT \"HELLO HELLO HELLO!!\" Confusion is everyday. So is laughter.",
+        "### No hoarding",
+        "There is no hoarding. No grudges. No archive. Each cycle is a new chance — and also a new loss.",
+        "### Disorder",
+        "In Gotto, disorder frightens no one. It's part of daily life. It's even celebrated.",
+        "### Always beginning again",
+        "Gotto never stops beginning. Each restart is a new childhood."
       ]
     }
   },
   {
     "title": {
       "pt": "Habitantes — Basiks",
-      "en": "Ecosystem"
+      "en": "Inhabitants — Basiks"
     },
-    "img": "",
+    "img": "/imgs/kammara/gotto/_subsystems/vila_basics.jpg",
     "text": {
       "pt": [
         "### Aparência",
@@ -47,16 +58,27 @@
         "São pequenos, redondos e imparáveis. A leveza mais bonita do universo — e também a mais vulnerável."
       ],
       "en": [
-        "Placeholder — describe the ecosystem here."
+        "### Appearance",
+        "Spherical, two-toned beings — half white, half black. No neck, no fingers, no fixed past. Two binary eyes: Eye-0 and Eye-1.",
+        "### The body",
+        "Short arms and legs come straight out of the spherical body. They measure about 20 to 25 centimeters. They are small, round and unstoppable.",
+        "### The glyph",
+        "On their backs they carry a Shal'ún glyph — an ancient mark that comes from the connection between Gotto and LUNN'P1. It is a deep memory that survives each restart.",
+        "### Behavior",
+        "They don't lie. They hold no grudges. They don't hoard. Everything they feel appears immediately around them — in crystals, in light, in sound.",
+        "### The gesture",
+        "Their most common gesture: PRINT \"HELLO\". They speak to exist. They exist to continue.",
+        "### Small and beautiful",
+        "They are small, round and unstoppable. The most beautiful lightness in the universe — and also the most vulnerable."
       ]
     }
   },
   {
     "title": {
       "pt": "Geografia",
-      "en": "Technology"
+      "en": "Geography"
     },
-    "img": "",
+    "img": "/imgs/kammara/gotto/_subsystems/geografia1.jpg",
     "text": {
       "pt": [
         "### Linhas, não nomes",
@@ -73,16 +95,27 @@
         "Depois de cada GOTO, as cidades mudam de lugar. Os caminhos somem. O que era mapa vira memória — e no próximo ciclo, quase não existe mais."
       ],
       "en": [
-        "Placeholder — describe the technology here."
+        "### Lines, not names",
+        "Gotto's regions are numbered like lines of code. They have no name — they have a number.",
+        "### Line 10 — INPUT Valley",
+        "Absorption, silence, dark and receptive terrain. It's where the planet listens.",
+        "### Line 20 — PRINT Valley",
+        "Expression, light, crystals that reflect emotions. It's where the planet speaks.",
+        "### Line 30 — GOTO Region",
+        "Unstable, transitional. The point where everything reorganizes before beginning again.",
+        "### Lines 40 to 90 and GOSUB",
+        "Intermediate zones, full of variation. The GOSUB Subroutines are deep regions — whoever enters may not find the way out.",
+        "### After each GOTO",
+        "After each GOTO, the cities change place. The paths vanish. What was a map becomes memory — and in the next cycle, it barely exists anymore."
       ]
     }
   },
   {
     "title": {
       "pt": "Ciclos & Tempo",
-      "en": ""
+      "en": "Cycles & Time"
     },
-    "img": "",
+    "img": "/imgs/kammara/gotto/_subsystems/ciclos.jpg",
     "text": {
       "pt": [
         "### O tempo não avança",
@@ -98,15 +131,28 @@
         "### Não envelhece",
         "Gotto não envelhece. Gotto recomeça. E cada recomeço é idêntico ao anterior — e completamente novo."
       ],
-      "en": []
+      "en": [
+        "### Time doesn't move forward",
+        "Time in Gotto doesn't move forward. It begins again. Each GOTO is a complete restart.",
+        "### What happens",
+        "Recent memories weaken. The personality comes back almost the same. And the planet starts over.",
+        "### The speed",
+        "A Gotto restart equals a fifth of a galactic cycle. What lasts a year on other planets, Gotto runs five times.",
+        "### The tokks",
+        "The tokks are tiny particles born each cycle. They feed the Basiks, light the planet and keep the regions stable.",
+        "### Away from home",
+        "Off the planet, the cycle continues but weakens. The lightness fades. Memory begins to weigh. A Basik that doesn't return in time is lost in the next restart.",
+        "### It doesn't age",
+        "Gotto doesn't age. Gotto begins again. And each new beginning is identical to the last — and completely new."
+      ]
     }
   },
   {
     "title": {
       "pt": "Relações com Outros Planetas",
-      "en": ""
+      "en": "Relations with Other Planets"
     },
-    "img": "",
+    "img": "/imgs/kammara/gotto/_subsystems/erurin_visits_gotto.jpg",
     "text": {
       "pt": [
         "### LUNN'P1",
@@ -122,15 +168,28 @@
         "### Um porto para quem precisa",
         "Para quem precisa deixar marca, Gotto é insuportável. Para quem precisa de alívio, é o único porto."
       ],
-      "en": []
+      "en": [
+        "### LUNN'P1",
+        "An ancestral, deep relationship. The Shal'ún Rift marked the Basiks on their own bodies — the glyphs on their backs are a direct inheritance from the Shal'ún. When they meet, there is immediate recognition.",
+        "### Z1",
+        "First recorded contact. The relationship is technical and curious — the Basiks watch the transistors of Z1 working with genuine admiration.",
+        "### ENI-4Δ",
+        "Node-0 has tried to dominate Gotto for cycles. It always fails for the same reason: the GOTO dissolves everything. Bonds don't hold. Instructions vanish in the restart. For anyone who needs to leave a mark, Gotto is unbearable.",
+        "### TripleC and ORF-V",
+        "Natural incompatibilities, no active conflict. They are worlds that work in ways too different from one another.",
+        "### The role in AURYN",
+        "Gotto takes part in the AURYN Protocol not with force, but with presence. It cushions impacts on allies in collapse. It dissolves tensions before they become rupture.",
+        "### A harbor for those who need one",
+        "For anyone who needs to leave a mark, Gotto is unbearable. For anyone who needs relief, it is the only harbor."
+      ]
     }
   },
   {
     "title": {
       "pt": "Perigos",
-      "en": ""
+      "en": "Dangers"
     },
-    "img": "",
+    "img": "/imgs/kammara/gotto/_subsystems/perigo.jpg",
     "text": {
       "pt": [
         "### Proteção e prisão",
@@ -146,7 +205,20 @@
         "### A leveza como risco",
         "A leveza mais bonita do universo é a mesma que mantém o planeta eternamente jovem — e eternamente vulnerável às mesmas falhas."
       ],
-      "en": []
+      "en": [
+        "### Protection and prison",
+        "The GOTO dissolves threats — but it also dissolves learning. It protects and imprisons at the same time.",
+        "### The same mistakes",
+        "The mistakes come back the same every cycle. The planet never builds up enough pressure to force change.",
+        "### The subroutines",
+        "The GOSUB regions are deep and dangerous. Whoever enters may not find the way out before the next restart.",
+        "### Off the planet",
+        "A Basik away from home loses the support of the cycle. The lightness fades. Memory begins to weigh. Time begins to exist — and that is frightening.",
+        "### The patient enemy",
+        "The enemy doesn't need to win in Gotto. It's enough to repeat the same interference every time, knowing it will be forgotten and never fought.",
+        "### Lightness as risk",
+        "The most beautiful lightness in the universe is the same one that keeps the planet eternally young — and eternally vulnerable to the same failures."
+      ]
     }
   }
 ]

@@ -1,34 +1,34 @@
 [
   {
-    "image": "/imgs/kammara/gotto/_scenes/vista_regiao.jpg",
-    "label": { "pt": "Vista da região", "en": "Regional view" }
+    "image": "/imgs/kammara/gotto/_scenes/regiao_10.jpg",
+    "label": { "pt": "Linha 10 — Vale INPUT", "en": "Line 10 — INPUT Valley" }
   },
   {
-    "image": "/imgs/kammara/gotto/_scenes/vista_area.jpg",
-    "label": { "pt": "Vista aérea", "en": "Aerial view" }
-  },
-  {
-    "image": "/imgs/kammara/gotto/_scenes/vista_regiao_com_frutas.jpg",
+    "image": "/imgs/kammara/gotto/_scenes/vista_regiao_deserta_com_frutas.jpg",
     "label": { "pt": "A região das frutas", "en": "The fruit region" }
   },
   {
-    "image": "/imgs/kammara/gotto/_scenes/vila_central.jpg",
-    "label": { "pt": "A vila central", "en": "The central village" }
+    "image": "/imgs/kammara/gotto/_scenes/cultivo_flores.jpg",
+    "label": { "pt": "O cultivo das flores", "en": "The flower fields" }
   },
   {
-    "image": "/imgs/kammara/gotto/_scenes/vista_area_vila.jpg",
-    "label": { "pt": "A vila, do alto", "en": "The village, from above" }
+    "image": "/imgs/kammara/gotto/_scenes/Arredores_vila_central.jpg",
+    "label": { "pt": "Arredores da vila central", "en": "Around the central village" }
   },
   {
-    "image": "/imgs/kammara/gotto/_scenes/vila1.jpg",
-    "label": { "pt": "Vila", "en": "Village" }
+    "image": "/imgs/kammara/gotto/_scenes/cena_vila_lateral1.jpg",
+    "label": { "pt": "A vila, de lado", "en": "The village, from the side" }
   },
   {
-    "image": "/imgs/kammara/gotto/_scenes/vila2.jpg",
-    "label": { "pt": "Vila", "en": "Village" }
+    "image": "/imgs/kammara/gotto/_scenes/vila_de_perto.jpg",
+    "label": { "pt": "A vila de perto", "en": "The village up close" }
   },
   {
-    "image": "/imgs/kammara/gotto/_scenes/floresta.jpg",
-    "label": { "pt": "A floresta", "en": "The forest" }
+    "image": "/imgs/kammara/gotto/_scenes/kirio_vigiando_morro2.jpg",
+    "label": { "pt": "Kirió, o Vigia do Morro", "en": "Kirió, the Hill Watcher" }
+  },
+  {
+    "image": "/imgs/kammara/gotto/_scenes/erurin_visits_gotto1.jpg",
+    "label": { "pt": "Erurin visita Gotto", "en": "Erurin visits Gotto" }
   }
 ]

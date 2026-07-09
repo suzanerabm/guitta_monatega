@@ -178,5 +178,111 @@
         }
       }
     ]
+  },
+  {
+    "match": "Kirió",
+    "name": {
+      "pt": "Kirió",
+      "en": "Kirió"
+    },
+    "species": {
+      "pt": "Attentis",
+      "en": "Attentis"
+    },
+    "image": "/imgs/kammara/gotto/kirio_frente.png",
+    "bio": {
+      "pt": "Kirió parece um morro — e é. Um guardião colossal coberto de folhagem viva que fica imóvel no alto, vigiando a planície e protegendo as vilas dos Basiks. Ancião anterior aos ciclos, ele não esquece quando o planeta reinicia — é a memória viva de Gotto.",
+      "en": "Kirió looks like a hill — and is one. A colossal guardian covered in living foliage that stands motionless up high, watching the plain and protecting the Basik villages. An elder older than the cycles, it does not forget when the planet restarts — it is the living memory of Gotto."
+    },
+    "backImage": "/imgs/kammara/gotto/kirio_back.png",
+    "backTitle": {
+      "pt": "O Vigia do Morro",
+      "en": "The Hill Watcher"
+    },
+    "backMeaning": {
+      "pt": "Meio animal, meio planta — mestre da camuflagem. Corpo de folhagem pêssego, creme e roxa, máscara de osso e chifre-folha curvado.",
+      "en": "Half animal, half plant — master of camouflage. A body of peach, cream and purple foliage, a bone mask and a curved leaf-horn."
+    },
+    "dorsalMeaning": {
+      "pt": "Olhe o morro de novo. Ele está olhando de volta.",
+      "en": "Look at the hill again. It's looking back."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Vigia do Morro",
+          "en": "Hill Watcher"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Os morros da planície",
+          "en": "The hills of the plain"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Daryun",
+    "name": {
+      "pt": "Daryun",
+      "en": "Daryun"
+    },
+    "species": {
+      "pt": "Daryun",
+      "en": "Daryun"
+    },
+    "image": "/imgs/kammara/gotto/daryun.png",
+    "bio": {
+      "pt": "O ser mais importante de Gotto. Um peixe colossal e antiquíssimo dos rios largos — a régua com que todo o planeta se mede. E mais: as escamas enormes que ele solta são o material de toda a civilização. Sem Daryun, não há escama; sem escama, não há vila.",
+      "en": "The most important being of Gotto. A colossal, ancient fish of the wide rivers — the measure against which the whole planet is gauged. And more: the enormous scales it sheds are the material of the entire civilization. Without Daryun, there is no scale; without a scale, there is no village."
+    },
+    "backImage": "/imgs/kammara/gotto/daryun_back.png",
+    "backTitle": {
+      "pt": "A Régua do Mundo",
+      "en": "The World's Measure"
+    },
+    "backMeaning": {
+      "pt": "Escamas branco-pérola, olho azul enorme e sereno, longos barbilhões, barbatanas iridescentes azul-roxo-teal. Cada Daryun tem sua paleta — por isso cada vila varia de cor, nunca a mesma duas vezes.",
+      "en": "Pearl-white scales, a huge serene blue eye, long barbels, iridescent blue-purple-teal fins. Each Daryun has its own palette — which is why each village varies in color, never the same twice."
+    },
+    "dorsalMeaning": {
+      "pt": "Nada, solta uma escama, e segue — e dela nasce um lar.",
+      "en": "It swims, sheds a scale, and moves on — and from it a home is born."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "A fonte de tudo",
+          "en": "The source of everything"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Os rios largos da planície",
+          "en": "The wide rivers of the plain"
+        }
+      }
+    ]
   }
 ]

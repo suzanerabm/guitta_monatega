@@ -77,10 +77,10 @@
     "href": ""
   },
   {
-    "world": "lunnp1",
-    "video": "/imgs/kammara/lunnp1/_videos/veluma.mp4",
-    "poster": "/imgs/kammara/lunnp1/_videos/veluma_poster.jpg",
-    "label": { "pt": "Minas", "en": "Mines" },
+    "world": "gotto",
+    "video": "/imgs/kammara/gotto/_videos/gotto_reinicio.mp4",
+    "poster": "/imgs/kammara/gotto/_videos/gotto_reinicio_poster.jpg",
+    "label": { "pt": "O reinício — GOTO", "en": "The restart — GOTO" },
     "href": ""
   }
 ]
