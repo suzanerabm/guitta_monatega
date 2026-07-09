@@ -1,5 +1,26 @@
 [
   {
+    "image": "/imgs/kammara/digg/_scenes/Two_floating_grey_stone_blocks_in_space_connected_by_a_suspended_wooden_bridge.jpg",
+    "label": {
+      "pt": "Blocos ligados por ponte",
+      "en": "Blocks joined by a bridge"
+    }
+  },
+  {
+    "image": "/imgs/kammara/digg/_scenes/Cross-section_of_a_floating_grey_stone_block.jpg",
+    "label": {
+      "pt": "Um bloco por dentro",
+      "en": "A block, in cross-section"
+    }
+  },
+  {
+    "image": "/imgs/kammara/digg/_scenes/Cross-section_showing_a_real_working_MINE.jpg",
+    "label": {
+      "pt": "A mina de kemita",
+      "en": "The kemita mine"
+    }
+  },
+  {
     "image": "/imgs/kammara/digg/_scenes/Nihrak_creature_sitting_on_his_stone_throne.jpg",
     "label": {
       "pt": "Níhrak no trono de pedra",
@@ -11,6 +32,13 @@
     "label": {
       "pt": "O trono, vista ampla",
       "en": "The throne, wide view"
+    }
+  },
+  {
+    "image": "/imgs/kammara/digg/_scenes/CHMURKA_creatures_standing_together.jpg",
+    "label": {
+      "pt": "As Chmurka em bando",
+      "en": "The Chmurka in a pack"
     }
   },
   {

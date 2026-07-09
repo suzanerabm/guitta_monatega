@@ -84,6 +84,8 @@ export function subsystemGlyph(title: string): string {
     key.includes('castas')
   ) return '⊙•⊙';
   if (key.includes('geograf') || key.includes('geography')) return '⊹—⊙'; // Geografia
+  if (key.includes('transporte') || key.includes('movimento') || key.includes('mobilidade') ||
+      key.includes('transport') || key.includes('movement')) return '⊶—⊶'; // Transporte & Movimento (Digg)
   if (key.includes('ciclo') || key.includes('lua') || key.includes('tempo') ||
       key.includes('cycle') || key.includes('moon') || key.includes('time')) return '⊶—⊶'; // Ciclos & Luas/Tempo
   if (key.includes('água') || key.includes('agua') || key.includes('water')) return '—•—'; // A Água

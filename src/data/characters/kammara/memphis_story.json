@@ -42,11 +42,11 @@
   "tags": [
     {
       "label": { "pt": "Habitantes", "en": "Inhabitants" },
-      "value": { "pt": "Imigrantes de todo o universo", "en": "Immigrants from across the universe" }
+      "value": { "pt": "Imigrantes", "en": "Immigrants" }
     },
     {
       "label": { "pt": "Idioma", "en": "Language" },
-      "value": { "pt": "Babel + devices de tradução", "en": "Babel + translation devices" }
+      "value": { "pt": "Babel", "en": "Babel" }
     },
     {
       "label": { "pt": "Energia", "en": "Energy" },
@@ -54,7 +54,7 @@
     },
     {
       "label": { "pt": "Transporte", "en": "Transport" },
-      "value": { "pt": "Modbus (trem) e naves", "en": "Modbus (train) and ships" }
+      "value": { "pt": "Modbus", "en": "Modbus" }
     }
   ]
 }
