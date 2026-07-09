@@ -113,7 +113,7 @@ const WORLD_COLOR_INDICES: Record<
   triplec: { name: 3, text: 2, title: 1, label: 5 },
   orfv: { name: 3, text: 2, title: 1, label: 5 },
   z1: { name: 0, text: 2, title: 1, label: 5 },
-  gotto: { name: 0, text: 2, title: 1, label: 5 },
+  gotto: { name: 3, text: 2, title: 1, label: 5 },
   digg: { name: 3, text: 2, title: 1, label: 5 },
   memphis: { name: 3, text: 2, title: 1, label: 5 },
 };

@@ -253,19 +253,20 @@ export const palettes: Record<PaletteName, Palette> = {
     gradientBg: 'linear-gradient(160deg, #12141a 0%, #2a2c34 40%, #1a1c22 100%)',
   },
   gotto: {
-    // Brown family, but with enough luminosity on the text indices to
-    // actually read over the dark gradient background.
-    // colors[0] = accent (CreatureSection radial tint) — sienna saturado
-    // colors[1] = DSTextPanel title — caramelo claro
-    // colors[2] = body text — creme/bege claro
-    // colors[3] = world heading h1 (name "Gotto") — caramelo-rosado claro
-    // colors[4..5] = usados em bordas/sombras
-    colors: ['#a0522d', '#d4a574', '#f5e6d3', '#e8c39e', '#6b3419', '#3d1a0a'],
-    text: '#f5e6d3',
-    // Used by FilterBar chrome tint — marrom profundo perceptível.
-    dark: '#3a1a0a',
-    gradient: 'linear-gradient(135deg, #6b3419, #a0522d, #d4a574)',
-    gradientBg: 'linear-gradient(160deg, #1a0a05 0%, #2a1408 40%, #1f0f06 100%)',
+    // Degradê pêssego → turquesa escuro, com luminosidade suficiente nos
+    // índices de texto para ler sobre o fundo escuro.
+    // colors[0] = accent (CreatureSection radial tint) — turquesa
+    // colors[1] = DSTextPanel title — pêssego claro
+    // colors[2] = body text — pêssego-creme claro
+    // colors[3] = world heading h1 (name "Gotto") — pêssego-rosado claro
+    // colors[4..5] = usados em bordas/sombras (turquesas profundos)
+    colors: ['#4bbfb0', '#ffcda8', '#ffe6d3', '#ffb99a', '#1d4f4c', '#0e2a2a'],
+    text: '#ffe6d3',
+    // Used by FilterBar chrome tint — turquesa profundo perceptível.
+    dark: '#13403c',
+    // Degradê pêssego → turquesa escuro: pêssego dominante, turquesa na base.
+    gradient: 'linear-gradient(135deg, #ffe0c8 0%, #ffcda8 30%, #ffb99a 55%, #2f8f86 100%)',
+    gradientBg: 'linear-gradient(160deg, #0c2422 0%, #123a37 35%, #0e2826 100%)',
   },
   digg: {
     // Degradê marrom → verde kemita. Placeholder inicial — ajustar com a arte final.
