@@ -9,19 +9,19 @@
       "pt": "Basik",
       "en": "Basik"
     },
-    "image": "",
+    "image": "/imgs/kammara/gotto/rema.png",
     "bio": {
       "pt": "Silêncio entre as notas. Margem que dá forma ao fluxo. Como o REM no código, está presente sem executar. Sua presença cria espaço para que outros se acalmem — permite que o excesso se dissolva naturalmente.",
       "en": "Silence between the notes. The margin that gives shape to the flow. Like REM in code, she is present without executing. Her presence makes room for others to settle — letting excess dissolve on its own."
     },
-    "backImage": "",
+    "backImage": "/imgs/kammara/gotto/rema_costas.png",
     "backTitle": {
-      "pt": "",
-      "en": ""
+      "pt": "Outro lado",
+      "en": "Another side"
     },
     "dorsalMeaning": {
-      "pt": "",
-      "en": ""
+      "pt": "Nem tudo precisa acontecer agora",
+      "en": "Not everything has to happen now."
     },
     "attributes": [
       {
@@ -53,8 +53,8 @@
           "en": "Language"
         },
         "value": {
-          "pt": "Basik (REM)",
-          "en": "Basik (REM)"
+          "pt": "Basik",
+          "en": "Basik"
         }
       }
     ]
@@ -69,19 +69,19 @@
       "pt": "Basik",
       "en": "Basik"
     },
-    "image": "",
+    "image": "/imgs/kammara/gotto/pilo.png",
     "bio": {
       "pt": "Fluxo audível. Correnteza que precisa fazer barulho para confirmar que existe. Sua presença desperta movimento nos outros — quando ele fala, algo acorda. Som que retorna, presença que se confirma pela repetição.",
       "en": "An audible flow. A current that needs to make noise to confirm it exists. His presence stirs movement in others — when he speaks, something wakes. Sound that returns, presence that confirms itself by repetition."
     },
-    "backImage": "",
+    "backImage": "/imgs/kammara/gotto/pilo_costas.png",
     "backTitle": {
-      "pt": "",
-      "en": ""
+      "pt": "Outro lado",
+      "en": "Another side"
     },
     "dorsalMeaning": {
-      "pt": "",
-      "en": ""
+      "pt": "Se eu disser de novo, eu continuo.",
+      "en": "If I say it again, I go on."
     },
     "attributes": [
       {
@@ -102,8 +102,8 @@
           "en": "Region"
         },
         "value": {
-          "pt": "Linha 20 (Vale PRINT)",
-          "en": "Line 20 (PRINT Valley)"
+          "pt": "Vale",
+          "en": "Valley"
         }
       },
       {
@@ -113,8 +113,8 @@
           "en": "Language"
         },
         "value": {
-          "pt": "Basik (PRINT)",
-          "en": "Basik (PRINT)"
+          "pt": "Basik",
+          "en": "Basik"
         }
       }
     ]
@@ -129,19 +129,19 @@
       "pt": "Basik",
       "en": "Basik"
     },
-    "image": "",
+    "image": "/imgs/kammara/gotto/jump.png",
     "bio": {
       "pt": "A mudança em si. Onde outros veem caminho, Jump vê ponto de salto. Não está mais onde estava — a ação surge sem esforço porque resistir ao movimento seria o verdadeiro esforço. Sua presença impede que outros fiquem presos: dissolve apegos por demonstração.",
       "en": "Change itself. Where others see a path, Jump sees a leap point. He is not where he was — action arises effortlessly because resisting the movement would be the real effort. His presence keeps others from getting stuck: dissolving attachments by example."
     },
-    "backImage": "",
+    "backImage": "/imgs/kammara/gotto/jump_costas.png",
     "backTitle": {
-      "pt": "",
-      "en": ""
+     "pt": "Outro lado",
+      "en": "Another side"
     },
     "dorsalMeaning": {
-      "pt": "",
-      "en": ""
+      "pt": "Já estou em outro lugar.",
+      "en": "I'm already somewhere else."
     },
     "attributes": [
       {
@@ -162,8 +162,8 @@
           "en": "Region"
         },
         "value": {
-          "pt": "Linha 30 (Penhasco GOTO)",
-          "en": "Line 30 (GOTO Cliff)"
+          "pt": "Penhasco",
+          "en": "Cliff"
         }
       },
       {
@@ -173,8 +173,8 @@
           "en": "Language"
         },
         "value": {
-          "pt": "Basik (saltos)",
-          "en": "Basik (jumps)"
+          "pt": "Basik",
+          "en": "Basik"
         }
       }
     ]
