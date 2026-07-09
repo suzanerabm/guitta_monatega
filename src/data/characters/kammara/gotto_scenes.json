@@ -1,0 +1,34 @@
+[
+  {
+    "image": "/imgs/kammara/gotto/_scenes/vista_regiao.jpg",
+    "label": { "pt": "Vista da região", "en": "Regional view" }
+  },
+  {
+    "image": "/imgs/kammara/gotto/_scenes/vista_area.jpg",
+    "label": { "pt": "Vista aérea", "en": "Aerial view" }
+  },
+  {
+    "image": "/imgs/kammara/gotto/_scenes/vista_regiao_com_frutas.jpg",
+    "label": { "pt": "A região das frutas", "en": "The fruit region" }
+  },
+  {
+    "image": "/imgs/kammara/gotto/_scenes/vila_central.jpg",
+    "label": { "pt": "A vila central", "en": "The central village" }
+  },
+  {
+    "image": "/imgs/kammara/gotto/_scenes/vista_area_vila.jpg",
+    "label": { "pt": "A vila, do alto", "en": "The village, from above" }
+  },
+  {
+    "image": "/imgs/kammara/gotto/_scenes/vila1.jpg",
+    "label": { "pt": "Vila", "en": "Village" }
+  },
+  {
+    "image": "/imgs/kammara/gotto/_scenes/vila2.jpg",
+    "label": { "pt": "Vila", "en": "Village" }
+  },
+  {
+    "image": "/imgs/kammara/gotto/_scenes/floresta.jpg",
+    "label": { "pt": "A floresta", "en": "The forest" }
+  }
+]

@@ -6,6 +6,7 @@ import eni4Scenes from './eni4_scenes.json';
 import eni4Drops from './eni4_drops.json';
 import gottoStory from './gotto_story.json';
 import gottoSubs from './gotto_subsystems.json';
+import gottoScenes from './gotto_scenes.json';
 import diggStory from './digg_story.json';
 import diggSubs from './digg_subsystems.json';
 import diggScenes from './digg_scenes.json';
@@ -124,6 +125,7 @@ const SUBSYSTEMS: Record<string, WorldSubsystem[]> = {
 
 const SCENES: Record<string, WorldScene[]> = {
   eni4: eni4Scenes as WorldScene[],
+  gotto: gottoScenes as WorldScene[],
   digg: diggScenes as WorldScene[],
   memphis: memphisScenes as WorldScene[],
   lunnp1: lunnp1Scenes as WorldScene[],
