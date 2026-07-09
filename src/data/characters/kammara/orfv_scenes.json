@@ -1,13 +1,5 @@
 [
   {
-    "image": "/imgs/kammara/orfv/_videos/festa_orfv_poster.jpg",
-    "label": {
-      "pt": "Lüp'Nül Fest",
-      "en": "Lüp'Nül Fest"
-    },
-    "video": "/imgs/kammara/orfv/_videos/festa_orfv.mp4"
-  },
-  {
     "image": "/imgs/kammara/orfv/_scenes/1vista_Fjorks_Centrais.jpg",
     "label": {
       "pt": "vista Fjorks Centrais",
@@ -26,6 +18,20 @@
     "label": {
       "pt": "Iren Kor Vila Central",
       "en": "Iren Kor Vila Central"
+    }
+  },
+  {
+    "image": "/imgs/kammara/orfv/_scenes/velo_dormindo_flor.jpg",
+    "label": {
+      "pt": "Velo dormindo na flor",
+      "en": "Velo sleeping on the flower"
+    }
+  },
+  {
+    "image": "/imgs/kammara/orfv/_scenes/zupi_dormindo_com_nuvin1.jpg",
+    "label": {
+      "pt": "Zupi dormindo com o Nuvin",
+      "en": "Zupi sleeping with the Nuvin"
     }
   },
   {

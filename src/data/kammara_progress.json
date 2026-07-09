@@ -78,38 +78,38 @@
       "id": "gotto",
       "name": { "pt": "Gotto", "en": "Gotto" },
       "progress": {
-        "lore": 95,
+        "lore": 100,
         "personagens": 25,
         "criaturas": 0,
-        "design-conceito": 0,
+        "design-conceito": 60,
         "characters-design": 60,
         "cenas": 0,
         "website": 20
       }
     },
     {
-      "id": "hash",
-      "name": { "pt": "Hash", "en": "Hash" },
+      "id": "digg",
+      "name": { "pt": "Digg", "en": "Digg" },
       "progress": {
-        "lore": 15,
-        "personagens": 0,
-        "criaturas": 0,
-        "design-conceito": 0,
-        "characters-design": 0,
-        "cenas": 0,
+        "lore": 100,
+        "personagens": 95,
+        "criaturas": 80,
+        "design-conceito": 90,
+        "characters-design": 90,
+        "cenas": 60,
         "website": 0
       }
     },
     {
-      "id": "bluecity",
-      "name": { "pt": "BlueCity", "en": "BlueCity" },
+      "id": "memphis",
+      "name": { "pt": "Memphis", "en": "Memphis" },
       "progress": {
-        "lore": 12,
-        "personagens": 0,
-        "criaturas": 0,
-        "design-conceito": 0,
-        "characters-design": 0,
-        "cenas": 0,
+        "lore": 100,
+        "personagens": 75,
+        "criaturas": 50,
+        "design-conceito": 90,
+        "characters-design": 90,
+        "cenas": 10,
         "website": 0
       }
     }

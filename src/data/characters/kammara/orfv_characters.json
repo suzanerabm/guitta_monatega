@@ -307,5 +307,217 @@
         }
       }
     ]
+  },
+  {
+    "match": "Nuvin",
+    "name": {
+      "pt": "Nuvin",
+      "en": "Nuvin"
+    },
+    "species": {
+      "pt": "Nuvinian",
+      "en": "Nuvinian"
+    },
+    "bio": {
+      "pt": "O Nuvin vive lá embaixo, onde a rocha dos Fjorks encontra a água. É o observador das águas: vigia a qualidade dos canais e, quando é preciso, filtra a água pelo próprio corpo de névoa — um purificador natural.",
+      "en": "The Nuvin lives down below, where the rock of the Fjorks meets the water. It is the watcher of the waters: it guards the quality of the canals and, when needed, filters the water through its own body of mist — a natural purifier."
+    },
+    "image": "/imgs/kammara/orfv/nuvin.png",
+    "backImage": "/imgs/kammara/orfv/nuvin_costas.png",
+    "backTitle": {
+      "pt": "Guardiões da Água Limpa",
+      "en": "Guardians of Clean Water"
+    },
+    "backMeaning": {
+      "pt": "Macios, translúcidos e levemente brilhantes — parecem feitos de vapor e nuvem. Vivem em pares, um nunca sem o outro.",
+      "en": "Soft, translucent and faintly glowing — they seem made of vapor and cloud. They live in pairs, one never without the other."
+    },
+    "dorsalMeaning": {
+      "pt": "A água limpa passa por nós.",
+      "en": "Clean water passes through us."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Purificador das águas",
+          "en": "Water purifier"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Base dos Fjorks",
+          "en": "Base of the Fjorks"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Zupi",
+    "name": {
+      "pt": "Zupi",
+      "en": "Zupi"
+    },
+    "species": {
+      "pt": "Zupik",
+      "en": "Zupik"
+    },
+    "bio": {
+      "pt": "O Zupi vive na água, pertinho de onde moram os Nuvinians — e é um contador de histórias nato: tagarela, feliz, fala sem parar. O detalhe é que ninguém entende uma palavra do que ele diz.",
+      "en": "The Zupi lives in the water, right next to where the Nuvinians dwell — and it is a born storyteller: chatty, happy, talks without stopping. The thing is, no one understands a word it says."
+    },
+    "image": "/imgs/kammara/orfv/Zupi.png",
+    "backImage": "/imgs/kammara/orfv/zupi_costas.png",
+    "backTitle": {
+      "pt": "O que Conta e Ninguém Entende",
+      "en": "The One Who Tells and No One Understands"
+    },
+    "backMeaning": {
+      "pt": "Pequeno jacaré de olhos enormes e esbugalhados, boca larga sempre aberta — falando! Vive junto aos Nuvinians, dividindo a água e se aconchegando neles para se aquecer.",
+      "en": "A little alligator with huge bulging eyes and a wide mouth always open — talking! It lives alongside the Nuvinians, sharing the water and cuddling up to them for warmth."
+    },
+    "dorsalMeaning": {
+      "pt": "…e foi assim que aconteceu!",
+      "en": "…and that's how it happened!"
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Contador de histórias",
+          "en": "Storyteller"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Base dos Fjorks",
+          "en": "Base of the Fjorks"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Velo",
+    "name": {
+      "pt": "Velo",
+      "en": "Velo"
+    },
+    "species": {
+      "pt": "Zephiriki",
+      "en": "Zephiriki"
+    },
+    "bio": {
+      "pt": "Ágil, leve, observador e brincalhão, o Velo é uma criaturinha felpuda. Não tem boca: alimenta-se da seiva das flores rosa das yarlins e dos pïnks, como um beija-flor.",
+      "en": "Agile, light, watchful and playful, the Velo is a fuzzy. It has no mouth: it feeds on the sap of the pink yarlin and pïnk flowers, like a hummingbird."
+    },
+    "image": "/imgs/kammara/orfv/velo.png",
+    "backImage": "/imgs/kammara/orfv/velo_costas.png",
+    "backTitle": {
+      "pt": "O Bebedor de Flores",
+      "en": "The Flower Drinker"
+    },
+    "backMeaning": {
+      "pt": "Branco a prateado, pelagem felpuda; olhos grandes, antenas espetadas e um bigode. Não fala — não tem boca; só observa e brinca.",
+      "en": "White to silver, fuzzy fur; large eyes, spiky antennae and a little mustache. It does not speak — it has no mouth; it only watches and plays."
+    },
+    "dorsalMeaning": {
+      "pt": "O Bebedor de Flores.",
+      "en": "The Flower Drinker."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Polinizador das flores",
+          "en": "Flower pollinator"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Alto dos Fjorks",
+          "en": "High in the Fjorks"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Aurin",
+    "name": {
+      "pt": "Aurin",
+      "en": "Aurin"
+    },
+    "species": {
+      "pt": "Aliventi",
+      "en": "Aliventi"
+    },
+    "bio": {
+      "pt": "Pequeno como uma libélula, o Aurin vive no alto dos Fjorks, pertinho das vilas dos elePHPants — e é dali que cruza o vento entre as ilhas carregando recados e sementes de um lado ao outro.",
+      "en": "Small as a dragonfly, the Aurin lives high in the Fjorks, close to the elePHPant villages — and from there it crosses the wind between the islands carrying messages and seeds from one side to the other."
+    },
+    "image": "/imgs/kammara/orfv/Aurin_rosa.png",
+    "backImage": "/imgs/kammara/orfv/Aurin_costas_rosa.png",
+    "backTitle": {
+      "pt": "O Mensageiro das Brisas",
+      "en": "The Messenger of the Breezes"
+    },
+    "backMeaning": {
+      "pt": "Corpo leve e liso, de madeira clara com leve brilho; asas translúcidas e delicadas como as de uma libélula.",
+      "en": "A light, smooth body of pale wood with a faint sheen; wings translucent and delicate like a dragonfly's."
+    },
+    "dorsalMeaning": {
+      "pt": "Trago um recado — e uma semente, de brinde.",
+      "en": "I bring a message — and a seed, for free."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Mensageiro",
+          "en": "Messenger"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Alto dos Fjorks",
+          "en": "High in the Fjorks"
+        }
+      }
+    ]
   }
 ]

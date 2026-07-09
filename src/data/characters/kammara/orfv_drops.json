@@ -16,6 +16,14 @@
     }
   },
   {
+    "video": "/imgs/kammara/orfv/_videos/zupi_nadando.mp4",
+    "poster": "/imgs/kammara/orfv/_videos/zupi_nadando_poster.jpg",
+    "label": {
+      "pt": "Zupi nadando",
+      "en": "Zupi swimming"
+    }
+  },
+  {
     "video": "/imgs/kammara/orfv/_videos/bisa_ativando_protocolo.mp4",
     "poster": "/imgs/kammara/orfv/_videos/bisa_ativando_protocolo_poster.jpg",
     "label": {
