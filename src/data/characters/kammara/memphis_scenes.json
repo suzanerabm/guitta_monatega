@@ -1,1 +1,51 @@
-[]
+[
+  {
+    "image": "/imgs/kammara/memphis/_scenes/memphis_old_section.jpg",
+    "label": {
+      "pt": "As camadas antigas",
+      "en": "The old layers"
+    }
+  },
+  {
+    "image": "/imgs/kammara/memphis/_scenes/modbus_crossing.jpg",
+    "label": {
+      "pt": "O Modbus cruzando",
+      "en": "The Modbus crossing"
+    }
+  },
+  {
+    "image": "/imgs/kammara/memphis/_scenes/memphis_container_section.jpg",
+    "label": {
+      "pt": "Os bairros-container",
+      "en": "The container-districts"
+    }
+  },
+  {
+    "image": "/imgs/kammara/memphis/_scenes/memphis_gotto_section.jpg",
+    "label": {
+      "pt": "A seção dos Gottos",
+      "en": "The Gotto section"
+    }
+  },
+  {
+    "image": "/imgs/kammara/memphis/_scenes/memphis_orf-v_section.jpg",
+    "label": {
+      "pt": "A seção de ORF-V",
+      "en": "The ORF-V section"
+    }
+  },
+  {
+    "image": "/imgs/kammara/memphis/_scenes/Ratdra_blocked.jpg",
+    "label": {
+      "pt": "O Ratdra bloqueado",
+      "en": "The Ratdra, blocked"
+    }
+  },
+  {
+    "image": "/imgs/kammara/memphis/_scenes/memphis_clen.jpg",
+    "label": {
+      "pt": "A Clén — a Tela Azul",
+      "en": "The Clén — the Blue Screen"
+    }
+  }
+]
