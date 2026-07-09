@@ -19,6 +19,8 @@ import kammaraTriplecSharp from "./kammara/triplec-sharp_characters.json";
 import kammaraOrfv from "./kammara/orfv_characters.json";
 import kammaraZ1 from "./kammara/z1_characters.json";
 import kammaraGotto from "./kammara/gotto_characters.json";
+import kammaraDigg from "./kammara/digg_characters.json";
+import kammaraMemphis from "./kammara/memphis_characters.json";
 import kammaraKammara from "./kammara/kammara_characters.json";
 
 export const charactersByContext: Record<string, Character[]> = {
@@ -31,6 +33,8 @@ export const charactersByContext: Record<string, Character[]> = {
   "kammara/orfv": kammaraOrfv as Character[],
   "kammara/z1": kammaraZ1 as Character[],
   "kammara/gotto": kammaraGotto as Character[],
+  "kammara/digg": kammaraDigg as Character[],
+  "kammara/memphis": kammaraMemphis as Character[],
   "kammara/kammara": kammaraKammara as Character[],
 };
 

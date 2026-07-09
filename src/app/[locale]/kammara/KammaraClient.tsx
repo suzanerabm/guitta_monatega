@@ -48,7 +48,7 @@ import { KammaraStarField } from './KammaraStarField';
 // Types & constants
 // ============================================================================
 
-type WorldId = 'lunnp1' | 'eni4' | 'triplec' | 'orfv' | 'z1' | 'gotto';
+type WorldId = 'lunnp1' | 'eni4' | 'triplec' | 'orfv' | 'z1' | 'gotto' | 'digg' | 'memphis';
 type TriplecRegionId = 'malloc' | 'mesh' | 'sharp';
 type Locale = 'pt' | 'en';
 
@@ -94,6 +94,8 @@ const WORLD_NAMES: Record<WorldId, string> = {
   orfv: 'ORF-V',
   z1: 'Z1',
   gotto: 'Gotto',
+  digg: 'Digg',
+  memphis: 'Memphis',
 };
 
 /**
@@ -112,6 +114,8 @@ const WORLD_COLOR_INDICES: Record<
   orfv: { name: 3, text: 2, title: 1, label: 5 },
   z1: { name: 0, text: 2, title: 1, label: 5 },
   gotto: { name: 0, text: 2, title: 1, label: 5 },
+  digg: { name: 3, text: 2, title: 1, label: 5 },
+  memphis: { name: 3, text: 2, title: 1, label: 5 },
 };
 
 /**

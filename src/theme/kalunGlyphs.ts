@@ -22,6 +22,8 @@ export type WorldKey =
   | 'orfv'
   | 'z1'
   | 'gotto'
+  | 'digg'
+  | 'memphis'
   | 'malloc'
   | 'mesh'
   | 'sharp';
@@ -37,6 +39,8 @@ const WORLD_CREST: Record<WorldKey, string> = {
   orfv: '⊶—⋄—⊷',
   z1: '⊷⊙⊷',
   gotto: '⊷⊶',
+  digg: '⊹⋄⊹',
+  memphis: '—⊙—',
   malloc: '•⊙',
   mesh: '⊶⊙⊶⊙⊶',
   sharp: '⊹⊙⊷',

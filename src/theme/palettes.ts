@@ -2,6 +2,7 @@
 export type PaletteName =
   | 'bichittos' | 'napcat' | 'zeco' | 'taylo' | 'miscelania' | 'cheiodebolinha'
   | 'kammara' | 'lunnp1' | 'eni4' | 'triplec' | 'orfv' | 'z1' | 'gotto' | 'arte'
+  | 'digg' | 'memphis'
   | 'malloc' | 'mesh' | 'sharp';
 
 /** Criaturas do Bichittos. */
@@ -265,6 +266,32 @@ export const palettes: Record<PaletteName, Palette> = {
     dark: '#3a1a0a',
     gradient: 'linear-gradient(135deg, #6b3419, #a0522d, #d4a574)',
     gradientBg: 'linear-gradient(160deg, #1a0a05 0%, #2a1408 40%, #1f0f06 100%)',
+  },
+  digg: {
+    // Degradê marrom → verde kemita. Placeholder inicial — ajustar com a arte final.
+    // colors[0] = accent (tint da CreatureSection) — verde kemita saturado
+    // colors[1] = título DSTextPanel — verde-claro
+    // colors[2] = corpo do texto — creme/bege claro (legível no fundo escuro)
+    // colors[3] = h1 do nome do mundo — verde-musgo claro
+    // colors[4..5] = bordas/sombras (marrons profundos)
+    colors: ['#5a8f3c', '#9fd67a', '#eef3e2', '#7fb85a', '#3d2a14', '#241206'],
+    text: '#eef3e2',
+    dark: '#2a1a0a',
+    gradient: 'linear-gradient(135deg, #3d2a14, #5a8f3c, #9fd67a)',
+    gradientBg: 'linear-gradient(160deg, #150d05 0%, #241a0c 40%, #14200c 100%)',
+  },
+  memphis: {
+    // Degradê cinza → azul. Placeholder inicial — ajustar com a arte final.
+    // colors[0] = accent (tint da CreatureSection) — azul saturado
+    // colors[1] = título DSTextPanel — azul-claro
+    // colors[2] = corpo do texto — cinza-claro quase branco
+    // colors[3] = h1 do nome do mundo — azul-acinzentado claro
+    // colors[4..5] = bordas/sombras (cinza-azulado profundo)
+    colors: ['#4a86c8', '#8fbde8', '#e6ecf2', '#6fa2d4', '#2a3542', '#141c26'],
+    text: '#e6ecf2',
+    dark: '#1c2530',
+    gradient: 'linear-gradient(135deg, #2a3542, #4a86c8, #8fbde8)',
+    gradientBg: 'linear-gradient(160deg, #0d1218 0%, #1a2430 40%, #101820 100%)',
   },
   arte: {
     colors: ['#f5f5f5', '#e8e8e8', '#d4d4d4', '#f0f0f0', '#cccccc', '#999999'],

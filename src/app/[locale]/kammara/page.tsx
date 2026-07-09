@@ -23,7 +23,7 @@ export async function generateMetadata({
   };
 }
 
-const WORLD_IDS = ['lunnp1', 'eni4', 'triplec', 'orfv', 'z1', 'gotto'] as const;
+const WORLD_IDS = ['lunnp1', 'eni4', 'triplec', 'orfv', 'z1', 'gotto', 'digg', 'memphis'] as const;
 const TRIPLEC_REGIONS = ['malloc', 'mesh', 'sharp'] as const;
 
 export default async function KammaraPage({

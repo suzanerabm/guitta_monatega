@@ -6,6 +6,14 @@ import eni4Scenes from './eni4_scenes.json';
 import eni4Drops from './eni4_drops.json';
 import gottoStory from './gotto_story.json';
 import gottoSubs from './gotto_subsystems.json';
+import diggStory from './digg_story.json';
+import diggSubs from './digg_subsystems.json';
+import diggScenes from './digg_scenes.json';
+import diggDrops from './digg_drops.json';
+import memphisStory from './memphis_story.json';
+import memphisSubs from './memphis_subsystems.json';
+import memphisScenes from './memphis_scenes.json';
+import memphisDrops from './memphis_drops.json';
 import lunnp1Story from './lunnp1_story.json';
 import lunnp1Subs from './lunnp1_subsystems.json';
 import lunnp1Scenes from './lunnp1_scenes.json';
@@ -89,6 +97,8 @@ export interface WorldDrop {
 const STORIES: Record<string, WorldStory> = {
   eni4: eni4Story as WorldStory,
   gotto: gottoStory as WorldStory,
+  digg: diggStory as WorldStory,
+  memphis: memphisStory as WorldStory,
   lunnp1: lunnp1Story as WorldStory,
   orfv: orfvStory as WorldStory,
   triplec: triplecStory as WorldStory,
@@ -101,6 +111,8 @@ const STORIES: Record<string, WorldStory> = {
 const SUBSYSTEMS: Record<string, WorldSubsystem[]> = {
   eni4: eni4Subs as WorldSubsystem[],
   gotto: gottoSubs as WorldSubsystem[],
+  digg: diggSubs as WorldSubsystem[],
+  memphis: memphisSubs as WorldSubsystem[],
   lunnp1: lunnp1Subs as WorldSubsystem[],
   orfv: orfvSubs as WorldSubsystem[],
   triplec: triplecSubs as WorldSubsystem[],
@@ -112,6 +124,8 @@ const SUBSYSTEMS: Record<string, WorldSubsystem[]> = {
 
 const SCENES: Record<string, WorldScene[]> = {
   eni4: eni4Scenes as WorldScene[],
+  digg: diggScenes as WorldScene[],
+  memphis: memphisScenes as WorldScene[],
   lunnp1: lunnp1Scenes as WorldScene[],
   orfv: orfvScenes as WorldScene[],
   triplec: triplecScenes as WorldScene[],
@@ -220,6 +234,8 @@ const DROPS: Record<string, WorldDrop[]> = {
   lunnp1: lunnp1Drops as WorldDrop[],
   eni4: eni4Drops as WorldDrop[],
   orfv: orfvDrops as WorldDrop[],
+  digg: diggDrops as WorldDrop[],
+  memphis: memphisDrops as WorldDrop[],
   triplec: triplecDrops as WorldDrop[],
   'triplec-malloc': triplecMallocDrops as WorldDrop[],
   'triplec-mesh': triplecMeshDrops as WorldDrop[],

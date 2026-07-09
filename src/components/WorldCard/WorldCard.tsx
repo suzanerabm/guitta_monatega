@@ -4,7 +4,7 @@ import { palettes, type PaletteName } from '@/theme/palettes';
 
 type WorldPaletteName = Extract<
   PaletteName,
-  'lunnp1' | 'eni4' | 'triplec' | 'orfv' | 'z1' | 'gotto'
+  'lunnp1' | 'eni4' | 'triplec' | 'orfv' | 'z1' | 'gotto' | 'digg' | 'memphis'
 >;
 
 interface WorldCardProps {
