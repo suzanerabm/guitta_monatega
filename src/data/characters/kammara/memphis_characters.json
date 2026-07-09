@@ -1,1 +1,104 @@
-[]
+[
+  {
+    "match": "O Administrador da Vitrine",
+    "name": {
+      "pt": "O Administrador da Vitrine",
+      "en": "The Administrator of the Showcase"
+    },
+    "species": {
+      "pt": "Governo de fachada",
+      "en": "Facade government"
+    },
+    "bio": {
+      "pt": "Ocupa o Ratdra, opera o centro de comando oficial, recebe as delegações e preside as cúpulas diplomáticas. Para o universo de fora, é quem manda em Memphis — mas não manda em nada: o comando real é do Axel, e o poder de fato está nas ruas. É a interface feita pessoa, uma janela bonita sobre um sistema que ele não controla. Por baixo da pose, é refém de Node-0 e obedece em segredo para não deixar o planeta morrer.",
+      "en": "He occupies the Ratdra, operates the official command center, receives the delegations and presides over the diplomatic summits. To the outside universe he is the one who rules Memphis — but he rules nothing: real command belongs to the Axel, and actual power lives in the streets. He is the interface made person, a pretty window over a system he does not control. Beneath the pose he is Node-0's hostage, obeying in secret so the planet won't die."
+    },
+    "image": "",
+    "backImage": "",
+    "backTitle": { "pt": "", "en": "" },
+    "dorsalMeaning": {
+      "pt": "Sorrio nas cúpulas e não durmo à noite — mando em Memphis para não deixar Memphis morrer.",
+      "en": "I smile at the summits and I don't sleep at night — I rule Memphis so Memphis won't die."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": { "pt": "Função", "en": "Role" },
+        "value": { "pt": "O rosto do governo de fachada", "en": "Face of the facade government" }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": { "pt": "Região", "en": "Region" },
+        "value": { "pt": "O Ratdra (a Vitrine)", "en": "The Ratdra (the Showcase)" }
+      }
+    ]
+  },
+  {
+    "match": "Os Vigias da Torre",
+    "name": {
+      "pt": "Os Vigias da Torre",
+      "en": "The Tower Watchers"
+    },
+    "species": {
+      "pt": "Casta técnica",
+      "en": "Technical caste"
+    },
+    "bio": {
+      "pt": "Uma casta técnica, respeitada, quase sacerdotal. Passam a existência lendo o pulso do Axel — o batimento que sobe do núcleo — para saber quando o tempo vai virar e avisar a cidade das viradas. Não tocam o Axel, sagrado e escondido: só escutam, como quem ausculta um coração sem nunca ver o corpo. São os que mais entendem Memphis e, por isso, os mais solitários: sabem melhor que ninguém o quanto o planeta é frágil.",
+      "en": "A technical caste — respected, almost priestly. They spend their existence reading the pulse of the Axel, the beat that rises from the core, to know when time will turn and warn the city of its turns. They do not touch the Axel, sacred and hidden: they only listen, like someone auscultating a heart without ever seeing the body. They are the ones who understand Memphis most, and so the loneliest — they know better than anyone how fragile the planet is."
+    },
+    "image": "",
+    "backImage": "",
+    "backTitle": { "pt": "", "en": "" },
+    "dorsalMeaning": {
+      "pt": "Não mandamos no tempo. Escutamo-lo — e aprendemos a não ter medo do próximo batimento.",
+      "en": "We do not rule time. We listen to it — and we've learned not to fear the next beat."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": { "pt": "Função", "en": "Role" },
+        "value": { "pt": "Operadores das Torres do Clock", "en": "Operators of the Clock Towers" }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": { "pt": "Região", "en": "Region" },
+        "value": { "pt": "As Torres do Clock, no Ratdra", "en": "The Clock Towers, in the Ratdra" }
+      }
+    ]
+  },
+  {
+    "match": "Os Z1 Ancestrais",
+    "name": {
+      "pt": "Os Z1 Ancestrais",
+      "en": "The Ancestral Z1"
+    },
+    "species": {
+      "pt": "Z1 defeituosos (fundadores)",
+      "en": "Defective Z1 (founders)"
+    },
+    "bio": {
+      "pt": "Os Z1 defeituosos originais que ergueram o Axel e fundaram Memphis, cansados da perfeição de Z1 mas incapazes de largar a engenharia da alma. Carregam na memória o conhecimento da fundação — talvez até o endereço secreto do Axel, a peça que Node-0 caça e não tem. Se algum ainda existe, é um resto: fragmentado, degradado, com a memória corrompida. Um cofre vivo que apodrece — o maior tesouro e a maior tragédia da cidade.",
+      "en": "The original defective Z1 who raised the Axel and founded Memphis — tired of Z1's perfection, yet unable to shed the engineering in their souls. They carry in memory the knowledge of the founding — perhaps even the Axel's secret address, the piece Node-0 hunts and lacks. If any still exist, they are a remnant: fragmented, degraded, their memory corrupted. A living vault that is rotting — at once the city's greatest treasure and its greatest tragedy."
+    },
+    "image": "",
+    "backImage": "",
+    "backTitle": { "pt": "", "en": "" },
+    "dorsalMeaning": {
+      "pt": "Guardamos o segredo que pode matar o planeta — numa mente que já mal se lembra de quem é.",
+      "en": "We guard the secret that can kill the planet — in a mind that barely remembers who it is."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": { "pt": "Função", "en": "Role" },
+        "value": { "pt": "Os fundadores que ergueram o Axel", "en": "The founders who raised the Axel" }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": { "pt": "Região", "en": "Region" },
+        "value": { "pt": "A Mina do Faton, perto do Axel", "en": "The Faton Mine, near the Axel" }
+      }
+    ]
+  }
+]

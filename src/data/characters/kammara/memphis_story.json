@@ -4,14 +4,57 @@
     "en": "Memphis"
   },
   "summary": {
-    "pt": [],
-    "en": []
+    "pt": [
+      "Memphis é um planeta que é uma cidade só: uma megalópole infinita, empilhada em camadas por era, erguida sobre o esqueleto de metal perfeito de Z1 e um núcleo velho e instável chamado Axel. Não tem nativos nem língua própria — recebe todos os povos perdidos do universo (bugs, vírus, robôs desertores, piratas, pinguins mercenários) e se enche do mundo inteiro para não escutar o próprio silêncio. A cidade que recebe todos e não pertence a ninguém."
+    ],
+    "en": [
+      "Memphis is a planet that is a single city: an endless megalopolis stacked in layers by era, raised on Z1's flawless metal skeleton and an old, unstable core called the Axel. It has no natives and no language of its own — it takes in every lost people of the universe (bugs, viruses, deserter robots, pirates, penguin mercenaries) and fills itself with the whole world so it never has to hear its own silence. The city that receives everyone and belongs to no one."
+    ]
   },
   "panel": {
     "story": {
-      "pt": [],
-      "en": []
+      "pt": [
+        "### Um sistema operacional que virou mundo",
+        "Memphis nasceu do nome de um sistema operacional e se comporta como um: não cria nada, apenas recebe e roda o que instalam nele. Os povos, a energia, o alimento e as línguas — tudo vem de fora. Nada é filtrado, tudo se acumula, nada se organiza. Venceu não por ser bom, mas por estar em todo lugar: tosco, remendado, e ainda assim o planeta mais populoso do universo.",
+        "### Camadas empilhadas, um esqueleto escondido",
+        "A cidade cresce em camadas por era — descer é voltar no tempo. Sob todo o caos há uma verdade escondida: Memphis repousa sobre um esqueleto de metal impecável herdado de Z1, feito do metal Faton, que só resiste na atmosfera daqui. No fundo de tudo fica o Axel, o núcleo antigo e instável de onde a cidade nasceu — e do qual nunca conseguiu se separar. Suas regiões vão da Mina do Faton, o berço no subsolo profundo, até o Ratdra, a única área bela e polida do planeta.",
+        "### Todos de fora, uma babel de povos",
+        "Nenhum habitante nasceu em Memphis. São todos imigrantes: bugs (os mais numerosos), vírus fugitivos e leais a Node-0, robôs desertores, Z1 defeituosos, piratas, pinguins mercenários e Gottos perdidos. A identidade do planeta é a própria mistura. Sem língua comum, comunicam-se por uma babel de idiomas resolvida com devices de tradução — comprados, trocados, remendados, roubados. Só os nomes próprios do planeta (Axel, Clén, Ratdra) atravessam todas as línguas.",
+        "### Viver é trocar",
+        "Numa cidade sem fonte própria, viver é trocar: cada povo oferece o que trouxe de casa, em feiras e mercados infinitos onde a comida e a energia são moeda tanto quanto sustento. Anda-se pelo Modbus, o trem herdado de Z1 que sobe e desce entre as camadas sobre trilhos de Faton; quem chega, chega de nave. O tempo não vem do céu, mas do Tick, o pulso do Axel — e duas festas marcam suas viradas: o Enchimento (o Dirven Festival) e o Reinício (o Kaldráx).",
+        "### O órfão sob o caos",
+        "Sem aviso, uma cúpula azul acende sobre um bairro e tudo trava: a Clén, a Tela Azul, a pausa que ninguém escolhe. E há uma verdade mais funda que ninguém diz em voz alta: todo esse barulho existe para não parar. Porque se parasse, no silêncio, apareceria o que Memphis mais teme — que nasceu quebrada, sem base, sem dono, e nunca curou isso. A cidade se enche do universo inteiro para não ficar sozinha consigo mesma."
+      ],
+      "en": [
+        "### An operating system that became a world",
+        "Memphis was born from the name of an operating system and behaves like one: it creates nothing, it only receives and runs whatever gets installed on it. The peoples, the energy, the food, the languages — all of it comes from outside. Nothing is filtered, everything accumulates, nothing gets organized. It won not by being good, but by being everywhere: crude, patched together, and yet the most populous planet in the universe.",
+        "### Stacked layers, a hidden skeleton",
+        "The city grows in layers by era — to go down is to go back in time. Beneath all the chaos lies a hidden truth: Memphis rests on a flawless metal skeleton inherited from Z1, made of the metal Faton, which only holds up in this planet's atmosphere. At the very bottom sits the Axel, the ancient, unstable core the city was born from — and could never separate itself from. Its regions run from the Faton Mine, the cradle deep underground, to the Ratdra, the only beautiful, polished district on the planet.",
+        "### Everyone from elsewhere, a babel of peoples",
+        "No inhabitant was born in Memphis. They are all immigrants: bugs (the most numerous), fugitive viruses and those loyal to Node-0, deserter robots, defective Z1, pirates, penguin mercenaries and lost Gottos. The planet's identity is the mixture itself. With no common tongue, they communicate through a babel of languages resolved by translation devices — bought, traded, patched, stolen. Only the planet's own proper names (Axel, Clén, Ratdra) cross every language.",
+        "### To live is to trade",
+        "In a city with no source of its own, to live is to trade: each people offers what it brought from home, in endless markets and fairs where food and energy are currency as much as sustenance. You get around on the Modbus, the train inherited from Z1 that rises and descends between the layers on Faton rails; whoever arrives, arrives by ship. Time doesn't come from the sky but from the Tick, the pulse of the Axel — and two festivals mark its turns: the Filling (the Dirven Festival) and the Restart (the Kaldráx).",
+        "### The orphan beneath the chaos",
+        "Without warning, a blue dome lights up over a district and everything freezes: the Clén, the Blue Screen, the pause no one chooses. And there is a deeper truth no one says aloud: all this noise exists in order never to stop. Because if it stopped, in the silence, what Memphis fears most would appear — that it was born broken, without a foundation, without an owner, and never healed it. The city fills itself with the entire universe so it never has to be alone with itself."
+      ]
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "label": { "pt": "Habitantes", "en": "Inhabitants" },
+      "value": { "pt": "Imigrantes de todo o universo", "en": "Immigrants from across the universe" }
+    },
+    {
+      "label": { "pt": "Idioma", "en": "Language" },
+      "value": { "pt": "Babel + devices de tradução", "en": "Babel + translation devices" }
+    },
+    {
+      "label": { "pt": "Energia", "en": "Energy" },
+      "value": { "pt": "Tudo importado", "en": "All imported" }
+    },
+    {
+      "label": { "pt": "Transporte", "en": "Transport" },
+      "value": { "pt": "Modbus (trem) e naves", "en": "Modbus (train) and ships" }
+    }
+  ]
 }

@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "image": "/imgs/kammara/digg/_scenes/Nihrak_creature_sitting_on_his_stone_throne.jpg",
+    "label": {
+      "pt": "Níhrak no trono de pedra",
+      "en": "Níhrak on the stone throne"
+    }
+  },
+  {
+    "image": "/imgs/kammara/digg/_scenes/Nihrak_creature_sitting_on_his_stone_throne_view.jpg",
+    "label": {
+      "pt": "O trono, vista ampla",
+      "en": "The throne, wide view"
+    }
+  },
+  {
+    "image": "/imgs/kammara/digg/_scenes/CHMURKA_on_street.jpg",
+    "label": {
+      "pt": "Chmurka nas ruas",
+      "en": "Chmurka in the streets"
+    }
+  },
+  {
+    "image": "/imgs/kammara/digg/_scenes/Creatures_sitting_around_a_rough_table_eating.jpg",
+    "label": {
+      "pt": "Ao redor da mesa",
+      "en": "Around the table"
+    }
+  }
+]
