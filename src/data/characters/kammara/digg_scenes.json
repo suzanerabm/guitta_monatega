@@ -7,6 +7,27 @@
     }
   },
   {
+    "image": "/imgs/kammara/digg/_scenes/Vista_cidade_digg.jpg",
+    "label": {
+      "pt": "A cidade de Digg",
+      "en": "The city of Digg"
+    }
+  },
+  {
+    "image": "/imgs/kammara/digg/_scenes/Vista_blocos.jpg",
+    "label": {
+      "pt": "Os blocos flutuantes",
+      "en": "The floating blocks"
+    }
+  },
+  {
+    "image": "/imgs/kammara/digg/_scenes/primeira_rocha.jpg",
+    "label": {
+      "pt": "A primeira rocha",
+      "en": "The first rock"
+    }
+  },
+  {
     "image": "/imgs/kammara/digg/_scenes/Cross-section_of_a_floating_grey_stone_block.jpg",
     "label": {
       "pt": "Um bloco por dentro",
@@ -21,17 +42,17 @@
     }
   },
   {
-    "image": "/imgs/kammara/digg/_scenes/Nihrak_creature_sitting_on_his_stone_throne.jpg",
+    "image": "/imgs/kammara/digg/_scenes/Nihrak_creature_sitting_on_his_stone_throne_view.jpg",
     "label": {
       "pt": "Níhrak no trono de pedra",
       "en": "Níhrak on the stone throne"
     }
   },
   {
-    "image": "/imgs/kammara/digg/_scenes/Nihrak_creature_sitting_on_his_stone_throne_view.jpg",
+    "image": "/imgs/kammara/digg/_scenes/Vista_interna_cadeirao.jpg",
     "label": {
-      "pt": "O trono, vista ampla",
-      "en": "The throne, wide view"
+      "pt": "O cadeirão, por dentro",
+      "en": "The big chair, within"
     }
   },
   {
@@ -39,13 +60,6 @@
     "label": {
       "pt": "As Chmurka em bando",
       "en": "The Chmurka in a pack"
-    }
-  },
-  {
-    "image": "/imgs/kammara/digg/_scenes/CHMURKA_on_street.jpg",
-    "label": {
-      "pt": "Chmurka nas ruas",
-      "en": "Chmurka in the streets"
     }
   },
   {
