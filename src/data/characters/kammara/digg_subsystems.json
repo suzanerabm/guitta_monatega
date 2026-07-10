@@ -1,7 +1,7 @@
 [
   {
     "title": { "pt": "Cultura", "en": "Culture" },
-    "img": "",
+    "img": "/imgs/kammara/digg/_subsystems/cultura.jpg",
     "text": {
       "pt": [
         "### A moral do acúmulo",
@@ -27,7 +27,7 @@
   },
   {
     "title": { "pt": "Diggers", "en": "Diggers" },
-    "img": "",
+    "img": "/imgs/kammara/digg/_subsystems/habitantes.jpg",
     "text": {
       "pt": [
         "### Uma moral, não uma espécie",
@@ -53,7 +53,7 @@
   },
   {
     "title": { "pt": "Geografia", "en": "Geography" },
-    "img": "",
+    "img": "/imgs/kammara/digg/_subsystems/geografia.jpg",
     "text": {
       "pt": [
         "### A cadeia de blocos",
@@ -79,7 +79,7 @@
   },
   {
     "title": { "pt": "Transporte & Movimento", "en": "Transport & Movement" },
-    "img": "",
+    "img": "/imgs/kammara/digg/_subsystems/transporte.jpg",
     "text": {
       "pt": [
         "### O planeta inteiro navega",
@@ -101,7 +101,7 @@
   },
   {
     "title": { "pt": "Relações com Outros Planetas", "en": "Relations with Other Planets" },
-    "img": "",
+   "img": "/imgs/kammara/digg/_subsystems/eniac_roubo.jpg",
     "text": {
       "pt": [
         "### TripleC",
@@ -127,7 +127,7 @@
   },
   {
     "title": { "pt": "Perigos", "en": "Dangers" },
-    "img": "",
+    "img": "/imgs/kammara/digg/_subsystems/perigo.jpg",
     "text": {
       "pt": [
         "### A ganância que nunca sacia",
