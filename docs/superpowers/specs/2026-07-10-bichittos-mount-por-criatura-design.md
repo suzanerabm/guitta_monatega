@@ -1,4 +1,4 @@
-# Bichittos — montar só a criatura ativa (mount pattern)
+# Bichittos + Art — montar só a seção ativa (mount pattern)
 
 **Data:** 2026-07-10
 **Branch:** `fix/bichittos-mount-por-criatura`
@@ -25,8 +25,15 @@ desktop com RAM sobrando — por isso "parece intermitente".
 
 Kammara teve o **mesmo problema** e já foi resolvido: removeu o botão "Todos" e
 passou a montar **um mundo por vez** (`mount: activeFilter === w.id`, render
-`!props.mount ? null : <WorldSection/>`). Este spec replica esse padrão na
-bichittos.
+`!props.mount ? null : <WorldSection/>`). Este spec replica esse padrão nas duas
+páginas que ainda faltam: **bichittos** e **art**.
+
+A página **art** (`ArtClient`) tem a mesma estrutura e o mesmo problema: abre com
+"Todos" (`useState('all')`), usa `hidden` nas `ArtSection`, e carrega ~135
+imagens de uma vez. A migração é idêntica à da bichittos, trocando apenas o
+data-attr (`data-section-art` em vez de `data-section-creature`) e o query param
+(`?art=<id>`). O componente `FilterBar` NÃO é alterado — as três páginas o usam
+em modo controlado via props já existentes.
 
 ## Objetivo
 
