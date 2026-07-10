@@ -22,5 +22,13 @@
       "pt": "Ratos e aranhas de Silica originados de ENI-4Δ",
       "en": "Silica rats and spiders originated from ENI-4Δ"
     }
+  },
+  {
+    "video": "/imgs/kammara/digg/_videos/CHMURKA_eating.mp4",
+    "poster": "/imgs/kammara/digg/_videos/CHMURKA_eating_poster.jpg",
+    "label": {
+      "pt": "As Chmurka comendo",
+      "en": "The Chmurka feeding"
+    }
   }
 ]
