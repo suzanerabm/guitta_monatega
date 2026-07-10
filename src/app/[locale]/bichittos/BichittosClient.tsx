@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useMemo, useState } from 'react';
+import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import { Box, Grid, Text, chakra } from '@chakra-ui/react';
 import { useTranslations, useLocale } from 'next-intl';
 import { HeroSection } from '@/components/HeroSection';
@@ -20,6 +21,7 @@ import {
   getCreaturePanelStory,
 } from '@/data/characters/bichittos/_creatureData';
 import { translateName } from '@/lib/translateName';
+import { resolveInitialBichitto } from './resolveInitialBichitto';
 import type { Locale } from '@/lib/characters';
 
 export interface BichittosCreatureData {
@@ -36,7 +38,26 @@ export function BichittosClient({ data }: Props) {
   const t = useTranslations('bichittos');
   const tCommon = useTranslations('common');
   const locale = useLocale();
-  const [activeFilter, setActiveFilter] = useState('all');
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  // Ids publicados, na ordem de `data` (já filtrado por isBichittoPublished
+  // na page.tsx). O primeiro é o default quando não há ?bichitto= na URL.
+  const publishedIds = data.map((c) => c.id);
+  const [activeFilter, setActiveFilter] = useState(() =>
+    resolveInitialBichitto(searchParams.get('bichitto'), publishedIds),
+  );
+
+  // Troca a criatura ativa E sincroniza a URL (?bichitto=<id>), sem recarregar
+  // nem empilhar histórico. É o único ponto de entrada do menu de filtros.
+  const handleSelectFilter = (id: string) => {
+    setActiveFilter(id);
+    const params = new URLSearchParams(searchParams.toString());
+    params.set('bichitto', id);
+    router.replace(`${pathname}?${params.toString()}`, { scroll: false });
+  };
+
   const { registerGallery, openGallery } = useModal();
 
   const bookIllustrated = t('bookIllustrated');
@@ -75,6 +96,23 @@ export function BichittosClient({ data }: Props) {
       registerGallery(id, g.pages);
     }
   }, [galleries, registerGallery]);
+
+  // Ao trocar de criatura, a seção anterior desmonta e a nova monta — a posição
+  // de scroll fica quebrada. Rola pra logo abaixo do FilterBar sticky. Espera um
+  // beat pro layout da seção recém-montada assentar antes de medir.
+  useEffect(() => {
+    const id = window.setTimeout(() => {
+      const target = document.querySelector(
+        `[data-section-creature="${activeFilter}"]`,
+      );
+      if (!target) return;
+      const bar = document.querySelector('nav[aria-label="filters"]');
+      const offset = bar ? bar.getBoundingClientRect().bottom + 10 : 0;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }, 80);
+    return () => window.clearTimeout(id);
+  }, [activeFilter]);
 
   const handleBookClick = (creatureId: string, bookId: string) => {
     const galleryId = `book_${creatureId}-${bookId}`;
@@ -146,8 +184,10 @@ export function BichittosClient({ data }: Props) {
 
       <FilterBar
         filters={filters}
-        allLabel={locale === 'en' ? 'All' : 'Todos'}
-        onFilter={setActiveFilter}
+        showAll={false}
+        defaultActive={publishedIds[0]}
+        active={activeFilter}
+        onFilter={handleSelectFilter}
       />
 
       {data.map((creature) => {
@@ -178,8 +218,9 @@ export function BichittosClient({ data }: Props) {
           };
         });
 
-        const hidden = activeFilter !== 'all' && activeFilter !== creature.id;
         const panelTitle = `${name}${creature.id === 'napcat' ? ' & Violeta' : (creature.id === 'zeco' || creature.id === 'taylo') ? ' & Amigos' : ''}`;
+
+        if (creature.id !== activeFilter) return null;
 
         return (
           <CreatureSection
@@ -189,7 +230,6 @@ export function BichittosClient({ data }: Props) {
             accentColor={palette.colors[0]}
             bgImage={colors.bgImage}
             bgOpacity={0.22}
-            hidden={hidden}
           >
             <CreatureCard
               name={name}
