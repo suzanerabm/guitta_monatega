@@ -1,5 +1,27 @@
 [
   {
+    "title": { "pt": "Origem", "en": "Origin" },
+    "img": "",
+    "text": {
+      "pt": [
+        "### A fuga",
+        "Memphis nasceu de uma fuga. Alguns Z1 se cansaram da ordem perfeita do seu mundo — os \"defeituosos\", que não cabiam na precisão absoluta de casa — e partiram, levando junto vírus fugitivos que também não pertenciam a lugar nenhum. Juntos, escolheram um planeta vazio e silencioso, parecido com Z1, e ergueram sobre esse silêncio o barulho que sempre quiseram: uma cidade sem regra, feita de todos e de ninguém.",
+        "### O esqueleto que veio junto",
+        "Mas fugir da perfeição não apaga a origem — trouxeram na alma a engenharia de Z1, e por isso o caos de Memphis repousa, até hoje, sobre um esqueleto perfeito.",
+        "### O defeito de nascença",
+        "Montaram às pressas um núcleo para dar vida ao mundo, e desse gesto tosco nasceu tudo: o Axel, e o defeito que ele nunca perdeu."
+      ],
+      "en": [
+        "### The escape",
+        "Memphis was born from an escape. Some Z1 grew tired of the perfect order of their world — the \"defective\" ones, who didn't fit the absolute precision of home — and left, bringing along fugitive viruses who belonged nowhere either. Together they chose an empty, silent planet, similar to Z1, and over that silence they raised the noise they had always wanted: a city with no rule, made of everyone and of no one.",
+        "### The skeleton that came along",
+        "But escaping perfection does not erase the origin — they carried Z1's engineering in their souls, and so the chaos of Memphis rests, to this day, upon a perfect skeleton.",
+        "### The birth defect",
+        "They threw together a core in a hurry to give the world life, and from that crude gesture everything was born: the Axel, and the defect it never lost."
+      ]
+    }
+  },
+  {
     "title": { "pt": "Cultura", "en": "Culture" },
     "img": "",
     "text": {
@@ -26,7 +48,7 @@
     }
   },
   {
-    "title": { "pt": "Habitantes — Todos de Fora", "en": "Inhabitants — Everyone from Elsewhere" },
+    "title": { "pt": "Imigrantes", "en": "Immigrants" },
     "img": "",
     "text": {
       "pt": [
@@ -78,72 +100,6 @@
         "The only beautiful, polished district in Memphis. Neutral ground where the universe holds diplomatic summits — the clean window the planet shows the world, hiding the chaos below.",
         "### The container-districts",
         "Sealed, isolated, portable glass bubbles where groups apart live — like the penguin mercenaries. Closed corners inside the open city."
-      ]
-    }
-  },
-  {
-    "title": { "pt": "Transporte & Movimento", "en": "Transport & Movement" },
-    "img": "",
-    "text": {
-      "pt": [
-        "### O Modbus",
-        "Por dentro, Memphis se move pelo Modbus — um trem herdado da engenharia de Z1, que corta as camadas da cidade.",
-        "### Naves por fora",
-        "Para sair do planeta, usam-se naves. O CShift, a viagem instantânea, é exclusivo do TripleC — Memphis não o tem."
-      ],
-      "en": [
-        "### The Modbus",
-        "Within, Memphis moves by the Modbus — a train inherited from Z1's engineering, cutting through the city's layers.",
-        "### Ships on the outside",
-        "To leave the planet, one uses ships. The CShift, the instant journey, is exclusive to TripleC — Memphis does not have it."
-      ]
-    }
-  },
-  {
-    "title": { "pt": "Ciclos & Tempo", "en": "Cycles & Time" },
-    "img": "",
-    "text": {
-      "pt": [
-        "### O tempo vem do Axel",
-        "O tempo de Memphis não vem do céu — vem do Tick, o pulso do núcleo Axel. É o batimento do planeta que marca as horas.",
-        "### O dia bagunçado",
-        "Há um sol e uma lua, mas o dia e a noite são uma confusão: as camadas empilhadas da cidade roubam a luz umas das outras. A claridade nunca chega igual a todos.",
-        "### As duas festas",
-        "O Enchimento acontece quando o contador do planeta estoura — a celebração do acúmulo. O Reinício acontece quando o Axel trava e é preciso religá-lo — a festa nervosa de quando o mundo quase para."
-      ],
-      "en": [
-        "### Time comes from the Axel",
-        "Memphis's time doesn't come from the sky — it comes from the Tick, the pulse of the Axel core. It is the planet's heartbeat that marks the hours.",
-        "### The jumbled day",
-        "There is a sun and a moon, but day and night are a confusion: the city's stacked layers steal the light from one another. Daylight never reaches everyone the same.",
-        "### The two festivals",
-        "The Filling happens when the planet's counter overflows — the celebration of accumulation. The Restart happens when the Axel freezes and must be switched back on — the nervous festival of when the world nearly stops."
-      ]
-    }
-  },
-  {
-    "title": { "pt": "Relações com Outros Planetas", "en": "Relations with Other Planets" },
-    "img": "",
-    "text": {
-      "pt": [
-        "### Z1",
-        "Os fundadores e o guardião. Memphis foi erguido por Z1 defeituosos, e por isso tem o esqueleto de Z1. Z1 também guarda o segredo que mantém Node-0 preso — o único contrapeso à chantagem.",
-        "### ENI-4Δ (Node-0)",
-        "A sombra maior. Node-0 conhece o comando que pode destruir o Axel e chantageia Memphis com isso. O governo de fachada, por baixo do pano, obedece — serve ao Parasita para não deixar o planeta morrer.",
-        "### Digg",
-        "O refúgio dos piratas. Muitos Diggers vivem em Memphis entre um saque e outro — a cidade que não pergunta o passado é o esconderijo perfeito para o povo da cobiça.",
-        "### TripleC",
-        "A viagem que Memphis não tem. O CShift é exclusivo do TripleC; Memphis depende de naves. E é do TripleC que vem a kemita pura, negociada no mercado ilegal."
-      ],
-      "en": [
-        "### Z1",
-        "The founders and the guardian. Memphis was raised by defective Z1, and so it has the Z1 skeleton. Z1 also guards the secret that keeps Node-0 imprisoned — the only counterweight to the blackmail.",
-        "### ENI-4Δ (Node-0)",
-        "The greater shadow. Node-0 knows the command that can destroy the Axel and blackmails Memphis with it. The facade government, behind the scenes, obeys — serving the Parasite so the planet won't die.",
-        "### Digg",
-        "The pirates' refuge. Many Diggers live in Memphis between one raid and the next — the city that doesn't ask about the past is the perfect hideout for the people of greed.",
-        "### TripleC",
-        "The journey Memphis doesn't have. The CShift is exclusive to TripleC; Memphis depends on ships. And it is from TripleC that pure kemita comes, traded on the black market."
       ]
     }
   },
