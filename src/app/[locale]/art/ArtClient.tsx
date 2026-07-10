@@ -1,11 +1,13 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { useTranslations, useLocale } from 'next-intl';
+import { useRouter, usePathname, useSearchParams } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import { HeroSection } from '@/components/HeroSection';
 import { FilterBar } from '@/components/FilterBar';
 import { ArtSection } from '@/components/ArtSection';
 import { useModal } from '@/components/Modal';
 import { artSectionMeta, artHero, type ArtSectionId } from '@/theme/artSections';
+import { resolveInitialArt } from './resolveInitialArt';
 
 interface ArtSectionData {
   id: string;
@@ -19,8 +21,24 @@ interface Props {
 
 export function ArtClient({ sections }: Props) {
   const t = useTranslations('art');
-  const locale = useLocale();
-  const [activeFilter, setActiveFilter] = useState('all');
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  const sectionIds = sections.map((s) => s.id);
+  const [activeFilter, setActiveFilter] = useState(() =>
+    resolveInitialArt(searchParams.get('art'), sectionIds),
+  );
+
+  // Troca a seção ativa E sincroniza a URL (?art=<id>), sem recarregar nem
+  // empilhar histórico. É o único ponto de entrada do menu de filtros.
+  const handleSelectFilter = (id: string) => {
+    setActiveFilter(id);
+    const params = new URLSearchParams(searchParams.toString());
+    params.set('art', id);
+    router.replace(`${pathname}?${params.toString()}`, { scroll: false });
+  };
+
   const { registerGallery, openGallery } = useModal();
 
   useEffect(() => {
@@ -30,6 +48,22 @@ export function ArtClient({ sections }: Props) {
       }
     }
   }, [sections, registerGallery]);
+
+  // Ao trocar de seção, a anterior desmonta e a nova monta — rola pra logo
+  // abaixo do FilterBar sticky, esperando o layout assentar.
+  useEffect(() => {
+    const id = window.setTimeout(() => {
+      const target = document.querySelector(
+        `[data-section-art="${activeFilter}"]`,
+      );
+      if (!target) return;
+      const bar = document.querySelector('nav[aria-label="filters"]');
+      const offset = bar ? bar.getBoundingClientRect().bottom + 10 : 0;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }, 80);
+    return () => window.clearTimeout(id);
+  }, [activeFilter]);
 
   const sectionsWithMeta = sections.map((s) => {
     const meta = artSectionMeta[s.id as ArtSectionId];
@@ -70,25 +104,28 @@ export function ArtClient({ sections }: Props) {
 
       <FilterBar
         filters={filters}
-        allLabel={locale === 'en' ? 'All' : 'Todos'}
-        onFilter={setActiveFilter}
+        showAll={false}
+        defaultActive={sectionIds[0]}
+        active={activeFilter}
+        onFilter={handleSelectFilter}
       />
 
-      {sectionsWithMeta.map((s) => (
-        <ArtSection
-          key={s.id}
-          id={s.id}
-          title={s.title}
-          technique={s.technique}
-          bg={s.bg}
-          titleColor={s.titleColor}
-          techColor={s.techColor}
-          large={s.large}
-          thumbs={s.thumbs}
-          hidden={activeFilter !== 'all' && activeFilter !== s.id}
-          onThumbClick={(idx) => handleThumbClick(s.id, idx)}
-        />
-      ))}
+      {sectionsWithMeta.map((s) =>
+        s.id !== activeFilter ? null : (
+          <ArtSection
+            key={s.id}
+            id={s.id}
+            title={s.title}
+            technique={s.technique}
+            bg={s.bg}
+            titleColor={s.titleColor}
+            techColor={s.techColor}
+            large={s.large}
+            thumbs={s.thumbs}
+            onThumbClick={(idx) => handleThumbClick(s.id, idx)}
+          />
+        ),
+      )}
     </>
   );
 }
