@@ -38,6 +38,8 @@ export interface KammaraCardRegionProps {
   stats?: KammaraCardRegionStat[];
   crestGlyph?: string;
   color: string;
+  /** Cor da moldura (border + outline). Default: `color`. */
+  borderColor?: string;
   darkColor: string;
   midColor?: string;
   /** When provided, tints the header banner background with this color
@@ -58,6 +60,7 @@ export function KammaraCardRegion({
   stats = [],
   crestGlyph = '⊙',
   color,
+  borderColor,
   darkColor,
   midColor,
   headerBg,
@@ -65,6 +68,7 @@ export function KammaraCardRegion({
   'data-testid': testId,
 }: KammaraCardRegionProps) {
   const allItems = tabs;
+  const bd = borderColor ?? color;
 
   const activeIndex = 0;
 
@@ -96,8 +100,8 @@ export function KammaraCardRegion({
         overflow="hidden"
         css={{
           background: `linear-gradient(160deg, ${darkColor}b3 0%, ${body}b3 45%, ${darkColor}b3 100%)`,
-          border: `1px solid ${color}40`,
-          outline: `2px solid ${color}`,
+          border: `1px solid ${bd}40`,
+          outline: `2px solid ${bd}`,
           outlineOffset: '6px',
           boxShadow: `0 20px 60px ${color}50, 0 4px 16px ${color}30, inset 0 1px 0 rgba(255,255,255,0.15)`,
         }}

@@ -23,6 +23,10 @@ export interface KammaraDropsStripProps {
   crestGlyph: string;
   /** Accent color (palette.colors[0] of the world). */
   color: string;
+  /** Cor da moldura (border + outline). Default: `color`. */
+  borderColor?: string;
+  /** Cor do título + glifo + linha + contador do cabeçalho. Default: `color`. */
+  titleColor?: string;
   /** Mid color for the card gradient. Falls back to darkColor. */
   midColor?: string;
   /** Dark base color (palette.dark). */
@@ -56,6 +60,8 @@ export function KammaraDropsStrip({
   worldName,
   crestGlyph,
   color,
+  borderColor,
+  titleColor,
   midColor,
   darkColor,
   sectionTitle,
@@ -64,6 +70,8 @@ export function KammaraDropsStrip({
   'data-testid': testId,
 }: KammaraDropsStripProps) {
   const mid = midColor ?? darkColor;
+  const bd = borderColor ?? color;
+  const tc = titleColor ?? color;
   const fallbackId = useId();
   const id = `kammara-drops-${fallbackId}`;
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -222,8 +230,8 @@ export function KammaraDropsStrip({
           // Frame HUD like the character gallery — same translucent gradient
           // (more transparent than the cards) + accent border + outline.
           background: `linear-gradient(160deg, ${darkColor}33 0%, ${darkColor}26 50%, ${darkColor}33 100%)`,
-          border: `1px solid ${color}40`,
-          outline: `1px solid ${color}80`,
+          border: `1px solid ${bd}40`,
+          outline: `1px solid ${bd}80`,
           outlineOffset: '4px',
           boxShadow: `0 20px 60px ${color}30, 0 4px 16px ${color}20, inset 0 1px 0 rgba(255,255,255,0.08)`,
         }}
@@ -253,26 +261,26 @@ export function KammaraDropsStrip({
             borderRightWidth: pos.borderRight,
             borderBottomWidth: pos.borderBottom,
             borderStyle: 'solid',
-            borderColor: color,
-            boxShadow: `0 0 8px ${color}80`,
+            borderColor: bd,
+            boxShadow: `0 0 8px ${bd}80`,
           }}
         />
       ))}
 
       <Flex direction="column" position="relative" zIndex={1} gap={{ base: 'md', md: 'lg' }}>
         {/* ── Header inside the frame: crest + title left, count right ── */}
-        <Flex align="center" justify="space-between" gap="sm" css={{ borderBottom: `1px solid ${color}40`, paddingBottom: '0.8rem' }}>
+        <Flex align="center" justify="space-between" gap="sm" css={{ borderBottom: `1px solid ${tc}40`, paddingBottom: '0.8rem' }}>
           <Flex align="center" gap="sm" minW={0}>
-            <Box as="span" fontFamily="glyph" fontSize="glyphH3" lineHeight={1} color={color} aria-hidden="true" css={{ whiteSpace: 'nowrap', letterSpacing: '0.04em' }}>
+            <Box as="span" fontFamily="glyph" fontSize="glyphH3" lineHeight={1} color={tc} aria-hidden="true" css={{ whiteSpace: 'nowrap', letterSpacing: '0.04em' }}>
               {crestGlyph}
             </Box>
             {sectionTitle && (
-              <Text fontSize="xs" letterSpacing="hero" textTransform="uppercase" fontWeight="bold" color={color} m={0} opacity={0.9} css={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              <Text fontSize="xs" letterSpacing="hero" textTransform="uppercase" fontWeight="bold" color={tc} m={0} opacity={0.9} css={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                 {sectionTitle}
               </Text>
             )}
           </Flex>
-          <Text fontSize="xs" letterSpacing="wide" fontWeight="semibold" color="textOverlayBright" m={0} opacity={0.7} css={{ fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap' }}>
+          <Text fontSize="xs" letterSpacing="wide" fontWeight="semibold" color={tc} m={0} opacity={0.7} css={{ fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap' }}>
             {drops.length}
           </Text>
         </Flex>
@@ -311,6 +319,7 @@ export function KammaraDropsStrip({
                   worldName={worldName}
                   crestGlyph={crestGlyph}
                   color={color}
+                  borderColor={bd}
                   mid={mid}
                   darkColor={darkColor}
                   onClick={() => handleClick(i)}
@@ -336,6 +345,7 @@ interface DropCardProps {
   worldName: string;
   crestGlyph: string;
   color: string;
+  borderColor?: string;
   mid: string;
   darkColor: string;
   onClick: () => void;
@@ -343,7 +353,8 @@ interface DropCardProps {
   playOn: 'hover' | 'visible';
 }
 
-function DropCard({ drop, index, worldName, crestGlyph, color, mid, darkColor, onClick, playOn }: DropCardProps) {
+function DropCard({ drop, index, worldName, crestGlyph, color, borderColor, mid, darkColor, onClick, playOn }: DropCardProps) {
+  const bd = borderColor ?? color;
   return (
     <chakra.button
       type="button"
@@ -361,8 +372,8 @@ function DropCard({ drop, index, worldName, crestGlyph, color, mid, darkColor, o
         // darkColor → mid → darkColor) so the Drops cards match the character
         // cards. `mid` falls back to darkColor when no midColor is passed.
         background: `linear-gradient(160deg, ${darkColor}b3 0%, ${mid}b3 45%, ${darkColor}b3 100%)`,
-        border: `1px solid ${color}40`,
-        outline: `2px solid ${color}`,
+        border: `1px solid ${bd}40`,
+        outline: `2px solid ${bd}`,
         outlineOffset: '5px',
         boxShadow: `0 20px 60px ${color}50, 0 4px 16px ${color}30, inset 0 1px 0 rgba(255,255,255,0.15)`,
         cursor: 'pointer',

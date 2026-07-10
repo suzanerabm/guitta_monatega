@@ -38,6 +38,8 @@ export interface KammaraCardProps {
   midColor?: string;
   /** Opacidade (hex, ex. 'b3'=70% | 'e6'=90') do fundo do card. Default 'b3'. */
   cardBgAlpha?: string;
+  /** Cor da moldura (border + outline). Default: `color`. */
+  borderColor?: string;
   theme?: 'light' | 'dark';
   'data-testid'?: string;
 }
@@ -54,10 +56,12 @@ export function KammaraCard({
   darkColor,
   midColor,
   cardBgAlpha = 'b3',
+  borderColor,
   theme = 'dark',
   'data-testid': testId,
 }: KammaraCardProps) {
   const allItems = tabs;
+  const bd = borderColor ?? color;
 
   const activeIndex = 0;
 
@@ -87,8 +91,8 @@ export function KammaraCard({
         overflow="hidden"
         css={{
           background: `linear-gradient(160deg, ${darkColor}${cardBgAlpha} 0%, ${body}${cardBgAlpha} 45%, ${darkColor}${cardBgAlpha} 100%)`,
-          border: `1px solid ${color}40`,
-          outline: `2px solid ${color}`,
+          border: `1px solid ${bd}40`,
+          outline: `2px solid ${bd}`,
           outlineOffset: '6px',
           boxShadow: `0 20px 60px ${color}50, 0 4px 16px ${color}30, inset 0 1px 0 rgba(255,255,255,0.15)`,
         }}

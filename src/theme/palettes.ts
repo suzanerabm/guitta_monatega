@@ -19,6 +19,16 @@ export interface Palette {
    *  Default: colors[0]. Use quando o hero precisa de cor própria (ex: Gotto,
    *  cujo card usa colors[0] claro mas o hero fica melhor em uva). */
   heroColor?: string;
+  /** Cor do texto do resumo sob o nome no hero. Default: branco do tema
+   *  (textOverlayBright). Use quando o fundo do planeta é claro (ex: Gotto). */
+  heroTextColor?: string;
+  /** Cor da moldura (border + outline) dos cards do planeta. Default: colors[0].
+   *  Alavanca de tema: a maioria dos planetas omite (herda colors[0]); defina
+   *  só quando a borda precisa destacar de forma diferente (ex: Gotto). */
+  border?: string;
+  /** Cor do título/glifo do cabeçalho da galeria de personagens
+   *  ("CHARACTERS · <MUNDO>"). Default: colors[0]. */
+  charactersTitleColor?: string;
   /**
    * Fonte única de verdade para o BichittosClient — só definido para as
    * criaturas do Bichittos. Mudou aqui, mudou na página.
@@ -257,25 +267,30 @@ export const palettes: Record<PaletteName, Palette> = {
     gradientBg: 'linear-gradient(160deg, #12141a 0%, #2a2c34 40%, #1a1c22 100%)',
   },
   gotto: {
-    // Fundo do PLANETA claro (degradê creme→pêssego→lavanda), mas os CARDS
-    // com fundo escuro (dark = roxo-uva) — igual aos outros planetas. Por
-    // isso os textos/accents dos cards (colors[0..2]) são CLAROS, e só o
-    // "Gotto" grande solto (colors[3], sobre o fundo claro) é escuro.
-    // colors[0] = accent + título/subtítulo dos cards (h3, "PLANETA", nome) — pêssego
+    // Fundo do planeta ESCURO (roxo→uva) como os outros planetas; cards com
+    // fundo roxo-uva profundo (dark). Textos/accents claros (pêssego/creme).
+    // colors[0] = accent + hero + título/subtítulo dos cards (h3, "PLANETA", nome) — pêssego
     // colors[1] = title do painel (DSMainCard) — pêssego claro
     // colors[2] = body text dos cards — creme claro
-    // colors[3] = world heading h1 (name "Gotto" solto, sobre fundo claro) — uva escuro
+    // colors[3] = não usado no hero (KammaraPlanetTitle usa colors[0])
     // colors[4..5] = usados em bordas/sombras
     colors: ['#ffcda8', '#ffe0c8', '#f7eee4', '#532e77', '#7a5a90', '#4a3560'],
     text: '#f7eee4',
-    // Hero (nome grande + PLANETA + glifo) em uva — só o hero; os cards
-    // continuam usando colors[0] (pêssego).
-    heroColor: '#5e2b8f',
+    // Hero em cores escuras — o fundo do planeta é claro (creme→pêssego→roxo),
+    // então nome/glifo e o texto do resumo precisam ler sobre claro. Os cards
+    // seguem usando colors[0] (pêssego) sobre seu próprio fundo escuro.
+    heroColor: '#58238a',
+    heroTextColor: '#3a2140',
+    // Moldura dos cards em dark purple (mais contraste que o pêssego colors[0]).
+    border: '#3a2140',
+    charactersTitleColor: '#3a2140',
     // Fundo translúcido dos cards — roxo-uva profundo (card escuro).
     dark: '#360b5e',
-    // Degradê creme → pêssego → lavanda pálido (fundo do planeta).
+    // Identidade do Gotto (ver arte: névoa creme, cogumelos pêssego, flores
+    // roxas pontuais). Claro e etéreo: creme/bege domina, pêssego no meio,
+    // roxo só um toque no fim (~15%). Distinto do ORF-V (escuro/saturado).
     gradient: 'linear-gradient(135deg, #f5e6d3 0%, #e8c4a8 50%, #d4bbdb 100%)',
-    gradientBg: 'linear-gradient(160deg, #f5e6d3 0%, #e8c4a8 50%, #d4bbdb 100%)',
+    gradientBg: 'linear-gradient(135deg, #f5e6d3 0%, #e8c4a8 50%, #d4bbdb 100%)',
   },
   digg: {
     // Degradê marrom → verde kemita. Placeholder inicial — ajustar com a arte final.

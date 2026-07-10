@@ -898,6 +898,7 @@ function WorldSection({
             name={name}
             category="Planeta"
             color={palette.colors[0]}
+            borderColor={palette.border}
             darkColor={palette.dark}
             cardBgAlpha={w.id === 'gotto' ? 'e6' : undefined}
             crestGlyph={worldCrestGlyph(w.id)}
@@ -931,6 +932,8 @@ function WorldSection({
       {/* ── Character gallery — full-width section with KammaraCharacterCard */}
       {(() => {
         const worldColor = palette.colors[0];
+        const worldBorder = palette.border;
+        const worldCharsTitle = palette.charactersTitleColor;
         const worldDark = palette.dark;
         const worldCrest = worldCrestGlyph(w.id);
         const contextId = `kammara/${w.id}`;
@@ -970,6 +973,8 @@ function WorldSection({
               title={`${charactersTitle} · ${name}`}
               worldCrestGlyph={worldCrest}
               color={worldColor}
+              borderColor={worldBorder}
+              titleColor={worldCharsTitle}
               darkColor={worldDark}
               items={galleryItems}
               minCardWidth={320}
@@ -992,6 +997,7 @@ function WorldSection({
                     worldName={name}
                     worldCrestGlyph={worldCrest}
                     color={worldColor}
+                    borderColor={worldBorder}
                     darkColor={worldDark}
                   />
                 </Box>
@@ -1024,6 +1030,7 @@ function WorldSection({
                   name={name}
                   category={subsystemsTitle}
                   color={palette.colors[0]}
+                  borderColor={palette.border}
                   darkColor={palette.dark}
                   crestGlyph={worldCrestGlyph(w.id)}
                   tabs={tabs}
@@ -1043,6 +1050,7 @@ function WorldSection({
                 name={name}
                 category={subsystemsTitle}
                 color={palette.colors[0]}
+                borderColor={palette.border}
                 darkColor={palette.dark}
                 crestGlyph={worldCrestGlyph(w.id)}
                 tabs={tabs}
@@ -1065,6 +1073,8 @@ function WorldSection({
             worldName={name}
             crestGlyph={worldCrestGlyph(w.id)}
             color={palette.colors[0]}
+            borderColor={palette.border}
+            titleColor={palette.charactersTitleColor}
             darkColor={palette.dark}
             modalSubtitle={bodyText[0] || ''}
             modalTextColor={palette.text}

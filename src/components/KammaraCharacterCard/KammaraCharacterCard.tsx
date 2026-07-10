@@ -32,6 +32,8 @@ export interface KammaraCharacterCardProps {
   worldCrestGlyph: string;
   /** Accent color of the world (usually palette.colors[0]). */
   color: string;
+  /** Cor da moldura (border + outline). Default: `color`. */
+  borderColor?: string;
   /** Dark base color of the world (palette.dark). */
   darkColor: string;
   /** Mid-tone color for the gradient (falls back to darkColor). */
@@ -126,6 +128,7 @@ export function KammaraCharacterCard({
   worldName,
   worldCrestGlyph,
   color,
+  borderColor,
   darkColor,
   midColor,
   attributes,
@@ -140,6 +143,7 @@ export function KammaraCharacterCard({
   // When the back override is missing, the front config is used on both faces.
   const backDust = fairyDustBack ?? fairyDust;
   const body = midColor ?? darkColor;
+  const bd = borderColor ?? color;
   // A card becomes flippable as soon as we have the back image. The dorsal
   // glyph + meaning are optional: characters without a known dorsal glyph
   // still get a back face (just their silhouette + a placeholder note).
@@ -193,8 +197,8 @@ export function KammaraCharacterCard({
           backfaceVisibility: 'hidden',
           WebkitBackfaceVisibility: 'hidden',
           background: `linear-gradient(160deg, ${darkColor}b3 0%, ${body}b3 45%, ${darkColor}b3 100%)`,
-          border: `1px solid ${color}40`,
-          outline: `2px solid ${color}`,
+          border: `1px solid ${bd}40`,
+          outline: `2px solid ${bd}`,
           outlineOffset: '6px',
           boxShadow: `0 20px 60px ${color}50, 0 4px 16px ${color}30, inset 0 1px 0 rgba(255,255,255,0.15)`,
         }}
@@ -482,8 +486,8 @@ export function KammaraCharacterCard({
             WebkitBackfaceVisibility: 'hidden',
             transform: 'rotateY(180deg)',
             background: `linear-gradient(160deg, ${darkColor}b3 0%, ${body}b3 45%, ${darkColor}b3 100%)`,
-            border: `1px solid ${color}40`,
-            outline: `2px solid ${color}`,
+            border: `1px solid ${bd}40`,
+            outline: `2px solid ${bd}`,
             outlineOffset: '6px',
             boxShadow: `0 20px 60px ${color}50, 0 4px 16px ${color}30, inset 0 1px 0 rgba(255,255,255,0.15)`,
           }}

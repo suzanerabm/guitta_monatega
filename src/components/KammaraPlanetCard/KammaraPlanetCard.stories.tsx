@@ -45,7 +45,7 @@ export const Orfv: Story = {
     id: 'orfv',
     name: 'ORF-V',
     summary:
-      'ORF-V — o planeta onde tudo conecta. Um mundo sem perfeição estrutural, onde quatro luas regem o tempo e a água nunca mente. Lar dos ElePHPants, os seres que sentem antes de pensar.',
+      'ORF-V — o planeta onde tudo conecta. Um mundo sem perfeição estrutural, onde duas luas regem o tempo e a água nunca mente. Lar dos ElePHPants, os seres que sentem antes de pensar.',
     image: '/imgs/kammara/orfv/_bg/vista_longa_orf-v-gigapixel-cgi-6x.jpg',
     crestGlyph: worldCrestGlyph('orfv'),
     color: palettes.orfv.colors[0],

@@ -251,7 +251,7 @@ export function KammaraPlanetTitle({
             {/* Description — accepts plain string or rich ReactNode (e.g. multiple <p> */}
             <Box
               fontSize="bannerDesc"
-              color="textOverlayBright"
+              color={p.heroTextColor ?? 'textOverlayBright'}
               lineHeight={1.6}
               maxWidth={descriptionMaxWidth}
               css={{

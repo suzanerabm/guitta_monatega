@@ -45,6 +45,7 @@ export function KammaraCardSubsystemHorizontal({
   stats = [],
   crestGlyph = '⊙',
   color,
+  borderColor,
   darkColor,
   theme = 'dark',
   variant = 'A',
@@ -52,6 +53,7 @@ export function KammaraCardSubsystemHorizontal({
   'data-testid': testId,
 }: KammaraCardSubsystemHorizontalProps) {
   const isRegion = borderStyle === 'region';
+  const bd = borderColor ?? color;
   const [activeIndex, setActiveIndex] = useState(0);
   const activeItem = tabs[activeIndex];
   const rouletteRef = useRef<KammaraRouletteHandle>(null);
@@ -122,8 +124,8 @@ export function KammaraCardSubsystemHorizontal({
           overflow="hidden"
           css={{
             background: `linear-gradient(160deg, ${darkColor}b3 0%, ${darkColor}b3 45%, ${darkColor}b3 100%)`,
-            border: `1px solid ${color}40`,
-            outline: `2px solid ${color}`,
+            border: `1px solid ${bd}40`,
+            outline: `2px solid ${bd}`,
             outlineOffset: '6px',
             boxShadow: `0 20px 60px ${color}50, 0 4px 16px ${color}30, inset 0 1px 0 rgba(255,255,255,0.15)`,
           }}
@@ -418,8 +420,8 @@ export function KammaraCardSubsystemHorizontal({
         borderRadius="32px"
         overflow="hidden"
         css={{
-          border: `1px solid ${color}40`,
-          outline: `2px solid ${color}`,
+          border: `1px solid ${bd}40`,
+          outline: `2px solid ${bd}`,
           outlineOffset: '6px',
           boxShadow: `0 20px 60px ${color}50, 0 4px 16px ${color}30, inset 0 1px 0 rgba(255,255,255,0.15)`,
         }}

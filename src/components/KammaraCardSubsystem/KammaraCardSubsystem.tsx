@@ -35,6 +35,8 @@ export interface KammaraCardSubsystemProps {
   crestGlyph?: string;
   color: string;
   darkColor: string;
+  /** Cor da moldura (border + outline). Default: `color`. */
+  borderColor?: string;
   theme?: 'light' | 'dark';
   /**
    * Visual variant.
@@ -53,12 +55,14 @@ export function KammaraCardSubsystem({
   crestGlyph = '⊙',
   color,
   darkColor,
+  borderColor,
   theme = 'dark',
   variant = 'default',
   'data-testid': testId,
 }: KammaraCardSubsystemProps) {
   const isRegion = variant === 'region';
   const allItems = tabs;
+  const bd = borderColor ?? color;
 
   const [activeIndex, setActiveIndex] = useState(0);
   const rouletteRef = useRef<KammaraRouletteHandle>(null);
@@ -117,8 +121,8 @@ export function KammaraCardSubsystem({
         overflow="hidden"
         css={{
           background: `linear-gradient(160deg, ${darkColor}b3 0%, ${darkColor}b3 45%, ${darkColor}b3 100%)`,
-          border: `1px solid ${color}40`,
-          outline: `2px solid ${color}`,
+          border: `1px solid ${bd}40`,
+          outline: `2px solid ${bd}`,
           outlineOffset: '6px',
           boxShadow: `0 20px 60px ${color}50, 0 4px 16px ${color}30, inset 0 1px 0 rgba(255,255,255,0.15)`,
         }}

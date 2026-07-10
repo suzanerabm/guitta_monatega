@@ -10,6 +10,10 @@ export interface KammaraCharacterGalleryProps<T> {
   worldCrestGlyph: string;
   /** Accent color (palette.colors[0]) — drives the frame glow. */
   color: string;
+  /** Cor da moldura (border + outline). Default: `color`. */
+  borderColor?: string;
+  /** Cor do título + glifo do cabeçalho. Default: `color`. */
+  titleColor?: string;
   /** Dark base color (palette.dark) — gradient background of the frame. */
   darkColor: string;
   /** Items to render — one card per item. */
@@ -79,6 +83,8 @@ export function KammaraCharacterGallery<T>({
   title,
   worldCrestGlyph,
   color,
+  borderColor,
+  titleColor,
   darkColor,
   items,
   renderCard,
@@ -90,6 +96,8 @@ export function KammaraCharacterGallery<T>({
   'data-testid': testId,
 }: KammaraCharacterGalleryProps<T>) {
   const isRegion = variant === 'region';
+  const bd = borderColor ?? color;
+  const tc = titleColor ?? color;
   // Measure the container width so we pick the right card width for the
   // breakpoint. On desktop we render every card inline and let the browser
   // scroll horizontally — no pagination state needed.
@@ -200,8 +208,8 @@ export function KammaraCharacterGallery<T>({
         borderRadius="24px"
         css={{
           background: `linear-gradient(160deg, ${darkColor}33 0%, ${darkColor}26 50%, ${darkColor}33 100%)`,
-          border: `1px solid ${color}40`,
-          outline: isRegion ? `1px solid ${color}` : `1px solid ${color}80`,
+          border: `1px solid ${bd}40`,
+          outline: isRegion ? `1px solid ${bd}` : `1px solid ${bd}80`,
           outlineOffset: '4px',
           boxShadow: `0 20px 60px ${color}30, 0 4px 16px ${color}20, inset 0 1px 0 rgba(255,255,255,0.08)`,
         }}
@@ -230,8 +238,8 @@ export function KammaraCharacterGallery<T>({
               borderRightWidth: pos.borderRight,
               borderBottomWidth: pos.borderBottom,
               borderStyle: 'solid',
-              borderColor: color,
-              boxShadow: `0 0 8px ${color}80`,
+              borderColor: bd,
+              boxShadow: `0 0 8px ${bd}80`,
             }}
           />
         ))}
@@ -244,7 +252,7 @@ export function KammaraCharacterGallery<T>({
             gap="sm"
             padding={`0 0 sm 0`}
             css={{
-              borderBottom: `1px solid ${color}40`,
+              borderBottom: `1px solid ${tc}40`,
               paddingBottom: '0.8rem',
             }}
           >
@@ -255,7 +263,7 @@ export function KammaraCharacterGallery<T>({
                 fontFamily="glyph"
                 fontSize="glyphH3"
                 lineHeight={1}
-                color={color}
+                color={tc}
                 css={{ whiteSpace: 'nowrap', letterSpacing: '0.04em' }}
                 aria-hidden="true"
               >
@@ -267,7 +275,7 @@ export function KammaraCharacterGallery<T>({
                   letterSpacing="hero"
                   textTransform="uppercase"
                   fontWeight="bold"
-                  color={color}
+                  color={tc}
                   m={0}
                   opacity={0.9}
                   css={{
@@ -286,7 +294,7 @@ export function KammaraCharacterGallery<T>({
               fontSize="xs"
               letterSpacing="wide"
               fontWeight="semibold"
-              color="textOverlayBright"
+              color={tc}
               m={0}
               opacity={0.7}
               css={{
