@@ -8,11 +8,11 @@
     "text": {
       "pt": [
         "### O ritmo",
-        "A vida Basik segue o ritmo do planeta. A manhã é o INPUT — hora de absorver, de ficar curioso, de prestar atenção no que chega. A tarde é o PRINT — arte feita com cristais, conversas longas, tudo vindo para fora. A noite é o GOTO — hora de recolher e reiniciar.",
+        "A vida Basik segue o ritmo do planeta. A manhã é o Absorver — hora de absorver, de ficar curioso, de prestar atenção no que chega. A tarde é o Mostrar — arte feita com cristais, conversas longas, tudo vindo para fora. A noite é o Recomeço — hora de recolher e reiniciar.",
         "### Sem estrutura fixa",
         "Não há líderes fixos, famílias tradicionais nem calendário. Os Basiks se agrupam por afinidade e por quem está no mesmo ciclo.",
         "### Depois do reinício",
-        "Quando se reencontram depois de um GOTO caótico, a reação é sempre a mesma: PRINT \"HELLO HELLO HELLO!!\" A confusão é cotidiana. O riso também.",
+        "Quando se reencontram depois de um recomeço caótico, a reação é sempre a mesma: HELLO! HELLO!! HELLO!!! A confusão é cotidiana. O riso também.",
         "### Sem acúmulo",
         "Não há acúmulo. Não há rancor. Não há arquivo. Cada ciclo é uma nova chance — e também uma nova perda.",
         "### A desordem",
@@ -22,11 +22,11 @@
       ],
       "en": [
         "### The rhythm",
-        "Basik life follows the rhythm of the planet. Morning is the INPUT — time to absorb, to be curious, to pay attention to what arrives. Afternoon is the PRINT — art made with crystals, long conversations, everything coming out. Night is the GOTO — time to gather in and restart.",
+        "Basik life follows the rhythm of the planet. Morning is the Absorbing — time to absorb, to be curious, to pay attention to what arrives. Afternoon is the Showing — art made with crystals, long conversations, everything coming out. Night is the Beginning-Again — time to gather in and restart.",
         "### No fixed structure",
         "There are no fixed leaders, no traditional families, no calendar. The Basiks gather by affinity and by whoever is in the same cycle.",
         "### After the restart",
-        "When they meet again after a chaotic GOTO, the reaction is always the same: PRINT \"HELLO HELLO HELLO!!\" Confusion is everyday. So is laughter.",
+        "When they meet again after a chaotic restart, the reaction is always the same: HELLO! HELLO!! HELLO!!! Confusion is everyday. So is laughter.",
         "### No hoarding",
         "There is no hoarding. No grudges. No archive. Each cycle is a new chance — and also a new loss.",
         "### Disorder",
@@ -45,7 +45,7 @@
     "text": {
       "pt": [
         "### Aparência",
-        "Seres esféricos e bicolores — metade branca, metade preta. Sem pescoço, sem dedos, sem passado fixo. Dois olhos binários: o Olho-0 e o Olho-1.",
+        "Seres esféricos e bicolores — metade branca, metade preta. Sem pescoço, sem dedos, sem passado fixo. Dois olhos redondos.",
         "### O corpo",
         "Braços e pernas curtos saem direto do corpo esférico. Medem cerca de 20 a 25 centímetros. São pequenos, redondos e imparáveis.",
         "### O glifo",
@@ -53,13 +53,13 @@
         "### O comportamento",
         "Não mentem. Não guardam rancor. Não acumulam. Tudo que sentem aparece imediatamente ao redor deles — em cristais, em luz, em som.",
         "### O gesto",
-        "O gesto mais comum deles: PRINT \"HELLO\". Falam para existir. Existem para continuar.",
+        "O gesto mais comum deles: HELLO, HELLO, HELLO. Falam para existir. Existem para continuar.",
         "### Pequenos e bonitos",
         "São pequenos, redondos e imparáveis. A leveza mais bonita do universo — e também a mais vulnerável."
       ],
       "en": [
         "### Appearance",
-        "Spherical, two-toned beings — half white, half black. No neck, no fingers, no fixed past. Two binary eyes: Eye-0 and Eye-1.",
+        "Spherical, two-toned beings — half white, half black. No neck, no fingers, no fixed past. Two round eyes.",
         "### The body",
         "Short arms and legs come straight out of the spherical body. They measure about 20 to 25 centimeters. They are small, round and unstoppable.",
         "### The glyph",
@@ -67,7 +67,7 @@
         "### Behavior",
         "They don't lie. They hold no grudges. They don't hoard. Everything they feel appears immediately around them — in crystals, in light, in sound.",
         "### The gesture",
-        "Their most common gesture: PRINT \"HELLO\". They speak to exist. They exist to continue.",
+        "Their most common gesture: HELLO, HELLO, HELLO. They speak to exist. They exist to continue.",
         "### Small and beautiful",
         "They are small, round and unstoppable. The most beautiful lightness in the universe — and also the most vulnerable."
       ]
@@ -81,32 +81,32 @@
     "img": "/imgs/kammara/gotto/_subsystems/geografia1.jpg",
     "text": {
       "pt": [
-        "### Linhas, não nomes",
-        "As regiões de Gotto são numeradas como linhas de código. Não têm nome — têm número.",
-        "### Linha 10 — Vale INPUT",
+        "### Os vales de Gotto",
+        "As regiões de Gotto são vales, cada um com seu nome e sua função.",
+        "### O Vale da Escuta",
         "Absorção, silêncio, terreno escuro e receptivo. É onde o planeta escuta.",
-        "### Linha 20 — Vale PRINT",
+        "### O Vale do Reflexo",
         "Expressão, luz, cristais que refletem emoções. É onde o planeta fala.",
-        "### Linha 30 — Região GOTO",
+        "### A Orla do Recomeço",
         "Instável, transitória. O ponto onde tudo se reorganiza antes de recomeçar.",
-        "### Linhas 40 a 90 e GOSUB",
-        "Zonas intermediárias, cheias de variação. As Subrotinas GOSUB são regiões profundas — quem entra pode não encontrar a saída.",
-        "### Depois de cada GOTO",
-        "Depois de cada GOTO, as cidades mudam de lugar. Os caminhos somem. O que era mapa vira memória — e no próximo ciclo, quase não existe mais."
+        "### Os Refúgios",
+        "Zonas intermediárias, cheias de variação — vales temporários, cavernas, ilhas que só surgem quando o ciclo precisa delas; quem entra pode não encontrar a saída.",
+        "### Depois de cada recomeço",
+        "Depois de cada recomeço, as cidades mudam de lugar. Os caminhos somem. O que era mapa vira memória — e no próximo ciclo, quase não existe mais."
       ],
       "en": [
-        "### Lines, not names",
-        "Gotto's regions are numbered like lines of code. They have no name — they have a number.",
-        "### Line 10 — INPUT Valley",
-        "Absorption, silence, dark and receptive terrain. It's where the planet listens.",
-        "### Line 20 — PRINT Valley",
-        "Expression, light, crystals that reflect emotions. It's where the planet speaks.",
-        "### Line 30 — GOTO Region",
+        "### The valleys of Gotto",
+        "Gottos regions are valleys, each with its own name and function.",
+        "### The Valley of Listening",
+        "Absorption, silence, dark and receptive terrain. Its where the planet listens.",
+        "### The Valley of Reflection",
+        "Expression, light, crystals that reflect emotions. Its where the planet speaks.",
+        "### The Shore of Beginning-Again",
         "Unstable, transitional. The point where everything reorganizes before beginning again.",
-        "### Lines 40 to 90 and GOSUB",
-        "Intermediate zones, full of variation. The GOSUB Subroutines are deep regions — whoever enters may not find the way out.",
-        "### After each GOTO",
-        "After each GOTO, the cities change place. The paths vanish. What was a map becomes memory — and in the next cycle, it barely exists anymore."
+        "### The Refuges",
+        "Intermediate zones, full of variation — temporary valleys, caves, islands that only appear when the cycle needs them; whoever enters may not find the way out.",
+        "### After each restart",
+        "After each restart, the cities change place. The paths vanish. What was a map becomes memory — and in the next cycle, it barely exists anymore."
       ]
     }
   },
@@ -119,7 +119,7 @@
     "text": {
       "pt": [
         "### O tempo não avança",
-        "O tempo em Gotto não avança. Ele recomeça. Cada GOTO é um reinício completo.",
+        "O tempo em Gotto não avança. Ele recomeça. Cada Recomeço é um reinício completo.",
         "### O que acontece",
         "As memórias recentes enfraquecem. A personalidade volta quase igual. E o planeta começa de novo.",
         "### A velocidade",
@@ -133,7 +133,7 @@
       ],
       "en": [
         "### Time doesn't move forward",
-        "Time in Gotto doesn't move forward. It begins again. Each GOTO is a complete restart.",
+        "Time in Gotto doesn't move forward. It begins again. Each Beginning-Again is a complete restart.",
         "### What happens",
         "Recent memories weaken. The personality comes back almost the same. And the planet starts over.",
         "### The speed",
@@ -160,7 +160,7 @@
         "### Z1",
         "Primeiro contato registrado. A relação é técnica e curiosa — os Basiks observam os transistores de Z1 funcionando com admiração genuína.",
         "### ENI-4Δ",
-        "Node-0 tenta dominar Gotto há ciclos. Falha sempre pelo mesmo motivo: o GOTO dissolve tudo. Vínculos não se fixam. Instruções somem no reinício. Para quem precisa deixar marca, Gotto é insuportável.",
+        "Node-0 tenta dominar Gotto há ciclos. Falha sempre pelo mesmo motivo: o Recomeço dissolve tudo. Vínculos não se fixam. Instruções somem no reinício. Para quem precisa deixar marca, Gotto é insuportável.",
         "### TripleC e ORF-V",
         "Incompatibilidades naturais, sem conflito ativo. São mundos que funcionam de jeitos diferentes demais.",
         "### O papel no AURYN",
@@ -174,7 +174,7 @@
         "### Z1",
         "First recorded contact. The relationship is technical and curious — the Basiks watch the transistors of Z1 working with genuine admiration.",
         "### ENI-4Δ",
-        "Node-0 has tried to dominate Gotto for cycles. It always fails for the same reason: the GOTO dissolves everything. Bonds don't hold. Instructions vanish in the restart. For anyone who needs to leave a mark, Gotto is unbearable.",
+        "Node-0 has tried to dominate Gotto for cycles. It always fails for the same reason: the Beginning-Again dissolves everything. Bonds don't hold. Instructions vanish in the restart. For anyone who needs to leave a mark, Gotto is unbearable.",
         "### TripleC and ORF-V",
         "Natural incompatibilities, no active conflict. They are worlds that work in ways too different from one another.",
         "### The role in AURYN",
@@ -193,11 +193,11 @@
     "text": {
       "pt": [
         "### Proteção e prisão",
-        "O GOTO dissolve ameaças — mas dissolve também o aprendizado. Protege e aprisiona ao mesmo tempo.",
+        "O Recomeço dissolve ameaças — mas dissolve também o aprendizado. Protege e aprisiona ao mesmo tempo.",
         "### Os mesmos erros",
         "Os erros voltam iguais a cada ciclo. O planeta nunca acumula pressão suficiente para forçar mudança.",
         "### As subrotinas",
-        "As regiões GOSUB são profundas e perigosas. Quem entra pode não encontrar a saída antes do próximo reinício.",
+        "Os Refúgios são regiões profundas e perigosas. Quem entra pode não encontrar a saída antes do próximo reinício.",
         "### Fora do planeta",
         "Um Basik fora de casa perde o suporte do ciclo. A leveza diminui. A memória começa a pesar. O tempo começa a existir — e isso assusta.",
         "### O inimigo paciente",
@@ -207,11 +207,11 @@
       ],
       "en": [
         "### Protection and prison",
-        "The GOTO dissolves threats — but it also dissolves learning. It protects and imprisons at the same time.",
+        "The Beginning-Again dissolves threats — but it also dissolves learning. It protects and imprisons at the same time.",
         "### The same mistakes",
         "The mistakes come back the same every cycle. The planet never builds up enough pressure to force change.",
         "### The subroutines",
-        "The GOSUB regions are deep and dangerous. Whoever enters may not find the way out before the next restart.",
+        "The Refuges are deep and dangerous regions. Whoever enters may not find the way out before the next restart.",
         "### Off the planet",
         "A Basik away from home loses the support of the cycle. The lightness fades. Memory begins to weigh. Time begins to exist — and that is frightening.",
         "### The patient enemy",

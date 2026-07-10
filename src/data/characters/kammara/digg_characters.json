@@ -6,14 +6,14 @@
       "en": "Níhrak"
     },
     "species": {
-      "pt": "Ancião de máscara de osso",
-      "en": "Bone-mask elder"
+      "pt": "Krovín",
+      "en": "Krovín"
     },
     "bio": {
-      "pt": "O mais antigo e forte da sua espécie, Níhrak não herdou o Digg — construiu-o, elo por elo, acorrentando bloco a bloco. Chegou ao topo pela antiguidade e pela paciência, não pela força bruta: quem reuniu mais, manda. Frio, calculado, comanda o rumo do planeta do alto do trono de pedra, com o Ratão enroscado no ombro — o único ser que ele ama num planeta feito só de ganância.",
-      "en": "The oldest and strongest of his kind, Níhrak did not inherit Digg — he built it, link by link, shackling block to block. He reached the top through age and patience, not brute force: he who gathered the most rules. Cold and calculating, he steers the planet from atop his stone throne, the Ratão curled on his shoulder — the only being he loves on a planet made only of greed."
+      "pt": "O mais antigo e forte da sua espécie; construiu o Digg elo por elo. Comanda frio do trono de pedra, o Ratão no ombro — o único ser que ama.",
+      "en": "The oldest and strongest of his kind; he built Digg link by link. He rules cold from his stone throne, the Ratão on his shoulder — the only being he loves."
     },
-    "image": "",
+    "image": "/imgs/kammara/digg/Nihrak.png",
     "backImage": "",
     "backTitle": {
       "pt": "",
@@ -26,87 +26,25 @@
     "attributes": [
       {
         "glyph": "⊶⊷⊙",
-        "label": { "pt": "Função", "en": "Role" },
-        "value": { "pt": "Chefe Digger", "en": "Digger Chief" }
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Chefe Digger",
+          "en": "Digger Chief"
+        }
       },
       {
         "glyph": "⊹—⊙",
-        "label": { "pt": "Região", "en": "Region" },
-        "value": { "pt": "O Primeiro Bloco", "en": "The First Block" }
-      }
-    ]
-  },
-  {
-    "match": "CHMURKA",
-    "name": {
-      "pt": "Chmurka",
-      "en": "Chmurka"
-    },
-    "species": {
-      "pt": "Chmurka",
-      "en": "Chmurka"
-    },
-    "bio": {
-      "pt": "Pequenas e de aparência dócil — pelo cinza-arroxeado, olhos negros enormes, um topete espetado e patinhas de garra —, as Chmurka são a mão-de-obra ligeira da ganância. Vêm em bando e fazem o trabalho miúdo do saque: carregam, vigiam, revistam, escondem e roubam o pequeno enquanto os grandes tomam o grande. A fofura é a arma: ninguém desconfia de uma Chmurka até já ter sido roubado. E cada uma guarda sempre um bolso para si.",
-      "en": "Small and gentle-looking — soft grayish-purple fur, enormous black eyes, a spiky tuft, and clawed little paws — the Chmurka are greed's nimble labor. They come in packs and do the small-time work of plunder: they carry, watch, rifle, hide, and steal the little while the big ones take the big. Cuteness is the weapon: no one suspects a Chmurka until they've already been robbed. And each always keeps a pocket for herself."
-    },
-    "image": "",
-    "backImage": "",
-    "backTitle": {
-      "pt": "",
-      "en": ""
-    },
-    "dorsalMeaning": {
-      "pt": "Ninguém desconfia de nós. É por isso que já perdeu.",
-      "en": "No one suspects us. That's why you've already lost."
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": { "pt": "Função", "en": "Role" },
-        "value": { "pt": "Piratas ajudantes", "en": "Helper pirates" }
-      },
-      {
-        "glyph": "⊹—⊙",
-        "label": { "pt": "Região", "en": "Region" },
-        "value": { "pt": "Toda a cadeia", "en": "Across the chain" }
-      }
-    ]
-  },
-  {
-    "match": "ORVÍN",
-    "name": {
-      "pt": "Orvín",
-      "en": "Orvín"
-    },
-    "species": {
-      "pt": "Orvín",
-      "en": "Orvín"
-    },
-    "bio": {
-      "pt": "Duros e silenciosos, os Orvín são o músculo do acúmulo: arrastam o saque, escavam os túneis, montam as pontes e alimentam os fornos. Cabeça de placa oval de concha e marfim com um único olho, corpo de casco de ripas de madeira e bronze, pernas finas de metal que sustentam pesos absurdos — parecem uma ferramenta viva. Vêm de um mundo de mineração onde eram usados como ferramenta; revoltaram-se e partiram, e agora carregam para o próprio ganho.",
-      "en": "Hard and silent, the Orvín are the muscle of the hoard: they haul the loot, dig the tunnels, build the bridges, and feed the furnaces. An oval plate of shell and ivory for a head with a single eye, a body of curved wood-and-bronze ribs, thin metal legs that bear impossible loads — they look like a living tool. They come from a mining world where they were used as tools; they rose up and left, and now they carry for their own gain."
-    },
-    "image": "",
-    "backImage": "",
-    "backTitle": {
-      "pt": "",
-      "en": ""
-    },
-    "dorsalMeaning": {
-      "pt": "Antes eu carregava para os outros. Agora carrego para mim. É a mesma carga. Mudou o dono.",
-      "en": "Before, I carried for others. Now I carry for myself. It's the same load. Only the owner changed."
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": { "pt": "Função", "en": "Role" },
-        "value": { "pt": "Carregadores", "en": "Carriers" }
-      },
-      {
-        "glyph": "⊹—⊙",
-        "label": { "pt": "Região", "en": "Region" },
-        "value": { "pt": "As minas e as pontes", "en": "The mines and bridges" }
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "O Primeiro Bloco",
+          "en": "The First Block"
+        }
       }
     ]
   },
@@ -121,10 +59,10 @@
       "en": "Sil'Rat"
     },
     "bio": {
-      "pt": "Sílko é um Sil'Rat de sílica vindo do deserto de dois sóis de ENI-4Δ — casca mineral escura, olhos vermelhos que brilham no escuro, grande o bastante para ser o maior da sua laia mas ainda cabendo no ombro de Níhrak. Capturado por vírus contratados, chegou às mãos do Chefe e ali encontrou o que aquele planeta não sabia dar: afeto. Não trabalha nem saqueia — existe para ser amado, e é intocável: machucá-lo é o caminho mais curto para a morte.",
-      "en": "Sílko is a silica Sil'Rat from ENI-4Δ's two-sun desert — a dark mineral shell, red eyes that glow in the dark, large enough to be the greatest of his kind yet still fitting on Níhrak's shoulder. Captured by hired viruses, he came into the Chief's hands and there found what that planet could not give: affection. He neither works nor plunders — he exists to be loved, and he is untouchable: to harm him is the shortest path to death."
+      "pt": "Sil'Rat de sílica âmbar, vindo de ENI-4Δ. Não trabalha nem saqueia: existe para ser amado. Machucá-lo é morte certa.",
+      "en": "An amber silica Sil'Rat from ENI-4Δ. He neither works nor plunders: he exists to be loved. To harm him is certain death."
     },
-    "image": "",
+    "image": "/imgs/kammara/digg/Silko.png",
     "backImage": "",
     "backTitle": {
       "pt": "",
@@ -137,13 +75,172 @@
     "attributes": [
       {
         "glyph": "⊶⊷⊙",
-        "label": { "pt": "Função", "en": "Role" },
-        "value": { "pt": "Mascote de Níhrak", "en": "Níhrak's pet" }
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Mascote de Níhrak",
+          "en": "Níhrak's pet"
+        }
       },
       {
         "glyph": "⊹—⊙",
-        "label": { "pt": "Região", "en": "Region" },
-        "value": { "pt": "O Primeiro Bloco", "en": "The First Block" }
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "O Primeiro Bloco",
+          "en": "The First Block"
+        }
+      }
+    ]
+  },
+  {
+    "match": "CHMURKA",
+    "name": {
+      "pt": "Chmurka",
+      "en": "Chmurka"
+    },
+    "species": {
+      "pt": "Chmurka",
+      "en": "Chmurka"
+    },
+    "bio": {
+      "pt": "Pequenas e fofas de propósito: a fofura é a arma. Vêm em bando, roubam o miúdo, e cada uma guarda um bolso pra si.",
+      "en": "Small and cute on purpose: cuteness is the weapon. They swarm, steal the small stuff, and each keeps a pocket for herself."
+    },
+    "image": "/imgs/kammara/digg/CHMURKA.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "Ninguém desconfia de nós. É por isso que já perdeu.",
+      "en": "No one suspects us. That's why you've already lost."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Ajudantes",
+          "en": "Helper"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Toda a cadeia",
+          "en": "Across the chain"
+        }
+      }
+    ]
+  },
+  {
+    "match": "ORVÍN",
+    "name": {
+      "pt": "Orvín",
+      "en": "Orvín"
+    },
+    "species": {
+      "pt": "Orvín",
+      "en": "Orvín"
+    },
+    "bio": {
+      "pt": "Duros e silenciosos, o músculo do acúmulo. Fugiram de ser ferramenta num mundo de mineração — e voltaram a carregar, só que agora para si.",
+      "en": "Hard and silent, the muscle of the hoard. They fled being tools on a mining world — and carry again, only now for themselves."
+    },
+    "image": "/imgs/kammara/digg/ORVIN.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "Antes eu carregava para os outros. Agora carrego para mim. É a mesma carga. Mudou o dono.",
+      "en": "Before, I carried for others. Now I carry for myself. It's the same load. Only the owner changed."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Carregadores",
+          "en": "Carriers"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "As minas e as pontes",
+          "en": "The mines and bridges"
+        }
+      }
+    ]
+  },
+  {
+    "match": "ZIN",
+    "name": {
+      "pt": "Zin",
+      "en": "Zin"
+    },
+    "species": {
+      "pt": "Zin",
+      "en": "Zin"
+    },
+    "bio": {
+      "pt": "Aves-gárgula de pedra viva, com um olho enorme e oval. Chegam por último e catam o que sobra do saque — acumulam a carniça como tesouro.",
+      "en": "Living-stone gargoyle birds with one huge oval eye. They arrive last and pick what the plunder left behind — hoarding carrion like treasure."
+    },
+    "image": "/imgs/kammara/digg/ZIN.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "O que ninguém quis ainda é meu. E meu já é tesouro.",
+      "en": "What no one wanted is still mine. And mine is already treasure."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Carniceiros",
+          "en": "Carrion-pickers"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "As bordas dos blocos",
+          "en": "The block edges"
+        }
       }
     ]
   }
