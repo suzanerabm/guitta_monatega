@@ -79,12 +79,12 @@
       "name": { "pt": "Gotto", "en": "Gotto" },
       "progress": {
         "lore": 100,
-        "personagens": 90,
+        "personagens": 100,
         "criaturas": 100,
-        "design-conceito": 60,
-        "characters-design": 90,
-        "cenas": 50,
-        "website": 60
+        "design-conceito": 100,
+        "characters-design": 100,
+        "cenas": 100,
+        "website": 100
       }
     },
     {
