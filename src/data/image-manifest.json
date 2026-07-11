@@ -254,6 +254,14 @@
       {
         "name": "grilo pulando",
         "image": "/imgs/bichittos/zeco/04_grilo_pulando.png"
+      },
+      {
+        "name": "zeco jogando bolinha poster",
+        "image": "/imgs/bichittos/zeco/zeco_jogando_bolinha_poster.jpg"
+      },
+      {
+        "name": "zeco jogando ioio poster",
+        "image": "/imgs/bichittos/zeco/zeco_jogando_ioio_poster.jpg"
       }
     ],
     "taylo": [
@@ -420,6 +428,36 @@
         "image": "/imgs/kammara/events_bg.jpg"
       }
     ],
+    "kammara/digg": [
+      {
+        "name": "CHMURKA",
+        "image": "/imgs/kammara/digg/CHMURKA.png"
+      },
+      {
+        "name": "Nihrak",
+        "image": "/imgs/kammara/digg/Nihrak.png"
+      },
+      {
+        "name": "ORVIN",
+        "image": "/imgs/kammara/digg/ORVIN.png"
+      },
+      {
+        "name": "Silko",
+        "image": "/imgs/kammara/digg/Silko.png"
+      },
+      {
+        "name": "ZIN costas",
+        "image": "/imgs/kammara/digg/ZIN_costas.png"
+      },
+      {
+        "name": "ZIN feliz",
+        "image": "/imgs/kammara/digg/ZIN_feliz.png"
+      },
+      {
+        "name": "ZIN",
+        "image": "/imgs/kammara/digg/ZIN.png"
+      }
+    ],
     "kammara/eni4": [
       {
         "name": "aracne 1 costas",
@@ -462,6 +500,10 @@
         "image": "/imgs/kammara/eni4/rats_bravo.png"
       },
       {
+        "name": "rats",
+        "image": "/imgs/kammara/eni4/rats.png"
+      },
+      {
         "name": "REPLION costas",
         "image": "/imgs/kammara/eni4/REPLION_costas.png"
       },
@@ -488,6 +530,10 @@
       {
         "name": "troy",
         "image": "/imgs/kammara/eni4/troy.png"
+      },
+      {
+        "name": "VALKON costas",
+        "image": "/imgs/kammara/eni4/VALKON_costas.png"
       },
       {
         "name": "VALKON virus",
@@ -556,6 +602,48 @@
       {
         "name": "worm",
         "image": "/imgs/kammara/eni4/worm.png"
+      }
+    ],
+    "kammara/gotto": [
+      {
+        "name": "daryun back",
+        "image": "/imgs/kammara/gotto/daryun_back.png"
+      },
+      {
+        "name": "daryun",
+        "image": "/imgs/kammara/gotto/daryun.png"
+      },
+      {
+        "name": "jump costas",
+        "image": "/imgs/kammara/gotto/jump_costas.png"
+      },
+      {
+        "name": "jump",
+        "image": "/imgs/kammara/gotto/jump.png"
+      },
+      {
+        "name": "kirio back",
+        "image": "/imgs/kammara/gotto/kirio_back.png"
+      },
+      {
+        "name": "kirio frente",
+        "image": "/imgs/kammara/gotto/kirio_frente.png"
+      },
+      {
+        "name": "pilo costas",
+        "image": "/imgs/kammara/gotto/pilo_costas.png"
+      },
+      {
+        "name": "pilo",
+        "image": "/imgs/kammara/gotto/pilo.png"
+      },
+      {
+        "name": "rema costas",
+        "image": "/imgs/kammara/gotto/rema_costas.png"
+      },
+      {
+        "name": "rema",
+        "image": "/imgs/kammara/gotto/rema.png"
       }
     ],
     "kammara/lunnp1": [
@@ -858,6 +946,14 @@
         "image": "/imgs/kammara/orfv/3Nylpha1.png"
       },
       {
+        "name": "Aurin costas rosa",
+        "image": "/imgs/kammara/orfv/Aurin_costas_rosa.png"
+      },
+      {
+        "name": "Aurin rosa",
+        "image": "/imgs/kammara/orfv/Aurin_rosa.png"
+      },
+      {
         "name": "Kallott",
         "image": "/imgs/kammara/orfv/Kallott.png"
       },
@@ -866,8 +962,32 @@
         "image": "/imgs/kammara/orfv/LetiK.png"
       },
       {
+        "name": "nuvin costas",
+        "image": "/imgs/kammara/orfv/nuvin_costas.png"
+      },
+      {
+        "name": "nuvin",
+        "image": "/imgs/kammara/orfv/nuvin.png"
+      },
+      {
         "name": "Torwen",
         "image": "/imgs/kammara/orfv/Torwen.png"
+      },
+      {
+        "name": "velo costas",
+        "image": "/imgs/kammara/orfv/velo_costas.png"
+      },
+      {
+        "name": "velo",
+        "image": "/imgs/kammara/orfv/velo.png"
+      },
+      {
+        "name": "zupi costas",
+        "image": "/imgs/kammara/orfv/zupi_costas.png"
+      },
+      {
+        "name": "Zupi",
+        "image": "/imgs/kammara/orfv/Zupi.png"
       }
     ],
     "kammara/triplec": [
@@ -998,6 +1118,10 @@
     ],
     "kammara/triplec/malloc": [
       {
+        "name": "Aion Var costas",
+        "image": "/imgs/kammara/triplec/malloc/Aion_Var_costas.png"
+      },
+      {
         "name": "Aion Var",
         "image": "/imgs/kammara/triplec/malloc/Aion_Var.png"
       },
@@ -1018,8 +1142,16 @@
         "image": "/imgs/kammara/triplec/malloc/Estakors.png"
       },
       {
+        "name": "Iren Kor costas",
+        "image": "/imgs/kammara/triplec/malloc/Iren_Kor_costas.png"
+      },
+      {
         "name": "Iren Kor",
         "image": "/imgs/kammara/triplec/malloc/Iren_Kor.png"
+      },
+      {
+        "name": "Luma Val costas1",
+        "image": "/imgs/kammara/triplec/malloc/Luma_Val_costas1.png"
       },
       {
         "name": "Luma Val",
@@ -1060,6 +1192,10 @@
     ],
     "kammara/triplec/mesh": [
       {
+        "name": "bunniet",
+        "image": "/imgs/kammara/triplec/mesh/bunniet.png"
+      },
+      {
         "name": "caracol-costas",
         "image": "/imgs/kammara/triplec/mesh/caracol-costas.png"
       },
@@ -1084,6 +1220,14 @@
         "image": "/imgs/kammara/triplec/mesh/cobra-frente-gigapixel-standard-v2-6x.png"
       },
       {
+        "name": "DORAN KES costas",
+        "image": "/imgs/kammara/triplec/mesh/DORAN_KES_costas.png"
+      },
+      {
+        "name": "DORAN KES",
+        "image": "/imgs/kammara/triplec/mesh/DORAN_KES.png"
+      },
+      {
         "name": "elefante-costas",
         "image": "/imgs/kammara/triplec/mesh/elefante-costas.png"
       },
@@ -1092,12 +1236,24 @@
         "image": "/imgs/kammara/triplec/mesh/elefante-frente.png"
       },
       {
+        "name": "EllenVar costas",
+        "image": "/imgs/kammara/triplec/mesh/EllenVar_costas.png"
+      },
+      {
+        "name": "EllenVar",
+        "image": "/imgs/kammara/triplec/mesh/EllenVar.png"
+      },
+      {
         "name": "KAEL TORIN bravo",
         "image": "/imgs/kammara/triplec/mesh/KAEL_TORIN_bravo.png"
       },
       {
         "name": "KAEL TORIN",
         "image": "/imgs/kammara/triplec/mesh/KAEL_TORIN.png"
+      },
+      {
+        "name": "KAELTORIN costas",
+        "image": "/imgs/kammara/triplec/mesh/KAELTORIN_costas.png"
       },
       {
         "name": "manu-costas",
@@ -1114,10 +1270,6 @@
       {
         "name": "mesh12",
         "image": "/imgs/kammara/triplec/mesh/mesh12.png"
-      },
-      {
-        "name": "mesh13",
-        "image": "/imgs/kammara/triplec/mesh/mesh13.png"
       },
       {
         "name": "mesh14",
@@ -1166,12 +1318,24 @@
         "image": "/imgs/kammara/triplec/sharp/lim.png"
       },
       {
+        "name": "Neran Vel costas",
+        "image": "/imgs/kammara/triplec/sharp/Neran_Vel_costas.png"
+      },
+      {
+        "name": "Neran Vel",
+        "image": "/imgs/kammara/triplec/sharp/Neran_Vel.png"
+      },
+      {
         "name": "peixe back",
         "image": "/imgs/kammara/triplec/sharp/peixe_back.png"
       },
       {
         "name": "peixe nadando",
         "image": "/imgs/kammara/triplec/sharp/peixe_nadando.png"
+      },
+      {
+        "name": "SELKA-RIN-costas",
+        "image": "/imgs/kammara/triplec/sharp/SELKA-RIN-costas.png"
       },
       {
         "name": "SELKA-RIN",
@@ -1184,24 +1348,56 @@
       {
         "name": "tilu-frente-gigapixel-standard-v2-6x",
         "image": "/imgs/kammara/triplec/sharp/tilu-frente-gigapixel-standard-v2-6x.png"
+      },
+      {
+        "name": "Veris Anon costas",
+        "image": "/imgs/kammara/triplec/sharp/Veris_Anon_costas.png"
+      },
+      {
+        "name": "Veris Anon",
+        "image": "/imgs/kammara/triplec/sharp/Veris_Anon.png"
       }
     ],
     "kammara/z1": [
       {
-        "name": "emo-1",
-        "image": "/imgs/kammara/z1/emo-1.jpg"
+        "name": "Aruun costas",
+        "image": "/imgs/kammara/z1/Aruun_costas.png"
+      },
+      {
+        "name": "Aruun",
+        "image": "/imgs/kammara/z1/Aruun.png"
+      },
+      {
+        "name": "Kaal costas",
+        "image": "/imgs/kammara/z1/Kaal_costas.png"
       },
       {
         "name": "Kaal",
         "image": "/imgs/kammara/z1/Kaal.png"
       },
       {
+        "name": "Ren costas",
+        "image": "/imgs/kammara/z1/Ren_costas.png"
+      },
+      {
         "name": "Ren",
         "image": "/imgs/kammara/z1/Ren.png"
       },
       {
+        "name": "Synn costas",
+        "image": "/imgs/kammara/z1/Synn_costas.png"
+      },
+      {
+        "name": "Synn",
+        "image": "/imgs/kammara/z1/Synn.png"
+      },
+      {
         "name": "Vexa",
         "image": "/imgs/kammara/z1/Vexa.png"
+      },
+      {
+        "name": "zeus costas",
+        "image": "/imgs/kammara/z1/zeus_costas.png"
       },
       {
         "name": "zeus",
@@ -1573,6 +1769,48 @@
     }
   },
   "scenes": {
+    "kammara/digg": [
+      {
+        "name": "CHMURKA creatures standing together",
+        "image": "/imgs/kammara/digg/_scenes/CHMURKA_creatures_standing_together.jpg"
+      },
+      {
+        "name": "Creatures sitting around a rough table eating",
+        "image": "/imgs/kammara/digg/_scenes/Creatures_sitting_around_a_rough_table_eating.jpg"
+      },
+      {
+        "name": "Cross-section of a floating grey stone block",
+        "image": "/imgs/kammara/digg/_scenes/Cross-section_of_a_floating_grey_stone_block.jpg"
+      },
+      {
+        "name": "Cross-section showing a real working MINE",
+        "image": "/imgs/kammara/digg/_scenes/Cross-section_showing_a_real_working_MINE.jpg"
+      },
+      {
+        "name": "Nihrak creature sitting on his stone throne view",
+        "image": "/imgs/kammara/digg/_scenes/Nihrak_creature_sitting_on_his_stone_throne_view.jpg"
+      },
+      {
+        "name": "primeira rocha",
+        "image": "/imgs/kammara/digg/_scenes/primeira_rocha.jpg"
+      },
+      {
+        "name": "Two floating grey stone blocks in space connected by a suspended wooden bridge",
+        "image": "/imgs/kammara/digg/_scenes/Two_floating_grey_stone_blocks_in_space_connected_by_a_suspended_wooden_bridge.jpg"
+      },
+      {
+        "name": "Vista blocos",
+        "image": "/imgs/kammara/digg/_scenes/Vista_blocos.jpg"
+      },
+      {
+        "name": "Vista cidade digg",
+        "image": "/imgs/kammara/digg/_scenes/Vista_cidade_digg.jpg"
+      },
+      {
+        "name": "Vista interna cadeirao",
+        "image": "/imgs/kammara/digg/_scenes/Vista_interna_cadeirao.jpg"
+      }
+    ],
     "kammara/eni4": [
       {
         "name": "Dois sois",
@@ -1667,6 +1905,44 @@
         "image": "/imgs/kammara/eni4/_scenes/19sucata_bugs.jpg"
       }
     ],
+    "kammara/gotto": [
+      {
+        "name": "Arredores vila central",
+        "image": "/imgs/kammara/gotto/_scenes/Arredores_vila_central.jpg"
+      },
+      {
+        "name": "cena vila lateral1",
+        "image": "/imgs/kammara/gotto/_scenes/cena_vila_lateral1.jpg"
+      },
+      {
+        "name": "cultivo flores",
+        "image": "/imgs/kammara/gotto/_scenes/cultivo_flores.jpg"
+      },
+      {
+        "name": "cultura vila",
+        "image": "/imgs/kammara/gotto/_scenes/cultura_vila.jpg"
+      },
+      {
+        "name": "erurin visits gotto1",
+        "image": "/imgs/kammara/gotto/_scenes/erurin_visits_gotto1.jpg"
+      },
+      {
+        "name": "kirio vigiando morro2",
+        "image": "/imgs/kammara/gotto/_scenes/kirio_vigiando_morro2.jpg"
+      },
+      {
+        "name": "regiao 10",
+        "image": "/imgs/kammara/gotto/_scenes/regiao_10.jpg"
+      },
+      {
+        "name": "vila de perto",
+        "image": "/imgs/kammara/gotto/_scenes/vila_de_perto.jpg"
+      },
+      {
+        "name": "vista regiao deserta com frutas",
+        "image": "/imgs/kammara/gotto/_scenes/vista_regiao_deserta_com_frutas.jpg"
+      }
+    ],
     "kammara/lunnp1": [
       {
         "name": "cena crianca brincando",
@@ -1717,6 +1993,32 @@
         "image": "/imgs/kammara/lunnp1/_scenes/regiao_sul.jpg"
       }
     ],
+    "kammara/memphis": [
+      {
+        "name": "memphis container section",
+        "image": "/imgs/kammara/memphis/_scenes/memphis_container_section.jpg"
+      },
+      {
+        "name": "memphis gotto section",
+        "image": "/imgs/kammara/memphis/_scenes/memphis_gotto_section.jpg"
+      },
+      {
+        "name": "memphis old section",
+        "image": "/imgs/kammara/memphis/_scenes/memphis_old_section.jpg"
+      },
+      {
+        "name": "memphis orf-v section",
+        "image": "/imgs/kammara/memphis/_scenes/memphis_orf-v_section.jpg"
+      },
+      {
+        "name": "modbus crossing",
+        "image": "/imgs/kammara/memphis/_scenes/modbus_crossing.jpg"
+      },
+      {
+        "name": "Ratdra blocked",
+        "image": "/imgs/kammara/memphis/_scenes/Ratdra_blocked.jpg"
+      }
+    ],
     "kammara/orfv": [
       {
         "name": "vista Fjorks Centrais",
@@ -1761,6 +2063,18 @@
       {
         "name": "regiao sul deserta",
         "image": "/imgs/kammara/orfv/_scenes/11regiao_sul_deserta.jpg"
+      },
+      {
+        "name": "festival",
+        "image": "/imgs/kammara/orfv/_scenes/12festival.jpg"
+      },
+      {
+        "name": "velo dormindo flor",
+        "image": "/imgs/kammara/orfv/_scenes/velo_dormindo_flor.jpg"
+      },
+      {
+        "name": "zupi dormindo com nuvin1",
+        "image": "/imgs/kammara/orfv/_scenes/zupi_dormindo_com_nuvin1.jpg"
       }
     ],
     "kammara/triplec": [
@@ -1825,6 +2139,58 @@
       {
         "name": "lumesha visita Luma Val",
         "image": "/imgs/kammara/triplec/malloc/_scenes/9lumesha_visita_Luma_Val.jpg"
+      },
+      {
+        "name": "malloc correndo",
+        "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_correndo.jpg"
+      },
+      {
+        "name": "malloc em mesh",
+        "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_em_mesh.jpg"
+      },
+      {
+        "name": "malloc forest",
+        "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_forest.jpg"
+      },
+      {
+        "name": "malloc quarto",
+        "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_quarto.jpg"
+      },
+      {
+        "name": "malloc sala",
+        "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_sala.jpg"
+      },
+      {
+        "name": "malloc tunel",
+        "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_tunel.jpg"
+      },
+      {
+        "name": "malloc vila 1",
+        "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_vila_1.jpg"
+      },
+      {
+        "name": "malloc vila 2",
+        "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_vila_2.jpg"
+      },
+      {
+        "name": "malloc vila 3",
+        "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_vila_3.jpg"
+      },
+      {
+        "name": "malloc vila 4",
+        "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_vila_4.jpg"
+      },
+      {
+        "name": "malloc vila",
+        "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_vila.jpg"
+      },
+      {
+        "name": "malloc visita mesh",
+        "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_visita_mesh.jpg"
+      },
+      {
+        "name": "malloc visita sharp",
+        "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_visita_sharp.jpg"
       }
     ],
     "kammara/triplec/mesh": [
@@ -1843,6 +2209,38 @@
       {
         "name": "KAEL TORIN ativando Cshift",
         "image": "/imgs/kammara/triplec/mesh/_scenes/KAEL_TORIN_ativando_Cshift.jpg"
+      },
+      {
+        "name": "kurr expandindo",
+        "image": "/imgs/kammara/triplec/mesh/_scenes/kurr_expandindo.jpg"
+      },
+      {
+        "name": "manoo dormindo",
+        "image": "/imgs/kammara/triplec/mesh/_scenes/manoo_dormindo.jpg"
+      },
+      {
+        "name": "mesh dentro ap",
+        "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_dentro_ap.jpg"
+      },
+      {
+        "name": "mesh familia",
+        "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_familia.jpg"
+      },
+      {
+        "name": "mesh praca vista cima",
+        "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_praca_vista_cima.jpg"
+      },
+      {
+        "name": "mesh praca",
+        "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_praca.jpg"
+      },
+      {
+        "name": "mesh quarto",
+        "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_quarto.jpg"
+      },
+      {
+        "name": "mesh sala",
+        "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_sala.jpg"
       },
       {
         "name": "Niul forest",
@@ -1873,46 +2271,98 @@
       {
         "name": "Vista panoramica",
         "image": "/imgs/kammara/triplec/sharp/_scenes/7Vista_panoramica.jpg"
+      },
+      {
+        "name": "sharp cena interna sala",
+        "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_cena_interna_sala.jpg"
+      },
+      {
+        "name": "sharp cena quarto",
+        "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_cena_quarto.jpg"
+      },
+      {
+        "name": "sharp fluxo energia",
+        "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_fluxo_energia.jpg"
+      },
+      {
+        "name": "sharp pets",
+        "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_pets.jpg"
+      },
+      {
+        "name": "sharp quarto",
+        "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_quarto.jpg"
+      },
+      {
+        "name": "sharp sala",
+        "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_sala.jpg"
+      },
+      {
+        "name": "sharp vista",
+        "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_vista.jpg"
       }
     ],
     "kammara/z1": [
       {
-        "name": "area interna z1",
-        "image": "/imgs/kammara/z1/_scenes/area_interna_z1.jpg"
+        "name": "CENTRAL SQUARE aerial view",
+        "image": "/imgs/kammara/z1/_scenes/CENTRAL_SQUARE_aerial_view.jpg"
       },
       {
-        "name": "area interna",
-        "image": "/imgs/kammara/z1/_scenes/area_interna.jpg"
+        "name": "CENTRAL SQUARE",
+        "image": "/imgs/kammara/z1/_scenes/CENTRAL_SQUARE.png"
       },
       {
-        "name": "area interna1",
-        "image": "/imgs/kammara/z1/_scenes/area_interna1.jpg"
+        "name": "habitantes conversando",
+        "image": "/imgs/kammara/z1/_scenes/habitantes_conversando.jpg"
       },
       {
-        "name": "praca central",
-        "image": "/imgs/kammara/z1/_scenes/praca_central.jpg"
+        "name": "INSIDE REG",
+        "image": "/imgs/kammara/z1/_scenes/INSIDE_REG.jpg"
       },
       {
-        "name": "regiao 1",
-        "image": "/imgs/kammara/z1/_scenes/regiao_1.jpg"
+        "name": "modbus lotado",
+        "image": "/imgs/kammara/z1/_scenes/modbus_lotado.jpg"
       },
       {
-        "name": "transporte coletivo",
-        "image": "/imgs/kammara/z1/_scenes/transporte_coletivo.jpg"
+        "name": "NEW VILLA",
+        "image": "/imgs/kammara/z1/_scenes/NEW_VILLA.jpg"
+      },
+      {
+        "name": "PERFORATED HALL",
+        "image": "/imgs/kammara/z1/_scenes/PERFORATED_HALL.jpg"
+      },
+      {
+        "name": "SALAS ANCESTRAIS",
+        "image": "/imgs/kammara/z1/_scenes/SALAS_ANCESTRAIS.jpg"
+      },
+      {
+        "name": "TOWER STATION",
+        "image": "/imgs/kammara/z1/_scenes/TOWER_STATION.jpg"
+      },
+      {
+        "name": "Vila square",
+        "image": "/imgs/kammara/z1/_scenes/Vila_square.jpg"
+      },
+      {
+        "name": "Vila",
+        "image": "/imgs/kammara/z1/_scenes/Vila.png"
+      },
+      {
+        "name": "Z-CHASMS",
+        "image": "/imgs/kammara/z1/_scenes/Z-CHASMS.jpg"
       }
     ]
   },
   "kammaraBgs": {
+    "kammara/digg": "/imgs/kammara/digg/_bg/digg_vista-gigapixel.png",
     "kammara/eni4": "/imgs/kammara/eni4/_bg/imagem_fabrica_com_lixos-gigapixel-cgi-6x.jpg",
     "kammara/gotto": "/imgs/kammara/gotto/_bg/vila_de_perto.jpg",
-    "kammara/digg": "/imgs/kammara/digg/_bg/digg_vista-gigapixel.png",
-    "kammara/memphis": "/imgs/kammara/memphis/_bg/memphis_vista.jpg",
     "kammara/lunnp1": "/imgs/kammara/lunnp1/_bg/regiao_norte.jpg",
+    "kammara/memphis": "/imgs/kammara/memphis/_bg/memphis_vista.jpg",
     "kammara/orfv": "/imgs/kammara/orfv/_bg/vista_longa_orf-v-gigapixel-cgi-6x.jpg",
     "kammara/triplec": "/imgs/kammara/triplec/_bg/niulForest.jpg",
     "kammara/triplec/malloc": "/imgs/kammara/triplec/malloc/_bg/1_regiao_central_malloc.jpg",
     "kammara/triplec/mesh": "/imgs/kammara/triplec/mesh/_bg/vista_area.jpg",
     "kammara/triplec/sharp": "/imgs/kammara/triplec/sharp/_bg/area_sharp.jpg",
-    "kammara/z1": "/imgs/kammara/z1/_bg/estacao_central_z1_alta.jpg"
+    "kammara/z1": "/imgs/kammara/z1/_bg/bg.jpg"
   }
 }
