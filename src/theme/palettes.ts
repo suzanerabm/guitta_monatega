@@ -260,11 +260,14 @@ export const palettes: Record<PaletteName, Palette> = {
     gradientBg: 'linear-gradient(160deg, #0c0620 0%, #1a0c40 40%, #081828 100%)',
   },
   z1: {
-    colors: ['#b0b8c4', '#8a929e', '#d8dce4', '#8a929e', '#6a7080', '#2a2c34'],
-    text: '#d8dce4',
-    dark: '#12141a',
-    gradient: 'linear-gradient(135deg, #6a7080, #b0b8c4, #d8dce4)',
-    gradientBg: 'linear-gradient(160deg, #12141a 0%, #2a2c34 40%, #1a1c22 100%)',
+    // Azul-gelo: os cinzas-aço originais recebem um leve viés no canal azul
+    // (mais azul, um pouco menos vermelho) — gelado sem virar azul berrante,
+    // mantendo o clima frio e preciso do planeta.
+    colors: ['#a8bccf', '#828fa4', '#cfdae6', '#828fa4', '#626f86', '#252a36'],
+    text: '#cfdae6',
+    dark: '#101520',
+    gradient: 'linear-gradient(135deg, #626f86, #a8bccf, #cfdae6)',
+    gradientBg: 'linear-gradient(160deg, #101520 0%, #252a36 40%, #141b28 100%)',
   },
   gotto: {
     // Fundo do planeta ESCURO (roxo→uva) como os outros planetas; cards com
