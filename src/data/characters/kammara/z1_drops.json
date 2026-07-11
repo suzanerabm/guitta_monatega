@@ -1,0 +1,34 @@
+[
+  {
+    "video": "/imgs/kammara/z1/_videos/TOWER_STATION.mp4",
+    "poster": "/imgs/kammara/z1/_videos/TOWER_STATION_poster.jpg",
+    "label": {
+      "pt": "estação-torre",
+      "en": "tower station"
+    }
+  },
+  {
+    "video": "/imgs/kammara/z1/_videos/transporte_dentro_CENTRAL_SQUARE.mp4",
+    "poster": "/imgs/kammara/z1/_videos/transporte_dentro_CENTRAL_SQUARE_poster.jpg",
+    "label": {
+      "pt": "transporte na praça central",
+      "en": "transport in the central square"
+    }
+  },
+  {
+    "video": "/imgs/kammara/z1/_videos/tempestades_curto_circuito.mp4",
+    "poster": "/imgs/kammara/z1/_videos/tempestades_curto_circuito_poster.jpg",
+    "label": {
+      "pt": "tempestades de curto-circuito",
+      "en": "short-circuit storms"
+    }
+  },
+  {
+    "video": "/imgs/kammara/z1/_videos/cidade_em_movimento.mp4",
+    "poster": "/imgs/kammara/z1/_videos/cidade_em_movimento_poster.jpg",
+    "label": {
+      "pt": "cidade em movimento",
+      "en": "city in motion"
+    }
+  }
+]

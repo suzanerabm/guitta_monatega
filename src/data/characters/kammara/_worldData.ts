@@ -43,6 +43,7 @@ import triplecSharpDrops from './triplec-sharp_drops.json';
 import z1Story from './z1_story.json';
 import z1Subs from './z1_subsystems.json';
 import z1Scenes from './z1_scenes.json';
+import z1Drops from './z1_drops.json';
 
 type Bilingual<T> = { pt: T; en: T };
 
@@ -244,6 +245,7 @@ const DROPS: Record<string, WorldDrop[]> = {
   'triplec-malloc': triplecMallocDrops as WorldDrop[],
   'triplec-mesh': triplecMeshDrops as WorldDrop[],
   'triplec-sharp': triplecSharpDrops as WorldDrop[],
+  z1: z1Drops as WorldDrop[],
 };
 
 /** Localized drops (small clips) for a world. Empty when the world has none. */
