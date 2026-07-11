@@ -1,16 +1,107 @@
 [
   {
+    "image": "/imgs/kammara/triplec/_scenes/Vista_area_planeta.jpg",
+    "label": {
+      "pt": "Vista aérea do planeta",
+      "en": "Aerial view of the planet"
+    }
+  },
+  {
     "image": "/imgs/kammara/triplec/_scenes/1_niul_Forest.jpg",
     "label": {
-      "pt": "niul Forest",
+      "pt": "Floresta Niul",
       "en": "Niul Forest"
     }
   },
   {
     "image": "/imgs/kammara/triplec/_scenes/2_niul_Forest.jpg",
     "label": {
-      "pt": "niul Forest",
+      "pt": "Floresta Niul",
       "en": "Niul Forest"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/_scenes/protecao_criptografia.jpg",
+    "label": {
+      "pt": "Proteção e criptografia",
+      "en": "Protection and cryptography"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/_scenes/Three_bunniets.jpg",
+    "label": {
+      "pt": "Três bunniets",
+      "en": "Three bunniets"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/_scenes/regiao_malloc_lifestyle.jpg",
+    "label": {
+      "pt": "Região malloc — cotidiano",
+      "en": "Malloc region — daily life"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/_scenes/regiao_mesh_lifestyle.jpg",
+    "label": {
+      "pt": "Região Mesh — cotidiano",
+      "en": "Mesh region — daily life"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/_scenes/regiao_sharp_lifestyle.jpg",
+    "label": {
+      "pt": "Região Sharp — cotidiano",
+      "en": "Sharp region — daily life"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/_scenes/regiao_malloc_familia.jpg",
+    "label": {
+      "pt": "Região Malloc — interior casa",
+      "en": "Malloc region — house interior"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/_scenes/regiao_mesh_praca.jpg",
+    "label": {
+      "pt": "Região Mesh — praça",
+      "en": "Mesh region — plaza"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/_scenes/regiao_mesh_vista_cidade.jpg",
+    "label": {
+      "pt": "Região Mesh — vista da cidade",
+      "en": "Mesh region — city view"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/_scenes/regiao_energia_sharp.jpg",
+    "label": {
+      "pt": "Região Sharp — energia",
+      "en": "Sharp region — energy"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/_scenes/regiao_sharp_pets.jpg",
+    "label": {
+      "pt": "Região Sharp — pets",
+      "en": "Sharp region — pets"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/_scenes/regiao_mesh_ativando_cshift.jpg",
+    "label": {
+      "pt": "Região Mesh — ativando CShift",
+      "en": "Mesh region — activating CShift"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/_scenes/regiao_malloc_correndo_floresta.jpg",
+    "label": {
+      "pt": "Bunniet malloc correndo na floresta",
+      "en": "Malloc bunniet running in the forest"
     }
   },
   {
@@ -21,7 +112,7 @@
     }
   },
   {
-    "image": "/imgs/kammara/triplec/_scenes/5EruRin_com_SELKA_RIN.jpg",
+    "image": "/imgs/kammara/triplec/_scenes/5EruRin_com_NERAN_VEL.png",
     "label": {
       "pt": "EruRin com NERAN VEL",
       "en": "EruRin with NERAN VEL"
@@ -32,20 +123,6 @@
     "label": {
       "pt": "Cshift portal",
       "en": "Cshift portal"
-    }
-  },
-  {
-    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_forest.jpg",
-    "label": {
-      "pt": "floresta",
-      "en": "forest"
-    }
-  },
-  {
-    "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_correndo.jpg",
-    "label": {
-      "pt": "correndo",
-      "en": "running"
     }
   }
 ]

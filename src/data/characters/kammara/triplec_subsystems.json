@@ -4,7 +4,7 @@
       "pt": "A Origem",
       "en": "The Origin"
     },
-    "img": "/imgs/kammara/triplec/_subsystems/0-gigapixel-standard-v2-6x.jpg",
+    "img": "/imgs/kammara/triplec/_subsystems/Regiao_malloc.jpg",
     "text": {
       "pt": [
         "### O mundo antes",
@@ -41,7 +41,7 @@
       "pt": "A Niul Forest",
       "en": "The Niul Forest"
     },
-    "img": "/imgs/kammara/triplec/_subsystems/1-gigapixel-standard-v2-6x.jpg",
+    "img": "/imgs/kammara/triplec/_scenes/Vista_area_planeta.jpg",
     "text": {
       "pt": [
         "### O pulmão ativo",
@@ -194,7 +194,7 @@
       "pt": "O CriptoKemita",
       "en": "The CriptoKemita"
     },
-    "img": "/imgs/kammara/triplec/_subsystems/5-gigapixel-standard-v2-6x.jpg",
+    "img": "/imgs/kammara/triplec/_scenes/protecao_criptografia.jpg",
     "text": {
       "pt": [
         "### A defesa suprema",
