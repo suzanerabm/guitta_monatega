@@ -13,11 +13,11 @@
       "pt": "O mais antigo e forte da sua espécie; construiu o Digg elo por elo. Comanda frio do trono de pedra, o Ratão no ombro — o único ser que ama.",
       "en": "The oldest and strongest of his kind; he built Digg link by link. He rules cold from his stone throne, the Ratão on his shoulder — the only being he loves."
     },
-    "image": "/imgs/kammara/digg/Nihrak.png",
-    "backImage": "",
+    "image": "/imgs/kammara/digg/Nihrak_frente.png",
+    "backImage": "/imgs/kammara/digg/Nihrak_costas.png",
     "backTitle": {
-      "pt": "",
-      "en": ""
+      "pt": "Outro Lado",
+      "en": "Other Side"
     },
     "dorsalMeaning": {
       "pt": "Nada disso era de ninguém. Agora é meu — e isso é justiça.",
@@ -63,10 +63,10 @@
       "en": "An amber silica Sil'Rat from ENI-4Δ. He neither works nor plunders: he exists to be loved. To harm him is certain death."
     },
     "image": "/imgs/kammara/digg/Silko.png",
-    "backImage": "",
+    "backImage": "/imgs/kammara/digg/Silko_costas.png",
     "backTitle": {
-      "pt": "",
-      "en": ""
+      "pt": "Outro Lado",
+      "en": "Other Side"
     },
     "dorsalMeaning": {
       "pt": "No planeta que só sabe possuir, há um ser que ninguém possui.",
@@ -111,11 +111,11 @@
       "pt": "Pequenas e fofas de propósito: a fofura é a arma. Vêm em bando, roubam o miúdo, e cada uma guarda um bolso pra si.",
       "en": "Small and cute on purpose: cuteness is the weapon. They swarm, steal the small stuff, and each keeps a pocket for herself."
     },
-    "image": "/imgs/kammara/digg/CHMURKA.png",
-    "backImage": "",
+    "image": "/imgs/kammara/digg/CHMURKA_frente.png",
+    "backImage": "/imgs/kammara/digg/CHMURKA_costas.png",
     "backTitle": {
-      "pt": "",
-      "en": ""
+      "pt": "Outro Lado",
+      "en": "Other Side"
     },
     "dorsalMeaning": {
       "pt": "Ninguém desconfia de nós. É por isso que já perdeu.",
@@ -196,6 +196,55 @@
     ]
   },
   {
+    "match": "Krovín",
+    "name": {
+      "pt": "Krovín",
+      "en": "Krovín"
+    },
+    "species": {
+      "pt": "Krovín",
+      "en": "Krovín"
+    },
+    "bio": {
+      "pt": "Da espécie KROVÍN, anciãos de crânio de marfim, tromba e penas, que deixaram o seu planeta atrás de mais.",
+      "en": "Of the KROVÍN kind, ivory-skulled elders with a trunk and feathers, who left their home planet in search of more."
+    },
+    "image": "/imgs/kammara/digg/krovin.png",
+    "backImage": "/imgs/kammara/digg/krovin_costas.png",
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Other Side"
+    },
+    "dorsalMeaning": {
+      "pt": "Nós gostamos de conquistar. Se eu achei é meu.",
+      "en": "We like to conquer. If I found it, it's mine."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Diggers",
+          "en": "Diggers"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Toda a cadeia",
+          "en": "Across the chain"
+        }
+      }
+    ]
+  },
+  {
     "match": "ZIN",
     "name": {
       "pt": "Zin",
@@ -210,10 +259,10 @@
       "en": "Living-stone gargoyle birds with one huge oval eye. They arrive last and pick what the plunder left behind — hoarding carrion like treasure."
     },
     "image": "/imgs/kammara/digg/ZIN.png",
-    "backImage": "",
+    "backImage": "/imgs/kammara/digg/ZIN_costas.png",
     "backTitle": {
-      "pt": "",
-      "en": ""
+      "pt": "Outro Lado",
+      "en": "Other Side"
     },
     "dorsalMeaning": {
       "pt": "O que ninguém quis ainda é meu. E meu já é tesouro.",
