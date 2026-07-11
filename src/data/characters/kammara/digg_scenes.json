@@ -1,19 +1,12 @@
 [
   {
-    "image": "/imgs/kammara/digg/_scenes/Two_floating_grey_stone_blocks_in_space_connected_by_a_suspended_wooden_bridge.jpg",
+    "image": "/imgs/kammara/digg/_scenes/primeira_rocha.jpg",
     "label": {
-      "pt": "Blocos ligados por ponte",
-      "en": "Blocks joined by a bridge"
+      "pt": "O primeiro bloco",
+      "en": "The first block"
     }
   },
-  {
-    "image": "/imgs/kammara/digg/_scenes/Vista_cidade_digg.jpg",
-    "label": {
-      "pt": "A cidade de Digg",
-      "en": "The city of Digg"
-    }
-  },
-  {
+   {
     "image": "/imgs/kammara/digg/_scenes/Vista_blocos.jpg",
     "label": {
       "pt": "Os blocos flutuantes",
@@ -21,38 +14,31 @@
     }
   },
   {
-    "image": "/imgs/kammara/digg/_scenes/primeira_rocha.jpg",
+    "image": "/imgs/kammara/digg/_scenes/Vista_bloco.jpg",
     "label": {
-      "pt": "A primeira rocha",
-      "en": "The first rock"
+      "pt": "Um bloco",
+      "en": "A block"
     }
   },
   {
-    "image": "/imgs/kammara/digg/_scenes/Cross-section_of_a_floating_grey_stone_block.jpg",
+    "image": "/imgs/kammara/digg/_scenes/Bloco_vista_2.jpg",
     "label": {
-      "pt": "Um bloco por dentro",
-      "en": "A block, in cross-section"
+      "pt": "Os blocos flutuantes, outra vista",
+      "en": "The floating blocks, another view"
     }
   },
   {
-    "image": "/imgs/kammara/digg/_scenes/Cross-section_showing_a_real_working_MINE.jpg",
+    "image": "/imgs/kammara/digg/_scenes/Nihrak_sala_trono.jpg",
     "label": {
-      "pt": "A mina de kemita",
-      "en": "The kemita mine"
+      "pt": "A sala do trono de Níhrak",
+      "en": "Níhrak's throne room"
     }
   },
   {
-    "image": "/imgs/kammara/digg/_scenes/Nihrak_creature_sitting_on_his_stone_throne_view.jpg",
+    "image": "/imgs/kammara/digg/_scenes/CHMURKA_eating.png",
     "label": {
-      "pt": "Níhrak no trono de pedra",
-      "en": "Níhrak on the stone throne"
-    }
-  },
-  {
-    "image": "/imgs/kammara/digg/_scenes/Vista_interna_cadeirao.jpg",
-    "label": {
-      "pt": "O cadeirão, por dentro",
-      "en": "The big chair, within"
+      "pt": "Chmurka comendo",
+      "en": "Chmurka eating"
     }
   },
   {
@@ -67,6 +53,62 @@
     "label": {
       "pt": "Ao redor da mesa",
       "en": "Around the table"
+    }
+  },
+  {
+    "image": "/imgs/kammara/digg/_scenes/Diggers_na_praca.jpg",
+    "label": {
+      "pt": "Diggers na praça",
+      "en": "Diggers in the square"
+    }
+  },
+  {
+    "image": "/imgs/kammara/digg/_scenes/Diggers_montando_ninho.jpg",
+    "label": {
+      "pt": "Diggers trabalhando",
+      "en": "Diggers working"
+    }
+  },
+  {
+    "image": "/imgs/kammara/digg/_scenes/NinhO_Zin.png",
+    "label": {
+      "pt": "O ninho do Zin",
+      "en": "Zin's nest"
+    }
+  },
+   {
+    "image": "/imgs/kammara/digg/_scenes/Vista_interna_cadeirao.jpg",
+    "label": {
+      "pt": "O cadeirão, por dentro",
+      "en": "The big chair, within"
+    }
+  },
+  {
+    "image": "/imgs/kammara/digg/_scenes/Cross-section_showing_a_real_working_MINE.jpg",
+    "label": {
+      "pt": "A mina de kemita — em corte",
+      "en": "The kemita mine — cross-section"
+    }
+  },
+  {
+    "image": "/imgs/kammara/digg/_scenes/Vista_poco_mina.jpg",
+    "label": {
+      "pt": "O poço da mina",
+      "en": "The mine shaft"
+    }
+  },
+  {
+    "image": "/imgs/kammara/digg/_scenes/Nihrak_creature_sitting_on_his_stone_throne_view.jpg",
+    "label": {
+      "pt": "Níhrak no trono de pedra",
+      "en": "Níhrak on the stone throne"
+    }
+  },
+   {
+    "image": "/imgs/kammara/digg/_scenes/Vista_interior_camara_mina.jpg",
+    "label": {
+      "pt": "O interior da câmara da mina",
+      "en": "Inside the mine chamber"
     }
   }
 ]

@@ -161,14 +161,14 @@
       "en": "Hard and silent, the muscle of the hoard. They fled being tools on a mining world — and carry again, only now for themselves."
     },
     "image": "/imgs/kammara/digg/ORVIN.png",
-    "backImage": "",
+    "backImage": "/imgs/kammara/digg/ORVIN_costas.png",
     "backTitle": {
-      "pt": "",
-      "en": ""
+      "pt": "Outro Lado",
+      "en": "Another Side"
     },
     "dorsalMeaning": {
-      "pt": "Antes eu carregava para os outros. Agora carrego para mim. É a mesma carga. Mudou o dono.",
-      "en": "Before, I carried for others. Now I carry for myself. It's the same load. Only the owner changed."
+      "pt": "Antes eu carregava para os outros. Agora carrego para mim.",
+      "en": "Before, I carried for others. Now I carry for myself."
     },
     "attributes": [
       {
@@ -258,7 +258,7 @@
       "pt": "Aves-gárgula de pedra viva, com um olho enorme e oval. Chegam por último e catam o que sobra do saque — acumulam a carniça como tesouro.",
       "en": "Living-stone gargoyle birds with one huge oval eye. They arrive last and pick what the plunder left behind — hoarding carrion like treasure."
     },
-    "image": "/imgs/kammara/digg/ZIN.png",
+    "image": "/imgs/kammara/digg/ZIN_asas.png",
     "backImage": "/imgs/kammara/digg/ZIN_costas.png",
     "backTitle": {
       "pt": "Outro Lado",
