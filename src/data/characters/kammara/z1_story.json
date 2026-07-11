@@ -25,7 +25,7 @@
         "### As castas",
         "Z– guarda a origem. REG– estabiliza. CLK– sincroniza o tempo. DEC– decodifica. MEM– preserva registros. BUS– transporta. ALU– calcula e decide. IO– vigia as fronteiras. Função é identidade — ninguém muda de papel.",
         "### A linguagem",
-        "Assembly Z1 não é falado. É executado. Toda frase é uma instrução: MOVE, LOAD, WAIT, RETURN. A comunicação é o próprio funcionamento do planeta. Lento, belo, limpo e matemático.",
+        "O Zuun não é falado. É executado. Toda frase é uma instrução: MOVER, CARREGAR, ESPERAR, RETORNAR. A comunicação é o próprio funcionamento do planeta. Lento, belo, limpo e matemático.",
         "### O trunfo",
         "Z1 lê a linguagem viral de ENI-4Δ — chamada ASM-Δ — melhor do que os próprios vírus. A mesma sucata que o criou carregava a chave para entender o inimigo. Por isso, Z1 é o decodificador silencioso do Kammara.",
         "### O medo",
@@ -45,7 +45,7 @@
         "### The castes",
         "Z– guards the origin. REG– stabilizes. CLK– synchronizes time. DEC– decodes. MEM– preserves records. BUS– transports. ALU– calculates and decides. IO– watches the borders. Function is identity — no one changes role.",
         "### The language",
-        "Assembly Z1 is not spoken. It is executed. Every sentence is an instruction: MOVE, LOAD, WAIT, RETURN. Communication is the very functioning of the planet. Slow, beautiful, clean and mathematical.",
+        "Zuun is not spoken. It is executed. Every sentence is an instruction: MOVE, LOAD, WAIT, RETURN. Communication is the very functioning of the planet. Slow, beautiful, clean and mathematical.",
         "### The trump card",
         "Z1 reads the viral language of ENI-4Δ — called ASM-Δ — better than the viruses themselves. The same scrap that created it carried the key to understanding the enemy. That is why Z1 is the silent decoder of Kammara.",
         "### The fear",
@@ -72,8 +72,8 @@
         "en": "Language"
       },
       "value": {
-        "pt": "Assembly",
-        "en": "Assembly"
+        "pt": "Zuun",
+        "en": "Zuun"
       }
     },
     {

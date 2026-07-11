@@ -1,27 +1,98 @@
 [
   {
+    "match": "Zeus",
+    "name": {
+      "pt": "Zeus",
+      "en": "Zeus"
+    },
+    "species": {
+      "pt": "Transistor",
+      "en": "Transistor"
+    },
+    "image": "/imgs/kammara/z1/zeus.png",
+    "bio": {
+      "pt": "O ancestral do Esquadrão, guardião do que veio antes. Raramente se move — quando o faz, o planeta inteiro percebe. Lê o que foi descartado e encontra ordem no abandono; é ele quem guarda os registros mais perigosos de Z1. ",
+      "en": "The Squad's ancestor, keeper of what came before. He rarely moves — when he does, the entire planet notices. He reads what was discarded and finds order in abandonment; it is he who guards Z1's most dangerous records."
+    },
+    "backImage": "/imgs/kammara/z1/zeus_costas.png",
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Other Side"
+    },
+    "dorsalMeaning": {
+      "pt": "Guardo o que o mundo quis esquecer.",
+      "en": "I keep what the world chose to forget."
+    },
+    "attributes": [
+      {
+        "glyph": "•••••",
+        "label": {
+          "pt": "Casta",
+          "en": "Caste"
+        },
+        "value": {
+          "pt": "Z–",
+          "en": "Z–"
+        }
+      },
+      {
+        "glyph": "⊙⊷⊙",
+        "label": {
+          "pt": "Endereço",
+          "en": "Address"
+        },
+        "value": {
+          "pt": "Z-001Q",
+          "en": "Z-001Q"
+        }
+      },
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Síntese ancestral",
+          "en": "Ancestral Synthesis"
+        }
+      },
+      {
+        "glyph": "⊶⊹⊷",
+        "label": {
+          "pt": "Protocolo",
+          "en": "Protocol"
+        },
+        "value": {
+          "pt": "AURYN",
+          "en": "AURYN"
+        }
+      }
+    ]
+  },
+  {
     "match": "Aruun",
     "name": {
       "pt": "Aruun",
       "en": "Aruun"
     },
     "species": {
-      "pt": "Transistor vivo",
-      "en": "Living Transistor"
+      "pt": "Transistor",
+      "en": "Transistor"
     },
-    "image": "/imgs/kammara/z1/Kaal.png",
+    "image": "/imgs/kammara/z1/Aruun.png",
     "bio": {
-      "pt": "Transistor metálico clássico, prateado, polido pelo tempo. Perninhas perfeitamente alinhadas. Sustenta estados lógicos: define onde o fluxo pode existir. Quando Aruun está presente, processos desaceleram ao redor — não por lentidão, por estabilidade garantida.",
-      "en": "Classic metallic transistor, silvered and polished by time. Legs perfectly aligned. Sustains logical states: decides where the flow may exist. When Aruun is present, processes slow down nearby — not from sluggishness, but because stability is guaranteed."
+      "pt": "É a âncora do Esquadrão: onde há caos instrucional, ele impõe estado firme e reergue setores depois das tempestades. Quando Aruun está presente, tudo ao redor para de tremer — não por lentidão, por estabilidade garantida.",
+      "en": "He is the Squad's anchor: where there is instruction chaos, he imposes a firm state and rebuilds sectors after the storms. When Aruun is present, everything around stops trembling — not from sluggishness, but because stability is guaranteed."
     },
-    "backImage": "",
+    "backImage": "/imgs/kammara/z1/Aruun_costas.png",
     "backTitle": {
-      "pt": "",
-      "en": ""
+      "pt": "Outro Lado",
+      "en": "Other Side"
     },
     "dorsalMeaning": {
-      "pt": "",
-      "en": ""
+      "pt": "Enquanto eu ficar, nada desaba.",
+      "en": "As long as I hold, nothing falls."
     },
     "attributes": [
       {
@@ -33,6 +104,17 @@
         "value": {
           "pt": "REG–",
           "en": "REG–"
+        }
+      },
+      {
+        "glyph": "⊙⊷⊙",
+        "label": {
+          "pt": "Endereço",
+          "en": "Address"
+        },
+        "value": {
+          "pt": "REG-A.224",
+          "en": "REG-A.224"
         }
       },
       {
@@ -60,28 +142,28 @@
     ]
   },
   {
-    "match": "Kalc",
+    "match": "Kaal",
     "name": {
-      "pt": "Kalc",
-      "en": "Kalc"
+      "pt": "Kaal",
+      "en": "Kaal"
     },
     "species": {
-      "pt": "Transistor vivo",
-      "en": "Living Transistor"
+      "pt": "Transistor",
+      "en": "Transistor"
     },
-    "image": "/imgs/kammara/z1/Ren.png",
+    "image": "/imgs/kammara/z1/Kaal.png",
     "bio": {
-      "pt": "Corpo compacto, encapsulamento metálico denso. Perninhas retas e simétricas. É o ponto onde o fluxo se bifurca e escolhe — lâmina que separa sem ferir. Decide sem hesitar quando outros ainda deliberam.",
-      "en": "Compact body, dense metal casing. Straight, symmetrical legs. The point where the flow forks and chooses — a blade that separates without wounding. Decides without hesitation while others still deliberate."
+      "pt": "É o ponto onde o fluxo se bifurca e escolhe — a lâmina que separa sem ferir. Calcula, compara, decide. Quando o Esquadrão hesita, Kaal já sabe o caminho: decide sem vacilar enquanto os outros ainda deliberam.",
+      "en": "The point where the flow forks and chooses — the blade that separates without wounding. Calculates, compares, decides. When the Squad hesitates, Kaal already knows the way: he decides without wavering while the others still deliberate."
     },
-    "backImage": "",
+    "backImage": "/imgs/kammara/z1/Kaal_costas.png",
     "backTitle": {
-      "pt": "",
-      "en": ""
+      "pt": "Outro Lado",
+      "en": "Other Side"
     },
     "dorsalMeaning": {
-      "pt": "",
-      "en": ""
+      "pt": "Entre mil caminhos, escolho um. Sem tremer.",
+      "en": "Among a thousand paths, I choose one. Without trembling."
     },
     "attributes": [
       {
@@ -93,6 +175,17 @@
         "value": {
           "pt": "ALU–",
           "en": "ALU–"
+        }
+      },
+      {
+        "glyph": "⊙⊷⊙",
+        "label": {
+          "pt": "Endereço",
+          "en": "Address"
+        },
+        "value": {
+          "pt": "ALU-19F",
+          "en": "ALU-19F"
         }
       },
       {
@@ -120,28 +213,28 @@
     ]
   },
   {
-    "match": "Runo",
+    "match": "Ren",
     "name": {
-      "pt": "Runo",
-      "en": "Runo"
+      "pt": "Ren",
+      "en": "Ren"
     },
     "species": {
-      "pt": "Transistor vivo",
-      "en": "Living Transistor"
+      "pt": "Transistor",
+      "en": "Transistor"
     },
-    "image": "/imgs/kammara/z1/Vexa.png",
+    "image": "/imgs/kammara/z1/Ren.png",
     "bio": {
-      "pt": "Transistor pequeno, corpo escuro, leve. Perninhas ligeiramente flexíveis para acompanhar o fluxo. É a correnteza em movimento — leva sem reter. Quando para, algo está errado. Sua presença transmite continuidade.",
-      "en": "Small transistor, dark body, light on its feet. Slightly flexible legs that track the flow. He is the current in motion — carries without holding. When he stops, something is wrong. His presence conveys continuity."
+      "pt": "É a correnteza do Esquadrão — move, roteia, conecta. Leva cada coisa aonde precisa chegar sem nunca reter. Quando Ren para, algo está errado no planeta. Sua presença é a garantia de que o fluxo continua.",
+      "en": "He is the Squad's current — he moves, routes, connects. Carries everything where it needs to go without ever holding on. When Ren stops, something is wrong on the planet. His presence is the assurance that the flow goes on."
     },
-    "backImage": "",
+    "backImage": "/imgs/kammara/z1/Ren_costas.png",
     "backTitle": {
-      "pt": "",
-      "en": ""
+      "pt": "Outro Lado",
+      "en": "Other Side"
     },
     "dorsalMeaning": {
-      "pt": "",
-      "en": ""
+      "pt": "Não guardo nada. Só levo adiante.",
+      "en": "I keep nothing. I only carry it forward."
     },
     "attributes": [
       {
@@ -153,6 +246,17 @@
         "value": {
           "pt": "BUS–",
           "en": "BUS–"
+        }
+      },
+      {
+        "glyph": "⊙⊷⊙",
+        "label": {
+          "pt": "Endereço",
+          "en": "Address"
+        },
+        "value": {
+          "pt": "BUS-N4.009",
+          "en": "BUS-N4.009"
         }
       },
       {
@@ -186,22 +290,22 @@
       "en": "Synn"
     },
     "species": {
-      "pt": "Transistor vivo",
-      "en": "Living Transistor"
+      "pt": "Transistor",
+      "en": "Transistor"
     },
-    "image": "/imgs/kammara/z1/emo-1.jpg",
+    "image": "/imgs/kammara/z1/Synn.png",
     "bio": {
-      "pt": "Transistor escuro, corpo simples, faixa técnica única. Perninhas perfeitamente paralelas, como se nunca tivessem pressa. Luz interna branca pulsa lentamente — regular, constante, inevitável. Onde Synn está, o tempo se organiza.",
-      "en": "Dark transistor, simple body, a single technical stripe. Legs perfectly parallel, as if it had never known hurry. Internal white light pulses slowly — regular, constant, inevitable. Wherever Synn is, time falls into order."
+      "pt": "É o compasso vivo do Esquadrão. Marca o pulso que mantém todas as castas no mesmo ritmo — sem ele, os outros se desencontrariam no tempo. Regular, constante, inevitável: onde Synn está, o tempo se organiza.",
+      "en": "He is the Squad's living metronome. He marks the pulse that keeps every caste in the same rhythm — without him, the others would drift out of time. Regular, constant, inevitable: wherever Synn is, time falls into order."
     },
-    "backImage": "",
+    "backImage": "/imgs/kammara/z1/Synn_costas.png",
     "backTitle": {
-      "pt": "",
-      "en": ""
+      "pt": "Outro Lado",
+      "en": "Other Side"
     },
     "dorsalMeaning": {
-      "pt": "",
-      "en": ""
+      "pt": "Marco o tempo para que ninguém se perca nele.",
+      "en": "I keep time so no one gets lost in it."
     },
     "attributes": [
       {
@@ -216,6 +320,17 @@
         }
       },
       {
+        "glyph": "⊙⊷⊙",
+        "label": {
+          "pt": "Endereço",
+          "en": "Address"
+        },
+        "value": {
+          "pt": "CLK-07.112",
+          "en": "CLK-07.112"
+        }
+      },
+      {
         "glyph": "⊶⊷⊙",
         "label": {
           "pt": "Função",
@@ -224,66 +339,6 @@
         "value": {
           "pt": "Sincronização",
           "en": "Synchronization"
-        }
-      },
-      {
-        "glyph": "⊶⊹⊷",
-        "label": {
-          "pt": "Protocolo",
-          "en": "Protocol"
-        },
-        "value": {
-          "pt": "AURYN",
-          "en": "AURYN"
-        }
-      }
-    ]
-  },
-  {
-    "match": "Zeus",
-    "name": {
-      "pt": "Zeus",
-      "en": "Zeus"
-    },
-    "species": {
-      "pt": "Transistor vivo",
-      "en": "Living Transistor"
-    },
-    "image": "/imgs/kammara/z1/zeus.png",
-    "bio": {
-      "pt": "Transistor de potência ancestral, encapsulamento grande, escuro, pesado. Raramente se move — quando o faz, o planeta inteiro percebe. Sem olhos, sem marcas decorativas, apenas presença densa. Luz interna mínima, roxa, perceptível somente durante leituras críticas. Lê o que foi descartado e encontra ordem no abandono.",
-      "en": "Ancient power transistor, large, dark, heavy casing. Rarely moves — when it does, the entire planet notices. No eyes, no decorative marks, only dense presence. Minimal internal purple light, visible only during critical readings. Reads what was discarded and finds order in abandonment."
-    },
-    "backImage": "",
-    "backTitle": {
-      "pt": "",
-      "en": ""
-    },
-    "dorsalMeaning": {
-      "pt": "",
-      "en": ""
-    },
-    "attributes": [
-      {
-        "glyph": "•••••",
-        "label": {
-          "pt": "Casta",
-          "en": "Caste"
-        },
-        "value": {
-          "pt": "Z–",
-          "en": "Z–"
-        }
-      },
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Função",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "Síntese ancestral",
-          "en": "Ancestral Synthesis"
         }
       },
       {
