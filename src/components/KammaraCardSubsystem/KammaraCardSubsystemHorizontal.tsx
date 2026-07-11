@@ -1,6 +1,6 @@
 'use client';
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { KammaraRoulette, type KammaraRouletteHandle } from '@/components/KammaraRoulette';
 import type {
   KammaraCardSubsystemProps,
@@ -57,11 +57,20 @@ export function KammaraCardSubsystemHorizontal({
   const [activeIndex, setActiveIndex] = useState(0);
   const activeItem = tabs[activeIndex];
   const rouletteRef = useRef<KammaraRouletteHandle>(null);
-  // Swapping the body content when the user picks a new tab resets the
-  // scroller to the top, which fires a synthetic `onScroll` that would
-  // otherwise close the roulette. This flag tells the scroll handler to
-  // ignore the very next event after a tab change.
+  // Corpo de texto rolável (variante C). Ao trocar de tab, só o conteúdo do
+  // Box muda — o elemento DOM persiste, então o navegador PRESERVA o scrollTop
+  // e o novo subsistema abre no meio da leitura anterior. Resetamos o scroll
+  // pro topo no effect abaixo.
+  const bodyRef = useRef<HTMLDivElement>(null);
+  // Ao resetar o scroll na troca de tab, o navegador dispara um `onScroll`
+  // sintético que fecharia a roleta. Esta flag manda o handler ignorar o
+  // próximo evento após a troca.
   const suppressNextScroll = useRef(false);
+
+  // Volta o texto pro início toda vez que muda o subsistema ativo.
+  useEffect(() => {
+    if (bodyRef.current) bodyRef.current.scrollTop = 0;
+  }, [activeIndex]);
 
   const isLight = theme === 'light';
   const textColor = isLight ? 'overlayLightSoft' : 'textOverlayBright';
@@ -594,6 +603,7 @@ export function KammaraCardSubsystemHorizontal({
               content also collapses the roulette so it gets out of the
               reading area. */}
           <Box
+            ref={bodyRef}
             flex={1}
             minH={0}
             overflowY="auto"
