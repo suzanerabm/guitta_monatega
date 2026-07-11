@@ -7,14 +7,7 @@
       "en": "tower station"
     }
   },
-  {
-    "video": "/imgs/kammara/z1/_videos/transporte_dentro_CENTRAL_SQUARE.mp4",
-    "poster": "/imgs/kammara/z1/_videos/transporte_dentro_CENTRAL_SQUARE_poster.jpg",
-    "label": {
-      "pt": "transporte na praça central",
-      "en": "transport in the central square"
-    }
-  },
+  
   {
     "video": "/imgs/kammara/z1/_videos/tempestades_curto_circuito.mp4",
     "poster": "/imgs/kammara/z1/_videos/tempestades_curto_circuito_poster.jpg",
@@ -29,6 +22,15 @@
     "label": {
       "pt": "cidade em movimento",
       "en": "city in motion"
+    }
+  },
+  
+  {
+    "video": "/imgs/kammara/z1/_videos/transporte_dentro_CENTRAL_SQUARE.mp4",
+    "poster": "/imgs/kammara/z1/_videos/transporte_dentro_CENTRAL_SQUARE_poster.jpg",
+    "label": {
+      "pt": "transporte na praça central",
+      "en": "transport in the central square"
     }
   }
 ]

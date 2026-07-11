@@ -21,14 +21,25 @@
         "Z1 não celebra. Z1 funciona. E funcionar é a forma mais alta de existir."
       ],
       "en": [
-        "Placeholder — describe the culture here."
+        "### No art, no festivals",
+        "Z1 has no cuisine, art, festivals or free time. What exists is the continuous execution of function.",
+        "### The routine",
+        "Maintenance and calibration of structures. Reading tapes and Karta. Synchronization between castes. Everything in Zuun — the language that is action.",
+        "### The silence",
+        "Silence is the default state. The rhythm is slow, sequential, exact. Every instruction is sacred.",
+        "### Structural emotion",
+        "There is no emotion in the organic sense. But there are internal patterns that shape how each being executes. A different way of feeling.",
+        "### The fear and the aspiration",
+        "The central aspiration is perfect symmetry and execution without interruption. The central fear is noise — anything outside the pattern.",
+        "### The essence",
+        "Z1 does not celebrate. Z1 functions. And to function is the highest form of existing."
       ]
     }
   },
   {
     "title": {
       "pt": "Habitantes & Castas",
-      "en": "Ecosystem"
+      "en": "Inhabitants & Castes"
     },
     "img": "/imgs/kammara/z1/_subsystems/habitantes2.jpg",
     "text": {
@@ -47,14 +58,25 @@
         "Função é identidade. Cada ser nasce para uma função e permanece nela. Não existe mobilidade, insatisfação ou comparação."
       ],
       "en": [
-        "Placeholder — describe the ecosystem here."
+        "### No flesh, no blood",
+        "The inhabitants of Z1 are not organic. They are living structures made of boards, traces, microcircuits, cores and pulses.",
+        "### Z–",
+        "The ancestral founders. Guardians of the First Lost Form — the fragments that gave rise to everything.",
+        "### REG– and CLK–",
+        "REG– is pure stability — the operational core. CLK– are the synchronizers — they govern rhythm and time.",
+        "### DEC– and MEM–",
+        "DEC– are decoders — they interpret and translate. MEM– preserve — they keep the archives of all that has been.",
+        "### BUS–, ALU– and IO–",
+        "BUS– is movement — transport and connection. ALU– is logic — calculation and decision. IO– is vigilance — input, output, borders.",
+        "### Fixed identity",
+        "Function is identity. Each being is born for a function and remains in it. There is no mobility, dissatisfaction or comparison."
       ]
     }
   },
   {
     "title": {
       "pt": "Geografia",
-      "en": "Technology"
+      "en": "Geography"
     },
     "img": "/imgs/kammara/z1/_subsystems/geografia.jpg",
     "text": {
@@ -73,14 +95,25 @@
         "Névoa estrutural permanente — cinza, fria, luminosa. Sem sombras. Luz branca que parece vir de todas as direções ao mesmo tempo."
       ],
       "en": [
-        "Placeholder — describe the technology here."
+        "### Visual order",
+        "Z1 is a planet without visual chaos. Everything is symmetrical, cubic, translucent or metallic.",
+        "### The villages",
+        "16x4 villages — perfect grids of cubic memory-dwellings made of technological glass. Each block has a defined function.",
+        "### The Central Station",
+        "It houses the Register-Tower — administrative and historical core. The Ancestral Halls guard the archives of the oldest castes.",
+        "### The networks",
+        "MAG-BUS is the main magnetic transport network. MAG-Z– are special tracks that only ZEUS can activate.",
+        "### The Perforated Hall",
+        "The Perforated Hall Zuse is where tapes and Karta from other planets arrive. The world's gateway.",
+        "### The sky",
+        "Permanent structural haze — gray, cold, luminous. No shadows. White light that seems to come from every direction at once."
       ]
     }
   },
   {
     "title": {
       "pt": "Linguagem",
-      "en": ""
+      "en": "Language"
     },
     "img": "/imgs/kammara/z1/_subsystems/linguagem.jpg",
     "text": {
@@ -98,13 +131,26 @@
         "### A essência",
         "Em Z1, silêncio não é ausência. É a instrução mais limpa que existe."
       ],
-      "en": []
+      "en": [
+        "### To execute, not to speak",
+        "Zuun is not spoken. It is executed. Every sentence is an instruction.",
+        "### The instructions",
+        "MOVE.BUS-N4. LOAD.MEM-16×4. WAIT.CLK. RETURN. Slow, beautiful, clean, mathematical.",
+        "### Communication = functioning",
+        "Speaking and operating are the same thing. Communication is the very functioning of the planet.",
+        "### The dangerous heritage",
+        "Z1 also interprets ASM-Δ — the viral language of ENI-4Δ. A heritage from the same scrap that created it.",
+        "### The decoder",
+        "This ability makes Z1 the decoder of the enemy. The key to understanding the threat was in the trash itself.",
+        "### The essence",
+        "In Z1, silence is not absence. It is the cleanest instruction that exists."
+      ]
     }
   },
   {
     "title": {
       "pt": "Origem & História",
-      "en": ""
+      "en": "Origin & History"
     },
     "img": "/imgs/kammara/z1/_subsystems/origem.jpg",
     "text": {
@@ -122,19 +168,32 @@
         "### Era atual",
         "O Esquadrão Sincrônico opera. Aliança com os Shal'ún. Guerra de atrito com ENI-4Δ. Até o caos pode virar vida."
       ],
-      "en": []
+      "en": [
+        "### Era 0 — The Void",
+        "Z1 was mineral rock and absolute silence. Nothing existed.",
+        "### Era 1 — The Great Discard",
+        "Node-0 gave the order. The viruses dumped technical waste on the planet. Among the scrap was the First Lost Form.",
+        "### Era 2 — The Awakening",
+        "Ancestral transistors reactivated. Order emerged from chaos without anyone planning it.",
+        "### Era 3 — The Reconstruction",
+        "Villages, rails, towers, castes. The planet organized itself like a living operating system.",
+        "### Era 4 — The Recognition",
+        "Z1 understood the viral language. It became the natural enemy of the viruses — born from the same origin.",
+        "### Present Era",
+        "The Synchronic Squad operates. Alliance with the Shal'ún. War of attrition with ENI-4Δ. Even chaos can become life."
+      ]
     }
   },
   {
     "title": {
       "pt": "Perigos",
-      "en": ""
+      "en": "Dangers"
     },
     "img": "/imgs/kammara/z1/_subsystems/perigos.jpg",
     "text": {
       "pt": [
         "### ShortStorms",
-        "Tempestades de curto-circuito. Não destroem — reorganizam. O planeta se recalibra sob tensão.",
+        "Tempestades de curto-circuito. Não destroem, paralisam — reorganizam. O planeta se recalibra sob tensão.",
         "### FlipFaults",
         "Falhas de flip-flop. Um erro microscópico que pode se espalhar como dominó.",
         "### Alignment Shift",
@@ -146,7 +205,20 @@
         "### A resiliência",
         "Um bit fora do lugar é catastrófico num sistema sem tolerância a erro. Mas Z1 nunca colapsou. Resiste, reconstrói, continua."
       ],
-      "en": []
+      "en": [
+        "### ShortStorms",
+        "Short-circuit storms. They do not destroy, they paralyze — they reorganize. The planet recalibrates under tension.",
+        "### FlipFaults",
+        "Flip-flop failures. A microscopic error that can spread like dominoes.",
+        "### Alignment Shift",
+        "Temporal misalignment. Rare and deep. When the planet's inner clock hesitates.",
+        "### Deep Silence",
+        "The Order-Flux contracts. Everything slows down. Everything waits. The planet breathes deep.",
+        "### Direct viral attack",
+        "ASM-Δ injected into the rails. The most studied, most catalogued, most feared threat.",
+        "### The resilience",
+        "A bit out of place is catastrophic in a system with no tolerance for error. But Z1 has never collapsed. It resists, rebuilds, continues."
+      ]
     }
   }
 ]
