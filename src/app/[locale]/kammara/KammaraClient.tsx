@@ -744,22 +744,26 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
         </Box>
 
         {/* ── PRÓXIMOS PLANETAS — heatmap de progresso ───────────────── */}
-        <Box
-          width="100%"
-          mt="calc(var(--chakra-spacing-3xl) + 60px)"
-          mb="calc(var(--chakra-spacing-3xl) + 60px)"
-          px={{ base: '25px', md: '2rem', xl: '3rem' }}
-        >
-          <KammaraProgressHeatmap
-            title={locale === 'en' ? 'Upcoming Worlds' : 'Próximos Planetas'}
-            subline={sectionName}
-            categories={kammaraProgressData.categories}
-            planets={kammaraInProgress()}
-            locale={locale}
-            color={kammaraPalette.colors[0]}
-            darkColor={kammaraPalette.dark}
-          />
-        </Box>
+        {/* Só aparece enquanto houver planeta em construção (<100). Quando
+            todos chegam a 100, a seção some da interface por completo. */}
+        {kammaraInProgress().length > 0 && (
+          <Box
+            width="100%"
+            mt="calc(var(--chakra-spacing-3xl) + 60px)"
+            mb="calc(var(--chakra-spacing-3xl) + 60px)"
+            px={{ base: '25px', md: '2rem', xl: '3rem' }}
+          >
+            <KammaraProgressHeatmap
+              title={locale === 'en' ? 'Upcoming Worlds' : 'Próximos Planetas'}
+              subline={sectionName}
+              categories={kammaraProgressData.categories}
+              planets={kammaraInProgress()}
+              locale={locale}
+              color={kammaraPalette.colors[0]}
+              darkColor={kammaraPalette.dark}
+            />
+          </Box>
+        )}
       </CreatureSection>
 
       {/* ── WORLDS ─────────────────────────────────────────────────────── */}
