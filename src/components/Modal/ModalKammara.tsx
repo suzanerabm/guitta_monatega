@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from 'react';
 import { Box, Flex, Text, Heading } from '@chakra-ui/react';
 import { useModal } from './ModalProvider';
 import { ZoomableImage } from '@/components/ZoomableImage';
-import { KammaraWatermark } from '@/components/KammaraWatermark';
 
 function formatFilename(path: string): string {
   const file = path.split('/').pop() || '';
@@ -144,13 +143,6 @@ export function ModalKammara() {
   const techniqueText =
     labels?.[currentIndex] || formatFilename(currentImage);
   const navColor = textColor ?? color;
-
-  // Teto de altura da mídia. No DESKTOP a paginação (setas + "N / M") fica no
-  // rodapé como `position:absolute; bottom:0`; sem reservar espaço, numa janela
-  // larga e BAIXA a imagem cresce até o fundo do card e cobre a paginação. Aqui
-  // descontamos essa faixa (~4.5rem) do teto da mídia. No mobile a paginação vai
-  // pras laterais (paisagem) ou tem espaço de sobra (retrato), então fica 100%.
-  const mediaMaxHeight = isCleanMobile ? '100%' : 'calc(100% - 4.5rem)';
 
   return (
     <>
@@ -376,7 +368,7 @@ export function ModalKammara() {
                   poster={currentImage}
                   style={{
                     maxWidth: '100%',
-                    maxHeight: mediaMaxHeight,
+                    maxHeight: '100%',
                     objectFit: 'contain',
                     borderRadius: '16px',
                     display: 'block',
@@ -397,7 +389,7 @@ export function ModalKammara() {
                   alt={heroTitle || techniqueText || ''}
                   style={{
                     maxWidth: '100%',
-                    maxHeight: mediaMaxHeight,
+                    maxHeight: '100%',
                     objectFit: 'contain',
                     borderRadius: '16px',
                     display: 'block',
@@ -408,7 +400,7 @@ export function ModalKammara() {
                   key={currentImage}
                   src={currentImage}
                   alt={heroTitle || techniqueText || ''}
-                  maxHeight={mediaMaxHeight}
+                  maxHeight="100%"
                 />
               )}
 
@@ -484,11 +476,6 @@ export function ModalKammara() {
                 </>
               )}
 
-              {/* Origin stamp over the media — same crest + world mark as the
-                  cards. Non-interactive, so video controls and zoom still work. */}
-              {variant === 'kammara' && heroTitle && (
-                <KammaraWatermark crestGlyph={crestGlyph} worldName={heroTitle} size="modal" placement="center" />
-              )}
 
               {/* Side label (desktop only) — rotated, bottom-left of photo. */}
               {techniqueText && (
