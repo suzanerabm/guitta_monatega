@@ -65,13 +65,13 @@
       "id": "z1",
       "name": { "pt": "Z1", "en": "Z1" },
       "progress": {
-        "lore": 96,
-        "personagens": 95,
+        "lore": 100,
+        "personagens": 100,
         "criaturas": 100,
-        "design-conceito": 70,
+        "design-conceito": 100,
         "characters-design": 100,
-        "cenas": 40,
-        "website": 90
+        "cenas": 100,
+        "website": 100
       }
     },
     {
@@ -92,12 +92,12 @@
       "name": { "pt": "Digg", "en": "Digg" },
       "progress": {
         "lore": 100,
-        "personagens": 95,
-        "criaturas": 80,
-        "design-conceito": 90,
-        "characters-design": 90,
-        "cenas": 60,
-        "website": 0
+        "personagens": 100,
+        "criaturas": 100,
+        "design-conceito": 100,
+        "characters-design": 100,
+        "cenas": 100,
+        "website": 100
       }
     },
     {
