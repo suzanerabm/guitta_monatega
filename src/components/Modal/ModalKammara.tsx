@@ -41,9 +41,13 @@ function useMobileModal() {
       const w = window.innerWidth;
       const h = window.innerHeight;
       const landscape = w > h;
-      // Mobile-clean: largura de celular (<=768px) OU deitado num viewport
-      // curto (celular virado tem ~850px de largura mas altura baixa).
-      const cleanMobile = w <= 768 || (landscape && h <= 768);
+      // Mobile-clean: largura de celular (<=768px) OU um celular DEITADO — que
+      // tem altura baixa (<=768) MAS largura ainda de telefone (<=950). O teto
+      // de largura é essencial: sem ele, um monitor widescreen com a janela
+      // baixa (ex: 1600x700) caía como "celular deitado" e o modal escondia a
+      // paginação de baixo esperando as setas laterais (que são só do mobile),
+      // deixando a navegação inacessível no desktop.
+      const cleanMobile = w <= 768 || (landscape && h <= 768 && w <= 950);
       setIsLandscape(landscape);
       setIsCleanMobile(cleanMobile);
     };
@@ -140,6 +144,13 @@ export function ModalKammara() {
   const techniqueText =
     labels?.[currentIndex] || formatFilename(currentImage);
   const navColor = textColor ?? color;
+
+  // Teto de altura da mídia. No DESKTOP a paginação (setas + "N / M") fica no
+  // rodapé como `position:absolute; bottom:0`; sem reservar espaço, numa janela
+  // larga e BAIXA a imagem cresce até o fundo do card e cobre a paginação. Aqui
+  // descontamos essa faixa (~4.5rem) do teto da mídia. No mobile a paginação vai
+  // pras laterais (paisagem) ou tem espaço de sobra (retrato), então fica 100%.
+  const mediaMaxHeight = isCleanMobile ? '100%' : 'calc(100% - 4.5rem)';
 
   return (
     <>
@@ -365,7 +376,7 @@ export function ModalKammara() {
                   poster={currentImage}
                   style={{
                     maxWidth: '100%',
-                    maxHeight: '100%',
+                    maxHeight: mediaMaxHeight,
                     objectFit: 'contain',
                     borderRadius: '16px',
                     display: 'block',
@@ -386,7 +397,7 @@ export function ModalKammara() {
                   alt={heroTitle || techniqueText || ''}
                   style={{
                     maxWidth: '100%',
-                    maxHeight: '100%',
+                    maxHeight: mediaMaxHeight,
                     objectFit: 'contain',
                     borderRadius: '16px',
                     display: 'block',
@@ -397,7 +408,7 @@ export function ModalKammara() {
                   key={currentImage}
                   src={currentImage}
                   alt={heroTitle || techniqueText || ''}
-                  maxHeight="100%"
+                  maxHeight={mediaMaxHeight}
                 />
               )}
 
