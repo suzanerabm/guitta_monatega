@@ -105,12 +105,12 @@
       "name": { "pt": "Memphis", "en": "Memphis" },
       "progress": {
         "lore": 100,
-        "personagens": 75,
-        "criaturas": 50,
-        "design-conceito": 90,
-        "characters-design": 90,
-        "cenas": 10,
-        "website": 0
+        "personagens": 100,
+        "criaturas": 100,
+        "design-conceito": 100,
+        "characters-design": 100,
+        "cenas": 100,
+        "website": 10
       }
     }
   ]
