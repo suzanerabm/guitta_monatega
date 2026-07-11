@@ -2,7 +2,7 @@
    {
     "world": "lunnp1",
     "video": "/imgs/kammara/lunnp1/_videos/erurin_andando.mp4",
-    "poster": "/imgs/kammara/lunnp1/_videos/erurin_andando.jpg",
+    "poster": "/imgs/kammara/lunnp1/_videos/erurin_andando_poster.jpg",
     "label": { "pt": "Erurin", "en": "Erurin" },
     "href": ""
   },
@@ -16,7 +16,7 @@
   {
     "world": "triplec",
     "video": "/imgs/kammara/triplec/_videos/soar_voando.mp4",
-    "poster": "/imgs/kammara/triplec/_videos/soar_voando.jpg",
+    "poster": "/imgs/kammara/triplec/_videos/soar_voando_poster.jpg",
     "label": { "pt": "Soar", "en": "Soar" },
     "href": ""
   },

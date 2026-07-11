@@ -14,13 +14,6 @@
     }
   },
   {
-    "image": "/imgs/kammara/triplec/_scenes/2_niul_Forest.jpg",
-    "label": {
-      "pt": "Floresta Niul",
-      "en": "Niul Forest"
-    }
-  },
-  {
     "image": "/imgs/kammara/triplec/_scenes/protecao_criptografia.jpg",
     "label": {
       "pt": "Proteção e criptografia",
@@ -67,6 +60,20 @@
     "label": {
       "pt": "Região Mesh — praça",
       "en": "Mesh region — plaza"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/_scenes/regiao_sharp_praca.jpg",
+    "label": {
+      "pt": "Região Sharp — praça",
+      "en": "Sharp region — plaza"
+    }
+  },
+  {
+    "image": "/imgs/kammara/triplec/_scenes/regiao_malloc_vista_cidade.jpg",
+    "label": {
+      "pt": "Região Malloc — vista da cidade",
+      "en": "Malloc region — city view"
     }
   },
   {
