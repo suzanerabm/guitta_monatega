@@ -36,7 +36,7 @@
     "label": { "pt": "Vila Central, Leste", "en": "Central Village, East" }
   },
   {
-    "image": "/imgs/kammara/gotto/_scenes/Vila_Central_Leste_Rema_dormindo.jpg",
+    "image": "/imgs/kammara/gotto/_scenes/Vila_Central_Leste_Rema_dormindo.png",
     "label": { "pt": "Rema dormindo, Vila Central Leste", "en": "Rema sleeping, Central Village East" }
   },
   {
@@ -72,7 +72,7 @@
     "label": { "pt": "O Vale da Escuta, outra vista", "en": "The Valley of Listening, another view" }
   },
   {
-    "image": "/imgs/kammara/gotto/_scenes/Flip_sleeping.png",
+    "image": "/imgs/kammara/gotto/_scenes/Flip_sleeping.jpg",
     "label": { "pt": "Flip dormindo", "en": "Flip sleeping" }
   }
 ]
