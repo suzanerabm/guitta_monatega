@@ -1,34 +1,70 @@
 [
   {
-    "image": "/imgs/kammara/gotto/_scenes/regiao_10.jpg",
+    "image": "/imgs/kammara/gotto/_scenes/1_Vale_Escuta.jpg",
     "label": { "pt": "O Vale da Escuta", "en": "The Valley of Listening" }
   },
   {
-    "image": "/imgs/kammara/gotto/_scenes/vista_regiao_deserta_com_frutas.jpg",
-    "label": { "pt": "A região das frutas", "en": "The fruit region" }
+    "image": "/imgs/kammara/gotto/_scenes/2_Vale_Escuta_kirio_camuflado.jpg",
+    "label": { "pt": "Kirió camuflado no Vale da Escuta", "en": "Kirió camouflaged in the Valley of Listening" }
   },
   {
-    "image": "/imgs/kammara/gotto/_scenes/cultivo_flores.jpg",
+    "image": "/imgs/kammara/gotto/_scenes/2_Vale_Reflexo.jpg",
+    "label": { "pt": "O Vale do Reflexo", "en": "The Valley of Reflection" }
+  },
+  {
+    "image": "/imgs/kammara/gotto/_scenes/Cultivo_flores.jpg",
     "label": { "pt": "O cultivo das flores", "en": "The flower fields" }
   },
   {
-    "image": "/imgs/kammara/gotto/_scenes/Arredores_vila_central.jpg",
-    "label": { "pt": "Arredores da vila central", "en": "Around the central village" }
-  },
-  {
-    "image": "/imgs/kammara/gotto/_scenes/cena_vila_lateral1.jpg",
-    "label": { "pt": "A vila, de lado", "en": "The village, from the side" }
-  },
-  {
-    "image": "/imgs/kammara/gotto/_scenes/vila_de_perto.jpg",
-    "label": { "pt": "A vila de perto", "en": "The village up close" }
-  },
-  {
-    "image": "/imgs/kammara/gotto/_scenes/kirio_vigiando_morro2.jpg",
-    "label": { "pt": "Kirió, o Vigia do Morro", "en": "Kirió, the Hill Watcher" }
-  },
-  {
-    "image": "/imgs/kammara/gotto/_scenes/erurin_visits_gotto1.jpg",
+    "image": "/imgs/kammara/gotto/_scenes/Erurin_visits_gotto.jpg",
     "label": { "pt": "Erurin visita Gotto", "en": "Erurin visits Gotto" }
+  },
+  {
+    "image": "/imgs/kammara/gotto/_scenes/Kirio_vigiando_Vila_Central.jpg",
+    "label": { "pt": "Kirió vigiando a Vila Central", "en": "Kirió watching over the Central Village" }
+  },
+  {
+    "image": "/imgs/kammara/gotto/_scenes/Vila_Central_vista.png",
+    "label": { "pt": "A Vila Central", "en": "The Central Village" }
+  },
+  {
+    "image": "/imgs/kammara/gotto/_scenes/Vila_Central_Arredores.jpg",
+    "label": { "pt": "Arredores da Vila Central", "en": "Around the Central Village" }
+  },
+  {
+    "image": "/imgs/kammara/gotto/_scenes/Vila_Central_Leste.jpg",
+    "label": { "pt": "Vila Central, Leste", "en": "Central Village, East" }
+  },
+  {
+    "image": "/imgs/kammara/gotto/_scenes/Vila_Central_Leste_Rema_dormindo.jpg",
+    "label": { "pt": "Rema dormindo, Vila Central Leste", "en": "Rema sleeping, Central Village East" }
+  },
+  {
+    "image": "/imgs/kammara/gotto/_scenes/Vila_Central_Oeste.jpg",
+    "label": { "pt": "Vila Central, Oeste", "en": "Central Village, West" }
+  },
+  {
+    "image": "/imgs/kammara/gotto/_scenes/Vila_Central_Sul.jpg",
+    "label": { "pt": "Vila Central, Sul", "en": "Central Village, South" }
+  },
+  {
+    "image": "/imgs/kammara/gotto/_scenes/Vila_Leste.jpg",
+    "label": { "pt": "A Vila Leste", "en": "The East Village" }
+  },
+  {
+    "image": "/imgs/kammara/gotto/_scenes/Vila_da_Orla.jpg",
+    "label": { "pt": "A Vila da Orla", "en": "The Shore Village" }
+  },
+  {
+    "image": "/imgs/kammara/gotto/_scenes/Jump_preparando_escamas.jpg",
+    "label": { "pt": "Jump preparando as escamas", "en": "Jump preparing the scales" }
+  },
+  {
+    "image": "/imgs/kammara/gotto/_scenes/Jump_trabalhando_escamas.png",
+    "label": { "pt": "Jump trabalhando as escamas", "en": "Jump working the scales" }
+  },
+  {
+    "image": "/imgs/kammara/gotto/_scenes/kirio_comendo.png",
+    "label": { "pt": "Kirió comendo", "en": "Kirió eating" }
   }
 ]

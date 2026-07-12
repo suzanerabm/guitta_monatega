@@ -136,7 +136,7 @@
     },
     "backImage": "/imgs/kammara/gotto/jump_costas.png",
     "backTitle": {
-     "pt": "Outro lado",
+      "pt": "Outro lado",
       "en": "Another side"
     },
     "dorsalMeaning": {
@@ -186,13 +186,13 @@
       "en": "Kirió"
     },
     "species": {
-      "pt": "Attentis",
-      "en": "Attentis"
+      "pt": "Kirió",
+      "en": "Kirió"
     },
     "image": "/imgs/kammara/gotto/kirio_frente.png",
     "bio": {
-      "pt": "Kirió parece um morro — e é. Um guardião colossal coberto de folhagem viva que fica imóvel no alto, vigiando a planície e protegendo as vilas dos Basiks. Ancião anterior aos ciclos, ele não esquece quando o planeta reinicia — é a memória viva de Gotto.",
-      "en": "Kirió looks like a hill — and is one. A colossal guardian covered in living foliage that stands motionless up high, watching the plain and protecting the Basik villages. An elder older than the cycles, it does not forget when the planet restarts — it is the living memory of Gotto."
+      "pt": "Kirió parece um morro — e é. Uma ave colossal coberta de penas que imitam a folhagem, imóvel no alto, vigiando a planície e protegendo as vilas dos Basiks. Anciã anterior aos ciclos, ela não esquece quando o planeta reinicia — é a memória viva de Gotto.",
+      "en": "Kirió looks like a hill — and is one. A colossal bird covered in feathers that mimic the foliage, motionless up high, watching the plain and protecting the Basik villages. An elder older than the cycles, it does not forget when the planet restarts — it is the living memory of Gotto."
     },
     "backImage": "/imgs/kammara/gotto/kirio_back.png",
     "backTitle": {
@@ -200,8 +200,8 @@
       "en": "The Hill Watcher"
     },
     "backMeaning": {
-      "pt": "Meio animal, meio planta — mestre da camuflagem. Corpo de folhagem pêssego, creme e roxa, máscara de osso e chifre-folha curvado.",
-      "en": "Half animal, half plant — master of camouflage. A body of peach, cream and purple foliage, a bone mask and a curved leaf-horn."
+      "pt": "Mestra da camuflagem. Penas grandes pêssego, creme e roxa que imitam a folhagem, máscara de osso e crista-folha curvada.",
+      "en": "Master of camouflage. Large peach, cream and purple feathers that mimic the foliage, a bone mask and a curved leaf-crest."
     },
     "dorsalMeaning": {
       "pt": "Olhe o morro de novo. Ele está olhando de volta.",
@@ -268,8 +268,8 @@
           "en": "Role"
         },
         "value": {
-          "pt": "A fonte de tudo",
-          "en": "The source of everything"
+          "pt": "Escamas",
+          "en": "Scales"
         }
       },
       {
@@ -279,8 +279,106 @@
           "en": "Region"
         },
         "value": {
-          "pt": "Os rios largos da planície",
-          "en": "The wide rivers of the plain"
+          "pt": "Os rios",
+          "en": "The rivers"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Lumi",
+    "name": {
+      "pt": "Lumi",
+      "en": "Lumi"
+    },
+    "species": {
+      "pt": "Tzo",
+      "en": "Tzo"
+    },
+    "image": "",
+    "bio": {
+      "pt": "Lumi é um Tzo — o pequeno anfíbio lumínico, pet do Jump e primo dos Tzir'Kai de LUNN'P1. Entra no loop junto com o Jump: esquece os fatos a cada Recomeço, mas nunca o afeto. Não lembra o que viveram — e ainda assim reconhece o Jump na hora, e brilha. Onde o Jump salta, Lumi vai atrás.",
+      "en": "Lumi is a Tzo — the small luminous amphibian, Jump's pet and cousin to the Tzir'Kai of LUNN'P1. It enters the loop alongside Jump: it forgets the facts at each Restart, but never the affection. It doesn't remember what they lived — and yet recognizes Jump at once, and glows. Wherever Jump leaps, Lumi follows."
+    },
+    "backImage": "",
+    "backTitle": {
+      "pt": "O que esquece, menos o amor",
+      "en": "It forgets all but love"
+    },
+    "dorsalMeaning": {
+      "pt": "Não sei quem você é. Mas eu te amo.",
+      "en": "I don't know who you are. But I love you."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Pet dos Basiks",
+          "en": "The Basiks' pet"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Parente",
+          "en": "Kin"
+        },
+        "value": {
+          "pt": "Primo dos Tzir'Kai",
+          "en": "Cousin to the Tzir'Kai"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Momo",
+    "name": {
+      "pt": "Momo",
+      "en": "Momo"
+    },
+    "species": {
+      "pt": "Tzo",
+      "en": "Tzo"
+    },
+    "image": "",
+    "bio": {
+      "pt": "Momo é um Tzo da variedade mais curta e fofa — o pet arredondado da Rema e primo dos Tzir'Kai de LUNN'P1. Anfíbio lumínico azul, brilha conforme a emoção. Esquece tudo a cada Recomeço, mas o laço com a Rema atravessa o loop: os dois se reencontram como se fosse a primeira vez, sempre. Quietinho ao lado dela, no silêncio entre as notas.",
+      "en": "Momo is a Tzo of the shorter, chubbier kind — Rema's round little pet and cousin to the Tzir'Kai of LUNN'P1. A blue luminous amphibian that glows with emotion. It forgets everything at each Restart, but the bond with Rema crosses the loop: the two meet again as if for the first time, always. Quiet at her side, in the silence between the notes."
+    },
+    "backImage": "",
+    "backTitle": {
+      "pt": "Sempre a primeira vez",
+      "en": "Always the first time"
+    },
+    "dorsalMeaning": {
+      "pt": "Oi de novo! (a gente já se conhece?)",
+      "en": "Hi again! (do we know each other?)"
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Pet dos Basiks",
+          "en": "The Basiks' pet"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Parente",
+          "en": "Kin"
+        },
+        "value": {
+          "pt": "Primo dos Tzir'Kai",
+          "en": "Cousin to the Tzir'Kai"
         }
       }
     ]
