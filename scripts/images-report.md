@@ -1,6 +1,6 @@
 # 🖼️  Image weight audit
 
-_Generated 2026-07-12 00:45:39_
+_Generated 2026-07-12 00:52:43_
 
 ## Pipeline
 
@@ -31,9 +31,9 @@ spot onde o ganho de peso é máximo sem perda visual perceptível.
 | Métrica | Valor |
 |---|---|
 | Total de imagens | **976** |
-| Peso total | **165.5 MB** |
-| Acima do alvo (ideal por tipo) | **11** (1%) |
-| Críticos (> 2× o alvo) | **6** |
+| Peso total | **143.6 MB** |
+| Acima do alvo (ideal por tipo) | **0** (0%) |
+| Críticos (> 2× o alvo) | **0** |
 
 ## Alvos por tipo de imagem
 
@@ -49,7 +49,7 @@ spot onde o ganho de peso é máximo sem perda visual perceptível.
 
 | Pasta | Imagens | Peso |
 |---|---|---|
-| `kammara` | 561 | 146.4 MB |
+| `kammara` | 561 | 124.5 MB |
 | `art` | 276 | 10.7 MB |
 | `bichittos` | 125 | 6.9 MB |
 | `books` | 9 | 1.3 MB |
@@ -57,55 +57,8 @@ spot onde o ganho de peso é máximo sem perda visual perceptível.
 
 ## Top 30 arquivos mais pesados
 
-| Peso | Classificação | Caminho |
-|---|---|---|
-| 2.6 MB | 🔴 crítico (character / misc) | `imgs/kammara/gotto/daryun.png` |
-| 2.6 MB | 🔴 crítico (character / misc) | `imgs/kammara/gotto/daryun_back.png` |
-| 2.4 MB | 🔴 crítico (character / misc) | `imgs/kammara/triplec/sharp/Veris_Anon.png` |
-| 2.3 MB | 🔴 crítico (character / misc) | `imgs/kammara/digg/ZIN_costas.png` |
-| 2.3 MB | 🔴 crítico (character / misc) | `imgs/kammara/orfv/velo.png` |
-| 2.1 MB | 🔴 crítico (character / misc) | `imgs/kammara/triplec/mesh/EllenVar.png` |
-| 1.4 MB | 🟠 acima (character / misc) | `imgs/kammara/orfv/zupi_costas.png` |
-| 1.3 MB | 🟠 acima (character / misc) | `imgs/kammara/gotto/jump.png` |
-| 970 KB | 🟠 acima (character / misc) | `imgs/kammara/digg/CHMURKA_com_bolacha.png` |
-| 801 KB | 🟠 acima (character / misc) | `imgs/kammara/digg/Nihrak_frente.png` |
-| 779 KB | 🟠 acima (character / misc) | `imgs/kammara/digg/ORVIN.png` |
+_Nenhum arquivo acima do alvo 🎉_
 
 ## Todos acima do alvo, agrupados por pasta
 
-### `imgs/kammara/digg/` — 4.8 MB em 4 arquivos
-
-| Peso | Classificação | Arquivo |
-|---|---|---|
-| 2.3 MB | 🔴 crítico (character / misc) | `ZIN_costas.png` |
-| 970 KB | 🟠 acima (character / misc) | `CHMURKA_com_bolacha.png` |
-| 801 KB | 🟠 acima (character / misc) | `Nihrak_frente.png` |
-| 779 KB | 🟠 acima (character / misc) | `ORVIN.png` |
-
-### `imgs/kammara/gotto/` — 6.6 MB em 3 arquivos
-
-| Peso | Classificação | Arquivo |
-|---|---|---|
-| 2.6 MB | 🔴 crítico (character / misc) | `daryun.png` |
-| 2.6 MB | 🔴 crítico (character / misc) | `daryun_back.png` |
-| 1.3 MB | 🟠 acima (character / misc) | `jump.png` |
-
-### `imgs/kammara/orfv/` — 3.7 MB em 2 arquivos
-
-| Peso | Classificação | Arquivo |
-|---|---|---|
-| 2.3 MB | 🔴 crítico (character / misc) | `velo.png` |
-| 1.4 MB | 🟠 acima (character / misc) | `zupi_costas.png` |
-
-### `imgs/kammara/triplec/mesh/` — 2.1 MB em 1 arquivo
-
-| Peso | Classificação | Arquivo |
-|---|---|---|
-| 2.1 MB | 🔴 crítico (character / misc) | `EllenVar.png` |
-
-### `imgs/kammara/triplec/sharp/` — 2.4 MB em 1 arquivo
-
-| Peso | Classificação | Arquivo |
-|---|---|---|
-| 2.4 MB | 🔴 crítico (character / misc) | `Veris_Anon.png` |
-
+_Tudo dentro do alvo 🎉_
