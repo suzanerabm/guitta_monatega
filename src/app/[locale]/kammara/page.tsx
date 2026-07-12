@@ -7,6 +7,7 @@ import {
   getKammaraBg,
 } from '@/lib/images';
 import { getWorldSubsystemImages, getWorldScenes, getWorldDrops } from '@/data/characters/kammara/_worldData';
+import { isKammaraPublished } from '@/lib/visibility';
 import type { Locale } from '@/lib/characters';
 import { KammaraClient } from './KammaraClient';
 
@@ -35,7 +36,14 @@ export default async function KammaraPage({
   setRequestLocale(locale);
   const loc = locale as Locale;
 
-  const worlds = WORLD_IDS.map((id) => {
+  // SEGURANÇA: só monta o conteúdo dos mundos PUBLICADOS. Antes, o payload
+  // enviado ao cliente continha lore/cenas/imagens de mundos incompletos
+  // (ex: memphis 87%) — o gate só os escondia na UI, mas os dados vazavam no
+  // RSC/HTML e eram baixáveis. Filtrar aqui, na origem (server), garante que
+  // conteúdo não-publicado nunca sai da máquina. Em dev/preview
+  // `isKammaraPublished` retorna true pra tudo (via showAll), então o fluxo de
+  // edição continua vendo todos os mundos.
+  const worlds = WORLD_IDS.filter((id) => isKammaraPublished(id)).map((id) => {
     const base = {
       id,
       chars: getCharacters(`kammara/${id}`),
