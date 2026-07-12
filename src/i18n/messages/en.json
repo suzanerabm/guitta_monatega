@@ -133,7 +133,7 @@
     "kammara": {
       "label": "Universe",
       "title": "Kammara",
-      "desc": "A universe where memory becomes matter."
+      "desc": "A universe where every planet lives its own story."
     },
     "art": {
       "label": "ART GALLERY",
@@ -220,7 +220,7 @@
     "pageTitle": "Kammara — Guitta Monatega",
     "heroLabel": "Universe",
     "heroTitle": "Kammara",
-    "heroDesc": "A universe where memory becomes matter.",
+    "heroDesc": "Welcome to Kammara",
     "placeholder": "Placeholder — description goes here.",
     "charactersTitle": "Characters",
     "scenesTitle": "Scenes",
@@ -228,7 +228,8 @@
     "section": {
       "name": "Kammara Universe",
       "text": [
-        "Kammara — a universe where memory is matter and all matter is bio-logical. Billions of planets. Viruses that infiltrate unnoticed. And the few who dare to resist."
+        "What if humanity's inventions had kept evolving in another universe?",
+        "They did. And they became Kammara — a universe where every planet lives its own story."
       ],
       "books": [
         {
@@ -238,22 +239,24 @@
       ],
       "panel": {
         "story": [
-          "Kammara is a universe where memory is matter — and all matter is bio-logical.",
-          "Billions of planets exist in a fragile balance. Each one carries its own identity, a different way of feeling, processing and existing.",
-          "At the center of everything is the kemita — the primordial token: half mineral, half logic, half organic. It is born in the deep caves of a single planet and fuels routes, records and the very foundation of the universe.",
-          "Without kemita, nothing moves. Nothing is recorded. Nothing is sustained. Whoever controls the kemita, controls destiny.",
-          "But where there is energy, there is what tries to consume it. The viruses do not attack with force. They infiltrate with patience. They arrive disguised, earn trust, and drain everything from within.",
-          "They create nothing. They only consume. And when the symptoms appear, the invasion is already over.",
-          "On the other side are those who resist. Entire peoples who learned to read signs before they become threats, to protect borders without violence, to reorganize when everything seems lost.",
-          "The AURYN Protocol is the alliance that unites them — a crisis response system that crosses planets when the balance of the universe is at risk.",
-          "The war in Kammara is not between good and evil. It is between what is true and what pretends to be. Between those who create energy and those who only consume it. Between seeing in time — and realizing too late.",
-          "This is Kammara. And the story is far from over."
+          "### Kammara",
+          "Some of humanity's inventions followed a path of their own, far beyond where they were born — and out there, each one became a planet. That's how Kammara came to be: a universe of countless planets, each with its own people, its own way of being, and a whole lot of stories waiting to be told.",
+          "### The planets",
+          "Every planet is one of a kind. Some flow in calm, others live in motion; some build, some keep, some begin again with every cycle.",
+          "### The crossings",
+          "The planets reach one another. Between them lie passages — corridors that open for an instant and close once the crossing is done. Through them, peoples meet, trade, contend, and discover each other. Some cross the cosmos in ships; others travel to the rhythm of their own planet.",
+          "### The encounters",
+          "When two planets cross paths, that's when everything happens. Sometimes a bond is born — a kinship, an alliance, a shared origin. Sometimes a friction — when what one treasures is exactly what the other holds most dear.",
+          "### Explore",
+          "Kammara is a living universe, in motion, always unfolding. Wander, explore… and discover which planet is your favorite.",
+          "### The essence",
+          "Kammara — a universe where every planet lives its own story."
         ]
       }
     },
     "booksTitle": "Books",
     "planetsTitle": "Planets",
-    "planetsDesc": "The worlds of Kammara — each one a universe of its own."
+    "planetsDesc": "The planets of Kammara — each one a universe of its own."
   },
   "art": {
     "pageTitle": "Art — Guitta Monatega",

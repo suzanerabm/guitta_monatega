@@ -133,7 +133,7 @@
     "kammara": {
       "label": "Universo",
       "title": "Kammara",
-      "desc": "Um universo onde memória é matéria."
+      "desc": "Um universo onde cada planeta vive a sua própria história."
     },
     "art": {
       "label": "Galeria de Arte",
@@ -218,9 +218,9 @@
   },
   "kammara": {
     "pageTitle": "Kammara — Guitta Monatega",
-    "heroLabel": "Saga Ilustrada",
+    "heroLabel": "Universo",
     "heroTitle": "Kammara",
-    "heroDesc": "Um universo bio-lógico. Uma guerra invisível. Uma saga que está longe de terminar.",
+    "heroDesc": "Bem-vindo ao Kammara",
     "placeholder": "Placeholder — descrição vai aqui.",
     "charactersTitle": "Personagens",
     "scenesTitle": "Cenas",
@@ -228,7 +228,8 @@
     "section": {
       "name": "Universo Kammara",
       "text": [
-        "Kammara — um universo onde memória é matéria e toda matéria é bio-lógica. Bilhões de planetas. Vírus que se infiltram sem serem notados. E os poucos que ousam resistir."
+        "E se as invenções da humanidade continuassem evoluindo em outro universo?",
+        "Continuaram. E se tornaram Kammara — um universo onde cada planeta vive a sua própria história."
       ],
       "books": [
         {
@@ -238,28 +239,24 @@
       ],
       "panel": {
         "story": [
-          "### O que é o Kammara",
-          "Kammara é um universo onde memória é matéria — e toda matéria é bio-lógica. Não é só um planeta ou uma galáxia. São bilhões de mundos, cada um com sua própria identidade, seu próprio povo, sua própria forma de existir.",
-          "### A kemita",
-          "No centro de tudo existe um recurso chamado kemita — uma espécie de mineral vivo, metade lógica, metade orgânica. Ela nasce nas cavernas de um único planeta e alimenta todo o universo: rotas de viagem, registros, energia. Sem kemita, nada funciona.",
-          "### O Cshift",
-          "O Cshift é o sistema de transporte que conecta o Kammara inteiro. Não são naves, não são portais fixos — são passagens instantâneas abertas por Sementes de Cshift, pequenos objetos compilados feitos de kemita, verdes com veios dourados. Cada Semente é de uso único: ao ser ativada, vira um corredor entre dois mundos, e quando a travessia termina, se desfaz. Sem o Cshift, os planetas do Kammara seriam ilhas isoladas no cosmos.",
-          "### Os vírus",
-          "Mas nem todo mundo cria energia. Os vírus são seres que não produzem nada — apenas consomem o que é dos outros. Eles não atacam com força. Se infiltram com paciência, ganham confiança, e drenam tudo por dentro. Quando a vítima percebe, já é tarde.",
-          "### A resistência",
-          "Do outro lado estão os que aprenderam a resistir. Povos inteiros que leem sinais antes que virem ameaças, que protegem fronteiras sem violência, que se reorganizam quando tudo parece perdido.",
-          "### O Protocol AURYN",
-          "Quando crises virais ameaçam múltiplos planetas ao mesmo tempo, é ativado o Protocol AURYN — a aliança de resposta coordenada do Kammara. Cada planeta entra com o que sabe fazer melhor. LUNN'P1 lidera, porque seu povo é o único naturalmente imune a vírus. Z1 decodifica a linguagem do inimigo. TripleC fornece energia e os canais de Cshift. Gotto desorganiza o invasor. ORF-V mantém as pontes de comunicação abertas. É a última linha de defesa quando o equilíbrio do universo está em risco.",
-          "### A guerra",
-          "No Kammara, a guerra não é entre o bem e o mal — é entre quem cria e quem consome. Entre ver a tempo e perceber tarde demais.",
-          "### E agora",
-          "Este é o Kammara. E a história está longe de terminar."
+          "### Kammara",
+          "Algumas invenções da humanidade seguiram seu próprio caminho, muito além de onde nasceram — e, lá longe, cada uma acabou virando um planeta. Assim nasceu Kammara: um universo com incontáveis planetas, cada um com seu povo, seu jeito de existir e um monte de histórias esperando pra serem contadas.",
+          "### Os planetas",
+          "Cada planeta é único. Alguns fluem em calma, outros vivem em movimento; alguns constroem, alguns guardam, alguns recomeçam a cada ciclo.",
+          "### As travessias",
+          "Os planetas conversam entre si. Entre eles existem passagens — corredores que se abrem por um instante e se fecham quando a travessia termina. É por elas que os povos se encontram, trocam, disputam e se descobrem. Alguns cruzam o cosmos em naves; outros viajam no ritmo do próprio planeta.",
+          "### Os encontros",
+          "É quando dois planetas se cruzam que tudo acontece. Às vezes nasce um laço — um parentesco, uma aliança, uma origem partilhada. Às vezes, um atrito — quando aquilo que um valoriza é justo o que o outro guarda como mais precioso.",
+          "### Explore",
+          "Este é o Kammara é um universo vivo, em movimento, sempre em curso. Navegue, explore… e descubra qual é o seu planeta favorito.",
+          "### A essência",
+          "Kammara — um universo onde cada planeta vive a sua própria história."
         ]
       }
     },
     "booksTitle": "Livros",
     "planetsTitle": "Planetas",
-    "planetsDesc": "Os mundos de Kammara — cada um um universo próprio."
+    "planetsDesc": "Os planetas de Kammara — cada um, um universo à parte."
   },
   "art": {
     "pageTitle": "Arte — Guitta Monatega",
