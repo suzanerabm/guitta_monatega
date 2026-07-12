@@ -91,6 +91,8 @@
         "Instável, transitória. O ponto onde tudo se reorganiza antes de recomeçar.",
         "### Os Refúgios",
         "Zonas intermediárias, cheias de variação — vales temporários, cavernas, ilhas que só surgem quando o ciclo precisa delas; quem entra pode não encontrar a saída.",
+        "### As casas de escama",
+        "Toda a civilização é erguida do que o Daryun solta. As escamas gigantes do peixe colossal dos rios são o material de cada casa, cada ponte, cada vila — nada em Gotto se constrói de outra coisa. Cada Daryun tem sua própria cor, e por isso cada vila varia de tom, nunca igual duas vezes.",
         "### Depois de cada recomeço",
         "Depois de cada recomeço, as cidades mudam de lugar. Os caminhos somem. O que era mapa vira memória — e no próximo ciclo, quase não existe mais."
       ],
@@ -105,6 +107,8 @@
         "Unstable, transitional. The point where everything reorganizes before beginning again.",
         "### The Refuges",
         "Intermediate zones, full of variation — temporary valleys, caves, islands that only appear when the cycle needs them; whoever enters may not find the way out.",
+        "### The scale houses",
+        "The whole civilization is built from what the Daryun sheds. The giant scales of the colossal river fish are the material of every house, every bridge, every village — nothing in Gotto is built from anything else. Each Daryun has its own color, which is why every village varies in tone, never the same twice.",
         "### After each restart",
         "After each restart, the cities change place. The paths vanish. What was a map becomes memory — and in the next cycle, it barely exists anymore."
       ]
@@ -152,7 +156,7 @@
       "pt": "Relações com Outros Planetas",
       "en": "Relations with Other Planets"
     },
-    "img": "/imgs/kammara/gotto/_subsystems/erurin_visits_gotto.jpg",
+    "img": "/imgs/kammara/gotto/_subsystems/erurin_visits_gotto.png",
     "text": {
       "pt": [
         "### LUNN'P1",
