@@ -51,7 +51,7 @@ export function Header({ homePath, transparent = false }: HeaderProps) {
           transition="all 0.2s ease"
         >
           <NextLink href={homePath} style={{ color: 'inherit', textDecoration: 'none' }}>
-            <Box as="strong" fontWeight="medium">guitta</Box>{' '}monatega
+            <Box as="strong" fontWeight="medium">guitta</Box>{' '}monatega studio
           </NextLink>
         </Box>
         <LanguageToggle />

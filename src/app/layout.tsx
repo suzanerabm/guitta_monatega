@@ -4,8 +4,8 @@ import { Providers } from './providers';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Guitta Monatega',
-  description: 'Portfolio — Guitta Monatega',
+  title: 'Guitta Monatega Studio',
+  description: 'Portfolio — Guitta Monatega Studio',
 };
 
 export default function RootLayout({
