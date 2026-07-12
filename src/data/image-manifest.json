@@ -650,12 +650,12 @@
         "image": "/imgs/kammara/gotto/daryun.png"
       },
       {
-        "name": "Filp",
-        "image": "/imgs/kammara/gotto/Filp.png"
+        "name": "flipflop costas",
+        "image": "/imgs/kammara/gotto/flipflop_costas.png"
       },
       {
-        "name": "flip costas",
-        "image": "/imgs/kammara/gotto/flip_costas.png"
+        "name": "flipflop",
+        "image": "/imgs/kammara/gotto/flipflop.png"
       },
       {
         "name": "jump costas",
@@ -2019,8 +2019,8 @@
         "image": "/imgs/kammara/gotto/_scenes/cultivo_flores.jpg"
       },
       {
-        "name": "Erurin visits gotto",
-        "image": "/imgs/kammara/gotto/_scenes/Erurin_visits_gotto.jpg"
+        "name": "Erurin conversa com Rema",
+        "image": "/imgs/kammara/gotto/_scenes/Erurin_conversa_com_Rema.png"
       },
       {
         "name": "Flip sleeping",
@@ -2037,6 +2037,10 @@
       {
         "name": "kirio comendo com rema",
         "image": "/imgs/kammara/gotto/_scenes/kirio_comendo_com_rema.jpg"
+      },
+      {
+        "name": "kirio comendo com rema2",
+        "image": "/imgs/kammara/gotto/_scenes/kirio_comendo_com_rema2.jpg"
       },
       {
         "name": "Kirio vigiando Vila Central",

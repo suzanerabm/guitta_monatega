@@ -182,19 +182,19 @@
    {
     "match": "Flip",
     "name": {
-      "pt": "Flip",
-      "en": "Flip"
+      "pt": "FlipFlop",
+      "en": "FlipFlop"
     },
     "species": {
-      "pt": "Flip",
-      "en": "Flip"
+      "pt": "FlipFlop",
+      "en": "FlipFlop"
     },
-    "image": "/imgs/kammara/gotto/Filp.png",
+    "image": "/imgs/kammara/gotto/flipflop.png",
     "bio": {
-      "pt": "O trepador de Gotto — um pequeno nativo felpudo de pelo marrom que sobe nas árvores-coral. Divide as frutas do alto com o Kirió: o gigante alcança as do topo, Flip colhe as escondidas.",
-      "en": "Gotto's climber — a small furry brown native that scales the coral-trees. It shares the high fruit with the Kirió: the giant reaches the top ones, Flip picks the hidden ones."
+      "pt": "O trepador de Gotto — um pequeno nativo felpudo de pelo marrom que sobe nas árvores-coral. Divide as frutas do alto com o Kirió: o gigante alcança as do topo, FlipFlop colhe as escondidas.",
+      "en": "Gotto's climber — a small furry brown native that scales the coral-trees. It shares the high fruit with the Kirió: the giant reaches the top ones, FlipFlop picks the hidden ones."
     },
-    "backImage": "/imgs/kammara/gotto/flip_costas.png",
+    "backImage": "/imgs/kammara/gotto/flipflop_costas.png",
     "backTitle": {
       "pt": "O Trepador",
       "en": "The Climber"
