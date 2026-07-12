@@ -24,7 +24,7 @@
     "label": { "pt": "Kirió vigiando a Vila Central", "en": "Kirió watching over the Central Village" }
   },
   {
-    "image": "/imgs/kammara/gotto/_scenes/Vila_Central_vista.png",
+    "image": "/imgs/kammara/gotto/_scenes/Vila_Central_vista.jpg",
     "label": { "pt": "A Vila Central", "en": "The Central Village" }
   },
   {
@@ -60,11 +60,11 @@
     "label": { "pt": "Jump preparando as escamas", "en": "Jump preparing the scales" }
   },
   {
-    "image": "/imgs/kammara/gotto/_scenes/Jump_trabalhando_escamas.png",
+    "image": "/imgs/kammara/gotto/_scenes/Jump_trabalhando_escamas.jpg",
     "label": { "pt": "Jump trabalhando as escamas", "en": "Jump working the scales" }
   },
   {
-    "image": "/imgs/kammara/gotto/_scenes/kirio_comendo.png",
+    "image": "/imgs/kammara/gotto/_scenes/kirio_comendo.jpg",
     "label": { "pt": "Kirió comendo", "en": "Kirió eating" }
   }
 ]

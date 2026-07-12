@@ -430,20 +430,56 @@
     ],
     "kammara/digg": [
       {
-        "name": "CHMURKA",
-        "image": "/imgs/kammara/digg/CHMURKA.png"
+        "name": "CHMURKA com bolacha",
+        "image": "/imgs/kammara/digg/CHMURKA_com_bolacha.png"
       },
       {
-        "name": "Nihrak",
-        "image": "/imgs/kammara/digg/Nihrak.png"
+        "name": "CHMURKA costas",
+        "image": "/imgs/kammara/digg/CHMURKA_costas.png"
+      },
+      {
+        "name": "CHMURKA frente",
+        "image": "/imgs/kammara/digg/CHMURKA_frente.png"
+      },
+      {
+        "name": "krovin costas",
+        "image": "/imgs/kammara/digg/krovin_costas.png"
+      },
+      {
+        "name": "krovin",
+        "image": "/imgs/kammara/digg/krovin.png"
+      },
+      {
+        "name": "Nihrak com mastro",
+        "image": "/imgs/kammara/digg/Nihrak_com_mastro.png"
+      },
+      {
+        "name": "Nihrak costas",
+        "image": "/imgs/kammara/digg/Nihrak_costas.png"
+      },
+      {
+        "name": "Nihrak frente",
+        "image": "/imgs/kammara/digg/Nihrak_frente.png"
+      },
+      {
+        "name": "ORVIN costas",
+        "image": "/imgs/kammara/digg/ORVIN_costas.png"
       },
       {
         "name": "ORVIN",
         "image": "/imgs/kammara/digg/ORVIN.png"
       },
       {
+        "name": "Silko costas",
+        "image": "/imgs/kammara/digg/Silko_costas.png"
+      },
+      {
         "name": "Silko",
         "image": "/imgs/kammara/digg/Silko.png"
+      },
+      {
+        "name": "ZIN asas",
+        "image": "/imgs/kammara/digg/ZIN_asas.png"
       },
       {
         "name": "ZIN costas",
@@ -614,6 +650,14 @@
         "image": "/imgs/kammara/gotto/daryun.png"
       },
       {
+        "name": "Filp",
+        "image": "/imgs/kammara/gotto/Filp.png"
+      },
+      {
+        "name": "flip costas",
+        "image": "/imgs/kammara/gotto/flip_costas.png"
+      },
+      {
         "name": "jump costas",
         "image": "/imgs/kammara/gotto/jump_costas.png"
       },
@@ -644,6 +688,14 @@
       {
         "name": "rema",
         "image": "/imgs/kammara/gotto/rema.png"
+      },
+      {
+        "name": "tzo azul costas",
+        "image": "/imgs/kammara/gotto/tzo_azul_costas.png"
+      },
+      {
+        "name": "Tzo",
+        "image": "/imgs/kammara/gotto/Tzo.png"
       }
     ],
     "kammara/lunnp1": [
@@ -1771,8 +1823,16 @@
   "scenes": {
     "kammara/digg": [
       {
+        "name": "Bloco vista 2",
+        "image": "/imgs/kammara/digg/_scenes/Bloco_vista_2.jpg"
+      },
+      {
         "name": "CHMURKA creatures standing together",
         "image": "/imgs/kammara/digg/_scenes/CHMURKA_creatures_standing_together.jpg"
+      },
+      {
+        "name": "CHMURKA eating",
+        "image": "/imgs/kammara/digg/_scenes/CHMURKA_eating.jpg"
       },
       {
         "name": "Creatures sitting around a rough table eating",
@@ -1787,8 +1847,24 @@
         "image": "/imgs/kammara/digg/_scenes/Cross-section_showing_a_real_working_MINE.jpg"
       },
       {
+        "name": "Diggers montando ninho",
+        "image": "/imgs/kammara/digg/_scenes/Diggers_montando_ninho.jpg"
+      },
+      {
+        "name": "Diggers na praca",
+        "image": "/imgs/kammara/digg/_scenes/Diggers_na_praca.jpg"
+      },
+      {
         "name": "Nihrak creature sitting on his stone throne view",
         "image": "/imgs/kammara/digg/_scenes/Nihrak_creature_sitting_on_his_stone_throne_view.jpg"
+      },
+      {
+        "name": "Nihrak sala trono",
+        "image": "/imgs/kammara/digg/_scenes/Nihrak_sala_trono.jpg"
+      },
+      {
+        "name": "NinhO Zin",
+        "image": "/imgs/kammara/digg/_scenes/NinhO_Zin.jpg"
       },
       {
         "name": "primeira rocha",
@@ -1799,16 +1875,24 @@
         "image": "/imgs/kammara/digg/_scenes/Two_floating_grey_stone_blocks_in_space_connected_by_a_suspended_wooden_bridge.jpg"
       },
       {
+        "name": "Vista bloco",
+        "image": "/imgs/kammara/digg/_scenes/Vista_bloco.jpg"
+      },
+      {
         "name": "Vista blocos",
         "image": "/imgs/kammara/digg/_scenes/Vista_blocos.jpg"
       },
       {
-        "name": "Vista cidade digg",
-        "image": "/imgs/kammara/digg/_scenes/Vista_cidade_digg.jpg"
+        "name": "Vista interior camara mina",
+        "image": "/imgs/kammara/digg/_scenes/Vista_interior_camara_mina.jpg"
       },
       {
         "name": "Vista interna cadeirao",
         "image": "/imgs/kammara/digg/_scenes/Vista_interna_cadeirao.jpg"
+      },
+      {
+        "name": "Vista poco mina",
+        "image": "/imgs/kammara/digg/_scenes/Vista_poco_mina.jpg"
       }
     ],
     "kammara/eni4": [
@@ -1907,40 +1991,72 @@
     ],
     "kammara/gotto": [
       {
-        "name": "Arredores vila central",
-        "image": "/imgs/kammara/gotto/_scenes/Arredores_vila_central.jpg"
+        "name": "Vale Escuta",
+        "image": "/imgs/kammara/gotto/_scenes/1_Vale_Escuta.jpg"
       },
       {
-        "name": "cena vila lateral1",
-        "image": "/imgs/kammara/gotto/_scenes/cena_vila_lateral1.jpg"
+        "name": "Vale Escuta kirio camuflado",
+        "image": "/imgs/kammara/gotto/_scenes/2_Vale_Escuta_kirio_camuflado.jpg"
       },
       {
-        "name": "cultivo flores",
-        "image": "/imgs/kammara/gotto/_scenes/cultivo_flores.jpg"
+        "name": "Vale Reflexo",
+        "image": "/imgs/kammara/gotto/_scenes/2_Vale_Reflexo.jpg"
       },
       {
-        "name": "cultura vila",
-        "image": "/imgs/kammara/gotto/_scenes/cultura_vila.jpg"
+        "name": "Cultivo flores",
+        "image": "/imgs/kammara/gotto/_scenes/Cultivo_flores.jpg"
       },
       {
-        "name": "erurin visits gotto1",
-        "image": "/imgs/kammara/gotto/_scenes/erurin_visits_gotto1.jpg"
+        "name": "Erurin visits gotto",
+        "image": "/imgs/kammara/gotto/_scenes/Erurin_visits_gotto.jpg"
       },
       {
-        "name": "kirio vigiando morro2",
-        "image": "/imgs/kammara/gotto/_scenes/kirio_vigiando_morro2.jpg"
+        "name": "Jump preparando escamas",
+        "image": "/imgs/kammara/gotto/_scenes/Jump_preparando_escamas.jpg"
       },
       {
-        "name": "regiao 10",
-        "image": "/imgs/kammara/gotto/_scenes/regiao_10.jpg"
+        "name": "Jump trabalhando escamas",
+        "image": "/imgs/kammara/gotto/_scenes/Jump_trabalhando_escamas.jpg"
       },
       {
-        "name": "vila de perto",
-        "image": "/imgs/kammara/gotto/_scenes/vila_de_perto.jpg"
+        "name": "kirio comendo",
+        "image": "/imgs/kammara/gotto/_scenes/kirio_comendo.jpg"
       },
       {
-        "name": "vista regiao deserta com frutas",
-        "image": "/imgs/kammara/gotto/_scenes/vista_regiao_deserta_com_frutas.jpg"
+        "name": "Kirio vigiando Vila Central",
+        "image": "/imgs/kammara/gotto/_scenes/Kirio_vigiando_Vila_Central.jpg"
+      },
+      {
+        "name": "Vila Central Arredores",
+        "image": "/imgs/kammara/gotto/_scenes/Vila_Central_Arredores.jpg"
+      },
+      {
+        "name": "Vila Central Leste Rema dormindo",
+        "image": "/imgs/kammara/gotto/_scenes/Vila_Central_Leste_Rema_dormindo.jpg"
+      },
+      {
+        "name": "Vila Central Leste",
+        "image": "/imgs/kammara/gotto/_scenes/Vila_Central_Leste.jpg"
+      },
+      {
+        "name": "Vila Central Oeste",
+        "image": "/imgs/kammara/gotto/_scenes/Vila_Central_Oeste.jpg"
+      },
+      {
+        "name": "Vila Central Sul",
+        "image": "/imgs/kammara/gotto/_scenes/Vila_Central_Sul.jpg"
+      },
+      {
+        "name": "Vila Central vista",
+        "image": "/imgs/kammara/gotto/_scenes/Vila_Central_vista.jpg"
+      },
+      {
+        "name": "Vila da Orla",
+        "image": "/imgs/kammara/gotto/_scenes/Vila_da_Orla.jpg"
+      },
+      {
+        "name": "Vila Leste",
+        "image": "/imgs/kammara/gotto/_scenes/Vila_Leste.jpg"
       }
     ],
     "kammara/lunnp1": [
@@ -2091,12 +2207,72 @@
         "image": "/imgs/kammara/triplec/_scenes/4_Lumesha_visita_LUMA_VAL.jpg"
       },
       {
-        "name": "EruRin com SELKA RIN",
-        "image": "/imgs/kammara/triplec/_scenes/5EruRin_com_SELKA_RIN.jpg"
+        "name": "EruRin com NERAN VEL",
+        "image": "/imgs/kammara/triplec/_scenes/5EruRin_com_NERAN_VEL.jpg"
       },
       {
         "name": "Cshift portal",
         "image": "/imgs/kammara/triplec/_scenes/6Cshift_portal.jpg"
+      },
+      {
+        "name": "protecao criptografia",
+        "image": "/imgs/kammara/triplec/_scenes/protecao_criptografia.jpg"
+      },
+      {
+        "name": "regiao energia sharp",
+        "image": "/imgs/kammara/triplec/_scenes/regiao_energia_sharp.jpg"
+      },
+      {
+        "name": "regiao malloc correndo floresta",
+        "image": "/imgs/kammara/triplec/_scenes/regiao_malloc_correndo_floresta.jpg"
+      },
+      {
+        "name": "regiao malloc familia",
+        "image": "/imgs/kammara/triplec/_scenes/regiao_malloc_familia.jpg"
+      },
+      {
+        "name": "regiao malloc lifestyle",
+        "image": "/imgs/kammara/triplec/_scenes/regiao_malloc_lifestyle.jpg"
+      },
+      {
+        "name": "regiao malloc vista cidade",
+        "image": "/imgs/kammara/triplec/_scenes/regiao_malloc_vista_cidade.jpg"
+      },
+      {
+        "name": "regiao mesh ativando cshift",
+        "image": "/imgs/kammara/triplec/_scenes/regiao_mesh_ativando_cshift.jpg"
+      },
+      {
+        "name": "regiao mesh lifestyle",
+        "image": "/imgs/kammara/triplec/_scenes/regiao_mesh_lifestyle.jpg"
+      },
+      {
+        "name": "regiao mesh praca",
+        "image": "/imgs/kammara/triplec/_scenes/regiao_mesh_praca.jpg"
+      },
+      {
+        "name": "regiao mesh vista cidade",
+        "image": "/imgs/kammara/triplec/_scenes/regiao_mesh_vista_cidade.jpg"
+      },
+      {
+        "name": "regiao sharp lifestyle",
+        "image": "/imgs/kammara/triplec/_scenes/regiao_sharp_lifestyle.jpg"
+      },
+      {
+        "name": "regiao sharp pets",
+        "image": "/imgs/kammara/triplec/_scenes/regiao_sharp_pets.jpg"
+      },
+      {
+        "name": "regiao sharp praca",
+        "image": "/imgs/kammara/triplec/_scenes/regiao_sharp_praca.jpg"
+      },
+      {
+        "name": "Three bunniets",
+        "image": "/imgs/kammara/triplec/_scenes/Three_bunniets.jpg"
+      },
+      {
+        "name": "Vista area planeta",
+        "image": "/imgs/kammara/triplec/_scenes/Vista_area_planeta.jpg"
       }
     ],
     "kammara/triplec/malloc": [
@@ -2308,7 +2484,7 @@
       },
       {
         "name": "CENTRAL SQUARE",
-        "image": "/imgs/kammara/z1/_scenes/CENTRAL_SQUARE.png"
+        "image": "/imgs/kammara/z1/_scenes/CENTRAL_SQUARE.jpg"
       },
       {
         "name": "habitantes conversando",
@@ -2344,7 +2520,7 @@
       },
       {
         "name": "Vila",
-        "image": "/imgs/kammara/z1/_scenes/Vila.png"
+        "image": "/imgs/kammara/z1/_scenes/Vila.jpg"
       },
       {
         "name": "Z-CHASMS",
@@ -2353,7 +2529,7 @@
     ]
   },
   "kammaraBgs": {
-    "kammara/digg": "/imgs/kammara/digg/_bg/digg_vista-gigapixel.png",
+    "kammara/digg": "/imgs/kammara/digg/_bg/digg_vista-gigapixel.jpg",
     "kammara/eni4": "/imgs/kammara/eni4/_bg/imagem_fabrica_com_lixos-gigapixel-cgi-6x.jpg",
     "kammara/gotto": "/imgs/kammara/gotto/_bg/vila_de_perto.jpg",
     "kammara/lunnp1": "/imgs/kammara/lunnp1/_bg/regiao_norte.jpg",

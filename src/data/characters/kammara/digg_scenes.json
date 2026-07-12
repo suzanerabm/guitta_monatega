@@ -35,7 +35,7 @@
     }
   },
   {
-    "image": "/imgs/kammara/digg/_scenes/CHMURKA_eating.png",
+    "image": "/imgs/kammara/digg/_scenes/CHMURKA_eating.jpg",
     "label": {
       "pt": "Chmurka comendo",
       "en": "Chmurka eating"
@@ -70,7 +70,7 @@
     }
   },
   {
-    "image": "/imgs/kammara/digg/_scenes/NinhO_Zin.png",
+    "image": "/imgs/kammara/digg/_scenes/NinhO_Zin.jpg",
     "label": {
       "pt": "O ninho do Zin",
       "en": "Zin's nest"

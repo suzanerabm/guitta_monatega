@@ -7,7 +7,7 @@
     }
   },
   {
-    "image": "/imgs/kammara/z1/_scenes/CENTRAL_SQUARE.png",
+    "image": "/imgs/kammara/z1/_scenes/CENTRAL_SQUARE.jpg",
     "label": {
       "pt": "praça central",
       "en": "central square"
@@ -28,7 +28,7 @@
     }
   },
   {
-    "image": "/imgs/kammara/z1/_scenes/Vila.png",
+    "image": "/imgs/kammara/z1/_scenes/Vila.jpg",
     "label": {
       "pt": "a vila cúbica",
       "en": "the cubic village"
