@@ -674,6 +674,22 @@
         "image": "/imgs/kammara/gotto/kirio_frente.png"
       },
       {
+        "name": "lumi costas",
+        "image": "/imgs/kammara/gotto/lumi_costas.png"
+      },
+      {
+        "name": "lumi",
+        "image": "/imgs/kammara/gotto/lumi.png"
+      },
+      {
+        "name": "momo costas",
+        "image": "/imgs/kammara/gotto/momo_costas.png"
+      },
+      {
+        "name": "momo",
+        "image": "/imgs/kammara/gotto/momo.png"
+      },
+      {
         "name": "pilo costas",
         "image": "/imgs/kammara/gotto/pilo_costas.png"
       },
@@ -688,14 +704,6 @@
       {
         "name": "rema",
         "image": "/imgs/kammara/gotto/rema.png"
-      },
-      {
-        "name": "tzo azul costas",
-        "image": "/imgs/kammara/gotto/tzo_azul_costas.png"
-      },
-      {
-        "name": "Tzo",
-        "image": "/imgs/kammara/gotto/Tzo.png"
       }
     ],
     "kammara/lunnp1": [
@@ -1999,16 +2007,24 @@
         "image": "/imgs/kammara/gotto/_scenes/2_Vale_Escuta_kirio_camuflado.jpg"
       },
       {
+        "name": "Vale Escuta",
+        "image": "/imgs/kammara/gotto/_scenes/2_Vale_Escuta.jpg"
+      },
+      {
         "name": "Vale Reflexo",
         "image": "/imgs/kammara/gotto/_scenes/2_Vale_Reflexo.jpg"
       },
       {
-        "name": "Cultivo flores",
-        "image": "/imgs/kammara/gotto/_scenes/Cultivo_flores.jpg"
+        "name": "cultivo flores",
+        "image": "/imgs/kammara/gotto/_scenes/cultivo_flores.jpg"
       },
       {
         "name": "Erurin visits gotto",
         "image": "/imgs/kammara/gotto/_scenes/Erurin_visits_gotto.jpg"
+      },
+      {
+        "name": "Flip sleeping",
+        "image": "/imgs/kammara/gotto/_scenes/Flip_sleeping.jpg"
       },
       {
         "name": "Jump preparando escamas",
@@ -2019,8 +2035,8 @@
         "image": "/imgs/kammara/gotto/_scenes/Jump_trabalhando_escamas.jpg"
       },
       {
-        "name": "kirio comendo",
-        "image": "/imgs/kammara/gotto/_scenes/kirio_comendo.jpg"
+        "name": "kirio comendo com rema",
+        "image": "/imgs/kammara/gotto/_scenes/kirio_comendo_com_rema.jpg"
       },
       {
         "name": "Kirio vigiando Vila Central",
@@ -2032,7 +2048,7 @@
       },
       {
         "name": "Vila Central Leste Rema dormindo",
-        "image": "/imgs/kammara/gotto/_scenes/Vila_Central_Leste_Rema_dormindo.jpg"
+        "image": "/imgs/kammara/gotto/_scenes/Vila_Central_Leste_Rema_dormindo.png"
       },
       {
         "name": "Vila Central Leste",
