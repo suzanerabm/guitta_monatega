@@ -41,6 +41,7 @@ export default async function LocaleLayout({
             aboutLabel={t('footerAbout')}
             privacyPath={privacyPath}
             privacyLabel={t('footerPrivacy')}
+            copyright={t('footerCopyright')}
           />
           <Modal />
           <ModalKammara />

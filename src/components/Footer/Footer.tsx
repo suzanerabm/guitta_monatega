@@ -8,6 +8,8 @@ interface FooterProps {
   aboutLabel: string;
   privacyPath: string;
   privacyLabel: string;
+  /** Aviso de direitos autorais (i18n). Mostrado discreto abaixo dos links. */
+  copyright?: string;
 }
 
 export function Footer({
@@ -15,6 +17,7 @@ export function Footer({
   aboutLabel,
   privacyPath,
   privacyLabel,
+  copyright,
 }: FooterProps) {
   const { tintColor } = useChromeTint();
 
@@ -62,6 +65,22 @@ export function Footer({
             {privacyLabel}
           </NextLink>
         </Flex>
+
+        {/* Aviso de direitos autorais — discreto, abaixo dos links. Não impede
+            cópia (impossível), mas dá respaldo legal de autoria. */}
+        {copyright && (
+          <Box
+            as="p"
+            m={0}
+            fontSize="0.7rem"
+            fontWeight={300}
+            letterSpacing="0.08em"
+            opacity={0.55}
+            textAlign="center"
+          >
+            {copyright}
+          </Box>
+        )}
       </Flex>
     </Box>
   );
