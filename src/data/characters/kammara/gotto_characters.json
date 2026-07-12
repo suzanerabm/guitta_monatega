@@ -382,5 +382,46 @@
         }
       }
     ]
+  },
+  {
+    "match": "Flip",
+    "name": {
+      "pt": "Flip",
+      "en": "Flip"
+    },
+    "species": {
+      "pt": "Flip",
+      "en": "Flip"
+    },
+    "image": "",
+    "bio": {
+      "pt": "Flip é o trepador de Gotto — um pequeno nativo felpudo de pelo marrom, orelhas e patinhas ágeis que sobem nas árvores-coral com facilidade. Come as frutas roxas lá do alto, dividindo a mesma árvore com o Kirió: o gigante alcança as do topo, o Flip trepa e colhe as escondidas. Onde o Kirió é a montanha que vigia, o Flip é a folha que salta de galho em galho.",
+      "en": "Flip is Gotto's climber — a small furry native with brown fur, ears and nimble little paws that scale the coral-trees with ease. It eats the purple fruits up high, sharing the same tree with the Kirió: the giant reaches the top ones, Flip climbs and picks the hidden ones. Where the Kirió is the mountain that watches, Flip is the leaf that leaps from branch to branch."
+    },
+    "backImage": "",
+    "backTitle": {
+      "pt": "O Trepador",
+      "en": "The Climber"
+    },
+    "backMeaning": {
+      "pt": "Nativo de Gotto, espécie própria — mas com a máscara de osso, a marca de todos os nativos. Pelo marrom macio, orelhas, patinhas de trepar.",
+      "en": "A Gotto native of its own species — but bearing the bone mask, the mark of all natives. Soft brown fur, ears, climbing paws."
+    },
+    "dorsalMeaning": {
+      "pt": "A fruta lá de cima é minha também.",
+      "en": "The fruit up top is mine too."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": { "pt": "Função", "en": "Role" },
+        "value": { "pt": "Trepador das árvores", "en": "Tree climber" }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": { "pt": "Região", "en": "Region" },
+        "value": { "pt": "Os bosques de árvores-coral", "en": "The coral-tree groves" }
+      }
+    ]
   }
 ]
