@@ -3,6 +3,28 @@ import type { NextConfig } from 'next';
 
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
+// Content-Security-Policy — controla de onde cada tipo de recurso pode
+// carregar, reduzindo a superfície pra injeção de conteúdo/XSS. Calibrado
+// pro que o site REALMENTE usa:
+//  - Google Fonts (fonts.googleapis.com CSS + fonts.gstatic.com woff2)
+//  - Vercel Analytics/Speed Insights (va.vercel-scripts.com)
+//  - imagens/vídeos: só do próprio site (self) + data: (posters inline)
+// `'unsafe-inline'`/`'unsafe-eval'` em script/style são exigidos pelo Next
+// (hidratação e estilos inline) — sem nonce dá pra endurecer mais depois.
+const cspDirectives = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://va.vercel-scripts.com",
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+  "font-src 'self' https://fonts.gstatic.com data:",
+  "img-src 'self' data: blob:",
+  "media-src 'self' data: blob:",
+  "connect-src 'self' https://va.vercel-scripts.com https://vitals.vercel-insights.com",
+  "frame-ancestors 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "object-src 'none'",
+].join('; ');
+
 // Security headers applied to every response. HSTS já vem da Vercel
 // (max-age 2 anos); o resto cobre clickjacking, MIME sniffing e
 // vazamento de Referer pra terceiros.
@@ -14,6 +36,7 @@ const securityHeaders = [
     key: 'Permissions-Policy',
     value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
   },
+  { key: 'Content-Security-Policy', value: cspDirectives },
 ];
 
 const nextConfig: NextConfig = {
