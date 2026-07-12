@@ -11,8 +11,8 @@
     },
     "image": "/imgs/kammara/gotto/rema.png",
     "bio": {
-      "pt": "Silêncio entre as notas. Margem que dá forma ao fluxo. Como o REM no código, está presente sem executar. Sua presença cria espaço para que outros se acalmem — permite que o excesso se dissolva naturalmente.",
-      "en": "Silence between the notes. The margin that gives shape to the flow. Like REM in code, she is present without executing. Her presence makes room for others to settle — letting excess dissolve on its own."
+      "pt": "Silêncio entre as notas — a pausa que dá forma ao fluxo. Como o REM no código, está presente sem executar. Onde ela está, o excesso se dissolve.",
+      "en": "Silence between the notes — the pause that shapes the flow. Like REM in code, present without executing. Where she is, excess dissolves."
     },
     "backImage": "/imgs/kammara/gotto/rema_costas.png",
     "backTitle": {
@@ -71,8 +71,8 @@
     },
     "image": "/imgs/kammara/gotto/pilo.png",
     "bio": {
-      "pt": "Fluxo audível. Correnteza que precisa fazer barulho para confirmar que existe. Sua presença desperta movimento nos outros — quando ele fala, algo acorda. Som que retorna, presença que se confirma pela repetição.",
-      "en": "An audible flow. A current that needs to make noise to confirm it exists. His presence stirs movement in others — when he speaks, something wakes. Sound that returns, presence that confirms itself by repetition."
+      "pt": "Fluxo audível — a correnteza que faz barulho para saber que existe. Quando ele fala, algo acorda; sua presença se confirma pela repetição.",
+      "en": "An audible flow — the current that makes noise to know it exists. When he speaks, something wakes; his presence confirms itself by repetition."
     },
     "backImage": "/imgs/kammara/gotto/pilo_costas.png",
     "backTitle": {
@@ -131,8 +131,8 @@
     },
     "image": "/imgs/kammara/gotto/jump.png",
     "bio": {
-      "pt": "A mudança em si. Onde outros veem caminho, Jump vê ponto de salto. Não está mais onde estava — a ação surge sem esforço porque resistir ao movimento seria o verdadeiro esforço. Sua presença impede que outros fiquem presos: dissolve apegos por demonstração.",
-      "en": "Change itself. Where others see a path, Jump sees a leap point. He is not where he was — action arises effortlessly because resisting the movement would be the real effort. His presence keeps others from getting stuck: dissolving attachments by example."
+      "pt": "A mudança em si. Onde outros veem caminho, Jump vê salto — já não está onde estava. Sua presença impede que outros fiquem presos.",
+      "en": "Change itself. Where others see a path, Jump sees a leap — already gone from where he was. His presence keeps others from getting stuck."
     },
     "backImage": "/imgs/kammara/gotto/jump_costas.png",
     "backTitle": {
@@ -179,6 +179,59 @@
       }
     ]
   },
+   {
+    "match": "Flip",
+    "name": {
+      "pt": "Flip",
+      "en": "Flip"
+    },
+    "species": {
+      "pt": "Flip",
+      "en": "Flip"
+    },
+    "image": "/imgs/kammara/gotto/Filp.png",
+    "bio": {
+      "pt": "O trepador de Gotto — um pequeno nativo felpudo de pelo marrom que sobe nas árvores-coral. Divide as frutas do alto com o Kirió: o gigante alcança as do topo, Flip colhe as escondidas.",
+      "en": "Gotto's climber — a small furry brown native that scales the coral-trees. It shares the high fruit with the Kirió: the giant reaches the top ones, Flip picks the hidden ones."
+    },
+    "backImage": "/imgs/kammara/gotto/flip_costas.png",
+    "backTitle": {
+      "pt": "O Trepador",
+      "en": "The Climber"
+    },
+    "backMeaning": {
+      "pt": "Nativo de Gotto, espécie própria — mas com a máscara de osso, a marca de todos os nativos. Pelo marrom macio, orelhas, patinhas de trepar.",
+      "en": "A Gotto native of its own species — but bearing the bone mask, the mark of all natives. Soft brown fur, ears, climbing paws."
+    },
+    "dorsalMeaning": {
+      "pt": "A fruta lá de cima é minha também.",
+      "en": "The fruit up top is mine too."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Trepador das árvores",
+          "en": "Tree climber"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Os bosques de árvores-coral",
+          "en": "The coral-tree groves"
+        }
+      }
+    ]
+  },
   {
     "match": "Kirió",
     "name": {
@@ -191,8 +244,8 @@
     },
     "image": "/imgs/kammara/gotto/kirio_frente.png",
     "bio": {
-      "pt": "Kirió parece um morro — e é. Uma ave colossal coberta de penas que imitam a folhagem, imóvel no alto, vigiando a planície e protegendo as vilas dos Basiks. Anciã anterior aos ciclos, ela não esquece quando o planeta reinicia — é a memória viva de Gotto.",
-      "en": "Kirió looks like a hill — and is one. A colossal bird covered in feathers that mimic the foliage, motionless up high, watching the plain and protecting the Basik villages. An elder older than the cycles, it does not forget when the planet restarts — it is the living memory of Gotto."
+      "pt": "Kirió parece um morro — e é. Uma ave colossal de penas que imitam a folhagem, imóvel no alto, vigiando a planície. Anciã que não esquece: a memória viva de Gotto.",
+      "en": "Kirió looks like a hill — and is one. A colossal bird whose feathers mimic the foliage, motionless up high, watching the plain. An elder that never forgets: Gotto's living memory."
     },
     "backImage": "/imgs/kammara/gotto/kirio_back.png",
     "backTitle": {
@@ -244,8 +297,8 @@
     },
     "image": "/imgs/kammara/gotto/daryun.png",
     "bio": {
-      "pt": "O ser mais importante de Gotto. Um peixe colossal e antiquíssimo dos rios largos — a régua com que todo o planeta se mede. E mais: as escamas enormes que ele solta são o material de toda a civilização. Sem Daryun, não há escama; sem escama, não há vila.",
-      "en": "The most important being of Gotto. A colossal, ancient fish of the wide rivers — the measure against which the whole planet is gauged. And more: the enormous scales it sheds are the material of the entire civilization. Without Daryun, there is no scale; without a scale, there is no village."
+      "pt": "O ser mais importante de Gotto — um peixe colossal e antiquíssimo dos rios. As escamas enormes que ele solta são o material de toda a civilização: sem Daryun, não há vila.",
+      "en": "Gotto's most important being — a colossal, ancient river fish. The enormous scales it sheds are the material of the whole civilization: without Daryun, there is no village."
     },
     "backImage": "/imgs/kammara/gotto/daryun_back.png",
     "backTitle": {
@@ -295,12 +348,12 @@
       "pt": "Tzo",
       "en": "Tzo"
     },
-    "image": "/imgs/kammara/gotto/kirio_frente.png",
+    "image": "/imgs/kammara/gotto/lumi.png",
     "bio": {
-      "pt": "Lumi é um Tzo — o pequeno anfíbio lumínico, pet do Jump e primo dos Tzir'Kai de LUNN'P1. Entra no loop junto com o Jump: esquece os fatos a cada Recomeço, mas nunca o afeto. Não lembra o que viveram — e ainda assim reconhece o Jump na hora, e brilha. Onde o Jump salta, Lumi vai atrás.",
-      "en": "Lumi is a Tzo — the small luminous amphibian, Jump's pet and cousin to the Tzir'Kai of LUNN'P1. It enters the loop alongside Jump: it forgets the facts at each Restart, but never the affection. It doesn't remember what they lived — and yet recognizes Jump at once, and glows. Wherever Jump leaps, Lumi follows."
+      "pt": "Esquece os fatos a cada Recomeço, mas nunca o afeto: reconhece o Jump na hora, e brilha.",
+      "en": "It forgets the facts at each Restart, but never the affection: it knows Jump at once, and glows."
     },
-    "backImage": "",
+    "backImage": "/imgs/kammara/gotto/lumi_costas.png",
     "backTitle": {
       "pt": "O que esquece, menos o amor",
       "en": "It forgets all but love"
@@ -317,8 +370,8 @@
           "en": "Role"
         },
         "value": {
-          "pt": "Pet dos Basiks",
-          "en": "The Basiks' pet"
+          "pt": "Pet do Jump",
+          "en": "Jump's pet"
         }
       },
       {
@@ -344,12 +397,12 @@
       "pt": "Tzo",
       "en": "Tzo"
     },
-    "image": "/imgs/kammara/gotto/kirio_frente.png",
+    "image": "/imgs/kammara/gotto/momo.png",
     "bio": {
-      "pt": "Momo é um Tzo da variedade mais curta e fofa — o pet arredondado da Rema e primo dos Tzir'Kai de LUNN'P1. Anfíbio lumínico azul, brilha conforme a emoção. Esquece tudo a cada Recomeço, mas o laço com a Rema atravessa o loop: os dois se reencontram como se fosse a primeira vez, sempre. Quietinho ao lado dela, no silêncio entre as notas.",
-      "en": "Momo is a Tzo of the shorter, chubbier kind — Rema's round little pet and cousin to the Tzir'Kai of LUNN'P1. A blue luminous amphibian that glows with emotion. It forgets everything at each Restart, but the bond with Rema crosses the loop: the two meet again as if for the first time, always. Quiet at her side, in the silence between the notes."
+      "pt": "Esquece tudo a cada Recomeço, mas o laço com a Rema atravessa o loop — sempre a primeira vez.",
+      "en": "It forgets everything at each Restart, but the bond with Rema crosses the loop — always the first time."
     },
-    "backImage": "",
+    "backImage": "/imgs/kammara/gotto/momo_costas.png",
     "backTitle": {
       "pt": "Sempre a primeira vez",
       "en": "Always the first time"
@@ -366,8 +419,8 @@
           "en": "Role"
         },
         "value": {
-          "pt": "Pet dos Basiks",
-          "en": "The Basiks' pet"
+          "pt": "Pet da Rema",
+          "en": "Rema's pet"
         }
       },
       {
@@ -380,47 +433,6 @@
           "pt": "Primo dos Tzir'Kai",
           "en": "Cousin to the Tzir'Kai"
         }
-      }
-    ]
-  },
-  {
-    "match": "Flip",
-    "name": {
-      "pt": "Flip",
-      "en": "Flip"
-    },
-    "species": {
-      "pt": "Flip",
-      "en": "Flip"
-    },
-    "image": "/imgs/kammara/gotto/kirio_frente.png",
-    "bio": {
-      "pt": "Flip é o trepador de Gotto — um pequeno nativo felpudo de pelo marrom, orelhas e patinhas ágeis que sobem nas árvores-coral com facilidade. Come as frutas roxas lá do alto, dividindo a mesma árvore com o Kirió: o gigante alcança as do topo, o Flip trepa e colhe as escondidas. Onde o Kirió é a montanha que vigia, o Flip é a folha que salta de galho em galho.",
-      "en": "Flip is Gotto's climber — a small furry native with brown fur, ears and nimble little paws that scale the coral-trees with ease. It eats the purple fruits up high, sharing the same tree with the Kirió: the giant reaches the top ones, Flip climbs and picks the hidden ones. Where the Kirió is the mountain that watches, Flip is the leaf that leaps from branch to branch."
-    },
-    "backImage": "",
-    "backTitle": {
-      "pt": "O Trepador",
-      "en": "The Climber"
-    },
-    "backMeaning": {
-      "pt": "Nativo de Gotto, espécie própria — mas com a máscara de osso, a marca de todos os nativos. Pelo marrom macio, orelhas, patinhas de trepar.",
-      "en": "A Gotto native of its own species — but bearing the bone mask, the mark of all natives. Soft brown fur, ears, climbing paws."
-    },
-    "dorsalMeaning": {
-      "pt": "A fruta lá de cima é minha também.",
-      "en": "The fruit up top is mine too."
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": { "pt": "Função", "en": "Role" },
-        "value": { "pt": "Trepador das árvores", "en": "Tree climber" }
-      },
-      {
-        "glyph": "⊹—⊙",
-        "label": { "pt": "Região", "en": "Region" },
-        "value": { "pt": "Os bosques de árvores-coral", "en": "The coral-tree groves" }
       }
     ]
   }

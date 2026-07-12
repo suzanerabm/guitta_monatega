@@ -64,7 +64,15 @@
     "label": { "pt": "Jump trabalhando as escamas", "en": "Jump working the scales" }
   },
   {
-    "image": "/imgs/kammara/gotto/_scenes/kirio_comendo.jpg",
-    "label": { "pt": "Kirió comendo", "en": "Kirió eating" }
+    "image": "/imgs/kammara/gotto/_scenes/kirio_comendo_com_rema.jpg",
+    "label": { "pt": "Kirió comendo com Rema", "en": "Kirió eating with Rema" }
+  },
+  {
+    "image": "/imgs/kammara/gotto/_scenes/2_Vale_Escuta.jpg",
+    "label": { "pt": "O Vale da Escuta, outra vista", "en": "The Valley of Listening, another view" }
+  },
+  {
+    "image": "/imgs/kammara/gotto/_scenes/Flip_sleeping.png",
+    "label": { "pt": "Flip dormindo", "en": "Flip sleeping" }
   }
 ]
