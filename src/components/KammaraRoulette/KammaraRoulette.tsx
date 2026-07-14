@@ -139,6 +139,11 @@ export const KammaraRoulette = forwardRef<KammaraRouletteHandle, KammaraRoulette
   // client, causing React to discard and re-create the subtree.
   const [mounted, setMounted] = useState(false);
   const hideTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // Timer para a segunda etapa da saída (após a animação de shooting).
+  // Guardado à parte para que um clique/abertura no meio da animação possa
+  // cancelá-lo — senão a roleta reabre e fecha logo em seguida (bug mobile:
+  // "só mostra a estrelinha e não abre").
+  const shootTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   // Ref used by the IntersectionObserver below to auto-open the roulette
   // when the card first scrolls into view. Gives users a visual hint that
   // there's a menu here — especially important on mobile where the
@@ -162,13 +167,17 @@ export const KammaraRoulette = forwardRef<KammaraRouletteHandle, KammaraRoulette
       clearTimeout(hideTimer.current);
       hideTimer.current = null;
     }
+    if (shootTimer.current) {
+      clearTimeout(shootTimer.current);
+      shootTimer.current = null;
+    }
   };
 
   const scheduleHide = () => {
     cancelHide();
     hideTimer.current = setTimeout(() => {
       setShooting(true);
-      setTimeout(() => {
+      shootTimer.current = setTimeout(() => {
         setRouletteOpen(false);
         setShooting(false);
       }, 600);
@@ -177,6 +186,11 @@ export const KammaraRoulette = forwardRef<KammaraRouletteHandle, KammaraRoulette
 
   const showRoulette = () => {
     cancelHide();
+    // Aborta qualquer saída em andamento: se a animação de shooting já tinha
+    // começado, `shooting` continuaria true e as esferas orbitais ficariam
+    // com opacity 0 (invisíveis) mesmo com a roleta "aberta". Resetar aqui
+    // garante que abrir sempre mostra o menu completo.
+    setShooting(false);
     setRouletteOpen(true);
   };
 
@@ -187,7 +201,7 @@ export const KammaraRoulette = forwardRef<KammaraRouletteHandle, KammaraRoulette
     cancelHide();
     if (!rouletteOpen) return;
     setShooting(true);
-    setTimeout(() => {
+    shootTimer.current = setTimeout(() => {
       setRouletteOpen(false);
       setShooting(false);
     }, 600);
@@ -205,7 +219,10 @@ export const KammaraRoulette = forwardRef<KammaraRouletteHandle, KammaraRoulette
 
   useEffect(() => {
     scheduleHide();
-    return () => { if (hideTimer.current) clearTimeout(hideTimer.current); };
+    return () => {
+      if (hideTimer.current) clearTimeout(hideTimer.current);
+      if (shootTimer.current) clearTimeout(shootTimer.current);
+    };
   }, []);
 
   // Auto-open once when the roulette scrolls into view — the initial
