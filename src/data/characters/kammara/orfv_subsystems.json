@@ -1,6 +1,31 @@
 [
   {
     "title": {
+      "pt": "Origem",
+      "en": "Origin"
+    },
+    "img": "",
+    "text": {
+      "pt": [
+        "### Nascido de uma necessidade",
+        "ORF-V não veio de um grande acontecimento — veio de uma falta. Antes dele existia só o mundo antigo: sólido, forte e preciso, mas duro demais e distante, feito para durar e não para responder rápido. Quando chegou um tempo novo, que pedia agilidade e mudança, o mundo antigo não deu conta. ORF-V nasceu para ser a ponte que faltava.",
+        "### O planeta duplo",
+        "O planeta se formou aos poucos, camada sobre camada — mas a separação entre elas nunca foi perfeita. Por isso ORF-V é duplo: um lado de fora, exposto e instável, e um lado de dentro, protegido e habitável, separados por um vão que não fecha por completo. O que acontece fora pode atravessar para dentro.",
+        "### Sustentado por ligações",
+        "Dessa formação nasceu a geografia: colunas de terra cercadas de água, e vilas ligadas só por pontes suspensas. ORF-V não se sustenta pela solidez, e sim pela ligação. Nasceu incompleto — e é por isso que precisa de cuidado. Ele não morre de um golpe: se esgota, aos poucos, se ninguém cuidar."
+      ],
+      "en": [
+        "### Born of a need",
+        "ORF-V did not come from a great event — it came from a lack. Before it there was only the old world: solid, strong and precise, but too hard and too distant, made to last and not to respond quickly. When a new time arrived, one that called for agility and change, the old world could not keep up. ORF-V was born to be the bridge that was missing.",
+        "### The double planet",
+        "The planet formed little by little, layer upon layer — but the separation between them was never perfect. That is why ORF-V is double: an outer side, exposed and unstable, and an inner side, protected and habitable, separated by a gap that never fully closes. What happens outside can cross to the inside.",
+        "### Held together by bonds",
+        "From that formation came the geography: columns of earth surrounded by water, and villages linked only by suspended bridges. ORF-V does not sustain itself through solidity, but through connection. It was born incomplete — and that is why it needs care. It does not die from a single blow: it wears out, little by little, if no one tends to it."
+      ]
+    }
+  },
+  {
+    "title": {
       "pt": "Cultura",
       "en": "Culture"
     },
