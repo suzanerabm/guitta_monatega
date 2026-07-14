@@ -49,28 +49,28 @@
     ]
   },
   {
-    "match": "Violeta",
+    "match": "Destro",
     "name": {
-      "pt": "Violeta",
-      "en": "Violeta"
+      "pt": "Destro",
+      "en": "Destro"
     },
     "species": {
-      "pt": "Sugrelle",
-      "en": "Sugrelle"
+      "pt": "Dectoris",
+      "en": "Dectoris"
     },
     "bio": {
-      "pt": "A mais graciosa do Conselho: pequena, de olhos roxos enormes e coroa dourada. Faz os acordos acontecerem com um sorriso — ninguém sai de perto dela sem um favor combinado.",
-      "en": "The most graceful of the Council: small, with enormous purple eyes and a golden crown. She makes deals happen with a smile — no one leaves her side without a favor arranged."
+      "pt": "O mais imponente do Conselho: alto, esguio, de rosto afilado e vestes de ouro e ametista. É a mão firme da corte, o que mantém a ordem. Fala pouco, e quando fala, todos escutam.",
+      "en": "The most imposing of the Council: tall, slender, with a narrow face and robes of gold and amethyst. He is the firm hand of the court, the one who keeps order. He speaks little, and when he speaks, everyone listens."
     },
-    "image": "/imgs/kammara/memphis/Violeta.png",
-    "backImage": "/imgs/kammara/memphis/Violeta_costas.png",
+    "image": "/imgs/kammara/memphis/Destro.png",
+    "backImage": "/imgs/kammara/memphis/Destro_costas.png",
     "backTitle": {
       "pt": "Outro Lado",
       "en": "Other Side"
     },
     "dorsalMeaning": {
-      "pt": "Deixa comigo, querido.",
-      "en": "Leave it to me, darling."
+      "pt": "Está resolvido.",
+      "en": "It's settled."
     },
     "attributes": [
       {
@@ -80,8 +80,57 @@
           "en": "Role"
         },
         "value": {
-          "pt": "Os acordos",
-          "en": "The deals"
+          "pt": "A ordem",
+          "en": "Order"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "O Ratdra",
+          "en": "The Ratdra"
+        }
+      }
+    ]
+  },
+   {
+    "match": "Raigu",
+    "name": {
+      "pt": "Raigu",
+      "en": "Raigu"
+    },
+    "species": {
+      "pt": "Kravún",
+      "en": "Kravún"
+    },
+    "bio": {
+      "pt": "O mais místico do Conselho: figura alta de longo bico branco e cetro de ametista. Lê os sinais da cidade instável e aconselha a corte sobre o que vem pela frente. A corte silencia quando ele fala.",
+      "en": "The most mystical of the Council: a tall figure with a long white beak and an amethyst scepter. He reads the signs of the unstable city and advises the court on what lies ahead. The court falls silent when he speaks."
+    },
+    "image": "/imgs/kammara/memphis/Raigu_frente.png",
+    "backImage": "/imgs/kammara/memphis/Raiagu_costas.png",
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Other Side"
+    },
+    "dorsalMeaning": {
+      "pt": "Eu já vi isso acontecer.",
+      "en": "I have seen this happen."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "O conselheiro",
+          "en": "The counselor"
         }
       },
       {
@@ -147,104 +196,6 @@
     ]
   },
   {
-    "match": "Destro",
-    "name": {
-      "pt": "Destro",
-      "en": "Destro"
-    },
-    "species": {
-      "pt": "Dectoris",
-      "en": "Dectoris"
-    },
-    "bio": {
-      "pt": "O mais imponente do Conselho: alto, esguio, de rosto afilado e vestes de ouro e ametista. É a mão firme da corte, o que mantém a ordem. Fala pouco, e quando fala, todos escutam.",
-      "en": "The most imposing of the Council: tall, slender, with a narrow face and robes of gold and amethyst. He is the firm hand of the court, the one who keeps order. He speaks little, and when he speaks, everyone listens."
-    },
-    "image": "/imgs/kammara/memphis/Destro.png",
-    "backImage": "/imgs/kammara/memphis/Destro_costas.png",
-    "backTitle": {
-      "pt": "Outro Lado",
-      "en": "Other Side"
-    },
-    "dorsalMeaning": {
-      "pt": "Está resolvido.",
-      "en": "It's settled."
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Função",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "A ordem",
-          "en": "Order"
-        }
-      },
-      {
-        "glyph": "⊹—⊙",
-        "label": {
-          "pt": "Região",
-          "en": "Region"
-        },
-        "value": {
-          "pt": "O Ratdra",
-          "en": "The Ratdra"
-        }
-      }
-    ]
-  },
-  {
-    "match": "Raigu",
-    "name": {
-      "pt": "Raigu",
-      "en": "Raigu"
-    },
-    "species": {
-      "pt": "Kravún",
-      "en": "Kravún"
-    },
-    "bio": {
-      "pt": "O mais místico do Conselho: figura alta de longo bico branco e cetro de ametista. Lê os sinais da cidade instável e aconselha a corte sobre o que vem pela frente. A corte silencia quando ele fala.",
-      "en": "The most mystical of the Council: a tall figure with a long white beak and an amethyst scepter. He reads the signs of the unstable city and advises the court on what lies ahead. The court falls silent when he speaks."
-    },
-    "image": "/imgs/kammara/memphis/Raigu_frente.png",
-    "backImage": "/imgs/kammara/memphis/Raiagu_costas.png",
-    "backTitle": {
-      "pt": "Outro Lado",
-      "en": "Other Side"
-    },
-    "dorsalMeaning": {
-      "pt": "Eu já vi isso acontecer.",
-      "en": "I have seen this happen."
-    },
-    "attributes": [
-      {
-        "glyph": "⊶⊷⊙",
-        "label": {
-          "pt": "Função",
-          "en": "Role"
-        },
-        "value": {
-          "pt": "O conselheiro",
-          "en": "The counselor"
-        }
-      },
-      {
-        "glyph": "⊹—⊙",
-        "label": {
-          "pt": "Região",
-          "en": "Region"
-        },
-        "value": {
-          "pt": "O Ratdra",
-          "en": "The Ratdra"
-        }
-      }
-    ]
-  },
-  {
     "match": "Nobuk",
     "name": {
       "pt": "Nobuk",
@@ -278,6 +229,55 @@
         "value": {
           "pt": "O guardião",
           "en": "The guardian"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "O Ratdra",
+          "en": "The Ratdra"
+        }
+      }
+    ]
+  },
+   {
+    "match": "Violeta",
+    "name": {
+      "pt": "Violeta",
+      "en": "Violeta"
+    },
+    "species": {
+      "pt": "Sugrelle",
+      "en": "Sugrelle"
+    },
+    "bio": {
+      "pt": "A mais graciosa do Conselho: pequena, de olhos roxos enormes e coroa dourada. Faz os acordos acontecerem com um sorriso — ninguém sai de perto dela sem um favor combinado.",
+      "en": "The most graceful of the Council: small, with enormous purple eyes and a golden crown. She makes deals happen with a smile — no one leaves her side without a favor arranged."
+    },
+    "image": "/imgs/kammara/memphis/Violeta.png",
+    "backImage": "/imgs/kammara/memphis/Violeta_costas.png",
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Other Side"
+    },
+    "dorsalMeaning": {
+      "pt": "Deixa comigo, querido.",
+      "en": "Leave it to me, darling."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Os acordos",
+          "en": "The deals"
         }
       },
       {
