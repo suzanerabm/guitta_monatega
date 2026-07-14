@@ -1,6 +1,39 @@
 [
   {
     "title": {
+      "pt": "Origem",
+      "en": "Origin"
+    },
+    "img": "/imgs/kammara/gotto/_scenes/1_Vale_Escuta.jpg",
+    "text": {
+      "pt": [
+        "### Antes do primeiro ciclo",
+        "O planeta já existia antes de tudo recomeçar pela primeira vez. Não era um vazio. Havia a planície, os rios, as árvores-coral e o chão creme com seu brilho roxo — um mundo pronto, mas ainda em silêncio, à espera de acontecer.",
+        "### A vida que já estava aqui",
+        "A fauna e a flora sempre foram deste planeta. Os grandes anciães dos rios e dos morros e os pequenos que saltam entre as árvores estavam aqui antes das vilas, antes dos caminhos. O planeta sempre foi deles.",
+        "### Quando o mundo começou a acontecer",
+        "Gotto não foi construído nem criado. Ele começou a acontecer — a absorver, a mostrar, a recomeçar. Foi aí que a paisagem deixou de ser fixa: as regiões viram vales, e a cada Recomeço tudo se reorganiza.",
+        "### De onde vieram os Basiks",
+        "Ao contrário da fauna e da flora, os Basiks não são deste planeta. Eles vieram de fora — chegaram com a Fenda Shal'ún, o vínculo ancestral que liga Gotto a LUNN'P1. Por isso os dois povos se reconhecem: a mesma raiz corre neles.",
+        "### O que a Fenda deixou",
+        "O glifo nas costas de cada Basik é a marca dessa passagem — herança direta da Fenda. Não é enfeite: é o sinal de onde o povo veio, a memória profunda que sobrevive a cada reinício."
+      ],
+      "en": [
+        "### Before the first cycle",
+        "The planet already existed before everything began again for the first time. It was not a void. There was the plain, the rivers, the coral-trees and the cream-colored ground with its purple glow — a world ready, but still silent, waiting to happen.",
+        "### The life that was already here",
+        "The fauna and flora have always belonged to this planet. The great elders of the rivers and hills and the small ones that leap among the trees were here before the villages, before the paths. The planet has always been theirs.",
+        "### When the world began to happen",
+        "Gotto was not built nor created. It began to happen — to absorb, to show, to begin again. That was when the landscape stopped being fixed: the regions became valleys, and with each Beginning-Again everything reorganizes.",
+        "### Where the Basiks came from",
+        "Unlike the fauna and flora, the Basiks are not of this planet. They came from outside — they arrived with the Shal'ún Rift, the ancestral bond that links Gotto to LUNN'P1. That is why the two peoples recognize each other: the same root runs through them.",
+        "### What the Rift left behind",
+        "The glyph on each Basik's back is the mark of that passage — a direct inheritance from the Rift. It is not an ornament: it is the sign of where the people came from, the deep memory that survives every restart."
+      ]
+    }
+  },
+  {
+    "title": {
       "pt": "Cultura",
       "en": "Culture"
     },
@@ -44,10 +77,6 @@
     "img": "/imgs/kammara/gotto/_subsystems/vila_basics.jpg",
     "text": {
       "pt": [
-        "### Aparência",
-        "Seres esféricos e bicolores — metade branca, metade preta. Sem pescoço, sem dedos, sem passado fixo. Dois olhos redondos.",
-        "### O corpo",
-        "Braços e pernas curtos saem direto do corpo esférico. Medem cerca de 20 a 25 centímetros. São pequenos, redondos e imparáveis.",
         "### O glifo",
         "Nas costas, carregam um glifo Shal'ún — uma marca antiga que vem da conexão entre Gotto e LUNN'P1. É uma memória profunda que sobrevive a cada reinício.",
         "### O comportamento",
@@ -58,10 +87,6 @@
         "São pequenos, redondos e imparáveis. A leveza mais bonita do universo — e também a mais vulnerável."
       ],
       "en": [
-        "### Appearance",
-        "Spherical, two-toned beings — half white, half black. No neck, no fingers, no fixed past. Two round eyes.",
-        "### The body",
-        "Short arms and legs come straight out of the spherical body. They measure about 20 to 25 centimeters. They are small, round and unstoppable.",
         "### The glyph",
         "On their backs they carry a Shal'ún glyph — an ancient mark that comes from the connection between Gotto and LUNN'P1. It is a deep memory that survives each restart.",
         "### Behavior",
@@ -92,7 +117,7 @@
         "### Os Refúgios",
         "Zonas intermediárias, cheias de variação — vales temporários, cavernas, ilhas que só surgem quando o ciclo precisa delas; quem entra pode não encontrar a saída.",
         "### As casas de escama",
-        "Toda a civilização é erguida do que o Daryun solta. As escamas gigantes do peixe colossal dos rios são o material de cada casa, cada ponte, cada vila — nada em Gotto se constrói de outra coisa. Cada Daryun tem sua própria cor, e por isso cada vila varia de tom, nunca igual duas vezes.",
+        "Toda a civilização é erguida do que o Daryun solta. As escamas gigantes do peixe colossal dos rios são o material de cada casa, cada ponte, cada vila. As escamas caem sozinhas, soltas naturalmente pelo peixe ao longo do ciclo: nenhum Daryun é ferido ou morto por elas. Os Basiks apenas recolhem o que o rio já entregou. Cada Daryun tem sua própria cor, e por isso cada vila varia de tom.",
         "### Depois de cada recomeço",
         "Depois de cada recomeço, as cidades mudam de lugar. Os caminhos somem. O que era mapa vira memória — e no próximo ciclo, quase não existe mais."
       ],
@@ -108,7 +133,7 @@
         "### The Refuges",
         "Intermediate zones, full of variation — temporary valleys, caves, islands that only appear when the cycle needs them; whoever enters may not find the way out.",
         "### The scale houses",
-        "The whole civilization is built from what the Daryun sheds. The giant scales of the colossal river fish are the material of every house, every bridge, every village — nothing in Gotto is built from anything else. Each Daryun has its own color, which is why every village varies in tone, never the same twice.",
+        "The whole civilization is built from what the Daryun sheds. The giant scales of the colossal river fish are the material of every house, every bridge, every village. The scales fall on their own, shed naturally by the fish throughout the cycle: no Daryun is harmed or killed for them. The Basiks only gather what the river has already given. Each Daryun has its own color, which is why every village varies in tone.",
         "### After each restart",
         "After each restart, the cities change place. The paths vanish. What was a map becomes memory — and in the next cycle, it barely exists anymore."
       ]
