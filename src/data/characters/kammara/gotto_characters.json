@@ -11,8 +11,8 @@
     },
     "image": "/imgs/kammara/gotto/rema.png",
     "bio": {
-      "pt": "Silêncio entre as notas — a pausa que dá forma ao fluxo. Como o REM no código, está presente sem executar. Onde ela está, o excesso se dissolve.",
-      "en": "Silence between the notes — the pause that shapes the flow. Like REM in code, present without executing. Where she is, excess dissolves."
+      "pt": "Rema é o sossego de Gotto. Ela quase não se mexe e quase não fala — só fica quietinha. E é por isso que todo mundo se acalma perto dela. Quando o barulho fica demais, é a Rema que traz a paz.",
+      "en": "Rema is the calm of Gotto. She barely moves and barely speaks — she just stays quiet. And that's why everyone settles down near her. When the noise gets to be too much, it's Rema who brings the peace."
     },
     "backImage": "/imgs/kammara/gotto/rema_costas.png",
     "backTitle": {
@@ -71,8 +71,8 @@
     },
     "image": "/imgs/kammara/gotto/pilo.png",
     "bio": {
-      "pt": "Fluxo audível — a correnteza que faz barulho para saber que existe. Quando ele fala, algo acorda; sua presença se confirma pela repetição.",
-      "en": "An audible flow — the current that makes noise to know it exists. When he speaks, something wakes; his presence confirms itself by repetition."
+      "pt": "Pilo adora falar. Ele repete as coisas de novo e de novo, porque falar é o jeito dele de saber que está ali. E quando o Pilo fala, os outros acordam e se mexem. Onde ele chega, tudo ganha vida.",
+      "en": "Pilo loves to talk. He repeats things again and again, because talking is his way of knowing he's there. And when Pilo talks, the others wake up and get moving. Wherever he arrives, everything comes to life."
     },
     "backImage": "/imgs/kammara/gotto/pilo_costas.png",
     "backTitle": {
@@ -131,8 +131,8 @@
     },
     "image": "/imgs/kammara/gotto/jump.png",
     "bio": {
-      "pt": "A mudança em si. Onde outros veem caminho, Jump vê salto — já não está onde estava. Sua presença impede que outros fiquem presos.",
-      "en": "Change itself. Where others see a path, Jump sees a leap — already gone from where he was. His presence keeps others from getting stuck."
+      "pt": "Jump nunca fica parado. Ele está sempre pulando de um lugar pro outro — quando você olha, ele já saltou pra bem longe. Vendo o Jump saltar, ninguém fica preso: todo mundo aprende que dá pra seguir em frente.",
+      "en": "Jump is never still. He's always hopping from one place to another — by the time you look, he's already leapt far away. Watching Jump leap, no one stays stuck: everyone learns that you can move on."
     },
     "backImage": "/imgs/kammara/gotto/jump_costas.png",
     "backTitle": {
@@ -191,8 +191,8 @@
     },
     "image": "/imgs/kammara/gotto/flipflop.png",
     "bio": {
-      "pt": "O trepador de Gotto — um pequeno nativo felpudo de pelo marrom que sobe nas árvores-coral. Divide as frutas do alto com o Kirió: o gigante alcança as do topo, FlipFlop colhe as escondidas.",
-      "en": "Gotto's climber — a small furry brown native that scales the coral-trees. It shares the high fruit with the Kirió: the giant reaches the top ones, FlipFlop picks the hidden ones."
+      "pt": "FlipFlop é um bichinho carinhoso e peludo que sobe rápido nas árvores. Ele pega as frutinhas escondidas lá no alto, e divide com o Kirió.",
+      "en": "FlipFlop is a sweet, furry little creature that climbs quickly up the trees. It grabs the hidden little fruits high up and shares them with the Kirió."
     },
     "backImage": "/imgs/kammara/gotto/flipflop_costas.png",
     "backTitle": {
@@ -244,8 +244,8 @@
     },
     "image": "/imgs/kammara/gotto/kirio_frente.png",
     "bio": {
-      "pt": "Kirió parece um morro — e é. Uma ave colossal de penas que imitam a folhagem, imóvel no alto, vigiando a planície. Anciã que não esquece: a memória viva de Gotto.",
-      "en": "Kirió looks like a hill — and is one. A colossal bird whose feathers mimic the foliage, motionless up high, watching the plain. An elder that never forgets: Gotto's living memory."
+      "pt": "Kirió parece um morro — mas é um bicho enorme, bem quietinho, coberto de folhas. Ele fica lá no alto, olhando e cuidando das casas dos Basiks. É muito, muito antigo. E é o único que não esquece quando o planeta recomeça: o Kirió lembra de tudo por todo mundo.",
+      "en": "Kirió looks like a hill — but it's a huge, very quiet creature, covered in leaves. It stays up high, watching over and caring for the Basiks' houses. It is very, very old. And it's the only one who doesn't forget when the planet begins again: Kirió remembers everything for everyone."
     },
     "backImage": "/imgs/kammara/gotto/kirio_back.png",
     "backTitle": {
@@ -297,8 +297,8 @@
     },
     "image": "/imgs/kammara/gotto/daryun.png",
     "bio": {
-      "pt": "O ser mais importante de Gotto — um peixe colossal e antiquíssimo dos rios. As escamas enormes que ele solta são o material de toda a civilização: sem Daryun, não há vila.",
-      "en": "Gotto's most important being — a colossal, ancient river fish. The enormous scales it sheds are the material of the whole civilization: without Daryun, there is no village."
+      "pt": "Daryun é um peixe gigante e muito antigo que vive nos rios. Ele é o maior de todos em Gotto. Quando ele nada, solta escamas enormes — e é com essas escamas que os Basiks fazem as casas. Sem o Daryun, não haveria casa nenhuma.",
+      "en": "Daryun is a giant, very old fish that lives in the rivers. It is the biggest of all in Gotto. When it swims, it sheds enormous scales — and it's with these scales that the Basiks build the houses. Without Daryun, there would be no houses at all."
     },
     "backImage": "/imgs/kammara/gotto/daryun_back.png",
     "backTitle": {
