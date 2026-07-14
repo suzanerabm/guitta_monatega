@@ -226,8 +226,8 @@
           "en": "Region"
         },
         "value": {
-          "pt": "Os bosques de árvores-coral",
-          "en": "The coral-tree groves"
+          "pt": "Os bosques",
+          "en": "The groves"
         }
       }
     ]
@@ -399,8 +399,8 @@
     },
     "image": "/imgs/kammara/gotto/momo.png",
     "bio": {
-      "pt": "Esquece tudo a cada Recomeço, mas o laço com a Rema atravessa o loop — sempre a primeira vez.",
-      "en": "It forgets everything at each Restart, but the bond with Rema crosses the loop — always the first time."
+      "pt": "Esquece tudo a cada Recomeço, mas o laço com a Rema atravessa o loop.",
+      "en": "It forgets everything at each Restart, but the bond with Rema crosses the loop."
     },
     "backImage": "/imgs/kammara/gotto/momo_costas.png",
     "backTitle": {

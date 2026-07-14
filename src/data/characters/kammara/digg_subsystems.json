@@ -1,5 +1,43 @@
 [
   {
+    "title": { "pt": "Origem", "en": "Origin" },
+    "img": "",
+    "text": {
+      "pt": [
+        "### O planeta que foi montado",
+        "O Digg não nasceu — foi construído. Não é um mundo natural: é uma cadeia de blocos-montanha de pedra que os fundadores cataram do universo e acorrentaram um ao outro. Não houve um instante de criação. Houve o primeiro bloco, depois o segundo, depois o terceiro.",
+        "### Os blocos espalhados",
+        "Antes do Digg, os blocos já existiam, mas soltos pelo universo. Cada um guardava kemita dentro de si, à deriva, sem ordem e sem dono. Eram só pedras dispersas, esperando quem as reunisse.",
+        "### A cadeia que não para",
+        "Um bando de Diggers capturou o primeiro bloco, prendeu o segundo com correntes de kemita, depois o terceiro. A corrente nasceu — e nunca mais parou de crescer. Cavaram túneis, ergueram castelos, e o amontoado virou o Digg. Ele nunca ficou pronto: como toda cadeia, só sabe adicionar o próximo bloco.",
+        "### A moral do acúmulo",
+        "Em Digg, acumular é virtude. Ter mais blocos, mais kemita, mais de tudo é o certo. Possuir é ser bom; soltar é fraqueza. É a moral invertida do universo — coerente consigo mesma, e convicta.",
+        "### A vida cotidiana",
+        "O dia a dia é roubar, planejar o próximo roubo, minerar mais kemita e escravizar quem for útil. Sempre se quer mais. E, como todos querem o mesmo, brigam entre si e roubam entre si também.",
+        "### Sem lei, só força",
+        "Não há autoridade legítima nem lei. A ordem nasce da força: manda quem tem mais poder, mais kemita, mais capangas. E reina só até aparecer alguém mais forte.",
+        "### A lealdade frágil",
+        "\"Leal\", em Digg, é palavra que dura enquanto convém. O companheiro de hoje é o traidor de amanhã, se compensar. O círculo de confiança é, na verdade, o de quem está mais perto para tomar o lugar."
+      ],
+      "en": [
+        "### The planet that was assembled",
+        "Digg was not born — it was built. It is not a natural world: it is a chain of stone mountain-blocks that the founders scavenged from the universe and shackled to one another. There was no moment of creation. There was the first block, then the second, then the third.",
+        "### The scattered blocks",
+        "Before Digg, the blocks already existed, but loose across the universe. Each one held kemita within, adrift, with no order and no owner. They were just dispersed stones, waiting for whoever would gather them.",
+        "### The chain that never stops",
+        "A band of Diggers captured the first block, bound the second with chains of kemita, then the third. The chain was born — and never stopped growing. They dug tunnels, raised castles, and the heap became Digg. It was never finished: like any chain, it only knows how to add the next block.",
+        "### The morality of hoarding",
+        "On Digg, to hoard is a virtue. Having more blocks, more kemita, more of everything is what's right. To possess is to be good; to let go is weakness. It is the universe's inverted morality — coherent with itself, and convinced.",
+        "### Daily life",
+        "Day to day is stealing, planning the next theft, mining more kemita and enslaving whoever is useful. There is always the want for more. And since everyone wants the same, they fight among themselves and steal from each other too.",
+        "### No law, only force",
+        "There is no legitimate authority and no law. Order is born of force: whoever has more power, more kemita, more henchmen rules. And they reign only until someone stronger appears.",
+        "### Fragile loyalty",
+        "\"Loyal,\" on Digg, is a word that lasts only while convenient. Today's companion is tomorrow's traitor, if it pays off. The circle of trust is, in truth, the circle of those closest to taking your place."
+      ]
+    }
+  },
+  {
     "title": { "pt": "Cultura", "en": "Culture" },
     "img": "/imgs/kammara/digg/_subsystems/cultura.jpg",
     "text": {

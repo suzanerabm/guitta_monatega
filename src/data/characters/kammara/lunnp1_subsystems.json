@@ -1,6 +1,35 @@
 [
   {
     "title": {
+      "pt": "Origem",
+      "en": "Origin"
+    },
+    "img": "/imgs/kammara/lunnp1/_scenes/regiao_norte.jpg",
+    "text": {
+      "pt": [
+        "### Um mundo que não começou",
+        "LUNN'P1 não tem um instante de nascimento. Outros mundos vieram de um choque, de uma queda, de um primeiro dia. Este não. A luz sempre esteve aqui — contínua, sem antes nem depois. O planeta não começou: ele continuou.",
+        "### A água primordial",
+        "No princípio havia apenas água, transparente e profunda, espalhada em silêncio. Ela existia, mas ainda não vibrava, não refletia, não guardava nada. Uma imensidão quieta, à espera de um primeiro movimento.",
+        "### O primeiro pulso",
+        "Então um único pulso atravessou a água. É o instante mais sagrado da história do planeta: o silêncio se moveu. A água ganhou vibração, correntes, o primeiro tremor de algo que sente — e deixou de ser matéria passiva para se tornar presença viva.",
+        "### O nascimento dos Shal'ún",
+        "Quando a luz, a água e as raízes se alinharam por completo, emergiram os Shal'ún, o povo de LUNN'P1. Não foram criados por nenhuma mão — surgiram do encontro perfeito de tudo o que o planeta já era. São a essência do mundo tomando forma."
+      ],
+      "en": [
+        "### A world that did not begin",
+        "LUNN'P1 has no moment of birth. Other worlds came from a shock, a fall, a first day. This one did not. The light was always here — continuous, with no before nor after. The planet did not begin: it continued.",
+        "### The primordial water",
+        "In the beginning there was only water, transparent and deep, spread out in silence. It existed, but it did not yet vibrate, did not reflect, kept nothing. A quiet vastness, waiting for a first movement.",
+        "### The first pulse",
+        "Then a single pulse crossed the water. It is the most sacred moment in the planet's history: the silence moved. The water gained vibration, currents, the first tremor of something that feels — and ceased to be passive matter to become living presence.",
+        "### The birth of the Shal'ún",
+        "When light, water and roots aligned completely, the Shal'ún emerged, the people of LUNN'P1. They were made by no hand — they arose from the perfect meeting of everything the planet already was. They are the essence of the world taking form."
+      ]
+    }
+  },
+  {
+    "title": {
       "pt": "Cultura",
       "en": "Culture"
     },
