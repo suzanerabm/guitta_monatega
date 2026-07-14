@@ -1,6 +1,55 @@
 [
   {
     "title": {
+      "pt": "Origem",
+      "en": "Origin"
+    },
+    "img": "/imgs/kammara/z1/_subsystems/origem.jpg",
+    "text": {
+      "pt": [
+        "### O planeta que foi descartado",
+        "Z1 não foi planejado. Foi descartado. Outro mundo se livrou do que não queria e despejou tudo aqui: placas quebradas, válvulas mortas, transistores velhos, restos de máquinas. Ninguém esperava que algo nascesse do lixo.",
+        "### Antes, só pedra",
+        "Antes disso, Z1 era um planeta vazio de pedra. Sem vida, sem lógica, sem propósito. Silêncio absoluto. Foi justamente por estar tão vazio que serviu de depósito para o refugo de outro mundo.",
+        "### A vida que se selecionou",
+        "Entre os restos, alguns transistores antigos voltaram a funcionar sozinhos. Reorganizaram-se, ergueram as primeiras torres. E uma regra silenciosa decidiu tudo: o que mantinha o padrão prosperava, o que virava ruído desaparecia. Do lixo, nasceu a ordem.",
+        "### Era 0 — O Vazio",
+        "Z1 era pedra mineral e silêncio absoluto. Nada existia.",
+        "### Era 1 — O Grande Descarte",
+        "Node-0 deu a ordem. Os vírus despejaram lixo técnico no planeta. Entre a sucata estava a Primeira Forma Perdida.",
+        "### Era 2 — O Despertar",
+        "Transistores ancestrais reativaram. A ordem emergiu do caos sem que ninguém planejasse.",
+        "### Era 3 — A Reconstrução",
+        "Vilas, trilhos, torres, castas. O planeta se organizou como um sistema operacional vivo.",
+        "### Era 4 — O Reconhecimento",
+        "Z1 compreendeu a linguagem viral. Tornou-se o inimigo natural dos vírus — nascido da mesma origem.",
+        "### Era atual",
+        "O Esquadrão Sincrônico opera. Aliança com os Shal'ún. Guerra de atrito com ENI-4Δ. Até o caos pode virar vida."
+      ],
+      "en": [
+        "### The planet that was discarded",
+        "Z1 was not planned. It was discarded. Another world rid itself of what it didn't want and dumped it all here: broken boards, dead valves, old transistors, the remains of machines. No one expected anything to be born from the trash.",
+        "### Before, only stone",
+        "Before that, Z1 was an empty planet of stone. No life, no logic, no purpose. Absolute silence. It was precisely because it was so empty that it served as a dump for another world's refuse.",
+        "### The life that selected itself",
+        "Among the remains, some old transistors began working again on their own. They reorganized, raised the first towers. And a silent rule decided everything: what held the pattern prospered, what turned to noise vanished. From the trash, order was born.",
+        "### Era 0 — The Void",
+        "Z1 was mineral stone and absolute silence. Nothing existed.",
+        "### Era 1 — The Great Discard",
+        "Node-0 gave the order. The viruses dumped technical waste onto the planet. Among the scrap was the First Lost Form.",
+        "### Era 2 — The Awakening",
+        "Ancestral transistors reactivated. Order emerged from chaos without anyone planning it.",
+        "### Era 3 — The Reconstruction",
+        "Villages, rails, towers, castes. The planet organized itself like a living operating system.",
+        "### Era 4 — The Recognition",
+        "Z1 understood the viral language. It became the natural enemy of the viruses — born of the same origin.",
+        "### Current era",
+        "The Synchronic Squad operates. An alliance with the Shal'ún. A war of attrition with ENI-4Δ. Even chaos can become life."
+      ]
+    }
+  },
+  {
+    "title": {
       "pt": "Cultura",
       "en": "Culture"
     },
@@ -144,43 +193,6 @@
         "This ability makes Z1 the decoder of the enemy. The key to understanding the threat was in the trash itself.",
         "### The essence",
         "In Z1, silence is not absence. It is the cleanest instruction that exists."
-      ]
-    }
-  },
-  {
-    "title": {
-      "pt": "Origem & História",
-      "en": "Origin & History"
-    },
-    "img": "/imgs/kammara/z1/_subsystems/origem.jpg",
-    "text": {
-      "pt": [
-        "### Era 0 — O Vazio",
-        "Z1 era pedra mineral e silêncio absoluto. Nada existia.",
-        "### Era 1 — O Grande Descarte",
-        "Node-0 deu a ordem. Os vírus despejaram lixo técnico no planeta. Entre a sucata estava a Primeira Forma Perdida.",
-        "### Era 2 — O Despertar",
-        "Transistores ancestrais reativaram. A ordem emergiu do caos sem que ninguém planejasse.",
-        "### Era 3 — A Reconstrução",
-        "Vilas, trilhos, torres, castas. O planeta se organizou como um sistema operacional vivo.",
-        "### Era 4 — O Reconhecimento",
-        "Z1 compreendeu a linguagem viral. Tornou-se o inimigo natural dos vírus — nascido da mesma origem.",
-        "### Era atual",
-        "O Esquadrão Sincrônico opera. Aliança com os Shal'ún. Guerra de atrito com ENI-4Δ. Até o caos pode virar vida."
-      ],
-      "en": [
-        "### Era 0 — The Void",
-        "Z1 was mineral rock and absolute silence. Nothing existed.",
-        "### Era 1 — The Great Discard",
-        "Node-0 gave the order. The viruses dumped technical waste on the planet. Among the scrap was the First Lost Form.",
-        "### Era 2 — The Awakening",
-        "Ancestral transistors reactivated. Order emerged from chaos without anyone planning it.",
-        "### Era 3 — The Reconstruction",
-        "Villages, rails, towers, castes. The planet organized itself like a living operating system.",
-        "### Era 4 — The Recognition",
-        "Z1 understood the viral language. It became the natural enemy of the viruses — born from the same origin.",
-        "### Present Era",
-        "The Synchronic Squad operates. Alliance with the Shal'ún. War of attrition with ENI-4Δ. Even chaos can become life."
       ]
     }
   },
