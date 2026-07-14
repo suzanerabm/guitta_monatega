@@ -1,103 +1,295 @@
 [
   {
-    "match": "O Administrador da Vitrine",
+    "match": "Jaquarta",
     "name": {
-      "pt": "O Administrador da Vitrine",
-      "en": "The Administrator of the Showcase"
+      "pt": "Jaquarta",
+      "en": "Jaquarta"
     },
     "species": {
-      "pt": "Governo de fachada",
-      "en": "Facade government"
+      "pt": "Rinoffe",
+      "en": "Rinoffe"
     },
     "bio": {
-      "pt": "Ocupa o Ratdra, opera o centro de comando oficial, recebe as delegações e preside as cúpulas diplomáticas. Para o universo de fora, é quem manda em Memphis — mas não manda em nada: o comando real é do Axel, e o poder de fato está nas ruas. É a interface feita pessoa, uma janela bonita sobre um sistema que ele não controla. Por baixo da pose, é refém de Node-0 e obedece em segredo para não deixar o planeta morrer.",
-      "en": "He occupies the Ratdra, operates the official command center, receives the delegations and presides over the diplomatic summits. To the outside universe he is the one who rules Memphis — but he rules nothing: real command belongs to the Axel, and actual power lives in the streets. He is the interface made person, a pretty window over a system he does not control. Beneath the pose he is Node-0's hostage, obeying in secret so the planet won't die."
+      "pt": "Prefeito de Memphis e chefe do Conselho da Vitrine. De monóculo de ouro e cetro na mão, é o rosto que a cidade mostra ao cosmos: digno, sereno, no comando.",
+      "en": "Mayor of Memphis and head of the Council of the Showcase. Gold monocle, scepter in hand, he is the face the city shows the cosmos: dignified, serene, in command."
     },
-    "image": "",
-    "backImage": "",
-    "backTitle": { "pt": "", "en": "" },
+    "image": "/imgs/kammara/memphis/Jaquarta_frente.png",
+    "backImage": "/imgs/kammara/memphis/Jaquarta_back.png",
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Other Side"
+    },
     "dorsalMeaning": {
-      "pt": "Sorrio nas cúpulas e não durmo à noite — mando em Memphis para não deixar Memphis morrer.",
-      "en": "I smile at the summits and I don't sleep at night — I rule Memphis so Memphis won't die."
+      "pt": "No comando de Memphis. (sempre sorrindo)",
+      "en": "In command of Memphis. (always smiling)"
     },
     "attributes": [
       {
         "glyph": "⊶⊷⊙",
-        "label": { "pt": "Função", "en": "Role" },
-        "value": { "pt": "O rosto do governo de fachada", "en": "Face of the facade government" }
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Prefeito",
+          "en": "Mayor"
+        }
       },
       {
         "glyph": "⊹—⊙",
-        "label": { "pt": "Região", "en": "Region" },
-        "value": { "pt": "O Ratdra (a Vitrine)", "en": "The Ratdra (the Showcase)" }
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "O Ratdra",
+          "en": "The Ratdra"
+        }
       }
     ]
   },
   {
-    "match": "Os Vigias da Torre",
+    "match": "Violeta",
     "name": {
-      "pt": "Os Vigias da Torre",
-      "en": "The Tower Watchers"
+      "pt": "Violeta",
+      "en": "Violeta"
     },
     "species": {
-      "pt": "Casta técnica",
-      "en": "Technical caste"
+      "pt": "Sugrelle",
+      "en": "Sugrelle"
     },
     "bio": {
-      "pt": "Uma casta técnica, respeitada, quase sacerdotal. Passam a existência lendo o pulso do Axel — o batimento que sobe do núcleo — para saber quando o tempo vai virar e avisar a cidade das viradas. Não tocam o Axel, sagrado e escondido: só escutam, como quem ausculta um coração sem nunca ver o corpo. São os que mais entendem Memphis e, por isso, os mais solitários: sabem melhor que ninguém o quanto o planeta é frágil.",
-      "en": "A technical caste — respected, almost priestly. They spend their existence reading the pulse of the Axel, the beat that rises from the core, to know when time will turn and warn the city of its turns. They do not touch the Axel, sacred and hidden: they only listen, like someone auscultating a heart without ever seeing the body. They are the ones who understand Memphis most, and so the loneliest — they know better than anyone how fragile the planet is."
+      "pt": "A mais graciosa do Conselho: pequena, de olhos roxos enormes e coroa dourada. Faz os acordos acontecerem com um sorriso — ninguém sai de perto dela sem um favor combinado.",
+      "en": "The most graceful of the Council: small, with enormous purple eyes and a golden crown. She makes deals happen with a smile — no one leaves her side without a favor arranged."
     },
-    "image": "",
-    "backImage": "",
-    "backTitle": { "pt": "", "en": "" },
+    "image": "/imgs/kammara/memphis/Violeta.png",
+    "backImage": "/imgs/kammara/memphis/Violeta_costas.png",
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Other Side"
+    },
     "dorsalMeaning": {
-      "pt": "Não mandamos no tempo. Escutamo-lo — e aprendemos a não ter medo do próximo batimento.",
-      "en": "We do not rule time. We listen to it — and we've learned not to fear the next beat."
+      "pt": "Deixa comigo, querido. (e deixe mesmo)",
+      "en": "Leave it to me, darling. (and do leave it)"
     },
     "attributes": [
       {
         "glyph": "⊶⊷⊙",
-        "label": { "pt": "Função", "en": "Role" },
-        "value": { "pt": "Operadores das Torres do Clock", "en": "Operators of the Clock Towers" }
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Os acordos",
+          "en": "The deals"
+        }
       },
       {
         "glyph": "⊹—⊙",
-        "label": { "pt": "Região", "en": "Region" },
-        "value": { "pt": "As Torres do Clock, no Ratdra", "en": "The Clock Towers, in the Ratdra" }
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "O Ratdra",
+          "en": "The Ratdra"
+        }
       }
     ]
   },
   {
-    "match": "Os Z1 Ancestrais",
+    "match": "Peter",
     "name": {
-      "pt": "Os Z1 Ancestrais",
-      "en": "The Ancestral Z1"
+      "pt": "Peter",
+      "en": "Peter"
     },
     "species": {
-      "pt": "Z1 defeituosos (fundadores)",
-      "en": "Defective Z1 (founders)"
+      "pt": "Sugrelle",
+      "en": "Sugrelle"
     },
     "bio": {
-      "pt": "Os Z1 defeituosos originais que ergueram o Axel e fundaram Memphis, cansados da perfeição de Z1 mas incapazes de largar a engenharia da alma. Carregam na memória o conhecimento da fundação — talvez até o endereço secreto do Axel, a peça que Node-0 caça e não tem. Se algum ainda existe, é um resto: fragmentado, degradado, com a memória corrompida. Um cofre vivo que apodrece — o maior tesouro e a maior tragédia da cidade.",
-      "en": "The original defective Z1 who raised the Axel and founded Memphis — tired of Z1's perfection, yet unable to shed the engineering in their souls. They carry in memory the knowledge of the founding — perhaps even the Axel's secret address, the piece Node-0 hunts and lacks. If any still exist, they are a remnant: fragmented, degraded, their memory corrupted. A living vault that is rotting — at once the city's greatest treasure and its greatest tragedy."
+      "pt": "O mais discreto do Conselho: fofo, quieto, de crista arrepiada e olhos atentos. Fala pouco e lembra de tudo — cada acordo, cada nome, cada promessa. Ninguém repara nele, e ele repara em todos.",
+      "en": "The most discreet of the Council: soft, quiet, with a ruffled crest and watchful eyes. He speaks little and remembers everything — every deal, every name, every promise. No one notices him, and he notices everyone."
     },
-    "image": "",
-    "backImage": "",
-    "backTitle": { "pt": "", "en": "" },
+    "image": "/imgs/kammara/memphis/Peter.png",
+    "backImage": "/imgs/kammara/memphis/Peter_back.png",
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Other Side"
+    },
     "dorsalMeaning": {
-      "pt": "Guardamos o segredo que pode matar o planeta — numa mente que já mal se lembra de quem é.",
-      "en": "We guard the secret that can kill the planet — in a mind that barely remembers who it is."
+      "pt": "Eu me lembro disso. (de tudo)",
+      "en": "I remember that. (everything)"
     },
     "attributes": [
       {
         "glyph": "⊶⊷⊙",
-        "label": { "pt": "Função", "en": "Role" },
-        "value": { "pt": "Os fundadores que ergueram o Axel", "en": "The founders who raised the Axel" }
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "A memória",
+          "en": "The memory"
+        }
       },
       {
         "glyph": "⊹—⊙",
-        "label": { "pt": "Região", "en": "Region" },
-        "value": { "pt": "A Mina do Faton, perto do Axel", "en": "The Faton Mine, near the Axel" }
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "O Ratdra",
+          "en": "The Ratdra"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Destro",
+    "name": {
+      "pt": "Destro",
+      "en": "Destro"
+    },
+    "species": {
+      "pt": "Dectoris",
+      "en": "Dectoris"
+    },
+    "bio": {
+      "pt": "O mais imponente do Conselho: alto, esguio, de rosto afilado e vestes de ouro e ametista. É a mão firme da corte, o que mantém a ordem. Fala pouco, e quando fala, todos escutam.",
+      "en": "The most imposing of the Council: tall, slender, with a narrow face and robes of gold and amethyst. He is the firm hand of the court, the one who keeps order. He speaks little, and when he speaks, everyone listens."
+    },
+    "image": "/imgs/kammara/memphis/Destro.png",
+    "backImage": "/imgs/kammara/memphis/Destro_costas.png",
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Other Side"
+    },
+    "dorsalMeaning": {
+      "pt": "Está resolvido. (e ninguém pergunta como)",
+      "en": "It's settled. (and no one asks how)"
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "A ordem",
+          "en": "Order"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "O Ratdra",
+          "en": "The Ratdra"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Raigu",
+    "name": {
+      "pt": "Raigu",
+      "en": "Raigu"
+    },
+    "species": {
+      "pt": "Kravún",
+      "en": "Kravún"
+    },
+    "bio": {
+      "pt": "O mais místico do Conselho: figura alta de longo bico branco e cetro de ametista. Lê os sinais da cidade instável e aconselha a corte sobre o que vem pela frente. A corte silencia quando ele fala.",
+      "en": "The most mystical of the Council: a tall figure with a long white beak and an amethyst scepter. He reads the signs of the unstable city and advises the court on what lies ahead. The court falls silent when he speaks."
+    },
+    "image": "/imgs/kammara/memphis/Raigu_frente.png",
+    "backImage": "/imgs/kammara/memphis/Raiagu_costas.png",
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Other Side"
+    },
+    "dorsalMeaning": {
+      "pt": "Eu já vi isso acontecer. (antes de acontecer)",
+      "en": "I have seen this happen. (before it happens)"
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "O conselheiro",
+          "en": "The counselor"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "O Ratdra",
+          "en": "The Ratdra"
+        }
+      }
+    ]
+  },
+  {
+    "match": "Nobuk",
+    "name": {
+      "pt": "Nobuk",
+      "en": "Nobuk"
+    },
+    "species": {
+      "pt": "Potland",
+      "en": "Potland"
+    },
+    "bio": {
+      "pt": "O mais sereno do Conselho: corpo liso de marfim, chifres em espiral e um sorriso calmo que nunca se altera. É o guardião da corte — zela pelos cofres e registros. Num planeta onde tudo muda, Nobuk é o ponto que sempre fica.",
+      "en": "The most serene of the Council: a smooth ivory body, spiraling horns and a calm smile that never changes. He is the guardian of the court — tending to the vaults and records. On a planet where everything changes, Nobuk is the point that always stays."
+    },
+    "image": "/imgs/kammara/memphis/Nobuk.png",
+    "backImage": "/imgs/kammara/memphis/Nobuk_back.png",
+    "backTitle": {
+      "pt": "Outro Lado",
+      "en": "Other Side"
+    },
+    "dorsalMeaning": {
+      "pt": "Eu fico. (sempre ficou)",
+      "en": "I stay. (always has)"
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "O guardião",
+          "en": "The guardian"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "O Ratdra",
+          "en": "The Ratdra"
+        }
       }
     ]
   }
