@@ -91,6 +91,14 @@ export function KammaraCardSubsystemHorizontal({
     rouletteRef.current?.close();
   };
 
+  // Fecha a roleta ao tocar/clicar no corpo do texto. Necessário para os
+  // subsistemas com pouco texto: sem scroll, `onScroll` nunca dispara e a
+  // roleta ficaria aberta por cima do texto, impedindo a leitura. Aqui um
+  // toque no texto já tira a roleta do caminho.
+  const handleBodyPointerDown = () => {
+    rouletteRef.current?.close();
+  };
+
   // ---------------------------------------------------------------------
   // Variation A — editorial header on top + image/text side-by-side body.
   // ---------------------------------------------------------------------
@@ -608,6 +616,7 @@ export function KammaraCardSubsystemHorizontal({
             minH={0}
             overflowY="auto"
             onScroll={handleBodyScroll}
+            onPointerDown={handleBodyPointerDown}
             css={{
               paddingTop: '1rem',
               fontFamily: 'var(--chakra-fonts-body)',
