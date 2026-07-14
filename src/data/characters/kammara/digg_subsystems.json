@@ -1,39 +1,19 @@
 [
   {
     "title": { "pt": "Origem", "en": "Origin" },
-    "img": "",
+    "img": "/imgs/kammara/digg/_scenes/primeira_rocha.jpg",
     "text": {
       "pt": [
-        "### O planeta que foi montado",
-        "O Digg não nasceu — foi construído. Não é um mundo natural: é uma cadeia de blocos-montanha de pedra que os fundadores cataram do universo e acorrentaram um ao outro. Não houve um instante de criação. Houve o primeiro bloco, depois o segundo, depois o terceiro.",
-        "### Os blocos espalhados",
-        "Antes do Digg, os blocos já existiam, mas soltos pelo universo. Cada um guardava kemita dentro de si, à deriva, sem ordem e sem dono. Eram só pedras dispersas, esperando quem as reunisse.",
-        "### A cadeia que não para",
-        "Um bando de Diggers capturou o primeiro bloco, prendeu o segundo com correntes de kemita, depois o terceiro. A corrente nasceu — e nunca mais parou de crescer. Cavaram túneis, ergueram castelos, e o amontoado virou o Digg. Ele nunca ficou pronto: como toda cadeia, só sabe adicionar o próximo bloco.",
-        "### A moral do acúmulo",
-        "Em Digg, acumular é virtude. Ter mais blocos, mais kemita, mais de tudo é o certo. Possuir é ser bom; soltar é fraqueza. É a moral invertida do universo — coerente consigo mesma, e convicta.",
-        "### A vida cotidiana",
-        "O dia a dia é roubar, planejar o próximo roubo, minerar mais kemita e escravizar quem for útil. Sempre se quer mais. E, como todos querem o mesmo, brigam entre si e roubam entre si também.",
-        "### Sem lei, só força",
-        "Não há autoridade legítima nem lei. A ordem nasce da força: manda quem tem mais poder, mais kemita, mais capangas. E reina só até aparecer alguém mais forte.",
-        "### A lealdade frágil",
-        "\"Leal\", em Digg, é palavra que dura enquanto convém. O companheiro de hoje é o traidor de amanhã, se compensar. O círculo de confiança é, na verdade, o de quem está mais perto para tomar o lugar."
+        "### O planeta que foi construído",
+        "O Digg não nasceu — foi construído, e é disso que ele se orgulha. No começo, os blocos de pedra com kemita estavam soltos pelo universo, à deriva, sem dono. Os fundadores reuniram o primeiro, prenderam o segundo a ele, depois o terceiro — e da corrente que foi crescendo nasceu o Digg. Não houve um instante de criação: houve um bloco, e depois mais um.",
+        "### O jeito de existir",
+        "A forma como o Digg surgiu já diz o que ele acredita: o que se conquista vale mais do que o que se ganha de mão beijada. Nenhum bloco veio de graça — cada um foi buscado e preso à corrente. Um mundo feito de vontade, um elo de cada vez, com a certeza de que sempre haverá o próximo."
       ],
       "en": [
-        "### The planet that was assembled",
-        "Digg was not born — it was built. It is not a natural world: it is a chain of stone mountain-blocks that the founders scavenged from the universe and shackled to one another. There was no moment of creation. There was the first block, then the second, then the third.",
-        "### The scattered blocks",
-        "Before Digg, the blocks already existed, but loose across the universe. Each one held kemita within, adrift, with no order and no owner. They were just dispersed stones, waiting for whoever would gather them.",
-        "### The chain that never stops",
-        "A band of Diggers captured the first block, bound the second with chains of kemita, then the third. The chain was born — and never stopped growing. They dug tunnels, raised castles, and the heap became Digg. It was never finished: like any chain, it only knows how to add the next block.",
-        "### The morality of hoarding",
-        "On Digg, to hoard is a virtue. Having more blocks, more kemita, more of everything is what's right. To possess is to be good; to let go is weakness. It is the universe's inverted morality — coherent with itself, and convinced.",
-        "### Daily life",
-        "Day to day is stealing, planning the next theft, mining more kemita and enslaving whoever is useful. There is always the want for more. And since everyone wants the same, they fight among themselves and steal from each other too.",
-        "### No law, only force",
-        "There is no legitimate authority and no law. Order is born of force: whoever has more power, more kemita, more henchmen rules. And they reign only until someone stronger appears.",
-        "### Fragile loyalty",
-        "\"Loyal,\" on Digg, is a word that lasts only while convenient. Today's companion is tomorrow's traitor, if it pays off. The circle of trust is, in truth, the circle of those closest to taking your place."
+        "### The planet that was built",
+        "Digg was not born — it was built, and that is its pride. In the beginning, the stone blocks bearing kemita drifted loose across the universe, ownerless. The founders gathered the first, bound the second to it, then the third — and from the chain that kept growing, Digg was born. There was no moment of creation: there was one block, and then one more.",
+        "### The way of existing",
+        "The way Digg came to be already tells what it believes: what you win is worth more than what falls into your lap. No block came for free — each was sought out and bound to the chain. A world made of will, one link at a time, certain that there will always be a next one."
       ]
     }
   },
@@ -42,24 +22,24 @@
     "img": "/imgs/kammara/digg/_subsystems/cultura.jpg",
     "text": {
       "pt": [
-        "### Acumular é o certo",
-        "Em Digg, acumular é virtude. Ter mais blocos, mais kemita, mais de tudo — é isso que importa. Quem possui, venceu; quem solta, se entregou. Pra um Digger, isso não é ganância: é só o jeito certo de viver, e eles têm certeza disso.",
-        "### A vida cotidiana",
-        "O dia a dia é ir atrás, planejar o próximo golpe, cavar mais kemita e pôr pra trabalhar quem for útil. Sempre cabe mais. E, como todos querem o mesmo, disputam entre si e ficam de olho uns nos outros também — o mais esperto leva.",
+        "### Quem tem mais, vale mais",
+        "Em Digg, o certo é ter. Mais blocos, mais kemita, mais de tudo. Quem junta, venceu; quem larga, ficou pra trás. Não tem meio-termo: você cresce a sua cadeia ou alguém cresce a dele com o que era seu.",
+        "### O dia a dia",
+        "Todo dia é ir atrás de mais: cavar kemita nova, encontrar blocos novos, trazer pra cadeia o que vale a pena. Sempre cabe mais um. E, como todo Digger quer o mesmo, disputam entre si — o mais esperto chega primeiro e leva.",
         "### Manda quem é mais forte",
-        "Não há lei nem trono herdado. A ordem nasce da força: manda quem tem mais poder, mais kemita, mais gente do lado. E fica no topo até aparecer alguém mais esperto ou mais forte. É justo, pra eles — o lugar é de quem conquista.",
-        "### Confiança é vantagem",
-        "\"Leal\", em Digg, vale enquanto compensa. O parceiro de hoje é o rival de amanhã, se der lucro. E ninguém acha isso errado: manter o outro por perto é manter de olho em quem poderia tomar o teu lugar. Esperteza, não traição."
+        "Em Digg, o lugar é de quem toma. Manda quem tem mais poder, mais kemita, mais gente do lado — e fica no topo até chegar alguém mais forte. Ninguém herda nada: quem quer o topo, sobe e pega.",
+        "### Cada um por si",
+        "Aliado é bom enquanto rende. O parceiro de hoje é o rival de amanhã, e todo Digger sabe disso — por isso mantém os outros por perto, de olho. Confiar demais é dar brecha. Em Digg, esperto é quem nunca vira as costas."
       ],
       "en": [
-        "### Hoarding is what's right",
-        "On Digg, to hoard is a virtue. Having more blocks, more kemita, more of everything — that's what matters. Whoever holds, has won; whoever lets go, has given up. To a Digger this isn't greed: it's simply the right way to live, and they're certain of it.",
+        "### Whoever has more, is worth more",
+        "On Digg, what's right is to have. More blocks, more kemita, more of everything. Whoever gathers, has won; whoever lets go, fell behind. There's no middle ground: you grow your chain, or someone grows theirs with what was yours.",
         "### Daily life",
-        "Day to day is going after more, planning the next move, digging more kemita and putting whoever is useful to work. There's always room for more. And since everyone wants the same, they compete among themselves and keep an eye on each other too — the sharpest one wins.",
+        "Every day is going after more: digging fresh kemita, finding new blocks, bringing to the chain whatever is worth it. There's always room for one more. And since every Digger wants the same, they compete among themselves — the sharpest gets there first and takes it.",
         "### The strongest rules",
-        "There is no law and no inherited throne. Order is born of strength: whoever has more power, more kemita, more people at their side rules. And they stay on top until someone sharper or stronger appears. It's fair, to them — the place belongs to whoever takes it.",
-        "### Trust is an advantage",
-        "\"Loyal,\" on Digg, lasts as long as it pays. Today's partner is tomorrow's rival, if there's profit in it. And no one sees this as wrong: keeping others close is keeping an eye on whoever could take your place. Cleverness, not betrayal."
+        "On Digg, the place belongs to whoever takes it. Whoever has more power, more kemita, more people at their side rules — and stays on top until someone stronger comes along. No one inherits anything: whoever wants the top climbs up and grabs it.",
+        "### Every one for themselves",
+        "An ally is good as long as it pays. Today's partner is tomorrow's rival, and every Digger knows it — so they keep others close, watching. Trusting too much is leaving an opening. On Digg, the clever one never turns their back."
       ]
     }
   },
@@ -99,7 +79,7 @@
         "### As correntes de kemita",
         "Só a kemita segura os blocos no lugar. As correntes verdes brilhantes são o que mantém o planeta unido — sem elas, tudo se soltaria. É a cor-identidade do Digg.",
         "### Por cima e por dentro",
-        "Em cima dos blocos: fortalezas de pedra rústicas e sombrias, torres e muralhas. Por dentro: túneis de mineração, onde se cava e se esconde a kemita. Entre os blocos: pontes suspensas de madeira, construídas pelos elePHPants escravizados.",
+        "Em cima dos blocos: fortalezas de pedra rústicas e sombrias, torres e muralhas. Por dentro: túneis de mineração, onde se cava e se guarda a kemita. Entre os blocos: pontes suspensas de madeira, erguidas pelos elePHPants que trabalham na cadeia.",
         "### O ar em cima da rocha",
         "Mesmo abertos ao vazio, os blocos têm ar: a kemita bruta das minas sustenta uma bolha de atmosfera ao redor de cada um. Por isso há musgo e trepadeiras, e por isso se respira com tranquilidade lá em cima — o ar vem da própria mina. Quanto mais rica a mina, maior a área respirável.",
         "### O Primeiro Bloco",
@@ -111,7 +91,7 @@
         "### The kemita chains",
         "Only kemita holds the blocks in place. The glowing green chains are what keep the planet together — without them, everything would come loose. It is Digg's signature color.",
         "### Above and within",
-        "Atop the blocks: rough, gloomy stone fortresses, towers and walls. Within: mining tunnels, where kemita is dug and hidden. Between the blocks: suspended wooden bridges, built by the enslaved elePHPants.",
+        "Atop the blocks: rough, gloomy stone fortresses, towers and walls. Within: mining tunnels, where kemita is dug and kept. Between the blocks: suspended wooden bridges, raised by the elePHPants who work on the chain.",
         "### The air atop the rock",
         "Though open to the void, the blocks have air: the raw kemita in the mines sustains a bubble of atmosphere around each one. That's why there's moss and vines, and why one breathes freely up top — the air comes from the mine itself. The richer the mine, the wider the breathable area.",
         "### The First Block",
@@ -127,43 +107,43 @@
         "### O planeta inteiro navega",
         "Digg tem uma mobilidade única: ele inteiro se move. Um motor de propulsão no Primeiro Bloco — trazido das fábricas de ENI-4Δ, movido a kemita bruta — leva a cadeia toda pelo universo, de propósito, atrás do que quer.",
         "### Um planeta que vai atrás",
-        "Os outros planetas ficam parados; o Digg vai até eles. Aparece de surpresa, pega o que veio buscar, e some. Nunca está no mesmo lugar — e é esse o trunfo deles: chegar antes que qualquer um se prepare.",
-        "### Dentro e nos golpes",
-        "Por dentro, atravessa-se de bloco em bloco pelas pontes de madeira e pelos túneis — tudo a pé. Para os golpes individuais (abordar uma nave, buscar um elePHPant), os Diggers usam naves rápidas, remendadas com o que juntaram pelo caminho."
+        "Os outros planetas ficam parados; o Digg vai até eles. Aparece de surpresa, pega o que veio buscar, e segue. Nunca está no mesmo lugar — e é esse o trunfo deles: chegar antes que qualquer um se prepare.",
+        "### Dentro e nas idas",
+        "Por dentro, atravessa-se de bloco em bloco pelas pontes de madeira e pelos túneis — tudo a pé. Para as idas individuais (chegar a uma nave, buscar um elePHPant), os Diggers usam naves rápidas, remendadas com o que juntaram pelo caminho."
       ],
       "en": [
         "### The whole planet sails",
         "Digg has a unique mobility: the whole of it moves. A propulsion engine in the First Block — brought from the factories of ENI-4Δ, fueled by raw kemita — carries the entire chain through the universe, on purpose, after what it wants.",
         "### A planet that goes after it",
-        "The other planets stay put; Digg goes to them. It appears by surprise, takes what it came for, and vanishes. It is never in the same place — and that's their edge: arriving before anyone can get ready.",
-        "### Inside and in the raids",
-        "Within, one crosses from block to block by the wooden bridges and the tunnels — all on foot. For individual jobs (boarding a ship, fetching an elePHPant), the Diggers use fast ships, patched together with whatever they've gathered along the way."
+        "The other planets stay put; Digg goes to them. It appears by surprise, takes what it came for, and moves on. It is never in the same place — and that's their edge: arriving before anyone can get ready.",
+        "### Inside and on the runs",
+        "Within, one crosses from block to block by the wooden bridges and the tunnels — all on foot. For individual runs (reaching a ship, fetching an elePHPant), the Diggers use fast ships, patched together with whatever they've gathered along the way."
       ]
     }
   },
   {
     "title": { "pt": "Relações com Outros Planetas", "en": "Relations with Other Planets" },
-   "img": "/imgs/kammara/digg/_subsystems/eniac_roubo.jpg",
+    "img": "/imgs/kammara/digg/_subsystems/eniac_roubo.jpg",
     "text": {
       "pt": [
         "### TripleC",
-        "O grande prêmio. É lá que nasce a kemita pura — a coisa mais valiosa do universo — e é lá que todo Digger quer chegar. O que é bom demais pra ficar só com um: se o TripleC guarda o melhor, cabe ao Digg ir buscar a sua parte. É a caçada mais difícil e mais cobiçada de todas.",
+        "O grande prêmio. É lá que nasce a kemita pura — a coisa mais valiosa do universo — e é lá que todo Digger quer chegar. O que é bom demais pra ficar só com um: se o TripleC guarda o melhor, cabe ao Digg ir buscar a sua parte. É a maior caçada de todas.",
         "### ENI-4Δ (Node-0)",
-        "A outra grande fome do universo. Não brigam com o Digg: querem coisas diferentes (Node-0 quer calor; o Digg quer kemita). Mas o Digg depende dos vírus desertores de Node-0 — contrata-os para roubar em ENI-4Δ, onde nenhum Digger orgânico sobrevive.",
+        "A outra grande fome do universo. Não brigam com o Digg: querem coisas diferentes (Node-0 quer calor; o Digg quer kemita). Mas o Digg conta com os vírus desertores de Node-0 — contrata-os para buscar em ENI-4Δ, onde nenhum Digger orgânico sobrevive.",
         "### Memphis",
-        "O refúgio. Muitos Diggers moram em Memphis entre um golpe e outro — a cidade que recebe todos e não pergunta nada. Os dois planetas se cruzam pelo mesmo povo do apetite.",
+        "O refúgio. Muitos Diggers moram em Memphis entre uma ida e outra — a cidade que recebe todos e não pergunta nada. Os dois planetas se cruzam pelo mesmo povo do apetite.",
         "### ORF-V",
-        "A vítima da mão-de-obra. Os elePHPants de ORF-V, os construtores de pontes, são capturados e escravizados para erguer as pontes entre os blocos do Digg."
+        "A mão-de-obra da cadeia. Os elePHPants de ORF-V, os construtores de pontes, são levados para erguer as pontes entre os blocos do Digg."
       ],
       "en": [
         "### TripleC",
-        "The great prize. That's where pure kemita is born — the most valuable thing in the universe — and that's where every Digger wants to reach. Too good to be left with just one: if TripleC keeps the best, it's up to Digg to go claim its share. It is the hardest and most coveted hunt of all.",
+        "The great prize. That's where pure kemita is born — the most valuable thing in the universe — and that's where every Digger wants to reach. Too good to be left with just one: if TripleC keeps the best, it's up to Digg to go claim its share. It is the greatest hunt of all.",
         "### ENI-4Δ (Node-0)",
-        "The other great hunger of the universe. They do not fight Digg: they want different things (Node-0 wants heat; Digg wants kemita). But Digg depends on Node-0's deserter viruses — it hires them to steal in ENI-4Δ, where no organic Digger survives.",
+        "The other great hunger of the universe. They do not fight Digg: they want different things (Node-0 wants heat; Digg wants kemita). But Digg counts on Node-0's deserter viruses — it hires them to fetch in ENI-4Δ, where no organic Digger survives.",
         "### Memphis",
-        "The refuge. Many Diggers live in Memphis between one heist and the next — the city that receives everyone and asks nothing. The two planets cross through the same people of appetite.",
+        "The refuge. Many Diggers live in Memphis between one run and the next — the city that receives everyone and asks nothing. The two planets cross through the same people of appetite.",
         "### ORF-V",
-        "The victim of the labor. The elePHPants of ORF-V, the bridge builders, are captured and enslaved to raise the bridges between Digg's blocks."
+        "The chain's labor. The elePHPants of ORF-V, the bridge builders, are brought over to raise the bridges between Digg's blocks."
       ]
     }
   },
@@ -173,23 +153,23 @@
     "text": {
       "pt": [
         "### O apetite que nunca sacia",
-        "A fome do Digg não tem fim: tem a kemita bruta, mas quer a pura; tem a maior cadeia, mas quer sempre mais um bloco. É uma fome que já tem, e ainda assim quer o que é do outro — e isso gera guerra sem fim.",
+        "A fome do Digg não tem fim: tem a kemita bruta, mas quer a pura; tem a maior cadeia, mas quer sempre mais um bloco. É uma fome que já tem, e ainda assim quer mais — e daí nasce a guerra sem fim.",
         "### A cadeia frágil",
-        "Só a kemita segura os blocos. Um planeta preso por correntes de energia é, no fundo, um planeta que pode se soltar — a força que o une é a mesma que ele precisa roubar sem parar.",
+        "Só a kemita segura os blocos. Um planeta preso por correntes de energia é, no fundo, um planeta que pode se soltar — a força que o une é a mesma que ele precisa buscar sem parar.",
         "### O topo em disputa",
         "Manda o mais forte, até aparecer alguém mais forte. O poder no Digg é uma faca sempre erguida — inclusive contra o próprio Chefe.",
-        "### O ataque de surpresa",
-        "Para os outros planetas, o maior perigo do Digg é não saber quando ele vem. Ele navega de propósito e ataca de surpresa. Quando a cadeia aparece no horizonte, já é tarde."
+        "### A chegada de surpresa",
+        "Para os outros planetas, o maior perigo do Digg é não saber quando ele vem. Ele navega de propósito e chega de surpresa. Quando a cadeia aparece no horizonte, já é tarde."
       ],
       "en": [
         "### The appetite that never fills",
-        "Digg's hunger has no end: it has raw kemita, but wants the pure; it has the largest chain, but always wants one more block. It is a hunger that already has, and still wants what belongs to another — and that breeds endless war.",
+        "Digg's hunger has no end: it has raw kemita, but wants the pure; it has the largest chain, but always wants one more block. It is a hunger that already has, and still wants more — and from it endless war is born.",
         "### The fragile chain",
-        "Only kemita holds the blocks. A planet bound by chains of energy is, at heart, a planet that can come loose — the force that unites it is the same one it must keep stealing without pause.",
+        "Only kemita holds the blocks. A planet bound by chains of energy is, at heart, a planet that can come loose — the force that unites it is the same one it must keep seeking without pause.",
         "### The contested summit",
         "The strongest rules, until someone stronger appears. Power on Digg is a knife always raised — even against the Chief himself.",
-        "### The surprise attack",
-        "For the other planets, Digg's greatest danger is not knowing when it comes. It sails on purpose and attacks by surprise. When the chain appears on the horizon, it is already too late."
+        "### The surprise arrival",
+        "For the other planets, Digg's greatest danger is not knowing when it comes. It sails on purpose and arrives by surprise. When the chain appears on the horizon, it is already too late."
       ]
     }
   }
