@@ -364,7 +364,6 @@ export function ModalKammara() {
                   loop
                   muted
                   playsInline
-                  controls
                   poster={currentImage}
                   style={{
                     maxWidth: '100%',
