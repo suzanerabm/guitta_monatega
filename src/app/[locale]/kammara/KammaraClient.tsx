@@ -950,6 +950,30 @@ function WorldSection({
         )}
       </DSMainCard>
       </Box>
+      {/* ── Drops strip — posicionado ACIMA dos personagens (todas as
+          resoluções). TripleC força verde no accent geral, mas o drops usa
+          a cor real do mundo (palette[0]) — roxo pro TripleC. */}
+      {w.drops.length > 0 && (
+        <Box
+          display="block"
+          width="100%"
+          my={{ base: '2xl', lg: '5xl' }}
+          px={{ base: '25px', md: '2rem', xl: '3rem' }}
+        >
+          <KammaraDropsStrip
+            sectionTitle={`Drops · ${name}`}
+            worldName={name}
+            crestGlyph={worldCrestGlyph(w.id)}
+            color={palette.colors[0]}
+            borderColor={palette.border}
+            titleColor={palette.charactersTitleColor}
+            darkColor={palette.dark}
+            modalSubtitle={bodyText[0] || ''}
+            modalTextColor={palette.text}
+            drops={w.drops}
+          />
+        </Box>
+      )}
       {/* ── Character gallery — full-width section with KammaraCharacterCard */}
       {(() => {
         const worldColor = palette.colors[0];
@@ -1080,29 +1104,6 @@ function WorldSection({
           </>
         );
       })()}
-      {w.drops.length > 0 && (
-        <Box
-          display="block"
-          width="100%"
-          my={{ base: '2xl', lg: '5xl' }}
-          px={{ base: '25px', md: '2rem', xl: '3rem' }}
-        >
-          {/* TripleC's accent is forced green elsewhere, but the drops strip
-              uses the world's real color (palette[0]) — roxo for TripleC. */}
-          <KammaraDropsStrip
-            sectionTitle={`Drops · ${name}`}
-            worldName={name}
-            crestGlyph={worldCrestGlyph(w.id)}
-            color={palette.colors[0]}
-            borderColor={palette.border}
-            titleColor={palette.charactersTitleColor}
-            darkColor={palette.dark}
-            modalSubtitle={bodyText[0] || ''}
-            modalTextColor={palette.text}
-            drops={w.drops}
-          />
-        </Box>
-      )}
     </CreatureSection>
   );
 }
@@ -1222,6 +1223,26 @@ function TriplecRegionSection({
           />
         )}
       </RegionBanner>
+      {/* ── Drops strip — acima dos personagens (mesma ordem do WorldSection). */}
+      {region.drops.length > 0 && (
+        <Box
+          display="block"
+          width="100%"
+          my={{ base: '2xl', lg: '5xl' }}
+          px={{ base: '25px', md: '2rem', xl: '3rem' }}
+        >
+          <KammaraDropsStrip
+            sectionTitle={`Drops · ${name}`}
+            worldName={name}
+            crestGlyph={worldCrestGlyph(regionId)}
+            color={regionColor}
+            darkColor={regionPalette.dark}
+            modalSubtitle={bodyText[0] || ''}
+            modalTextColor={regionPalette.text}
+            drops={region.drops}
+          />
+        </Box>
+      )}
       {/* ── Character gallery for the region ─────────── */}
       {(() => {
         const characterData = getCharactersForContext(contextId);
@@ -1341,25 +1362,6 @@ function TriplecRegionSection({
           </>
         );
       })()}
-      {region.drops.length > 0 && (
-        <Box
-          display="block"
-          width="100%"
-          my={{ base: '2xl', lg: '5xl' }}
-          px={{ base: '25px', md: '2rem', xl: '3rem' }}
-        >
-          <KammaraDropsStrip
-            sectionTitle={`Drops · ${name}`}
-            worldName={name}
-            crestGlyph={worldCrestGlyph(regionId)}
-            color={regionColor}
-            darkColor={regionPalette.dark}
-            modalSubtitle={bodyText[0] || ''}
-            modalTextColor={regionPalette.text}
-            drops={region.drops}
-          />
-        </Box>
-      )}
       </Box>
     </CreatureSection>
   );
