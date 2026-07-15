@@ -26,4 +26,13 @@ describe('KammaraSagaPoster', () => {
     expect(screen.getByText('ORF-V')).toBeInTheDocument();
     expect(screen.getByText('SAGA I')).toBeInTheDocument();
   });
+
+  it('freezes the frame glow when frozen is set (no pulse animation)', () => {
+    const { getByTestId } = renderWithChakra(
+      <KammaraSagaPoster background="/bg.jpg" frozen data-testid="poster" />,
+    );
+    const frame = getByTestId('poster');
+    // Congelado: sem a animação de pulse na moldura.
+    expect(frame.style.animation || '').not.toContain('ksp-pulse');
+  });
 });

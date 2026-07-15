@@ -50,6 +50,8 @@ export interface KammaraSagaPosterProps {
   color?: string;
   /** Dark base color — defaults to the kammara palette. */
   darkColor?: string;
+  /** Congela o glow da moldura no pico (sem pulse). Para export estático. */
+  frozen?: boolean;
   'data-testid'?: string;
 }
 
@@ -110,6 +112,7 @@ export function KammaraSagaPoster({
   footerLabel = 'Kammara',
   color,
   darkColor,
+  frozen = false,
   'data-testid': testId,
 }: KammaraSagaPosterProps) {
   const accent = color ?? palettes.kammara.colors[0];
@@ -129,8 +132,10 @@ export function KammaraSagaPoster({
         // Animated accent glow on the frame — a slow, subtle breathing pulse.
         // `--ksp-accent` lets the keyframe reference the resolved accent color.
         ['--ksp-accent' as string]: accent,
-        boxShadow: `0 30px 80px rgba(0,0,0,.6), 0 0 0 1px ${accent}55, 0 0 50px ${accent}33`,
-        animation: 'ksp-pulse 5s ease-in-out infinite',
+        boxShadow: frozen
+          ? `0 30px 80px rgba(0,0,0,.6), 0 0 0 1px ${accent}, 0 0 70px color-mix(in srgb, ${accent} 45%, transparent)`
+          : `0 30px 80px rgba(0,0,0,.6), 0 0 0 1px ${accent}55, 0 0 50px ${accent}33`,
+        animation: frozen ? 'none' : 'ksp-pulse 5s ease-in-out infinite',
         '@media (prefers-reduced-motion: reduce)': { animation: 'none' },
       }}
     >
