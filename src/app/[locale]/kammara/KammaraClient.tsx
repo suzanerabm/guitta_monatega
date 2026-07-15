@@ -911,31 +911,11 @@ function WorldSection({
         maxHeight="80vh"
         titleColor={colors.title}
         textColor={colors.text}
-        stripSide
-        textPanelTitle={name}
-        text={renderStory(panelStory, palette.colors[0])}
-        renderPanel={({ text: panelText }) => (
-          <KammaraCard
-            name={name}
-            category="Planeta"
-            color={palette.colors[0]}
-            borderColor={palette.border}
-            darkColor={palette.dark}
-            cardBgAlpha={w.id === 'gotto' ? 'e6' : undefined}
-            crestGlyph={worldCrestGlyph(w.id)}
-            tabs={[
-              {
-                id: `${w.id}-story`,
-                icon: '⊙',
-                label: name,
-                title: name,
-                content: panelText,
-              },
-            ]}
-          />
-        )}
       >
-        {/* Side column inside the banner: KammaraSceneCollage. */}
+        {/* Painel de texto (KammaraCard com nome+story) removido do Card do
+            planeta — reduz volume. Sem `stripSide`, a cena abaixo ocupa a
+            largura toda em vez de ficar presa à direita. */}
+        {/* Cena do planeta: KammaraSceneCollage, agora full-width. */}
         {w.scenes.length > 0 && (
           <KammaraSceneCollage
             scenes={w.scenes}
