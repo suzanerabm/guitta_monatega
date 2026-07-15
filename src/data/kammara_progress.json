@@ -45,7 +45,7 @@
         "design-conceito": 100,
         "characters-design": 100,
         "cenas": 100,
-        "website": 100
+        "website": 80
       }
     },
     {
@@ -71,7 +71,7 @@
         "design-conceito": 100,
         "characters-design": 100,
         "cenas": 100,
-        "website": 100
+        "website": 50
       }
     },
     {
@@ -84,7 +84,7 @@
         "design-conceito": 100,
         "characters-design": 100,
         "cenas": 100,
-        "website": 100
+        "website": 40
       }
     },
     {
@@ -97,7 +97,7 @@
         "design-conceito": 100,
         "characters-design": 100,
         "cenas": 100,
-        "website": 100
+        "website": 30
       }
     },
     {
@@ -109,8 +109,8 @@
         "criaturas": 100,
         "design-conceito": 100,
         "characters-design": 100,
-        "cenas": 100,
-        "website": 10
+        "cenas": 10,
+        "website": 1
       }
     }
   ]

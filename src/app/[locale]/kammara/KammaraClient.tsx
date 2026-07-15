@@ -497,7 +497,11 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
 
   // Mosaico de drops curado (src/data/kammara_mosaic.json), localizado. Cada
   // clip carrega a marca do seu planeta (nome + glifo); clicar abre o mundo.
-  const mosaicClips = kammaraMosaicData.map((c) => ({
+  // Filtra clips de planetas não publicados: senão vídeo/poster/label deles
+  // vazariam no payload mesmo com o mundo oculto do resto do site.
+  const mosaicClips = kammaraMosaicData
+    .filter((c) => isKammaraPublished(c.world))
+    .map((c) => ({
     video: c.video,
     poster: c.poster,
     label: c.label[locale] ?? c.label.pt,
@@ -505,6 +509,12 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
     worldName: getWorldName(c.world, locale) || WORLD_NAMES[c.world as WorldId] || c.world,
     crestGlyph: worldCrestGlyph(c.world),
   }));
+
+  // Só eventos de planetas publicados chegam ao componente — senão título,
+  // data, local e planeta de mundos ocultos vazariam no payload de produção.
+  const publishedEvents = kammaraEventsData.events.filter((e) =>
+    isKammaraPublished(e.planet),
+  );
 
   // ── Per-world content ──────────────────────────────────────────────────
   // Everything a WorldSection needs is shared here so the sub-component
@@ -710,7 +720,13 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
             Pra trocar a imagem: jogue um arquivo em
             `public/imgs/kammara/_events_bg.png` (ou ajuste o path no
             `backgroundImage`). O overlay garante leitura mesmo se a
-            imagem for clara. */}
+            imagem for clara.
+
+            Visibilidade controlada por DADOS, não por código: a seção some
+            quando `kammara_events.json` tem `"visible": false` — ou quando
+            não sobra nenhum evento de planeta publicado. Basta editar o JSON
+            para ligar/desligar; nenhuma mudança de código é necessária. */}
+        {kammaraEventsData.visible !== false && publishedEvents.length > 0 && (
         <Box
           width="100%"
           my="3xl"
@@ -735,13 +751,14 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
               title={locale === 'en' ? 'Upcoming Events' : 'Próximos Eventos'}
               kicker={sectionName}
               categories={kammaraEventsData.categories}
-              events={kammaraEventsData.events}
+              events={publishedEvents}
               locale={locale}
               color={kammaraPalette.colors[0]}
               darkColor={kammaraPalette.dark}
             />
           </Box>
         </Box>
+        )}
 
         {/* ── PRÓXIMOS PLANETAS — heatmap de progresso ───────────────── */}
         {/* Só aparece enquanto houver planeta em construção (<100). Quando

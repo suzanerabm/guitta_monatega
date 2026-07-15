@@ -18,6 +18,13 @@ interface PlanetEntry {
   id: string;
   name: { pt: string; en: string };
   progress: Record<string, number>;
+  /**
+   * Desliga o planeta manualmente, independente do progresso. Quando `true`,
+   * o mundo fica oculto do site em produção MESMO que o progresso seja 100 —
+   * é o interruptor para "reduzir volume de info" sem mentir no progresso.
+   * Em dev/preview (`showAll`) segue visível, para edição.
+   */
+  hidden?: boolean;
 }
 
 const planets = progressData.planets as PlanetEntry[];
@@ -41,18 +48,30 @@ const launchByPlanet = new Map<string, number>(
   planets.map((p) => [p.id, launchPercentFor(p)]),
 );
 
-/** True when the world has shipped (launch readiness >= 100). */
+const hiddenByPlanet = new Map<string, boolean>(
+  planets.map((p) => [p.id, p.hidden === true]),
+);
+
+/** True when the world has shipped (launch readiness >= 100) and isn't
+ *  manually hidden. In dev/preview (`showAll`) everything is visible so the
+ *  work-in-progress stays editable. */
 export function isKammaraPublished(worldId: string): boolean {
   if (showAll) return true;
+  if (hiddenByPlanet.get(worldId)) return false;
   const launch = launchByPlanet.get(worldId);
   return launch !== undefined && launch >= 100;
 }
 
 /** Worlds still under 100 — what the "Próximos Planetas" heatmap shows.
- *  Returned in every environment (dev / preview / prod) so the heatmap
- *  remains editable and visible while you iterate on it locally. */
+ *  In dev/preview (`showAll`) returns every under-100 world so the heatmap
+ *  stays editable locally. In production, worlds marked `hidden` are dropped
+ *  so a manually-disabled planet doesn't resurface in the heatmap. */
 export function kammaraInProgress(): PlanetEntry[] {
-  return planets.filter((p) => launchPercentFor(p) < 100);
+  return planets.filter((p) => {
+    if (launchPercentFor(p) >= 100) return false;
+    if (!showAll && p.hidden === true) return false;
+    return true;
+  });
 }
 
 // ─── Bichittos ──────────────────────────────────────────────────────────
