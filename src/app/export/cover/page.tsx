@@ -1,0 +1,26 @@
+import { Box } from '@chakra-ui/react';
+import { KammaraSagaPosterCover } from '@/components/KammaraSagaPosterCover';
+
+/**
+ * Rota de export (não faz parte do site). Renderiza a capa da saga num
+ * container de tamanho fixo 1000×1600 para o script de screenshot capturar
+ * em 1600×2560 (deviceScaleFactor 1.6). Sem chrome: está fora de [locale]
+ * (o middleware do next-intl ignora /export, então não há Header/Footer).
+ */
+export default function CoverExportPage() {
+  return (
+    <Box
+      css={{
+        width: '1000px',
+        height: '1600px',
+        margin: 0,
+        background: '#0a0a12',
+        overflow: 'hidden',
+      }}
+    >
+      <Box css={{ width: '1000px', height: '1600px' }} data-export-target="cover">
+        <KammaraSagaPosterCover background="/imgs/kammara/orfv/_scenes/9noite_em_orfv.jpg" />
+      </Box>
+    </Box>
+  );
+}
