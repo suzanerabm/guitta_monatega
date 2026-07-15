@@ -10,7 +10,7 @@
     "world": "eni4",
     "video": "/imgs/kammara/eni4/_videos/palacio_node0.mp4",
     "poster": "/imgs/kammara/eni4/_videos/palacio_node0_poster.jpg",
-    "label": { "pt": "Túneis com Worms", "en": "Tunnels with Worms" },
+    "label": { "pt": "Palácio de Node-0", "en": "Palace of Node-0" },
     "href": ""
   },
   {
@@ -38,7 +38,7 @@
     "world": "lunnp1",
     "video": "/imgs/kammara/lunnp1/_videos/tziki_lumira_brincando.mp4",
     "poster": "/imgs/kammara/lunnp1/_videos/tziki_lumira_brincando_poster.jpg",
-    "label": { "pt": "Erurin", "en": "Erurin" },
+    "label": { "pt": "Tziki & Lumira", "en": "Tziki & Lumira" },
     "href": ""
   }, 
   {
@@ -52,7 +52,7 @@
     "world": "orfv",
     "video": "/imgs/kammara/orfv/_videos/zupi_nadando.mp4",
     "poster": "/imgs/kammara/orfv/_videos/zupi_nadando_poster.jpg",
-    "label": { "pt": "", "en": "" },
+    "label": { "pt": "Zupi", "en": "Zupi" },
     "href": ""
   },
   {
@@ -81,6 +81,48 @@
     "video": "/imgs/kammara/gotto/_videos/gotto_reinicio.mp4",
     "poster": "/imgs/kammara/gotto/_videos/gotto_reinicio_poster.jpg",
     "label": { "pt": "O reinício — GOTO", "en": "The restart — GOTO" },
+    "href": ""
+  },
+  {
+    "world": "lunnp1",
+    "video": "/imgs/kammara/lunnp1/_videos/plantas_flutuantes.mp4",
+    "poster": "/imgs/kammara/lunnp1/_videos/plantas_flutuantes_poster.jpg",
+    "label": { "pt": "Plantas Flutuantes", "en": "Floating Plants" },
+    "href": ""
+  },
+  {
+    "world": "eni4",
+    "video": "/imgs/kammara/eni4/_videos/fabrica.mp4",
+    "poster": "/imgs/kammara/eni4/_videos/fabrica_poster.jpg",
+    "label": { "pt": "A Fábrica", "en": "The Factory" },
+    "href": ""
+  },
+  {
+    "world": "orfv",
+    "video": "/imgs/kammara/orfv/_videos/melik_andando_para_festival.mp4",
+    "poster": "/imgs/kammara/orfv/_videos/melik_andando_para_festival_poster.jpg",
+    "label": { "pt": "Melik", "en": "Melik" },
+    "href": ""
+  },
+  {
+    "world": "lunnp1",
+    "video": "/imgs/kammara/lunnp1/_videos/veluma.mp4",
+    "poster": "/imgs/kammara/lunnp1/_videos/veluma_poster.jpg",
+    "label": { "pt": "Veluma", "en": "Veluma" },
+    "href": ""
+  },
+  {
+    "world": "eni4",
+    "video": "/imgs/kammara/eni4/_videos/marcha_aracnes.mp4",
+    "poster": "/imgs/kammara/eni4/_videos/marcha_aracnes_poster.jpg",
+    "label": { "pt": "Marcha dos Aracnes", "en": "March of the Aracnes" },
+    "href": ""
+  },
+  {
+    "world": "orfv",
+    "video": "/imgs/kammara/orfv/_videos/troys_atacando.mp4",
+    "poster": "/imgs/kammara/orfv/_videos/troys_atacando_poster.jpg",
+    "label": { "pt": "Troys", "en": "Troys" },
     "href": ""
   }
 ]
