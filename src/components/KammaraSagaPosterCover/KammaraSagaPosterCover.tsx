@@ -23,7 +23,23 @@ export function KammaraSagaPosterCover({
       width="100%"
       style={{ aspectRatio: '1000 / 1600' }}
     >
-      <Box position="absolute" inset={0} css={{ '& > *': { maxWidth: 'none', height: '100%' } }}>
+      {/* O poster tem aspectRatio 360/540 e maxW=420px próprios. Aqui ele
+          precisa preencher a moldura 1:1,6 inteira: forçamos width/height 100%,
+          soltamos o maxW e anulamos o aspectRatio para o Box do poster esticar
+          até 1000×1600. Os heróis são <img width:auto> — NÃO distorcem; só a
+          moldura fica mais alta, e o espaço extra vira respiro no topo. */}
+      <Box
+        position="absolute"
+        inset={0}
+        css={{
+          '& > [data-testid="kammara-saga-poster"]': {
+            width: '100%',
+            height: '100%',
+            maxWidth: 'none',
+            aspectRatio: 'auto',
+          },
+        }}
+      >
         <KammaraSagaPoster frozen={frozen} {...posterProps} />
       </Box>
     </Box>

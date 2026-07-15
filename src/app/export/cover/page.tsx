@@ -18,6 +18,12 @@ export default function CoverExportPage() {
         overflow: 'hidden',
       }}
     >
+      {/* Esconde o badge de dev-tools do Next (portal fixo) pra não vazar no
+          screenshot da capa. Só existe em dev; inofensivo em produção. */}
+      <style>{`
+        nextjs-portal, [data-nextjs-toast], #__next-build-watcher,
+        [data-next-badge-root], [data-next-badge] { display: none !important; }
+      `}</style>
       <Box css={{ width: '1000px', height: '1600px' }} data-export-target="cover">
         <KammaraSagaPosterCover background="/imgs/kammara/orfv/_scenes/9noite_em_orfv.jpg" />
       </Box>
