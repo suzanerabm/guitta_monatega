@@ -71,6 +71,12 @@ export interface WorldSubsystem {
    */
   img?: string;
   text: Bilingual<string[]>;
+  /**
+   * Visibilidade no site. `false` esconde o subsistema SEM apagá-lo do JSON.
+   * O filtro roda no servidor (getWorldSubsystems), antes de montar o payload,
+   * então um subsistema invisível não vaza no HTML. Ausente = visível.
+   */
+  visible?: boolean;
 }
 
 export interface WorldScene {
@@ -182,7 +188,11 @@ export function getWorldSubsystems(
 ): { title: string; text: string[]; img: string }[] {
   const subs = SUBSYSTEMS[worldId];
   if (!subs) return [];
-  return subs.map((s) => {
+  return subs
+    // Esconde `visible: false` no servidor — o subsistema não entra no
+    // payload, então não vaza. Ausente = visível.
+    .filter((s) => s.visible !== false)
+    .map((s) => {
     // If either title or text is missing in the requested locale, fall back to
     // PT for BOTH fields — so we never render a PT-titled item with EN body
     // or vice-versa.

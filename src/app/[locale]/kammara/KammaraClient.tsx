@@ -653,6 +653,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
           const contextId = 'kammara/kammara';
           const characterData = getCharactersForContext(contextId);
           const galleryItems = characterData
+            .filter((char) => char.visible !== false)
             .map((char) => {
               const manifestMatch = kammaraChars.find(
                 (c) => c.name.toLowerCase().trim() === char.match.toLowerCase().trim(),
@@ -843,7 +844,7 @@ interface WorldSectionProps {
   name: string;
   bodyText: string[];
   panelStory: string[];
-  subsystems: { title: string; text: string[] }[];
+  subsystems: { title: string; text: string[]; img: string }[];
   hidden: boolean;
   words: Record<string, string>;
   locale: Locale;
@@ -965,7 +966,10 @@ function WorldSection({
         const characterData = getCharactersForContext(contextId);
         // Kammara characters are driven by the JSON (single source of truth).
         // Manifest images are a fallback for legacy entries without `image`.
+        // Filtra `visible: false` AQUI (servidor), antes de montar o payload:
+        // personagem escondido não entra no HTML, então não vaza.
         const galleryItems = characterData
+          .filter((char) => char.visible !== false)
           .map((char) => {
             const manifestMatch = w.chars.find(
               (c) => c.name.toLowerCase().trim() === char.match.toLowerCase().trim(),
@@ -1037,7 +1041,9 @@ function WorldSection({
           icon: subsystemGlyph(s.title),
           label: s.title,
           title: s.title,
-          image: w.subsystemImages[i] ?? undefined,
+          // Usa o `img` do próprio subsistema (não o array paralelo por índice)
+          // pra o filtro de `visible` não desalinhar imagem × subsistema.
+          image: s.img || undefined,
           imageAlt: s.title,
           content: renderStory(s.text, palette.colors[0]),
         }));
@@ -1227,6 +1233,7 @@ function TriplecRegionSection({
       {(() => {
         const characterData = getCharactersForContext(contextId);
         const galleryItems = characterData
+          .filter((char) => char.visible !== false)
           .map((char) => {
             const manifestMatch = region.chars.find(
               (c) => c.name.toLowerCase().trim() === char.match.toLowerCase().trim(),
@@ -1296,7 +1303,7 @@ function TriplecRegionSection({
           icon: subsystemGlyph(s.title),
           label: s.title,
           title: s.title,
-          image: region.subsystemImages[i] ?? undefined,
+          image: s.img || undefined,
           imageAlt: s.title,
           content: renderStory(s.text, regionPalette.colors[0]),
         }));

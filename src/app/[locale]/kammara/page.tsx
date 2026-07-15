@@ -8,8 +8,33 @@ import {
 } from '@/lib/images';
 import { getWorldSubsystemImages, getWorldScenes, getWorldDrops } from '@/data/characters/kammara/_worldData';
 import { isKammaraPublished } from '@/lib/visibility';
-import type { Locale } from '@/lib/characters';
+import { getCharactersForContext, type Locale } from '@/lib/characters';
 import { KammaraClient } from './KammaraClient';
+
+/**
+ * Lista de imagens de personagens (vem do image-manifest) SEM os que estão
+ * marcados `visible: false` no JSON de personagens. Sem esse cruzamento, o
+ * nome + caminho de imagem de um personagem escondido ainda vazaria no payload
+ * (o manifesto é uma fonte separada do JSON que carrega o flag `visible`).
+ */
+function getVisibleChars(contextId: string): { name: string; image: string }[] {
+  const manifestChars = getCharacters(contextId);
+  // O manifesto guarda VÁRIAS entradas por personagem (frente, costas,
+  // variações), com nomes derivados do arquivo: "sereno", "sereno 2",
+  // "sereno alta", "Sereno costas"... O `match` do JSON é só "Sereno". Por
+  // isso o cruzamento não pode ser por igualdade — removemos toda entrada
+  // cujo nome COMECE com o nome do personagem escondido.
+  const hiddenPrefixes = getCharactersForContext(contextId)
+    .filter((c) => c.visible === false)
+    .map((c) => c.match.toLowerCase().trim());
+  const isHidden = (name: string) => {
+    const n = name.toLowerCase().trim();
+    return hiddenPrefixes.some(
+      (p) => n === p || n.startsWith(`${p} `) || n.startsWith(`${p}_`),
+    );
+  };
+  return manifestChars.filter((c) => !isHidden(c.name));
+}
 
 export async function generateMetadata({
   params,
@@ -46,7 +71,7 @@ export default async function KammaraPage({
   const worlds = WORLD_IDS.filter((id) => isKammaraPublished(id)).map((id) => {
     const base = {
       id,
-      chars: getCharacters(`kammara/${id}`),
+      chars: getVisibleChars(`kammara/${id}`),
       scenes: getWorldScenes(id, loc),
       drops: getWorldDrops(id, loc),
       bgImage: getKammaraBg(`kammara/${id}`),
@@ -60,7 +85,7 @@ export default async function KammaraPage({
           regionId,
           {
             id: regionId,
-            chars: getCharacters(`kammara/triplec/${regionId}`),
+            chars: getVisibleChars(`kammara/triplec/${regionId}`),
             scenes: getWorldScenes(`triplec-${regionId}`, loc),
             drops: getWorldDrops(`triplec-${regionId}`, loc),
             bgImage: getKammaraBg(`kammara/triplec/${regionId}`),
@@ -79,7 +104,7 @@ export default async function KammaraPage({
   }));
 
   const kammaraBg = getKammaraBg('kammara');
-  const kammaraChars = getCharacters('kammara');
+  const kammaraChars = getVisibleChars('kammara');
 
   return (
     <KammaraClient

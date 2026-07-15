@@ -112,6 +112,14 @@ export interface Character {
       falloff?: number;
     };
   };
+
+  /**
+   * Visibilidade no site. `false` esconde o personagem SEM apagá-lo do JSON —
+   * o conteúdo fica preservado pra reativação (basta trocar pra true / remover
+   * o campo). O filtro é aplicado no SERVIDOR, antes de montar o payload, então
+   * um personagem invisível não vaza no HTML. Ausente = visível (default).
+   */
+  visible?: boolean;
 }
 
 /**

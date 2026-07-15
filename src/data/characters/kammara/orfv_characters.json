@@ -113,6 +113,206 @@
     ]
   },
   {
+    "match": "Nylpha",
+    "name": {
+      "pt": "Nylpha",
+      "en": "Nylpha"
+    },
+    "species": {
+      "pt": "ElePHPant",
+      "en": "ElePHPant"
+    },
+    "bio": {
+      "pt": "Nylpha é menor que Orvian, mas mais inquieta. Seus olhos observam tudo — escuros, atentos, levemente fundos. Desde jovem, Nylpha percebia mudanças no planeta antes de qualquer sinal físico.",
+      "en": "Nylpha is smaller than Orvian, but more restless. Her eyes observe everything — dark, attentive, slightly sunken. Ever since she was young, Nylpha noticed changes in the planet before any physical sign."
+    },
+    "image": "/imgs/kammara/orfv/3Nylpha1.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "Algo mudou. Eu sinto.",
+      "en": "Something has changed. I feel it."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Sensora de instabilidade",
+          "en": "Instability sensor"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Fjorks Norte",
+          "en": "Northern Fjorks"
+        }
+      }
+    ],
+    "visible": false
+  },
+  {
+    "match": "LetiK",
+    "name": {
+      "pt": "LetiK",
+      "en": "LetiK"
+    },
+    "species": {
+      "pt": "ElePHPant",
+      "en": "ElePHPant"
+    },
+    "bio": {
+      "pt": "Vê tudo, avalia tudo, calcula riscos — mas não cruza. Os outros a chamam de cautelosa. Ela se chama de responsável.",
+      "en": "Sees everything, evaluates everything, calculates risks — but doesn't cross. The others call her cautious. She calls herself responsible."
+    },
+    "image": "/imgs/kammara/orfv/LetiK.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "E se a ponte não aguenta?",
+      "en": "What if the bridge doesn't hold?"
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Sem função formal",
+          "en": "No formal role"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Fjorks Leste",
+          "en": "Eastern Fjorks"
+        }
+      }
+    ],
+    "visible": false
+  },
+  {
+    "match": "Kallott",
+    "name": {
+      "pt": "Kallott",
+      "en": "Kallott"
+    },
+    "species": {
+      "pt": "ElePHPant",
+      "en": "ElePHPant"
+    },
+    "bio": {
+      "pt": "Kallott age quando os outros hesitam. Dispara jatos de água com a tromba, bloqueia passagens, contém ameaças. Tem reação rápida e resistência física acima da média.",
+      "en": "Kallott acts when the others hesitate. Fires jets of water with his trunk, blocks passages, contains threats. Quick reaction and above-average physical resilience."
+    },
+    "image": "/imgs/kammara/orfv/Kallott.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "Agora.",
+      "en": "Now."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Defensor",
+          "en": "Defender"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Fjorks Leste",
+          "en": "Eastern Fjorks"
+        }
+      }
+    ],
+    "visible": false
+  },
+  {
+    "match": "Torwen",
+    "name": {
+      "pt": "Torwen",
+      "en": "Torwen"
+    },
+    "species": {
+      "pt": "ElePHPant",
+      "en": "ElePHPant"
+    },
+    "bio": {
+      "pt": "Quando era jovem, o irmão de Torwen ficou paralisado de medo no meio de uma ponte durante uma instabilidade. Ninguém ficou com ele. Quando tudo passou, o irmão estava lá — mas algo nele tinha mudado. Desde esse dia, Torwen é o elePHPant que sempre está cuidando de todos.",
+      "en": "When he was young, Torwen's brother froze with fear in the middle of a bridge during an instability. No one stayed with him. When it was all over, his brother was there — but something in him had changed. Since that day, Torwen is the ElePHPant who is always taking care of everyone."
+    },
+    "image": "/imgs/kammara/orfv/Torwen.png",
+    "backImage": "",
+    "backTitle": {
+      "pt": "",
+      "en": ""
+    },
+    "dorsalMeaning": {
+      "pt": "Eu fico.",
+      "en": "I stay."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Cuidador comunitário",
+          "en": "Community caretaker"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Fjorks Centrais",
+          "en": "Central Fjorks"
+        }
+      }
+    ],
+    "visible": false
+  },
+  {
     "match": "Nuvin",
     "name": {
       "pt": "Nuvin",
@@ -217,5 +417,113 @@
         }
       }
     ]
+  },
+  {
+    "match": "Velo",
+    "name": {
+      "pt": "Velo",
+      "en": "Velo"
+    },
+    "species": {
+      "pt": "Zephiriki",
+      "en": "Zephiriki"
+    },
+    "bio": {
+      "pt": "Ágil, leve, observador e brincalhão, o Velo é uma criaturinha felpuda. Não tem boca: alimenta-se da seiva das flores rosa das yarlins e dos pïnks, como um beija-flor.",
+      "en": "Agile, light, watchful and playful, the Velo is a fuzzy. It has no mouth: it feeds on the sap of the pink yarlin and pïnk flowers, like a hummingbird."
+    },
+    "image": "/imgs/kammara/orfv/velo.png",
+    "backImage": "/imgs/kammara/orfv/velo_costas.png",
+    "backTitle": {
+      "pt": "O Bebedor de Flores",
+      "en": "The Flower Drinker"
+    },
+    "backMeaning": {
+      "pt": "Branco a prateado, pelagem felpuda; olhos grandes, antenas espetadas e um bigode. Não fala — não tem boca; só observa e brinca.",
+      "en": "White to silver, fuzzy fur; large eyes, spiky antennae and a little mustache. It does not speak — it has no mouth; it only watches and plays."
+    },
+    "dorsalMeaning": {
+      "pt": "O Bebedor de Flores.",
+      "en": "The Flower Drinker."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Polinizador das flores",
+          "en": "Flower pollinator"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Alto dos Fjorks",
+          "en": "High in the Fjorks"
+        }
+      }
+    ],
+    "visible": false
+  },
+  {
+    "match": "Aurin",
+    "name": {
+      "pt": "Aurin",
+      "en": "Aurin"
+    },
+    "species": {
+      "pt": "Aliventi",
+      "en": "Aliventi"
+    },
+    "bio": {
+      "pt": "Pequeno como uma libélula, o Aurin vive no alto dos Fjorks, pertinho das vilas dos elePHPants — e é dali que cruza o vento entre as ilhas carregando recados e sementes de um lado ao outro.",
+      "en": "Small as a dragonfly, the Aurin lives high in the Fjorks, close to the elePHPant villages — and from there it crosses the wind between the islands carrying messages and seeds from one side to the other."
+    },
+    "image": "/imgs/kammara/orfv/Aurin_rosa.png",
+    "backImage": "/imgs/kammara/orfv/Aurin_costas_rosa.png",
+    "backTitle": {
+      "pt": "O Mensageiro das Brisas",
+      "en": "The Messenger of the Breezes"
+    },
+    "backMeaning": {
+      "pt": "Corpo leve e liso, de madeira clara com leve brilho; asas translúcidas e delicadas como as de uma libélula.",
+      "en": "A light, smooth body of pale wood with a faint sheen; wings translucent and delicate like a dragonfly's."
+    },
+    "dorsalMeaning": {
+      "pt": "Trago um recado — e uma semente, de brinde.",
+      "en": "I bring a message — and a seed, for free."
+    },
+    "attributes": [
+      {
+        "glyph": "⊶⊷⊙",
+        "label": {
+          "pt": "Função",
+          "en": "Role"
+        },
+        "value": {
+          "pt": "Mensageiro",
+          "en": "Messenger"
+        }
+      },
+      {
+        "glyph": "⊹—⊙",
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "value": {
+          "pt": "Alto dos Fjorks",
+          "en": "High in the Fjorks"
+        }
+      }
+    ],
+    "visible": false
   }
 ]
