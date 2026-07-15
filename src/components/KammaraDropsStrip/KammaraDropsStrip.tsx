@@ -176,14 +176,14 @@ export function KammaraDropsStrip({
           scrollbarWidth: 'none',
           msOverflowStyle: 'none',
           '&::-webkit-scrollbar': { display: 'none' },
-          // One clip per screen, full-width like the home mosaic. Even 16px
-          // gutters, snap-padding matched both sides so each clip lands flush.
-          padding: '8px 16px',
+          // Padding esquerdo = gutter do 1º clip; direito é 0 pra o próximo
+          // clip espiar da borda direita — sinaliza que dá pra deslizar (mesmo
+          // padrão do KammaraCharacterGallery). scroll-padding casa o snap.
+          padding: '8px 0 8px 16px',
           scrollPaddingLeft: '16px',
-          scrollPaddingRight: '16px',
         }}
       >
-        <Box display="flex" css={{ gap: '16px', width: 'max-content' }}>
+        <Box display="flex" css={{ gap: '16px', width: 'max-content', paddingRight: '16px' }}>
           {/* Mobile: just the clip (no HUD frame/header/footer) — same clean
               full-width tile as the home mosaic, so it's easy to see on a phone. */}
           {drops.map((drop, i) => (
@@ -194,13 +194,11 @@ export function KammaraDropsStrip({
               aria-label={drop.label}
               position="relative"
               flexShrink={0}
-              // Largura = o MENOR entre "quase a tela" (retrato) e "o que cabe
-              // na altura mantendo 16/9" (paisagem). Em retrato a 1ª opção vence
-              // (sobra altura); ao girar, a altura fica curta e a 2ª vence — o
-              // tile encolhe junto e o vídeo NÃO esmaga. min() resolve nos dois
-              // sem detectar orientação. 90vh deixa respiro pro menu/barras.
-              width="min(calc(100vw - 32px), calc(90vh * 16 / 9))"
-              maxW="calc(100vw - 32px)"
+              // 82vw deixa ~18vw do próximo clip espiando na direita, sinalizando
+              // que dá pra deslizar (mesmo padrão do CharacterGallery). O min()
+              // com 90vh*16/9 evita esmagar o vídeo em paisagem (altura curta).
+              width="min(82vw, calc(90vh * 16 / 9))"
+              maxW="82vw"
               aspectRatio="16 / 9"
               borderRadius="14px"
               overflow="hidden"
