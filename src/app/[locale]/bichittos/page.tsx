@@ -31,8 +31,9 @@ export default async function BichittosPage({
   const data = creatures.map((id) => ({
     id,
     chars: getCharacters(id),
-    // Filtra livros marcados `visible: false` em bichittos_books.json AQUI, no
-    // servidor — livro oculto nem entra no payload (não vaza).
+    // Filtra livros marcados `visible: false` em
+    // characters/bichittos/bichittos_books.json AQUI, no servidor — livro
+    // oculto nem entra no payload (não vaza).
     books: getBooks(id)
       .filter((b) => isBichittoBookVisible(id, b.id))
       .map((b) => ({
