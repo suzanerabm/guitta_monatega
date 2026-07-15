@@ -140,5 +140,12 @@ export function getBichittoBookBuy(
 ): { url: string; label: string } | null {
   const cfg = bookConfig[`${creatureId}/${bookId}`];
   if (!cfg?.buyUrl) return null;
-  return { url: cfg.buyUrl, label: cfg.buyLabel || 'Compre na Amazon' };
+  // Garante um link ABSOLUTO: sem o esquema, o navegador trataria "www.x.com"
+  // como caminho relativo (guittamonatega.com/.../www.x.com). Prefixa https://
+  // quando o valor não começa com http(s):// nem com "/".
+  const raw = cfg.buyUrl.trim();
+  const url = /^(https?:)?\/\//i.test(raw) || raw.startsWith('/')
+    ? raw
+    : `https://${raw}`;
+  return { url, label: cfg.buyLabel || 'Compre na Amazon' };
 }

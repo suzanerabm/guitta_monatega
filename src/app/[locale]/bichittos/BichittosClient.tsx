@@ -225,12 +225,16 @@ export function BichittosClient({ data }: Props) {
         })();
         const books = creature.books.map((b) => {
           const def = bookDefs?.find((d) => b.id.endsWith(d.tag));
+          const hasPages = Boolean(b.pages && b.pages.length > 0);
           return {
             id: `${creature.id}-${b.id}`,
             image: b.cover ?? undefined,
             alt: def?.title ?? b.id,
             label: def?.title ?? b.id,
-            soon: !b.pages || b.pages.length === 0,
+            // "soon" só quando NÃO há páginas E NÃO há link de compra. Um livro
+            // à venda (só capa + buyUrl) não é "em breve" — mostra o botão.
+            soon: !hasPages && !b.buy,
+            buy: b.buy ?? undefined,
           };
         });
 
@@ -437,7 +441,34 @@ export function BichittosClient({ data }: Props) {
                     <Text fontSize={{ base: 'lg', md: 'xl' }} fontWeight="bold" color={colors.textColor} mb="1rem">
                       {books[0].label}
                     </Text>
-                    {!books[0].soon && (
+                    {books[0].buy ? (
+                      // Livro à venda (só capa + link): botão leva pra loja.
+                      <chakra.a
+                        href={books[0].buy.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        css={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '0.4rem',
+                          outline: `2px solid ${boxBorder}`,
+                          outlineOffset: '3px',
+                          borderRadius: '999px',
+                          padding: '0.5rem 1.4rem',
+                          color: colors.textColor,
+                          fontSize: '0.85rem',
+                          fontWeight: 700,
+                          letterSpacing: '0.08em',
+                          textTransform: 'uppercase',
+                          cursor: 'pointer',
+                          background: 'transparent',
+                          textDecoration: 'none',
+                          transition: 'transform 0.15s ease, opacity 0.15s ease',
+                        }}
+                      >
+                        {books[0].buy.label} ↗
+                      </chakra.a>
+                    ) : !books[0].soon ? (
                       <chakra.button
                         type="button"
                         onClick={() => handleBookClick(creature.id, books[0].id.slice(creature.id.length + 1))}
@@ -458,7 +489,7 @@ export function BichittosClient({ data }: Props) {
                       >
                         Ler história ✦
                       </chakra.button>
-                    )}
+                    ) : null}
                   </Box>
                 )}
               </Grid>
