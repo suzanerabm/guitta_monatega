@@ -105,16 +105,40 @@ export function isBichittoPublished(creatureId: string): boolean {
 
 import booksVisibility from '@/data/characters/bichittos/bichittos_books.json';
 
-const bookVisible = (booksVisibility.books ?? {}) as Record<
-  string,
-  { visible?: boolean }
->;
+interface BookConfig {
+  visible?: boolean;
+  /** Se definido, o livro só aparece nesse idioma (ex: 'pt' some no EN). */
+  onlyLocale?: 'pt' | 'en';
+  /** Link de compra — quando presente, o modal mostra um botão. */
+  buyUrl?: string;
+  /** Texto do botão de compra (ex: "Compre na Amazon"). */
+  buyLabel?: string;
+}
 
-/** True quando o livro deve aparecer. Chave = `creatureId/bookId`. Ausente do
- *  JSON = visível (default). */
+const bookConfig = (booksVisibility.books ?? {}) as Record<string, BookConfig>;
+
+/** True quando o livro deve aparecer no idioma dado. Chave = `creatureId/bookId`.
+ *  Regras: `visible: false` esconde sempre; `onlyLocale` restringe a um idioma.
+ *  Ausente do JSON = visível (default). */
 export function isBichittoBookVisible(
   creatureId: string,
   bookId: string,
+  locale?: string,
 ): boolean {
-  return bookVisible[`${creatureId}/${bookId}`]?.visible !== false;
+  const cfg = bookConfig[`${creatureId}/${bookId}`];
+  if (!cfg) return true;
+  if (cfg.visible === false) return false;
+  if (cfg.onlyLocale && locale && cfg.onlyLocale !== locale) return false;
+  return true;
+}
+
+/** Dados de compra do livro (link + texto do botão), ou null se não houver
+ *  `buyUrl`. Usado pra renderizar o botão "Compre na Amazon" no modal. */
+export function getBichittoBookBuy(
+  creatureId: string,
+  bookId: string,
+): { url: string; label: string } | null {
+  const cfg = bookConfig[`${creatureId}/${bookId}`];
+  if (!cfg?.buyUrl) return null;
+  return { url: cfg.buyUrl, label: cfg.buyLabel || 'Compre na Amazon' };
 }

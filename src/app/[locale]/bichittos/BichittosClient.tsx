@@ -27,7 +27,12 @@ import type { Locale } from '@/lib/characters';
 export interface BichittosCreatureData {
   id: CreatureId;
   chars: { name: string; image: string }[];
-  books: { id: string; cover: string | null; pages: string[] }[];
+  books: {
+    id: string;
+    cover: string | null;
+    pages: string[];
+    buy?: { url: string; label: string } | null;
+  }[];
 }
 
 interface Props {
@@ -70,7 +75,14 @@ export function BichittosClient({ data }: Props) {
 
   // Build a flat list of book galleries: galleryId -> pages
   const galleries = useMemo(() => {
-    const out: Record<string, { title: string; pages: string[] }> = {};
+    const out: Record<
+      string,
+      {
+        title: string;
+        pages: string[];
+        buy?: { url: string; label: string } | null;
+      }
+    > = {};
     for (const creature of data) {
       // Read translated book defs to map tag -> title
       const bookDefs = ((): { tag: string; title: string }[] | undefined => {
@@ -85,7 +97,11 @@ export function BichittosClient({ data }: Props) {
         if (!book.pages || book.pages.length === 0) continue;
         const def = bookDefs?.find((d) => book.id.endsWith(d.tag));
         const title = def?.title ?? book.id;
-        out[`book_${creature.id}-${book.id}`] = { title, pages: book.pages };
+        out[`book_${creature.id}-${book.id}`] = {
+          title,
+          pages: book.pages,
+          buy: book.buy,
+        };
       }
     }
     return out;
@@ -118,7 +134,7 @@ export function BichittosClient({ data }: Props) {
     const galleryId = `book_${creatureId}-${bookId}`;
     const g = galleries[galleryId];
     if (!g) return;
-    openGallery(galleryId, 0, g.title, bookIllustrated);
+    openGallery(galleryId, 0, g.title, bookIllustrated, undefined, undefined, undefined, g.buy);
   };
 
   const filters = [

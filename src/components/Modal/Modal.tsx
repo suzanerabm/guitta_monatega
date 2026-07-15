@@ -1,6 +1,6 @@
 'use client';
 import { useEffect } from 'react';
-import { Box, Flex, Text, Heading } from '@chakra-ui/react';
+import { Box, Flex, Text, Heading, chakra } from '@chakra-ui/react';
 import { useModal } from './ModalProvider';
 import { useChromeTint } from '@/components/ChromeTint';
 
@@ -16,7 +16,7 @@ function formatFilename(path: string): string {
 
 export function Modal() {
   const { state, close, next, prev } = useModal();
-  const { isOpen, images, labels, currentIndex, title, technique, theme, heroTitle, heroText } = state;
+  const { isOpen, images, labels, currentIndex, title, technique, theme, heroTitle, heroText, buyUrl, buyLabel } = state;
   const { tintColor } = useChromeTint();
 
   // Theme resolution priority:
@@ -150,6 +150,36 @@ export function Modal() {
           >
             {techniqueText}
           </Text>
+        )}
+
+        {/* Botão de compra (livros dos Bichittos com buyUrl). Abre em nova aba,
+            rel noopener por segurança. Só renderiza quando há link. */}
+        {buyUrl && (
+          <chakra.a
+            href={buyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            display="inline-flex"
+            alignItems="center"
+            gap="0.5rem"
+            mt="1rem"
+            px="1.25rem"
+            py="0.6rem"
+            borderRadius="full"
+            fontSize="sm"
+            fontWeight="semibold"
+            letterSpacing="wide"
+            bg={isDark ? 'whiteAlpha.900' : 'ink'}
+            color={isDark ? 'ink' : 'surface'}
+            css={{
+              textDecoration: 'none',
+              transition: 'transform 0.15s ease, opacity 0.15s ease',
+              '&:hover': { transform: 'translateY(-1px)', opacity: 0.9 },
+            }}
+          >
+            {buyLabel || 'Compre na Amazon'}
+            <Box as="span" aria-hidden="true">↗</Box>
+          </chakra.a>
         )}
 
         {/* Image */}

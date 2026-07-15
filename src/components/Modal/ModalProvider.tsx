@@ -23,6 +23,10 @@ interface ModalState {
   theme?: string;
   heroTitle?: string;
   heroText?: string;
+  /** Link de compra do livro (Bichittos). Quando presente, o modal mostra um
+   *  botão. `buyLabel` é o texto (ex: "Compre na Amazon"). */
+  buyUrl?: string;
+  buyLabel?: string;
   /** Visual variant: 'default' uses Modal, 'kammara' uses ModalKammara. */
   variant?: 'default' | 'kammara';
   /** Accent color for kammara variant. */
@@ -55,7 +59,8 @@ interface ModalContextType {
     technique?: string,
     theme?: string,
     heroTitle?: string,
-    heroText?: string
+    heroText?: string,
+    buy?: { url: string; label: string } | null
   ) => void;
   openModal: (
     title: string,
@@ -118,7 +123,8 @@ export function ModalProvider({ children }: { children: React.ReactNode }) {
       technique = '',
       theme?: string,
       heroTitle?: string,
-      heroText?: string
+      heroText?: string,
+      buy?: { url: string; label: string } | null
     ) => {
       const gallery = galleriesRef.current[galleryId];
       if (!gallery) return;
@@ -133,6 +139,8 @@ export function ModalProvider({ children }: { children: React.ReactNode }) {
         theme,
         heroTitle,
         heroText,
+        buyUrl: buy?.url,
+        buyLabel: buy?.label,
       });
     },
     []

@@ -1,8 +1,13 @@
 {
-  "_comment": "Controle de visibilidade dos livros dos Bichittos. Cada chave é 'creatureId/bookId' (o bookId = nome da pasta em public/imgs/books/<creature>/<book>/). visible:false esconde o livro do site SEM apagar as imagens — reversível trocando pra true. Ausente = visível (default). Os títulos continuam vindo das traduções (i18n messages, chave <creature>.books). O filtro roda no servidor (bichittos/page.tsx), então livro oculto não vaza no payload.",
+  "_comment": "Controle dos livros dos Bichittos. Chave = 'creatureId/bookId' (bookId = pasta em public/imgs/books/<creature>/<book>/). Campos por livro: | visible (bool): false esconde o livro sem apagar imagens; ausente=visível. | onlyLocale ('pt'|'en'): se definido, o livro só aparece nesse idioma (ex: 'pt' = some na versão EN do site). Ausente = aparece nos dois. | buyUrl (string): link de compra; quando presente, mostra um botão no modal do livro. | buyLabel (string): texto do botão (ex: 'Compre na Amazon'). Títulos vêm das traduções. Filtros rodam no servidor (bichittos/page.tsx) — livro oculto não vaza.",
   "books": {
     "napcat/adventures": { "visible": false },
-    "zeco/zeco-estacoes": { "visible": true },
+    "zeco/zeco-estacoes": {
+      "visible": true,
+      "onlyLocale": "pt",
+      "buyUrl": "",
+      "buyLabel": "Compre na Amazon"
+    },
     "taylo/star-hunter": { "visible": false }
   }
 }
