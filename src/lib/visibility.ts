@@ -93,3 +93,28 @@ export function isBichittoPublished(creatureId: string): boolean {
   if (showAll) return true;
   return BICHITTOS_PUBLISHED[creatureId] ?? true;
 }
+
+// ─── Bichittos books ─────────────────────────────────────────────────────
+//
+// Controle de visibilidade por LIVRO (independente da criatura), lido de
+// `src/data/bichittos_books.json`. Diferente de `isBichittoPublished` (gate de
+// "publicado"), aqui `visible: false` esconde SEMPRE — em dev/preview/prod —
+// porque é uma escolha manual de esconder, não um estado de progresso. Assim o
+// comportamento bate com o campo `visible` de personagens/subsistemas do
+// Kammara. O filtro roda no servidor (bichittos/page.tsx) → não vaza.
+
+import booksVisibility from '@/data/bichittos_books.json';
+
+const bookVisible = (booksVisibility.books ?? {}) as Record<
+  string,
+  { visible?: boolean }
+>;
+
+/** True quando o livro deve aparecer. Chave = `creatureId/bookId`. Ausente do
+ *  JSON = visível (default). */
+export function isBichittoBookVisible(
+  creatureId: string,
+  bookId: string,
+): boolean {
+  return bookVisible[`${creatureId}/${bookId}`]?.visible !== false;
+}

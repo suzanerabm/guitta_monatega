@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getCharacters, getBooks, getBookPages } from '@/lib/images';
-import { isBichittoPublished } from '@/lib/visibility';
+import { isBichittoPublished, isBichittoBookVisible } from '@/lib/visibility';
 import { BichittosClient } from './BichittosClient';
 
 export async function generateMetadata({
@@ -31,10 +31,14 @@ export default async function BichittosPage({
   const data = creatures.map((id) => ({
     id,
     chars: getCharacters(id),
-    books: getBooks(id).map((b) => ({
-      ...b,
-      pages: getBookPages(id, b.id),
-    })),
+    // Filtra livros marcados `visible: false` em bichittos_books.json AQUI, no
+    // servidor — livro oculto nem entra no payload (não vaza).
+    books: getBooks(id)
+      .filter((b) => isBichittoBookVisible(id, b.id))
+      .map((b) => ({
+        ...b,
+        pages: getBookPages(id, b.id),
+      })),
   }));
 
   return <BichittosClient data={data} />;

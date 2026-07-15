@@ -1,0 +1,8 @@
+{
+  "_comment": "Controle de visibilidade dos livros dos Bichittos. Cada chave é 'creatureId/bookId' (o bookId = nome da pasta em public/imgs/books/<creature>/<book>/). visible:false esconde o livro do site SEM apagar as imagens — reversível trocando pra true. Ausente = visível (default). Os títulos continuam vindo das traduções (i18n messages, chave <creature>.books). O filtro roda no servidor (bichittos/page.tsx), então livro oculto não vaza no payload.",
+  "books": {
+    "napcat/adventures": { "visible": true },
+    "zeco/zeco-estacoes": { "visible": true },
+    "taylo/star-hunter": { "visible": true }
+  }
+}
