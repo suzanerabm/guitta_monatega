@@ -188,6 +188,12 @@ export function DSMainCard({
         inset={0}
         zIndex={{ base: 4, md: 1 }}
         height={{ base: '180px', md: 'auto' }}
+        // Sem personagens, este overlay absoluto ficaria por cima do slot da
+        // cena (que passa a viver no fluxo quando não há `stripSide`) e roubaria
+        // os cliques dela. Desliga pointer-events quando vazio para o clique
+        // chegar na cena/collage embaixo. Os próprios personagens reativam
+        // pointer-events individualmente (cada tile é clicável no seu componente).
+        pointerEvents={characters.length === 0 ? 'none' : undefined}
       >
         {characters.map((c, idx) => {
           const cssVars = {
