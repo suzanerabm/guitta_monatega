@@ -10,8 +10,8 @@
       "en": "Krovín"
     },
     "bio": {
-      "pt": "O mais antigo e forte da sua espécie; construiu o Digg elo por elo. Não é rei herdado — é o que reuniu mais e sabe esperar melhor. Comanda do trono de pedra, o Ratão no ombro — a única coisa que ama.",
-      "en": "The oldest and strongest of his kind; he built Digg link by link. No inherited king — he is the one who gathered the most and waits the best. He rules from his stone throne, the Ratón on his shoulder — the one thing he loves."
+      "pt": "O mais antigo e forte da sua espécie; construiu o Digg elo por elo. Não é rei herdado: é o que reuniu mais e sabe esperar melhor. Comanda do trono de pedra, o Ratão no ombro (a única coisa que ama).",
+      "en": "The oldest and strongest of his kind; he built Digg link by link. No inherited king: he is the one who gathered the most and waits the best. He rules from his stone throne, the Ratón on his shoulder (the one thing he loves)."
     },
     "image": "/imgs/kammara/digg/Nihrak_frente.png",
     "backImage": "/imgs/kammara/digg/Nihrak_costas.png",
@@ -20,8 +20,8 @@
       "en": "Other Side"
     },
     "dorsalMeaning": {
-      "pt": "Nada disso era de ninguém. Agora é meu — e isso é justiça.",
-      "en": "None of this belonged to anyone. Now it is mine — and that is justice."
+      "pt": "Nada disso era de ninguém. Agora é meu, e isso é justiça.",
+      "en": "None of this belonged to anyone. Now it is mine, and that is justice."
     },
     "attributes": [
       {
@@ -59,8 +59,8 @@
       "en": "Sil'Rat"
     },
     "bio": {
-      "pt": "Sil'Rat de sílica âmbar, vindo de ENI-4Δ. Não cava nem carrega: existe para ser amado. É a única brecha no ser mais duro do Digg — machucá-lo é morte certa.",
-      "en": "An amber silica Sil'Rat from ENI-4Δ. He neither digs nor carries: he exists to be loved. He is the one soft spot in the hardest being on Digg — to harm him is certain death."
+      "pt": "Sil'Rat de sílica âmbar, vindo de ENI-4Δ. Não cava nem carrega: existe para ser amado. É a única brecha no ser mais duro do Digg: machucá-lo é morte certa.",
+      "en": "An amber silica Sil'Rat from ENI-4Δ. He neither digs nor carries: he exists to be loved. He is the one soft spot in the hardest being on Digg: to harm him is certain death."
     },
     "image": "/imgs/kammara/digg/Silko.png",
     "backImage": "/imgs/kammara/digg/Silko_costas.png",
@@ -157,8 +157,8 @@
       "en": "Orvín"
     },
     "bio": {
-      "pt": "Duros e silenciosos, o músculo do acúmulo. Fugiram de ser ferramenta num mundo de mineração — e voltaram a carregar, só que agora para si.",
-      "en": "Hard and silent, the muscle of the hoard. They fled being tools on a mining world — and carry again, only now for themselves."
+      "pt": "Duros e silenciosos, o músculo do acúmulo. Fugiram de ser ferramenta num mundo de mineração, e voltaram a carregar, só que agora para si.",
+      "en": "Hard and silent, the muscle of the hoard. They fled being tools on a mining world, and carry again, only now for themselves."
     },
     "image": "/imgs/kammara/digg/ORVIN.png",
     "backImage": "/imgs/kammara/digg/ORVIN_costas.png",
@@ -255,8 +255,8 @@
       "en": "Zin"
     },
     "bio": {
-      "pt": "Aves-gárgula de pedra viva, com um olho enorme e oval. Chegam por último e catam o que os outros deixaram pra trás — pra elas, o que ninguém quis já é tesouro.",
-      "en": "Living-stone gargoyle birds with one huge oval eye. They arrive last and gather what the others left behind — to them, what no one wanted is already treasure."
+      "pt": "Aves-gárgula de pedra viva, com um olho enorme e oval. Chegam por último e catam o que os outros deixaram pra trás: pra elas, o que ninguém quis já é tesouro.",
+      "en": "Living-stone gargoyle birds with one huge oval eye. They arrive last and gather what the others left behind: to them, what no one wanted is already treasure."
     },
     "image": "/imgs/kammara/digg/ZIN_asas.png",
     "backImage": "/imgs/kammara/digg/ZIN_costas.png",

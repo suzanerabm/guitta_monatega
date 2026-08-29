@@ -205,9 +205,8 @@ export function DSTextPanel({
             )}
             <Heading
               as="h2"
-              fontFamily="body"
+              textStyle="heading"
               fontSize={{ base: '1.3rem', md: '2rem', '2xl': 'clamp(2rem, 4vw, 3rem)' }}
-              fontWeight={700}
               lineHeight={1.1}
               color={titleColor}
               m={0}

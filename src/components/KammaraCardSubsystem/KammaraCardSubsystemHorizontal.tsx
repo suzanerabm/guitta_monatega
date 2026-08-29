@@ -241,13 +241,12 @@ export function KammaraCardSubsystemHorizontal({
                   </Text>
                   <Heading
                     as="h2"
-                    fontFamily="body"
+                    textStyle="heading"
                     fontSize={
                       activeItem.label.length > 16
                         ? { base: '1.5rem', md: '1.9rem' }
                         : { base: '2rem', md: '2.4rem' }
                     }
-                    fontWeight="bold"
                     lineHeight={1}
                     color={color}
                     letterSpacing="heroTitle"
@@ -529,13 +528,12 @@ export function KammaraCardSubsystemHorizontal({
           </Text>
           <Heading
             as="h2"
-            fontFamily="body"
+            textStyle="heading"
             fontSize={
               activeItem.label.length > 16
                 ? { base: '1.5rem', md: '2rem', xl: '2.6rem' }
                 : { base: '2rem', md: '2.6rem' }
             }
-            fontWeight="bold"
             lineHeight={1}
             color={color}
             letterSpacing="heroTitle"

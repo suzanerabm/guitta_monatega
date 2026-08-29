@@ -4,7 +4,7 @@
     "siteTitle": "Guitta Monatega",
     "footerAbout": "guitta monatega",
     "footerPrivacy": "privacidade",
-    "footerCopyright": "© Guitta Monatega — todos os direitos reservados",
+    "footerCopyright": "© Guitta Monatega. Todos os direitos reservados",
     "soon": "em breve",
     "words": {
       "acordando": "acordando",
@@ -152,7 +152,7 @@
       {
         "num": "01",
         "tag": "A Origem",
-        "body": "Desenho desde pequena. Comecei em guardanapos, papéis soltos, margens de caderno — tudo que estivesse por perto."
+        "body": "Desenho desde pequena. Comecei em guardanapos, papéis soltos, margens de caderno, tudo que estivesse por perto."
       },
       {
         "num": "02",
@@ -162,12 +162,12 @@
       {
         "num": "03",
         "tag": "As Três Frentes",
-        "body": "Hoje meu trabalho se organiza em três frentes — cada uma com seu tempo, sua técnica, seu universo."
+        "body": "Hoje meu trabalho se organiza em três frentes, cada uma com seu tempo, sua técnica, seu universo."
       },
       {
         "num": "04",
         "tag": "O Ofício",
-        "body": "Meu trabalho transita entre a escrita, técnicas tradicionais e digitais — nanquim, grafite, pontilhismo, crochê, needle felting, modelagem, ilustração digital. A palavra e a imagem caminham juntas. Cada peça é construída com tempo, repetição e cuidado, preservando a essência do feito à mão."
+        "body": "Meu trabalho transita entre a escrita, técnicas tradicionais e digitais: nanquim, grafite, pontilhismo, crochê, needle felting, modelagem, ilustração digital. A palavra e a imagem caminham juntas. Cada peça é construída com tempo, repetição e cuidado, preservando a essência do feito à mão."
       },
       {
         "num": "05",
@@ -177,7 +177,7 @@
       {
         "num": "06",
         "tag": "Kammara",
-        "body": "Onde a história da computação se transforma em mito. A semente veio por volta de 2012 — começaram a surgir planetas, linguagens, criaturas. Em 2019, visitei museus de história da computação para estudar de perto as máquinas que deram origem a tudo. Desde então, venho desenvolvendo esse universo em camadas: cosmologia, personagens, linguagens próprias. Agora apresento o compilado em livros."
+        "body": "Onde a história da computação se transforma em mito. A semente veio por volta de 2012, quando começaram a surgir planetas, linguagens, criaturas. Em 2019, visitei museus de história da computação para estudar de perto as máquinas que deram origem a tudo. Desde então, venho desenvolvendo esse universo em camadas: cosmologia, personagens, linguagens próprias. Agora apresento o compilado em livros."
       }
     ],
     "declaration": "Onde a arte e a computação se equilibram.",
@@ -221,7 +221,7 @@
     "heroLabel": "Universo",
     "heroTitle": "Kammara",
     "heroDesc": "Bem-vindo ao Kammara",
-    "placeholder": "Placeholder — descrição vai aqui.",
+    "placeholder": "Placeholder: descrição vai aqui.",
     "charactersTitle": "Personagens",
     "scenesTitle": "Cenas",
     "subsystemsTitle": "Subsistemas",
@@ -229,7 +229,7 @@
       "name": "Universo Kammara",
       "text": [
         "E se as invenções da humanidade continuassem evoluindo em outro universo?",
-        "Continuaram. E se tornaram Kammara — um universo onde cada planeta vive a sua própria história."
+        "Continuaram. E se tornaram Kammara, um universo onde cada planeta vive a sua própria história."
       ],
       "books": [
         {
@@ -240,19 +240,19 @@
       "panel": {
         "story": [
           "### Kammara",
-          "Algumas invenções da humanidade seguiram seu próprio caminho, muito além de onde nasceram — e, lá longe, cada uma acabou virando um planeta. Assim nasceu Kammara: um universo com incontáveis planetas, cada um com seu povo, seu jeito de existir e um monte de histórias esperando pra serem contadas.",
+          "Algumas invenções da humanidade seguiram seu próprio caminho, muito além de onde nasceram; lá longe, cada uma acabou virando um planeta. Assim nasceu Kammara: um universo com incontáveis planetas, cada um com seu povo, seu jeito de existir e um monte de histórias esperando pra serem contadas.",
           "### Os planetas",
           "Cada planeta é único. Alguns fluem em calma, outros vivem em movimento; alguns constroem, alguns guardam, alguns recomeçam a cada ciclo.",
           "### Explore",
           "Este é o Kammara é um universo vivo, em movimento, sempre em curso. Navegue, explore… e descubra qual é o seu planeta favorito.",
           "### A essência",
-          "Kammara — um universo onde cada planeta vive a sua própria história."
+          "Kammara: um universo onde cada planeta vive a sua própria história."
         ]
       }
     },
     "booksTitle": "Livros",
     "planetsTitle": "Planetas",
-    "planetsDesc": "Os planetas de Kammara — cada um, um universo à parte."
+    "planetsDesc": "Os planetas de Kammara, cada um um universo à parte."
   },
   "art": {
     "pageTitle": "Arte — Guitta Monatega",
@@ -318,7 +318,7 @@
       },
       {
         "tag": "Cookies",
-        "body": "Este site não usa cookies próprios para rastreamento ou publicidade. Pode haver cookies técnicos definidos pela infraestrutura (Cloudflare, Vercel) apenas para funcionamento da entrega de conteúdo — nenhum identifica a pessoa. Por isso este site não exibe banner de consentimento de cookies: não há cookie nosso que exija essa permissão sob LGPD ou GDPR."
+        "body": "Este site não usa cookies próprios para rastreamento ou publicidade. Pode haver cookies técnicos definidos pela infraestrutura (Cloudflare, Vercel) apenas para funcionamento da entrega de conteúdo; nenhum identifica a pessoa. Por isso este site não exibe banner de consentimento de cookies: não há cookie nosso que exija essa permissão sob LGPD ou GDPR."
       },
       {
         "tag": "Natureza do site",
@@ -326,11 +326,11 @@
       },
       {
         "tag": "Propriedade intelectual",
-        "body": "Todo o conteúdo deste site — incluindo arte, ilustrações, textos, nomes próprios, personagens, criaturas, universos (Kammara, Bichittos e demais), sistemas linguísticos, glifos, símbolos e demais elementos criativos — é propriedade intelectual exclusiva de Guitta Monatega e está protegido pelas leis brasileiras de direito autoral (Lei 9.610/98) e por tratados internacionais. É vedada qualquer reprodução, redistribuição, modificação, uso em treinamento de modelos de inteligência artificial ou utilização comercial sem autorização expressa e por escrito."
+        "body": "Todo o conteúdo deste site, incluindo arte, ilustrações, textos, nomes próprios, personagens, criaturas, universos (Kammara, Bichittos e demais), sistemas linguísticos, glifos, símbolos e demais elementos criativos, é propriedade intelectual exclusiva de Guitta Monatega e está protegido pelas leis brasileiras de direito autoral (Lei 9.610/98) e por tratados internacionais. É vedada qualquer reprodução, redistribuição, modificação, uso em treinamento de modelos de inteligência artificial ou utilização comercial sem autorização expressa e por escrito."
       },
       {
         "tag": "Uso de inteligência artificial na produção",
-        "body": "Algumas imagens deste site foram geradas com auxílio de ferramentas de IA. Em todos os casos, a geração ocorreu sob direção criativa explícita da autora: prompts especializados foram desenvolvidos a partir de doodles, esboços manuais, estudos de personagem, paletas e referências visuais autorais previamente concebidos. As ferramentas de IA atuaram como instrumento de execução assistida — análoga a pincel digital, esculpidor 3D ou qualquer outro recurso técnico — e não substituíram a autoria conceitual, narrativa ou estética. A obra resultante é considerada criação derivada de processo autoral pessoal, e como tal permanece propriedade intelectual da autora."
+        "body": "Algumas imagens deste site foram geradas com auxílio de ferramentas de IA. Em todos os casos, a geração ocorreu sob direção criativa explícita da autora: prompts especializados foram desenvolvidos a partir de doodles, esboços manuais, estudos de personagem, paletas e referências visuais autorais previamente concebidos. As ferramentas de IA atuaram como instrumento de execução assistida (análoga a pincel digital, esculpidor 3D ou qualquer outro recurso técnico) e não substituíram a autoria conceitual, narrativa ou estética. A obra resultante é considerada criação derivada de processo autoral pessoal, e como tal permanece propriedade intelectual da autora."
       },
       {
         "tag": "Reservas de direitos",

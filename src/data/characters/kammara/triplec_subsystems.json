@@ -10,13 +10,13 @@
         "### O mundo antes",
         "Antes do PD-11, TripleC era um planeta inteiramente coberto pela Niul Forest. Profundo, lento, ancestral. Um mundo do elemento Terra-Viva, onde tudo respirava junto e nada tinha pressa.",
         "### O Estalo Branco",
-        "Um dia, um artefato caiu do céu — era lixo. Um equipamento tecnológico ancestral, descartado pelos humanos da Terra, que atravessou o cosmos como sucata até pousar na floresta. Os bunniets o chamam de PD-11. O impacto ficou conhecido como O Estalo Branco: o momento em que o mundo foi \"instruído\" pela primeira vez. A queda não destruiu TripleC. Reorganizou tudo.",
+        "Um dia, um artefato caiu do céu: era lixo. Um equipamento tecnológico ancestral, descartado pelos humanos da Terra, que atravessou o cosmos como sucata até pousar na floresta. Os bunniets o chamam de PD-11. O impacto ficou conhecido como O Estalo Branco: o momento em que o mundo foi \"instruído\" pela primeira vez. A queda não destruiu TripleC. Reorganizou tudo.",
         "### A reorganização",
-        "O subsolo se dobrou em camadas lógicas ativas. Da fusão entre raiz, mineral e instrução surgiram os primeiros bunniets — Filhos do Acaso Lógico. A lógica começou a germinar em uma nova forma de vida.",
+        "O subsolo se dobrou em camadas lógicas ativas. Da fusão entre raiz, mineral e instrução surgiram os primeiros bunniets, Filhos do Acaso Lógico. A lógica começou a germinar em uma nova forma de vida.",
         "### As quatro regiões",
         "Com o tempo, três grandes regiões se consolidaram: malloc ao sul, Mesh ao norte, Sharp ao leste. A oeste, permaneceu floresta. E entre todas elas, a Niul Forest original continua respirando.",
         "### O núcleo de malloc",
-        "O PD-11 ainda pulsa no coração de malloc — é o núcleo permanente da região, a principal vila de todo o planeta. As primeiras vilas 16×16 surgiram ao redor dele, e dele nasceram as cinco camadas do subsolo. É uma estrutura mineral que imita circuitos, feita de luz comprimida — instável, sagrada e ativa. Suas distorções aparecem sem aviso, e quando aparecem, sempre mudam alguma coisa.",
+        "O PD-11 ainda pulsa no coração de malloc: é o núcleo permanente da região, a principal vila de todo o planeta. As primeiras vilas 16×16 surgiram ao redor dele, e dele nasceram as cinco camadas do subsolo. É uma estrutura mineral que imita circuitos, feita de luz comprimida, instável, sagrada e ativa. Suas distorções aparecem sem aviso, e quando aparecem, sempre mudam alguma coisa.",
         "### Um acidente que virou mundo",
         "TripleC nunca quis ser tecnológico. Aconteceu. E aprendeu a transformar o acaso em ordem ativa."
       ],
@@ -24,13 +24,13 @@
         "### The world before",
         "Before the PD-11, TripleC was a planet entirely covered by the Niul Forest. Deep, slow, ancestral. A world of the Living-Earth element, where everything breathed together and nothing was in a hurry.",
         "### The White Snap",
-        "One day, an artifact fell from the sky — it was trash. Ancient technological equipment discarded by the humans of Earth, which drifted across the cosmos as scrap until it landed in the forest. The bunniets call it PD-11. The impact became known as the White Snap: the moment the world was \"instructed\" for the first time. The fall did not destroy TripleC. It reorganized everything.",
+        "One day, an artifact fell from the sky: it was trash. Ancient technological equipment discarded by the humans of Earth, which drifted across the cosmos as scrap until it landed in the forest. The bunniets call it PD-11. The impact became known as the White Snap: the moment the world was \"instructed\" for the first time. The fall did not destroy TripleC. It reorganized everything.",
         "### The reorganization",
-        "The subsoil folded into active logical layers. From the fusion of root, mineral and instruction came the first bunniets — Children of Logical Chance. Logic began to germinate into a new form of life.",
+        "The subsoil folded into active logical layers. From the fusion of root, mineral and instruction came the first bunniets, Children of Logical Chance. Logic began to germinate into a new form of life.",
         "### The four regions",
         "Over time, three great regions took shape: malloc to the south, Mesh to the north, Sharp to the east. To the west, forest remained. And among them all, the original Niul Forest keeps breathing.",
         "### The core of malloc",
-        "The PD-11 still pulses at the heart of malloc — it is the region's permanent core, the main village of the whole planet. The first 16×16 villages rose around it, and from it the five subsoil layers were born. It is a mineral structure that mimics circuits, made of compressed light — unstable, sacred and active. Its distortions appear without warning, and when they do, they always change something.",
+        "The PD-11 still pulses at the heart of malloc: it is the region's permanent core, the main village of the whole planet. The first 16×16 villages rose around it, and from it the five subsoil layers were born. It is a mineral structure that mimics circuits, made of compressed light, unstable, sacred and active. Its distortions appear without warning, and when they do, they always change something.",
         "### An accident that became a world",
         "TripleC never wanted to be technological. It just happened. And it learned to turn chance into active order."
       ]
@@ -45,27 +45,27 @@
     "text": {
       "pt": [
         "### O pulmão ativo",
-        "A Niul Forest é a floresta ancestral que cobria o planeta inteiro antes do PD-11. Hoje ocupa o espaço entre todas as regiões — profunda, antiga, com neblina azul constante, raízes elevadas e entrelaçadas.",
+        "A Niul Forest é a floresta ancestral que cobria o planeta inteiro antes do PD-11. Hoje ocupa o espaço entre todas as regiões, profunda, antiga, com neblina azul constante, raízes elevadas e entrelaçadas.",
         "### A luz que nunca chega direta",
-        "A luz da Niul é difusa, suave. Nunca direta. Cogumelos bioluminescentes em azul fosforescente iluminam o chão da floresta — herança ativa do mundo que existia antes da transformação.",
+        "A luz da Niul é difusa, suave. Nunca direta. Cogumelos bioluminescentes em azul fosforescente iluminam o chão da floresta, herança ativa do mundo que existia antes da transformação.",
         "### O intervalo entre mundos",
-        "A Niul Forest não faz fronteira entre regiões — ela é o próprio intervalo. Absorve o excesso de cada uma, impede que instinto e ordem colidam, mantém o equilíbrio sem interferir.",
+        "A Niul Forest não faz fronteira entre regiões: ela é o próprio intervalo. Absorve o excesso de cada uma, impede que instinto e ordem colidam, mantém o equilíbrio sem interferir.",
         "### Os habitantes de Z1",
-        "Alguns seres vindos de Z1 vivem discretamente na Niul Forest. Acústicos, antigos, conectados ao pulso do planeta. Não governam — observam. E quando malloc é atacada, Niul acorda — e eles se movem sem serem vistos.",
+        "Alguns seres vindos de Z1 vivem discretamente na Niul Forest. Acústicos, antigos, conectados ao pulso do planeta. Não governam; observam. E quando malloc é atacada, Niul acorda, e eles se movem sem serem vistos.",
         "### O papel da floresta",
-        "A Niul Forest não evolui em direção à lógica nem volta a ser pura natureza. Ela continua sendo o que sempre foi — e é essa constância que protege tudo ao redor."
+        "A Niul Forest não evolui em direção à lógica nem volta a ser pura natureza. Ela continua sendo o que sempre foi, e é essa constância que protege tudo ao redor."
       ],
       "en": [
         "### The active lung",
-        "The Niul Forest is the ancestral forest that covered the whole planet before the PD-11. Today it occupies the space between all the regions — deep, ancient, with constant blue mist and raised, interlaced roots.",
+        "The Niul Forest is the ancestral forest that covered the whole planet before the PD-11. Today it occupies the space between all the regions, deep, ancient, with constant blue mist and raised, interlaced roots.",
         "### The light that never arrives direct",
-        "The light of the Niul is diffuse, soft. Never direct. Bioluminescent mushrooms in phosphorescent blue light up the forest floor — an active inheritance of the world that existed before the transformation.",
+        "The light of the Niul is diffuse, soft. Never direct. Bioluminescent mushrooms in phosphorescent blue light up the forest floor, an active inheritance of the world that existed before the transformation.",
         "### The interval between worlds",
-        "The Niul Forest does not form a border between regions — it is the interval itself. It absorbs the excess of each one, keeps instinct and order from colliding, holds the balance without interfering.",
+        "The Niul Forest does not form a border between regions: it is the interval itself. It absorbs the excess of each one, keeps instinct and order from colliding, holds the balance without interfering.",
         "### The inhabitants from Z1",
-        "Some beings from Z1 live quietly in the Niul Forest. Acoustic, ancient, connected to the pulse of the planet. They do not govern — they observe. And when malloc is attacked, the Niul awakens — and they move unseen.",
+        "Some beings from Z1 live quietly in the Niul Forest. Acoustic, ancient, connected to the pulse of the planet. They do not govern; they observe. And when malloc is attacked, the Niul awakens, and they move unseen.",
         "### The role of the forest",
-        "The Niul Forest neither evolves toward logic nor returns to being pure nature. It remains what it always was — and it is that constancy that protects everything around it."
+        "The Niul Forest neither evolves toward logic nor returns to being pure nature. It remains what it always was, and it is that constancy that protects everything around it."
       ]
     }
   },
@@ -78,19 +78,19 @@
     "text": {
       "pt": [
         "### O que são",
-        "Os bunniets são a única espécie nativa inteligente de TripleC. São bio-lógicos — parte orgânica, parte mineral, parte instrução. Não são robôs. Não são puramente biológicos.",
+        "Os bunniets são a única espécie nativa inteligente de TripleC. São bio-lógicos: parte orgânica, parte mineral, parte instrução. Não são robôs. Não são puramente biológicos.",
         "### O entendimento natural",
         "Os bunniets têm uma capacidade que nenhuma outra espécie do Kammara tem: entendem qualquer forma de comunicação assim que a recebem. Não precisam de tradutor. Não precisam aprender. Basta escutar.",
         "### O que os torna únicos",
-        "Onde outros ouvem ruído, bunniets ouvem ordem. Onde outros veem caos, bunniets veem padrão. Ninguém os ensinou a entender o mundo — eles já nasceram entendendo."
+        "Onde outros ouvem ruído, bunniets ouvem ordem. Onde outros veem caos, bunniets veem padrão. Ninguém os ensinou a entender o mundo: eles já nasceram entendendo."
       ],
       "en": [
         "### What they are",
-        "The bunniets are the only intelligent native species of TripleC. They are bio-logical — part organic, part mineral, part instruction. They are not robots. They are not purely biological.",
+        "The bunniets are the only intelligent native species of TripleC. They are bio-logical: part organic, part mineral, part instruction. They are not robots. They are not purely biological.",
         "### The natural understanding",
         "The bunniets have an ability no other species in Kammara has: they understand any form of communication the moment they receive it. They need no translator. They need not learn. They only need to listen.",
         "### What makes them unique",
-        "Where others hear noise, bunniets hear order. Where others see chaos, bunniets see pattern. No one taught them to understand the world — they were born already understanding it."
+        "Where others hear noise, bunniets hear order. Where others see chaos, bunniets see pattern. No one taught them to understand the world: they were born already understanding it."
       ]
     }
   },
@@ -103,17 +103,17 @@
     "text": {
       "pt": [
         "### As Sementes de Cshift",
-        "São o que conecta o Kammara. Pequenos objetos ativos de uso único que abrem passagens instantâneas entre mundos. Feitas de kemita cristalizada e shilo — com a participação das três regiões: malloc fornece a energia vital, Mesh dá a forma, Sharp valida e estabiliza. O processo de fabricação é segredo absoluto de TripleC — ninguém mais no universo sabe replicá-lo. Ao ser ativada, a Semente vira corredor. Quando alguém atravessa, o corredor se desfaz.",
+        "São o que conecta o Kammara. Pequenos objetos ativos de uso único que abrem passagens instantâneas entre mundos. Feitas de kemita cristalizada e shilo, com a participação das três regiões: malloc fornece a energia vital, Mesh dá a forma, Sharp valida e estabiliza. O processo de fabricação é segredo absoluto de TripleC: ninguém mais no universo sabe replicá-lo. Ao ser ativada, a Semente vira corredor. Quando alguém atravessa, o corredor se desfaz.",
         "### Como transporte",
-        "Graças ao Cshift, TripleC e seus aliados viajam entre mundos sem precisar de naves. As três regiões precisam estar alinhadas para dar vida a uma Semente — é por isso que nenhuma delas funciona sozinha. O Cshift também funciona como transporte entre as regiões de TripleC. Com o Cshift, seja a distância curta ou longa, o transporte acontece em segundos.",
+        "Graças ao Cshift, TripleC e seus aliados viajam entre mundos sem precisar de naves. As três regiões precisam estar alinhadas para dar vida a uma Semente: é por isso que nenhuma delas funciona sozinha. O Cshift também funciona como transporte entre as regiões de TripleC. Com o Cshift, seja a distância curta ou longa, o transporte acontece em segundos.",
         "### O fio que move tudo",
         "Da kemita nasce o bloco. Da cadeia nasce o destino. E de TripleC nasce tudo que o universo precisa para se mover."
       ],
       "en": [
         "### The Cshift Seeds",
-        "They are what connects Kammara. Small single-use active objects that open instant passages between worlds. Made of crystallized kemita and shilo — with the participation of all three regions: malloc supplies the vital energy, Mesh gives the form, Sharp validates and stabilizes. The crafting process is an absolute secret of TripleC — no one else in the universe knows how to replicate it. Once activated, the Seed becomes a corridor. When someone crosses, the corridor unmakes itself.",
+        "They are what connects Kammara. Small single-use active objects that open instant passages between worlds. Made of crystallized kemita and shilo, with the participation of all three regions: malloc supplies the vital energy, Mesh gives the form, Sharp validates and stabilizes. The crafting process is an absolute secret of TripleC: no one else in the universe knows how to replicate it. Once activated, the Seed becomes a corridor. When someone crosses, the corridor unmakes itself.",
         "### As transport",
-        "Thanks to the Cshift, TripleC and its allies travel between worlds without needing ships. The three regions must be aligned to give life to a Seed — which is why none of them works alone. The Cshift also serves as transport between the regions of TripleC. With the Cshift, whether the distance is short or long, the journey happens in seconds.",
+        "Thanks to the Cshift, TripleC and its allies travel between worlds without needing ships. The three regions must be aligned to give life to a Seed: which is why none of them works alone. The Cshift also serves as transport between the regions of TripleC. With the Cshift, whether the distance is short or long, the journey happens in seconds.",
         "### The thread that moves everything",
         "From kemita comes the block. From the chain comes the destination. And from TripleC comes everything the universe needs to move."
       ]
@@ -130,25 +130,25 @@
         "### A kemita",
         "O recurso mais importante do universo inteiro nasce nas cavernas da Hepa, a camada mais profunda de malloc. Metade mineral, metade lógica, metade orgânica. Verde-esmeralda. Extrair kemita das cavernas da Hepa é o principal trabalho dos bunniets de malloc. A kemita é matéria-prima para a fabricação do CShift. E o recurso mais cobiçado do universo por suas diversas aplicações.",
         "### O shilo",
-        "A energia de endereço. Flui pelas camadas como rios luminosos em tom teal — herança direta da Niul Forest ancestral. Para os bunniets, shilo é bússola, alimento e estabilizador emocional ao mesmo tempo. Cristais de shilo pulsam nas cavernas de malloc e iluminam os túneis por onde tudo se move. Sem shilo, ninguém se localiza. É também energia fundamental para a fabricação de Sementes de Cshift.",
+        "A energia de endereço. Flui pelas camadas como rios luminosos em tom teal, herança direta da Niul Forest ancestral. Para os bunniets, shilo é bússola, alimento e estabilizador emocional ao mesmo tempo. Cristais de shilo pulsam nas cavernas de malloc e iluminam os túneis por onde tudo se move. Sem shilo, ninguém se localiza. É também energia fundamental para a fabricação de Sementes de Cshift.",
         "### Os materiais de cada região",
-        "Cada região produz seus próprios recursos. malloc vive de rochas-moles aquecidas pela Datara, cristais da Hepa e frutos de kemita-cor — pequenas esferas minerais que dão foco e memória. Mesh trabalha com torel — um metal ativo, prateado-azulado, usado nas construções modulares. Sharp opera com mekesh — fluxos de energia filtrada em tons brancos e verdes claros.",
+        "Cada região produz seus próprios recursos. malloc vive de rochas-moles aquecidas pela Datara, cristais da Hepa e frutos de kemita-cor, pequenas esferas minerais que dão foco e memória. Mesh trabalha com torel, um metal ativo, prateado-azulado, usado nas construções modulares. Sharp opera com mekesh, fluxos de energia filtrada em tons brancos e verdes claros.",
         "### As cinco camadas",
-        "O subsolo se dobra em camadas lógicas, cinco camadas que organizam o subsolo de malloc: Portex guarda a memória ativa. Datara mantém o fluxo estável. Basa pulsa com potencial latente. Hepa expande e cria. Estaka sustenta as decisões. As camadas nasceram com o impacto do PD-11 — são o alicerce de todo o planeta.",
+        "O subsolo se dobra em camadas lógicas, cinco camadas que organizam o subsolo de malloc: Portex guarda a memória ativa. Datara mantém o fluxo estável. Basa pulsa com potencial latente. Hepa expande e cria. Estaka sustenta as decisões. As camadas nasceram com o impacto do PD-11: são o alicerce de todo o planeta.",
         "### A vida que pulsa",
-        "Vinhas-var detectam instabilidade e alinham caminhos entre vilas. Cristais da Hepa iluminam cavernas e reagem a emoções. Mewlites — criaturas microscópicas feitas de cristal e vida — seguem o shilo e cantam quando uma rota está morrendo. Shilo-insetos translúcidos marcam caminhos íntegros. Estakors vivem nas profundezas da Estaka, nunca sobem — buscam o encaixe com Krystos camuflados, e o encaixe provoca terremoto."
+        "Vinhas-var detectam instabilidade e alinham caminhos entre vilas. Cristais da Hepa iluminam cavernas e reagem a emoções. Mewlites (criaturas microscópicas feitas de cristal e vida) seguem o shilo e cantam quando uma rota está morrendo. Shilo-insetos translúcidos marcam caminhos íntegros. Estakors vivem nas profundezas da Estaka, nunca sobem; buscam o encaixe com Krystos camuflados, e o encaixe provoca terremoto."
       ],
       "en": [
         "### Kemita",
         "The most important resource in the entire universe is born in the caves of the Hepa, the deepest layer of malloc. Half mineral, half logic, half organic. Emerald-green. Extracting kemita from the caves of the Hepa is the main work of malloc's bunniets. Kemita is the raw material for crafting the Cshift. And it is the most coveted resource in the universe for its many applications.",
         "### Shilo",
-        "The energy of address. It flows through the layers like luminous teal rivers — a direct inheritance of the ancestral Niul Forest. For the bunniets, shilo is compass, food and emotional stabilizer all at once. Shilo crystals pulse in the caves of malloc and light the tunnels through which everything moves. Without shilo, no one can find their way. It is also fundamental energy for crafting Cshift Seeds.",
+        "The energy of address. It flows through the layers like luminous teal rivers, a direct inheritance of the ancestral Niul Forest. For the bunniets, shilo is compass, food and emotional stabilizer all at once. Shilo crystals pulse in the caves of malloc and light the tunnels through which everything moves. Without shilo, no one can find their way. It is also fundamental energy for crafting Cshift Seeds.",
         "### The materials of each region",
-        "Each region produces its own resources. malloc lives on soft-rocks warmed by the Datara, Hepa crystals and kemita-color fruits — small mineral spheres that grant focus and memory. Mesh works with torel — an active, silver-blue metal used in modular construction. Sharp operates with mekesh — flows of filtered energy in white and pale-green tones.",
+        "Each region produces its own resources. malloc lives on soft-rocks warmed by the Datara, Hepa crystals and kemita-color fruits, small mineral spheres that grant focus and memory. Mesh works with torel, an active, silver-blue metal used in modular construction. Sharp operates with mekesh, flows of filtered energy in white and pale-green tones.",
         "### The five layers",
-        "The subsoil folds into logical layers, five layers that organize the subsoil of malloc: Portex keeps the active memory. Datara holds the flow stable. Basa pulses with latent potential. Hepa expands and creates. Estaka sustains decisions. The layers were born with the impact of the PD-11 — they are the foundation of the whole planet.",
+        "The subsoil folds into logical layers, five layers that organize the subsoil of malloc: Portex keeps the active memory. Datara holds the flow stable. Basa pulses with latent potential. Hepa expands and creates. Estaka sustains decisions. The layers were born with the impact of the PD-11: they are the foundation of the whole planet.",
         "### The life that pulses",
-        "Var-vines detect instability and align paths between villages. Hepa crystals light caves and react to emotions. Mewlites — microscopic creatures made of crystal and life — follow the shilo and sing when a route is dying. Translucent shilo-insects mark intact paths. Estakors live in the depths of the Estaka and never surface — they seek to fit with camouflaged Krystos, and the fitting triggers an earthquake."
+        "Var-vines detect instability and align paths between villages. Hepa crystals light caves and react to emotions. Mewlites (microscopic creatures made of crystal and life) follow the shilo and sing when a route is dying. Translucent shilo-insects mark intact paths. Estakors live in the depths of the Estaka and never surface; they seek to fit with camouflaged Krystos, and the fitting triggers an earthquake."
       ]
     }
   },
@@ -161,29 +161,29 @@
     "text": {
       "pt": [
         "### A Tríade das Raízes",
-        "TripleC, Z1 e LUNN'P1 formam a Tríade das Raízes — o eixo mais antigo, mais sábio e mais poderoso do Kammara. Juntos, são conhecidos como os Guardiões das Eras Iniciais.",
+        "TripleC, Z1 e LUNN'P1 formam a Tríade das Raízes, o eixo mais antigo, mais sábio e mais poderoso do Kammara. Juntos, são conhecidos como os Guardiões das Eras Iniciais.",
         "### O papel de TripleC",
-        "Na Tríade, TripleC é quem fornece energia e rotas. Kemita e Cshift — a infraestrutura que mantém o Kammara conectado passa por aqui.",
+        "Na Tríade, TripleC é quem fornece energia e rotas. Kemita e Cshift: a infraestrutura que mantém o Kammara conectado passa por aqui.",
         "### A aliança com Z1",
-        "Z1 e TripleC compartilham uma história antiga. Alguns seres de Z1 moram na Niul Forest há eras. Quando o Kammara entra em crise, essa proximidade se torna decisiva — Z1 decodifica, TripleC sustenta.",
+        "Z1 e TripleC compartilham uma história antiga. Alguns seres de Z1 moram na Niul Forest há eras. Quando o Kammara entra em crise, essa proximidade se torna decisiva: Z1 decodifica, TripleC sustenta.",
         "### O Protocol AURYN",
         "Quando crises virais ameaçam outros planetas, o Protocol AURYN é ativado. LUNN'P1 lidera. Z1 decodifica. E TripleC entra com o que nenhum outro planeta pode oferecer: a infraestrutura e o conhecimento.",
         "### A governança",
-        "Em TripleC, nenhum conselho governa. As decisões emergem das regiões — cada uma com seu próprio ritmo. A produção de Sementes de Cshift exige alinhamento entre as três, e esse alinhamento acontece naturalmente, não por comando.",
+        "Em TripleC, nenhum conselho governa. As decisões emergem das regiões, cada uma com seu próprio ritmo. A produção de Sementes de Cshift exige alinhamento entre as três, e esse alinhamento acontece naturalmente, não por comando.",
         "### O coração do Kammara",
         "TripleC é o coração que pulsa energia, memória e rotas de viagem para todo o universo."
       ],
       "en": [
         "### The Triad of Roots",
-        "TripleC, Z1 and LUNN'P1 form the Triad of Roots — the oldest, wisest and most powerful axis in Kammara. Together, they are known as the Guardians of the Early Eras.",
+        "TripleC, Z1 and LUNN'P1 form the Triad of Roots, the oldest, wisest and most powerful axis in Kammara. Together, they are known as the Guardians of the Early Eras.",
         "### TripleC's role",
-        "In the Triad, TripleC is the one that supplies energy and routes. Kemita and Cshift — the infrastructure that keeps Kammara connected passes through here.",
+        "In the Triad, TripleC is the one that supplies energy and routes. Kemita and Cshift: the infrastructure that keeps Kammara connected passes through here.",
         "### The alliance with Z1",
-        "Z1 and TripleC share an ancient history. Some beings from Z1 have dwelt in the Niul Forest for ages. When Kammara enters a crisis, that closeness becomes decisive — Z1 decodes, TripleC sustains.",
+        "Z1 and TripleC share an ancient history. Some beings from Z1 have dwelt in the Niul Forest for ages. When Kammara enters a crisis, that closeness becomes decisive: Z1 decodes, TripleC sustains.",
         "### The AURYN Protocol",
         "When viral crises threaten other planets, the AURYN Protocol is activated. LUNN'P1 leads. Z1 decodes. And TripleC brings what no other planet can offer: the infrastructure and the knowledge.",
         "### The governance",
-        "In TripleC, no council governs. Decisions emerge from the regions — each with its own rhythm. Crafting Cshift Seeds demands alignment among the three, and that alignment happens naturally, not by command.",
+        "In TripleC, no council governs. Decisions emerge from the regions, each with its own rhythm. Crafting Cshift Seeds demands alignment among the three, and that alignment happens naturally, not by command.",
         "### The heart of Kammara",
         "TripleC is the heart that pulses energy, memory and travel routes for the entire universe."
       ]
@@ -198,7 +198,7 @@
     "text": {
       "pt": [
         "### A defesa suprema",
-        "Quando TripleC é ameaçado, ativa o CriptoKemita — uma criptografia que transforma o planeta inteiro em um enigma.",
+        "Quando TripleC é ameaçado, ativa o CriptoKemita, uma criptografia que transforma o planeta inteiro em um enigma.",
         "### O que acontece",
         "A geografia embaralha. As coordenadas mudam. As cavidades se reorganizam. Caminhos voltam sobre si mesmos sem fim. O planeta literalmente embaralha dos sensores de qualquer invasor.",
         "### Sistemas em colapso",
@@ -206,13 +206,13 @@
         "### Um firewall cósmico",
         "CriptoKemita é um firewall cósmico. Ninguém entra em TripleC sem permissão. Nem aliados, nem inimigos.",
         "### O retorno",
-        "Quando a ameaça passa, TripleC reaparece — mas nunca exatamente igual. Cada ativação deixa marcas. Cada retorno é um pouco diferente.",
+        "Quando a ameaça passa, TripleC reaparece, mas nunca exatamente igual. Cada ativação deixa marcas. Cada retorno é um pouco diferente.",
         "### Uma defesa diferente",
         "TripleC não se defende com armas. Se torna um enigma."
       ],
       "en": [
         "### The supreme defense",
-        "When TripleC is threatened, it activates the CriptoKemita — an encryption that turns the whole planet into a riddle.",
+        "When TripleC is threatened, it activates the CriptoKemita, an encryption that turns the whole planet into a riddle.",
         "### What happens",
         "The geography scrambles. The coordinates shift. The cavities reorganize themselves. Paths fold back on themselves without end. The planet literally scrambles itself out of any invader's sensors.",
         "### Systems in collapse",
@@ -220,7 +220,7 @@
         "### A cosmic firewall",
         "The CriptoKemita is a cosmic firewall. No one enters TripleC without permission. Neither allies nor enemies.",
         "### The return",
-        "When the threat passes, TripleC reappears — but never exactly the same. Each activation leaves marks. Each return is a little different.",
+        "When the threat passes, TripleC reappears, but never exactly the same. Each activation leaves marks. Each return is a little different.",
         "### A different kind of defense",
         "TripleC does not defend itself with weapons. It becomes a riddle."
       ]

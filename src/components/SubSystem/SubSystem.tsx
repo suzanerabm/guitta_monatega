@@ -96,13 +96,12 @@ export function SubSystem({
       {sectionTitle && (
         <Heading
           as="h2"
-          fontFamily="body"
+          textStyle="heading"
           // `lg` (62em) is the closest canonical cut to the old 64em; the
           // ~32px gap is imperceptible for this font-size tier.
           fontSize={{ base: 'section', md: '0.85rem', lg: 'section' }}
           letterSpacing="wider"
           textTransform="uppercase"
-          fontWeight="semibold"
           padding="0 2rem"
           margin="5em 0 0.5rem"
           color={titleColor}
@@ -178,9 +177,8 @@ export function SubSystem({
                 // title reads as a sub-heading inside the section —
                 // still clearly a title, just lower in the visual
                 // hierarchy of the kammara text panels.
-                fontFamily="body"
+                textStyle="heading"
                 fontSize="1.5rem"
-                fontWeight={700}
                 padding="1.2rem 1.5rem 0.8rem"
                 marginBottom="0.8rem"
                 color={titleColor}

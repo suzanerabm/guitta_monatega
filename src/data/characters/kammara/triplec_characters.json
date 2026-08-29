@@ -10,8 +10,8 @@
       "en": "Volpitoid"
     },
     "bio": {
-      "pt": "Sentinela natural de TripleC. Aparece antes de eventos energéticos importantes — bunniets observam o brilho da cauda em espiral pra antecipar instabilidades. Sente antes de qualquer outro animal quando um portal de Cshift vai abrir.",
-      "en": "Natural sentinel of TripleC. Appears before important energy events — bunniets watch the glow of her spiral tail to anticipate instabilities. She feels a Cshift portal opening before any other animal."
+      "pt": "Sentinela natural de TripleC. Aparece antes de eventos energéticos importantes: bunniets observam o brilho da cauda em espiral pra antecipar instabilidades. Sente antes de qualquer outro animal quando um portal de Cshift vai abrir.",
+      "en": "Natural sentinel of TripleC. Appears before important energy events: bunniets watch the glow of her spiral tail to anticipate instabilities. She feels a Cshift portal opening before any other animal."
     },
     "image": "/imgs/kammara/triplec/volpita.png",
     "backImage": "/imgs/kammara/triplec/volpita_costas.png",
@@ -70,8 +70,8 @@
       "en": "Ypitoid"
     },
     "bio": {
-      "pt": "Quando um Ypito te encara, é porque algo está prestes a mudar. Observador silencioso de TripleC — fica imóvel observando por horas, aparece e some sem aviso. Não foge fácil.",
-      "en": "When a Ypito stares at you, it is because something is about to change. Silent observer of TripleC — stays still watching for hours, appears and vanishes without warning. Hard to scare off."
+      "pt": "Quando um Ypito te encara, é porque algo está prestes a mudar. Observador silencioso de TripleC: fica imóvel observando por horas, aparece e some sem aviso. Não foge fácil.",
+      "en": "When a Ypito stares at you, it is because something is about to change. Silent observer of TripleC: stays still watching for hours, appears and vanishes without warning. Hard to scare off."
     },
     "image": "/imgs/kammara/triplec/ypito_roxo.png",
      "backImage": "/imgs/kammara/triplec/ypito_roxo_costas.png",
@@ -130,8 +130,8 @@
       "en": "Sealbeanoid"
     },
     "bio": {
-      "pt": "Trepa em galhos baixos com 2 ventosas, descansa em plantas grandes. Muda de cor como o Camuoide e brilha quando está feliz e seguro — bunniets observam o brilho pra saber se o pet está bem.",
-      "en": "Climbs low branches with 2 suction pads, rests on large plants. Changes color like the Camuoid and glows when happy and safe — bunniets watch the glow to know if their pet is well."
+      "pt": "Trepa em galhos baixos com 2 ventosas, descansa em plantas grandes. Muda de cor como o Camuoide e brilha quando está feliz e seguro: bunniets observam o brilho pra saber se o pet está bem.",
+      "en": "Climbs low branches with 2 suction pads, rests on large plants. Changes color like the Camuoid and glows when happy and safe: bunniets watch the glow to know if their pet is well."
     },
     "image": "/imgs/kammara/triplec/bean_lado.png",
     "backImage": "/imgs/kammara/triplec/bean_costas.png",
@@ -200,8 +200,8 @@
       "en": "Verse"
     },
     "dorsalMeaning": {
-      "pt": "Vive em comunidades dentro de árvores — casinhas escavadas em troncos da Niul Forest. Compartilha as árvores com personagens Z1, formando vilas mistas Treezit-Z1. Vejo de dois jeitos ao mesmo tempo.",
-      "en": "Lives in communities inside trees — small homes carved in Niul Forest trunks. Shares the trees with Z1 characters, forming mixed Treezit-Z1 villages. I see in two ways at once."
+      "pt": "Vive em comunidades dentro de árvores, casinhas escavadas em troncos da Niul Forest. Compartilha as árvores com personagens Z1, formando vilas mistas Treezit-Z1. Vejo de dois jeitos ao mesmo tempo.",
+      "en": "Lives in communities inside trees, small homes carved in Niul Forest trunks. Shares the trees with Z1 characters, forming mixed Treezit-Z1 villages. I see in two ways at once."
     },
     "attributes": [
       {
@@ -310,8 +310,8 @@
       "en": "Niuloid"
     },
     "bio": {
-      "pt": "Voa entre raízes elevadas e copas baixas levando sementes pelo bico — distribui plantas pequenas pelo planeta, mantém a regeneração da floresta. ",
-      "en": "Flies between raised roots and low canopies carrying seeds in its beak — spreads small plants across the planet and keeps the forest regenerating. "
+      "pt": "Voa entre raízes elevadas e copas baixas levando sementes pelo bico: distribui plantas pequenas pelo planeta, mantém a regeneração da floresta. ",
+      "en": "Flies between raised roots and low canopies carrying seeds in its beak: spreads small plants across the planet and keeps the forest regenerating. "
     },
     "image": "/imgs/kammara/triplec/niuloide.png",
     "backImage": "/imgs/kammara/triplec/niuloide_costas.png",
@@ -371,8 +371,8 @@
       "en": "Espirola"
     },
     "bio": {
-      "pt": "Pode se tornar completamente invisível na versão híbrida — some do plano visível sem rastro. Por isso serve de espiã e companheira dos bunniets em missões de reconhecimento.",
-      "en": "Smarter than other animals, bordering on sentience. In its hybrid form she can turn completely invisible — vanishes from the visible plane without a trace. That is why she serves as a spy and companion of the bunniets on recon missions."
+      "pt": "Pode se tornar completamente invisível na versão híbrida: some do plano visível sem rastro. Por isso serve de espiã e companheira dos bunniets em missões de reconhecimento.",
+      "en": "Smarter than other animals, bordering on sentience. In its hybrid form she can turn completely invisible: vanishes from the visible plane without a trace. That is why she serves as a spy and companion of the bunniets on recon missions."
     },
     "image": "/imgs/kammara/triplec/borboleta.png",
     "backImage": "/imgs/kammara/triplec/borboleta_costas.png",
@@ -491,8 +491,8 @@
       "en": "Camuoid"
     },
     "bio": {
-      "pt": "Anfíbio de habitat — vive tanto nas copas das árvores quanto dentro das cachoeiras de TripleC. Reflete a energia próxima na cor (esmeralda perto de kemita, teal perto de shilo, verde-folha em ambiente neutro).",
-      "en": "Habitat amphibian — lives both in the tree canopies and inside the waterfalls of TripleC. Mirrors nearby energy in its color (emerald near kemita, teal near shilo, leaf-green in neutral places). "
+      "pt": "Anfíbio de habitat: vive tanto nas copas das árvores quanto dentro das cachoeiras de TripleC. Reflete a energia próxima na cor (esmeralda perto de kemita, teal perto de shilo, verde-folha em ambiente neutro).",
+      "en": "Habitat amphibian: lives both in the tree canopies and inside the waterfalls of TripleC. Mirrors nearby energy in its color (emerald near kemita, teal near shilo, leaf-green in neutral places). "
     },
     "image": "/imgs/kammara/triplec/Camuoide_frente1.png",
     "backImage": "/imgs/kammara/triplec/Camuoide_costas.png",
@@ -551,8 +551,8 @@
       "en": "Transistor"
     },
     "bio": {
-      "pt": "Engenheiro enviado de Z1 a TripleC para mapear o mecanismo de integração dos bunniets — autor do Relatório Técnico 41-Z. Hoje vive na Floresta Niul.",
-      "en": "Engineer sent from Z1 to TripleC to map the integration mechanism of the bunniets — author of Technical Report 41-Z. He now lives in the Niul Forest."
+      "pt": "Engenheiro enviado de Z1 a TripleC para mapear o mecanismo de integração dos bunniets, autor do Relatório Técnico 41-Z. Hoje vive na Floresta Niul.",
+      "en": "Engineer sent from Z1 to TripleC to map the integration mechanism of the bunniets, author of Technical Report 41-Z. He now lives in the Niul Forest."
     },
     "image": "/imgs/kammara/triplec/ZARKOL-9.png",
     "backImage": "/imgs/kammara/triplec/ZARKOL-9_costas.png",

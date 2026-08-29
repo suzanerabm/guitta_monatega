@@ -178,9 +178,8 @@ export function KammaraPlanetCard({
           </Text>
           <Heading
             as="h2"
-            fontFamily="body"
+            textStyle="heading"
             fontSize={{ base: '2.2rem', md: '2.8rem' }}
-            fontWeight="bold"
             lineHeight={1}
             letterSpacing="heroTitle"
             color="textOverlayBright"

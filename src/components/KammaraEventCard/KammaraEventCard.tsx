@@ -331,9 +331,8 @@ export function KammaraEventCard({
                   lives inside a multi-column grid. */}
               <Heading
                 as="h3"
-                fontFamily="body"
+                textStyle="heading"
                 fontSize="h3"
-                fontWeight="bold"
                 lineHeight={1.05}
                 color={color}
                 letterSpacing="heroTitle"

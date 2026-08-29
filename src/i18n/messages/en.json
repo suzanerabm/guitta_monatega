@@ -4,7 +4,7 @@
     "siteTitle": "Guitta Monatega",
     "footerAbout": "guitta monatega",
     "footerPrivacy": "privacy",
-    "footerCopyright": "© Guitta Monatega — all rights reserved",
+    "footerCopyright": "© Guitta Monatega. All rights reserved",
     "soon": "coming soon",
     "words": {
       "acordando": "waking up",
@@ -152,7 +152,7 @@
       {
         "num": "01",
         "tag": "The Origin",
-        "body": "I've drawn since I was little. It started on napkins, loose sheets of paper, the margins of notebooks — anything within reach."
+        "body": "I've drawn since I was little. It started on napkins, loose sheets of paper, the margins of notebooks, anything within reach."
       },
       {
         "num": "02",
@@ -162,12 +162,12 @@
       {
         "num": "03",
         "tag": "The Three Fronts",
-        "body": "Today my work unfolds along three fronts — each with its own time, its own craft, its own universe."
+        "body": "Today my work unfolds along three fronts, each with its own time, its own craft, its own universe."
       },
       {
         "num": "04",
         "tag": "The Craft",
-        "body": "My work moves between writing and traditional and digital techniques — ink, graphite, stippling, crochet, needle felting, sculpting, digital illustration. Word and image walk together. Each piece is built with time, repetition, and care, preserving the essence of what is made by hand."
+        "body": "My work moves between writing and traditional and digital techniques: ink, graphite, stippling, crochet, needle felting, sculpting, digital illustration. Word and image walk together. Each piece is built with time, repetition, and care, preserving the essence of what is made by hand."
       },
       {
         "num": "05",
@@ -177,7 +177,7 @@
       {
         "num": "06",
         "tag": "Kammara",
-        "body": "Where the history of computing becomes myth. The seed appeared around 2012 — planets, languages, and creatures began to surface. In 2019, I visited museums of computing history to study up close the machines that gave rise to everything. Since then, I've been developing this universe in layers: cosmology, characters, original languages. Now I'm gathering the work into books."
+        "body": "Where the history of computing becomes myth. The seed appeared around 2012, when planets, languages, and creatures began to surface. In 2019, I visited museums of computing history to study up close the machines that gave rise to everything. Since then, I've been developing this universe in layers: cosmology, characters, original languages. Now I'm gathering the work into books."
       }
     ],
     "declaration": "Where art and computing meet in balance.",
@@ -221,7 +221,7 @@
     "heroLabel": "Universe",
     "heroTitle": "Kammara",
     "heroDesc": "Welcome to Kammara",
-    "placeholder": "Placeholder — description goes here.",
+    "placeholder": "Placeholder: description goes here.",
     "charactersTitle": "Characters",
     "scenesTitle": "Scenes",
     "subsystemsTitle": "Subsystems",
@@ -229,7 +229,7 @@
       "name": "Kammara Universe",
       "text": [
         "What if humanity's inventions had kept evolving in another universe?",
-        "They did. And they became Kammara — a universe where every planet lives its own story."
+        "They did. And they became Kammara, a universe where every planet lives its own story."
       ],
       "books": [
         {
@@ -240,19 +240,19 @@
       "panel": {
         "story": [
           "### Kammara",
-          "Some of humanity's inventions followed a path of their own, far beyond where they were born — and out there, each one became a planet. That's how Kammara came to be: a universe of countless planets, each with its own people, its own way of being, and a whole lot of stories waiting to be told.",
+          "Some of humanity's inventions followed a path of their own, far beyond where they were born; out there, each one became a planet. That's how Kammara came to be: a universe of countless planets, each with its own people, its own way of being, and a whole lot of stories waiting to be told.",
           "### The planets",
           "Every planet is one of a kind. Some flow in calm, others live in motion; some build, some keep, some begin again with every cycle.",
           "### Explore",
           "Kammara is a living universe, in motion, always unfolding. Wander, explore… and discover which planet is your favorite.",
           "### The essence",
-          "Kammara — a universe where every planet lives its own story."
+          "Kammara: a universe where every planet lives its own story."
         ]
       }
     },
     "booksTitle": "Books",
     "planetsTitle": "Planets",
-    "planetsDesc": "The planets of Kammara — each one a universe of its own."
+    "planetsDesc": "The planets of Kammara, each one a universe of its own."
   },
   "art": {
     "pageTitle": "Art — Guitta Monatega",
@@ -318,7 +318,7 @@
       },
       {
         "tag": "Cookies",
-        "body": "This site does not use its own cookies for tracking or advertising. There may be technical cookies set by the underlying infrastructure (Cloudflare, Vercel) solely to deliver content — none of them identifies an individual. That is why this site does not show a cookie consent banner: no cookie of ours requires that permission under LGPD or GDPR."
+        "body": "This site does not use its own cookies for tracking or advertising. There may be technical cookies set by the underlying infrastructure (Cloudflare, Vercel) solely to deliver content; none of them identifies an individual. That is why this site does not show a cookie consent banner: no cookie of ours requires that permission under LGPD or GDPR."
       },
       {
         "tag": "Nature of this site",
@@ -326,11 +326,11 @@
       },
       {
         "tag": "Intellectual property",
-        "body": "All content on this site — including artwork, illustrations, texts, proper names, characters, creatures, universes (Kammara, Bichittos, and others), linguistic systems, glyphs, symbols, and other creative elements — is the exclusive intellectual property of Guitta Monatega and is protected under Brazilian copyright law (Law 9.610/98) and international treaties. Any reproduction, redistribution, modification, use in training of artificial intelligence models, or commercial use is forbidden without express written permission."
+        "body": "All content on this site, including artwork, illustrations, texts, proper names, characters, creatures, universes (Kammara, Bichittos, and others), linguistic systems, glyphs, symbols, and other creative elements, is the exclusive intellectual property of Guitta Monatega and is protected under Brazilian copyright law (Law 9.610/98) and international treaties. Any reproduction, redistribution, modification, use in training of artificial intelligence models, or commercial use is forbidden without express written permission."
       },
       {
         "tag": "Use of AI in production",
-        "body": "Some images on this site were generated with the assistance of AI tools. In every case, generation occurred under the explicit creative direction of the author: specialized prompts were developed from previously conceived doodles, hand-drawn sketches, character studies, palettes, and authorial visual references. AI tools acted as an instrument of assisted execution — analogous to a digital brush, a 3D sculpting tool, or any other technical resource — and did not replace conceptual, narrative, or aesthetic authorship. The resulting work is considered a derivative creation of a personal authorial process and, as such, remains the author's intellectual property."
+        "body": "Some images on this site were generated with the assistance of AI tools. In every case, generation occurred under the explicit creative direction of the author: specialized prompts were developed from previously conceived doodles, hand-drawn sketches, character studies, palettes, and authorial visual references. AI tools acted as an instrument of assisted execution (analogous to a digital brush, a 3D sculpting tool, or any other technical resource) and did not replace conceptual, narrative, or aesthetic authorship. The resulting work is considered a derivative creation of a personal authorial process and, as such, remains the author's intellectual property."
       },
       {
         "tag": "Reservation of rights",

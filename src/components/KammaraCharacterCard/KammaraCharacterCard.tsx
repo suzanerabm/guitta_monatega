@@ -327,9 +327,8 @@ export function KammaraCharacterCard({
             {/* Character name — hero scale */}
             <Heading
               as="h2"
-              fontFamily="body"
+              textStyle="heading"
               fontSize={name.length > 16 ? { base: '1.4rem', md: '1.7rem' } : { base: '1.8rem', md: '2.2rem' }}
-              fontWeight="bold"
               lineHeight={1}
               color={color}
               letterSpacing="heroTitle"

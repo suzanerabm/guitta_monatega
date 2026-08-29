@@ -226,7 +226,7 @@ export function KammaraCardSubsystem({
                     so it doesn't blow up on ultra-wide screens. */}
                 <Heading
                   as="h2"
-                  fontFamily="body"
+                  textStyle="heading"
                   // Shrink the font when the title is long so a lone letter
                   // doesn't get orphaned on the last line.
                   fontSize={
@@ -234,7 +234,6 @@ export function KammaraCardSubsystem({
                       ? { base: '1.4rem', md: '1.7rem' }
                       : { base: '1.8rem', md: '2.2rem' }
                   }
-                  fontWeight="bold"
                   lineHeight={1}
                   color={color}
                   letterSpacing="heroTitle"

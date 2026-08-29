@@ -154,9 +154,8 @@ export function RegionDivider({
         )}
         <Heading
           as="h2"
-          fontFamily="body"
+          textStyle="heading"
           fontSize={{ base: 'clamp(2rem, 7vw, 3rem)', md: 'clamp(2.5rem, 6vw, 4.5rem)' }}
-          fontWeight="bold"
           letterSpacing="widest"
           textTransform="uppercase"
           color="white"

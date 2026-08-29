@@ -7,6 +7,7 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 // carregar, reduzindo a superfície pra injeção de conteúdo/XSS. Calibrado
 // pro que o site REALMENTE usa:
 //  - Google Fonts (fonts.googleapis.com CSS + fonts.gstatic.com woff2)
+//  - Adobe Fonts / Typekit (use.typekit.net CSS+woff2 + p.typekit.net @import)
 //  - Vercel Analytics/Speed Insights (va.vercel-scripts.com)
 //  - imagens/vídeos: só do próprio site (self) + data: (posters inline)
 // `'unsafe-inline'`/`'unsafe-eval'` em script/style são exigidos pelo Next
@@ -14,8 +15,8 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 const cspDirectives = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://va.vercel-scripts.com",
-  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-  "font-src 'self' https://fonts.gstatic.com data:",
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://use.typekit.net https://p.typekit.net",
+  "font-src 'self' https://fonts.gstatic.com https://use.typekit.net data:",
   "img-src 'self' data: blob:",
   "media-src 'self' data: blob:",
   "connect-src 'self' https://va.vercel-scripts.com https://vitals.vercel-insights.com",

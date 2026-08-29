@@ -118,13 +118,12 @@ export function SceneStrip({
       {sectionTitle && (
         <Heading
           as="h2"
-          fontFamily="body"
+          textStyle="heading"
           // `lg` is the closest canonical breakpoint to the old 64em cut — the
           // ~32px difference isn't visually perceptible for this font-size jump.
           fontSize={{ base: 'section', md: '0.85rem', lg: 'section' }}
           letterSpacing="wider"
           textTransform="uppercase"
-          fontWeight="semibold"
           padding="0 2rem"
           marginTop={{ base: '2em', md: titleMarginTop }}
           marginBottom="0.5rem"

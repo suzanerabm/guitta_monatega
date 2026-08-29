@@ -5,7 +5,7 @@
     "zeco/zeco-estacoes": {
       "visible": true,
       "onlyLocale": "pt",
-      "buyUrl": "",
+      "buyUrl": "www.kammara.com",
       "buyLabel": "Compre na Amazon"
     },
     "taylo/star-hunter": { "visible": false }

@@ -22,4 +22,15 @@ export const textStyles = defineTextStyles({
       lineHeight: 1.2,
     },
   },
+  /**
+   * Section/page headings and character/card/planet names (h1-h3 scale).
+   * Exo Soft SemiBold — only weight 600 is loaded, so never pair this with
+   * fontWeight="bold"/700 (triggers synthetic bold in the browser).
+   */
+  heading: {
+    value: {
+      fontFamily: 'heading',
+      fontWeight: 'semibold',
+    },
+  },
 });

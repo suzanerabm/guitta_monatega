@@ -33,8 +33,8 @@
       },
       "planet": "orfv",
       "title": {
-        "pt": "Lüp'Nül Fest — Festival das Duas Luas",
-        "en": "Lüp'Nül Fest — Festival of the Two Moons"
+        "pt": "Lüp'Nül Fest: Festival das Duas Luas",
+        "en": "Lüp'Nül Fest: Festival of the Two Moons"
       },
       "date": {
         "pt": "Em 2 ciclos",
@@ -47,8 +47,8 @@
       "cshiftAddress": "b7e0fc1d",
       "backgroundVideo": "/imgs/kammara/orfv/_videos/festa_orfv.mp4",
       "description": {
-        "pt": "O maior evento cultural de ORF-V e o Ano Novo do planeta — celebrado quando Lüp e Nül, as duas luas, se alinham no céu. O dia começa com o Phruit'Dëy, a colheita coletiva das phruits, e a noite termina no silêncio sagrado do alinhamento. Primeiro se colhe, depois se festeja, depois se faz silêncio.",
-        "en": "ORF-V's greatest cultural event and the planet's New Year — celebrated when Lüp and Nül, the two moons, align in the sky. The day begins with the Phruit'Dëy, the collective phruit harvest, and the night ends in the sacred silence of the alignment. First we harvest, then we feast, then we pause."
+        "pt": "O maior evento cultural de ORF-V e o Ano Novo do planeta, celebrado quando Lüp e Nül, as duas luas, se alinham no céu. O dia começa com o Phruit'Dëy, a colheita coletiva das phruits, e a noite termina no silêncio sagrado do alinhamento. Primeiro se colhe, depois se festeja, depois se faz silêncio.",
+        "en": "ORF-V's greatest cultural event and the planet's New Year, celebrated when Lüp and Nül, the two moons, align in the sky. The day begins with the Phruit'Dëy, the collective phruit harvest, and the night ends in the sacred silence of the alignment. First we harvest, then we feast, then we pause."
       },
       "href": ""
     },
@@ -101,8 +101,8 @@
       },
       "cshiftAddress": "86760350",
       "description": {
-        "pt": "Bunniets das três regiões atravessam o planeta juntos — de malloc até Sharp, passando pela Niul Forest. Não é competição: é celebração. Não importa quem chega primeiro, importa que todos cheguem. Os Z1 de Niul observam e aprovam o caminho.",
-        "en": "Bunniets from the three regions cross the planet together — from malloc to Sharp, through the Niul Forest. It is not a competition: it is a celebration. It does not matter who arrives first; what matters is that everyone arrives. The Z1 of Niul watch and approve the path."
+        "pt": "Bunniets das três regiões atravessam o planeta juntos: de malloc até Sharp, passando pela Niul Forest. Não é competição: é celebração. Não importa quem chega primeiro, importa que todos cheguem. Os Z1 de Niul observam e aprovam o caminho.",
+        "en": "Bunniets from the three regions cross the planet together: from malloc to Sharp, through the Niul Forest. It is not a competition: it is a celebration. It does not matter who arrives first; what matters is that everyone arrives. The Z1 of Niul watch and approve the path."
       },
       "href": ""
     },
@@ -128,8 +128,8 @@
       },
       "cshiftAddress": "ae38c83c",
       "description": {
-        "pt": "Tradição de uma das Naru'ei do sul de LUNN'P1, sob a lua Oru'Len — a lua que muda de cor constantemente. Durante o festival, toda a cidade muda de cor simultaneamente, em sincronia com a lua dominante.",
-        "en": "Tradition of one of the southern Naru'ei of LUNN'P1, beneath the moon Oru'Len — the moon that constantly shifts color. During the festival, the entire city changes color simultaneously, in sync with the dominant moon."
+        "pt": "Tradição de uma das Naru'ei do sul de LUNN'P1, sob a lua Oru'Len, a lua que muda de cor constantemente. Durante o festival, toda a cidade muda de cor simultaneamente, em sincronia com a lua dominante.",
+        "en": "Tradition of one of the southern Naru'ei of LUNN'P1, beneath the moon Oru'Len, the moon that constantly shifts color. During the festival, the entire city changes color simultaneously, in sync with the dominant moon."
       }
     },
     {
@@ -141,8 +141,8 @@
       },
       "planet": "triplec",
       "title": {
-        "pt": "SILK — Simpósio Interplanetário Lumínico do Kammara",
-        "en": "SILK — Interplanetary Luminic Symposium of Kammara"
+        "pt": "SILK: Simpósio Interplanetário Lumínico do Kammara",
+        "en": "SILK: Interplanetary Luminic Symposium of Kammara"
       },
       "date": {
         "pt": "Em 35 ciclos",
@@ -179,8 +179,8 @@
         "en": "Soon at Amazon"
       },
       "description": {
-        "pt": "Num planeta de pontes frágeis, os elePHPants vivem abertos e gentis — até que algo silencioso começa a apagar a memória deles, vila por vila. De LUNN'P1, o planeta de água, Erú'Rin e seu guia luminoso Brisa atravessam o Cshift para ajudar. Uma fábula ilustrada sobre memória, cuidado e o que se perde quando se confia demais.",
-        "en": "On a planet of fragile bridges, the elePHPants live open and gentle — until something silent begins to erase their memory, village by village. From the water-world of LUNN'P1, Erú'Rin and his luminous guide Brisa cross the Cshift to help. An illustrated fable about memory, care, and what is lost when one trusts too much."
+        "pt": "Num planeta de pontes frágeis, os elePHPants vivem abertos e gentis, até que algo silencioso começa a apagar a memória deles, vila por vila. De LUNN'P1, o planeta de água, Erú'Rin e seu guia luminoso Brisa atravessam o Cshift para ajudar. Uma fábula ilustrada sobre memória, cuidado e o que se perde quando se confia demais.",
+        "en": "On a planet of fragile bridges, the elePHPants live open and gentle, until something silent begins to erase their memory, village by village. From the water-world of LUNN'P1, Erú'Rin and his luminous guide Brisa cross the Cshift to help. An illustrated fable about memory, care, and what is lost when one trusts too much."
       },
       "backgroundImage": "/imgs/books/kammara/saga-orf-v/12festival.jpg",
       "href": "",

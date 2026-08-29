@@ -11,8 +11,8 @@
     },
     "image": "/imgs/kammara/gotto/rema.png",
     "bio": {
-      "pt": "Rema é o sossego de Gotto. Ela quase não se mexe e quase não fala — só fica quietinha. E é por isso que todo mundo se acalma perto dela. Quando o barulho fica demais, é a Rema que traz a paz.",
-      "en": "Rema is the calm of Gotto. She barely moves and barely speaks — she just stays quiet. And that's why everyone settles down near her. When the noise gets to be too much, it's Rema who brings the peace."
+      "pt": "Rema é o sossego de Gotto. Ela quase não se mexe e quase não fala, só fica quietinha. E é por isso que todo mundo se acalma perto dela. Quando o barulho fica demais, é a Rema que traz a paz.",
+      "en": "Rema is the calm of Gotto. She barely moves and barely speaks, she just stays quiet. And that's why everyone settles down near her. When the noise gets to be too much, it's Rema who brings the peace."
     },
     "backImage": "/imgs/kammara/gotto/rema_costas.png",
     "backTitle": {
@@ -131,8 +131,8 @@
     },
     "image": "/imgs/kammara/gotto/jump.png",
     "bio": {
-      "pt": "Jump nunca fica parado. Ele está sempre pulando de um lugar pro outro — quando você olha, ele já saltou pra bem longe. Vendo o Jump saltar, ninguém fica preso: todo mundo aprende que dá pra seguir em frente.",
-      "en": "Jump is never still. He's always hopping from one place to another — by the time you look, he's already leapt far away. Watching Jump leap, no one stays stuck: everyone learns that you can move on."
+      "pt": "Jump nunca fica parado. Ele está sempre pulando de um lugar pro outro, quando você olha, ele já saltou pra bem longe. Vendo o Jump saltar, ninguém fica preso: todo mundo aprende que dá pra seguir em frente.",
+      "en": "Jump is never still. He's always hopping from one place to another, by the time you look, he's already leapt far away. Watching Jump leap, no one stays stuck: everyone learns that you can move on."
     },
     "backImage": "/imgs/kammara/gotto/jump_costas.png",
     "backTitle": {
@@ -200,8 +200,8 @@
       "en": "The Climber"
     },
     "backMeaning": {
-      "pt": "Nativo de Gotto, espécie própria — mas com a máscara de osso, a marca de todos os nativos. Pelo marrom macio, orelhas, patinhas de trepar.",
-      "en": "A Gotto native of its own species — but bearing the bone mask, the mark of all natives. Soft brown fur, ears, climbing paws."
+      "pt": "Nativo de Gotto, espécie própria, mas com a máscara de osso, a marca de todos os nativos. Pelo marrom macio, orelhas, patinhas de trepar.",
+      "en": "A Gotto native of its own species, but bearing the bone mask, the mark of all natives. Soft brown fur, ears, climbing paws."
     },
     "dorsalMeaning": {
       "pt": "A fruta lá de cima é minha também.",
@@ -244,8 +244,8 @@
     },
     "image": "/imgs/kammara/gotto/kirio_frente.png",
     "bio": {
-      "pt": "Kirió parece um morro — mas é um bicho enorme, bem quietinho, coberto de folhas. Ele fica lá no alto, olhando e cuidando das casas dos Basiks. É muito, muito antigo. E é o único que não esquece quando o planeta recomeça: o Kirió lembra de tudo por todo mundo.",
-      "en": "Kirió looks like a hill — but it's a huge, very quiet creature, covered in leaves. It stays up high, watching over and caring for the Basiks' houses. It is very, very old. And it's the only one who doesn't forget when the planet begins again: Kirió remembers everything for everyone."
+      "pt": "Kirió parece um morro, mas é um bicho enorme, bem quietinho, coberto de folhas. Ele fica lá no alto, olhando e cuidando das casas dos Basiks. É muito, muito antigo. E é o único que não esquece quando o planeta recomeça: o Kirió lembra de tudo por todo mundo.",
+      "en": "Kirió looks like a hill, but it's a huge, very quiet creature, covered in leaves. It stays up high, watching over and caring for the Basiks' houses. It is very, very old. And it's the only one who doesn't forget when the planet begins again: Kirió remembers everything for everyone."
     },
     "backImage": "/imgs/kammara/gotto/kirio_back.png",
     "backTitle": {
@@ -297,8 +297,8 @@
     },
     "image": "/imgs/kammara/gotto/daryun.png",
     "bio": {
-      "pt": "Daryun é um peixe gigante e muito antigo que vive nos rios. Ele é o maior de todos em Gotto. Quando ele nada, solta escamas enormes — e é com essas escamas que os Basiks fazem as casas. Sem o Daryun, não haveria casa nenhuma.",
-      "en": "Daryun is a giant, very old fish that lives in the rivers. It is the biggest of all in Gotto. When it swims, it sheds enormous scales — and it's with these scales that the Basiks build the houses. Without Daryun, there would be no houses at all."
+      "pt": "Daryun é um peixe gigante e muito antigo que vive nos rios. Ele é o maior de todos em Gotto. Quando ele nada, solta escamas enormes, e é com essas escamas que os Basiks fazem as casas. Sem o Daryun, não haveria casa nenhuma.",
+      "en": "Daryun is a giant, very old fish that lives in the rivers. It is the biggest of all in Gotto. When it swims, it sheds enormous scales, and it's with these scales that the Basiks build the houses. Without Daryun, there would be no houses at all."
     },
     "backImage": "/imgs/kammara/gotto/daryun_back.png",
     "backTitle": {
@@ -306,12 +306,12 @@
       "en": "The World's Measure"
     },
     "backMeaning": {
-      "pt": "Escamas branco-pérola, olho azul enorme e sereno, longos barbilhões, barbatanas iridescentes azul-roxo-teal. Cada Daryun tem sua paleta — por isso cada vila varia de cor, nunca a mesma duas vezes.",
-      "en": "Pearl-white scales, a huge serene blue eye, long barbels, iridescent blue-purple-teal fins. Each Daryun has its own palette — which is why each village varies in color, never the same twice."
+      "pt": "Escamas branco-pérola, olho azul enorme e sereno, longos barbilhões, barbatanas iridescentes azul-roxo-teal. Cada Daryun tem sua paleta; por isso cada vila varia de cor, nunca a mesma duas vezes.",
+      "en": "Pearl-white scales, a huge serene blue eye, long barbels, iridescent blue-purple-teal fins. Each Daryun has its own palette, which is why each village varies in color, never the same twice."
     },
     "dorsalMeaning": {
-      "pt": "Nada, solta uma escama, e segue — e dela nasce um lar.",
-      "en": "It swims, sheds a scale, and moves on — and from it a home is born."
+      "pt": "Nada, solta uma escama, e segue, e dela nasce um lar.",
+      "en": "It swims, sheds a scale, and moves on, and from it a home is born."
     },
     "attributes": [
       {

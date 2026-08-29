@@ -203,11 +203,10 @@ export function CharacterStrip({
       {sectionTitle && (
         <Heading
           as="h2"
-          fontFamily="body"
+          textStyle="heading"
           fontSize={mobileColor ? { base: 'section', md: '0.85rem', lg: 'section' } : 'section'}
           letterSpacing="wider"
           textTransform="uppercase"
-          fontWeight="semibold"
           padding="0 2rem"
           margin={inStripSide ? '1rem 0 0.5rem 0' : '5em 2em 0 3em'}
           color={

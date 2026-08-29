@@ -10,8 +10,8 @@
       "en": "ElePHPant"
     },
     "bio": {
-      "pt": "Cuida das pontes que conectam as vilas dos Fjorks — organiza reparos, coordena o grupo, garante que ninguém fique isolado. Sente medo o tempo todo — e mesmo assim fica.",
-      "en": "Cares for the bridges that connect the Fjork villages — organizes repairs, coordinates the group, makes sure no one is left isolated. Feels fear all the time — and stays anyway."
+      "pt": "Cuida das pontes que conectam as vilas dos Fjorks: organiza reparos, coordena o grupo, garante que ninguém fique isolado. Sente medo o tempo todo, e mesmo assim fica.",
+      "en": "Cares for the bridges that connect the Fjork villages: organizes repairs, coordinates the group, makes sure no one is left isolated. Feels fear all the time, and stays anyway."
     },
     "image": "/imgs/kammara/orfv/1orvian.png",
     "backImage": "/imgs/kammara/orfv/1orvian_costas.png",
@@ -74,8 +74,8 @@
       "en": "ElePHPant"
     },
     "bio": {
-      "pt": "Calmo, acessível, genuinamente gentil. Maelik é o elePHPant que cuida sem pedir nada — ajuda quem precisa, mantém rotinas, circula entre vilas como quem nasceu pra isso. Seu nome significa \"aquele que continua\" — e é exatamente o que ele faz.",
-      "en": "Calm, approachable, genuinely kind. Maelik is the ElePHPant who cares without asking anything in return — helps those who need, keeps routines, moves between villages as if born for it. His name means \"the one who continues\" — and that's exactly what he does."
+      "pt": "Calmo, acessível, genuinamente gentil. Maelik é o elePHPant que cuida sem pedir nada: ajuda quem precisa, mantém rotinas, circula entre vilas como quem nasceu pra isso. Seu nome significa \"aquele que continua\", e é exatamente o que ele faz.",
+      "en": "Calm, approachable, genuinely kind. Maelik is the ElePHPant who cares without asking anything in return: helps those who need, keeps routines, moves between villages as if born for it. His name means \"the one who continues\", and that's exactly what he does."
     },
     "image": "/imgs/kammara/orfv/2maelik.png",
     "backImage": "",
@@ -123,8 +123,8 @@
       "en": "ElePHPant"
     },
     "bio": {
-      "pt": "Nylpha é menor que Orvian, mas mais inquieta. Seus olhos observam tudo — escuros, atentos, levemente fundos. Desde jovem, Nylpha percebia mudanças no planeta antes de qualquer sinal físico.",
-      "en": "Nylpha is smaller than Orvian, but more restless. Her eyes observe everything — dark, attentive, slightly sunken. Ever since she was young, Nylpha noticed changes in the planet before any physical sign."
+      "pt": "Nylpha é menor que Orvian, mas mais inquieta. Seus olhos observam tudo: escuros, atentos, levemente fundos. Desde jovem, Nylpha percebia mudanças no planeta antes de qualquer sinal físico.",
+      "en": "Nylpha is smaller than Orvian, but more restless. Her eyes observe everything: dark, attentive, slightly sunken. Ever since she was young, Nylpha noticed changes in the planet before any physical sign."
     },
     "image": "/imgs/kammara/orfv/3Nylpha1.png",
     "backImage": "",
@@ -173,8 +173,8 @@
       "en": "ElePHPant"
     },
     "bio": {
-      "pt": "Vê tudo, avalia tudo, calcula riscos — mas não cruza. Os outros a chamam de cautelosa. Ela se chama de responsável.",
-      "en": "Sees everything, evaluates everything, calculates risks — but doesn't cross. The others call her cautious. She calls herself responsible."
+      "pt": "Vê tudo, avalia tudo, calcula riscos, mas não cruza. Os outros a chamam de cautelosa. Ela se chama de responsável.",
+      "en": "Sees everything, evaluates everything, calculates risks, but doesn't cross. The others call her cautious. She calls herself responsible."
     },
     "image": "/imgs/kammara/orfv/LetiK.png",
     "backImage": "",
@@ -273,8 +273,8 @@
       "en": "ElePHPant"
     },
     "bio": {
-      "pt": "Quando era jovem, o irmão de Torwen ficou paralisado de medo no meio de uma ponte durante uma instabilidade. Ninguém ficou com ele. Quando tudo passou, o irmão estava lá — mas algo nele tinha mudado. Desde esse dia, Torwen é o elePHPant que sempre está cuidando de todos.",
-      "en": "When he was young, Torwen's brother froze with fear in the middle of a bridge during an instability. No one stayed with him. When it was all over, his brother was there — but something in him had changed. Since that day, Torwen is the ElePHPant who is always taking care of everyone."
+      "pt": "Quando era jovem, o irmão de Torwen ficou paralisado de medo no meio de uma ponte durante uma instabilidade. Ninguém ficou com ele. Quando tudo passou, o irmão estava lá, mas algo nele tinha mudado. Desde esse dia, Torwen é o elePHPant que sempre está cuidando de todos.",
+      "en": "When he was young, Torwen's brother froze with fear in the middle of a bridge during an instability. No one stayed with him. When it was all over, his brother was there, but something in him had changed. Since that day, Torwen is the ElePHPant who is always taking care of everyone."
     },
     "image": "/imgs/kammara/orfv/Torwen.png",
     "backImage": "",
@@ -323,8 +323,8 @@
       "en": "Nuvinian"
     },
     "bio": {
-      "pt": "O Nuvin vive lá embaixo, onde a rocha dos Fjorks encontra a água. É o observador das águas: vigia a qualidade dos canais e, quando é preciso, filtra a água pelo próprio corpo de névoa — um purificador natural.",
-      "en": "The Nuvin lives down below, where the rock of the Fjorks meets the water. It is the watcher of the waters: it guards the quality of the canals and, when needed, filters the water through its own body of mist — a natural purifier."
+      "pt": "O Nuvin vive lá embaixo, onde a rocha dos Fjorks encontra a água. É o observador das águas: vigia a qualidade dos canais e, quando é preciso, filtra a água pelo próprio corpo de névoa, um purificador natural.",
+      "en": "The Nuvin lives down below, where the rock of the Fjorks meets the water. It is the watcher of the waters: it guards the quality of the canals and, when needed, filters the water through its own body of mist, a natural purifier."
     },
     "image": "/imgs/kammara/orfv/nuvin.png",
     "backImage": "/imgs/kammara/orfv/nuvin_costas.png",
@@ -333,8 +333,8 @@
       "en": "Guardians of Clean Water"
     },
     "backMeaning": {
-      "pt": "Macios, translúcidos e levemente brilhantes — parecem feitos de vapor e nuvem. Vivem em pares, um nunca sem o outro.",
-      "en": "Soft, translucent and faintly glowing — they seem made of vapor and cloud. They live in pairs, one never without the other."
+      "pt": "Macios, translúcidos e levemente brilhantes: parecem feitos de vapor e nuvem. Vivem em pares, um nunca sem o outro.",
+      "en": "Soft, translucent and faintly glowing: they seem made of vapor and cloud. They live in pairs, one never without the other."
     },
     "dorsalMeaning": {
       "pt": "A água limpa passa por nós.",
@@ -376,8 +376,8 @@
       "en": "Zupik"
     },
     "bio": {
-      "pt": "O Zupi vive na água, pertinho de onde moram os Nuvinians — e é um contador de histórias nato: tagarela, feliz, fala sem parar. O detalhe é que ninguém entende uma palavra do que ele diz.",
-      "en": "The Zupi lives in the water, right next to where the Nuvinians dwell — and it is a born storyteller: chatty, happy, talks without stopping. The thing is, no one understands a word it says."
+      "pt": "O Zupi vive na água, pertinho de onde moram os Nuvinians, e é um contador de histórias nato: tagarela, feliz, fala sem parar. O detalhe é que ninguém entende uma palavra do que ele diz.",
+      "en": "The Zupi lives in the water, right next to where the Nuvinians dwell, and it is a born storyteller: chatty, happy, talks without stopping. The thing is, no one understands a word it says."
     },
     "image": "/imgs/kammara/orfv/Zupi.png",
     "backImage": "/imgs/kammara/orfv/zupi_costas.png",
@@ -386,8 +386,8 @@
       "en": "The One Who Tells and No One Understands"
     },
     "backMeaning": {
-      "pt": "Pequeno jacaré de olhos enormes e esbugalhados, boca larga sempre aberta — falando! Vive junto aos Nuvinians, dividindo a água e se aconchegando neles para se aquecer.",
-      "en": "A little alligator with huge bulging eyes and a wide mouth always open — talking! It lives alongside the Nuvinians, sharing the water and cuddling up to them for warmth."
+      "pt": "Pequeno jacaré de olhos enormes e esbugalhados, boca larga sempre aberta, falando! Vive junto aos Nuvinians, dividindo a água e se aconchegando neles para se aquecer.",
+      "en": "A little alligator with huge bulging eyes and a wide mouth always open, talking! It lives alongside the Nuvinians, sharing the water and cuddling up to them for warmth."
     },
     "dorsalMeaning": {
       "pt": "…e foi assim que aconteceu!",
@@ -439,8 +439,8 @@
       "en": "The Flower Drinker"
     },
     "backMeaning": {
-      "pt": "Branco a prateado, pelagem felpuda; olhos grandes, antenas espetadas e um bigode. Não fala — não tem boca; só observa e brinca.",
-      "en": "White to silver, fuzzy fur; large eyes, spiky antennae and a little mustache. It does not speak — it has no mouth; it only watches and plays."
+      "pt": "Branco a prateado, pelagem felpuda; olhos grandes, antenas espetadas e um bigode. Não fala: não tem boca; só observa e brinca.",
+      "en": "White to silver, fuzzy fur; large eyes, spiky antennae and a little mustache. It does not speak: it has no mouth; it only watches and plays."
     },
     "dorsalMeaning": {
       "pt": "O Bebedor de Flores.",
@@ -483,8 +483,8 @@
       "en": "Aliventi"
     },
     "bio": {
-      "pt": "Pequeno como uma libélula, o Aurin vive no alto dos Fjorks, pertinho das vilas dos elePHPants — e é dali que cruza o vento entre as ilhas carregando recados e sementes de um lado ao outro.",
-      "en": "Small as a dragonfly, the Aurin lives high in the Fjorks, close to the elePHPant villages — and from there it crosses the wind between the islands carrying messages and seeds from one side to the other."
+      "pt": "Pequeno como uma libélula, o Aurin vive no alto dos Fjorks, pertinho das vilas dos elePHPants, e é dali que cruza o vento entre as ilhas carregando recados e sementes de um lado ao outro.",
+      "en": "Small as a dragonfly, the Aurin lives high in the Fjorks, close to the elePHPant villages, and from there it crosses the wind between the islands carrying messages and seeds from one side to the other."
     },
     "image": "/imgs/kammara/orfv/Aurin_rosa.png",
     "backImage": "/imgs/kammara/orfv/Aurin_costas_rosa.png",
@@ -497,8 +497,8 @@
       "en": "A light, smooth body of pale wood with a faint sheen; wings translucent and delicate like a dragonfly's."
     },
     "dorsalMeaning": {
-      "pt": "Trago um recado — e uma semente, de brinde.",
-      "en": "I bring a message — and a seed, for free."
+      "pt": "Trago um recado, e uma semente, de brinde.",
+      "en": "I bring a message, and a seed, for free."
     },
     "attributes": [
       {

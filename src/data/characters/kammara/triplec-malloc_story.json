@@ -5,57 +5,57 @@
   },
   "summary": {
     "pt": [
-      "malloc ao sul — instinto e precisão. Túneis e cavernas pulsantes onde a memória do planeta é alocada, organizada e protegida. Aqui nada se perde sem propósito."
+      "malloc ao sul: instinto e precisão. Túneis e cavernas pulsantes onde a memória do planeta é alocada, organizada e protegida. Aqui nada se perde sem propósito."
     ],
     "en": [
-      "malloc to the south — instinct and precision. Tunnels and pulsing caves where the planet's memory is allocated, organized and protected. Nothing here is lost without purpose."
+      "malloc to the south: instinct and precision. Tunnels and pulsing caves where the planet's memory is allocated, organized and protected. Nothing here is lost without purpose."
     ]
   },
   "panel": {
     "story": {
       "pt": [
         "### Resumo",
-        "malloc — o instinto vivo de TripleC. A região mais antiga e mais vital do planeta, feita de túneis, cavernas pulsantes e cinco camadas geológicas, onde nasce a kemita.",
+        "malloc: o instinto vivo de TripleC. A região mais antiga e mais vital do planeta, feita de túneis, cavernas pulsantes e cinco camadas geológicas, onde nasce a kemita.",
         "### A região",
-        "malloc é o sul de TripleC — a região mais antiga, mais instável e mais vital do planeta. É onde tudo começou, onde o artefato PD-11 caiu do céu e reorganizou a floresta em camadas vivas. Quem fala de origem em TripleC, fala de malloc.",
+        "malloc é o sul de TripleC, a região mais antiga, mais instável e mais vital do planeta. É onde tudo começou, onde o artefato PD-11 caiu do céu e reorganizou a floresta em camadas vivas. Quem fala de origem em TripleC, fala de malloc.",
         "### As cinco camadas",
-        "O subsolo de malloc se divide em cinco camadas geológicas vivas. Portex é a superfície, onde instruções e runas se cristalizam. Datara tem túneis estáveis por onde flui o shilo. Basa é feita de cavernas de matéria potencial — tudo pode nascer ali. Hepa é a camada criadora, de onde brotam kemita, cristais e oka. E Estaka é o abismo mais profundo, onde ficam as decisões finais e os limites.",
+        "O subsolo de malloc se divide em cinco camadas geológicas vivas. Portex é a superfície, onde instruções e runas se cristalizam. Datara tem túneis estáveis por onde flui o shilo. Basa é feita de cavernas de matéria potencial: tudo pode nascer ali. Hepa é a camada criadora, de onde brotam kemita, cristais e oka. E Estaka é o abismo mais profundo, onde ficam as decisões finais e os limites.",
         "### As vilas",
-        "As comunidades de malloc são organizadas em grades 16×16 — vilas cúbicas incrustadas no subsolo. Cada uma tem endereço próprio, função social e conexões com outras vilas através das Cidades-Risca, caminhos estreitos que funcionam como atalhos diretos.",
+        "As comunidades de malloc são organizadas em grades 16×16, vilas cúbicas incrustadas no subsolo. Cada uma tem endereço próprio, função social e conexões com outras vilas através das Cidades-Risca, caminhos estreitos que funcionam como atalhos diretos.",
         "### Os bunniets",
-        "Os bunniets de malloc medem de 30 a 40 centímetros. São compactos, arredondados, com pelagem em tons bege, verde ou ferrugem. Têm orelhas longas com circuitos integrados, olhos negros brilhantes e cristais de shilo embutidos no corpo — funcionais, não ornamentais. São guiados por instinto: sentem antes de pensar, agem antes de calcular.",
+        "Os bunniets de malloc medem de 30 a 40 centímetros. São compactos, arredondados, com pelagem em tons bege, verde ou ferrugem. Têm orelhas longas com circuitos integrados, olhos negros brilhantes e cristais de shilo embutidos no corpo (funcionais, não ornamentais). São guiados por instinto: sentem antes de pensar, agem antes de calcular.",
         "### As castas",
-        "Cinco castas organizam a sociedade naturalmente. Prae estabiliza e previne falhas. Koma calcula rotas e interpreta kemita. Aska registra runas e preserva Portex. Lanko conecta vilas e media disputas. E Runa executa — age quando o instante exige. Entre os Runa, há uma elite rara: os Runa-Tora, um em cada cinco mil, com shilo embutido nos antebraços e estabilidade emocional excepcional.",
+        "Cinco castas organizam a sociedade naturalmente. Prae estabiliza e previne falhas. Koma calcula rotas e interpreta kemita. Aska registra runas e preserva Portex. Lanko conecta vilas e media disputas. E Runa executa: age quando o instante exige. Entre os Runa, há uma elite rara: os Runa-Tora, um em cada cinco mil, com shilo embutido nos antebraços e estabilidade emocional excepcional.",
         "### A kemita e o shilo",
-        "Nas cavernas da Hepa nasce a kemita — o token primordial que sustenta todo o universo. E por toda a região flui o shilo, a energia de endereço que permite o Cshift existir. Essas duas forças fazem de malloc o coração mineral de TripleC, e a cobiça de todo o Kammara.",
+        "Nas cavernas da Hepa nasce a kemita, o token primordial que sustenta todo o universo. E por toda a região flui o shilo, a energia de endereço que permite o Cshift existir. Essas duas forças fazem de malloc o coração mineral de TripleC, e a cobiça de todo o Kammara.",
         "### Alloc",
-        "Há uma presença nas vibrações das camadas — algo que os bunniets chamam de Alloc. Não tem forma. É sentido. Prae e Aska interpretam sua voz, e sua harmonia é condição para a extração de kemita. Sem Alloc em paz, a Hepa não entrega nada.",
+        "Há uma presença nas vibrações das camadas, algo que os bunniets chamam de Alloc. Não tem forma. É sentido. Prae e Aska interpretam sua voz, e sua harmonia é condição para a extração de kemita. Sem Alloc em paz, a Hepa não entrega nada.",
         "### Os perigos",
-        "O maior medo coletivo é o Segmentation Fault — quando camadas se contradizem e vilas inteiras desaparecem, shilo fragmenta, runas se corrompem. A Hepa pode crescer sem aviso e engolir túneis. E sempre há a ameaça externa: vírus que exploram falhas de shilo para roubar Sementes de Cshift.",
+        "O maior medo coletivo é o Segmentation Fault: quando camadas se contradizem e vilas inteiras desaparecem, shilo fragmenta, runas se corrompem. A Hepa pode crescer sem aviso e engolir túneis. E sempre há a ameaça externa: vírus que exploram falhas de shilo para roubar Sementes de Cshift.",
         "### Vigília calma",
-        "malloc vive em vigília calma — atenção alta sem tensão. É o instinto vivo de TripleC, o ponto onde tudo começa antes de ter nome. E onde tudo, ainda hoje, começa de novo a cada ciclo."
+        "malloc vive em vigília calma: atenção alta sem tensão. É o instinto vivo de TripleC, o ponto onde tudo começa antes de ter nome. E onde tudo, ainda hoje, começa de novo a cada ciclo."
       ],
       "en": [
         "### Summary",
-        "malloc — the living instinct of TripleC. The oldest and most vital region of the planet, made of tunnels, pulsing caves and five geological layers, where kemita is born.",
+        "malloc: the living instinct of TripleC. The oldest and most vital region of the planet, made of tunnels, pulsing caves and five geological layers, where kemita is born.",
         "### The region",
-        "malloc is the south of TripleC — the oldest, most unstable and most vital region of the planet. It is where everything began, where the PD-11 artifact fell from the sky and reorganized the forest into living layers. To speak of origin in TripleC is to speak of malloc.",
+        "malloc is the south of TripleC, the oldest, most unstable and most vital region of the planet. It is where everything began, where the PD-11 artifact fell from the sky and reorganized the forest into living layers. To speak of origin in TripleC is to speak of malloc.",
         "### The five layers",
-        "The subsoil of malloc divides into five living geological layers. Portex is the surface, where instructions and runes crystallize. Datara holds stable tunnels through which the shilo flows. Basa is made of caves of potential matter — anything can be born there. Hepa is the creator layer, from which kemita, crystals and oka sprout. And Estaka is the deepest abyss, where the final decisions and the limits lie.",
+        "The subsoil of malloc divides into five living geological layers. Portex is the surface, where instructions and runes crystallize. Datara holds stable tunnels through which the shilo flows. Basa is made of caves of potential matter: anything can be born there. Hepa is the creator layer, from which kemita, crystals and oka sprout. And Estaka is the deepest abyss, where the final decisions and the limits lie.",
         "### The villages",
-        "The communities of malloc are organized in 16×16 grids — cubic villages embedded in the subsoil. Each one has its own address, social function and connections to other villages through the Risca-Cities, narrow paths that work as direct shortcuts.",
+        "The communities of malloc are organized in 16×16 grids, cubic villages embedded in the subsoil. Each one has its own address, social function and connections to other villages through the Risca-Cities, narrow paths that work as direct shortcuts.",
         "### The bunniets",
-        "The bunniets of malloc measure 30 to 40 centimeters. They are compact, rounded, with fur in beige, green or rust tones. They have long ears with integrated circuits, shiny black eyes and shilo crystals embedded in the body — functional, not ornamental. They are guided by instinct: they feel before they think, they act before they calculate.",
+        "The bunniets of malloc measure 30 to 40 centimeters. They are compact, rounded, with fur in beige, green or rust tones. They have long ears with integrated circuits, shiny black eyes and shilo crystals embedded in the body (functional, not ornamental). They are guided by instinct: they feel before they think, they act before they calculate.",
         "### The castes",
-        "Five castes organize society naturally. Prae stabilizes and prevents failures. Koma calculates routes and interprets kemita. Aska records runes and preserves Portex. Lanko connects villages and mediates disputes. And Runa executes — it acts when the moment demands. Among the Runa, there is a rare elite: the Runa-Tora, one in every five thousand, with shilo embedded in their forearms and exceptional emotional stability.",
+        "Five castes organize society naturally. Prae stabilizes and prevents failures. Koma calculates routes and interprets kemita. Aska records runes and preserves Portex. Lanko connects villages and mediates disputes. And Runa executes: it acts when the moment demands. Among the Runa, there is a rare elite: the Runa-Tora, one in every five thousand, with shilo embedded in their forearms and exceptional emotional stability.",
         "### Kemita and shilo",
-        "In the caves of the Hepa, kemita is born — the primordial token that sustains the entire universe. And throughout the region flows the shilo, the energy of address that lets the Cshift exist. These two forces make malloc the mineral heart of TripleC, and the coveted prize of all Kammara.",
+        "In the caves of the Hepa, kemita is born, the primordial token that sustains the entire universe. And throughout the region flows the shilo, the energy of address that lets the Cshift exist. These two forces make malloc the mineral heart of TripleC, and the coveted prize of all Kammara.",
         "### Alloc",
-        "There is a presence in the vibrations of the layers — something the bunniets call Alloc. It has no form. It is felt. Prae and Aska interpret its voice, and its harmony is a condition for extracting kemita. Without Alloc at peace, the Hepa yields nothing.",
+        "There is a presence in the vibrations of the layers, something the bunniets call Alloc. It has no form. It is felt. Prae and Aska interpret its voice, and its harmony is a condition for extracting kemita. Without Alloc at peace, the Hepa yields nothing.",
         "### The dangers",
-        "The greatest collective fear is the Segmentation Fault — when layers contradict each other and entire villages vanish, shilo fragments, runes corrupt. The Hepa can grow without warning and swallow tunnels. And there is always the external threat: viruses that exploit shilo failures to steal Cshift Seeds.",
+        "The greatest collective fear is the Segmentation Fault: when layers contradict each other and entire villages vanish, shilo fragments, runes corrupt. The Hepa can grow without warning and swallow tunnels. And there is always the external threat: viruses that exploit shilo failures to steal Cshift Seeds.",
         "### Calm vigil",
-        "malloc lives in a calm vigil — high attention without tension. It is the living instinct of TripleC, the point where everything begins before it has a name. And where everything, even today, begins anew with each cycle."
+        "malloc lives in a calm vigil: high attention without tension. It is the living instinct of TripleC, the point where everything begins before it has a name. And where everything, even today, begins anew with each cycle."
       ]
     }
   }

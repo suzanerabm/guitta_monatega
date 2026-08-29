@@ -65,7 +65,7 @@ export const tokens = defineTokens({
   },
   fonts: {
     body: { value: "'Fira Sans', system-ui, sans-serif" },
-    heading: { value: "'Fira Sans', system-ui, sans-serif" },
+    heading: { value: "'exo-soft', 'Fira Sans', system-ui, sans-serif" },
     glyph: { value: '"Apple Symbols", "Symbola", "Noto Sans Symbols 2", "Cambria Math", "Segoe UI Symbol", sans-serif' },
   },
   fontSizes: {

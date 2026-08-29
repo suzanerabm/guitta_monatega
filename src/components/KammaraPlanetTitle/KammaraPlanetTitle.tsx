@@ -225,9 +225,8 @@ export function KammaraPlanetTitle({
             {/* Name — hero scale */}
             <Heading
               as="h1"
-              fontFamily="body"
+              textStyle="heading"
               fontSize="h1"
-              fontWeight="bold"
               lineHeight={1}
               color={color}
               letterSpacing="heroTitle"

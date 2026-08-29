@@ -223,9 +223,8 @@ export function KammaraCard({
               {/* Name — hero scale, left aligned */}
               <Heading
                 as="h2"
-                fontFamily="body"
+                textStyle="heading"
                 fontSize="h2"
-                fontWeight="bold"
                 lineHeight={1}
                 color={color}
                 letterSpacing="heroTitle"

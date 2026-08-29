@@ -45,13 +45,13 @@
         "### O dia a dia",
         "Trabalho compulsivo e reparos infinitos. Suspeita constante. Disfarces, intrigas e acusações. Ninguém confia em ninguém.",
         "### O Tribunal de Ruído",
-        "A lei de ENI-4Δ funciona assim: Node-0 emite ruído, os Caste-BLM interpretam, convertem em culpa direcionada e o alvo é punido. A palavra de Node-0 é a lei — não se discute, cumpre-se na hora.",
+        "A lei de ENI-4Δ funciona assim: Node-0 emite ruído, os Caste-BLM interpretam, convertem em culpa direcionada e o alvo é punido. A palavra de Node-0 é a lei: não se discute, cumpre-se na hora.",
         "### A culpa é sempre de alguém",
         "A culpa nunca é de quem acusa. Todos olham para baixo e culpam. Ninguém olha para cima e questiona.",
         "### Questionar é morrer",
         "Não é figura de linguagem. Questionar a ordem é ser eliminado. A obediência é o único caminho possível.",
         "### Um lugar de sobreviver",
-        "ENI-4Δ não é um lugar onde se vive. É um lugar onde se sobrevive — consumindo o que é dos outros."
+        "ENI-4Δ não é um lugar onde se vive. É um lugar onde se sobrevive, consumindo o que é dos outros."
       ],
       "en": [
         "### No affection",
@@ -59,13 +59,13 @@
         "### Daily life",
         "Compulsive work and endless repairs. Constant suspicion. Disguises, intrigue and accusations. No one trusts anyone.",
         "### The Noise Tribunal",
-        "The law of ENI-4Δ works like this: Node-0 emits noise, the Caste-BLM interpret it, convert it into directed blame, and the target is punished. Node-0's word is the law — it is not debated, it is carried out at once.",
+        "The law of ENI-4Δ works like this: Node-0 emits noise, the Caste-BLM interpret it, convert it into directed blame, and the target is punished. Node-0's word is the law: it is not debated, it is carried out at once.",
         "### The blame is always someone's",
         "The blame is never the accuser's. Everyone looks down and blames. No one looks up and questions.",
         "### To question is to die",
         "It is not figurative. To question the order is to be eliminated. Obedience is the only possible path.",
         "### A place to survive",
-        "ENI-4Δ is not a place where you live. It is a place where you survive — by consuming what belongs to others."
+        "ENI-4Δ is not a place where you live. It is a place where you survive, by consuming what belongs to others."
       ]
     }
   },
@@ -80,7 +80,7 @@
         "### Node-0",
         "A autoridade absoluta. Insubstituível. O topo que jamais duvida de si. A certeza que rege tudo.",
         "### VEXON",
-        "O único vírus que sabe planejar. Braço operacional de Node-0, nascido de uma mutação rara. Consegue pensar em várias ações ao mesmo tempo — nenhum outro vírus consegue.",
+        "O único vírus que sabe planejar. Braço operacional de Node-0, nascido de uma mutação rara. Consegue pensar em várias ações ao mesmo tempo, nenhum outro vírus consegue.",
         "### Os Δ-PRIME",
         "Seis administradores: VALKON, THERMAX, KARTEX, REPLION, MASKON e SCORAK. Cada um cuida de um pedaço do sistema.",
         "### Os de baixo",
@@ -88,13 +88,13 @@
         "### Os worms",
         "Replicam-se sozinhos nos túneis subterrâneos. Ninguém consegue controlá-los. Nem mesmo Node-0.",
         "### Os dois rostos",
-        "Os vírus têm dois estados visuais: o real — esfera escura de sílica, olhos vermelhos, oito patas — e a Máscara Cute: casca branca lisinha, olhinhos escuros, aparência inofensiva. A troca entre um e outro é instantânea."
+        "Os vírus têm dois estados visuais: o real (esfera escura de sílica, olhos vermelhos, oito patas) e a Máscara Cute: casca branca lisinha, olhinhos escuros, aparência inofensiva. A troca entre um e outro é instantânea."
       ],
       "en": [
         "### Node-0",
         "The absolute authority. Irreplaceable. The top that never doubts itself. The certainty that rules over all.",
         "### VEXON",
-        "The only virus that knows how to plan. Operational arm of Node-0, born from a rare mutation. Can think of multiple actions at once — no other virus can.",
+        "The only virus that knows how to plan. Operational arm of Node-0, born from a rare mutation. Can think of multiple actions at once, no other virus can.",
         "### The Δ-PRIME",
         "Six administrators: VALKON, THERMAX, KARTEX, REPLION, MASKON and SCORAK. Each one handles a slice of the system.",
         "### The lower ranks",
@@ -102,7 +102,7 @@
         "### The worms",
         "They replicate themselves in the underground tunnels. No one can control them. Not even Node-0.",
         "### The two faces",
-        "Viruses have two visual states: the real one — a dark silica sphere, red eyes, eight legs — and the Cute Mask: smooth white shell, small dark eyes, harmless appearance. The swap between them is instantaneous."
+        "Viruses have two visual states: the real one (a dark silica sphere, red eyes, eight legs) and the Cute Mask: smooth white shell, small dark eyes, harmless appearance. The swap between them is instantaneous."
       ]
     },
     "visible": false
@@ -118,7 +118,7 @@
         "### Poder é temperatura",
         "Em ENI-4Δ, quem fica mais perto do calor manda. Quem fica longe, morre.",
         "### Onde vivem",
-        "Milhares de vírus, bugs, e outros seres de ENI-4Δ vivem ao redor das megaválvulas — 16 principais, 52 secundárias e centenas espalhadas pelo deserto. As válvulas geram calor, e calor é vida. Com o tempo, as válvulas organizadas viraram as cidades deles. Quem mora perto das mais quentes tem mais poder.",
+        "Milhares de vírus, bugs, e outros seres de ENI-4Δ vivem ao redor das megaválvulas: 16 principais, 52 secundárias e centenas espalhadas pelo deserto. As válvulas geram calor, e calor é vida. Com o tempo, as válvulas organizadas viraram as cidades deles. Quem mora perto das mais quentes tem mais poder.",
         "### SCORCH",
         "A zona de temperatura extrema. Onde Node-0 queima no centro. Reverência absoluta. A ordem no seu grau mais alto.",
         "### BURN",
@@ -130,19 +130,19 @@
         "### O Vale das Válvulas Queimadas",
         "Um vale repleto de válvulas quebradas, derretidas, invertidas, permanentemente presas em loop. O chão treme ao caminhar. Ruídos ecoam das estruturas. É onde os vírus treinam.",
         "### Os Campos de Cartões Perfurados",
-        "Quando os Karta-Δ ficam obsoletos, são queimados e espalhados no vento. A paisagem é coberta de pedaços carbonizados — ordens antigas que ninguém mais lê.",
+        "Quando os Karta-Δ ficam obsoletos, são queimados e espalhados no vento. A paisagem é coberta de pedaços carbonizados, ordens antigas que ninguém mais lê.",
         "### Os Lixões de Robôs",
         "Robôs velhos ou inutilizados são empilhados, tortos, parcialmente derretidos, abandonados em campos metálicos. Com o calor, derretem e voltam a ser sílica pura. É a reciclagem natural do planeta.",
         "### Os Túneis de Worms",
-        "Mudam toda semana. Se conectam às megaválvulas. Geram novos caminhos por colapso. Podem abrir na superfície sem aviso. Ninguém sobrevive lá por muito tempo — exceto os worms.",
+        "Mudam toda semana. Se conectam às megaválvulas. Geram novos caminhos por colapso. Podem abrir na superfície sem aviso. Ninguém sobrevive lá por muito tempo, exceto os worms.",
         "### As Fendas Térmicas",
-        "Rachaduras profundas na superfície — fontes de calor puro e portas para o subsolo. Worms emergem delas. Bugs se escondem nelas e morrem. Algumas fendas antigas estão seladas, mas tremem."
+        "Rachaduras profundas na superfície: fontes de calor puro e portas para o subsolo. Worms emergem delas. Bugs se escondem nelas e morrem. Algumas fendas antigas estão seladas, mas tremem."
       ],
       "en": [
         "### Power is temperature",
         "In ENI-4Δ, whoever stays closest to the heat, rules. Whoever stays far away, dies.",
         "### Where they live",
-        "Thousands of viruses, bugs, and other beings of ENI-4Δ live around the mega-valves — 16 main, 52 secondary and hundreds scattered across the desert. The valves generate heat, and heat is life. Over time, the organized valves became their cities. Whoever lives near the hottest ones holds more power.",
+        "Thousands of viruses, bugs, and other beings of ENI-4Δ live around the mega-valves: 16 main, 52 secondary and hundreds scattered across the desert. The valves generate heat, and heat is life. Over time, the organized valves became their cities. Whoever lives near the hottest ones holds more power.",
         "### SCORCH",
         "The zone of extreme temperature. Where Node-0 burns at the center. Absolute reverence. Order at its highest degree.",
         "### BURN",
@@ -154,13 +154,13 @@
         "### The Valley of Burnt Valves",
         "A valley filled with broken, melted, inverted valves, permanently stuck in loop. The ground trembles when you walk. Noises echo from the structures. It's where the viruses train.",
         "### The Fields of Punched Cards",
-        "When the Karta-Δ become obsolete, they are burned and scattered in the wind. The landscape is covered in charred fragments — old orders no one reads anymore.",
+        "When the Karta-Δ become obsolete, they are burned and scattered in the wind. The landscape is covered in charred fragments, old orders no one reads anymore.",
         "### The Robot Junkyards",
         "Old or unused robots are stacked, twisted, partially melted, abandoned in metallic fields. With the heat, they melt and return to pure silica. It's the planet's natural recycling.",
         "### The Worm Tunnels",
-        "They change every week. They connect to the mega-valves. They generate new paths through collapse. They can open at the surface without warning. No one survives there for long — except the worms.",
+        "They change every week. They connect to the mega-valves. They generate new paths through collapse. They can open at the surface without warning. No one survives there for long, except the worms.",
         "### The Thermal Rifts",
-        "Deep cracks on the surface — sources of pure heat and gates to the underground. Worms emerge from them. Bugs hide in them and die. Some ancient rifts are sealed, but tremble."
+        "Deep cracks on the surface: sources of pure heat and gates to the underground. Worms emerge from them. Bugs hide in them and die. Some ancient rifts are sealed, but tremble."
       ]
     }
   },
@@ -175,7 +175,7 @@
         "### Sem energia própria",
         "ENI-4Δ não gera energia. Suas megaválvulas gigantes só se mantêm acesas com energia roubada de outros planetas.",
         "### As Δ-Cells",
-        "Esferas de sílica cristalizada — recipientes de energia drenada. Cada uma carrega o que foi tirado de alguém.",
+        "Esferas de sílica cristalizada: recipientes de energia drenada. Cada uma carrega o que foi tirado de alguém.",
         "### O ciclo",
         "Um vírus drena uma vítima. A energia vira uma Δ-Cell. As naves Troy-Δ coletam. As megaválvulas convertem em calor. O THERMAX distribui. Node-0 se alimenta. Gera mais vírus. E tudo recomeça.",
         "### A divisão",
@@ -189,7 +189,7 @@
         "### No energy of its own",
         "ENI-4Δ does not generate energy. Its giant mega-valves only stay lit by burning energy stolen from other planets.",
         "### The Δ-Cells",
-        "Crystallized silica spheres — vessels of drained energy. Each one carries what was taken from someone.",
+        "Crystallized silica spheres: vessels of drained energy. Each one carries what was taken from someone.",
         "### The cycle",
         "A virus drains a victim. The energy becomes a Δ-Cell. The Troy-Δ ships collect. The mega-valves convert it into heat. THERMAX distributes. Node-0 feeds. Generates more viruses. And it all begins again.",
         "### The split",
@@ -217,9 +217,9 @@
         "### BREACH",
         "Invasão pela porta dos fundos. Meses ou ciclos inteiros de infiltração silenciosa. Quando alguém descobre, já é tarde demais.",
         "### O disfarce",
-        "Os vírus chegam com a Máscara Cute — aparência inofensiva. Ganham confiança antes de drenar.",
+        "Os vírus chegam com a Máscara Cute, aparência inofensiva. Ganham confiança antes de drenar.",
         "### As naves Troy-Δ",
-        "Sem elas, os vírus evaporam ao cruzar o Cshift. As Troy-Δ são transporte e proteção ao mesmo tempo — e sem elas, nenhum vírus sairia do próprio planeta.",
+        "Sem elas, os vírus evaporam ao cruzar o Cshift. As Troy-Δ são transporte e proteção ao mesmo tempo, e sem elas, nenhum vírus sairia do próprio planeta.",
         "### Quando os sintomas aparecem",
         "Quando os sintomas aparecem, a invasão já terminou."
       ],
@@ -231,9 +231,9 @@
         "### BREACH",
         "Invasion through the back door. Months or entire cycles of silent infiltration. By the time someone finds out, it's already too late.",
         "### The disguise",
-        "Viruses arrive wearing the Cute Mask — harmless appearance. They earn trust before draining.",
+        "Viruses arrive wearing the Cute Mask, harmless appearance. They earn trust before draining.",
         "### The Troy-Δ ships",
-        "Without them, viruses evaporate while crossing the Cshift. The Troy-Δ are transport and protection at the same time — and without them, no virus would leave its own planet.",
+        "Without them, viruses evaporate while crossing the Cshift. The Troy-Δ are transport and protection at the same time, and without them, no virus would leave its own planet.",
         "### When symptoms appear",
         "By the time the symptoms appear, the invasion is already over."
       ]
@@ -242,20 +242,20 @@
   },
   {
     "title": {
-      "pt": "O Código dos Vírus — ASM-Δ",
-      "en": "The Code of the Viruses — ASM-Δ"
+      "pt": "O Código dos Vírus: ASM-Δ",
+      "en": "The Code of the Viruses: ASM-Δ"
     },
     "img": "/imgs/kammara/eni4/_subsystems/6-gigapixel-standard-v2-6x.jpg",
     "text": {
       "pt": [
         "### O que é",
         "Os vírus não analisam. Executam.",
-        "Sua linguagem — ASM-Δ — não serve pra agir: mover, sugar, culpar e repetir.",
+        "Sua linguagem (ASM-Δ) não serve pra agir: mover, sugar, culpar e repetir.",
         "### Quatro formas de comunicação",
-        "ASM-Δ : pensamento — uma lista de instruções, executada em linha reta",
-        "Karta-Δ : escrita — cartões perfurados com furos que viram ordens",
-        "Click-Δ : som — clicks secos, curtos, mecânicos, como interruptores quebrados",
-        "Pulsos térmicos : calor — ondas de temperatura que coordenam à distância",
+        "ASM-Δ : pensamento, uma lista de instruções, executada em linha reta",
+        "Karta-Δ : escrita, cartões perfurados com furos que viram ordens",
+        "Click-Δ : som, clicks secos, curtos, mecânicos, como interruptores quebrados",
+        "Pulsos térmicos : calor, ondas de temperatura que coordenam à distância",
         "### As instruções",
         "MOVE : avançar na direção escolhida",
         "TURN : mudar de direção",
@@ -270,7 +270,7 @@
         "ATTACK : descarga ofensiva",
         "REPAIR : estabilizar uma válvula",
         "ALERT : sinalizar risco térmico",
-        "### A instrução mais importante — BLM (Blame)",
+        "### A instrução mais importante: BLM (Blame)",
         "BLM : redirecionar a culpa de si para outro",
         "É a instrução social mais usada no planeta inteiro. Nenhum vírus admite erro. Quando algo falha, a culpa é sempre transferida pro próximo.",
         "### Os clicks",
@@ -283,14 +283,14 @@
         "crrk : culpa projetada (BLM)",
         "### Os cartões perfurados (Karta-Δ)",
         "Cada instrução tem um padrão de furos. ■ = furo ativo, □ = vazio:",
-        "CONSUM : ■ □ □ ■ □ — sugar energia",
-        "ATTACK : ■ ■ ■ □ □ — descarga direta",
-        "MOVE : ■ ■ □ □ □ — deslocamento",
-        "MASK : □ ■ □ □ ■ — disfarce",
-        "REPL : □ ■ □ ■ ■ — criar cópia",
-        "RET : □ ■ □ ■ □ — retorno obrigatório",
-        "SCAN : □ □ ■ □ □ — busca de calor",
-        "HALT : □ □ □ □ ■ — parar",
+        "CONSUM : ■ □ □ ■ □, sugar energia",
+        "ATTACK : ■ ■ ■ □ □, descarga direta",
+        "MOVE : ■ ■ □ □ □, deslocamento",
+        "MASK : □ ■ □ □ ■, disfarce",
+        "REPL : □ ■ □ ■ ■, criar cópia",
+        "RET : □ ■ □ ■ □, retorno obrigatório",
+        "SCAN : □ □ ■ □ □, busca de calor",
+        "HALT : □ □ □ □ ■, parar",
         "### Como um vírus age",
         "Um vírus não analisam. Executa em linha reta:",
         "MASK → MOVE → SCAN → CONSUM → REPL → BLM → RET → HALT",
@@ -303,17 +303,17 @@
         "### Os três níveis de cartão",
         "Karta-Min : ordens simples, qualquer vírus lê",
         "Karta-Med : operações complexas, só Δ-PRIME leem",
-        "Karta-MAX : ordens diretas de Node-0 — ninguém questiona"
+        "Karta-MAX : ordens diretas de Node-0, ninguém questiona"
       ],
       "en": [
         "### What it is",
         "Viruses don't analyze. They execute.",
-        "Their language — ASM-Δ — is not for thinking: it's for acting. Move, drain, blame and repeat.",
+        "Their language (ASM-Δ) is not for thinking: it's for acting. Move, drain, blame and repeat.",
         "### Four forms of communication",
-        "ASM-Δ : thought — a list of instructions, executed in a straight line",
-        "Karta-Δ : writing — punched cards whose holes become orders",
-        "Click-Δ : sound — dry, short, mechanical clicks, like broken switches",
-        "Thermal pulses : heat — temperature waves that coordinate at a distance",
+        "ASM-Δ : thought, a list of instructions, executed in a straight line",
+        "Karta-Δ : writing, punched cards whose holes become orders",
+        "Click-Δ : sound, dry, short, mechanical clicks, like broken switches",
+        "Thermal pulses : heat, temperature waves that coordinate at a distance",
         "### The instructions",
         "MOVE : advance in the chosen direction",
         "TURN : change direction",
@@ -328,7 +328,7 @@
         "ATTACK : offensive discharge",
         "REPAIR : stabilize a valve",
         "ALERT : signal thermal risk",
-        "### The most important instruction — BLM (Blame)",
+        "### The most important instruction: BLM (Blame)",
         "BLM : redirect blame from oneself to another",
         "It's the most-used social instruction on the entire planet. No virus admits a mistake. When something fails, blame is always passed to the next one.",
         "### The clicks",
@@ -341,14 +341,14 @@
         "crrk : projected blame (BLM)",
         "### The punched cards (Karta-Δ)",
         "Each instruction has a hole pattern. ■ = active hole, □ = empty:",
-        "CONSUM : ■ □ □ ■ □ — drain energy",
-        "ATTACK : ■ ■ ■ □ □ — direct discharge",
-        "MOVE : ■ ■ □ □ □ — displacement",
-        "MASK : □ ■ □ □ ■ — disguise",
-        "REPL : □ ■ □ ■ ■ — create copy",
-        "RET : □ ■ □ ■ □ — mandatory return",
-        "SCAN : □ □ ■ □ □ — heat search",
-        "HALT : □ □ □ □ ■ — stop",
+        "CONSUM : ■ □ □ ■ □, drain energy",
+        "ATTACK : ■ ■ ■ □ □, direct discharge",
+        "MOVE : ■ ■ □ □ □, displacement",
+        "MASK : □ ■ □ □ ■, disguise",
+        "REPL : □ ■ □ ■ ■, create copy",
+        "RET : □ ■ □ ■ □, mandatory return",
+        "SCAN : □ □ ■ □ □, heat search",
+        "HALT : □ □ □ □ ■, stop",
         "### How a virus acts",
         "A virus doesn't analyze. It executes in a straight line:",
         "MASK → MOVE → SCAN → CONSUM → REPL → BLM → RET → HALT",
@@ -361,7 +361,7 @@
         "### The three card levels",
         "Karta-Min : simple orders, any virus can read",
         "Karta-Med : complex operations, only Δ-PRIME can read",
-        "Karta-MAX : direct orders from Node-0 — no one questions"
+        "Karta-MAX : direct orders from Node-0, no one questions"
       ]
     },
     "visible": false

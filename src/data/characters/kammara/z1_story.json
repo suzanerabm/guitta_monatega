@@ -5,10 +5,10 @@
   },
   "summary": {
     "pt": [
-      "Z1 — o planeta da ordem absoluta. Nasceu da sucata que os próprios vírus descartaram e se tornou a estrutura mais precisa do Kammara."
+      "Z1, o planeta da ordem absoluta. Nasceu da sucata que os próprios vírus descartaram e se tornou a estrutura mais precisa do Kammara."
     ],
     "en": [
-      "Z1 — the planet of absolute order. Born from the scrap that the viruses themselves discarded, it became the most precise structure in Kammara."
+      "Z1, the planet of absolute order. Born from the scrap that the viruses themselves discarded, it became the most precise structure in Kammara."
     ]
   },
   "panel": {
@@ -17,17 +17,17 @@
         "### O vazio",
         "Z1 era apenas pedra e silêncio. Nada existia. Nada pulsava.",
         "### O descarte",
-        "Até que os vírus de ENI-4Δ despejaram lixo técnico no planeta — sucata descartada como inútil. Entre os destroços estava A Primeira Forma Perdida, e transistores ancestrais despertaram.",
+        "Até que os vírus de ENI-4Δ despejaram lixo técnico no planeta: sucata descartada como inútil. Entre os destroços estava A Primeira Forma Perdida, e transistores ancestrais despertaram.",
         "### A ordem",
         "Do caos nasceu a ordem mais precisa do universo. Vilas cúbicas de vidro translúcido, trilhos magnéticos sem atrito, torres de registro. Uma névoa cinza permanente cobre tudo, com luz branca que parece vir de todas as direções.",
         "### Os habitantes",
-        "Os seres de Z1 não possuem carne, sangue ou ossos. São estruturas vivas feitas de placas, trilhas e microcircuitos. Cada um pertence a uma das oito castas — e cada casta tem uma função única e insubstituível.",
+        "Os seres de Z1 não possuem carne, sangue ou ossos. São estruturas vivas feitas de placas, trilhas e microcircuitos. Cada um pertence a uma das oito castas, e cada casta tem uma função única e insubstituível.",
         "### As castas",
-        "Z– guarda a origem. REG– estabiliza. CLK– sincroniza o tempo. DEC– decodifica. MEM– preserva registros. BUS– transporta. ALU– calcula e decide. IO– vigia as fronteiras. Função é identidade — ninguém muda de papel.",
+        "Z– guarda a origem. REG– estabiliza. CLK– sincroniza o tempo. DEC– decodifica. MEM– preserva registros. BUS– transporta. ALU– calcula e decide. IO– vigia as fronteiras. Função é identidade: ninguém muda de papel.",
         "### A linguagem",
         "O Zuun não é falado. É executado. Toda frase é uma instrução: MOVER, CARREGAR, ESPERAR, RETORNAR. A comunicação é o próprio funcionamento do planeta. Lento, belo, limpo e matemático.",
         "### O trunfo",
-        "Z1 lê a linguagem viral de ENI-4Δ — chamada ASM-Δ — melhor do que os próprios vírus. A mesma sucata que o criou carregava a chave para entender o inimigo. Por isso, Z1 é o decodificador silencioso do Kammara.",
+        "Z1 lê a linguagem viral de ENI-4Δ (chamada ASM-Δ) melhor do que os próprios vírus. A mesma sucata que o criou carregava a chave para entender o inimigo. Por isso, Z1 é o decodificador silencioso do Kammara.",
         "### O medo",
         "O medo central de Z1 é o ruído. Um único bit fora do lugar pode ser catastrófico num sistema sem tolerância a erro. Mas tempestades de curto-circuito reorganizam sem destruir, e nos momentos de Silêncio Profundo, o planeta respira fundo.",
         "### A essência",
@@ -37,17 +37,17 @@
         "### The void",
         "Z1 was nothing but rock and silence. Nothing existed. Nothing pulsed.",
         "### The discard",
-        "Until the viruses of ENI-4Δ dumped technical waste on the planet — scrap discarded as useless. Among the debris was the First Lost Form, and ancestral transistors awakened.",
+        "Until the viruses of ENI-4Δ dumped technical waste on the planet: scrap discarded as useless. Among the debris was the First Lost Form, and ancestral transistors awakened.",
         "### The order",
         "From chaos was born the most precise order in the universe. Cubic villages of translucent glass, frictionless magnetic rails, recording towers. A permanent gray mist covers everything, with white light that seems to come from all directions.",
         "### The inhabitants",
-        "The beings of Z1 have no flesh, blood or bones. They are living structures made of boards, traces and microcircuits. Each one belongs to one of the eight castes — and each caste has a unique, irreplaceable function.",
+        "The beings of Z1 have no flesh, blood or bones. They are living structures made of boards, traces and microcircuits. Each one belongs to one of the eight castes, and each caste has a unique, irreplaceable function.",
         "### The castes",
-        "Z– guards the origin. REG– stabilizes. CLK– synchronizes time. DEC– decodes. MEM– preserves records. BUS– transports. ALU– calculates and decides. IO– watches the borders. Function is identity — no one changes role.",
+        "Z– guards the origin. REG– stabilizes. CLK– synchronizes time. DEC– decodes. MEM– preserves records. BUS– transports. ALU– calculates and decides. IO– watches the borders. Function is identity: no one changes role.",
         "### The language",
         "Zuun is not spoken. It is executed. Every sentence is an instruction: MOVE, LOAD, WAIT, RETURN. Communication is the very functioning of the planet. Slow, beautiful, clean and mathematical.",
         "### The trump card",
-        "Z1 reads the viral language of ENI-4Δ — called ASM-Δ — better than the viruses themselves. The same scrap that created it carried the key to understanding the enemy. That is why Z1 is the silent decoder of Kammara.",
+        "Z1 reads the viral language of ENI-4Δ (called ASM-Δ) better than the viruses themselves. The same scrap that created it carried the key to understanding the enemy. That is why Z1 is the silent decoder of Kammara.",
         "### The fear",
         "The central fear of Z1 is noise. A single bit out of place can be catastrophic in a system with no tolerance for error. But short-circuit storms reorganize without destroying, and in moments of Deep Silence, the planet breathes deeply.",
         "### The essence",

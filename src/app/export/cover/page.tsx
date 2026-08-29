@@ -1,6 +1,11 @@
 import { Box } from '@chakra-ui/react';
 import { KammaraSagaPosterCover } from '@/components/KammaraSagaPosterCover';
 
+// Rota sempre dinâmica e sem cache — as artes da capa mudam com o mesmo nome
+// de arquivo, então o navegador não pode reusar versões antigas na prévia.
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 /**
  * Rota de export (não faz parte do site). Renderiza a capa da saga num
  * container de tamanho fixo 1000×1600 para o script de screenshot capturar
@@ -25,7 +30,7 @@ export default function CoverExportPage() {
         [data-next-badge-root], [data-next-badge] { display: none !important; }
       `}</style>
       <Box css={{ width: '1000px', height: '1600px' }} data-export-target="cover">
-        <KammaraSagaPosterCover background="/imgs/kammara/orfv/_scenes/9noite_em_orfv.jpg" />
+        <KammaraSagaPosterCover background="/imgs/kammara/_capa/fundo.jpg" />
       </Box>
     </Box>
   );

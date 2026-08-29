@@ -172,9 +172,8 @@ export function KammaraProgressHeatmap({
           )}
           <Heading
             as="h2"
-            fontFamily="body"
+            textStyle="heading"
             fontSize={{ base: '1.6rem', md: '2.2rem', xl: '2.6rem' }}
-            fontWeight="bold"
             lineHeight={1}
             color={color}
             letterSpacing="heroTitle"

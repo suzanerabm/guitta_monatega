@@ -5,61 +5,61 @@
   },
   "summary": {
     "pt": [
-      "Mesh ao norte — o domínio modular de TripleC. A região onde a forma encontra propósito, com cidades-classe, pontes de herança e torres-template que replicam padrões e dão origem a estruturas inteiras."
+      "Mesh ao norte: o domínio modular de TripleC. A região onde a forma encontra propósito, com cidades-classe, pontes de herança e torres-template que replicam padrões e dão origem a estruturas inteiras."
     ],
     "en": [
-      "Mesh to the north — the modular domain of TripleC. The region where form meets purpose, with class-cities, inheritance bridges, and template-towers that replicate patterns and give rise to entire structures."
+      "Mesh to the north: the modular domain of TripleC. The region where form meets purpose, with class-cities, inheritance bridges, and template-towers that replicate patterns and give rise to entire structures."
     ]
   },
   "panel": {
     "story": {
       "pt": [
         "### Resumo",
-        "Mesh — o domínio da forma viva de TripleC. A região onde a lógica bruta de malloc aprende a aceitar limites, cada cidade nasce de um molde vivo que pode gerar outras, e as Pontes de Herança ligam o que veio antes ao que existe agora.",
+        "Mesh: o domínio da forma viva de TripleC. A região onde a lógica bruta de malloc aprende a aceitar limites, cada cidade nasce de um molde vivo que pode gerar outras, e as Pontes de Herança ligam o que veio antes ao que existe agora.",
         "### A região",
-        "Mesh ocupa a faixa central-oriental de TripleC, entre malloc ao sul, a Niul Forest ao norte e Sharp a leste. É onde a energia instintiva de malloc encontra organização consciente. Se malloc é memória viva, Mesh é memória estruturada em forma habitável. A paisagem nasce da organização consciente da energia herdada — tudo existe porque faz sentido existir.",
+        "Mesh ocupa a faixa central-oriental de TripleC, entre malloc ao sul, a Niul Forest ao norte e Sharp a leste. É onde a energia instintiva de malloc encontra organização consciente. Se malloc é memória viva, Mesh é memória estruturada em forma habitável. A paisagem nasce da organização consciente da energia herdada: tudo existe porque faz sentido existir.",
         "### As leis que regem tudo",
         "Quatro Leis Fundamentais sustentam Mesh. A Lei da Modularidade: cada parte pertence a um conjunto maior. A Lei da Herança Geológica: toda forma se apoia em outra, mais antiga. A Lei da Coerência: formas incoerentes geram fraturas estruturais reais. E a Lei das Muitas Formas: o mesmo material pode tomar formas diferentes, desde que cada uma cumpra um propósito.",
         "### As Cidades-Classe",
-        "Cada cidade de Mesh tem um centro, caminhos que conectam partes, portais de entrada, fronteiras energéticas que definem onde ela começa e termina, e praças onde se comunica com outras cidades. As cidades evoluem por especialização. Quando uma acumula complexidade demais, se divide — e uma nova cidade nasce da que já existia.",
+        "Cada cidade de Mesh tem um centro, caminhos que conectam partes, portais de entrada, fronteiras energéticas que definem onde ela começa e termina, e praças onde se comunica com outras cidades. As cidades evoluem por especialização. Quando uma acumula complexidade demais, se divide; uma nova cidade nasce da que já existia.",
         "### As estruturas",
-        "As Pontes de Herança conectam cidades antigas às que nasceram delas, levando adiante a forma que já provou funcionar. Torres replicam padrões e dão origem a cidades inteiras a partir de uma única forma. Há áreas onde o terreno muda conforme quem caminha — quem conhece usa como atalho, quem não conhece se perde. E no subsolo, salas hexagonais mantêm estáveis as passagens de Cshift que cruzam a região.",
+        "As Pontes de Herança conectam cidades antigas às que nasceram delas, levando adiante a forma que já provou funcionar. Torres replicam padrões e dão origem a cidades inteiras a partir de uma única forma. Há áreas onde o terreno muda conforme quem caminha: quem conhece usa como atalho, quem não conhece se perde. E no subsolo, salas hexagonais mantêm estáveis as passagens de Cshift que cruzam a região.",
         "### Os bunniets",
-        "Os bunniets de Mesh são uma evolução dos de malloc: mais altos, mais definidos, com padrões geométricos verde-dourados na pele. Pelagem creme. Ossatura reforçada por filamentos lineares. Antenas estruturadas. Enxergam várias versões possíveis de uma mesma forma ao mesmo tempo. Organizam emoções em blocos internos. E conseguem criar pequenas estruturas de energia com as próprias mãos — um gesto, uma forma, e algo passa a existir.",
+        "Os bunniets de Mesh são uma evolução dos de malloc: mais altos, mais definidos, com padrões geométricos verde-dourados na pele. Pelagem creme. Ossatura reforçada por filamentos lineares. Antenas estruturadas. Enxergam várias versões possíveis de uma mesma forma ao mesmo tempo. Organizam emoções em blocos internos. E conseguem criar pequenas estruturas de energia com as próprias mãos: um gesto, uma forma, e algo passa a existir.",
         "### As castas",
-        "Arquitetos criam o que vai existir. Moduladores ajustam o que já existe. Polimórficos — raros — conseguem dar várias formas ao mesmo material. E os Guardiões garantem que tudo continue fazendo sentido junto.",
+        "Arquitetos criam o que vai existir. Moduladores ajustam o que já existe. Polimórficos (raros) conseguem dar várias formas ao mesmo material. E os Guardiões garantem que tudo continue fazendo sentido junto.",
         "### O governo",
-        "Mesh é governada por um Conselho formado pelos mais experientes de cada função. O Conselho decide o que pode ser construído, mantém equilíbrio com malloc e Sharp, e garante que as passagens de Cshift continuem funcionando. Ele não cria ideias — verifica se elas podem existir sem destruir o que já existe.",
+        "Mesh é governada por um Conselho formado pelos mais experientes de cada função. O Conselho decide o que pode ser construído, mantém equilíbrio com malloc e Sharp, e garante que as passagens de Cshift continuem funcionando. Ele não cria ideias; verifica se elas podem existir sem destruir o que já existe.",
         "### Os valores",
         "Clareza, elegância, propósito, precisão, responsabilidade sobre as formas criadas. Cada bunniet de Mesh sente o peso do que constrói. O lazer reflete isso: jogos de raciocínio em três dimensões, debates formais chamados de duelos de coerência, arte geométrica, labirintos que mudam conforme quem os percorre.",
         "### Os perigos",
         "Quando algo perde sentido, cidades inteiras se desfazem. Regiões às vezes ficam presas repetindo a mesma forma. Torres instáveis criam construções incompletas. E o maior risco é organizar tanto que a vida fica presa dentro da forma.",
         "### A ponte entre instinto e controle",
-        "Mesh é a ponte entre o instinto de malloc e o controle de Sharp. O eixo estrutural do Cshift. A ordem viva que sustenta TripleC — um território elegante, coerente, belo, e perigoso quando a lógica falha."
+        "Mesh é a ponte entre o instinto de malloc e o controle de Sharp. O eixo estrutural do Cshift. A ordem viva que sustenta TripleC, um território elegante, coerente, belo, e perigoso quando a lógica falha."
       ],
       "en": [
         "### Summary",
-        "Mesh — the domain of living form in TripleC. The region where malloc's raw logic learns to accept limits, where each city is born from a living mold that can spawn others, and the Heritage Bridges link what came before to what exists now.",
+        "Mesh: the domain of living form in TripleC. The region where malloc's raw logic learns to accept limits, where each city is born from a living mold that can spawn others, and the Heritage Bridges link what came before to what exists now.",
         "### The region",
-        "Mesh occupies the central-eastern band of TripleC, between malloc to the south, the Niul Forest to the north and Sharp to the east. It is where malloc's instinctive energy meets conscious organization. If malloc is living memory, Mesh is memory structured into habitable form. The landscape arises from the conscious organization of inherited energy — everything exists because it makes sense to exist.",
+        "Mesh occupies the central-eastern band of TripleC, between malloc to the south, the Niul Forest to the north and Sharp to the east. It is where malloc's instinctive energy meets conscious organization. If malloc is living memory, Mesh is memory structured into habitable form. The landscape arises from the conscious organization of inherited energy: everything exists because it makes sense to exist.",
         "### The laws that govern everything",
         "Four Fundamental Laws sustain Mesh. The Law of Modularity: each part belongs to a greater whole. The Law of Geological Inheritance: every form rests on another, older one. The Law of Coherence: incoherent forms produce real structural fractures. And the Law of Many Forms: the same material can take different shapes, as long as each one serves a purpose.",
         "### The Class-Cities",
-        "Each city in Mesh has a center, paths that connect its parts, entry portals, energetic borders that define where it begins and ends, and plazas where it communicates with other cities. Cities evolve through specialization. When one accumulates too much complexity, it splits — and a new city is born from the one that already existed.",
+        "Each city in Mesh has a center, paths that connect its parts, entry portals, energetic borders that define where it begins and ends, and plazas where it communicates with other cities. Cities evolve through specialization. When one accumulates too much complexity, it splits; a new city is born from the one that already existed.",
         "### The structures",
-        "The Heritage Bridges connect old cities to the ones born from them, carrying forward the form that has already proven to work. Towers replicate patterns and give rise to entire cities from a single form. There are areas where the terrain shifts according to who walks it — those who know it use it as a shortcut, those who don't get lost. And underground, hexagonal chambers keep the Cshift passages that cross the region stable.",
+        "The Heritage Bridges connect old cities to the ones born from them, carrying forward the form that has already proven to work. Towers replicate patterns and give rise to entire cities from a single form. There are areas where the terrain shifts according to who walks it: those who know it use it as a shortcut, those who don't get lost. And underground, hexagonal chambers keep the Cshift passages that cross the region stable.",
         "### The bunniets",
-        "The bunniets of Mesh are an evolution of malloc's: taller, more defined, with green-gold geometric patterns on the skin. Cream-colored fur. Bone structure reinforced by linear filaments. Structured antennae. They see several possible versions of the same form at once. They organize emotions into internal blocks. And they can create small structures of energy with their own hands — a gesture, a form, and something comes into being.",
+        "The bunniets of Mesh are an evolution of malloc's: taller, more defined, with green-gold geometric patterns on the skin. Cream-colored fur. Bone structure reinforced by linear filaments. Structured antennae. They see several possible versions of the same form at once. They organize emotions into internal blocks. And they can create small structures of energy with their own hands: a gesture, a form, and something comes into being.",
         "### The castes",
-        "Architects create what is to exist. Modulators adjust what already exists. Polymorphics — rare — can give many forms to the same material. And the Guardians make sure everything keeps making sense together.",
+        "Architects create what is to exist. Modulators adjust what already exists. Polymorphics (rare) can give many forms to the same material. And the Guardians make sure everything keeps making sense together.",
         "### The government",
-        "Mesh is governed by a Council formed of the most experienced of each function. The Council decides what may be built, keeps balance with malloc and Sharp, and ensures the Cshift passages keep working. It does not create ideas — it verifies whether they can exist without destroying what already exists.",
+        "Mesh is governed by a Council formed of the most experienced of each function. The Council decides what may be built, keeps balance with malloc and Sharp, and ensures the Cshift passages keep working. It does not create ideas; it verifies whether they can exist without destroying what already exists.",
         "### The values",
         "Clarity, elegance, purpose, precision, responsibility for the forms created. Every bunniet of Mesh feels the weight of what it builds. Leisure reflects this: three-dimensional reasoning games, formal debates called coherence duels, geometric art, labyrinths that change according to who walks them.",
         "### The dangers",
         "When something loses meaning, whole cities come undone. Regions sometimes get stuck repeating the same form. Unstable towers create incomplete constructions. And the greatest risk is organizing so much that life becomes trapped inside the form.",
         "### The bridge between instinct and control",
-        "Mesh is the bridge between malloc's instinct and Sharp's control. The structural axis of the Cshift. The living order that sustains TripleC — an elegant, coherent, beautiful territory, and a dangerous one when logic fails."
+        "Mesh is the bridge between malloc's instinct and Sharp's control. The structural axis of the Cshift. The living order that sustains TripleC, an elegant, coherent, beautiful territory, and a dangerous one when logic fails."
       ]
     }
   }

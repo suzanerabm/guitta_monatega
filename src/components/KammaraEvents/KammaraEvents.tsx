@@ -131,9 +131,8 @@ export function KammaraEvents({
         )}
         <Heading
           as="h2"
-          fontFamily="body"
+          textStyle="heading"
           fontSize={{ base: '1.6rem', md: '2.2rem', xl: '2.6rem' }}
-          fontWeight="bold"
           lineHeight={1}
           color={color}
           letterSpacing="heroTitle"
@@ -212,9 +211,8 @@ function CategoryBlock({
         </Text>
         <Heading
           as="h3"
-          fontFamily="body"
+          textStyle="heading"
           fontSize={{ base: '1rem', md: '1.2rem' }}
-          fontWeight="semibold"
           letterSpacing="hero"
           textTransform="uppercase"
           color={color}

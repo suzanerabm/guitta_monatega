@@ -43,9 +43,8 @@ export function ArtSection({
       <Box maxW="1200px" mx="auto" px={{ base: '1rem', md: '2rem' }}>
         <Heading
           as="h2"
-          fontFamily="body"
+          textStyle="heading"
           fontSize="2xl"
-          fontWeight="bold"
           letterSpacing="tight"
           margin="0 0 0.3rem"
           color={titleColor}

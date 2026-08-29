@@ -5,7 +5,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Guitta Monatega Studio',
-  description: 'Portfolio — Guitta Monatega Studio',
+  description: 'Portfolio: Guitta Monatega Studio',
 };
 
 export default function RootLayout({
@@ -22,6 +22,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400&display=swap"
           rel="stylesheet"
         />
+        <link rel="stylesheet" href="https://use.typekit.net/nlt5pwq.css" />
       </head>
       <body>
         <Providers>{children}</Providers>

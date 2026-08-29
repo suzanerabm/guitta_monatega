@@ -11,8 +11,8 @@
     },
     "image": "/imgs/kammara/z1/zeus.png",
     "bio": {
-      "pt": "O ancestral do Esquadrão, guardião do que veio antes. Raramente se move — quando o faz, o planeta inteiro percebe. Lê o que foi descartado e encontra ordem no abandono; é ele quem guarda os registros mais perigosos de Z1. ",
-      "en": "The Squad's ancestor, keeper of what came before. He rarely moves — when he does, the entire planet notices. He reads what was discarded and finds order in abandonment; it is he who guards Z1's most dangerous records."
+      "pt": "O ancestral do Esquadrão, guardião do que veio antes. Raramente se move; quando o faz, o planeta inteiro percebe. Lê o que foi descartado e encontra ordem no abandono; é ele quem guarda os registros mais perigosos de Z1. ",
+      "en": "The Squad's ancestor, keeper of what came before. He rarely moves; when he does, the entire planet notices. He reads what was discarded and finds order in abandonment; it is he who guards Z1's most dangerous records."
     },
     "backImage": "/imgs/kammara/z1/zeus_costas.png",
     "backTitle": {
@@ -82,8 +82,8 @@
     },
     "image": "/imgs/kammara/z1/Aruun.png",
     "bio": {
-      "pt": "É a âncora do Esquadrão: onde há caos instrucional, ele impõe estado firme e reergue setores depois das tempestades. Quando Aruun está presente, tudo ao redor para de tremer — não por lentidão, por estabilidade garantida.",
-      "en": "He is the Squad's anchor: where there is instruction chaos, he imposes a firm state and rebuilds sectors after the storms. When Aruun is present, everything around stops trembling — not from sluggishness, but because stability is guaranteed."
+      "pt": "É a âncora do Esquadrão: onde há caos instrucional, ele impõe estado firme e reergue setores depois das tempestades. Quando Aruun está presente, tudo ao redor para de tremer, não por lentidão, por estabilidade garantida.",
+      "en": "He is the Squad's anchor: where there is instruction chaos, he imposes a firm state and rebuilds sectors after the storms. When Aruun is present, everything around stops trembling, not from sluggishness, but because stability is guaranteed."
     },
     "backImage": "/imgs/kammara/z1/Aruun_costas.png",
     "backTitle": {
@@ -153,8 +153,8 @@
     },
     "image": "/imgs/kammara/z1/Kaal.png",
     "bio": {
-      "pt": "É o ponto onde o fluxo se bifurca e escolhe — a lâmina que separa sem ferir. Calcula, compara, decide. Quando o Esquadrão hesita, Kaal já sabe o caminho: decide sem vacilar enquanto os outros ainda deliberam.",
-      "en": "The point where the flow forks and chooses — the blade that separates without wounding. Calculates, compares, decides. When the Squad hesitates, Kaal already knows the way: he decides without wavering while the others still deliberate."
+      "pt": "É o ponto onde o fluxo se bifurca e escolhe: a lâmina que separa sem ferir. Calcula, compara, decide. Quando o Esquadrão hesita, Kaal já sabe o caminho: decide sem vacilar enquanto os outros ainda deliberam.",
+      "en": "The point where the flow forks and chooses: the blade that separates without wounding. Calculates, compares, decides. When the Squad hesitates, Kaal already knows the way: he decides without wavering while the others still deliberate."
     },
     "backImage": "/imgs/kammara/z1/Kaal_costas.png",
     "backTitle": {
@@ -224,8 +224,8 @@
     },
     "image": "/imgs/kammara/z1/Ren.png",
     "bio": {
-      "pt": "É a correnteza do Esquadrão — move, roteia, conecta. Leva cada coisa aonde precisa chegar sem nunca reter. Quando Ren para, algo está errado no planeta. Sua presença é a garantia de que o fluxo continua.",
-      "en": "He is the Squad's current — he moves, routes, connects. Carries everything where it needs to go without ever holding on. When Ren stops, something is wrong on the planet. His presence is the assurance that the flow goes on."
+      "pt": "É a correnteza do Esquadrão: move, roteia, conecta. Leva cada coisa aonde precisa chegar sem nunca reter. Quando Ren para, algo está errado no planeta. Sua presença é a garantia de que o fluxo continua.",
+      "en": "He is the Squad's current: he moves, routes, connects. Carries everything where it needs to go without ever holding on. When Ren stops, something is wrong on the planet. His presence is the assurance that the flow goes on."
     },
     "backImage": "/imgs/kammara/z1/Ren_costas.png",
     "backTitle": {
@@ -295,8 +295,8 @@
     },
     "image": "/imgs/kammara/z1/Synn.png",
     "bio": {
-      "pt": "É o compasso vivo do Esquadrão. Marca o pulso que mantém todas as castas no mesmo ritmo — sem ele, os outros se desencontrariam no tempo. Regular, constante, inevitável: onde Synn está, o tempo se organiza.",
-      "en": "He is the Squad's living metronome. He marks the pulse that keeps every caste in the same rhythm — without him, the others would drift out of time. Regular, constant, inevitable: wherever Synn is, time falls into order."
+      "pt": "É o compasso vivo do Esquadrão. Marca o pulso que mantém todas as castas no mesmo ritmo (sem ele, os outros se desencontrariam no tempo). Regular, constante, inevitável: onde Synn está, o tempo se organiza.",
+      "en": "He is the Squad's living metronome. He marks the pulse that keeps every caste in the same rhythm (without him, the others would drift out of time). Regular, constant, inevitable: wherever Synn is, time falls into order."
     },
     "backImage": "/imgs/kammara/z1/Synn_costas.png",
     "backTitle": {
