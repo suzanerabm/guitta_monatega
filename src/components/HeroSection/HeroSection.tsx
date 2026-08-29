@@ -82,6 +82,7 @@ export function HeroSection({
         <Text
           as="span"
           display="block"
+          fontFamily="heading"
           fontSize="heroHomeLabel"
           letterSpacing="wider"
           textTransform="uppercase"
@@ -139,6 +140,7 @@ export function HeroSection({
       {children}
       <Text
         as="span"
+        fontFamily="heading"
         color={labelColor ?? 'heroDefaultLabel'}
         fontSize="heroLabel"
         fontWeight="regular"
@@ -169,6 +171,7 @@ export function HeroSection({
       {labelBottom && (
         <Text
           as="span"
+          fontFamily="heading"
           color={labelColor ?? 'heroDefaultLabel'}
           fontSize="heroLabel"
           fontWeight="regular"

@@ -233,7 +233,7 @@ function FilterButton({
     <Box
       as="button"
       onClick={onClick}
-      fontFamily="body"
+      textStyle="heading"
       fontSize={{ base: 'xs', md: 'sm' }}
       letterSpacing="normal"
       textTransform="uppercase"

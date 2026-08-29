@@ -43,15 +43,16 @@ export function Header({ homePath, transparent = false }: HeaderProps) {
     >
       <Flex justify="space-between" align="center">
         <Box
+          fontFamily="heading"
           fontSize={isCompact ? 'base' : { base: 'base', md: 'xl' }}
-          fontWeight="light"
+          fontWeight="semibold"
           letterSpacing="wider"
           textTransform="lowercase"
           color="inherit"
           transition="all 0.2s ease"
         >
           <NextLink href={homePath} style={{ color: 'inherit', textDecoration: 'none' }}>
-            <Box as="strong" fontWeight="medium">guitta</Box>{' '}monatega studio
+            <Box as="strong" fontWeight="light">guitta</Box>{' '}monatega studio
           </NextLink>
         </Box>
         <LanguageToggle />
