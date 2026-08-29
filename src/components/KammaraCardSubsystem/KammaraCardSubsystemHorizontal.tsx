@@ -229,10 +229,10 @@ export function KammaraCardSubsystemHorizontal({
               >
                 <Flex direction="column" align="flex-start" gap="xs" flex={1} minW={0}>
                   <Text
+                    textStyle="heading"
                     fontSize="xs"
                     letterSpacing="hero"
                     textTransform="uppercase"
-                    fontWeight="bold"
                     color={color}
                     m={0}
                     opacity={0.9}
@@ -346,6 +346,9 @@ export function KammaraCardSubsystemHorizontal({
                     lineHeight: 1.7,
                     fontWeight: 300,
                     color: textColor,
+                    '& h2, & h3': {
+                      fontFamily: 'var(--chakra-fonts-heading)',
+                    },
                     '& h3': {
                       fontSize: '0.65rem',
                       fontWeight: 600,
@@ -515,10 +518,10 @@ export function KammaraCardSubsystemHorizontal({
           zIndex={3}
         >
           <Text
+            textStyle="heading"
             fontSize="xs"
             letterSpacing="hero"
             textTransform="uppercase"
-            fontWeight="bold"
             color={color}
             m={0}
             opacity={0.9}
@@ -629,6 +632,9 @@ export function KammaraCardSubsystemHorizontal({
                 'linear-gradient(to bottom, transparent 0%, black 4%, black 94%, transparent 100%)',
               WebkitMaskImage:
                 'linear-gradient(to bottom, transparent 0%, black 4%, black 94%, transparent 100%)',
+              '& h2, & h3': {
+                fontFamily: 'var(--chakra-fonts-heading)',
+              },
               '& h3': {
                 fontSize: '0.62rem',
                 fontWeight: 600,
@@ -716,6 +722,7 @@ function StatsBar({
               {stat.icon}
             </Box>
             <Text
+              textStyle="heading"
               fontSize="xs"
               letterSpacing="wider"
               textTransform="uppercase"
@@ -727,8 +734,8 @@ function StatsBar({
             </Text>
           </Flex>
           <Text
+            textStyle="heading"
             fontSize={compact ? 'sm' : 'base'}
-            fontWeight="semibold"
             color={textColor}
             m={0}
             lineHeight={1.1}

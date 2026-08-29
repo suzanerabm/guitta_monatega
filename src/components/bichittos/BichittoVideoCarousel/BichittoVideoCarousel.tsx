@@ -106,8 +106,8 @@ export function BichittoVideoCarousel({
             m={0}
             px="0.8rem"
             py="0.6rem"
+            textStyle="heading"
             fontSize="sm"
-            fontWeight="bold"
             color="white"
             css={{
               background: 'linear-gradient(180deg, transparent, rgba(0,0,0,0.6))',

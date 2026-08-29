@@ -40,14 +40,14 @@ export default async function PrivacyPage({
         <Heading
           as="h1"
           fontSize={{ base: '2.4rem', md: '3rem' }}
-          fontWeight="semibold"
+          textStyle="heading"
           letterSpacing="tight"
           lineHeight={1.05}
           color="ink"
         >
           {t('title')}
         </Heading>
-        <Text fontSize="sm" opacity={0.65} color="ink">
+        <Text fontSize="sm" opacity={0.65} textStyle="heading" color="ink">
           {t('lastUpdate')}
         </Text>
         <Text fontSize={{ base: 'base', md: 'md' }} lineHeight={1.7} color="ink">
@@ -60,7 +60,7 @@ export default async function PrivacyPage({
               <Heading
                 as="h2"
                 fontSize={{ base: '1.1rem', md: '1.25rem' }}
-                fontWeight="semibold"
+                textStyle="heading"
                 letterSpacing="wide"
                 textTransform="uppercase"
                 mb="sm"

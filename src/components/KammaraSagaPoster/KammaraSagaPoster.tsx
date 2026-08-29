@@ -199,6 +199,7 @@ export function KammaraSagaPoster({
 
       {/* Top label */}
       <Text
+        textStyle="heading"
         position="absolute"
         top="3%"
         left={0}
@@ -293,6 +294,7 @@ export function KammaraSagaPoster({
         <Text
           as="span"
           display="block"
+          textStyle="heading"
           mt="2xs"
           fontSize="xs"
           letterSpacing="hero"

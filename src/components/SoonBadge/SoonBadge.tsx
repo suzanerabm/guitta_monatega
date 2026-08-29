@@ -33,7 +33,7 @@ export function SoonBadge({ label = 'soon', overlay = false }: SoonBadgeProps) {
           textTransform="uppercase"
         >
           <Sparkles size={12} />
-          <Text>{label}</Text>
+          <Text fontFamily="heading">{label}</Text>
         </Flex>
       </Flex>
     );
@@ -57,7 +57,7 @@ export function SoonBadge({ label = 'soon', overlay = false }: SoonBadgeProps) {
       textTransform="uppercase"
     >
       <Sparkles size={12} />
-      <Text as="span">{label}</Text>
+      <Text as="span" fontFamily="heading">{label}</Text>
     </Flex>
   );
 }

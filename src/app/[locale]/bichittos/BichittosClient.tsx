@@ -414,10 +414,10 @@ export function BichittosClient({ data }: Props) {
                     }}
                   >
                     <Text
+                      textStyle="heading"
                       fontSize="xs"
                       letterSpacing="hero"
                       textTransform="uppercase"
-                      fontWeight="bold"
                       color={colors.textColor}
                       mb="1rem"
                     >
@@ -438,7 +438,7 @@ export function BichittosClient({ data }: Props) {
                         }}
                       />
                     )}
-                    <Text fontSize={{ base: 'lg', md: 'xl' }} fontWeight="bold" color={colors.textColor} mb="1rem">
+                    <Text textStyle="heading" fontSize={{ base: 'lg', md: 'xl' }} color={colors.textColor} mb="1rem">
                       {books[0].label}
                     </Text>
                     {books[0].buy ? (

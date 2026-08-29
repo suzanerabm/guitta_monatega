@@ -20,6 +20,7 @@ export function SoonPanel({ label = 'soon', color = 'textOverlayDim' }: SoonPane
         borderRadius="full"
         px="lg"
         py="xs"
+        fontFamily="heading"
         fontSize="sm"
         fontWeight="light"
         letterSpacing="widest"

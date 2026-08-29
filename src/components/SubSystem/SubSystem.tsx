@@ -248,6 +248,9 @@ export function SubSystem({
                     // Color falls back to titleColor when no subtitleColor
                     // is passed, matching DSTextPanel's `--ds-subtitle-color`
                     // resolution (subtitleColor || titleColor).
+                    '& h2, & h3': {
+                      fontFamily: 'var(--chakra-fonts-heading)',
+                    },
                     '& h3': {
                       fontSize: '0.75rem',
                       fontWeight: 600,

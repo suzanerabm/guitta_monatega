@@ -101,7 +101,7 @@ export function Breadcrumb({
                 {item.label}
               </NextLink>
             ) : (
-              <Text as="span" color={tintColor ? 'white' : 'inkSoft'} marginBottom={useGlyphs ? '5px' : '0'}>
+              <Text as="span" textStyle="heading" color={tintColor ? 'white' : 'inkSoft'} marginBottom={useGlyphs ? '5px' : '0'}>
                 {item.label}
               </Text>
             )}

@@ -257,10 +257,10 @@ export function KammaraCharacterCard({
               {worldCrestGlyph}
             </Box>
             <Text
+              textStyle="heading"
               fontSize="xs"
               letterSpacing="hero"
               textTransform="uppercase"
-              fontWeight="bold"
               color={color}
               m={0}
               opacity={0.9}
@@ -382,10 +382,10 @@ export function KammaraCharacterCard({
                     {/* Label + glyph grouped on the left */}
                     <Flex align="center" gap="xs" flex="0 0 auto" minW={0}>
                       <Text
+                        textStyle="heading"
                         fontSize={{ base: '0.6rem', md: 'xs' }}
                         letterSpacing={{ base: 'wider', md: 'hero' }}
                         textTransform="uppercase"
-                        fontWeight="semibold"
                         color={color}
                         m={0}
                         opacity={0.8}
@@ -408,10 +408,10 @@ export function KammaraCharacterCard({
                     {/* Value on the right — flex:1 so it takes the remaining
                         space and aligns right, with ellipsis on overflow. */}
                     <Text
+                      textStyle="heading"
                       fontSize={{ base: '0.6rem', md: 'xs' }}
                       letterSpacing={{ base: 'wider', md: 'hero' }}
                       textTransform="uppercase"
-                      fontWeight="bold"
                       color="textOverlayBright"
                       m={0}
                       flex="1 1 auto"
@@ -535,10 +535,10 @@ export function KammaraCharacterCard({
               flexShrink={0}
             >
               <Text
+                textStyle="heading"
                 fontSize="xs"
                 letterSpacing="hero"
                 textTransform="uppercase"
-                fontWeight="bold"
                 color={color}
                 m={0}
                 opacity={0.9}
@@ -546,10 +546,10 @@ export function KammaraCharacterCard({
                 {backTitle ?? (dorsalMeaning ? 'Glifo Dorsal' : 'Costas')}
               </Text>
               <Text
+                textStyle="heading"
                 fontSize="xs"
                 letterSpacing="hero"
                 textTransform="uppercase"
-                fontWeight="semibold"
                 color="textOverlayBright"
                 m={0}
                 opacity={0.8}

@@ -271,10 +271,10 @@ export function KammaraCharacterGallery<T>({
               </Box>
               {title && (
                 <Text
+                  textStyle="heading"
                   fontSize="xs"
                   letterSpacing="hero"
                   textTransform="uppercase"
-                  fontWeight="bold"
                   color={tc}
                   m={0}
                   opacity={0.9}
@@ -291,9 +291,9 @@ export function KammaraCharacterGallery<T>({
 
             {/* Right: HUD-style counter */}
             <Text
+              textStyle="heading"
               fontSize="xs"
               letterSpacing="wide"
-              fontWeight="semibold"
               color={tc}
               m={0}
               opacity={0.7}

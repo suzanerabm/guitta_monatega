@@ -353,6 +353,7 @@ export function HomeBanner({
         >
           <Text
             fontSize="bannerLabel"
+            fontFamily="heading"
             letterSpacing="widest"
             textTransform="uppercase"
             color={labelColor ?? (isArte ? 'arteLabel' : 'bannerLabel')}
@@ -364,7 +365,7 @@ export function HomeBanner({
           <Heading
             as="h2"
             fontSize="h2"
-            fontWeight="bold"
+            textStyle="heading"
             color={titleColor ?? (isArte ? 'ink' : 'white')}
             letterSpacing="normal"
             textTransform="uppercase"
@@ -395,7 +396,7 @@ export function HomeBanner({
             left={orderSide === 'left' ? '70px' : 'auto'}
             right={orderSide === 'right' ? '70px' : 'auto'}
             fontSize="bannerOrder"
-            fontWeight="bold"
+            textStyle="heading"
             color={isArte ? 'ink' : 'white'}
             opacity={0.85}
             lineHeight={1}

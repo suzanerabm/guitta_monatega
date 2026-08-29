@@ -65,6 +65,7 @@ export function HeroSection({
       >
         <Heading
           as="h1"
+          fontFamily="heading"
           fontSize="heroHome"
           fontWeight="thin"
           letterSpacing="wide"
@@ -152,9 +153,9 @@ export function HeroSection({
       </Text>
       <Heading
         as="h1"
+        textStyle="heading"
         color={textColor ?? 'heroDefaultText'}
         fontSize={titleSize ?? 'h1'}
-        fontWeight="bold"
         letterSpacing="heroTitle"
         textTransform="uppercase"
         textAlign="center"

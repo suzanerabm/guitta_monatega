@@ -166,10 +166,10 @@ export function KammaraPlanetCard({
           zIndex={3}
         >
           <Text
+            textStyle="heading"
             fontSize="xs"
             letterSpacing="hero"
             textTransform="uppercase"
-            fontWeight="bold"
             color={color}
             m={0}
             css={{ textShadow: `0 2px 10px ${color}, 0 0 20px ${color}88` }}

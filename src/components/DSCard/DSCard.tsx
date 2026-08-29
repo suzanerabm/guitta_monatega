@@ -161,8 +161,8 @@ export function DSCard({ reveal, expand, children, ...rest }: DSCardProps) {
           >
             <Text
               css={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
+              textStyle="heading"
               fontSize="h2"
-              fontWeight="bold"
               letterSpacing="heroTitle"
               textTransform="uppercase"
               color={reveal.left.spineColor ?? 'white'}
@@ -206,8 +206,8 @@ export function DSCard({ reveal, expand, children, ...rest }: DSCardProps) {
           >
             <Text
               css={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
+              textStyle="heading"
               fontSize="h2"
-              fontWeight="bold"
               letterSpacing="heroTitle"
               textTransform="uppercase"
               color={reveal.right.spineColor ?? 'white'}

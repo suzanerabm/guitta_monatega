@@ -67,6 +67,7 @@ export function BookGallery({
     >
       <Heading
         as="h4"
+        textStyle="heading"
         fontSize="h4"
         letterSpacing="wider"
         textTransform="uppercase"

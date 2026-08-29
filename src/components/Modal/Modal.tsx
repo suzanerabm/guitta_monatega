@@ -116,7 +116,7 @@ export function Modal() {
             <Heading
               as="h2"
               fontSize="h2"
-              fontWeight="bold"
+              textStyle="heading"
               letterSpacing="tight"
               color={isDark ? 'white' : 'ink'}
               m={0}
@@ -143,6 +143,7 @@ export function Modal() {
         {techniqueText && (
           <Text
             fontSize="sm"
+            textStyle="heading"
             letterSpacing="wide"
             textTransform="uppercase"
             color={isDark ? 'textOverlayFaint' : 'inkMuted'}
@@ -243,6 +244,7 @@ export function Modal() {
 
         <Text
           fontSize="md"
+          textStyle="heading"
           color={isDark ? 'textOverlayBright' : 'ink'}
           letterSpacing="wide"
         >

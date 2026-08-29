@@ -14,7 +14,7 @@ export const textStyles = defineTextStyles({
    */
   label: {
     value: {
-      fontFamily: 'body',
+      fontFamily: 'heading',
       fontSize: 'label',
       fontWeight: 'semibold',
       letterSpacing: 'wider',

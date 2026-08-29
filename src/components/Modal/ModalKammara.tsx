@@ -305,7 +305,7 @@ export function ModalKammara() {
                 <Heading
                   as="h2"
                   fontSize="h2"
-                  fontWeight="bold"
+                  textStyle="heading"
                   letterSpacing="tight"
                   color={color}
                   m={0}
@@ -485,6 +485,7 @@ export function ModalKammara() {
                   bottom="40px"
                   zIndex={1}
                   fontSize="sm"
+                  textStyle="heading"
                   letterSpacing="wide"
                   textTransform="uppercase"
                   color={color}

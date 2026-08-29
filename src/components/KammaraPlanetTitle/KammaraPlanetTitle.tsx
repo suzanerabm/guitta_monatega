@@ -183,10 +183,10 @@ export function KammaraPlanetTitle({
               <Flex align="center" gap="sm">
                 {category && (
                   <Text
+                    textStyle="heading"
                     fontSize="xs"
                     letterSpacing="hero"
                     textTransform="uppercase"
-                    fontWeight="semibold"
                     color={color}
                     m={0}
                     opacity={0.9}
@@ -208,10 +208,10 @@ export function KammaraPlanetTitle({
                 )}
                 {role && (
                   <Text
+                    textStyle="heading"
                     fontSize="xs"
                     letterSpacing="hero"
                     textTransform="uppercase"
-                    fontWeight="semibold"
                     color="textOverlayBright"
                     m={0}
                     opacity={0.8}

@@ -65,6 +65,7 @@ export default async function AboutPage({
             textTransform="uppercase"
             color="inkMuted"
             fontWeight="medium"
+            fontFamily="heading"
             mb="0.5rem"
           >
             {t('heroLabel')}
@@ -72,7 +73,7 @@ export default async function AboutPage({
           <Heading
             as="h1"
             fontSize={{ base: '3rem', md: 'clamp(3.5rem, 8vw, 6rem)' }}
-            fontWeight="bold"
+            textStyle="heading"
             lineHeight="0.95"
             color="ink"
             mb="0.8rem"
@@ -83,6 +84,7 @@ export default async function AboutPage({
             fontSize="0.95rem"
             color="inkSoft"
             fontWeight="light"
+            fontFamily="heading"
             lineHeight={1.55}
             maxW="460px"
           >
@@ -104,6 +106,7 @@ export default async function AboutPage({
             as="h2"
             fontSize="1.72rem"
             fontWeight="regular"
+            fontFamily="heading"
             color="ink"
             letterSpacing="tight"
           >
@@ -113,6 +116,7 @@ export default async function AboutPage({
             fontSize="14px"
             color="inkMuted"
             letterSpacing="normal"
+            textStyle="heading"
             mt="0.4rem"
           >
             {t('date')}
@@ -145,6 +149,7 @@ export default async function AboutPage({
                   letterSpacing="normal"
                   color={accent}
                   fontWeight="medium"
+                  fontFamily="heading"
                   mb={{ base: 0, md: '2px' }}
                 >
                   {section.num}
@@ -154,6 +159,7 @@ export default async function AboutPage({
                   letterSpacing="normal"
                   color={accent}
                   textTransform="uppercase"
+                  textStyle="heading"
                   lineHeight={1.4}
                 >
                   {section.tag}
@@ -206,6 +212,7 @@ export default async function AboutPage({
             fontSize="h4"
             letterSpacing="wider"
             textTransform="uppercase"
+            textStyle="heading"
             color="inkMuted"
             mb="1rem"
           >
@@ -258,6 +265,7 @@ export default async function AboutPage({
             fontSize="h4"
             letterSpacing="wider"
             textTransform="uppercase"
+            textStyle="heading"
             color="inkMuted"
             mb="1rem"
           >

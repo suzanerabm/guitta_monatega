@@ -45,6 +45,7 @@ function WorldText({
         as="span"
         display="block"
         fontSize="label"
+        textStyle="heading"
         letterSpacing="wider"
         textTransform="uppercase"
         color="fgMuted"
@@ -55,7 +56,7 @@ function WorldText({
       <Heading
         as="h2"
         fontSize="h2"
-        fontWeight="bold"
+        textStyle="heading"
         color="white"
         letterSpacing="tight"
         mb="0.8rem"

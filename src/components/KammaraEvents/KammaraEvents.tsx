@@ -117,10 +117,10 @@ export function KammaraEvents({
       >
         {kicker && (
           <Text
+            textStyle="heading"
             fontSize="xs"
             letterSpacing="hero"
             textTransform="uppercase"
-            fontWeight="bold"
             color={color}
             m={0}
             opacity={0.9}

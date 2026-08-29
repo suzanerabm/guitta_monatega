@@ -38,8 +38,8 @@ export function KammaraStatBadge({
     >
       {/* Tag title: tiny, bold, wide-tracked, accent */}
       <Text
+        textStyle="heading"
         m={0}
-        fontWeight="bold"
         textTransform="uppercase"
         color={color}
         opacity={0.85}
@@ -49,8 +49,8 @@ export function KammaraStatBadge({
       </Text>
       {/* Tag value: white, uppercase, regular weight */}
       <Text
+        textStyle="heading"
         m={0}
-        fontWeight="normal"
         textTransform="uppercase"
         color="textOverlayBright"
         lineHeight={1.25}

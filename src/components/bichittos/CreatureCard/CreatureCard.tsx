@@ -52,8 +52,8 @@ export function CreatureCard({
           >
             <Heading
               as="h1"
+              textStyle="heading"
               fontSize={{ base: '1.5rem', md: 'h2' }}
-              fontWeight="bold"
               letterSpacing="tight"
               flexShrink={0}
               style={nameStyle}

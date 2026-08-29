@@ -183,10 +183,10 @@ export function KammaraCard({
               {/* Category + role tag */}
               <Flex align="center" gap="sm">
                 <Text
+                  textStyle="heading"
                   fontSize="xs"
                   letterSpacing="hero"
                   textTransform="uppercase"
-                  fontWeight="semibold"
                   color={color}
                   m={0}
                   opacity={0.9}
@@ -206,10 +206,10 @@ export function KammaraCard({
                       ·
                     </Box>
                     <Text
+                      textStyle="heading"
                       fontSize="xs"
                       letterSpacing="hero"
                       textTransform="uppercase"
-                      fontWeight="semibold"
                       color="textOverlayBright"
                       m={0}
                       opacity={0.8}
@@ -246,6 +246,7 @@ export function KammaraCard({
               {/* Traits (subtitle) — inline separated list */}
               {subtitle && (
                 <Text
+                  textStyle="heading"
                   fontSize="sm"
                   color={mutedText}
                   m={0}
@@ -288,11 +289,11 @@ export function KammaraCard({
                     >
                       {stat.icon}
                     </Box>
-                    <Text fontSize="xs" letterSpacing="wider" textTransform="uppercase" color={color} m={0} opacity={0.8}>
+                    <Text textStyle="heading" fontSize="xs" letterSpacing="wider" textTransform="uppercase" color={color} m={0} opacity={0.8}>
                       {stat.label}
                     </Text>
                   </Flex>
-                  <Text fontSize="base" fontWeight="semibold" color={textColor} m={0} lineHeight={1.1}>
+                  <Text textStyle="heading" fontSize="base" color={textColor} m={0} lineHeight={1.1}>
                     {stat.value}
                   </Text>
                 </Flex>
@@ -318,6 +319,9 @@ export function KammaraCard({
               '&::-webkit-scrollbar': { display: 'none' },
               maskImage: 'linear-gradient(to bottom, transparent 0%, black 4%, black 94%, transparent 100%)',
               WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 4%, black 94%, transparent 100%)',
+              '& h2, & h3': {
+                fontFamily: 'var(--chakra-fonts-heading)',
+              },
               '& h3': {
                 fontSize: '0.62rem',
                 fontWeight: 600,

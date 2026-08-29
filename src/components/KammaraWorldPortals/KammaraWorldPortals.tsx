@@ -69,8 +69,8 @@ export function KammaraWorldPortals({
           <Box position="absolute" left="1rem" bottom="1rem">
             <Text
               m={0}
+              textStyle="heading"
               fontSize="2xl"
-              fontWeight="bold"
               letterSpacing="heroTitle"
               color="textOverlayBright"
               css={{ textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}

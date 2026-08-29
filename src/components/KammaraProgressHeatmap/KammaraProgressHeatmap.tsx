@@ -158,10 +158,10 @@ export function KammaraProgressHeatmap({
         >
           {kicker && (
             <Text
+              textStyle="heading"
               fontSize="xs"
               letterSpacing="hero"
               textTransform="uppercase"
-              fontWeight="bold"
               color={color}
               m={0}
               opacity={0.9}
@@ -309,10 +309,10 @@ function HeatmapGrid({
           paddingBottom="xs"
         >
           <Text
+            textStyle="heading"
             fontSize={{ base: '0.5rem', md: '0.65rem' }}
             letterSpacing="wider"
             textTransform="uppercase"
-            fontWeight="semibold"
             color={`${color}d9`}
             lineHeight={1.2}
             m={0}
@@ -332,10 +332,10 @@ function HeatmapGrid({
       ))}
       <Text
         role="columnheader"
+        textStyle="heading"
         fontSize={{ base: '0.5rem', md: '0.65rem' }}
         letterSpacing="wider"
         textTransform="uppercase"
-        fontWeight="bold"
         color={LAUNCH_ACCENT}
         textAlign="center"
         lineHeight={1.2}
@@ -389,8 +389,8 @@ function PlanetRow({ planet, categories, locale, color, darkColor }: PlanetRowPr
     <>
       <Text
         role="rowheader"
+        textStyle="heading"
         fontSize={{ base: '0.7rem', md: '1rem' }}
-        fontWeight="bold"
         letterSpacing="wider"
         color={color}
         m={0}

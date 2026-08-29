@@ -273,12 +273,12 @@ export function KammaraDropsStrip({
               {crestGlyph}
             </Box>
             {sectionTitle && (
-              <Text fontSize="xs" letterSpacing="hero" textTransform="uppercase" fontWeight="bold" color={tc} m={0} opacity={0.9} css={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              <Text textStyle="heading" fontSize="xs" letterSpacing="hero" textTransform="uppercase" color={tc} m={0} opacity={0.9} css={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                 {sectionTitle}
               </Text>
             )}
           </Flex>
-          <Text fontSize="xs" letterSpacing="wide" fontWeight="semibold" color={tc} m={0} opacity={0.7} css={{ fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap' }}>
+          <Text textStyle="heading" fontSize="xs" letterSpacing="wide" color={tc} m={0} opacity={0.7} css={{ fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap' }}>
             {drops.length}
           </Text>
         </Flex>
@@ -419,12 +419,12 @@ function DropCard({ drop, index, worldName, crestGlyph, color, borderColor, mid,
         </Flex>
 
         <Text
+          textStyle="heading"
           position="relative"
           m={0}
           fontSize="xs"
           letterSpacing="hero"
           textTransform="uppercase"
-          fontWeight="bold"
           color={color}
           css={{ textShadow: `0 0 12px ${color}55` }}
         >
@@ -478,7 +478,7 @@ function DropCard({ drop, index, worldName, crestGlyph, color, borderColor, mid,
           as="span"
           m={0}
           color={color}
-          css={{ fontSize: '0.65rem', fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase' }}
+          css={{ fontFamily: 'var(--chakra-fonts-heading)', fontSize: '0.65rem', fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase' }}
         >
           {drop.label}
         </Text>

@@ -1,6 +1,7 @@
 import { Box, Flex, Heading } from '@chakra-ui/react';
 import type { ReactNode, CSSProperties } from 'react';
 import { GlyphPlanet } from '@/components/GlyphPlanet';
+import { proseHeadingStyles } from '@/theme/proseHeadings';
 
 interface DSTextPanelProps {
   /**
@@ -274,12 +275,14 @@ export function DSTextPanel({
           // props because the target is a child element, not the Box itself.
           // Allowed exception per AGENTS.md rule 6.
           '& h2': {
+            fontFamily: 'var(--chakra-fonts-heading)',
             fontSize: '1rem',
-            fontWeight: 700,
+            fontWeight: 600,
             marginBottom: '0.5rem',
             color: 'var(--ds-title-color)',
           },
           '& h3': {
+            fontFamily: 'var(--chakra-fonts-heading)',
             fontSize: '0.65rem',
             fontWeight: 600,
             letterSpacing: '0.2em',

@@ -116,8 +116,8 @@ export function CharacterInfoPanel({
       >
         <Heading
           as="h4"
+          textStyle="heading"
           fontSize="md"
-          fontWeight="bold"
           color="white"
           pr="1.5rem"
           mb="0.3rem"
