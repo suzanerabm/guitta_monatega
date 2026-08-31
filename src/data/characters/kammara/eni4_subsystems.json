@@ -81,7 +81,7 @@
         "A autoridade absoluta. Insubstituível. O topo que jamais duvida de si. A certeza que rege tudo.",
         "### VEXON",
         "O único vírus que sabe planejar. Braço operacional de Node-0, nascido de uma mutação rara. Consegue pensar em várias ações ao mesmo tempo, nenhum outro vírus consegue.",
-        "### Os Δ-PRIME",
+        "### Os PRIME-Δ",
         "Seis administradores: VALKON, THERMAX, KARTEX, REPLION, MASKON e SCORAK. Cada um cuida de um pedaço do sistema.",
         "### Os de baixo",
         "Os vírus comuns obedecem e esperam sua chance. Os bugs são culpados por tudo. Os robôs são escravos roubados de outros planetas.",
@@ -95,7 +95,7 @@
         "The absolute authority. Irreplaceable. The top that never doubts itself. The certainty that rules over all.",
         "### VEXON",
         "The only virus that knows how to plan. Operational arm of Node-0, born from a rare mutation. Can think of multiple actions at once, no other virus can.",
-        "### The Δ-PRIME",
+        "### The PRIME-Δ",
         "Six administrators: VALKON, THERMAX, KARTEX, REPLION, MASKON and SCORAK. Each one handles a slice of the system.",
         "### The lower ranks",
         "Common viruses obey and wait for their chance. Bugs are blamed for everything. The robots are slaves stolen from other planets.",
@@ -122,7 +122,7 @@
         "### SCORCH",
         "A zona de temperatura extrema. Onde Node-0 queima no centro. Reverência absoluta. A ordem no seu grau mais alto.",
         "### BURN",
-        "Alta e estável. Onde a elite opera. Os Δ-PRIME disputam prestígio e eficiência ali.",
+        "Alta e estável. Onde a elite opera. Os PRIME-Δ disputam prestígio e eficiência ali.",
         "### CRACK",
         "Média e instável. Caos e imprevisibilidade. Bugs trabalham, worms surgem sem aviso, fábricas de clonagem operam sem parar.",
         "### SINK",
@@ -146,7 +146,7 @@
         "### SCORCH",
         "The zone of extreme temperature. Where Node-0 burns at the center. Absolute reverence. Order at its highest degree.",
         "### BURN",
-        "High and stable. Where the elite operates. The Δ-PRIME compete for prestige and efficiency there.",
+        "High and stable. Where the elite operates. The PRIME-Δ compete for prestige and efficiency there.",
         "### CRACK",
         "Medium and unstable. Chaos and unpredictability. Bugs work, worms appear without warning, cloning factories operate nonstop.",
         "### SINK",
@@ -174,10 +174,10 @@
       "pt": [
         "### Sem energia própria",
         "ENI-4Δ não gera energia. Suas megaválvulas gigantes só se mantêm acesas com energia roubada de outros planetas.",
-        "### As Δ-Cells",
+        "### As Cells-Δ",
         "Esferas de sílica cristalizada: recipientes de energia drenada. Cada uma carrega o que foi tirado de alguém.",
         "### O ciclo",
-        "Um vírus drena uma vítima. A energia vira uma Δ-Cell. As naves Troy-Δ coletam. As megaválvulas convertem em calor. O THERMAX distribui. Node-0 se alimenta. Gera mais vírus. E tudo recomeça.",
+        "Um vírus drena uma vítima. A energia vira uma Cell-Δ. As naves Troy-Δ coletam. As megaválvulas convertem em calor. O THERMAX distribui. Node-0 se alimenta. Gera mais vírus. E tudo recomeça.",
         "### A divisão",
         "40% do calor vai para Node-0. 30% para as fábricas. 20% para o sistema. 10% para as naves. Nunca muda.",
         "### A dependência",
@@ -188,10 +188,10 @@
       "en": [
         "### No energy of its own",
         "ENI-4Δ does not generate energy. Its giant mega-valves only stay lit by burning energy stolen from other planets.",
-        "### The Δ-Cells",
+        "### The Cells-Δ",
         "Crystallized silica spheres: vessels of drained energy. Each one carries what was taken from someone.",
         "### The cycle",
-        "A virus drains a victim. The energy becomes a Δ-Cell. The Troy-Δ ships collect. The mega-valves convert it into heat. THERMAX distributes. Node-0 feeds. Generates more viruses. And it all begins again.",
+        "A virus drains a victim. The energy becomes a Cell-Δ. The Troy-Δ ships collect. The mega-valves convert it into heat. THERMAX distributes. Node-0 feeds. Generates more viruses. And it all begins again.",
         "### The split",
         "40% of the heat goes to Node-0. 30% to the factories. 20% to the system. 10% to the ships. It never changes.",
         "### The dependency",
@@ -238,7 +238,7 @@
         "By the time the symptoms appear, the invasion is already over."
       ]
     },
-    "visible": false
+    "visible": true
   },
   {
     "title": {
@@ -296,13 +296,13 @@
         "MASK → MOVE → SCAN → CONSUM → REPL → BLM → RET → HALT",
         "Se disfarça. Se move. Procura calor. Suga. Se copia. Culpa outro. Volta. Para. E recomeça.",
         "### Os erros",
-        "Δ-Loop : vírus preso repetindo a mesma instrução pra sempre",
-        "Δ-Cold : energia acabou, vírus congela",
-        "Δ-Overflow : calor demais, vírus explode",
-        "Δ-Crash : cartão não lido, tudo trava",
+        "Loop-Δ : vírus preso repetindo a mesma instrução pra sempre",
+        "Cold-Δ : energia acabou, vírus congela",
+        "Overflow-Δ : calor demais, vírus explode",
+        "Crash-Δ : cartão não lido, tudo trava",
         "### Os três níveis de cartão",
         "Karta-Min : ordens simples, qualquer vírus lê",
-        "Karta-Med : operações complexas, só Δ-PRIME leem",
+        "Karta-Med : operações complexas, só PRIME-Δ leem",
         "Karta-MAX : ordens diretas de Node-0, ninguém questiona"
       ],
       "en": [
@@ -354,16 +354,16 @@
         "MASK → MOVE → SCAN → CONSUM → REPL → BLM → RET → HALT",
         "Disguises itself. Moves. Looks for heat. Drains. Copies itself. Blames another. Returns. Stops. And starts again.",
         "### The errors",
-        "Δ-Loop : virus stuck repeating the same instruction forever",
-        "Δ-Cold : energy ran out, virus freezes",
-        "Δ-Overflow : too much heat, virus explodes",
-        "Δ-Crash : card not read, everything locks up",
+        "Loop-Δ : virus stuck repeating the same instruction forever",
+        "Cold-Δ : energy ran out, virus freezes",
+        "Overflow-Δ : too much heat, virus explodes",
+        "Crash-Δ : card not read, everything locks up",
         "### The three card levels",
         "Karta-Min : simple orders, any virus can read",
-        "Karta-Med : complex operations, only Δ-PRIME can read",
+        "Karta-Med : complex operations, only PRIME-Δ can read",
         "Karta-MAX : direct orders from Node-0, no one questions"
       ]
     },
-    "visible": false
+    "visible": true
   }
 ]

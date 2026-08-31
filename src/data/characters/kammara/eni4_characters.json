@@ -55,8 +55,8 @@
       "en": "VEXON"
     },
     "species": {
-      "pt": "Vírus Δ-APEX",
-      "en": "Virus Δ-APEX"
+      "pt": "Vírus APEX-Δ",
+      "en": "Virus APEX-Δ"
     },
     "bio": {
       "pt": "Único vírus do universo capaz de processar várias instruções ao mesmo tempo, nasceu de uma mutação rara durante a clonagem. ",
@@ -115,8 +115,8 @@
       "en": "Troy-Δ"
     },
     "species": {
-      "pt": "Δ-TROY",
-      "en": "Δ-TROY"
+      "pt": "TROY-Δ",
+      "en": "TROY-Δ"
     },
     "bio": {
       "pt": "Naves mecânicas. Envelopes físicos para infiltração interplanetária. Lê Karta-Δ e executa instruções primitivas. Cria portais térmicos curtos para invasão e coleta. Sem as Troy-Δ, os vírus evaporam ao cruzar o Cshift.",
@@ -164,8 +164,8 @@
       "en": "SCORAK"
     },
     "species": {
-      "pt": "Vírus Δ-PRIME",
-      "en": "Vírus Δ-PRIME"
+      "pt": "Vírus PRIME-Δ",
+      "en": "Vírus PRIME-Δ"
     },
     "bio": {
       "pt": "Tipo de vírus líder, o mais violento. Braço executor de Node-0: aplicam as decisões do Tribunal de Ruído. Cada punição é direta, imediata, desproporcional. Pesam mais que qualquer outro tipo.",
@@ -214,8 +214,8 @@
       "en": "THERMAX"
     },
     "species": {
-      "pt": "Vírus Δ-PRIME",
-      "en": "Virus Δ-PRIME"
+      "pt": "Vírus PRIME-Δ",
+      "en": "Virus PRIME-Δ"
     },
     "bio": {
       "pt": "Controladores térmicos do planeta: medem, distribuem e acusam todos de \"desperdício térmico\". Decidem para onde o calor vai.",
@@ -264,8 +264,8 @@
       "en": "VALKON"
     },
     "species": {
-      "pt": "Vírus Δ-PRIME",
-      "en": "Virus Δ-PRIME"
+      "pt": "Vírus PRIME-Δ",
+      "en": "Virus PRIME-Δ"
     },
     "bio": {
       "pt": "Supervisionam megaválvulas e a conversão de energia roubada em calor. Conhecem cada válvula em detalhe. Vigiam, patrulham, reivindicam autoria de toda conversão bem-sucedida. Os mais antigos de todos os tipos.",
@@ -314,8 +314,8 @@
       "en": "REPLION"
     },
     "species": {
-      "pt": "Vírus Δ-PRIME",
-      "en": "Virus Δ-PRIME"
+      "pt": "Vírus PRIME-Δ",
+      "en": "Virus PRIME-Δ"
     },
     "bio": {
       "pt": "Coordenam a clonagem em massa nas fábricas. O tipo mais instável e o que mais produz. Velocidade máxima, qualidade mínima. Culpam os bugs por cada defeito.",
@@ -364,8 +364,8 @@
       "en": "MASKON"
     },
     "species": {
-      "pt": "Vírus Δ-PRIME",
-      "en": "Virus Δ-PRIME"
+      "pt": "Vírus PRIME-Δ",
+      "en": "Virus PRIME-Δ"
     },
     "bio": {
       "pt": "Coordenam infiltrações externas, especialistas em operações ERODE e BREACH. Planejam ataques que levam semanas ou meses.",
@@ -414,12 +414,12 @@
       "en": "KARTEX"
     },
     "species": {
-      "pt": "Vírus Δ-PRIME",
-      "en": "Virus Δ-PRIME"
+      "pt": "Vírus PRIME-Δ",
+      "en": "Virus PRIME-Δ"
     },
     "bio": {
-      "pt": "Administram naves Troy-Δ e rotas de coleta de Δ-Cells. O tipo que mais sabe sobre o universo exterior. Organizam expedições para mundos que mapeiam mas nunca visitam.",
-      "en": "They administer Troy-Δ ships and Δ-Cell collection routes. The type that knows the most about the outer universe. They organize expeditions to worlds they map but never visit."
+      "pt": "Administram naves Troy-Δ e rotas de coleta de Cells-Δ. O tipo que mais sabe sobre o universo exterior. Organizam expedições para mundos que mapeiam mas nunca visitam.",
+      "en": "They administer Troy-Δ ships and Cell-Δ collection routes. The type that knows the most about the outer universe. They organize expeditions to worlds they map but never visit."
     },
     "image": "/imgs/kammara/eni4/virus_KARTEX.png",
     "backImage": "/imgs/kammara/eni4/virus_KARTEX_dentro_troy.png",
@@ -489,8 +489,8 @@
           "en": "Class"
         },
         "value": {
-          "pt": "Δ-EXEC",
-          "en": "Δ-EXEC"
+          "pt": "EXEC-Δ",
+          "en": "EXEC-Δ"
         }
       },
       {
@@ -509,8 +509,8 @@
   {
     "match": "aracne_1",
     "name": {
-      "pt": "Δ-ARACNE I",
-      "en": "Δ-ARACNE I"
+      "pt": "ARACNE-Δ I",
+      "en": "ARACNE-Δ I"
     },
     "species": {
       "pt": "Válvula-Aranha",
@@ -538,8 +538,8 @@
           "en": "Class"
         },
         "value": {
-          "pt": "Δ-ARACNE",
-          "en": "Δ-ARACNE"
+          "pt": "ARACNE-Δ",
+          "en": "ARACNE-Δ"
         }
       },
       {
@@ -559,8 +559,8 @@
   {
     "match": "aracne_2",
     "name": {
-      "pt": "Δ-ARACNE II",
-      "en": "Δ-ARACNE II"
+      "pt": "ARACNE-Δ II",
+      "en": "ARACNE-Δ II"
     },
     "species": {
       "pt": "Válvula-Aranha",
@@ -588,8 +588,8 @@
           "en": "Class"
         },
         "value": {
-          "pt": "Δ-ARACNE",
-          "en": "Δ-ARACNE"
+          "pt": "ARACNE-Δ",
+          "en": "ARACNE-Δ"
         }
       },
       {
@@ -609,8 +609,8 @@
   {
     "match": "aracne_3",
     "name": {
-      "pt": "Δ-ARACNE III",
-      "en": "Δ-ARACNE III"
+      "pt": "ARACNE-Δ III",
+      "en": "ARACNE-Δ III"
     },
     "species": {
       "pt": "Válvula-Aranha",
@@ -638,8 +638,8 @@
           "en": "Class"
         },
         "value": {
-          "pt": "Δ-ARACNE",
-          "en": "Δ-ARACNE"
+          "pt": "ARACNE-Δ",
+          "en": "ARACNE-Δ"
         }
       },
       {
@@ -663,8 +663,8 @@
       "en": "Worm"
     },
     "species": {
-      "pt": "Δ-RECURSE",
-      "en": "Δ-RECURSE"
+      "pt": "RECURSE-Δ",
+      "en": "RECURSE-Δ"
     },
     "bio": {
       "pt": "Replicam-se sozinhos nos túneis subterrâneos. Devoram sílica, vírus, robôs, tudo que encontram. Distribuem calor, abrem caminhos por colapso. Ninguém consegue controlá-los. Nem Node-0. ",
@@ -713,8 +713,8 @@
       "en": "Bug"
     },
     "species": {
-      "pt": "Δ-ERRATA",
-      "en": "Δ-ERRATA"
+      "pt": "ERRATA-Δ",
+      "en": "ERRATA-Δ"
     },
     "bio": {
       "pt": "Falhas vivas. Criados por erros de replicação nas fábricas de REPLION. Fazem manutenção bruta, carregam materiais, limpam. Culpados por tudo que falha, sempre. Todos os vírus os desprezam. O degrau mais baixo da hierarquia que ainda é visível.",
@@ -754,7 +754,7 @@
         }
       }
     ],
-    "visible": false
+    "visible":true
   },
   {
     "match": "silrats",
@@ -813,8 +813,8 @@
       "en": "Slave Robot"
     },
     "species": {
-      "pt": "Δ-AUTOMATA",
-      "en": "Δ-AUTOMATA"
+      "pt": "AUTOMATA-Δ",
+      "en": "AUTOMATA-Δ"
     },
     "bio": {
       "pt": "Máquinas de outros planetas: sequestradas, destruídas, reiniciadas e reaproveitadas. O calor extremo derreteu e recristalizou seus materiais: placas fundidas, circuitos em ruído, memória virada cinza, cabos virados filamentos de sílica. ",
