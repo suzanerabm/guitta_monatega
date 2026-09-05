@@ -168,9 +168,14 @@ function resolveBooks(
 import bichittosBooksData from '@/data/characters/bichittos/bichittos_books.json';
 
 const bichittosBookConfig = (bichittosBooksData.books ?? {}) as Record<string, BookConfig>;
+const bichittosStickerConfig = (bichittosBooksData.stickers ?? {}) as Record<string, BookConfig>;
 
 export function getBichittoBooks(creatureId: string, locale: 'pt' | 'en'): BookEntry[] {
   return resolveBooks(bichittosBookConfig, creatureId, locale);
+}
+
+export function getBichittoStickers(creatureId: string, locale: 'pt' | 'en'): BookEntry[] {
+  return resolveBooks(bichittosStickerConfig, creatureId, locale);
 }
 
 // ─── Kammara books — src/data/kammara_books.json (chave `section/bookId`)

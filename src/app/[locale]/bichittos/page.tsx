@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getCharacters, getBookPages } from '@/lib/images';
-import { isBichittoPublished, getBichittoBooks } from '@/lib/visibility';
+import { isBichittoPublished, getBichittoBooks, getBichittoStickers } from '@/lib/visibility';
 import { BichittosClient } from './BichittosClient';
 
 export async function generateMetadata({
@@ -39,6 +39,7 @@ export default async function BichittosPage({
       ...b,
       pages: getBookPages(id, b.id),
     })),
+    stickers: getBichittoStickers(id, loc),
   }));
 
   return <BichittosClient data={data} />;

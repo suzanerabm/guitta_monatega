@@ -1,7 +1,8 @@
 'use client';
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
-import { Box, Grid, Text } from '@chakra-ui/react';
+import { Box, Grid, Text, chakra } from '@chakra-ui/react';
+import { Apple } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
 import { HeroSection } from '@/components/HeroSection';
 import { FilterBar } from '@/components/FilterBar';
@@ -34,6 +35,12 @@ export interface BichittosCreatureData {
     title: string;
     cover: string | null;
     pages: string[];
+    buy: { url: string; label: string } | null;
+  }[];
+  stickers: {
+    id: string;
+    title: string;
+    cover: string | null;
     buy: { url: string; label: string } | null;
   }[];
 }
@@ -231,6 +238,14 @@ export function BichittosClient({ data }: Props) {
             buy: b.buy ?? undefined,
           };
         });
+        const stickers = (creature.stickers ?? []).map((sticker) => ({
+          id: `${creature.id}-${sticker.id}`,
+          image: sticker.cover ?? undefined,
+          alt: sticker.title,
+          label: sticker.title,
+          soon: !sticker.buy,
+          buy: sticker.buy ?? undefined,
+        }));
 
         const panelTitle = `${name}${creature.id === 'napcat' ? ' & Violeta' : (creature.id === 'zeco' || creature.id === 'taylo') ? ' & Amigos' : ''}`;
 
@@ -356,6 +371,7 @@ export function BichittosClient({ data }: Props) {
                 gap={{ base: '2rem', md: '2.5rem' }}
                 alignItems="stretch"
               >
+                <Box display="flex" flexDirection="column" gap={{ base: '1rem', md: '1.5rem' }}>
                 {/* Box do TEXTO (história) — mesma altura do box do livro
                     (height 100% no Grid stretch); scroll interno quando a
                     história é longa. */}
@@ -394,6 +410,81 @@ export function BichittosClient({ data }: Props) {
                     ))}
                   </Box>
                 )}
+
+                {stickers.length > 0 && (
+                  <Box
+                    maxW={{ base: '100%', md: '520px' }}
+                    display="flex"
+                    alignItems="center"
+                    gap={{ base: '1rem', md: '1.25rem' }}
+                    p={{ base: '0.85rem', md: '1rem' }}
+                    borderRadius="xl"
+                    css={{
+                      background: 'rgba(0,0,0,0.22)',
+                      outline: `1px solid ${boxBorder}`,
+                      outlineOffset: '3px',
+                    }}
+                  >
+                    {stickers[0].image && (
+                      <Box
+                        flexShrink={0}
+                        width={{ base: '64px', md: '76px' }}
+                        height={{ base: '64px', md: '76px' }}
+                        borderRadius="lg"
+                        overflow="hidden"
+                      >
+                        <chakra.img
+                          src={stickers[0].image}
+                          alt={stickers[0].alt}
+                          width="100%"
+                          height="100%"
+                          objectFit="cover"
+                        />
+                      </Box>
+                    )}
+                    <Box minW={0} flex="1">
+                      <Text
+                        fontSize="xs"
+                        letterSpacing="hero"
+                        textTransform="uppercase"
+                        color={colors.textColor}
+                        mb="0.25rem"
+                      >
+                        {t('stickersTitle')}
+                      </Text>
+                      <Text
+                        fontSize={{ base: 'md', md: 'lg' }}
+                        color={colors.textColor}
+                        mb="0.7rem"
+                        overflow="hidden"
+                        textOverflow="ellipsis"
+                        whiteSpace="nowrap"
+                      >
+                        {stickers[0].label}
+                      </Text>
+                      {stickers[0].buy && (
+                        <chakra.a
+                          href={stickers[0].buy.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          display="inline-flex"
+                          alignItems="center"
+                          gap="0.35rem"
+                          color={colors.textColor}
+                          fontSize="xs"
+                          fontWeight="semibold"
+                          letterSpacing="normal"
+                          textTransform="uppercase"
+                          textDecoration="none"
+                        >
+                          <Apple size={16} aria-hidden="true" />
+                          {stickers[0].buy.label}
+                        </chakra.a>
+                      )}
+                    </Box>
+                  </Box>
+                )}
+                </Box>
 
                 {/* Box do LIVRO (capa + título + botão) */}
                 {books.length > 0 && books[0] && (

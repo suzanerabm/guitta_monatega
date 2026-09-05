@@ -56,5 +56,27 @@
       "cover": "/imgs/books/taylo/star-hunter/cover.jpg",
       "title": { "en": "The Star Catcher" }
     }
+  },
+  "stickers": {
+    "napcat/stickers": {
+      "visible": true,
+      "cover": "/imgs/bichittos/napcat/napcat.png",
+      "title": {
+        "pt": "Stickers do Napcat",
+        "en": "Napcat Stickers"
+      },
+      "buyUrl": "https://apps.apple.com/us/app/napcat-stickers/id6792932885?app=messages",
+      "buyLabel": "App Store"
+    },
+    "zeco/stickers": {
+      "visible": true,
+      "cover": "/imgs/bichittos/zeco/01_zeco.png",
+      "title": {
+        "pt": "Stickers dos Bichittos",
+        "en": "Bichittos Stickers"
+      },
+      "buyUrl": "https://apps.apple.com/us/app/bichittos-stickers/id6792836521?app=messages",
+      "buyLabel": "App Store"
+    }
   }
 }
