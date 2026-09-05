@@ -38,3 +38,11 @@ export function getCreaturePanelStory(id: CreatureId, locale: Locale): string[] 
   const v = s.panel.story[locale];
   return hasRealContent(v) ? v : s.panel.story.pt || [];
 }
+
+/** Texto da seção "Livros" (não é uma criatura — chave própria em stories.json). */
+export function getBooksText(locale: Locale): string[] {
+  const s = (stories as Record<string, Pick<CreatureStory, 'name' | 'text'>>).livros;
+  if (!s) return [];
+  const v = s.text[locale];
+  return hasRealContent(v) ? v : s.text.pt || [];
+}

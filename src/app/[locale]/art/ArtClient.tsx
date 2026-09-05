@@ -2,9 +2,11 @@
 import { useEffect, useState } from 'react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
+import { Box, Heading, Text } from '@chakra-ui/react';
 import { HeroSection } from '@/components/HeroSection';
 import { FilterBar } from '@/components/FilterBar';
 import { ArtSection } from '@/components/ArtSection';
+import { BookShelf } from '@/components/BookShelf';
 import { useModal } from '@/components/Modal';
 import { artSectionMeta, artHero, type ArtSectionId } from '@/theme/artSections';
 import { resolveInitialArt } from './resolveInitialArt';
@@ -15,19 +17,30 @@ interface ArtSectionData {
   full: string[];
 }
 
-interface Props {
-  sections: ArtSectionData[];
+interface ArtBook {
+  id: string;
+  title: string;
+  cover: string | null;
+  buy: { url: string; label: string } | null;
+  pages: string[];
 }
 
-export function ArtClient({ sections }: Props) {
+interface Props {
+  sections: ArtSectionData[];
+  books: ArtBook[];
+}
+
+export function ArtClient({ sections, books }: Props) {
   const t = useTranslations('art');
+  const tCommon = useTranslations('common');
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
   const sectionIds = sections.map((s) => s.id);
+  const filterIds = books.length > 0 ? [...sectionIds, 'livros'] : sectionIds;
   const [activeFilter, setActiveFilter] = useState(() =>
-    resolveInitialArt(searchParams.get('art'), sectionIds),
+    resolveInitialArt(searchParams.get('art'), filterIds),
   );
 
   // Troca a seção ativa E sincroniza a URL (?art=<id>), sem recarregar nem
@@ -48,6 +61,20 @@ export function ArtClient({ sections }: Props) {
       }
     }
   }, [sections, registerGallery]);
+
+  useEffect(() => {
+    for (const b of books) {
+      if (b.pages.length > 0) {
+        registerGallery(`book_art-${b.id}`, b.pages);
+      }
+    }
+  }, [books, registerGallery]);
+
+  const handleBookRead = (bookId: string) => {
+    const b = books.find((x) => x.id === bookId);
+    if (!b) return;
+    openGallery(`book_art-${b.id}`, 0, b.title, undefined, undefined, b.title, undefined, b.buy);
+  };
 
   // Ao trocar de seção, a anterior desmonta e a nova monta — rola pra logo
   // abaixo do FilterBar sticky, esperando o layout assentar.
@@ -82,7 +109,24 @@ export function ArtClient({ sections }: Props) {
     return { ...s, ...meta, title, technique };
   });
 
-  const filters = sectionsWithMeta.map((s) => ({ id: s.id, label: s.title }));
+  const booksMeta = artSectionMeta.livros;
+  let booksTitle = t('booksTitle');
+  let booksTechnique = '';
+  try {
+    booksTitle = t('sections.livros.title' as never);
+  } catch {
+    // ignore
+  }
+  try {
+    booksTechnique = t('sections.livros.technique' as never);
+  } catch {
+    // ignore
+  }
+
+  const filters = [
+    ...sectionsWithMeta.map((s) => ({ id: s.id, label: s.title })),
+    ...(books.length > 0 ? [{ id: 'livros', label: t('booksTitle') }] : []),
+  ];
 
   const handleThumbClick = (sectionId: string, idx: number) => {
     const s = sectionsWithMeta.find((x) => x.id === sectionId);
@@ -126,6 +170,64 @@ export function ArtClient({ sections }: Props) {
           />
         ),
       )}
+
+      {books.length > 0 && (() => {
+        const hidden = activeFilter !== 'livros';
+        return (
+          <Box
+            as="section"
+            data-section-art="livros"
+            data-hidden={hidden ? 'true' : undefined}
+            background={booksMeta.bg}
+            padding={hidden ? '0' : '4rem 0'}
+            opacity={hidden ? 0 : 1}
+            maxHeight={hidden ? '0' : 'none'}
+            overflow={hidden ? 'hidden' : undefined}
+            transition="opacity 0.5s ease, max-height 0.5s ease"
+          >
+            <Box maxW="1200px" mx="auto" px={{ base: '1rem', md: '2rem' }}>
+              <Heading
+                as="h2"
+                textStyle="heading"
+                fontSize="2xl"
+                letterSpacing="tight"
+                margin="0 0 0.3rem"
+                color={booksMeta.titleColor}
+              >
+                {booksTitle}
+              </Heading>
+              <Text
+                fontFamily="body"
+                fontSize="sm"
+                letterSpacing="wide"
+                textTransform="uppercase"
+                margin="0 0 2rem"
+                color={booksMeta.techColor}
+              >
+                {booksTechnique}
+              </Text>
+              <BookShelf
+                title={booksTitle}
+                arrowColor={booksMeta.titleColor}
+                comingSoonLabel={tCommon('soon')}
+                books={books.map((b) => ({
+                  book: {
+                    id: b.id,
+                    image: b.cover,
+                    alt: b.title,
+                    label: b.title,
+                    soon: !b.buy,
+                    buy: b.buy,
+                  },
+                  borderColor: booksMeta.titleColor,
+                  textColor: booksMeta.titleColor,
+                  onRead: handleBookRead,
+                }))}
+              />
+            </Box>
+          </Box>
+        );
+      })()}
     </>
   );
 }

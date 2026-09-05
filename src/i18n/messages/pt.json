@@ -251,6 +251,7 @@
       }
     },
     "booksTitle": "Livros",
+    "booksDesc": "As histórias de Kammara, reunidas em páginas.",
     "planetsTitle": "Planetas",
     "planetsDesc": "Os planetas de Kammara, cada um um universo à parte."
   },
@@ -303,6 +304,10 @@
       "croche": {
         "title": "Crochê",
         "technique": "Linha e memória. Formas feitas à mão com ritmo, afeto e delicadeza."
+      },
+      "livros": {
+        "title": "Livros",
+        "technique": "Histórias e ilustrações reunidas em páginas, prontas pra colecionar."
       }
     }
   },

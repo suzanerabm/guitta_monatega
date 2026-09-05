@@ -20,7 +20,7 @@ import { KammaraCardSubsystem, KammaraCardSubsystemContainer, KammaraCardSubsyst
 import { RegionDivider } from '@/components/RegionDivider';
 import { RegionBanner } from '@/components/RegionBanner';
 import { KammaraDropsStrip } from '@/components/KammaraDropsStrip';
-import { BookPanel } from '@/components/BookPanel';
+import { BookShelf } from '@/components/BookShelf';
 import { KammaraProgressHeatmap } from '@/components/KammaraProgressHeatmap';
 import kammaraProgressData from '@/data/kammara_progress.json';
 import { isKammaraPublished, kammaraInProgress } from '@/lib/visibility';
@@ -331,8 +331,11 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const publishedIds = useMemo(
-    () => worlds.filter((w) => isKammaraPublished(w.id)).map((w) => w.id),
-    [worlds],
+    () => [
+      ...worlds.filter((w) => isKammaraPublished(w.id)).map((w) => w.id),
+      ...(kammaraBooks.length > 0 ? ['livros'] : []),
+    ],
+    [worlds, kammaraBooks],
   );
   const [activeFilter, setActiveFilter] = useState(() =>
     // `planet` é o param atual; `planeta` é o legado em PT (links antigos).
@@ -473,10 +476,14 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
       color: palettes[w.id as PaletteName].colors[0],
       bgColor: palettes[w.id as PaletteName].dark,
     })),
+    ...(kammaraBooks.length > 0
+      ? [{ id: 'livros', label: safeT('booksTitle', 'Livros'), color: palettes.kammara.colors[0], bgColor: palettes.kammara.dark }]
+      : []),
   ];
 
   const kammaraPalette = palettes.kammara;
   const kammaraHidden = activeFilter !== 'kammara';
+  const booksHidden = activeFilter !== 'livros';
 
   // Cards de entrada: um por mundo publicado, com nome/texto/tags/imagem/cor
   // resolvidos dos dados do mundo (sem duplicar conteúdo). Clicar aciona o
@@ -709,53 +716,6 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
             </Box>
           );
         })()}
-        {kammaraBooks.length > 0 && (() => {
-          const booksTitle = safeT('booksTitle', 'Livros');
-          return (
-            <>
-              <KammaraPlanetTitle
-                name={booksTitle}
-                palette="kammara"
-                category={sectionName}
-                declarer="universe"
-                crestGlyph={worldCrestGlyph('kammara')}
-                description=""
-              />
-              <Grid
-                templateColumns={{ base: '1fr', md: 'repeat(auto-fit, minmax(280px, 420px))' }}
-                gap="lg"
-                justifyContent="center"
-                maxW="900px"
-                mx="auto"
-                my="3xl"
-                px={{ base: '1.5rem', md: 0 }}
-              >
-                {kammaraBooks.map((b) => {
-                  return (
-                    <BookPanel
-                      key={b.id}
-                      title={booksTitle}
-                      book={{
-                        id: `kammara-${b.id}`,
-                        image: b.cover,
-                        alt: b.title,
-                        label: b.title,
-                        // "Em breve" sempre que ainda não há link de compra
-                        // — mesmo que já existam páginas pra ler.
-                        soon: !b.buy,
-                        buy: b.buy,
-                      }}
-                      borderColor={kammaraPalette.colors[0]}
-                      textColor={kammaraPalette.text}
-                      comingSoonLabel={tCommon('soon')}
-                      onRead={(bookId) => handleBookClick(bookId.replace(/^kammara-/, ''))}
-                    />
-                  );
-                })}
-              </Grid>
-            </>
-          );
-        })()}
 
         {/* ── PRÓXIMOS EVENTOS — eventos in-universe de Kammara ──────────
             A `Box` externa controla padding + imagem de fundo da seção.
@@ -824,6 +784,51 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
           </Box>
         )}
       </CreatureSection>
+
+      {/* ── LIVROS — aba própria, exclusiva (não fica embaixo da intro) ── */}
+      {kammaraBooks.length > 0 && (() => {
+        const booksTitle = safeT('booksTitle', 'Livros');
+        return (
+          <CreatureSection
+            id="livros"
+            gradient={kammaraPalette.gradient}
+            accentColor={kammaraPalette.colors[4]}
+            bgImage={kammaraBg ?? undefined}
+            hidden={booksHidden}
+          >
+            <KammaraPlanetTitle
+              name={booksTitle}
+              palette="kammara"
+              category={sectionName}
+              declarer="universe"
+              crestGlyph={worldCrestGlyph('kammara')}
+              description={safeT('booksDesc', '')}
+            />
+            <Box my="3xl" px={{ base: '1.5rem', md: 0 }}>
+              <BookShelf
+                title={booksTitle}
+                arrowColor={kammaraPalette.colors[0]}
+                comingSoonLabel={tCommon('soon')}
+                books={kammaraBooks.map((b) => ({
+                  book: {
+                    id: `kammara-${b.id}`,
+                    image: b.cover,
+                    alt: b.title,
+                    label: b.title,
+                    // "Em breve" sempre que ainda não há link de compra
+                    // — mesmo que já existam páginas pra ler.
+                    soon: !b.buy,
+                    buy: b.buy,
+                  },
+                  borderColor: kammaraPalette.colors[0],
+                  textColor: kammaraPalette.text,
+                  onRead: (bookId) => handleBookClick(bookId.replace(/^kammara-/, '')),
+                }))}
+              />
+            </Box>
+          </CreatureSection>
+        );
+      })()}
 
       {/* ── WORLDS ─────────────────────────────────────────────────────── */}
       {/* Only the active world is rendered — inactive worlds are fully

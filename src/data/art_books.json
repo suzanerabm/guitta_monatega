@@ -1,0 +1,33 @@
+{
+  "_readme": [
+    "Controle dos livros de Arte.",
+    "Chave de cada livro = 'sectionId/bookId-locale'.",
+    "  sectionId = 'art' pro livro geral da galeria.",
+    "  bookId = nome da pasta em public/imgs/books/art/<bookId>/",
+    "  Cada idioma é sua própria entrada (capa e link podem ser diferentes).",
+    "",
+    "Campos por livro (todos opcionais):",
+    "  visible (bool)    -> false esconde o livro sem apagar imagens. Ausente = visível.",
+    "  onlyLocale ('pt'|'en') -> idioma em que essa edição aparece.",
+    "  cover (string)    -> caminho da imagem de capa dessa edição.",
+    "  title ({pt,en})   -> nome do livro (preencha só o idioma dessa edição).",
+    "  buyUrl (string)   -> link de compra. Ausente = mostra 'Em breve' no botão.",
+    "  buyLabel (string) -> texto do botão (ex: 'Compre na Amazon').",
+    "",
+    "Filtro roda no servidor (art/page.tsx) — livro oculto não vaza pro cliente."
+  ],
+  "books": {
+    "art/coloring-book-pt": {
+      "visible": true,
+      "onlyLocale": "pt",
+      "cover": "/imgs/books/art/Coloring_Book/capa_arte_ptbr.png",
+      "title": { "pt": "Mundos Imaginários - Livro de Colorir" }
+    },
+    "art/coloring-book-en": {
+      "visible": true,
+      "onlyLocale": "en",
+      "cover": "/imgs/books/art/Coloring_Book/capa_arte_en.png",
+      "title": { "en": "Imaginary Worlds - Coloring Book" }
+    }
+  }
+}

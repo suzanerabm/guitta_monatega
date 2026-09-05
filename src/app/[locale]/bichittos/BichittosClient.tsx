@@ -11,6 +11,7 @@ import { DSMainCard } from '@/components/DSMainCard';
 import { CharacterStrip } from '@/components/bichittos/CharacterStrip';
 import { BichittoVideoCarousel } from '@/components/bichittos/BichittoVideoCarousel';
 import { BookPanel } from '@/components/BookPanel';
+import { BookShelf } from '@/components/BookShelf';
 import { useModal } from '@/components/Modal';
 import { palettes, type CreatureId } from '@/theme/palettes';
 import { isBichittoPublished } from '@/lib/visibility';
@@ -19,6 +20,7 @@ import {
   getCreatureName,
   getCreatureText,
   getCreaturePanelStory,
+  getBooksText,
 } from '@/data/characters/bichittos/_creatureData';
 import { translateName } from '@/lib/translateName';
 import { resolveInitialBichitto } from './resolveInitialBichitto';
@@ -51,8 +53,10 @@ export function BichittosClient({ data }: Props) {
   // Ids publicados, na ordem de `data` (já filtrado por isBichittoPublished
   // na page.tsx). O primeiro é o default quando não há ?bichitto= na URL.
   const publishedIds = data.map((c) => c.id);
+  const hasAnyBook = data.some((c) => c.books.length > 0);
+  const filterIds = hasAnyBook ? [...publishedIds, 'livros'] : publishedIds;
   const [activeFilter, setActiveFilter] = useState(() =>
-    resolveInitialBichitto(searchParams.get('bichitto'), publishedIds),
+    resolveInitialBichitto(searchParams.get('bichitto'), filterIds),
   );
 
   // Troca a criatura ativa E sincroniza a URL (?bichitto=<id>), sem recarregar
@@ -127,6 +131,10 @@ export function BichittosClient({ data }: Props) {
     openGallery(galleryId, 0, g.title, bookIllustrated, undefined, undefined, undefined, g.buy);
   };
 
+  const allBooks = data.flatMap((creature) =>
+    creature.books.map((b) => ({ ...b, creatureId: creature.id })),
+  );
+
   const filters = [
     { id: 'napcat', label: getCreatureName('napcat', locale as Locale), color: palettes.napcat.colors[3], bgColor: palettes.napcat.dark },
     { id: 'zeco', label: getCreatureName('zeco', locale as Locale), color: palettes.zeco.colors[3], bgColor: palettes.zeco.dark },
@@ -134,6 +142,11 @@ export function BichittosClient({ data }: Props) {
     { id: 'cheiodebolinha', label: getCreatureName('cheiodebolinha', locale as Locale), color: palettes.cheiodebolinha.colors[2], bgColor: palettes.cheiodebolinha.dark },
     { id: 'miscelania', label: getCreatureName('miscelania', locale as Locale), color: palettes.miscelania.colors[2], bgColor: palettes.miscelania.dark },
   ].filter((f) => isBichittoPublished(f.id));
+
+  const filtersWithBooks = [
+    ...filters,
+    ...(allBooks.length > 0 ? [{ id: 'livros', label: t('booksTitle') }] : []),
+  ];
 
   return (
     <>
@@ -189,7 +202,7 @@ export function BichittosClient({ data }: Props) {
       </HeroSection>
 
       <FilterBar
-        filters={filters}
+        filters={filtersWithBooks}
         showAll={false}
         defaultActive={publishedIds[0]}
         active={activeFilter}
@@ -399,6 +412,84 @@ export function BichittosClient({ data }: Props) {
           </CreatureSection>
         );
       })}
+
+      {allBooks.length > 0 && activeFilter === 'livros' && (
+        <CreatureSection
+          id="livros"
+          gradient={palettes.livros.gradientBg}
+          accentColor={palettes.livros.colors[0]}
+          bgImage={palettes.livros.bichittos?.bgImage}
+          bgOpacity={0.3}
+        >
+          <CreatureCard
+            name={t('booksTitle')}
+            color1={palettes.livros.dark}
+            color2={palettes.livros.dark}
+          >
+            {getBooksText(locale as Locale).map((paragraph, i, arr) => (
+              <Box key={i} as={i === arr.length - 1 ? 'strong' : 'p'} display="block" fontWeight={i === arr.length - 1 ? 'bold' : 'inherit'} mb={i < arr.length - 1 ? '1rem' : 0}>
+                {paragraph}
+              </Box>
+            ))}
+          </CreatureCard>
+          {/* ── Camada inferior — mesma receita do DSMainCard (fundo +
+              overlay + sombra de elevação em cima/embaixo), sem o resto da
+              complexidade (personagens/mascote), já que aqui só precisamos
+              do grid de livros por cima. Cores vêm de palettes.livros (tema),
+              separada de palettes.bichittos (usada no HeroSection do topo). ── */}
+          <Box
+            position="relative"
+            width="100%"
+            minH={{ base: 'auto', md: '400px' }}
+            mt={{ base: '3rem', md: '2.5rem' }}
+            overflow="hidden"
+            boxShadow="0 20px 50px rgba(0,0,0,0.35), 0 -20px 50px rgba(0,0,0,0.35), 0 8px 20px rgba(0,0,0,0.25), 0 -8px 20px rgba(0,0,0,0.25)"
+          >
+            <Box
+              data-testid="livros-bg"
+              position="absolute"
+              inset={0}
+              zIndex={0}
+              background={palettes.livros.bichittos?.panelBg}
+            />
+            <Box
+              data-testid="livros-bg-overlay"
+              position="absolute"
+              inset={0}
+              zIndex={0}
+              pointerEvents="none"
+              css={{
+                background: `linear-gradient(to bottom, transparent 0%, ${palettes.livros.dark}22 60%, ${palettes.livros.dark}88 100%)`,
+                backdropFilter: 'blur(4px)',
+                WebkitBackdropFilter: 'blur(4px)',
+              }}
+            />
+            <Box position="relative" zIndex={1} py="2rem">
+              <BookShelf
+                title={t('booksTitle')}
+                arrowColor={palettes.livros.colors[0]}
+                books={allBooks.map((b) => ({
+                  book: {
+                    id: `${b.creatureId}-${b.id}`,
+                    image: b.cover ?? undefined,
+                    alt: b.title,
+                    label: b.title,
+                    soon: !(b.pages && b.pages.length > 0) && !b.buy,
+                    buy: b.buy ?? undefined,
+                  },
+                  // TODO(design): cor por livro ainda não decidida — usando
+                  // palettes.livros.colors[0] como neutro legível sobre o
+                  // fundo escuro desta seção. Ajustar no tema (ou trocar por
+                  // uma cor por criatura) quando a paleta for definida.
+                  borderColor: palettes.livros.colors[0],
+                  textColor: palettes.livros.colors[0],
+                  onRead: (bookId) => handleBookClick(b.creatureId, bookId.slice(b.creatureId.length + 1)),
+                }))}
+              />
+            </Box>
+          </Box>
+        </CreatureSection>
+      )}
     </>
   );
 }

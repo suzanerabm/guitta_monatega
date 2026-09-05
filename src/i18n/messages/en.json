@@ -251,6 +251,7 @@
       }
     },
     "booksTitle": "Books",
+    "booksDesc": "The stories of Kammara, gathered into pages.",
     "planetsTitle": "Planets",
     "planetsDesc": "The planets of Kammara, each one a universe of its own."
   },
@@ -303,6 +304,10 @@
       "croche": {
         "title": "Crochet",
         "technique": "Thread and memory. Handmade forms shaped with rhythm, warmth, and care."
+      },
+      "livros": {
+        "title": "Books",
+        "technique": "Stories and illustrations gathered into pages, ready to collect."
       }
     }
   },

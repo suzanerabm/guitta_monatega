@@ -22,7 +22,8 @@ export type ArtSectionId =
   | 'fimo'
   | 'needle'
   | 'clay'
-  | 'croche';
+  | 'croche'
+  | 'livros';
 
 // Subtitle (technique) color overlays — same alpha for both modes so
 // the relationship between title and subtitle stays consistent.
@@ -85,6 +86,12 @@ export const artSectionMeta: Record<ArtSectionId, ArtSectionMeta> = {
   },
   croche: {
     bg: '#aeaeae',
+    titleColor: '#1a1a1a',
+    techColor: DARK_TECH_OVERLAY,
+    large: false,
+  },
+  livros: {
+    bg: '#a4a4a4',
     titleColor: '#1a1a1a',
     techColor: DARK_TECH_OVERLAY,
     large: false,

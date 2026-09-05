@@ -3,7 +3,8 @@ export type PaletteName =
   | 'bichittos' | 'napcat' | 'zeco' | 'taylo' | 'miscelania' | 'cheiodebolinha'
   | 'kammara' | 'lunnp1' | 'eni4' | 'triplec' | 'orfv' | 'z1' | 'gotto' | 'arte'
   | 'digg' | 'memphis'
-  | 'malloc' | 'mesh' | 'sharp';
+  | 'malloc' | 'mesh' | 'sharp'
+  | 'livros';
 
 /** Criaturas do Bichittos. */
 export type CreatureId =
@@ -109,7 +110,7 @@ export const palettes: Record<PaletteName, Palette> = {
       textColor: '#fece95',
       accent: '#f58020',
       accentAlt: '#fece95',
-      bgImage: '/imgs/bichittos/_bg/primaveracena_12_ipe.png',
+      bgImage: '/imgs/bichittos/_bg/primaveracena_12_ipe.jpg',
       tag: 'Hamster · Quintal',
       panelBg: '#592e06',
       // panelBg: 'rgb(245, 128, 32, 0.6)',
@@ -166,9 +167,48 @@ export const palettes: Record<PaletteName, Palette> = {
       textColor: '#edf0f2',
       accent: '#3ae9f2',
       accentAlt: '#83e5ea',
-      bgImage: '/imgs/bichittos/_bg/ceu_nuvem.png',
+      bgImage: '/imgs/bichittos/_bg/ceu_nuvem.jpg',
       tag: 'Elefante · Medroso',
       panelBg: 'rgb(47, 49, 113)',
+    },
+  },
+  // === LIVROS (Bichittos) ===
+  // Aba "Books" que reúne os livros de todas as criaturas. colors[0] = cor
+  // dos cards/texto sobre o fundo escuro; dark = fundo sólido da camada de
+  // baixo (atrás do grid); gradient = degradê da camada de baixo; gradientBg
+  // = degradê da camada de cima (título "Books"). Paleta própria, separada
+  // de `bichittos` (usada no HeroSection do topo da página).
+  livros: {
+    // Combinação própria — rosa → laranja → amarelo, quente e festiva,
+    // diferente da paleta do Zeco (que foi só um ponto de partida).
+    //
+    // Campos REALMENTE usados na seção "Livros" (ver BichittosClient.tsx):
+    //   colors[0]  → accentColor do CreatureSection + cor dos BookPanel
+    //   dark       → cor do título/texto (CreatureCard) + overlay escuro
+    //   gradientBg → fundo da camada de cima (atrás do título "Books")
+    //   bichittos.bgImage → imagem de fundo com parallax
+    //   bichittos.panelBg → fundo translúcido da camada de baixo
+    // Os demais campos abaixo (`text`, `gradient`, `colors[1..5]`, resto de
+    // `bichittos`) existem só porque `Palette`/`bichittos` exigem esses
+    // campos no tipo — não aparecem em tela aqui, então valem qualquer coisa
+    // coerente (repetindo valores já usados) em vez de inventar cor snova.
+    colors: ['#dda026', '#dda026', '#dda026', '#dda026', '#dda026', '#dda026'],
+    text: '',
+    dark: '#3f1c0d',
+    gradient: 'linear-gradient(155deg, #4a2512 0%, #7a3d1a 45%, #c56b2e 100%)',
+    gradientBg: 'linear-gradient(160deg, #fece95 0%, #f57f20 40%, #fece95 100%)',
+    bichittos: {
+      name: '#572d0d',
+      text: '#b66120',
+      titleColor: '#b66120',
+      textColor: '#ffe5b4',
+      accent: '#b66120',
+      accentAlt: '#ffe5b4',
+      bgImage: '/imgs/bichittos/_bg/primaveracena_12_ipe.jpg',
+      tag: '',
+      // Translúcido, igual ao default do DSTextPanel — deixa a imagem de
+      // fundo (parallax) aparecer por trás, como nas criaturas reais.
+      panelBg: 'rgba(225, 113, 27, 0.7)',
     },
   },
   kammara: {

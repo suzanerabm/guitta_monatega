@@ -1,5 +1,20 @@
 {
-  "_comment": "Fonte única de verdade dos livros dos Bichittos: título, capa, idioma, visibilidade e link de compra — tudo aqui, nada vem do i18n nem do manifest automático. Chave = 'creatureId/bookId' (bookId = pasta em public/imgs/books/<creature>/<book>/). Cada IDIOMA de um mesmo livro é uma entrada própria (capa e link podem ser diferentes por edição). Campos por livro: | title ({pt,en}): nome do livro (preencha só o idioma dessa edição). | cover (string): caminho da imagem de capa dessa edição. | visible (bool): false esconde o livro sem apagar imagens; ausente=visível. | onlyLocale ('pt'|'en'): idioma em que essa edição aparece — use sempre, já que cada entrada é uma edição de um idioma só. | buyUrl (string): link de compra dessa edição. | buyLabel (string): texto do botão (ex: 'Compre na Amazon'). Filtros rodam no servidor (bichittos/page.tsx) — livro oculto não vaza.",
+  "_readme": [
+    "Controle dos livros dos Bichittos.",
+    "Chave de cada livro = 'creatureId/bookId-locale'.",
+    "  bookId = nome da pasta em public/imgs/books/<creatureId>/<bookId>/",
+    "  Cada idioma é sua própria entrada (capa e link podem ser diferentes).",
+    "",
+    "Campos por livro (todos opcionais):",
+    "  visible (bool)    -> false esconde o livro sem apagar imagens. Ausente = visível.",
+    "  onlyLocale ('pt'|'en') -> idioma em que essa edição aparece.",
+    "  cover (string)    -> caminho da imagem de capa dessa edição.",
+    "  title ({pt,en})   -> nome do livro (preencha só o idioma dessa edição).",
+    "  buyUrl (string)   -> link de compra. Ausente = mostra 'Em breve' no botão.",
+    "  buyLabel (string) -> texto do botão (ex: 'Compre na Amazon').",
+    "",
+    "Filtro roda no servidor (bichittos/page.tsx) — livro oculto não vaza pro cliente."
+  ],
   "books": {
     "napcat/color-pt": {
       "visible": true,
@@ -30,13 +45,13 @@
       "title": { "en": "Zeco Through the Seasons - and his friends" }
     },
     "taylo/star-hunter-pt": {
-      "visible": false,
+      "visible": true,
       "onlyLocale": "pt",
       "cover": "/imgs/books/taylo/star-hunter/cover.jpg",
       "title": { "pt": "O Caçador de Estrelas" }
     },
     "taylo/star-hunter-en": {
-      "visible": false,
+      "visible": true,
       "onlyLocale": "en",
       "cover": "/imgs/books/taylo/star-hunter/cover.jpg",
       "title": { "en": "The Star Catcher" }

@@ -1,5 +1,21 @@
 {
-  "_comment": "Fonte única de verdade dos livros de Kammara: título, capa, idioma, visibilidade e link de compra — tudo aqui, nada vem do i18n nem do manifest automático. Chave = 'section/bookId' (bookId = pasta em public/imgs/books/kammara/<book>/; section = 'kammara'). Cada IDIOMA de um mesmo livro é uma entrada própria (capa e link podem ser diferentes por edição). Campos por livro: | title ({pt,en}): nome do livro (preencha só o idioma dessa edição). | cover (string): caminho da imagem de capa dessa edição. | visible (bool): false esconde o livro sem apagar imagens; ausente=visível. | onlyLocale ('pt'|'en'): idioma em que essa edição aparece — use sempre, já que cada entrada é uma edição de um idioma só. | buyUrl (string): link de compra dessa edição. | buyLabel (string): texto do botão (ex: 'Compre na Amazon'). Filtros rodam no servidor (kammara/page.tsx) — livro oculto não vaza.",
+  "_readme": [
+    "Controle dos livros de Kammara.",
+    "Chave de cada livro = 'section/bookId-locale'.",
+    "  section = 'kammara' pro livro do universo geral.",
+    "  bookId = nome da pasta em public/imgs/books/kammara/<bookId>/",
+    "  Cada idioma é sua própria entrada (capa e link podem ser diferentes).",
+    "",
+    "Campos por livro (todos opcionais):",
+    "  visible (bool)    -> false esconde o livro sem apagar imagens. Ausente = visível.",
+    "  onlyLocale ('pt'|'en') -> idioma em que essa edição aparece.",
+    "  cover (string)    -> caminho da imagem de capa dessa edição.",
+    "  title ({pt,en})   -> nome do livro (preencha só o idioma dessa edição).",
+    "  buyUrl (string)   -> link de compra. Ausente = mostra 'Em breve' no botão.",
+    "  buyLabel (string) -> texto do botão (ex: 'Compre na Amazon').",
+    "",
+    "Filtro roda no servidor (kammara/page.tsx) — livro oculto não vaza pro cliente."
+  ],
   "books": {
     "kammara/saga-orf-v-pt": {
       "visible": true,
@@ -13,13 +29,13 @@
       "visible": true,
       "onlyLocale": "en",
       "cover": "/imgs/books/kammara/saga-orf-v/capa_70x10_en.jpg",
-      "title": { "en": "Saga on ORF-V" }
+      "title": { "en": "Saga in ORF-V" }
     },
     "kammara/saga-maelik-v-pt": {
-      "visible": false,
+      "visible": true,
       "onlyLocale": "pt",
       "cover": "/imgs/books/kammara/saga-orf-v/capa_70x10_2.jpg",
-      "title": { "pt": "O Resgate de Maelik - Volume 2" }
+      "title": { "pt": "Saga em Digg - Volume 2" }
     }
   }
 }

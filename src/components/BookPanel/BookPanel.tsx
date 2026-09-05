@@ -1,5 +1,13 @@
 import { Box, Text, chakra } from '@chakra-ui/react';
 
+// Fixed height at every breakpoint so cards in a shelf stay uniform — no
+// card grows taller than its neighbours when its title runs long or it
+// has no cover at all. Mirrors KammaraEventCard's CARD_HEIGHT pattern.
+const CARD_HEIGHT: Record<string, string> = {
+  base: '620px',
+  md: '680px',
+};
+
 export interface BookPanelBook {
   id: string;
   image?: string | null;
@@ -50,7 +58,9 @@ export function BookPanel({
       data-testid={testId ?? 'book-panel'}
       borderRadius="20px"
       p={{ base: '1.5rem', md: '2rem' }}
-      height="100%"
+      height={CARD_HEIGHT}
+      display="flex"
+      flexDirection="column"
       css={{
         background: 'rgba(0,0,0,0.28)',
         outline: `2px solid ${borderColor}`,
@@ -64,6 +74,7 @@ export function BookPanel({
         textTransform="uppercase"
         color={textColor}
         mb="1rem"
+        flexShrink={0}
       >
         {title}
       </Text>
@@ -72,17 +83,29 @@ export function BookPanel({
           src={book.image}
           alt={book.alt}
           width="100%"
+          flexShrink={0}
           borderRadius="12px"
           mb="1rem"
           css={{
             outline: `2px solid ${borderColor}`,
             outlineOffset: '4px',
             display: 'block',
-            objectFit: 'cover',
           }}
         />
       )}
-      <Text textStyle="heading" fontSize={{ base: 'lg', md: 'xl' }} color={textColor} mb="1rem">
+      <Text
+        textStyle="heading"
+        fontSize={{ base: 'lg', md: 'xl' }}
+        color={textColor}
+        mb="1rem"
+        flex="1"
+        css={{
+          display: '-webkit-box',
+          WebkitLineClamp: 2,
+          WebkitBoxOrient: 'vertical',
+          overflow: 'hidden',
+        }}
+      >
         {book.label}
       </Text>
       {book.buy ? (

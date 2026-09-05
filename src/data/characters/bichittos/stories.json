@@ -133,6 +133,24 @@
       }
     }
   },
+  "livros": {
+    "name": {
+      "pt": "Livros",
+      "en": "Books"
+    },
+    "text": {
+      "pt": [
+        "Os Bichittos também vivem nos livros!",
+        "Conheça suas histórias, descubra novos amigos e acompanhe cada aventura por mundos cheios de imaginação, humor e pequenas surpresas.",
+        "Tem livro para ler, colorir, criar e levar os Bichittos para onde você quiser."
+      ],
+      "en": [
+        "The Bichittos live in books too!",
+        "Discover their stories, meet new friends, and follow every adventure through worlds full of imagination, humor, and little surprises.",
+        "There are books to read, color, create, and take the Bichittos wherever you go."
+      ]
+    }
+  },
   "miscelania": {
     "name": {
       "pt": "Fada Candy",
