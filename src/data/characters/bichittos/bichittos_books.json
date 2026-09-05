@@ -45,13 +45,13 @@
       "title": { "en": "Zeco Through the Seasons - and his friends" }
     },
     "taylo/star-hunter-pt": {
-      "visible": true,
+      "visible": false,
       "onlyLocale": "pt",
       "cover": "/imgs/books/taylo/star-hunter/cover.jpg",
       "title": { "pt": "O Caçador de Estrelas" }
     },
     "taylo/star-hunter-en": {
-      "visible": true,
+      "visible": false,
       "onlyLocale": "en",
       "cover": "/imgs/books/taylo/star-hunter/cover.jpg",
       "title": { "en": "The Star Catcher" }

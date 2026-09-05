@@ -17,6 +17,12 @@ interface BookShelfProps {
   books: BookShelfEntry[];
   /** Color of the prev/next arrows. Falls back to HorizontalCardStrip's default. */
   arrowColor?: string;
+  /**
+   * Arrow glyph style — see HorizontalCardStrip. Default 'plain': the
+   * glyph font (⊷/⊶) is Kammara's visual language, so only the Kammara
+   * "Livros" tab should pass 'glyph'; Bichittos and Art use plain chevrons.
+   */
+  arrowVariant?: 'glyph' | 'plain';
   /** Label for the "read" button when there's no buy link. */
   readLabel?: string;
   /** Label for the disabled "buy" button when a book has no buy link yet. */
@@ -36,12 +42,13 @@ export function BookShelf({
   title,
   books,
   arrowColor,
+  arrowVariant = 'plain',
   readLabel,
   comingSoonLabel,
   'data-testid': testId,
 }: BookShelfProps) {
   return (
-    <HorizontalCardStrip arrowColor={arrowColor} data-testid={testId}>
+    <HorizontalCardStrip arrowColor={arrowColor} arrowVariant={arrowVariant} data-testid={testId}>
       {books.map((entry) => (
         <Box key={entry.book.id} width={{ base: '80vw', sm: '340px' }} maxW="420px">
           <BookPanel
