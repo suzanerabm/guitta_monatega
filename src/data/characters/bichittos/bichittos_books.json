@@ -1,13 +1,45 @@
 {
-  "_comment": "Controle dos livros dos Bichittos. Chave = 'creatureId/bookId' (bookId = pasta em public/imgs/books/<creature>/<book>/). Campos por livro: | visible (bool): false esconde o livro sem apagar imagens; ausente=visível. | onlyLocale ('pt'|'en'): se definido, o livro só aparece nesse idioma (ex: 'pt' = some na versão EN do site). Ausente = aparece nos dois. | buyUrl (string): link de compra; quando presente, mostra um botão no modal do livro. | buyLabel (string): texto do botão (ex: 'Compre na Amazon'). Títulos vêm das traduções. Filtros rodam no servidor (bichittos/page.tsx) — livro oculto não vaza.",
+  "_comment": "Fonte única de verdade dos livros dos Bichittos: título, capa, idioma, visibilidade e link de compra — tudo aqui, nada vem do i18n nem do manifest automático. Chave = 'creatureId/bookId' (bookId = pasta em public/imgs/books/<creature>/<book>/). Cada IDIOMA de um mesmo livro é uma entrada própria (capa e link podem ser diferentes por edição). Campos por livro: | title ({pt,en}): nome do livro (preencha só o idioma dessa edição). | cover (string): caminho da imagem de capa dessa edição. | visible (bool): false esconde o livro sem apagar imagens; ausente=visível. | onlyLocale ('pt'|'en'): idioma em que essa edição aparece — use sempre, já que cada entrada é uma edição de um idioma só. | buyUrl (string): link de compra dessa edição. | buyLabel (string): texto do botão (ex: 'Compre na Amazon'). Filtros rodam no servidor (bichittos/page.tsx) — livro oculto não vaza.",
   "books": {
-    "napcat/adventures": { "visible": false },
-    "zeco/zeco-estacoes": {
+    "napcat/color-pt": {
       "visible": true,
       "onlyLocale": "pt",
+      "cover": "/imgs/books/napcat/color_book/capa_pt-br.png",
+      "title": { "pt": "Livro para Colorir do NapCat" },
       "buyUrl": "www.kammara.com",
       "buyLabel": "Compre na Amazon"
     },
-    "taylo/star-hunter": { "visible": false }
+    "napcat/color-en": {
+      "visible": true,
+      "onlyLocale": "en",
+      "cover": "/imgs/books/napcat/color_book/capa_en.png",
+      "title": { "en": "A Coloring Book for Kids - NapCat" }
+    },
+    "zeco/zeco-estacoes-pt": {
+      "visible": true,
+      "onlyLocale": "pt",
+      "cover": "/imgs/books/zeco/zeco-estacoes/cover_ptbr1.jpg",
+      "title": { "pt": "Zeco nas Estações - e seus amigos" },
+      "buyUrl": "www.kammara.com",
+      "buyLabel": "Compre na Amazon"
+    },
+    "zeco/zeco-estacoes-en": {
+      "visible": true,
+      "onlyLocale": "en",
+      "cover": "/imgs/books/zeco/zeco-estacoes/cover_en1.jpg",
+      "title": { "en": "Zeco Through the Seasons - and his friends" }
+    },
+    "taylo/star-hunter-pt": {
+      "visible": false,
+      "onlyLocale": "pt",
+      "cover": "/imgs/books/taylo/star-hunter/cover.jpg",
+      "title": { "pt": "O Caçador de Estrelas" }
+    },
+    "taylo/star-hunter-en": {
+      "visible": false,
+      "onlyLocale": "en",
+      "cover": "/imgs/books/taylo/star-hunter/cover.jpg",
+      "title": { "en": "The Star Catcher" }
+    }
   }
 }

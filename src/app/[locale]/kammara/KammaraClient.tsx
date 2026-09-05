@@ -20,7 +20,7 @@ import { KammaraCardSubsystem, KammaraCardSubsystemContainer, KammaraCardSubsyst
 import { RegionDivider } from '@/components/RegionDivider';
 import { RegionBanner } from '@/components/RegionBanner';
 import { KammaraDropsStrip } from '@/components/KammaraDropsStrip';
-import { BookGallery } from '@/components/BookGallery';
+import { BookPanel } from '@/components/BookPanel';
 import { KammaraProgressHeatmap } from '@/components/KammaraProgressHeatmap';
 import kammaraProgressData from '@/data/kammara_progress.json';
 import { isKammaraPublished, kammaraInProgress } from '@/lib/visibility';
@@ -76,7 +76,9 @@ interface WorldData {
 
 interface KammaraBook {
   id: string;
+  title: string;
   cover: string | null;
+  buy: { url: string; label: string } | null;
   pages: string[];
 }
 
@@ -389,24 +391,19 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
   const sectionName = safeT('section.name', 'Kammara');
   const sectionText = safeTRaw<string[]>('section.text', []);
   const sectionStory = safeTRaw<string[]>('section.panel.story', []);
-  const bookDefs = safeTRaw<{ tag: string; title: string }[] | undefined>(
-    'section.books',
-    undefined
-  );
 
   // ── Modal gallery registration for kammara books ──────────────────────
   const bookGalleries = useMemo(() => {
     const out: Record<string, { title: string; pages: string[] }> = {};
     for (const book of kammaraBooks) {
       if (book.pages.length === 0) continue;
-      const def = bookDefs?.find((d) => d.tag === book.id);
       out[`book_kammara-${book.id}`] = {
-        title: def?.title ?? book.id,
+        title: book.title,
         pages: book.pages,
       };
     }
     return out;
-  }, [kammaraBooks, bookDefs]);
+  }, [kammaraBooks]);
 
   useEffect(() => {
     for (const [id, g] of Object.entries(bookGalleries)) {
@@ -712,9 +709,53 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
             </Box>
           );
         })()}
-        {/* BookGallery temporariamente removida da página Kammara — props
-            (kammaraBooks, bookDefs) e handlers (handleBookClick) seguem
-            ativos pra reativação rápida. */}
+        {kammaraBooks.length > 0 && (() => {
+          const booksTitle = safeT('booksTitle', 'Livros');
+          return (
+            <>
+              <KammaraPlanetTitle
+                name={booksTitle}
+                palette="kammara"
+                category={sectionName}
+                declarer="universe"
+                crestGlyph={worldCrestGlyph('kammara')}
+                description=""
+              />
+              <Grid
+                templateColumns={{ base: '1fr', md: 'repeat(auto-fit, minmax(280px, 420px))' }}
+                gap="lg"
+                justifyContent="center"
+                maxW="900px"
+                mx="auto"
+                my="3xl"
+                px={{ base: '1.5rem', md: 0 }}
+              >
+                {kammaraBooks.map((b) => {
+                  return (
+                    <BookPanel
+                      key={b.id}
+                      title={booksTitle}
+                      book={{
+                        id: `kammara-${b.id}`,
+                        image: b.cover,
+                        alt: b.title,
+                        label: b.title,
+                        // "Em breve" sempre que ainda não há link de compra
+                        // — mesmo que já existam páginas pra ler.
+                        soon: !b.buy,
+                        buy: b.buy,
+                      }}
+                      borderColor={kammaraPalette.colors[0]}
+                      textColor={kammaraPalette.text}
+                      comingSoonLabel={tCommon('soon')}
+                      onRead={(bookId) => handleBookClick(bookId.replace(/^kammara-/, ''))}
+                    />
+                  );
+                })}
+              </Grid>
+            </>
+          );
+        })()}
 
         {/* ── PRÓXIMOS EVENTOS — eventos in-universe de Kammara ──────────
             A `Box` externa controla padding + imagem de fundo da seção.

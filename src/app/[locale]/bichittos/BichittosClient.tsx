@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
-import { Box, Grid, Text, chakra } from '@chakra-ui/react';
+import { Box, Grid, Text } from '@chakra-ui/react';
 import { useTranslations, useLocale } from 'next-intl';
 import { HeroSection } from '@/components/HeroSection';
 import { FilterBar } from '@/components/FilterBar';
@@ -10,7 +10,7 @@ import { CreatureCard } from '@/components/bichittos/CreatureCard';
 import { DSMainCard } from '@/components/DSMainCard';
 import { CharacterStrip } from '@/components/bichittos/CharacterStrip';
 import { BichittoVideoCarousel } from '@/components/bichittos/BichittoVideoCarousel';
-import { BookGallery } from '@/components/BookGallery';
+import { BookPanel } from '@/components/BookPanel';
 import { useModal } from '@/components/Modal';
 import { palettes, type CreatureId } from '@/theme/palettes';
 import { isBichittoPublished } from '@/lib/visibility';
@@ -29,9 +29,10 @@ export interface BichittosCreatureData {
   chars: { name: string; image: string }[];
   books: {
     id: string;
+    title: string;
     cover: string | null;
     pages: string[];
-    buy?: { url: string; label: string } | null;
+    buy: { url: string; label: string } | null;
   }[];
 }
 
@@ -84,28 +85,17 @@ export function BichittosClient({ data }: Props) {
       }
     > = {};
     for (const creature of data) {
-      // Read translated book defs to map tag -> title
-      const bookDefs = ((): { tag: string; title: string }[] | undefined => {
-        try {
-          if (!t.has(`${creature.id}.books` as never)) return undefined;
-          return t.raw(`${creature.id}.books`) as { tag: string; title: string }[];
-        } catch {
-          return undefined;
-        }
-      })();
       for (const book of creature.books) {
         if (!book.pages || book.pages.length === 0) continue;
-        const def = bookDefs?.find((d) => book.id.endsWith(d.tag));
-        const title = def?.title ?? book.id;
         out[`book_${creature.id}-${book.id}`] = {
-          title,
+          title: book.title,
           pages: book.pages,
           buy: book.buy,
         };
       }
     }
     return out;
-  }, [data, t]);
+  }, [data]);
 
   useEffect(() => {
     for (const [id, g] of Object.entries(galleries)) {
@@ -215,22 +205,13 @@ export function BichittosClient({ data }: Props) {
         const text = getCreatureText(creature.id, locale as Locale);
         const panelStory = getCreaturePanelStory(creature.id, locale as Locale);
         const name = getCreatureName(creature.id, locale as Locale);
-        const bookDefs = ((): { tag: string; title: string }[] | undefined => {
-          try {
-            if (!t.has(`${creature.id}.books` as never)) return undefined;
-            return t.raw(`${creature.id}.books`) as { tag: string; title: string }[];
-          } catch {
-            return undefined;
-          }
-        })();
         const books = creature.books.map((b) => {
-          const def = bookDefs?.find((d) => b.id.endsWith(d.tag));
           const hasPages = Boolean(b.pages && b.pages.length > 0);
           return {
             id: `${creature.id}-${b.id}`,
             image: b.cover ?? undefined,
-            alt: def?.title ?? b.id,
-            label: def?.title ?? b.id,
+            alt: b.title,
+            label: b.title,
             // "soon" só quando NÃO há páginas E NÃO há link de compra. Um livro
             // à venda (só capa + buyUrl) não é "em breve" — mostra o botão.
             soon: !hasPages && !b.buy,
@@ -403,94 +384,15 @@ export function BichittosClient({ data }: Props) {
 
                 {/* Box do LIVRO (capa + título + botão) */}
                 {books.length > 0 && books[0] && (
-                  <Box
-                    borderRadius="20px"
-                    p={{ base: '1.5rem', md: '2rem' }}
-                    height="100%"
-                    css={{
-                      background: 'rgba(0,0,0,0.28)',
-                      outline: `2px solid ${boxBorder}`,
-                      outlineOffset: '6px',
-                    }}
-                  >
-                    <Text
-                      textStyle="heading"
-                      fontSize="xs"
-                      letterSpacing="hero"
-                      textTransform="uppercase"
-                      color={colors.textColor}
-                      mb="1rem"
-                    >
-                      {t('booksTitle')}
-                    </Text>
-                    {books[0].image && (
-                      <chakra.img
-                        src={books[0].image}
-                        alt={books[0].alt}
-                        width="100%"
-                        borderRadius="12px"
-                        mb="1rem"
-                        css={{
-                          outline: `2px solid ${boxBorder}`,
-                          outlineOffset: '4px',
-                          display: 'block',
-                          objectFit: 'cover',
-                        }}
-                      />
-                    )}
-                    <Text textStyle="heading" fontSize={{ base: 'lg', md: 'xl' }} color={colors.textColor} mb="1rem">
-                      {books[0].label}
-                    </Text>
-                    {books[0].buy ? (
-                      // Livro à venda (só capa + link): botão leva pra loja.
-                      <chakra.a
-                        href={books[0].buy.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        css={{
-                          display: 'inline-flex',
-                          alignItems: 'center',
-                          gap: '0.4rem',
-                          outline: `2px solid ${boxBorder}`,
-                          outlineOffset: '3px',
-                          borderRadius: '999px',
-                          padding: '0.5rem 1.4rem',
-                          color: colors.textColor,
-                          fontSize: '0.85rem',
-                          fontWeight: 700,
-                          letterSpacing: '0.08em',
-                          textTransform: 'uppercase',
-                          cursor: 'pointer',
-                          background: 'transparent',
-                          textDecoration: 'none',
-                          transition: 'transform 0.15s ease, opacity 0.15s ease',
-                        }}
-                      >
-                        {books[0].buy.label} ↗
-                      </chakra.a>
-                    ) : !books[0].soon ? (
-                      <chakra.button
-                        type="button"
-                        onClick={() => handleBookClick(creature.id, books[0].id.slice(creature.id.length + 1))}
-                        css={{
-                          display: 'inline-block',
-                          outline: `2px solid ${boxBorder}`,
-                          outlineOffset: '3px',
-                          borderRadius: '999px',
-                          padding: '0.5rem 1.4rem',
-                          color: colors.textColor,
-                          fontSize: '0.85rem',
-                          fontWeight: 700,
-                          letterSpacing: '0.08em',
-                          textTransform: 'uppercase',
-                          cursor: 'pointer',
-                          background: 'transparent',
-                        }}
-                      >
-                        Ler história ✦
-                      </chakra.button>
-                    ) : null}
-                  </Box>
+                  <BookPanel
+                    title={t('booksTitle')}
+                    book={books[0]}
+                    borderColor={boxBorder}
+                    textColor={colors.textColor}
+                    onRead={(bookId) =>
+                      handleBookClick(creature.id, bookId.slice(creature.id.length + 1))
+                    }
+                  />
                 )}
               </Grid>
             </Box>

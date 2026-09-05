@@ -96,56 +96,133 @@ export function isBichittoPublished(creatureId: string): boolean {
 
 // ─── Bichittos books ─────────────────────────────────────────────────────
 //
-// Controle de visibilidade por LIVRO (independente da criatura), lido de
-// `src/data/characters/bichittos/bichittos_books.json`. Diferente de `isBichittoPublished` (gate de
-// "publicado"), aqui `visible: false` esconde SEMPRE — em dev/preview/prod —
-// porque é uma escolha manual de esconder, não um estado de progresso. Assim o
-// comportamento bate com o campo `visible` de personagens/subsistemas do
-// Kammara. O filtro roda no servidor (bichittos/page.tsx) → não vaza.
+// Fonte ÚNICA de verdade dos livros dos Bichittos (título, capa, idioma,
+// visibilidade, link de compra) — lida de
+// `src/data/characters/bichittos/bichittos_books.json`. Cada IDIOMA de um
+// livro é a sua própria entrada (capa e link de compra podem ser diferentes
+// por edição). Diferente de `isBichittoPublished` (gate de "publicado"),
+// aqui `visible: false` esconde SEMPRE — em dev/preview/prod — porque é uma
+// escolha manual de esconder, não um estado de progresso. O filtro roda no
+// servidor (bichittos/page.tsx) → não vaza.
 
 import booksVisibility from '@/data/characters/bichittos/bichittos_books.json';
 
-interface BookConfig {
+interface BichittoBookConfig {
   visible?: boolean;
-  /** Se definido, o livro só aparece nesse idioma (ex: 'pt' some no EN). */
+  /** Idioma em que essa edição aparece. Cada entrada é uma edição de um só idioma. */
   onlyLocale?: 'pt' | 'en';
-  /** Link de compra — quando presente, o modal mostra um botão. */
+  /** Caminho da capa dessa edição (ex: '/imgs/books/zeco/zeco-estacoes/cover.png'). */
+  cover?: string;
+  /** Título do livro, preenchido só no idioma dessa edição. */
+  title?: { pt?: string; en?: string };
   buyUrl?: string;
-  /** Texto do botão de compra (ex: "Compre na Amazon"). */
   buyLabel?: string;
 }
 
-const bookConfig = (booksVisibility.books ?? {}) as Record<string, BookConfig>;
+const bookConfig = (booksVisibility.books ?? {}) as Record<string, BichittoBookConfig>;
 
-/** True quando o livro deve aparecer no idioma dado. Chave = `creatureId/bookId`.
- *  Regras: `visible: false` esconde sempre; `onlyLocale` restringe a um idioma.
- *  Ausente do JSON = visível (default). */
-export function isBichittoBookVisible(
-  creatureId: string,
-  bookId: string,
-  locale?: string,
-): boolean {
-  const cfg = bookConfig[`${creatureId}/${bookId}`];
-  if (!cfg) return true;
-  if (cfg.visible === false) return false;
-  if (cfg.onlyLocale && locale && cfg.onlyLocale !== locale) return false;
-  return true;
+export interface BichittoBookEntry {
+  /** `bookId` sem o prefixo de `creatureId/` — usado como id estável no front. */
+  id: string;
+  title: string;
+  cover: string | null;
+  buy: { url: string; label: string } | null;
 }
 
-/** Dados de compra do livro (link + texto do botão), ou null se não houver
- *  `buyUrl`. Usado pra renderizar o botão "Compre na Amazon" no modal. */
-export function getBichittoBookBuy(
-  creatureId: string,
-  bookId: string,
-): { url: string; label: string } | null {
-  const cfg = bookConfig[`${creatureId}/${bookId}`];
-  if (!cfg?.buyUrl) return null;
+function resolveBichittoBuy(cfg: BichittoBookConfig): { url: string; label: string } | null {
+  if (!cfg.buyUrl) return null;
   // Garante um link ABSOLUTO: sem o esquema, o navegador trataria "www.x.com"
-  // como caminho relativo (guittamonatega.com/.../www.x.com). Prefixa https://
-  // quando o valor não começa com http(s):// nem com "/".
+  // como caminho relativo (guittamonatega.com/.../www.x.com).
   const raw = cfg.buyUrl.trim();
   const url = /^(https?:)?\/\//i.test(raw) || raw.startsWith('/')
     ? raw
     : `https://${raw}`;
   return { url, label: cfg.buyLabel || 'Compre na Amazon' };
+}
+
+/** Livros de uma criatura visíveis para o idioma dado, já resolvidos (título,
+ *  capa, link de compra). Regras de visibilidade: `visible: false` esconde
+ *  sempre; `onlyLocale` restringe a edição a um idioma. Ausente do JSON = não
+ *  aparece (o JSON é a única fonte — sem entrada, não há livro a mostrar). */
+export function getBichittoBooks(creatureId: string, locale: 'pt' | 'en'): BichittoBookEntry[] {
+  const prefix = `${creatureId}/`;
+  return Object.entries(bookConfig)
+    .filter(([key, cfg]) => {
+      if (!key.startsWith(prefix)) return false;
+      if (cfg.visible === false) return false;
+      if (cfg.onlyLocale && cfg.onlyLocale !== locale) return false;
+      return true;
+    })
+    .map(([key, cfg]) => ({
+      id: key.slice(prefix.length),
+      title: cfg.title?.[locale] ?? key.slice(prefix.length),
+      cover: cfg.cover ?? null,
+      buy: resolveBichittoBuy(cfg),
+    }));
+}
+
+// ─── Kammara books ───────────────────────────────────────────────────────
+//
+// Fonte ÚNICA de verdade dos livros de Kammara (título, capa, idioma,
+// visibilidade, link de compra) — lida de `src/data/kammara_books.json`.
+// Diferente do bloco dos Bichittos (que só controla visibilidade/compra
+// sobre dados vindos do image-manifest + i18n), aqui o JSON já é dono de
+// tudo: cada IDIOMA de um livro é a sua própria entrada (capa e link de
+// compra podem ser diferentes por edição). Chave = `section/bookId`.
+
+import kammaraBooksData from '@/data/kammara_books.json';
+
+interface KammaraBookConfig {
+  visible?: boolean;
+  /** Idioma em que essa edição aparece. Cada entrada é uma edição de um só idioma. */
+  onlyLocale?: 'pt' | 'en';
+  /** Caminho da capa dessa edição (ex: '/imgs/books/kammara/saga-orf-v/cover.jpg'). */
+  cover?: string;
+  /** Título do livro, preenchido só no idioma dessa edição. */
+  title?: { pt?: string; en?: string };
+  buyUrl?: string;
+  buyLabel?: string;
+}
+
+const kammaraBookConfig = (kammaraBooksData.books ?? {}) as Record<string, KammaraBookConfig>;
+
+export interface KammaraBookEntry {
+  /** `bookId` sem o prefixo de `section/` — usado como id estável no front. */
+  id: string;
+  title: string;
+  cover: string | null;
+  buy: { url: string; label: string } | null;
+}
+
+function resolveBuy(cfg: KammaraBookConfig): { url: string; label: string } | null {
+  if (!cfg.buyUrl) return null;
+  // Garante um link ABSOLUTO: sem o esquema, o navegador trataria "www.x.com"
+  // como caminho relativo (guittamonatega.com/.../www.x.com).
+  const raw = cfg.buyUrl.trim();
+  const url = /^(https?:)?\/\//i.test(raw) || raw.startsWith('/')
+    ? raw
+    : `https://${raw}`;
+  return { url, label: cfg.buyLabel || 'Compre na Amazon' };
+}
+
+/** Livros de Kammara visíveis para o idioma dado, já resolvidos (título,
+ *  capa, link de compra). `section` = 'kammara' pro livro do universo geral.
+ *  Regras de visibilidade: `visible: false` esconde sempre; `onlyLocale`
+ *  restringe a edição a um idioma. Ausente do JSON = não aparece (o JSON é a
+ *  única fonte — sem entrada, não há livro a mostrar). */
+export function getKammaraBooks(section: string, locale: 'pt' | 'en'): KammaraBookEntry[] {
+  const prefix = `${section}/`;
+  return Object.entries(kammaraBookConfig)
+    .filter(([key, cfg]) => {
+      if (!key.startsWith(prefix)) return false;
+      if (cfg.visible === false) return false;
+      if (cfg.onlyLocale && cfg.onlyLocale !== locale) return false;
+      return true;
+    })
+    .map(([key, cfg]) => ({
+      id: key.slice(prefix.length),
+      title: cfg.title?.[locale] ?? key.slice(prefix.length),
+      cover: cfg.cover ?? null,
+      buy: resolveBuy(cfg),
+    }));
 }
