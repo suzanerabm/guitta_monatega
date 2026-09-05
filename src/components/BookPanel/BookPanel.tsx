@@ -79,19 +79,20 @@ export function BookPanel({
         {title}
       </Text>
       {book.image && (
-        <chakra.img
-          src={book.image}
-          alt={book.alt}
-          width="100%"
-          flexShrink={0}
-          borderRadius="12px"
-          mb="1rem"
-          css={{
-            outline: `2px solid ${borderColor}`,
-            outlineOffset: '4px',
-            display: 'block',
-          }}
-        />
+        <Box flex="0 1 auto" minHeight={0} mb="1rem" textAlign="center">
+          <chakra.img
+            src={book.image}
+            alt={book.alt}
+            maxWidth="100%"
+            maxHeight="100%"
+            borderRadius="12px"
+            css={{
+              outline: `2px solid ${borderColor}`,
+              outlineOffset: '4px',
+              display: 'inline-block',
+            }}
+          />
+        </Box>
       )}
       <Text
         textStyle="heading"
