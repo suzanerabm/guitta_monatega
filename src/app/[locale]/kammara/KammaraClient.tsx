@@ -30,6 +30,7 @@ import { KammaraPlanetCard } from '@/components/KammaraPlanetCard';
 import { KammaraDropsMosaic } from '@/components/KammaraDropsMosaic';
 import kammaraMosaicData from '@/data/kammara_mosaic.json';
 import { useModal } from '@/components/Modal';
+import { mediaUrl } from '@/lib/media';
 import { palettes, type PaletteName, type Palette } from '@/theme/palettes';
 
 const kammaraHero = palettes.kammara.hero!;
@@ -502,8 +503,8 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
   const mosaicClips = kammaraMosaicData
     .filter((c) => isKammaraPublished(c.world))
     .map((c) => ({
-    video: c.video,
-    poster: c.poster,
+    video: mediaUrl(c.video),
+    poster: mediaUrl(c.poster),
     label: c.label[locale] ?? c.label.pt,
     worldId: c.world,
     worldName: getWorldName(c.world, locale) || WORLD_NAMES[c.world as WorldId] || c.world,
@@ -736,7 +737,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
           pb="60px"
           position="relative"
           overflow="hidden"
-          backgroundImage="url(/imgs/kammara/_events_bg.jpg)"
+          backgroundImage={`url(${mediaUrl('/imgs/kammara/_events_bg.jpg')})`}
           backgroundSize="cover"
           backgroundPosition="center"
         >

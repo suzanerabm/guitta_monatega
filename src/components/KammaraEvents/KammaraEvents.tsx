@@ -5,6 +5,7 @@ import { HorizontalCardStrip } from '@/components/HorizontalCardStrip';
 import { palettes, type PaletteName } from '@/theme/palettes';
 import { worldCrestGlyph } from '@/theme/kalunGlyphs';
 import { getWorldName } from '@/data/characters/kammara/_worldData';
+import { mediaUrl } from '@/lib/media';
 
 export interface EventCategory {
   id: string;
@@ -303,8 +304,8 @@ function EventCard({ event, locale, color, darkColor }: EventCardProps) {
       color={accent}
       darkColor={accentDark}
       headerBg={accentDark}
-      bgImage={event.backgroundImage}
-      bgVideo={event.backgroundVideo}
+      bgImage={mediaUrl(event.backgroundImage)}
+      bgVideo={mediaUrl(event.backgroundVideo)}
       tabs={[
         {
           id: event.id,
