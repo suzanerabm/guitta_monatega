@@ -5,8 +5,12 @@
 
 import type { Character, Mascot } from '@/components/DSMainCard/DSMainCard';
 import type { CreatureId } from '@/theme/palettes';
+import { mediaUrl } from '@/lib/media';
 
-export const characterPositions: Record<CreatureId, Character[]> = {
+// Tabelas com os paths CRUS (`/imgs/...`). A resolução pra base de mídia
+// (local ou CDN) acontece uma única vez, nos exports abaixo — ver
+// `src/lib/media.ts`. Assim as tabelas seguem legíveis e nenhum path escapa.
+const rawCharacterPositions: Record<CreatureId, Character[]> = {
   napcat: [
     { image: '/imgs/bichittos/napcat/napcat-sonequinha.png', x: 55, y: 0, size: 360, zIndex: 2,
       md: { size: 340 }, xl: { x: 58, size: 560 }, xxl: { x: 55, size: 650 } },
@@ -43,7 +47,7 @@ export const characterPositions: Record<CreatureId, Character[]> = {
   ],
 };
 
-export const zecoMascot: Mascot = {
+const rawZecoMascot: Mascot = {
   image: '/imgs/bichittos/zeco/03_ninha_apaixonada.png',
   size: 100,
   offsetX: 15,
@@ -66,7 +70,7 @@ export interface BichittoVideo {
  * Vídeos por bichitto. Só aparecem na página os bichittos que têm itens aqui
  * (hoje só o Zeco). Adicione entradas conforme novos vídeos forem criados.
  */
-export const bichittoVideos: Partial<Record<CreatureId, BichittoVideo[]>> = {
+const rawBichittoVideos: Partial<Record<CreatureId, BichittoVideo[]>> = {
   zeco: [
     {
       src: '/imgs/bichittos/zeco/zeco_jogando_bolinha.mp4',
@@ -80,3 +84,29 @@ export const bichittoVideos: Partial<Record<CreatureId, BichittoVideo[]>> = {
     },
   ],
 };
+
+// ── Exports resolvidos ───────────────────────────────────────────────────────
+// Único ponto onde os paths de bichittos ganham a base de mídia.
+
+export const characterPositions = Object.fromEntries(
+  Object.entries(rawCharacterPositions).map(([creature, chars]) => [
+    creature,
+    chars.map((c) => ({ ...c, image: mediaUrl(c.image) })),
+  ]),
+) as Record<CreatureId, Character[]>;
+
+export const zecoMascot: Mascot = {
+  ...rawZecoMascot,
+  image: mediaUrl(rawZecoMascot.image),
+};
+
+export const bichittoVideos = Object.fromEntries(
+  Object.entries(rawBichittoVideos).map(([creature, videos]) => [
+    creature,
+    (videos ?? []).map((v) => ({
+      ...v,
+      src: mediaUrl(v.src),
+      poster: mediaUrl(v.poster),
+    })),
+  ]),
+) as Partial<Record<CreatureId, BichittoVideo[]>>;

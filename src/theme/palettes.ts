@@ -1,4 +1,6 @@
 // src/theme/palettes.ts
+import { mediaUrl } from '@/lib/media';
+
 export type PaletteName =
   | 'bichittos' | 'napcat' | 'zeco' | 'taylo' | 'miscelania' | 'cheiodebolinha'
   | 'kammara' | 'lunnp1' | 'eni4' | 'triplec' | 'orfv' | 'z1' | 'gotto' | 'arte'
@@ -90,7 +92,7 @@ export const palettes: Record<PaletteName, Palette> = {
       textColor: '#c4d4ff',  // parágrafos dentro do painel
       accent: '#c4d4ff',  
       accentAlt: '#c4d4ff',  // texto da pill
-      bgImage: '/imgs/bichittos/_bg/violeta_caminha.jpg',
+      bgImage: mediaUrl('/imgs/bichittos/_bg/violeta_caminha.jpg'),
       tag: 'Gato · Sonhador',
       panelBg: 'rgb(30, 58, 122, 0.8)',
       // panelBg: '#3b0033',
@@ -109,7 +111,7 @@ export const palettes: Record<PaletteName, Palette> = {
       textColor: '#fece95',
       accent: '#f58020',
       accentAlt: '#fece95',
-      bgImage: '/imgs/bichittos/_bg/primaveracena_12_ipe.png',
+      bgImage: mediaUrl('/imgs/bichittos/_bg/primaveracena_12_ipe.png'),
       tag: 'Hamster · Quintal',
       panelBg: '#592e06',
       // panelBg: 'rgb(245, 128, 32, 0.6)',
@@ -131,7 +133,7 @@ export const palettes: Record<PaletteName, Palette> = {
       textColor: '#d7e2dd',
       accent: '#5d9466',
       accentAlt: '#b6fcc0',
-      bgImage: '/imgs/bichittos/_bg/estrela_ceu.jpg',
+      bgImage: mediaUrl('/imgs/bichittos/_bg/estrela_ceu.jpg'),
       tag: 'Amigos · Natureza',
       panelBg: 'rgb(8, 43, 11, 0.8)',
     },
@@ -149,7 +151,7 @@ export const palettes: Record<PaletteName, Palette> = {
       textColor: '#ddd4f4',
       accent: '#b5a2dc',
       accentAlt: '#977ad1',
-      bgImage: '/imgs/bichittos/_bg/miscelania.png',
+      bgImage: mediaUrl('/imgs/bichittos/_bg/miscelania.png'),
       tag: 'Mágica',
     },
   },
@@ -166,7 +168,7 @@ export const palettes: Record<PaletteName, Palette> = {
       textColor: '#edf0f2',
       accent: '#3ae9f2',
       accentAlt: '#83e5ea',
-      bgImage: '/imgs/bichittos/_bg/ceu_nuvem.png',
+      bgImage: mediaUrl('/imgs/bichittos/_bg/ceu_nuvem.png'),
       tag: 'Elefante · Medroso',
       panelBg: 'rgb(47, 49, 113)',
     },
