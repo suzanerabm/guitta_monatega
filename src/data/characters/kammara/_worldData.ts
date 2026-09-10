@@ -1,4 +1,5 @@
 import type { Locale } from '@/lib/characters';
+import { mediaUrl } from '@/lib/media';
 
 import eni4Story from './eni4_story.json';
 import eni4Subs from './eni4_subsystems.json';
@@ -200,7 +201,7 @@ export function getWorldSubsystems(
     const textInLocale = s.text[locale];
     const hasTitle = !!titleInLocale;
     const hasText = Array.isArray(textInLocale) && textInLocale.some((p) => p && p.trim());
-    const img = s.img || '';
+    const img = mediaUrl(s.img || '');
     if (hasTitle && hasText) {
       return { title: titleInLocale!, text: textInLocale, img };
     }
@@ -220,7 +221,7 @@ export function getWorldSubsystems(
 export function getWorldSubsystemImages(worldId: string): (string | null)[] {
   const subs = SUBSYSTEMS[worldId];
   if (!subs) return [];
-  return subs.map((s) => (s.img && s.img.trim() ? s.img : null));
+  return subs.map((s) => (s.img && s.img.trim() ? mediaUrl(s.img) : null));
 }
 
 /**
@@ -236,9 +237,9 @@ export function getWorldScenes(
   const scenes = SCENES[worldId];
   if (!scenes) return [];
   return scenes.map((s) => ({
-    image: s.image,
+    image: mediaUrl(s.image),
     name: s.label[locale]?.trim() || s.label.pt || '',
-    ...(s.video ? { video: s.video } : {}),
+    ...(s.video ? { video: mediaUrl(s.video) } : {}),
   }));
 }
 
@@ -269,8 +270,8 @@ export function getWorldDrops(
     // `enabled: false` parks a clip in the JSON without showing it.
     .filter((d) => d.enabled !== false)
     .map((d) => ({
-      video: d.video,
-      poster: d.poster,
+      video: mediaUrl(d.video),
+      poster: mediaUrl(d.poster),
       label: d.label[locale]?.trim() || d.label.pt || '',
     }));
 }
