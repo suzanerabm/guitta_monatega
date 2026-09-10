@@ -2,162 +2,185 @@
   {
     "image": "/imgs/kammara/eni4/_scenes/1_Dois_sois.jpg",
     "label": {
-      "pt": "Dois sois",
+      "pt": "Dois sóis",
       "en": "Dois sois"
-    }
+    },
+    "appId": "eni4-scene-2159b663c1facabe"
   },
   {
     "image": "/imgs/kammara/eni4/_scenes/1_Palacio_Node-0.jpg",
     "label": {
-      "pt": "Palacio Node-0",
+      "pt": "Palácio de Node-0",
       "en": "Palacio Node-0"
-    }
+    },
+    "appId": "eni4-scene-1bf519b867705a7d"
   },
   {
     "image": "/imgs/kammara/eni4/_scenes/3_Palacio_Node-0.jpg",
     "label": {
-      "pt": "Palacio Node-0",
+      "pt": "Palácio de Node-0",
       "en": "Palacio Node-0"
-    }
+    },
+    "appId": "eni4-scene-2ce7e20ede862529"
   },
   {
     "image": "/imgs/kammara/eni4/_scenes/4_Palacio_Node-0.jpg",
     "label": {
-      "pt": "Palacio Node-0",
+      "pt": "Palácio de Node-0",
       "en": "Palacio Node-0"
-    }
+    },
+    "appId": "eni4-scene-9c6a65c2023f7a4f"
   },
   {
     "image": "/imgs/kammara/eni4/_scenes/5_Palacio_Node-0-Entrada.jpg",
     "label": {
-      "pt": "Palacio Node-0-Entrada",
+      "pt": "Entrada do palácio de Node-0",
       "en": "Palacio Node-0-Entrada"
-    }
+    },
+    "appId": "eni4-scene-8ff310d17f2c3645"
   },
   {
     "image": "/imgs/kammara/eni4/_scenes/6_Palacio_Node-0-Corredor.jpg",
     "label": {
-      "pt": "Palacio Node-0-Corredor",
+      "pt": "Corredor do palácio de Node-0",
       "en": "Palacio Node-0-Corredor"
-    }
+    },
+    "appId": "eni4-scene-853612a111b6bc6d"
   },
   {
     "image": "/imgs/kammara/eni4/_scenes/7_Palacio_Node-0-Porta.jpg",
     "label": {
-      "pt": "Palacio Node-0-Porta",
+      "pt": "Porta do palácio de Node-0",
       "en": "Palacio Node-0-Porta"
-    }
+    },
+    "appId": "eni4-scene-75010ada3f0c59bb"
   },
   {
     "image": "/imgs/kammara/eni4/_scenes/8_Palacio_Node-0-Interior.jpg",
     "label": {
-      "pt": "Palacio Node-0-Interior",
+      "pt": "Interior do palácio de Node-0",
       "en": "Palacio Node-0-Interior"
-    }
+    },
+    "appId": "eni4-scene-8ded64139506ee60"
   },
   {
     "image": "/imgs/kammara/eni4/_scenes/9_Palacio_Node-0-Interior.jpg",
     "label": {
-      "pt": "Palacio Node-0-Interior",
+      "pt": "Interior do palácio de Node-0",
       "en": "Palacio Node-0-Interior"
-    }
+    },
+    "appId": "eni4-scene-26d856cb1f6cb698"
   },
   {
     "image": "/imgs/kammara/eni4/_scenes/9camara_node-0_entrada.jpg",
     "label": {
-      "pt": "camara node-0 entrada",
+      "pt": "Entrada da câmara de Node-0",
       "en": "camara node-0 entrada"
-    }
+    },
+    "appId": "eni4-scene-4d82c300b1576318"
   },
   {
     "image": "/imgs/kammara/eni4/_scenes/9camara_node-0_interior.jpg",
     "label": {
-      "pt": "camara node-0 interior",
+      "pt": "Interior da câmara de Node-0",
       "en": "camara node-0 interior"
-    }
+    },
+    "appId": "eni4-scene-8c73e4167098ada0"
   },
   {
     "image": "/imgs/kammara/eni4/_scenes/10Fabrica_BURN.jpg",
     "label": {
-      "pt": "Fabrica BURN",
+      "pt": "Fábrica BURN",
       "en": "Fabrica BURN"
-    }
+    },
+    "appId": "eni4-scene-4bc4294d82b86167"
   },
   {
     "image": "/imgs/kammara/eni4/_scenes/10muro_valvulas._formam_laritinto.jpg",
     "label": {
-      "pt": "muro valvulas. formam laritinto",
+      "pt": "Muro de válvulas formando um labirinto",
       "en": "muro valvulas. formam laritinto"
-    }
+    },
+    "appId": "eni4-scene-0a2529561ca9bc1a"
   },
   {
     "image": "/imgs/kammara/eni4/_scenes/11fabrica_frente.jpg",
     "label": {
-      "pt": "fabrica frente",
+      "pt": "Frente da fábrica",
       "en": "fabrica frente"
-    }
+    },
+    "appId": "eni4-scene-defca71095d6276d"
   },
   {
     "image": "/imgs/kammara/eni4/_scenes/11fabrica_interior.jpg",
     "label": {
-      "pt": "fabrica interior",
+      "pt": "Interior da fábrica",
       "en": "fabrica interior"
-    }
+    },
+    "appId": "eni4-scene-0c877daba6dc465b"
   },
   {
     "image": "/imgs/kammara/eni4/_scenes/12corte_planeta.jpg",
     "label": {
-      "pt": "corte planeta",
+      "pt": "Planeta em corte",
       "en": "corte planeta"
-    }
+    },
+    "appId": "eni4-scene-f09c1e3611c8c474"
   },
   {
     "image": "/imgs/kammara/eni4/_scenes/13zona-SCORCH_worms.jpg",
     "label": {
-      "pt": "zona-SCORCH worms",
+      "pt": "Worms na zona SCORCH",
       "en": "zona-SCORCH worms"
-    }
+    },
+    "appId": "eni4-scene-73dda71792013e23"
   },
   {
     "image": "/imgs/kammara/eni4/_scenes/13zona-SCORCH.jpg",
     "label": {
-      "pt": "zona-SCORCH",
+      "pt": "Zona SCORCH",
       "en": "zona-SCORCH"
-    }
+    },
+    "appId": "eni4-scene-3d57f0d03ada7d52"
   },
   {
     "image": "/imgs/kammara/eni4/_scenes/15zona_CRACK_tuneis_worms.jpg",
     "label": {
-      "pt": "zona CRACK tuneis worms",
+      "pt": "Túneis com Worms na zona CRACK",
       "en": "zona CRACK tuneis worms"
-    }
+    },
+    "appId": "eni4-scene-fb05c3232d0ed895"
   },
   {
     "image": "/imgs/kammara/eni4/_scenes/16zona_CRACK_tuneis_worms.jpg",
     "label": {
-      "pt": "zona CRACK tuneis worms",
+      "pt": "Túneis com Worms na zona CRACK",
       "en": "zona CRACK tuneis worms"
-    }
+    },
+    "appId": "eni4-scene-32dec6fe4f42f504"
   },
   {
     "image": "/imgs/kammara/eni4/_scenes/17zona_SINK.jpg",
     "label": {
-      "pt": "zona SINK",
+      "pt": "Zona SINK",
       "en": "zona SINK"
-    }
+    },
+    "appId": "eni4-scene-2dc9329f95a66379"
   },
   {
     "image": "/imgs/kammara/eni4/_scenes/18megavalvulas_onde_moram_virus_bugs.jpg",
     "label": {
-      "pt": "megavalvulas onde moram virus bugs",
+      "pt": "Megaválvulas onde vivem vírus e bugs",
       "en": "megavalvulas onde moram virus bugs"
-    }
+    },
+    "appId": "eni4-scene-4c8ea2de9b39fe3b"
   },
   {
     "image": "/imgs/kammara/eni4/_scenes/19sucata_bugs.jpg",
     "label": {
-      "pt": "sucata bugs",
+      "pt": "Bugs na sucata",
       "en": "sucata bugs"
-    }
+    },
+    "appId": "eni4-scene-e2e66ff4e6818f79"
   }
 ]

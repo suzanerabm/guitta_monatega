@@ -5,7 +5,8 @@
     "label": {
       "pt": "Bunniets",
       "en": "Bunniets"
-    }
+    },
+    "appId": "triplec-video-97f8c8ae014c092f"
   },
   {
     "video": "/imgs/kammara/triplec/_videos/Nilo_familia.mp4",
@@ -13,15 +14,17 @@
     "label": {
       "pt": "Família de Nilo",
       "en": "Nilo's family"
-    }
+    },
+    "appId": "triplec-video-743231f2f8b972f9"
   },
   {
     "video": "/imgs/kammara/triplec/_videos/lumesha_encontra_luma_val.mp4",
     "poster": "/imgs/kammara/triplec/_videos/lumesha_encontra_luma_val_poster.jpg",
     "label": {
-      "pt": "LumEsha encontra Luma Val",
-      "en": "LumEsha meets Luma Val"
-    }
+      "pt": "Lúm'Esha encontra LUMA VAL",
+      "en": "Lúm'Esha meets LUMA VAL"
+    },
+    "appId": "triplec-video-db47bf038601db43"
   },
   {
     "video": "/imgs/kammara/triplec/_videos/soar_voando.mp4",
@@ -29,7 +32,8 @@
     "label": {
       "pt": "Soar voando",
       "en": "Soar flying"
-    }
+    },
+    "appId": "triplec-video-2d8b9da4a200318e"
   },
   {
     "video": "/imgs/kammara/triplec/_videos/tripleC_creatures.mp4",
@@ -37,6 +41,7 @@
     "label": {
       "pt": "Criaturas de TripleC",
       "en": "TripleC creatures"
-    }
+    },
+    "appId": "triplec-video-b96caa17cfe954d7"
   }
 ]

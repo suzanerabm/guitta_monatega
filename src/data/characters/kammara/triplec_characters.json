@@ -57,7 +57,8 @@
           "en": "Natural sentinel"
         }
       }
-    ]
+    ],
+    "appId": "triplec-character-8090c64f7680df75"
   },
   {
     "match": "Ypito",
@@ -74,7 +75,7 @@
       "en": "When a Ypito stares at you, it is because something is about to change. Silent observer of TripleC: stays still watching for hours, appears and vanishes without warning. Hard to scare off."
     },
     "image": "/imgs/kammara/triplec/ypito_roxo.png",
-     "backImage": "/imgs/kammara/triplec/ypito_roxo_costas.png",
+    "backImage": "/imgs/kammara/triplec/ypito_roxo_costas.png",
     "backTitle": {
       "pt": "Verso",
       "en": "Verse"
@@ -117,7 +118,8 @@
           "en": "Observer"
         }
       }
-    ]
+    ],
+    "appId": "triplec-character-09798ccee29fe1cb"
   },
   {
     "match": "Seal Beans",
@@ -177,9 +179,10 @@
           "en": "Love"
         }
       }
-    ]
+    ],
+    "appId": "triplec-character-89770558d412c14c"
   },
-   {
+  {
     "match": "Treezitoide",
     "name": {
       "pt": "Treezi",
@@ -221,7 +224,7 @@
           "pt": "Habitat",
           "en": "Habitat"
         },
-         "value": {
+        "value": {
           "pt": "Multi-regional",
           "en": "Multi-regional"
         }
@@ -237,9 +240,10 @@
           "en": "Silent"
         }
       }
-    ]
+    ],
+    "appId": "triplec-character-2877cfc8e2bb4ef5"
   },
-   {
+  {
     "match": "Plumoide",
     "name": {
       "pt": "Pluma",
@@ -297,7 +301,8 @@
           "en": "Pollinator"
         }
       }
-    ]
+    ],
+    "appId": "triplec-character-b45dba40269f9f29"
   },
   {
     "match": "Niuloide",
@@ -357,9 +362,9 @@
           "en": "Seed distributor"
         }
       }
-    ]
+    ],
+    "appId": "triplec-character-f1367cfd6a1486d7"
   },
- 
   {
     "match": "Espirola",
     "name": {
@@ -418,7 +423,8 @@
           "en": "Spy"
         }
       }
-    ]
+    ],
+    "appId": "triplec-character-3ca4f699e6504606"
   },
   {
     "match": "Soaroide",
@@ -478,7 +484,8 @@
           "en": "Sky watcher"
         }
       }
-    ]
+    ],
+    "appId": "triplec-character-9f4f70070a991951"
   },
   {
     "match": "Camuoide",
@@ -538,7 +545,8 @@
           "en": "Energy sensor"
         }
       }
-    ]
+    ],
+    "appId": "triplec-character-4264e69f12652fc9"
   },
   {
     "match": "Zarkol-9",
@@ -587,7 +595,7 @@
           "en": "Technical Exchange"
         }
       },
-       {
+      {
         "glyph": "⊹",
         "label": {
           "pt": "Origem",
@@ -598,7 +606,8 @@
           "en": "Z1 Planet"
         }
       }
-    ]
+    ],
+    "appId": "triplec-character-99bc6186d4013527"
   },
   {
     "match": "Omi",
@@ -658,7 +667,7 @@
           "en": "AURYN"
         }
       },
-       {
+      {
         "glyph": "⊹",
         "label": {
           "pt": "Origem",
@@ -669,7 +678,8 @@
           "en": "Z1 Planet"
         }
       }
-    ]
+    ],
+    "appId": "triplec-character-196957aafe709433"
   },
   {
     "match": "Vexa",
@@ -728,9 +738,8 @@
           "pt": "AURYN",
           "en": "AURYN"
         }
-      }
-      ,
-       {
+      },
+      {
         "glyph": "⊹",
         "label": {
           "pt": "Origem",
@@ -741,7 +750,8 @@
           "en": "Z1 Planet"
         }
       }
-    ]
+    ],
+    "appId": "triplec-character-8fd83f914cc69fc0"
   },
   {
     "match": "Lai",
@@ -801,7 +811,7 @@
           "en": "AURYN"
         }
       },
-       {
+      {
         "glyph": "⊹",
         "label": {
           "pt": "Origem",
@@ -812,6 +822,7 @@
           "en": "Z1 Planet"
         }
       }
-    ]
+    ],
+    "appId": "triplec-character-df89dde8cfcb3409"
   }
 ]

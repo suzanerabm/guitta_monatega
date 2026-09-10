@@ -68,7 +68,8 @@
           "en": "AURYN"
         }
       }
-    ]
+    ],
+    "appId": "z1-character-0ff0ef099ecb754b"
   },
   {
     "match": "Aruun",
@@ -139,7 +140,8 @@
           "en": "AURYN"
         }
       }
-    ]
+    ],
+    "appId": "z1-character-4f8cfd9f84240470"
   },
   {
     "match": "Kaal",
@@ -210,7 +212,8 @@
           "en": "AURYN"
         }
       }
-    ]
+    ],
+    "appId": "z1-character-3b10243a10dbbe33"
   },
   {
     "match": "Ren",
@@ -281,7 +284,8 @@
           "en": "AURYN"
         }
       }
-    ]
+    ],
+    "appId": "z1-character-2c826edf4924bdc4"
   },
   {
     "match": "Synn",
@@ -352,6 +356,7 @@
           "en": "AURYN"
         }
       }
-    ]
+    ],
+    "appId": "z1-character-2edd8ee3f57484dc"
   }
 ]

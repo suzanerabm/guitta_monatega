@@ -3,34 +3,36 @@
     "video": "/imgs/kammara/z1/_videos/TOWER_STATION.mp4",
     "poster": "/imgs/kammara/z1/_videos/TOWER_STATION_poster.jpg",
     "label": {
-      "pt": "estação-torre",
+      "pt": "Estação-torre",
       "en": "tower station"
-    }
+    },
+    "appId": "z1-video-9d5236eb98c22a8f"
   },
-  
   {
     "video": "/imgs/kammara/z1/_videos/tempestades_curto_circuito.mp4",
     "poster": "/imgs/kammara/z1/_videos/tempestades_curto_circuito_poster.jpg",
     "label": {
-      "pt": "tempestades de curto-circuito",
+      "pt": "Tempestades de curto-circuito",
       "en": "short-circuit storms"
-    }
+    },
+    "appId": "z1-video-d645ddf669581459"
   },
   {
     "video": "/imgs/kammara/z1/_videos/cidade_em_movimento.mp4",
     "poster": "/imgs/kammara/z1/_videos/cidade_em_movimento_poster.jpg",
     "label": {
-      "pt": "cidade em movimento",
+      "pt": "Cidade em movimento",
       "en": "city in motion"
-    }
+    },
+    "appId": "z1-video-7abb985acd70bac9"
   },
-  
   {
     "video": "/imgs/kammara/z1/_videos/transporte_dentro_CENTRAL_SQUARE.mp4",
     "poster": "/imgs/kammara/z1/_videos/transporte_dentro_CENTRAL_SQUARE_poster.jpg",
     "label": {
-      "pt": "transporte na praça central",
+      "pt": "Transporte na praça central",
       "en": "transport in the central square"
-    }
+    },
+    "appId": "z1-video-5523e717123b880e"
   }
 ]

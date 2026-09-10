@@ -5,7 +5,8 @@
     "label": {
       "pt": "Níhrak no trono",
       "en": "Níhrak on the throne"
-    }
+    },
+    "appId": "digg-video-3f6fc42e2ab3c636"
   },
   {
     "video": "/imgs/kammara/digg/_videos/CHMURKA_eating.mp4",
@@ -13,7 +14,8 @@
     "label": {
       "pt": "Chmurka comendo",
       "en": "The Chmurka feeding"
-    }
+    },
+    "appId": "digg-video-995fada8ac51ed2f"
   },
   {
     "video": "/imgs/kammara/digg/_videos/Zin_protege_ninho.mp4",
@@ -21,14 +23,16 @@
     "label": {
       "pt": "Zin protege o ninho",
       "en": "Zin protects the nest"
-    }
+    },
+    "appId": "digg-video-270689997000e9f1"
   },
   {
     "video": "/imgs/kammara/digg/_videos/ratos_eniac_correndo.mp4",
     "poster": "/imgs/kammara/digg/_videos/ratos_eniac_correndo_poster.jpg",
     "label": {
-      "pt": "Ratos e aranhas de Silica originados de ENI-4Δ",
+      "pt": "Ratos e aranhas de sílica originários de ENI-4Δ",
       "en": "Silica rats and spiders originated from ENI-4Δ"
-    }
+    },
+    "appId": "digg-video-e011b5dbaa267839"
   }
 ]

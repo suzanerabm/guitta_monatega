@@ -5,7 +5,8 @@
     "label": {
       "pt": "Volpita feliz",
       "en": "Happy Volpita"
-    }
+    },
+    "appId": "triplec-sharp-video-192da40e3009887a"
   },
   {
     "video": "/imgs/kammara/triplec/sharp/_videos/pets_playing.mp4",
@@ -13,33 +14,36 @@
     "label": {
       "pt": "DooPe e Tilu brincando",
       "en": "DooPe and Tilu playing"
-    }
+    },
+    "appId": "triplec-sharp-video-d367a8302b2533da"
   },
-    {
+  {
     "video": "/imgs/kammara/triplec/sharp/_videos/ativando_cshift.mp4",
     "poster": "/imgs/kammara/triplec/sharp/_videos/ativando_cshift_poster.jpg",
     "label": {
-      "pt": "Ativando C-Shift",
+      "pt": "Ativando o Cshift",
       "en": "Activating C-Shift"
-    }
+    },
+    "appId": "triplec-sharp-video-7470157dc4f90bb5"
   },
   {
-    
     "enabled": false,
     "video": "/imgs/kammara/triplec/sharp/_videos/bunniet_niul_forest.mp4",
     "poster": "/imgs/kammara/triplec/sharp/_videos/bunniet_niul_forest_poster.jpg",
     "label": {
       "pt": "Bunniet na floresta Niul",
       "en": "Bunniet in the Niul forest"
-    }
+    },
+    "appId": "triplec-sharp-video-c5df5749370cf279"
   },
   {
     "video": "/imgs/kammara/triplec/sharp/_videos/kurr_expandindo.mp4",
     "poster": "/imgs/kammara/triplec/sharp/_videos/kurr_expandindo_poster.jpg",
     "label": {
-      "pt": "Kurr expandindo",
+      "pt": "Kurr se expandindo",
       "en": "Kurr expanding"
-    }
+    },
+    "appId": "triplec-sharp-video-13adaaf057c86ec6"
   },
   {
     "video": "/imgs/kammara/triplec/sharp/_videos/bunniet_sala.mp4",
@@ -47,7 +51,8 @@
     "label": {
       "pt": "Bunniet na sala",
       "en": "Bunniet in the room"
-    }
+    },
+    "appId": "triplec-sharp-video-4f448fb4ff025061"
   },
   {
     "enabled": false,
@@ -56,6 +61,7 @@
     "label": {
       "pt": "Bunniet com Volpita",
       "en": "Bunniet with Volpita"
-    }
+    },
+    "appId": "triplec-sharp-video-86539928aac4f46b"
   }
 ]

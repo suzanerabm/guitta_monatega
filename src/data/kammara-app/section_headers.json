@@ -1,0 +1,363 @@
+{
+  "schemaVersion": 1,
+  "fallback": {
+    "pt": "Conheça os detalhes e continue explorando.",
+    "en": "Discover the details and keep exploring."
+  },
+  "sections": {
+    "home_coming_soon": {
+      "titles": ["Em breve", "Coming soon"],
+      "subtitle": {
+        "pt": "Novas histórias, personagens e mundos estão a caminho.",
+        "en": "New stories, characters and worlds are on their way."
+      }
+    },
+    "home_planets": {
+      "titles": [
+        "Explorar planetas",
+        "Explore planets"
+      ],
+      "subtitle": {
+        "pt": "Suas descobertas em cada mundo.",
+        "en": "Your discoveries in each world."
+      }
+    },
+    "home_resume": {
+      "titles": [
+        "Continue de onde parou",
+        "Pick up where you left off"
+      ],
+      "subtitle": {
+        "pt": "Retome sua última descoberta e siga explorando.",
+        "en": "Return to your latest discovery and keep exploring."
+      }
+    },
+    "home_numbers": {
+      "titles": [
+        "Kammara em números",
+        "Kammara in numbers"
+      ],
+      "subtitle": {
+        "pt": "Um universo de histórias, suas descobertas até aqui.",
+        "en": "A universe of stories, your discoveries so far."
+      }
+    },
+    "to_discover": {
+      "titles": [
+        "Por descobrir",
+        "To discover"
+      ],
+      "subtitle": {
+        "pt": "Conheça um verbete e siga suas conexões.",
+        "en": "Get to know an entry and follow its connections."
+      }
+    },
+    "planets": {
+      "titles": [
+        "Planetas",
+        "Planets"
+      ],
+      "subtitle": {
+        "pt": "Os planetas de Kammara, cada um um universo à parte.",
+        "en": "The planets of Kammara, each one a universe of its own."
+      }
+    },
+    "books": {
+      "titles": [
+        "Um universo em páginas.",
+        "A universe in pages."
+      ],
+      "subtitle": {
+        "pt": "As histórias de Kammara, reunidas em páginas.",
+        "en": "The stories of Kammara, gathered into pages."
+      }
+    },
+    "book_launch": {
+      "titles": [
+        "Em lançamento",
+        "Launching"
+      ],
+      "subtitle": {
+        "pt": "Uma nova porta de entrada para Kammara.",
+        "en": "A new way into Kammara."
+      }
+    },
+    "books_on_horizon": {
+      "titles": [
+        "No horizonte",
+        "On the horizon"
+      ],
+      "subtitle": {
+        "pt": "As próximas histórias começam a ganhar forma.",
+        "en": "The next stories are beginning to take shape."
+      }
+    },
+    "search_suggestions": {
+      "titles": [
+        "Sugestões",
+        "Suggestions"
+      ],
+      "subtitle": {
+        "pt": "Outros caminhos para continuar sua exploração.",
+        "en": "More paths to continue your exploration."
+      }
+    },
+    "search_categories": {
+      "titles": [
+        "Explorar por categoria",
+        "Browse by category"
+      ],
+      "subtitle": {
+        "pt": "Escolha um tema e encontre novas conexões.",
+        "en": "Choose a topic and find new connections."
+      }
+    },
+    "search_best_results": {
+      "titles": [
+        "Melhores resultados",
+        "Best results"
+      ],
+      "subtitle": {
+        "pt": "Os primeiros caminhos encontrados na sua busca.",
+        "en": "The first paths found in your search."
+      }
+    },
+    "search_more_results": {
+      "titles": [
+        "Outros resultados",
+        "More results"
+      ],
+      "subtitle": {
+        "pt": "Há mais para explorar a partir da sua busca.",
+        "en": "There is more to explore from your search."
+      }
+    },
+    "search_results": {
+      "titles": [],
+      "subtitle": {
+        "pt": "Escolha um verbete para conhecer sua história.",
+        "en": "Choose an entry to discover its story."
+      }
+    },
+    "search_alphabet": {
+      "titles": [],
+      "subtitle": {
+        "pt": "De letra em letra, encontre seu próximo destino.",
+        "en": "Letter by letter, find your next destination."
+      }
+    },
+    "search_recent": {
+      "titles": [],
+      "subtitle": {
+        "pt": "Reencontre os verbetes que você visitou.",
+        "en": "Return to the entries you have visited."
+      }
+    },
+    "search_saved": {
+      "titles": [],
+      "subtitle": {
+        "pt": "Seus verbetes guardados para voltar quando quiser.",
+        "en": "Your saved entries, ready whenever you return."
+      }
+    },
+    "scenes": {
+      "titles": [
+        "Cenas",
+        "Scenes"
+      ],
+      "subtitle": {
+        "pt": "Pequenos recortes da vida neste mundo.",
+        "en": "Glimpses of life in this world."
+      }
+    },
+    "drops": {
+      "titles": [],
+      "subtitle": {
+        "pt": "Instantes deste mundo em movimento.",
+        "en": "Moments from this world in motion."
+      }
+    },
+    "characters": {
+      "titles": [
+        "Personagens",
+        "Characters"
+      ],
+      "subtitle": {
+        "pt": "Conheça quem faz parte das histórias deste mundo.",
+        "en": "Meet those who are part of this world’s stories."
+      }
+    },
+    "subsystems": {
+      "titles": [
+        "Subsistemas",
+        "Subsystems"
+      ],
+      "subtitle": {
+        "pt": "As ideias e os sistemas que compõem este mundo.",
+        "en": "The ideas and systems that make up this world."
+      }
+    },
+    "regions": {
+      "titles": [],
+      "subtitle": {
+        "pt": "Outros lugares para explorar dentro deste mundo.",
+        "en": "More places to explore within this world."
+      }
+    },
+    "connections": {
+      "titles": [
+        "Conexões",
+        "Connections"
+      ],
+      "subtitle": {
+        "pt": "Cada ligação abre caminho para outra descoberta.",
+        "en": "Every connection opens a path to another discovery."
+      }
+    },
+    "dorsal_glyph": {
+      "titles": [
+        "Glifo dorsal",
+        "Dorsal glyph"
+      ],
+      "subtitle": {
+        "pt": "Observe os detalhes desta marca.",
+        "en": "Take a closer look at this mark."
+      }
+    },
+    "other_side": {
+      "titles": [
+        "Outro Lado",
+        "Another Side",
+        "Other Side",
+        "Outro lado",
+        "Another side",
+        "Do Outro Lado",
+        "O outro lado"
+      ],
+      "subtitle": {
+        "pt": "Um novo ângulo sobre este personagem.",
+        "en": "A new angle on this character."
+      }
+    },
+    "attack": {
+      "titles": [
+        "Ataque",
+        "Attack"
+      ],
+      "subtitle": {
+        "pt": "Conheça esta faceta do personagem.",
+        "en": "Discover this side of the character."
+      }
+    },
+    "attack_route": {
+      "titles": [
+        "Em rota para ataque",
+        "En route to attack"
+      ],
+      "subtitle": {
+        "pt": "Um instante antes do confronto.",
+        "en": "A moment before the confrontation."
+      }
+    },
+    "camouflage": {
+      "titles": [
+        "Camuflagem",
+        "Cute mask"
+      ],
+      "subtitle": {
+        "pt": "Veja o que muda quando a aparência engana.",
+        "en": "See what changes when appearances deceive."
+      }
+    },
+    "blame": {
+      "titles": [
+        "Culpa",
+        "Blame"
+      ],
+      "subtitle": {
+        "pt": "Um olhar sobre este momento da história.",
+        "en": "A closer look at this moment in the story."
+      }
+    },
+    "verse": {
+      "titles": [
+        "Verso",
+        "Verse"
+      ],
+      "subtitle": {
+        "pt": "Outra face para observar de perto.",
+        "en": "Another side to take a closer look at."
+      }
+    },
+    "clean_water": {
+      "titles": [
+        "Guardiões da Água Limpa",
+        "Guardians of Clean Water"
+      ],
+      "subtitle": {
+        "pt": "Conheça a história por trás deste nome.",
+        "en": "Discover the story behind this name."
+      }
+    },
+    "teller": {
+      "titles": [
+        "O que Conta e Ninguém Entende",
+        "The One Who Tells and No One Understands"
+      ],
+      "subtitle": {
+        "pt": "Há mais para conhecer por trás destas palavras.",
+        "en": "There is more to discover behind these words."
+      }
+    },
+    "climber": {
+      "titles": [
+        "O Trepador",
+        "The Climber"
+      ],
+      "subtitle": {
+        "pt": "Acompanhe este personagem por outro ângulo.",
+        "en": "Follow this character from another angle."
+      }
+    },
+    "watcher": {
+      "titles": [
+        "O Vigia do Morro",
+        "The Hill Watcher"
+      ],
+      "subtitle": {
+        "pt": "Observe a história a partir deste ponto de vista.",
+        "en": "See the story from this point of view."
+      }
+    },
+    "measure": {
+      "titles": [
+        "A Régua do Mundo",
+        "The World's Measure"
+      ],
+      "subtitle": {
+        "pt": "Descubra o que este título conta sobre o personagem.",
+        "en": "Discover what this title reveals about the character."
+      }
+    },
+    "love": {
+      "titles": [
+        "O que esquece, menos o amor",
+        "It forgets all but love"
+      ],
+      "subtitle": {
+        "pt": "Um detalhe para conhecer além do nome.",
+        "en": "A detail to discover beyond the name."
+      }
+    },
+    "first_time": {
+      "titles": [
+        "Sempre a primeira vez",
+        "Always the first time"
+      ],
+      "subtitle": {
+        "pt": "Um convite a olhar de novo para esta história.",
+        "en": "An invitation to look at this story anew."
+      }
+    }
+  }
+}
