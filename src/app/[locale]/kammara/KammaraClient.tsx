@@ -737,7 +737,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
           pb="60px"
           position="relative"
           overflow="hidden"
-          backgroundImage={`url(${mediaUrl('/imgs/kammara/_events_bg.jpg')})`}
+          backgroundImage={`url(${mediaUrl('/imgs/kammara/events_bg.jpg')})`}
           backgroundSize="cover"
           backgroundPosition="center"
         >
