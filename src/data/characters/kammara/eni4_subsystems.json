@@ -30,7 +30,8 @@
         "### What sustains everything",
         "Revenge sustains everything. Without it, the planet loses purpose. Without purpose, the heat cools. And without heat, ENI-4Δ goes dark."
       ]
-    }
+    },
+    "appId": "eni4-topic-7b9afa8bda071a80"
   },
   {
     "title": {
@@ -67,7 +68,8 @@
         "### A place to survive",
         "ENI-4Δ is not a place where you live. It is a place where you survive, by consuming what belongs to others."
       ]
-    }
+    },
+    "appId": "eni4-topic-18bde5ff6dcc7e7c"
   },
   {
     "title": {
@@ -105,7 +107,8 @@
         "Viruses have two visual states: the real one (a dark silica sphere, red eyes, eight legs) and the Cute Mask: smooth white shell, small dark eyes, harmless appearance. The swap between them is instantaneous."
       ]
     },
-    "visible": false
+    "visible": false,
+    "appId": "eni4-topic-1e386883a2408add"
   },
   {
     "title": {
@@ -162,7 +165,8 @@
         "### The Thermal Rifts",
         "Deep cracks on the surface: sources of pure heat and gates to the underground. Worms emerge from them. Bugs hide in them and die. Some ancient rifts are sealed, but tremble."
       ]
-    }
+    },
+    "appId": "eni4-topic-a1c3cc08e61d192b"
   },
   {
     "title": {
@@ -200,7 +204,8 @@
         "ENI-4Δ is not strong. It is hungry. And the hunger never stops."
       ]
     },
-    "visible": true
+    "visible": true,
+    "appId": "eni4-topic-8631789211d848c8"
   },
   {
     "title": {
@@ -238,7 +243,8 @@
         "By the time the symptoms appear, the invasion is already over."
       ]
     },
-    "visible": true
+    "visible": true,
+    "appId": "eni4-topic-d8225510a020b40f"
   },
   {
     "title": {
@@ -364,6 +370,7 @@
         "Karta-MAX : direct orders from Node-0, no one questions"
       ]
     },
-    "visible": true
+    "visible": true,
+    "appId": "eni4-topic-bee2581406285b4b"
   }
 ]

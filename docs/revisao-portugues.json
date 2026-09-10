@@ -1,0 +1,950 @@
+{
+  "scope": "Portuguese scene and Drop captions; canonical proper names in localized display text.",
+  "reviewedSceneCaptions": 165,
+  "changes": [
+    {
+      "file": "src/data/characters/kammara/eni4_scenes.json",
+      "field": "/0/label/pt",
+      "before": "Dois sois",
+      "after": "Dois sóis"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_scenes.json",
+      "field": "/1/label/pt",
+      "before": "Palacio Node-0",
+      "after": "Palácio de Node-0"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_scenes.json",
+      "field": "/2/label/pt",
+      "before": "Palacio Node-0",
+      "after": "Palácio de Node-0"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_scenes.json",
+      "field": "/3/label/pt",
+      "before": "Palacio Node-0",
+      "after": "Palácio de Node-0"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_scenes.json",
+      "field": "/4/label/pt",
+      "before": "Palacio Node-0-Entrada",
+      "after": "Entrada do palácio de Node-0"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_scenes.json",
+      "field": "/5/label/pt",
+      "before": "Palacio Node-0-Corredor",
+      "after": "Corredor do palácio de Node-0"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_scenes.json",
+      "field": "/6/label/pt",
+      "before": "Palacio Node-0-Porta",
+      "after": "Porta do palácio de Node-0"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_scenes.json",
+      "field": "/7/label/pt",
+      "before": "Palacio Node-0-Interior",
+      "after": "Interior do palácio de Node-0"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_scenes.json",
+      "field": "/8/label/pt",
+      "before": "Palacio Node-0-Interior",
+      "after": "Interior do palácio de Node-0"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_scenes.json",
+      "field": "/9/label/pt",
+      "before": "camara node-0 entrada",
+      "after": "Entrada da câmara de Node-0"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_scenes.json",
+      "field": "/10/label/pt",
+      "before": "camara node-0 interior",
+      "after": "Interior da câmara de Node-0"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_scenes.json",
+      "field": "/11/label/pt",
+      "before": "Fabrica BURN",
+      "after": "Fábrica BURN"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_scenes.json",
+      "field": "/12/label/pt",
+      "before": "muro valvulas. formam laritinto",
+      "after": "Muro de válvulas formando um labirinto"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_scenes.json",
+      "field": "/13/label/pt",
+      "before": "fabrica frente",
+      "after": "Frente da fábrica"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_scenes.json",
+      "field": "/14/label/pt",
+      "before": "fabrica interior",
+      "after": "Interior da fábrica"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_scenes.json",
+      "field": "/15/label/pt",
+      "before": "corte planeta",
+      "after": "Planeta em corte"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_scenes.json",
+      "field": "/16/label/pt",
+      "before": "zona-SCORCH worms",
+      "after": "Worms na zona SCORCH"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_scenes.json",
+      "field": "/17/label/pt",
+      "before": "zona-SCORCH",
+      "after": "Zona SCORCH"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_scenes.json",
+      "field": "/18/label/pt",
+      "before": "zona CRACK tuneis worms",
+      "after": "Túneis com Worms na zona CRACK"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_scenes.json",
+      "field": "/19/label/pt",
+      "before": "zona CRACK tuneis worms",
+      "after": "Túneis com Worms na zona CRACK"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_scenes.json",
+      "field": "/20/label/pt",
+      "before": "zona SINK",
+      "after": "Zona SINK"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_scenes.json",
+      "field": "/21/label/pt",
+      "before": "megavalvulas onde moram virus bugs",
+      "after": "Megaválvulas onde vivem vírus e bugs"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_scenes.json",
+      "field": "/22/label/pt",
+      "before": "sucata bugs",
+      "after": "Bugs na sucata"
+    },
+    {
+      "file": "src/data/characters/kammara/lunnp1_scenes.json",
+      "field": "/0/label/pt",
+      "before": "cena crianca brincando",
+      "after": "Criança brincando"
+    },
+    {
+      "file": "src/data/characters/kammara/lunnp1_scenes.json",
+      "field": "/1/label/pt",
+      "before": "EruRin e LumEsha plantando",
+      "after": "Erú'Rin e Lúm'Esha plantando"
+    },
+    {
+      "file": "src/data/characters/kammara/lunnp1_scenes.json",
+      "field": "/2/label/pt",
+      "before": "NaLum pequenas esferas que-flutuam",
+      "after": "NaLum: pequenas esferas que flutuam"
+    },
+    {
+      "file": "src/data/characters/kammara/lunnp1_scenes.json",
+      "field": "/3/label/pt",
+      "before": "regiao EXTERMO NORTE",
+      "after": "Região do extremo norte"
+    },
+    {
+      "file": "src/data/characters/kammara/lunnp1_scenes.json",
+      "field": "/4/label/pt",
+      "before": "regiao leste aerea",
+      "after": "Região leste: vista aérea"
+    },
+    {
+      "file": "src/data/characters/kammara/lunnp1_scenes.json",
+      "field": "/5/label/pt",
+      "before": "regiao leste",
+      "after": "Região leste"
+    },
+    {
+      "file": "src/data/characters/kammara/lunnp1_scenes.json",
+      "field": "/6/label/pt",
+      "before": "regiao norte vista area 1",
+      "after": "Região norte: vista aérea 1"
+    },
+    {
+      "file": "src/data/characters/kammara/lunnp1_scenes.json",
+      "field": "/7/label/pt",
+      "before": "regiao norte vista area 2",
+      "after": "Região norte: vista aérea 2"
+    },
+    {
+      "file": "src/data/characters/kammara/lunnp1_scenes.json",
+      "field": "/8/label/pt",
+      "before": "regiao norte",
+      "after": "Região norte"
+    },
+    {
+      "file": "src/data/characters/kammara/lunnp1_scenes.json",
+      "field": "/9/label/pt",
+      "before": "regiao oeste aerea",
+      "after": "Região oeste: vista aérea"
+    },
+    {
+      "file": "src/data/characters/kammara/lunnp1_scenes.json",
+      "field": "/10/label/pt",
+      "before": "regiao sul aerea",
+      "after": "Região sul: vista aérea"
+    },
+    {
+      "file": "src/data/characters/kammara/lunnp1_scenes.json",
+      "field": "/11/label/pt",
+      "before": "regiao sul",
+      "after": "Região sul"
+    },
+    {
+      "file": "src/data/characters/kammara/orfv_scenes.json",
+      "field": "/0/label/pt",
+      "before": "vista Fjorks Centrais",
+      "after": "Vista dos Fjorks Centrais"
+    },
+    {
+      "file": "src/data/characters/kammara/orfv_scenes.json",
+      "field": "/2/label/pt",
+      "before": "Iren Kor Vila Central",
+      "after": "IREN KOR na Vila Central"
+    },
+    {
+      "file": "src/data/characters/kammara/orfv_scenes.json",
+      "field": "/4/label/pt",
+      "before": "Zupi dormindo com o Nuvin",
+      "after": "Zupi dormindo com Nuvin"
+    },
+    {
+      "file": "src/data/characters/kammara/orfv_scenes.json",
+      "field": "/7/label/pt",
+      "before": "Maelik Fjorks Oeste",
+      "after": "Maelik nos Fjorks Oeste"
+    },
+    {
+      "file": "src/data/characters/kammara/orfv_scenes.json",
+      "field": "/8/label/pt",
+      "before": "vila norte",
+      "after": "Vila Norte"
+    },
+    {
+      "file": "src/data/characters/kammara/orfv_scenes.json",
+      "field": "/9/label/pt",
+      "before": "Ceu em orf-v",
+      "after": "Céu de ORF-V"
+    },
+    {
+      "file": "src/data/characters/kammara/orfv_scenes.json",
+      "field": "/10/label/pt",
+      "before": "noite em orfv",
+      "after": "Noite em ORF-V"
+    },
+    {
+      "file": "src/data/characters/kammara/orfv_scenes.json",
+      "field": "/11/label/pt",
+      "before": "regiao sul deserta",
+      "after": "Região sul deserta"
+    },
+    {
+      "file": "src/data/characters/kammara/orfv_scenes.json",
+      "field": "/12/label/pt",
+      "before": "regiao sul deserta",
+      "after": "Região sul deserta"
+    },
+    {
+      "file": "src/data/characters/kammara/orfv_scenes.json",
+      "field": "/13/label/pt",
+      "before": "festival",
+      "after": "Festival"
+    },
+    {
+      "file": "src/data/characters/kammara/z1_scenes.json",
+      "field": "/0/label/pt",
+      "before": "estação-torre",
+      "after": "Estação-torre"
+    },
+    {
+      "file": "src/data/characters/kammara/z1_scenes.json",
+      "field": "/1/label/pt",
+      "before": "praça central",
+      "after": "Praça central"
+    },
+    {
+      "file": "src/data/characters/kammara/z1_scenes.json",
+      "field": "/2/label/pt",
+      "before": "praça central, vista aérea",
+      "after": "Praça central: vista aérea"
+    },
+    {
+      "file": "src/data/characters/kammara/z1_scenes.json",
+      "field": "/3/label/pt",
+      "before": "salão perfurado",
+      "after": "Salão perfurado"
+    },
+    {
+      "file": "src/data/characters/kammara/z1_scenes.json",
+      "field": "/4/label/pt",
+      "before": "a vila cúbica",
+      "after": "A vila cúbica"
+    },
+    {
+      "file": "src/data/characters/kammara/z1_scenes.json",
+      "field": "/5/label/pt",
+      "before": "praça da vila",
+      "after": "Praça da vila"
+    },
+    {
+      "file": "src/data/characters/kammara/z1_scenes.json",
+      "field": "/6/label/pt",
+      "before": "modbus modelo aberto",
+      "after": "Modbus: modelo aberto"
+    },
+    {
+      "file": "src/data/characters/kammara/z1_scenes.json",
+      "field": "/7/label/pt",
+      "before": "vista dentro da estação-torre",
+      "after": "Interior da estação-torre"
+    },
+    {
+      "file": "src/data/characters/kammara/z1_scenes.json",
+      "field": "/8/label/pt",
+      "before": "salas ancestrais",
+      "after": "Salas ancestrais"
+    },
+    {
+      "file": "src/data/characters/kammara/z1_scenes.json",
+      "field": "/9/label/pt",
+      "before": "os abismos de z1",
+      "after": "Os abismos de Z1"
+    },
+    {
+      "file": "src/data/characters/kammara/z1_scenes.json",
+      "field": "/10/label/pt",
+      "before": "habitantes conversando",
+      "after": "Habitantes conversando"
+    },
+    {
+      "file": "src/data/characters/kammara/z1_scenes.json",
+      "field": "/11/label/pt",
+      "before": "modbus lotado",
+      "after": "Modbus lotado"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-malloc_scenes.json",
+      "field": "/0/label/pt",
+      "before": "vila principal",
+      "after": "Vila principal"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-malloc_scenes.json",
+      "field": "/1/label/pt",
+      "before": "portex camada",
+      "after": "Camada Portex"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-malloc_scenes.json",
+      "field": "/2/label/pt",
+      "before": "portex camada vista cima",
+      "after": "Camada Portex: vista de cima"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-malloc_scenes.json",
+      "field": "/3/label/pt",
+      "before": "datex camada",
+      "after": "Camada Datex"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-malloc_scenes.json",
+      "field": "/4/label/pt",
+      "before": "datara camada",
+      "after": "Camada Datara"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-malloc_scenes.json",
+      "field": "/5/label/pt",
+      "before": "malloc mina kemita",
+      "after": "Mina de kemita em malloc"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-malloc_scenes.json",
+      "field": "/6/label/pt",
+      "before": "túnel",
+      "after": "Túnel"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-malloc_scenes.json",
+      "field": "/7/label/pt",
+      "before": "hepa regiao 1",
+      "after": "Hepa: região 1"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-malloc_scenes.json",
+      "field": "/8/label/pt",
+      "before": "malloc camadas regiao2",
+      "after": "Camadas de malloc: região 2"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-malloc_scenes.json",
+      "field": "/9/label/pt",
+      "before": "hepa regiao2",
+      "after": "Hepa: região 2"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-malloc_scenes.json",
+      "field": "/10/label/pt",
+      "before": "vila",
+      "after": "Vila"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-malloc_scenes.json",
+      "field": "/11/label/pt",
+      "before": "vila 1",
+      "after": "Vila 1"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-malloc_scenes.json",
+      "field": "/12/label/pt",
+      "before": "vila 2",
+      "after": "Vila 2"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-malloc_scenes.json",
+      "field": "/13/label/pt",
+      "before": "vila 3",
+      "after": "Vila 3"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-malloc_scenes.json",
+      "field": "/14/label/pt",
+      "before": "vila 4",
+      "after": "Vila 4"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-malloc_scenes.json",
+      "field": "/15/label/pt",
+      "before": "sala",
+      "after": "Sala"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-malloc_scenes.json",
+      "field": "/16/label/pt",
+      "before": "quarto",
+      "after": "Quarto"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-mesh_scenes.json",
+      "field": "/0/label/pt",
+      "before": "vista area vila central",
+      "after": "Vila Central: vista aérea"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-mesh_scenes.json",
+      "field": "/1/label/pt",
+      "before": "vila central",
+      "after": "Vila Central"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-mesh_scenes.json",
+      "field": "/2/label/pt",
+      "before": "KAEL TORIN ativando Cshift vista aerea",
+      "after": "KAEL TORIN ativando o Cshift: vista aérea"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-mesh_scenes.json",
+      "field": "/3/label/pt",
+      "before": "KAEL TORIN ativando Cshift",
+      "after": "KAEL TORIN ativando o Cshift"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-mesh_scenes.json",
+      "field": "/4/label/pt",
+      "before": "Niul forest",
+      "after": "Floresta Niul"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-mesh_scenes.json",
+      "field": "/5/label/pt",
+      "before": "praça",
+      "after": "Praça"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-mesh_scenes.json",
+      "field": "/6/label/pt",
+      "before": "praça vista de cima",
+      "after": "Praça: vista de cima"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-mesh_scenes.json",
+      "field": "/7/label/pt",
+      "before": "sala",
+      "after": "Sala"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-mesh_scenes.json",
+      "field": "/8/label/pt",
+      "before": "quarto",
+      "after": "Quarto"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-mesh_scenes.json",
+      "field": "/9/label/pt",
+      "before": "em Mesh",
+      "after": "Em Mesh"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-mesh_scenes.json",
+      "field": "/10/label/pt",
+      "before": "visita a Mesh",
+      "after": "Visita a Mesh"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-mesh_scenes.json",
+      "field": "/11/label/pt",
+      "before": "dentro do apartamento",
+      "after": "Dentro do apartamento"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-mesh_scenes.json",
+      "field": "/12/label/pt",
+      "before": "família",
+      "after": "Família"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-mesh_scenes.json",
+      "field": "/14/label/pt",
+      "before": "Kurr expandindo",
+      "after": "Kurr se expandindo"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-sharp_scenes.json",
+      "field": "/0/label/pt",
+      "before": "regiao sharp",
+      "after": "Região de Sharp"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-sharp_scenes.json",
+      "field": "/1/label/pt",
+      "before": "praca central",
+      "after": "Praça central"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-sharp_scenes.json",
+      "field": "/2/label/pt",
+      "before": "Camara-de-Permissao ativando cshift",
+      "after": "Câmara de Permissão ativando o Cshift"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-sharp_scenes.json",
+      "field": "/3/label/pt",
+      "before": "Camara-de-Permissao posicao defesa",
+      "after": "Câmara de Permissão em posição de defesa"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-sharp_scenes.json",
+      "field": "/4/label/pt",
+      "before": "Praça Central",
+      "after": "Praça central"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-sharp_scenes.json",
+      "field": "/5/label/pt",
+      "before": "fluxo de energia",
+      "after": "Fluxo de energia"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-sharp_scenes.json",
+      "field": "/6/label/pt",
+      "before": "sala interna",
+      "after": "Sala interna"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-sharp_scenes.json",
+      "field": "/7/label/pt",
+      "before": "Vista panoramica",
+      "after": "Vista panorâmica"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-sharp_scenes.json",
+      "field": "/8/label/pt",
+      "before": "quarto dos bebes",
+      "after": "Quarto dos bebês"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-sharp_scenes.json",
+      "field": "/9/label/pt",
+      "before": "quarto master",
+      "after": "Quarto principal"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-sharp_scenes.json",
+      "field": "/10/label/pt",
+      "before": "sala ",
+      "after": "Sala"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-sharp_scenes.json",
+      "field": "/11/label/pt",
+      "before": "visita a Sharp",
+      "after": "Visita a Sharp"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec_scenes.json",
+      "field": "/4/label/pt",
+      "before": "Região malloc: cotidiano",
+      "after": "Região de malloc: cotidiano"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec_scenes.json",
+      "field": "/5/label/pt",
+      "before": "Região Mesh: cotidiano",
+      "after": "Região de Mesh: cotidiano"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec_scenes.json",
+      "field": "/6/label/pt",
+      "before": "Região Sharp: cotidiano",
+      "after": "Região de Sharp: cotidiano"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec_scenes.json",
+      "field": "/7/label/pt",
+      "before": "Região Malloc: interior casa",
+      "after": "Região de malloc: interior de uma casa"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec_scenes.json",
+      "field": "/8/label/pt",
+      "before": "Região Mesh: praça",
+      "after": "Região de Mesh: praça"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec_scenes.json",
+      "field": "/9/label/pt",
+      "before": "Região Sharp: praça",
+      "after": "Região de Sharp: praça"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec_scenes.json",
+      "field": "/10/label/pt",
+      "before": "Região Malloc: vista da cidade",
+      "after": "Região de malloc: vista da cidade"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec_scenes.json",
+      "field": "/11/label/pt",
+      "before": "Região Mesh: vista da cidade",
+      "after": "Região de Mesh: vista da cidade"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec_scenes.json",
+      "field": "/12/label/pt",
+      "before": "Região Sharp: energia",
+      "after": "Região de Sharp: energia"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec_scenes.json",
+      "field": "/13/label/pt",
+      "before": "Região Sharp: pets",
+      "after": "Região de Sharp: animais de estimação"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec_scenes.json",
+      "field": "/14/label/pt",
+      "before": "Região Mesh: ativando CShift",
+      "after": "Região de Mesh: ativando o Cshift"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec_scenes.json",
+      "field": "/15/label/pt",
+      "before": "Bunniet malloc correndo na floresta",
+      "after": "Bunniet de malloc correndo na floresta"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec_scenes.json",
+      "field": "/16/label/pt",
+      "before": "Lumesha visita LUMA VAL",
+      "after": "Lúm'Esha visita LUMA VAL"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec_scenes.json",
+      "field": "/17/label/pt",
+      "before": "EruRin com NERAN VEL",
+      "after": "Erú'Rin com NERAN VEL"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec_scenes.json",
+      "field": "/18/label/pt",
+      "before": "Cshift portal",
+      "after": "Portal Cshift"
+    },
+    {
+      "file": "src/data/characters/kammara/gotto_scenes.json",
+      "field": "/4/label/pt",
+      "before": "Erurin conversa com Rema",
+      "after": "Erú'Rin conversa com Rema"
+    },
+    {
+      "file": "src/data/characters/kammara/gotto_scenes.json",
+      "field": "/8/label/pt",
+      "before": "Vila Central, Leste",
+      "after": "Vila Central: leste"
+    },
+    {
+      "file": "src/data/characters/kammara/gotto_scenes.json",
+      "field": "/9/label/pt",
+      "before": "Rema dormindo, Vila Central Leste",
+      "after": "Rema dormindo na Vila Central, a leste"
+    },
+    {
+      "file": "src/data/characters/kammara/gotto_scenes.json",
+      "field": "/10/label/pt",
+      "before": "Vila Central, Oeste",
+      "after": "Vila Central: oeste"
+    },
+    {
+      "file": "src/data/characters/kammara/gotto_scenes.json",
+      "field": "/11/label/pt",
+      "before": "Vila Central, Sul",
+      "after": "Vila Central: sul"
+    },
+    {
+      "file": "src/data/characters/kammara/gotto_scenes.json",
+      "field": "/17/label/pt",
+      "before": "O Vale da Escuta, outra vista",
+      "after": "O Vale da Escuta: outra vista"
+    },
+    {
+      "file": "src/data/characters/kammara/digg_scenes.json",
+      "field": "/3/label/pt",
+      "before": "Os blocos flutuantes, outra vista",
+      "after": "Os blocos flutuantes: outra vista"
+    },
+    {
+      "file": "src/data/characters/kammara/digg_scenes.json",
+      "field": "/6/label/pt",
+      "before": "As Chmurka em bando",
+      "after": "Chmurka em bando"
+    },
+    {
+      "file": "src/data/characters/kammara/digg_scenes.json",
+      "field": "/11/label/pt",
+      "before": "O cadeirão, por dentro",
+      "after": "O cadeirão por dentro"
+    },
+    {
+      "file": "src/data/characters/kammara/digg_scenes.json",
+      "field": "/12/label/pt",
+      "before": "A mina de kemita, em corte",
+      "after": "A mina de kemita em corte"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_drops.json",
+      "field": "/0/label/pt",
+      "before": "Palácio Node-0",
+      "after": "Palácio de Node-0"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_drops.json",
+      "field": "/4/label/pt",
+      "before": "Câmera de calor Node-0",
+      "after": "Câmara de calor de Node-0"
+    },
+    {
+      "file": "src/data/characters/kammara/eni4_drops.json",
+      "field": "/5/label/pt",
+      "before": "Região do Lixões de Robôs",
+      "after": "Região dos lixões de robôs"
+    },
+    {
+      "file": "src/data/characters/kammara/digg_drops.json",
+      "field": "/3/label/pt",
+      "before": "Ratos e aranhas de Silica originados de ENI-4Δ",
+      "after": "Ratos e aranhas de sílica originários de ENI-4Δ"
+    },
+    {
+      "file": "src/data/characters/kammara/gotto_drops.json",
+      "field": "/0/label/pt",
+      "before": "Erurin visita Rema",
+      "after": "Erú'Rin visita Rema"
+    },
+    {
+      "file": "src/data/characters/kammara/gotto_drops.json",
+      "field": "/1/label/pt",
+      "before": "O reinício, o Recomeço",
+      "after": "O reinício, o recomeço"
+    },
+    {
+      "file": "src/data/characters/kammara/gotto_drops.json",
+      "field": "/3/label/pt",
+      "before": "Kirió, o Vigia do Morro",
+      "after": "Kirió, o vigia do morro"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec_drops.json",
+      "field": "/2/label/pt",
+      "before": "LumEsha encontra Luma Val",
+      "after": "Lúm'Esha encontra LUMA VAL"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-malloc_drops.json",
+      "field": "/0/label/pt",
+      "before": "Correndo pra Mesh",
+      "after": "Correndo para Mesh"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-sharp_drops.json",
+      "field": "/2/label/pt",
+      "before": "Ativando C-Shift",
+      "after": "Ativando o Cshift"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec-sharp_drops.json",
+      "field": "/4/label/pt",
+      "before": "Kurr expandindo",
+      "after": "Kurr se expandindo"
+    },
+    {
+      "file": "src/data/characters/kammara/z1_drops.json",
+      "field": "/0/label/pt",
+      "before": "estação-torre",
+      "after": "Estação-torre"
+    },
+    {
+      "file": "src/data/characters/kammara/z1_drops.json",
+      "field": "/1/label/pt",
+      "before": "tempestades de curto-circuito",
+      "after": "Tempestades de curto-circuito"
+    },
+    {
+      "file": "src/data/characters/kammara/z1_drops.json",
+      "field": "/2/label/pt",
+      "before": "cidade em movimento",
+      "after": "Cidade em movimento"
+    },
+    {
+      "file": "src/data/characters/kammara/z1_drops.json",
+      "field": "/3/label/pt",
+      "before": "transporte na praça central",
+      "after": "Transporte na praça central"
+    },
+    {
+      "file": "src/data/kammara_mosaic.json",
+      "field": "/0/label/pt",
+      "before": "Erurin",
+      "after": "Erú'Rin"
+    },
+    {
+      "file": "src/data/kammara_mosaic.json",
+      "field": "/5/label/pt",
+      "before": "Tziki & Lumira",
+      "after": "Tzi'Ki e Lumira"
+    },
+    {
+      "file": "src/data/kammara_mosaic.json",
+      "field": "/12/label/pt",
+      "before": "Plantas Flutuantes",
+      "after": "Plantas flutuantes"
+    },
+    {
+      "file": "src/data/kammara_mosaic.json",
+      "field": "/13/label/pt",
+      "before": "A Fábrica",
+      "after": "A fábrica"
+    },
+    {
+      "file": "src/data/kammara_mosaic.json",
+      "field": "/14/label/pt",
+      "before": "Melik",
+      "after": "Maelik"
+    },
+    {
+      "file": "src/data/characters/kammara/gotto_drops.json",
+      "field": "/0/label/en",
+      "before": "Erurin visits Rema",
+      "after": "Erú'Rin visits Rema"
+    },
+    {
+      "file": "src/data/characters/kammara/gotto_scenes.json",
+      "field": "/4/label/en",
+      "before": "Erurin talks with Rema",
+      "after": "Erú'Rin talks with Rema"
+    },
+    {
+      "file": "src/data/characters/kammara/lunnp1_scenes.json",
+      "field": "/1/label/en",
+      "before": "EruRin e LumEsha plantando",
+      "after": "Erú'Rin e Lúm'Esha plantando"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec_drops.json",
+      "field": "/2/label/en",
+      "before": "LumEsha meets Luma Val",
+      "after": "Lúm'Esha meets Luma Val"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec_scenes.json",
+      "field": "/16/label/en",
+      "before": "Lumesha visits LUMA VAL",
+      "after": "Lúm'Esha visits LUMA VAL"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec_scenes.json",
+      "field": "/17/label/en",
+      "before": "EruRin with NERAN VEL",
+      "after": "Erú'Rin with NERAN VEL"
+    },
+    {
+      "file": "src/data/kammara_mosaic.json",
+      "field": "/0/label/en",
+      "before": "Erurin",
+      "after": "Erú'Rin"
+    },
+    {
+      "file": "src/data/kammara_mosaic.json",
+      "field": "/5/label/en",
+      "before": "Tziki & Lumira",
+      "after": "Tzi'Ki & Lumira"
+    },
+    {
+      "file": "src/data/kammara_mosaic.json",
+      "field": "/14/label/en",
+      "before": "Melik",
+      "after": "Maelik"
+    },
+    {
+      "file": "src/data/characters/kammara/triplec_drops.json",
+      "field": "/2/label/en",
+      "before": "Lúm'Esha meets Luma Val",
+      "after": "Lúm'Esha meets LUMA VAL"
+    }
+  ],
+  "notes": [
+    "Datex and NaLum retained as authored terms; no canonical replacement confirmed.",
+    "English prose was not translated in this Portuguese review; proper names corrected in both locales.",
+    "No appId, match, path, media, ordering, publication flag or connection was modified."
+  ],
+  "validation": {
+    "idsPreserved": 353,
+    "authoredAndInferredConnectionsUnchanged": true,
+    "mediaPathsUnchanged": true,
+    "onlyGeneratedFieldsChanged": [
+      "title",
+      "media.title"
+    ]
+  }
+}

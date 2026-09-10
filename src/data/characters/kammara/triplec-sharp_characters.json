@@ -46,7 +46,8 @@
           "en": "Validator"
         }
       }
-    ]
+    ],
+    "appId": "triplec-sharp-character-302344acd5682742"
   },
   {
     "match": "Neran_Vel",
@@ -95,7 +96,8 @@
           "en": "Sustainer"
         }
       }
-    ]
+    ],
+    "appId": "triplec-sharp-character-db2103aa4ecb0072"
   },
   {
     "match": "Veris_Anon",
@@ -144,7 +146,8 @@
           "en": "Systemic Biologist"
         }
       }
-    ]
+    ],
+    "appId": "triplec-sharp-character-835d3918a31fff23"
   },
   {
     "match": "Kurr",
@@ -193,7 +196,8 @@
           "en": "Night cleaner"
         }
       }
-    ]
+    ],
+    "appId": "triplec-sharp-character-524ceea45dbbf6b9"
   },
   {
     "match": "Tilu",
@@ -242,7 +246,8 @@
           "en": "Playful companion"
         }
       }
-    ]
+    ],
+    "appId": "triplec-sharp-character-56004bdbad9c157b"
   },
   {
     "match": "Doopoide",
@@ -291,7 +296,8 @@
           "en": "Sniffer"
         }
       }
-    ]
+    ],
+    "appId": "triplec-sharp-character-5525a30719bfcf3b"
   },
   {
     "match": "Dinossauro Alongado",
@@ -340,7 +346,8 @@
           "en": "Silent connector"
         }
       }
-    ]
+    ],
+    "appId": "triplec-sharp-character-2b7838c64458f335"
   },
   {
     "match": "Suigui",
@@ -389,7 +396,8 @@
           "en": "Overflow"
         }
       }
-    ]
+    ],
+    "appId": "triplec-sharp-character-a039fc4f1cf4b581"
   },
   {
     "match": "Lim",
@@ -438,6 +446,7 @@
           "en": "Sensor"
         }
       }
-    ]
+    ],
+    "appId": "triplec-sharp-character-394e564158488650"
   }
 ]

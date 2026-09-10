@@ -54,3 +54,6 @@ _bkp/
 # ImageOptim artifacts (sidecar files it leaves behind)
 *~imageoptim*
 .*imageoptim*
+
+# Server-only generated Kammara app content
+/src/generated/kammara-app.json

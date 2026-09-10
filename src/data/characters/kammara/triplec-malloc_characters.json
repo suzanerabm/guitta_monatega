@@ -57,7 +57,8 @@
           "en": "Sentinel"
         }
       }
-    ]
+    ],
+    "appId": "triplec-malloc-character-30df2bd5719e42ce"
   },
   {
     "match": "Iren_Kor",
@@ -117,7 +118,8 @@
           "en": "Validator"
         }
       }
-    ]
+    ],
+    "appId": "triplec-malloc-character-f033f7ffd2723f0c"
   },
   {
     "match": "Aion_Var",
@@ -177,7 +179,8 @@
           "en": "Crossing"
         }
       }
-    ]
+    ],
+    "appId": "triplec-malloc-character-063b4acb02b0eb8e"
   },
   {
     "match": "Stelipa",
@@ -226,7 +229,8 @@
           "en": "Messenger"
         }
       }
-    ]
+    ],
+    "appId": "triplec-malloc-character-a2d51dc4fe94a5a9"
   },
   {
     "match": "Mewlites",
@@ -275,7 +279,8 @@
           "en": "Defense"
         }
       }
-    ]
+    ],
+    "appId": "triplec-malloc-character-04b09d8f71c12c13"
   },
   {
     "match": "Trilume",
@@ -324,7 +329,8 @@
           "en": "Guides"
         }
       }
-    ]
+    ],
+    "appId": "triplec-malloc-character-0be80eaafc0f0fe0"
   },
   {
     "match": "Krystos",
@@ -373,7 +379,8 @@
           "en": "Infiltrator"
         }
       }
-    ]
+    ],
+    "appId": "triplec-malloc-character-3157581fcf2b5b4d"
   },
   {
     "match": "Estakors",
@@ -422,6 +429,7 @@
           "en": "Destabilizers"
         }
       }
-    ]
+    ],
+    "appId": "triplec-malloc-character-65e0cf497b6ef92a"
   }
 ]

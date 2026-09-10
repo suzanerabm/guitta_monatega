@@ -14,28 +14,44 @@
     "  buyUrl (string)   -> link de compra. Ausente = mostra 'Em breve' no botão.",
     "  buyLabel (string) -> texto do botão (ex: 'Compre na Amazon').",
     "",
-    "Filtro roda no servidor (kammara/page.tsx) — livro oculto não vaza pro cliente."
+    "Filtro roda no servidor (kammara/page.tsx) — livro oculto não vaza pro cliente.",
+    "  description ({pt,en}) -> sinopse compartilhada pelo site e pelo app.",
+    "  body ({pt,en}) -> listas de parágrafos complementares.",
+    "  appId -> identidade permanente; preserve ao corrigir títulos ou renomear uma edição."
   ],
   "books": {
     "kammara/saga-orf-v-pt": {
       "visible": true,
       "onlyLocale": "pt",
       "cover": "/imgs/books/kammara/saga-orf-v/capa_70x10.jpg",
-      "title": { "pt": "Saga em ORF-V - Volume 1" },
+      "title": {
+        "pt": "Saga em ORF-V - Volume 1"
+      },
       "buyUrl": "www.kammara.com",
-      "buyLabel": "Compre na Amazon"
+      "buyLabel": "Compre na Amazon",
+      "description": {
+        "pt": "E se as invenções da humanidade continuassem evoluindo em outro universo?\n\nBem-vindo ao Kammara — um universo com incontáveis planetas, cada um com seu povo, seu jeito de viver e uma história própria. Nesta primeira saga, embarque por ORF-V, o planeta onde tudo se conecta, e conheça povos que se encontram, se ajudam e se enfrentam quando seus mundos se cruzam.\n\nUma aventura ilustrada sobre coragem, amizade e o que nos torna quem somos — para jovens leitores e para todos que nunca deixaram de imaginar.",
+        "en": ""
+      },
+      "appId": "kammara-book-291c10e5acd97b48"
     },
     "kammara/saga-orf-v-en": {
       "visible": true,
       "onlyLocale": "en",
       "cover": "/imgs/books/kammara/saga-orf-v/capa_70x10_en.jpg",
-      "title": { "en": "Saga in ORF-V" }
+      "title": {
+        "en": "Saga in ORF-V"
+      },
+      "appId": "kammara-book-354188b060c80db4"
     },
     "kammara/saga-maelik-v-pt": {
       "visible": true,
       "onlyLocale": "pt",
       "cover": "/imgs/books/kammara/saga-orf-v/capa_70x10_2.jpg",
-      "title": { "pt": "Saga em Digg - Volume 2" }
+      "title": {
+        "pt": "Saga em Digg - Volume 2"
+      },
+      "appId": "kammara-book-d54f0662e46a1fea"
     }
   }
 }

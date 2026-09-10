@@ -2,85 +2,97 @@
   {
     "image": "/imgs/kammara/z1/_scenes/TOWER_STATION.jpg",
     "label": {
-      "pt": "estação-torre",
+      "pt": "Estação-torre",
       "en": "tower station"
-    }
+    },
+    "appId": "z1-scene-a048011f4414d030"
   },
   {
     "image": "/imgs/kammara/z1/_scenes/CENTRAL_SQUARE.jpg",
     "label": {
-      "pt": "praça central",
+      "pt": "Praça central",
       "en": "central square"
-    }
+    },
+    "appId": "z1-scene-61ba92f557c7feae"
   },
   {
     "image": "/imgs/kammara/z1/_scenes/CENTRAL_SQUARE_aerial_view.jpg",
     "label": {
-      "pt": "praça central, vista aérea",
+      "pt": "Praça central: vista aérea",
       "en": "central square, aerial view"
-    }
+    },
+    "appId": "z1-scene-bb3ad4cbccb99dcd"
   },
   {
     "image": "/imgs/kammara/z1/_scenes/PERFORATED_HALL.jpg",
     "label": {
-      "pt": "salão perfurado",
+      "pt": "Salão perfurado",
       "en": "perforated hall"
-    }
+    },
+    "appId": "z1-scene-2e12b925e06f69c0"
   },
   {
     "image": "/imgs/kammara/z1/_scenes/Vila.jpg",
     "label": {
-      "pt": "a vila cúbica",
+      "pt": "A vila cúbica",
       "en": "the cubic village"
-    }
+    },
+    "appId": "z1-scene-ea2f7b81a6f549b6"
   },
   {
     "image": "/imgs/kammara/z1/_scenes/Vila_square.jpg",
     "label": {
-      "pt": "praça da vila",
+      "pt": "Praça da vila",
       "en": "village square"
-    }
+    },
+    "appId": "z1-scene-a10dbdd99b59dc40"
   },
   {
     "image": "/imgs/kammara/z1/_scenes/NEW_VILLA.jpg",
     "label": {
-      "pt": "modbus modelo aberto",
+      "pt": "Modbus: modelo aberto",
       "en": "modbus open model"
-    }
+    },
+    "appId": "z1-scene-e8aa91f55e1c7914"
   },
   {
     "image": "/imgs/kammara/z1/_scenes/INSIDE_REG.jpg",
     "label": {
-      "pt": "vista dentro da estação-torre",
+      "pt": "Interior da estação-torre",
       "en": "inside the tower station"
-    }
+    },
+    "appId": "z1-scene-39d4341e2b4dc309"
   },
   {
     "image": "/imgs/kammara/z1/_scenes/SALAS_ANCESTRAIS.jpg",
     "label": {
-      "pt": "salas ancestrais",
+      "pt": "Salas ancestrais",
       "en": "ancestral halls"
-    }
+    },
+    "appId": "z1-scene-4e08d1ee55f1952c"
   },
   {
     "image": "/imgs/kammara/z1/_scenes/Z-CHASMS.jpg",
     "label": {
-      "pt": "os abismos de z1",
+      "pt": "Os abismos de Z1",
       "en": "the chasms of z1"
-    }
+    },
+    "appId": "z1-scene-a1c0314dbff84d55"
   },
   {
     "image": "/imgs/kammara/z1/_scenes/habitantes_conversando.jpg",
     "label": {
-      "pt": "habitantes conversando",
+      "pt": "Habitantes conversando",
       "en": "inhabitants talking"
-    }
+    },
+    "appId": "z1-scene-9ec92568b7b0c300"
   },
   {
     "image": "/imgs/kammara/z1/_scenes/modbus_lotado.jpg",
     "label": {
-      "pt": "modbus lotado",
+      "pt": "Modbus lotado",
       "en": "crowded modbus"
-    }
+    },
+    "appId": "z1-scene-622b680358a9d493"
   }
 ]

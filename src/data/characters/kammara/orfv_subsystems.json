@@ -34,7 +34,8 @@
         "### What holds it all",
         "On ORF-V, what keeps everything working isn't rules. It's the care of one for the other."
       ]
-    }
+    },
+    "appId": "orfv-topic-18bde5ff6dcc7e7c"
   },
   {
     "title": {
@@ -71,7 +72,8 @@
         "### They are not weak",
         "They are not weak. They are kind. And the difference is exactly what the viruses don't understand."
       ]
-    }
+    },
+    "appId": "orfv-topic-4588ee2ac8737a42"
   },
   {
     "title": {
@@ -108,7 +110,8 @@
         "### An imperfect balance",
         "ORF-V is a world that lives on imperfect balance. Nothing is guaranteed; everything depends on those who care."
       ]
-    }
+    },
+    "appId": "orfv-topic-a1c3cc08e61d192b"
   },
   {
     "title": {
@@ -150,7 +153,8 @@
         "On ORF-V, when someone speaks, what matters isn't what they say; it's that they are there."
       ]
     },
-    "visible": false
+    "visible": false,
+    "appId": "orfv-topic-90448549821d89dd"
   },
   {
     "title": {
@@ -184,7 +188,8 @@
         "The boundaries between the inner and the outer are never precise. And fear, once it settles in, postpones decisions and keeps gaps open."
       ]
     },
-    "visible": false
+    "visible": false,
+    "appId": "orfv-topic-0680e6863ed6135e"
   },
   {
     "title": {
@@ -221,6 +226,7 @@
         "### A slow collapse",
         "ORF-V doesn't fall all at once. It falls slowly. And it's the slowness of the collapse that makes it so hard to react."
       ]
-    }
+    },
+    "appId": "orfv-topic-509bcd37877ffa41"
   }
 ]

@@ -1,6 +1,9 @@
 [
   {
-    "title": { "pt": "Origem", "en": "Origin" },
+    "title": {
+      "pt": "Origem",
+      "en": "Origin"
+    },
     "img": "/imgs/kammara/digg/_scenes/primeira_rocha.jpg",
     "text": {
       "pt": [
@@ -15,10 +18,14 @@
         "### The way of existing",
         "The way Digg came to be already tells what it believes: what you win is worth more than what falls into your lap. No block came for free: each was sought out and bound to the chain. A world made of will, one link at a time, certain that there will always be a next one."
       ]
-    }
+    },
+    "appId": "digg-topic-7b9afa8bda071a80"
   },
   {
-    "title": { "pt": "Cultura", "en": "Culture" },
+    "title": {
+      "pt": "Cultura",
+      "en": "Culture"
+    },
     "img": "/imgs/kammara/digg/_subsystems/cultura.jpg",
     "text": {
       "pt": [
@@ -41,10 +48,14 @@
         "### Every one for themselves",
         "An ally is good as long as it pays. Today's partner is tomorrow's rival, and every Digger knows it: so they keep others close, watching. Trusting too much is leaving an opening. On Digg, the clever one never turns their back."
       ]
-    }
+    },
+    "appId": "digg-topic-18bde5ff6dcc7e7c"
   },
   {
-    "title": { "pt": "Diggers", "en": "Diggers" },
+    "title": {
+      "pt": "Diggers",
+      "en": "Diggers"
+    },
     "img": "/imgs/kammara/digg/_subsystems/habitantes.jpg",
     "text": {
       "pt": [
@@ -67,10 +78,14 @@
         "### What they want",
         "Kemita, above all the pure kind, which only TripleC can create. The Turen, the rare translation devices. And blocks bearing kemita, to shackle to the chain and make the planet grow."
       ]
-    }
+    },
+    "appId": "digg-topic-8e027b1fba08e6c0"
   },
   {
-    "title": { "pt": "Geografia", "en": "Geography" },
+    "title": {
+      "pt": "Geografia",
+      "en": "Geography"
+    },
     "img": "/imgs/kammara/digg/_subsystems/geografia.jpg",
     "text": {
       "pt": [
@@ -97,10 +112,14 @@
         "### The First Block",
         "The command block, where Níhrak reigns. It holds the engine that moves the planet and Sílko, the Ratón. It is the heart of the chain."
       ]
-    }
+    },
+    "appId": "digg-topic-a1c3cc08e61d192b"
   },
   {
-    "title": { "pt": "Transporte & Movimento", "en": "Transport & Movement" },
+    "title": {
+      "pt": "Transporte & Movimento",
+      "en": "Transport & Movement"
+    },
     "img": "/imgs/kammara/digg/_scenes/primeira_rocha.jpg",
     "text": {
       "pt": [
@@ -119,10 +138,14 @@
         "### Inside and on the runs",
         "Within, one crosses from block to block by the wooden bridges and the tunnels, all on foot. For individual runs (reaching a ship, fetching an elePHPant), the Diggers use fast ships, patched together with whatever they've gathered along the way."
       ]
-    }
+    },
+    "appId": "digg-topic-43627973cc47d874"
   },
   {
-    "title": { "pt": "Relações com Outros Planetas", "en": "Relations with Other Planets" },
+    "title": {
+      "pt": "Relações com Outros Planetas",
+      "en": "Relations with Other Planets"
+    },
     "img": "/imgs/kammara/digg/_subsystems/eniac_roubo.jpg",
     "text": {
       "pt": [
@@ -145,10 +168,14 @@
         "### ORF-V",
         "The chain's labor. The elePHPants of ORF-V, the bridge builders, are brought over to raise the bridges between Digg's blocks."
       ]
-    }
+    },
+    "appId": "digg-topic-8008ab136eb3106b"
   },
   {
-    "title": { "pt": "Perigos", "en": "Dangers" },
+    "title": {
+      "pt": "Perigos",
+      "en": "Dangers"
+    },
     "img": "/imgs/kammara/digg/_subsystems/perigo.jpg",
     "text": {
       "pt": [
@@ -171,6 +198,7 @@
         "### The surprise arrival",
         "For the other planets, Digg's greatest danger is not knowing when it comes. It sails on purpose and arrives by surprise. When the chain appears on the horizon, it is already too late."
       ]
-    }
+    },
+    "appId": "digg-topic-509bcd37877ffa41"
   }
 ]

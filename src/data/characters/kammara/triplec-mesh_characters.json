@@ -46,7 +46,8 @@
           "en": "Modulator"
         }
       }
-    ]
+    ],
+    "appId": "triplec-mesh-character-e32ccfd5e4ad4701"
   },
   {
     "match": "DORAN_KES",
@@ -95,7 +96,8 @@
           "en": "Guardian"
         }
       }
-    ]
+    ],
+    "appId": "triplec-mesh-character-c3f07cb056cb5d6d"
   },
   {
     "match": "ELLEN VAR",
@@ -144,7 +146,8 @@
           "en": "Architect"
         }
       }
-    ]
+    ],
+    "appId": "triplec-mesh-character-f2f2ab1b0dda5796"
   },
   {
     "match": "Caracol-Espiral",
@@ -193,7 +196,8 @@
           "en": "Time-marker"
         }
       }
-    ]
+    ],
+    "appId": "triplec-mesh-character-287281edb074251d"
   },
   {
     "match": "nibu",
@@ -242,7 +246,8 @@
           "en": "Affective warmer"
         }
       }
-    ]
+    ],
+    "appId": "triplec-mesh-character-043d68d9bff1d9fa"
   },
   {
     "match": "Cobra-Caracol",
@@ -291,7 +296,8 @@
           "en": "Curve-connector"
         }
       }
-    ]
+    ],
+    "appId": "triplec-mesh-character-3310800451937a9e"
   },
   {
     "match": "Poly",
@@ -340,7 +346,8 @@
           "en": "Form-reorganizer"
         }
       }
-    ]
+    ],
+    "appId": "triplec-mesh-character-b4c4c14310bab292"
   },
   {
     "match": "Manoo",
@@ -389,6 +396,7 @@
           "en": "Tracker"
         }
       }
-    ]
+    ],
+    "appId": "triplec-mesh-character-8d1ca9d6004566b0"
   }
 ]

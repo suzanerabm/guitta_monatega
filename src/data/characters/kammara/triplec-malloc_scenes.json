@@ -2,120 +2,137 @@
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/1_vila_principal.jpg",
     "label": {
-      "pt": "vila principal",
+      "pt": "Vila principal",
       "en": "main village"
-    }
+    },
+    "appId": "triplec-malloc-scene-229511fa20f350c4"
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/1portex_camada.jpg",
     "label": {
-      "pt": "portex camada",
+      "pt": "Camada Portex",
       "en": "portex layer"
-    }
+    },
+    "appId": "triplec-malloc-scene-e5dbb76ee1cae809"
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/2portex_camada_vista_cima.jpg",
     "label": {
-      "pt": "portex camada vista cima",
+      "pt": "Camada Portex: vista de cima",
       "en": "portex layer top view"
-    }
+    },
+    "appId": "triplec-malloc-scene-856b13d55c40217d"
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/3datex_camada.jpg",
     "label": {
-      "pt": "datex camada",
+      "pt": "Camada Datex",
       "en": "datex layer"
-    }
+    },
+    "appId": "triplec-malloc-scene-516b89991aab62d4"
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/4datara_camada.jpg",
     "label": {
-      "pt": "datara camada",
+      "pt": "Camada Datara",
       "en": "datara layer"
-    }
+    },
+    "appId": "triplec-malloc-scene-43cd5c7871debb69"
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/4malloc_mina_cshift.jpg",
     "label": {
-      "pt": "malloc mina kemita",
+      "pt": "Mina de kemita em malloc",
       "en": "malloc kemita mine"
-    }
+    },
+    "appId": "triplec-malloc-scene-6bec7c2c39e2fc24"
   },
-   {
+  {
     "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_tunel.jpg",
     "label": {
-      "pt": "túnel",
+      "pt": "Túnel",
       "en": "tunnel"
-    }
+    },
+    "appId": "triplec-malloc-scene-e063cf959f70f4b2"
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/5hepa_regiao_1.jpg",
     "label": {
-      "pt": "hepa regiao 1",
+      "pt": "Hepa: região 1",
       "en": "hepa region 1"
-    }
+    },
+    "appId": "triplec-malloc-scene-6179060ac6191dbe"
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/6malloc_camadas_regiao2.jpg",
     "label": {
-      "pt": "malloc camadas regiao2",
+      "pt": "Camadas de malloc: região 2",
       "en": "malloc layers region 2"
-    }
+    },
+    "appId": "triplec-malloc-scene-2a05bba4bc4ee556"
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/7hepa_regiao2.jpg",
     "label": {
-      "pt": "hepa regiao2",
+      "pt": "Hepa: região 2",
       "en": "hepa region 2"
-    }
+    },
+    "appId": "triplec-malloc-scene-7c4531bdf4f87dcf"
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_vila.jpg",
     "label": {
-      "pt": "vila",
+      "pt": "Vila",
       "en": "village"
-    }
+    },
+    "appId": "triplec-malloc-scene-76fc4b376ebdd445"
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_vila_1.jpg",
     "label": {
-      "pt": "vila 1",
+      "pt": "Vila 1",
       "en": "village 1"
-    }
+    },
+    "appId": "triplec-malloc-scene-28e2766db46c5d3d"
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_vila_2.jpg",
     "label": {
-      "pt": "vila 2",
+      "pt": "Vila 2",
       "en": "village 2"
-    }
+    },
+    "appId": "triplec-malloc-scene-00f1cebb9cbd43cd"
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_vila_3.jpg",
     "label": {
-      "pt": "vila 3",
+      "pt": "Vila 3",
       "en": "village 3"
-    }
+    },
+    "appId": "triplec-malloc-scene-b45cf522ccabb511"
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_vila_4.jpg",
     "label": {
-      "pt": "vila 4",
+      "pt": "Vila 4",
       "en": "village 4"
-    }
+    },
+    "appId": "triplec-malloc-scene-7cf88ff048404957"
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_sala.jpg",
     "label": {
-      "pt": "sala",
+      "pt": "Sala",
       "en": "living room"
-    }
+    },
+    "appId": "triplec-malloc-scene-2d30d0f993c84acc"
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_quarto.jpg",
     "label": {
-      "pt": "quarto",
+      "pt": "Quarto",
       "en": "bedroom"
-    }
+    },
+    "appId": "triplec-malloc-scene-24143a610b7bd5e1"
   }
 ]
