@@ -1,3 +1,8 @@
+// Só servidor. Este módulo carrega os JSONs de conteúdo INTEIROS, inclusive o
+// que não está publicado — se um client component importar daqui, essa lore vai
+// junto pro bundle do navegador. O `server-only` transforma isso em erro de
+// build. Os dados chegam ao cliente por props, via `src/lib/content/`.
+import 'server-only';
 import manifest from '@/data/image-manifest.json';
 import { mediaUrl, mediaUrls } from '@/lib/media';
 
