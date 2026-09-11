@@ -56,6 +56,20 @@ const nextConfig: NextConfig = {
 				headers: securityHeaders,
 			},
 			{
+				// CORS da API pública.
+				source: "/api/:path*",
+				headers: [
+					{ key: "Access-Control-Allow-Origin", value: "*" },
+					{ key: "Access-Control-Allow-Methods", value: "GET, OPTIONS" },
+					{
+						key: "Access-Control-Allow-Headers",
+						value: "Content-Type, If-None-Match",
+					},
+					// Deixa o app ler o ETag pra mandar If-None-Match depois.
+					{ key: "Access-Control-Expose-Headers", value: "ETag" },
+				],
+			},
+			{
 				// Imagens e vídeos em /imgs são imutáveis (mudam de nome quando mudam
 				// de conteúdo). Cache forte de 1 ano evita rebaixar a cada visita —
 				// parte do plano de performance (specs/2026-06-21-performance-*).
