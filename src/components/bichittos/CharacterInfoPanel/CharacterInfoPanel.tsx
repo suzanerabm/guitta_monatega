@@ -2,14 +2,22 @@
 import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Box, Text, Heading } from '@chakra-ui/react';
-import type { Character } from '@/data/characters/types';
-import { getLocalizedName, getLocalizedSpecies, getLocalizedBio, type Locale } from '@/lib/characters';
+
+/**
+ * Texto do painel, já resolvido para o idioma ativo. A resolução acontece no
+ * SERVIDOR (camada de conteúdo) — este componente não pode importar os dados
+ * de personagem, senão o bundle do cliente carrega a lore inteira, incluindo
+ * a de personagens marcados `visible: false`.
+ */
+export interface CharacterInfo {
+  name: string;
+  species: string;
+  bio?: string;
+}
 
 export interface CharacterInfoPanelProps {
   /** Character to display. When null/undefined, the panel is hidden. */
-  character: Character | null | undefined;
-  /** Active locale for i18n text. */
-  locale: Locale;
+  character: CharacterInfo | null | undefined;
   /**
    * Element the panel anchors to. The panel is rendered via a portal to
    * document.body and positioned in viewport coordinates (position: fixed)
@@ -42,7 +50,6 @@ interface AnchorRect {
  */
 export function CharacterInfoPanel({
   character,
-  locale,
   anchorEl,
   onClose,
 }: CharacterInfoPanelProps) {
@@ -69,9 +76,7 @@ export function CharacterInfoPanel({
   if (!character || !rect) return null;
   if (typeof document === 'undefined') return null;
 
-  const name = getLocalizedName(character, locale);
-  const species = getLocalizedSpecies(character, locale);
-  const bio = getLocalizedBio(character, locale);
+  const { name, species, bio } = character;
 
   const GAP = 12; // px gap between card bottom and panel top
   const centerX = rect.left + rect.width / 2;

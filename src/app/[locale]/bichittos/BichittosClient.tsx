@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import { Box, Grid, Text, chakra } from '@chakra-ui/react';
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { HeroSection } from '@/components/HeroSection';
 import { FilterBar } from '@/components/FilterBar';
 import { CreatureSection } from '@/components/CreatureSection';
@@ -12,28 +12,16 @@ import { CharacterStrip } from '@/components/bichittos/CharacterStrip';
 import { BichittoVideoCarousel } from '@/components/bichittos/BichittoVideoCarousel';
 import { BookGallery } from '@/components/BookGallery';
 import { useModal } from '@/components/Modal';
-import { palettes, type CreatureId } from '@/theme/palettes';
-import { isBichittoPublished } from '@/lib/visibility';
-import { characterPositions, zecoMascot, bichittoVideos } from '@/data/bichittos';
-import {
-  getCreatureName,
-  getCreatureText,
-  getCreaturePanelStory,
-} from '@/data/characters/bichittos/_creatureData';
-import { translateName } from '@/lib/translateName';
+import { palettes } from '@/theme/palettes';
 import { resolveInitialBichitto } from './resolveInitialBichitto';
-import type { Locale } from '@/lib/characters';
+import type { BichittoPayload } from '@/lib/content/types';
 
-export interface BichittosCreatureData {
-  id: CreatureId;
-  chars: { name: string; image: string }[];
-  books: {
-    id: string;
-    cover: string | null;
-    pages: string[];
-    buy?: { url: string; label: string } | null;
-  }[];
-}
+/**
+ * Tudo aqui chega pronto do servidor (`src/lib/content/bichittos.ts`). Este
+ * componente NÃO importa módulo de dados: era assim que a lore de criaturas
+ * não publicadas entrava no bundle do cliente.
+ */
+export type BichittosCreatureData = BichittoPayload;
 
 interface Props {
   data: BichittosCreatureData[];
@@ -41,8 +29,6 @@ interface Props {
 
 export function BichittosClient({ data }: Props) {
   const t = useTranslations('bichittos');
-  const tCommon = useTranslations('common');
-  const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -66,12 +52,6 @@ export function BichittosClient({ data }: Props) {
   const { registerGallery, openGallery } = useModal();
 
   const bookIllustrated = t('bookIllustrated');
-
-  // Word dictionary for translating filename-derived character names.
-  // Each character image is named like "napcat-dormindo.png" — the manifest
-  // stores the cleaned form ("napcat dormindo") and we translate each word
-  // here so the label switches with the locale.
-  const words = tCommon.raw('words') as Record<string, string>;
 
   // Build a flat list of book galleries: galleryId -> pages
   const galleries = useMemo(() => {
@@ -137,13 +117,22 @@ export function BichittosClient({ data }: Props) {
     openGallery(galleryId, 0, g.title, bookIllustrated, undefined, undefined, undefined, g.buy);
   };
 
-  const filters = [
-    { id: 'napcat', label: getCreatureName('napcat', locale as Locale), color: palettes.napcat.colors[3], bgColor: palettes.napcat.dark },
-    { id: 'zeco', label: getCreatureName('zeco', locale as Locale), color: palettes.zeco.colors[3], bgColor: palettes.zeco.dark },
-    { id: 'taylo', label: getCreatureName('taylo', locale as Locale), color: palettes.taylo.colors[0], bgColor: palettes.taylo.dark },
-    { id: 'cheiodebolinha', label: getCreatureName('cheiodebolinha', locale as Locale), color: palettes.cheiodebolinha.colors[2], bgColor: palettes.cheiodebolinha.dark },
-    { id: 'miscelania', label: getCreatureName('miscelania', locale as Locale), color: palettes.miscelania.colors[2], bgColor: palettes.miscelania.dark },
-  ].filter((f) => isBichittoPublished(f.id));
+  // Índice da cor de cada criatura dentro da sua paleta. O resto (label,
+  // ordem, quais criaturas aparecem) vem do payload, que já é gateado no
+  // servidor e chega na ordem canônica.
+  const FILTER_COLOR_INDEX: Record<string, number> = {
+    napcat: 3,
+    zeco: 3,
+    taylo: 0,
+    cheiodebolinha: 2,
+    miscelania: 2,
+  };
+  const filters = data.map((c) => ({
+    id: c.id,
+    label: c.name,
+    color: palettes[c.id].colors[FILTER_COLOR_INDEX[c.id]],
+    bgColor: palettes[c.id].dark,
+  }));
 
   return (
     <>
@@ -212,9 +201,7 @@ export function BichittosClient({ data }: Props) {
         // Cor da borda dos boxes. Só o Zeco define `borderColor` na paleta;
         // os outros caem no titleColor pra todos terem a mesma borda.
         const boxBorder = colors.borderColor ?? colors.titleColor;
-        const text = getCreatureText(creature.id, locale as Locale);
-        const panelStory = getCreaturePanelStory(creature.id, locale as Locale);
-        const name = getCreatureName(creature.id, locale as Locale);
+        const { text, panelStory, name } = creature;
         const bookDefs = ((): { tag: string; title: string }[] | undefined => {
           try {
             if (!t.has(`${creature.id}.books` as never)) return undefined;
@@ -257,7 +244,7 @@ export function BichittosClient({ data }: Props) {
               color2={colors.text}
               banner={
                 <DSMainCard
-                  characters={characterPositions[creature.id] ?? []}
+                  characters={creature.positions}
                   gradient={palette.gradient}
                   cardBgOpacity={0.7}
                   bottomShadow
@@ -266,7 +253,7 @@ export function BichittosClient({ data }: Props) {
                   maxHeight="800px"
                   titleColor={colors.titleColor}
                   textColor={colors.textColor}
-                  mascot={creature.id === 'zeco' ? zecoMascot : undefined}
+                  mascot={creature.mascot}
                   textPanelTitle={panelTitle}
                   creatureAccent={colors.accent}
                   creatureAccentAlt={colors.accentAlt}
@@ -289,7 +276,7 @@ export function BichittosClient({ data }: Props) {
                     <CharacterStrip
                       characters={creature.chars.map((c) => ({
                         ...c,
-                        name: translateName(c.name, words),
+                        name: c.name,
                       }))}
                       gradient={palette.gradient}
                       cardBg="rgba(255,255,255,0.12)"
@@ -300,7 +287,7 @@ export function BichittosClient({ data }: Props) {
                   {/* Vídeo DENTRO do DSMain — só em xl+ (>1280px), centralizado
                       na horizontal, no vão à esquerda do personagem. Nas telas
                       menores ele aparece fora (bloco abaixo). */}
-                  {(bichittoVideos[creature.id]?.length ?? 0) > 0 && (
+                  {creature.videos.length > 0 && (
                     <Box
                       display={{ base: 'none', xl: 'block' }}
                       position="absolute"
@@ -313,7 +300,7 @@ export function BichittosClient({ data }: Props) {
                           px 3rem) pra alinhar à esquerda com ele. */}
                       <Box maxW="1200px" mx="auto" px="3rem">
                         <BichittoVideoCarousel
-                          videos={bichittoVideos[creature.id]!}
+                          videos={creature.videos}
                           color={colors.stripColor ?? colors.titleColor}
                         />
                       </Box>
@@ -334,7 +321,7 @@ export function BichittosClient({ data }: Props) {
             </CreatureCard>
             {/* Carrossel de vídeo "um por vez" — fora do DSMain, só ATÉ xl
                 (≤1280px). Em xl+ ele aparece DENTRO do DSMain (acima). */}
-            {(bichittoVideos[creature.id]?.length ?? 0) > 0 && (
+            {creature.videos.length > 0 && (
               <Box
                 display={{ base: 'block', xl: 'none' }}
                 maxW="1200px"
@@ -343,7 +330,7 @@ export function BichittosClient({ data }: Props) {
                 pb={{ base: '1rem', md: '1.5rem' }}
               >
                 <BichittoVideoCarousel
-                  videos={bichittoVideos[creature.id]!}
+                  videos={creature.videos}
                   color={colors.stripColor ?? colors.titleColor}
                 />
               </Box>

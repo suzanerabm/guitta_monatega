@@ -2,7 +2,7 @@
 import { useRef, useState } from 'react';
 import { Box, Flex, Text, chakra } from '@chakra-ui/react';
 import { LazyVideo } from '@/components/LazyVideo';
-import type { BichittoVideo } from '@/data/bichittos';
+import type { BichittoVideo } from '@/lib/content/types';
 
 export interface BichittoVideoCarouselProps {
   videos: BichittoVideo[];

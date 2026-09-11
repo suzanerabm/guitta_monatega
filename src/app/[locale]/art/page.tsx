@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { getArtImages } from '@/lib/images';
+import { getArtSections } from '@/lib/content/art';
 import { ArtClient } from './ArtClient';
 
 export async function generateMetadata({
@@ -13,17 +13,6 @@ export async function generateMetadata({
   return { title: t('pageTitle') };
 }
 
-const SECTION_IDS = [ 
-  'doodle',
-  'grafite',
-  'black',
-  // 'digital',
-  'collections',
-  'fimo',
-  'needle',
-  'clay',
-  'croche',
-] as const;
 
 export default async function ArtPage({
   params,
@@ -33,10 +22,7 @@ export default async function ArtPage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const sections = SECTION_IDS.map((id) => {
-    const imgs = getArtImages(id);
-    return { id, thumbs: imgs.thumbs, full: imgs.full };
-  });
+  const sections = getArtSections();
 
   return <ArtClient sections={sections} />;
 }

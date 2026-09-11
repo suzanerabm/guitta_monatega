@@ -4,19 +4,19 @@ import { renderWithChakra } from '@/test-utils';
 import { KammaraProgressHeatmap } from './KammaraProgressHeatmap';
 
 const categories = [
-  { id: 'lore', label: { pt: 'Lore', en: 'Lore' } },
-  { id: 'cenas', label: { pt: 'Cenas', en: 'Scenes' } },
+  { id: 'lore', label: 'Lore' },
+  { id: 'cenas', label: 'Cenas' },
 ];
 
 const planets = [
   {
     id: 'z1',
-    name: { pt: 'Z1', en: 'Z1' },
+    name: 'Z1',
     progress: { lore: 96, cenas: 0 },
   },
   {
     id: 'hash',
-    name: { pt: 'Hash', en: 'Hash' },
+    name: 'Hash',
     progress: { lore: 3, cenas: 0 },
   },
 ];

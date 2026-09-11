@@ -12,7 +12,6 @@ import { KammaraCard } from '@/components/KammaraCard';
 import { KammaraCardRegion } from '@/components/KammaraCardRegion';
 import { KammaraCharacterCard } from '@/components/KammaraCharacterCard';
 import { KammaraCharacterGallery } from '@/components/KammaraCharacterGallery';
-import { getCharactersForContext, getLocalizedBio, getLocalizedName as getCharLocalizedName, getLocalizedSpecies } from '@/lib/characters';
 import { DSMainCard } from '@/components/DSMainCard';
 import { KammaraSceneCollage } from '@/components/KammaraSceneCollage';
 import { SceneStrip } from '@/components/SceneStrip';
@@ -22,82 +21,55 @@ import { RegionBanner } from '@/components/RegionBanner';
 import { KammaraDropsStrip } from '@/components/KammaraDropsStrip';
 import { BookGallery } from '@/components/BookGallery';
 import { KammaraProgressHeatmap } from '@/components/KammaraProgressHeatmap';
-import kammaraProgressData from '@/data/kammara_progress.json';
-import { isKammaraPublished, kammaraInProgress } from '@/lib/visibility';
 import { KammaraEvents } from '@/components/KammaraEvents';
-import kammaraEventsData from '@/data/kammara_events.json';
 import { KammaraPlanetCard } from '@/components/KammaraPlanetCard';
 import { KammaraDropsMosaic } from '@/components/KammaraDropsMosaic';
-import kammaraMosaicData from '@/data/kammara_mosaic.json';
 import { useModal } from '@/components/Modal';
 import { mediaUrl } from '@/lib/media';
 import { palettes, type PaletteName, type Palette } from '@/theme/palettes';
 
 const kammaraHero = palettes.kammara.hero!;
 import { subsystemGlyph, worldCrestGlyph } from '@/theme/kalunGlyphs';
-import { translateName } from '@/lib/translateName';
-import {
-  getWorldName,
-  getWorldSummary,
-  getWorldPanelStory,
-  getWorldSubsystems,
-  getWorldTags,
-} from '@/data/characters/kammara/_worldData';
 import { KammaraStarField } from './KammaraStarField';
+import type {
+  Book,
+  CharacterCardItem,
+  MosaicClip,
+  ProgressPayload,
+  RegionPayload,
+  WorldPayload,
+} from '@/lib/content/types';
+import type { getEvents } from '@/lib/content/kammara';
+
+type KammaraEventsPayload = NonNullable<ReturnType<typeof getEvents>>;
 
 // ============================================================================
 // Types & constants
 // ============================================================================
 
-type WorldId = 'lunnp1' | 'eni4' | 'triplec' | 'orfv' | 'z1' | 'gotto' | 'digg' | 'memphis';
 type TriplecRegionId = 'malloc' | 'mesh' | 'sharp';
 type Locale = 'pt' | 'en';
 
 const TRIPLEC_REGION_IDS = ['malloc', 'mesh', 'sharp'] as const;
 
-interface RegionData {
-  id: TriplecRegionId;
-  chars: { name: string; image: string }[];
-  scenes: { name: string; image: string; video?: string }[];
-  drops: { video: string; poster: string; label: string }[];
-  bgImage: string | null;
-  subsystemImages: (string | null)[];
-}
-
-interface WorldData {
-  id: WorldId;
-  chars: { name: string; image: string }[];
-  scenes: { name: string; image: string; video?: string }[];
-  drops: { video: string; poster: string; label: string }[];
-  bgImage: string | null;
-  subsystemImages: (string | null)[];
-  /** Sub-regions inside a world. Only triplec currently uses this. */
-  regions?: Partial<Record<TriplecRegionId, RegionData>>;
-}
-
-interface KammaraBook {
-  id: string;
-  cover: string | null;
-  pages: string[];
-}
+/**
+ * Tudo chega pronto de `src/lib/content/kammara.ts`. Este componente NÃO
+ * importa módulo de dados — era assim que a lore dos 11 mundos e a bio dos
+ * personagens `visible: false` entravam no bundle do navegador.
+ */
+type RegionData = RegionPayload;
+type WorldData = WorldPayload;
 
 interface Props {
   worlds: WorldData[];
-  kammaraBooks: KammaraBook[];
+  kammaraBooks: Book[];
   kammaraBg: string | null;
-  kammaraChars: { name: string; image: string }[];
+  kammaraCharacters: CharacterCardItem[];
+  mosaicClips: MosaicClip[];
+  events: KammaraEventsPayload | null;
+  progress: ProgressPayload | null;
 }
 
-const WORLD_NAMES: Record<WorldId, string> = {
-  lunnp1: "LUNN'P1",
-  eni4: 'ENI-4Δ',
-  triplec: 'TripleC',
-  orfv: 'ORF-V',
-  z1: 'Z1',
-  gotto: 'Gotto',
-  digg: 'Digg',
-  memphis: 'Memphis',
-};
 
 /**
  * Per-world color indices into the palette.colors[] array. Matches the
@@ -106,7 +78,7 @@ const WORLD_NAMES: Record<WorldId, string> = {
  * on the dark gradient.
  */
 const WORLD_COLOR_INDICES: Record<
-  WorldId,
+  string,
   { name: number; text: number; title: number; label: number }
 > = {
   lunnp1: { name: 0, text: 2, title: 1, label: 5 },
@@ -125,8 +97,9 @@ const WORLD_COLOR_INDICES: Record<
  * stays legible. Keys: name = h1, text = body copy, title = DSTextPanel h2,
  * label = strip labels / scene captions / subsystem subtitles.
  */
-const WORLD_TEXT_OVERRIDE: Partial<
-  Record<WorldId, { name?: string; text?: string; title?: string; label?: string }>
+const WORLD_TEXT_OVERRIDE: Record<
+  string,
+  { name?: string; text?: string; title?: string; label?: string } | undefined
 > = {
   triplec: {
     // Only body text forced white; name/title/label keep palette colors.
@@ -315,9 +288,16 @@ function renderStory(story: string[], accentColor?: string) {
 // Main component
 // ============================================================================
 
-export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }: Props) {
+export function KammaraClient({
+  worlds,
+  kammaraBooks,
+  kammaraBg,
+  kammaraCharacters,
+  mosaicClips,
+  events,
+  progress,
+}: Props) {
   const t = useTranslations('kammara');
-  const tCommon = useTranslations('common');
   const locale = useLocale() as Locale;
   // No "all" on /kammara: it would mount every world at once and freeze the
   // page. We open on the Kammara intro and mount one world at a time — the
@@ -329,10 +309,8 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const publishedIds = useMemo(
-    () => worlds.filter((w) => isKammaraPublished(w.id)).map((w) => w.id),
-    [worlds],
-  );
+  // `worlds` já chega gateado do servidor — não publicado nem vem no payload.
+  const publishedIds = useMemo(() => worlds.map((w) => w.id), [worlds]);
   const [activeFilter, setActiveFilter] = useState(() =>
     // `planet` é o param atual; `planeta` é o legado em PT (links antigos).
     resolveInitialFilter(
@@ -361,8 +339,6 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
 
   const { registerGallery, openKammaraGallery } = useModal();
 
-  // Word dictionary used by translateName() for filename-derived labels.
-  const words = tCommon.raw('words') as Record<string, string>;
 
   // ── Safe i18n helpers ──────────────────────────────────────────────────
   // next-intl throws when a key is missing. These helpers swallow the
@@ -466,14 +442,14 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
   // de "Próximos Planetas" — não no filtro, no menu ou como seção da
   // página. Quando chegam a 100, somem do heatmap e entram em tudo
   // o resto.
-  const publishedWorlds = worlds.filter((w) => isKammaraPublished(w.id));
+  const publishedWorlds = worlds;
 
   // ── Filter bar ────────────────────────────────────────────────────────
   const filters = [
     { id: 'kammara', label: sectionName, color: palettes.kammara.colors[0], bgColor: palettes.kammara.dark },
     ...publishedWorlds.map((w) => ({
       id: w.id,
-      label: WORLD_NAMES[w.id],
+      label: w.name,
       color: palettes[w.id as PaletteName].colors[0],
       bgColor: palettes[w.id as PaletteName].dark,
     })),
@@ -487,9 +463,9 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
   // mesmo setActiveFilter do FilterBar (monta a seção daquele mundo).
   const worldCards = publishedWorlds.map((w) => ({
     id: w.id,
-    name: getWorldName(w.id, locale) || WORLD_NAMES[w.id],
-    summary: (getWorldSummary(w.id, locale)[0] ?? ''),
-    tags: getWorldTags(w.id, locale),
+    name: w.name,
+    summary: w.summary[0] ?? '',
+    tags: w.tags,
     crestGlyph: worldCrestGlyph(w.id),
     color: palettes[w.id as PaletteName].colors[0],
     darkColor: palettes[w.id as PaletteName].dark,
@@ -500,22 +476,13 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
   // clip carrega a marca do seu planeta (nome + glifo); clicar abre o mundo.
   // Filtra clips de planetas não publicados: senão vídeo/poster/label deles
   // vazariam no payload mesmo com o mundo oculto do resto do site.
-  const mosaicClips = kammaraMosaicData
-    .filter((c) => isKammaraPublished(c.world))
-    .map((c) => ({
-    video: mediaUrl(c.video),
-    poster: mediaUrl(c.poster),
-    label: c.label[locale] ?? c.label.pt,
-    worldId: c.world,
-    worldName: getWorldName(c.world, locale) || WORLD_NAMES[c.world as WorldId] || c.world,
-    crestGlyph: worldCrestGlyph(c.world),
+  // Os clipes vêm prontos do servidor; aqui só se acrescenta o glifo, que é
+  // tema e não conteúdo.
+  const mosaicClipsWithCrest = mosaicClips.map((c) => ({
+    ...c,
+    crestGlyph: worldCrestGlyph(c.worldId),
   }));
 
-  // Só eventos de planetas publicados chegam ao componente — senão título,
-  // data, local e planeta de mundos ocultos vazariam no payload de produção.
-  const publishedEvents = kammaraEventsData.events.filter((e) =>
-    isKammaraPublished(e.planet),
-  );
 
   // ── Per-world content ──────────────────────────────────────────────────
   // Everything a WorldSection needs is shared here so the sub-component
@@ -526,10 +493,9 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
     w,
     palette: palettes[w.id as PaletteName],
     colors: getWorldColors(w, palettes[w.id as PaletteName]),
-    name: getWorldName(w.id, locale) || WORLD_NAMES[w.id],
-    bodyText: getWorldSummary(w.id, locale),
-    panelStory: getWorldPanelStory(w.id, locale),
-    subsystems: getWorldSubsystems(w.id, locale),
+    name: w.name,
+    bodyText: w.summary,
+    subsystems: w.subsystems,
     mount: activeFilter === w.id,
   }));
 
@@ -614,7 +580,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
         >
           {/* Side slot: a curated mosaic of drops (kammara_mosaic.json) — a
               living sample of the universe next to the intro text. */}
-          <KammaraDropsMosaic clips={mosaicClips} color={kammaraPalette.colors[0]} onSelectWorld={handleSelectFilter} />
+          <KammaraDropsMosaic clips={mosaicClipsWithCrest} color={kammaraPalette.colors[0]} onSelectWorld={handleSelectFilter} />
         </DSMainCard>
         </Box>
 
@@ -651,33 +617,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
           </Grid>
         </Box>
         {(() => {
-          const contextId = 'kammara/kammara';
-          const characterData = getCharactersForContext(contextId);
-          const galleryItems = characterData
-            .filter((char) => char.visible !== false)
-            .map((char) => {
-              const manifestMatch = kammaraChars.find(
-                (c) => c.name.toLowerCase().trim() === char.match.toLowerCase().trim(),
-              );
-              const image = char.image ?? manifestMatch?.image;
-              if (!image) return null;
-              return {
-                name: getCharLocalizedName(char, locale),
-                species: getLocalizedSpecies(char, locale),
-                bio: getLocalizedBio(char, locale),
-                image,
-                backImage: char.backImage,
-                backTitle: char.backTitle?.[locale],
-                dorsalMeaning: char.dorsalMeaning?.[locale],
-                backMeaning: char.backMeaning?.[locale],
-                attributes: char.attributes?.map((a) => ({
-                  glyph: a.glyph,
-                  label: a.label[locale],
-                  value: a.value[locale],
-                })),
-              };
-            })
-            .filter((x): x is NonNullable<typeof x> => x !== null);
+          const galleryItems = kammaraCharacters;
           if (galleryItems.length === 0) return null;
           return (
             <Box width="100%" my="3xl" px={{ base: "25px", md: "2rem", xl: "3rem" }}>
@@ -728,7 +668,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
             quando `kammara_events.json` tem `"visible": false` — ou quando
             não sobra nenhum evento de planeta publicado. Basta editar o JSON
             para ligar/desligar; nenhuma mudança de código é necessária. */}
-        {kammaraEventsData.visible !== false && publishedEvents.length > 0 && (
+        {events && (
         <Box
           width="100%"
           my="3xl"
@@ -752,11 +692,12 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
             <KammaraEvents
               title={locale === 'en' ? 'Upcoming Events' : 'Próximos Eventos'}
               kicker={sectionName}
-              categories={kammaraEventsData.categories}
-              events={publishedEvents}
+              categories={events.categories}
+              events={events.items}
               locale={locale}
               color={kammaraPalette.colors[0]}
               darkColor={kammaraPalette.dark}
+              planetNames={events.planetNames}
             />
           </Box>
         </Box>
@@ -765,7 +706,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
         {/* ── PRÓXIMOS PLANETAS — heatmap de progresso ───────────────── */}
         {/* Só aparece enquanto houver planeta em construção (<100). Quando
             todos chegam a 100, a seção some da interface por completo. */}
-        {kammaraInProgress().length > 0 && (
+        {progress && (
           <Box
             width="100%"
             mt="calc(var(--chakra-spacing-3xl) + 60px)"
@@ -775,8 +716,8 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
             <KammaraProgressHeatmap
               title={locale === 'en' ? 'Upcoming Worlds' : 'Próximos Planetas'}
               subline={sectionName}
-              categories={kammaraProgressData.categories}
-              planets={kammaraInProgress()}
+              categories={progress.categories}
+              planets={progress.planets}
               locale={locale}
               color={kammaraPalette.colors[0]}
               darkColor={kammaraPalette.dark}
@@ -795,9 +736,6 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
           <WorldSection
             {...props}
             hidden={false}
-            words={words}
-            locale={locale}
-            tCommon={tCommon}
             charactersTitle={charactersTitle}
             scenesTitle={scenesTitle}
             subsystemsTitle={subsystemsTitle}
@@ -815,9 +753,6 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
                   regionId={regionId}
                   region={region}
                   hidden={false}
-                  words={words}
-                  locale={locale}
-                  tCommon={tCommon}
                   scenesTitle={scenesTitle}
                   subsystemsTitle={subsystemsTitle}
                   charactersTitle={charactersTitle}
@@ -844,12 +779,8 @@ interface WorldSectionProps {
   colors: WorldColors;
   name: string;
   bodyText: string[];
-  panelStory: string[];
   subsystems: { title: string; text: string[]; img: string }[];
   hidden: boolean;
-  words: Record<string, string>;
-  locale: Locale;
-  tCommon: ReturnType<typeof useTranslations>;
   charactersTitle: string;
   scenesTitle: string;
   subsystemsTitle: string;
@@ -862,12 +793,8 @@ function WorldSection({
   colors,
   name,
   bodyText,
-  panelStory,
   subsystems,
   hidden,
-  words,
-  locale,
-  tCommon,
   charactersTitle,
   scenesTitle,
   subsystemsTitle,
@@ -886,7 +813,7 @@ function WorldSection({
     >
       <KammaraPlanetTitle
         name={name}
-        palette={w.id}
+        palette={w.id as PaletteName}
         category="Planeta"
         declarer="planet"
         crestGlyph={worldCrestGlyph(w.id)}
@@ -963,39 +890,7 @@ function WorldSection({
         const worldCharsTitle = palette.charactersTitleColor;
         const worldDark = palette.dark;
         const worldCrest = worldCrestGlyph(w.id);
-        const contextId = `kammara/${w.id}`;
-        const characterData = getCharactersForContext(contextId);
-        // Kammara characters are driven by the JSON (single source of truth).
-        // Manifest images are a fallback for legacy entries without `image`.
-        // Filtra `visible: false` AQUI (servidor), antes de montar o payload:
-        // personagem escondido não entra no HTML, então não vaza.
-        const galleryItems = characterData
-          .filter((char) => char.visible !== false)
-          .map((char) => {
-            const manifestMatch = w.chars.find(
-              (c) => c.name.toLowerCase().trim() === char.match.toLowerCase().trim(),
-            );
-            const image = char.image ?? manifestMatch?.image;
-            if (!image) return null;
-            return {
-              name: getCharLocalizedName(char, locale),
-              species: getLocalizedSpecies(char, locale),
-              bio: getLocalizedBio(char, locale),
-              image,
-              backImage: char.backImage,
-              backTitle: char.backTitle?.[locale],
-              dorsalMeaning: char.dorsalMeaning?.[locale],
-              backMeaning: char.backMeaning?.[locale],
-              attributes: char.attributes?.map((a) => ({
-                glyph: a.glyph,
-                label: a.label[locale],
-                value: a.value[locale],
-              })),
-              fairyDust: char.fairyDust,
-              fairyDustBack: char.fairyDustBack,
-            };
-          })
-          .filter((x): x is NonNullable<typeof x> => x !== null);
+        const galleryItems = w.characters;
         if (galleryItems.length === 0) return null;
         return (
           <Box width="100%" my={{ base: '2xl', lg: '5xl' }} px={{ base: "25px", md: "2rem", xl: "3rem" }}>
@@ -1106,9 +1001,6 @@ interface TriplecRegionSectionProps {
   regionId: TriplecRegionId;
   region: RegionData;
   hidden: boolean;
-  words: Record<string, string>;
-  locale: Locale;
-  tCommon: ReturnType<typeof useTranslations>;
   scenesTitle: string;
   subsystemsTitle: string;
   charactersTitle: string;
@@ -1118,23 +1010,18 @@ function TriplecRegionSection({
   regionId,
   region,
   hidden,
-  words,
-  locale,
-  tCommon,
   scenesTitle,
   subsystemsTitle,
   charactersTitle,
 }: TriplecRegionSectionProps) {
   const regionPalette = palettes[regionId];
   const regionColor = regionPalette.colors[0];
-  const regionWorldId = `triplec-${regionId}`;
 
-  const name = getWorldName(regionWorldId, locale) || regionId;
-  const bodyText = getWorldSummary(regionWorldId, locale);
-  const panelStory = getWorldPanelStory(regionWorldId, locale);
-  const subsystems = getWorldSubsystems(regionWorldId, locale);
-  const realSubsystems = subsystems.filter(hasRealContent);
-  const contextId = `kammara/triplec/${regionId}`;
+  const name = region.name;
+  const bodyText = region.summary;
+  const panelStory = region.panelStory;
+  // `subsystems` já vem sem os `visible: false` e sem os placeholders.
+  const realSubsystems = region.subsystems;
 
   return (
     <CreatureSection
@@ -1232,34 +1119,7 @@ function TriplecRegionSection({
       )}
       {/* ── Character gallery for the region ─────────── */}
       {(() => {
-        const characterData = getCharactersForContext(contextId);
-        const galleryItems = characterData
-          .filter((char) => char.visible !== false)
-          .map((char) => {
-            const manifestMatch = region.chars.find(
-              (c) => c.name.toLowerCase().trim() === char.match.toLowerCase().trim(),
-            );
-            const image = char.image ?? manifestMatch?.image;
-            if (!image) return null;
-            return {
-              name: getCharLocalizedName(char, locale),
-              species: getLocalizedSpecies(char, locale),
-              bio: getLocalizedBio(char, locale),
-              image,
-              backImage: char.backImage,
-              backTitle: char.backTitle?.[locale],
-              dorsalMeaning: char.dorsalMeaning?.[locale],
-              backMeaning: char.backMeaning?.[locale],
-              attributes: char.attributes?.map((a) => ({
-                glyph: a.glyph,
-                label: a.label[locale],
-                value: a.value[locale],
-              })),
-              fairyDust: char.fairyDust,
-              fairyDustBack: char.fairyDustBack,
-            };
-          })
-          .filter((x): x is NonNullable<typeof x> => x !== null);
+        const galleryItems = region.characters;
         if (galleryItems.length === 0) return null;
         return (
           <Box width="100%" px={{ base: "25px", md: "2rem", xl: "3rem" }}>
