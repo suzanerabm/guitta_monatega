@@ -270,7 +270,7 @@ export function BichittosClient({ data }: Props) {
                   gradient={palette.gradient}
                   cardBgOpacity={0.7}
                   bottomShadow
-                  bgGradientOverlay={palette.dark}
+                  bgGradientOverlay={colors.cardOverlay ?? palette.dark}
                   height="2000px"
                   maxHeight="800px"
                   titleColor={colors.titleColor}
@@ -383,7 +383,7 @@ export function BichittosClient({ data }: Props) {
                     maxHeight={{ base: '420px', md: '560px' }}
                     overflowY="auto"
                     css={{
-                      background: 'rgba(0,0,0,0.28)',
+                      background: colors.storyPanelBg ?? 'rgba(0,0,0,0.28)',
                       outline: `2px solid ${boxBorder}`,
                       outlineOffset: '6px',
                       // Scrollbar discreta na cor do bichitto.
@@ -493,6 +493,7 @@ export function BichittosClient({ data }: Props) {
                     book={books[0]}
                     borderColor={boxBorder}
                     textColor={colors.textColor}
+                    background={colors.storyPanelBg}
                     onRead={(bookId) =>
                       handleBookClick(creature.id, bookId.slice(creature.id.length + 1))
                     }

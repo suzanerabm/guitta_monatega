@@ -25,6 +25,8 @@ interface BookPanelProps {
   borderColor: string;
   /** Text color for title + button. */
   textColor: string;
+  /** Panel background supplied by the active creature palette. */
+  background?: string;
   /** Label for the "read" button when there's no buy link (default: "Ler história ✦"). */
   readLabel?: string;
   /** Label for the disabled "buy" button when the book is visible but has no `buy` link yet (default: "Em breve"). */
@@ -48,6 +50,7 @@ export function BookPanel({
   book,
   borderColor,
   textColor,
+  background = 'rgba(0,0,0,0.28)',
   readLabel = 'Ler história ✦',
   comingSoonLabel = 'Em breve',
   onRead,
@@ -62,7 +65,7 @@ export function BookPanel({
       display="flex"
       flexDirection="column"
       css={{
-        background: 'rgba(0,0,0,0.28)',
+        background,
         outline: `2px solid ${borderColor}`,
         outlineOffset: '6px',
       }}

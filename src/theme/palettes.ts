@@ -57,6 +57,10 @@ export interface Palette {
     tag: string;
     /** Fundo translúcido do DSTextPanel (default: rgba(0,0,0,0.3)). */
     panelBg?: string;
+    /** Fundo do painel longo de história abaixo do card principal. */
+    storyPanelBg?: string;
+    /** Cor do overlay inferior do card principal. Default: `dark`. */
+    cardOverlay?: string;
     /** Cor da legenda e da borda dos cards do CharacterStrip.
      *  Se não definido, cai em `titleColor`. */
     stripColor?: string;
@@ -120,21 +124,23 @@ export const palettes: Record<PaletteName, Palette> = {
     },
   },
   taylo: {
-    colors: ['#5d9466', '#427f49', '#277230', '#d7e2dd', '#b6fcc0', '#082b0b'],
-    text: '#b6fcc0',
-    dark: '#103a13',
-    gradient: 'linear-gradient(135deg, #5d9466, #427f49, #5d9466)',
-    gradientBg: 'linear-gradient(160deg, #34843c 0%, #185b1e 40%, #082b0b 100%)',
+    colors: ['#8fa9bf', '#71899e', '#526979', '#f7e5d0', '#d8c4ad', '#394d5c'],
+    text: '#8fa9bf',
+    dark: '#8fa9bf',
+    gradient: 'linear-gradient(135deg, #f7e5d0, #eee2d7, #d8c4ad)',
+    gradientBg: 'linear-gradient(160deg, #f7e5d0 0%, #e6dfd9 55%, #c7d2dc 100%)',
     bichittos: {
-      name: '#eafcb6',
-      text: '#d7e2dd',
-      titleColor: '#eafcb6',
-      textColor: '#d7e2dd',
-      accent: '#5d9466',
-      accentAlt: '#b6fcc0',
-      bgImage: '/imgs/bichittos/_bg/estrela_ceu.jpg',
+      name: '#8fa9bf',
+      text: '#8fa9bf',
+      titleColor: '#8fa9bf',
+      textColor: '#8fa9bf',
+      accent: '#e4ebf1',
+      accentAlt: '#b58a49',
+      bgImage: '/imgs/bichittos/taylo/_backgrounds/new_cena_fundo.jpg',
       tag: 'Amigos · Natureza',
-      panelBg: 'rgb(8, 43, 11, 0.8)',
+      panelBg: 'rgba(247, 229, 208, 0.88)',
+      storyPanelBg: 'rgba(247, 229, 208, 0.9)',
+      cardOverlay: '#f7e5d0',
     },
   },
   miscelania: {

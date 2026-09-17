@@ -20,10 +20,8 @@ export const characterPositions: Record<CreatureId, Character[]> = {
       md: { size: 265 }, xl: { x: 80, size: 440 }, xxl: { x: 80, size: 500 } },
   ],
   taylo: [
-    { image: '/imgs/bichittos/taylo/01_taylo.png', x: 80, y: 0, size: 400, zIndex: 3,
-      md: { size: 375 }, xl: { x: 75, size: 625 }, xxl: { x: 80, size: 725 } },
-    { image: '/imgs/bichittos/taylo/02_pitu.png', x: 55, y: 0, size: 200, zIndex: 2, mobileY: 90,
-      md: { size: 190 }, xl: { x: 58, size: 315 }, xxl: { x: 55, size: 365 } },
+    { image: '/imgs/bichittos/taylo/_backgrounds/new_cena5_transparente.png', x: 72, y: 0, size: 700, zIndex: 2, mobileY: 65, mobileScale: 0.48,
+      md: { x: 70, size: 650 }, xl: { x: 72, size: 900 }, xxl: { x: 72, size: 1100 } },
   ],
   miscelania: [
     // { image: '/imgs/bichittos/miscelania/malmo.png', x: 5, y: 0, size: 100, zIndex: 1 },
@@ -59,7 +57,7 @@ export interface BichittoVideo {
   /** Imagem de capa mostrada até o vídeo tocar. */
   poster: string;
   /** Rótulo curto do clipe. */
-  label: string;
+  label: { pt: string; en: string };
 }
 
 /**
@@ -71,12 +69,12 @@ export const bichittoVideos: Partial<Record<CreatureId, BichittoVideo[]>> = {
     {
       src: '/imgs/bichittos/zeco/zeco_jogando_bolinha.mp4',
       poster: '/imgs/bichittos/zeco/zeco_jogando_bolinha_poster.jpg',
-      label: 'Jogando bolinha',
+      label: { pt: 'Jogando bolinha', en: 'Playing ball' },
     },
     {
       src: '/imgs/bichittos/zeco/zeco_jogando_ioio.mp4',
       poster: '/imgs/bichittos/zeco/zeco_jogando_ioio_poster.jpg',
-      label: 'Jogando ioiô',
+      label: { pt: 'Jogando ioiô', en: 'Playing with a yo-yo' },
     },
   ],
 };
