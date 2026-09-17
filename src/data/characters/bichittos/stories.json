@@ -370,6 +370,26 @@
       {
         "name": "pitu",
         "image": "/imgs/bichittos/taylo/pitu.png"
+      },
+      {
+        "name": "Taylo e Pitu",
+        "image": "/imgs/bichittos/taylo/os_dois.png"
+      },
+      {
+        "name": "Pitu chorando",
+        "image": "/imgs/bichittos/taylo/pitu_chorando.png"
+      },
+      {
+        "name": "Taylo agachado",
+        "image": "/imgs/bichittos/taylo/tayllo_agachado.png"
+      },
+      {
+        "name": "Taylo costas",
+        "image": "/imgs/bichittos/taylo/tayllo_costas.png"
+      },
+      {
+        "name": "Taylo em-pé",
+        "image": "/imgs/bichittos/taylo/tayllo_em_pe.png"
       }
     ]
   },
