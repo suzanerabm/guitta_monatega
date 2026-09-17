@@ -30,7 +30,10 @@
     "appId": "triplec-sharp-scene-camara-de-permissao-ativando-o-cshift",
     "relations": [
       "triplec-sharp-topic-geografia",
-      "triplec-topic-o-cshift"
+      "triplec-topic-o-cshift",
+      "triplec-sharp-character-selka-rin",
+      "triplec-sharp-character-neran-vel",
+      "triplec-sharp-character-veris-anon"
     ]
   },
   {
@@ -41,7 +44,10 @@
     },
     "appId": "triplec-sharp-scene-camara-de-permissao-em-posicao-de-defesa",
     "relations": [
-      "triplec-sharp-topic-geografia"
+      "triplec-sharp-topic-geografia",
+      "triplec-sharp-character-selka-rin",
+      "triplec-sharp-character-neran-vel",
+      "triplec-sharp-character-veris-anon"
     ]
   },
   {

@@ -6,7 +6,11 @@
       "pt": "Erú'Rin procurando Brisa",
       "en": "Erú'Rin looking for Brisa"
     },
-    "appId": "lunnp1-video-eru-rin-procurando-brisa"
+    "appId": "lunnp1-video-eru-rin-procurando-brisa",
+    "relations": [
+      "lunnp1-character-eru-rin",
+      "lunnp1-character-brisa"
+    ]
   },
   {
     "video": "/imgs/kammara/lunnp1/_videos/tziki_lumira_brincando.mp4",
@@ -15,7 +19,10 @@
       "pt": "Tzi'Ki e Lumira brincando",
       "en": "Tzi'Ki and Lumira playing"
     },
-    "appId": "lunnp1-video-tzi-ki-e-lumira-brincando"
+    "appId": "lunnp1-video-tzi-ki-e-lumira-brincando",
+    "relations": [
+      "lunnp1-character-tzi-ki"
+    ]
   },
   {
     "video": "/imgs/kammara/lunnp1/_videos/veluma.mp4",
@@ -24,7 +31,10 @@
       "pt": "Veluma",
       "en": "Veluma"
     },
-    "appId": "lunnp1-video-veluma"
+    "appId": "lunnp1-video-veluma",
+    "relations": [
+      "lunnp1-topic-flora-fauna"
+    ]
   },
   {
     "video": "/imgs/kammara/lunnp1/_videos/erurin_acenando.mp4",
@@ -33,15 +43,23 @@
       "pt": "Erú'Rin acenando",
       "en": "Erú'Rin waving"
     },
-    "appId": "lunnp1-video-eru-rin-acenando"
+    "appId": "lunnp1-video-eru-rin-acenando",
+    "relations": [
+      "lunnp1-character-eru-rin"
+    ]
   },
   {
     "video": "/imgs/kammara/lunnp1/_videos/plantas_flutuantes.mp4",
     "poster": "/imgs/kammara/lunnp1/_videos/plantas_flutuantes_poster.jpg",
     "label": {
-      "pt": "Plantas flutuantes",
-      "en": "Floating plants"
+      "pt": "Ná'Lum",
+      "en": "Ná'Lum"
     },
-    "appId": "lunnp1-video-plantas-flutuantes"
+    "appId": "lunnp1-video-plantas-flutuantes",
+    "relations": [
+      "lunnp1-topic-flora-fauna",
+      "lunnp1-scene-crianca-brincando",
+      "lunnp1-scene-nalum-pequenas-esferas-que-flutuam"
+    ]
   }
 ]

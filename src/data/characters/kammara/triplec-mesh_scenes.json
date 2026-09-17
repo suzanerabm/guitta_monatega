@@ -110,7 +110,8 @@
     },
     "appId": "triplec-mesh-scene-em-mesh",
     "relations": [
-      "triplec-mesh-topic-geografia"
+      "triplec-mesh-topic-geografia",
+      "triplec-malloc-character-iren-kor"
     ]
   },
   {
@@ -121,7 +122,8 @@
     },
     "appId": "triplec-mesh-scene-visita-a-mesh",
     "relations": [
-      "triplec-mesh-topic-geografia"
+      "triplec-mesh-topic-geografia",
+      "triplec-malloc-character-iren-kor"
     ]
   },
   {

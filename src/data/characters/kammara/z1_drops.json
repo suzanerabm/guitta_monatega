@@ -20,7 +20,10 @@
       "pt": "Tempestades de curto-circuito",
       "en": "short-circuit storms"
     },
-    "appId": "z1-video-tempestades-de-curto-circuito"
+    "appId": "z1-video-tempestades-de-curto-circuito",
+    "relations": [
+      "z1-character-aruun"
+    ]
   },
   {
     "video": "/imgs/kammara/z1/_videos/cidade_em_movimento.mp4",
@@ -33,7 +36,8 @@
     "relations": [
       "z1-topic-geografia",
       "z1-scene-praca-central-vista-aerea",
-      "z1-scene-modbus-lotado"
+      "z1-scene-modbus-lotado",
+      "z1-character-ren"
     ]
   },
   {
@@ -47,7 +51,8 @@
     "relations": [
       "z1-topic-geografia",
       "z1-scene-praca-central",
-      "z1-scene-praca-central-vista-aerea"
+      "z1-scene-praca-central-vista-aerea",
+      "z1-character-ren"
     ]
   }
 ]

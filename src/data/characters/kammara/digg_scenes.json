@@ -165,7 +165,9 @@
     },
     "appId": "digg-scene-nihrak-no-trono-de-pedra",
     "relations": [
-      "digg-character-nihrak"
+      "digg-character-nihrak",
+      "digg-character-chmurka",
+      "digg-character-orvin"
     ]
   },
   {

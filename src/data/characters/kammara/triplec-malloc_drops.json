@@ -9,7 +9,9 @@
     "appId": "triplec-malloc-video-correndo-para-mesh",
     "relations": [
       "triplec-malloc-topic-geografia",
-      "triplec-mesh-topic-geografia"
+      "triplec-mesh-topic-geografia",
+      "triplec-malloc-character-iren-kor",
+      "triplec-scene-bunniet-de-malloc-correndo-na-floresta"
     ]
   },
   {
@@ -35,7 +37,8 @@
     "appId": "triplec-malloc-video-interior-da-mina",
     "relations": [
       "triplec-malloc-topic-energia",
-      "triplec-malloc-scene-tunel"
+      "triplec-malloc-scene-tunel",
+      "triplec-malloc-scene-hepa-regiao-1"
     ]
   },
   {
@@ -47,7 +50,8 @@
     },
     "appId": "triplec-malloc-video-elevador-da-mina",
     "relations": [
-      "triplec-malloc-topic-energia"
+      "triplec-malloc-topic-energia",
+      "triplec-malloc-scene-camada-portex"
     ]
   },
   {
@@ -60,7 +64,8 @@
     "appId": "triplec-malloc-video-vila-de-malloc",
     "relations": [
       "triplec-malloc-topic-geografia",
-      "triplec-malloc-scene-vila-principal"
+      "triplec-malloc-scene-vila-principal",
+      "triplec-malloc-scene-vila-3"
     ]
   }
 ]

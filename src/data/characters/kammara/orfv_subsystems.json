@@ -35,7 +35,12 @@
         "On ORF-V, what keeps everything working isn't rules. It's the care of one for the other."
       ]
     },
-    "appId": "orfv-topic-cultura"
+    "appId": "orfv-topic-cultura",
+    "relations": [
+      "orfv-character-maelik",
+      "orfv-scene-festival",
+      "orfv-video-lup-nul-fest"
+    ]
   },
   {
     "title": {
@@ -73,7 +78,11 @@
         "They are not weak. They are kind. And the difference is exactly what the viruses don't understand."
       ]
     },
-    "appId": "orfv-topic-habitantes-elephpants"
+    "appId": "orfv-topic-habitantes-elephpants",
+    "relations": [
+      "orfv-character-orvian",
+      "orfv-character-maelik"
+    ]
   },
   {
     "title": {
@@ -111,7 +120,12 @@
         "ORF-V is a world that lives on imperfect balance. Nothing is guaranteed; everything depends on those who care."
       ]
     },
-    "appId": "orfv-topic-geografia"
+    "appId": "orfv-topic-geografia",
+    "relations": [
+      "orfv-character-orvian",
+      "orfv-character-nuvin",
+      "orfv-character-zupi"
+    ]
   },
   {
     "title": {
@@ -227,6 +241,10 @@
         "ORF-V doesn't fall all at once. It falls slowly. And it's the slowness of the collapse that makes it so hard to react."
       ]
     },
-    "appId": "orfv-topic-perigos"
+    "appId": "orfv-topic-perigos",
+    "relations": [
+      "orfv-character-orvian",
+      "orfv-video-troys-atacando"
+    ]
   }
 ]

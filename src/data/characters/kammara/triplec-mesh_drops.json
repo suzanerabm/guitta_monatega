@@ -21,7 +21,8 @@
     },
     "appId": "triplec-mesh-video-bunniet-de-mesh-dormindo",
     "relations": [
-      "triplec-mesh-topic-bunniets"
+      "triplec-mesh-topic-bunniets",
+      "triplec-mesh-scene-quarto"
     ]
   },
   {
@@ -33,7 +34,8 @@
     },
     "appId": "triplec-mesh-video-na-hora-do-almoco",
     "relations": [
-      "triplec-mesh-topic-cultura"
+      "triplec-mesh-topic-cultura",
+      "triplec-mesh-scene-familia"
     ]
   },
   {

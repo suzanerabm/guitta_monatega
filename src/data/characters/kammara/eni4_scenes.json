@@ -128,7 +128,9 @@
     },
     "appId": "eni4-scene-fabrica-burn",
     "relations": [
-      "eni4-topic-energia-sobrevivencia"
+      "eni4-topic-energia-sobrevivencia",
+      "eni4-character-troy",
+      "eni4-character-virus"
     ]
   },
   {
@@ -238,7 +240,9 @@
     },
     "appId": "eni4-scene-megavalvulas-onde-vivem-virus-e-bugs",
     "relations": [
-      "eni4-topic-geografia"
+      "eni4-topic-geografia",
+      "eni4-character-virus",
+      "eni4-character-bug"
     ]
   },
   {

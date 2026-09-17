@@ -90,7 +90,10 @@
       "pt": "Salas ancestrais",
       "en": "ancestral halls"
     },
-    "appId": "z1-scene-salas-ancestrais"
+    "appId": "z1-scene-salas-ancestrais",
+    "relations": [
+      "z1-character-zeus"
+    ]
   },
   {
     "image": "/imgs/kammara/z1/_scenes/Z-CHASMS.jpg",
@@ -100,7 +103,8 @@
     },
     "appId": "z1-scene-os-abismos-de-z1",
     "relations": [
-      "z1-topic-geografia"
+      "z1-topic-geografia",
+      "z1-character-zeus"
     ]
   },
   {
@@ -111,7 +115,9 @@
     },
     "appId": "z1-scene-habitantes-conversando",
     "relations": [
-      "z1-topic-cultura"
+      "z1-topic-cultura",
+      "z1-character-aruun",
+      "z1-character-kaal"
     ]
   },
   {
@@ -122,7 +128,8 @@
     },
     "appId": "z1-scene-modbus-lotado",
     "relations": [
-      "z1-topic-geografia"
+      "z1-topic-geografia",
+      "z1-character-ren"
     ]
   }
 ]

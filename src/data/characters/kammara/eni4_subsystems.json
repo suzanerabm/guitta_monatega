@@ -217,7 +217,8 @@
     "visible": true,
     "relations": [
       "eni4-character-node-0",
-      "eni4-character-troy"
+      "eni4-character-troy",
+      "eni4-character-virus"
     ],
     "appId": "eni4-topic-energia-sobrevivencia"
   },
@@ -260,7 +261,8 @@
     "visible": true,
     "relations": [
       "eni4-character-troy",
-      "eni4-character-virus"
+      "eni4-character-virus",
+      "eni4-character-vexon"
     ],
     "appId": "eni4-topic-protocolos-de-ataque"
   },
@@ -391,7 +393,8 @@
     "visible": true,
     "relations": [
       "eni4-character-node-0",
-      "eni4-character-virus"
+      "eni4-character-virus",
+      "eni4-character-vexon"
     ],
     "appId": "eni4-topic-o-codigo-dos-virus-asm"
   }

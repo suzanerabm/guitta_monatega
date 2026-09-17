@@ -101,7 +101,8 @@
     },
     "appId": "gotto-scene-rema-dormindo-na-vila-central-a-leste",
     "relations": [
-      "gotto-character-rema"
+      "gotto-character-rema",
+      "gotto-character-flipflop"
     ]
   },
   {

@@ -21,7 +21,8 @@
     "appId": "triplec-video-familia-de-nilo",
     "relations": [
       "triplec-character-nilo",
-      "triplec-topic-a-niul-forest"
+      "triplec-topic-a-niul-forest",
+      "triplec-scene-regiao-de-malloc-cotidiano"
     ]
   },
   {

@@ -10,7 +10,8 @@
     "relations": [
       "digg-character-nihrak",
       "digg-scene-a-sala-do-trono-de-nihrak",
-      "digg-scene-nihrak-no-trono-de-pedra"
+      "digg-scene-nihrak-no-trono-de-pedra",
+      "digg-character-silko-o-ratao"
     ]
   },
   {
@@ -46,6 +47,9 @@
       "pt": "Ratos e aranhas de sílica originários de ENI-4Δ",
       "en": "Silica rats and spiders originated from ENI-4Δ"
     },
-    "appId": "digg-video-ratos-e-aranhas-de-silica-originarios-de-eni-4"
+    "appId": "digg-video-ratos-e-aranhas-de-silica-originarios-de-eni-4",
+    "relations": [
+      "digg-scene-o-interior-da-camara-da-mina"
+    ]
   }
 ]

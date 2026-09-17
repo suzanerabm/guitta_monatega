@@ -54,7 +54,11 @@
         }
       }
     ],
-    "appId": "lunnp1-character-eru-rin"
+    "appId": "lunnp1-character-eru-rin",
+    "relations": [
+      "lunnp1-character-brisa",
+      "lunnp1-character-tzi-ki"
+    ]
   },
   {
     "match": "Brisa",
@@ -192,7 +196,10 @@
         }
       }
     ],
-    "appId": "lunnp1-character-lum-esha"
+    "appId": "lunnp1-character-lum-esha",
+    "relations": [
+      "lunnp1-character-flor-lume"
+    ]
   },
   {
     "match": "Flor-Lume",

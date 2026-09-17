@@ -27,7 +27,10 @@
         "When light, water and roots aligned completely, the Shal'ún emerged, the people of LUNN'P1. They were made by no hand: they arose from the perfect meeting of everything the planet already was. They are the essence of the world taking form."
       ]
     },
-    "appId": "lunnp1-topic-origem"
+    "appId": "lunnp1-topic-origem",
+    "relations": [
+      "lunnp1-topic-flora-fauna"
+    ]
   },
   {
     "title": {
@@ -65,7 +68,11 @@
         "On LUNN'P1, no one decides where the cities go. They simply go."
       ]
     },
-    "appId": "lunnp1-topic-cultura"
+    "appId": "lunnp1-topic-cultura",
+    "relations": [
+      "lunnp1-scene-crianca-brincando",
+      "lunnp1-scene-eru-rin-e-lum-esha-plantando"
+    ]
   },
   {
     "title": {
@@ -103,7 +110,11 @@
         "Luna-leaves change color according to the dominant moon. Ancestral roots hold memories no living being remembers. The flora of Oru'Len is mutable, never the same as itself."
       ]
     },
-    "appId": "lunnp1-topic-flora-fauna"
+    "appId": "lunnp1-topic-flora-fauna",
+    "relations": [
+      "lunnp1-character-brisa",
+      "lunnp1-character-flor-lume"
+    ]
   },
   {
     "title": {

@@ -5,7 +5,10 @@
       "pt": "Criança brincando",
       "en": "Child playing"
     },
-    "appId": "lunnp1-scene-crianca-brincando"
+    "appId": "lunnp1-scene-crianca-brincando",
+    "relations": [
+      "lunnp1-character-eru-rin"
+    ]
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/EruRin_e_LumEsha_plantando.jpg",
@@ -13,15 +16,23 @@
       "pt": "Erú'Rin e Lúm'Esha plantando",
       "en": "Erú'Rin and Lúm'Esha planting"
     },
-    "appId": "lunnp1-scene-eru-rin-e-lum-esha-plantando"
+    "appId": "lunnp1-scene-eru-rin-e-lum-esha-plantando",
+    "relations": [
+      "lunnp1-character-eru-rin",
+      "lunnp1-character-lum-esha",
+      "lunnp1-topic-flora-fauna"
+    ]
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/NaLum_pequenas_esferas_que-flutuam.jpg",
     "label": {
-      "pt": "NaLum: pequenas esferas que flutuam",
-      "en": "NaLum: small floating spheres"
+      "pt": "Ná'Lum: pequenas esferas que flutuam",
+      "en": "Ná'Lum: small floating spheres"
     },
-    "appId": "lunnp1-scene-nalum-pequenas-esferas-que-flutuam"
+    "appId": "lunnp1-scene-nalum-pequenas-esferas-que-flutuam",
+    "relations": [
+      "lunnp1-topic-flora-fauna"
+    ]
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_EXTERMO_NORTE.jpg",
@@ -29,7 +40,10 @@
       "pt": "Região do extremo norte",
       "en": "Extreme north region"
     },
-    "appId": "lunnp1-scene-regiao-do-extremo-norte"
+    "appId": "lunnp1-scene-regiao-do-extremo-norte",
+    "relations": [
+      "lunnp1-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_leste_aerea.jpg",
@@ -37,7 +51,10 @@
       "pt": "Região leste: vista aérea",
       "en": "East region: aerial view"
     },
-    "appId": "lunnp1-scene-regiao-leste-vista-aerea"
+    "appId": "lunnp1-scene-regiao-leste-vista-aerea",
+    "relations": [
+      "lunnp1-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_leste.jpg",
@@ -45,7 +62,10 @@
       "pt": "Região leste",
       "en": "East region"
     },
-    "appId": "lunnp1-scene-regiao-leste"
+    "appId": "lunnp1-scene-regiao-leste",
+    "relations": [
+      "lunnp1-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_norte_vista_area_1.jpg",
@@ -53,7 +73,10 @@
       "pt": "Região norte: vista aérea 1",
       "en": "North region: aerial view 1"
     },
-    "appId": "lunnp1-scene-regiao-norte-vista-aerea-1"
+    "appId": "lunnp1-scene-regiao-norte-vista-aerea-1",
+    "relations": [
+      "lunnp1-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_norte_vista_area_2.jpg",
@@ -61,7 +84,10 @@
       "pt": "Região norte: vista aérea 2",
       "en": "North region: aerial view 2"
     },
-    "appId": "lunnp1-scene-regiao-norte-vista-aerea-2"
+    "appId": "lunnp1-scene-regiao-norte-vista-aerea-2",
+    "relations": [
+      "lunnp1-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_norte.jpg",
@@ -69,7 +95,10 @@
       "pt": "Região norte",
       "en": "North region"
     },
-    "appId": "lunnp1-scene-regiao-norte"
+    "appId": "lunnp1-scene-regiao-norte",
+    "relations": [
+      "lunnp1-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_oeste_aerea.jpg",
@@ -77,7 +106,10 @@
       "pt": "Região oeste: vista aérea",
       "en": "West region: aerial view"
     },
-    "appId": "lunnp1-scene-regiao-oeste-vista-aerea"
+    "appId": "lunnp1-scene-regiao-oeste-vista-aerea",
+    "relations": [
+      "lunnp1-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_sul_aerea.jpg",
@@ -85,7 +117,10 @@
       "pt": "Região sul: vista aérea",
       "en": "South region: aerial view"
     },
-    "appId": "lunnp1-scene-regiao-sul-vista-aerea"
+    "appId": "lunnp1-scene-regiao-sul-vista-aerea",
+    "relations": [
+      "lunnp1-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_sul.jpg",
@@ -93,6 +128,9 @@
       "pt": "Região sul",
       "en": "South region"
     },
-    "appId": "lunnp1-scene-regiao-sul"
+    "appId": "lunnp1-scene-regiao-sul",
+    "relations": [
+      "lunnp1-topic-geografia"
+    ]
   }
 ]

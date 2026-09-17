@@ -42,7 +42,8 @@
     },
     "appId": "triplec-scene-regiao-de-malloc-cotidiano",
     "relations": [
-      "triplec-malloc-topic-cultura"
+      "triplec-malloc-topic-cultura",
+      "triplec-character-nilo"
     ]
   },
   {
@@ -141,7 +142,9 @@
     },
     "appId": "triplec-scene-regiao-de-sharp-animais-de-estimacao",
     "relations": [
-      "triplec-sharp-topic-bunniets"
+      "triplec-sharp-topic-bunniets",
+      "triplec-sharp-character-doope",
+      "triplec-sharp-character-tilu"
     ]
   },
   {

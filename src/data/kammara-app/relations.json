@@ -1,41 +1,4 @@
 {
   "schemaVersion": 1,
-  "relations": {
-    "lunnp1-video-eru-rin-procurando-brisa": [
-      "lunnp1-character-eru-rin",
-      "lunnp1-character-brisa"
-    ],
-    "lunnp1-video-tzi-ki-e-lumira-brincando": [
-      "lunnp1-character-tzi-ki"
-    ],
-    "lunnp1-video-eru-rin-acenando": [
-      "lunnp1-character-eru-rin"
-    ],
-    "orfv-video-maelik-a-caminho-do-festival": [
-      "orfv-character-maelik"
-    ],
-    "orfv-video-zupi-nadando": [
-      "orfv-character-zupi"
-    ],
-    "orfv-video-brisa-ativando-o-protocolo": [
-      "lunnp1-character-brisa"
-    ],
-    "orfv-video-troys-atacando": [
-      "eni4-character-troy"
-    ],
-    "lunnp1-scene-eru-rin-e-lum-esha-plantando": [
-      "lunnp1-character-eru-rin",
-      "lunnp1-character-lum-esha"
-    ],
-    "orfv-scene-iren-kor-na-vila-central": [
-      "triplec-malloc-character-iren-kor"
-    ],
-    "orfv-scene-zupi-dormindo-com-nuvin": [
-      "orfv-character-zupi",
-      "orfv-character-nuvin"
-    ],
-    "orfv-scene-maelik-nos-fjorks-oeste": [
-      "orfv-character-maelik"
-    ]
-  }
+  "relations": {}
 }

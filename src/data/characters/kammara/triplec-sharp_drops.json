@@ -45,7 +45,11 @@
       "pt": "Bunniet na floresta Niul",
       "en": "Bunniet in the Niul forest"
     },
-    "appId": "triplec-sharp-video-bunniet-na-floresta-niul"
+    "appId": "triplec-sharp-video-bunniet-na-floresta-niul",
+    "relations": [
+      "triplec-sharp-topic-bunniets",
+      "triplec-topic-a-niul-forest"
+    ]
   },
   {
     "video": "/imgs/kammara/triplec/sharp/_videos/kurr_expandindo.mp4",
@@ -81,6 +85,10 @@
       "pt": "Bunniet com Volpita",
       "en": "Bunniet with Volpita"
     },
-    "appId": "triplec-sharp-video-bunniet-com-volpita"
+    "appId": "triplec-sharp-video-bunniet-com-volpita",
+    "relations": [
+      "triplec-sharp-topic-bunniets",
+      "triplec-character-volpita"
+    ]
   }
 ]
