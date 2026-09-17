@@ -4,12 +4,14 @@ import { resolve, dirname, sep } from 'node:path';
 import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { stabilizeContentIds } from './stabilize-app-ids.mjs';
+import { semanticAppId } from './app-id.mjs';
 
 const worlds = ['lunnp1', 'eni4', 'triplec', 'orfv', 'z1', 'gotto', 'digg', 'memphis'];
 const regions = ['triplec-malloc', 'triplec-mesh', 'triplec-sharp'];
 const base = 'https://guittamonatega.com';
 const hash = value => createHash('sha256').update(value).digest('hex');
-export const stableId = (world, kind, key) => `${world}-${kind}-${hash(key).slice(0, 16)}`;
+// Kept as a public alias for fixtures and downstream scripts.
+export const stableId = semanticAppId;
 const localized = (value, fallback = '') => value && !Array.isArray(value) && typeof value === 'object'
   ? { pt: value.pt ?? fallback, en: value.en ?? fallback } : { pt: value ?? fallback, en: value ?? fallback };
 const paragraphs = value => Object.fromEntries(Object.entries(localized(value, [])).map(([lang, text]) =>
@@ -32,7 +34,8 @@ export function buildContent(siteRoot, appDataRoot = resolve(siteRoot, 'src/data
   const media = (image, title, video = '', fit = false) => ({ image: art(image), title: localized(title), video: remote(video), fit });
   const entries = [], worldEntries = {}, worldDropIds = {}, mosaicIds = [];
   const entry = (world, kind, key, title, summary, body, image = '', extra = {}) => {
-    const item = { id: extra.source?.appId || stableId(world, kind, key), worldId: world, kind,
+    const semanticLabel = title?.pt || title?.en || title || key;
+    const item = { id: extra.source?.appId || stableId(world, kind, semanticLabel), worldId: world, kind,
       title: localized(title), summary: localized(summary), body: paragraphs(body), image: art(image),
       attributes: [], media: [], sections: [], ...extra };
     entries.push(item);
@@ -92,7 +95,7 @@ export function buildContent(siteRoot, appDataRoot = resolve(siteRoot, 'src/data
   for (const clip of read('src/data/kammara_mosaic.json').filter(visible)) {
     const world = clip.world || 'kammara';
     if (!worldEntries[world]) continue;
-    const id = clip.appId || stableId(world, 'video', clip.video);
+    const id = clip.appId || stableId(world, 'video', clip.label?.pt || clip.label?.en || clip.video);
     if (!entries.some(item => item.id === id)) entry(world, 'video', clip.video, clip.label, undefined, undefined, clip.poster,
       { source: clip, media: [media(clip.poster, clip.label, clip.video)] });
     mosaicIds.push(id);
@@ -131,7 +134,17 @@ export function buildContent(siteRoot, appDataRoot = resolve(siteRoot, 'src/data
     names.get(key).add(item.id);
   }
   for (const item of entries) {
-    const links = (item.source?.relations || []).filter(id => byId.has(id) && id !== item.id);
+    const authoredLinks = item.source?.relations || [];
+    if (!Array.isArray(authoredLinks) || authoredLinks.some(id => typeof id !== 'string')) {
+      throw Error(`Invalid relations array: ${item.id}`);
+    }
+    const duplicateLinks = authoredLinks.filter((id, index) => authoredLinks.indexOf(id) !== index);
+    if (duplicateLinks.length) throw Error(`Duplicate relation in ${item.id}: ${duplicateLinks[0]}`);
+    for (const id of authoredLinks) {
+      if (id === item.id) throw Error(`Self relation: ${item.id}`);
+      if (!byId.has(id)) throw Error(`Unknown relation from ${item.id}: ${id}`);
+    }
+    const links = [...authoredLinks];
     for (const attribute of item.attributes) {
       const matches = new Set(Object.values(localized(attribute.value)).flatMap(value => [...(names.get(`${item.worldId}:${normalize(value)}`) || [])]));
       if (matches.size === 1 && !matches.has(item.id)) links.push(...matches);

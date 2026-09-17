@@ -5,7 +5,7 @@
       "pt": "Criança brincando",
       "en": "Child playing"
     },
-    "appId": "lunnp1-scene-c34e17a1de6202f0"
+    "appId": "lunnp1-scene-crianca-brincando"
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/EruRin_e_LumEsha_plantando.jpg",
@@ -13,7 +13,7 @@
       "pt": "Erú'Rin e Lúm'Esha plantando",
       "en": "Erú'Rin and Lúm'Esha planting"
     },
-    "appId": "lunnp1-scene-76377c94e0d3a11c"
+    "appId": "lunnp1-scene-eru-rin-e-lum-esha-plantando"
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/NaLum_pequenas_esferas_que-flutuam.jpg",
@@ -21,7 +21,7 @@
       "pt": "NaLum: pequenas esferas que flutuam",
       "en": "NaLum: small floating spheres"
     },
-    "appId": "lunnp1-scene-4d51bb308492807f"
+    "appId": "lunnp1-scene-nalum-pequenas-esferas-que-flutuam"
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_EXTERMO_NORTE.jpg",
@@ -29,7 +29,7 @@
       "pt": "Região do extremo norte",
       "en": "Extreme north region"
     },
-    "appId": "lunnp1-scene-15718878a505bf09"
+    "appId": "lunnp1-scene-regiao-do-extremo-norte"
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_leste_aerea.jpg",
@@ -37,7 +37,7 @@
       "pt": "Região leste: vista aérea",
       "en": "East region: aerial view"
     },
-    "appId": "lunnp1-scene-dba10a7c0f2a74b2"
+    "appId": "lunnp1-scene-regiao-leste-vista-aerea"
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_leste.jpg",
@@ -45,7 +45,7 @@
       "pt": "Região leste",
       "en": "East region"
     },
-    "appId": "lunnp1-scene-290d7593ad1d49b5"
+    "appId": "lunnp1-scene-regiao-leste"
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_norte_vista_area_1.jpg",
@@ -53,7 +53,7 @@
       "pt": "Região norte: vista aérea 1",
       "en": "North region: aerial view 1"
     },
-    "appId": "lunnp1-scene-0553454858e7a977"
+    "appId": "lunnp1-scene-regiao-norte-vista-aerea-1"
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_norte_vista_area_2.jpg",
@@ -61,7 +61,7 @@
       "pt": "Região norte: vista aérea 2",
       "en": "North region: aerial view 2"
     },
-    "appId": "lunnp1-scene-cdba3ff6e965afec"
+    "appId": "lunnp1-scene-regiao-norte-vista-aerea-2"
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_norte.jpg",
@@ -69,7 +69,7 @@
       "pt": "Região norte",
       "en": "North region"
     },
-    "appId": "lunnp1-scene-f80cab64b70737c4"
+    "appId": "lunnp1-scene-regiao-norte"
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_oeste_aerea.jpg",
@@ -77,7 +77,7 @@
       "pt": "Região oeste: vista aérea",
       "en": "West region: aerial view"
     },
-    "appId": "lunnp1-scene-37ae1467d3a35e38"
+    "appId": "lunnp1-scene-regiao-oeste-vista-aerea"
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_sul_aerea.jpg",
@@ -85,7 +85,7 @@
       "pt": "Região sul: vista aérea",
       "en": "South region: aerial view"
     },
-    "appId": "lunnp1-scene-56a765818029e38a"
+    "appId": "lunnp1-scene-regiao-sul-vista-aerea"
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_sul.jpg",
@@ -93,6 +93,6 @@
       "pt": "Região sul",
       "en": "South region"
     },
-    "appId": "lunnp1-scene-14d46ffc4e0d1fe2"
+    "appId": "lunnp1-scene-regiao-sul"
   }
 ]

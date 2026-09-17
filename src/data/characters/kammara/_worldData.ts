@@ -57,12 +57,14 @@ export interface WorldStory {
   name: Bilingual<string>;
   summary: Bilingual<string[]>;
   panel: { story: Bilingual<string[]> };
+  relations?: string[];
   /** Optional fact tags for the planet entry card. */
   tags?: WorldTag[];
 }
 
 export interface WorldSubsystem {
   title: Bilingual<string>;
+  relations?: string[];
   /**
    * Optional image path for this subsystem (relative to /public).
    * Empty string means "no image". Replaces the legacy
@@ -84,6 +86,7 @@ export interface WorldScene {
   image: string;
   /** Curated label per locale — replaces filename-derived names + word dictionary. */
   label: Bilingual<string>;
+  relations?: string[];
   /** Optional looping video for this scene (region strips only). The image
    *  acts as its poster. */
   video?: string;
@@ -101,6 +104,7 @@ export interface WorldDrop {
   poster: string;
   /** Caption per locale. */
   label: Bilingual<string>;
+  relations?: string[];
 }
 
 const STORIES: Record<string, WorldStory> = {

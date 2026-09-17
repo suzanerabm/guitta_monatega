@@ -69,7 +69,10 @@
         }
       }
     ],
-    "appId": "z1-character-0ff0ef099ecb754b"
+    "appId": "z1-character-zeus",
+    "relations": [
+      "z1-topic-habitantes-castas"
+    ]
   },
   {
     "match": "Aruun",
@@ -141,7 +144,10 @@
         }
       }
     ],
-    "appId": "z1-character-4f8cfd9f84240470"
+    "appId": "z1-character-aruun",
+    "relations": [
+      "z1-topic-habitantes-castas"
+    ]
   },
   {
     "match": "Kaal",
@@ -213,7 +219,10 @@
         }
       }
     ],
-    "appId": "z1-character-3b10243a10dbbe33"
+    "appId": "z1-character-kaal",
+    "relations": [
+      "z1-topic-habitantes-castas"
+    ]
   },
   {
     "match": "Ren",
@@ -285,7 +294,10 @@
         }
       }
     ],
-    "appId": "z1-character-2c826edf4924bdc4"
+    "appId": "z1-character-ren",
+    "relations": [
+      "z1-topic-habitantes-castas"
+    ]
   },
   {
     "match": "Synn",
@@ -357,6 +369,9 @@
         }
       }
     ],
-    "appId": "z1-character-2edd8ee3f57484dc"
+    "appId": "z1-character-synn",
+    "relations": [
+      "z1-topic-habitantes-castas"
+    ]
   }
 ]

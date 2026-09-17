@@ -35,7 +35,10 @@
         "In malloc, the day does not begin because someone decided it. It begins when the Estaka pulses."
       ]
     },
-    "appId": "triplec-malloc-topic-18bde5ff6dcc7e7c"
+    "appId": "triplec-malloc-topic-cultura",
+    "relations": [
+      "triplec-malloc-topic-bunniets"
+    ]
   },
   {
     "title": {
@@ -73,7 +76,7 @@
         "A rare elite among the Runa, one in every five thousand. Bone structure of high mineral density, shilo crystals in the forearms, exceptional emotional stability. They are the guardians of the Cshift Seeds."
       ]
     },
-    "appId": "triplec-malloc-topic-6f5b22a819723489"
+    "appId": "triplec-malloc-topic-bunniets"
   },
   {
     "title": {
@@ -111,7 +114,7 @@
         "In malloc, rituals are also geography. They happen in specific places, because each layer responds in its own way to what is done there."
       ]
     },
-    "appId": "triplec-malloc-topic-a1c3cc08e61d192b"
+    "appId": "triplec-malloc-topic-geografia"
   },
   {
     "title": {
@@ -149,7 +152,10 @@
         "Something dwells in the vibrations of the layers. Formless, with no defined voice: only presence. Prae and Aska interpret Alloc. Without it at peace, kemita does not sprout."
       ]
     },
-    "appId": "triplec-malloc-topic-2ced24713ba057c9"
+    "appId": "triplec-malloc-topic-energia",
+    "relations": [
+      "triplec-malloc-topic-bunniets"
+    ]
   },
   {
     "title": {
@@ -187,7 +193,10 @@
         "In malloc, no one is in charge. The planet decides. The bunniet responds."
       ]
     },
-    "appId": "triplec-malloc-topic-282877c8dfe13edf"
+    "appId": "triplec-malloc-topic-governanca",
+    "relations": [
+      "triplec-malloc-topic-bunniets"
+    ]
   },
   {
     "title": {
@@ -225,6 +234,9 @@
         "malloc lives forever on the verge of collapse. But it never falls, because with each threat, it reorganizes itself."
       ]
     },
-    "appId": "triplec-malloc-topic-509bcd37877ffa41"
+    "appId": "triplec-malloc-topic-perigos",
+    "relations": [
+      "triplec-malloc-topic-bunniets"
+    ]
   }
 ]

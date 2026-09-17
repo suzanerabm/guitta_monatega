@@ -31,7 +31,10 @@
         "Revenge sustains everything. Without it, the planet loses purpose. Without purpose, the heat cools. And without heat, ENI-4Δ goes dark."
       ]
     },
-    "appId": "eni4-topic-7b9afa8bda071a80"
+    "relations": [
+      "eni4-character-node-0"
+    ],
+    "appId": "eni4-topic-origem"
   },
   {
     "title": {
@@ -69,7 +72,10 @@
         "ENI-4Δ is not a place where you live. It is a place where you survive, by consuming what belongs to others."
       ]
     },
-    "appId": "eni4-topic-18bde5ff6dcc7e7c"
+    "relations": [
+      "eni4-character-node-0"
+    ],
+    "appId": "eni4-topic-cultura"
   },
   {
     "title": {
@@ -108,7 +114,7 @@
       ]
     },
     "visible": false,
-    "appId": "eni4-topic-1e386883a2408add"
+    "appId": "eni4-topic-habitantes-hierarquia"
   },
   {
     "title": {
@@ -166,7 +172,11 @@
         "Deep cracks on the surface: sources of pure heat and gates to the underground. Worms emerge from them. Bugs hide in them and die. Some ancient rifts are sealed, but tremble."
       ]
     },
-    "appId": "eni4-topic-a1c3cc08e61d192b"
+    "relations": [
+      "eni4-character-node-0",
+      "eni4-character-bug"
+    ],
+    "appId": "eni4-topic-geografia"
   },
   {
     "title": {
@@ -205,7 +215,11 @@
       ]
     },
     "visible": true,
-    "appId": "eni4-topic-8631789211d848c8"
+    "relations": [
+      "eni4-character-node-0",
+      "eni4-character-troy"
+    ],
+    "appId": "eni4-topic-energia-sobrevivencia"
   },
   {
     "title": {
@@ -244,7 +258,11 @@
       ]
     },
     "visible": true,
-    "appId": "eni4-topic-d8225510a020b40f"
+    "relations": [
+      "eni4-character-troy",
+      "eni4-character-virus"
+    ],
+    "appId": "eni4-topic-protocolos-de-ataque"
   },
   {
     "title": {
@@ -371,6 +389,10 @@
       ]
     },
     "visible": true,
-    "appId": "eni4-topic-bee2581406285b4b"
+    "relations": [
+      "eni4-character-node-0",
+      "eni4-character-virus"
+    ],
+    "appId": "eni4-topic-o-codigo-dos-virus-asm"
   }
 ]

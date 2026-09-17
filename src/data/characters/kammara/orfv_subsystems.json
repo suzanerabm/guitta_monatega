@@ -35,7 +35,7 @@
         "On ORF-V, what keeps everything working isn't rules. It's the care of one for the other."
       ]
     },
-    "appId": "orfv-topic-18bde5ff6dcc7e7c"
+    "appId": "orfv-topic-cultura"
   },
   {
     "title": {
@@ -73,7 +73,7 @@
         "They are not weak. They are kind. And the difference is exactly what the viruses don't understand."
       ]
     },
-    "appId": "orfv-topic-4588ee2ac8737a42"
+    "appId": "orfv-topic-habitantes-elephpants"
   },
   {
     "title": {
@@ -111,7 +111,7 @@
         "ORF-V is a world that lives on imperfect balance. Nothing is guaranteed; everything depends on those who care."
       ]
     },
-    "appId": "orfv-topic-a1c3cc08e61d192b"
+    "appId": "orfv-topic-geografia"
   },
   {
     "title": {
@@ -154,7 +154,7 @@
       ]
     },
     "visible": false,
-    "appId": "orfv-topic-90448549821d89dd"
+    "appId": "orfv-topic-comunicacao"
   },
   {
     "title": {
@@ -189,7 +189,7 @@
       ]
     },
     "visible": false,
-    "appId": "orfv-topic-0680e6863ed6135e"
+    "appId": "orfv-topic-conflitos"
   },
   {
     "title": {
@@ -227,6 +227,6 @@
         "ORF-V doesn't fall all at once. It falls slowly. And it's the slowness of the collapse that makes it so hard to react."
       ]
     },
-    "appId": "orfv-topic-509bcd37877ffa41"
+    "appId": "orfv-topic-perigos"
   }
 ]

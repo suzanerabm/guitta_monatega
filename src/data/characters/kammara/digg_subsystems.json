@@ -19,7 +19,10 @@
         "The way Digg came to be already tells what it believes: what you win is worth more than what falls into your lap. No block came for free: each was sought out and bound to the chain. A world made of will, one link at a time, certain that there will always be a next one."
       ]
     },
-    "appId": "digg-topic-7b9afa8bda071a80"
+    "relations": [
+      "digg-scene-o-primeiro-bloco"
+    ],
+    "appId": "digg-topic-origem"
   },
   {
     "title": {
@@ -49,7 +52,10 @@
         "An ally is good as long as it pays. Today's partner is tomorrow's rival, and every Digger knows it: so they keep others close, watching. Trusting too much is leaving an opening. On Digg, the clever one never turns their back."
       ]
     },
-    "appId": "digg-topic-18bde5ff6dcc7e7c"
+    "appId": "digg-topic-cultura",
+    "relations": [
+      "digg-topic-diggers"
+    ]
   },
   {
     "title": {
@@ -79,7 +85,7 @@
         "Kemita, above all the pure kind, which only TripleC can create. The Turen, the rare translation devices. And blocks bearing kemita, to shackle to the chain and make the planet grow."
       ]
     },
-    "appId": "digg-topic-8e027b1fba08e6c0"
+    "appId": "digg-topic-diggers"
   },
   {
     "title": {
@@ -113,7 +119,12 @@
         "The command block, where Níhrak reigns. It holds the engine that moves the planet and Sílko, the Ratón. It is the heart of the chain."
       ]
     },
-    "appId": "digg-topic-a1c3cc08e61d192b"
+    "relations": [
+      "digg-character-nihrak",
+      "digg-character-silko-o-ratao",
+      "digg-scene-o-primeiro-bloco"
+    ],
+    "appId": "digg-topic-geografia"
   },
   {
     "title": {
@@ -139,7 +150,11 @@
         "Within, one crosses from block to block by the wooden bridges and the tunnels, all on foot. For individual runs (reaching a ship, fetching an elePHPant), the Diggers use fast ships, patched together with whatever they've gathered along the way."
       ]
     },
-    "appId": "digg-topic-43627973cc47d874"
+    "relations": [
+      "digg-topic-diggers",
+      "digg-scene-o-primeiro-bloco"
+    ],
+    "appId": "digg-topic-transporte-movimento"
   },
   {
     "title": {
@@ -169,7 +184,11 @@
         "The chain's labor. The elePHPants of ORF-V, the bridge builders, are brought over to raise the bridges between Digg's blocks."
       ]
     },
-    "appId": "digg-topic-8008ab136eb3106b"
+    "relations": [
+      "digg-topic-diggers",
+      "eni4-character-node-0"
+    ],
+    "appId": "digg-topic-relacoes-com-outros-planetas"
   },
   {
     "title": {
@@ -199,6 +218,9 @@
         "For the other planets, Digg's greatest danger is not knowing when it comes. It sails on purpose and arrives by surprise. When the chain appears on the horizon, it is already too late."
       ]
     },
-    "appId": "digg-topic-509bcd37877ffa41"
+    "appId": "digg-topic-perigos",
+    "relations": [
+      "digg-topic-diggers"
+    ]
   }
 ]

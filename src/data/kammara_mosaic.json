@@ -8,7 +8,7 @@
       "en": "Erú'Rin"
     },
     "href": "",
-    "appId": "lunnp1-video-8bd17423c969a3f3"
+    "appId": "lunnp1-video-eru-rin-procurando-brisa"
   },
   {
     "world": "eni4",
@@ -19,7 +19,7 @@
       "en": "Palace of Node-0"
     },
     "href": "",
-    "appId": "eni4-video-880d933f033227db"
+    "appId": "eni4-video-palacio-de-node-0"
   },
   {
     "world": "triplec",
@@ -30,7 +30,7 @@
       "en": "Soar"
     },
     "href": "",
-    "appId": "triplec-video-2d8b9da4a200318e"
+    "appId": "triplec-video-soar-voando"
   },
   {
     "world": "orfv",
@@ -41,7 +41,7 @@
       "en": "Lüp'Nül Fest"
     },
     "href": "",
-    "appId": "orfv-video-41d9f61f139ebe3a"
+    "appId": "orfv-video-lup-nul-fest"
   },
   {
     "world": "eni4",
@@ -52,7 +52,7 @@
       "en": "Tunnels with Worms"
     },
     "href": "",
-    "appId": "eni4-video-6d0ed62fbfe8d79a"
+    "appId": "eni4-video-tuneis-com-worms"
   },
   {
     "world": "lunnp1",
@@ -63,7 +63,7 @@
       "en": "Tzi'Ki & Lumira"
     },
     "href": "",
-    "appId": "lunnp1-video-bb8edee424f09ad3"
+    "appId": "lunnp1-video-tzi-ki-e-lumira-brincando"
   },
   {
     "world": "triplec",
@@ -74,7 +74,10 @@
       "en": "Happy Volpita"
     },
     "href": "",
-    "appId": "triplec-video-192da40e3009887a"
+    "appId": "triplec-video-volpita-feliz",
+    "relations": [
+      "triplec-character-volpita"
+    ]
   },
   {
     "world": "orfv",
@@ -85,7 +88,7 @@
       "en": "Zupi"
     },
     "href": "",
-    "appId": "orfv-video-79a9ced5d16402ec"
+    "appId": "orfv-video-zupi-nadando"
   },
   {
     "world": "triplec",
@@ -96,7 +99,7 @@
       "en": "Mines"
     },
     "href": "",
-    "appId": "triplec-video-3fa1627c488b5a54"
+    "appId": "triplec-video-minas"
   },
   {
     "world": "triplec",
@@ -107,7 +110,7 @@
       "en": "Mines"
     },
     "href": "",
-    "appId": "triplec-video-97f8c8ae014c092f"
+    "appId": "triplec-video-bunniets"
   },
   {
     "world": "triplec",
@@ -118,7 +121,7 @@
       "en": "Mines"
     },
     "href": "",
-    "appId": "triplec-video-743231f2f8b972f9"
+    "appId": "triplec-video-familia-de-nilo"
   },
   {
     "world": "gotto",
@@ -129,7 +132,7 @@
       "en": "The restart: GOTO"
     },
     "href": "",
-    "appId": "gotto-video-89586572f902b927"
+    "appId": "gotto-video-o-reinicio-o-recomeco"
   },
   {
     "world": "lunnp1",
@@ -140,7 +143,7 @@
       "en": "Floating Plants"
     },
     "href": "",
-    "appId": "lunnp1-video-73698ff0e8ef6fdb"
+    "appId": "lunnp1-video-plantas-flutuantes"
   },
   {
     "world": "eni4",
@@ -151,7 +154,7 @@
       "en": "The Factory"
     },
     "href": "",
-    "appId": "eni4-video-c20cf7af04e15e0b"
+    "appId": "eni4-video-fabrica-burn"
   },
   {
     "world": "orfv",
@@ -162,7 +165,7 @@
       "en": "Maelik"
     },
     "href": "",
-    "appId": "orfv-video-878bea778ad28a8a"
+    "appId": "orfv-video-maelik-a-caminho-do-festival"
   },
   {
     "world": "lunnp1",
@@ -173,7 +176,7 @@
       "en": "Veluma"
     },
     "href": "",
-    "appId": "lunnp1-video-44791dc92543d781"
+    "appId": "lunnp1-video-veluma"
   },
   {
     "world": "eni4",
@@ -184,7 +187,7 @@
       "en": "March of the Aracnes"
     },
     "href": "",
-    "appId": "eni4-video-d48760e20db09a6f"
+    "appId": "eni4-video-marcha-dos-aracnes"
   },
   {
     "world": "orfv",
@@ -195,6 +198,6 @@
       "en": "Troys"
     },
     "href": "",
-    "appId": "orfv-video-2a0e3b37270f800e"
+    "appId": "orfv-video-troys-atacando"
   }
 ]

@@ -6,7 +6,7 @@
       "pt": "Erú'Rin procurando Brisa",
       "en": "Erú'Rin looking for Brisa"
     },
-    "appId": "lunnp1-video-8bd17423c969a3f3"
+    "appId": "lunnp1-video-eru-rin-procurando-brisa"
   },
   {
     "video": "/imgs/kammara/lunnp1/_videos/tziki_lumira_brincando.mp4",
@@ -15,7 +15,7 @@
       "pt": "Tzi'Ki e Lumira brincando",
       "en": "Tzi'Ki and Lumira playing"
     },
-    "appId": "lunnp1-video-bb8edee424f09ad3"
+    "appId": "lunnp1-video-tzi-ki-e-lumira-brincando"
   },
   {
     "video": "/imgs/kammara/lunnp1/_videos/veluma.mp4",
@@ -24,7 +24,7 @@
       "pt": "Veluma",
       "en": "Veluma"
     },
-    "appId": "lunnp1-video-44791dc92543d781"
+    "appId": "lunnp1-video-veluma"
   },
   {
     "video": "/imgs/kammara/lunnp1/_videos/erurin_acenando.mp4",
@@ -33,7 +33,7 @@
       "pt": "Erú'Rin acenando",
       "en": "Erú'Rin waving"
     },
-    "appId": "lunnp1-video-8f79aae55601de37"
+    "appId": "lunnp1-video-eru-rin-acenando"
   },
   {
     "video": "/imgs/kammara/lunnp1/_videos/plantas_flutuantes.mp4",
@@ -42,6 +42,6 @@
       "pt": "Plantas flutuantes",
       "en": "Floating plants"
     },
-    "appId": "lunnp1-video-73698ff0e8ef6fdb"
+    "appId": "lunnp1-video-plantas-flutuantes"
   }
 ]
