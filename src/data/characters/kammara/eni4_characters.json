@@ -47,7 +47,7 @@
         }
       }
     ],
-    "appId": "eni4-character-3f62c9268b00abc5"
+    "appId": "eni4-character-node-0"
   },
   {
     "match": "VEXON",
@@ -108,7 +108,10 @@
         }
       }
     ],
-    "appId": "eni4-character-3b8c10d9a716bf24"
+    "relations": [
+      "eni4-character-node-0"
+    ],
+    "appId": "eni4-character-vexon"
   },
   {
     "match": "Troy",
@@ -158,7 +161,7 @@
         }
       }
     ],
-    "appId": "eni4-character-5a99c57b24b4f79e"
+    "appId": "eni4-character-troy"
   },
   {
     "match": "SCORAK",
@@ -209,7 +212,7 @@
       }
     ],
     "visible": false,
-    "appId": "eni4-character-5303f6e4349bc7fe"
+    "appId": "eni4-character-scorak"
   },
   {
     "match": "THERMAX",
@@ -260,7 +263,7 @@
       }
     ],
     "visible": false,
-    "appId": "eni4-character-81589c48e586869e"
+    "appId": "eni4-character-thermax"
   },
   {
     "match": "VALKON",
@@ -311,7 +314,7 @@
       }
     ],
     "visible": false,
-    "appId": "eni4-character-81a8899ad3818b5a"
+    "appId": "eni4-character-valkon"
   },
   {
     "match": "REPLION",
@@ -362,7 +365,7 @@
       }
     ],
     "visible": false,
-    "appId": "eni4-character-8348fb1cf8564352"
+    "appId": "eni4-character-replion"
   },
   {
     "match": "MASKON",
@@ -413,7 +416,7 @@
       }
     ],
     "visible": false,
-    "appId": "eni4-character-9c5aa73c445fc1d4"
+    "appId": "eni4-character-maskon"
   },
   {
     "match": "KARTEX",
@@ -464,7 +467,7 @@
       }
     ],
     "visible": false,
-    "appId": "eni4-character-3bd7e869337ecf51"
+    "appId": "eni4-character-kartex"
   },
   {
     "match": "virus",
@@ -514,7 +517,7 @@
         }
       }
     ],
-    "appId": "eni4-character-2898a07b2cf23dda"
+    "appId": "eni4-character-virus"
   },
   {
     "match": "aracne_1",
@@ -565,7 +568,7 @@
       }
     ],
     "visible": false,
-    "appId": "eni4-character-ff3636d1a01a574f"
+    "appId": "eni4-character-aracne-i"
   },
   {
     "match": "aracne_2",
@@ -616,7 +619,7 @@
       }
     ],
     "visible": false,
-    "appId": "eni4-character-2b5bbfdbc909c547"
+    "appId": "eni4-character-aracne-ii"
   },
   {
     "match": "aracne_3",
@@ -667,7 +670,7 @@
       }
     ],
     "visible": false,
-    "appId": "eni4-character-29fcd2be1b7595b1"
+    "appId": "eni4-character-aracne-iii"
   },
   {
     "match": "worm",
@@ -718,7 +721,7 @@
       }
     ],
     "visible": false,
-    "appId": "eni4-character-b9af17af4fc5708e"
+    "appId": "eni4-character-worm"
   },
   {
     "match": "bug",
@@ -769,7 +772,7 @@
       }
     ],
     "visible": true,
-    "appId": "eni4-character-ecb53f367b3541da"
+    "appId": "eni4-character-bug"
   },
   {
     "match": "silrats",
@@ -820,7 +823,7 @@
       }
     ],
     "visible": false,
-    "appId": "eni4-character-58d6c636b1d94d19"
+    "appId": "eni4-character-sil-rats"
   },
   {
     "match": "robo_escravo",
@@ -882,6 +885,6 @@
       }
     ],
     "visible": false,
-    "appId": "eni4-character-aefa1db2d49e1668"
+    "appId": "eni4-character-robo-escravo"
   }
 ]

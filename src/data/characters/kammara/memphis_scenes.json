@@ -5,7 +5,7 @@
       "pt": "As camadas antigas",
       "en": "The old layers"
     },
-    "appId": "memphis-scene-95c85f3c89486f6f"
+    "appId": "memphis-scene-as-camadas-antigas"
   },
   {
     "image": "/imgs/kammara/memphis/_scenes/modbus_crossing.jpg",
@@ -13,7 +13,7 @@
       "pt": "O Modbus cruzando",
       "en": "The Modbus crossing"
     },
-    "appId": "memphis-scene-f1a58e171e9bc99f"
+    "appId": "memphis-scene-o-modbus-cruzando"
   },
   {
     "image": "/imgs/kammara/memphis/_scenes/memphis_container_section.jpg",
@@ -21,7 +21,7 @@
       "pt": "Os bairros-container",
       "en": "The container-districts"
     },
-    "appId": "memphis-scene-f7cb3f34c746dd70"
+    "appId": "memphis-scene-os-bairros-container"
   },
   {
     "image": "/imgs/kammara/memphis/_scenes/memphis_gotto_section.jpg",
@@ -29,7 +29,7 @@
       "pt": "A seção dos Gottos",
       "en": "The Gotto section"
     },
-    "appId": "memphis-scene-fc9898b8c2e1afe1"
+    "appId": "memphis-scene-a-secao-dos-gottos"
   },
   {
     "image": "/imgs/kammara/memphis/_scenes/memphis_orf-v_section.jpg",
@@ -37,7 +37,7 @@
       "pt": "A seção de ORF-V",
       "en": "The ORF-V section"
     },
-    "appId": "memphis-scene-1057ed503e089351"
+    "appId": "memphis-scene-a-secao-de-orf-v"
   },
   {
     "image": "/imgs/kammara/memphis/_scenes/Ratdra_blocked.jpg",
@@ -45,6 +45,6 @@
       "pt": "O Ratdra bloqueado",
       "en": "The Ratdra, blocked"
     },
-    "appId": "memphis-scene-0eb4b08a0abd5795"
+    "appId": "memphis-scene-o-ratdra-bloqueado"
   }
 ]

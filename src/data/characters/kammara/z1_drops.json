@@ -6,7 +6,12 @@
       "pt": "Estação-torre",
       "en": "tower station"
     },
-    "appId": "z1-video-9d5236eb98c22a8f"
+    "appId": "z1-video-estacao-torre",
+    "relations": [
+      "z1-topic-geografia",
+      "z1-scene-estacao-torre",
+      "z1-scene-interior-da-estacao-torre"
+    ]
   },
   {
     "video": "/imgs/kammara/z1/_videos/tempestades_curto_circuito.mp4",
@@ -15,7 +20,7 @@
       "pt": "Tempestades de curto-circuito",
       "en": "short-circuit storms"
     },
-    "appId": "z1-video-d645ddf669581459"
+    "appId": "z1-video-tempestades-de-curto-circuito"
   },
   {
     "video": "/imgs/kammara/z1/_videos/cidade_em_movimento.mp4",
@@ -24,7 +29,12 @@
       "pt": "Cidade em movimento",
       "en": "city in motion"
     },
-    "appId": "z1-video-7abb985acd70bac9"
+    "appId": "z1-video-cidade-em-movimento",
+    "relations": [
+      "z1-topic-geografia",
+      "z1-scene-praca-central-vista-aerea",
+      "z1-scene-modbus-lotado"
+    ]
   },
   {
     "video": "/imgs/kammara/z1/_videos/transporte_dentro_CENTRAL_SQUARE.mp4",
@@ -33,6 +43,11 @@
       "pt": "Transporte na praça central",
       "en": "transport in the central square"
     },
-    "appId": "z1-video-5523e717123b880e"
+    "appId": "z1-video-transporte-na-praca-central",
+    "relations": [
+      "z1-topic-geografia",
+      "z1-scene-praca-central",
+      "z1-scene-praca-central-vista-aerea"
+    ]
   }
 ]

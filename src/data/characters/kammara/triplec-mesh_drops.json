@@ -6,7 +6,11 @@
       "pt": "Vista aérea",
       "en": "Aerial view"
     },
-    "appId": "triplec-mesh-video-af86cfec6482b949"
+    "appId": "triplec-mesh-video-vista-aerea",
+    "relations": [
+      "triplec-mesh-topic-geografia",
+      "triplec-mesh-scene-vila-central-vista-aerea"
+    ]
   },
   {
     "video": "/imgs/kammara/triplec/mesh/_videos/mesh_dormindo.mp4",
@@ -15,7 +19,10 @@
       "pt": "Bunniet de Mesh dormindo",
       "en": "Mesh's bunniet sleeping"
     },
-    "appId": "triplec-mesh-video-c79314b5f281d1ac"
+    "appId": "triplec-mesh-video-bunniet-de-mesh-dormindo",
+    "relations": [
+      "triplec-mesh-topic-bunniets"
+    ]
   },
   {
     "video": "/imgs/kammara/triplec/mesh/_videos/na_hora_do_almoco.mp4",
@@ -24,7 +31,10 @@
       "pt": "Na hora do almoço",
       "en": "Lunchtime"
     },
-    "appId": "triplec-mesh-video-36af326a9850e5e8"
+    "appId": "triplec-mesh-video-na-hora-do-almoco",
+    "relations": [
+      "triplec-mesh-topic-cultura"
+    ]
   },
   {
     "video": "/imgs/kammara/triplec/mesh/_videos/manoo_dormindo.mp4",
@@ -33,7 +43,11 @@
       "pt": "Manoo dormindo",
       "en": "Manoo sleeping"
     },
-    "appId": "triplec-mesh-video-9005e2ddf71fd3ca"
+    "appId": "triplec-mesh-video-manoo-dormindo",
+    "relations": [
+      "triplec-mesh-character-manoo",
+      "triplec-mesh-scene-manoo-dormindo"
+    ]
   },
   {
     "video": "/imgs/kammara/triplec/mesh/_videos/mesh_praca.mp4",
@@ -42,6 +56,11 @@
       "pt": "Praça de Mesh",
       "en": "Mesh square"
     },
-    "appId": "triplec-mesh-video-fdebc2e24d33763c"
+    "appId": "triplec-mesh-video-praca-de-mesh",
+    "relations": [
+      "triplec-mesh-topic-geografia",
+      "triplec-mesh-scene-praca",
+      "triplec-mesh-scene-praca-vista-de-cima"
+    ]
   }
 ]

@@ -6,7 +6,11 @@
       "pt": "Correndo para Mesh",
       "en": "Running to Mesh"
     },
-    "appId": "triplec-malloc-video-85554439dd9da269"
+    "appId": "triplec-malloc-video-correndo-para-mesh",
+    "relations": [
+      "triplec-malloc-topic-geografia",
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "video": "/imgs/kammara/triplec/malloc/_videos/minas.mp4",
@@ -15,7 +19,11 @@
       "pt": "Minas",
       "en": "Mines"
     },
-    "appId": "triplec-malloc-video-3fa1627c488b5a54"
+    "appId": "triplec-malloc-video-minas",
+    "relations": [
+      "triplec-malloc-topic-energia",
+      "triplec-malloc-scene-mina-de-kemita-em-malloc"
+    ]
   },
   {
     "video": "/imgs/kammara/triplec/malloc/_videos/interior_mina.mp4",
@@ -24,7 +32,11 @@
       "pt": "Interior da mina",
       "en": "Mine interior"
     },
-    "appId": "triplec-malloc-video-951633a4d221eb9f"
+    "appId": "triplec-malloc-video-interior-da-mina",
+    "relations": [
+      "triplec-malloc-topic-energia",
+      "triplec-malloc-scene-tunel"
+    ]
   },
   {
     "video": "/imgs/kammara/triplec/malloc/_videos/elevador_mina.mp4",
@@ -33,7 +45,10 @@
       "pt": "Elevador da mina",
       "en": "Mine elevator"
     },
-    "appId": "triplec-malloc-video-64f5a21d3f90a164"
+    "appId": "triplec-malloc-video-elevador-da-mina",
+    "relations": [
+      "triplec-malloc-topic-energia"
+    ]
   },
   {
     "video": "/imgs/kammara/triplec/malloc/_videos/malloc_cidade.mp4",
@@ -42,6 +57,10 @@
       "pt": "Vila de malloc",
       "en": "malloc village"
     },
-    "appId": "triplec-malloc-video-1110dcb054e6f51c"
+    "appId": "triplec-malloc-video-vila-de-malloc",
+    "relations": [
+      "triplec-malloc-topic-geografia",
+      "triplec-malloc-scene-vila-principal"
+    ]
   }
 ]

@@ -54,7 +54,7 @@
         }
       }
     ],
-    "appId": "lunnp1-character-abaee3a5f26b92e2"
+    "appId": "lunnp1-character-eru-rin"
   },
   {
     "match": "Brisa",
@@ -135,7 +135,7 @@
         "falloff": 0.25
       }
     },
-    "appId": "lunnp1-character-4811bd6535f1c803"
+    "appId": "lunnp1-character-brisa"
   },
   {
     "match": "Lúm'Esha",
@@ -192,7 +192,7 @@
         }
       }
     ],
-    "appId": "lunnp1-character-124c2c8bd6e81a30"
+    "appId": "lunnp1-character-lum-esha"
   },
   {
     "match": "Flor-Lume",
@@ -255,7 +255,7 @@
         "height": 65
       }
     },
-    "appId": "lunnp1-character-ca21d7a8a188e5a1"
+    "appId": "lunnp1-character-flor-lume"
   },
   {
     "match": "Rin'Boro",
@@ -306,7 +306,7 @@
       }
     ],
     "visible": false,
-    "appId": "lunnp1-character-ea6e0309f3aecaaf"
+    "appId": "lunnp1-character-rin-boro"
   },
   {
     "match": "Tiru",
@@ -370,7 +370,7 @@
       }
     },
     "visible": false,
-    "appId": "lunnp1-character-f3b93e9369d01db1"
+    "appId": "lunnp1-character-tiru"
   },
   {
     "match": "Müra",
@@ -421,7 +421,7 @@
       }
     ],
     "visible": false,
-    "appId": "lunnp1-character-652fc53cf79f26d2"
+    "appId": "lunnp1-character-mura"
   },
   {
     "match": "Sereno",
@@ -485,7 +485,7 @@
       }
     },
     "visible": false,
-    "appId": "lunnp1-character-d205d5c0a2aeea09"
+    "appId": "lunnp1-character-sereno"
   },
   {
     "match": "Shir'Nai",
@@ -536,7 +536,7 @@
       }
     ],
     "visible": false,
-    "appId": "lunnp1-character-be898c897ce519cf"
+    "appId": "lunnp1-character-shir-nai"
   },
   {
     "match": "Veludo",
@@ -600,7 +600,7 @@
     },
     "image": "/imgs/kammara/lunnp1/veludo.png",
     "visible": false,
-    "appId": "lunnp1-character-cc2411af785a8ed6"
+    "appId": "lunnp1-character-veludo"
   },
   {
     "match": "Kaitor",
@@ -651,7 +651,7 @@
       }
     ],
     "visible": false,
-    "appId": "lunnp1-character-e45bace3f4e99df6"
+    "appId": "lunnp1-character-kaitor"
   },
   {
     "match": "Lumino",
@@ -715,7 +715,7 @@
     },
     "image": "/imgs/kammara/lunnp1/Lumino.png",
     "visible": false,
-    "appId": "lunnp1-character-ba60c21ab3e7adf8"
+    "appId": "lunnp1-character-lumino"
   },
   {
     "match": "Kaelun",
@@ -766,7 +766,7 @@
       }
     ],
     "visible": false,
-    "appId": "lunnp1-character-36ab866413ff2ea5"
+    "appId": "lunnp1-character-kaelun"
   },
   {
     "match": "Veloz",
@@ -830,7 +830,7 @@
       }
     },
     "visible": false,
-    "appId": "lunnp1-character-f95379a371e04cdd"
+    "appId": "lunnp1-character-veloz"
   },
   {
     "match": "Télun",
@@ -892,7 +892,7 @@
       }
     ],
     "visible": false,
-    "appId": "lunnp1-character-0ca4104500d5c3a4"
+    "appId": "lunnp1-character-telun"
   },
   {
     "match": "Katé",
@@ -956,7 +956,7 @@
       }
     },
     "visible": false,
-    "appId": "lunnp1-character-63e40f43f097aca6"
+    "appId": "lunnp1-character-kate"
   },
   {
     "match": "Serai",
@@ -1007,7 +1007,7 @@
       }
     ],
     "visible": false,
-    "appId": "lunnp1-character-eec3b79e69ef5627"
+    "appId": "lunnp1-character-serai"
   },
   {
     "match": "Blue",
@@ -1071,7 +1071,7 @@
     },
     "image": "/imgs/kammara/lunnp1/blue.png",
     "visible": false,
-    "appId": "lunnp1-character-ec7d56a01607001e"
+    "appId": "lunnp1-character-blue"
   },
   {
     "match": "Narúmin",
@@ -1122,7 +1122,7 @@
       }
     ],
     "visible": false,
-    "appId": "lunnp1-character-4fdd6f8dfe45ffb8"
+    "appId": "lunnp1-character-narumin"
   },
   {
     "match": "Lei",
@@ -1186,7 +1186,7 @@
       }
     },
     "visible": false,
-    "appId": "lunnp1-character-94f99e0dea73878c"
+    "appId": "lunnp1-character-lei"
   },
   {
     "match": "Tzi'Ki",
@@ -1273,7 +1273,7 @@
         "height": 25
       }
     },
-    "appId": "lunnp1-character-5ee76f047f172554"
+    "appId": "lunnp1-character-tzi-ki"
   },
   {
     "match": "Krii",
@@ -1350,7 +1350,7 @@
       }
     },
     "visible": false,
-    "appId": "lunnp1-character-721b15216683df30"
+    "appId": "lunnp1-character-krii"
   },
   {
     "match": "Lumira",
@@ -1427,7 +1427,7 @@
       }
     },
     "visible": false,
-    "appId": "lunnp1-character-65b192d7eb7443ba"
+    "appId": "lunnp1-character-lumira"
   },
   {
     "match": "Veluma",
@@ -1478,7 +1478,7 @@
       }
     ],
     "visible": false,
-    "appId": "lunnp1-character-ad5299b1f4e76307"
+    "appId": "lunnp1-character-veluma"
   },
   {
     "match": "Koryn",
@@ -1529,7 +1529,7 @@
       }
     ],
     "visible": false,
-    "appId": "lunnp1-character-f306d82b67884e1f"
+    "appId": "lunnp1-character-koryn"
   },
   {
     "match": "Naia",
@@ -1579,6 +1579,6 @@
       }
     ],
     "visible": false,
-    "appId": "lunnp1-character-d9f40a285d202445"
+    "appId": "lunnp1-character-naia"
   }
 ]

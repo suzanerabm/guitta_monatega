@@ -31,7 +31,10 @@
         "The glyph on each Basik's back is the mark of that passage, a direct inheritance from the Rift. It is not an ornament: it is the sign of where the people came from, the deep memory that survives every restart."
       ]
     },
-    "appId": "gotto-topic-7b9afa8bda071a80"
+    "appId": "gotto-topic-origem",
+    "relations": [
+      "gotto-topic-habitantes-basiks"
+    ]
   },
   {
     "title": {
@@ -69,7 +72,10 @@
         "Gotto never stops beginning. Each restart is a new childhood."
       ]
     },
-    "appId": "gotto-topic-18bde5ff6dcc7e7c"
+    "appId": "gotto-topic-cultura",
+    "relations": [
+      "gotto-topic-habitantes-basiks"
+    ]
   },
   {
     "title": {
@@ -99,7 +105,7 @@
         "They are small, round and unstoppable. The most beautiful lightness in the universe, and also the most vulnerable."
       ]
     },
-    "appId": "gotto-topic-b576e4e563c5d050"
+    "appId": "gotto-topic-habitantes-basiks"
   },
   {
     "title": {
@@ -141,7 +147,12 @@
         "After each restart, the cities change place. The paths vanish. What was a map becomes memory, and in the next cycle, it barely exists anymore."
       ]
     },
-    "appId": "gotto-topic-a1c3cc08e61d192b"
+    "relations": [
+      "gotto-character-daryun",
+      "gotto-scene-o-vale-da-escuta",
+      "gotto-scene-o-vale-do-reflexo"
+    ],
+    "appId": "gotto-topic-geografia"
   },
   {
     "title": {
@@ -179,7 +190,7 @@
         "Gotto doesn't age. Gotto begins again. And each new beginning is identical to the last, and completely new."
       ]
     },
-    "appId": "gotto-topic-b2fd0ac2614a96e6"
+    "appId": "gotto-topic-ciclos-tempo"
   },
   {
     "title": {
@@ -217,7 +228,10 @@
         "For anyone who needs to leave a mark, Gotto is unbearable. For anyone who needs relief, it is the only harbor."
       ]
     },
-    "appId": "gotto-topic-8008ab136eb3106b"
+    "relations": [
+      "eni4-character-node-0"
+    ],
+    "appId": "gotto-topic-relacoes-com-outros-planetas"
   },
   {
     "title": {
@@ -255,6 +269,9 @@
         "The most beautiful lightness in the universe is the same one that keeps the planet eternally young, and eternally vulnerable to the same failures."
       ]
     },
-    "appId": "gotto-topic-509bcd37877ffa41"
+    "appId": "gotto-topic-perigos",
+    "relations": [
+      "gotto-topic-ciclos-tempo"
+    ]
   }
 ]

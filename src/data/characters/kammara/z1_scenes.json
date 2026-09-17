@@ -5,7 +5,10 @@
       "pt": "Estação-torre",
       "en": "tower station"
     },
-    "appId": "z1-scene-a048011f4414d030"
+    "appId": "z1-scene-estacao-torre",
+    "relations": [
+      "z1-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/z1/_scenes/CENTRAL_SQUARE.jpg",
@@ -13,7 +16,10 @@
       "pt": "Praça central",
       "en": "central square"
     },
-    "appId": "z1-scene-61ba92f557c7feae"
+    "appId": "z1-scene-praca-central",
+    "relations": [
+      "z1-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/z1/_scenes/CENTRAL_SQUARE_aerial_view.jpg",
@@ -21,7 +27,10 @@
       "pt": "Praça central: vista aérea",
       "en": "central square, aerial view"
     },
-    "appId": "z1-scene-bb3ad4cbccb99dcd"
+    "appId": "z1-scene-praca-central-vista-aerea",
+    "relations": [
+      "z1-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/z1/_scenes/PERFORATED_HALL.jpg",
@@ -29,7 +38,7 @@
       "pt": "Salão perfurado",
       "en": "perforated hall"
     },
-    "appId": "z1-scene-2e12b925e06f69c0"
+    "appId": "z1-scene-salao-perfurado"
   },
   {
     "image": "/imgs/kammara/z1/_scenes/Vila.jpg",
@@ -37,7 +46,10 @@
       "pt": "A vila cúbica",
       "en": "the cubic village"
     },
-    "appId": "z1-scene-ea2f7b81a6f549b6"
+    "appId": "z1-scene-a-vila-cubica",
+    "relations": [
+      "z1-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/z1/_scenes/Vila_square.jpg",
@@ -45,7 +57,10 @@
       "pt": "Praça da vila",
       "en": "village square"
     },
-    "appId": "z1-scene-a10dbdd99b59dc40"
+    "appId": "z1-scene-praca-da-vila",
+    "relations": [
+      "z1-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/z1/_scenes/NEW_VILLA.jpg",
@@ -53,7 +68,10 @@
       "pt": "Modbus: modelo aberto",
       "en": "modbus open model"
     },
-    "appId": "z1-scene-e8aa91f55e1c7914"
+    "appId": "z1-scene-modbus-modelo-aberto",
+    "relations": [
+      "z1-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/z1/_scenes/INSIDE_REG.jpg",
@@ -61,7 +79,10 @@
       "pt": "Interior da estação-torre",
       "en": "inside the tower station"
     },
-    "appId": "z1-scene-39d4341e2b4dc309"
+    "appId": "z1-scene-interior-da-estacao-torre",
+    "relations": [
+      "z1-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/z1/_scenes/SALAS_ANCESTRAIS.jpg",
@@ -69,7 +90,7 @@
       "pt": "Salas ancestrais",
       "en": "ancestral halls"
     },
-    "appId": "z1-scene-4e08d1ee55f1952c"
+    "appId": "z1-scene-salas-ancestrais"
   },
   {
     "image": "/imgs/kammara/z1/_scenes/Z-CHASMS.jpg",
@@ -77,7 +98,10 @@
       "pt": "Os abismos de Z1",
       "en": "the chasms of z1"
     },
-    "appId": "z1-scene-a1c0314dbff84d55"
+    "appId": "z1-scene-os-abismos-de-z1",
+    "relations": [
+      "z1-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/z1/_scenes/habitantes_conversando.jpg",
@@ -85,7 +109,10 @@
       "pt": "Habitantes conversando",
       "en": "inhabitants talking"
     },
-    "appId": "z1-scene-9ec92568b7b0c300"
+    "appId": "z1-scene-habitantes-conversando",
+    "relations": [
+      "z1-topic-cultura"
+    ]
   },
   {
     "image": "/imgs/kammara/z1/_scenes/modbus_lotado.jpg",
@@ -93,6 +120,9 @@
       "pt": "Modbus lotado",
       "en": "crowded modbus"
     },
-    "appId": "z1-scene-622b680358a9d493"
+    "appId": "z1-scene-modbus-lotado",
+    "relations": [
+      "z1-topic-geografia"
+    ]
   }
 ]

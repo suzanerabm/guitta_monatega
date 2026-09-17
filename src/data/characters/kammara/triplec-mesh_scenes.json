@@ -5,7 +5,10 @@
       "pt": "Vila Central: vista aérea",
       "en": "central village aerial view"
     },
-    "appId": "triplec-mesh-scene-d0739ca3fa73705c"
+    "appId": "triplec-mesh-scene-vila-central-vista-aerea",
+    "relations": [
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/2vila_central.jpg",
@@ -13,7 +16,10 @@
       "pt": "Vila Central",
       "en": "central village"
     },
-    "appId": "triplec-mesh-scene-c8ae8ff6f00abbc1"
+    "appId": "triplec-mesh-scene-vila-central",
+    "relations": [
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/KAEL_TORIN_ativando_Cshift_vista_aerea.jpg",
@@ -21,7 +27,12 @@
       "pt": "KAEL TORIN ativando o Cshift: vista aérea",
       "en": "KAEL TORIN activating Cshift aerial view"
     },
-    "appId": "triplec-mesh-scene-ee9a0d34285912dc"
+    "appId": "triplec-mesh-scene-kael-torin-ativando-o-cshift-vista-aerea",
+    "relations": [
+      "triplec-mesh-character-kael-torin",
+      "triplec-mesh-topic-geografia",
+      "triplec-topic-o-cshift"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/KAEL_TORIN_ativando_Cshift.jpg",
@@ -29,7 +40,12 @@
       "pt": "KAEL TORIN ativando o Cshift",
       "en": "KAEL TORIN activating Cshift"
     },
-    "appId": "triplec-mesh-scene-02464b9b26de89df"
+    "appId": "triplec-mesh-scene-kael-torin-ativando-o-cshift",
+    "relations": [
+      "triplec-mesh-character-kael-torin",
+      "triplec-mesh-topic-geografia",
+      "triplec-topic-o-cshift"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/Niul_forest.jpg",
@@ -37,7 +53,10 @@
       "pt": "Floresta Niul",
       "en": "Niul Forest"
     },
-    "appId": "triplec-mesh-scene-256d84b4c575e813"
+    "appId": "triplec-mesh-scene-floresta-niul",
+    "relations": [
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_praca.jpg",
@@ -45,7 +64,10 @@
       "pt": "Praça",
       "en": "plaza"
     },
-    "appId": "triplec-mesh-scene-4541c93795fad8a0"
+    "appId": "triplec-mesh-scene-praca",
+    "relations": [
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_praca_vista_cima.jpg",
@@ -53,7 +75,10 @@
       "pt": "Praça: vista de cima",
       "en": "plaza top view"
     },
-    "appId": "triplec-mesh-scene-8fa18af83443dcd7"
+    "appId": "triplec-mesh-scene-praca-vista-de-cima",
+    "relations": [
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_sala.jpg",
@@ -61,7 +86,10 @@
       "pt": "Sala",
       "en": "living room"
     },
-    "appId": "triplec-mesh-scene-5d9d4d4b7a902767"
+    "appId": "triplec-mesh-scene-sala",
+    "relations": [
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_quarto.jpg",
@@ -69,7 +97,10 @@
       "pt": "Quarto",
       "en": "bedroom"
     },
-    "appId": "triplec-mesh-scene-a0ef3ac07d95f057"
+    "appId": "triplec-mesh-scene-quarto",
+    "relations": [
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_em_mesh.jpg",
@@ -77,7 +108,10 @@
       "pt": "Em Mesh",
       "en": "in Mesh"
     },
-    "appId": "triplec-mesh-scene-4dbb91275c7d86d9"
+    "appId": "triplec-mesh-scene-em-mesh",
+    "relations": [
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_visita_mesh.jpg",
@@ -85,7 +119,10 @@
       "pt": "Visita a Mesh",
       "en": "visit to Mesh"
     },
-    "appId": "triplec-mesh-scene-24d79b85ba322354"
+    "appId": "triplec-mesh-scene-visita-a-mesh",
+    "relations": [
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_dentro_ap.jpg",
@@ -93,7 +130,10 @@
       "pt": "Dentro do apartamento",
       "en": "inside the apartment"
     },
-    "appId": "triplec-mesh-scene-7999163d63062aad"
+    "appId": "triplec-mesh-scene-dentro-do-apartamento",
+    "relations": [
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_familia.jpg",
@@ -101,7 +141,10 @@
       "pt": "Família",
       "en": "family"
     },
-    "appId": "triplec-mesh-scene-146002c9a155e2a2"
+    "appId": "triplec-mesh-scene-familia",
+    "relations": [
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/manoo_dormindo.jpg",
@@ -109,7 +152,11 @@
       "pt": "Manoo dormindo",
       "en": "Manoo sleeping"
     },
-    "appId": "triplec-mesh-scene-a6d9e5d107e5bfef"
+    "appId": "triplec-mesh-scene-manoo-dormindo",
+    "relations": [
+      "triplec-mesh-character-manoo",
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/kurr_expandindo.jpg",
@@ -117,6 +164,10 @@
       "pt": "Kurr se expandindo",
       "en": "Kurr expanding"
     },
-    "appId": "triplec-mesh-scene-7f59679b0d865ed0"
+    "appId": "triplec-mesh-scene-kurr-se-expandindo",
+    "relations": [
+      "triplec-sharp-character-kurr",
+      "triplec-mesh-topic-geografia"
+    ]
   }
 ]

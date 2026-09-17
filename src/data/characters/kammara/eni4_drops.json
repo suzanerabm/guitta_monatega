@@ -6,7 +6,18 @@
       "pt": "Palácio de Node-0",
       "en": "Node-0 palace"
     },
-    "appId": "eni4-video-880d933f033227db"
+    "appId": "eni4-video-palacio-de-node-0",
+    "relations": [
+      "eni4-character-node-0",
+      "eni4-scene-palacio-de-node-0-1",
+      "eni4-scene-palacio-de-node-0-3",
+      "eni4-scene-palacio-de-node-0-4",
+      "eni4-scene-entrada-do-palacio-de-node-0",
+      "eni4-scene-corredor-do-palacio-de-node-0",
+      "eni4-scene-porta-do-palacio-de-node-0",
+      "eni4-scene-interior-do-palacio-de-node-0-8",
+      "eni4-scene-interior-do-palacio-de-node-0-9"
+    ]
   },
   {
     "video": "/imgs/kammara/eni4/_videos/tuneis_com_worms.mp4",
@@ -15,7 +26,13 @@
       "pt": "Túneis com Worms",
       "en": "Tunnels with Worms"
     },
-    "appId": "eni4-video-6d0ed62fbfe8d79a"
+    "appId": "eni4-video-tuneis-com-worms",
+    "relations": [
+      "eni4-topic-geografia",
+      "eni4-scene-worms-na-zona-scorch",
+      "eni4-scene-tuneis-com-worms-na-zona-crack-15",
+      "eni4-scene-tuneis-com-worms-na-zona-crack-16"
+    ]
   },
   {
     "video": "/imgs/kammara/eni4/_videos/marcha_aracnes.mp4",
@@ -24,7 +41,10 @@
       "pt": "Marcha dos Aracnes",
       "en": "March of the Aracnes"
     },
-    "appId": "eni4-video-d48760e20db09a6f"
+    "appId": "eni4-video-marcha-dos-aracnes",
+    "relations": [
+      "eni4-topic-protocolos-de-ataque"
+    ]
   },
   {
     "video": "/imgs/kammara/eni4/_videos/fabrica.mp4",
@@ -33,7 +53,13 @@
       "pt": "Fábrica BURN",
       "en": "BURN Factory"
     },
-    "appId": "eni4-video-c20cf7af04e15e0b"
+    "appId": "eni4-video-fabrica-burn",
+    "relations": [
+      "eni4-topic-energia-sobrevivencia",
+      "eni4-scene-fabrica-burn",
+      "eni4-scene-frente-da-fabrica",
+      "eni4-scene-interior-da-fabrica"
+    ]
   },
   {
     "video": "/imgs/kammara/eni4/_videos/camera_calor_node-0.mp4",
@@ -42,7 +68,12 @@
       "pt": "Câmara de calor de Node-0",
       "en": "Node-0 heat chamber"
     },
-    "appId": "eni4-video-9edb4d4d1ba8a792"
+    "appId": "eni4-video-camara-de-calor-de-node-0",
+    "relations": [
+      "eni4-character-node-0",
+      "eni4-scene-entrada-da-camara-de-node-0",
+      "eni4-scene-interior-da-camara-de-node-0"
+    ]
   },
   {
     "video": "/imgs/kammara/eni4/_videos/regiao_lixo.mp4",
@@ -51,6 +82,10 @@
       "pt": "Região dos lixões de robôs",
       "en": "Wasteland region"
     },
-    "appId": "eni4-video-0d081540e2629ca2"
+    "appId": "eni4-video-regiao-dos-lixoes-de-robos",
+    "relations": [
+      "eni4-topic-geografia",
+      "eni4-scene-bugs-na-sucata"
+    ]
   }
 ]

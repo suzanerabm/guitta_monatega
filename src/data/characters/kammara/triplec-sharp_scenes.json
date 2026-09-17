@@ -5,7 +5,10 @@
       "pt": "Região de Sharp",
       "en": "Sharp region"
     },
-    "appId": "triplec-sharp-scene-ea64d598b05df097"
+    "appId": "triplec-sharp-scene-regiao-de-sharp",
+    "relations": [
+      "triplec-sharp-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/sharp/_scenes/3praca_central.jpg",
@@ -13,7 +16,10 @@
       "pt": "Praça central",
       "en": "central plaza"
     },
-    "appId": "triplec-sharp-scene-48d4fa2173ee3666"
+    "appId": "triplec-sharp-scene-praca-central",
+    "relations": [
+      "triplec-sharp-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/sharp/_scenes/4Camara-de-Permissao_ativando_cshift.jpg",
@@ -21,7 +27,11 @@
       "pt": "Câmara de Permissão ativando o Cshift",
       "en": "Permission Chamber activating cshift"
     },
-    "appId": "triplec-sharp-scene-0b3e17f05b4ead1e"
+    "appId": "triplec-sharp-scene-camara-de-permissao-ativando-o-cshift",
+    "relations": [
+      "triplec-sharp-topic-geografia",
+      "triplec-topic-o-cshift"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/sharp/_scenes/5Camara-de-Permissao_posicao_defesa.jpg",
@@ -29,7 +39,10 @@
       "pt": "Câmara de Permissão em posição de defesa",
       "en": "Permission Chamber defense stance"
     },
-    "appId": "triplec-sharp-scene-a2dca1c66a7e4b6c"
+    "appId": "triplec-sharp-scene-camara-de-permissao-em-posicao-de-defesa",
+    "relations": [
+      "triplec-sharp-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/sharp/_scenes/6plataforma.jpg",
@@ -37,7 +50,10 @@
       "pt": "Praça central",
       "en": "Central Plaza"
     },
-    "appId": "triplec-sharp-scene-6179cfe14d5e96be"
+    "appId": "triplec-sharp-scene-praca-central-plataforma",
+    "relations": [
+      "triplec-sharp-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_fluxo_energia.jpg",
@@ -45,7 +61,11 @@
       "pt": "Fluxo de energia",
       "en": "energy flow"
     },
-    "appId": "triplec-sharp-scene-1c664abd6ab8f37e"
+    "appId": "triplec-sharp-scene-fluxo-de-energia",
+    "relations": [
+      "triplec-sharp-topic-geografia",
+      "triplec-sharp-topic-energia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_cena_interna_sala.jpg",
@@ -53,7 +73,10 @@
       "pt": "Sala interna",
       "en": "interior room"
     },
-    "appId": "triplec-sharp-scene-736aff065b456a7e"
+    "appId": "triplec-sharp-scene-sala-interna",
+    "relations": [
+      "triplec-sharp-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/sharp/_scenes/7Vista_panoramica.jpg",
@@ -61,7 +84,10 @@
       "pt": "Vista panorâmica",
       "en": "panoramic view"
     },
-    "appId": "triplec-sharp-scene-4b6e2eae775b41cf"
+    "appId": "triplec-sharp-scene-vista-panoramica",
+    "relations": [
+      "triplec-sharp-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_cena_quarto.jpg",
@@ -69,7 +95,10 @@
       "pt": "Quarto dos bebês",
       "en": "babies's bedroom"
     },
-    "appId": "triplec-sharp-scene-027cdb77757694e4"
+    "appId": "triplec-sharp-scene-quarto-dos-bebes",
+    "relations": [
+      "triplec-sharp-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_quarto.jpg",
@@ -77,7 +106,10 @@
       "pt": "Quarto principal",
       "en": "master bedroom"
     },
-    "appId": "triplec-sharp-scene-82b676b2e65bc0eb"
+    "appId": "triplec-sharp-scene-quarto-principal",
+    "relations": [
+      "triplec-sharp-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_sala.jpg",
@@ -85,7 +117,10 @@
       "pt": "Sala",
       "en": "living room"
     },
-    "appId": "triplec-sharp-scene-30fc09f488742700"
+    "appId": "triplec-sharp-scene-sala",
+    "relations": [
+      "triplec-sharp-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_visita_sharp.jpg",
@@ -93,6 +128,9 @@
       "pt": "Visita a Sharp",
       "en": "visit to Sharp"
     },
-    "appId": "triplec-sharp-scene-72e2e8bfa459b151"
+    "appId": "triplec-sharp-scene-visita-a-sharp",
+    "relations": [
+      "triplec-sharp-topic-geografia"
+    ]
   }
 ]

@@ -58,7 +58,10 @@
         }
       }
     ],
-    "appId": "triplec-character-8090c64f7680df75"
+    "appId": "triplec-character-volpita",
+    "relations": [
+      "triplec-topic-o-cshift"
+    ]
   },
   {
     "match": "Ypito",
@@ -119,7 +122,7 @@
         }
       }
     ],
-    "appId": "triplec-character-09798ccee29fe1cb"
+    "appId": "triplec-character-ypito"
   },
   {
     "match": "Seal Beans",
@@ -180,7 +183,10 @@
         }
       }
     ],
-    "appId": "triplec-character-89770558d412c14c"
+    "appId": "triplec-character-seal-beans",
+    "relations": [
+      "triplec-topic-os-bunniets"
+    ]
   },
   {
     "match": "Treezitoide",
@@ -241,7 +247,11 @@
         }
       }
     ],
-    "appId": "triplec-character-2877cfc8e2bb4ef5"
+    "appId": "triplec-character-treezi",
+    "relations": [
+      "triplec-topic-os-bunniets",
+      "triplec-topic-a-niul-forest"
+    ]
   },
   {
     "match": "Plumoide",
@@ -302,7 +312,10 @@
         }
       }
     ],
-    "appId": "triplec-character-b45dba40269f9f29"
+    "appId": "triplec-character-pluma",
+    "relations": [
+      "triplec-topic-a-niul-forest"
+    ]
   },
   {
     "match": "Niuloide",
@@ -363,7 +376,10 @@
         }
       }
     ],
-    "appId": "triplec-character-f1367cfd6a1486d7"
+    "appId": "triplec-character-nilo",
+    "relations": [
+      "triplec-topic-a-niul-forest"
+    ]
   },
   {
     "match": "Espirola",
@@ -424,7 +440,11 @@
         }
       }
     ],
-    "appId": "triplec-character-3ca4f699e6504606"
+    "appId": "triplec-character-espirola",
+    "relations": [
+      "triplec-topic-os-bunniets",
+      "triplec-topic-a-niul-forest"
+    ]
   },
   {
     "match": "Soaroide",
@@ -485,7 +505,10 @@
         }
       }
     ],
-    "appId": "triplec-character-9f4f70070a991951"
+    "appId": "triplec-character-soar",
+    "relations": [
+      "triplec-topic-os-bunniets"
+    ]
   },
   {
     "match": "Camuoide",
@@ -546,7 +569,10 @@
         }
       }
     ],
-    "appId": "triplec-character-4264e69f12652fc9"
+    "appId": "triplec-character-camu",
+    "relations": [
+      "triplec-topic-a-niul-forest"
+    ]
   },
   {
     "match": "Zarkol-9",
@@ -607,7 +633,10 @@
         }
       }
     ],
-    "appId": "triplec-character-99bc6186d4013527"
+    "appId": "triplec-character-zarkol-9",
+    "relations": [
+      "triplec-topic-a-niul-forest"
+    ]
   },
   {
     "match": "Omi",
@@ -679,7 +708,10 @@
         }
       }
     ],
-    "appId": "triplec-character-196957aafe709433"
+    "appId": "triplec-character-omi",
+    "relations": [
+      "triplec-topic-a-niul-forest"
+    ]
   },
   {
     "match": "Vexa",
@@ -751,7 +783,10 @@
         }
       }
     ],
-    "appId": "triplec-character-8fd83f914cc69fc0"
+    "appId": "triplec-character-vexa",
+    "relations": [
+      "triplec-topic-a-niul-forest"
+    ]
   },
   {
     "match": "Lai",
@@ -823,6 +858,9 @@
         }
       }
     ],
-    "appId": "triplec-character-df89dde8cfcb3409"
+    "appId": "triplec-character-lai",
+    "relations": [
+      "triplec-topic-a-niul-forest"
+    ]
   }
 ]

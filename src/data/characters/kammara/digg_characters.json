@@ -47,7 +47,11 @@
         }
       }
     ],
-    "appId": "digg-character-16c498df41baf07a"
+    "relations": [
+      "digg-character-silko-o-ratao",
+      "digg-topic-diggers"
+    ],
+    "appId": "digg-character-nihrak"
   },
   {
     "match": "Sílko",
@@ -97,7 +101,7 @@
         }
       }
     ],
-    "appId": "digg-character-0646d3a91790ed58"
+    "appId": "digg-character-silko-o-ratao"
   },
   {
     "match": "CHMURKA",
@@ -147,7 +151,10 @@
         }
       }
     ],
-    "appId": "digg-character-95c84993aaf70ad1"
+    "relations": [
+      "digg-topic-diggers"
+    ],
+    "appId": "digg-character-chmurka"
   },
   {
     "match": "ORVÍN",
@@ -197,7 +204,10 @@
         }
       }
     ],
-    "appId": "digg-character-b1b925a777b99c94"
+    "relations": [
+      "digg-topic-diggers"
+    ],
+    "appId": "digg-character-orvin"
   },
   {
     "match": "Krovín",
@@ -247,7 +257,10 @@
         }
       }
     ],
-    "appId": "digg-character-f2a83c78537ac1d2"
+    "relations": [
+      "digg-topic-diggers"
+    ],
+    "appId": "digg-character-krovin"
   },
   {
     "match": "ZIN",
@@ -297,6 +310,9 @@
         }
       }
     ],
-    "appId": "digg-character-52034ec24de98e6a"
+    "relations": [
+      "digg-topic-diggers"
+    ],
+    "appId": "digg-character-zin"
   }
 ]

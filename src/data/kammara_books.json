@@ -33,7 +33,7 @@
         "pt": "E se as invenções da humanidade continuassem evoluindo em outro universo?\n\nBem-vindo ao Kammara — um universo com incontáveis planetas, cada um com seu povo, seu jeito de viver e uma história própria. Nesta primeira saga, embarque por ORF-V, o planeta onde tudo se conecta, e conheça povos que se encontram, se ajudam e se enfrentam quando seus mundos se cruzam.\n\nUma aventura ilustrada sobre coragem, amizade e o que nos torna quem somos — para jovens leitores e para todos que nunca deixaram de imaginar.",
         "en": ""
       },
-      "appId": "kammara-book-291c10e5acd97b48"
+      "appId": "kammara-book-saga-em-orf-v-volume-1"
     },
     "kammara/saga-orf-v-en": {
       "visible": true,
@@ -42,7 +42,7 @@
       "title": {
         "en": "Saga in ORF-V"
       },
-      "appId": "kammara-book-354188b060c80db4"
+      "appId": "kammara-book-saga-in-orf-v"
     },
     "kammara/saga-maelik-v-pt": {
       "visible": true,
@@ -51,7 +51,7 @@
       "title": {
         "pt": "Saga em Digg - Volume 2"
       },
-      "appId": "kammara-book-d54f0662e46a1fea"
+      "appId": "kammara-book-saga-em-digg-volume-2"
     }
   }
 }

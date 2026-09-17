@@ -58,7 +58,10 @@
         }
       }
     ],
-    "appId": "gotto-character-a19a3892d5e3ff02"
+    "appId": "gotto-character-rema",
+    "relations": [
+      "gotto-topic-habitantes-basiks"
+    ]
   },
   {
     "match": "Pilo",
@@ -119,7 +122,10 @@
         }
       }
     ],
-    "appId": "gotto-character-5fa3455c19300611"
+    "appId": "gotto-character-pilo",
+    "relations": [
+      "gotto-topic-habitantes-basiks"
+    ]
   },
   {
     "match": "Jump",
@@ -180,7 +186,10 @@
         }
       }
     ],
-    "appId": "gotto-character-9ee0ca3e24d60ea0"
+    "appId": "gotto-character-jump",
+    "relations": [
+      "gotto-topic-habitantes-basiks"
+    ]
   },
   {
     "match": "Flip",
@@ -234,7 +243,10 @@
         }
       }
     ],
-    "appId": "gotto-character-2449d137ea15fd2b"
+    "relations": [
+      "gotto-character-kirio"
+    ],
+    "appId": "gotto-character-flipflop"
   },
   {
     "match": "Kirió",
@@ -288,7 +300,7 @@
         }
       }
     ],
-    "appId": "gotto-character-6fd192f5b3529959"
+    "appId": "gotto-character-kirio"
   },
   {
     "match": "Daryun",
@@ -342,7 +354,7 @@
         }
       }
     ],
-    "appId": "gotto-character-b72a5792e1b409e3"
+    "appId": "gotto-character-daryun"
   },
   {
     "match": "Lumi",
@@ -392,7 +404,10 @@
         }
       }
     ],
-    "appId": "gotto-character-603ed7a43df5de3f"
+    "relations": [
+      "gotto-character-jump"
+    ],
+    "appId": "gotto-character-lumi"
   },
   {
     "match": "Momo",
@@ -442,6 +457,9 @@
         }
       }
     ],
-    "appId": "gotto-character-dce88c29de615438"
+    "relations": [
+      "gotto-character-rema"
+    ],
+    "appId": "gotto-character-momo"
   }
 ]

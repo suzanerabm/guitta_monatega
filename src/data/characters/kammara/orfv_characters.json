@@ -62,7 +62,7 @@
       "pt": "Se alguém precisa atravessar, eu fico.",
       "en": "If someone needs to cross, I stay."
     },
-    "appId": "orfv-character-66de2722bb5fdabf"
+    "appId": "orfv-character-orvian"
   },
   {
     "match": "Maelik",
@@ -112,7 +112,7 @@
         }
       }
     ],
-    "appId": "orfv-character-fe3236c5aa718fdc"
+    "appId": "orfv-character-maelik"
   },
   {
     "match": "Nylpha",
@@ -163,7 +163,7 @@
       }
     ],
     "visible": false,
-    "appId": "orfv-character-08d57eb818274e5a"
+    "appId": "orfv-character-nylpha"
   },
   {
     "match": "LetiK",
@@ -214,7 +214,7 @@
       }
     ],
     "visible": false,
-    "appId": "orfv-character-8c5d8555a2ae7dad"
+    "appId": "orfv-character-letik"
   },
   {
     "match": "Kallott",
@@ -265,7 +265,7 @@
       }
     ],
     "visible": false,
-    "appId": "orfv-character-b48fc11c63ed0260"
+    "appId": "orfv-character-kallott"
   },
   {
     "match": "Torwen",
@@ -316,7 +316,7 @@
       }
     ],
     "visible": false,
-    "appId": "orfv-character-d5edca64ace0a427"
+    "appId": "orfv-character-torwen"
   },
   {
     "match": "Nuvin",
@@ -370,7 +370,7 @@
         }
       }
     ],
-    "appId": "orfv-character-851f7cbfeb250de9"
+    "appId": "orfv-character-nuvin"
   },
   {
     "match": "Zupi",
@@ -424,7 +424,7 @@
         }
       }
     ],
-    "appId": "orfv-character-70a6c93febe2c35d"
+    "appId": "orfv-character-zupi"
   },
   {
     "match": "Velo",
@@ -479,7 +479,7 @@
       }
     ],
     "visible": false,
-    "appId": "orfv-character-5d1e437e74a365f9"
+    "appId": "orfv-character-velo"
   },
   {
     "match": "Aurin",
@@ -534,6 +534,6 @@
       }
     ],
     "visible": false,
-    "appId": "orfv-character-591fb809e60e2db9"
+    "appId": "orfv-character-aurin"
   }
 ]

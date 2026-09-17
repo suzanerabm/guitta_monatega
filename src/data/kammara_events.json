@@ -51,7 +51,7 @@
         "en": "ORF-V's greatest cultural event and the planet's New Year, celebrated when Lüp and Nül, the two moons, align in the sky. The day begins with the Phruit'Dëy, the collective phruit harvest, and the night ends in the sacred silence of the alignment. First we harvest, then we feast, then we pause."
       },
       "href": "",
-      "appId": "orfv-event-97bf1237650858ef"
+      "appId": "orfv-event-lup-nul-fest-festival-das-duas-luas"
     },
     {
       "id": "festival-quatro-luas",
@@ -79,7 +79,7 @@
         "en": "The most special day on LUNN'P1. When Lur'Ma, Oru'Len, Tiru'Na and Ve'Lume share the same sky, the Shal'ún gather on the Naru'ei. After the ORF-V Saga, the festival began welcoming bunniets from TripleC and elePHPants from ORF-V."
       },
       "href": "",
-      "appId": "lunnp1-event-6b5f32bc1d1e66fa"
+      "appId": "lunnp1-event-festival-das-quatro-luas"
     },
     {
       "id": "grande-corrida-tres-regioes",
@@ -107,7 +107,7 @@
         "en": "Bunniets from the three regions cross the planet together: from malloc to Sharp, through the Niul Forest. It is not a competition: it is a celebration. It does not matter who arrives first; what matters is that everyone arrives. The Z1 of Niul watch and approve the path."
       },
       "href": "",
-      "appId": "triplec-event-c7c36a8178d70ad3"
+      "appId": "triplec-event-a-grande-corrida-das-tres-regioes"
     },
     {
       "id": "festival-orulen",
@@ -134,7 +134,7 @@
         "pt": "Tradição de uma das Naru'ei do sul de LUNN'P1, sob a lua Oru'Len, a lua que muda de cor constantemente. Durante o festival, toda a cidade muda de cor simultaneamente, em sincronia com a lua dominante.",
         "en": "Tradition of one of the southern Naru'ei of LUNN'P1, beneath the moon Oru'Len, the moon that constantly shifts color. During the festival, the entire city changes color simultaneously, in sync with the dominant moon."
       },
-      "appId": "lunnp1-event-06b36747565598e9"
+      "appId": "lunnp1-event-festival-oru-len"
     },
     {
       "id": "simposio-silk",
@@ -161,7 +161,7 @@
         "pt": "Principal fórum científico interplanetário do Kammara. Sediado na Câmara de Permissão (Sharp/TripleC), reúne pesquisadores de todos os planetas aliados em cosmogonia, arqueologia técnica, engenharia vibracional e estabilidade interplanetária. Fundado no Ano Galático 9.037 por TripleC e a Casta DEC- de Z1.",
         "en": "Kammara's leading interplanetary scientific forum. Hosted at the Permission Chamber (Sharp/TripleC), it gathers researchers from all allied planets in cosmogony, technical archaeology, vibrational engineering, and interplanetary stability. Founded in Galactic Year 9,037 by TripleC and the DEC- Caste of Z1."
       },
-      "appId": "triplec-event-139c13caf2d0e073"
+      "appId": "triplec-event-silk-simposio-interplanetario-luminico-do-kammara"
     },
     {
       "id": "saga-orfv",
@@ -193,7 +193,7 @@
         "pt": "Ver na Amazon",
         "en": "View on Amazon"
       },
-      "appId": "orfv-event-5f16e85852d3d92a"
+      "appId": "orfv-event-saga-em-orf-v"
     }
   ]
 }

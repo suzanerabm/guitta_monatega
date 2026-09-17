@@ -58,7 +58,10 @@
         }
       }
     ],
-    "appId": "triplec-malloc-character-30df2bd5719e42ce"
+    "appId": "triplec-malloc-character-luma-val",
+    "relations": [
+      "triplec-malloc-topic-bunniets"
+    ]
   },
   {
     "match": "Iren_Kor",
@@ -119,7 +122,10 @@
         }
       }
     ],
-    "appId": "triplec-malloc-character-f033f7ffd2723f0c"
+    "appId": "triplec-malloc-character-iren-kor",
+    "relations": [
+      "triplec-malloc-topic-bunniets"
+    ]
   },
   {
     "match": "Aion_Var",
@@ -180,7 +186,10 @@
         }
       }
     ],
-    "appId": "triplec-malloc-character-063b4acb02b0eb8e"
+    "appId": "triplec-malloc-character-aion-var",
+    "relations": [
+      "triplec-malloc-topic-bunniets"
+    ]
   },
   {
     "match": "Stelipa",
@@ -230,7 +239,11 @@
         }
       }
     ],
-    "appId": "triplec-malloc-character-a2d51dc4fe94a5a9"
+    "appId": "triplec-malloc-character-stelipa",
+    "relations": [
+      "triplec-malloc-topic-bunniets",
+      "triplec-malloc-topic-cultura"
+    ]
   },
   {
     "match": "Mewlites",
@@ -280,7 +293,10 @@
         }
       }
     ],
-    "appId": "triplec-malloc-character-04b09d8f71c12c13"
+    "appId": "triplec-malloc-character-mewlites",
+    "relations": [
+      "triplec-malloc-topic-energia"
+    ]
   },
   {
     "match": "Trilume",
@@ -330,7 +346,10 @@
         }
       }
     ],
-    "appId": "triplec-malloc-character-0be80eaafc0f0fe0"
+    "appId": "triplec-malloc-character-trilume",
+    "relations": [
+      "triplec-malloc-topic-energia"
+    ]
   },
   {
     "match": "Krystos",
@@ -380,7 +399,11 @@
         }
       }
     ],
-    "appId": "triplec-malloc-character-3157581fcf2b5b4d"
+    "appId": "triplec-malloc-character-krystos",
+    "relations": [
+      "triplec-malloc-character-mewlites",
+      "triplec-malloc-topic-perigos"
+    ]
   },
   {
     "match": "Estakors",
@@ -430,6 +453,10 @@
         }
       }
     ],
-    "appId": "triplec-malloc-character-65e0cf497b6ef92a"
+    "appId": "triplec-malloc-character-estakors",
+    "relations": [
+      "triplec-malloc-character-krystos",
+      "triplec-malloc-topic-perigos"
+    ]
   }
 ]

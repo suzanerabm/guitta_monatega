@@ -28,7 +28,7 @@ function fixture() {
   write('src/data/kammara_books.json', { books: { book: { title: { pt: 'Book' }, description: { pt: 'Website description' }, buyUrl: '' } } });
   write('src/data/kammara_events.json', { visible: false, events: [] });
   write('src/data/kammara-app/relations.json', { schemaVersion: 1, relations: {
-    [stableId('lunnp1', 'character', 'char0')]: [stableId('lunnp1', 'character', 'char1'), stableId('lunnp1', 'character', 'secret')],
+    [stableId('lunnp1', 'character', 'Character 0')]: [stableId('lunnp1', 'character', 'Character 1'), stableId('lunnp1', 'character', 'NEVER-PUBLISH')],
   } });
   write('src/data/kammara-app/book_details.json', { schemaVersion: 1, books: {
     [stableId('kammara', 'book', 'book')]: { description: { pt: 'Old description' }, externalUrl: 'https://old.example' },
@@ -50,13 +50,13 @@ test('export excludes hidden records, prunes links and uses website book values'
     assert.ok(!serialized.includes('Old description'));
     assert.ok(!serialized.includes('old.example'));
     const catalog = snapshot.files['catalog.json'];
-    const id = stableId('lunnp1', 'character', 'char0');
-    assert.deepEqual(snapshot.files['relations.json'].relations[id], [stableId('lunnp1', 'character', 'char1')]);
+    const id = stableId('lunnp1', 'character', 'Character 0');
+    assert.deepEqual(snapshot.files['relations.json'].relations[id], [stableId('lunnp1', 'character', 'Character 1')]);
     f.write(f.folder + 'characters.json', [{ ...f.characters[0], visible: false }, ...f.characters.slice(1)]);
     const next = buildContent(f.root);
     assert.notEqual(next.revision, snapshot.revision);
     assert.ok(!next.files['catalog.json'].entries.some(entry => entry.id === id));
-    assert.equal(catalog.entries.find(entry => entry.id === stableId('lunnp1', 'character', 'char1')).id,
+    assert.equal(catalog.entries.find(entry => entry.id === stableId('lunnp1', 'character', 'Character 1')).id,
       next.files['catalog.json'].entries.find(entry => entry.title.pt === 'Character 1').id);
   } finally { rmSync(f.root, { recursive: true }); }
 });
@@ -85,17 +85,30 @@ test('API never returns an unlimited catalog and rejects stale revisions', async
   } finally { rmSync(f.root, { recursive: true }); }
 });
 
+test('authored relations require valid semantic app IDs', () => {
+  const f = fixture();
+  try {
+    const characters = f.characters.map(character => ({ ...character }));
+    characters[0].relations = ['lunnp1-character-missing'];
+    f.write(f.folder + 'characters.json', characters);
+    assert.throws(() => buildContent(f.root), /Unknown relation from lunnp1-character-character-0/);
+  } finally { rmSync(f.root, { recursive: true }); }
+});
+
 
 test('editing titles, record order and book keys preserves published identity and links', () => {
   const f = fixture();
   try {
+    const read = path => JSON.parse(readFileSync(join(f.root, path), 'utf8'));
     f.write(f.folder + 'subsystems.json', [{ title: { pt: 'Historia', en: 'History' }, text: { pt: ['Original'] } }]);
     const before = buildContent(f.root);
     const count = stabilizeContentIds(f.root);
     assert.ok(count.assigned > 0);
     assert.equal(stabilizeContentIds(f.root).assigned, 0);
+    assert.equal(read(f.folder + 'story.json').appId, 'lunnp1-planet-lunn');
+    assert.equal(read(f.folder + 'characters.json')[0].appId, 'lunnp1-character-character-0');
+    assert.equal(read(f.folder + 'drops.json')[0].appId, 'lunnp1-video-secret');
     assert.deepEqual(buildContent(f.root), before);
-    const read = path => JSON.parse(readFileSync(join(f.root, path), 'utf8'));
     const topics = read(f.folder + 'subsystems.json');
     const topicId = topics[0].appId;
     topics[0].title.pt = 'História do planeta';

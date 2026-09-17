@@ -47,7 +47,7 @@
         }
       }
     ],
-    "appId": "memphis-character-03c1ea9d12b3ac22"
+    "appId": "memphis-character-jaquarta"
   },
   {
     "match": "Destro",
@@ -97,7 +97,7 @@
         }
       }
     ],
-    "appId": "memphis-character-40ca11960f6ca0bc"
+    "appId": "memphis-character-destro"
   },
   {
     "match": "Raigu",
@@ -147,7 +147,7 @@
         }
       }
     ],
-    "appId": "memphis-character-f93c40461b5bc846"
+    "appId": "memphis-character-raigu"
   },
   {
     "match": "Peter",
@@ -197,7 +197,7 @@
         }
       }
     ],
-    "appId": "memphis-character-ea72c79594296e45"
+    "appId": "memphis-character-peter"
   },
   {
     "match": "Nobuk",
@@ -247,7 +247,7 @@
         }
       }
     ],
-    "appId": "memphis-character-2f4eeaf88fcc330e"
+    "appId": "memphis-character-nobuk"
   },
   {
     "match": "Violeta",
@@ -297,6 +297,6 @@
         }
       }
     ],
-    "appId": "memphis-character-264f2ba06e85cbaf"
+    "appId": "memphis-character-violeta"
   }
 ]

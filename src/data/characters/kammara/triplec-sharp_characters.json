@@ -47,7 +47,10 @@
         }
       }
     ],
-    "appId": "triplec-sharp-character-302344acd5682742"
+    "appId": "triplec-sharp-character-selka-rin",
+    "relations": [
+      "triplec-sharp-topic-bunniets"
+    ]
   },
   {
     "match": "Neran_Vel",
@@ -97,7 +100,10 @@
         }
       }
     ],
-    "appId": "triplec-sharp-character-db2103aa4ecb0072"
+    "appId": "triplec-sharp-character-neran-vel",
+    "relations": [
+      "triplec-sharp-topic-bunniets"
+    ]
   },
   {
     "match": "Veris_Anon",
@@ -147,7 +153,10 @@
         }
       }
     ],
-    "appId": "triplec-sharp-character-835d3918a31fff23"
+    "appId": "triplec-sharp-character-veris-anon",
+    "relations": [
+      "triplec-sharp-topic-bunniets"
+    ]
   },
   {
     "match": "Kurr",
@@ -197,7 +206,10 @@
         }
       }
     ],
-    "appId": "triplec-sharp-character-524ceea45dbbf6b9"
+    "appId": "triplec-sharp-character-kurr",
+    "relations": [
+      "triplec-sharp-topic-energia"
+    ]
   },
   {
     "match": "Tilu",
@@ -247,7 +259,10 @@
         }
       }
     ],
-    "appId": "triplec-sharp-character-56004bdbad9c157b"
+    "appId": "triplec-sharp-character-tilu",
+    "relations": [
+      "triplec-sharp-topic-bunniets"
+    ]
   },
   {
     "match": "Doopoide",
@@ -297,7 +312,10 @@
         }
       }
     ],
-    "appId": "triplec-sharp-character-5525a30719bfcf3b"
+    "appId": "triplec-sharp-character-doope",
+    "relations": [
+      "triplec-sharp-character-tilu"
+    ]
   },
   {
     "match": "Dinossauro Alongado",
@@ -347,7 +365,10 @@
         }
       }
     ],
-    "appId": "triplec-sharp-character-2b7838c64458f335"
+    "appId": "triplec-sharp-character-logg",
+    "relations": [
+      "triplec-sharp-topic-geografia"
+    ]
   },
   {
     "match": "Suigui",
@@ -397,7 +418,10 @@
         }
       }
     ],
-    "appId": "triplec-sharp-character-a039fc4f1cf4b581"
+    "appId": "triplec-sharp-character-suigui",
+    "relations": [
+      "triplec-sharp-topic-geografia"
+    ]
   },
   {
     "match": "Lim",
@@ -447,6 +471,9 @@
         }
       }
     ],
-    "appId": "triplec-sharp-character-394e564158488650"
+    "appId": "triplec-sharp-character-lim",
+    "relations": [
+      "triplec-sharp-topic-geografia"
+    ]
   }
 ]

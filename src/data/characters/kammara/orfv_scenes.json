@@ -3,25 +3,25 @@
     "image": "/imgs/kammara/orfv/_scenes/1vista_Fjorks_Centrais.jpg",
     "label": {
       "pt": "Vista dos Fjorks Centrais",
-      "en": "vista Fjorks Centrais"
+      "en": "View of the Central Fjorks"
     },
-    "appId": "orfv-scene-c6b4dcea27fc6e17"
+    "appId": "orfv-scene-vista-dos-fjorks-centrais"
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/2Colina_Central.jpg",
     "label": {
       "pt": "Colina Central",
-      "en": "Colina Central"
+      "en": "Central Hill"
     },
-    "appId": "orfv-scene-ef4971709ffa355a"
+    "appId": "orfv-scene-colina-central"
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/3Iren_Kor_Vila_Central.jpg",
     "label": {
       "pt": "IREN KOR na Vila Central",
-      "en": "Iren Kor Vila Central"
+      "en": "IREN KOR in the Central Village"
     },
-    "appId": "orfv-scene-ed8041979e4fff8c"
+    "appId": "orfv-scene-iren-kor-na-vila-central"
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/velo_dormindo_flor.jpg",
@@ -29,7 +29,7 @@
       "pt": "Velo dormindo na flor",
       "en": "Velo sleeping on the flower"
     },
-    "appId": "orfv-scene-d90898d1e1d52866"
+    "appId": "orfv-scene-velo-dormindo-na-flor"
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/zupi_dormindo_com_nuvin1.jpg",
@@ -37,78 +37,78 @@
       "pt": "Zupi dormindo com Nuvin",
       "en": "Zupi sleeping with the Nuvin"
     },
-    "appId": "orfv-scene-f21e706338f4888e"
+    "appId": "orfv-scene-zupi-dormindo-com-nuvin"
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/4Vila_Central.jpg",
     "label": {
       "pt": "Vila Central",
-      "en": "Vila Central"
+      "en": "Central Village"
     },
-    "appId": "orfv-scene-41fadc09e40052b1"
+    "appId": "orfv-scene-vila-central"
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/5Vila_Leste.jpg",
     "label": {
       "pt": "Vila Leste",
-      "en": "Vila Leste"
+      "en": "East Village"
     },
-    "appId": "orfv-scene-37049e7e32e261f6"
+    "appId": "orfv-scene-vila-leste"
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/6Maelik_Fjorks_Oeste.jpg",
     "label": {
       "pt": "Maelik nos Fjorks Oeste",
-      "en": "Maelik Fjorks Oeste"
+      "en": "Maelik in the West Fjorks"
     },
-    "appId": "orfv-scene-33bb937f59cd166b"
+    "appId": "orfv-scene-maelik-nos-fjorks-oeste"
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/7vila_norte.jpg",
     "label": {
       "pt": "Vila Norte",
-      "en": "vila norte"
+      "en": "North Village"
     },
-    "appId": "orfv-scene-95f4d2096fea5d04"
+    "appId": "orfv-scene-vila-norte"
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/8Ceu_em_orf-v.jpg",
     "label": {
       "pt": "Céu de ORF-V",
-      "en": "Ceu em orf-v"
+      "en": "Sky over ORF-V"
     },
-    "appId": "orfv-scene-9f9e9039799eb179"
+    "appId": "orfv-scene-ceu-de-orf-v"
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/9noite_em_orfv.jpg",
     "label": {
       "pt": "Noite em ORF-V",
-      "en": "noite em orfv"
+      "en": "Night in ORF-V"
     },
-    "appId": "orfv-scene-1a1c9d68e62f2ee2"
+    "appId": "orfv-scene-noite-em-orf-v"
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/10regiao_sul_deserta.jpg",
     "label": {
       "pt": "Região sul deserta",
-      "en": "regiao sul deserta"
+      "en": "Deserted south region"
     },
-    "appId": "orfv-scene-7e58ef55a22e87be"
+    "appId": "orfv-scene-regiao-sul-deserta-10"
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/11regiao_sul_deserta.jpg",
     "label": {
       "pt": "Região sul deserta",
-      "en": "regiao sul deserta"
+      "en": "Deserted south region"
     },
-    "appId": "orfv-scene-b6f14d959e8de188"
+    "appId": "orfv-scene-regiao-sul-deserta-11"
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/12festival.jpg",
     "label": {
       "pt": "Festival",
-      "en": "festival"
+      "en": "Festival"
     },
-    "appId": "orfv-scene-3e53ff46b75eba5d"
+    "appId": "orfv-scene-festival"
   }
 ]
