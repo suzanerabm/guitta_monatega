@@ -29,7 +29,69 @@
           "Come take a nap with NapCat and his friends."
         ]
       }
-    }
+    },
+    "carousel": [
+      {
+        "name": "napcat pendurado",
+        "image": "/imgs/bichittos/napcat/napcat_pendurado.png"
+      },
+      {
+        "name": "napcat soneca pijama",
+        "image": "/imgs/bichittos/napcat/napcat_soneca_pijama.png"
+      },
+      {
+        "name": "napcat soneca",
+        "image": "/imgs/bichittos/napcat/napcat_soneca.png"
+      },
+      {
+        "name": "napcat-burp",
+        "image": "/imgs/bichittos/napcat/napcat-burp.gif"
+      },
+      {
+        "name": "napcat-cambalhota",
+        "image": "/imgs/bichittos/napcat/napcat-cambalhota.png"
+      },
+      {
+        "name": "napcat-desenhando",
+        "image": "/imgs/bichittos/napcat/napcat-desenhando.png"
+      },
+      {
+        "name": "napcat-dormindo",
+        "image": "/imgs/bichittos/napcat/napcat-dormindo.png"
+      },
+      {
+        "name": "napcat-gargalhando",
+        "image": "/imgs/bichittos/napcat/napcat-gargalhando.png"
+      },
+      {
+        "name": "napcat-pijama",
+        "image": "/imgs/bichittos/napcat/napcat-pijama.png"
+      },
+      {
+        "name": "napcat-sonequinha",
+        "image": "/imgs/bichittos/napcat/napcat-sonequinha.png"
+      },
+      {
+        "name": "napcat",
+        "image": "/imgs/bichittos/napcat/napcat.png"
+      },
+      {
+        "name": "violeta dormindo",
+        "image": "/imgs/bichittos/napcat/violeta_dormindo.png"
+      },
+      {
+        "name": "violeta sentada",
+        "image": "/imgs/bichittos/napcat/violeta_sentada.png"
+      },
+      {
+        "name": "violeta soneca",
+        "image": "/imgs/bichittos/napcat/violeta_soneca.png"
+      },
+      {
+        "name": "violeta",
+        "image": "/imgs/bichittos/napcat/violeta.png"
+      }
+    ]
   },
   "zeco": {
     "name": {
@@ -63,7 +125,209 @@
           "Each book holds a piece of that childhood, transformed into narrative, image, and feeling."
         ]
       }
-    }
+    },
+    "carousel": [
+      {
+        "name": "zeco atrasado",
+        "image": "/imgs/bichittos/zeco/01_zeco_atrasado.png"
+      },
+      {
+        "name": "zeco boa noite",
+        "image": "/imgs/bichittos/zeco/01_zeco_boa_noite.png"
+      },
+      {
+        "name": "zeco boiando",
+        "image": "/imgs/bichittos/zeco/01_zeco_boiando.png"
+      },
+      {
+        "name": "zeco comendo picole",
+        "image": "/imgs/bichittos/zeco/01_zeco_comendo_picole.png"
+      },
+      {
+        "name": "zeco de boia",
+        "image": "/imgs/bichittos/zeco/01_zeco_de_boia.png"
+      },
+      {
+        "name": "zeco desmaiando",
+        "image": "/imgs/bichittos/zeco/01_zeco_desmaiando.png"
+      },
+      {
+        "name": "zeco doente",
+        "image": "/imgs/bichittos/zeco/01_zeco_doente.png"
+      },
+      {
+        "name": "zeco escondido",
+        "image": "/imgs/bichittos/zeco/01_zeco_escondido.png"
+      },
+      {
+        "name": "zeco falando",
+        "image": "/imgs/bichittos/zeco/01_zeco_falando.png"
+      },
+      {
+        "name": "zeco feliz",
+        "image": "/imgs/bichittos/zeco/01_zeco_feliz.png"
+      },
+      {
+        "name": "zeco jump",
+        "image": "/imgs/bichittos/zeco/01_zeco_jump.png"
+      },
+      {
+        "name": "zeco piscando",
+        "image": "/imgs/bichittos/zeco/01_zeco_piscando.png"
+      },
+      {
+        "name": "zeco soneca",
+        "image": "/imgs/bichittos/zeco/01_zeco_soneca.png"
+      },
+      {
+        "name": "zeco triste",
+        "image": "/imgs/bichittos/zeco/01_zeco_triste.png"
+      },
+      {
+        "name": "zeco tropecou",
+        "image": "/imgs/bichittos/zeco/01_zeco_tropecou.png"
+      },
+      {
+        "name": "zeco",
+        "image": "/imgs/bichittos/zeco/01_zeco.png"
+      },
+      {
+        "name": "Rui Merengue apaixonado",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_apaixonado.png"
+      },
+      {
+        "name": "Rui Merengue boiando",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_boiando.png"
+      },
+      {
+        "name": "Rui Merengue com duvida",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_com_duvida.png"
+      },
+      {
+        "name": "Rui Merengue com frio",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_com_frio.png"
+      },
+      {
+        "name": "Rui Merengue com medo",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_com_medo.png"
+      },
+      {
+        "name": "Rui Merengue comendo compota",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_comendo_compota.png"
+      },
+      {
+        "name": "Rui Merengue comendo morango",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_comendo_morango.png"
+      },
+      {
+        "name": "Rui Merengue contando historia",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_contando_historia.png"
+      },
+      {
+        "name": "Rui Merengue correndo",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_correndo.png"
+      },
+      {
+        "name": "Rui Merengue joga bolinha",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_joga_bolinha.png"
+      },
+      {
+        "name": "Rui Merengue mexirico",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_mexirico.png"
+      },
+      {
+        "name": "Rui Merengue navegando",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_navegando.png"
+      },
+      {
+        "name": "Rui Merengue tomando sorvete",
+        "image": "/imgs/bichittos/zeco/02_Rui_Merengue_tomando_sorvete.png"
+      },
+      {
+        "name": "RuiMerengue com sorte",
+        "image": "/imgs/bichittos/zeco/02_RuiMerengue_com_sorte.png"
+      },
+      {
+        "name": "RuiMerengue dormindo",
+        "image": "/imgs/bichittos/zeco/02_RuiMerengue_dormindo.png"
+      },
+      {
+        "name": "RuiMerengue no carnaval",
+        "image": "/imgs/bichittos/zeco/02_RuiMerengue_no_carnaval.png"
+      },
+      {
+        "name": "RuiMerengue",
+        "image": "/imgs/bichittos/zeco/02_RuiMerengue.png"
+      },
+      {
+        "name": "ninha apaixonada",
+        "image": "/imgs/bichittos/zeco/03_ninha_apaixonada.png"
+      },
+      {
+        "name": "ninha bricando",
+        "image": "/imgs/bichittos/zeco/03_ninha_bricando.png"
+      },
+      {
+        "name": "ninha cafe",
+        "image": "/imgs/bichittos/zeco/03_ninha_cafe.png"
+      },
+      {
+        "name": "ninha cheiro ruim",
+        "image": "/imgs/bichittos/zeco/03_ninha_cheiro_ruim.png"
+      },
+      {
+        "name": "ninha comendo",
+        "image": "/imgs/bichittos/zeco/03_ninha_comendo.png"
+      },
+      {
+        "name": "ninha costas",
+        "image": "/imgs/bichittos/zeco/03_ninha_costas.png"
+      },
+      {
+        "name": "ninha danca",
+        "image": "/imgs/bichittos/zeco/03_ninha_danca.png"
+      },
+      {
+        "name": "ninha feliz",
+        "image": "/imgs/bichittos/zeco/03_ninha_feliz.png"
+      },
+      {
+        "name": "ninha nadando",
+        "image": "/imgs/bichittos/zeco/03_ninha_nadando.png"
+      },
+      {
+        "name": "ninha praia",
+        "image": "/imgs/bichittos/zeco/03_ninha_praia.png"
+      },
+      {
+        "name": "ninha soneca",
+        "image": "/imgs/bichittos/zeco/03_ninha_soneca.png"
+      },
+      {
+        "name": "ninha voa",
+        "image": "/imgs/bichittos/zeco/03_ninha_voa.png"
+      },
+      {
+        "name": "ninha",
+        "image": "/imgs/bichittos/zeco/03_ninha.png"
+      },
+      {
+        "name": "gelo derretendo",
+        "image": "/imgs/bichittos/zeco/04_gelo_derretendo.png"
+      },
+      {
+        "name": "grilo pulando",
+        "image": "/imgs/bichittos/zeco/04_grilo_pulando.png"
+      },
+      {
+        "name": "zeco jogando bolinha poster",
+        "image": "/imgs/bichittos/zeco/zeco_jogando_bolinha_poster.jpg"
+      },
+      {
+        "name": "zeco jogando ioio poster",
+        "image": "/imgs/bichittos/zeco/zeco_jogando_ioio_poster.jpg"
+      }
+    ]
   },
   "taylo": {
     "name": {
@@ -101,7 +365,13 @@
           "Complete just as we are, always dreaming."
         ]
       }
-    }
+    },
+    "carousel": [
+      {
+        "name": "pitu",
+        "image": "/imgs/bichittos/taylo/pitu.png"
+      }
+    ]
   },
   "cheiodebolinha": {
     "name": {
@@ -131,7 +401,77 @@
           "Bobbin and Querie are waiting for you to come play."
         ]
       }
-    }
+    },
+    "carousel": [
+      {
+        "name": "Cheio Bolinha voando",
+        "image": "/imgs/bichittos/cheiodebolinha/Cheio_Bolinha_voando.png"
+      },
+      {
+        "name": "Cheio Bolinha",
+        "image": "/imgs/bichittos/cheiodebolinha/Cheio_Bolinha.gif"
+      },
+      {
+        "name": "querie bravo",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_bravo.gif"
+      },
+      {
+        "name": "querie comendo maca",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_comendo_maca.gif"
+      },
+      {
+        "name": "querie comendo milho",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_comendo_milho.gif"
+      },
+      {
+        "name": "querie dancando",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_dancando.gif"
+      },
+      {
+        "name": "querie desmaia dormindo",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_desmaia_dormindo.gif"
+      },
+      {
+        "name": "querie dormindo",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_dormindo.gif"
+      },
+      {
+        "name": "querie feliz",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_feliz.gif"
+      },
+      {
+        "name": "querie love",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_love.gif"
+      },
+      {
+        "name": "querie mostra os dentes",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_mostra_os_dentes.gif"
+      },
+      {
+        "name": "querie piscando",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_piscando.gif"
+      },
+      {
+        "name": "querie tira oculos",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_tira_oculos.gif"
+      },
+      {
+        "name": "querie tomando banho",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_tomando_banho.gif"
+      },
+      {
+        "name": "querie triste",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_triste.gif"
+      },
+      {
+        "name": "querie vomitando",
+        "image": "/imgs/bichittos/cheiodebolinha/querie_vomitando.gif"
+      },
+      {
+        "name": "Querie",
+        "image": "/imgs/bichittos/cheiodebolinha/Querie.gif"
+      }
+    ]
   },
   "livros": {
     "name": {
@@ -185,6 +525,32 @@
           "Each one here has their own story. Some short, others still being written."
         ]
       }
-    }
+    },
+    "carousel": [
+      {
+        "name": "candy fada",
+        "image": "/imgs/bichittos/miscelania/04_candy_fada.png"
+      },
+      {
+        "name": "candy",
+        "image": "/imgs/bichittos/miscelania/04_candy.png"
+      },
+      {
+        "name": "baby cry",
+        "image": "/imgs/bichittos/miscelania/baby_cry.png"
+      },
+      {
+        "name": "baby pacifier",
+        "image": "/imgs/bichittos/miscelania/baby_pacifier.png"
+      },
+      {
+        "name": "baby sick",
+        "image": "/imgs/bichittos/miscelania/baby_sick.png"
+      },
+      {
+        "name": "baby sleep",
+        "image": "/imgs/bichittos/miscelania/baby_sleep.png"
+      }
+    ]
   }
 }

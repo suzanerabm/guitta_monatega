@@ -1,6 +1,7 @@
 'use client';
 import { useRef, useState } from 'react';
 import { Box, Flex, Text, chakra } from '@chakra-ui/react';
+import { useLocale } from 'next-intl';
 import { LazyVideo } from '@/components/LazyVideo';
 import type { BichittoVideo } from '@/data/bichittos';
 
@@ -22,6 +23,7 @@ export function BichittoVideoCarousel({
   color,
   'data-testid': testId,
 }: BichittoVideoCarouselProps) {
+  const locale = useLocale() === 'en' ? 'en' : 'pt';
   const [index, setIndex] = useState(0);
   const touchStartX = useRef<number | null>(null);
 
@@ -44,6 +46,7 @@ export function BichittoVideoCarousel({
   };
 
   const current = videos[index];
+  const currentLabel = current.label[locale] || current.label.pt;
   const multiple = videos.length > 1;
 
   return (
@@ -93,7 +96,7 @@ export function BichittoVideoCarousel({
             key={current.src}
             src={current.src}
             poster={current.poster}
-            alt={current.label}
+            alt={currentLabel}
             fit="cover"
             playOn="visible"
           />
@@ -113,7 +116,7 @@ export function BichittoVideoCarousel({
               background: 'linear-gradient(180deg, transparent, rgba(0,0,0,0.6))',
             }}
           >
-            {current.label}
+            {currentLabel}
           </Text>
         </Box>
 

@@ -9,6 +9,16 @@ export interface CreatureStory {
   name: Bilingual<string>;
   text: Bilingual<string[]>;
   panel: { story: Bilingual<string[]> };
+  carousel?: CreatureCarouselItem[];
+}
+
+export interface CreatureCarouselItem {
+  /** Nome usado como legenda e como chave para as traduções existentes. */
+  name: string;
+  /** Caminho da imagem dentro de /public. */
+  image: string;
+  /** `false` esconde a imagem sem remover sua configuração. */
+  visible?: boolean;
 }
 
 const STORIES = stories as Record<CreatureId, CreatureStory>;
@@ -37,6 +47,11 @@ export function getCreaturePanelStory(id: CreatureId, locale: Locale): string[] 
   if (!s) return [];
   const v = s.panel.story[locale];
   return hasRealContent(v) ? v : s.panel.story.pt || [];
+}
+
+/** Imagens do carrossel, na mesma ordem em que aparecem no JSON. */
+export function getCreatureCarousel(id: CreatureId): CreatureCarouselItem[] {
+  return (STORIES[id]?.carousel ?? []).filter((item) => item.visible !== false);
 }
 
 /** Texto da seção "Livros" (não é uma criatura — chave própria em stories.json). */
