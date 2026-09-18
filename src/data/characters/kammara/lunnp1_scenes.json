@@ -46,7 +46,7 @@
     ]
   },
   {
-    "image": "/imgs/kammara/lunnp1/_scenes/regiao_leste_aerea.jpg",
+    "image": "/imgs/kammara/lunnp1/_scenes/regiao_leste_aerea_com_cidade.jpg",
     "label": {
       "pt": "Região leste: vista aérea",
       "en": "East region: aerial view"
@@ -57,14 +57,26 @@
     ]
   },
   {
-    "image": "/imgs/kammara/lunnp1/_scenes/regiao_leste.jpg",
+    "image": "/imgs/kammara/lunnp1/_scenes/regiao_leste_cidade_flutuante.jpg",
     "label": {
-      "pt": "Região leste",
-      "en": "East region"
+      "pt": "Naru'ei na região leste",
+      "en": "Naru'ei in the east region"
     },
     "appId": "lunnp1-scene-regiao-leste",
     "relations": [
       "lunnp1-topic-geografia"
+    ]
+  },
+  {
+    "image": "/imgs/kammara/lunnp1/_scenes/cidade_flutuante.jpg",
+    "label": {
+      "pt": "Naru'ei: cidade flutuante",
+      "en": "Naru'ei: floating city"
+    },
+    "appId": "lunnp1-scene-naru-ei-cidade-flutuante",
+    "relations": [
+      "lunnp1-topic-geografia",
+      "lunnp1-topic-cultura"
     ]
   },
   {
@@ -101,6 +113,18 @@
     ]
   },
   {
+    "image": "/imgs/kammara/lunnp1/_scenes/regiao_norte1.jpg",
+    "label": {
+      "pt": "Região norte sob as quatro luas",
+      "en": "North region beneath the four moons"
+    },
+    "appId": "lunnp1-scene-regiao-norte-sob-as-quatro-luas",
+    "relations": [
+      "lunnp1-topic-geografia",
+      "lunnp1-topic-ciclos-luas"
+    ]
+  },
+  {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_oeste_aerea.jpg",
     "label": {
       "pt": "Região oeste: vista aérea",
@@ -109,6 +133,20 @@
     "appId": "lunnp1-scene-regiao-oeste-vista-aerea",
     "relations": [
       "lunnp1-topic-geografia"
+    ]
+  },
+  {
+    "image": "/imgs/kammara/lunnp1/_scenes/regiao_oeste_veluma.jpg",
+    "label": {
+      "pt": "Veluma na região oeste",
+      "en": "Veluma in the west region"
+    },
+    "appId": "lunnp1-scene-veluma-na-regiao-oeste",
+    "relations": [
+      "lunnp1-character-veluma",
+      "lunnp1-video-veluma",
+      "lunnp1-topic-geografia",
+      "lunnp1-topic-flora-fauna"
     ]
   },
   {
