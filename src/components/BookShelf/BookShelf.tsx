@@ -1,4 +1,7 @@
+'use client';
+
 import { Box } from '@chakra-ui/react';
+import type { BoxProps } from '@chakra-ui/react';
 import { HorizontalCardStrip } from '@/components/HorizontalCardStrip';
 import { BookPanel, type BookPanelBook } from '@/components/BookPanel';
 
@@ -12,8 +15,6 @@ export interface BookShelfEntry {
 }
 
 interface BookShelfProps {
-  /** Section eyebrow shown on every card (e.g. "Livros"). */
-  title: string;
   books: BookShelfEntry[];
   /** Color of the prev/next arrows. Falls back to HorizontalCardStrip's default. */
   arrowColor?: string;
@@ -27,6 +28,16 @@ interface BookShelfProps {
   readLabel?: string;
   /** Label for the disabled "buy" button when a book has no buy link yet. */
   comingSoonLabel?: string;
+  /** Optional card width override for wider host layouts such as the home page. */
+  cardWidth?: BoxProps['width'];
+  /** Optional maximum card width override. */
+  cardMaxWidth?: BoxProps['maxWidth'];
+  /** Optional panel height override. */
+  cardHeight?: BoxProps['height'];
+  /** Whether each card displays its book title. */
+  showLabels?: boolean;
+  /** Optional background shared by this shelf's panels. */
+  panelBackground?: string;
   'data-testid'?: string;
 }
 
@@ -39,23 +50,29 @@ interface BookShelfProps {
  * elsewhere on the site (scenes, character galleries, drops).
  */
 export function BookShelf({
-  title,
   books,
   arrowColor,
   arrowVariant = 'plain',
   readLabel,
   comingSoonLabel,
+  cardWidth = { base: '80vw', sm: '340px' },
+  cardMaxWidth = '420px',
+  cardHeight,
+  showLabels = true,
+  panelBackground,
   'data-testid': testId,
 }: BookShelfProps) {
   return (
     <HorizontalCardStrip arrowColor={arrowColor} arrowVariant={arrowVariant} data-testid={testId}>
       {books.map((entry) => (
-        <Box key={entry.book.id} width={{ base: '80vw', sm: '340px' }} maxW="420px">
+        <Box key={entry.book.id} width={cardWidth} maxW={cardMaxWidth}>
           <BookPanel
-            title={title}
             book={entry.book}
             borderColor={entry.borderColor}
             textColor={entry.textColor}
+            height={cardHeight}
+            showLabel={showLabels}
+            background={panelBackground}
             readLabel={readLabel}
             comingSoonLabel={comingSoonLabel}
             onRead={entry.onRead}

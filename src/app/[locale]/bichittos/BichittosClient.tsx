@@ -489,7 +489,6 @@ export function BichittosClient({ data }: Props) {
                 {/* Box do LIVRO (capa + título + botão) */}
                 {books.length > 0 && books[0] && (
                   <BookPanel
-                    title={t('booksTitle')}
                     book={books[0]}
                     borderColor={boxBorder}
                     textColor={colors.textColor}
@@ -558,7 +557,6 @@ export function BichittosClient({ data }: Props) {
             />
             <Box position="relative" zIndex={1} py="2rem">
               <BookShelf
-                title={t('booksTitle')}
                 arrowColor={palettes.livros.colors[0]}
                 books={allBooks.map((b) => ({
                   book: {

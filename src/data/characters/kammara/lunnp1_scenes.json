@@ -143,6 +143,7 @@
     },
     "appId": "lunnp1-scene-veluma-na-regiao-oeste",
     "relations": [
+      "lunnp1-character-veluma",
       "lunnp1-video-veluma",
       "lunnp1-topic-geografia",
       "lunnp1-topic-flora-fauna"

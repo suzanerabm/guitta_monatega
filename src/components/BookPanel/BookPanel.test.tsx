@@ -25,30 +25,31 @@ const soon: BookPanelBook = {
 };
 
 describe('BookPanel', () => {
-  it('renders the section title', () => {
-    renderWithChakra(
-      <BookPanel title="Livros" book={readable} borderColor="#fff" textColor="#fff" />,
-    );
-    expect(screen.getByText('Livros')).toBeInTheDocument();
-  });
-
   it('renders the book label', () => {
     renderWithChakra(
-      <BookPanel title="Livros" book={readable} borderColor="#fff" textColor="#fff" />,
+      <BookPanel book={readable} borderColor="#fff" textColor="#fff" />,
     );
     expect(screen.getByText('Book One')).toBeInTheDocument();
   });
 
+  it('can hide the book label without hiding its cover', () => {
+    renderWithChakra(
+      <BookPanel book={readable} borderColor="#fff" textColor="#fff" showLabel={false} />,
+    );
+    expect(screen.queryByText('Book One')).not.toBeInTheDocument();
+    expect(screen.getByAltText('Book One')).toBeInTheDocument();
+  });
+
   it('renders the cover image when present', () => {
     renderWithChakra(
-      <BookPanel title="Livros" book={readable} borderColor="#fff" textColor="#fff" />,
+      <BookPanel book={readable} borderColor="#fff" textColor="#fff" />,
     );
     expect(screen.getByAltText('Book One')).toBeInTheDocument();
   });
 
   it('renders a buy link when book.buy is set', () => {
     renderWithChakra(
-      <BookPanel title="Livros" book={buyable} borderColor="#fff" textColor="#fff" />,
+      <BookPanel book={buyable} borderColor="#fff" textColor="#fff" />,
     );
     const link = screen.getByRole('link', { name: /Compre na Amazon/ });
     expect(link).toHaveAttribute('href', 'https://example.com');
@@ -58,7 +59,6 @@ describe('BookPanel', () => {
     const onRead = vi.fn();
     renderWithChakra(
       <BookPanel
-        title="Livros"
         book={readable}
         borderColor="#fff"
         textColor="#fff"
@@ -71,7 +71,7 @@ describe('BookPanel', () => {
 
   it('renders a "coming soon" pill (no buy link, no read button) when the book is "soon"', () => {
     renderWithChakra(
-      <BookPanel title="Livros" book={soon} borderColor="#fff" textColor="#fff" />,
+      <BookPanel book={soon} borderColor="#fff" textColor="#fff" />,
     );
     expect(screen.getByText('Em breve')).toBeInTheDocument();
     expect(screen.queryByRole('link')).not.toBeInTheDocument();
@@ -81,7 +81,6 @@ describe('BookPanel', () => {
   it('uses a custom comingSoonLabel when provided', () => {
     renderWithChakra(
       <BookPanel
-        title="Livros"
         book={soon}
         borderColor="#fff"
         textColor="#fff"
@@ -89,5 +88,32 @@ describe('BookPanel', () => {
       />,
     );
     expect(screen.getByText('Coming soon')).toBeInTheDocument();
+  });
+
+  it('renders an optional extra link', () => {
+    renderWithChakra(
+      <BookPanel
+        book={{
+          ...readable,
+          extraLink: {
+            url: '/pt/bichittos?bichitto=napcat',
+            label: 'Conheça o mundo do Napcat',
+            image: '/imgs/bichittos/napcat/napcat.png',
+            imageAlt: 'Napcat',
+          },
+        }}
+        borderColor="#fff"
+        textColor="#fff"
+      />,
+    );
+    expect(screen.getByRole('link', { name: /Conheça o mundo do Napcat/ })).toHaveAttribute(
+      'href',
+      '/pt/bichittos?bichitto=napcat',
+    );
+    expect(screen.getByAltText('Napcat')).toHaveAttribute(
+      'src',
+      '/imgs/bichittos/napcat/napcat.png',
+    );
+    expect(screen.getByTestId('book-extra-link-divider')).toBeInTheDocument();
   });
 });

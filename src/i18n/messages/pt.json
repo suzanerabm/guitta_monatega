@@ -143,6 +143,10 @@
       "label": "Galeria de Arte",
       "title": "Guitta Monatega",
       "desc": "Engenheira de Universos • Escritora • Ilustradora"
+    },
+    "books": {
+      "title": "Livros",
+      "description": "Histórias de Arte, Bichittos e Kammara reunidas em uma só galeria."
     }
   },
   "about": {

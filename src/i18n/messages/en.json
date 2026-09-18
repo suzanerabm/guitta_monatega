@@ -143,6 +143,10 @@
       "label": "ART GALLERY",
       "title": "Guitta Monatega",
       "desc": "World Systems Engineer • Writer • Illustrator"
+    },
+    "books": {
+      "title": "Books",
+      "description": "Stories from Art, Bichittos, and Kammara gathered in one gallery."
     }
   },
   "about": {

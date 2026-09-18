@@ -116,6 +116,11 @@ interface BookConfig {
   title?: { pt?: string; en?: string };
   buyUrl?: string;
   buyLabel?: string;
+  /** Botão opcional da galeria de livros da home. */
+  homeButtonUrl?: string;
+  homeButtonLabel?: string;
+  homeButtonImage?: string;
+  homeButtonImageAlt?: string;
 }
 
 export interface BookEntry {
@@ -124,6 +129,7 @@ export interface BookEntry {
   title: string;
   cover: string | null;
   buy: { url: string; label: string } | null;
+  homeButton: { url: string; label: string; image?: string; imageAlt?: string } | null;
 }
 
 function resolveBuy(cfg: BookConfig): { url: string; label: string } | null {
@@ -160,6 +166,14 @@ function resolveBooks(
       title: cfg.title?.[locale] ?? key.slice(prefix.length),
       cover: cfg.cover ?? null,
       buy: resolveBuy(cfg),
+      homeButton: cfg.homeButtonUrl
+        ? {
+            url: cfg.homeButtonUrl.trim(),
+            label: cfg.homeButtonLabel || 'Conheça este mundo',
+            image: cfg.homeButtonImage,
+            imageAlt: cfg.homeButtonImageAlt,
+          }
+        : null,
     }));
 }
 

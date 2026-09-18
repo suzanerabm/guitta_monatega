@@ -71,7 +71,13 @@ export function HorizontalCardStrip({
     if (!el) return;
     updateScrollState();
     el.addEventListener('scroll', updateScrollState, { passive: true });
-    return () => el.removeEventListener('scroll', updateScrollState);
+    const resizeObserver = new ResizeObserver(updateScrollState);
+    resizeObserver.observe(el);
+    if (el.firstElementChild) resizeObserver.observe(el.firstElementChild);
+    return () => {
+      el.removeEventListener('scroll', updateScrollState);
+      resizeObserver.disconnect();
+    };
   }, [updateScrollState]);
 
   const handleArrow = (dir: -1 | 1) => {
@@ -119,6 +125,7 @@ export function HorizontalCardStrip({
       <button
         type="button"
         aria-label="Previous"
+        disabled={!canPrev}
         onClick={() => handleArrow(-1)}
         data-testid={testId ? `${testId}-arrow-left` : 'hcs-arrow-left'}
         className="hcs-arrow"
@@ -162,6 +169,7 @@ export function HorizontalCardStrip({
       <button
         type="button"
         aria-label="Next"
+        disabled={!canNext}
         onClick={() => handleArrow(1)}
         data-testid={testId ? `${testId}-arrow-right` : 'hcs-arrow-right'}
         className="hcs-arrow"

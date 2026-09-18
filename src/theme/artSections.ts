@@ -104,3 +104,15 @@ export const artHero = {
   textColor: '#1a1d21',
   labelColor: '#999999',
 };
+
+// Home-only treatment for the combined book gallery. It reuses the first
+// black-and-white artwork without changing the books section on /art.
+export const homeBooksGallery = {
+  background:
+    'linear-gradient(rgba(222,215,204,0.86), rgba(222,215,204,0.86)), url("/imgs/art/black/1-arte.jpg")',
+  backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  panelBackground: 'rgba(245,240,232,0.78)',
+  titleColor: '#302d29',
+  techColor: 'rgba(48,45,41,0.66)',
+};

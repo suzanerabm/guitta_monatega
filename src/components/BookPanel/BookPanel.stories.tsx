@@ -18,7 +18,6 @@ const zecoCover = '/imgs/books/zeco/zeco-estacoes/cover.png';
 
 export const ReadableBook: Story = {
   args: {
-    title: 'Livros',
     borderColor: '#a78bfa',
     textColor: '#f5f0ff',
     book: {
@@ -33,7 +32,6 @@ export const ReadableBook: Story = {
 
 export const BuyableBook: Story = {
   args: {
-    title: 'Livros',
     borderColor: '#f58020',
     textColor: '#fece95',
     book: {
@@ -48,7 +46,6 @@ export const BuyableBook: Story = {
 
 export const SoonBook: Story = {
   args: {
-    title: 'Livros',
     borderColor: '#a78bfa',
     textColor: '#f5f0ff',
     book: {
@@ -63,7 +60,6 @@ export const SoonBook: Story = {
 
 export const NoCover: Story = {
   args: {
-    title: 'Livros',
     borderColor: '#a78bfa',
     textColor: '#f5f0ff',
     book: {

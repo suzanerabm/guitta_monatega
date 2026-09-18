@@ -806,7 +806,6 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
             />
             <Box my="3xl" px={{ base: '1.5rem', md: 0 }}>
               <BookShelf
-                title={booksTitle}
                 arrowColor={kammaraPalette.colors[0]}
                 arrowVariant="glyph"
                 comingSoonLabel={tCommon('soon')}

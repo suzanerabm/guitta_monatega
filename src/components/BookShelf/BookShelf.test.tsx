@@ -20,19 +20,13 @@ const entries: BookShelfEntry[] = [
 
 describe('BookShelf', () => {
   it('renders every book in the shelf', () => {
-    renderWithChakra(<BookShelf title="Livros" books={entries} />);
+    renderWithChakra(<BookShelf books={entries} />);
     expect(screen.getByText('Book One')).toBeInTheDocument();
     expect(screen.getByText('Book Two')).toBeInTheDocument();
   });
 
-  it('renders the shared title on each card', () => {
-    renderWithChakra(<BookShelf title="Livros" books={entries} />);
-    const titles = screen.getAllByText('Livros');
-    expect(titles).toHaveLength(2);
-  });
-
   it('calls the correct book onRead when its read button is clicked', () => {
-    renderWithChakra(<BookShelf title="Livros" books={entries} />);
+    renderWithChakra(<BookShelf books={entries} />);
     // Both books lack `buy`, so both render a "read" button — one per card.
     const readButtons = screen.getAllByRole('button', { name: /Ler história/ });
     expect(readButtons).toHaveLength(2);
@@ -43,7 +37,7 @@ describe('BookShelf', () => {
   });
 
   it('scrolls with prev/next arrows present', () => {
-    renderWithChakra(<BookShelf title="Livros" books={entries} data-testid="shelf" />);
+    renderWithChakra(<BookShelf books={entries} data-testid="shelf" />);
     expect(screen.getByTestId('shelf-arrow-left')).toBeInTheDocument();
     expect(screen.getByTestId('shelf-arrow-right')).toBeInTheDocument();
   });

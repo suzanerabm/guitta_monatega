@@ -18,7 +18,6 @@ const zecoCover = '/imgs/books/zeco/zeco-estacoes/cover.png';
 
 export const FewBooks: Story = {
   args: {
-    title: 'Livros',
     books: [
       {
         book: { id: 'b1', image: kammaraCover, alt: 'Saga em ORF-V', label: 'Saga em ORF-V' },
@@ -36,7 +35,6 @@ export const FewBooks: Story = {
 
 export const ManyBooks: Story = {
   args: {
-    title: 'Livros',
     books: Array.from({ length: 10 }, (_, i) => ({
       book: {
         id: `book-${i}`,

@@ -207,7 +207,6 @@ export function ArtClient({ sections, books }: Props) {
                 {booksTechnique}
               </Text>
               <BookShelf
-                title={booksTitle}
                 arrowColor={booksMeta.titleColor}
                 comingSoonLabel={tCommon('soon')}
                 books={books.map((b) => ({
