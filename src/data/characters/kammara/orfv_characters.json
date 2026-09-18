@@ -478,7 +478,7 @@
         }
       }
     ],
-    "visible": false,
+    "visible": true,
     "appId": "orfv-character-velo"
   },
   {
