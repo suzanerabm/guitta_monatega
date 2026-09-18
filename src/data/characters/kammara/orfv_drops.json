@@ -26,6 +26,19 @@
       "orfv-scene-festival"
     ]
   },
+   {
+    "video": "/imgs/kammara/orfv/_videos/velo_e_maelik.mp4",
+    "poster": "/imgs/kammara/orfv/_videos/velo_e_maelik_poster.jpg",
+    "label": {
+      "pt": "Velo e Maelik",
+      "en": "Velo and Maelik"
+    },
+    "appId": "orfv-video-velo-e-maelik",
+    "relations": [
+      "orfv-character-velo",
+      "orfv-character-maelik"
+    ]
+  },
   {
     "video": "/imgs/kammara/orfv/_videos/zupi_nadando.mp4",
     "poster": "/imgs/kammara/orfv/_videos/zupi_nadando_poster.jpg",
