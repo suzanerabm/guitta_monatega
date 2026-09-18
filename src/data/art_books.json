@@ -28,7 +28,8 @@
       "title": { "pt": "Mundos Imaginários - Livro de Colorir" },
       "homeButtonUrl": "/art",
       "homeButtonLabel": "Conheça mais sobre Arte",
-       "buyUrl": "www.kammara.com",
+      "homeButtonImage": "/imgs/books/art/Coloring_Book/bichitto_art.png",
+      "buyUrl": "www.kammara.com",
       "buyLabel": "Compre na Amazon"
     },
     "art/coloring-book-en": {
@@ -37,7 +38,8 @@
       "cover": "/imgs/books/art/Coloring_Book/capa_arte_en.png",
       "title": { "en": "Imaginary Worlds - Coloring Book" },
       "homeButtonUrl": "/art",
-      "homeButtonLabel": "Discover the world of Art",
+      "homeButtonLabel": "Discover more about Art",
+      "homeButtonImage": "/imgs/books/art/Coloring_Book/bichitto_art.png",
       "buyUrl": "www.kammara.com",
       "buyLabel": "Buy on Amazon"
     }
