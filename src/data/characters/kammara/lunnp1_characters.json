@@ -1484,7 +1484,7 @@
         }
       }
     ],
-    "visible": false,
+    "visible": true,
     "appId": "lunnp1-character-veluma",
     "relations": [
       "lunnp1-scene-veluma-na-regiao-oeste",
