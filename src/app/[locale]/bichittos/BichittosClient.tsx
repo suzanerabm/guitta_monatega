@@ -430,6 +430,7 @@ export function BichittosClient({ data }: Props) {
                         flexShrink={0}
                         width={{ base: '64px', md: '76px' }}
                         height={{ base: '64px', md: '76px' }}
+                        p="xs"
                         borderRadius="lg"
                         overflow="hidden"
                       >
@@ -438,7 +439,7 @@ export function BichittosClient({ data }: Props) {
                           alt={stickers[0].alt}
                           width="100%"
                           height="100%"
-                          objectFit="cover"
+                          objectFit="contain"
                         />
                       </Box>
                     )}
