@@ -3,6 +3,7 @@
     "back": "back",
     "siteTitle": "Guitta Monatega",
     "footerAbout": "guitta monatega",
+    "footerLicensing": "Licensing & Partnerships",
     "footerPrivacy": "privacy",
     "footerCopyright": "© Guitta Monatega. All rights reserved",
     "soon": "coming soon",
@@ -190,7 +191,23 @@
     ],
     "declaration": "Where art and computing meet in balance.",
     "universesLabel": "Universes",
-    "contactLabel": "Contact"
+    "contactLabel": "Contact",
+    "contactEmail": "hello@guittamonategastudio.com"
+  },
+  "licensing": {
+    "pageTitle": "Licensing & Partnerships — Guitta Monatega",
+    "heroLabel": "Kammara",
+    "heroTitle": "Licensing & Partnerships",
+    "heroSub": "Explore opportunities to bring the Kammara universe to new audiences.",
+    "title": "The universe",
+    "intro": "Kammara is an original illustrated sci-fi/fantasy universe created by Guitta Monatega Studio, developed across books, a bilingual website, an interactive app/wiki, and an expanding archive of characters, planets, species, and story arcs.",
+    "sections": [
+      { "num": "02", "tag": "Opportunities", "items": ["Publishing partnerships", "Animation and series development", "Interactive media", "Licensing and merchandise", "Editorial and creative collaborations"] },
+      { "num": "03", "tag": "Existing assets", "items": ["Book One", "Bilingual universe website", "Interactive app/wiki", "200+ characters", "Multiple planets and species", "Extensive visual archive", "Expandable story arcs"] }
+    ],
+    "contactLabel": "Contact",
+    "contactBody": "For licensing, publishing, studio, or partnership inquiries, contact Guitta Monatega Studio.",
+    "contactEmail": "hello@guittamonategastudio.com"
   },
   "bichittos": {
     "pageTitle": "Bichittos — Guitta Monatega",
@@ -355,6 +372,6 @@
         "body": "For privacy questions, licensing, authorized use, partnerships, or removal requests, please reach out via the email below."
       }
     ],
-    "contact": "guitta.monatega@gmail.com"
+    "contact": "hello@guittamonategastudio.com"
   }
 }
