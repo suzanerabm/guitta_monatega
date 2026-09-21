@@ -75,7 +75,7 @@ export function Footer({
             bg={tintColor ? 'textOverlayStrong' : 'borderColor'}
             opacity={0.6}
           />
-          <NextLink href={licensingPath} style={{ ...linkStyle, textTransform: 'none' }}>
+          <NextLink href={licensingPath} style={linkStyle}>
             {licensingLabel}
           </NextLink>
         </Flex>
