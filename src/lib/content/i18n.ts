@@ -21,3 +21,12 @@ const MESSAGES: Record<Locale, typeof ptMessages> = {
 export function getWordDictionary(locale: Locale): Record<string, string> {
 	return (MESSAGES[locale]?.common?.words ?? {}) as Record<string, string>;
 }
+
+/**
+ * O bloco inteiro de mensagens de um idioma. O app Android monta a página do
+ * universo e os títulos das seções a partir daqui, então precisa do bloco, não
+ * de uma chave por vez.
+ */
+export function getMessages(locale: Locale): typeof ptMessages {
+	return MESSAGES[locale] ?? MESSAGES.pt;
+}

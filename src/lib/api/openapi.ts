@@ -97,6 +97,11 @@ export const openApiDocument = {
     { name: 'Kammara', description: 'Mundos, progresso, eventos e mosaico.' },
     { name: 'Bichittos', description: 'Criaturas e seus livros.' },
     { name: 'Arte', description: 'Galerias de arte por técnica.' },
+    {
+      name: 'App',
+      description:
+        'O que o app Android precisa e as outras rotas não carregam.',
+    },
   ],
   paths: {
     '/worlds': {
@@ -180,6 +185,22 @@ export const openApiDocument = {
         operationId: 'listArtSections',
         responses: {
           200: okJson('Seções de arte.', '#/components/schemas/ArtResponse'),
+          304: NOT_MODIFIED,
+        },
+      },
+    },
+    '/app-overlay': {
+      get: {
+        tags: ['App'],
+        summary: 'Dados exclusivos do app',
+        description:
+          'Conexões entre verbetes, a página do universo, os livros de Kammara, privacidade, subtítulos de seção e os contadores de "em breve". Não aceita `locale`: vem nos dois idiomas, porque o app guarda os dois no mesmo catálogo e troca de idioma sem rede.',
+        operationId: 'getAppOverlay',
+        responses: {
+          200: okJson(
+            'Dados de apoio do app, nos dois idiomas.',
+            '#/components/schemas/AppOverlay',
+          ),
           304: NOT_MODIFIED,
         },
       },
@@ -540,6 +561,126 @@ export const openApiDocument = {
         properties: {
           locale: { $ref: '#/components/schemas/Locale' },
           bichitto: { $ref: '#/components/schemas/Bichitto' },
+        },
+      },
+      Localized: {
+        type: 'object',
+        description: 'Um texto nos dois idiomas.',
+        required: ['pt', 'en'],
+        properties: { pt: { type: 'string' }, en: { type: 'string' } },
+      },
+      LocalizedBody: {
+        type: 'object',
+        description: 'Parágrafos nos dois idiomas.',
+        required: ['pt', 'en'],
+        properties: {
+          pt: { type: 'array', items: { type: 'string' } },
+          en: { type: 'array', items: { type: 'string' } },
+        },
+      },
+      OverlayBook: {
+        type: 'object',
+        required: ['id', 'title', 'description', 'body', 'cover', 'buyUrl', 'onlyLocale'],
+        properties: {
+          id: { type: 'string' },
+          title: { $ref: '#/components/schemas/Localized' },
+          description: { $ref: '#/components/schemas/Localized' },
+          body: { $ref: '#/components/schemas/LocalizedBody' },
+          cover: { $ref: '#/components/schemas/MediaUrl' },
+          buyUrl: {
+            type: 'string',
+            description: 'Vazio quando a edição ainda não está à venda.',
+          },
+          onlyLocale: {
+            type: 'string',
+            description:
+              '`pt` ou `en` quando a edição só existe num idioma; vazio quando existe nos dois.',
+          },
+        },
+      },
+      OverlayLegalDocument: {
+        type: 'object',
+        required: ['title', 'lastUpdate', 'intro', 'sections', 'contact', 'url'],
+        properties: {
+          title: { type: 'string' },
+          lastUpdate: { type: 'string' },
+          intro: { type: 'string' },
+          sections: {
+            type: 'array',
+            items: {
+              type: 'object',
+              required: ['tag', 'body'],
+              properties: { tag: { type: 'string' }, body: { type: 'string' } },
+            },
+          },
+          contact: { type: 'string' },
+          url: { type: 'string', description: 'A mesma política no site.' },
+        },
+      },
+      AppOverlay: {
+        type: 'object',
+        required: [
+          'schemaVersion',
+          'universe',
+          'messages',
+          'relations',
+          'books',
+          'legal',
+          'sectionHeaders',
+          'comingSoon',
+        ],
+        properties: {
+          schemaVersion: { type: 'integer', enum: [1] },
+          universe: {
+            type: 'object',
+            description: 'A abertura da seção Kammara, que no app é uma página.',
+            required: ['title', 'summary', 'body'],
+            properties: {
+              title: { $ref: '#/components/schemas/Localized' },
+              summary: { $ref: '#/components/schemas/Localized' },
+              body: { $ref: '#/components/schemas/LocalizedBody' },
+            },
+          },
+          messages: {
+            type: 'object',
+            description: 'Bloco `kammara` das mensagens de i18n, por idioma.',
+          },
+          relations: {
+            type: 'object',
+            description:
+              'Grafo de conexões: id do verbete para os ids ligados a ele. Editorial — não é derivado do texto.',
+            additionalProperties: { type: 'array', items: { type: 'string' } },
+          },
+          books: { type: 'array', items: { $ref: '#/components/schemas/OverlayBook' } },
+          legal: {
+            type: 'object',
+            required: ['pt', 'en'],
+            properties: {
+              pt: { $ref: '#/components/schemas/OverlayLegalDocument' },
+              en: { $ref: '#/components/schemas/OverlayLegalDocument' },
+            },
+          },
+          sectionHeaders: {
+            type: 'object',
+            description: 'Subtítulo de cada seção do app, com os títulos que o resolvem.',
+          },
+          comingSoon: {
+            type: 'object',
+            required: ['books', 'characters', 'planets'],
+            properties: {
+              books: {
+                type: 'object',
+                required: ['pt', 'en'],
+                properties: { pt: { type: 'integer' }, en: { type: 'integer' } },
+              },
+              characters: {
+                type: 'integer',
+                description:
+                  'Todos os registros autorais, inclusive os ainda não publicados.',
+              },
+              planets: { type: 'integer' },
+            },
+          },
         },
       },
       ArtResponse: {

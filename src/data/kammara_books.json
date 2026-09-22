@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "books": [
+    {
+      "id": "saga-em-orf-v-volume-1",
+      "title": {
+        "pt": "Saga em ORF-V - Volume 1",
+        "en": ""
+      },
+      "description": {
+        "pt": "E se as invenções da humanidade continuassem evoluindo em outro universo?\n\nBem-vindo ao Kammara — um universo com incontáveis planetas, cada um com seu povo, seu jeito de viver e uma história própria. Nesta primeira saga, embarque por ORF-V, o planeta onde tudo se conecta, e conheça povos que se encontram, se ajudam e se enfrentam quando seus mundos se cruzam.\n\nUma aventura ilustrada sobre coragem, amizade e o que nos torna quem somos — para jovens leitores e para todos que nunca deixaram de imaginar.",
+        "en": ""
+      },
+      "body": {
+        "pt": [],
+        "en": []
+      },
+      "cover": "/imgs/books/kammara/saga-orf-v/capa_70x10.jpg",
+      "buyUrl": "https://www.kammara.com",
+      "onlyLocale": "pt"
+    },
+    {
+      "id": "saga-in-orf-v",
+      "title": {
+        "pt": "",
+        "en": "Saga in ORF-V"
+      },
+      "description": {
+        "pt": "",
+        "en": ""
+      },
+      "body": {
+        "pt": [],
+        "en": []
+      },
+      "cover": "/imgs/books/kammara/saga-orf-v/capa_70x10_en.jpg",
+      "buyUrl": "",
+      "onlyLocale": "en"
+    },
+    {
+      "id": "saga-em-digg-volume-2",
+      "title": {
+        "pt": "Saga em Digg - Volume 2",
+        "en": ""
+      },
+      "description": {
+        "pt": "",
+        "en": ""
+      },
+      "body": {
+        "pt": [],
+        "en": []
+      },
+      "cover": "/imgs/books/kammara/saga-orf-v/capa_70x10_2.jpg",
+      "buyUrl": "",
+      "onlyLocale": "pt"
+    }
+  ]
+}

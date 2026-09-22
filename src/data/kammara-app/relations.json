@@ -1,0 +1,1120 @@
+{
+  "schemaVersion": 1,
+  "relations": {
+    "lunnp1-character-eru-rin": [
+      "lunnp1-character-brisa",
+      "lunnp1-character-tzi-ki"
+    ],
+    "lunnp1-character-brisa": [
+      "lunnp1-character-eru-rin"
+    ],
+    "lunnp1-character-lum-esha": [
+      "lunnp1-character-flor-lume"
+    ],
+    "lunnp1-character-flor-lume": [
+      "lunnp1-character-lum-esha"
+    ],
+    "lunnp1-character-tzi-ki": [
+      "lunnp1-character-eru-rin"
+    ],
+    "lunnp1-topic-origem": [
+      "lunnp1-topic-flora-fauna"
+    ],
+    "lunnp1-topic-cultura": [
+      "lunnp1-scene-crianca-brincando",
+      "lunnp1-scene-eru-rin-e-lum-esha-plantando"
+    ],
+    "lunnp1-topic-flora-fauna": [
+      "lunnp1-character-brisa",
+      "lunnp1-character-flor-lume"
+    ],
+    "lunnp1-scene-crianca-brincando": [
+      "lunnp1-character-eru-rin"
+    ],
+    "lunnp1-scene-eru-rin-e-lum-esha-plantando": [
+      "lunnp1-character-eru-rin",
+      "lunnp1-character-lum-esha",
+      "lunnp1-topic-flora-fauna"
+    ],
+    "lunnp1-scene-nalum-pequenas-esferas-que-flutuam": [
+      "lunnp1-topic-flora-fauna"
+    ],
+    "lunnp1-scene-regiao-do-extremo-norte": [
+      "lunnp1-topic-geografia"
+    ],
+    "lunnp1-scene-regiao-leste-vista-aerea": [
+      "lunnp1-topic-geografia"
+    ],
+    "lunnp1-scene-regiao-leste": [
+      "lunnp1-topic-geografia"
+    ],
+    "lunnp1-scene-regiao-norte-vista-aerea-1": [
+      "lunnp1-topic-geografia"
+    ],
+    "lunnp1-scene-regiao-norte-vista-aerea-2": [
+      "lunnp1-topic-geografia"
+    ],
+    "lunnp1-scene-regiao-norte": [
+      "lunnp1-topic-geografia"
+    ],
+    "lunnp1-scene-regiao-oeste-vista-aerea": [
+      "lunnp1-topic-geografia"
+    ],
+    "lunnp1-scene-regiao-sul-vista-aerea": [
+      "lunnp1-topic-geografia"
+    ],
+    "lunnp1-scene-regiao-sul": [
+      "lunnp1-topic-geografia"
+    ],
+    "lunnp1-video-eru-rin-procurando-brisa": [
+      "lunnp1-character-eru-rin",
+      "lunnp1-character-brisa"
+    ],
+    "lunnp1-video-tzi-ki-e-lumira-brincando": [
+      "lunnp1-character-tzi-ki"
+    ],
+    "lunnp1-video-veluma": [
+      "lunnp1-topic-flora-fauna"
+    ],
+    "lunnp1-video-eru-rin-acenando": [
+      "lunnp1-character-eru-rin"
+    ],
+    "lunnp1-video-plantas-flutuantes": [
+      "lunnp1-topic-flora-fauna",
+      "lunnp1-scene-crianca-brincando",
+      "lunnp1-scene-nalum-pequenas-esferas-que-flutuam"
+    ],
+    "eni4-planet-eni-4": [
+      "eni4-character-troy"
+    ],
+    "eni4-character-vexon": [
+      "eni4-character-node-0"
+    ],
+    "eni4-topic-origem": [
+      "eni4-character-node-0"
+    ],
+    "eni4-topic-cultura": [
+      "eni4-character-node-0"
+    ],
+    "eni4-topic-geografia": [
+      "eni4-character-node-0",
+      "eni4-character-bug"
+    ],
+    "eni4-topic-energia-sobrevivencia": [
+      "eni4-character-node-0",
+      "eni4-character-troy",
+      "eni4-character-virus"
+    ],
+    "eni4-topic-protocolos-de-ataque": [
+      "eni4-character-troy",
+      "eni4-character-virus",
+      "eni4-character-vexon"
+    ],
+    "eni4-topic-o-codigo-dos-virus-asm": [
+      "eni4-character-node-0",
+      "eni4-character-virus",
+      "eni4-character-vexon"
+    ],
+    "eni4-scene-dois-sois": [
+      "eni4-topic-geografia"
+    ],
+    "eni4-scene-palacio-de-node-0-1": [
+      "eni4-character-node-0"
+    ],
+    "eni4-scene-palacio-de-node-0-3": [
+      "eni4-character-node-0"
+    ],
+    "eni4-scene-palacio-de-node-0-4": [
+      "eni4-character-node-0"
+    ],
+    "eni4-scene-entrada-do-palacio-de-node-0": [
+      "eni4-character-node-0"
+    ],
+    "eni4-scene-corredor-do-palacio-de-node-0": [
+      "eni4-character-node-0"
+    ],
+    "eni4-scene-porta-do-palacio-de-node-0": [
+      "eni4-character-node-0"
+    ],
+    "eni4-scene-interior-do-palacio-de-node-0-8": [
+      "eni4-character-node-0"
+    ],
+    "eni4-scene-interior-do-palacio-de-node-0-9": [
+      "eni4-character-node-0"
+    ],
+    "eni4-scene-entrada-da-camara-de-node-0": [
+      "eni4-character-node-0"
+    ],
+    "eni4-scene-interior-da-camara-de-node-0": [
+      "eni4-character-node-0"
+    ],
+    "eni4-scene-fabrica-burn": [
+      "eni4-topic-energia-sobrevivencia",
+      "eni4-character-troy",
+      "eni4-character-virus"
+    ],
+    "eni4-scene-muro-de-valvulas-formando-um-labirinto": [
+      "eni4-topic-geografia"
+    ],
+    "eni4-scene-frente-da-fabrica": [
+      "eni4-topic-energia-sobrevivencia"
+    ],
+    "eni4-scene-interior-da-fabrica": [
+      "eni4-topic-energia-sobrevivencia"
+    ],
+    "eni4-scene-planeta-em-corte": [
+      "eni4-topic-geografia"
+    ],
+    "eni4-scene-worms-na-zona-scorch": [
+      "eni4-topic-geografia"
+    ],
+    "eni4-scene-zona-scorch": [
+      "eni4-topic-geografia"
+    ],
+    "eni4-scene-tuneis-com-worms-na-zona-crack-15": [
+      "eni4-topic-geografia"
+    ],
+    "eni4-scene-tuneis-com-worms-na-zona-crack-16": [
+      "eni4-topic-geografia"
+    ],
+    "eni4-scene-zona-sink": [
+      "eni4-topic-geografia"
+    ],
+    "eni4-scene-megavalvulas-onde-vivem-virus-e-bugs": [
+      "eni4-topic-geografia",
+      "eni4-character-virus",
+      "eni4-character-bug"
+    ],
+    "eni4-scene-bugs-na-sucata": [
+      "eni4-character-bug",
+      "eni4-topic-geografia"
+    ],
+    "eni4-video-palacio-de-node-0": [
+      "eni4-character-node-0",
+      "eni4-scene-palacio-de-node-0-1",
+      "eni4-scene-palacio-de-node-0-3",
+      "eni4-scene-palacio-de-node-0-4",
+      "eni4-scene-entrada-do-palacio-de-node-0",
+      "eni4-scene-corredor-do-palacio-de-node-0",
+      "eni4-scene-porta-do-palacio-de-node-0",
+      "eni4-scene-interior-do-palacio-de-node-0-8",
+      "eni4-scene-interior-do-palacio-de-node-0-9"
+    ],
+    "eni4-video-tuneis-com-worms": [
+      "eni4-topic-geografia",
+      "eni4-scene-worms-na-zona-scorch",
+      "eni4-scene-tuneis-com-worms-na-zona-crack-15",
+      "eni4-scene-tuneis-com-worms-na-zona-crack-16"
+    ],
+    "eni4-video-marcha-dos-aracnes": [
+      "eni4-scene-muro-de-valvulas-formando-um-labirinto"
+    ],
+    "eni4-video-fabrica-burn": [
+      "eni4-topic-energia-sobrevivencia",
+      "eni4-scene-fabrica-burn",
+      "eni4-scene-frente-da-fabrica",
+      "eni4-scene-interior-da-fabrica"
+    ],
+    "eni4-video-camara-de-calor-de-node-0": [
+      "eni4-character-node-0",
+      "eni4-scene-entrada-da-camara-de-node-0",
+      "eni4-scene-interior-da-camara-de-node-0"
+    ],
+    "eni4-video-regiao-dos-lixoes-de-robos": [
+      "eni4-topic-geografia",
+      "eni4-scene-bugs-na-sucata"
+    ],
+    "triplec-planet-triplec": [
+      "triplec-video-bunniets"
+    ],
+    "triplec-character-volpita": [
+      "triplec-topic-o-cshift"
+    ],
+    "triplec-character-seal-beans": [
+      "triplec-topic-os-bunniets"
+    ],
+    "triplec-character-treezi": [
+      "triplec-topic-os-bunniets",
+      "triplec-topic-a-niul-forest"
+    ],
+    "triplec-character-pluma": [
+      "triplec-topic-a-niul-forest"
+    ],
+    "triplec-character-nilo": [
+      "triplec-topic-a-niul-forest",
+      "triplec-scene-floresta-niul"
+    ],
+    "triplec-character-espirola": [
+      "triplec-topic-os-bunniets",
+      "triplec-topic-a-niul-forest",
+      "triplec-scene-floresta-niul"
+    ],
+    "triplec-character-soar": [
+      "triplec-topic-os-bunniets"
+    ],
+    "triplec-character-camu": [
+      "triplec-topic-a-niul-forest"
+    ],
+    "triplec-character-zarkol-9": [
+      "triplec-topic-a-niul-forest"
+    ],
+    "triplec-character-omi": [
+      "triplec-topic-a-niul-forest"
+    ],
+    "triplec-character-vexa": [
+      "triplec-topic-a-niul-forest"
+    ],
+    "triplec-character-lai": [
+      "triplec-topic-a-niul-forest"
+    ],
+    "triplec-topic-origem": [
+      "triplec-topic-a-niul-forest",
+      "triplec-topic-os-bunniets"
+    ],
+    "triplec-topic-a-niul-forest": [
+      "triplec-scene-floresta-niul"
+    ],
+    "triplec-topic-os-bunniets": [
+      "triplec-video-bunniets",
+      "triplec-scene-tres-bunniets"
+    ],
+    "triplec-topic-o-cshift": [
+      "triplec-scene-portal-cshift",
+      "triplec-scene-regiao-de-mesh-ativando-o-cshift"
+    ],
+    "triplec-topic-riquezas-naturais": [
+      "triplec-malloc-character-mewlites",
+      "triplec-malloc-character-krystos",
+      "triplec-malloc-character-estakors"
+    ],
+    "triplec-topic-a-triade-e-o-protocol-auryn": [
+      "triplec-character-omi",
+      "triplec-character-vexa",
+      "triplec-character-lai"
+    ],
+    "triplec-topic-o-criptokemita": [
+      "triplec-scene-protecao-e-criptografia"
+    ],
+    "triplec-scene-vista-aerea-do-planeta": [
+      "triplec-topic-origem"
+    ],
+    "triplec-scene-regiao-de-malloc-cotidiano": [
+      "triplec-malloc-topic-cultura",
+      "triplec-character-nilo"
+    ],
+    "triplec-scene-regiao-de-mesh-cotidiano": [
+      "triplec-mesh-topic-cultura"
+    ],
+    "triplec-scene-regiao-de-sharp-cotidiano": [
+      "triplec-sharp-topic-cultura"
+    ],
+    "triplec-scene-regiao-de-malloc-interior-de-uma-casa": [
+      "triplec-malloc-topic-geografia"
+    ],
+    "triplec-scene-regiao-de-mesh-praca": [
+      "triplec-mesh-topic-geografia"
+    ],
+    "triplec-scene-regiao-de-sharp-praca": [
+      "triplec-sharp-topic-geografia"
+    ],
+    "triplec-scene-regiao-de-malloc-vista-da-cidade": [
+      "triplec-malloc-topic-geografia"
+    ],
+    "triplec-scene-regiao-de-mesh-vista-da-cidade": [
+      "triplec-mesh-topic-geografia"
+    ],
+    "triplec-scene-regiao-de-sharp-energia": [
+      "triplec-sharp-topic-energia"
+    ],
+    "triplec-scene-regiao-de-sharp-animais-de-estimacao": [
+      "triplec-sharp-topic-bunniets",
+      "triplec-sharp-character-doope",
+      "triplec-sharp-character-tilu"
+    ],
+    "triplec-scene-bunniet-de-malloc-correndo-na-floresta": [
+      "triplec-malloc-topic-bunniets",
+      "triplec-topic-a-niul-forest"
+    ],
+    "triplec-scene-lum-esha-visita-luma-val": [
+      "lunnp1-character-lum-esha",
+      "triplec-malloc-character-luma-val",
+      "triplec-topic-a-triade-e-o-protocol-auryn"
+    ],
+    "triplec-scene-eru-rin-com-neran-vel": [
+      "lunnp1-character-eru-rin",
+      "triplec-sharp-character-neran-vel",
+      "triplec-topic-a-triade-e-o-protocol-auryn"
+    ],
+    "triplec-video-bunniets": [
+      "triplec-scene-tres-bunniets"
+    ],
+    "triplec-video-familia-de-nilo": [
+      "triplec-character-nilo",
+      "triplec-topic-a-niul-forest",
+      "triplec-scene-regiao-de-malloc-cotidiano"
+    ],
+    "triplec-video-lum-esha-encontra-luma-val": [
+      "lunnp1-character-lum-esha",
+      "triplec-malloc-character-luma-val",
+      "triplec-scene-lum-esha-visita-luma-val",
+      "triplec-topic-a-triade-e-o-protocol-auryn"
+    ],
+    "triplec-video-soar-voando": [
+      "triplec-character-soar"
+    ],
+    "triplec-video-criaturas-de-triplec": [
+      "triplec-character-treezi",
+      "triplec-character-pluma",
+      "triplec-character-seal-beans",
+      "triplec-character-ypito",
+      "triplec-topic-a-niul-forest"
+    ],
+    "orfv-topic-cultura": [
+      "orfv-character-maelik",
+      "orfv-scene-festival",
+      "orfv-video-lup-nul-fest"
+    ],
+    "orfv-topic-habitantes-elephpants": [
+      "orfv-character-orvian",
+      "orfv-character-maelik"
+    ],
+    "orfv-topic-geografia": [
+      "orfv-character-orvian",
+      "orfv-character-nuvin",
+      "orfv-character-zupi"
+    ],
+    "orfv-topic-perigos": [
+      "orfv-character-orvian",
+      "orfv-video-troys-atacando"
+    ],
+    "orfv-scene-vista-dos-fjorks-centrais": [
+      "orfv-topic-geografia"
+    ],
+    "orfv-scene-colina-central": [
+      "orfv-topic-geografia"
+    ],
+    "orfv-scene-iren-kor-na-vila-central": [
+      "triplec-malloc-character-iren-kor",
+      "orfv-topic-geografia"
+    ],
+    "orfv-scene-velo-dormindo-na-flor": [
+      "orfv-topic-geografia"
+    ],
+    "orfv-scene-zupi-dormindo-com-nuvin": [
+      "orfv-character-zupi",
+      "orfv-character-nuvin"
+    ],
+    "orfv-scene-vila-central": [
+      "orfv-topic-geografia"
+    ],
+    "orfv-scene-vila-leste": [
+      "orfv-topic-geografia"
+    ],
+    "orfv-scene-maelik-nos-fjorks-oeste": [
+      "orfv-character-maelik",
+      "orfv-topic-geografia"
+    ],
+    "orfv-scene-vila-norte": [
+      "orfv-topic-geografia"
+    ],
+    "orfv-scene-ceu-de-orf-v": [
+      "orfv-topic-geografia"
+    ],
+    "orfv-scene-noite-em-orf-v": [
+      "orfv-topic-geografia"
+    ],
+    "orfv-scene-regiao-sul-deserta-10": [
+      "orfv-topic-geografia",
+      "orfv-topic-perigos"
+    ],
+    "orfv-scene-regiao-sul-deserta-11": [
+      "orfv-topic-geografia",
+      "orfv-topic-perigos"
+    ],
+    "orfv-scene-festival": [
+      "orfv-character-maelik"
+    ],
+    "orfv-video-lup-nul-fest": [
+      "orfv-scene-festival",
+      "orfv-character-maelik"
+    ],
+    "orfv-video-maelik-a-caminho-do-festival": [
+      "orfv-character-maelik",
+      "orfv-scene-maelik-nos-fjorks-oeste",
+      "orfv-scene-festival"
+    ],
+    "orfv-video-zupi-nadando": [
+      "orfv-character-zupi"
+    ],
+    "orfv-video-brisa-ativando-o-protocolo": [
+      "lunnp1-character-brisa",
+      "orfv-character-orvian"
+    ],
+    "orfv-video-troys-atacando": [
+      "eni4-character-troy"
+    ],
+    "z1-character-zeus": [
+      "z1-topic-habitantes-castas"
+    ],
+    "z1-character-aruun": [
+      "z1-topic-habitantes-castas"
+    ],
+    "z1-character-kaal": [
+      "z1-topic-habitantes-castas"
+    ],
+    "z1-character-ren": [
+      "z1-topic-habitantes-castas"
+    ],
+    "z1-character-synn": [
+      "z1-topic-habitantes-castas"
+    ],
+    "z1-topic-origem": [
+      "eni4-character-node-0"
+    ],
+    "z1-topic-cultura": [
+      "z1-topic-linguagem"
+    ],
+    "z1-topic-geografia": [
+      "z1-character-zeus",
+      "z1-scene-salas-ancestrais",
+      "z1-scene-salao-perfurado"
+    ],
+    "z1-topic-linguagem": [
+      "eni4-topic-o-codigo-dos-virus-asm"
+    ],
+    "z1-topic-perigos": [
+      "z1-video-tempestades-de-curto-circuito",
+      "eni4-topic-o-codigo-dos-virus-asm"
+    ],
+    "z1-scene-estacao-torre": [
+      "z1-topic-geografia"
+    ],
+    "z1-scene-praca-central": [
+      "z1-topic-geografia"
+    ],
+    "z1-scene-praca-central-vista-aerea": [
+      "z1-topic-geografia"
+    ],
+    "z1-scene-a-vila-cubica": [
+      "z1-topic-geografia"
+    ],
+    "z1-scene-praca-da-vila": [
+      "z1-topic-geografia"
+    ],
+    "z1-scene-modbus-modelo-aberto": [
+      "z1-topic-geografia"
+    ],
+    "z1-scene-interior-da-estacao-torre": [
+      "z1-topic-geografia"
+    ],
+    "z1-scene-salas-ancestrais": [
+      "z1-character-zeus"
+    ],
+    "z1-scene-os-abismos-de-z1": [
+      "z1-topic-geografia",
+      "z1-character-zeus"
+    ],
+    "z1-scene-habitantes-conversando": [
+      "z1-topic-cultura",
+      "z1-character-aruun",
+      "z1-character-kaal"
+    ],
+    "z1-scene-modbus-lotado": [
+      "z1-topic-geografia",
+      "z1-character-ren"
+    ],
+    "z1-video-estacao-torre": [
+      "z1-topic-geografia",
+      "z1-scene-estacao-torre",
+      "z1-scene-interior-da-estacao-torre"
+    ],
+    "z1-video-tempestades-de-curto-circuito": [
+      "z1-character-aruun"
+    ],
+    "z1-video-cidade-em-movimento": [
+      "z1-topic-geografia",
+      "z1-scene-praca-central-vista-aerea",
+      "z1-scene-modbus-lotado",
+      "z1-character-ren"
+    ],
+    "z1-video-transporte-na-praca-central": [
+      "z1-topic-geografia",
+      "z1-scene-praca-central",
+      "z1-scene-praca-central-vista-aerea",
+      "z1-character-ren"
+    ],
+    "gotto-character-rema": [
+      "gotto-topic-habitantes-basiks"
+    ],
+    "gotto-character-pilo": [
+      "gotto-topic-habitantes-basiks"
+    ],
+    "gotto-character-jump": [
+      "gotto-topic-habitantes-basiks"
+    ],
+    "gotto-character-flipflop": [
+      "gotto-character-kirio"
+    ],
+    "gotto-character-lumi": [
+      "gotto-character-jump"
+    ],
+    "gotto-character-momo": [
+      "gotto-character-rema"
+    ],
+    "gotto-topic-origem": [
+      "gotto-topic-habitantes-basiks"
+    ],
+    "gotto-topic-cultura": [
+      "gotto-topic-habitantes-basiks"
+    ],
+    "gotto-topic-geografia": [
+      "gotto-character-daryun",
+      "gotto-scene-o-vale-da-escuta",
+      "gotto-scene-o-vale-do-reflexo"
+    ],
+    "gotto-topic-relacoes-com-outros-planetas": [
+      "eni4-character-node-0"
+    ],
+    "gotto-topic-perigos": [
+      "gotto-topic-ciclos-tempo"
+    ],
+    "gotto-scene-kirio-camuflado-no-vale-da-escuta": [
+      "gotto-character-kirio"
+    ],
+    "gotto-scene-o-cultivo-das-flores": [
+      "gotto-topic-geografia"
+    ],
+    "gotto-scene-eru-rin-conversa-com-rema": [
+      "lunnp1-character-eru-rin",
+      "gotto-character-rema"
+    ],
+    "gotto-scene-kirio-vigiando-a-vila-central": [
+      "gotto-character-kirio"
+    ],
+    "gotto-scene-a-vila-central": [
+      "gotto-topic-geografia"
+    ],
+    "gotto-scene-arredores-da-vila-central": [
+      "gotto-topic-geografia"
+    ],
+    "gotto-scene-vila-central-leste": [
+      "gotto-topic-geografia"
+    ],
+    "gotto-scene-rema-dormindo-na-vila-central-a-leste": [
+      "gotto-character-rema",
+      "gotto-character-flipflop"
+    ],
+    "gotto-scene-vila-central-oeste": [
+      "gotto-topic-geografia"
+    ],
+    "gotto-scene-vila-central-sul": [
+      "gotto-topic-geografia"
+    ],
+    "gotto-scene-a-vila-leste": [
+      "gotto-topic-geografia"
+    ],
+    "gotto-scene-a-vila-da-orla": [
+      "gotto-topic-geografia"
+    ],
+    "gotto-scene-jump-preparando-as-escamas": [
+      "gotto-character-jump"
+    ],
+    "gotto-scene-jump-trabalhando-as-escamas": [
+      "gotto-character-jump"
+    ],
+    "gotto-scene-kirio-comendo-com-rema": [
+      "gotto-character-kirio",
+      "gotto-character-rema"
+    ],
+    "gotto-scene-o-vale-da-escuta-outra-vista": [
+      "gotto-topic-geografia"
+    ],
+    "gotto-scene-flipflop-dormindo": [
+      "gotto-character-flipflop"
+    ],
+    "gotto-video-eru-rin-visita-rema": [
+      "lunnp1-character-eru-rin",
+      "gotto-character-rema",
+      "gotto-scene-eru-rin-conversa-com-rema"
+    ],
+    "gotto-video-o-reinicio-o-recomeco": [
+      "gotto-topic-ciclos-tempo"
+    ],
+    "gotto-video-daryun-nadando": [
+      "gotto-character-daryun"
+    ],
+    "gotto-video-kirio-o-vigia-do-morro": [
+      "gotto-character-kirio",
+      "gotto-scene-kirio-vigiando-a-vila-central"
+    ],
+    "digg-planet-digg": [
+      "digg-topic-diggers"
+    ],
+    "digg-character-nihrak": [
+      "digg-character-silko-o-ratao",
+      "digg-topic-diggers",
+      "digg-character-krovin",
+      "digg-scene-o-primeiro-bloco"
+    ],
+    "digg-character-silko-o-ratao": [
+      "digg-scene-o-primeiro-bloco"
+    ],
+    "digg-character-chmurka": [
+      "digg-topic-diggers"
+    ],
+    "digg-character-orvin": [
+      "digg-topic-diggers"
+    ],
+    "digg-character-krovin": [
+      "digg-topic-diggers"
+    ],
+    "digg-character-zin": [
+      "digg-topic-diggers"
+    ],
+    "digg-topic-origem": [
+      "digg-scene-o-primeiro-bloco"
+    ],
+    "digg-topic-cultura": [
+      "digg-topic-diggers"
+    ],
+    "digg-topic-geografia": [
+      "digg-character-nihrak",
+      "digg-character-silko-o-ratao",
+      "digg-scene-o-primeiro-bloco"
+    ],
+    "digg-topic-transporte-movimento": [
+      "digg-topic-diggers",
+      "digg-scene-o-primeiro-bloco"
+    ],
+    "digg-topic-relacoes-com-outros-planetas": [
+      "digg-topic-diggers",
+      "eni4-character-node-0"
+    ],
+    "digg-topic-perigos": [
+      "digg-topic-diggers"
+    ],
+    "digg-scene-os-blocos-flutuantes": [
+      "digg-topic-geografia"
+    ],
+    "digg-scene-um-bloco": [
+      "digg-topic-origem"
+    ],
+    "digg-scene-os-blocos-flutuantes-outra-vista": [
+      "digg-topic-geografia"
+    ],
+    "digg-scene-a-sala-do-trono-de-nihrak": [
+      "digg-character-nihrak"
+    ],
+    "digg-scene-chmurka-comendo": [
+      "digg-character-chmurka"
+    ],
+    "digg-scene-chmurka-em-bando": [
+      "digg-character-chmurka"
+    ],
+    "digg-scene-ao-redor-da-mesa": [
+      "digg-topic-diggers",
+      "digg-character-chmurka"
+    ],
+    "digg-scene-diggers-na-praca": [
+      "digg-topic-diggers",
+      "digg-character-chmurka",
+      "digg-character-orvin",
+      "digg-character-zin"
+    ],
+    "digg-scene-diggers-trabalhando": [
+      "digg-topic-diggers",
+      "digg-character-zin",
+      "digg-character-chmurka",
+      "digg-character-orvin"
+    ],
+    "digg-scene-o-ninho-do-zin": [
+      "digg-character-zin"
+    ],
+    "digg-scene-o-cadeirao-por-dentro": [
+      "digg-character-nihrak"
+    ],
+    "digg-scene-a-mina-de-kemita-em-corte": [
+      "digg-topic-geografia"
+    ],
+    "digg-scene-o-poco-da-mina": [
+      "digg-topic-geografia"
+    ],
+    "digg-scene-nihrak-no-trono-de-pedra": [
+      "digg-character-nihrak",
+      "digg-character-chmurka",
+      "digg-character-orvin"
+    ],
+    "digg-scene-o-interior-da-camara-da-mina": [
+      "digg-topic-geografia"
+    ],
+    "digg-video-nihrak-no-trono": [
+      "digg-character-nihrak",
+      "digg-scene-a-sala-do-trono-de-nihrak",
+      "digg-scene-nihrak-no-trono-de-pedra",
+      "digg-character-silko-o-ratao"
+    ],
+    "digg-video-chmurka-comendo": [
+      "digg-character-chmurka",
+      "digg-scene-chmurka-comendo"
+    ],
+    "digg-video-zin-protege-o-ninho": [
+      "digg-character-zin",
+      "digg-scene-o-ninho-do-zin"
+    ],
+    "digg-video-ratos-e-aranhas-de-silica-originarios-de-eni-4": [
+      "digg-scene-o-interior-da-camara-da-mina"
+    ],
+    "triplec-malloc-character-luma-val": [
+      "triplec-malloc-topic-bunniets",
+      "triplec-malloc-region-malloc"
+    ],
+    "triplec-malloc-character-iren-kor": [
+      "triplec-malloc-topic-bunniets",
+      "triplec-malloc-region-malloc"
+    ],
+    "triplec-malloc-character-aion-var": [
+      "triplec-malloc-topic-bunniets",
+      "triplec-malloc-region-malloc"
+    ],
+    "triplec-malloc-character-stelipa": [
+      "triplec-malloc-topic-bunniets",
+      "triplec-malloc-topic-cultura",
+      "triplec-malloc-region-malloc"
+    ],
+    "triplec-malloc-character-mewlites": [
+      "triplec-malloc-topic-energia",
+      "triplec-malloc-region-malloc"
+    ],
+    "triplec-malloc-character-trilume": [
+      "triplec-malloc-topic-energia",
+      "triplec-malloc-region-malloc"
+    ],
+    "triplec-malloc-character-krystos": [
+      "triplec-malloc-character-mewlites",
+      "triplec-malloc-topic-perigos",
+      "triplec-malloc-region-malloc"
+    ],
+    "triplec-malloc-character-estakors": [
+      "triplec-malloc-character-krystos",
+      "triplec-malloc-topic-perigos",
+      "triplec-malloc-region-malloc"
+    ],
+    "triplec-malloc-topic-cultura": [
+      "triplec-malloc-topic-bunniets"
+    ],
+    "triplec-malloc-topic-energia": [
+      "triplec-malloc-topic-bunniets"
+    ],
+    "triplec-malloc-topic-governanca": [
+      "triplec-malloc-topic-bunniets"
+    ],
+    "triplec-malloc-topic-perigos": [
+      "triplec-malloc-topic-bunniets"
+    ],
+    "triplec-malloc-scene-vila-principal": [
+      "triplec-malloc-topic-geografia"
+    ],
+    "triplec-malloc-scene-camada-portex": [
+      "triplec-malloc-topic-geografia"
+    ],
+    "triplec-malloc-scene-camada-portex-vista-de-cima": [
+      "triplec-malloc-topic-geografia"
+    ],
+    "triplec-malloc-scene-camada-datex": [
+      "triplec-malloc-topic-geografia"
+    ],
+    "triplec-malloc-scene-camada-datara": [
+      "triplec-malloc-topic-geografia"
+    ],
+    "triplec-malloc-scene-mina-de-kemita-em-malloc": [
+      "triplec-malloc-topic-geografia",
+      "triplec-malloc-topic-energia"
+    ],
+    "triplec-malloc-scene-tunel": [
+      "triplec-malloc-topic-geografia"
+    ],
+    "triplec-malloc-scene-hepa-regiao-1": [
+      "triplec-malloc-topic-geografia"
+    ],
+    "triplec-malloc-scene-camadas-de-malloc-regiao-2": [
+      "triplec-malloc-topic-geografia"
+    ],
+    "triplec-malloc-scene-hepa-regiao-2": [
+      "triplec-malloc-topic-geografia"
+    ],
+    "triplec-malloc-scene-vila": [
+      "triplec-malloc-topic-geografia"
+    ],
+    "triplec-malloc-scene-vila-1": [
+      "triplec-malloc-topic-geografia"
+    ],
+    "triplec-malloc-scene-vila-2": [
+      "triplec-malloc-topic-geografia"
+    ],
+    "triplec-malloc-scene-vila-3": [
+      "triplec-malloc-topic-geografia"
+    ],
+    "triplec-malloc-scene-vila-4": [
+      "triplec-malloc-topic-geografia"
+    ],
+    "triplec-malloc-scene-sala": [
+      "triplec-malloc-topic-geografia"
+    ],
+    "triplec-malloc-scene-quarto": [
+      "triplec-malloc-topic-geografia"
+    ],
+    "triplec-malloc-video-correndo-para-mesh": [
+      "triplec-malloc-topic-geografia",
+      "triplec-mesh-topic-geografia",
+      "triplec-malloc-character-iren-kor",
+      "triplec-scene-bunniet-de-malloc-correndo-na-floresta"
+    ],
+    "triplec-malloc-video-minas": [
+      "triplec-malloc-topic-energia",
+      "triplec-malloc-scene-mina-de-kemita-em-malloc"
+    ],
+    "triplec-malloc-video-interior-da-mina": [
+      "triplec-malloc-topic-energia",
+      "triplec-malloc-scene-tunel",
+      "triplec-malloc-scene-hepa-regiao-1"
+    ],
+    "triplec-malloc-video-elevador-da-mina": [
+      "triplec-malloc-topic-energia",
+      "triplec-malloc-scene-camada-portex"
+    ],
+    "triplec-malloc-video-vila-de-malloc": [
+      "triplec-malloc-topic-geografia",
+      "triplec-malloc-scene-vila-principal",
+      "triplec-malloc-scene-vila-3"
+    ],
+    "triplec-mesh-character-kael-torin": [
+      "triplec-mesh-topic-bunniets",
+      "triplec-mesh-region-mesh"
+    ],
+    "triplec-mesh-character-doran-kes": [
+      "triplec-mesh-topic-bunniets",
+      "triplec-mesh-region-mesh"
+    ],
+    "triplec-mesh-character-ellen-var": [
+      "triplec-mesh-topic-bunniets",
+      "triplec-mesh-region-mesh"
+    ],
+    "triplec-mesh-character-fibo": [
+      "triplec-mesh-topic-bunniets",
+      "triplec-mesh-region-mesh"
+    ],
+    "triplec-mesh-character-nibu": [
+      "triplec-mesh-topic-bunniets",
+      "triplec-mesh-region-mesh"
+    ],
+    "triplec-mesh-character-minati": [
+      "triplec-mesh-topic-energia",
+      "triplec-mesh-region-mesh"
+    ],
+    "triplec-mesh-character-poly": [
+      "triplec-mesh-topic-bunniets",
+      "triplec-mesh-region-mesh"
+    ],
+    "triplec-mesh-character-manoo": [
+      "triplec-mesh-topic-cultura",
+      "triplec-mesh-region-mesh"
+    ],
+    "triplec-mesh-topic-cultura": [
+      "triplec-mesh-topic-bunniets"
+    ],
+    "triplec-mesh-topic-energia": [
+      "triplec-mesh-topic-bunniets"
+    ],
+    "triplec-mesh-topic-governanca": [
+      "triplec-mesh-topic-bunniets"
+    ],
+    "triplec-mesh-topic-perigos": [
+      "triplec-mesh-topic-bunniets"
+    ],
+    "triplec-mesh-scene-vila-central-vista-aerea": [
+      "triplec-mesh-topic-geografia"
+    ],
+    "triplec-mesh-scene-vila-central": [
+      "triplec-mesh-topic-geografia"
+    ],
+    "triplec-mesh-scene-kael-torin-ativando-o-cshift-vista-aerea": [
+      "triplec-mesh-character-kael-torin",
+      "triplec-mesh-topic-geografia",
+      "triplec-topic-o-cshift"
+    ],
+    "triplec-mesh-scene-kael-torin-ativando-o-cshift": [
+      "triplec-mesh-character-kael-torin",
+      "triplec-mesh-topic-geografia",
+      "triplec-topic-o-cshift"
+    ],
+    "triplec-mesh-scene-floresta-niul": [
+      "triplec-mesh-topic-geografia"
+    ],
+    "triplec-mesh-scene-praca": [
+      "triplec-mesh-topic-geografia"
+    ],
+    "triplec-mesh-scene-praca-vista-de-cima": [
+      "triplec-mesh-topic-geografia"
+    ],
+    "triplec-mesh-scene-sala": [
+      "triplec-mesh-topic-geografia"
+    ],
+    "triplec-mesh-scene-quarto": [
+      "triplec-mesh-topic-geografia"
+    ],
+    "triplec-mesh-scene-em-mesh": [
+      "triplec-mesh-topic-geografia",
+      "triplec-malloc-character-iren-kor"
+    ],
+    "triplec-mesh-scene-visita-a-mesh": [
+      "triplec-mesh-topic-geografia",
+      "triplec-malloc-character-iren-kor"
+    ],
+    "triplec-mesh-scene-dentro-do-apartamento": [
+      "triplec-mesh-topic-geografia"
+    ],
+    "triplec-mesh-scene-familia": [
+      "triplec-mesh-topic-geografia"
+    ],
+    "triplec-mesh-scene-manoo-dormindo": [
+      "triplec-mesh-character-manoo",
+      "triplec-mesh-topic-geografia"
+    ],
+    "triplec-mesh-scene-kurr-se-expandindo": [
+      "triplec-sharp-character-kurr",
+      "triplec-mesh-topic-geografia"
+    ],
+    "triplec-mesh-video-vista-aerea": [
+      "triplec-mesh-topic-geografia",
+      "triplec-mesh-scene-vila-central-vista-aerea"
+    ],
+    "triplec-mesh-video-bunniet-de-mesh-dormindo": [
+      "triplec-mesh-topic-bunniets",
+      "triplec-mesh-scene-quarto"
+    ],
+    "triplec-mesh-video-na-hora-do-almoco": [
+      "triplec-mesh-topic-cultura",
+      "triplec-mesh-scene-familia"
+    ],
+    "triplec-mesh-video-manoo-dormindo": [
+      "triplec-mesh-character-manoo",
+      "triplec-mesh-scene-manoo-dormindo"
+    ],
+    "triplec-mesh-video-praca-de-mesh": [
+      "triplec-mesh-topic-geografia",
+      "triplec-mesh-scene-praca",
+      "triplec-mesh-scene-praca-vista-de-cima"
+    ],
+    "triplec-sharp-character-selka-rin": [
+      "triplec-sharp-topic-bunniets",
+      "triplec-sharp-region-sharp"
+    ],
+    "triplec-sharp-character-neran-vel": [
+      "triplec-sharp-topic-bunniets",
+      "triplec-sharp-region-sharp"
+    ],
+    "triplec-sharp-character-veris-anon": [
+      "triplec-sharp-topic-bunniets",
+      "triplec-sharp-region-sharp"
+    ],
+    "triplec-sharp-character-kurr": [
+      "triplec-sharp-topic-energia",
+      "triplec-sharp-region-sharp"
+    ],
+    "triplec-sharp-character-tilu": [
+      "triplec-sharp-topic-bunniets",
+      "triplec-sharp-region-sharp"
+    ],
+    "triplec-sharp-character-doope": [
+      "triplec-sharp-character-tilu",
+      "triplec-sharp-region-sharp"
+    ],
+    "triplec-sharp-character-logg": [
+      "triplec-sharp-topic-geografia",
+      "triplec-sharp-region-sharp"
+    ],
+    "triplec-sharp-character-suigui": [
+      "triplec-sharp-topic-geografia",
+      "triplec-sharp-region-sharp"
+    ],
+    "triplec-sharp-character-lim": [
+      "triplec-sharp-topic-geografia",
+      "triplec-sharp-region-sharp"
+    ],
+    "triplec-sharp-topic-cultura": [
+      "triplec-sharp-topic-bunniets"
+    ],
+    "triplec-sharp-topic-energia": [
+      "triplec-sharp-topic-bunniets"
+    ],
+    "triplec-sharp-topic-governanca": [
+      "triplec-sharp-topic-bunniets"
+    ],
+    "triplec-sharp-topic-perigos": [
+      "triplec-sharp-topic-bunniets"
+    ],
+    "triplec-sharp-scene-regiao-de-sharp": [
+      "triplec-sharp-topic-geografia"
+    ],
+    "triplec-sharp-scene-praca-central": [
+      "triplec-sharp-topic-geografia"
+    ],
+    "triplec-sharp-scene-camara-de-permissao-ativando-o-cshift": [
+      "triplec-sharp-topic-geografia",
+      "triplec-topic-o-cshift",
+      "triplec-sharp-character-selka-rin",
+      "triplec-sharp-character-neran-vel",
+      "triplec-sharp-character-veris-anon"
+    ],
+    "triplec-sharp-scene-camara-de-permissao-em-posicao-de-defesa": [
+      "triplec-sharp-topic-geografia",
+      "triplec-sharp-character-selka-rin",
+      "triplec-sharp-character-neran-vel",
+      "triplec-sharp-character-veris-anon"
+    ],
+    "triplec-sharp-scene-praca-central-plataforma": [
+      "triplec-sharp-topic-geografia"
+    ],
+    "triplec-sharp-scene-fluxo-de-energia": [
+      "triplec-sharp-topic-geografia",
+      "triplec-sharp-topic-energia"
+    ],
+    "triplec-sharp-scene-sala-interna": [
+      "triplec-sharp-topic-geografia"
+    ],
+    "triplec-sharp-scene-vista-panoramica": [
+      "triplec-sharp-topic-geografia"
+    ],
+    "triplec-sharp-scene-quarto-dos-bebes": [
+      "triplec-sharp-topic-geografia"
+    ],
+    "triplec-sharp-scene-quarto-principal": [
+      "triplec-sharp-topic-geografia"
+    ],
+    "triplec-sharp-scene-sala": [
+      "triplec-sharp-topic-geografia"
+    ],
+    "triplec-sharp-scene-visita-a-sharp": [
+      "triplec-sharp-topic-geografia"
+    ],
+    "triplec-sharp-video-volpita-feliz": [
+      "triplec-character-volpita"
+    ],
+    "triplec-sharp-video-doope-e-tilu-brincando": [
+      "triplec-sharp-character-doope",
+      "triplec-sharp-character-tilu"
+    ],
+    "triplec-sharp-video-ativando-o-cshift": [
+      "triplec-topic-o-cshift",
+      "triplec-sharp-scene-camara-de-permissao-ativando-o-cshift"
+    ],
+    "triplec-sharp-video-kurr-se-expandindo": [
+      "triplec-sharp-character-kurr",
+      "triplec-mesh-scene-kurr-se-expandindo"
+    ],
+    "triplec-sharp-video-bunniet-na-sala": [
+      "triplec-sharp-topic-bunniets",
+      "triplec-sharp-scene-sala"
+    ]
+  }
+}
