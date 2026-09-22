@@ -23,7 +23,7 @@
   {
     "image": "/imgs/kammara/digg/_scenes/Bloco_vista_2.jpg",
     "label": {
-      "pt": "Os blocos flutuantes, outra vista",
+      "pt": "Os blocos flutuantes: outra vista",
       "en": "The floating blocks, another view"
     }
   },
@@ -44,7 +44,7 @@
   {
     "image": "/imgs/kammara/digg/_scenes/CHMURKA_creatures_standing_together.jpg",
     "label": {
-      "pt": "As Chmurka em bando",
+      "pt": "Chmurka em bando",
       "en": "The Chmurka in a pack"
     }
   },
@@ -79,14 +79,14 @@
    {
     "image": "/imgs/kammara/digg/_scenes/Vista_interna_cadeirao.jpg",
     "label": {
-      "pt": "O cadeirão, por dentro",
+      "pt": "O cadeirão por dentro",
       "en": "The big chair, within"
     }
   },
   {
     "image": "/imgs/kammara/digg/_scenes/Cross-section_showing_a_real_working_MINE.jpg",
     "label": {
-      "pt": "A mina de kemita, em corte",
+      "pt": "A mina de kemita em corte",
       "en": "The kemita mine, cross-section"
     }
   },

@@ -3,7 +3,7 @@
     "world": "lunnp1",
     "video": "/imgs/kammara/lunnp1/_videos/erurin_andando.mp4",
     "poster": "/imgs/kammara/lunnp1/_videos/erurin_andando_poster.jpg",
-    "label": { "pt": "Erurin", "en": "Erurin" },
+    "label": { "pt": "Erú'Rin", "en": "Erú'Rin" },
     "href": ""
   },
   {
@@ -38,7 +38,7 @@
     "world": "lunnp1",
     "video": "/imgs/kammara/lunnp1/_videos/tziki_lumira_brincando.mp4",
     "poster": "/imgs/kammara/lunnp1/_videos/tziki_lumira_brincando_poster.jpg",
-    "label": { "pt": "Tziki & Lumira", "en": "Tziki & Lumira" },
+    "label": { "pt": "Tzi'Ki e Lumira", "en": "Tzi'Ki & Lumira" },
     "href": ""
   }, 
   {
@@ -87,21 +87,21 @@
     "world": "lunnp1",
     "video": "/imgs/kammara/lunnp1/_videos/plantas_flutuantes.mp4",
     "poster": "/imgs/kammara/lunnp1/_videos/plantas_flutuantes_poster.jpg",
-    "label": { "pt": "Plantas Flutuantes", "en": "Floating Plants" },
+    "label": { "pt": "Plantas flutuantes", "en": "Floating Plants" },
     "href": ""
   },
   {
     "world": "eni4",
     "video": "/imgs/kammara/eni4/_videos/fabrica.mp4",
     "poster": "/imgs/kammara/eni4/_videos/fabrica_poster.jpg",
-    "label": { "pt": "A Fábrica", "en": "The Factory" },
+    "label": { "pt": "A fábrica", "en": "The Factory" },
     "href": ""
   },
   {
     "world": "orfv",
     "video": "/imgs/kammara/orfv/_videos/melik_andando_para_festival.mp4",
     "poster": "/imgs/kammara/orfv/_videos/melik_andando_para_festival_poster.jpg",
-    "label": { "pt": "Melik", "en": "Melik" },
+    "label": { "pt": "Maelik", "en": "Maelik" },
     "href": ""
   },
   {

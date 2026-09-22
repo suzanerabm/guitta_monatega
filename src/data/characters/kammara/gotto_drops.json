@@ -3,15 +3,15 @@
     "video": "/imgs/kammara/gotto/_videos/erurin_visita_rema.mp4",
     "poster": "/imgs/kammara/gotto/_videos/erurin_visita_rema_poster.jpg",
     "label": {
-      "pt": "Erurin visita Rema",
-      "en": "Erurin visits Rema"
+      "pt": "Erú'Rin visita Rema",
+      "en": "Erú'Rin visits Rema"
     }
   },
   {
     "video": "/imgs/kammara/gotto/_videos/gotto_reinicio.mp4",
     "poster": "/imgs/kammara/gotto/_videos/gotto_reinicio_poster.jpg",
     "label": {
-      "pt": "O reinício, o Recomeço",
+      "pt": "O reinício, o recomeço",
       "en": "The restart, the Beginning-Again"
     }
   },
@@ -27,7 +27,7 @@
     "video": "/imgs/kammara/gotto/_videos/vigilante_morro.mp4",
     "poster": "/imgs/kammara/gotto/_videos/vigilante_morro_poster.jpg",
     "label": {
-      "pt": "Kirió, o Vigia do Morro",
+      "pt": "Kirió, o vigia do morro",
       "en": "Kirió, the Hill Watcher"
     }
   }

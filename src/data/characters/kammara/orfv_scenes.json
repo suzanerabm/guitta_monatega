@@ -2,7 +2,7 @@
   {
     "image": "/imgs/kammara/orfv/_scenes/1vista_Fjorks_Centrais.jpg",
     "label": {
-      "pt": "vista Fjorks Centrais",
+      "pt": "Vista dos Fjorks Centrais",
       "en": "vista Fjorks Centrais"
     }
   },
@@ -16,7 +16,7 @@
   {
     "image": "/imgs/kammara/orfv/_scenes/3Iren_Kor_Vila_Central.jpg",
     "label": {
-      "pt": "Iren Kor Vila Central",
+      "pt": "IREN KOR na Vila Central",
       "en": "Iren Kor Vila Central"
     }
   },
@@ -30,7 +30,7 @@
   {
     "image": "/imgs/kammara/orfv/_scenes/zupi_dormindo_com_nuvin1.jpg",
     "label": {
-      "pt": "Zupi dormindo com o Nuvin",
+      "pt": "Zupi dormindo com Nuvin",
       "en": "Zupi sleeping with the Nuvin"
     }
   },
@@ -51,49 +51,49 @@
   {
     "image": "/imgs/kammara/orfv/_scenes/6Maelik_Fjorks_Oeste.jpg",
     "label": {
-      "pt": "Maelik Fjorks Oeste",
+      "pt": "Maelik nos Fjorks Oeste",
       "en": "Maelik Fjorks Oeste"
     }
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/7vila_norte.jpg",
     "label": {
-      "pt": "vila norte",
+      "pt": "Vila Norte",
       "en": "vila norte"
     }
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/8Ceu_em_orf-v.jpg",
     "label": {
-      "pt": "Ceu em orf-v",
+      "pt": "Céu de ORF-V",
       "en": "Ceu em orf-v"
     }
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/9noite_em_orfv.jpg",
     "label": {
-      "pt": "noite em orfv",
+      "pt": "Noite em ORF-V",
       "en": "noite em orfv"
     }
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/10regiao_sul_deserta.jpg",
     "label": {
-      "pt": "regiao sul deserta",
+      "pt": "Região sul deserta",
       "en": "regiao sul deserta"
     }
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/11regiao_sul_deserta.jpg",
     "label": {
-      "pt": "regiao sul deserta",
+      "pt": "Região sul deserta",
       "en": "regiao sul deserta"
     }
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/12festival.jpg",
     "label": {
-      "pt": "festival",
+      "pt": "Festival",
       "en": "festival"
     }
   }

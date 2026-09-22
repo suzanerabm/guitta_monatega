@@ -3,7 +3,7 @@
     "video": "/imgs/kammara/eni4/_videos/palacio_node0.mp4",
     "poster": "/imgs/kammara/eni4/_videos/palacio_node0_poster.jpg",
     "label": {
-      "pt": "Palácio Node-0",
+      "pt": "Palácio de Node-0",
       "en": "Node-0 palace"
     }
   },
@@ -35,7 +35,7 @@
     "video": "/imgs/kammara/eni4/_videos/camera_calor_node-0.mp4",
     "poster": "/imgs/kammara/eni4/_videos/camera_calor_node-0_poster.jpg",
     "label": {
-      "pt": "Câmera de calor Node-0",
+      "pt": "Câmara de calor de Node-0",
       "en": "Node-0 heat chamber"
     }
   },
@@ -43,7 +43,7 @@
     "video": "/imgs/kammara/eni4/_videos/regiao_lixo.mp4",
     "poster": "/imgs/kammara/eni4/_videos/regiao_lixo_poster.jpg",
     "label": {
-      "pt": "Região do Lixões de Robôs",
+      "pt": "Região dos lixões de robôs",
       "en": "Wasteland region"
     }
   }

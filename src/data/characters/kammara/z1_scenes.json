@@ -2,84 +2,84 @@
   {
     "image": "/imgs/kammara/z1/_scenes/TOWER_STATION.jpg",
     "label": {
-      "pt": "estação-torre",
+      "pt": "Estação-torre",
       "en": "tower station"
     }
   },
   {
     "image": "/imgs/kammara/z1/_scenes/CENTRAL_SQUARE.jpg",
     "label": {
-      "pt": "praça central",
+      "pt": "Praça central",
       "en": "central square"
     }
   },
   {
     "image": "/imgs/kammara/z1/_scenes/CENTRAL_SQUARE_aerial_view.jpg",
     "label": {
-      "pt": "praça central, vista aérea",
+      "pt": "Praça central: vista aérea",
       "en": "central square, aerial view"
     }
   },
   {
     "image": "/imgs/kammara/z1/_scenes/PERFORATED_HALL.jpg",
     "label": {
-      "pt": "salão perfurado",
+      "pt": "Salão perfurado",
       "en": "perforated hall"
     }
   },
   {
     "image": "/imgs/kammara/z1/_scenes/Vila.jpg",
     "label": {
-      "pt": "a vila cúbica",
+      "pt": "A vila cúbica",
       "en": "the cubic village"
     }
   },
   {
     "image": "/imgs/kammara/z1/_scenes/Vila_square.jpg",
     "label": {
-      "pt": "praça da vila",
+      "pt": "Praça da vila",
       "en": "village square"
     }
   },
   {
     "image": "/imgs/kammara/z1/_scenes/NEW_VILLA.jpg",
     "label": {
-      "pt": "modbus modelo aberto",
+      "pt": "Modbus: modelo aberto",
       "en": "modbus open model"
     }
   },
   {
     "image": "/imgs/kammara/z1/_scenes/INSIDE_REG.jpg",
     "label": {
-      "pt": "vista dentro da estação-torre",
+      "pt": "Interior da estação-torre",
       "en": "inside the tower station"
     }
   },
   {
     "image": "/imgs/kammara/z1/_scenes/SALAS_ANCESTRAIS.jpg",
     "label": {
-      "pt": "salas ancestrais",
+      "pt": "Salas ancestrais",
       "en": "ancestral halls"
     }
   },
   {
     "image": "/imgs/kammara/z1/_scenes/Z-CHASMS.jpg",
     "label": {
-      "pt": "os abismos de z1",
+      "pt": "Os abismos de Z1",
       "en": "the chasms of z1"
     }
   },
   {
     "image": "/imgs/kammara/z1/_scenes/habitantes_conversando.jpg",
     "label": {
-      "pt": "habitantes conversando",
+      "pt": "Habitantes conversando",
       "en": "inhabitants talking"
     }
   },
   {
     "image": "/imgs/kammara/z1/_scenes/modbus_lotado.jpg",
     "label": {
-      "pt": "modbus lotado",
+      "pt": "Modbus lotado",
       "en": "crowded modbus"
     }
   }

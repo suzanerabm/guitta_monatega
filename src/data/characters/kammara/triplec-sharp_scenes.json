@@ -2,42 +2,42 @@
   {
     "image": "/imgs/kammara/triplec/sharp/_scenes/1regiao_sharp.jpg",
     "label": {
-      "pt": "regiao sharp",
+      "pt": "Região de Sharp",
       "en": "Sharp region"
     }
   },
   {
     "image": "/imgs/kammara/triplec/sharp/_scenes/3praca_central.jpg",
     "label": {
-      "pt": "praca central",
+      "pt": "Praça central",
       "en": "central plaza"
     }
   },
   {
     "image": "/imgs/kammara/triplec/sharp/_scenes/4Camara-de-Permissao_ativando_cshift.jpg",
     "label": {
-      "pt": "Camara-de-Permissao ativando cshift",
+      "pt": "Câmara de Permissão ativando o Cshift",
       "en": "Permission Chamber activating cshift"
     }
   },
   {
     "image": "/imgs/kammara/triplec/sharp/_scenes/5Camara-de-Permissao_posicao_defesa.jpg",
     "label": {
-      "pt": "Camara-de-Permissao posicao defesa",
+      "pt": "Câmara de Permissão em posição de defesa",
       "en": "Permission Chamber defense stance"
     }
   },
   {
     "image": "/imgs/kammara/triplec/sharp/_scenes/6plataforma.jpg",
     "label": {
-      "pt": "Praça Central",
+      "pt": "Praça central",
       "en": "Central Plaza"
     }
   },
   {
     "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_fluxo_energia.jpg",
     "label": {
-      "pt": "fluxo de energia",
+      "pt": "Fluxo de energia",
       "en": "energy flow"
     }
   },
@@ -45,14 +45,14 @@
    {
     "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_cena_interna_sala.jpg",
     "label": {
-      "pt": "sala interna",
+      "pt": "Sala interna",
       "en": "interior room"
     }
   },
   {
     "image": "/imgs/kammara/triplec/sharp/_scenes/7Vista_panoramica.jpg",
     "label": {
-      "pt": "Vista panoramica",
+      "pt": "Vista panorâmica",
       "en": "panoramic view"
     }
   },
@@ -60,7 +60,7 @@
   {
     "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_cena_quarto.jpg",
     "label": {
-      "pt": "quarto dos bebes",
+      "pt": "Quarto dos bebês",
       "en": "babies's bedroom"
     }
   },
@@ -68,21 +68,21 @@
   {
     "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_quarto.jpg",
     "label": {
-      "pt": "quarto master",
+      "pt": "Quarto principal",
       "en": "master bedroom"
     }
   },
   {
     "image": "/imgs/kammara/triplec/sharp/_scenes/sharp_sala.jpg",
     "label": {
-      "pt": "sala ",
+      "pt": "Sala",
       "en": "living room"
     }
   },
    {
     "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_visita_sharp.jpg",
     "label": {
-      "pt": "visita a Sharp",
+      "pt": "Visita a Sharp",
       "en": "visit to Sharp"
     }
   }
