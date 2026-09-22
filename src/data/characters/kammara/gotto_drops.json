@@ -1,11 +1,17 @@
 [
-   {
+  {
     "video": "/imgs/kammara/gotto/_videos/erurin_visita_rema.mp4",
     "poster": "/imgs/kammara/gotto/_videos/erurin_visita_rema_poster.jpg",
     "label": {
       "pt": "Erú'Rin visita Rema",
       "en": "Erú'Rin visits Rema"
-    }
+    },
+    "appId": "gotto-video-eru-rin-visita-rema",
+    "relations": [
+      "lunnp1-character-eru-rin",
+      "gotto-character-rema",
+      "gotto-scene-eru-rin-conversa-com-rema"
+    ]
   },
   {
     "video": "/imgs/kammara/gotto/_videos/gotto_reinicio.mp4",
@@ -13,7 +19,11 @@
     "label": {
       "pt": "O reinício, o recomeço",
       "en": "The restart, the Beginning-Again"
-    }
+    },
+    "appId": "gotto-video-o-reinicio-o-recomeco",
+    "relations": [
+      "gotto-topic-ciclos-tempo"
+    ]
   },
   {
     "video": "/imgs/kammara/gotto/_videos/daryun-swimming.mp4",
@@ -21,7 +31,11 @@
     "label": {
       "pt": "Daryun nadando",
       "en": "Daryun swimming"
-    }
+    },
+    "appId": "gotto-video-daryun-nadando",
+    "relations": [
+      "gotto-character-daryun"
+    ]
   },
   {
     "video": "/imgs/kammara/gotto/_videos/vigilante_morro.mp4",
@@ -29,6 +43,11 @@
     "label": {
       "pt": "Kirió, o vigia do morro",
       "en": "Kirió, the Hill Watcher"
-    }
+    },
+    "appId": "gotto-video-kirio-o-vigia-do-morro",
+    "relations": [
+      "gotto-character-kirio",
+      "gotto-scene-kirio-vigiando-a-vila-central"
+    ]
   }
-] 
+]

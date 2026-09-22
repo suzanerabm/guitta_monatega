@@ -30,7 +30,11 @@
         "### What sustains everything",
         "Revenge sustains everything. Without it, the planet loses purpose. Without purpose, the heat cools. And without heat, ENI-4Δ goes dark."
       ]
-    }
+    },
+    "relations": [
+      "eni4-character-node-0"
+    ],
+    "appId": "eni4-topic-origem"
   },
   {
     "title": {
@@ -67,7 +71,11 @@
         "### A place to survive",
         "ENI-4Δ is not a place where you live. It is a place where you survive, by consuming what belongs to others."
       ]
-    }
+    },
+    "relations": [
+      "eni4-character-node-0"
+    ],
+    "appId": "eni4-topic-cultura"
   },
   {
     "title": {
@@ -105,7 +113,8 @@
         "Viruses have two visual states: the real one (a dark silica sphere, red eyes, eight legs) and the Cute Mask: smooth white shell, small dark eyes, harmless appearance. The swap between them is instantaneous."
       ]
     },
-    "visible": false
+    "visible": false,
+    "appId": "eni4-topic-habitantes-hierarquia"
   },
   {
     "title": {
@@ -162,7 +171,12 @@
         "### The Thermal Rifts",
         "Deep cracks on the surface: sources of pure heat and gates to the underground. Worms emerge from them. Bugs hide in them and die. Some ancient rifts are sealed, but tremble."
       ]
-    }
+    },
+    "relations": [
+      "eni4-character-node-0",
+      "eni4-character-bug"
+    ],
+    "appId": "eni4-topic-geografia"
   },
   {
     "title": {
@@ -200,7 +214,13 @@
         "ENI-4Δ is not strong. It is hungry. And the hunger never stops."
       ]
     },
-    "visible": true
+    "visible": true,
+    "relations": [
+      "eni4-character-node-0",
+      "eni4-character-troy",
+      "eni4-character-virus"
+    ],
+    "appId": "eni4-topic-energia-sobrevivencia"
   },
   {
     "title": {
@@ -238,7 +258,13 @@
         "By the time the symptoms appear, the invasion is already over."
       ]
     },
-    "visible": true
+    "visible": true,
+    "relations": [
+      "eni4-character-troy",
+      "eni4-character-virus",
+      "eni4-character-vexon"
+    ],
+    "appId": "eni4-topic-protocolos-de-ataque"
   },
   {
     "title": {
@@ -364,6 +390,12 @@
         "Karta-MAX : direct orders from Node-0, no one questions"
       ]
     },
-    "visible": true
+    "visible": true,
+    "relations": [
+      "eni4-character-node-0",
+      "eni4-character-virus",
+      "eni4-character-vexon"
+    ],
+    "appId": "eni4-topic-o-codigo-dos-virus-asm"
   }
 ]

@@ -5,11 +5,11 @@
 // oculto nem entram no payload. Antes parte disso rodava dentro do
 // BichittosClient, o que colocava o conteúdo não publicado no bundle.
 
-import { getCharacters, getBooks } from "@/lib/images";
+import { getBookPages } from "@/lib/images";
 import {
 	isBichittoPublished,
-	isBichittoBookVisible,
-	getBichittoBookBuy,
+	getBichittoBooks,
+	getBichittoStickers,
 } from "@/lib/visibility";
 import {
 	characterPositions,
@@ -20,6 +20,8 @@ import {
 	getCreatureName,
 	getCreatureText,
 	getCreaturePanelStory,
+	getCreatureCarousel,
+	getBooksText,
 } from "@/data/characters/bichittos/_creatureData";
 import { translateName } from "@/lib/translateName";
 import { getWordDictionary } from "./i18n";
@@ -47,28 +49,36 @@ export function getBichitto(id: CreatureId, locale: Locale): BichittoPayload {
 		name: getCreatureName(id, locale),
 		text: getCreatureText(id, locale),
 		panelStory: getCreaturePanelStory(id, locale),
-		// O nome vem do nome do arquivo no manifesto ("napcat dormindo"); traduzir
+		// O nome vem do carrossel de `stories.json` ("napcat dormindo"); traduzir
 		// aqui e não no cliente mantém a conversão na fronteira de dados e evita
 		// depender de `useLocale()`, que pode ficar stale em navegação suave.
-		chars: getCharacters(id).map((c) => ({
+		chars: getCreatureCarousel(id).map((c) => ({
 			name: translateName(c.name, words),
 			image: c.image,
 		})),
 		positions: characterPositions[id] ?? [],
-		videos: bichittoVideos[id] ?? [],
+		videos: (bichittoVideos[id] ?? []).map((v) => ({
+			src: v.src,
+			poster: v.poster,
+			label: v.label[locale] || v.label.pt,
+		})),
 		mascot: id === "zeco" ? zecoMascot : undefined,
-		books: getBooks(id)
-			// Livro oculto (visible:false, ou onlyLocale de outro idioma) não entra
-			// no payload — nem no HTML, nem na resposta da API.
-			.filter((b) => isBichittoBookVisible(id, b.id, locale))
-			.map((b) => ({
-				id: b.id,
-				cover: b.cover,
-				// `getBooks` já devolve as páginas resolvidas; a página antiga chamava
-				// `getBookPages` de novo, o que refazia `getBooks` por dentro.
-				pages: b.pages,
-				buy: getBichittoBookBuy(id, b.id),
-			})),
+		// Livro oculto (visible:false, ou onlyLocale de outro idioma) não entra
+		// no payload — nem no HTML, nem na resposta da API. O filtro mora em
+		// `getBichittoBooks`.
+		books: getBichittoBooks(id, locale).map((b) => ({
+			id: b.id,
+			title: b.title,
+			cover: b.cover,
+			pages: getBookPages(id, b.id),
+			buy: b.buy,
+		})),
+		stickers: getBichittoStickers(id, locale).map((s) => ({
+			id: s.id,
+			title: s.title,
+			cover: s.cover,
+			buy: s.buy,
+		})),
 	};
 }
 
@@ -77,6 +87,11 @@ export function getBichittos(locale: Locale): BichittoPayload[] {
 	return CREATURE_IDS.filter((id) => isBichittoPublished(id)).map((id) =>
 		getBichitto(id, locale),
 	);
+}
+
+/** Texto de apresentação da aba "Livros" (chave própria em `stories.json`). */
+export function getBichittosBooksText(locale: Locale): string[] {
+	return getBooksText(locale);
 }
 
 /** True quando a criatura existe e está publicada. Usado pela API pra 404. */

@@ -57,6 +57,10 @@
           "en": "Sentinel"
         }
       }
+    ],
+    "appId": "triplec-malloc-character-luma-val",
+    "relations": [
+      "triplec-malloc-topic-bunniets"
     ]
   },
   {
@@ -117,6 +121,10 @@
           "en": "Validator"
         }
       }
+    ],
+    "appId": "triplec-malloc-character-iren-kor",
+    "relations": [
+      "triplec-malloc-topic-bunniets"
     ]
   },
   {
@@ -177,6 +185,10 @@
           "en": "Crossing"
         }
       }
+    ],
+    "appId": "triplec-malloc-character-aion-var",
+    "relations": [
+      "triplec-malloc-topic-bunniets"
     ]
   },
   {
@@ -226,6 +238,11 @@
           "en": "Messenger"
         }
       }
+    ],
+    "appId": "triplec-malloc-character-stelipa",
+    "relations": [
+      "triplec-malloc-topic-bunniets",
+      "triplec-malloc-topic-cultura"
     ]
   },
   {
@@ -275,6 +292,10 @@
           "en": "Defense"
         }
       }
+    ],
+    "appId": "triplec-malloc-character-mewlites",
+    "relations": [
+      "triplec-malloc-topic-energia"
     ]
   },
   {
@@ -324,6 +345,10 @@
           "en": "Guides"
         }
       }
+    ],
+    "appId": "triplec-malloc-character-trilume",
+    "relations": [
+      "triplec-malloc-topic-energia"
     ]
   },
   {
@@ -373,6 +398,11 @@
           "en": "Infiltrator"
         }
       }
+    ],
+    "appId": "triplec-malloc-character-krystos",
+    "relations": [
+      "triplec-malloc-character-mewlites",
+      "triplec-malloc-topic-perigos"
     ]
   },
   {
@@ -422,6 +452,11 @@
           "en": "Destabilizers"
         }
       }
+    ],
+    "appId": "triplec-malloc-character-estakors",
+    "relations": [
+      "triplec-malloc-character-krystos",
+      "triplec-malloc-topic-perigos"
     ]
   }
 ]

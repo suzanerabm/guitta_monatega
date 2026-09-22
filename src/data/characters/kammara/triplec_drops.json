@@ -5,7 +5,11 @@
     "label": {
       "pt": "Bunniets",
       "en": "Bunniets"
-    }
+    },
+    "appId": "triplec-video-bunniets",
+    "relations": [
+      "triplec-scene-tres-bunniets"
+    ]
   },
   {
     "video": "/imgs/kammara/triplec/_videos/Nilo_familia.mp4",
@@ -13,7 +17,13 @@
     "label": {
       "pt": "Família de Nilo",
       "en": "Nilo's family"
-    }
+    },
+    "appId": "triplec-video-familia-de-nilo",
+    "relations": [
+      "triplec-character-nilo",
+      "triplec-topic-a-niul-forest",
+      "triplec-scene-regiao-de-malloc-cotidiano"
+    ]
   },
   {
     "video": "/imgs/kammara/triplec/_videos/lumesha_encontra_luma_val.mp4",
@@ -21,7 +31,14 @@
     "label": {
       "pt": "Lúm'Esha encontra LUMA VAL",
       "en": "Lúm'Esha meets LUMA VAL"
-    }
+    },
+    "appId": "triplec-video-lum-esha-encontra-luma-val",
+    "relations": [
+      "lunnp1-character-lum-esha",
+      "triplec-malloc-character-luma-val",
+      "triplec-scene-lum-esha-visita-luma-val",
+      "triplec-topic-a-triade-e-o-protocol-auryn"
+    ]
   },
   {
     "video": "/imgs/kammara/triplec/_videos/soar_voando.mp4",
@@ -29,7 +46,11 @@
     "label": {
       "pt": "Soar voando",
       "en": "Soar flying"
-    }
+    },
+    "appId": "triplec-video-soar-voando",
+    "relations": [
+      "triplec-character-soar"
+    ]
   },
   {
     "video": "/imgs/kammara/triplec/_videos/tripleC_creatures.mp4",
@@ -37,6 +58,14 @@
     "label": {
       "pt": "Criaturas de TripleC",
       "en": "TripleC creatures"
-    }
+    },
+    "appId": "triplec-video-criaturas-de-triplec",
+    "relations": [
+      "triplec-character-treezi",
+      "triplec-character-pluma",
+      "triplec-character-seal-beans",
+      "triplec-character-ypito",
+      "triplec-topic-a-niul-forest"
+    ]
   }
 ]

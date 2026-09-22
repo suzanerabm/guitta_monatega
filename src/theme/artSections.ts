@@ -5,6 +5,8 @@
 // Values live here (rather than in tokens.ts) because they are unique to a
 // single section and don't have reuse potential as global tokens.
 
+import { mediaUrl } from '@/lib/media';
+
 export interface ArtSectionMeta {
   bg: string;
   titleColor: string;
@@ -22,7 +24,8 @@ export type ArtSectionId =
   | 'fimo'
   | 'needle'
   | 'clay'
-  | 'croche';
+  | 'croche'
+  | 'livros';
 
 // Subtitle (technique) color overlays — same alpha for both modes so
 // the relationship between title and subtitle stays consistent.
@@ -89,6 +92,12 @@ export const artSectionMeta: Record<ArtSectionId, ArtSectionMeta> = {
     techColor: DARK_TECH_OVERLAY,
     large: false,
   },
+  livros: {
+    bg: '#a4a4a4',
+    titleColor: '#1a1a1a',
+    techColor: DARK_TECH_OVERLAY,
+    large: false,
+  },
 };
 
 // Hero gradient used on the /art page hero.
@@ -96,4 +105,16 @@ export const artHero = {
   background: 'linear-gradient(135deg, #f5f5f5, #e8e8e8, #f0f0f0)',
   textColor: '#1a1d21',
   labelColor: '#999999',
+};
+
+// Home-only treatment for the combined book gallery. It reuses the first
+// black-and-white artwork without changing the books section on /art.
+export const homeBooksGallery = {
+  background:
+    `linear-gradient(rgba(222,215,204,0.86), rgba(222,215,204,0.86)), url("${mediaUrl('/imgs/art/black/1-arte.jpg')}")`,
+  backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  panelBackground: 'rgba(245,240,232,0.78)',
+  titleColor: '#302d29',
+  techColor: 'rgba(48,45,41,0.66)',
 };

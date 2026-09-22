@@ -6,9 +6,13 @@
 // personagens `visible: false` iam parar no bundle do navegador — escondidas
 // na UI, mas baixáveis.
 
-import { getCharacters, getBooks, getKammaraBg } from "@/lib/images";
+import { getCharacters, getBookPages, getKammaraBg } from "@/lib/images";
 import { getCharactersForContext } from "@/lib/characters";
-import { isKammaraPublished, kammaraInProgress } from "@/lib/visibility";
+import {
+	isKammaraPublished,
+	kammaraInProgress,
+	getKammaraBooks as getKammaraBookEntries,
+} from "@/lib/visibility";
 import {
 	getWorldName,
 	getWorldSummary,
@@ -279,12 +283,17 @@ export function getKammaraCharacters(locale: Locale): CharacterCardItem[] {
 	return characterCards(contextId, locale, visibleManifestChars(contextId));
 }
 
-/** Livros da seção Kammara. */
-export function getKammaraBooks(): Book[] {
-	return getBooks("kammara").map((b) => ({
+/**
+ * Livros da seção Kammara, no idioma pedido. Edição oculta (`visible: false`
+ * ou `onlyLocale` de outro idioma em `kammara_books.json`) não entra.
+ */
+export function getKammaraBooks(locale: Locale): Book[] {
+	return getKammaraBookEntries("kammara", locale).map((b) => ({
 		id: b.id,
+		title: b.title,
 		cover: b.cover,
-		pages: b.pages,
+		pages: getBookPages("kammara", b.id),
+		buy: b.buy,
 	}));
 }
 
@@ -292,7 +301,7 @@ export function getKammaraBooks(): Book[] {
 export function getKammaraPage(locale: Locale) {
 	return {
 		worlds: getWorlds(locale),
-		kammaraBooks: getKammaraBooks(),
+		kammaraBooks: getKammaraBooks(locale),
 		kammaraBg: getKammaraBg("kammara"),
 		kammaraCharacters: getKammaraCharacters(locale),
 		mosaicClips: getMosaic(locale),

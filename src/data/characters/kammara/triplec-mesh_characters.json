@@ -46,6 +46,10 @@
           "en": "Modulator"
         }
       }
+    ],
+    "appId": "triplec-mesh-character-kael-torin",
+    "relations": [
+      "triplec-mesh-topic-bunniets"
     ]
   },
   {
@@ -95,6 +99,10 @@
           "en": "Guardian"
         }
       }
+    ],
+    "appId": "triplec-mesh-character-doran-kes",
+    "relations": [
+      "triplec-mesh-topic-bunniets"
     ]
   },
   {
@@ -144,6 +152,10 @@
           "en": "Architect"
         }
       }
+    ],
+    "appId": "triplec-mesh-character-ellen-var",
+    "relations": [
+      "triplec-mesh-topic-bunniets"
     ]
   },
   {
@@ -193,6 +205,10 @@
           "en": "Time-marker"
         }
       }
+    ],
+    "appId": "triplec-mesh-character-fibo",
+    "relations": [
+      "triplec-mesh-topic-bunniets"
     ]
   },
   {
@@ -242,6 +258,10 @@
           "en": "Affective warmer"
         }
       }
+    ],
+    "appId": "triplec-mesh-character-nibu",
+    "relations": [
+      "triplec-mesh-topic-bunniets"
     ]
   },
   {
@@ -291,6 +311,10 @@
           "en": "Curve-connector"
         }
       }
+    ],
+    "appId": "triplec-mesh-character-minati",
+    "relations": [
+      "triplec-mesh-topic-energia"
     ]
   },
   {
@@ -340,6 +364,10 @@
           "en": "Form-reorganizer"
         }
       }
+    ],
+    "appId": "triplec-mesh-character-poly",
+    "relations": [
+      "triplec-mesh-topic-bunniets"
     ]
   },
   {
@@ -389,6 +417,10 @@
           "en": "Tracker"
         }
       }
+    ],
+    "appId": "triplec-mesh-character-manoo",
+    "relations": [
+      "triplec-mesh-topic-cultura"
     ]
   }
 ]

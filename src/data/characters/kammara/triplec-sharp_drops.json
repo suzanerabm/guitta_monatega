@@ -5,7 +5,11 @@
     "label": {
       "pt": "Volpita feliz",
       "en": "Happy Volpita"
-    }
+    },
+    "appId": "triplec-sharp-video-volpita-feliz",
+    "relations": [
+      "triplec-character-volpita"
+    ]
   },
   {
     "video": "/imgs/kammara/triplec/sharp/_videos/pets_playing.mp4",
@@ -13,25 +17,39 @@
     "label": {
       "pt": "DooPe e Tilu brincando",
       "en": "DooPe and Tilu playing"
-    }
+    },
+    "appId": "triplec-sharp-video-doope-e-tilu-brincando",
+    "relations": [
+      "triplec-sharp-character-doope",
+      "triplec-sharp-character-tilu"
+    ]
   },
-    {
+  {
     "video": "/imgs/kammara/triplec/sharp/_videos/ativando_cshift.mp4",
     "poster": "/imgs/kammara/triplec/sharp/_videos/ativando_cshift_poster.jpg",
     "label": {
       "pt": "Ativando o Cshift",
       "en": "Activating C-Shift"
-    }
+    },
+    "appId": "triplec-sharp-video-ativando-o-cshift",
+    "relations": [
+      "triplec-topic-o-cshift",
+      "triplec-sharp-scene-camara-de-permissao-ativando-o-cshift"
+    ]
   },
   {
-    
     "enabled": false,
     "video": "/imgs/kammara/triplec/sharp/_videos/bunniet_niul_forest.mp4",
     "poster": "/imgs/kammara/triplec/sharp/_videos/bunniet_niul_forest_poster.jpg",
     "label": {
       "pt": "Bunniet na floresta Niul",
       "en": "Bunniet in the Niul forest"
-    }
+    },
+    "appId": "triplec-sharp-video-bunniet-na-floresta-niul",
+    "relations": [
+      "triplec-sharp-topic-bunniets",
+      "triplec-topic-a-niul-forest"
+    ]
   },
   {
     "video": "/imgs/kammara/triplec/sharp/_videos/kurr_expandindo.mp4",
@@ -39,7 +57,12 @@
     "label": {
       "pt": "Kurr se expandindo",
       "en": "Kurr expanding"
-    }
+    },
+    "appId": "triplec-sharp-video-kurr-se-expandindo",
+    "relations": [
+      "triplec-sharp-character-kurr",
+      "triplec-mesh-scene-kurr-se-expandindo"
+    ]
   },
   {
     "video": "/imgs/kammara/triplec/sharp/_videos/bunniet_sala.mp4",
@@ -47,7 +70,12 @@
     "label": {
       "pt": "Bunniet na sala",
       "en": "Bunniet in the room"
-    }
+    },
+    "appId": "triplec-sharp-video-bunniet-na-sala",
+    "relations": [
+      "triplec-sharp-topic-bunniets",
+      "triplec-sharp-scene-sala"
+    ]
   },
   {
     "enabled": false,
@@ -56,6 +84,11 @@
     "label": {
       "pt": "Bunniet com Volpita",
       "en": "Bunniet with Volpita"
-    }
+    },
+    "appId": "triplec-sharp-video-bunniet-com-volpita",
+    "relations": [
+      "triplec-sharp-topic-bunniets",
+      "triplec-character-volpita"
+    ]
   }
 ]

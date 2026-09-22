@@ -3,11 +3,13 @@
     "back": "voltar",
     "siteTitle": "Guitta Monatega",
     "footerAbout": "guitta monatega",
+    "footerLicensing": "licenciamento e parcerias",
     "footerPrivacy": "privacidade",
     "footerCopyright": "© Guitta Monatega. Todos os direitos reservados",
     "soon": "em breve",
     "words": {
       "acordando": "acordando",
+      "agachado": "agachado",
       "apaixonada": "apaixonada",
       "apaixonado": "apaixonado",
       "arvore": "árvore",
@@ -32,6 +34,7 @@
       "contando": "contando",
       "correndo": "correndo",
       "costas": "costas",
+      "chorando": "chorando",
       "danca": "dançando",
       "dancando": "dançando",
       "de": "de",
@@ -45,6 +48,8 @@
       "doodle": "rabisco",
       "dormindo": "dormindo",
       "duvida": "dúvida",
+      "e": "e",
+      "em-pé": "em pé",
       "escondido": "escondido",
       "escova": "escova",
       "falando": "falando",
@@ -139,6 +144,10 @@
       "label": "Galeria de Arte",
       "title": "Guitta Monatega",
       "desc": "Engenheira de Universos • Escritora • Ilustradora"
+    },
+    "books": {
+      "title": "Livros",
+      "description": "Histórias de Arte, Bichittos e Kammara reunidas em uma só galeria."
     }
   },
   "about": {
@@ -182,7 +191,23 @@
     ],
     "declaration": "Onde a arte e a computação se equilibram.",
     "universesLabel": "Universos",
-    "contactLabel": "Contato"
+    "contactLabel": "Contato",
+    "contactEmail": "hello@guittamonategastudio.com"
+  },
+  "licensing": {
+    "pageTitle": "Licenciamento e parcerias — Guitta Monatega",
+    "heroLabel": "Kammara",
+    "heroTitle": "Licenciamento e parcerias",
+    "heroSub": "Explore oportunidades para levar o universo Kammara a novos públicos.",
+    "title": "O universo",
+    "intro": "Kammara é um universo original e ilustrado de ficção científica e fantasia, criado pelo Guitta Monatega Studio e desenvolvido em livros, um site bilíngue, um aplicativo/wiki interativo e um acervo em expansão de personagens, planetas, espécies e arcos narrativos.",
+    "sections": [
+      { "num": "02", "tag": "Oportunidades", "items": ["Parcerias editoriais", "Desenvolvimento de animações e séries", "Mídias interativas", "Licenciamento e produtos", "Colaborações editoriais e criativas"] },
+      { "num": "03", "tag": "Materiais existentes", "items": ["Livro Um", "Site bilíngue do universo", "Aplicativo/wiki interativo", "Mais de 200 personagens", "Múltiplos planetas e espécies", "Extenso acervo visual", "Arcos narrativos expansíveis"] }
+    ],
+    "contactLabel": "Contato",
+    "contactBody": "Para propostas de licenciamento, publicação, produção ou parceria, entre em contato com o Guitta Monatega Studio.",
+    "contactEmail": "hello@guittamonategastudio.com"
   },
   "bichittos": {
     "pageTitle": "Bichittos — Guitta Monatega",
@@ -214,7 +239,8 @@
       ]
     },
     "booksTitle": "Livros",
-    "bookIllustrated": "Livro ilustrado"
+    "bookIllustrated": "Livro ilustrado",
+    "stickersTitle": "Stickers"
   },
   "kammara": {
     "pageTitle": "Kammara — Guitta Monatega",
@@ -251,6 +277,7 @@
       }
     },
     "booksTitle": "Livros",
+    "booksDesc": "As histórias de Kammara, reunidas em páginas.",
     "planetsTitle": "Planetas",
     "planetsDesc": "Os planetas de Kammara, cada um um universo à parte."
   },
@@ -303,6 +330,10 @@
       "croche": {
         "title": "Crochê",
         "technique": "Linha e memória. Formas feitas à mão com ritmo, afeto e delicadeza."
+      },
+      "livros": {
+        "title": "Livros",
+        "technique": "Histórias e ilustrações reunidas em páginas, prontas pra colecionar."
       }
     }
   },
@@ -341,6 +372,6 @@
         "body": "Para questões de privacidade, licenciamento, uso autorizado, parcerias ou solicitação de remoção, entre em contato pelo e-mail abaixo."
       }
     ],
-    "contact": "guitta.monatega@gmail.com"
+    "contact": "hello@guittamonategastudio.com"
   }
 }

@@ -46,6 +46,10 @@
           "en": "Validator"
         }
       }
+    ],
+    "appId": "triplec-sharp-character-selka-rin",
+    "relations": [
+      "triplec-sharp-topic-bunniets"
     ]
   },
   {
@@ -95,6 +99,10 @@
           "en": "Sustainer"
         }
       }
+    ],
+    "appId": "triplec-sharp-character-neran-vel",
+    "relations": [
+      "triplec-sharp-topic-bunniets"
     ]
   },
   {
@@ -144,6 +152,10 @@
           "en": "Systemic Biologist"
         }
       }
+    ],
+    "appId": "triplec-sharp-character-veris-anon",
+    "relations": [
+      "triplec-sharp-topic-bunniets"
     ]
   },
   {
@@ -193,6 +205,10 @@
           "en": "Night cleaner"
         }
       }
+    ],
+    "appId": "triplec-sharp-character-kurr",
+    "relations": [
+      "triplec-sharp-topic-energia"
     ]
   },
   {
@@ -242,6 +258,10 @@
           "en": "Playful companion"
         }
       }
+    ],
+    "appId": "triplec-sharp-character-tilu",
+    "relations": [
+      "triplec-sharp-topic-bunniets"
     ]
   },
   {
@@ -291,6 +311,10 @@
           "en": "Sniffer"
         }
       }
+    ],
+    "appId": "triplec-sharp-character-doope",
+    "relations": [
+      "triplec-sharp-character-tilu"
     ]
   },
   {
@@ -340,6 +364,10 @@
           "en": "Silent connector"
         }
       }
+    ],
+    "appId": "triplec-sharp-character-logg",
+    "relations": [
+      "triplec-sharp-topic-geografia"
     ]
   },
   {
@@ -389,6 +417,10 @@
           "en": "Overflow"
         }
       }
+    ],
+    "appId": "triplec-sharp-character-suigui",
+    "relations": [
+      "triplec-sharp-topic-geografia"
     ]
   },
   {
@@ -438,6 +470,10 @@
           "en": "Sensor"
         }
       }
+    ],
+    "appId": "triplec-sharp-character-lim",
+    "relations": [
+      "triplec-sharp-topic-geografia"
     ]
   }
 ]

@@ -1,78 +1,208 @@
 [
   {
     "image": "/imgs/kammara/gotto/_scenes/1_Vale_Escuta.jpg",
-    "label": { "pt": "O Vale da Escuta", "en": "The Valley of Listening" }
+    "label": {
+      "pt": "O Vale da Escuta",
+      "en": "The Valley of Listening"
+    },
+    "appId": "gotto-scene-o-vale-da-escuta"
   },
   {
     "image": "/imgs/kammara/gotto/_scenes/2_Vale_Escuta_kirio_camuflado.jpg",
-    "label": { "pt": "Kirió camuflado no Vale da Escuta", "en": "Kirió camouflaged in the Valley of Listening" }
+    "label": {
+      "pt": "Kirió camuflado no Vale da Escuta",
+      "en": "Kirió camouflaged in the Valley of Listening"
+    },
+    "appId": "gotto-scene-kirio-camuflado-no-vale-da-escuta",
+    "relations": [
+      "gotto-character-kirio"
+    ]
   },
   {
     "image": "/imgs/kammara/gotto/_scenes/2_Vale_Reflexo.jpg",
-    "label": { "pt": "O Vale do Reflexo", "en": "The Valley of Reflection" }
+    "label": {
+      "pt": "O Vale do Reflexo",
+      "en": "The Valley of Reflection"
+    },
+    "appId": "gotto-scene-o-vale-do-reflexo"
   },
   {
     "image": "/imgs/kammara/gotto/_scenes/cultivo_flores.jpg",
-    "label": { "pt": "O cultivo das flores", "en": "The flower fields" }
+    "label": {
+      "pt": "O cultivo das flores",
+      "en": "The flower fields"
+    },
+    "appId": "gotto-scene-o-cultivo-das-flores",
+    "relations": [
+      "gotto-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/gotto/_scenes/Erurin_conversa_com_Rema.png",
-    "label": { "pt": "Erú'Rin conversa com Rema", "en": "Erú'Rin talks with Rema" }
+    "label": {
+      "pt": "Erú'Rin conversa com Rema",
+      "en": "Erú'Rin talks with Rema"
+    },
+    "appId": "gotto-scene-eru-rin-conversa-com-rema",
+    "relations": [
+      "lunnp1-character-eru-rin",
+      "gotto-character-rema"
+    ]
   },
   {
     "image": "/imgs/kammara/gotto/_scenes/Kirio_vigiando_Vila_Central.jpg",
-    "label": { "pt": "Kirió vigiando a Vila Central", "en": "Kirió watching over the Central Village" }
+    "label": {
+      "pt": "Kirió vigiando a Vila Central",
+      "en": "Kirió watching over the Central Village"
+    },
+    "appId": "gotto-scene-kirio-vigiando-a-vila-central",
+    "relations": [
+      "gotto-character-kirio"
+    ]
   },
   {
     "image": "/imgs/kammara/gotto/_scenes/Vila_Central_vista.jpg",
-    "label": { "pt": "A Vila Central", "en": "The Central Village" }
+    "label": {
+      "pt": "A Vila Central",
+      "en": "The Central Village"
+    },
+    "appId": "gotto-scene-a-vila-central",
+    "relations": [
+      "gotto-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/gotto/_scenes/Vila_Central_Arredores.jpg",
-    "label": { "pt": "Arredores da Vila Central", "en": "Around the Central Village" }
+    "label": {
+      "pt": "Arredores da Vila Central",
+      "en": "Around the Central Village"
+    },
+    "appId": "gotto-scene-arredores-da-vila-central",
+    "relations": [
+      "gotto-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/gotto/_scenes/Vila_Central_Leste.jpg",
-    "label": { "pt": "Vila Central: leste", "en": "Central Village, East" }
+    "label": {
+      "pt": "Vila Central: leste",
+      "en": "Central Village, East"
+    },
+    "appId": "gotto-scene-vila-central-leste",
+    "relations": [
+      "gotto-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/gotto/_scenes/Vila_Central_Leste_Rema_dormindo.png",
-    "label": { "pt": "Rema dormindo na Vila Central, a leste", "en": "Rema sleeping, Central Village East" }
+    "label": {
+      "pt": "Rema dormindo na Vila Central, a leste",
+      "en": "Rema sleeping, Central Village East"
+    },
+    "appId": "gotto-scene-rema-dormindo-na-vila-central-a-leste",
+    "relations": [
+      "gotto-character-rema",
+      "gotto-character-flipflop"
+    ]
   },
   {
     "image": "/imgs/kammara/gotto/_scenes/Vila_Central_Oeste.jpg",
-    "label": { "pt": "Vila Central: oeste", "en": "Central Village, West" }
+    "label": {
+      "pt": "Vila Central: oeste",
+      "en": "Central Village, West"
+    },
+    "appId": "gotto-scene-vila-central-oeste",
+    "relations": [
+      "gotto-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/gotto/_scenes/Vila_Central_Sul.jpg",
-    "label": { "pt": "Vila Central: sul", "en": "Central Village, South" }
+    "label": {
+      "pt": "Vila Central: sul",
+      "en": "Central Village, South"
+    },
+    "appId": "gotto-scene-vila-central-sul",
+    "relations": [
+      "gotto-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/gotto/_scenes/Vila_Leste.jpg",
-    "label": { "pt": "A Vila Leste", "en": "The East Village" }
+    "label": {
+      "pt": "A Vila Leste",
+      "en": "The East Village"
+    },
+    "appId": "gotto-scene-a-vila-leste",
+    "relations": [
+      "gotto-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/gotto/_scenes/Vila_da_Orla.jpg",
-    "label": { "pt": "A Vila da Orla", "en": "The Shore Village" }
+    "label": {
+      "pt": "A Vila da Orla",
+      "en": "The Shore Village"
+    },
+    "appId": "gotto-scene-a-vila-da-orla",
+    "relations": [
+      "gotto-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/gotto/_scenes/Jump_preparando_escamas.jpg",
-    "label": { "pt": "Jump preparando as escamas", "en": "Jump preparing the scales" }
+    "label": {
+      "pt": "Jump preparando as escamas",
+      "en": "Jump preparing the scales"
+    },
+    "appId": "gotto-scene-jump-preparando-as-escamas",
+    "relations": [
+      "gotto-character-jump"
+    ]
   },
   {
     "image": "/imgs/kammara/gotto/_scenes/Jump_trabalhando_escamas.jpg",
-    "label": { "pt": "Jump trabalhando as escamas", "en": "Jump working the scales" }
+    "label": {
+      "pt": "Jump trabalhando as escamas",
+      "en": "Jump working the scales"
+    },
+    "appId": "gotto-scene-jump-trabalhando-as-escamas",
+    "relations": [
+      "gotto-character-jump"
+    ]
   },
   {
     "image": "/imgs/kammara/gotto/_scenes/kirio_comendo_com_rema.jpg",
-    "label": { "pt": "Kirió comendo com Rema", "en": "Kirió eating with Rema" }
+    "label": {
+      "pt": "Kirió comendo com Rema",
+      "en": "Kirió eating with Rema"
+    },
+    "appId": "gotto-scene-kirio-comendo-com-rema",
+    "relations": [
+      "gotto-character-kirio",
+      "gotto-character-rema"
+    ]
   },
   {
     "image": "/imgs/kammara/gotto/_scenes/2_Vale_Escuta.jpg",
-    "label": { "pt": "O Vale da Escuta: outra vista", "en": "The Valley of Listening, another view" }
+    "label": {
+      "pt": "O Vale da Escuta: outra vista",
+      "en": "The Valley of Listening, another view"
+    },
+    "appId": "gotto-scene-o-vale-da-escuta-outra-vista",
+    "relations": [
+      "gotto-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/gotto/_scenes/Flip_sleeping.jpg",
-    "label": { "pt": "FlipFlop dormindo", "en": "FlipFlop sleeping" }
+    "label": {
+      "pt": "FlipFlop dormindo",
+      "en": "FlipFlop sleeping"
+    },
+    "appId": "gotto-scene-flipflop-dormindo",
+    "relations": [
+      "gotto-character-flipflop"
+    ]
   }
 ]

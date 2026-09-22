@@ -5,7 +5,8 @@ export type PaletteName =
   | 'bichittos' | 'napcat' | 'zeco' | 'taylo' | 'miscelania' | 'cheiodebolinha'
   | 'kammara' | 'lunnp1' | 'eni4' | 'triplec' | 'orfv' | 'z1' | 'gotto' | 'arte'
   | 'digg' | 'memphis'
-  | 'malloc' | 'mesh' | 'sharp';
+  | 'malloc' | 'mesh' | 'sharp'
+  | 'livros';
 
 /** Criaturas do Bichittos. */
 export type CreatureId =
@@ -58,6 +59,10 @@ export interface Palette {
     tag: string;
     /** Fundo translúcido do DSTextPanel (default: rgba(0,0,0,0.3)). */
     panelBg?: string;
+    /** Fundo do painel longo de história abaixo do card principal. */
+    storyPanelBg?: string;
+    /** Cor do overlay inferior do card principal. Default: `dark`. */
+    cardOverlay?: string;
     /** Cor da legenda e da borda dos cards do CharacterStrip.
      *  Se não definido, cai em `titleColor`. */
     stripColor?: string;
@@ -111,7 +116,7 @@ export const palettes: Record<PaletteName, Palette> = {
       textColor: '#fece95',
       accent: '#f58020',
       accentAlt: '#fece95',
-      bgImage: mediaUrl('/imgs/bichittos/_bg/primaveracena_12_ipe.png'),
+      bgImage: mediaUrl('/imgs/bichittos/_bg/primaveracena_12_ipe.jpg'),
       tag: 'Hamster · Quintal',
       panelBg: '#592e06',
       // panelBg: 'rgb(245, 128, 32, 0.6)',
@@ -121,21 +126,23 @@ export const palettes: Record<PaletteName, Palette> = {
     },
   },
   taylo: {
-    colors: ['#5d9466', '#427f49', '#277230', '#d7e2dd', '#b6fcc0', '#082b0b'],
-    text: '#b6fcc0',
-    dark: '#103a13',
-    gradient: 'linear-gradient(135deg, #5d9466, #427f49, #5d9466)',
-    gradientBg: 'linear-gradient(160deg, #34843c 0%, #185b1e 40%, #082b0b 100%)',
+    colors: ['#8fa9bf', '#71899e', '#526979', '#f7e5d0', '#d8c4ad', '#394d5c'],
+    text: '#8fa9bf',
+    dark: '#8fa9bf',
+    gradient: 'linear-gradient(135deg, #f7e5d0, #eee2d7, #d8c4ad)',
+    gradientBg: 'linear-gradient(160deg, #f7e5d0 0%, #e6dfd9 55%, #c7d2dc 100%)',
     bichittos: {
-      name: '#eafcb6',
-      text: '#d7e2dd',
-      titleColor: '#eafcb6',
-      textColor: '#d7e2dd',
-      accent: '#5d9466',
-      accentAlt: '#b6fcc0',
-      bgImage: mediaUrl('/imgs/bichittos/_bg/estrela_ceu.jpg'),
+      name: '#8fa9bf',
+      text: '#8fa9bf',
+      titleColor: '#8fa9bf',
+      textColor: '#8fa9bf',
+      accent: '#e4ebf1',
+      accentAlt: '#b58a49',
+      bgImage: mediaUrl('/imgs/bichittos/taylo/_backgrounds/new_cena_fundo.jpg'),
       tag: 'Amigos · Natureza',
-      panelBg: 'rgb(8, 43, 11, 0.8)',
+      panelBg: 'rgba(247, 229, 208, 0.88)',
+      storyPanelBg: 'rgba(247, 229, 208, 0.9)',
+      cardOverlay: '#f7e5d0',
     },
   },
   miscelania: {
@@ -168,9 +175,48 @@ export const palettes: Record<PaletteName, Palette> = {
       textColor: '#edf0f2',
       accent: '#3ae9f2',
       accentAlt: '#83e5ea',
-      bgImage: mediaUrl('/imgs/bichittos/_bg/ceu_nuvem.png'),
+      bgImage: mediaUrl('/imgs/bichittos/_bg/ceu_nuvem.jpg'),
       tag: 'Elefante · Medroso',
       panelBg: 'rgb(47, 49, 113)',
+    },
+  },
+  // === LIVROS (Bichittos) ===
+  // Aba "Books" que reúne os livros de todas as criaturas. colors[0] = cor
+  // dos cards/texto sobre o fundo escuro; dark = fundo sólido da camada de
+  // baixo (atrás do grid); gradient = degradê da camada de baixo; gradientBg
+  // = degradê da camada de cima (título "Books"). Paleta própria, separada
+  // de `bichittos` (usada no HeroSection do topo da página).
+  livros: {
+    // Combinação própria — rosa → laranja → amarelo, quente e festiva,
+    // diferente da paleta do Zeco (que foi só um ponto de partida).
+    //
+    // Campos REALMENTE usados na seção "Livros" (ver BichittosClient.tsx):
+    //   colors[0]  → accentColor do CreatureSection + cor dos BookPanel
+    //   dark       → cor do título/texto (CreatureCard) + overlay escuro
+    //   gradientBg → fundo da camada de cima (atrás do título "Books")
+    //   bichittos.bgImage → imagem de fundo com parallax
+    //   bichittos.panelBg → fundo translúcido da camada de baixo
+    // Os demais campos abaixo (`text`, `gradient`, `colors[1..5]`, resto de
+    // `bichittos`) existem só porque `Palette`/`bichittos` exigem esses
+    // campos no tipo — não aparecem em tela aqui, então valem qualquer coisa
+    // coerente (repetindo valores já usados) em vez de inventar cor snova.
+    colors: ['#dda026', '#dda026', '#dda026', '#dda026', '#dda026', '#dda026'],
+    text: '',
+    dark: '#3f1c0d',
+    gradient: 'linear-gradient(155deg, #4a2512 0%, #7a3d1a 45%, #c56b2e 100%)',
+    gradientBg: 'linear-gradient(160deg, #fece95 0%, #f57f20 40%, #fece95 100%)',
+    bichittos: {
+      name: '#572d0d',
+      text: '#b66120',
+      titleColor: '#b66120',
+      textColor: '#ffe5b4',
+      accent: '#b66120',
+      accentAlt: '#ffe5b4',
+      bgImage: mediaUrl('/imgs/bichittos/_bg/primaveracena_12_ipe.jpg'),
+      tag: '',
+      // Translúcido, igual ao default do DSTextPanel — deixa a imagem de
+      // fundo (parallax) aparecer por trás, como nas criaturas reais.
+      panelBg: 'rgba(225, 113, 27, 0.7)',
     },
   },
   kammara: {

@@ -20,7 +20,11 @@
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "generate-app-content": "node scripts/generate-app-content.mjs",
+    "prebuild": "npm run generate-app-content",
+    "predev": "npm run generate-app-content",
+    "test:app-content": "node --test scripts/tests/kammara-app-api.test.mjs"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.34.0",

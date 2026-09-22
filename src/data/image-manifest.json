@@ -266,64 +266,8 @@
     ],
     "taylo": [
       {
-        "name": "taylo",
-        "image": "/imgs/bichittos/taylo/01_taylo.png"
-      },
-      {
-        "name": "Pitu chorando",
-        "image": "/imgs/bichittos/taylo/02_Pitu_chorando.gif"
-      },
-      {
-        "name": "Pitu comendo geleia",
-        "image": "/imgs/bichittos/taylo/02_Pitu_comendo_geleia.png"
-      },
-      {
-        "name": "Pitu tomando banho",
-        "image": "/imgs/bichittos/taylo/02_Pitu_tomando_banho.png"
-      },
-      {
-        "name": "Pitu toy",
-        "image": "/imgs/bichittos/taylo/02_Pitu_toy.png"
-      },
-      {
         "name": "pitu",
-        "image": "/imgs/bichittos/taylo/02_pitu.png"
-      },
-      {
-        "name": "babalina dancando",
-        "image": "/imgs/bichittos/taylo/03_babalina_dancando.png"
-      },
-      {
-        "name": "babalina",
-        "image": "/imgs/bichittos/taylo/03_babalina.png"
-      },
-      {
-        "name": "Catarina feliz",
-        "image": "/imgs/bichittos/taylo/05_Catarina_feliz.gif"
-      },
-      {
-        "name": "Catarina",
-        "image": "/imgs/bichittos/taylo/05_Catarina.png"
-      },
-      {
-        "name": "Carmela Caramela",
-        "image": "/imgs/bichittos/taylo/06_Carmela_Caramela.gif"
-      },
-      {
-        "name": "olivia feliz",
-        "image": "/imgs/bichittos/taylo/07_olivia_feliz.png"
-      },
-      {
-        "name": "olivia",
-        "image": "/imgs/bichittos/taylo/07_olivia.png"
-      },
-      {
-        "name": "squizo comendo bala",
-        "image": "/imgs/bichittos/taylo/08_squizo_comendo_bala.png"
-      },
-      {
-        "name": "squizo quebrou patinha",
-        "image": "/imgs/bichittos/taylo/08_squizo_quebrou_patinha.png"
+        "image": "/imgs/bichittos/taylo/pitu.png"
       }
     ],
     "cheiodebolinha": [
@@ -423,6 +367,10 @@
       }
     ],
     "kammara": [
+      {
+        "name": "capa kammara saga",
+        "image": "/imgs/kammara/capa_kammara_saga.jpg"
+      },
       {
         "name": "events bg",
         "image": "/imgs/kammara/events_bg.jpg"
@@ -972,6 +920,60 @@
         "image": "/imgs/kammara/lunnp1/Veluma.png"
       }
     ],
+    "kammara/memphis": [
+      {
+        "name": "Bagu",
+        "image": "/imgs/kammara/memphis/Bagu.png"
+      },
+      {
+        "name": "Destro costas",
+        "image": "/imgs/kammara/memphis/Destro_costas.png"
+      },
+      {
+        "name": "Destro",
+        "image": "/imgs/kammara/memphis/Destro.png"
+      },
+      {
+        "name": "Jaquarta back",
+        "image": "/imgs/kammara/memphis/Jaquarta_back.png"
+      },
+      {
+        "name": "Jaquarta frente",
+        "image": "/imgs/kammara/memphis/Jaquarta_frente.png"
+      },
+      {
+        "name": "Nobuk back",
+        "image": "/imgs/kammara/memphis/Nobuk_back.png"
+      },
+      {
+        "name": "Nobuk",
+        "image": "/imgs/kammara/memphis/Nobuk.png"
+      },
+      {
+        "name": "Peter back",
+        "image": "/imgs/kammara/memphis/Peter_back.png"
+      },
+      {
+        "name": "Peter",
+        "image": "/imgs/kammara/memphis/Peter.png"
+      },
+      {
+        "name": "Raiagu costas",
+        "image": "/imgs/kammara/memphis/Raiagu_costas.png"
+      },
+      {
+        "name": "Raigu frente",
+        "image": "/imgs/kammara/memphis/Raigu_frente.png"
+      },
+      {
+        "name": "Violeta costas",
+        "image": "/imgs/kammara/memphis/Violeta_costas.png"
+      },
+      {
+        "name": "Violeta",
+        "image": "/imgs/kammara/memphis/Violeta.png"
+      }
+    ],
     "kammara/orfv": [
       {
         "name": "orvian 13",
@@ -1468,8 +1470,8 @@
   "books": {
     "art": [
       {
-        "id": "Coloring Book",
-        "cover": "/imgs/books/art/Coloring Book/cover.jpg",
+        "id": "Coloring_Book",
+        "cover": "/imgs/books/art/Coloring_Book/cover.jpg",
         "pages": []
       }
     ],
@@ -1485,13 +1487,24 @@
         "id": "adventures",
         "cover": "/imgs/books/napcat/adventures/cover.jpg",
         "pages": []
+      },
+      {
+        "id": "color_book",
+        "cover": null,
+        "pages": []
       }
     ],
-    "taylo": [],
+    "taylo": [
+      {
+        "id": "volume1",
+        "cover": null,
+        "pages": []
+      }
+    ],
     "zeco": [
       {
         "id": "zeco-estacoes",
-        "cover": "/imgs/books/zeco/zeco-estacoes/cover.png",
+        "cover": "/imgs/books/zeco/zeco-estacoes/cover_en1.jpg",
         "pages": []
       }
     ]

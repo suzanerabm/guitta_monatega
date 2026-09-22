@@ -3,7 +3,7 @@ import { SITE_URL } from "@/lib/site";
 
 const LOCALES = ["pt", "en"] as const;
 // Rotas públicas do app (sem locale — ele é prefixado abaixo).
-const ROUTES = ["", "kammara", "bichittos", "art", "about", "privacy"] as const;
+const ROUTES = ["", "kammara", "bichittos", "art", "about", "licensing-partnerships", "privacy"] as const;
 
 /**
  * sitemap.xml gerado pelo Next (App Router).

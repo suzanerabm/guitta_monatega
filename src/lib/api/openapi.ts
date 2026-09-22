@@ -375,21 +375,38 @@ export const openApiDocument = {
         },
       },
 
+      BookBuy: {
+        type: ['object', 'null'],
+        description: 'Link de compra, ou `null` quando ainda não está à venda.',
+        required: ['url', 'label'],
+        properties: {
+          url: { type: 'string', format: 'uri' },
+          label: { type: 'string' },
+        },
+      },
+
       Book: {
         type: 'object',
-        required: ['id', 'cover', 'pages'],
+        description: 'Uma edição de livro, no idioma pedido.',
+        required: ['id', 'title', 'cover', 'pages', 'buy'],
         properties: {
           id: { type: 'string' },
+          title: { type: 'string' },
           cover: { oneOf: [{ $ref: '#/components/schemas/MediaUrl' }, { type: 'null' }] },
           pages: { type: 'array', items: { $ref: '#/components/schemas/MediaUrl' } },
-          buy: {
-            type: ['object', 'null'],
-            description: 'Link de compra, quando houver.',
-            properties: {
-              url: { type: 'string', format: 'uri' },
-              label: { type: 'string' },
-            },
-          },
+          buy: { $ref: '#/components/schemas/BookBuy' },
+        },
+      },
+
+      Sticker: {
+        type: 'object',
+        description: 'Pacote de stickers de um bichitto.',
+        required: ['id', 'title', 'cover', 'buy'],
+        properties: {
+          id: { type: 'string' },
+          title: { type: 'string' },
+          cover: { oneOf: [{ $ref: '#/components/schemas/MediaUrl' }, { type: 'null' }] },
+          buy: { $ref: '#/components/schemas/BookBuy' },
         },
       },
 
@@ -447,7 +464,7 @@ export const openApiDocument = {
 
       Bichitto: {
         type: 'object',
-        required: ['id', 'name', 'text', 'panelStory', 'chars', 'positions', 'videos', 'books'],
+        required: ['id', 'name', 'text', 'panelStory', 'chars', 'positions', 'videos', 'books', 'stickers'],
         properties: {
           id: { type: 'string', example: 'napcat' },
           name: { type: 'string' },
@@ -474,6 +491,7 @@ export const openApiDocument = {
           },
           mascot: { type: ['object', 'null'] },
           books: { type: 'array', items: { $ref: '#/components/schemas/Book' } },
+          stickers: { type: 'array', items: { $ref: '#/components/schemas/Sticker' } },
         },
       },
 
