@@ -29,7 +29,7 @@
       "homeButtonLabel": "Conheça o mundo do Napcat",
       "homeButtonImage": "/imgs/bichittos/napcat/napcat.png",
       "homeButtonImageAlt": "Napcat",
-      "buyUrl": "www.kammara.com",
+      "buyUrl": "https://a.co/d/00X33Zd1",
       "buyLabel": "Compre na Amazon"
     },
     "napcat/color-en": {
@@ -41,7 +41,7 @@
       "homeButtonLabel": "Discover Napcat's world",
       "homeButtonImage": "/imgs/bichittos/napcat/napcat.png",
       "homeButtonImageAlt": "Napcat",
-      "buyUrl": "www.kammara.com",
+      "buyUrl": "https://a.co/d/0gbFQBiB",
       "buyLabel": "Buy on Amazon"
     },
     "zeco/zeco-estacoes-pt": {
@@ -53,7 +53,7 @@
       "homeButtonLabel": "Conheça o mundo do Zeco",
       "homeButtonImage": "/imgs/bichittos/zeco/01_zeco.png",
       "homeButtonImageAlt": "Zeco",
-      "buyUrl": "www.kammara.com",
+      "buyUrl": "https://a.co/d/0fxxQVRy",
       "buyLabel": "Compre na Amazon"
     },
     "zeco/zeco-estacoes-en": {
@@ -65,7 +65,7 @@
       "homeButtonLabel": "Discover Zeco's world",
       "homeButtonImage": "/imgs/bichittos/zeco/01_zeco.png",
       "homeButtonImageAlt": "Zeco",
-      "buyUrl": "www.kammara.com",
+      "buyUrl": "https://a.co/d/04qQpMrW",
       "buyLabel": "Buy on Amazon"
     },
     "taylo/star-hunter-pt": {
@@ -77,7 +77,7 @@
       "homeButtonLabel": "Conheça o mundo de Taylo",
       "homeButtonImage": "/imgs/bichittos/taylo/os_dois.png",
       "homeButtonImageAlt": "Taylo e Pitu",
-       "buyUrl": "www.kammara.com",
+      "buyUrl": "https://a.co/d/0g3t8Q69",
       "buyLabel": "Compre na Amazon"
     },
     "taylo/star-hunter-en": {
