@@ -157,7 +157,7 @@ export default async function HomePage({
           background="white"
           padding={{ base: '3rem 0', md: '4rem 0' }}
         >
-          <Box maxW="1200px" mx="auto" px={{ base: 'lg', md: '3xl' }}>
+          <Box width="100%" px={{ base: 'lg', md: '3xl' }}>
             <Box
               display="flex"
               flexDirection={{ base: 'column', md: 'row' }}
