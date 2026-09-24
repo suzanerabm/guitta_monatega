@@ -80,7 +80,7 @@ export default async function BooksPage({
             cover={book.cover}
             detailsLabel={t('detailsLabel')}
             accentColor={visual.accent}
-            decoration={visual.decorations[0]}
+            decoration={visual.decorations[0]?.src}
           />;
         })}
       </Box>

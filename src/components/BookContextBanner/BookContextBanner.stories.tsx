@@ -18,7 +18,7 @@ export const NapCat: Story = {
     title: 'Conheça o NapCat',
     backgroundImage: '/imgs/bichittos/_bg/napcat.jpg',
     overlay: bookPageVisuals.napcat.contextOverlay,
-    decorations: ['/imgs/bichittos/napcat/napcat.png'],
+    decorations: [{ src: '/imgs/bichittos/napcat/napcat.png' }],
     accentColor: 'orange',
   },
 };
