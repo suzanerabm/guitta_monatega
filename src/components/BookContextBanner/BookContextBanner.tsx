@@ -8,6 +8,8 @@ interface BookContextBannerProps {
   title: string;
   backgroundImage: string;
   overlay: string;
+  textColor: string;
+  eyebrowColor: string;
   decorations: BookBannerDecoration[];
   accentColor: string;
 }
@@ -18,6 +20,8 @@ export function BookContextBanner({
   title,
   backgroundImage,
   overlay,
+  textColor,
+  eyebrowColor,
   decorations,
   accentColor,
 }: BookContextBannerProps) {
@@ -29,7 +33,7 @@ export function BookContextBanner({
         position="relative"
         height={bookPageLayout.contextBannerHeight}
         overflow="hidden"
-        backgroundImage={`${overlay}, url(${backgroundImage})`}
+        backgroundImage={`url(${backgroundImage})`}
         backgroundSize="cover"
         backgroundPosition={{ base: '58% center', md: 'center' }}
         borderTopWidth={bookPageLayout.accentBorderWidth}
@@ -39,17 +43,24 @@ export function BookContextBanner({
         alignItems="center"
         px={{ base: 'xl', md: '5xl' }}
       >
+        <Box
+          aria-hidden="true"
+          position="absolute"
+          inset={0}
+          background={overlay}
+          opacity={bookPageLayout.contextOverlayOpacity}
+        />
         <Box position="relative" zIndex={2} maxW={{ base: '68%', md: '52%' }}>
           <Text
             fontSize="xs"
             letterSpacing="widest"
             textTransform="uppercase"
-            color="textOverlay"
+            color={eyebrowColor}
             mb="sm"
           >
             {eyebrow}
           </Text>
-          <Heading as="h2" textStyle="heading" fontSize={{ base: '3xl', md: 'h1' }} lineHeight={1.02} color="white">
+          <Heading as="h2" textStyle="heading" fontSize={{ base: '3xl', md: 'h1' }} lineHeight={1.02} color={textColor}>
             {title}
           </Heading>
         </Box>
@@ -57,6 +68,7 @@ export function BookContextBanner({
           aria-hidden="true"
           position="absolute"
           inset={0}
+          zIndex={1}
           display="flex"
           justifyContent="flex-end"
           alignItems="flex-end"

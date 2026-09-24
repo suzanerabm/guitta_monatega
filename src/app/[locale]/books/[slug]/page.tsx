@@ -78,7 +78,7 @@ export default async function BookPage({
   };
 
   return (
-    <Box background={visual.background} color="ink" minH="100vh">
+    <Box background="offWhite" color="ink" minH="100vh">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -208,6 +208,8 @@ export default async function BookPage({
         title={book.contextTitle}
         backgroundImage={visual.contextBackground}
         overlay={visual.contextOverlay}
+        textColor={visual.contextText}
+        eyebrowColor={visual.contextEyebrow}
         decorations={visual.decorations}
         accentColor={visual.accent}
       />

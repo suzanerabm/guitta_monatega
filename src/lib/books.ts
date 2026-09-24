@@ -101,7 +101,7 @@ const BOOK_DEFINITIONS: BookDefinition[] = [
     collection: 'kammara',
     legacyIds: ['saga-orf-v-pt', 'saga-orf-v-en'],
     contextPath: '/kammara',
-    visualKey: 'kammara',
+    visualKey: 'orfv',
     descriptions: {
       pt: 'Uma aventura ilustrada em Kammara, universo onde as invenções da humanidade continuaram evoluindo e cada planeta passou a viver sua própria história.',
       en: 'An illustrated adventure set in Kammara, a universe where humanity’s inventions kept evolving and every planet came to live its own story.',
@@ -125,7 +125,7 @@ const BOOK_DEFINITIONS: BookDefinition[] = [
     collection: 'kammara',
     legacyIds: ['saga-maelik-v-pt'],
     contextPath: '/kammara',
-    visualKey: 'kammara',
+    visualKey: 'digg',
     descriptions: {
       pt: 'O segundo volume da saga de Kammara amplia a jornada para Digg e para novas histórias desse universo em expansão.',
     },
