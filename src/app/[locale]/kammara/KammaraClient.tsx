@@ -321,6 +321,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
   const t = useTranslations('kammara');
   const tCommon = useTranslations('common');
   const locale = useLocale() as Locale;
+  const tBooks = useTranslations('booksPage');
   // No "all" on /kammara: it would mount every world at once and freeze the
   // page. We open on the Kammara intro and mount one world at a time — the
   // intro section stays mounted always; each world mounts only when active.
@@ -808,6 +809,9 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
             <Box my="3xl" px={{ base: '1.5rem', md: 0 }}>
               <BookShelf
                 arrowColor={kammaraPalette.colors[0]}
+                viewAllHref={`/${locale}/books`}
+                viewAllLabel={tBooks('viewAllLabel')}
+                viewAllColor={kammaraPalette.colors[0]}
                 arrowVariant="glyph"
                 comingSoonLabel={tCommon('soon')}
                 books={kammaraBooks.map((b) => ({

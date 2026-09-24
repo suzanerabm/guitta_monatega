@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Box, Heading, Text, VisuallyHidden } from '@chakra-ui/react';
-import NextLink from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { HomeBanner } from '@/components/HomeBanner';
 import { BookShelf } from '@/components/BookShelf';
@@ -191,20 +190,11 @@ export default async function HomePage({
             >
               {t('books.description')}
             </Text>
-            <NextLink href={`${prefix}/books`} style={{ textDecoration: 'underline' }}>
-              <Text
-                as="span"
-                display="inline-block"
-                fontSize="sm"
-                letterSpacing="wide"
-                color={homeBooksGallery.titleColor}
-                mb="xl"
-              >
-                {tBooks('viewAllLabel')}
-              </Text>
-            </NextLink>
             <BookShelf
               arrowColor={homeBooksGallery.titleColor}
+              viewAllHref={`${prefix}/books`}
+              viewAllLabel={tBooks('viewAllLabel')}
+              viewAllColor={homeBooksGallery.titleColor}
               comingSoonLabel={tCommon('soon')}
               cardWidth={{ base: '68vw', sm: '250px', xl: '280px' }}
               cardMaxWidth="300px"

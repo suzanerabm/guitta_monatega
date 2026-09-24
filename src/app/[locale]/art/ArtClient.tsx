@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Box, Heading, Text } from '@chakra-ui/react';
 import { HeroSection } from '@/components/HeroSection';
 import { FilterBar } from '@/components/FilterBar';
@@ -34,6 +34,8 @@ interface Props {
 export function ArtClient({ sections, books }: Props) {
   const t = useTranslations('art');
   const tCommon = useTranslations('common');
+  const tBooks = useTranslations('booksPage');
+  const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -209,6 +211,9 @@ export function ArtClient({ sections, books }: Props) {
               </Text>
               <BookShelf
                 arrowColor={booksMeta.titleColor}
+                viewAllHref={`/${locale}/books`}
+                viewAllLabel={tBooks('viewAllLabel')}
+                viewAllColor={booksMeta.titleColor}
                 comingSoonLabel={tCommon('soon')}
                 books={books.map((b) => ({
                   book: {

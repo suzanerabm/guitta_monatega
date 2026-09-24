@@ -53,6 +53,7 @@ interface Props {
 export function BichittosClient({ data }: Props) {
   const t = useTranslations('bichittos');
   const tCommon = useTranslations('common');
+  const tBooks = useTranslations('booksPage');
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -561,6 +562,9 @@ export function BichittosClient({ data }: Props) {
             <Box position="relative" zIndex={1} py="2rem">
               <BookShelf
                 arrowColor={palettes.livros.colors[0]}
+                viewAllHref={`/${locale}/books`}
+                viewAllLabel={tBooks('viewAllLabel')}
+                viewAllColor={palettes.livros.colors[0]}
                 books={allBooks.map((b) => ({
                   book: {
                     id: `${b.creatureId}-${b.id}`,

@@ -41,4 +41,15 @@ describe('BookShelf', () => {
     expect(screen.getByTestId('shelf-arrow-left')).toBeInTheDocument();
     expect(screen.getByTestId('shelf-arrow-right')).toBeInTheDocument();
   });
+
+  it('renders the optional catalog link above the shelf', () => {
+    renderWithChakra(
+      <BookShelf
+        books={entries}
+        viewAllHref="/pt/books"
+        viewAllLabel="Ver todos"
+      />,
+    );
+    expect(screen.getByRole('link', { name: 'Ver todos' })).toHaveAttribute('href', '/pt/books');
+  });
 });

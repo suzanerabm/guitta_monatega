@@ -2,6 +2,7 @@
 
 import { Box } from '@chakra-ui/react';
 import type { BoxProps } from '@chakra-ui/react';
+import NextLink from 'next/link';
 import { HorizontalCardStrip } from '@/components/HorizontalCardStrip';
 import { BookPanel, type BookPanelBook } from '@/components/BookPanel';
 
@@ -38,6 +39,9 @@ interface BookShelfProps {
   showLabels?: boolean;
   /** Optional background shared by this shelf's panels. */
   panelBackground?: string;
+  viewAllHref?: string;
+  viewAllLabel?: string;
+  viewAllColor?: string;
   'data-testid'?: string;
 }
 
@@ -60,25 +64,55 @@ export function BookShelf({
   cardHeight,
   showLabels = true,
   panelBackground,
+  viewAllHref,
+  viewAllLabel,
+  viewAllColor = 'ink',
   'data-testid': testId,
 }: BookShelfProps) {
   return (
-    <HorizontalCardStrip arrowColor={arrowColor} arrowVariant={arrowVariant} data-testid={testId}>
-      {books.map((entry) => (
-        <Box key={entry.book.id} width={cardWidth} maxW={cardMaxWidth}>
-          <BookPanel
-            book={entry.book}
-            borderColor={entry.borderColor}
-            textColor={entry.textColor}
-            height={cardHeight}
-            showLabel={showLabels}
-            background={panelBackground}
-            readLabel={readLabel}
-            comingSoonLabel={comingSoonLabel}
-            onRead={entry.onRead}
-          />
+    <Box>
+      {viewAllHref && viewAllLabel && (
+        <Box display="flex" justifyContent="flex-end" mb="lg" pr={{ base: 'lg', md: 0 }}>
+          <NextLink href={viewAllHref} style={{ textDecoration: 'none' }}>
+            <Box
+              as="span"
+              display="inline-flex"
+              alignItems="center"
+              border="1px solid"
+              borderColor={viewAllColor}
+              color={viewAllColor}
+              px="lg"
+              py="md"
+              fontSize="sm"
+              fontWeight="semibold"
+              letterSpacing="wide"
+              textTransform="uppercase"
+              transitionProperty="opacity"
+              transitionDuration="default"
+              _hover={{ opacity: 0.72 }}
+            >
+              {viewAllLabel}
+            </Box>
+          </NextLink>
         </Box>
-      ))}
-    </HorizontalCardStrip>
+      )}
+      <HorizontalCardStrip arrowColor={arrowColor} arrowVariant={arrowVariant} data-testid={testId}>
+        {books.map((entry) => (
+          <Box key={entry.book.id} width={cardWidth} maxW={cardMaxWidth}>
+            <BookPanel
+              book={entry.book}
+              borderColor={entry.borderColor}
+              textColor={entry.textColor}
+              height={cardHeight}
+              showLabel={showLabels}
+              background={panelBackground}
+              readLabel={readLabel}
+              comingSoonLabel={comingSoonLabel}
+              onRead={entry.onRead}
+            />
+          </Box>
+        ))}
+      </HorizontalCardStrip>
+    </Box>
   );
 }

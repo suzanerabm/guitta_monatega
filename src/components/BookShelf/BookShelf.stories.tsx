@@ -18,6 +18,8 @@ const zecoCover = '/imgs/books/zeco/zeco-estacoes/cover.png';
 
 export const FewBooks: Story = {
   args: {
+    viewAllHref: '/pt/books',
+    viewAllLabel: 'Ver todos',
     books: [
       {
         book: { id: 'b1', image: kammaraCover, alt: 'Saga em ORF-V', label: 'Saga em ORF-V' },
