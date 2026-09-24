@@ -1,0 +1,33 @@
+import { fireEvent, screen } from '@testing-library/react';
+import { describe, expect, it } from 'vitest';
+import { renderWithChakra } from '@/test-utils';
+import type { CatalogBook } from '@/lib/books';
+import { BookCatalog } from './BookCatalog';
+
+const books: CatalogBook[] = [
+  {
+    slug: 'digital-book', collection: 'bichittos', contextPath: '/bichittos', visualKey: 'zeco',
+    title: 'Digital', description: 'Description', cover: null, contextTitle: 'Zeco',
+    editions: [{ id: 'digital', format: 'ebook', url: null, retailer: null, price: { amount: 4.98, currency: 'USD' } }],
+  },
+  {
+    slug: 'print-book', collection: 'art', contextPath: '/art', visualKey: 'art',
+    title: 'Print', description: 'Description', cover: null, contextTitle: 'Art',
+    editions: [{ id: 'print', format: 'paperback', url: null, retailer: null }],
+  },
+];
+
+const labels = {
+  filterLabel: 'Filtrar por formato', allFormats: 'Todos', fromPrice: 'A partir de', details: 'Conheça o livro',
+  collections: { art: 'Arte', bichittos: 'Bichittos', kammara: 'Kammara' },
+  formats: { ebook: 'Livro digital', paperback: 'Capa comum', hardcover: 'Capa dura', print: 'Edição impressa' },
+};
+
+describe('BookCatalog', () => {
+  it('filters books by available edition format', () => {
+    renderWithChakra(<BookCatalog books={books} locale="pt" labels={labels} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Livro digital' }));
+    expect(screen.getByRole('heading', { name: 'Digital' })).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: 'Print' })).not.toBeInTheDocument();
+  });
+});

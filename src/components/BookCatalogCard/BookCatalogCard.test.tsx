@@ -20,11 +20,15 @@ describe('BookCatalogCard', () => {
         detailsLabel="Conheça o livro"
         accentColor="orange"
         decoration="/character.png"
+        editionLabels={['Livro digital', 'Capa comum', 'Capa dura']}
+        priceLabel="A partir de US$ 4,98"
       />,
     );
 
     expect(screen.getByRole('heading', { name: 'Zeco nas Estações' })).toBeInTheDocument();
     expect(screen.getAllByRole('link')).toHaveLength(2);
     expect(screen.getByAltText('Zeco nas Estações')).toHaveAttribute('src', '/cover.jpg');
+    expect(screen.getByText('A partir de US$ 4,98')).toBeInTheDocument();
+    expect(screen.getByText('Livro digital · Capa comum · Capa dura')).toBeInTheDocument();
   });
 });

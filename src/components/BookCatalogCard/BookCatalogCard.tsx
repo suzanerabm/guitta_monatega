@@ -10,6 +10,8 @@ interface BookCatalogCardProps {
   detailsLabel: string;
   accentColor: string;
   decoration?: string;
+  editionLabels?: string[];
+  priceLabel?: string;
 }
 
 export function BookCatalogCard({
@@ -20,6 +22,8 @@ export function BookCatalogCard({
   detailsLabel,
   accentColor,
   decoration,
+  editionLabels = [],
+  priceLabel,
 }: BookCatalogCardProps) {
   return (
     <Box
@@ -78,6 +82,16 @@ export function BookCatalogCard({
         <Heading as="h2" textStyle="heading" fontSize="xl" color="ink" mb="lg">
           {title}
         </Heading>
+        {priceLabel && (
+          <Text fontSize="lg" color="ink" fontWeight="semibold" mb="sm">
+            {priceLabel}
+          </Text>
+        )}
+        {editionLabels.length > 0 && (
+          <Text fontSize="sm" color="inkMuted" lineHeight={1.6} mb="lg">
+            {editionLabels.join(' · ')}
+          </Text>
+        )}
         <Box mt="auto" position="relative" zIndex={1}>
           <NextLink href={href} style={{ textDecoration: 'underline' }}>
             <Text as="span" fontSize="sm" color="ink" letterSpacing="wide">

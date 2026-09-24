@@ -19,5 +19,7 @@ export const Default: Story = {
     detailsLabel: 'Conheça o livro',
     accentColor: 'orange',
     decoration: '/imgs/bichittos/zeco/01_zeco.png',
+    editionLabels: ['Livro digital', 'Capa comum', 'Capa dura'],
+    priceLabel: 'A partir de US$ 4,98',
   },
 };

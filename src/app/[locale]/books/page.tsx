@@ -1,10 +1,9 @@
 import type { Metadata } from 'next';
 import { Box, Heading, Text } from '@chakra-ui/react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { BookCatalogCard } from '@/components/BookCatalogCard';
+import { BookCatalog } from '@/components/BookCatalog';
 import { getCatalogBooks, type BookLocale } from '@/lib/books';
 import { buildPageMetadata } from '@/lib/seo';
-import { bookPageVisuals } from '@/theme/bookPages';
 
 export async function generateMetadata({
   params,
@@ -59,31 +58,27 @@ export default async function BooksPage({
         </Text>
       </Box>
 
-      <Box
-        as="section"
-        aria-label={t('catalogLabel')}
-        maxW="1200px"
-        mx="auto"
-        px={{ base: 'lg', md: '3xl' }}
-        pb={{ base: '4xl', md: '6xl' }}
-        display="grid"
-        gridTemplateColumns={{ base: '1fr', sm: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }}
-        gap={{ base: 'xl', md: '2xl' }}
-      >
-        {books.map((book) => {
-          const visual = bookPageVisuals[book.visualKey];
-          return <BookCatalogCard
-            key={book.slug}
-            href={`/${loc}/books/${book.slug}`}
-            title={book.title}
-            collection={t(`collections.${book.collection}`)}
-            cover={book.cover}
-            detailsLabel={t('detailsLabel')}
-            accentColor={visual.accent}
-            decoration={visual.decorations[0]?.src}
-          />;
-        })}
-      </Box>
+      <BookCatalog
+        books={books}
+        locale={loc}
+        labels={{
+          filterLabel: t('filterLabel'),
+          allFormats: t('allFormats'),
+          fromPrice: t('fromPrice'),
+          details: t('detailsLabel'),
+          collections: {
+            art: t('collections.art'),
+            bichittos: t('collections.bichittos'),
+            kammara: t('collections.kammara'),
+          },
+          formats: {
+            ebook: t('formats.ebook'),
+            paperback: t('formats.paperback'),
+            hardcover: t('formats.hardcover'),
+            print: t('formats.print'),
+          },
+        }}
+      />
     </Box>
   );
 }
