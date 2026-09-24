@@ -6,6 +6,7 @@ import { HomeBanner } from '@/components/HomeBanner';
 import { BookCatalogCarousel } from '@/components/BookCatalogCarousel';
 import { buildPageMetadata, SITE_URL } from '@/lib/seo';
 import { getCatalogBooks } from '@/lib/books';
+import { bookPageLayout } from '@/theme/bookPages';
 // import { DSCard } from '@/components/DSCard';
 // import { BichittosBannerWithNinha } from './BichittosBannerWithNinha';
 
@@ -169,7 +170,7 @@ export default async function HomePage({
                 <Text fontSize="sm" letterSpacing="widest" textTransform="uppercase" color="inkMuted" mb="md">
                   {tBooks('eyebrow')}
                 </Text>
-                <Heading as="h2" textStyle="heading" fontSize="h1" color="ink">
+                <Heading as="h2" textStyle="heading" fontSize={bookPageLayout.catalogTitleSize} color="ink">
                   {tBooks('title')}
                 </Heading>
               </Box>

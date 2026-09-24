@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { BookCatalog } from '@/components/BookCatalog';
 import { getCatalogBooks, type BookLocale } from '@/lib/books';
 import { buildPageMetadata } from '@/lib/seo';
+import { bookPageLayout } from '@/theme/bookPages';
 
 export async function generateMetadata({
   params,
@@ -50,7 +51,7 @@ export default async function BooksPage({
         >
           {t('eyebrow')}
         </Text>
-        <Heading as="h1" textStyle="heading" fontSize="h1" color="ink" mb="lg">
+        <Heading as="h1" textStyle="heading" fontSize={bookPageLayout.catalogTitleSize} color="ink" mb="lg">
           {t('title')}
         </Heading>
         <Text fontSize="xl" color="inkSoft" lineHeight={1.7} maxW="720px">
