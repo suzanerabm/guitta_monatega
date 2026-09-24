@@ -44,23 +44,23 @@ describe('mediaUrl — modo local (default, sem env)', () => {
 });
 
 describe('mediaUrl — modo remoto', () => {
-  it('prefixa paths de /imgs/', async () => {
+  it('prefixa paths de /imgs/ e remove o /imgs (no bucket as pastas ficam na raiz)', async () => {
     const { mediaUrl: url } = await loadWithBase('https://cdn.exemplo.com');
     expect(url('/imgs/kammara/eni4/sereno.png')).toBe(
-      'https://cdn.exemplo.com/imgs/kammara/eni4/sereno.png',
+      'https://cdn.exemplo.com/kammara/eni4/sereno.png',
     );
   });
 
   it('ignora barra sobrando no fim da base', async () => {
     const { mediaUrl: url } = await loadWithBase('https://cdn.exemplo.com///');
-    expect(url('/imgs/a.png')).toBe('https://cdn.exemplo.com/imgs/a.png');
+    expect(url('/imgs/a.png')).toBe('https://cdn.exemplo.com/a.png');
   });
 
   it('codifica espaço uma única vez (idempotente)', async () => {
     const { mediaUrl: url } = await loadWithBase('https://cdn.exemplo.com');
     const once = url('/imgs/books/art/Coloring Book/cover.jpg');
     expect(once).toBe(
-      'https://cdn.exemplo.com/imgs/books/art/Coloring%20Book/cover.jpg',
+      'https://cdn.exemplo.com/books/art/Coloring%20Book/cover.jpg',
     );
     // Reaplicar não deve gerar %2520.
     expect(url(once)).toBe(once);
@@ -85,7 +85,7 @@ describe('mediaUrl — modo remoto', () => {
     const src = url('/imgs/kammara/eni4/_videos/palacio.mp4');
     expect(src.endsWith('.mp4')).toBe(true);
     expect(src.replace(/\.mp4$/, '.webm')).toBe(
-      'https://cdn.exemplo.com/imgs/kammara/eni4/_videos/palacio.webm',
+      'https://cdn.exemplo.com/kammara/eni4/_videos/palacio.webm',
     );
   });
 
@@ -97,8 +97,8 @@ describe('mediaUrl — modo remoto', () => {
   it('mediaUrls mapeia arrays', async () => {
     const { mediaUrls: urls } = await loadWithBase('https://cdn.exemplo.com');
     expect(urls(['/imgs/a.png', '/imgs/b.png'])).toEqual([
-      'https://cdn.exemplo.com/imgs/a.png',
-      'https://cdn.exemplo.com/imgs/b.png',
+      'https://cdn.exemplo.com/a.png',
+      'https://cdn.exemplo.com/b.png',
     ]);
   });
 
