@@ -22,7 +22,6 @@ export default async function ArtPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-
   const sections = getArtSections();
   const books = getArtBooks(locale as Locale);
 

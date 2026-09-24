@@ -38,28 +38,27 @@ export interface Drop {
 	label: string;
 }
 
-/** Link de compra de um livro ou sticker. */
-export interface BuyLink {
+export interface BookBuy {
 	url: string;
 	label: string;
 }
 
-/** Livro de uma seção, já filtrado por visibilidade e idioma. */
 export interface Book {
 	id: string;
-	/** Título da edição no idioma pedido. */
+	/** Título da edição, já no idioma pedido. */
 	title: string;
 	cover: string | null;
 	pages: string[];
-	buy: BuyLink | null;
+	/** Link de compra, ou `null` quando ainda não está à venda. */
+	buy: BookBuy | null;
 }
 
-/** Pacote de stickers de uma criatura (só capa + link de compra). */
+/** Pacote de stickers de um bichitto (link pra loja, sem páginas). */
 export interface Sticker {
 	id: string;
 	title: string;
 	cover: string | null;
-	buy: BuyLink | null;
+	buy: BookBuy | null;
 }
 
 // ── Bichittos ───────────────────────────────────────────────────────────
@@ -70,6 +69,7 @@ export interface BichittoVideo {
 	src: string;
 	/** Imagem de capa mostrada até o vídeo tocar. */
 	poster: string;
+	/** Rótulo curto, já no idioma pedido. */
 	label: string;
 }
 

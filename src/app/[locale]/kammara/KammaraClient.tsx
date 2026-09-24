@@ -312,7 +312,10 @@ export function KammaraClient({
   const searchParams = useSearchParams();
   // `worlds` já chega gateado do servidor — não publicado nem vem no payload.
   const publishedIds = useMemo(
-    () => [...worlds.map((w) => w.id), ...(kammaraBooks.length > 0 ? ['livros'] : [])],
+    () => [
+      ...worlds.map((w) => w.id),
+      ...(kammaraBooks.length > 0 ? ['livros'] : []),
+    ],
     [worlds, kammaraBooks],
   );
   const [activeFilter, setActiveFilter] = useState(() =>

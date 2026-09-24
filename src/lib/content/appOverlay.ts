@@ -14,13 +14,14 @@
 // e mantém as duas versões sempre da mesma revisão.
 
 import 'server-only';
-import snapshot from '@/generated/kammara-app.json';
 import sectionHeadersData from '@/data/kammara-app/section_headers.json';
-import booksData from '@/data/kammara_books.json';
+// Gerado por `npm run generate-app-content` (roda no predev/prebuild). É a
+// mesma fonte de `/api/kammara/v1`: as relações moram em cada item dos JSONs
+// (`relations`) e o gerador as junta com as de `kammara-app/relations.json`.
+import appSnapshot from '@/generated/kammara-app.json';
 import { charactersByContext } from '@/data/characters';
 import progressData from '@/data/kammara_progress.json';
 import { kammaraInProgress } from '@/lib/visibility';
-import { mediaUrl } from '@/lib/media';
 import { SITE_URL } from '@/lib/site';
 import { getMessages } from './i18n';
 import type { Locale } from './types';
@@ -69,21 +70,36 @@ export interface AppOverlayPayload {
 	comingSoon: { books: Record<Locale, number>; characters: number; planets: number };
 }
 
-/** Uma edição em `kammara_books.json`. Todos os campos são opcionais lá. */
-interface BookSource {
-	visible?: boolean;
-	onlyLocale?: string;
-	cover?: string;
-	title?: Partial<Localized>;
-	description?: Partial<Localized>;
-	body?: Partial<LocalizedBody>;
-	buyUrl?: string;
-	appId?: string;
+const catalogEntries = appSnapshot.files['catalog.json'].entries;
+
+/** Grafo de conexões: as relações de cada item somadas às avulsas. */
+function relations(): Record<string, string[]> {
+	const out: Record<string, string[]> = {};
+	for (const entry of catalogEntries) {
+		if (entry.relations.length > 0) out[entry.id] = [...entry.relations];
+	}
+	for (const [id, targets] of Object.entries(
+		appSnapshot.files['relations.json'].relations as Record<string, string[]>,
+	)) {
+		out[id] = [...new Set([...(out[id] ?? []), ...targets])];
+	}
+	return out;
 }
 
-const BOOKS = Object.entries(booksData.books as Record<string, BookSource>).filter(
-	([, book]) => book.visible !== false,
-);
+/** Livros visíveis de Kammara, uma entrada por edição. */
+function books(): OverlayBook[] {
+	return catalogEntries
+		.filter((entry) => entry.kind === 'book')
+		.map((entry) => ({
+			id: entry.id,
+			title: { pt: entry.title.pt ?? '', en: entry.title.en ?? '' },
+			description: { pt: entry.summary.pt ?? '', en: entry.summary.en ?? '' },
+			body: { pt: entry.body?.pt ?? [], en: entry.body?.en ?? [] },
+			cover: entry.image,
+			buyUrl: entry.externalUrl ?? '',
+			onlyLocale: entry.onlyLocale ?? '',
+		}));
+}
 
 function byLocale<T>(build: (locale: Locale) => T): Record<Locale, T> {
 	return Object.fromEntries(LOCALES.map((locale) => [locale, build(locale)])) as Record<
@@ -131,50 +147,13 @@ function comingSoon() {
 	const planets = kammaraInProgress().filter((planet) =>
 		stages.some((stage) => (planet.progress[stage] ?? 0) < 100),
 	).length;
-	const books = byLocale(
+	const upcomingBooks = byLocale(
 		(locale) =>
-			BOOKS.filter(
-				([, book]) =>
-					!(book.buyUrl ?? '').trim() &&
-					(!book.onlyLocale || book.onlyLocale === locale),
+			books().filter(
+				(book) => !book.buyUrl && (!book.onlyLocale || book.onlyLocale === locale),
 			).length,
 	);
-	return { books, characters, planets };
-}
-
-/**
- * O grafo de conexões entre verbetes. As conexões autorais moram em cada item
- * (`relations` nos JSONs de cenas, Drops etc.) e em `kammara-app/relations.json`;
- * o gerador (`scripts/generate-app-content.mjs`) junta as duas, acrescenta as
- * inferidas pelos atributos e descarta as que apontam para conteúdo oculto. Ler
- * do snapshot garante o mesmo grafo que `/api/kammara/v1` entrega.
- */
-function relations(): Record<string, string[]> {
-	const out: Record<string, string[]> = {};
-	for (const entry of snapshot.files['catalog.json'].entries) {
-		if (entry.relations.length > 0) out[entry.id] = [...entry.relations];
-	}
-	for (const [id, targets] of Object.entries(
-		snapshot.files['relations.json'].relations as Record<string, string[]>,
-	)) {
-		out[id] = [...new Set([...(out[id] ?? []), ...targets])];
-	}
-	return out;
-}
-
-function books(): OverlayBook[] {
-	return BOOKS.map(([key, book]) => {
-		const buy = (book.buyUrl ?? '').trim();
-		return {
-			id: book.appId ?? key,
-			title: { pt: book.title?.pt ?? '', en: book.title?.en ?? '' },
-			description: { pt: book.description?.pt ?? '', en: book.description?.en ?? '' },
-			body: { pt: book.body?.pt ?? [], en: book.body?.en ?? [] },
-			cover: book.cover ? mediaUrl(book.cover) : '',
-			buyUrl: buy && !/^https?:\/\//.test(buy) ? `https://${buy}` : buy,
-			onlyLocale: book.onlyLocale ?? '',
-		};
-	});
+	return { books: upcomingBooks, characters, planets };
 }
 
 /** Tudo o que o app precisa e as outras rotas não entregam, nos dois idiomas. */

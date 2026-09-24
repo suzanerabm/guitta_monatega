@@ -283,7 +283,10 @@ export function getKammaraCharacters(locale: Locale): CharacterCardItem[] {
 	return characterCards(contextId, locale, visibleManifestChars(contextId));
 }
 
-/** Livros da seção Kammara, filtrados por visibilidade e idioma. */
+/**
+ * Livros da seção Kammara, no idioma pedido. Edição oculta (`visible: false`
+ * ou `onlyLocale` de outro idioma em `kammara_books.json`) não entra.
+ */
 export function getKammaraBooks(locale: Locale): Book[] {
 	return getKammaraBookEntries("kammara", locale).map((b) => ({
 		id: b.id,

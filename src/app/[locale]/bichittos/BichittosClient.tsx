@@ -27,7 +27,7 @@ export type BichittosCreatureData = BichittoPayload;
 
 interface Props {
   data: BichittosCreatureData[];
-  /** Texto de abertura da aba "Livros", já no idioma da página. */
+  /** Texto de apresentação da aba "Livros", já no idioma da página. */
   booksText: string[];
 }
 

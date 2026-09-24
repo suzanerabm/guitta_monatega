@@ -5,9 +5,9 @@
 import 'server-only';
 import type { Locale } from '@/lib/characters';
 import type { CreatureId } from '@/theme/palettes';
-import { mediaUrl } from '@/lib/media';
 
 import stories from './stories.json';
+import { mediaUrl } from '@/lib/media';
 
 type Bilingual<T> = { pt: T; en: T };
 

@@ -375,9 +375,10 @@ export const openApiDocument = {
         },
       },
 
-      BuyLink: {
+      BookBuy: {
         type: ['object', 'null'],
-        description: 'Link de compra, quando houver.',
+        description: 'Link de compra, ou `null` quando ainda não está à venda.',
+        required: ['url', 'label'],
         properties: {
           url: { type: 'string', format: 'uri' },
           label: { type: 'string' },
@@ -386,25 +387,26 @@ export const openApiDocument = {
 
       Book: {
         type: 'object',
+        description: 'Uma edição de livro, no idioma pedido.',
         required: ['id', 'title', 'cover', 'pages', 'buy'],
         properties: {
           id: { type: 'string' },
-          title: { type: 'string', description: 'Título da edição no idioma pedido.' },
+          title: { type: 'string' },
           cover: { oneOf: [{ $ref: '#/components/schemas/MediaUrl' }, { type: 'null' }] },
           pages: { type: 'array', items: { $ref: '#/components/schemas/MediaUrl' } },
-          buy: { $ref: '#/components/schemas/BuyLink' },
+          buy: { $ref: '#/components/schemas/BookBuy' },
         },
       },
 
       Sticker: {
         type: 'object',
-        description: 'Pacote de stickers de uma criatura: só capa e link de compra.',
+        description: 'Pacote de stickers de um bichitto.',
         required: ['id', 'title', 'cover', 'buy'],
         properties: {
           id: { type: 'string' },
           title: { type: 'string' },
           cover: { oneOf: [{ $ref: '#/components/schemas/MediaUrl' }, { type: 'null' }] },
-          buy: { $ref: '#/components/schemas/BuyLink' },
+          buy: { $ref: '#/components/schemas/BookBuy' },
         },
       },
 

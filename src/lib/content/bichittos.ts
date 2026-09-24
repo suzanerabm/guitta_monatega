@@ -49,7 +49,7 @@ export function getBichitto(id: CreatureId, locale: Locale): BichittoPayload {
 		name: getCreatureName(id, locale),
 		text: getCreatureText(id, locale),
 		panelStory: getCreaturePanelStory(id, locale),
-		// O nome vem do nome do arquivo no manifesto ("napcat dormindo"); traduzir
+		// O nome vem do carrossel de `stories.json` ("napcat dormindo"); traduzir
 		// aqui e não no cliente mantém a conversão na fronteira de dados e evita
 		// depender de `useLocale()`, que pode ficar stale em navegação suave.
 		chars: getCreatureCarousel(id).map((c) => ({
@@ -58,13 +58,14 @@ export function getBichitto(id: CreatureId, locale: Locale): BichittoPayload {
 		})),
 		positions: characterPositions[id] ?? [],
 		videos: (bichittoVideos[id] ?? []).map((v) => ({
-			...v,
+			src: v.src,
+			poster: v.poster,
 			label: v.label[locale] || v.label.pt,
 		})),
 		mascot: id === "zeco" ? zecoMascot : undefined,
 		// Livro oculto (visible:false, ou onlyLocale de outro idioma) não entra
-		// no payload — nem no HTML, nem na resposta da API. `getBichittoBooks` já
-		// filtra por visibilidade e idioma.
+		// no payload — nem no HTML, nem na resposta da API. O filtro mora em
+		// `getBichittoBooks`.
 		books: getBichittoBooks(id, locale).map((b) => ({
 			id: b.id,
 			title: b.title,
@@ -88,7 +89,7 @@ export function getBichittos(locale: Locale): BichittoPayload[] {
 	);
 }
 
-/** Texto de abertura da aba "Livros", que reúne os livros de todas as criaturas. */
+/** Texto de apresentação da aba "Livros" (chave própria em `stories.json`). */
 export function getBichittosBooksText(locale: Locale): string[] {
 	return getBooksText(locale);
 }
