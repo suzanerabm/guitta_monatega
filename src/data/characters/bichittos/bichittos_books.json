@@ -34,7 +34,7 @@
       "editions": [{
         "format": "paperback",
         "purchaseChannel": "store",
-        "price": { "amount": 49.90, "currency": "BRL" },
+        "price": { "amount": 39.90, "currency": "BRL" },
         "facts": { "readingAge": "3–6 anos", "pageCount": 58, "language": "Português", "dimensions": "20,96 × 20,96 cm", "publicationDate": "23 de setembro de 2026" }
       }],
       "homeButtonUrl": "/bichittos?bichitto=napcat",
@@ -51,7 +51,7 @@
       "title": { "en": "A Coloring Book for Kids - NapCat" },
       "description": { "en": "Meet NapCat, a sleepy little kitten who turns every nap into a magical adventure.\n\nThis charming coloring book is filled with cozy scenes, friendly characters, and gentle moments designed to inspire creativity and imagination.\n\nPerfect for young children, every page invites little artists to relax, explore, and bring NapCat’s colorful world to life." },
       "contextTitle": { "en": "Discover NapCat" },
-      "editions": [{ "format": "paperback", "purchaseChannel": "amazon" }],
+      "editions": [{ "format": "paperback", "purchaseChannel": "amazon", "price": { "amount": 9.99, "currency": "USD" } }],
       "homeButtonUrl": "/bichittos?bichitto=napcat",
       "homeButtonLabel": "Discover Napcat's world",
       "homeButtonImage": "/imgs/bichittos/napcat/napcat.png",
@@ -69,7 +69,7 @@
       "editions": [
         { "format": "ebook", "purchaseChannel": "amazon", "price": { "amount": 24.90, "currency": "BRL" }, "facts": { "readingAge": "2–6 anos", "pageCount": 88, "language": "Português", "publicationDate": "23 de setembro de 2026" } },
         { "format": "paperback", "purchaseChannel": "store", "price": { "amount": 69.90, "currency": "BRL" }, "facts": { "readingAge": "3–6 anos", "pageCount": 88, "language": "Português", "dimensions": "17,78 × 0,53 × 25,4 cm", "publicationDate": "23 de setembro de 2026" } },
-        { "format": "hardcover", "purchaseChannel": "store", "price": { "amount": 99.90, "currency": "BRL" } }
+        { "format": "hardcover", "purchaseChannel": "store", "price": { "amount": 99.90, "currency": "BRL" }, "facts": { "readingAge": "2–6 anos", "pageCount": 88, "language": "Português", "dimensions": "18,39 × 1,02 × 26,01 cm", "publicationDate": "23 de setembro de 2026" } }
       ],
       "homeButtonUrl": "/bichittos?bichitto=zeco",
       "homeButtonLabel": "Conheça o mundo do Zeco",
@@ -88,7 +88,7 @@
       "editions": [
         { "format": "ebook", "purchaseChannel": "amazon", "price": { "amount": 4.98, "currency": "USD" }, "facts": { "readingAge": "2–6 years", "pageCount": 88, "language": "English", "publicationDate": "September 23, 2026" } },
         { "format": "paperback", "purchaseChannel": "amazon", "price": { "amount": 17.99, "currency": "USD" }, "facts": { "readingAge": "3–6 years", "pageCount": 88, "language": "English", "dimensions": "7 × 0.21 × 10 in", "publicationDate": "September 23, 2026", "isbn": "979-8193854920" } },
-        { "format": "hardcover", "purchaseChannel": "amazon", "price": { "amount": 27.99, "currency": "USD" } }
+        { "format": "hardcover", "purchaseChannel": "amazon", "price": { "amount": 27.99, "currency": "USD" }, "facts": { "readingAge": "2–6 years", "pageCount": 88, "language": "English", "dimensions": "7.24 × 0.4 × 10.24 in", "publicationDate": "September 23, 2026" } }
       ],
       "homeButtonUrl": "/bichittos?bichitto=zeco",
       "homeButtonLabel": "Discover Zeco's world",
