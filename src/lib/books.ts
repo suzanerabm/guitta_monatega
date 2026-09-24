@@ -18,6 +18,16 @@ interface BookDefinition {
   visualKey: BookVisualKey;
   descriptions: Partial<Record<BookLocale, string>>;
   contextTitles: Partial<Record<BookLocale, string>>;
+  facts?: Partial<Record<BookLocale, BookFacts>>;
+}
+
+export interface BookFacts {
+  readingAge?: string;
+  pageCount?: number;
+  language?: string;
+  dimensions?: string;
+  publicationDate?: string;
+  isbn?: string;
 }
 
 export interface BookEdition {
@@ -37,6 +47,7 @@ export interface CatalogBook {
   cover: string | null;
   editions: BookEdition[];
   contextTitle: string;
+  facts?: BookFacts;
 }
 
 const BOOK_DEFINITIONS: BookDefinition[] = [
@@ -51,6 +62,15 @@ const BOOK_DEFINITIONS: BookDefinition[] = [
       en: 'A coloring book inspired by NapCat’s world, created to turn imagination, characters, and affection into moments of creativity.',
     },
     contextTitles: { pt: 'Conheça o NapCat', en: 'Discover NapCat' },
+    facts: {
+      pt: {
+        readingAge: '3–6 anos',
+        pageCount: 58,
+        language: 'Português',
+        dimensions: '20,96 × 20,96 cm',
+        publicationDate: '23 de setembro de 2026',
+      },
+    },
   },
   {
     slug: 'zeco-estacoes',
@@ -158,6 +178,7 @@ export function getCatalogBooks(locale: BookLocale): CatalogBook[] {
         retailer: book.buy?.label ?? null,
       })),
       contextTitle,
+      facts: definition.facts?.[locale],
     }];
   });
 }

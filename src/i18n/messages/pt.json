@@ -350,6 +350,15 @@
     "editionsTitle": "Edições disponíveis",
     "buyLabel": "Comprar",
     "soonLabel": "Em breve",
+    "facts": {
+      "readingAge": "Faixa etária",
+      "pageCount": "Número de páginas",
+      "language": "Idioma",
+      "dimensions": "Dimensões",
+      "publicationDate": "Publicação",
+      "isbn": "ISBN",
+      "pages": "páginas"
+    },
     "collections": {
       "art": "Arte",
       "bichittos": "Bichittos",

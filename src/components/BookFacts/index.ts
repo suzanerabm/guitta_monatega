@@ -1,0 +1,1 @@
+export { BookFacts } from './BookFacts';

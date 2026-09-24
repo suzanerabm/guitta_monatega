@@ -350,6 +350,15 @@
     "editionsTitle": "Available editions",
     "buyLabel": "Buy",
     "soonLabel": "Coming soon",
+    "facts": {
+      "readingAge": "Reading age",
+      "pageCount": "Print length",
+      "language": "Language",
+      "dimensions": "Dimensions",
+      "publicationDate": "Publication",
+      "isbn": "ISBN",
+      "pages": "pages"
+    },
     "collections": {
       "art": "Art",
       "bichittos": "Bichittos",

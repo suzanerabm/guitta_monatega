@@ -12,6 +12,7 @@ import {
 import { buildPageMetadata, SITE_URL } from '@/lib/seo';
 import { bookPageVisuals } from '@/theme/bookPages';
 import { BookContextBanner } from '@/components/BookContextBanner';
+import { BookFacts } from '@/components/BookFacts';
 
 export function generateStaticParams() {
   return getAllBookSlugs().flatMap((slug) =>
@@ -129,6 +130,22 @@ export default async function BookPage({
           <Text fontSize="xl" color="inkSoft" lineHeight={1.8} mb="3xl">
             {book.description}
           </Text>
+
+          {book.facts && (
+            <BookFacts
+              facts={book.facts}
+              accentColor={visual.accent}
+              labels={{
+                readingAge: t('facts.readingAge'),
+                pageCount: t('facts.pageCount'),
+                language: t('facts.language'),
+                dimensions: t('facts.dimensions'),
+                publicationDate: t('facts.publicationDate'),
+                isbn: t('facts.isbn'),
+                pages: t('facts.pages'),
+              }}
+            />
+          )}
 
           <Box as="section" aria-labelledby="book-editions-title" borderTop="1px solid" borderColor="border" pt="2xl">
             <Heading id="book-editions-title" as="h2" textStyle="heading" fontSize="2xl" color="ink" mb="xl">

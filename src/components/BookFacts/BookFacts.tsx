@@ -1,0 +1,100 @@
+import { Box, Text } from '@chakra-ui/react';
+import {
+  Baby,
+  Barcode,
+  BookOpen,
+  CalendarDays,
+  Languages,
+  Ruler,
+  type LucideIcon,
+} from 'lucide-react';
+import type { BookFacts as BookFactsData } from '@/lib/books';
+
+interface BookFactsLabels {
+  readingAge: string;
+  pageCount: string;
+  language: string;
+  dimensions: string;
+  publicationDate: string;
+  isbn: string;
+  pages: string;
+}
+
+interface BookFactsProps {
+  facts: BookFactsData;
+  labels: BookFactsLabels;
+  accentColor: string;
+}
+
+interface FactItem {
+  key: keyof BookFactsData;
+  label: string;
+  value?: string | number;
+  Icon: LucideIcon;
+}
+
+export function BookFacts({ facts, labels, accentColor }: BookFactsProps) {
+  const possibleItems: FactItem[] = [
+    { key: 'readingAge', label: labels.readingAge, value: facts.readingAge, Icon: Baby },
+    {
+      key: 'pageCount',
+      label: labels.pageCount,
+      value: facts.pageCount ? `${facts.pageCount} ${labels.pages}` : undefined,
+      Icon: BookOpen,
+    },
+    { key: 'language', label: labels.language, value: facts.language, Icon: Languages },
+    { key: 'dimensions', label: labels.dimensions, value: facts.dimensions, Icon: Ruler },
+    {
+      key: 'publicationDate',
+      label: labels.publicationDate,
+      value: facts.publicationDate,
+      Icon: CalendarDays,
+    },
+    { key: 'isbn', label: labels.isbn, value: facts.isbn, Icon: Barcode },
+  ];
+  const items = possibleItems.filter((item) => item.value !== undefined);
+
+  if (items.length === 0) return null;
+
+  return (
+    <Box
+      as="dl"
+      display="grid"
+      gridTemplateColumns={{ base: 'repeat(2, minmax(0, 1fr))', lg: `repeat(${items.length}, minmax(0, 1fr))` }}
+      borderTop="1px solid"
+      borderBottom="1px solid"
+      borderColor="border"
+      my={{ base: '2xl', md: '3xl' }}
+    >
+      {items.map(({ key, label, value, Icon }, index) => (
+        <Box
+          key={key}
+          px={{ base: 'md', md: 'lg' }}
+          py={{ base: 'lg', md: 'xl' }}
+          minW="0"
+          gridColumn={{
+            base: items.length % 2 === 1 && index === items.length - 1 ? '1 / -1' : 'auto',
+            lg: 'auto',
+          }}
+          borderLeft={{
+            base: index % 2 === 1 && index !== items.length - 1 ? '1px solid' : 'none',
+            lg: index > 0 ? '1px solid' : 'none',
+          }}
+          borderTop={{ base: index > 1 ? '1px solid' : 'none', lg: 'none' }}
+          borderColor="border"
+          textAlign="center"
+        >
+          <Box color={accentColor} display="flex" justifyContent="center" mb="md" aria-hidden="true">
+            <Icon size={25} strokeWidth={1.5} />
+          </Box>
+          <Text as="dt" fontSize="xs" color="inkMuted" letterSpacing="wide" textTransform="uppercase" mb="sm">
+            {label}
+          </Text>
+          <Text as="dd" fontSize="sm" color="ink" fontWeight="semibold" lineHeight={1.45} m="0">
+            {value}
+          </Text>
+        </Box>
+      ))}
+    </Box>
+  );
+}
