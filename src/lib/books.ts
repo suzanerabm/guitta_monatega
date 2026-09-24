@@ -18,8 +18,18 @@ interface BookDefinition {
   visualKey: BookVisualKey;
   descriptions: Partial<Record<BookLocale, string>>;
   contextTitles: Partial<Record<BookLocale, string>>;
-  editionFacts?: Partial<Record<string, BookFacts>>;
-  editionFormats?: Partial<Record<string, BookFormat>>;
+  editionVariants?: Partial<Record<string, BookEditionVariant[]>>;
+}
+
+interface BookEditionVariant {
+  format: BookFormat;
+  price?: BookPrice;
+  facts?: BookFacts;
+}
+
+export interface BookPrice {
+  amount: number;
+  currency: 'USD' | 'BRL';
 }
 
 export interface BookFacts {
@@ -37,6 +47,7 @@ export interface BookEdition {
   format: BookFormat;
   url: string | null;
   retailer: string | null;
+  price?: BookPrice;
   facts?: BookFacts;
 }
 
@@ -64,15 +75,17 @@ const BOOK_DEFINITIONS: BookDefinition[] = [
       en: 'A coloring book inspired by NapCat’s world, created to turn imagination, characters, and affection into moments of creativity.',
     },
     contextTitles: { pt: 'Conheça o NapCat', en: 'Discover NapCat' },
-    editionFormats: { 'color-pt': 'paperback' },
-    editionFacts: {
-      'color-pt': {
+    editionVariants: {
+      'color-pt': [{
+        format: 'paperback',
+        facts: {
         readingAge: '3–6 anos',
         pageCount: 58,
         language: 'Português',
         dimensions: '20,96 × 20,96 cm',
         publicationDate: '23 de setembro de 2026',
-      },
+        },
+      }],
     },
   },
   {
@@ -86,6 +99,57 @@ const BOOK_DEFINITIONS: BookDefinition[] = [
       en: 'Zeco and his friends travel through the seasons in an illustrated story about discovery, friendship, and the changes brought by every new cycle.',
     },
     contextTitles: { pt: 'Conheça Zeco e seus amigos', en: 'Discover Zeco and his friends' },
+    editionVariants: {
+      'zeco-estacoes-pt': [
+        {
+          format: 'ebook',
+          price: { amount: 4.98, currency: 'USD' },
+          facts: {
+            readingAge: '2–6 anos',
+            pageCount: 88,
+            language: 'Português',
+            publicationDate: '23 de setembro de 2026',
+          },
+        },
+        {
+          format: 'paperback',
+          price: { amount: 17.99, currency: 'USD' },
+          facts: {
+            readingAge: '3–6 anos',
+            pageCount: 88,
+            language: 'Português',
+            dimensions: '17,78 × 0,53 × 25,4 cm',
+            publicationDate: '23 de setembro de 2026',
+          },
+        },
+        { format: 'hardcover', price: { amount: 27.99, currency: 'USD' } },
+      ],
+      'zeco-estacoes-en': [
+        {
+          format: 'ebook',
+          price: { amount: 4.98, currency: 'USD' },
+          facts: {
+            readingAge: '2–6 years',
+            pageCount: 88,
+            language: 'English',
+            publicationDate: 'September 23, 2026',
+          },
+        },
+        {
+          format: 'paperback',
+          price: { amount: 17.99, currency: 'USD' },
+          facts: {
+            readingAge: '3–6 years',
+            pageCount: 88,
+            language: 'English',
+            dimensions: '7 × 0.21 × 10 in',
+            publicationDate: 'September 23, 2026',
+            isbn: '979-8193854920',
+          },
+        },
+        { format: 'hardcover', price: { amount: 27.99, currency: 'USD' } },
+      ],
+    },
   },
   {
     slug: 'taylo-e-pitu-volume-1',
@@ -174,13 +238,17 @@ export function getCatalogBooks(locale: BookLocale): CatalogBook[] {
       title: primary.title,
       description,
       cover: primary.cover,
-      editions: matches.map((book) => ({
-        id: book.id,
-        format: definition.editionFormats?.[book.id] ?? 'print',
-        url: book.buy?.url ?? null,
-        retailer: book.buy?.label ?? null,
-        facts: definition.editionFacts?.[book.id],
-      })),
+      editions: matches.flatMap((book) => {
+        const variants = definition.editionVariants?.[book.id] ?? [{ format: 'print' as const }];
+        return variants.map((variant) => ({
+          id: `${book.id}-${variant.format}`,
+          format: variant.format,
+          url: book.buy?.url ?? null,
+          retailer: book.buy?.label ?? null,
+          price: variant.price,
+          facts: variant.facts,
+        }));
+      }),
       contextTitle,
     }];
   });

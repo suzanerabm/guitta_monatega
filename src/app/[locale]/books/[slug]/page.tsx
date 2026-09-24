@@ -154,6 +154,14 @@ export default async function BookPage({
                       <Text textStyle="heading" fontSize="lg" color="ink">
                         {t(`formats.${edition.format}`)}
                       </Text>
+                      {edition.price && (
+                        <Text fontSize="xl" color="ink" fontWeight="semibold" mt="xs">
+                          {new Intl.NumberFormat(loc === 'pt' ? 'pt-BR' : 'en-US', {
+                            style: 'currency',
+                            currency: edition.price.currency,
+                          }).format(edition.price.amount)}
+                        </Text>
+                      )}
                       {edition.retailer && (
                         <Text fontSize="sm" color="inkMuted" mt="xs">
                           {edition.retailer}
