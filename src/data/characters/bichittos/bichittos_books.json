@@ -11,7 +11,7 @@
     "  cover (string)    -> caminho da imagem de capa dessa edição.",
     "  title ({pt,en})   -> nome do livro (preencha só o idioma dessa edição).",
     "  buyUrl (string)   -> link de compra. Ausente = mostra 'Em breve' no botão.",
-    "  buyLabel (string) -> texto do botão (ex: 'Compre na Amazon').",
+    "  buyLabel (string) -> texto do botão (ex: 'Amazon.com').",
     "  homeButtonUrl (string) -> destino do botão extra exibido na home.",
     "  homeButtonLabel (string) -> texto completo do botão extra da home.",
     "  homeButtonImage (string) -> Bichitto usado como botão ilustrado na home.",
@@ -30,7 +30,7 @@
       "homeButtonImage": "/imgs/bichittos/napcat/napcat.png",
       "homeButtonImageAlt": "Napcat",
       "buyUrl": "https://a.co/d/00X33Zd1",
-      "buyLabel": "Compre na Amazon"
+      "buyLabel": "Amazon.com"
     },
     "napcat/color-en": {
       "visible": true,
@@ -42,7 +42,7 @@
       "homeButtonImage": "/imgs/bichittos/napcat/napcat.png",
       "homeButtonImageAlt": "Napcat",
       "buyUrl": "https://a.co/d/0gbFQBiB",
-      "buyLabel": "Buy on Amazon"
+      "buyLabel": "Amazon.com"
     },
     "zeco/zeco-estacoes-pt": {
       "visible": true,
@@ -54,7 +54,7 @@
       "homeButtonImage": "/imgs/bichittos/zeco/01_zeco.png",
       "homeButtonImageAlt": "Zeco",
       "buyUrl": "https://a.co/d/0fxxQVRy",
-      "buyLabel": "Compre na Amazon"
+      "buyLabel": "Amazon.com"
     },
     "zeco/zeco-estacoes-en": {
       "visible": true,
@@ -66,7 +66,7 @@
       "homeButtonImage": "/imgs/bichittos/zeco/01_zeco.png",
       "homeButtonImageAlt": "Zeco",
       "buyUrl": "https://a.co/d/04qQpMrW",
-      "buyLabel": "Buy on Amazon"
+      "buyLabel": "Amazon.com"
     },
     "taylo/star-hunter-pt": {
       "visible": true,
@@ -78,7 +78,7 @@
       "homeButtonImage": "/imgs/bichittos/taylo/os_dois.png",
       "homeButtonImageAlt": "Taylo e Pitu",
       "buyUrl": "https://a.co/d/0g3t8Q69",
-      "buyLabel": "Compre na Amazon"
+      "buyLabel": "Amazon.com"
     },
     "taylo/star-hunter-en": {
       "visible": false,

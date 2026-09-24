@@ -140,7 +140,7 @@ function resolveBuy(cfg: BookConfig): { url: string; label: string } | null {
   const url = /^(https?:)?\/\//i.test(raw) || raw.startsWith('/')
     ? raw
     : `https://${raw}`;
-  return { url, label: cfg.buyLabel || 'Compre na Amazon' };
+  return { url, label: cfg.buyLabel || 'Amazon.com' };
 }
 
 /** Livros de um contexto (`<contextId>/...`) visíveis para o idioma dado, já

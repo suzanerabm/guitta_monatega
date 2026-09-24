@@ -24,7 +24,7 @@ interface ModalState {
   heroTitle?: string;
   heroText?: string;
   /** Link de compra do livro (Bichittos). Quando presente, o modal mostra um
-   *  botão. `buyLabel` é o texto (ex: "Compre na Amazon"). */
+   *  botão. `buyLabel` é o texto (ex: "Amazon.com"). */
   buyUrl?: string;
   buyLabel?: string;
   /** Visual variant: 'default' uses Modal, 'kammara' uses ModalKammara. */
