@@ -59,6 +59,29 @@ Regras:
    em paths de JSON — mas note que ele não varre arquivos `.ts`, então literais em código precisam
    de conferência manual.
 
+## Dados: o servidor é a fonte, o cliente só renderiza
+
+Conteúdo (lore, personagens, cenas, livros, progresso) é montado no SERVIDOR pela camada
+`src/lib/content/` e entregue ao cliente por props. As páginas e os route handlers de `/api/v1`
+chamam as MESMAS funções, então site e API nunca divergem.
+
+Regras:
+1. **Proibido** um componente `'use client'` importar módulo de dados (`@/data/*`, `@/lib/images`,
+   `@/lib/characters`, `@/lib/visibility`). Esses módulos declaram `import 'server-only'` e o build
+   falha — de propósito. O motivo é concreto: eles carregam os JSONs INTEIROS, incluindo mundos não
+   publicados e personagens `visible: false`, e um import desses colocava ~380KB de conteúdo
+   escondido no bundle do navegador.
+2. **Todo gate de visibilidade roda na camada de conteúdo**, nunca no componente. Se você está
+   escrevendo `.filter(x => x.visible !== false)` dentro de um `.tsx`, está no lugar errado.
+3. **Componente recebe texto já resolvido**, não objeto bilíngue `{pt, en}` + `locale`. Quem escolhe
+   o idioma é `src/lib/content/`. (Exceção documentada: `KammaraEvents`, enquanto a seção estiver
+   desligada.)
+4. **Payload precisa ser serializável** — nada de função, Date ou classe: o mesmo objeto vira JSON
+   na API.
+5. Para conferir que nada vazou, rode `npm run build` e procure por um trecho de prosa que só exista
+   em conteúdo não publicado dentro de `.next/static`. Tem que dar zero. O gate só vale em
+   produção (`src/lib/visibility.ts` desliga em dev/preview), então não adianta testar com `npm run dev`.
+
 ## Responsividade: props do Chakra, nunca `@media` manual
 
 A única forma aceita de escrever estilos responsivos neste projeto é pelo sistema de breakpoints

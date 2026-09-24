@@ -4,7 +4,6 @@ import { KammaraEventCard } from '@/components/KammaraEventCard';
 import { HorizontalCardStrip } from '@/components/HorizontalCardStrip';
 import { palettes, type PaletteName } from '@/theme/palettes';
 import { worldCrestGlyph } from '@/theme/kalunGlyphs';
-import { getWorldName } from '@/data/characters/kammara/_worldData';
 import { mediaUrl } from '@/lib/media';
 
 export interface EventCategory {
@@ -74,6 +73,13 @@ export interface KammaraEventsProps {
   color: string;
   /** Section dark colour for shadows + tints. */
   darkColor: string;
+  /**
+   * Mapa `planetId → nome de exibição`, resolvido no servidor. Chave ausente
+   * cai no id cru. Vem por prop (e não de `getWorldName`) porque importar
+   * `_worldData` aqui arrasta os 44 JSONs de mundo — inclusive os não
+   * publicados — para dentro do bundle do cliente.
+   */
+  planetNames?: Record<string, string>;
   'data-testid'?: string;
 }
 
@@ -98,6 +104,7 @@ export function KammaraEvents({
   locale,
   color,
   darkColor,
+  planetNames,
   'data-testid': testId,
 }: KammaraEventsProps) {
   return (
@@ -173,6 +180,7 @@ export function KammaraEvents({
               locale={locale}
               color={color}
               darkColor={darkColor}
+              planetNames={planetNames}
             />
           );
         })}
@@ -187,6 +195,7 @@ interface CategoryBlockProps {
   locale: 'pt' | 'en';
   color: string;
   darkColor: string;
+  planetNames?: Record<string, string>;
 }
 
 function CategoryBlock({
@@ -195,6 +204,7 @@ function CategoryBlock({
   locale,
   color,
   darkColor,
+  planetNames,
 }: CategoryBlockProps) {
   return (
     <Box>
@@ -236,6 +246,7 @@ function CategoryBlock({
             locale={locale}
             color={color}
             darkColor={darkColor}
+            planetNames={planetNames}
           />
         ))}
       </HorizontalCardStrip>
@@ -248,10 +259,11 @@ interface EventCardProps {
   locale: 'pt' | 'en';
   color: string;
   darkColor: string;
+  planetNames?: Record<string, string>;
 }
 
-function EventCard({ event, locale, color, darkColor }: EventCardProps) {
-  const meta = getEventPlanetMeta(event.planet, locale);
+function EventCard({ event, locale, color, darkColor, planetNames }: EventCardProps) {
+  const meta = getEventPlanetMeta(event.planet, planetNames);
   // Planet accent + dark colour — fall back to section colours when
   // the planet isn't a registered palette (hash, bluecity, etc).
   const planetPalette = palettes[event.planet as PaletteName];
@@ -361,7 +373,7 @@ function EventCard({ event, locale, color, darkColor }: EventCardProps) {
  * the canonical sources directly:
  *   - palettes[id].colors[0]       — accent colour
  *   - worldCrestGlyph(id)          — kalún crest of the world
- *   - getWorldName(id, locale)     — display name (with apostrophes etc.)
+ *   - planetNames[id]              — display name resolvido no servidor
  *
  * If the id isn't a known world (hash, bluecity, …), `color` and `glyph`
  * fall back to undefined / the generic Kammara glyph and the caller is
@@ -370,10 +382,10 @@ function EventCard({ event, locale, color, darkColor }: EventCardProps) {
  */
 function getEventPlanetMeta(
   planetId: string,
-  locale: 'pt' | 'en',
+  planetNames?: Record<string, string>,
 ): { color: string | undefined; glyph: string; name: string } {
   const palette = palettes[planetId as PaletteName];
-  const name = getWorldName(planetId, locale) || planetId;
+  const name = planetNames?.[planetId] || planetId;
   return {
     color: palette?.colors[0],
     glyph: worldCrestGlyph(planetId),

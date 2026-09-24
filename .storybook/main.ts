@@ -19,6 +19,12 @@ const config: StorybookConfig = {
     config.resolve.alias = {
       ...(config.resolve.alias || {}),
       '@': path.resolve(__dirname, '../src'),
+      // `server-only` é resolvido pelo bundler do Next, não pelo Vite — no
+      // Storybook precisa apontar pro stub vazio.
+      'server-only': path.resolve(
+        __dirname,
+        '../node_modules/next/dist/compiled/server-only/empty.js',
+      ),
     };
     config.define = {
       ...(config.define || {}),

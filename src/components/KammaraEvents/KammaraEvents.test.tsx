@@ -47,11 +47,12 @@ describe('KammaraEvents', () => {
         locale="pt"
         color="#d4cbf0"
         darkColor="#0a0a2e"
+        planetNames={{ lunnp1: "LUNN'P1" }}
       />,
     );
     expect(screen.getByText('Evento da Lua')).toBeInTheDocument();
-    // The card resolves the planet id to its canonical display name
-    // via getWorldName(): 'lunnp1' → "LUNN'P1".
+    // O nome de exibição do planeta vem resolvido do servidor via
+    // `planetNames`; sem a chave, o card cairia no id cru ('lunnp1').
     expect(screen.getByText("LUNN'P1")).toBeInTheDocument();
     expect(screen.getByText('Próximo ciclo')).toBeInTheDocument();
     expect(screen.getByText('Descrição PT')).toBeInTheDocument();
