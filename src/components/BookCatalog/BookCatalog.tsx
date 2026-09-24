@@ -3,7 +3,14 @@
 import { useMemo, useState } from 'react';
 import { Box, Button } from '@chakra-ui/react';
 import { BookCatalogCard } from '@/components/BookCatalogCard';
-import type { BookFormat, CatalogBook } from '@/lib/books';
+import {
+  BOOK_FORMAT_ORDER,
+  formatBookPrice,
+  getBookFormats,
+  getLowestBookPrice,
+  type BookFormat,
+  type CatalogBook,
+} from '@/lib/books';
 import { bookPageVisuals } from '@/theme/bookPages';
 
 interface BookCatalogLabels {
@@ -21,12 +28,10 @@ interface BookCatalogProps {
   labels: BookCatalogLabels;
 }
 
-const FORMAT_ORDER: BookFormat[] = ['ebook', 'paperback', 'hardcover', 'print'];
-
 export function BookCatalog({ books, locale, labels }: BookCatalogProps) {
   const [activeFormat, setActiveFormat] = useState<BookFormat | 'all'>('all');
   const availableFormats = useMemo(
-    () => FORMAT_ORDER.filter((format) => books.some((book) => book.editions.some((edition) => edition.format === format))),
+    () => BOOK_FORMAT_ORDER.filter((format) => books.some((book) => book.editions.some((edition) => edition.format === format))),
     [books],
   );
   const visibleBooks = activeFormat === 'all'
@@ -86,17 +91,9 @@ export function BookCatalog({ books, locale, labels }: BookCatalogProps) {
       >
         {visibleBooks.map((book) => {
           const visual = bookPageVisuals[book.visualKey];
-          const formats = FORMAT_ORDER.filter((format) => book.editions.some((edition) => edition.format === format));
-          const prices = book.editions.flatMap((edition) => edition.price ? [edition.price] : []);
-          const lowestPrice = prices.length > 0
-            ? prices.reduce((lowest, price) => price.amount < lowest.amount ? price : lowest)
-            : null;
-          const formattedPrice = lowestPrice
-            ? new Intl.NumberFormat(locale === 'pt' ? 'pt-BR' : 'en-US', {
-                style: 'currency',
-                currency: lowestPrice.currency,
-              }).format(lowestPrice.amount)
-            : null;
+          const formats = getBookFormats(book);
+          const lowestPrice = getLowestBookPrice(book);
+          const formattedPrice = lowestPrice ? formatBookPrice(lowestPrice, locale) : null;
 
           return (
             <BookCatalogCard

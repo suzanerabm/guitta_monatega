@@ -9,6 +9,7 @@ import type { BookVisualKey } from '@/theme/bookPages';
 export type BookLocale = 'pt' | 'en';
 export type BookCollection = 'art' | 'bichittos' | 'kammara';
 export type BookFormat = 'ebook' | 'paperback' | 'hardcover' | 'print';
+export const BOOK_FORMAT_ORDER: BookFormat[] = ['ebook', 'paperback', 'hardcover', 'print'];
 
 interface BookDefinition {
   slug: string;
@@ -269,4 +270,24 @@ export function getBookLocales(slug: string): BookLocale[] {
 
 export function getAllBookSlugs(): string[] {
   return BOOK_DEFINITIONS.map((book) => book.slug);
+}
+
+export function getBookFormats(book: CatalogBook): BookFormat[] {
+  return BOOK_FORMAT_ORDER.filter((format) =>
+    book.editions.some((edition) => edition.format === format),
+  );
+}
+
+export function getLowestBookPrice(book: CatalogBook): BookPrice | null {
+  const prices = book.editions.flatMap((edition) => edition.price ? [edition.price] : []);
+  return prices.length > 0
+    ? prices.reduce((lowest, price) => price.amount < lowest.amount ? price : lowest)
+    : null;
+}
+
+export function formatBookPrice(price: BookPrice, locale: BookLocale): string {
+  return new Intl.NumberFormat(locale === 'pt' ? 'pt-BR' : 'en-US', {
+    style: 'currency',
+    currency: price.currency,
+  }).format(price.amount);
 }

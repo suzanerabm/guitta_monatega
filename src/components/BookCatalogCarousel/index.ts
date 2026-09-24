@@ -1,0 +1,1 @@
+export { BookCatalogCarousel } from './BookCatalogCarousel';

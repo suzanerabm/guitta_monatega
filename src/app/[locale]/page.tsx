@@ -1,16 +1,11 @@
 import type { Metadata } from 'next';
 import { Box, Heading, Text, VisuallyHidden } from '@chakra-ui/react';
+import NextLink from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { HomeBanner } from '@/components/HomeBanner';
-import { BookShelf } from '@/components/BookShelf';
-import {
-  getArtBooks,
-  getBichittoBooks,
-  getKammaraBooks,
-} from '@/lib/visibility';
-import { homeBooksGallery } from '@/theme/artSections';
+import { BookCatalogCarousel } from '@/components/BookCatalogCarousel';
 import { buildPageMetadata, SITE_URL } from '@/lib/seo';
-import { getBookSlug } from '@/lib/books';
+import { getCatalogBooks } from '@/lib/books';
 // import { DSCard } from '@/components/DSCard';
 // import { BichittosBannerWithNinha } from './BichittosBannerWithNinha';
 
@@ -36,19 +31,13 @@ export default async function HomePage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('home');
-  const tCommon = await getTranslations('common');
   const tBooks = await getTranslations('booksPage');
   const loc = locale === 'en' ? 'en' : 'pt';
 
   const prefix = `/${locale}`;
-  const bichittoIds = ['napcat', 'zeco', 'taylo', 'cheiodebolinha', 'miscelania'];
-  const books = [
-    ...getArtBooks('art', loc).map((book) => ({ ...book, source: 'art' })),
-    ...getKammaraBooks('kammara', loc).map((book) => ({ ...book, source: 'kammara' })),
-    ...bichittoIds.flatMap((id) =>
-      getBichittoBooks(id, loc).map((book) => ({ ...book, source: id })),
-    ),
-  ].filter((book) => book.buy !== null);
+  const books = getCatalogBooks(loc).filter((book) =>
+    book.editions.some((edition) => edition.url !== null),
+  );
   const booksJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -61,7 +50,7 @@ export default async function HomePage({
         '@type': 'Book',
         name: book.title,
         image: book.cover ? `${SITE_URL}${book.cover}` : undefined,
-        url: book.buy?.url,
+        url: book.editions.find((edition) => edition.url)?.url,
         inLanguage: locale === 'en' ? 'en' : 'pt-BR',
         author: {
           '@type': 'Person',
@@ -164,69 +153,70 @@ export default async function HomePage({
       {books.length > 0 && (
         <Box
           as="section"
-          background={homeBooksGallery.background}
-          backgroundPosition={homeBooksGallery.backgroundPosition}
-          backgroundSize={homeBooksGallery.backgroundSize}
+          background="white"
           padding={{ base: '3rem 0', md: '4rem 0' }}
         >
-          <Box maxW="1600px" mx="auto" px={{ base: '1rem', md: '2rem' }}>
-            <Heading
-              as="h2"
-              textStyle="heading"
-              fontSize="2xl"
-              letterSpacing="tight"
-              margin="0 0 0.3rem"
-              color={homeBooksGallery.titleColor}
+          <Box maxW="1200px" mx="auto" px={{ base: 'lg', md: '3xl' }}>
+            <Box
+              display="flex"
+              flexDirection={{ base: 'column', md: 'row' }}
+              alignItems={{ base: 'flex-start', md: 'flex-end' }}
+              justifyContent="space-between"
+              gap="lg"
+              mb="lg"
             >
-              {t('books.title')}
-            </Heading>
+              <Box>
+                <Text fontSize="sm" letterSpacing="widest" textTransform="uppercase" color="inkMuted" mb="md">
+                  {tBooks('eyebrow')}
+                </Text>
+                <Heading as="h2" textStyle="heading" fontSize="h1" color="ink">
+                  {tBooks('title')}
+                </Heading>
+              </Box>
+              <NextLink href={`${prefix}/books`} style={{ textDecoration: 'none' }}>
+                <Box
+                  as="span"
+                  display="inline-flex"
+                  border="1px solid"
+                  borderColor="ink"
+                  color="ink"
+                  px="lg"
+                  py="md"
+                  fontSize="sm"
+                  fontWeight="semibold"
+                  letterSpacing="wide"
+                  textTransform="uppercase"
+                  whiteSpace="nowrap"
+                  transitionProperty="opacity"
+                  transitionDuration="default"
+                  _hover={{ opacity: 0.72 }}
+                >
+                  {tBooks('viewAllLabel')}
+                </Box>
+              </NextLink>
+            </Box>
             <Text
-              fontFamily="body"
-              fontSize="sm"
-              letterSpacing="wide"
-              textTransform="uppercase"
-              margin="0 0 2rem"
-              color={homeBooksGallery.techColor}
+              fontSize="xl"
+              color="inkSoft"
+              lineHeight={1.7}
+              maxW="720px"
+              mb="2xl"
             >
-              {t('books.description')}
+              {tBooks('intro')}
             </Text>
-            <BookShelf
-              arrowColor={homeBooksGallery.titleColor}
-              viewAllHref={`${prefix}/books`}
-              viewAllLabel={tBooks('viewAllLabel')}
-              viewAllColor={homeBooksGallery.titleColor}
-              comingSoonLabel={tCommon('soon')}
-              cardWidth={{ base: '68vw', sm: '250px', xl: '280px' }}
-              cardMaxWidth="300px"
-              cardHeight={{ base: '480px', md: '520px' }}
-              showLabels={false}
-              panelBackground={homeBooksGallery.panelBackground}
-              books={books.map((book) => ({
-                book: {
-                  id: `${book.source}-${book.id}`,
-                  image: book.cover,
-                  alt: book.title,
-                  label: book.title,
-                  soon: false,
-                  buy: book.buy,
-                  details: getBookSlug(book.id)
-                    ? {
-                        url: `${prefix}/books/${getBookSlug(book.id)}`,
-                        label: tBooks('detailsLabel'),
-                      }
-                    : null,
-                  extraLink: book.homeButton
-                    ? {
-                        ...book.homeButton,
-                        url: book.homeButton.url.startsWith('/')
-                          ? `${prefix}${book.homeButton.url}`
-                          : book.homeButton.url,
-                      }
-                    : null,
-                },
-                borderColor: homeBooksGallery.titleColor,
-                textColor: homeBooksGallery.titleColor,
-              }))}
+            <BookCatalogCarousel
+              books={books}
+              locale={loc}
+              detailsLabel={tBooks('detailsLabel')}
+              fromPriceLabel={tBooks('fromPrice')}
+              formatLabels={{
+                ebook: tBooks('formats.ebook'), paperback: tBooks('formats.paperback'),
+                hardcover: tBooks('formats.hardcover'), print: tBooks('formats.print'),
+              }}
+              collectionLabels={{
+                art: tBooks('collections.art'), bichittos: tBooks('collections.bichittos'),
+                kammara: tBooks('collections.kammara'),
+              }}
             />
           </Box>
         </Box>
