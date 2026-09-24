@@ -53,13 +53,6 @@ dist/
 # image asset backups (kept locally, never pushed)
 _bkp/
 
-# Mídia de conteúdo vive no S3 (ver AGENTS.md → "Mídia"). O que ainda está
-# versionado em public/imgs é só o que o tooling local lê (pôster, stories) e
-# continua rastreado; mídia nova não entra no git.
-/public/imgs/**
-!/public/imgs/**/
-!/public/imgs/kammara/_capa/**
-
 # ImageOptim artifacts (sidecar files it leaves behind)
 *~imageoptim*
 .*imageoptim*
