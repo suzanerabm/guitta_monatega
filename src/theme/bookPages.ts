@@ -12,9 +12,19 @@ interface BookPageVisual {
   decorations: BookBannerDecoration[];
   contextBackground: string;
   contextOverlay: string;
+  contextImageOpacity: number;
   contextText: string;
   contextEyebrow: string;
 }
+
+export const bookPageLayout = {
+  coverAspectRatio: '4 / 5',
+  accentBorderWidth: '4px',
+  contextBannerHeight: { base: '360px', md: '520px' },
+  contextCharacterHeight: { base: '300px', md: '460px' },
+  bichittosSceneOpacity: 0.22,
+  worldSceneOpacity: 0.3,
+};
 
 export const bookPageVisuals: Record<BookVisualKey, BookPageVisual> = {
   napcat: {
@@ -25,6 +35,7 @@ export const bookPageVisuals: Record<BookVisualKey, BookPageVisual> = {
     ],
     contextBackground: '/imgs/bichittos/_bg/napcat.jpg',
     contextOverlay: palettes.napcat.gradientBg,
+    contextImageOpacity: bookPageLayout.worldSceneOpacity,
     contextText: palettes.napcat.text,
     contextEyebrow: palettes.napcat.colors[2],
   },
@@ -37,6 +48,7 @@ export const bookPageVisuals: Record<BookVisualKey, BookPageVisual> = {
     ],
     contextBackground: '/imgs/bichittos/_bg/zeco.jpg',
     contextOverlay: palettes.zeco.gradient,
+    contextImageOpacity: bookPageLayout.worldSceneOpacity,
     contextText: palettes.zeco.colors[4],
     contextEyebrow: palettes.zeco.colors[2],
   },
@@ -46,16 +58,18 @@ export const bookPageVisuals: Record<BookVisualKey, BookPageVisual> = {
       { src: '/imgs/bichittos/taylo/tayllo_em_pe.png' },
       { src: '/imgs/bichittos/taylo/pitu.png' },
     ],
-    contextBackground: '/imgs/bichittos/_bg/taylo.jpg',
+    contextBackground: palettes.taylo.bichittos!.bgImage!,
     contextOverlay: palettes.taylo.gradientBg,
-    contextText: palettes.taylo.colors[5],
-    contextEyebrow: palettes.taylo.colors[2],
+    contextImageOpacity: bookPageLayout.bichittosSceneOpacity,
+    contextText: palettes.taylo.bichittos!.name,
+    contextEyebrow: palettes.taylo.bichittos!.name,
   },
   orfv: {
     accent: palettes.orfv.colors[0],
     decorations: [{ src: '/imgs/kammara/orfv/2maelik.png' }],
     contextBackground: '/imgs/kammara/orfv/_scenes/8Ceu_em_orf-v.jpg',
     contextOverlay: palettes.orfv.gradientBg,
+    contextImageOpacity: bookPageLayout.worldSceneOpacity,
     contextText: palettes.orfv.text,
     contextEyebrow: palettes.orfv.colors[2],
   },
@@ -64,6 +78,7 @@ export const bookPageVisuals: Record<BookVisualKey, BookPageVisual> = {
     decorations: [{ src: '/imgs/kammara/digg/CHMURKA_frente.png' }],
     contextBackground: '/imgs/kammara/digg/_bg/digg_vista-gigapixel.jpg',
     contextOverlay: palettes.digg.gradientBg,
+    contextImageOpacity: bookPageLayout.worldSceneOpacity,
     contextText: palettes.digg.text,
     contextEyebrow: palettes.digg.colors[1],
   },
@@ -72,15 +87,8 @@ export const bookPageVisuals: Record<BookVisualKey, BookPageVisual> = {
     decorations: [{ src: '/imgs/books/art/Coloring_Book/bichitto_art.png' }],
     contextBackground: '/imgs/art/black/1-arte.jpg',
     contextOverlay: palettes.arte.gradientBg,
+    contextImageOpacity: bookPageLayout.worldSceneOpacity,
     contextText: palettes.arte.text,
     contextEyebrow: palettes.arte.colors[5],
   },
-};
-
-export const bookPageLayout = {
-  coverAspectRatio: '4 / 5',
-  accentBorderWidth: '4px',
-  contextBannerHeight: { base: '360px', md: '520px' },
-  contextCharacterHeight: { base: '300px', md: '460px' },
-  contextOverlayOpacity: 0.82,
 };

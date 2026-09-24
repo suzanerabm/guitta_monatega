@@ -8,6 +8,7 @@ interface BookContextBannerProps {
   title: string;
   backgroundImage: string;
   overlay: string;
+  backgroundImageOpacity: number;
   textColor: string;
   eyebrowColor: string;
   decorations: BookBannerDecoration[];
@@ -20,6 +21,7 @@ export function BookContextBanner({
   title,
   backgroundImage,
   overlay,
+  backgroundImageOpacity,
   textColor,
   eyebrowColor,
   decorations,
@@ -33,7 +35,7 @@ export function BookContextBanner({
         position="relative"
         height={bookPageLayout.contextBannerHeight}
         overflow="hidden"
-        backgroundImage={`url(${backgroundImage})`}
+        background={overlay}
         backgroundSize="cover"
         backgroundPosition={{ base: '58% center', md: 'center' }}
         borderTopWidth={bookPageLayout.accentBorderWidth}
@@ -47,8 +49,10 @@ export function BookContextBanner({
           aria-hidden="true"
           position="absolute"
           inset={0}
-          background={overlay}
-          opacity={bookPageLayout.contextOverlayOpacity}
+          backgroundImage={`url(${backgroundImage})`}
+          backgroundSize="cover"
+          backgroundPosition={{ base: '58% center', md: 'center' }}
+          opacity={backgroundImageOpacity}
         />
         <Box position="relative" zIndex={2} maxW={{ base: '68%', md: '52%' }}>
           <Text

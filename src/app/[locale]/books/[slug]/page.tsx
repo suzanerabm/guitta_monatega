@@ -208,6 +208,7 @@ export default async function BookPage({
         title={book.contextTitle}
         backgroundImage={visual.contextBackground}
         overlay={visual.contextOverlay}
+        backgroundImageOpacity={visual.contextImageOpacity}
         textColor={visual.contextText}
         eyebrowColor={visual.contextEyebrow}
         decorations={visual.decorations}

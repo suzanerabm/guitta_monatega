@@ -16,6 +16,7 @@ describe('BookContextBanner', () => {
         title="Conheça o NapCat"
         backgroundImage="/background.jpg"
         overlay="linear-gradient(blue, navy)"
+        backgroundImageOpacity={0.22}
         textColor="white"
         eyebrowColor="lightblue"
         decorations={[{ src: '/napcat.png' }]}
