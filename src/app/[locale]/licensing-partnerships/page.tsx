@@ -60,7 +60,7 @@ export default async function LicensingPartnershipsPage({
         </Box>
       </Box>
 
-      <Box as="main" maxW="820px" mx="auto" px={{ base: '1.5rem', md: '4rem' }} pb={{ base: '3rem', md: '5rem' }}>
+      <Box as="section" maxW="820px" mx="auto" px={{ base: '1.5rem', md: '4rem' }} pb={{ base: '3rem', md: '5rem' }}>
         <Box display="grid" gridTemplateColumns={{ base: '1fr', md: '140px 1fr' }} gap={{ base: 'sm', md: '2.5rem' }} py={{ base: '2rem', md: '2.5rem' }} borderTop="0.5px solid" borderColor="borderSoft">
           <Flex direction={{ base: 'row', md: 'column' }} gap={{ base: 'sm', md: '0' }} alignItems={{ base: 'center', md: 'flex-start' }}>
             <Text fontSize="sm" color="inkMuted" fontWeight="medium" fontFamily="heading">01</Text>

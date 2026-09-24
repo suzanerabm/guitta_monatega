@@ -85,6 +85,8 @@ export function BookPanel({
           <chakra.img
             src={book.image}
             alt={book.alt}
+            loading="lazy"
+            decoding="async"
             maxWidth="100%"
             maxHeight="100%"
             borderRadius="12px"
@@ -119,6 +121,7 @@ export function BookPanel({
           href={book.buy.url}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label={`${book.buy.label}: ${book.label}`}
           css={{
             display: 'inline-flex',
             alignItems: 'center',

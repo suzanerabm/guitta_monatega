@@ -104,7 +104,7 @@ export default async function AboutPage({
       </Box>
 
       {/* MAIN */}
-      <Box as="main" maxW="820px" mx="auto" px={{ base: '1.5rem', md: '4rem' }} pb={{ base: '3rem', md: '5rem' }}>
+      <Box as="section" maxW="820px" mx="auto" px={{ base: '1.5rem', md: '4rem' }} pb={{ base: '3rem', md: '5rem' }}>
         {/* PAGE HEADER */}
         <Box
           textAlign="center"

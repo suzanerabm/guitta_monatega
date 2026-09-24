@@ -39,7 +39,7 @@ export default async function PrivacyPage({
 
   return (
     <Box
-      as="main"
+      as="section"
       px={{ base: 'lg', md: '3xl' }}
       py={{ base: '4xl', md: '5xl' }}
       maxW="720px"
