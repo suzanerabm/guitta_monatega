@@ -11,5 +11,5 @@ export default meta;
 type Story = StoryObj<typeof Footer>;
 
 export const Default: Story = {
-  args: { aboutPath: '/about', aboutLabel: 'sobre guitta monatega', licensingPath: '/licensing-partnerships', licensingLabel: 'licenciamento e parcerias', privacyPath: '/privacy', privacyLabel: 'privacidade' },
+  args: { aboutPath: '/about', aboutLabel: 'sobre guitta monatega', licensingPath: '/licensing-partnerships', licensingLabel: 'licenciamento e parcerias', privacyPath: '/privacy', privacyLabel: 'privacidade', version: '1.0.0' },
 };
