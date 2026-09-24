@@ -23,6 +23,8 @@ export const bookPageLayout = {
   accentBorderWidth: '4px',
   contextBannerHeight: { base: '360px', md: '520px' },
   contextCharacterHeight: { base: '300px', md: '460px' },
+  factIconSize: 18,
+  factItemWidth: { base: '128px', md: '144px' },
   bichittosSceneOpacity: 0.22,
   worldSceneOpacity: 0.3,
 };

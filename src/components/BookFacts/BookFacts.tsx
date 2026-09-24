@@ -4,19 +4,23 @@ import {
   Barcode,
   BookOpen,
   CalendarDays,
+  File,
   Languages,
   Ruler,
   Scale,
   type LucideIcon,
 } from 'lucide-react';
 import type { BookFacts as BookFactsData } from '@/lib/books';
+import { bookPageLayout } from '@/theme/bookPages';
+import { HorizontalCardStrip } from '@/components/HorizontalCardStrip';
 
-interface BookFactsLabels {
+export interface BookFactsLabels {
   readingAge: string;
   pageCount: string;
   language: string;
   dimensions: string;
   weight: string;
+  fileSize: string;
   publicationDate: string;
   isbn: string;
   pages: string;
@@ -48,6 +52,7 @@ export function BookFacts({ facts, labels, accentColor, embedded = false }: Book
     { key: 'language', label: labels.language, value: facts.language, Icon: Languages },
     { key: 'dimensions', label: labels.dimensions, value: facts.dimensions, Icon: Ruler },
     { key: 'weight', label: labels.weight, value: facts.weight, Icon: Scale },
+    { key: 'fileSize', label: labels.fileSize, value: facts.fileSize, Icon: File },
     {
       key: 'publicationDate',
       label: labels.publicationDate,
@@ -63,43 +68,35 @@ export function BookFacts({ facts, labels, accentColor, embedded = false }: Book
   return (
     <Box
       as="dl"
-      display="grid"
-      gridTemplateColumns={{ base: 'repeat(2, minmax(0, 1fr))', md: 'repeat(3, minmax(0, 1fr))' }}
-      borderTop="1px solid"
-      borderBottom="1px solid"
-      borderColor="border"
-      mt={embedded ? 'xl' : { base: '2xl', md: '3xl' }}
+      mt={embedded ? 'lg' : { base: '2xl', md: '3xl' }}
       mb={embedded ? '0' : { base: '2xl', md: '3xl' }}
     >
-      {items.map(({ key, label, value, Icon }, index) => (
-        <Box
-          key={key}
-          px={{ base: 'md', md: 'lg' }}
-          py={{ base: 'lg', md: 'xl' }}
-          minW="0"
-          gridColumn={{
-            base: items.length % 2 === 1 && index === items.length - 1 ? '1 / -1' : 'auto',
-            md: 'auto',
-          }}
-          borderLeft={{
-            base: index % 2 === 1 && index !== items.length - 1 ? '1px solid' : 'none',
-            md: index % 3 !== 0 ? '1px solid' : 'none',
-          }}
-          borderTop={{ base: index > 1 ? '1px solid' : 'none', md: index > 2 ? '1px solid' : 'none' }}
-          borderColor="border"
-          textAlign="center"
-        >
-          <Box color={accentColor} display="flex" justifyContent="center" mb="md" aria-hidden="true">
-            <Icon size={25} strokeWidth={1.5} />
+      <HorizontalCardStrip
+        arrowColor={accentColor}
+        arrowVariant="plain"
+        gap="sm"
+        cardPadding={{ base: 'sm', md: 'sm' }}
+      >
+        {items.map(({ key, label, value, Icon }) => (
+          <Box
+            key={key}
+            width={bookPageLayout.factItemWidth}
+            px="sm"
+            py="md"
+            textAlign="center"
+          >
+            <Box color={accentColor} display="flex" justifyContent="center" mb="sm" aria-hidden="true">
+              <Icon size={bookPageLayout.factIconSize} strokeWidth={1.5} />
+            </Box>
+            <Text as="dt" fontSize="xs" color="inkMuted" letterSpacing="wide" textTransform="uppercase" mb="xs">
+              {label}
+            </Text>
+            <Text as="dd" fontSize="sm" color="ink" fontWeight="semibold" lineHeight={1.45} m="0">
+              {value}
+            </Text>
           </Box>
-          <Text as="dt" fontSize="xs" color="inkMuted" letterSpacing="wide" textTransform="uppercase" mb="sm">
-            {label}
-          </Text>
-          <Text as="dd" fontSize="sm" color="ink" fontWeight="semibold" lineHeight={1.45} m="0">
-            {value}
-          </Text>
-        </Box>
-      ))}
+        ))}
+      </HorizontalCardStrip>
     </Box>
   );
 }

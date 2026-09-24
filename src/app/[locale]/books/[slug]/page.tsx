@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Box, Heading, Image, Link, Text } from '@chakra-ui/react';
+import { Box, Heading, Image, Text } from '@chakra-ui/react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import {
@@ -11,7 +11,7 @@ import {
 import { buildPageMetadata, SITE_URL } from '@/lib/seo';
 import { bookPageVisuals } from '@/theme/bookPages';
 import { BookContextBanner } from '@/components/BookContextBanner';
-import { BookFacts } from '@/components/BookFacts';
+import { BookEditionSelector } from '@/components/BookEditionSelector';
 
 export function generateStaticParams() {
   return getAllBookSlugs().flatMap((slug) =>
@@ -91,7 +91,7 @@ export default async function BookPage({
         pt={{ base: '5xl', md: '6xl' }}
         pb={{ base: '4xl', md: '6xl' }}
         display="grid"
-        gridTemplateColumns={{ base: '1fr', md: 'minmax(280px, 0.8fr) 1.2fr' }}
+        gridTemplateColumns={{ base: '1fr', md: 'minmax(280px, 0.8fr) minmax(0, 1.2fr)' }}
         gap={{ base: '2xl', md: '4xl' }}
         alignItems="start"
       >
@@ -107,7 +107,7 @@ export default async function BookPage({
           )}
         </Box>
 
-        <Box>
+        <Box minW="0">
           <Text
             fontSize="sm"
             letterSpacing="widest"
@@ -117,92 +117,38 @@ export default async function BookPage({
           >
             {t(`collections.${book.collection}`)}
           </Text>
-          <Heading as="h1" textStyle="heading" fontSize="h2" lineHeight={1.05} color="ink" mb="xl">
+          <Heading as="h1" textStyle="heading" fontSize="h3" lineHeight={1.05} color="ink" mb="xl">
             {book.title}
           </Heading>
-          <Text fontSize="xl" color="inkSoft" lineHeight={1.8} mb="3xl">
+          <Text fontSize="md" color="inkSoft" lineHeight={1.7} whiteSpace="pre-line" mb="3xl">
             {book.description}
           </Text>
 
-          <Box as="section" aria-labelledby="book-editions-title" borderTop="1px solid" borderColor="border" pt="2xl">
-            <Heading id="book-editions-title" as="h2" textStyle="heading" fontSize="2xl" color="ink" mb="xl">
-              {t('editionsTitle')}
-            </Heading>
-            <Box display="grid" gap="md">
-              {book.editions.map((edition) => (
-                <Box
-                  key={edition.id}
-                  border="1px solid"
-                  borderColor="border"
-                  p={{ base: 'lg', md: 'xl' }}
-                >
-                  <Box
-                    display="flex"
-                    flexDirection={{ base: 'column', sm: 'row' }}
-                    alignItems={{ sm: 'center' }}
-                    justifyContent="space-between"
-                    gap="lg"
-                  >
-                    <Box>
-                      <Text textStyle="heading" fontSize="lg" color="ink">
-                        {t(`formats.${edition.format}`)}
-                      </Text>
-                      {edition.price && (
-                        <Text fontSize="xl" color="ink" fontWeight="semibold" mt="xs">
-                          {new Intl.NumberFormat(loc === 'pt' ? 'pt-BR' : 'en-US', {
-                            style: 'currency',
-                            currency: edition.price.currency,
-                          }).format(edition.price.amount)}
-                        </Text>
-                      )}
-                      {edition.retailer && (
-                        <Text fontSize="sm" color="inkMuted" mt="xs">
-                          {edition.retailer}
-                        </Text>
-                      )}
-                    </Box>
-                    {edition.url ? (
-                      <Link
-                        href={edition.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        bg="ink"
-                        color="white"
-                        px="xl"
-                        py="md"
-                        fontSize="sm"
-                        letterSpacing="wide"
-                        textTransform="uppercase"
-                        textAlign="center"
-                      >
-                        {t('buyLabel')}
-                      </Link>
-                    ) : (
-                      <Text fontSize="sm" color="inkMuted">
-                        {t('soonLabel')}
-                      </Text>
-                    )}
-                  </Box>
-                  {edition.facts && (
-                    <BookFacts
-                      facts={edition.facts}
-                      accentColor={visual.accent}
-                      embedded
-                      labels={{
-                        readingAge: t('facts.readingAge'),
-                        pageCount: t('facts.pageCount'),
-                        language: t('facts.language'),
-                        dimensions: t('facts.dimensions'),
-                        weight: t('facts.weight'),
-                        publicationDate: t('facts.publicationDate'),
-                        isbn: t('facts.isbn'),
-                        pages: t('facts.pages'),
-                      }}
-                    />
-                  )}
-                </Box>
-              ))}
-            </Box>
+          <Box as="section" aria-label={t('editionsTitle')} borderTop="1px solid" borderColor="border" pt="2xl">
+            <BookEditionSelector
+              editions={book.editions}
+              locale={loc}
+              accentColor={visual.accent}
+              formatLabels={{
+                ebook: t('formats.ebook'),
+                paperback: t('formats.paperback'),
+                hardcover: t('formats.hardcover'),
+              }}
+              factsLabels={{
+                readingAge: t('facts.readingAge'),
+                pageCount: t('facts.pageCount'),
+                language: t('facts.language'),
+                dimensions: t('facts.dimensions'),
+                weight: t('facts.weight'),
+                fileSize: t('facts.fileSize'),
+                publicationDate: t('facts.publicationDate'),
+                isbn: t('facts.isbn'),
+                pages: t('facts.pages'),
+              }}
+              buyLabel={t('buyLabel')}
+              amazonBuyLabel={t('amazonBuyLabel')}
+              soonLabel={t('soonLabel')}
+            />
           </Box>
 
         </Box>

@@ -352,6 +352,7 @@
     "backToBooks": "Back to Books",
     "editionsTitle": "Available editions",
     "buyLabel": "Buy",
+    "amazonBuyLabel": "Buy on Amazon",
     "soonLabel": "Coming soon",
     "facts": {
       "readingAge": "Reading age",
@@ -359,6 +360,7 @@
       "language": "Language",
       "dimensions": "Dimensions",
       "weight": "Weight",
+      "fileSize": "File size",
       "publicationDate": "Publication",
       "isbn": "ISBN",
       "pages": "pages"

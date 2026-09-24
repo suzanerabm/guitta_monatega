@@ -11,6 +11,10 @@
     "  onlyLocale ('pt'|'en') -> idioma em que essa edição aparece.",
     "  cover (string)    -> caminho da imagem de capa dessa edição.",
     "  title ({pt,en})   -> nome do livro (preencha só o idioma dessa edição).",
+    "  description ({pt,en}) -> sinopse exibida na página de detalhes.",
+    "  contextTitle ({pt,en}) -> chamada do banner no fim da página.",
+    "  editions (array) -> formatos, preços, moeda, características, canal e link de compra.",
+    "    purchaseChannel: 'amazon' | 'store' | 'comingSoon'.",
     "  buyUrl (string)   -> link de compra. Ausente = mostra 'Em breve' no botão.",
     "  buyLabel (string) -> texto do botão (ex: 'Amazon.com').",
     "  homeButtonUrl (string) -> destino do botão extra exibido na home.",
@@ -41,6 +45,12 @@
         "pt": "E se as invenções da humanidade continuassem evoluindo em outro universo?\n\nBem-vindo ao Kammara — um universo com incontáveis planetas, cada um com seu povo, seu jeito de viver e uma história própria. Nesta primeira saga, embarque por ORF-V, o planeta onde tudo se conecta, e conheça povos que se encontram, se ajudam e se enfrentam quando seus mundos se cruzam.\n\nUma aventura ilustrada sobre coragem, amizade e o que nos torna quem somos — para jovens leitores e para todos que nunca deixaram de imaginar.",
         "en": ""
       },
+      "contextTitle": { "pt": "Explore o universo Kammara" },
+      "editions": [
+        { "format": "ebook", "purchaseChannel": "amazon", "price": { "amount": 29.90, "currency": "BRL" }, "facts": { "readingAge": "9–14 anos", "pageCount": 151, "language": "Português", "publicationDate": "23 de setembro de 2026" } },
+        { "format": "paperback", "purchaseChannel": "store", "price": { "amount": 99.90, "currency": "BRL" }, "facts": { "readingAge": "9–14 anos", "pageCount": 144, "language": "Português", "dimensions": "15,24 × 0,86 × 22,86 cm", "publicationDate": "23 de setembro de 2026" } },
+        { "format": "hardcover", "purchaseChannel": "store", "price": { "amount": 139.90, "currency": "BRL" }, "facts": { "readingAge": "9–14 anos", "pageCount": 144, "language": "Português", "dimensions": "15,85 × 1,35 × 23,47 cm", "publicationDate": "23 de setembro de 2026" } }
+      ],
       "appId": "kammara-book-saga-em-orf-v-volume-1"
     },
     "kammara/saga-orf-v-en": {
@@ -50,6 +60,9 @@
       "title": {
         "en": "Saga in ORF-V"
       },
+      "description": { "en": "What if humanity’s inventions continued to evolve in another universe?\n\nWelcome to Kammara, a universe of countless planets, each with its own people, way of life, and story. In this first saga, journey through ORF-V, the planet where everything connects, and meet peoples who come together, help one another, and face each other when their worlds cross.\n\nAn illustrated adventure about courage, friendship, and what makes us who we are, for young readers and everyone who never stopped imagining." },
+      "contextTitle": { "en": "Explore the Kammara universe" },
+      "editions": [{ "format": "paperback", "purchaseChannel": "comingSoon" }],
       "homeButtonUrl": "/kammara",
       "homeButtonLabel": "Discover the Kammara universe",
       "homeButtonImage": "/imgs/kammara/orfv/2maelik.png",
@@ -63,6 +76,9 @@
       "title": {
         "pt": "Saga em Digg - Volume 2"
       },
+      "description": { "pt": "O segundo volume da saga de Kammara amplia a jornada para Digg e para novas histórias desse universo em expansão." },
+      "contextTitle": { "pt": "Explore o universo Kammara" },
+      "editions": [{ "format": "paperback", "purchaseChannel": "comingSoon" }],
       "homeButtonUrl": "/kammara",
       "homeButtonLabel": "Conheça o universo Kammara",
       "homeButtonImage": "/imgs/kammara/orfv/2maelik.png",

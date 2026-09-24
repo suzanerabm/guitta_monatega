@@ -8,12 +8,12 @@ const books: CatalogBook[] = [
   {
     slug: 'digital-book', collection: 'bichittos', contextPath: '/bichittos', visualKey: 'zeco',
     title: 'Digital', description: 'Description', cover: null, contextTitle: 'Zeco',
-    editions: [{ id: 'digital', format: 'ebook', url: null, retailer: null, price: { amount: 4.98, currency: 'USD' } }],
+    editions: [{ id: 'digital', format: 'ebook', purchaseChannel: 'amazon', url: null, retailer: null, price: { amount: 4.98, currency: 'USD' } }],
   },
   {
     slug: 'paperback-book', collection: 'art', contextPath: '/art', visualKey: 'art',
     title: 'Print', description: 'Description', cover: null, contextTitle: 'Art',
-    editions: [{ id: 'paperback', format: 'paperback', url: null, retailer: null }],
+    editions: [{ id: 'paperback', format: 'paperback', purchaseChannel: 'store', url: null, retailer: null }],
   },
 ];
 

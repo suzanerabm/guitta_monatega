@@ -114,6 +114,9 @@ interface BookConfig {
   cover?: string;
   /** Título do livro, preenchido só no idioma dessa edição. */
   title?: { pt?: string; en?: string };
+  description?: { pt?: string; en?: string };
+  contextTitle?: { pt?: string; en?: string };
+  editions?: BookEditionConfig[];
   buyUrl?: string;
   buyLabel?: string;
   /** Botão opcional da galeria de livros da home. */
@@ -123,11 +126,32 @@ interface BookConfig {
   homeButtonImageAlt?: string;
 }
 
+export interface BookEditionConfig {
+  format: 'ebook' | 'paperback' | 'hardcover';
+  price?: { amount: number; currency: 'USD' | 'BRL' };
+  facts?: {
+    readingAge?: string;
+    pageCount?: number;
+    language?: string;
+    dimensions?: string;
+    weight?: string;
+    fileSize?: string;
+    publicationDate?: string;
+    isbn?: string;
+  };
+  purchaseChannel?: 'amazon' | 'store' | 'comingSoon';
+  buyUrl?: string;
+  buyLabel?: string;
+}
+
 export interface BookEntry {
   /** `bookId` sem o prefixo de `contextId/` — usado como id estável no front. */
   id: string;
   title: string;
   cover: string | null;
+  description: string | null;
+  contextTitle: string | null;
+  editions: BookEditionConfig[];
   buy: { url: string; label: string } | null;
   homeButton: { url: string; label: string; image?: string; imageAlt?: string } | null;
 }
@@ -165,6 +189,9 @@ function resolveBooks(
       id: key.slice(prefix.length),
       title: cfg.title?.[locale] ?? key.slice(prefix.length),
       cover: cfg.cover ?? null,
+      description: cfg.description?.[locale] ?? null,
+      contextTitle: cfg.contextTitle?.[locale] ?? null,
+      editions: cfg.editions ?? [],
       buy: resolveBuy(cfg),
       homeButton: cfg.homeButtonUrl
         ? {

@@ -9,6 +9,7 @@ const labels = {
   language: 'Idioma',
   dimensions: 'Dimensões',
   weight: 'Peso',
+  fileSize: 'Tamanho do arquivo',
   publicationDate: 'Publicação',
   isbn: 'ISBN',
   pages: 'páginas',
