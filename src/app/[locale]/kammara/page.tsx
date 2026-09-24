@@ -9,6 +9,7 @@ import { getWorldSubsystemImages, getWorldScenes, getWorldDrops } from '@/data/c
 import { isKammaraPublished, getKammaraBooks } from '@/lib/visibility';
 import { getCharactersForContext, type Locale } from '@/lib/characters';
 import { KammaraClient } from './KammaraClient';
+import { buildPageMetadata } from '@/lib/seo';
 
 /**
  * Lista de imagens de personagens (vem do image-manifest) SEM os que estão
@@ -42,8 +43,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'kammara' });
+  const sectionText = t.raw('section.text') as string[];
   return {
-    title: t('pageTitle'),
+    ...buildPageMetadata({
+      locale,
+      route: 'kammara',
+      title: t('pageTitle'),
+      description: sectionText.join(' '),
+    }),
     icons: { icon: '/icons/kammara.svg' },
   };
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Box, Flex, Heading, Link, Text } from '@chakra-ui/react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { buildPageMetadata } from '@/lib/seo';
 
 type Section = { num: string; tag: string; items: string[] };
 
@@ -11,7 +12,15 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'licensing' });
-  return { title: t('pageTitle'), description: t('heroSub') };
+  return buildPageMetadata({
+    locale,
+    route: 'licensing-partnerships',
+    title: t('pageTitle'),
+    description:
+      locale === 'en'
+        ? 'Licensing, publishing, animation, interactive media, and creative partnership opportunities with Guitta Monatega Studio.'
+        : 'Oportunidades de licenciamento, publicação, animação, mídia interativa e parcerias criativas com o Guitta Monatega Studio.',
+  });
 }
 
 export default async function LicensingPartnershipsPage({

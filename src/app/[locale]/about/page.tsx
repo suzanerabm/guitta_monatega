@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Box, Heading, Text, Flex, Link as ChakraLink } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { buildPageMetadata } from '@/lib/seo';
 
 export async function generateMetadata({
   params,
@@ -10,7 +11,15 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'about' });
-  return { title: t('pageTitle') };
+  return buildPageMetadata({
+    locale,
+    route: 'about',
+    title: t('pageTitle'),
+    description:
+      locale === 'en'
+        ? 'Meet Guitta Monatega, a writer, illustrator, and world systems engineer creating original books, characters, and universes.'
+        : 'Conheça Guitta Monatega, escritora, ilustradora e engenheira de universos que cria livros, personagens e mundos autorais.',
+  });
 }
 
 type Section = {

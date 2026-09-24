@@ -1,4 +1,5 @@
-import { Box, Heading, Text } from '@chakra-ui/react';
+import type { Metadata } from 'next';
+import { Box, Heading, Text, VisuallyHidden } from '@chakra-ui/react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { HomeBanner } from '@/components/HomeBanner';
 import { BookShelf } from '@/components/BookShelf';
@@ -8,8 +9,23 @@ import {
   getKammaraBooks,
 } from '@/lib/visibility';
 import { homeBooksGallery } from '@/theme/artSections';
+import { buildPageMetadata } from '@/lib/seo';
 // import { DSCard } from '@/components/DSCard';
 // import { BichittosBannerWithNinha } from './BichittosBannerWithNinha';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'home' });
+  return buildPageMetadata({
+    locale,
+    title: locale === 'en' ? 'Guitta Monatega — Books, Art & Original Worlds' : 'Guitta Monatega — Livros, Arte e Universos Autorais',
+    description: `${t('heroSub')} ${t('books.description')}`,
+  });
+}
 
 export default async function HomePage({
   params,
@@ -33,6 +49,7 @@ export default async function HomePage({
   ].filter((book) => book.buy !== null);
   return (
     <>
+      <VisuallyHidden as="h1">{t('title')}</VisuallyHidden>
       {/* <HeroSection
         variant="home"
         title="guitta monatega"

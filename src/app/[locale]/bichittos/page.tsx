@@ -4,6 +4,7 @@ import { getBookPages } from '@/lib/images';
 import { getCreatureCarousel } from '@/data/characters/bichittos/_creatureData';
 import { isBichittoPublished, getBichittoBooks, getBichittoStickers } from '@/lib/visibility';
 import { BichittosClient } from './BichittosClient';
+import { buildPageMetadata } from '@/lib/seo';
 
 export async function generateMetadata({
   params,
@@ -13,7 +14,12 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'bichittos' });
   return {
-    title: t('pageTitle'),
+    ...buildPageMetadata({
+      locale,
+      route: 'bichittos',
+      title: t('pageTitle'),
+      description: t('heroDesc'),
+    }),
     icons: { icon: '/icons/bichittos.png' },
   };
 }

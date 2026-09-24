@@ -1,12 +1,9 @@
 import type { MetadataRoute } from 'next';
+import { SITE_URL } from '@/lib/seo';
 
 // Base URL do site. Em produção a Vercel expõe o host em VERCEL_URL, mas como
 // há 3 domínios apontando pro mesmo app, preferimos uma env explícita
 // (NEXT_PUBLIC_SITE_URL) quando definida; senão caímos no domínio principal.
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') ||
-  'https://guittamonatega.com';
-
 /**
  * robots.txt gerado pelo Next (App Router).
  *
