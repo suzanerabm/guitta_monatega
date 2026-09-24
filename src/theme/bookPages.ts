@@ -56,8 +56,7 @@ export const bookPageVisuals: Record<BookVisualKey, BookPageVisual> = {
   taylo: {
     accent: palettes.taylo.colors[0],
     decorations: [
-      { src: '/imgs/bichittos/taylo/tayllo_em_pe.png' },
-      { src: '/imgs/bichittos/taylo/pitu.png' },
+      { src: '/imgs/bichittos/taylo/_backgrounds/new_cena5_transparente.png' },
     ],
     contextBackground: palettes.taylo.bichittos!.bgImage!,
     contextOverlay: palettes.taylo.gradientBg,

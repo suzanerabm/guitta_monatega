@@ -18,7 +18,7 @@ describe('BookCatalogCarousel', () => {
         locale="pt"
         detailsLabel="Conheça o livro"
         fromPriceLabel="A partir de"
-        formatLabels={{ ebook: 'Livro digital', paperback: 'Capa comum', hardcover: 'Capa dura', print: 'Edição impressa' }}
+        formatLabels={{ ebook: 'Livro digital', paperback: 'Capa comum', hardcover: 'Capa dura' }}
         collectionLabels={{ art: 'Arte', bichittos: 'Bichittos', kammara: 'Kammara' }}
       />,
     );

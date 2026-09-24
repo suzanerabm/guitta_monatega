@@ -16,7 +16,7 @@ export const Default: Story = {
     labels: {
       filterLabel: 'Filtrar por formato', allFormats: 'Todos', fromPrice: 'A partir de', details: 'Conheça o livro',
       collections: { art: 'Arte', bichittos: 'Bichittos', kammara: 'Kammara' },
-      formats: { ebook: 'Livro digital', paperback: 'Capa comum', hardcover: 'Capa dura', print: 'Edição impressa' },
+      formats: { ebook: 'Livro digital', paperback: 'Capa comum', hardcover: 'Capa dura' },
     },
   },
 };

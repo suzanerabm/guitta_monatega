@@ -64,7 +64,7 @@ export function BookContextBanner({
           >
             {eyebrow}
           </Text>
-          <Heading as="h2" textStyle="heading" fontSize={{ base: '3xl', md: 'h1' }} lineHeight={1.02} color={textColor}>
+          <Heading as="h2" textStyle="heading" fontSize="h2" lineHeight={1.02} color={textColor}>
             {title}
           </Heading>
         </Box>

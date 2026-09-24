@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Box, Heading, Image, Link, Text } from '@chakra-ui/react';
-import NextLink from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import {
@@ -109,17 +108,11 @@ export default async function BookPage({
         </Box>
 
         <Box>
-          <NextLink href={`/${loc}/books`} style={{ textDecoration: 'underline' }}>
-            <Text as="span" fontSize="sm" color="inkMuted">
-              {t('backToBooks')}
-            </Text>
-          </NextLink>
           <Text
             fontSize="sm"
             letterSpacing="widest"
             textTransform="uppercase"
             color="inkMuted"
-            mt="2xl"
             mb="md"
           >
             {t(`collections.${book.collection}`)}

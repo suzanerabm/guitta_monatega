@@ -14,6 +14,7 @@ export interface FilterItem {
 interface FilterBarProps {
   filters: FilterItem[];
   allLabel?: string;
+  ariaLabel?: string;
   onFilter: (filterId: string) => void;
   /**
    * Tint color used by the chrome when the "all" pill is active (no
@@ -47,6 +48,7 @@ interface FilterBarProps {
 export function FilterBar({
   filters,
   allLabel = 'Todos',
+  ariaLabel = 'filters',
   onFilter,
   defaultTintColor,
   showAll = true,
@@ -153,7 +155,7 @@ export function FilterBar({
     <Box
       ref={navRef}
       as="nav"
-      aria-label="filters"
+      aria-label={ariaLabel}
       position="sticky"
       top={isHidden ? '0' : `${chromeHeight}px`}
       zIndex={98}

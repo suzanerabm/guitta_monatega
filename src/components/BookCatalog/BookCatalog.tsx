@@ -1,8 +1,9 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { Box, Button } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import { BookCatalogCard } from '@/components/BookCatalogCard';
+import { FilterBar } from '@/components/FilterBar';
 import {
   BOOK_FORMAT_ORDER,
   formatBookPrice,
@@ -34,57 +35,30 @@ export function BookCatalog({ books, locale, labels }: BookCatalogProps) {
     () => BOOK_FORMAT_ORDER.filter((format) => books.some((book) => book.editions.some((edition) => edition.format === format))),
     [books],
   );
+  const filters = useMemo(
+    () => availableFormats.map((format) => ({ id: format, label: labels.formats[format] })),
+    [availableFormats, labels.formats],
+  );
   const visibleBooks = activeFormat === 'all'
     ? books
     : books.filter((book) => book.editions.some((edition) => edition.format === activeFormat));
 
   return (
     <Box>
-      <Box
-        as="nav"
-        aria-label={labels.filterLabel}
-        maxW="1200px"
-        mx="auto"
-        px={{ base: 'lg', md: '3xl' }}
-        pb={{ base: 'xl', md: '2xl' }}
-        display="flex"
-        flexWrap="wrap"
-        gap="sm"
-      >
-        {(['all', ...availableFormats] as const).map((format) => {
-          const active = activeFormat === format;
-          return (
-            <Button
-              key={format}
-              type="button"
-              aria-pressed={active}
-              onClick={() => setActiveFormat(format)}
-              bg={active ? 'ink' : 'transparent'}
-              color={active ? 'white' : 'inkSoft'}
-              border="1px solid"
-              borderColor={active ? 'ink' : 'border'}
-              px="lg"
-              py="md"
-              fontSize="sm"
-              fontWeight="semibold"
-              letterSpacing="wide"
-              textTransform="uppercase"
-              transitionProperty="opacity"
-              transitionDuration="default"
-              _hover={{ opacity: 0.72 }}
-            >
-              {format === 'all' ? labels.allFormats : labels.formats[format]}
-            </Button>
-          );
-        })}
-      </Box>
+      <FilterBar
+        filters={filters}
+        allLabel={labels.allFormats}
+        ariaLabel={labels.filterLabel}
+        active={activeFormat}
+        onFilter={(format) => setActiveFormat(format as BookFormat | 'all')}
+      />
 
       <Box
         as="section"
         maxW="1200px"
         mx="auto"
         px={{ base: 'lg', md: '3xl' }}
-        pb={{ base: '4xl', md: '6xl' }}
+        py={{ base: '2xl', md: '4xl' }}
         display="grid"
         gridTemplateColumns={{ base: '1fr', sm: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }}
         gap={{ base: 'xl', md: '2xl' }}
@@ -104,7 +78,6 @@ export function BookCatalog({ books, locale, labels }: BookCatalogProps) {
               cover={book.cover}
               detailsLabel={labels.details}
               accentColor={visual.accent}
-              decoration={visual.decorations[0]?.src}
               editionLabels={formats.map((format) => labels.formats[format])}
               priceLabel={formattedPrice ? `${labels.fromPrice} ${formattedPrice}` : undefined}
             />

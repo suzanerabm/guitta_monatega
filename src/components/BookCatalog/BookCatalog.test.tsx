@@ -11,16 +11,16 @@ const books: CatalogBook[] = [
     editions: [{ id: 'digital', format: 'ebook', url: null, retailer: null, price: { amount: 4.98, currency: 'USD' } }],
   },
   {
-    slug: 'print-book', collection: 'art', contextPath: '/art', visualKey: 'art',
+    slug: 'paperback-book', collection: 'art', contextPath: '/art', visualKey: 'art',
     title: 'Print', description: 'Description', cover: null, contextTitle: 'Art',
-    editions: [{ id: 'print', format: 'paperback', url: null, retailer: null }],
+    editions: [{ id: 'paperback', format: 'paperback', url: null, retailer: null }],
   },
 ];
 
 const labels = {
   filterLabel: 'Filtrar por formato', allFormats: 'Todos', fromPrice: 'A partir de', details: 'Conheça o livro',
   collections: { art: 'Arte', bichittos: 'Bichittos', kammara: 'Kammara' },
-  formats: { ebook: 'Livro digital', paperback: 'Capa comum', hardcover: 'Capa dura', print: 'Edição impressa' },
+  formats: { ebook: 'Livro digital', paperback: 'Capa comum', hardcover: 'Capa dura' },
 };
 
 describe('BookCatalog', () => {

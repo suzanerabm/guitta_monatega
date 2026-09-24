@@ -19,7 +19,6 @@ describe('BookCatalogCard', () => {
         cover="/cover.jpg"
         detailsLabel="Conheça o livro"
         accentColor="orange"
-        decoration="/character.png"
         editionLabels={['Livro digital', 'Capa comum', 'Capa dura']}
         priceLabel="A partir de US$ 4,98"
       />,

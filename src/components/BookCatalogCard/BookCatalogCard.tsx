@@ -9,7 +9,6 @@ interface BookCatalogCardProps {
   cover: string | null;
   detailsLabel: string;
   accentColor: string;
-  decoration?: string;
   editionLabels?: string[];
   priceLabel?: string;
 }
@@ -21,7 +20,6 @@ export function BookCatalogCard({
   cover,
   detailsLabel,
   accentColor,
-  decoration,
   editionLabels = [],
   priceLabel,
 }: BookCatalogCardProps) {
@@ -54,22 +52,7 @@ export function BookCatalogCard({
           )}
         </Box>
       </NextLink>
-      <Box p={{ base: 'lg', md: 'xl' }} display="flex" flexDirection="column" flex="1" position="relative" overflow="hidden">
-        {decoration && (
-          <Image
-            src={decoration}
-            alt=""
-            aria-hidden="true"
-            position="absolute"
-            right="md"
-            bottom="md"
-            width="4xl"
-            height="4xl"
-            objectFit="contain"
-            opacity={0.12}
-            pointerEvents="none"
-          />
-        )}
+      <Box p={{ base: 'lg', md: 'xl' }} display="flex" flexDirection="column" flex="1">
         <Text
           fontSize="xs"
           letterSpacing="wider"
@@ -92,7 +75,7 @@ export function BookCatalogCard({
             {editionLabels.join(' · ')}
           </Text>
         )}
-        <Box mt="auto" position="relative" zIndex={1}>
+        <Box mt="auto">
           <NextLink href={href} style={{ textDecoration: 'underline' }}>
             <Text as="span" fontSize="sm" color="ink" letterSpacing="wide">
               {detailsLabel}

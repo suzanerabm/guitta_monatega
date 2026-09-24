@@ -1,6 +1,7 @@
 'use client';
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Text } from '@chakra-ui/react';
 import NextLink from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { useChromeTint } from '@/components/ChromeTint';
 import { useScrollHeader } from '@/hooks/useScrollHeader';
@@ -23,6 +24,7 @@ export function Breadcrumb({
   backLabel = 'voltar',
   useGlyphs = false,
 }: BreadcrumbProps) {
+  const router = useRouter();
   const [headerHeight, setHeaderHeight] = useState(60);
   const { tintColor } = useChromeTint();
   const { isHidden } = useScrollHeader(80);
@@ -54,6 +56,15 @@ export function Breadcrumb({
     textDecoration: 'none',
     transition: 'opacity 0.2s ease',
   } as const;
+
+  const handleBack = () => {
+    if (window.history.length > 1) {
+      router.back();
+      return;
+    }
+
+    router.push(homePath);
+  };
 
   return (
     <Box
@@ -110,9 +121,21 @@ export function Breadcrumb({
       </Flex>
 
       {/* Right: back */}
-      <NextLink
-        href={homePath}
-        style={linkStyle}
+      <Button
+        type="button"
+        onClick={handleBack}
+        variant="plain"
+        display="inline-flex"
+        alignItems="center"
+        gap="xs"
+        color="inherit"
+        cursor="pointer"
+        background="transparent"
+        border={0}
+        p={0}
+        font="inherit"
+        letterSpacing="inherit"
+        textTransform="inherit"
         title={backLabel}
       >
         {useGlyphs ? (
@@ -130,7 +153,7 @@ export function Breadcrumb({
         ) : (
           <span>{backLabel}</span>
         )}
-      </NextLink>
+      </Button>
     </Box>
   );
 }

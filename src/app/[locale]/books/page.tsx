@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
-import { Box, Heading, Text } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { BookCatalog } from '@/components/BookCatalog';
+import { HeroSection } from '@/components/HeroSection';
 import { getCatalogBooks, type BookLocale } from '@/lib/books';
 import { buildPageMetadata } from '@/lib/seo';
-import { bookPageLayout } from '@/theme/bookPages';
+import { artHero } from '@/theme/artSections';
 
 export async function generateMetadata({
   params,
@@ -34,30 +35,15 @@ export default async function BooksPage({
 
   return (
     <Box bg="white" color="ink" minH="100vh">
-      <Box
-        as="header"
-        maxW="1200px"
-        mx="auto"
-        px={{ base: 'lg', md: '3xl' }}
-        pt={{ base: '5xl', md: '6xl' }}
-        pb={{ base: '2xl', md: '4xl' }}
-      >
-        <Text
-          fontSize="sm"
-          letterSpacing="widest"
-          textTransform="uppercase"
-          color="inkMuted"
-          mb="md"
-        >
-          {t('eyebrow')}
-        </Text>
-        <Heading as="h1" textStyle="heading" fontSize={bookPageLayout.catalogTitleSize} color="ink" mb="lg">
-          {t('title')}
-        </Heading>
-        <Text fontSize="xl" color="inkSoft" lineHeight={1.7} maxW="720px">
-          {t('intro')}
-        </Text>
-      </Box>
+      <HeroSection
+        label={t('catalogLabel')}
+        title={t('title')}
+        description={t('intro')}
+        background={artHero.background}
+        textColor={artHero.textColor}
+        labelColor={artHero.labelColor}
+        minHeight="35vh"
+      />
 
       <BookCatalog
         books={books}
@@ -76,7 +62,6 @@ export default async function BooksPage({
             ebook: t('formats.ebook'),
             paperback: t('formats.paperback'),
             hardcover: t('formats.hardcover'),
-            print: t('formats.print'),
           },
         }}
       />

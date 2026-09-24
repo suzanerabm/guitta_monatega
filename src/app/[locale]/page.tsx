@@ -212,7 +212,7 @@ export default async function HomePage({
               fromPriceLabel={tBooks('fromPrice')}
               formatLabels={{
                 ebook: tBooks('formats.ebook'), paperback: tBooks('formats.paperback'),
-                hardcover: tBooks('formats.hardcover'), print: tBooks('formats.print'),
+                hardcover: tBooks('formats.hardcover'),
               }}
               collectionLabels={{
                 art: tBooks('collections.art'), bichittos: tBooks('collections.bichittos'),

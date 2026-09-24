@@ -8,8 +8,8 @@ import type { BookVisualKey } from '@/theme/bookPages';
 
 export type BookLocale = 'pt' | 'en';
 export type BookCollection = 'art' | 'bichittos' | 'kammara';
-export type BookFormat = 'ebook' | 'paperback' | 'hardcover' | 'print';
-export const BOOK_FORMAT_ORDER: BookFormat[] = ['ebook', 'paperback', 'hardcover', 'print'];
+export type BookFormat = 'ebook' | 'paperback' | 'hardcover';
+export const BOOK_FORMAT_ORDER: BookFormat[] = ['ebook', 'paperback', 'hardcover'];
 
 interface BookDefinition {
   slug: string;
@@ -240,7 +240,7 @@ export function getCatalogBooks(locale: BookLocale): CatalogBook[] {
       description,
       cover: primary.cover,
       editions: matches.flatMap((book) => {
-        const variants = definition.editionVariants?.[book.id] ?? [{ format: 'print' as const }];
+        const variants = definition.editionVariants?.[book.id] ?? [{ format: 'paperback' as const }];
         return variants.map((variant) => ({
           id: `${book.id}-${variant.format}`,
           format: variant.format,

@@ -18,7 +18,6 @@ export const Default: Story = {
     cover: '/imgs/books/zeco/zeco-estacoes/cover_ptbr1.jpg',
     detailsLabel: 'Conheça o livro',
     accentColor: 'orange',
-    decoration: '/imgs/bichittos/zeco/01_zeco.png',
     editionLabels: ['Livro digital', 'Capa comum', 'Capa dura'],
     priceLabel: 'A partir de US$ 4,98',
   },

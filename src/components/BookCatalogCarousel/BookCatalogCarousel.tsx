@@ -43,7 +43,6 @@ export function BookCatalogCarousel({
                 cover={book.cover}
                 detailsLabel={detailsLabel}
                 accentColor={visual.accent}
-                decoration={visual.decorations[0]?.src}
                 editionLabels={getBookFormats(book).map((format) => formatLabels[format])}
                 priceLabel={price ? `${fromPriceLabel} ${formatBookPrice(price, locale)}` : undefined}
               />
