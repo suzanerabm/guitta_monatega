@@ -1,4 +1,6 @@
 // src/theme/palettes.ts
+import { mediaUrl } from '@/lib/media';
+
 export type PaletteName =
   | 'bichittos' | 'napcat' | 'zeco' | 'taylo' | 'miscelania' | 'cheiodebolinha'
   | 'kammara' | 'lunnp1' | 'eni4' | 'triplec' | 'orfv' | 'z1' | 'gotto' | 'arte'
@@ -95,7 +97,7 @@ export const palettes: Record<PaletteName, Palette> = {
       textColor: '#c4d4ff',  // parágrafos dentro do painel
       accent: '#c4d4ff',  
       accentAlt: '#c4d4ff',  // texto da pill
-      bgImage: '/imgs/bichittos/_bg/violeta_caminha.jpg',
+      bgImage: mediaUrl('/imgs/bichittos/_bg/violeta_caminha.jpg'),
       tag: 'Gato · Sonhador',
       panelBg: 'rgb(30, 58, 122, 0.8)',
       // panelBg: '#3b0033',
@@ -114,7 +116,7 @@ export const palettes: Record<PaletteName, Palette> = {
       textColor: '#fece95',
       accent: '#f58020',
       accentAlt: '#fece95',
-      bgImage: '/imgs/bichittos/_bg/primaveracena_12_ipe.jpg',
+      bgImage: mediaUrl('/imgs/bichittos/_bg/primaveracena_12_ipe.jpg'),
       tag: 'Hamster · Quintal',
       panelBg: '#592e06',
       // panelBg: 'rgb(245, 128, 32, 0.6)',
@@ -136,7 +138,7 @@ export const palettes: Record<PaletteName, Palette> = {
       textColor: '#8fa9bf',
       accent: '#e4ebf1',
       accentAlt: '#b58a49',
-      bgImage: '/imgs/bichittos/taylo/_backgrounds/new_cena_fundo.jpg',
+      bgImage: mediaUrl('/imgs/bichittos/taylo/_backgrounds/new_cena_fundo.jpg'),
       tag: 'Amigos · Natureza',
       panelBg: 'rgba(247, 229, 208, 0.88)',
       storyPanelBg: 'rgba(247, 229, 208, 0.9)',
@@ -156,7 +158,7 @@ export const palettes: Record<PaletteName, Palette> = {
       textColor: '#ddd4f4',
       accent: '#b5a2dc',
       accentAlt: '#977ad1',
-      bgImage: '/imgs/bichittos/_bg/miscelania.png',
+      bgImage: mediaUrl('/imgs/bichittos/_bg/miscelania.png'),
       tag: 'Mágica',
     },
   },
@@ -173,7 +175,7 @@ export const palettes: Record<PaletteName, Palette> = {
       textColor: '#edf0f2',
       accent: '#3ae9f2',
       accentAlt: '#83e5ea',
-      bgImage: '/imgs/bichittos/_bg/ceu_nuvem.jpg',
+      bgImage: mediaUrl('/imgs/bichittos/_bg/ceu_nuvem.jpg'),
       tag: 'Elefante · Medroso',
       panelBg: 'rgb(47, 49, 113)',
     },
@@ -210,7 +212,7 @@ export const palettes: Record<PaletteName, Palette> = {
       textColor: '#ffe5b4',
       accent: '#b66120',
       accentAlt: '#ffe5b4',
-      bgImage: '/imgs/bichittos/_bg/primaveracena_12_ipe.jpg',
+      bgImage: mediaUrl('/imgs/bichittos/_bg/primaveracena_12_ipe.jpg'),
       tag: '',
       // Translúcido, igual ao default do DSTextPanel — deixa a imagem de
       // fundo (parallax) aparecer por trás, como nas criaturas reais.

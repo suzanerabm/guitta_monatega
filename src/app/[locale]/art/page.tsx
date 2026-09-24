@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { getArtImages, getBookPages } from '@/lib/images';
-import { getArtBooks } from '@/lib/visibility';
+import { getArtSections, getArtBooks } from '@/lib/content/art';
+import type { Locale } from '@/lib/content/types';
 import { ArtClient } from './ArtClient';
 
 export async function generateMetadata({
@@ -14,17 +14,6 @@ export async function generateMetadata({
   return { title: t('pageTitle') };
 }
 
-const SECTION_IDS = [ 
-  'doodle',
-  'grafite',
-  'black',
-  // 'digital',
-  'collections',
-  'fimo',
-  'needle',
-  'clay',
-  'croche',
-] as const;
 
 export default async function ArtPage({
   params,
@@ -33,17 +22,8 @@ export default async function ArtPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const loc = locale === 'en' ? 'en' : 'pt';
+  const sections = getArtSections();
+  const books = getArtBooks(locale as Locale);
 
-  const sections = SECTION_IDS.map((id) => {
-    const imgs = getArtImages(id);
-    return { id, thumbs: imgs.thumbs, full: imgs.full };
-  });
-
-  const artBooks = getArtBooks('art', loc).map((b) => ({
-    ...b,
-    pages: getBookPages('art', b.id),
-  }));
-
-  return <ArtClient sections={sections} books={artBooks} />;
+  return <ArtClient sections={sections} books={books} />;
 }

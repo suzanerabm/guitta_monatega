@@ -13,6 +13,16 @@ export default meta;
 type Story = StoryObj<typeof KammaraEvents>;
 
 const baseArgs = {
+  planetNames: {
+    lunnp1: "LUNN'P1",
+    eni4: 'ENI-4Δ',
+    triplec: 'TripleC',
+    orfv: 'ORF-V',
+    z1: 'Z1',
+    gotto: 'Gotto',
+    digg: 'Digg',
+    memphis: 'Memphis',
+  },
   title: 'Próximos Eventos',
   kicker: 'Universo Kammara',
   categories: eventsData.categories,

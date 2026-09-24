@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { getBookPages } from '@/lib/images';
-import { getCreatureCarousel } from '@/data/characters/bichittos/_creatureData';
-import { isBichittoPublished, getBichittoBooks, getBichittoStickers } from '@/lib/visibility';
+import { getBichittos, getBichittosBooksText } from '@/lib/content/bichittos';
+import type { Locale } from '@/lib/content/types';
 import { BichittosClient } from './BichittosClient';
 
 export async function generateMetadata({
@@ -25,23 +24,9 @@ export default async function BichittosPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const loc = locale === 'en' ? 'en' : 'pt';
 
-  const allCreatures = ['napcat', 'zeco', 'taylo', 'cheiodebolinha', 'miscelania'] as const;
-  const creatures = allCreatures.filter(isBichittoPublished);
+  const data = getBichittos(locale as Locale);
+  const booksText = getBichittosBooksText(locale as Locale);
 
-  const data = creatures.map((id) => ({
-    id,
-    chars: getCreatureCarousel(id),
-    // Livros vêm de characters/bichittos/bichittos_books.json AQUI, no
-    // servidor — livro oculto (visible:false ou onlyLocale de outro idioma)
-    // nem entra no payload (não vaza).
-    books: getBichittoBooks(id, loc).map((b) => ({
-      ...b,
-      pages: getBookPages(id, b.id),
-    })),
-    stickers: getBichittoStickers(id, loc),
-  }));
-
-  return <BichittosClient data={data} />;
+  return <BichittosClient data={data} booksText={booksText} />;
 }

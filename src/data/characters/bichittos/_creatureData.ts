@@ -1,7 +1,13 @@
+// Só servidor. Este módulo carrega os JSONs de conteúdo INTEIROS, inclusive o
+// que não está publicado — se um client component importar daqui, essa lore vai
+// junto pro bundle do navegador. O `server-only` transforma isso em erro de
+// build. Os dados chegam ao cliente por props, via `src/lib/content/`.
+import 'server-only';
 import type { Locale } from '@/lib/characters';
 import type { CreatureId } from '@/theme/palettes';
 
 import stories from './stories.json';
+import { mediaUrl } from '@/lib/media';
 
 type Bilingual<T> = { pt: T; en: T };
 
@@ -51,7 +57,9 @@ export function getCreaturePanelStory(id: CreatureId, locale: Locale): string[] 
 
 /** Imagens do carrossel, na mesma ordem em que aparecem no JSON. */
 export function getCreatureCarousel(id: CreatureId): CreatureCarouselItem[] {
-  return (STORIES[id]?.carousel ?? []).filter((item) => item.visible !== false);
+  return (STORIES[id]?.carousel ?? [])
+    .filter((item) => item.visible !== false)
+    .map((item) => ({ ...item, image: mediaUrl(item.image) }));
 }
 
 /** Texto da seção "Livros" (não é uma criatura — chave própria em stories.json). */
