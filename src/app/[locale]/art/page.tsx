@@ -4,6 +4,7 @@ import { getArtImages, getBookPages } from '@/lib/images';
 import { getArtBooks } from '@/lib/visibility';
 import { ArtClient } from './ArtClient';
 import { buildPageMetadata } from '@/lib/seo';
+import { getBookSlug } from '@/lib/books';
 
 export async function generateMetadata({
   params,
@@ -49,6 +50,9 @@ export default async function ArtPage({
   const artBooks = getArtBooks('art', loc).map((b) => ({
     ...b,
     pages: getBookPages('art', b.id),
+    details: getBookSlug(b.id)
+      ? { url: `/${loc}/books/${getBookSlug(b.id)}`, label: loc === 'en' ? 'Discover the book' : 'Conheça o livro' }
+      : null,
   }));
 
   return <ArtClient sections={sections} books={artBooks} />;

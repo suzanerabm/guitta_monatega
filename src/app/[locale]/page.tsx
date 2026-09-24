@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Box, Heading, Text, VisuallyHidden } from '@chakra-ui/react';
+import NextLink from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { HomeBanner } from '@/components/HomeBanner';
 import { BookShelf } from '@/components/BookShelf';
@@ -10,6 +11,7 @@ import {
 } from '@/lib/visibility';
 import { homeBooksGallery } from '@/theme/artSections';
 import { buildPageMetadata, SITE_URL } from '@/lib/seo';
+import { getBookSlug } from '@/lib/books';
 // import { DSCard } from '@/components/DSCard';
 // import { BichittosBannerWithNinha } from './BichittosBannerWithNinha';
 
@@ -36,6 +38,7 @@ export default async function HomePage({
   setRequestLocale(locale);
   const t = await getTranslations('home');
   const tCommon = await getTranslations('common');
+  const tBooks = await getTranslations('booksPage');
   const loc = locale === 'en' ? 'en' : 'pt';
 
   const prefix = `/${locale}`;
@@ -188,6 +191,18 @@ export default async function HomePage({
             >
               {t('books.description')}
             </Text>
+            <NextLink href={`${prefix}/books`} style={{ textDecoration: 'underline' }}>
+              <Text
+                as="span"
+                display="inline-block"
+                fontSize="sm"
+                letterSpacing="wide"
+                color={homeBooksGallery.titleColor}
+                mb="xl"
+              >
+                {tBooks('viewAllLabel')}
+              </Text>
+            </NextLink>
             <BookShelf
               arrowColor={homeBooksGallery.titleColor}
               comingSoonLabel={tCommon('soon')}
@@ -204,6 +219,12 @@ export default async function HomePage({
                   label: book.title,
                   soon: false,
                   buy: book.buy,
+                  details: getBookSlug(book.id)
+                    ? {
+                        url: `${prefix}/books/${getBookSlug(book.id)}`,
+                        label: tBooks('detailsLabel'),
+                      }
+                    : null,
                   extraLink: book.homeButton
                     ? {
                         ...book.homeButton,

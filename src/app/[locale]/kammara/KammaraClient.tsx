@@ -79,6 +79,7 @@ interface KammaraBook {
   title: string;
   cover: string | null;
   buy: { url: string; label: string } | null;
+  details: { url: string; label: string } | null;
   pages: string[];
 }
 
@@ -819,6 +820,7 @@ export function KammaraClient({ worlds, kammaraBooks, kammaraBg, kammaraChars }:
                     // — mesmo que já existam páginas pra ler.
                     soon: !b.buy,
                     buy: b.buy,
+                    details: b.details,
                   },
                   borderColor: kammaraPalette.colors[0],
                   textColor: kammaraPalette.text,

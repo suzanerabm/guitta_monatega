@@ -337,6 +337,36 @@
       }
     }
   },
+  "booksPage": {
+    "pageTitle": "Books — Guitta Monatega",
+    "description": "Original Art, Bichittos, and Kammara books written and illustrated by Guitta Monatega.",
+    "eyebrow": "Guitta Monatega Studio",
+    "title": "Books",
+    "intro": "Original stories, characters, and worlds brought together in a collection of books written and illustrated by Guitta Monatega.",
+    "catalogLabel": "Book catalog",
+    "detailsLabel": "Discover the book",
+    "viewAllLabel": "View all books",
+    "backToBooks": "Back to Books",
+    "editionsTitle": "Available editions",
+    "buyLabel": "Buy",
+    "soonLabel": "Coming soon",
+    "collections": {
+      "art": "Art",
+      "bichittos": "Bichittos",
+      "kammara": "Kammara"
+    },
+    "formats": {
+      "print": "Print edition",
+      "ebook": "Digital book",
+      "paperback": "Paperback",
+      "hardcover": "Hardcover"
+    },
+    "contextLinks": {
+      "art": "Explore the Art gallery",
+      "bichittos": "Explore the Bichittos universe",
+      "kammara": "Explore the Kammara universe"
+    }
+  },
   "privacy": {
     "pageTitle": "Privacy — Guitta Monatega",
     "title": "Privacy",

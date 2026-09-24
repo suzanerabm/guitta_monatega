@@ -10,6 +10,7 @@ import { isKammaraPublished, getKammaraBooks } from '@/lib/visibility';
 import { getCharactersForContext, type Locale } from '@/lib/characters';
 import { KammaraClient } from './KammaraClient';
 import { buildPageMetadata } from '@/lib/seo';
+import { getBookSlug } from '@/lib/books';
 
 /**
  * Lista de imagens de personagens (vem do image-manifest) SEM os que estão
@@ -107,6 +108,9 @@ export default async function KammaraPage({
   const kammaraBooks = getKammaraBooks('kammara', loc).map((b) => ({
     ...b,
     pages: getBookPages('kammara', b.id),
+    details: getBookSlug(b.id)
+      ? { url: `/${loc}/books/${getBookSlug(b.id)}`, label: loc === 'en' ? 'Discover the book' : 'Conheça o livro' }
+      : null,
   }));
 
   const kammaraBg = getKammaraBg('kammara');

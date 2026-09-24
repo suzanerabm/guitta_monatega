@@ -5,6 +5,7 @@ import { getCreatureCarousel } from '@/data/characters/bichittos/_creatureData';
 import { isBichittoPublished, getBichittoBooks, getBichittoStickers } from '@/lib/visibility';
 import { BichittosClient } from './BichittosClient';
 import { buildPageMetadata } from '@/lib/seo';
+import { getBookSlug } from '@/lib/books';
 
 export async function generateMetadata({
   params,
@@ -45,6 +46,9 @@ export default async function BichittosPage({
     books: getBichittoBooks(id, loc).map((b) => ({
       ...b,
       pages: getBookPages(id, b.id),
+      details: getBookSlug(b.id)
+        ? { url: `/${loc}/books/${getBookSlug(b.id)}`, label: loc === 'en' ? 'Discover the book' : 'Conheça o livro' }
+        : null,
     })),
     stickers: getBichittoStickers(id, loc),
   }));

@@ -22,6 +22,7 @@ interface ArtBook {
   title: string;
   cover: string | null;
   buy: { url: string; label: string } | null;
+  details: { url: string; label: string } | null;
   pages: string[];
 }
 
@@ -217,6 +218,7 @@ export function ArtClient({ sections, books }: Props) {
                     label: b.title,
                     soon: !b.buy,
                     buy: b.buy,
+                    details: b.details,
                   },
                   borderColor: booksMeta.titleColor,
                   textColor: booksMeta.titleColor,

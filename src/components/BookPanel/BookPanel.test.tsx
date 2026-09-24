@@ -55,6 +55,24 @@ describe('BookPanel', () => {
     expect(link).toHaveAttribute('href', 'https://example.com');
   });
 
+  it('renders a link to the institutional book page without removing the buy link', () => {
+    renderWithChakra(
+      <BookPanel
+        book={{
+          ...buyable,
+          details: { url: '/pt/books/book-two', label: 'Conheça o livro' },
+        }}
+        borderColor="#fff"
+        textColor="#fff"
+      />,
+    );
+    expect(screen.getByRole('link', { name: /Conheça o livro/ })).toHaveAttribute(
+      'href',
+      '/pt/books/book-two',
+    );
+    expect(screen.getByRole('link', { name: /Compre na Amazon/ })).toBeInTheDocument();
+  });
+
   it('renders a read button and calls onRead when there is no buy link', () => {
     const onRead = vi.fn();
     renderWithChakra(

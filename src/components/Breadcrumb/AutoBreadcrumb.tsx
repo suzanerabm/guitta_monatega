@@ -6,7 +6,8 @@ import { Breadcrumb } from './Breadcrumb';
 /**
  * Reads the current path and locale to render the Breadcrumb automatically
  * on every page except the home. Maps the URL segment (bichittos, kammara,
- * art, about) to a translated label.
+ * art, about, books) to a translated label. Nested pages use their root
+ * segment so a book detail URL still reads "Livros"/"Books".
  */
 export function AutoBreadcrumb() {
   const pathname = usePathname() ?? '/';
@@ -15,6 +16,7 @@ export function AutoBreadcrumb() {
 
   // Strip the locale prefix to get the page segment
   const segment = pathname.replace(/^\/(pt|en)(?=\/|$)/, '').replace(/^\//, '');
+  const rootSegment = segment.split('/')[0];
 
   // No breadcrumb on the home page
   if (!segment) return null;
@@ -26,10 +28,11 @@ export function AutoBreadcrumb() {
     bichittos: { pt: 'Bichittos', en: 'Bichittos' },
     kammara: { pt: 'Kammara', en: 'Kammara' },
     art: { pt: 'Arte', en: 'Art' },
+    books: { pt: 'Livros', en: 'Books' },
   };
 
   const label =
-    labels[segment]?.[locale === 'en' ? 'en' : 'pt'] ?? segment;
+    labels[rootSegment]?.[locale === 'en' ? 'en' : 'pt'] ?? rootSegment;
 
   const backLabel = (() => {
     try {
@@ -46,7 +49,7 @@ export function AutoBreadcrumb() {
       items={[{ label }]}
       homePath={homePath}
       backLabel={backLabel}
-      useGlyphs={segment === 'kammara'}
+      useGlyphs={rootSegment === 'kammara'}
     />
   );
 }

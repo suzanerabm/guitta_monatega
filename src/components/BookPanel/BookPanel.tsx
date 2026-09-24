@@ -16,6 +16,7 @@ export interface BookPanelBook {
   label: string;
   soon?: boolean;
   buy?: { url: string; label: string } | null;
+  details?: { url: string; label: string } | null;
   extraLink?: { url: string; label: string; image?: string; imageAlt?: string } | null;
 }
 
@@ -114,6 +115,29 @@ export function BookPanel({
         >
           {book.label}
         </Text>
+      )}
+      {book.details && (
+        <chakra.a
+          href={book.details.url}
+          aria-label={`${book.details.label}: ${book.label}`}
+          mb="md"
+          css={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            borderRadius: '999px',
+            padding: '0.5rem 1.4rem',
+            color: textColor,
+            fontSize: '0.85rem',
+            fontWeight: 700,
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
+            background: `${borderColor}22`,
+            textDecoration: 'none',
+          }}
+        >
+          {book.details.label}
+        </chakra.a>
       )}
       {book.buy ? (
         // Livro à venda (só capa + link): botão leva pra loja.

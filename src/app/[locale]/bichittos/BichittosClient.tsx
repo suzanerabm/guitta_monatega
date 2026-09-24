@@ -36,6 +36,7 @@ export interface BichittosCreatureData {
     cover: string | null;
     pages: string[];
     buy: { url: string; label: string } | null;
+    details: { url: string; label: string } | null;
   }[];
   stickers: {
     id: string;
@@ -236,6 +237,7 @@ export function BichittosClient({ data }: Props) {
             // à venda (só capa + buyUrl) não é "em breve" — mostra o botão.
             soon: !hasPages && !b.buy,
             buy: b.buy ?? undefined,
+            details: b.details,
           };
         });
         const stickers = (creature.stickers ?? []).map((sticker) => ({
@@ -567,6 +569,7 @@ export function BichittosClient({ data }: Props) {
                     label: b.title,
                     soon: !(b.pages && b.pages.length > 0) && !b.buy,
                     buy: b.buy ?? undefined,
+                    details: b.details,
                   },
                   // TODO(design): cor por livro ainda não decidida — usando
                   // palettes.livros.colors[0] como neutro legível sobre o
