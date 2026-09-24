@@ -1,5 +1,10 @@
 import { Box } from '@chakra-ui/react';
+import type { Metadata } from 'next';
 import { KammaraSagaPosterCover } from '@/components/KammaraSagaPosterCover';
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false, noarchive: true },
+};
 
 // Rota sempre dinâmica e sem cache — as artes da capa mudam com o mesmo nome
 // de arquivo, então o navegador não pode reusar versões antigas na prévia.

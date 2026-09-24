@@ -1,12 +1,9 @@
 import type { MetadataRoute } from 'next';
+import { SITE_URL } from '@/lib/seo';
 
 // Base URL do site. Em produção a Vercel expõe o host em VERCEL_URL, mas como
 // há 3 domínios apontando pro mesmo app, preferimos uma env explícita
 // (NEXT_PUBLIC_SITE_URL) quando definida; senão caímos no domínio principal.
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') ||
-  'https://guittamonatega.com';
-
 /**
  * robots.txt gerado pelo Next (App Router).
  *
@@ -39,12 +36,12 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       // Buscadores que queremos: liberados.
-      { userAgent: 'Googlebot', allow: '/' },
-      { userAgent: 'Bingbot', allow: '/' },
+      { userAgent: 'Googlebot', allow: '/', disallow: ['/api/', '/export/'] },
+      { userAgent: 'Bingbot', allow: '/', disallow: ['/api/', '/export/'] },
       // Crawlers de IA: bloqueados.
       ...aiBots.map((userAgent) => ({ userAgent, disallow: '/' })),
       // Todo o resto (pessoas, buscadores não listados): liberado.
-      { userAgent: '*', allow: '/' },
+      { userAgent: '*', allow: '/', disallow: ['/api/', '/export/'] },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,
   };

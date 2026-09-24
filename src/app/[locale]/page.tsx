@@ -1,4 +1,5 @@
-import { Box, Heading, Text } from '@chakra-ui/react';
+import type { Metadata } from 'next';
+import { Box, Heading, Text, VisuallyHidden } from '@chakra-ui/react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { HomeBanner } from '@/components/HomeBanner';
 import { BookShelf } from '@/components/BookShelf';
@@ -8,8 +9,23 @@ import {
   getKammaraBooks,
 } from '@/lib/visibility';
 import { homeBooksGallery } from '@/theme/artSections';
+import { buildPageMetadata, SITE_URL } from '@/lib/seo';
 // import { DSCard } from '@/components/DSCard';
 // import { BichittosBannerWithNinha } from './BichittosBannerWithNinha';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'home' });
+  return buildPageMetadata({
+    locale,
+    title: locale === 'en' ? 'Guitta Monatega — Books, Art & Original Worlds' : 'Guitta Monatega — Livros, Arte e Universos Autorais',
+    description: `${t('heroSub')} ${t('books.description')}`,
+  });
+}
 
 export default async function HomePage({
   params,
@@ -31,8 +47,39 @@ export default async function HomePage({
       getBichittoBooks(id, loc).map((book) => ({ ...book, source: id })),
     ),
   ].filter((book) => book.buy !== null);
+  const booksJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: t('books.title'),
+    numberOfItems: books.length,
+    itemListElement: books.map((book, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Book',
+        name: book.title,
+        image: book.cover ? `${SITE_URL}${book.cover}` : undefined,
+        url: book.buy?.url,
+        inLanguage: locale === 'en' ? 'en' : 'pt-BR',
+        author: {
+          '@type': 'Person',
+          '@id': `${SITE_URL}/#guitta-monatega`,
+          name: 'Guitta Monatega',
+        },
+      },
+    })),
+  };
   return (
     <>
+      {books.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(booksJsonLd).replace(/</g, '\\u003c'),
+          }}
+        />
+      )}
+      <VisuallyHidden as="h1">{t('title')}</VisuallyHidden>
       {/* <HeroSection
         variant="home"
         title="guitta monatega"

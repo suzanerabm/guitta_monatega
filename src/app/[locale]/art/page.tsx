@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getArtImages, getBookPages } from '@/lib/images';
 import { getArtBooks } from '@/lib/visibility';
 import { ArtClient } from './ArtClient';
+import { buildPageMetadata } from '@/lib/seo';
 
 export async function generateMetadata({
   params,
@@ -11,7 +12,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'art' });
-  return { title: t('pageTitle') };
+  return buildPageMetadata({
+    locale,
+    route: 'art',
+    title: t('pageTitle'),
+    description: `${t('sections.doodle.technique')} ${t('sections.collections.technique')}`,
+  });
 }
 
 const SECTION_IDS = [ 

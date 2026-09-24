@@ -98,6 +98,7 @@ export function ArtSection({
                 src={thumb}
                 alt={`${title} ${idx + 1}`}
                 loading="lazy"
+                decoding="async"
               />
             </Box>
           ))}

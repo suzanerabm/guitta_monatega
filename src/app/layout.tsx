@@ -1,11 +1,22 @@
 import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/next';
 import { Providers } from './providers';
+import { SITE_NAME, SITE_URL } from '@/lib/seo';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Guitta Monatega Studio',
-  description: 'Portfolio: Guitta Monatega Studio',
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_NAME,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description:
+    'Arte, livros e universos autorais de Guitta Monatega — escritora, ilustradora e engenheira de universos.',
+  applicationName: SITE_NAME,
+  authors: [{ name: 'Guitta Monatega', url: SITE_URL }],
+  creator: 'Guitta Monatega',
+  publisher: SITE_NAME,
+  formatDetection: { email: false, address: false, telephone: false },
 };
 
 export default function RootLayout({
@@ -14,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
