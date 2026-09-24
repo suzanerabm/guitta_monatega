@@ -1,4 +1,5 @@
-[ {
+[
+  {
     "title": {
       "pt": "Origem",
       "en": "Origin"
@@ -25,7 +26,11 @@
         "### The birth of the Shal'ún",
         "When light, water and roots aligned completely, the Shal'ún emerged, the people of LUNN'P1. They were made by no hand: they arose from the perfect meeting of everything the planet already was. They are the essence of the world taking form."
       ]
-    }
+    },
+    "appId": "lunnp1-topic-origem",
+    "relations": [
+      "lunnp1-topic-flora-fauna"
+    ]
   },
   {
     "title": {
@@ -62,7 +67,12 @@
         "### The movement of the cities",
         "On LUNN'P1, no one decides where the cities go. They simply go."
       ]
-    }
+    },
+    "appId": "lunnp1-topic-cultura",
+    "relations": [
+      "lunnp1-scene-crianca-brincando",
+      "lunnp1-scene-eru-rin-e-lum-esha-plantando"
+    ]
   },
   {
     "title": {
@@ -99,14 +109,19 @@
         "### The flora",
         "Luna-leaves change color according to the dominant moon. Ancestral roots hold memories no living being remembers. The flora of Oru'Len is mutable, never the same as itself."
       ]
-    }
+    },
+    "appId": "lunnp1-topic-flora-fauna",
+    "relations": [
+      "lunnp1-character-brisa",
+      "lunnp1-character-flor-lume"
+    ]
   },
   {
     "title": {
       "pt": "Geografia",
       "en": "Geography"
     },
-    "img": "/imgs/kammara/lunnp1/_subsystems/2.jpg",
+    "img": "/imgs/kammara/lunnp1/_subsystems/cidade_flutuante.jpg",
     "text": {
       "pt": [
         "### Um mundo vivo",
@@ -136,7 +151,8 @@
         "### No fixed map",
         "There is no permanent map. The Naru'ei move. The paths change. The geography of LUNN'P1 breathes."
       ]
-    }
+    },
+    "appId": "lunnp1-topic-geografia"
   },
   {
     "title": {
@@ -174,7 +190,8 @@
         "A day lasts about 40 hours. A year, 400 lunar days. But the Shal'ún do not measure time. The moons can stretch their phases; the planet chooses what it needs to feel."
       ]
     },
-    "visible": false
+    "visible": true,
+    "appId": "lunnp1-topic-ciclos-luas"
   },
   {
     "title": {
@@ -212,7 +229,8 @@
         "The Lún'Rai dissolves everything: unconscious armor, automatic defenses, untested certainties. Everything. Except the will not to be dissolved."
       ]
     },
-    "visible": false
+    "visible": false,
+    "appId": "lunnp1-topic-a-agua-lun-rai"
   },
   {
     "title": {
@@ -250,7 +268,8 @@
         "In LUNN'P1, no one 'passes information'. Whoever speaks emits light. Whoever listens changes color."
       ]
     },
-    "visible": false
+    "visible": false,
+    "appId": "lunnp1-topic-idioma"
   },
   {
     "title": {
@@ -350,6 +369,7 @@
         "⊹ ⊶ ⊶ ⊶ emergency, evacuation"
       ]
     },
-    "visible": false
+    "visible": false,
+    "appId": "lunnp1-topic-os-glifos-kalun"
   }
 ]

@@ -46,7 +46,12 @@
           "en": "The First Block"
         }
       }
-    ]
+    ],
+    "relations": [
+      "digg-character-silko-o-ratao",
+      "digg-topic-diggers"
+    ],
+    "appId": "digg-character-nihrak"
   },
   {
     "match": "Sílko",
@@ -68,7 +73,7 @@
       "pt": "Outro Lado",
       "en": "Other Side"
     },
-    "dorsalMeaning": { 
+    "dorsalMeaning": {
       "pt": "No planeta que só sabe possuir, há um ser que ninguém possui.",
       "en": "On the planet that only knows how to possess, there is one being no one possesses."
     },
@@ -95,7 +100,8 @@
           "en": "The First Block"
         }
       }
-    ]
+    ],
+    "appId": "digg-character-silko-o-ratao"
   },
   {
     "match": "CHMURKA",
@@ -144,7 +150,11 @@
           "en": "Across the chain"
         }
       }
-    ]
+    ],
+    "relations": [
+      "digg-topic-diggers"
+    ],
+    "appId": "digg-character-chmurka"
   },
   {
     "match": "ORVÍN",
@@ -193,7 +203,11 @@
           "en": "The mines and bridges"
         }
       }
-    ]
+    ],
+    "relations": [
+      "digg-topic-diggers"
+    ],
+    "appId": "digg-character-orvin"
   },
   {
     "match": "Krovín",
@@ -242,7 +256,11 @@
           "en": "Across the chain"
         }
       }
-    ]
+    ],
+    "relations": [
+      "digg-topic-diggers"
+    ],
+    "appId": "digg-character-krovin"
   },
   {
     "match": "ZIN",
@@ -291,6 +309,10 @@
           "en": "The block edges"
         }
       }
-    ]
+    ],
+    "relations": [
+      "digg-topic-diggers"
+    ],
+    "appId": "digg-character-zin"
   }
 ]

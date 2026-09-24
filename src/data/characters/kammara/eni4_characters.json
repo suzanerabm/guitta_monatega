@@ -46,7 +46,8 @@
           "en": "SCORCH"
         }
       }
-    ]
+    ],
+    "appId": "eni4-character-node-0"
   },
   {
     "match": "VEXON",
@@ -106,7 +107,11 @@
           "en": "Diagonal Fissure"
         }
       }
-    ]
+    ],
+    "relations": [
+      "eni4-character-node-0"
+    ],
+    "appId": "eni4-character-vexon"
   },
   {
     "match": "Troy",
@@ -155,7 +160,8 @@
           "en": "BURN Factories"
         }
       }
-    ]
+    ],
+    "appId": "eni4-character-troy"
   },
   {
     "match": "SCORAK",
@@ -205,7 +211,8 @@
         }
       }
     ],
-    "visible": false
+    "visible": false,
+    "appId": "eni4-character-scorak"
   },
   {
     "match": "THERMAX",
@@ -255,7 +262,8 @@
         }
       }
     ],
-    "visible": false
+    "visible": false,
+    "appId": "eni4-character-thermax"
   },
   {
     "match": "VALKON",
@@ -305,7 +313,8 @@
         }
       }
     ],
-    "visible": false
+    "visible": false,
+    "appId": "eni4-character-valkon"
   },
   {
     "match": "REPLION",
@@ -355,7 +364,8 @@
         }
       }
     ],
-    "visible": false
+    "visible": false,
+    "appId": "eni4-character-replion"
   },
   {
     "match": "MASKON",
@@ -405,7 +415,8 @@
         }
       }
     ],
-    "visible": false
+    "visible": false,
+    "appId": "eni4-character-maskon"
   },
   {
     "match": "KARTEX",
@@ -455,7 +466,8 @@
         }
       }
     ],
-    "visible": false
+    "visible": false,
+    "appId": "eni4-character-kartex"
   },
   {
     "match": "virus",
@@ -504,7 +516,8 @@
           "en": "Infiltration and consumption"
         }
       }
-    ]
+    ],
+    "appId": "eni4-character-virus"
   },
   {
     "match": "aracne_1",
@@ -554,7 +567,8 @@
         }
       }
     ],
-    "visible": false
+    "visible": false,
+    "appId": "eni4-character-aracne-i"
   },
   {
     "match": "aracne_2",
@@ -604,7 +618,8 @@
         }
       }
     ],
-    "visible": false
+    "visible": false,
+    "appId": "eni4-character-aracne-ii"
   },
   {
     "match": "aracne_3",
@@ -654,7 +669,8 @@
         }
       }
     ],
-    "visible": false
+    "visible": false,
+    "appId": "eni4-character-aracne-iii"
   },
   {
     "match": "worm",
@@ -704,7 +720,8 @@
         }
       }
     ],
-    "visible": false
+    "visible": false,
+    "appId": "eni4-character-worm"
   },
   {
     "match": "bug",
@@ -754,7 +771,8 @@
         }
       }
     ],
-    "visible":true
+    "visible": true,
+    "appId": "eni4-character-bug"
   },
   {
     "match": "silrats",
@@ -804,7 +822,8 @@
         }
       }
     ],
-    "visible": false
+    "visible": false,
+    "appId": "eni4-character-sil-rats"
   },
   {
     "match": "robo_escravo",
@@ -865,6 +884,7 @@
         }
       }
     ],
-    "visible": false
+    "visible": false,
+    "appId": "eni4-character-robo-escravo"
   }
 ]

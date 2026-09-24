@@ -46,7 +46,8 @@
           "en": "The Ratdra"
         }
       }
-    ]
+    ],
+    "appId": "memphis-character-jaquarta"
   },
   {
     "match": "Destro",
@@ -95,9 +96,10 @@
           "en": "The Ratdra"
         }
       }
-    ]
+    ],
+    "appId": "memphis-character-destro"
   },
-   {
+  {
     "match": "Raigu",
     "name": {
       "pt": "Raigu",
@@ -144,7 +146,8 @@
           "en": "The Ratdra"
         }
       }
-    ]
+    ],
+    "appId": "memphis-character-raigu"
   },
   {
     "match": "Peter",
@@ -193,7 +196,8 @@
           "en": "The Ratdra"
         }
       }
-    ]
+    ],
+    "appId": "memphis-character-peter"
   },
   {
     "match": "Nobuk",
@@ -242,9 +246,10 @@
           "en": "The Ratdra"
         }
       }
-    ]
+    ],
+    "appId": "memphis-character-nobuk"
   },
-   {
+  {
     "match": "Violeta",
     "name": {
       "pt": "Violeta",
@@ -291,6 +296,7 @@
           "en": "The Ratdra"
         }
       }
-    ]
+    ],
+    "appId": "memphis-character-violeta"
   }
 ]

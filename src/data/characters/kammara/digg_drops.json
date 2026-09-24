@@ -5,7 +5,14 @@
     "label": {
       "pt": "Níhrak no trono",
       "en": "Níhrak on the throne"
-    }
+    },
+    "appId": "digg-video-nihrak-no-trono",
+    "relations": [
+      "digg-character-nihrak",
+      "digg-scene-a-sala-do-trono-de-nihrak",
+      "digg-scene-nihrak-no-trono-de-pedra",
+      "digg-character-silko-o-ratao"
+    ]
   },
   {
     "video": "/imgs/kammara/digg/_videos/CHMURKA_eating.mp4",
@@ -13,7 +20,12 @@
     "label": {
       "pt": "Chmurka comendo",
       "en": "The Chmurka feeding"
-    }
+    },
+    "appId": "digg-video-chmurka-comendo",
+    "relations": [
+      "digg-character-chmurka",
+      "digg-scene-chmurka-comendo"
+    ]
   },
   {
     "video": "/imgs/kammara/digg/_videos/Zin_protege_ninho.mp4",
@@ -21,14 +33,23 @@
     "label": {
       "pt": "Zin protege o ninho",
       "en": "Zin protects the nest"
-    }
+    },
+    "appId": "digg-video-zin-protege-o-ninho",
+    "relations": [
+      "digg-character-zin",
+      "digg-scene-o-ninho-do-zin"
+    ]
   },
   {
     "video": "/imgs/kammara/digg/_videos/ratos_eniac_correndo.mp4",
     "poster": "/imgs/kammara/digg/_videos/ratos_eniac_correndo_poster.jpg",
     "label": {
-      "pt": "Ratos e aranhas de Silica originados de ENI-4Δ",
+      "pt": "Ratos e aranhas de sílica originários de ENI-4Δ",
       "en": "Silica rats and spiders originated from ENI-4Δ"
-    }
+    },
+    "appId": "digg-video-ratos-e-aranhas-de-silica-originarios-de-eni-4",
+    "relations": [
+      "digg-scene-o-interior-da-camara-da-mina"
+    ]
   }
 ]

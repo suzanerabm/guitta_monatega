@@ -27,6 +27,7 @@ export default async function LocaleLayout({
   const t = await getTranslations({ locale, namespace: 'common' });
   const homePath = `/${locale}`;
   const aboutPath = `/${locale}/about`;
+  const licensingPath = `/${locale}/licensing-partnerships`;
   const privacyPath = `/${locale}/privacy`;
 
   return (
@@ -39,6 +40,8 @@ export default async function LocaleLayout({
           <Footer
             aboutPath={aboutPath}
             aboutLabel={t('footerAbout')}
+            licensingPath={licensingPath}
+            licensingLabel={t('footerLicensing')}
             privacyPath={privacyPath}
             privacyLabel={t('footerPrivacy')}
             copyright={t('footerCopyright')}

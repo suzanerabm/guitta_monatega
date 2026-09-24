@@ -1,0 +1,73 @@
+{
+  "_readme": [
+    "Controle dos livros de Kammara.",
+    "Chave de cada livro = 'section/bookId-locale'.",
+    "  section = 'kammara' pro livro do universo geral.",
+    "  bookId = nome da pasta em public/imgs/books/kammara/<bookId>/",
+    "  Cada idioma é sua própria entrada (capa e link podem ser diferentes).",
+    "",
+    "Campos por livro (todos opcionais):",
+    "  visible (bool)    -> false esconde o livro sem apagar imagens. Ausente = visível.",
+    "  onlyLocale ('pt'|'en') -> idioma em que essa edição aparece.",
+    "  cover (string)    -> caminho da imagem de capa dessa edição.",
+    "  title ({pt,en})   -> nome do livro (preencha só o idioma dessa edição).",
+    "  buyUrl (string)   -> link de compra. Ausente = mostra 'Em breve' no botão.",
+    "  buyLabel (string) -> texto do botão (ex: 'Compre na Amazon').",
+    "  homeButtonUrl (string) -> destino do botão extra exibido na home.",
+    "  homeButtonLabel (string) -> texto completo do botão extra da home.",
+    "  homeButtonImage (string) -> personagem usado como botão ilustrado na home.",
+    "  homeButtonImageAlt (string) -> descrição acessível do personagem.",
+    "",
+    "Filtro roda no servidor (kammara/page.tsx) — livro oculto não vaza pro cliente.",
+    "  description ({pt,en}) -> sinopse compartilhada pelo site e pelo app.",
+    "  body ({pt,en}) -> listas de parágrafos complementares.",
+    "  appId -> identidade permanente; preserve ao corrigir títulos ou renomear uma edição."
+  ],
+  "books": {
+    "kammara/saga-orf-v-pt": {
+      "visible": true,
+      "onlyLocale": "pt",
+      "cover": "/imgs/books/kammara/saga-orf-v/capa_70x10.jpg",
+      "title": {
+        "pt": "Saga em ORF-V - Volume 1"
+      },
+      "buyUrl": "https://a.co/d/0fOqc7NW",
+      "buyLabel": "Compre na Amazon",
+      "homeButtonUrl": "/kammara",
+      "homeButtonLabel": "Conheça o universo Kammara",
+      "homeButtonImage": "/imgs/kammara/orfv/2maelik.png",
+      "homeButtonImageAlt": "Maelik",
+      "description": {
+        "pt": "E se as invenções da humanidade continuassem evoluindo em outro universo?\n\nBem-vindo ao Kammara — um universo com incontáveis planetas, cada um com seu povo, seu jeito de viver e uma história própria. Nesta primeira saga, embarque por ORF-V, o planeta onde tudo se conecta, e conheça povos que se encontram, se ajudam e se enfrentam quando seus mundos se cruzam.\n\nUma aventura ilustrada sobre coragem, amizade e o que nos torna quem somos — para jovens leitores e para todos que nunca deixaram de imaginar.",
+        "en": ""
+      },
+      "appId": "kammara-book-saga-em-orf-v-volume-1"
+    },
+    "kammara/saga-orf-v-en": {
+      "visible": true,
+      "onlyLocale": "en",
+      "cover": "/imgs/books/kammara/saga-orf-v/capa_70x10_en.jpg",
+      "title": {
+        "en": "Saga in ORF-V"
+      },
+      "homeButtonUrl": "/kammara",
+      "homeButtonLabel": "Discover the Kammara universe",
+      "homeButtonImage": "/imgs/kammara/orfv/2maelik.png",
+      "homeButtonImageAlt": "Maelik",
+      "appId": "kammara-book-saga-in-orf-v"
+    },
+    "kammara/saga-maelik-v-pt": {
+      "visible": true,
+      "onlyLocale": "pt",
+      "cover": "/imgs/books/kammara/saga-orf-v/capa_70x10_2.jpg",
+      "title": {
+        "pt": "Saga em Digg - Volume 2"
+      },
+      "homeButtonUrl": "/kammara",
+      "homeButtonLabel": "Conheça o universo Kammara",
+      "homeButtonImage": "/imgs/kammara/orfv/2maelik.png",
+      "homeButtonImageAlt": "Maelik",
+      "appId": "kammara-book-saga-em-digg-volume-2"
+    }
+  }
+}

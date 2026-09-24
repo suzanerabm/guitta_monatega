@@ -23,6 +23,13 @@ export interface HorizontalCardStripProps {
    * that gives the cards breathing room on mobile and desktop.
    */
   cardPadding?: { base: string; md: string } | string;
+  /**
+   * Arrow glyph style. 'glyph' (default) renders the Kammara-world glyph
+   * font (⊷/⊶) — reserve it for Kammara surfaces. 'plain' renders neutral
+   * chevrons in the body font, for strips outside the Kammara universe
+   * (e.g. BookShelf on Bichittos/Art).
+   */
+  arrowVariant?: 'glyph' | 'plain';
   'data-testid'?: string;
 }
 
@@ -45,6 +52,7 @@ export function HorizontalCardStrip({
   arrowColor,
   gap = '1.5rem',
   cardPadding = { base: '1rem 16px', md: '0.5rem 2rem 2rem' },
+  arrowVariant = 'glyph',
   'data-testid': testId,
 }: HorizontalCardStripProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -63,7 +71,13 @@ export function HorizontalCardStrip({
     if (!el) return;
     updateScrollState();
     el.addEventListener('scroll', updateScrollState, { passive: true });
-    return () => el.removeEventListener('scroll', updateScrollState);
+    const resizeObserver = new ResizeObserver(updateScrollState);
+    resizeObserver.observe(el);
+    if (el.firstElementChild) resizeObserver.observe(el.firstElementChild);
+    return () => {
+      el.removeEventListener('scroll', updateScrollState);
+      resizeObserver.disconnect();
+    };
   }, [updateScrollState]);
 
   const handleArrow = (dir: -1 | 1) => {
@@ -92,8 +106,9 @@ export function HorizontalCardStrip({
       alignItems: 'center',
       justifyContent: 'center',
       transition: 'color 0.2s ease',
-      fontFamily: 'var(--chakra-fonts-glyph)',
-      fontSize: 'var(--chakra-font-sizes-glyph-h1)',
+      fontFamily:
+        arrowVariant === 'glyph' ? 'var(--chakra-fonts-glyph)' : 'var(--chakra-fonts-body)',
+      fontSize: arrowVariant === 'glyph' ? 'var(--chakra-font-sizes-glyph-h1)' : '1.6rem',
       lineHeight: 1,
     },
     '@media (max-width: 48em)': {
@@ -103,12 +118,14 @@ export function HorizontalCardStrip({
 
   const idleColor = arrowColor ?? 'var(--chakra-colors-glyphIdle)';
   const disabledColor = 'var(--chakra-colors-glyphDisabled)';
+  const [prevGlyph, nextGlyph] = arrowVariant === 'glyph' ? ['⊷', '⊶'] : ['‹', '›'];
 
   return (
     <Flex align="center" css={arrowSelector} data-testid={testId}>
       <button
         type="button"
         aria-label="Previous"
+        disabled={!canPrev}
         onClick={() => handleArrow(-1)}
         data-testid={testId ? `${testId}-arrow-left` : 'hcs-arrow-left'}
         className="hcs-arrow"
@@ -118,7 +135,7 @@ export function HorizontalCardStrip({
           cursor: canPrev ? 'pointer' : 'default',
         }}
       >
-        ⊷
+        {prevGlyph}
       </button>
       <Box
         ref={scrollRef}
@@ -152,6 +169,7 @@ export function HorizontalCardStrip({
       <button
         type="button"
         aria-label="Next"
+        disabled={!canNext}
         onClick={() => handleArrow(1)}
         data-testid={testId ? `${testId}-arrow-right` : 'hcs-arrow-right'}
         className="hcs-arrow"
@@ -161,7 +179,7 @@ export function HorizontalCardStrip({
           cursor: canNext ? 'pointer' : 'default',
         }}
       >
-        ⊶
+        {nextGlyph}
       </button>
     </Flex>
   );

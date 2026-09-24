@@ -2,12 +2,11 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import {
   getCharacters,
-  getBooks,
   getBookPages,
   getKammaraBg,
 } from '@/lib/images';
 import { getWorldSubsystemImages, getWorldScenes, getWorldDrops } from '@/data/characters/kammara/_worldData';
-import { isKammaraPublished } from '@/lib/visibility';
+import { isKammaraPublished, getKammaraBooks } from '@/lib/visibility';
 import { getCharactersForContext, type Locale } from '@/lib/characters';
 import { KammaraClient } from './KammaraClient';
 
@@ -98,7 +97,7 @@ export default async function KammaraPage({
     return base;
   });
 
-  const kammaraBooks = getBooks('kammara').map((b) => ({
+  const kammaraBooks = getKammaraBooks('kammara', loc).map((b) => ({
     ...b,
     pages: getBookPages('kammara', b.id),
   }));

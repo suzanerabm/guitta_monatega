@@ -34,7 +34,11 @@
         "### The filter that never sleeps",
         "In Sharp, nothing is approved in haste. Everything passes through the same filter, and the filter never sleeps."
       ]
-    }
+    },
+    "appId": "triplec-sharp-topic-cultura",
+    "relations": [
+      "triplec-sharp-topic-bunniets"
+    ]
   },
   {
     "title": {
@@ -71,7 +75,8 @@
         "### Nourishment",
         "The bunniets of Sharp do not eat. They absorb silver light, pure metadata and filtered shilo. The energy that sustains the body is the same that validates the region's flows."
       ]
-    }
+    },
+    "appId": "triplec-sharp-topic-bunniets"
   },
   {
     "title": {
@@ -108,7 +113,8 @@
         "### Run-time Caves",
         "Underground areas where the most delicate operations happen. When something needs total privacy and maximum supervision, it is done there."
       ]
-    }
+    },
+    "appId": "triplec-sharp-topic-geografia"
   },
   {
     "title": {
@@ -145,7 +151,11 @@
         "### Supervised energy",
         "In Sharp, energy does not flow freely. It flows supervised. And what cannot be validated does not exist."
       ]
-    }
+    },
+    "appId": "triplec-sharp-topic-energia",
+    "relations": [
+      "triplec-sharp-topic-bunniets"
+    ]
   },
   {
     "title": {
@@ -182,7 +192,11 @@
         "### Continuous validation",
         "In Sharp, governance is not hierarchy. It is continuous validation. Every decision passes through the same system, including those of the Council itself."
       ]
-    }
+    },
+    "appId": "triplec-sharp-topic-governanca",
+    "relations": [
+      "triplec-sharp-topic-bunniets"
+    ]
   },
   {
     "title": {
@@ -219,6 +233,10 @@
         "### When perfection stops",
         "Sharp's greatest danger is not the external attack. It is its own perfection: when the system works so well that it stops evolving."
       ]
-    }
+    },
+    "appId": "triplec-sharp-topic-perigos",
+    "relations": [
+      "triplec-sharp-topic-bunniets"
+    ]
   }
 ]

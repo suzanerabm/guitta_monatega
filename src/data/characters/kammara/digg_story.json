@@ -41,20 +41,45 @@
   },
   "tags": [
     {
-      "label": { "pt": "Habitantes", "en": "Inhabitants" },
-      "value": { "pt": "Diggers", "en": "Diggers" }
+      "label": {
+        "pt": "Habitantes",
+        "en": "Inhabitants"
+      },
+      "value": {
+        "pt": "Diggers",
+        "en": "Diggers"
+      }
     },
     {
-      "label": { "pt": "Idioma", "en": "Language" },
-      "value": { "pt": "Turen", "en": "Turen" }
+      "label": {
+        "pt": "Idioma",
+        "en": "Language"
+      },
+      "value": {
+        "pt": "Turen",
+        "en": "Turen"
+      }
     },
     {
-      "label": { "pt": "Energia", "en": "Energy" },
-      "value": { "pt": "Kemita bruta", "en": "Raw kemita" }
+      "label": {
+        "pt": "Energia",
+        "en": "Energy"
+      },
+      "value": {
+        "pt": "Kemita bruta",
+        "en": "Raw kemita"
+      }
     },
     {
-      "label": { "pt": "Transporte", "en": "Transport" },
-      "value": { "pt": "Naves", "en": "Spaceship" }
+      "label": {
+        "pt": "Transporte",
+        "en": "Transport"
+      },
+      "value": {
+        "pt": "Naves",
+        "en": "Spaceship"
+      }
     }
-  ]
+  ],
+  "appId": "digg-planet-digg"
 }

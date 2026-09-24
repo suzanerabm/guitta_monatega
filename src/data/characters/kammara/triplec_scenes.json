@@ -4,132 +4,201 @@
     "label": {
       "pt": "Vista aérea do planeta",
       "en": "Aerial view of the planet"
-    }
+    },
+    "appId": "triplec-scene-vista-aerea-do-planeta",
+    "relations": [
+      "triplec-topic-origem"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/_scenes/1_niul_Forest.jpg",
     "label": {
       "pt": "Floresta Niul",
       "en": "Niul Forest"
-    }
+    },
+    "appId": "triplec-scene-floresta-niul"
   },
   {
     "image": "/imgs/kammara/triplec/_scenes/protecao_criptografia.jpg",
     "label": {
       "pt": "Proteção e criptografia",
       "en": "Protection and cryptography"
-    }
+    },
+    "appId": "triplec-scene-protecao-e-criptografia"
   },
   {
     "image": "/imgs/kammara/triplec/_scenes/Three_bunniets.jpg",
     "label": {
       "pt": "Três bunniets",
       "en": "Three bunniets"
-    }
+    },
+    "appId": "triplec-scene-tres-bunniets"
   },
   {
     "image": "/imgs/kammara/triplec/_scenes/regiao_malloc_lifestyle.jpg",
     "label": {
-      "pt": "Região malloc: cotidiano",
+      "pt": "Região de malloc: cotidiano",
       "en": "Malloc region: daily life"
-    }
+    },
+    "appId": "triplec-scene-regiao-de-malloc-cotidiano",
+    "relations": [
+      "triplec-malloc-topic-cultura",
+      "triplec-character-nilo"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/_scenes/regiao_mesh_lifestyle.jpg",
     "label": {
-      "pt": "Região Mesh: cotidiano",
+      "pt": "Região de Mesh: cotidiano",
       "en": "Mesh region: daily life"
-    }
+    },
+    "appId": "triplec-scene-regiao-de-mesh-cotidiano",
+    "relations": [
+      "triplec-mesh-topic-cultura"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/_scenes/regiao_sharp_lifestyle.jpg",
     "label": {
-      "pt": "Região Sharp: cotidiano",
+      "pt": "Região de Sharp: cotidiano",
       "en": "Sharp region: daily life"
-    }
+    },
+    "appId": "triplec-scene-regiao-de-sharp-cotidiano",
+    "relations": [
+      "triplec-sharp-topic-cultura"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/_scenes/regiao_malloc_familia.jpg",
     "label": {
-      "pt": "Região Malloc: interior casa",
+      "pt": "Região de malloc: interior de uma casa",
       "en": "Malloc region: house interior"
-    }
+    },
+    "appId": "triplec-scene-regiao-de-malloc-interior-de-uma-casa",
+    "relations": [
+      "triplec-malloc-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/_scenes/regiao_mesh_praca.jpg",
     "label": {
-      "pt": "Região Mesh: praça",
+      "pt": "Região de Mesh: praça",
       "en": "Mesh region: plaza"
-    }
+    },
+    "appId": "triplec-scene-regiao-de-mesh-praca",
+    "relations": [
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/_scenes/regiao_sharp_praca.jpg",
     "label": {
-      "pt": "Região Sharp: praça",
+      "pt": "Região de Sharp: praça",
       "en": "Sharp region: plaza"
-    }
+    },
+    "appId": "triplec-scene-regiao-de-sharp-praca",
+    "relations": [
+      "triplec-sharp-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/_scenes/regiao_malloc_vista_cidade.jpg",
     "label": {
-      "pt": "Região Malloc: vista da cidade",
+      "pt": "Região de malloc: vista da cidade",
       "en": "Malloc region: city view"
-    }
+    },
+    "appId": "triplec-scene-regiao-de-malloc-vista-da-cidade",
+    "relations": [
+      "triplec-malloc-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/_scenes/regiao_mesh_vista_cidade.jpg",
     "label": {
-      "pt": "Região Mesh: vista da cidade",
+      "pt": "Região de Mesh: vista da cidade",
       "en": "Mesh region: city view"
-    }
+    },
+    "appId": "triplec-scene-regiao-de-mesh-vista-da-cidade",
+    "relations": [
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/_scenes/regiao_energia_sharp.jpg",
     "label": {
-      "pt": "Região Sharp: energia",
+      "pt": "Região de Sharp: energia",
       "en": "Sharp region: energy"
-    }
+    },
+    "appId": "triplec-scene-regiao-de-sharp-energia",
+    "relations": [
+      "triplec-sharp-topic-energia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/_scenes/regiao_sharp_pets.jpg",
     "label": {
-      "pt": "Região Sharp: pets",
+      "pt": "Região de Sharp: animais de estimação",
       "en": "Sharp region: pets"
-    }
+    },
+    "appId": "triplec-scene-regiao-de-sharp-animais-de-estimacao",
+    "relations": [
+      "triplec-sharp-topic-bunniets",
+      "triplec-sharp-character-doope",
+      "triplec-sharp-character-tilu"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/_scenes/regiao_mesh_ativando_cshift.jpg",
     "label": {
-      "pt": "Região Mesh: ativando CShift",
+      "pt": "Região de Mesh: ativando o Cshift",
       "en": "Mesh region: activating CShift"
-    }
+    },
+    "appId": "triplec-scene-regiao-de-mesh-ativando-o-cshift"
   },
   {
     "image": "/imgs/kammara/triplec/_scenes/regiao_malloc_correndo_floresta.jpg",
     "label": {
-      "pt": "Bunniet malloc correndo na floresta",
+      "pt": "Bunniet de malloc correndo na floresta",
       "en": "Malloc bunniet running in the forest"
-    }
+    },
+    "appId": "triplec-scene-bunniet-de-malloc-correndo-na-floresta",
+    "relations": [
+      "triplec-malloc-topic-bunniets",
+      "triplec-topic-a-niul-forest"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/_scenes/4_Lumesha_visita_LUMA_VAL.jpg",
     "label": {
-      "pt": "Lumesha visita LUMA VAL",
-      "en": "Lumesha visits LUMA VAL"
-    }
+      "pt": "Lúm'Esha visita LUMA VAL",
+      "en": "Lúm'Esha visits LUMA VAL"
+    },
+    "appId": "triplec-scene-lum-esha-visita-luma-val",
+    "relations": [
+      "lunnp1-character-lum-esha",
+      "triplec-malloc-character-luma-val",
+      "triplec-topic-a-triade-e-o-protocol-auryn"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/_scenes/5EruRin_com_NERAN_VEL.jpg",
     "label": {
-      "pt": "EruRin com NERAN VEL",
-      "en": "EruRin with NERAN VEL"
-    }
+      "pt": "Erú'Rin com NERAN VEL",
+      "en": "Erú'Rin with NERAN VEL"
+    },
+    "appId": "triplec-scene-eru-rin-com-neran-vel",
+    "relations": [
+      "lunnp1-character-eru-rin",
+      "triplec-sharp-character-neran-vel",
+      "triplec-topic-a-triade-e-o-protocol-auryn"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/_scenes/6Cshift_portal.jpg",
     "label": {
-      "pt": "Cshift portal",
+      "pt": "Portal Cshift",
       "en": "Cshift portal"
-    }
+    },
+    "appId": "triplec-scene-portal-cshift"
   }
 ]

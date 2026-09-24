@@ -1,13 +1,116 @@
 {
-  "_comment": "Controle dos livros dos Bichittos. Chave = 'creatureId/bookId' (bookId = pasta em public/imgs/books/<creature>/<book>/). Campos por livro: | visible (bool): false esconde o livro sem apagar imagens; ausente=visível. | onlyLocale ('pt'|'en'): se definido, o livro só aparece nesse idioma (ex: 'pt' = some na versão EN do site). Ausente = aparece nos dois. | buyUrl (string): link de compra; quando presente, mostra um botão no modal do livro. | buyLabel (string): texto do botão (ex: 'Compre na Amazon'). Títulos vêm das traduções. Filtros rodam no servidor (bichittos/page.tsx) — livro oculto não vaza.",
+  "_readme": [
+    "Controle dos livros dos Bichittos.",
+    "Chave de cada livro = 'creatureId/bookId-locale'.",
+    "  bookId = nome da pasta em public/imgs/books/<creatureId>/<bookId>/",
+    "  Cada idioma é sua própria entrada (capa e link podem ser diferentes).",
+    "",
+    "Campos por livro (todos opcionais):",
+    "  visible (bool)    -> false esconde o livro sem apagar imagens. Ausente = visível.",
+    "  onlyLocale ('pt'|'en') -> idioma em que essa edição aparece.",
+    "  cover (string)    -> caminho da imagem de capa dessa edição.",
+    "  title ({pt,en})   -> nome do livro (preencha só o idioma dessa edição).",
+    "  buyUrl (string)   -> link de compra. Ausente = mostra 'Em breve' no botão.",
+    "  buyLabel (string) -> texto do botão (ex: 'Compre na Amazon').",
+    "  homeButtonUrl (string) -> destino do botão extra exibido na home.",
+    "  homeButtonLabel (string) -> texto completo do botão extra da home.",
+    "  homeButtonImage (string) -> Bichitto usado como botão ilustrado na home.",
+    "  homeButtonImageAlt (string) -> descrição acessível do Bichitto.",
+    "",
+    "Filtro roda no servidor (bichittos/page.tsx) — livro oculto não vaza pro cliente."
+  ],
   "books": {
-    "napcat/adventures": { "visible": false },
-    "zeco/zeco-estacoes": {
+    "napcat/color-pt": {
       "visible": true,
       "onlyLocale": "pt",
-      "buyUrl": "www.kammara.com",
+      "cover": "/imgs/books/napcat/color_book/capa_pt-br.png",
+      "title": { "pt": "Livro para Colorir do NapCat" },
+      "homeButtonUrl": "/bichittos?bichitto=napcat",
+      "homeButtonLabel": "Conheça o mundo do Napcat",
+      "homeButtonImage": "/imgs/bichittos/napcat/napcat.png",
+      "homeButtonImageAlt": "Napcat",
+      "buyUrl": "https://a.co/d/00X33Zd1",
       "buyLabel": "Compre na Amazon"
     },
-    "taylo/star-hunter": { "visible": false }
+    "napcat/color-en": {
+      "visible": true,
+      "onlyLocale": "en",
+      "cover": "/imgs/books/napcat/color_book/capa_en.png",
+      "title": { "en": "A Coloring Book for Kids - NapCat" },
+      "homeButtonUrl": "/bichittos?bichitto=napcat",
+      "homeButtonLabel": "Discover Napcat's world",
+      "homeButtonImage": "/imgs/bichittos/napcat/napcat.png",
+      "homeButtonImageAlt": "Napcat",
+      "buyUrl": "https://a.co/d/0gbFQBiB",
+      "buyLabel": "Buy on Amazon"
+    },
+    "zeco/zeco-estacoes-pt": {
+      "visible": true,
+      "onlyLocale": "pt",
+      "cover": "/imgs/books/zeco/zeco-estacoes/cover_ptbr1.jpg",
+      "title": { "pt": "Zeco nas Estações - e seus amigos" },
+      "homeButtonUrl": "/bichittos?bichitto=zeco",
+      "homeButtonLabel": "Conheça o mundo do Zeco",
+      "homeButtonImage": "/imgs/bichittos/zeco/01_zeco.png",
+      "homeButtonImageAlt": "Zeco",
+      "buyUrl": "https://a.co/d/0fxxQVRy",
+      "buyLabel": "Compre na Amazon"
+    },
+    "zeco/zeco-estacoes-en": {
+      "visible": true,
+      "onlyLocale": "en",
+      "cover": "/imgs/books/zeco/zeco-estacoes/cover_en1.jpg",
+      "title": { "en": "Zeco Through the Seasons - and his friends" },
+      "homeButtonUrl": "/bichittos?bichitto=zeco",
+      "homeButtonLabel": "Discover Zeco's world",
+      "homeButtonImage": "/imgs/bichittos/zeco/01_zeco.png",
+      "homeButtonImageAlt": "Zeco",
+      "buyUrl": "https://a.co/d/04qQpMrW",
+      "buyLabel": "Buy on Amazon"
+    },
+    "taylo/star-hunter-pt": {
+      "visible": true,
+      "onlyLocale": "pt",
+      "cover": "/imgs/books/taylo/volume1/capa.png",
+      "title": { "pt": "Taylo e Pitu - Volume 1" },
+      "homeButtonUrl": "/bichittos?bichitto=taylo",
+      "homeButtonLabel": "Conheça o mundo de Taylo",
+      "homeButtonImage": "/imgs/bichittos/taylo/os_dois.png",
+      "homeButtonImageAlt": "Taylo e Pitu",
+      "buyUrl": "https://a.co/d/0g3t8Q69",
+      "buyLabel": "Compre na Amazon"
+    },
+    "taylo/star-hunter-en": {
+      "visible": false,
+      "onlyLocale": "en",
+      "cover": "/imgs/books/taylo/volume1/cover.jp",
+      "title": { "en": "The Star Catcher" },
+      "homeButtonUrl": "/bichittos?bichitto=taylo",
+      "homeButtonLabel": "Discover Taylo's world",
+      "homeButtonImage": "/imgs/bichittos/taylo/os_dois.png",
+      "homeButtonImageAlt": "Taylo and Pitu"
+    }
+  },
+  "stickers": {
+    "napcat/stickers": {
+      "visible": true,
+      "cover": "/imgs/bichittos/napcat/napcat.png",
+      "title": {
+        "pt": "Stickers do Napcat",
+        "en": "Napcat Stickers"
+      },
+      "buyUrl": "https://apps.apple.com/us/app/napcat-stickers/id6792932885?app=messages",
+      "buyLabel": "App Store"
+    },
+    "zeco/stickers": {
+      "visible": true,
+      "cover": "/imgs/bichittos/zeco/01_zeco.png",
+      "title": {
+        "pt": "Stickers dos Bichittos",
+        "en": "Bichittos Stickers"
+      },
+      "buyUrl": "https://apps.apple.com/us/app/bichittos-stickers/id6792836521?app=messages",
+      "buyLabel": "App Store"
+    }
   }
 }

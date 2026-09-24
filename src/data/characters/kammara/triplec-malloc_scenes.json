@@ -2,120 +2,189 @@
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/1_vila_principal.jpg",
     "label": {
-      "pt": "vila principal",
+      "pt": "Vila principal",
       "en": "main village"
-    }
+    },
+    "appId": "triplec-malloc-scene-vila-principal",
+    "relations": [
+      "triplec-malloc-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/1portex_camada.jpg",
     "label": {
-      "pt": "portex camada",
+      "pt": "Camada Portex",
       "en": "portex layer"
-    }
+    },
+    "appId": "triplec-malloc-scene-camada-portex",
+    "relations": [
+      "triplec-malloc-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/2portex_camada_vista_cima.jpg",
     "label": {
-      "pt": "portex camada vista cima",
+      "pt": "Camada Portex: vista de cima",
       "en": "portex layer top view"
-    }
+    },
+    "appId": "triplec-malloc-scene-camada-portex-vista-de-cima",
+    "relations": [
+      "triplec-malloc-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/3datex_camada.jpg",
     "label": {
-      "pt": "datex camada",
+      "pt": "Camada Datex",
       "en": "datex layer"
-    }
+    },
+    "appId": "triplec-malloc-scene-camada-datex",
+    "relations": [
+      "triplec-malloc-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/4datara_camada.jpg",
     "label": {
-      "pt": "datara camada",
+      "pt": "Camada Datara",
       "en": "datara layer"
-    }
+    },
+    "appId": "triplec-malloc-scene-camada-datara",
+    "relations": [
+      "triplec-malloc-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/4malloc_mina_cshift.jpg",
     "label": {
-      "pt": "malloc mina kemita",
+      "pt": "Mina de kemita em malloc",
       "en": "malloc kemita mine"
-    }
+    },
+    "appId": "triplec-malloc-scene-mina-de-kemita-em-malloc",
+    "relations": [
+      "triplec-malloc-topic-geografia",
+      "triplec-malloc-topic-energia"
+    ]
   },
-   {
+  {
     "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_tunel.jpg",
     "label": {
-      "pt": "túnel",
+      "pt": "Túnel",
       "en": "tunnel"
-    }
+    },
+    "appId": "triplec-malloc-scene-tunel",
+    "relations": [
+      "triplec-malloc-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/5hepa_regiao_1.jpg",
     "label": {
-      "pt": "hepa regiao 1",
+      "pt": "Hepa: região 1",
       "en": "hepa region 1"
-    }
+    },
+    "appId": "triplec-malloc-scene-hepa-regiao-1",
+    "relations": [
+      "triplec-malloc-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/6malloc_camadas_regiao2.jpg",
     "label": {
-      "pt": "malloc camadas regiao2",
+      "pt": "Camadas de malloc: região 2",
       "en": "malloc layers region 2"
-    }
+    },
+    "appId": "triplec-malloc-scene-camadas-de-malloc-regiao-2",
+    "relations": [
+      "triplec-malloc-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/7hepa_regiao2.jpg",
     "label": {
-      "pt": "hepa regiao2",
+      "pt": "Hepa: região 2",
       "en": "hepa region 2"
-    }
+    },
+    "appId": "triplec-malloc-scene-hepa-regiao-2",
+    "relations": [
+      "triplec-malloc-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_vila.jpg",
     "label": {
-      "pt": "vila",
+      "pt": "Vila",
       "en": "village"
-    }
+    },
+    "appId": "triplec-malloc-scene-vila",
+    "relations": [
+      "triplec-malloc-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_vila_1.jpg",
     "label": {
-      "pt": "vila 1",
+      "pt": "Vila 1",
       "en": "village 1"
-    }
+    },
+    "appId": "triplec-malloc-scene-vila-1",
+    "relations": [
+      "triplec-malloc-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_vila_2.jpg",
     "label": {
-      "pt": "vila 2",
+      "pt": "Vila 2",
       "en": "village 2"
-    }
+    },
+    "appId": "triplec-malloc-scene-vila-2",
+    "relations": [
+      "triplec-malloc-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_vila_3.jpg",
     "label": {
-      "pt": "vila 3",
+      "pt": "Vila 3",
       "en": "village 3"
-    }
+    },
+    "appId": "triplec-malloc-scene-vila-3",
+    "relations": [
+      "triplec-malloc-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_vila_4.jpg",
     "label": {
-      "pt": "vila 4",
+      "pt": "Vila 4",
       "en": "village 4"
-    }
+    },
+    "appId": "triplec-malloc-scene-vila-4",
+    "relations": [
+      "triplec-malloc-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_sala.jpg",
     "label": {
-      "pt": "sala",
+      "pt": "Sala",
       "en": "living room"
-    }
+    },
+    "appId": "triplec-malloc-scene-sala",
+    "relations": [
+      "triplec-malloc-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_quarto.jpg",
     "label": {
-      "pt": "quarto",
+      "pt": "Quarto",
       "en": "bedroom"
-    }
+    },
+    "appId": "triplec-malloc-scene-quarto",
+    "relations": [
+      "triplec-malloc-topic-geografia"
+    ]
   }
 ]

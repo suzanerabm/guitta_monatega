@@ -68,6 +68,10 @@
           "en": "AURYN"
         }
       }
+    ],
+    "appId": "z1-character-zeus",
+    "relations": [
+      "z1-topic-habitantes-castas"
     ]
   },
   {
@@ -139,6 +143,10 @@
           "en": "AURYN"
         }
       }
+    ],
+    "appId": "z1-character-aruun",
+    "relations": [
+      "z1-topic-habitantes-castas"
     ]
   },
   {
@@ -210,6 +218,10 @@
           "en": "AURYN"
         }
       }
+    ],
+    "appId": "z1-character-kaal",
+    "relations": [
+      "z1-topic-habitantes-castas"
     ]
   },
   {
@@ -281,6 +293,10 @@
           "en": "AURYN"
         }
       }
+    ],
+    "appId": "z1-character-ren",
+    "relations": [
+      "z1-topic-habitantes-castas"
     ]
   },
   {
@@ -352,6 +368,10 @@
           "en": "AURYN"
         }
       }
+    ],
+    "appId": "z1-character-synn",
+    "relations": [
+      "z1-topic-habitantes-castas"
     ]
   }
 ]

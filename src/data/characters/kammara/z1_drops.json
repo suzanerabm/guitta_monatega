@@ -3,34 +3,56 @@
     "video": "/imgs/kammara/z1/_videos/TOWER_STATION.mp4",
     "poster": "/imgs/kammara/z1/_videos/TOWER_STATION_poster.jpg",
     "label": {
-      "pt": "estação-torre",
+      "pt": "Estação-torre",
       "en": "tower station"
-    }
+    },
+    "appId": "z1-video-estacao-torre",
+    "relations": [
+      "z1-topic-geografia",
+      "z1-scene-estacao-torre",
+      "z1-scene-interior-da-estacao-torre"
+    ]
   },
-  
   {
     "video": "/imgs/kammara/z1/_videos/tempestades_curto_circuito.mp4",
     "poster": "/imgs/kammara/z1/_videos/tempestades_curto_circuito_poster.jpg",
     "label": {
-      "pt": "tempestades de curto-circuito",
+      "pt": "Tempestades de curto-circuito",
       "en": "short-circuit storms"
-    }
+    },
+    "appId": "z1-video-tempestades-de-curto-circuito",
+    "relations": [
+      "z1-character-aruun"
+    ]
   },
   {
     "video": "/imgs/kammara/z1/_videos/cidade_em_movimento.mp4",
     "poster": "/imgs/kammara/z1/_videos/cidade_em_movimento_poster.jpg",
     "label": {
-      "pt": "cidade em movimento",
+      "pt": "Cidade em movimento",
       "en": "city in motion"
-    }
+    },
+    "appId": "z1-video-cidade-em-movimento",
+    "relations": [
+      "z1-topic-geografia",
+      "z1-scene-praca-central-vista-aerea",
+      "z1-scene-modbus-lotado",
+      "z1-character-ren"
+    ]
   },
-  
   {
     "video": "/imgs/kammara/z1/_videos/transporte_dentro_CENTRAL_SQUARE.mp4",
     "poster": "/imgs/kammara/z1/_videos/transporte_dentro_CENTRAL_SQUARE_poster.jpg",
     "label": {
-      "pt": "transporte na praça central",
+      "pt": "Transporte na praça central",
       "en": "transport in the central square"
-    }
+    },
+    "appId": "z1-video-transporte-na-praca-central",
+    "relations": [
+      "z1-topic-geografia",
+      "z1-scene-praca-central",
+      "z1-scene-praca-central-vista-aerea",
+      "z1-character-ren"
+    ]
   }
 ]

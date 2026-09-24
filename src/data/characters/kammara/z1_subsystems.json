@@ -46,7 +46,11 @@
         "### Current era",
         "The Synchronic Squad operates. An alliance with the Shal'ún. A war of attrition with ENI-4Δ. Even chaos can become life."
       ]
-    }
+    },
+    "relations": [
+      "eni4-character-node-0"
+    ],
+    "appId": "z1-topic-origem"
   },
   {
     "title": {
@@ -83,7 +87,11 @@
         "### The essence",
         "Z1 does not celebrate. Z1 functions. And to function is the highest form of existing."
       ]
-    }
+    },
+    "relations": [
+      "z1-topic-linguagem"
+    ],
+    "appId": "z1-topic-cultura"
   },
   {
     "title": {
@@ -120,7 +128,8 @@
         "### Fixed identity",
         "Function is identity. Each being is born for a function and remains in it. There is no mobility, dissatisfaction or comparison."
       ]
-    }
+    },
+    "appId": "z1-topic-habitantes-castas"
   },
   {
     "title": {
@@ -157,7 +166,13 @@
         "### The sky",
         "Permanent structural haze: gray, cold, luminous. No shadows. White light that seems to come from every direction at once."
       ]
-    }
+    },
+    "relations": [
+      "z1-character-zeus",
+      "z1-scene-salas-ancestrais",
+      "z1-scene-salao-perfurado"
+    ],
+    "appId": "z1-topic-geografia"
   },
   {
     "title": {
@@ -194,7 +209,11 @@
         "### The essence",
         "In Z1, silence is not absence. It is the cleanest instruction that exists."
       ]
-    }
+    },
+    "relations": [
+      "eni4-topic-o-codigo-dos-virus-asm"
+    ],
+    "appId": "z1-topic-linguagem"
   },
   {
     "title": {
@@ -231,6 +250,11 @@
         "### The resilience",
         "A bit out of place is catastrophic in a system with no tolerance for error. But Z1 has never collapsed. It resists, rebuilds, continues."
       ]
-    }
+    },
+    "relations": [
+      "z1-video-tempestades-de-curto-circuito",
+      "eni4-topic-o-codigo-dos-virus-asm"
+    ],
+    "appId": "z1-topic-perigos"
   }
 ]

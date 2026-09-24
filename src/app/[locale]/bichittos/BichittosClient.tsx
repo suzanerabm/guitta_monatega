@@ -2,6 +2,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import { Box, Grid, Text, chakra } from '@chakra-ui/react';
+import { Apple } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
 import { HeroSection } from '@/components/HeroSection';
 import { FilterBar } from '@/components/FilterBar';
@@ -10,7 +11,8 @@ import { CreatureCard } from '@/components/bichittos/CreatureCard';
 import { DSMainCard } from '@/components/DSMainCard';
 import { CharacterStrip } from '@/components/bichittos/CharacterStrip';
 import { BichittoVideoCarousel } from '@/components/bichittos/BichittoVideoCarousel';
-import { BookGallery } from '@/components/BookGallery';
+import { BookPanel } from '@/components/BookPanel';
+import { BookShelf } from '@/components/BookShelf';
 import { useModal } from '@/components/Modal';
 import { palettes, type CreatureId } from '@/theme/palettes';
 import { isBichittoPublished } from '@/lib/visibility';
@@ -19,6 +21,7 @@ import {
   getCreatureName,
   getCreatureText,
   getCreaturePanelStory,
+  getBooksText,
 } from '@/data/characters/bichittos/_creatureData';
 import { translateName } from '@/lib/translateName';
 import { resolveInitialBichitto } from './resolveInitialBichitto';
@@ -29,9 +32,16 @@ export interface BichittosCreatureData {
   chars: { name: string; image: string }[];
   books: {
     id: string;
+    title: string;
     cover: string | null;
     pages: string[];
-    buy?: { url: string; label: string } | null;
+    buy: { url: string; label: string } | null;
+  }[];
+  stickers: {
+    id: string;
+    title: string;
+    cover: string | null;
+    buy: { url: string; label: string } | null;
   }[];
 }
 
@@ -50,8 +60,10 @@ export function BichittosClient({ data }: Props) {
   // Ids publicados, na ordem de `data` (já filtrado por isBichittoPublished
   // na page.tsx). O primeiro é o default quando não há ?bichitto= na URL.
   const publishedIds = data.map((c) => c.id);
+  const hasAnyBook = data.some((c) => c.books.length > 0);
+  const filterIds = hasAnyBook ? [...publishedIds, 'livros'] : publishedIds;
   const [activeFilter, setActiveFilter] = useState(() =>
-    resolveInitialBichitto(searchParams.get('bichitto'), publishedIds),
+    resolveInitialBichitto(searchParams.get('bichitto'), filterIds),
   );
 
   // Troca a criatura ativa E sincroniza a URL (?bichitto=<id>), sem recarregar
@@ -84,28 +96,17 @@ export function BichittosClient({ data }: Props) {
       }
     > = {};
     for (const creature of data) {
-      // Read translated book defs to map tag -> title
-      const bookDefs = ((): { tag: string; title: string }[] | undefined => {
-        try {
-          if (!t.has(`${creature.id}.books` as never)) return undefined;
-          return t.raw(`${creature.id}.books`) as { tag: string; title: string }[];
-        } catch {
-          return undefined;
-        }
-      })();
       for (const book of creature.books) {
         if (!book.pages || book.pages.length === 0) continue;
-        const def = bookDefs?.find((d) => book.id.endsWith(d.tag));
-        const title = def?.title ?? book.id;
         out[`book_${creature.id}-${book.id}`] = {
-          title,
+          title: book.title,
           pages: book.pages,
           buy: book.buy,
         };
       }
     }
     return out;
-  }, [data, t]);
+  }, [data]);
 
   useEffect(() => {
     for (const [id, g] of Object.entries(galleries)) {
@@ -137,6 +138,10 @@ export function BichittosClient({ data }: Props) {
     openGallery(galleryId, 0, g.title, bookIllustrated, undefined, undefined, undefined, g.buy);
   };
 
+  const allBooks = data.flatMap((creature) =>
+    creature.books.map((b) => ({ ...b, creatureId: creature.id })),
+  );
+
   const filters = [
     { id: 'napcat', label: getCreatureName('napcat', locale as Locale), color: palettes.napcat.colors[3], bgColor: palettes.napcat.dark },
     { id: 'zeco', label: getCreatureName('zeco', locale as Locale), color: palettes.zeco.colors[3], bgColor: palettes.zeco.dark },
@@ -144,6 +149,11 @@ export function BichittosClient({ data }: Props) {
     { id: 'cheiodebolinha', label: getCreatureName('cheiodebolinha', locale as Locale), color: palettes.cheiodebolinha.colors[2], bgColor: palettes.cheiodebolinha.dark },
     { id: 'miscelania', label: getCreatureName('miscelania', locale as Locale), color: palettes.miscelania.colors[2], bgColor: palettes.miscelania.dark },
   ].filter((f) => isBichittoPublished(f.id));
+
+  const filtersWithBooks = [
+    ...filters,
+    ...(allBooks.length > 0 ? [{ id: 'livros', label: t('booksTitle') }] : []),
+  ];
 
   return (
     <>
@@ -199,7 +209,7 @@ export function BichittosClient({ data }: Props) {
       </HeroSection>
 
       <FilterBar
-        filters={filters}
+        filters={filtersWithBooks}
         showAll={false}
         defaultActive={publishedIds[0]}
         active={activeFilter}
@@ -215,28 +225,27 @@ export function BichittosClient({ data }: Props) {
         const text = getCreatureText(creature.id, locale as Locale);
         const panelStory = getCreaturePanelStory(creature.id, locale as Locale);
         const name = getCreatureName(creature.id, locale as Locale);
-        const bookDefs = ((): { tag: string; title: string }[] | undefined => {
-          try {
-            if (!t.has(`${creature.id}.books` as never)) return undefined;
-            return t.raw(`${creature.id}.books`) as { tag: string; title: string }[];
-          } catch {
-            return undefined;
-          }
-        })();
         const books = creature.books.map((b) => {
-          const def = bookDefs?.find((d) => b.id.endsWith(d.tag));
           const hasPages = Boolean(b.pages && b.pages.length > 0);
           return {
             id: `${creature.id}-${b.id}`,
             image: b.cover ?? undefined,
-            alt: def?.title ?? b.id,
-            label: def?.title ?? b.id,
+            alt: b.title,
+            label: b.title,
             // "soon" só quando NÃO há páginas E NÃO há link de compra. Um livro
             // à venda (só capa + buyUrl) não é "em breve" — mostra o botão.
             soon: !hasPages && !b.buy,
             buy: b.buy ?? undefined,
           };
         });
+        const stickers = (creature.stickers ?? []).map((sticker) => ({
+          id: `${creature.id}-${sticker.id}`,
+          image: sticker.cover ?? undefined,
+          alt: sticker.title,
+          label: sticker.title,
+          soon: !sticker.buy,
+          buy: sticker.buy ?? undefined,
+        }));
 
         const panelTitle = `${name}${creature.id === 'napcat' ? ' & Violeta' : (creature.id === 'zeco' || creature.id === 'taylo') ? ' & Amigos' : ''}`;
 
@@ -261,7 +270,7 @@ export function BichittosClient({ data }: Props) {
                   gradient={palette.gradient}
                   cardBgOpacity={0.7}
                   bottomShadow
-                  bgGradientOverlay={palette.dark}
+                  bgGradientOverlay={colors.cardOverlay ?? palette.dark}
                   height="2000px"
                   maxHeight="800px"
                   titleColor={colors.titleColor}
@@ -362,6 +371,7 @@ export function BichittosClient({ data }: Props) {
                 gap={{ base: '2rem', md: '2.5rem' }}
                 alignItems="stretch"
               >
+                <Box display="flex" flexDirection="column" gap={{ base: '1rem', md: '1.5rem' }}>
                 {/* Box do TEXTO (história) — mesma altura do box do livro
                     (height 100% no Grid stretch); scroll interno quando a
                     história é longa. */}
@@ -373,7 +383,7 @@ export function BichittosClient({ data }: Props) {
                     maxHeight={{ base: '420px', md: '560px' }}
                     overflowY="auto"
                     css={{
-                      background: 'rgba(0,0,0,0.28)',
+                      background: colors.storyPanelBg ?? 'rgba(0,0,0,0.28)',
                       outline: `2px solid ${boxBorder}`,
                       outlineOffset: '6px',
                       // Scrollbar discreta na cor do bichitto.
@@ -401,102 +411,176 @@ export function BichittosClient({ data }: Props) {
                   </Box>
                 )}
 
-                {/* Box do LIVRO (capa + título + botão) */}
-                {books.length > 0 && books[0] && (
+                {stickers.length > 0 && (
                   <Box
-                    borderRadius="20px"
-                    p={{ base: '1.5rem', md: '2rem' }}
-                    height="100%"
+                    maxW={{ base: '100%', md: '520px' }}
+                    display="flex"
+                    alignItems="center"
+                    gap={{ base: '1rem', md: '1.25rem' }}
+                    p={{ base: '0.85rem', md: '1rem' }}
+                    borderRadius="xl"
                     css={{
-                      background: 'rgba(0,0,0,0.28)',
-                      outline: `2px solid ${boxBorder}`,
-                      outlineOffset: '6px',
+                      background: 'rgba(0,0,0,0.22)',
+                      outline: `1px solid ${boxBorder}`,
+                      outlineOffset: '3px',
                     }}
                   >
-                    <Text
-                      textStyle="heading"
-                      fontSize="xs"
-                      letterSpacing="hero"
-                      textTransform="uppercase"
-                      color={colors.textColor}
-                      mb="1rem"
-                    >
-                      {t('booksTitle')}
-                    </Text>
-                    {books[0].image && (
-                      <chakra.img
-                        src={books[0].image}
-                        alt={books[0].alt}
-                        width="100%"
-                        borderRadius="12px"
-                        mb="1rem"
-                        css={{
-                          outline: `2px solid ${boxBorder}`,
-                          outlineOffset: '4px',
-                          display: 'block',
-                          objectFit: 'cover',
-                        }}
-                      />
+                    {stickers[0].image && (
+                      <Box
+                        flexShrink={0}
+                        width={{ base: '64px', md: '76px' }}
+                        height={{ base: '64px', md: '76px' }}
+                        p="xs"
+                        borderRadius="lg"
+                        overflow="hidden"
+                      >
+                        <chakra.img
+                          src={stickers[0].image}
+                          alt={stickers[0].alt}
+                          width="100%"
+                          height="100%"
+                          objectFit="contain"
+                        />
+                      </Box>
                     )}
-                    <Text textStyle="heading" fontSize={{ base: 'lg', md: 'xl' }} color={colors.textColor} mb="1rem">
-                      {books[0].label}
-                    </Text>
-                    {books[0].buy ? (
-                      // Livro à venda (só capa + link): botão leva pra loja.
-                      <chakra.a
-                        href={books[0].buy.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        css={{
-                          display: 'inline-flex',
-                          alignItems: 'center',
-                          gap: '0.4rem',
-                          outline: `2px solid ${boxBorder}`,
-                          outlineOffset: '3px',
-                          borderRadius: '999px',
-                          padding: '0.5rem 1.4rem',
-                          color: colors.textColor,
-                          fontSize: '0.85rem',
-                          fontWeight: 700,
-                          letterSpacing: '0.08em',
-                          textTransform: 'uppercase',
-                          cursor: 'pointer',
-                          background: 'transparent',
-                          textDecoration: 'none',
-                          transition: 'transform 0.15s ease, opacity 0.15s ease',
-                        }}
+                    <Box minW={0} flex="1">
+                      <Text
+                        fontSize="xs"
+                        letterSpacing="hero"
+                        textTransform="uppercase"
+                        color={colors.textColor}
+                        mb="0.25rem"
                       >
-                        {books[0].buy.label} ↗
-                      </chakra.a>
-                    ) : !books[0].soon ? (
-                      <chakra.button
-                        type="button"
-                        onClick={() => handleBookClick(creature.id, books[0].id.slice(creature.id.length + 1))}
-                        css={{
-                          display: 'inline-block',
-                          outline: `2px solid ${boxBorder}`,
-                          outlineOffset: '3px',
-                          borderRadius: '999px',
-                          padding: '0.5rem 1.4rem',
-                          color: colors.textColor,
-                          fontSize: '0.85rem',
-                          fontWeight: 700,
-                          letterSpacing: '0.08em',
-                          textTransform: 'uppercase',
-                          cursor: 'pointer',
-                          background: 'transparent',
-                        }}
+                        {t('stickersTitle')}
+                      </Text>
+                      <Text
+                        fontSize={{ base: 'md', md: 'lg' }}
+                        color={colors.textColor}
+                        mb="0.7rem"
+                        overflow="hidden"
+                        textOverflow="ellipsis"
+                        whiteSpace="nowrap"
                       >
-                        Ler história ✦
-                      </chakra.button>
-                    ) : null}
+                        {stickers[0].label}
+                      </Text>
+                      {stickers[0].buy && (
+                        <chakra.a
+                          href={stickers[0].buy.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          display="inline-flex"
+                          alignItems="center"
+                          gap="0.35rem"
+                          color={colors.textColor}
+                          fontSize="xs"
+                          fontWeight="semibold"
+                          letterSpacing="normal"
+                          textTransform="uppercase"
+                          textDecoration="none"
+                        >
+                          <Apple size={16} aria-hidden="true" />
+                          {stickers[0].buy.label}
+                        </chakra.a>
+                      )}
+                    </Box>
                   </Box>
+                )}
+                </Box>
+
+                {/* Box do LIVRO (capa + título + botão) */}
+                {books.length > 0 && books[0] && (
+                  <BookPanel
+                    book={books[0]}
+                    borderColor={boxBorder}
+                    textColor={colors.textColor}
+                    background={colors.storyPanelBg}
+                    onRead={(bookId) =>
+                      handleBookClick(creature.id, bookId.slice(creature.id.length + 1))
+                    }
+                  />
                 )}
               </Grid>
             </Box>
           </CreatureSection>
         );
       })}
+
+      {allBooks.length > 0 && activeFilter === 'livros' && (
+        <CreatureSection
+          id="livros"
+          gradient={palettes.livros.gradientBg}
+          accentColor={palettes.livros.colors[0]}
+          bgImage={palettes.livros.bichittos?.bgImage}
+          bgOpacity={0.3}
+        >
+          <CreatureCard
+            name={t('booksTitle')}
+            color1={palettes.livros.dark}
+            color2={palettes.livros.dark}
+          >
+            {getBooksText(locale as Locale).map((paragraph, i, arr) => (
+              <Box key={i} as={i === arr.length - 1 ? 'strong' : 'p'} display="block" fontWeight={i === arr.length - 1 ? 'bold' : 'inherit'} mb={i < arr.length - 1 ? '1rem' : 0}>
+                {paragraph}
+              </Box>
+            ))}
+          </CreatureCard>
+          {/* ── Camada inferior — mesma receita do DSMainCard (fundo +
+              overlay + sombra de elevação em cima/embaixo), sem o resto da
+              complexidade (personagens/mascote), já que aqui só precisamos
+              do grid de livros por cima. Cores vêm de palettes.livros (tema),
+              separada de palettes.bichittos (usada no HeroSection do topo). ── */}
+          <Box
+            position="relative"
+            width="100%"
+            minH={{ base: 'auto', md: '400px' }}
+            mt={{ base: '3rem', md: '2.5rem' }}
+            overflow="hidden"
+            boxShadow="0 20px 50px rgba(0,0,0,0.35), 0 -20px 50px rgba(0,0,0,0.35), 0 8px 20px rgba(0,0,0,0.25), 0 -8px 20px rgba(0,0,0,0.25)"
+          >
+            <Box
+              data-testid="livros-bg"
+              position="absolute"
+              inset={0}
+              zIndex={0}
+              background={palettes.livros.bichittos?.panelBg}
+            />
+            <Box
+              data-testid="livros-bg-overlay"
+              position="absolute"
+              inset={0}
+              zIndex={0}
+              pointerEvents="none"
+              css={{
+                background: `linear-gradient(to bottom, transparent 0%, ${palettes.livros.dark}22 60%, ${palettes.livros.dark}88 100%)`,
+                backdropFilter: 'blur(4px)',
+                WebkitBackdropFilter: 'blur(4px)',
+              }}
+            />
+            <Box position="relative" zIndex={1} py="2rem">
+              <BookShelf
+                arrowColor={palettes.livros.colors[0]}
+                books={allBooks.map((b) => ({
+                  book: {
+                    id: `${b.creatureId}-${b.id}`,
+                    image: b.cover ?? undefined,
+                    alt: b.title,
+                    label: b.title,
+                    soon: !(b.pages && b.pages.length > 0) && !b.buy,
+                    buy: b.buy ?? undefined,
+                  },
+                  // TODO(design): cor por livro ainda não decidida — usando
+                  // palettes.livros.colors[0] como neutro legível sobre o
+                  // fundo escuro desta seção. Ajustar no tema (ou trocar por
+                  // uma cor por criatura) quando a paleta for definida.
+                  borderColor: palettes.livros.colors[0],
+                  textColor: palettes.livros.colors[0],
+                  onRead: (bookId) => handleBookClick(b.creatureId, bookId.slice(b.creatureId.length + 1)),
+                }))}
+              />
+            </Box>
+          </Box>
+        </CreatureSection>
+      )}
     </>
   );
 }

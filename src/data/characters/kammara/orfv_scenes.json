@@ -2,99 +2,160 @@
   {
     "image": "/imgs/kammara/orfv/_scenes/1vista_Fjorks_Centrais.jpg",
     "label": {
-      "pt": "vista Fjorks Centrais",
-      "en": "vista Fjorks Centrais"
-    }
+      "pt": "Vista dos Fjorks Centrais",
+      "en": "View of the Central Fjorks"
+    },
+    "appId": "orfv-scene-vista-dos-fjorks-centrais",
+    "relations": [
+      "orfv-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/2Colina_Central.jpg",
     "label": {
       "pt": "Colina Central",
-      "en": "Colina Central"
-    }
+      "en": "Central Hill"
+    },
+    "appId": "orfv-scene-colina-central",
+    "relations": [
+      "orfv-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/3Iren_Kor_Vila_Central.jpg",
     "label": {
-      "pt": "Iren Kor Vila Central",
-      "en": "Iren Kor Vila Central"
-    }
+      "pt": "IREN KOR na Vila Central",
+      "en": "IREN KOR in the Central Village"
+    },
+    "appId": "orfv-scene-iren-kor-na-vila-central",
+    "relations": [
+      "triplec-malloc-character-iren-kor",
+      "orfv-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/velo_dormindo_flor.jpg",
     "label": {
       "pt": "Velo dormindo na flor",
       "en": "Velo sleeping on the flower"
-    }
+    },
+    "appId": "orfv-scene-velo-dormindo-na-flor",
+    "relations": [
+      "orfv-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/zupi_dormindo_com_nuvin1.jpg",
     "label": {
-      "pt": "Zupi dormindo com o Nuvin",
+      "pt": "Zupi dormindo com Nuvin",
       "en": "Zupi sleeping with the Nuvin"
-    }
+    },
+    "appId": "orfv-scene-zupi-dormindo-com-nuvin",
+    "relations": [
+      "orfv-character-zupi",
+      "orfv-character-nuvin"
+    ]
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/4Vila_Central.jpg",
     "label": {
       "pt": "Vila Central",
-      "en": "Vila Central"
-    }
+      "en": "Central Village"
+    },
+    "appId": "orfv-scene-vila-central",
+    "relations": [
+      "orfv-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/5Vila_Leste.jpg",
     "label": {
       "pt": "Vila Leste",
-      "en": "Vila Leste"
-    }
+      "en": "East Village"
+    },
+    "appId": "orfv-scene-vila-leste",
+    "relations": [
+      "orfv-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/6Maelik_Fjorks_Oeste.jpg",
     "label": {
-      "pt": "Maelik Fjorks Oeste",
-      "en": "Maelik Fjorks Oeste"
-    }
+      "pt": "Maelik nos Fjorks Oeste",
+      "en": "Maelik in the West Fjorks"
+    },
+    "appId": "orfv-scene-maelik-nos-fjorks-oeste",
+    "relations": [
+      "orfv-character-maelik",
+      "orfv-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/7vila_norte.jpg",
     "label": {
-      "pt": "vila norte",
-      "en": "vila norte"
-    }
+      "pt": "Vila Norte",
+      "en": "North Village"
+    },
+    "appId": "orfv-scene-vila-norte",
+    "relations": [
+      "orfv-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/8Ceu_em_orf-v.jpg",
     "label": {
-      "pt": "Ceu em orf-v",
-      "en": "Ceu em orf-v"
-    }
+      "pt": "Céu de ORF-V",
+      "en": "Sky over ORF-V"
+    },
+    "appId": "orfv-scene-ceu-de-orf-v",
+    "relations": [
+      "orfv-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/9noite_em_orfv.jpg",
     "label": {
-      "pt": "noite em orfv",
-      "en": "noite em orfv"
-    }
+      "pt": "Noite em ORF-V",
+      "en": "Night in ORF-V"
+    },
+    "appId": "orfv-scene-noite-em-orf-v",
+    "relations": [
+      "orfv-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/10regiao_sul_deserta.jpg",
     "label": {
-      "pt": "regiao sul deserta",
-      "en": "regiao sul deserta"
-    }
+      "pt": "Região sul deserta",
+      "en": "Deserted south region"
+    },
+    "appId": "orfv-scene-regiao-sul-deserta-10",
+    "relations": [
+      "orfv-topic-geografia",
+      "orfv-topic-perigos"
+    ]
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/11regiao_sul_deserta.jpg",
     "label": {
-      "pt": "regiao sul deserta",
-      "en": "regiao sul deserta"
-    }
+      "pt": "Região sul deserta",
+      "en": "Deserted south region"
+    },
+    "appId": "orfv-scene-regiao-sul-deserta-11",
+    "relations": [
+      "orfv-topic-geografia",
+      "orfv-topic-perigos"
+    ]
   },
   {
     "image": "/imgs/kammara/orfv/_scenes/12festival.jpg",
     "label": {
-      "pt": "festival",
-      "en": "festival"
-    }
+      "pt": "Festival",
+      "en": "Festival"
+    },
+    "appId": "orfv-scene-festival",
+    "relations": [
+      "orfv-character-maelik"
+    ]
   }
 ]
