@@ -37,7 +37,7 @@ export default async function HomePage({
 
   const prefix = `/${locale}`;
   const books = getCatalogBooks(loc).filter((book) =>
-    book.editions.some((edition) => edition.url !== null),
+    book.editions.some((edition) => edition.purchaseChannel !== 'comingSoon'),
   );
   const booksJsonLd = {
     '@context': 'https://schema.org',
@@ -51,7 +51,7 @@ export default async function HomePage({
         '@type': 'Book',
         name: book.title,
         image: book.cover ? `${SITE_URL}${book.cover}` : undefined,
-        url: book.editions.find((edition) => edition.url)?.url,
+        url: `${SITE_URL}/${loc}/books/${book.slug}`,
         inLanguage: locale === 'en' ? 'en' : 'pt-BR',
         author: {
           '@type': 'Person',
@@ -210,6 +210,7 @@ export default async function HomePage({
               locale={loc}
               detailsLabel={tBooks('detailsLabel')}
               fromPriceLabel={tBooks('fromPrice')}
+              comingSoonLabel={tBooks('soonLabel')}
               formatLabels={{
                 ebook: tBooks('formats.ebook'), paperback: tBooks('formats.paperback'),
                 hardcover: tBooks('formats.hardcover'),

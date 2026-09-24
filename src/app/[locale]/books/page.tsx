@@ -53,6 +53,7 @@ export default async function BooksPage({
           allFormats: t('allFormats'),
           fromPrice: t('fromPrice'),
           details: t('detailsLabel'),
+          comingSoon: t('soonLabel'),
           collections: {
             art: t('collections.art'),
             bichittos: t('collections.bichittos'),

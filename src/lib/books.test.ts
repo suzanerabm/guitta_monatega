@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { getBookLocales, getBookSlug, getCatalogBook, getCatalogBooks } from './books';
+import { getBookFormats, getBookLocales, getBookSlug, getCatalogBook, getCatalogBooks, isBookComingSoon } from './books';
 
 describe('book catalog', () => {
   it('groups the legacy locale editions under one stable book slug', () => {
@@ -77,5 +77,11 @@ describe('book catalog', () => {
       publicationDate: 'September 24, 2026',
       isbn: '979-8175224666',
     });
+  });
+
+  it('marks books with only unreleased editions as coming soon', () => {
+    const book = getCatalogBook('saga-digg-volume-2', 'pt');
+    expect(book && isBookComingSoon(book)).toBe(true);
+    expect(book && getBookFormats(book)).toEqual([]);
   });
 });

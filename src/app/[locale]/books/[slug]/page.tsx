@@ -6,6 +6,7 @@ import {
   getAllBookSlugs,
   getBookLocales,
   getCatalogBook,
+  isBookComingSoon,
   type BookLocale,
 } from '@/lib/books';
 import { buildPageMetadata, SITE_URL } from '@/lib/seo';
@@ -62,6 +63,7 @@ export default async function BookPage({
   if (!book) notFound();
   const t = await getTranslations('booksPage');
   const visual = bookPageVisuals[book.visualKey];
+  const comingSoon = isBookComingSoon(book);
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Book',
@@ -95,7 +97,7 @@ export default async function BookPage({
         gap={{ base: '2xl', md: '4xl' }}
         alignItems="start"
       >
-        <Box bg="surface" position={{ md: 'sticky' }} top={{ md: '5xl' }}>
+        <Box bg="surface" position={{ base: 'relative', md: 'sticky' }} top={{ md: '5xl' }}>
           {book.cover && (
             <Image
               src={book.cover}
@@ -104,6 +106,23 @@ export default async function BookPage({
               height="auto"
               decoding="async"
             />
+          )}
+          {comingSoon && (
+            <Text
+              position="absolute"
+              top={0}
+              right={0}
+              bg={visual.accent}
+              color="ink"
+              px="lg"
+              py="sm"
+              fontSize="xs"
+              fontWeight="semibold"
+              letterSpacing="wider"
+              textTransform="uppercase"
+            >
+              {t('soonLabel')}
+            </Text>
           )}
         </Box>
 
@@ -120,36 +139,38 @@ export default async function BookPage({
           <Heading as="h1" textStyle="heading" fontSize="h3" lineHeight={1.05} color="ink" mb="xl">
             {book.title}
           </Heading>
-          <Text fontSize="md" color="inkSoft" lineHeight={1.7} whiteSpace="pre-line" mb="3xl">
+          <Text fontSize="base" color="inkSoft" lineHeight={1.7} whiteSpace="pre-line" mb="3xl">
             {book.description}
           </Text>
 
-          <Box as="section" aria-label={t('editionsTitle')} borderTop="1px solid" borderColor="border" pt="2xl">
-            <BookEditionSelector
-              editions={book.editions}
-              locale={loc}
-              accentColor={visual.accent}
-              formatLabels={{
-                ebook: t('formats.ebook'),
-                paperback: t('formats.paperback'),
-                hardcover: t('formats.hardcover'),
-              }}
-              factsLabels={{
-                readingAge: t('facts.readingAge'),
-                pageCount: t('facts.pageCount'),
-                language: t('facts.language'),
-                dimensions: t('facts.dimensions'),
-                weight: t('facts.weight'),
-                fileSize: t('facts.fileSize'),
-                publicationDate: t('facts.publicationDate'),
-                isbn: t('facts.isbn'),
-                pages: t('facts.pages'),
-              }}
-              buyLabel={t('buyLabel')}
-              amazonBuyLabel={t('amazonBuyLabel')}
-              soonLabel={t('soonLabel')}
-            />
-          </Box>
+          {!comingSoon && (
+            <Box as="section" aria-label={t('editionsTitle')} borderTop="1px solid" borderColor="border" pt="2xl">
+              <BookEditionSelector
+                editions={book.editions}
+                locale={loc}
+                accentColor={visual.accent}
+                formatLabels={{
+                  ebook: t('formats.ebook'),
+                  paperback: t('formats.paperback'),
+                  hardcover: t('formats.hardcover'),
+                }}
+                factsLabels={{
+                  readingAge: t('facts.readingAge'),
+                  pageCount: t('facts.pageCount'),
+                  language: t('facts.language'),
+                  dimensions: t('facts.dimensions'),
+                  weight: t('facts.weight'),
+                  fileSize: t('facts.fileSize'),
+                  publicationDate: t('facts.publicationDate'),
+                  isbn: t('facts.isbn'),
+                  pages: t('facts.pages'),
+                }}
+                buyLabel={t('buyLabel')}
+                amazonBuyLabel={t('amazonBuyLabel')}
+                soonLabel={t('soonLabel')}
+              />
+            </Box>
+          )}
 
         </Box>
       </Box>

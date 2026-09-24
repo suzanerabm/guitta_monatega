@@ -9,6 +9,7 @@ import {
   formatBookPrice,
   getBookFormats,
   getLowestBookPrice,
+  isBookComingSoon,
   type BookFormat,
   type CatalogBook,
 } from '@/lib/books';
@@ -19,6 +20,7 @@ interface BookCatalogLabels {
   allFormats: string;
   fromPrice: string;
   details: string;
+  comingSoon: string;
   collections: Record<CatalogBook['collection'], string>;
   formats: Record<BookFormat, string>;
 }
@@ -78,6 +80,7 @@ export function BookCatalog({ books, locale, labels }: BookCatalogProps) {
               cover={book.cover}
               detailsLabel={labels.details}
               accentColor={visual.accent}
+              badgeLabel={isBookComingSoon(book) ? labels.comingSoon : undefined}
               editionLabels={formats.map((format) => labels.formats[format])}
               priceLabel={formattedPrice ? `${labels.fromPrice} ${formattedPrice}` : undefined}
             />

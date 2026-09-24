@@ -5,6 +5,7 @@ import {
   formatBookPrice,
   getBookFormats,
   getLowestBookPrice,
+  isBookComingSoon,
   type BookFormat,
   type BookLocale,
   type CatalogBook,
@@ -16,6 +17,7 @@ interface BookCatalogCarouselProps {
   locale: BookLocale;
   detailsLabel: string;
   fromPriceLabel: string;
+  comingSoonLabel: string;
   formatLabels: Record<BookFormat, string>;
   collectionLabels: Record<CatalogBook['collection'], string>;
 }
@@ -25,6 +27,7 @@ export function BookCatalogCarousel({
   locale,
   detailsLabel,
   fromPriceLabel,
+  comingSoonLabel,
   formatLabels,
   collectionLabels,
 }: BookCatalogCarouselProps) {
@@ -43,6 +46,7 @@ export function BookCatalogCarousel({
                 cover={book.cover}
                 detailsLabel={detailsLabel}
                 accentColor={visual.accent}
+                badgeLabel={isBookComingSoon(book) ? comingSoonLabel : undefined}
                 editionLabels={getBookFormats(book).map((format) => formatLabels[format])}
                 priceLabel={price ? `${fromPriceLabel} ${formatBookPrice(price, locale)}` : undefined}
               />

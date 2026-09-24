@@ -96,7 +96,12 @@ export function getBookLocales(slug: string): BookLocale[] {
 }
 export function getAllBookSlugs(): string[] { return BOOK_DEFINITIONS.map((book) => book.slug); }
 export function getBookFormats(book: CatalogBook): BookFormat[] {
-  return BOOK_FORMAT_ORDER.filter((format) => book.editions.some((edition) => edition.format === format));
+  return BOOK_FORMAT_ORDER.filter((format) =>
+    book.editions.some((edition) => edition.format === format && edition.purchaseChannel !== 'comingSoon'),
+  );
+}
+export function isBookComingSoon(book: CatalogBook): boolean {
+  return book.editions.length > 0 && book.editions.every((edition) => edition.purchaseChannel === 'comingSoon');
 }
 export function getLowestBookPrice(book: CatalogBook): BookPrice | null {
   const prices = book.editions.flatMap((edition) => edition.price ? [edition.price] : []);

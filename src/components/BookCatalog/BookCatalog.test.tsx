@@ -18,7 +18,7 @@ const books: CatalogBook[] = [
 ];
 
 const labels = {
-  filterLabel: 'Filtrar por formato', allFormats: 'Todos', fromPrice: 'A partir de', details: 'Conheça o livro',
+  filterLabel: 'Filtrar por formato', allFormats: 'Todos', fromPrice: 'A partir de', details: 'Conheça o livro', comingSoon: 'Em breve',
   collections: { art: 'Arte', bichittos: 'Bichittos', kammara: 'Kammara' },
   formats: { ebook: 'Livro digital', paperback: 'Capa comum', hardcover: 'Capa dura' },
 };
