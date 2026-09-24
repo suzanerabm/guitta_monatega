@@ -131,22 +131,6 @@ export default async function BookPage({
             {book.description}
           </Text>
 
-          {book.facts && (
-            <BookFacts
-              facts={book.facts}
-              accentColor={visual.accent}
-              labels={{
-                readingAge: t('facts.readingAge'),
-                pageCount: t('facts.pageCount'),
-                language: t('facts.language'),
-                dimensions: t('facts.dimensions'),
-                publicationDate: t('facts.publicationDate'),
-                isbn: t('facts.isbn'),
-                pages: t('facts.pages'),
-              }}
-            />
-          )}
-
           <Box as="section" aria-labelledby="book-editions-title" borderTop="1px solid" borderColor="border" pt="2xl">
             <Heading id="book-editions-title" as="h2" textStyle="heading" fontSize="2xl" color="ink" mb="xl">
               {t('editionsTitle')}
@@ -158,42 +142,62 @@ export default async function BookPage({
                   border="1px solid"
                   borderColor="border"
                   p={{ base: 'lg', md: 'xl' }}
-                  display="flex"
-                  flexDirection={{ base: 'column', sm: 'row' }}
-                  alignItems={{ sm: 'center' }}
-                  justifyContent="space-between"
-                  gap="lg"
                 >
-                  <Box>
-                    <Text textStyle="heading" fontSize="lg" color="ink">
-                      {t(`formats.${edition.format}`)}
-                    </Text>
-                    {edition.retailer && (
-                      <Text fontSize="sm" color="inkMuted" mt="xs">
-                        {edition.retailer}
+                  <Box
+                    display="flex"
+                    flexDirection={{ base: 'column', sm: 'row' }}
+                    alignItems={{ sm: 'center' }}
+                    justifyContent="space-between"
+                    gap="lg"
+                  >
+                    <Box>
+                      <Text textStyle="heading" fontSize="lg" color="ink">
+                        {t(`formats.${edition.format}`)}
+                      </Text>
+                      {edition.retailer && (
+                        <Text fontSize="sm" color="inkMuted" mt="xs">
+                          {edition.retailer}
+                        </Text>
+                      )}
+                    </Box>
+                    {edition.url ? (
+                      <Link
+                        href={edition.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        bg="ink"
+                        color="white"
+                        px="xl"
+                        py="md"
+                        fontSize="sm"
+                        letterSpacing="wide"
+                        textTransform="uppercase"
+                        textAlign="center"
+                      >
+                        {t('buyLabel')}
+                      </Link>
+                    ) : (
+                      <Text fontSize="sm" color="inkMuted">
+                        {t('soonLabel')}
                       </Text>
                     )}
                   </Box>
-                  {edition.url ? (
-                    <Link
-                      href={edition.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      bg="ink"
-                      color="white"
-                      px="xl"
-                      py="md"
-                      fontSize="sm"
-                      letterSpacing="wide"
-                      textTransform="uppercase"
-                      textAlign="center"
-                    >
-                      {t('buyLabel')}
-                    </Link>
-                  ) : (
-                    <Text fontSize="sm" color="inkMuted">
-                      {t('soonLabel')}
-                    </Text>
+                  {edition.facts && (
+                    <BookFacts
+                      facts={edition.facts}
+                      accentColor={visual.accent}
+                      embedded
+                      labels={{
+                        readingAge: t('facts.readingAge'),
+                        pageCount: t('facts.pageCount'),
+                        language: t('facts.language'),
+                        dimensions: t('facts.dimensions'),
+                        weight: t('facts.weight'),
+                        publicationDate: t('facts.publicationDate'),
+                        isbn: t('facts.isbn'),
+                        pages: t('facts.pages'),
+                      }}
+                    />
                   )}
                 </Box>
               ))}

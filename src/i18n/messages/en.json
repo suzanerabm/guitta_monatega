@@ -355,6 +355,7 @@
       "pageCount": "Print length",
       "language": "Language",
       "dimensions": "Dimensions",
+      "weight": "Weight",
       "publicationDate": "Publication",
       "isbn": "ISBN",
       "pages": "pages"

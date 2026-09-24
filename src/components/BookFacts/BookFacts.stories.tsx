@@ -18,6 +18,7 @@ const meta = {
       pageCount: 'Número de páginas',
       language: 'Idioma',
       dimensions: 'Dimensões',
+      weight: 'Peso',
       publicationDate: 'Publicação',
       isbn: 'ISBN',
       pages: 'páginas',

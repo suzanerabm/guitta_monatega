@@ -18,7 +18,8 @@ interface BookDefinition {
   visualKey: BookVisualKey;
   descriptions: Partial<Record<BookLocale, string>>;
   contextTitles: Partial<Record<BookLocale, string>>;
-  facts?: Partial<Record<BookLocale, BookFacts>>;
+  editionFacts?: Partial<Record<string, BookFacts>>;
+  editionFormats?: Partial<Record<string, BookFormat>>;
 }
 
 export interface BookFacts {
@@ -26,6 +27,7 @@ export interface BookFacts {
   pageCount?: number;
   language?: string;
   dimensions?: string;
+  weight?: string;
   publicationDate?: string;
   isbn?: string;
 }
@@ -35,6 +37,7 @@ export interface BookEdition {
   format: BookFormat;
   url: string | null;
   retailer: string | null;
+  facts?: BookFacts;
 }
 
 export interface CatalogBook {
@@ -47,7 +50,6 @@ export interface CatalogBook {
   cover: string | null;
   editions: BookEdition[];
   contextTitle: string;
-  facts?: BookFacts;
 }
 
 const BOOK_DEFINITIONS: BookDefinition[] = [
@@ -62,8 +64,9 @@ const BOOK_DEFINITIONS: BookDefinition[] = [
       en: 'A coloring book inspired by NapCat’s world, created to turn imagination, characters, and affection into moments of creativity.',
     },
     contextTitles: { pt: 'Conheça o NapCat', en: 'Discover NapCat' },
-    facts: {
-      pt: {
+    editionFormats: { 'color-pt': 'paperback' },
+    editionFacts: {
+      'color-pt': {
         readingAge: '3–6 anos',
         pageCount: 58,
         language: 'Português',
@@ -173,12 +176,12 @@ export function getCatalogBooks(locale: BookLocale): CatalogBook[] {
       cover: primary.cover,
       editions: matches.map((book) => ({
         id: book.id,
-        format: 'print' as const,
+        format: definition.editionFormats?.[book.id] ?? 'print',
         url: book.buy?.url ?? null,
         retailer: book.buy?.label ?? null,
+        facts: definition.editionFacts?.[book.id],
       })),
       contextTitle,
-      facts: definition.facts?.[locale],
     }];
   });
 }

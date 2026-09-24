@@ -6,6 +6,7 @@ import {
   CalendarDays,
   Languages,
   Ruler,
+  Scale,
   type LucideIcon,
 } from 'lucide-react';
 import type { BookFacts as BookFactsData } from '@/lib/books';
@@ -15,6 +16,7 @@ interface BookFactsLabels {
   pageCount: string;
   language: string;
   dimensions: string;
+  weight: string;
   publicationDate: string;
   isbn: string;
   pages: string;
@@ -24,6 +26,7 @@ interface BookFactsProps {
   facts: BookFactsData;
   labels: BookFactsLabels;
   accentColor: string;
+  embedded?: boolean;
 }
 
 interface FactItem {
@@ -33,7 +36,7 @@ interface FactItem {
   Icon: LucideIcon;
 }
 
-export function BookFacts({ facts, labels, accentColor }: BookFactsProps) {
+export function BookFacts({ facts, labels, accentColor, embedded = false }: BookFactsProps) {
   const possibleItems: FactItem[] = [
     { key: 'readingAge', label: labels.readingAge, value: facts.readingAge, Icon: Baby },
     {
@@ -44,6 +47,7 @@ export function BookFacts({ facts, labels, accentColor }: BookFactsProps) {
     },
     { key: 'language', label: labels.language, value: facts.language, Icon: Languages },
     { key: 'dimensions', label: labels.dimensions, value: facts.dimensions, Icon: Ruler },
+    { key: 'weight', label: labels.weight, value: facts.weight, Icon: Scale },
     {
       key: 'publicationDate',
       label: labels.publicationDate,
@@ -60,11 +64,12 @@ export function BookFacts({ facts, labels, accentColor }: BookFactsProps) {
     <Box
       as="dl"
       display="grid"
-      gridTemplateColumns={{ base: 'repeat(2, minmax(0, 1fr))', lg: `repeat(${items.length}, minmax(0, 1fr))` }}
+      gridTemplateColumns={{ base: 'repeat(2, minmax(0, 1fr))', md: 'repeat(3, minmax(0, 1fr))' }}
       borderTop="1px solid"
       borderBottom="1px solid"
       borderColor="border"
-      my={{ base: '2xl', md: '3xl' }}
+      mt={embedded ? 'xl' : { base: '2xl', md: '3xl' }}
+      mb={embedded ? '0' : { base: '2xl', md: '3xl' }}
     >
       {items.map(({ key, label, value, Icon }, index) => (
         <Box
@@ -74,13 +79,13 @@ export function BookFacts({ facts, labels, accentColor }: BookFactsProps) {
           minW="0"
           gridColumn={{
             base: items.length % 2 === 1 && index === items.length - 1 ? '1 / -1' : 'auto',
-            lg: 'auto',
+            md: 'auto',
           }}
           borderLeft={{
             base: index % 2 === 1 && index !== items.length - 1 ? '1px solid' : 'none',
-            lg: index > 0 ? '1px solid' : 'none',
+            md: index % 3 !== 0 ? '1px solid' : 'none',
           }}
-          borderTop={{ base: index > 1 ? '1px solid' : 'none', lg: 'none' }}
+          borderTop={{ base: index > 1 ? '1px solid' : 'none', md: index > 2 ? '1px solid' : 'none' }}
           borderColor="border"
           textAlign="center"
         >
