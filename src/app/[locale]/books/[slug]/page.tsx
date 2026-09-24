@@ -207,6 +207,7 @@ export default async function BookPage({
         eyebrow={t(`collections.${book.collection}`)}
         title={book.contextTitle}
         backgroundImage={visual.contextBackground}
+        overlay={visual.contextOverlay}
         decorations={visual.decorations}
         accentColor={visual.accent}
       />

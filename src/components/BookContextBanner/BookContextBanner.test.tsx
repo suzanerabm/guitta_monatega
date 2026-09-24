@@ -15,6 +15,7 @@ describe('BookContextBanner', () => {
         eyebrow="Bichittos"
         title="Conheça o NapCat"
         backgroundImage="/background.jpg"
+        overlay="linear-gradient(blue, navy)"
         decorations={['/napcat.png']}
         accentColor="orange"
       />,
@@ -23,4 +24,3 @@ describe('BookContextBanner', () => {
     expect(screen.getByRole('heading', { name: 'Conheça o NapCat' })).toBeInTheDocument();
   });
 });
-

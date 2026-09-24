@@ -7,6 +7,7 @@ interface BookContextBannerProps {
   eyebrow: string;
   title: string;
   backgroundImage: string;
+  overlay: string;
   decorations: string[];
   accentColor: string;
 }
@@ -16,6 +17,7 @@ export function BookContextBanner({
   eyebrow,
   title,
   backgroundImage,
+  overlay,
   decorations,
   accentColor,
 }: BookContextBannerProps) {
@@ -27,7 +29,7 @@ export function BookContextBanner({
         position="relative"
         height={bookPageLayout.contextBannerHeight}
         overflow="hidden"
-        backgroundImage={`linear-gradient(var(--chakra-colors-overlay-dark-soft), var(--chakra-colors-overlay-dark-soft)), url(${backgroundImage})`}
+        backgroundImage={`${overlay}, url(${backgroundImage})`}
         backgroundSize="cover"
         backgroundPosition={{ base: '58% center', md: 'center' }}
         borderTopWidth={bookPageLayout.accentBorderWidth}
