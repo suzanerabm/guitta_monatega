@@ -17,6 +17,7 @@ export const Default: Story = {
     collection: 'Bichittos',
     cover: '/imgs/books/zeco/zeco-estacoes/cover_ptbr1.jpg',
     detailsLabel: 'Conheça o livro',
+    accentColor: 'orange',
+    decoration: '/imgs/bichittos/zeco/01_zeco.png',
   },
 };
-

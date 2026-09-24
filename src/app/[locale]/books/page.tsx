@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { BookCatalogCard } from '@/components/BookCatalogCard';
 import { getCatalogBooks, type BookLocale } from '@/lib/books';
 import { buildPageMetadata } from '@/lib/seo';
+import { bookPageVisuals } from '@/theme/bookPages';
 
 export async function generateMetadata({
   params,
@@ -69,18 +70,20 @@ export default async function BooksPage({
         gridTemplateColumns={{ base: '1fr', sm: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }}
         gap={{ base: 'xl', md: '2xl' }}
       >
-        {books.map((book) => (
-          <BookCatalogCard
+        {books.map((book) => {
+          const visual = bookPageVisuals[book.visualKey];
+          return <BookCatalogCard
             key={book.slug}
             href={`/${loc}/books/${book.slug}`}
             title={book.title}
             collection={t(`collections.${book.collection}`)}
             cover={book.cover}
             detailsLabel={t('detailsLabel')}
-          />
-        ))}
+            accentColor={visual.accent}
+            decoration={visual.decorations[0]}
+          />;
+        })}
       </Box>
     </Box>
   );
 }
-

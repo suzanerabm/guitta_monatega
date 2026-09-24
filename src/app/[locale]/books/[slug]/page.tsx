@@ -10,6 +10,8 @@ import {
   type BookLocale,
 } from '@/lib/books';
 import { buildPageMetadata, SITE_URL } from '@/lib/seo';
+import { bookPageVisuals } from '@/theme/bookPages';
+import { BookContextBanner } from '@/components/BookContextBanner';
 
 export function generateStaticParams() {
   return getAllBookSlugs().flatMap((slug) =>
@@ -59,6 +61,7 @@ export default async function BookPage({
   const book = getCatalogBook(slug, loc);
   if (!book) notFound();
   const t = await getTranslations('booksPage');
+  const visual = bookPageVisuals[book.visualKey];
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Book',
@@ -74,7 +77,7 @@ export default async function BookPage({
   };
 
   return (
-    <Box bg="white" color="ink" minH="100vh">
+    <Box background={visual.background} color="ink" minH="100vh">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -180,15 +183,16 @@ export default async function BookPage({
             </Box>
           </Box>
 
-          <Box mt="3xl" pt="2xl" borderTop="1px solid" borderColor="border">
-            <NextLink href={`/${loc}${book.contextPath}`} style={{ textDecoration: 'underline' }}>
-              <Text as="span" fontSize="sm" color="ink">
-                {t(`contextLinks.${book.collection}`)}
-              </Text>
-            </NextLink>
-          </Box>
         </Box>
       </Box>
+      <BookContextBanner
+        href={`/${loc}${book.contextPath}`}
+        eyebrow={t(`collections.${book.collection}`)}
+        title={book.contextTitle}
+        backgroundImage={visual.contextBackground}
+        decorations={visual.decorations}
+        accentColor={visual.accent}
+      />
     </Box>
   );
 }

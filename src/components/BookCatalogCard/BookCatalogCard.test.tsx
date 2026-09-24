@@ -18,6 +18,8 @@ describe('BookCatalogCard', () => {
         collection="Bichittos"
         cover="/cover.jpg"
         detailsLabel="Conheça o livro"
+        accentColor="orange"
+        decoration="/character.png"
       />,
     );
 
@@ -26,4 +28,3 @@ describe('BookCatalogCard', () => {
     expect(screen.getByAltText('Zeco nas Estações')).toHaveAttribute('src', '/cover.jpg');
   });
 });
-
