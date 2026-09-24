@@ -57,6 +57,10 @@
           "en": "Natural sentinel"
         }
       }
+    ],
+    "appId": "triplec-character-volpita",
+    "relations": [
+      "triplec-topic-o-cshift"
     ]
   },
   {
@@ -74,7 +78,7 @@
       "en": "When a Ypito stares at you, it is because something is about to change. Silent observer of TripleC: stays still watching for hours, appears and vanishes without warning. Hard to scare off."
     },
     "image": "/imgs/kammara/triplec/ypito_roxo.png",
-     "backImage": "/imgs/kammara/triplec/ypito_roxo_costas.png",
+    "backImage": "/imgs/kammara/triplec/ypito_roxo_costas.png",
     "backTitle": {
       "pt": "Verso",
       "en": "Verse"
@@ -117,7 +121,8 @@
           "en": "Observer"
         }
       }
-    ]
+    ],
+    "appId": "triplec-character-ypito"
   },
   {
     "match": "Seal Beans",
@@ -177,9 +182,13 @@
           "en": "Love"
         }
       }
+    ],
+    "appId": "triplec-character-seal-beans",
+    "relations": [
+      "triplec-topic-os-bunniets"
     ]
   },
-   {
+  {
     "match": "Treezitoide",
     "name": {
       "pt": "Treezi",
@@ -221,7 +230,7 @@
           "pt": "Habitat",
           "en": "Habitat"
         },
-         "value": {
+        "value": {
           "pt": "Multi-regional",
           "en": "Multi-regional"
         }
@@ -237,9 +246,14 @@
           "en": "Silent"
         }
       }
+    ],
+    "appId": "triplec-character-treezi",
+    "relations": [
+      "triplec-topic-os-bunniets",
+      "triplec-topic-a-niul-forest"
     ]
   },
-   {
+  {
     "match": "Plumoide",
     "name": {
       "pt": "Pluma",
@@ -297,6 +311,10 @@
           "en": "Pollinator"
         }
       }
+    ],
+    "appId": "triplec-character-pluma",
+    "relations": [
+      "triplec-topic-a-niul-forest"
     ]
   },
   {
@@ -357,9 +375,12 @@
           "en": "Seed distributor"
         }
       }
+    ],
+    "appId": "triplec-character-nilo",
+    "relations": [
+      "triplec-topic-a-niul-forest"
     ]
   },
- 
   {
     "match": "Espirola",
     "name": {
@@ -418,6 +439,11 @@
           "en": "Spy"
         }
       }
+    ],
+    "appId": "triplec-character-espirola",
+    "relations": [
+      "triplec-topic-os-bunniets",
+      "triplec-topic-a-niul-forest"
     ]
   },
   {
@@ -478,6 +504,10 @@
           "en": "Sky watcher"
         }
       }
+    ],
+    "appId": "triplec-character-soar",
+    "relations": [
+      "triplec-topic-os-bunniets"
     ]
   },
   {
@@ -538,6 +568,10 @@
           "en": "Energy sensor"
         }
       }
+    ],
+    "appId": "triplec-character-camu",
+    "relations": [
+      "triplec-topic-a-niul-forest"
     ]
   },
   {
@@ -587,7 +621,7 @@
           "en": "Technical Exchange"
         }
       },
-       {
+      {
         "glyph": "⊹",
         "label": {
           "pt": "Origem",
@@ -598,6 +632,10 @@
           "en": "Z1 Planet"
         }
       }
+    ],
+    "appId": "triplec-character-zarkol-9",
+    "relations": [
+      "triplec-topic-a-niul-forest"
     ]
   },
   {
@@ -658,7 +696,7 @@
           "en": "AURYN"
         }
       },
-       {
+      {
         "glyph": "⊹",
         "label": {
           "pt": "Origem",
@@ -669,6 +707,10 @@
           "en": "Z1 Planet"
         }
       }
+    ],
+    "appId": "triplec-character-omi",
+    "relations": [
+      "triplec-topic-a-niul-forest"
     ]
   },
   {
@@ -728,9 +770,8 @@
           "pt": "AURYN",
           "en": "AURYN"
         }
-      }
-      ,
-       {
+      },
+      {
         "glyph": "⊹",
         "label": {
           "pt": "Origem",
@@ -741,6 +782,10 @@
           "en": "Z1 Planet"
         }
       }
+    ],
+    "appId": "triplec-character-vexa",
+    "relations": [
+      "triplec-topic-a-niul-forest"
     ]
   },
   {
@@ -801,7 +846,7 @@
           "en": "AURYN"
         }
       },
-       {
+      {
         "glyph": "⊹",
         "label": {
           "pt": "Origem",
@@ -812,6 +857,10 @@
           "en": "Z1 Planet"
         }
       }
+    ],
+    "appId": "triplec-character-lai",
+    "relations": [
+      "triplec-topic-a-niul-forest"
     ]
   }
 ]

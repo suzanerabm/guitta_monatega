@@ -57,6 +57,10 @@
           "en": "Basik"
         }
       }
+    ],
+    "appId": "gotto-character-rema",
+    "relations": [
+      "gotto-topic-habitantes-basiks"
     ]
   },
   {
@@ -117,6 +121,10 @@
           "en": "Basik"
         }
       }
+    ],
+    "appId": "gotto-character-pilo",
+    "relations": [
+      "gotto-topic-habitantes-basiks"
     ]
   },
   {
@@ -177,9 +185,13 @@
           "en": "Basik"
         }
       }
+    ],
+    "appId": "gotto-character-jump",
+    "relations": [
+      "gotto-topic-habitantes-basiks"
     ]
   },
-   {
+  {
     "match": "Flip",
     "name": {
       "pt": "FlipFlop",
@@ -230,7 +242,11 @@
           "en": "The groves"
         }
       }
-    ]
+    ],
+    "relations": [
+      "gotto-character-kirio"
+    ],
+    "appId": "gotto-character-flipflop"
   },
   {
     "match": "Kirió",
@@ -283,7 +299,8 @@
           "en": "The hills of the plain"
         }
       }
-    ]
+    ],
+    "appId": "gotto-character-kirio"
   },
   {
     "match": "Daryun",
@@ -336,7 +353,8 @@
           "en": "The rivers"
         }
       }
-    ]
+    ],
+    "appId": "gotto-character-daryun"
   },
   {
     "match": "Lumi",
@@ -385,7 +403,11 @@
           "en": "Cousin to the Tzir'Kai"
         }
       }
-    ]
+    ],
+    "relations": [
+      "gotto-character-jump"
+    ],
+    "appId": "gotto-character-lumi"
   },
   {
     "match": "Momo",
@@ -434,6 +456,10 @@
           "en": "Cousin to the Tzir'Kai"
         }
       }
-    ]
+    ],
+    "relations": [
+      "gotto-character-rema"
+    ],
+    "appId": "gotto-character-momo"
   }
 ]

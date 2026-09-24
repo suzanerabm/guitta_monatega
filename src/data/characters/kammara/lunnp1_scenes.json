@@ -3,84 +3,172 @@
     "image": "/imgs/kammara/lunnp1/_scenes/cena_crianca_brincando.jpg",
     "label": {
       "pt": "Criança brincando",
-      "en": "cena crianca brincando"
-    }
+      "en": "Child playing"
+    },
+    "appId": "lunnp1-scene-crianca-brincando",
+    "relations": [
+      "lunnp1-character-eru-rin"
+    ]
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/EruRin_e_LumEsha_plantando.jpg",
     "label": {
       "pt": "Erú'Rin e Lúm'Esha plantando",
-      "en": "Erú'Rin e Lúm'Esha plantando"
-    }
+      "en": "Erú'Rin and Lúm'Esha planting"
+    },
+    "appId": "lunnp1-scene-eru-rin-e-lum-esha-plantando",
+    "relations": [
+      "lunnp1-character-eru-rin",
+      "lunnp1-character-lum-esha",
+      "lunnp1-topic-flora-fauna"
+    ]
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/NaLum_pequenas_esferas_que-flutuam.jpg",
     "label": {
-      "pt": "NaLum: pequenas esferas que flutuam",
-      "en": "NaLum pequenas esferas que-flutuam"
-    }
+      "pt": "Ná'Lum: pequenas esferas que flutuam",
+      "en": "Ná'Lum: small floating spheres"
+    },
+    "appId": "lunnp1-scene-nalum-pequenas-esferas-que-flutuam",
+    "relations": [
+      "lunnp1-topic-flora-fauna"
+    ]
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_EXTERMO_NORTE.jpg",
     "label": {
       "pt": "Região do extremo norte",
-      "en": "regiao EXTERMO NORTE"
-    }
+      "en": "Extreme north region"
+    },
+    "appId": "lunnp1-scene-regiao-do-extremo-norte",
+    "relations": [
+      "lunnp1-topic-geografia"
+    ]
   },
   {
-    "image": "/imgs/kammara/lunnp1/_scenes/regiao_leste_aerea.jpg",
+    "image": "/imgs/kammara/lunnp1/_scenes/regiao_leste_aerea_com_cidade.jpg",
     "label": {
       "pt": "Região leste: vista aérea",
-      "en": "regiao leste aerea"
-    }
+      "en": "East region: aerial view"
+    },
+    "appId": "lunnp1-scene-regiao-leste-vista-aerea",
+    "relations": [
+      "lunnp1-topic-geografia"
+    ]
   },
   {
-    "image": "/imgs/kammara/lunnp1/_scenes/regiao_leste.jpg",
+    "image": "/imgs/kammara/lunnp1/_scenes/regiao_leste_cidade_flutuante.jpg",
     "label": {
-      "pt": "Região leste",
-      "en": "regiao leste"
-    }
+      "pt": "Naru'ei na região leste",
+      "en": "Naru'ei in the east region"
+    },
+    "appId": "lunnp1-scene-regiao-leste",
+    "relations": [
+      "lunnp1-topic-geografia"
+    ]
+  },
+  {
+    "image": "/imgs/kammara/lunnp1/_scenes/cidade_flutuante.jpg",
+    "label": {
+      "pt": "Naru'ei: cidade flutuante",
+      "en": "Naru'ei: floating city"
+    },
+    "appId": "lunnp1-scene-naru-ei-cidade-flutuante",
+    "relations": [
+      "lunnp1-topic-geografia",
+      "lunnp1-topic-cultura"
+    ]
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_norte_vista_area_1.jpg",
     "label": {
       "pt": "Região norte: vista aérea 1",
-      "en": "regiao norte vista area 1"
-    }
+      "en": "North region: aerial view 1"
+    },
+    "appId": "lunnp1-scene-regiao-norte-vista-aerea-1",
+    "relations": [
+      "lunnp1-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_norte_vista_area_2.jpg",
     "label": {
       "pt": "Região norte: vista aérea 2",
-      "en": "regiao norte vista area 2"
-    }
+      "en": "North region: aerial view 2"
+    },
+    "appId": "lunnp1-scene-regiao-norte-vista-aerea-2",
+    "relations": [
+      "lunnp1-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_norte.jpg",
     "label": {
       "pt": "Região norte",
-      "en": "regiao norte"
-    }
+      "en": "North region"
+    },
+    "appId": "lunnp1-scene-regiao-norte",
+    "relations": [
+      "lunnp1-topic-geografia"
+    ]
+  },
+  {
+    "image": "/imgs/kammara/lunnp1/_scenes/regiao_norte1.jpg",
+    "label": {
+      "pt": "Região norte sob as quatro luas",
+      "en": "North region beneath the four moons"
+    },
+    "appId": "lunnp1-scene-regiao-norte-sob-as-quatro-luas",
+    "relations": [
+      "lunnp1-topic-geografia",
+      "lunnp1-topic-ciclos-luas"
+    ]
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_oeste_aerea.jpg",
     "label": {
       "pt": "Região oeste: vista aérea",
-      "en": "regiao oeste aerea"
-    }
+      "en": "West region: aerial view"
+    },
+    "appId": "lunnp1-scene-regiao-oeste-vista-aerea",
+    "relations": [
+      "lunnp1-topic-geografia"
+    ]
+  },
+  {
+    "image": "/imgs/kammara/lunnp1/_scenes/regiao_oeste_veluma.jpg",
+    "label": {
+      "pt": "Veluma na região oeste",
+      "en": "Veluma in the west region"
+    },
+    "appId": "lunnp1-scene-veluma-na-regiao-oeste",
+    "relations": [
+      "lunnp1-character-veluma",
+      "lunnp1-video-veluma",
+      "lunnp1-topic-geografia",
+      "lunnp1-topic-flora-fauna"
+    ]
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_sul_aerea.jpg",
     "label": {
       "pt": "Região sul: vista aérea",
-      "en": "regiao sul aerea"
-    }
+      "en": "South region: aerial view"
+    },
+    "appId": "lunnp1-scene-regiao-sul-vista-aerea",
+    "relations": [
+      "lunnp1-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/lunnp1/_scenes/regiao_sul.jpg",
     "label": {
       "pt": "Região sul",
-      "en": "regiao sul"
-    }
+      "en": "South region"
+    },
+    "appId": "lunnp1-scene-regiao-sul",
+    "relations": [
+      "lunnp1-topic-geografia"
+    ]
   }
 ]

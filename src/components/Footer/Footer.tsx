@@ -6,6 +6,8 @@ import { useChromeTint } from '@/components/ChromeTint';
 interface FooterProps {
   aboutPath: string;
   aboutLabel: string;
+  licensingPath: string;
+  licensingLabel: string;
   privacyPath: string;
   privacyLabel: string;
   /** Aviso de direitos autorais (i18n). Mostrado discreto abaixo dos links. */
@@ -15,6 +17,8 @@ interface FooterProps {
 export function Footer({
   aboutPath,
   aboutLabel,
+  licensingPath,
+  licensingLabel,
   privacyPath,
   privacyLabel,
   copyright,
@@ -50,7 +54,7 @@ export function Footer({
         gap="md"
         width="100%"
       >
-        <Flex gap="lg" align="center" justify="center">
+        <Flex gap="lg" align="center" justify="center" flexWrap="wrap" textAlign="center">
           <NextLink href={aboutPath} style={linkStyle}>
             {aboutLabel}
           </NextLink>
@@ -63,6 +67,16 @@ export function Footer({
           />
           <NextLink href={privacyPath} style={linkStyle}>
             {privacyLabel}
+          </NextLink>
+          <Box
+            w="2px"
+            h="2px"
+            borderRadius="full"
+            bg={tintColor ? 'textOverlayStrong' : 'borderColor'}
+            opacity={0.6}
+          />
+          <NextLink href={licensingPath} style={linkStyle}>
+            {licensingLabel}
           </NextLink>
         </Flex>
 

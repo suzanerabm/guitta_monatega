@@ -40,6 +40,7 @@ export default async function AboutPage({
   setRequestLocale(locale);
   const t = await getTranslations('about');
   const sections = t.raw('sections') as Section[];
+  const contactEmail = t('contactEmail');
 
   const prefix = `/${locale}`;
   const artLabel = locale === 'en' ? 'Art' : 'Arte';
@@ -273,14 +274,14 @@ export default async function AboutPage({
           </Text>
           <Flex direction="column" gap="0.5rem">
             <ChakraLink
-              href="mailto:guitta.monatega@gmail.com"
+              href={`mailto:${contactEmail}`}
               fontSize="1rem"
               color="ink"
               fontWeight="regular"
               transition="color 0.2s"
               _hover={{ color: 'inkMuted', textDecoration: 'none' }}
             >
-              guitta.monatega@gmail.com
+              {contactEmail}
             </ChakraLink>
           </Flex>
         </Box>

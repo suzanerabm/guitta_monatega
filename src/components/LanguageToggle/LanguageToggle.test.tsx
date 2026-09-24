@@ -1,4 +1,5 @@
 import { screen } from '@testing-library/react';
+import type { ComponentPropsWithoutRef } from 'react';
 import { renderWithChakra as render } from '@/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { LanguageToggle } from './LanguageToggle';
@@ -10,20 +11,22 @@ vi.mock('next/navigation', () => ({
 }));
 
 vi.mock('next/link', () => ({
-  default: ({ children, href, ...props }: any) => <a href={href} {...props}>{children}</a>,
+  default: ({ children, href, ...props }: ComponentPropsWithoutRef<'a'>) => (
+    <a href={href} {...props}>{children}</a>
+  ),
 }));
 
 describe('LanguageToggle', () => {
-  it('shows PT and links to /en when on a pt path', () => {
+  it('shows EN and links to /en when on a pt path', () => {
     render(<LanguageToggle currentPath="/pt/" />);
-    const link = screen.getByText('PT');
+    const link = screen.getByText('EN');
     expect(link).toBeInTheDocument();
     expect(link).toHaveAttribute('href', '/en/');
   });
 
-  it('shows EN and links to /pt when on an en path', () => {
+  it('shows PT and links to /pt when on an en path', () => {
     render(<LanguageToggle currentPath="/en/kammara" />);
-    const link = screen.getByText('EN');
+    const link = screen.getByText('PT');
     expect(link).toBeInTheDocument();
     expect(link).toHaveAttribute('href', '/pt/kammara');
   });

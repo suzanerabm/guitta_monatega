@@ -5,7 +5,12 @@
     "label": {
       "pt": "Lüp'Nül Fest",
       "en": "Lüp'Nül Fest"
-    }
+    },
+    "appId": "orfv-video-lup-nul-fest",
+    "relations": [
+      "orfv-scene-festival",
+      "orfv-character-maelik"
+    ]
   },
   {
     "video": "/imgs/kammara/orfv/_videos/melik_andando_para_festival.mp4",
@@ -13,7 +18,26 @@
     "label": {
       "pt": "Maelik a caminho do festival",
       "en": "Maelik heading to the festival"
-    }
+    },
+    "appId": "orfv-video-maelik-a-caminho-do-festival",
+    "relations": [
+      "orfv-character-maelik",
+      "orfv-scene-maelik-nos-fjorks-oeste",
+      "orfv-scene-festival"
+    ]
+  },
+   {
+    "video": "/imgs/kammara/orfv/_videos/velo_e_maelik.mp4",
+    "poster": "/imgs/kammara/orfv/_videos/velo_e_maelik_poster.jpg",
+    "label": {
+      "pt": "Velo e Maelik",
+      "en": "Velo and Maelik"
+    },
+    "appId": "orfv-video-velo-e-maelik",
+    "relations": [
+      "orfv-character-velo",
+      "orfv-character-maelik"
+    ]
   },
   {
     "video": "/imgs/kammara/orfv/_videos/zupi_nadando.mp4",
@@ -21,7 +45,11 @@
     "label": {
       "pt": "Zupi nadando",
       "en": "Zupi swimming"
-    }
+    },
+    "appId": "orfv-video-zupi-nadando",
+    "relations": [
+      "orfv-character-zupi"
+    ]
   },
   {
     "video": "/imgs/kammara/orfv/_videos/bisa_ativando_protocolo.mp4",
@@ -29,7 +57,12 @@
     "label": {
       "pt": "Brisa ativando o protocolo",
       "en": "Brisa activating the protocol"
-    }
+    },
+    "appId": "orfv-video-brisa-ativando-o-protocolo",
+    "relations": [
+      "lunnp1-character-brisa",
+      "orfv-character-orvian"
+    ]
   },
   {
     "video": "/imgs/kammara/orfv/_videos/troys_atacando.mp4",
@@ -37,6 +70,10 @@
     "label": {
       "pt": "Troys atacando",
       "en": "Troys attacking"
-    }
+    },
+    "appId": "orfv-video-troys-atacando",
+    "relations": [
+      "eni4-character-troy"
+    ]
   }
 ]

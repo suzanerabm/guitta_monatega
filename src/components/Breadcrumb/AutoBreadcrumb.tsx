@@ -22,6 +22,7 @@ export function AutoBreadcrumb() {
   // Map segment -> translated label
   const labels: Record<string, { pt: string; en: string }> = {
     about: { pt: 'Sobre', en: 'About' },
+    'licensing-partnerships': { pt: 'Licenciamento e parcerias', en: 'Licensing & Partnerships' },
     bichittos: { pt: 'Bichittos', en: 'Bichittos' },
     kammara: { pt: 'Kammara', en: 'Kammara' },
     art: { pt: 'Arte', en: 'Art' },

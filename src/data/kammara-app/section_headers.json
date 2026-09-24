@@ -6,10 +6,7 @@
   },
   "sections": {
     "home_coming_soon": {
-      "titles": [
-        "Em breve",
-        "Coming soon"
-      ],
+      "titles": ["Em breve", "Coming soon"],
       "subtitle": {
         "pt": "Novas histórias, personagens e mundos estão a caminho.",
         "en": "New stories, characters and worlds are on their way."

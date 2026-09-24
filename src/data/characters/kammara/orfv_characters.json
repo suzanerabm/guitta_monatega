@@ -61,7 +61,8 @@
     "dorsalMeaning": {
       "pt": "Se alguém precisa atravessar, eu fico.",
       "en": "If someone needs to cross, I stay."
-    }
+    },
+    "appId": "orfv-character-orvian"
   },
   {
     "match": "Maelik",
@@ -110,7 +111,8 @@
           "en": "Western Fjorks"
         }
       }
-    ]
+    ],
+    "appId": "orfv-character-maelik"
   },
   {
     "match": "Nylpha",
@@ -160,7 +162,8 @@
         }
       }
     ],
-    "visible": false
+    "visible": false,
+    "appId": "orfv-character-nylpha"
   },
   {
     "match": "LetiK",
@@ -210,7 +213,8 @@
         }
       }
     ],
-    "visible": false
+    "visible": false,
+    "appId": "orfv-character-letik"
   },
   {
     "match": "Kallott",
@@ -260,7 +264,8 @@
         }
       }
     ],
-    "visible": false
+    "visible": false,
+    "appId": "orfv-character-kallott"
   },
   {
     "match": "Torwen",
@@ -310,7 +315,8 @@
         }
       }
     ],
-    "visible": false
+    "visible": false,
+    "appId": "orfv-character-torwen"
   },
   {
     "match": "Nuvin",
@@ -363,7 +369,8 @@
           "en": "Base of the Fjorks"
         }
       }
-    ]
+    ],
+    "appId": "orfv-character-nuvin"
   },
   {
     "match": "Zupi",
@@ -416,7 +423,8 @@
           "en": "Base of the Fjorks"
         }
       }
-    ]
+    ],
+    "appId": "orfv-character-zupi"
   },
   {
     "match": "Velo",
@@ -470,7 +478,8 @@
         }
       }
     ],
-    "visible": false
+    "visible": true,
+    "appId": "orfv-character-velo"
   },
   {
     "match": "Aurin",
@@ -524,6 +533,7 @@
         }
       }
     ],
-    "visible": false
+    "visible": false,
+    "appId": "orfv-character-aurin"
   }
 ]

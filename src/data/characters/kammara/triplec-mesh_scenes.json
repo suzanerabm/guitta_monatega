@@ -4,104 +4,172 @@
     "label": {
       "pt": "Vila Central: vista aérea",
       "en": "central village aerial view"
-    }
+    },
+    "appId": "triplec-mesh-scene-vila-central-vista-aerea",
+    "relations": [
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/2vila_central.jpg",
     "label": {
       "pt": "Vila Central",
       "en": "central village"
-    }
+    },
+    "appId": "triplec-mesh-scene-vila-central",
+    "relations": [
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/KAEL_TORIN_ativando_Cshift_vista_aerea.jpg",
     "label": {
       "pt": "KAEL TORIN ativando o Cshift: vista aérea",
       "en": "KAEL TORIN activating Cshift aerial view"
-    }
+    },
+    "appId": "triplec-mesh-scene-kael-torin-ativando-o-cshift-vista-aerea",
+    "relations": [
+      "triplec-mesh-character-kael-torin",
+      "triplec-mesh-topic-geografia",
+      "triplec-topic-o-cshift"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/KAEL_TORIN_ativando_Cshift.jpg",
     "label": {
       "pt": "KAEL TORIN ativando o Cshift",
       "en": "KAEL TORIN activating Cshift"
-    }
+    },
+    "appId": "triplec-mesh-scene-kael-torin-ativando-o-cshift",
+    "relations": [
+      "triplec-mesh-character-kael-torin",
+      "triplec-mesh-topic-geografia",
+      "triplec-topic-o-cshift"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/Niul_forest.jpg",
     "label": {
       "pt": "Floresta Niul",
       "en": "Niul Forest"
-    }
+    },
+    "appId": "triplec-mesh-scene-floresta-niul",
+    "relations": [
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_praca.jpg",
     "label": {
       "pt": "Praça",
       "en": "plaza"
-    }
+    },
+    "appId": "triplec-mesh-scene-praca",
+    "relations": [
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_praca_vista_cima.jpg",
     "label": {
       "pt": "Praça: vista de cima",
       "en": "plaza top view"
-    }
+    },
+    "appId": "triplec-mesh-scene-praca-vista-de-cima",
+    "relations": [
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_sala.jpg",
     "label": {
       "pt": "Sala",
       "en": "living room"
-    }
+    },
+    "appId": "triplec-mesh-scene-sala",
+    "relations": [
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_quarto.jpg",
     "label": {
       "pt": "Quarto",
       "en": "bedroom"
-    }
+    },
+    "appId": "triplec-mesh-scene-quarto",
+    "relations": [
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_em_mesh.jpg",
     "label": {
       "pt": "Em Mesh",
       "en": "in Mesh"
-    }
+    },
+    "appId": "triplec-mesh-scene-em-mesh",
+    "relations": [
+      "triplec-mesh-topic-geografia",
+      "triplec-malloc-character-iren-kor"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/malloc/_scenes/malloc_visita_mesh.jpg",
     "label": {
       "pt": "Visita a Mesh",
       "en": "visit to Mesh"
-    }
+    },
+    "appId": "triplec-mesh-scene-visita-a-mesh",
+    "relations": [
+      "triplec-mesh-topic-geografia",
+      "triplec-malloc-character-iren-kor"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_dentro_ap.jpg",
     "label": {
       "pt": "Dentro do apartamento",
       "en": "inside the apartment"
-    }
+    },
+    "appId": "triplec-mesh-scene-dentro-do-apartamento",
+    "relations": [
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/mesh_familia.jpg",
     "label": {
       "pt": "Família",
       "en": "family"
-    }
+    },
+    "appId": "triplec-mesh-scene-familia",
+    "relations": [
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/manoo_dormindo.jpg",
     "label": {
       "pt": "Manoo dormindo",
       "en": "Manoo sleeping"
-    }
+    },
+    "appId": "triplec-mesh-scene-manoo-dormindo",
+    "relations": [
+      "triplec-mesh-character-manoo",
+      "triplec-mesh-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/kurr_expandindo.jpg",
     "label": {
       "pt": "Kurr se expandindo",
       "en": "Kurr expanding"
-    }
+    },
+    "appId": "triplec-mesh-scene-kurr-se-expandindo",
+    "relations": [
+      "triplec-sharp-character-kurr",
+      "triplec-mesh-topic-geografia"
+    ]
   }
 ]

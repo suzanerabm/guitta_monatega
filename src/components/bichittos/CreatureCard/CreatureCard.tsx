@@ -65,6 +65,7 @@ export function CreatureCard({
               lineHeight={1.7}
               fontWeight="light"
               maxW="600px"
+              whiteSpace="pre-line"
               style={textStyle}
             >
               {children}

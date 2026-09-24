@@ -14,7 +14,7 @@
 // e mantém as duas versões sempre da mesma revisão.
 
 import 'server-only';
-import relationsData from '@/data/kammara-app/relations.json';
+import snapshot from '@/generated/kammara-app.json';
 import sectionHeadersData from '@/data/kammara-app/section_headers.json';
 import booksData from '@/data/kammara_books.json';
 import { charactersByContext } from '@/data/characters';
@@ -69,6 +69,22 @@ export interface AppOverlayPayload {
 	comingSoon: { books: Record<Locale, number>; characters: number; planets: number };
 }
 
+/** Uma edição em `kammara_books.json`. Todos os campos são opcionais lá. */
+interface BookSource {
+	visible?: boolean;
+	onlyLocale?: string;
+	cover?: string;
+	title?: Partial<Localized>;
+	description?: Partial<Localized>;
+	body?: Partial<LocalizedBody>;
+	buyUrl?: string;
+	appId?: string;
+}
+
+const BOOKS = Object.entries(booksData.books as Record<string, BookSource>).filter(
+	([, book]) => book.visible !== false,
+);
+
 function byLocale<T>(build: (locale: Locale) => T): Record<Locale, T> {
 	return Object.fromEntries(LOCALES.map((locale) => [locale, build(locale)])) as Record<
 		Locale,
@@ -117,12 +133,48 @@ function comingSoon() {
 	).length;
 	const books = byLocale(
 		(locale) =>
-			booksData.books.filter(
-				(book) =>
-					!book.buyUrl.trim() && (!book.onlyLocale || book.onlyLocale === locale),
+			BOOKS.filter(
+				([, book]) =>
+					!(book.buyUrl ?? '').trim() &&
+					(!book.onlyLocale || book.onlyLocale === locale),
 			).length,
 	);
 	return { books, characters, planets };
+}
+
+/**
+ * O grafo de conexões entre verbetes. As conexões autorais moram em cada item
+ * (`relations` nos JSONs de cenas, Drops etc.) e em `kammara-app/relations.json`;
+ * o gerador (`scripts/generate-app-content.mjs`) junta as duas, acrescenta as
+ * inferidas pelos atributos e descarta as que apontam para conteúdo oculto. Ler
+ * do snapshot garante o mesmo grafo que `/api/kammara/v1` entrega.
+ */
+function relations(): Record<string, string[]> {
+	const out: Record<string, string[]> = {};
+	for (const entry of snapshot.files['catalog.json'].entries) {
+		if (entry.relations.length > 0) out[entry.id] = [...entry.relations];
+	}
+	for (const [id, targets] of Object.entries(
+		snapshot.files['relations.json'].relations as Record<string, string[]>,
+	)) {
+		out[id] = [...new Set([...(out[id] ?? []), ...targets])];
+	}
+	return out;
+}
+
+function books(): OverlayBook[] {
+	return BOOKS.map(([key, book]) => {
+		const buy = (book.buyUrl ?? '').trim();
+		return {
+			id: book.appId ?? key,
+			title: { pt: book.title?.pt ?? '', en: book.title?.en ?? '' },
+			description: { pt: book.description?.pt ?? '', en: book.description?.en ?? '' },
+			body: { pt: book.body?.pt ?? [], en: book.body?.en ?? [] },
+			cover: book.cover ? mediaUrl(book.cover) : '',
+			buyUrl: buy && !/^https?:\/\//.test(buy) ? `https://${buy}` : buy,
+			onlyLocale: book.onlyLocale ?? '',
+		};
+	});
 }
 
 /** Tudo o que o app precisa e as outras rotas não entregam, nos dois idiomas. */
@@ -131,8 +183,8 @@ export function getAppOverlay(): AppOverlayPayload {
 		schemaVersion: 1,
 		universe: universe(),
 		messages: byLocale((locale) => getMessages(locale).kammara),
-		relations: relationsData.relations,
-		books: booksData.books.map((book) => ({ ...book, cover: mediaUrl(book.cover) })),
+		relations: relations(),
+		books: books(),
 		legal: legal(),
 		sectionHeaders: sectionHeadersData,
 		comingSoon: comingSoon(),

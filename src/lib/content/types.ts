@@ -38,11 +38,28 @@ export interface Drop {
 	label: string;
 }
 
+/** Link de compra de um livro ou sticker. */
+export interface BuyLink {
+	url: string;
+	label: string;
+}
+
+/** Livro de uma seção, já filtrado por visibilidade e idioma. */
 export interface Book {
 	id: string;
+	/** Título da edição no idioma pedido. */
+	title: string;
 	cover: string | null;
 	pages: string[];
-	buy?: { url: string; label: string } | null;
+	buy: BuyLink | null;
+}
+
+/** Pacote de stickers de uma criatura (só capa + link de compra). */
+export interface Sticker {
+	id: string;
+	title: string;
+	cover: string | null;
+	buy: BuyLink | null;
 }
 
 // ── Bichittos ───────────────────────────────────────────────────────────
@@ -73,6 +90,7 @@ export interface BichittoPayload {
 	/** Mascote no canto do card (hoje só o Zeco tem). */
 	mascot?: Mascot;
 	books: Book[];
+	stickers: Sticker[];
 }
 
 // ── Kammara ─────────────────────────────────────────────────────────────

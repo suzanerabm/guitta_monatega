@@ -34,7 +34,12 @@
         "### An accident that became a world",
         "TripleC never wanted to be technological. It just happened. And it learned to turn chance into active order."
       ]
-    }
+    },
+    "appId": "triplec-topic-origem",
+    "relations": [
+      "triplec-topic-a-niul-forest",
+      "triplec-topic-os-bunniets"
+    ]
   },
   {
     "title": {
@@ -67,7 +72,11 @@
         "### The role of the forest",
         "The Niul Forest neither evolves toward logic nor returns to being pure nature. It remains what it always was, and it is that constancy that protects everything around it."
       ]
-    }
+    },
+    "appId": "triplec-topic-a-niul-forest",
+    "relations": [
+      "triplec-scene-floresta-niul"
+    ]
   },
   {
     "title": {
@@ -92,7 +101,12 @@
         "### What makes them unique",
         "Where others hear noise, bunniets hear order. Where others see chaos, bunniets see pattern. No one taught them to understand the world: they were born already understanding it."
       ]
-    }
+    },
+    "appId": "triplec-topic-os-bunniets",
+    "relations": [
+      "triplec-video-bunniets",
+      "triplec-scene-tres-bunniets"
+    ]
   },
   {
     "title": {
@@ -117,7 +131,12 @@
         "### The thread that moves everything",
         "From kemita comes the block. From the chain comes the destination. And from TripleC comes everything the universe needs to move."
       ]
-    }
+    },
+    "appId": "triplec-topic-o-cshift",
+    "relations": [
+      "triplec-scene-portal-cshift",
+      "triplec-scene-regiao-de-mesh-ativando-o-cshift"
+    ]
   },
   {
     "title": {
@@ -150,7 +169,13 @@
         "### The life that pulses",
         "Var-vines detect instability and align paths between villages. Hepa crystals light caves and react to emotions. Mewlites (microscopic creatures made of crystal and life) follow the shilo and sing when a route is dying. Translucent shilo-insects mark intact paths. Estakors live in the depths of the Estaka and never surface; they seek to fit with camouflaged Krystos, and the fitting triggers an earthquake."
       ]
-    }
+    },
+    "appId": "triplec-topic-riquezas-naturais",
+    "relations": [
+      "triplec-malloc-character-mewlites",
+      "triplec-malloc-character-krystos",
+      "triplec-malloc-character-estakors"
+    ]
   },
   {
     "title": {
@@ -187,7 +212,13 @@
         "### The heart of Kammara",
         "TripleC is the heart that pulses energy, memory and travel routes for the entire universe."
       ]
-    }
+    },
+    "appId": "triplec-topic-a-triade-e-o-protocol-auryn",
+    "relations": [
+      "triplec-character-omi",
+      "triplec-character-vexa",
+      "triplec-character-lai"
+    ]
   },
   {
     "title": {
@@ -224,6 +255,10 @@
         "### A different kind of defense",
         "TripleC does not defend itself with weapons. It becomes a riddle."
       ]
-    }
+    },
+    "appId": "triplec-topic-o-criptokemita",
+    "relations": [
+      "triplec-scene-protecao-e-criptografia"
+    ]
   }
 ]

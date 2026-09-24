@@ -4,111 +4,181 @@
     "label": {
       "pt": "O primeiro bloco",
       "en": "The first block"
-    }
+    },
+    "appId": "digg-scene-o-primeiro-bloco"
   },
-   {
+  {
     "image": "/imgs/kammara/digg/_scenes/Vista_blocos.jpg",
     "label": {
       "pt": "Os blocos flutuantes",
       "en": "The floating blocks"
-    }
+    },
+    "appId": "digg-scene-os-blocos-flutuantes",
+    "relations": [
+      "digg-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/digg/_scenes/Vista_bloco.jpg",
     "label": {
       "pt": "Um bloco",
       "en": "A block"
-    }
+    },
+    "appId": "digg-scene-um-bloco",
+    "relations": [
+      "digg-topic-origem"
+    ]
   },
   {
     "image": "/imgs/kammara/digg/_scenes/Bloco_vista_2.jpg",
     "label": {
       "pt": "Os blocos flutuantes: outra vista",
       "en": "The floating blocks, another view"
-    }
+    },
+    "appId": "digg-scene-os-blocos-flutuantes-outra-vista",
+    "relations": [
+      "digg-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/digg/_scenes/Nihrak_sala_trono.jpg",
     "label": {
       "pt": "A sala do trono de Níhrak",
       "en": "Níhrak's throne room"
-    }
+    },
+    "appId": "digg-scene-a-sala-do-trono-de-nihrak",
+    "relations": [
+      "digg-character-nihrak"
+    ]
   },
   {
     "image": "/imgs/kammara/digg/_scenes/CHMURKA_eating.jpg",
     "label": {
       "pt": "Chmurka comendo",
       "en": "Chmurka eating"
-    }
+    },
+    "appId": "digg-scene-chmurka-comendo",
+    "relations": [
+      "digg-character-chmurka"
+    ]
   },
   {
     "image": "/imgs/kammara/digg/_scenes/CHMURKA_creatures_standing_together.jpg",
     "label": {
       "pt": "Chmurka em bando",
       "en": "The Chmurka in a pack"
-    }
+    },
+    "appId": "digg-scene-chmurka-em-bando",
+    "relations": [
+      "digg-character-chmurka"
+    ]
   },
   {
     "image": "/imgs/kammara/digg/_scenes/Creatures_sitting_around_a_rough_table_eating.jpg",
     "label": {
       "pt": "Ao redor da mesa",
       "en": "Around the table"
-    }
+    },
+    "appId": "digg-scene-ao-redor-da-mesa",
+    "relations": [
+      "digg-topic-diggers",
+      "digg-character-chmurka"
+    ]
   },
   {
     "image": "/imgs/kammara/digg/_scenes/Diggers_na_praca.jpg",
     "label": {
       "pt": "Diggers na praça",
       "en": "Diggers in the square"
-    }
+    },
+    "appId": "digg-scene-diggers-na-praca",
+    "relations": [
+      "digg-topic-diggers",
+      "digg-character-chmurka",
+      "digg-character-orvin",
+      "digg-character-zin"
+    ]
   },
   {
     "image": "/imgs/kammara/digg/_scenes/Diggers_montando_ninho.jpg",
     "label": {
       "pt": "Diggers trabalhando",
       "en": "Diggers working"
-    }
+    },
+    "appId": "digg-scene-diggers-trabalhando",
+    "relations": [
+      "digg-topic-diggers",
+      "digg-character-zin",
+      "digg-character-chmurka",
+      "digg-character-orvin"
+    ]
   },
   {
     "image": "/imgs/kammara/digg/_scenes/NinhO_Zin.jpg",
     "label": {
       "pt": "O ninho do Zin",
       "en": "Zin's nest"
-    }
+    },
+    "appId": "digg-scene-o-ninho-do-zin",
+    "relations": [
+      "digg-character-zin"
+    ]
   },
-   {
+  {
     "image": "/imgs/kammara/digg/_scenes/Vista_interna_cadeirao.jpg",
     "label": {
       "pt": "O cadeirão por dentro",
       "en": "The big chair, within"
-    }
+    },
+    "appId": "digg-scene-o-cadeirao-por-dentro",
+    "relations": [
+      "digg-character-nihrak"
+    ]
   },
   {
     "image": "/imgs/kammara/digg/_scenes/Cross-section_showing_a_real_working_MINE.jpg",
     "label": {
       "pt": "A mina de kemita em corte",
       "en": "The kemita mine, cross-section"
-    }
+    },
+    "appId": "digg-scene-a-mina-de-kemita-em-corte",
+    "relations": [
+      "digg-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/digg/_scenes/Vista_poco_mina.jpg",
     "label": {
       "pt": "O poço da mina",
       "en": "The mine shaft"
-    }
+    },
+    "appId": "digg-scene-o-poco-da-mina",
+    "relations": [
+      "digg-topic-geografia"
+    ]
   },
   {
     "image": "/imgs/kammara/digg/_scenes/Nihrak_creature_sitting_on_his_stone_throne_view.jpg",
     "label": {
       "pt": "Níhrak no trono de pedra",
       "en": "Níhrak on the stone throne"
-    }
+    },
+    "appId": "digg-scene-nihrak-no-trono-de-pedra",
+    "relations": [
+      "digg-character-nihrak",
+      "digg-character-chmurka",
+      "digg-character-orvin"
+    ]
   },
-   {
+  {
     "image": "/imgs/kammara/digg/_scenes/Vista_interior_camara_mina.jpg",
     "label": {
       "pt": "O interior da câmara da mina",
       "en": "Inside the mine chamber"
-    }
+    },
+    "appId": "digg-scene-o-interior-da-camara-da-mina",
+    "relations": [
+      "digg-topic-geografia"
+    ]
   }
 ]

@@ -375,21 +375,36 @@ export const openApiDocument = {
         },
       },
 
+      BuyLink: {
+        type: ['object', 'null'],
+        description: 'Link de compra, quando houver.',
+        properties: {
+          url: { type: 'string', format: 'uri' },
+          label: { type: 'string' },
+        },
+      },
+
       Book: {
         type: 'object',
-        required: ['id', 'cover', 'pages'],
+        required: ['id', 'title', 'cover', 'pages', 'buy'],
         properties: {
           id: { type: 'string' },
+          title: { type: 'string', description: 'Título da edição no idioma pedido.' },
           cover: { oneOf: [{ $ref: '#/components/schemas/MediaUrl' }, { type: 'null' }] },
           pages: { type: 'array', items: { $ref: '#/components/schemas/MediaUrl' } },
-          buy: {
-            type: ['object', 'null'],
-            description: 'Link de compra, quando houver.',
-            properties: {
-              url: { type: 'string', format: 'uri' },
-              label: { type: 'string' },
-            },
-          },
+          buy: { $ref: '#/components/schemas/BuyLink' },
+        },
+      },
+
+      Sticker: {
+        type: 'object',
+        description: 'Pacote de stickers de uma criatura: só capa e link de compra.',
+        required: ['id', 'title', 'cover', 'buy'],
+        properties: {
+          id: { type: 'string' },
+          title: { type: 'string' },
+          cover: { oneOf: [{ $ref: '#/components/schemas/MediaUrl' }, { type: 'null' }] },
+          buy: { $ref: '#/components/schemas/BuyLink' },
         },
       },
 
@@ -447,7 +462,7 @@ export const openApiDocument = {
 
       Bichitto: {
         type: 'object',
-        required: ['id', 'name', 'text', 'panelStory', 'chars', 'positions', 'videos', 'books'],
+        required: ['id', 'name', 'text', 'panelStory', 'chars', 'positions', 'videos', 'books', 'stickers'],
         properties: {
           id: { type: 'string', example: 'napcat' },
           name: { type: 'string' },
@@ -474,6 +489,7 @@ export const openApiDocument = {
           },
           mascot: { type: ['object', 'null'] },
           books: { type: 'array', items: { $ref: '#/components/schemas/Book' } },
+          stickers: { type: 'array', items: { $ref: '#/components/schemas/Sticker' } },
         },
       },
 

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { getBichittos } from '@/lib/content/bichittos';
+import { getBichittos, getBichittosBooksText } from '@/lib/content/bichittos';
 import type { Locale } from '@/lib/content/types';
 import { BichittosClient } from './BichittosClient';
 
@@ -26,6 +26,7 @@ export default async function BichittosPage({
   setRequestLocale(locale);
 
   const data = getBichittos(locale as Locale);
+  const booksText = getBichittosBooksText(locale as Locale);
 
-  return <BichittosClient data={data} />;
+  return <BichittosClient data={data} booksText={booksText} />;
 }

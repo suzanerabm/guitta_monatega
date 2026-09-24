@@ -34,7 +34,11 @@
         "### Nothing without purpose",
         "In Mesh, no one builds for the sake of building. Each form exists because it needs to exist."
       ]
-    }
+    },
+    "appId": "triplec-mesh-topic-cultura",
+    "relations": [
+      "triplec-mesh-topic-bunniets"
+    ]
   },
   {
     "title": {
@@ -71,7 +75,8 @@
         "### Structure, not rigidity",
         "The bunniets of Mesh are not rigid. They are structured. The difference is that structure allows creation; rigidity prevents it."
       ]
-    }
+    },
+    "appId": "triplec-mesh-topic-bunniets"
   },
   {
     "title": {
@@ -108,7 +113,8 @@
         "### Regional variations",
         "The north of Mesh is more artistic. The center is more technical. The south preserves ancient traditions. And the west is experimental: where the polymorphic bunniets test forms no one has tried before."
       ]
-    }
+    },
+    "appId": "triplec-mesh-topic-geografia"
   },
   {
     "title": {
@@ -145,7 +151,11 @@
         "### Architected energy",
         "In Mesh, energy is not raw; it is architected. Each flow has a name, a purpose and a destination."
       ]
-    }
+    },
+    "appId": "triplec-mesh-topic-energia",
+    "relations": [
+      "triplec-mesh-topic-bunniets"
+    ]
   },
   {
     "title": {
@@ -182,7 +192,11 @@
         "### Scope-Guardians",
         "They keep the coherence of the whole region. When one part begins to contradict another, it is the Scope-Guardian who notices first."
       ]
-    }
+    },
+    "appId": "triplec-mesh-topic-governanca",
+    "relations": [
+      "triplec-mesh-topic-bunniets"
+    ]
   },
   {
     "title": {
@@ -219,6 +233,10 @@
         "### The form that forgets itself",
         "In Mesh, the greatest danger is not chaos. It is the form that works so well that it forgets what it is for."
       ]
-    }
+    },
+    "appId": "triplec-mesh-topic-perigos",
+    "relations": [
+      "triplec-mesh-topic-bunniets"
+    ]
   }
 ]

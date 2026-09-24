@@ -17,14 +17,14 @@ describe('HorizontalCardStrip', () => {
     expect(screen.getByText('Card C')).toBeInTheDocument();
   });
 
-  it('renders prev/next arrow buttons', () => {
+  it('disables both arrows when the content does not overflow', () => {
     renderWithChakra(
       <HorizontalCardStrip>
         <div>Card</div>
       </HorizontalCardStrip>
     );
-    expect(screen.getByRole('button', { name: 'Previous' })).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: 'Next' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Previous' })).toBeDisabled();
+    expect(screen.getByRole('button', { name: 'Next' })).toBeDisabled();
   });
 
   it('exposes a scrollable track via data-testid', () => {

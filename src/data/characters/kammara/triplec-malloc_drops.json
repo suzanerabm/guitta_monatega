@@ -1,18 +1,31 @@
-[{
+[
+  {
     "video": "/imgs/kammara/triplec/malloc/_videos/malloc_runnnin_mesh.mp4",
     "poster": "/imgs/kammara/triplec/malloc/_videos/malloc_runnnin_mesh_poster.jpg",
     "label": {
       "pt": "Correndo para Mesh",
       "en": "Running to Mesh"
-    }
+    },
+    "appId": "triplec-malloc-video-correndo-para-mesh",
+    "relations": [
+      "triplec-malloc-topic-geografia",
+      "triplec-mesh-topic-geografia",
+      "triplec-malloc-character-iren-kor",
+      "triplec-scene-bunniet-de-malloc-correndo-na-floresta"
+    ]
   },
-   {
+  {
     "video": "/imgs/kammara/triplec/malloc/_videos/minas.mp4",
     "poster": "/imgs/kammara/triplec/malloc/_videos/minas_poster.jpg",
     "label": {
       "pt": "Minas",
       "en": "Mines"
-    }
+    },
+    "appId": "triplec-malloc-video-minas",
+    "relations": [
+      "triplec-malloc-topic-energia",
+      "triplec-malloc-scene-mina-de-kemita-em-malloc"
+    ]
   },
   {
     "video": "/imgs/kammara/triplec/malloc/_videos/interior_mina.mp4",
@@ -20,7 +33,13 @@
     "label": {
       "pt": "Interior da mina",
       "en": "Mine interior"
-    }
+    },
+    "appId": "triplec-malloc-video-interior-da-mina",
+    "relations": [
+      "triplec-malloc-topic-energia",
+      "triplec-malloc-scene-tunel",
+      "triplec-malloc-scene-hepa-regiao-1"
+    ]
   },
   {
     "video": "/imgs/kammara/triplec/malloc/_videos/elevador_mina.mp4",
@@ -28,15 +47,25 @@
     "label": {
       "pt": "Elevador da mina",
       "en": "Mine elevator"
-    }
+    },
+    "appId": "triplec-malloc-video-elevador-da-mina",
+    "relations": [
+      "triplec-malloc-topic-energia",
+      "triplec-malloc-scene-camada-portex"
+    ]
   },
-
   {
     "video": "/imgs/kammara/triplec/malloc/_videos/malloc_cidade.mp4",
     "poster": "/imgs/kammara/triplec/malloc/_videos/malloc_cidade_poster.jpg",
     "label": {
       "pt": "Vila de malloc",
       "en": "malloc village"
-    }
+    },
+    "appId": "triplec-malloc-video-vila-de-malloc",
+    "relations": [
+      "triplec-malloc-topic-geografia",
+      "triplec-malloc-scene-vila-principal",
+      "triplec-malloc-scene-vila-3"
+    ]
   }
 ]
