@@ -9,6 +9,9 @@ import { semanticAppId } from './app-id.mjs';
 const worlds = ['lunnp1', 'eni4', 'triplec', 'orfv', 'z1', 'gotto', 'digg', 'memphis'];
 const regions = ['triplec-malloc', 'triplec-mesh', 'triplec-sharp'];
 const base = 'https://guittamonatega.com';
+// Mídia de conteúdo vive no bucket (ver `src/lib/media.ts`): com a env definida,
+// `/imgs/kammara/a.png` → `<base>/kammara/a.png`. Sem ela, cai no próprio site.
+const mediaBase = () => (process.env.NEXT_PUBLIC_MEDIA_BASE_URL ?? '').trim().replace(/\/+$/, '');
 const hash = value => createHash('sha256').update(value).digest('hex');
 // Kept as a public alias for fixtures and downstream scripts.
 export const stableId = semanticAppId;
@@ -18,18 +21,27 @@ const paragraphs = value => Object.fromEntries(Object.entries(localized(value, [
   [lang, Array.isArray(text) ? text : text ? [text] : []]));
 const normalize = text => String(text).normalize('NFD').replace(/\p{M}+/gu, '').toLowerCase().replaceAll('’', "'").trim().replace(/\s+/g, ' ');
 const visible = item => item.visible !== false && item.enabled !== false && item.hidden !== true;
-const remote = path => path?.startsWith('/') ? base + path.split('/').map(part => encodeURIComponent(part).replace(/[!'()*]/g, char => '%' + char.charCodeAt(0).toString(16).toUpperCase())).join('/') : path || '';
+const encodePath = path => path.split('/').map(part => encodeURIComponent(part).replace(/[!'()*]/g, char => '%' + char.charCodeAt(0).toString(16).toUpperCase())).join('/');
+const remote = path => {
+  if (!path?.startsWith('/')) return path || '';
+  if (mediaBase() && path.startsWith('/imgs/')) return mediaBase() + encodePath(path.slice('/imgs'.length));
+  return base + encodePath(path);
+};
 
 export function buildContent(siteRoot, appDataRoot = resolve(siteRoot, 'src/data/kammara-app')) {
   const read = path => JSON.parse(readFileSync(resolve(siteRoot, path), 'utf8'));
   const appData = name => JSON.parse(readFileSync(resolve(appDataRoot, name), 'utf8'));
   const publicRoot = resolve(siteRoot, 'public');
+  // As mídias saíram de `public/imgs` e foram pro bucket: "existe" = está no
+  // disco OU no inventário do bucket (`npm run media-inventory`).
+  const inventoryFile = resolve(siteRoot, 'src/data/media-inventory.json');
+  const inventory = new Set(existsSync(inventoryFile) ? JSON.parse(readFileSync(inventoryFile, 'utf8')) : []);
   const art = path => {
     if (!path) return '';
     if (!path.startsWith('/imgs/kammara/') && !path.startsWith('/imgs/books/kammara/')) throw Error(`Out-of-scope image: ${path}`);
     const full = resolve(publicRoot, path.slice(1));
     if (!full.startsWith(publicRoot + sep)) throw Error('Invalid image path');
-    return existsSync(full) ? remote(path) : '';
+    return existsSync(full) || inventory.has(path) ? remote(path) : '';
   };
   const media = (image, title, video = '', fit = false) => ({ image: art(image), title: localized(title), video: remote(video), fit });
   const entries = [], worldEntries = {}, worldDropIds = {}, mosaicIds = [];
@@ -178,6 +190,11 @@ export function buildContent(siteRoot, appDataRoot = resolve(siteRoot, 'src/data
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === realpathSync(process.argv[1])) {
   const siteRoot = resolve(process.argv[2] || process.cwd());
+  // Roda fora do Next (prebuild/predev), então o `.env.local` não é lido sozinho.
+  // Variáveis já definidas (ex: Vercel) têm prioridade.
+  const envFile = resolve(siteRoot, '.env.local');
+  if (existsSync(envFile)) process.loadEnvFile(envFile);
+  if (!mediaBase()) console.warn('Kammara app: NEXT_PUBLIC_MEDIA_BASE_URL vazia — mídias apontam para o site, que não serve mais /imgs.');
   const output = resolve(process.argv[3] || resolve(siteRoot, 'src/generated/kammara-app.json'));
   if (output.startsWith(resolve(siteRoot, 'public') + sep)) throw Error('The complete snapshot must never be generated inside public/');
   const appDataRoot = process.argv[4] ? resolve(process.argv[4]) : undefined;

@@ -1,3 +1,8 @@
+// Só servidor. Este módulo carrega os JSONs de conteúdo INTEIROS, inclusive o
+// que não está publicado — se um client component importar daqui, essa lore vai
+// junto pro bundle do navegador. O `server-only` transforma isso em erro de
+// build. Os dados chegam ao cliente por props, via `src/lib/content/`.
+import 'server-only';
 /**
  * Character lookup helpers used by CharacterStrip / CharacterInfoPanel.
  *
@@ -9,6 +14,7 @@
 
 import type { Character } from "@/data/characters/types";
 import { charactersByContext } from "@/data/characters";
+import { mediaUrl } from "@/lib/media";
 
 export type Locale = "pt" | "en";
 
@@ -20,8 +26,19 @@ function normalize(value: string): string {
     .trim();
 }
 
+/**
+ * Personagens de um contexto, com `image`/`backImage` já resolvidos pela base
+ * de mídia (local ou CDN) — ver `src/lib/media.ts`. Como `charactersByContext`
+ * vem de `import` de JSON (singleton de módulo), devolvemos objetos novos em
+ * vez de mutar. `findCharacter` herda a resolução por chamar esta função.
+ */
 export function getCharactersForContext(contextId: string): Character[] {
-  return charactersByContext[contextId] ?? [];
+  const list = charactersByContext[contextId] ?? [];
+  return list.map((c) => ({
+    ...c,
+    ...(c.image ? { image: mediaUrl(c.image) } : {}),
+    ...(c.backImage ? { backImage: mediaUrl(c.backImage) } : {}),
+  }));
 }
 
 export function findCharacter(

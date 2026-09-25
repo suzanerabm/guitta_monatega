@@ -7,6 +7,7 @@ import { Footer } from '@/components/Footer';
 import { ModalProvider, Modal, ModalKammara } from '@/components/Modal';
 import { ChromeTintProvider } from '@/components/ChromeTint';
 import { AutoBreadcrumb } from '@/components/Breadcrumb';
+import { version } from '../../../package.json';
 import { SITE_NAME, SITE_URL, normalizeLocale } from '@/lib/seo';
 
 export default async function LocaleLayout({
@@ -77,6 +78,7 @@ export default async function LocaleLayout({
             privacyPath={privacyPath}
             privacyLabel={t('footerPrivacy')}
             copyright={t('footerCopyright')}
+            version={version}
           />
           <Modal />
           <ModalKammara />

@@ -1,12 +1,16 @@
-import type { MetadataRoute } from 'next';
-import { SITE_URL } from '@/lib/seo';
+import type { MetadataRoute } from "next";
+import { SITE_URL } from "@/lib/site";
+
+
+
+
 
 // Domínio RAIZ (guitta). Os outros domínios (kammara, bichittos) apontam pra
 // rotas deste mesmo app, então o sitemap canônico mora aqui, na raiz.
 // Sobrescreva com NEXT_PUBLIC_SITE_URL se o domínio principal mudar.
 const LOCALES = ['pt', 'en'] as const;
 // Rotas públicas do app (sem locale — ele é prefixado abaixo).
-const ROUTES = ['', 'kammara', 'bichittos', 'art', 'about', 'licensing-partnerships', 'privacy'] as const;
+const ROUTES = ["", "kammara", "bichittos", "art", "about", "licensing-partnerships", "privacy"] as const;
 
 /**
  * sitemap.xml gerado pelo Next (App Router).
@@ -36,5 +40,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  return entries;
+	return entries;
 }
