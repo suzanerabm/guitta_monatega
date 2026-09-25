@@ -381,6 +381,19 @@
       "kammara": "Conheça o universo Kammara"
     }
   },
+  "cart": {
+    "open": "Abrir carrinho",
+    "title": "Seu carrinho",
+    "close": "Fechar carrinho",
+    "empty": "Seu carrinho está vazio.",
+    "continueShopping": "Continuar comprando",
+    "subtotal": "Subtotal",
+    "shippingNotice": "Frete calculado no checkout.",
+    "checkoutPreparing": "Checkout em preparação",
+    "decrease": "Diminuir quantidade de {title}",
+    "increase": "Aumentar quantidade de {title}",
+    "remove": "Remover {title}"
+  },
   "privacy": {
     "pageTitle": "Privacidade — Guitta Monatega",
     "title": "Privacidade",

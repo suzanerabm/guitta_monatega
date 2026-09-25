@@ -4,6 +4,7 @@ import NextLink from 'next/link';
 import { useScrollHeader } from '@/hooks/useScrollHeader';
 import { LanguageToggle } from '@/components/LanguageToggle';
 import { useChromeTint } from '@/components/ChromeTint';
+import { CartTrigger } from '@/components/Cart';
 
 interface HeaderProps {
   homePath: string;
@@ -55,7 +56,10 @@ export function Header({ homePath, transparent = false }: HeaderProps) {
             <Box as="strong" fontWeight="light">guitta</Box>{' '}monatega studio
           </NextLink>
         </Box>
-        <LanguageToggle />
+        <Flex align="center" gap="sm">
+          <CartTrigger />
+          <LanguageToggle />
+        </Flex>
       </Flex>
     </Box>
   );

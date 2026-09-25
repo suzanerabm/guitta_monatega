@@ -147,6 +147,7 @@ export default async function BookPage({
             <Box as="section" aria-label={t('editionsTitle')} borderTop="1px solid" borderColor="border" pt="2xl">
               <BookEditionSelector
                 editions={book.editions}
+                book={{ slug: book.slug, title: book.title, cover: book.cover }}
                 locale={loc}
                 accentColor={visual.accent}
                 formatLabels={{
