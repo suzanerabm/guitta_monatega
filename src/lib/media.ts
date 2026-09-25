@@ -7,7 +7,9 @@
 //     sai como está (`/imgs/...`) e o Next serve de `public/`. É o que roda
 //     em dev, no Storybook e nos testes.
 //   - REMOTO: com a env definida (ex: `https://cdn.guittamonatega.com`), todo
-//     path `/imgs/...` vira URL absoluta no CDN.
+//     path `/imgs/...` vira URL absoluta no CDN. O `/imgs` sai do caminho: no
+//     bucket as pastas de dentro (`kammara/`, `books/`, ...) ficam na raiz,
+//     então `/imgs/kammara/a.png` → `https://cdn.../kammara/a.png`.
 //
 // O prefixo `NEXT_PUBLIC_` é obrigatório: `kammara_mosaic.json` é importado
 // direto num client component (KammaraClient), então a base precisa chegar ao
@@ -65,7 +67,9 @@ export function mediaUrl(
 	if (!MEDIA_BASE) return path;
 	if (!path.startsWith(MEDIA_PREFIX)) return path;
 
-	const encoded = path.split("/").map(encodeSegment).join("/");
+	// Mantém a barra inicial: `/imgs/kammara/a.png` → `/kammara/a.png`.
+	const relative = path.slice(MEDIA_PREFIX.length - 1);
+	const encoded = relative.split("/").map(encodeSegment).join("/");
 	return `${MEDIA_BASE}${encoded}`;
 }
 

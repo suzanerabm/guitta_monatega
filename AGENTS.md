@@ -39,8 +39,18 @@ Regras:
 
 ## Mídia: todo path passa por `mediaUrl()`
 
-As imagens e vídeos podem vir de `public/imgs` (local, default) ou de um CDN/S3, dependendo de
-`NEXT_PUBLIC_MEDIA_BASE_URL` (ver `.env.example`). Quem decide isso é `src/lib/media.ts`.
+As imagens e vídeos vêm de um CDN/S3 via `NEXT_PUBLIC_MEDIA_BASE_URL` (ver `.env.example`). Quem
+decide isso é `src/lib/media.ts`.
+
+**A mídia de conteúdo NÃO está mais no repo.** `public/imgs` guarda só o que o tooling local lê
+(pôster/`/export/cover`, stories). Consequências:
+- `npm run dev` precisa de `NEXT_PUBLIC_MEDIA_BASE_URL` no `.env.local`, senão as imagens dão 404.
+- `src/data/media-inventory.json` lista o que está no bucket. O `generate-app-content` (prebuild)
+  usa essa lista para saber se uma imagem existe. **Subiu mídia nova pro bucket → rode
+  `npm run media-inventory -- <pasta enviada>`**, senão o app recebe `image: ''` sem erro.
+- Os scripts de preparo (`prepare-art`, `generate-manifest`, `generate-thumbs`, `audit-images`,
+  `fix-image-case`) leem o disco: rode-os com a pasta completa de mídia copiada em `public/imgs`.
+  O `generate-manifest` com a pasta incompleta gera um manifest vazio.
 
 Regras:
 1. **Proibido** escrever `/imgs/...` direto num `src=`, `poster=`, `url(...)` ou prop de componente.
