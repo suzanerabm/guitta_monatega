@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getKammaraPage } from '@/lib/content/kammara';
 import type { Locale } from '@/lib/content/types';
 import { KammaraClient } from './KammaraClient';
+import { buildPageMetadata } from '@/lib/seo';
 
 export async function generateMetadata({
   params,
@@ -11,8 +12,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'kammara' });
+  const sectionText = t.raw('section.text') as string[];
   return {
-    title: t('pageTitle'),
+    ...buildPageMetadata({
+      locale,
+      route: 'kammara',
+      title: t('pageTitle'),
+      description: sectionText.join(' '),
+    }),
     icons: { icon: '/icons/kammara.svg' },
   };
 }

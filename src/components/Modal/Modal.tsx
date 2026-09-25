@@ -178,7 +178,7 @@ export function Modal() {
               '&:hover': { transform: 'translateY(-1px)', opacity: 0.9 },
             }}
           >
-            {buyLabel || 'Compre na Amazon'}
+            {buyLabel || 'Amazon.com'}
             <Box as="span" aria-hidden="true">↗</Box>
           </chakra.a>
         )}

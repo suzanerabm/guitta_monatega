@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getBichittos, getBichittosBooksText } from '@/lib/content/bichittos';
 import type { Locale } from '@/lib/content/types';
 import { BichittosClient } from './BichittosClient';
+import { buildPageMetadata } from '@/lib/seo';
 
 export async function generateMetadata({
   params,
@@ -12,7 +13,12 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'bichittos' });
   return {
-    title: t('pageTitle'),
+    ...buildPageMetadata({
+      locale,
+      route: 'bichittos',
+      title: t('pageTitle'),
+      description: t('heroDesc'),
+    }),
     icons: { icon: '/icons/bichittos.png' },
   };
 }

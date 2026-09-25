@@ -51,7 +51,7 @@ export function CreatureCard({
             width="100%"
           >
             <Heading
-              as="h1"
+              as="h2"
               textStyle="heading"
               fontSize={{ base: '1.5rem', md: 'h2' }}
               letterSpacing="tight"

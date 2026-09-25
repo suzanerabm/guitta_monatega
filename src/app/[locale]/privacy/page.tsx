@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Box, Heading, Text, Flex, Link as ChakraLink } from '@chakra-ui/react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { buildPageMetadata } from '@/lib/seo';
 
 export async function generateMetadata({
   params,
@@ -9,7 +10,15 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'privacy' });
-  return { title: t('pageTitle') };
+  return buildPageMetadata({
+    locale,
+    route: 'privacy',
+    title: t('pageTitle'),
+    description:
+      locale === 'en'
+        ? 'Privacy, analytics, cookies, intellectual property, and permitted-use information for the Guitta Monatega Studio website.'
+        : 'Informações sobre privacidade, métricas, cookies, propriedade intelectual e uso permitido no site Guitta Monatega Studio.',
+  });
 }
 
 interface Section {
@@ -30,7 +39,7 @@ export default async function PrivacyPage({
 
   return (
     <Box
-      as="main"
+      as="section"
       px={{ base: 'lg', md: '3xl' }}
       py={{ base: '4xl', md: '5xl' }}
       maxW="720px"
