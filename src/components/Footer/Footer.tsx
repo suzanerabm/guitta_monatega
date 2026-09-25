@@ -12,6 +12,8 @@ interface FooterProps {
   privacyLabel: string;
   /** Aviso de direitos autorais (i18n). Mostrado discreto abaixo dos links. */
   copyright?: string;
+  /** Versão do site (vem do package.json, resolvida no servidor). */
+  version?: string;
 }
 
 export function Footer({
@@ -22,6 +24,7 @@ export function Footer({
   privacyPath,
   privacyLabel,
   copyright,
+  version,
 }: FooterProps) {
   const { tintColor } = useChromeTint();
 
@@ -93,6 +96,20 @@ export function Footer({
             textAlign="center"
           >
             {copyright}
+          </Box>
+        )}
+
+        {version && (
+          <Box
+            as="p"
+            m={0}
+            fontSize="xs"
+            fontWeight="light"
+            letterSpacing="normal"
+            opacity={0.4}
+            textAlign="center"
+          >
+            v{version}
           </Box>
         )}
       </Flex>

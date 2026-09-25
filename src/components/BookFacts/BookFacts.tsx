@@ -10,7 +10,7 @@ import {
   Scale,
   type LucideIcon,
 } from 'lucide-react';
-import type { BookFacts as BookFactsData } from '@/lib/books';
+import type { BookFacts as BookFactsData } from '@/lib/bookCatalog';
 import { bookPageLayout } from '@/theme/bookPages';
 import { HorizontalCardStrip } from '@/components/HorizontalCardStrip';
 

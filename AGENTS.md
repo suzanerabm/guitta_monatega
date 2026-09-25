@@ -37,6 +37,61 @@ Regras:
    componente, um posicionamento pontual, um override isolado. Em caso de dúvida, pergunte antes
    de espalhar.
 
+## Mídia: todo path passa por `mediaUrl()`
+
+As imagens e vídeos vêm de um CDN/S3 via `NEXT_PUBLIC_MEDIA_BASE_URL` (ver `.env.example`). Quem
+decide isso é `src/lib/media.ts`.
+
+**A mídia de conteúdo NÃO está mais no repo.** `public/imgs` guarda só o que o tooling local lê
+(pôster/`/export/cover`, stories). Consequências:
+- `npm run dev` precisa de `NEXT_PUBLIC_MEDIA_BASE_URL` no `.env.local`, senão as imagens dão 404.
+- `src/data/media-inventory.json` lista o que está no bucket. O `generate-app-content` (prebuild)
+  usa essa lista para saber se uma imagem existe. **Subiu mídia nova pro bucket → rode
+  `npm run media-inventory -- <pasta enviada>`**, senão o app recebe `image: ''` sem erro.
+- Os scripts de preparo (`prepare-art`, `generate-manifest`, `generate-thumbs`, `audit-images`,
+  `fix-image-case`) leem o disco: rode-os com a pasta completa de mídia copiada em `public/imgs`.
+  O `generate-manifest` com a pasta incompleta gera um manifest vazio.
+
+Regras:
+1. **Proibido** escrever `/imgs/...` direto num `src=`, `poster=`, `url(...)` ou prop de componente.
+   O path tem que passar por `mediaUrl()` em algum ponto do caminho.
+2. **A conversão acontece na fronteira de dados**, não no componente: `src/lib/images.ts`,
+   `_worldData.ts`, `src/lib/characters.ts`, `src/data/bichittos.ts` e `src/theme/palettes.ts` já
+   entregam os paths resolvidos. Se você lê de um desses, **não** chame `mediaUrl` de novo (é
+   idempotente, mas o ponto é não espalhar).
+3. Path novo que não passa por nenhum desses (literal num componente, JSON novo importado direto)
+   → envolva com `mediaUrl()` no ponto em que ele entra no React.
+4. **Sem query string** em URL de mídia — `Modal.tsx` e `ModalKammara.tsx` derivam o rótulo do nome
+   do arquivo.
+5. **Exceções (sempre local, não envolver)**: `/export/cover` e os componentes
+   `KammaraSagaPoster*` (tooling de geração de arte), stories e testes, e `/icons/*` (chrome de UI).
+6. **Case importa.** S3 é case-sensitive, o macOS não. Rode `npm run fix-image-case` depois de mexer
+   em paths de JSON — mas note que ele não varre arquivos `.ts`, então literais em código precisam
+   de conferência manual.
+
+## Dados: o servidor é a fonte, o cliente só renderiza
+
+Conteúdo (lore, personagens, cenas, livros, progresso) é montado no SERVIDOR pela camada
+`src/lib/content/` e entregue ao cliente por props. As páginas e os route handlers de `/api/v1`
+chamam as MESMAS funções, então site e API nunca divergem.
+
+Regras:
+1. **Proibido** um componente `'use client'` importar módulo de dados (`@/data/*`, `@/lib/images`,
+   `@/lib/characters`, `@/lib/visibility`). Esses módulos declaram `import 'server-only'` e o build
+   falha — de propósito. O motivo é concreto: eles carregam os JSONs INTEIROS, incluindo mundos não
+   publicados e personagens `visible: false`, e um import desses colocava ~380KB de conteúdo
+   escondido no bundle do navegador.
+2. **Todo gate de visibilidade roda na camada de conteúdo**, nunca no componente. Se você está
+   escrevendo `.filter(x => x.visible !== false)` dentro de um `.tsx`, está no lugar errado.
+3. **Componente recebe texto já resolvido**, não objeto bilíngue `{pt, en}` + `locale`. Quem escolhe
+   o idioma é `src/lib/content/`. (Exceção documentada: `KammaraEvents`, enquanto a seção estiver
+   desligada.)
+4. **Payload precisa ser serializável** — nada de função, Date ou classe: o mesmo objeto vira JSON
+   na API.
+5. Para conferir que nada vazou, rode `npm run build` e procure por um trecho de prosa que só exista
+   em conteúdo não publicado dentro de `.next/static`. Tem que dar zero. O gate só vale em
+   produção (`src/lib/visibility.ts` desliga em dev/preview), então não adianta testar com `npm run dev`.
+
 ## Responsividade: props do Chakra, nunca `@media` manual
 
 A única forma aceita de escrever estilos responsivos neste projeto é pelo sistema de breakpoints

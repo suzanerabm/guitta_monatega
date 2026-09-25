@@ -1,6 +1,6 @@
 {
   "name": "guitta_monatega_next",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -17,6 +17,7 @@
     "prepare-art": "npm run normalize-image-names && npm run resize-art-fulls && npm run generate-thumbs && npm run generate-manifest && npm run fix-image-case && npm run audit-images",
     "audit-images": "tsx scripts/audit-images.ts",
     "export-cover": "tsx scripts/export-cover.ts",
+    "media-inventory": "node scripts/media-inventory.mjs",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "storybook": "storybook dev -p 6006",

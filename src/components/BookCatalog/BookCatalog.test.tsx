@@ -1,7 +1,7 @@
 import { fireEvent, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import { renderWithChakra } from '@/test-utils';
-import type { CatalogBook } from '@/lib/books';
+import type { CatalogBook } from '@/lib/bookCatalog';
 import { BookCatalog } from './BookCatalog';
 
 const books: CatalogBook[] = [

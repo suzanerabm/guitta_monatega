@@ -9,7 +9,7 @@ import {
   type BookFormat,
   type BookLocale,
   type CatalogBook,
-} from '@/lib/books';
+} from '@/lib/bookCatalog';
 import { bookPageVisuals } from '@/theme/bookPages';
 
 interface BookCatalogCarouselProps {

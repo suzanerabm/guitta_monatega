@@ -2,14 +2,17 @@
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 
+// Rótulos chegam já resolvidos para o idioma ativo — quem resolve é a camada
+// de conteúdo, no servidor. `locale` segue como prop porque o componente ainda
+// escolhe as próprias palavras fixas ("Lançamento"/"Launch").
 export interface ProgressCategory {
   id: string;
-  label: { pt: string; en: string };
+  label: string;
 }
 
 export interface ProgressPlanet {
   id: string;
-  name: { pt: string; en: string };
+  name: string;
   progress: Record<string, number>;
 }
 
@@ -326,7 +329,7 @@ function HeatmapGrid({
               },
             }}
           >
-            {cat.label[locale]}
+            {cat.label}
           </Text>
         </Box>
       ))}
@@ -399,7 +402,7 @@ function PlanetRow({ planet, categories, locale, color, darkColor }: PlanetRowPr
         paddingRight={{ base: '0.3rem', md: '0.75rem' }}
         css={{ textShadow: `0 2px 8px ${darkColor}` }}
       >
-        {planet.name[locale]}
+        {planet.name}
       </Text>
       {categories.map((cat) => {
         const value = clampPercent(planet.progress[cat.id] ?? 0);
@@ -408,13 +411,13 @@ function PlanetRow({ planet, categories, locale, color, darkColor }: PlanetRowPr
             key={cat.id}
             value={value}
             color={color}
-            ariaLabel={`${planet.name[locale]} · ${cat.label[locale]}: ${value}%`}
+            ariaLabel={`${planet.name} · ${cat.label}: ${value}%`}
           />
         );
       })}
       <LaunchCell
         value={launchValue}
-        ariaLabel={`${planet.name[locale]} · ${launchLabel}: ${launchValue}%`}
+        ariaLabel={`${planet.name} · ${launchLabel}: ${launchValue}%`}
       />
     </>
   );

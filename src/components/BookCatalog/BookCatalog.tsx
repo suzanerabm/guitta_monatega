@@ -12,7 +12,7 @@ import {
   isBookComingSoon,
   type BookFormat,
   type CatalogBook,
-} from '@/lib/books';
+} from '@/lib/bookCatalog';
 import { bookPageVisuals } from '@/theme/bookPages';
 
 interface BookCatalogLabels {

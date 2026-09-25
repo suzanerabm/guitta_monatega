@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { SITE_URL } from '@/lib/seo';
+import { SITE_URL } from '@/lib/site';
 import { getAllBookSlugs, getBookLocales } from '@/lib/books';
 
 // Domínio RAIZ (guitta). Os outros domínios (kammara, bichittos) apontam pra

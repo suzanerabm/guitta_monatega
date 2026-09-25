@@ -12,7 +12,13 @@
 // production deploy (main → guittamonatega.com) actually hides
 // unpublished sections.
 
+// Só servidor. Este módulo carrega os JSONs de conteúdo INTEIROS, inclusive o
+// que não está publicado — se um client component importar daqui, essa lore vai
+// junto pro bundle do navegador. O `server-only` transforma isso em erro de
+// build. Os dados chegam ao cliente por props, via `src/lib/content/`.
+import 'server-only';
 import progressData from '@/data/kammara_progress.json';
+import { mediaUrl } from '@/lib/media';
 
 interface PlanetEntry {
   id: string;
@@ -188,7 +194,7 @@ function resolveBooks(
     .map(([key, cfg]) => ({
       id: key.slice(prefix.length),
       title: cfg.title?.[locale] ?? key.slice(prefix.length),
-      cover: cfg.cover ?? null,
+      cover: cfg.cover ? mediaUrl(cfg.cover) : null,
       description: cfg.description?.[locale] ?? null,
       contextTitle: cfg.contextTitle?.[locale] ?? null,
       editions: cfg.editions ?? [],
@@ -197,7 +203,7 @@ function resolveBooks(
         ? {
             url: cfg.homeButtonUrl.trim(),
             label: cfg.homeButtonLabel || 'Conheça este mundo',
-            image: cfg.homeButtonImage,
+            image: cfg.homeButtonImage ? mediaUrl(cfg.homeButtonImage) : undefined,
             imageAlt: cfg.homeButtonImageAlt,
           }
         : null,

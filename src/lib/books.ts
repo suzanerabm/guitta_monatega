@@ -1,11 +1,30 @@
 import { getArtBooks, getBichittoBooks, getKammaraBooks, type BookEditionConfig, type BookEntry } from '@/lib/visibility';
 import type { BookVisualKey } from '@/theme/bookPages';
+import {
+  type BookEdition,
+  type BookCollection,
+  type BookLocale,
+  type CatalogBook,
+} from '@/lib/bookCatalog';
 
-export type BookLocale = 'pt' | 'en';
-export type BookCollection = 'art' | 'bichittos' | 'kammara';
-export type BookFormat = 'ebook' | 'paperback' | 'hardcover';
-export type PurchaseChannel = 'amazon' | 'store' | 'comingSoon';
-export const BOOK_FORMAT_ORDER: BookFormat[] = ['ebook', 'paperback', 'hardcover'];
+export {
+  BOOK_FORMAT_ORDER,
+  formatBookPrice,
+  getBookFormats,
+  getLowestBookPrice,
+  isBookComingSoon,
+} from '@/lib/bookCatalog';
+
+export type {
+  BookCollection,
+  BookEdition,
+  BookFacts,
+  BookFormat,
+  BookLocale,
+  BookPrice,
+  CatalogBook,
+  PurchaseChannel,
+} from '@/lib/bookCatalog';
 
 interface BookDefinition {
   slug: string;
@@ -13,20 +32,6 @@ interface BookDefinition {
   legacyIds: string[];
   contextPath: string;
   visualKey: BookVisualKey;
-}
-
-export interface BookPrice { amount: number; currency: 'USD' | 'BRL' }
-export interface BookFacts {
-  readingAge?: string; pageCount?: number; language?: string; dimensions?: string;
-  weight?: string; fileSize?: string; publicationDate?: string; isbn?: string;
-}
-export interface BookEdition {
-  id: string; format: BookFormat; purchaseChannel: PurchaseChannel;
-  url: string | null; retailer: string | null; price?: BookPrice; facts?: BookFacts;
-}
-export interface CatalogBook {
-  slug: string; collection: BookCollection; contextPath: string; visualKey: BookVisualKey;
-  title: string; description: string; cover: string | null; editions: BookEdition[]; contextTitle: string;
 }
 
 const BOOK_DEFINITIONS: BookDefinition[] = [
@@ -68,6 +73,16 @@ export function getBookSlug(legacyId: string): string | null {
   return BOOK_DEFINITIONS.find((definition) => definition.legacyIds.includes(legacyId))?.slug ?? null;
 }
 
+export function getBookDetails(legacyId: string, locale: BookLocale) {
+  const slug = getBookSlug(legacyId);
+  return slug
+    ? {
+        url: `/${locale}/books/${slug}`,
+        label: locale === 'en' ? 'Discover the book' : 'Conheça o livro',
+      }
+    : null;
+}
+
 export function getCatalogBooks(locale: BookLocale): CatalogBook[] {
   const legacyBooks = allLegacyBooks(locale);
   return BOOK_DEFINITIONS.flatMap((definition) => {
@@ -95,18 +110,3 @@ export function getBookLocales(slug: string): BookLocale[] {
   return (['pt', 'en'] as const).filter((locale) => getCatalogBooks(locale).some((book) => book.slug === slug));
 }
 export function getAllBookSlugs(): string[] { return BOOK_DEFINITIONS.map((book) => book.slug); }
-export function getBookFormats(book: CatalogBook): BookFormat[] {
-  return BOOK_FORMAT_ORDER.filter((format) =>
-    book.editions.some((edition) => edition.format === format && edition.purchaseChannel !== 'comingSoon'),
-  );
-}
-export function isBookComingSoon(book: CatalogBook): boolean {
-  return book.editions.length > 0 && book.editions.every((edition) => edition.purchaseChannel === 'comingSoon');
-}
-export function getLowestBookPrice(book: CatalogBook): BookPrice | null {
-  const prices = book.editions.flatMap((edition) => edition.price ? [edition.price] : []);
-  return prices.length > 0 ? prices.reduce((lowest, price) => price.amount < lowest.amount ? price : lowest) : null;
-}
-export function formatBookPrice(price: BookPrice, locale: BookLocale): string {
-  return new Intl.NumberFormat(locale === 'pt' ? 'pt-BR' : 'en-US', { style: 'currency', currency: price.currency }).format(price.amount);
-}

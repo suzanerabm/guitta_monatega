@@ -39,4 +39,14 @@ describe('Footer', () => {
       '/licensing-partnerships',
     ]);
   });
+
+  it('renders the version when provided', () => {
+    render(<Footer {...baseProps} version="1.0.0" />);
+    expect(screen.getByText('v1.0.0')).toBeInTheDocument();
+  });
+
+  it('omits the version when not provided', () => {
+    render(<Footer {...baseProps} />);
+    expect(screen.queryByText(/^v\d/)).not.toBeInTheDocument();
+  });
 });

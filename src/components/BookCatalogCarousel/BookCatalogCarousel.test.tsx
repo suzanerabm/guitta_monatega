@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import { renderWithChakra } from '@/test-utils';
-import type { CatalogBook } from '@/lib/books';
+import type { CatalogBook } from '@/lib/bookCatalog';
 import { BookCatalogCarousel } from './BookCatalogCarousel';
 
 const book: CatalogBook = {

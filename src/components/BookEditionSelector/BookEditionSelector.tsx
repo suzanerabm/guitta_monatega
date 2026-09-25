@@ -8,7 +8,7 @@ import {
   type BookEdition,
   type BookFormat,
   type BookLocale,
-} from '@/lib/books';
+} from '@/lib/bookCatalog';
 
 interface BookEditionSelectorProps {
   editions: BookEdition[];
