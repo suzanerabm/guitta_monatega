@@ -58,7 +58,8 @@ publica uma pasta inteira por acidente:
 aws s3 cp \
   public/imgs/art/exemplo.jpg \
   s3://kammara/art/exemplo.jpg \
-  --profile kammara-user
+  --profile kammara-user \
+  --cache-control "public, max-age=31536000, immutable"
 ```
 
 O caminho depois de `public/imgs/` deve ser igual ao caminho depois de
@@ -71,6 +72,7 @@ aws s3 sync \
   public/imgs/art/minha-pasta/ \
   s3://kammara/art/minha-pasta/ \
   --profile kammara-user \
+  --cache-control "public, max-age=31536000, immutable" \
   --dryrun
 ```
 
@@ -80,8 +82,13 @@ Revise toda a saída. Se estiver correta, repita sem `--dryrun`:
 aws s3 sync \
   public/imgs/art/minha-pasta/ \
   s3://kammara/art/minha-pasta/ \
-  --profile kammara-user
+  --profile kammara-user \
+  --cache-control "public, max-age=31536000, immutable"
 ```
+
+O `Cache-Control` mantém cada mídia no cache do navegador por um ano. Como o
+valor é `immutable`, publique uma nova versão com outro nome quando o conteúdo
+de uma imagem ou vídeo mudar.
 
 ## Conferir o resultado
 
