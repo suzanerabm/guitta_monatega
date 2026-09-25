@@ -53,6 +53,13 @@ dist/
 # image asset backups (kept locally, never pushed)
 _bkp/
 
+# Local S3 media cache. Files already tracked by Git remain tracked; new files
+# downloaded from s3://kammara stay local.
+/public/imgs/art/
+/public/imgs/bichittos/
+/public/imgs/books/
+/public/imgs/kammara/
+
 # ImageOptim artifacts (sidecar files it leaves behind)
 *~imageoptim*
 .*imageoptim*
