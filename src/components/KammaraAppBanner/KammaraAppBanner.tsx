@@ -77,7 +77,7 @@ export function KammaraAppBanner({
         {backgroundSrc && (
           <Box
             position="absolute"
-            top={{ base: '-18%', lg: 0 }}
+            top="calc(-30% - 100px)"
             right={0}
             bottom={0}
             left={0}
@@ -93,8 +93,23 @@ export function KammaraAppBanner({
           </Box>
         )}
 
-        <Box position="absolute" inset={0} aria-hidden="true" css={{ background: `linear-gradient(90deg, ${darkColor}e8 0%, ${darkColor}c2 28%, ${darkColor}80 48%, ${darkColor}35 58%, ${darkColor}12 70%, ${darkColor}05 100%)` }} />
-        <Box position="absolute" inset={0} aria-hidden="true" css={{ background: `linear-gradient(180deg, ${darkColor}4d 0%, transparent 46%, ${darkColor}66 100%)` }} />
+        <Box position="absolute" inset={0} aria-hidden="true" css={{ background: `linear-gradient(90deg, ${darkColor}35 0%, ${darkColor}18 28%, ${darkColor}08 46%, transparent 62%)` }} />
+        <Box position="absolute" inset={0} aria-hidden="true" css={{ background: `linear-gradient(180deg, transparent 55%, ${darkColor}12 100%)` }} />
+
+        <Box
+          position="absolute"
+          top={{ base: '1rem', md: '1.5rem', lg: '1.8rem' }}
+          left={{ base: '0.5rem', md: '1rem', lg: '1.8rem' }}
+          width={{ base: 'calc(100% - 1rem)', lg: '76%' }}
+          height={{ base: '100px', md: '108px' }}
+          borderRadius="24px"
+          aria-hidden="true"
+          css={{
+            background: `linear-gradient(90deg, ${darkColor}e8 0%, ${darkColor}cc 42%, ${color}38 68%, transparent 100%)`,
+            boxShadow: `0 10px 32px rgba(0,0,0,0.3), 0 0 24px ${color}18`,
+            backdropFilter: 'blur(10px)',
+          }}
+        />
 
         <Box
           position="absolute"
