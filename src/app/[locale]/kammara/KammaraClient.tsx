@@ -713,6 +713,26 @@ export function KammaraClient({
         </Box>
         )}
 
+        {/* ── APP KAMMARA — convite antes dos próximos mundos ────────── */}
+        <Box
+          width="100%"
+          my={{ base: '2xl', lg: '5xl' }}
+          px={{ base: '25px', md: '2rem', xl: '3rem' }}
+        >
+          <KammaraAppBanner
+            worldName={sectionName}
+            eyebrow={appBanner.eyebrow}
+            title={appBanner.title}
+            description={appBanner.description}
+            image={appBanner.backgroundImage}
+            iconImage={appBanner.iconImage}
+            crestGlyph={worldCrestGlyph('kammara')}
+            color={kammaraPalette.colors[0]}
+            darkColor={kammaraPalette.dark}
+            stores={appBanner.stores}
+          />
+        </Box>
+
         {/* ── PRÓXIMOS PLANETAS — heatmap de progresso ───────────────── */}
         {/* Só aparece enquanto houver planeta em construção (<100). Quando
             todos chegam a 100, a seção some da interface por completo. */}

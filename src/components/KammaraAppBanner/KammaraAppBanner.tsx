@@ -64,7 +64,7 @@ export function KammaraAppBanner({
       <Box
         position="relative"
         width="100%"
-        height={{ base: '460px', md: '380px', xl: '420px' }}
+        height={{ base: 'auto', lg: '380px', xl: '420px' }}
         borderRadius="32px"
         overflow="hidden"
         css={{
@@ -93,13 +93,14 @@ export function KammaraAppBanner({
         </Box>
 
         <Flex
-          position="absolute"
-          top={{ base: '2rem', md: '2.5rem' }}
-          left={{ base: '1.2rem', md: '2.8rem' }}
+          position={{ base: 'relative', lg: 'absolute' }}
+          top={{ lg: '2.5rem' }}
+          left={{ lg: '2.8rem' }}
           direction="column"
           align="flex-start"
           gap="xs"
-          maxW={{ base: 'calc(100% - 2.4rem)', md: '48%' }}
+          maxW={{ base: '100%', lg: '48%' }}
+          padding={{ base: '1.5rem 1rem 0', md: '2rem 2rem 0', lg: 0 }}
           zIndex={3}
         >
           <Flex align="center" gap="lg">
@@ -123,7 +124,7 @@ export function KammaraAppBanner({
               <Heading
                 as="h2"
                 textStyle="heading"
-                fontSize={{ base: '1.5rem', md: '2rem', xl: '2.6rem' }}
+                fontSize={{ base: '2xl', md: '3xl', xl: '2.6rem' }}
                 lineHeight={1}
                 color={color}
                 letterSpacing="heroTitle"
@@ -153,13 +154,13 @@ export function KammaraAppBanner({
         </Flex>
 
         <Flex
-          position="absolute"
-          top={{ base: '12rem', md: '50%' }}
-          bottom={{ base: '3.5rem', md: 'auto' }}
-          right={{ base: '1rem', md: '2rem' }}
-          transform={{ md: 'translateY(-50%)' }}
-          width={{ base: 'calc(100% - 2rem)', md: '60%' }}
+          position={{ base: 'relative', lg: 'absolute' }}
+          top={{ lg: '50%' }}
+          right={{ lg: '2rem' }}
+          transform={{ lg: 'translateY(-50%)' }}
+          width={{ base: 'auto', lg: '60%' }}
           maxW="710px"
+          margin={{ base: '1.5rem 1rem', md: '2rem', lg: 0 }}
           direction="column"
           justify="center"
           gap="md"
@@ -211,7 +212,7 @@ export function KammaraAppBanner({
               const css = { border: `1px solid ${color}80`, outline: `1px solid ${color}40`, outlineOffset: '3px', background: `${color}15`, textDecoration: 'none' };
               const props = {
                 display: 'inline-flex',
-                width: '180px',
+                width: { base: '100%', sm: '180px' },
                 height: '48px',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -234,7 +235,7 @@ export function KammaraAppBanner({
         </Flex>
 
         <Flex
-          position="absolute"
+          position={{ base: 'relative', lg: 'absolute' }}
           left={0}
           right={0}
           bottom={0}

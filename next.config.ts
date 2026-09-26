@@ -4,14 +4,21 @@ import { mediaOrigin } from "./src/lib/media";
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
-// Origem do CDN de mídia, quando `NEXT_PUBLIC_MEDIA_BASE_URL` está definida.
-// Sai da MESMA variável que `src/lib/media.ts` usa pra montar as URLs .
-// Vazio (default) = modo local, CSP segue `'self'`-only.
+// O banner do app usa URLs absolutas do bucket mesmo no modo local. Mantemos
+// essa origem sempre permitida e acrescentamos o CDN configurado, se houver.
 const MEDIA_ORIGIN = mediaOrigin();
-const mediaSrc = MEDIA_ORIGIN ? ` ${MEDIA_ORIGIN}` : "";
-const mediaRemotePatterns = MEDIA_ORIGIN
-	? [new URL(`${MEDIA_ORIGIN}/**`)]
-	: [];
+const KAMMARA_MEDIA_ORIGIN = "https://kammara.s3.us-east-1.amazonaws.com";
+const mediaOrigins = Array.from(
+	new Set(
+		[KAMMARA_MEDIA_ORIGIN, MEDIA_ORIGIN].filter(
+			(origin): origin is string => Boolean(origin),
+		),
+	),
+);
+const mediaSrc = mediaOrigins.map((origin) => ` ${origin}`).join("");
+const mediaRemotePatterns = mediaOrigins.map(
+	(origin) => new URL(`${origin}/**`),
+);
 
 // Content-Security-Policy — controla de onde cada tipo de recurso pode
 // carregar, reduzindo a superfície pra injeção de conteúdo/XSS. Calibrado
