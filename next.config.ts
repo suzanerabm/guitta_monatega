@@ -9,6 +9,9 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 // Vazio (default) = modo local, CSP segue `'self'`-only.
 const MEDIA_ORIGIN = mediaOrigin();
 const mediaSrc = MEDIA_ORIGIN ? ` ${MEDIA_ORIGIN}` : "";
+const mediaRemotePatterns = MEDIA_ORIGIN
+	? [new URL(`${MEDIA_ORIGIN}/**`)]
+	: [];
 
 // Content-Security-Policy — controla de onde cada tipo de recurso pode
 // carregar, reduzindo a superfície pra injeção de conteúdo/XSS. Calibrado
@@ -49,6 +52,11 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+	images: {
+		// A mesma origem usada por `mediaUrl` e pelo CSP. O pathname amplo é
+		// necessário porque o bucket guarda kammara/, books/ e art/ na raiz.
+		remotePatterns: mediaRemotePatterns,
+	},
 	async headers() {
 		return [
 			{

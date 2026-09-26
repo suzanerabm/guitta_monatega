@@ -150,7 +150,17 @@ export interface WorldPayload {
 	scenes: Scene[];
 	drops: Drop[];
 	bgImage: string | null;
+	appBannerImage: string;
 	regions?: Record<string, RegionPayload>;
+}
+
+export interface KammaraAppBannerContent {
+	backgroundImage: string;
+	iconImage: string;
+	eyebrow: string;
+	title: string;
+	description: string[];
+	stores: { id: "apple" | "android"; label: string; url: string }[];
 }
 
 export interface MosaicClip {

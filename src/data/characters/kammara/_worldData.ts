@@ -235,6 +235,11 @@ export function getWorldSubsystemImages(worldId: string): (string | null)[] {
   return subs.map((s) => (s.img && s.img.trim() ? mediaUrl(s.img) : null));
 }
 
+/** First authored subsystem image, even when its text is hidden on the site. */
+export function getWorldAppBannerImage(worldId: string): string {
+  return getWorldSubsystemImages(worldId).find((image): image is string => !!image) ?? '';
+}
+
 /**
  * Returns the curated scene list for a world, with the label resolved
  * to the requested locale. Replaces the legacy manifest + word

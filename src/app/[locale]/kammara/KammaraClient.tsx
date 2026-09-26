@@ -23,6 +23,7 @@ import { BookShelf } from '@/components/BookShelf';
 import { KammaraProgressHeatmap } from '@/components/KammaraProgressHeatmap';
 import { KammaraEvents } from '@/components/KammaraEvents';
 import { KammaraPlanetCard } from '@/components/KammaraPlanetCard';
+import { KammaraAppBanner } from '@/components/KammaraAppBanner';
 import { KammaraDropsMosaic } from '@/components/KammaraDropsMosaic';
 import { useModal } from '@/components/Modal';
 import { mediaUrl } from '@/lib/media';
@@ -38,6 +39,7 @@ import type {
   ProgressPayload,
   RegionPayload,
   WorldPayload,
+  KammaraAppBannerContent,
 } from '@/lib/content/types';
 import type { getEvents } from '@/lib/content/kammara';
 
@@ -68,6 +70,7 @@ interface Props {
   mosaicClips: MosaicClip[];
   events: KammaraEventsPayload | null;
   progress: ProgressPayload | null;
+  appBanner: KammaraAppBannerContent;
 }
 
 
@@ -296,6 +299,7 @@ export function KammaraClient({
   mosaicClips,
   events,
   progress,
+  appBanner,
 }: Props) {
   const t = useTranslations('kammara');
   const tCommon = useTranslations('common');
@@ -503,6 +507,7 @@ export function KammaraClient({
     name: w.name,
     bodyText: w.summary,
     subsystems: w.subsystems,
+    appBanner,
     mount: activeFilter === w.id,
   }));
 
@@ -834,6 +839,7 @@ interface WorldSectionProps {
   name: string;
   bodyText: string[];
   subsystems: { title: string; text: string[]; img: string }[];
+  appBanner: KammaraAppBannerContent;
   hidden: boolean;
   charactersTitle: string;
   scenesTitle: string;
@@ -848,6 +854,7 @@ function WorldSection({
   name,
   bodyText,
   subsystems,
+  appBanner,
   hidden,
   charactersTitle,
   scenesTitle,
@@ -1040,6 +1047,26 @@ function WorldSection({
           </>
         );
       })()}
+      {w.appBannerImage && (
+        <Box
+          width="100%"
+          my={{ base: '2xl', lg: '5xl' }}
+          px={{ base: '25px', md: '2rem', xl: '3rem' }}
+        >
+          <KammaraAppBanner
+            worldName={name}
+            eyebrow={appBanner.eyebrow}
+            title={appBanner.title}
+            description={appBanner.description}
+            image={appBanner.backgroundImage}
+            iconImage={appBanner.iconImage}
+            crestGlyph={worldCrestGlyph(w.id)}
+            color={palette.colors[0]}
+            darkColor={palette.dark}
+            stores={appBanner.stores}
+          />
+        </Box>
+      )}
     </CreatureSection>
   );
 }

@@ -1,0 +1,46 @@
+{
+  "backgroundImage": "/imgs/home_app.png",
+  "iconImage": "/imgs/kammara_app_icon.png",
+  "eyebrow": {
+    "pt": "Aplicativo Kammara",
+    "en": "Kammara App"
+  },
+  "title": {
+    "pt": "Explore",
+    "en": "Explore"
+  },
+  "description": {
+    "pt": [
+      "**Há sempre mais para descobrir**",
+      "Kammara não foi criado para ser conhecido de uma vez. Seus mundos se conectam, personagens atravessam histórias e cada descoberta pode levar a outra.",
+      "Se o site despertou sua curiosidade, o app Kammara é o próximo passo da exploração. Nele, você pode mergulhar mais fundo nos mundos, conhecer seus personagens, descobrir conexões e acessar novas camadas desse universo.",
+      "**Explore no seu ritmo. Siga o que despertar sua curiosidade.**",
+      "Baixe gratuitamente na **App Store** e no **Google Play**."
+    ],
+    "en": [
+      "**There is always more to discover**",
+      "Kammara was not created to be discovered all at once. Its worlds are connected, characters cross between stories, and each discovery can lead to another.",
+      "If the website has sparked your curiosity, the Kammara app is the next step in your exploration. There, you can dive deeper into its worlds, meet its characters, uncover connections, and access new layers of this universe.",
+      "**Explore at your own pace. Follow whatever sparks your curiosity.**",
+      "Download it for free on the **App Store** and **Google Play**."
+    ]
+  },
+  "stores": [
+    {
+      "id": "apple",
+      "label": {
+        "pt": "App Store",
+        "en": "App Store"
+      },
+      "url": "https://apps.apple.com/us/app/kammara/id6813962740"
+    },
+    {
+      "id": "android",
+      "label": {
+        "pt": "Google Play",
+        "en": "Google Play"
+      },
+      "url": ""
+    }
+  ]
+}

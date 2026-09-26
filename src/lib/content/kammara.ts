@@ -19,6 +19,7 @@ import {
 	getWorldPanelStory,
 	getWorldTags,
 	getWorldSubsystems,
+	getWorldAppBannerImage,
 	getWorldScenes,
 	getWorldDrops,
 } from "@/data/characters/kammara/_worldData";
@@ -27,6 +28,7 @@ import { getBookDetails } from "@/lib/books";
 import kammaraMosaicData from "@/data/kammara_mosaic.json";
 import kammaraEventsData from "@/data/kammara_events.json";
 import kammaraProgressData from "@/data/kammara_progress.json";
+import kammaraAppBannerData from "@/data/kammaraAppBanner.json";
 import type {
 	Book,
 	CharacterCardItem,
@@ -37,6 +39,7 @@ import type {
 	RegionPayload,
 	Subsystem,
 	WorldPayload,
+	KammaraAppBannerContent,
 } from "./types";
 
 /** Ordem canônica dos mundos — define a ordem do FilterBar e dos cards. */
@@ -190,6 +193,7 @@ export function getWorld(id: string, locale: Locale): WorldPayload | null {
 		scenes: getWorldScenes(id, locale),
 		drops: getWorldDrops(id, locale),
 		bgImage: getKammaraBg(contextId),
+		appBannerImage: getWorldAppBannerImage(id),
 	};
 
 	// Só o TripleC tem sub-regiões.
@@ -302,6 +306,22 @@ export function getKammaraBooks(locale: Locale): Book[] {
 	}));
 }
 
+/** Copy and future store links for the per-world app banner. */
+export function getKammaraAppBanner(locale: Locale): KammaraAppBannerContent {
+	return {
+		backgroundImage: kammaraAppBannerData.backgroundImage,
+		iconImage: kammaraAppBannerData.iconImage,
+		eyebrow: kammaraAppBannerData.eyebrow[locale] ?? kammaraAppBannerData.eyebrow.pt,
+		title: kammaraAppBannerData.title[locale] ?? kammaraAppBannerData.title.pt,
+		description: kammaraAppBannerData.description[locale] ?? kammaraAppBannerData.description.pt,
+		stores: kammaraAppBannerData.stores.map((store) => ({
+			id: store.id as "apple" | "android",
+			label: store.label[locale] ?? store.label.pt,
+			url: store.url.trim(),
+		})),
+	};
+}
+
 /** Payload completo da página /kammara. */
 export function getKammaraPage(locale: Locale) {
 	return {
@@ -312,5 +332,6 @@ export function getKammaraPage(locale: Locale) {
 		mosaicClips: getMosaic(locale),
 		events: getEvents(locale),
 		progress: getProgress(locale),
+		appBanner: getKammaraAppBanner(locale),
 	};
 }
