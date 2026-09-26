@@ -15,10 +15,18 @@ const labels = {
   pages: 'páginas',
 };
 
+const preorderProps = {
+  bookTitle: 'Zeco nas Estações',
+  preorderLabel: 'Pré-venda',
+  preorderEmailSubject: 'Pré-venda — {title}',
+  preorderEmailBody: 'Desejo comprar o livro "{title}", na edição {format}, e quero reservar 1 unidade.',
+};
+
 describe('BookEditionSelector', () => {
   it('shows the information for the selected format', () => {
     renderWithChakra(
       <BookEditionSelector
+        {...preorderProps}
         editions={[
           { id: 'ebook', format: 'ebook', purchaseChannel: 'amazon', url: '/ebook', retailer: 'Amazon', price: { amount: 4.98, currency: 'USD' } },
           { id: 'paperback', format: 'paperback', purchaseChannel: 'amazon', url: '/paperback', retailer: 'Amazon', price: { amount: 17.99, currency: 'USD' } },
@@ -41,6 +49,7 @@ describe('BookEditionSelector', () => {
   it('shows unavailable editions without a purchase action', () => {
     renderWithChakra(
       <BookEditionSelector
+        {...preorderProps}
         editions={[
           { id: 'paperback', format: 'paperback', purchaseChannel: 'comingSoon', url: null, retailer: null, price: { amount: 69.90, currency: 'BRL' } },
         ]}
@@ -56,5 +65,29 @@ describe('BookEditionSelector', () => {
 
     expect(screen.queryByRole('button', { name: 'Comprar' })).not.toBeInTheDocument();
     expect(screen.getByText('Em breve')).toBeInTheDocument();
+  });
+
+  it('opens a pre-filled email for a pre-order edition', () => {
+    renderWithChakra(
+      <BookEditionSelector
+        {...preorderProps}
+        editions={[
+          { id: 'paperback', format: 'paperback', purchaseChannel: 'preorder', url: null, retailer: null, price: { amount: 69.90, currency: 'BRL' } },
+        ]}
+        locale="pt"
+        accentColor="orange"
+        formatLabels={{ ebook: 'Livro digital', paperback: 'Capa comum', hardcover: 'Capa dura' }}
+        factsLabels={labels}
+        buyLabel="Comprar"
+        amazonBuyLabel="Comprar na Amazon"
+        soonLabel="Em breve"
+      />,
+    );
+
+    const link = screen.getByRole('link', { name: 'Pré-venda' });
+    expect(link).toHaveAttribute('href', expect.stringMatching(/^mailto:hello@guittamonategastudio\.com\?/));
+    expect(decodeURIComponent(link.getAttribute('href') ?? '')).toContain('Zeco nas Estações');
+    expect(decodeURIComponent(link.getAttribute('href') ?? '')).toContain('Capa comum');
+    expect(decodeURIComponent(link.getAttribute('href') ?? '')).toContain('reservar 1 unidade');
   });
 });

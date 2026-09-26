@@ -17,6 +17,7 @@ export const Default: Story = {
       { id: 'paperback', format: 'paperback', purchaseChannel: 'amazon', url: '#paperback', retailer: 'Amazon.com', price: { amount: 17.99, currency: 'USD' } },
       { id: 'hardcover', format: 'hardcover', purchaseChannel: 'amazon', url: '#hardcover', retailer: 'Amazon.com', price: { amount: 27.99, currency: 'USD' } },
     ],
+    bookTitle: 'Zeco nas Estações',
     locale: 'pt',
     accentColor: 'orange',
     formatLabels: { ebook: 'Livro digital', paperback: 'Capa comum', hardcover: 'Capa dura' },
@@ -27,6 +28,9 @@ export const Default: Story = {
     },
     buyLabel: 'Comprar',
     amazonBuyLabel: 'Comprar na Amazon',
+    preorderLabel: 'Pré-venda',
+    preorderEmailSubject: 'Pré-venda — {title}',
+    preorderEmailBody: 'Desejo comprar o livro "{title}", na edição {format}, e quero reservar 1 unidade.',
     soonLabel: 'Em breve',
   },
 };

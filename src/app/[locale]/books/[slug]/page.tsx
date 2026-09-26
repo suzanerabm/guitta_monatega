@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Box, Heading, Image, Text } from '@chakra-ui/react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import NextLink from 'next/link';
 import {
   getAllBookSlugs,
   getBookLocales,
@@ -143,35 +144,65 @@ export default async function BookPage({
             {book.description}
           </Text>
 
-          {!comingSoon && (
-            <Box as="section" aria-label={t('editionsTitle')} borderTop="1px solid" borderColor="border" pt="2xl">
-              <BookEditionSelector
-                editions={book.editions}
-                locale={loc}
-                accentColor={visual.accent}
-                formatLabels={{
-                  ebook: t('formats.ebook'),
-                  paperback: t('formats.paperback'),
-                  hardcover: t('formats.hardcover'),
-                }}
-                factsLabels={{
-                  readingAge: t('facts.readingAge'),
-                  pageCount: t('facts.pageCount'),
-                  language: t('facts.language'),
-                  dimensions: t('facts.dimensions'),
-                  weight: t('facts.weight'),
-                  fileSize: t('facts.fileSize'),
-                  publicationDate: t('facts.publicationDate'),
-                  isbn: t('facts.isbn'),
-                  pages: t('facts.pages'),
-                }}
-                buyLabel={t('buyLabel')}
-                amazonBuyLabel={t('amazonBuyLabel')}
-                soonLabel={t('soonLabel')}
-              />
-            </Box>
-          )}
+          <Box borderTop="1px solid" borderColor="border" pt="2xl">
+            {!comingSoon && (
+              <Box as="section" aria-label={t('editionsTitle')}>
+                <BookEditionSelector
+                  editions={book.editions}
+                  bookTitle={book.title}
+                  locale={loc}
+                  accentColor={visual.accent}
+                  formatLabels={{
+                    ebook: t('formats.ebook'),
+                    paperback: t('formats.paperback'),
+                    hardcover: t('formats.hardcover'),
+                  }}
+                  factsLabels={{
+                    readingAge: t('facts.readingAge'),
+                    pageCount: t('facts.pageCount'),
+                    language: t('facts.language'),
+                    dimensions: t('facts.dimensions'),
+                    weight: t('facts.weight'),
+                    fileSize: t('facts.fileSize'),
+                    publicationDate: t('facts.publicationDate'),
+                    isbn: t('facts.isbn'),
+                    pages: t('facts.pages'),
+                  }}
+                  buyLabel={t('buyLabel')}
+                  amazonBuyLabel={t('amazonBuyLabel')}
+                  preorderLabel={t('preorderLabel')}
+                  preorderEmailSubject={t.raw('preorderEmailSubject') as string}
+                  preorderEmailBody={t.raw('preorderEmailBody') as string}
+                  soonLabel={t('soonLabel')}
+                />
+              </Box>
+            )}
 
+            <Box mt={comingSoon ? 0 : '2xl'}>
+              <NextLink href={`/${loc}/books`} style={{ textDecoration: 'none' }}>
+                <Box
+                  as="span"
+                  display="inline-flex"
+                  alignItems="center"
+                  border="1px solid"
+                  borderColor="ink"
+                  borderRadius="full"
+                  color="ink"
+                  px="xl"
+                  py="md"
+                  fontSize="sm"
+                  fontWeight="semibold"
+                  letterSpacing="wide"
+                  textTransform="uppercase"
+                  transitionProperty="opacity"
+                  transitionDuration="default"
+                  _hover={{ opacity: 0.72 }}
+                >
+                  {t('viewAllBooksLabel')}
+                </Box>
+              </NextLink>
+            </Box>
+          </Box>
         </Box>
       </Box>
       <BookContextBanner

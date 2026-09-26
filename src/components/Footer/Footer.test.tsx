@@ -45,6 +45,15 @@ describe('Footer', () => {
     expect(screen.getByText('v1.0.0')).toBeInTheDocument();
   });
 
+  it('renders a decorative gradient line above the copyright', () => {
+    const { container } = render(<Footer {...baseProps} copyright="© Guitta Monatega" />);
+    const line = container.querySelector('[aria-hidden="true"]');
+    const copyright = screen.getByText('© Guitta Monatega');
+
+    expect(line).toBeInTheDocument();
+    expect(line!.compareDocumentPosition(copyright) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+  });
+
   it('omits the version when not provided', () => {
     render(<Footer {...baseProps} />);
     expect(screen.queryByText(/^v\d/)).not.toBeInTheDocument();

@@ -2,6 +2,7 @@
 import { Box, Flex } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { useChromeTint } from '@/components/ChromeTint';
+import { GradientLine } from '@/components/GradientLine';
 
 interface FooterProps {
   aboutPath: string;
@@ -86,17 +87,27 @@ export function Footer({
         {/* Aviso de direitos autorais — discreto, abaixo dos links. Não impede
             cópia (impossível), mas dá respaldo legal de autoria. */}
         {copyright && (
-          <Box
-            as="p"
-            m={0}
-            fontSize="0.7rem"
-            fontWeight={300}
-            letterSpacing="0.08em"
-            opacity={0.55}
-            textAlign="center"
+          <Flex
+            direction="column"
+            align="center"
+            gap="sm"
+            width="100%"
           >
-            {copyright}
-          </Box>
+            <Box width={{ base: '80%', md: '50%' }} opacity={0.35}>
+              <GradientLine color="currentColor" />
+            </Box>
+            <Box
+              as="p"
+              m={0}
+              fontSize="0.7rem"
+              fontWeight={300}
+              letterSpacing="0.08em"
+              opacity={0.55}
+              textAlign="center"
+            >
+              {copyright}
+            </Box>
+          </Flex>
         )}
 
         {version && (

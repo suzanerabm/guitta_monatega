@@ -12,23 +12,40 @@ import {
 
 interface BookEditionSelectorProps {
   editions: BookEdition[];
+  bookTitle: string;
   locale: BookLocale;
   accentColor: string;
   formatLabels: Record<BookFormat, string>;
   factsLabels: BookFactsLabels;
   buyLabel: string;
   amazonBuyLabel: string;
+  preorderLabel: string;
+  preorderEmailSubject: string;
+  preorderEmailBody: string;
   soonLabel: string;
+}
+
+function fillEmailTemplate(
+  template: string,
+  values: Record<'title' | 'format', string>,
+) {
+  return template
+    .replaceAll('{title}', values.title)
+    .replaceAll('{format}', values.format);
 }
 
 export function BookEditionSelector({
   editions,
+  bookTitle,
   locale,
   accentColor,
   formatLabels,
   factsLabels,
   buyLabel,
   amazonBuyLabel,
+  preorderLabel,
+  preorderEmailSubject,
+  preorderEmailBody,
   soonLabel,
 }: BookEditionSelectorProps) {
   const preferredEdition = editions.find((edition) => edition.format === 'paperback') ?? editions[0];
@@ -37,6 +54,17 @@ export function BookEditionSelector({
 
   if (!selectedEdition) return null;
   const isAmazon = selectedEdition.retailer?.toLowerCase().includes('amazon') ?? false;
+  const isPreorder = selectedEdition.purchaseChannel === 'preorder';
+  const templateValues = {
+    title: bookTitle,
+    format: formatLabels[selectedEdition.format],
+  };
+  const preorderUrl = isPreorder
+    ? `mailto:hello@guittamonategastudio.com?subject=${encodeURIComponent(
+        fillEmailTemplate(preorderEmailSubject, templateValues),
+      )}&body=${encodeURIComponent(fillEmailTemplate(preorderEmailBody, templateValues))}`
+    : null;
+  const purchaseUrl = selectedEdition.url ?? preorderUrl;
 
   return (
     <Box width="100%" minW="0">
@@ -110,11 +138,11 @@ export function BookEditionSelector({
           </Text>
         )}
 
-        {selectedEdition.url ? (
+        {purchaseUrl ? (
           <Link
-            href={selectedEdition.url}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={purchaseUrl}
+            target={isPreorder ? undefined : '_blank'}
+            rel={isPreorder ? undefined : 'noopener noreferrer'}
             display="block"
             width="100%"
             bg="ink"
@@ -128,7 +156,7 @@ export function BookEditionSelector({
             textTransform="uppercase"
             textAlign="center"
           >
-            {isAmazon ? amazonBuyLabel : buyLabel}
+            {isPreorder ? preorderLabel : isAmazon ? amazonBuyLabel : buyLabel}
           </Link>
         ) : (
           <Text fontSize="sm" color="inkMuted" mt="xl">
