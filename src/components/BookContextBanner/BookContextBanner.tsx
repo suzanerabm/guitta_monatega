@@ -1,6 +1,7 @@
 import { Box, Heading, Image, Text } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { bookPageLayout, type BookBannerDecoration } from '@/theme/bookPages';
+import { mediaUrl } from '@/lib/media';
 
 interface BookContextBannerProps {
   href: string;
@@ -27,6 +28,8 @@ export function BookContextBanner({
   decorations,
   accentColor,
 }: BookContextBannerProps) {
+  const resolvedBackgroundImage = mediaUrl(backgroundImage);
+
   return (
     <NextLink href={href} style={{ textDecoration: 'none' }}>
       <Box
@@ -49,7 +52,7 @@ export function BookContextBanner({
           aria-hidden="true"
           position="absolute"
           inset={0}
-          backgroundImage={`url(${backgroundImage})`}
+          backgroundImage={`url(${resolvedBackgroundImage})`}
           backgroundSize="cover"
           backgroundPosition={{ base: '58% center', md: 'center' }}
           opacity={backgroundImageOpacity}
@@ -83,7 +86,7 @@ export function BookContextBanner({
           {decorations.map((decoration) => (
             <Image
               key={decoration.src}
-              src={decoration.src}
+              src={mediaUrl(decoration.src)}
               alt=""
               height={decoration.height ?? bookPageLayout.contextCharacterHeight}
               width="auto"
