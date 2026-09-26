@@ -54,6 +54,8 @@
   },
   {
     "match": "DORAN_KES",
+    "visible": false,
+    "appVisible": false,
     "name": {
       "pt": "DORAN KES",
       "en": "DORAN KES"
@@ -107,6 +109,8 @@
   },
   {
     "match": "ELLEN VAR",
+    "visible": false,
+    "appVisible": false,
     "name": {
       "pt": "ELLEN VAR",
       "en": "ELLEN VAR"
@@ -160,6 +164,8 @@
   },
   {
     "match": "Caracol-Espiral",
+    "visible": false,
+    "appVisible": false,
     "name": {
       "pt": "Fibo",
       "en": "Fibo"
@@ -213,6 +219,8 @@
   },
   {
     "match": "nibu",
+    "visible": false,
+    "appVisible": false,
     "name": {
       "pt": "Nibu",
       "en": "Nibu"
@@ -266,6 +274,8 @@
   },
   {
     "match": "Cobra-Caracol",
+    "visible": false,
+    "appVisible": true,
     "name": {
       "pt": "Minati",
       "en": "Minati"
@@ -319,6 +329,8 @@
   },
   {
     "match": "Poly",
+    "visible": false,
+    "appVisible": true,
     "name": {
       "pt": "Poly",
       "en": "Poly"

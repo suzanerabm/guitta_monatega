@@ -51,15 +51,22 @@ Para planetas, defina `appVisible` na entrada correspondente de
 `false` o retira do app mesmo quando o progresso chegou a 100%.
 
 `appComingSoon` controla separadamente a contagem de planetas no dashboard
-“Em breve”. Para ocultar um planeta do catálogo e anunciá-lo no dashboard, use:
+“Em breve”. Por padrão, `appVisible: false` já oculta o planeta e o anuncia:
 
 ```json
 {
-  "appVisible": false,
-  "appComingSoon": true
+  "appVisible": false
 }
 ```
+
+Para manter um planeta oculto e secreto, use também `appComingSoon: false`.
 
 As relações continuam registradas nos arquivos autorais. O gerador remove do
 JSON final as conexões cujo destino está oculto e as inclui novamente quando o
 destino volta a ficar visível.
+
+O contador de personagens “Em breve” mantém a base autoral cadastrada e soma os
+personagens publicáveis dos planetas com `appComingSoon: true`. Assim, ocultar
+um planeta anunciado aumenta o saldo futuro; ao publicá-lo novamente, esse
+acréscimo é removido. Personagens ocultos individualmente não entram no
+acréscimo, salvo quando usam explicitamente `appComingSoon: true`.

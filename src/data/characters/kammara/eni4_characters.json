@@ -111,6 +111,7 @@
     "relations": [
       "eni4-character-node-0"
     ],
+    "visible": false,
     "appId": "eni4-character-vexon"
   },
   {

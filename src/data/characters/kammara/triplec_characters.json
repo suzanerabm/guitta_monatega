@@ -1,6 +1,8 @@
 [
   {
     "match": "Volpita",
+    "visible": true,
+    "appVisible": true,
     "name": {
       "pt": "Volpita",
       "en": "Volpita"
@@ -65,6 +67,8 @@
   },
   {
     "match": "Ypito",
+    "visible": false,
+    "appVisible": true,
     "name": {
       "pt": "Ypito",
       "en": "Ypito"
@@ -126,6 +130,8 @@
   },
   {
     "match": "Seal Beans",
+    "visible": false,
+    "appVisible": true,
     "name": {
       "pt": "Seal Beans",
       "en": "Seal Beans"
@@ -190,6 +196,8 @@
   },
   {
     "match": "Treezitoide",
+    "visible": false,
+    "appVisible": true,
     "name": {
       "pt": "Treezi",
       "en": "Treezi"
@@ -255,6 +263,8 @@
   },
   {
     "match": "Plumoide",
+    "visible": false,
+    "appVisible": true,
     "name": {
       "pt": "Pluma",
       "en": "Pluma"
@@ -319,6 +329,8 @@
   },
   {
     "match": "Niuloide",
+    "visible": true,
+    "appVisible": true,
     "name": {
       "pt": "Nilo",
       "en": "Nilo"
@@ -383,6 +395,8 @@
   },
   {
     "match": "Espirola",
+    "visible": false,
+    "appVisible": true,
     "name": {
       "pt": "Espirola",
       "en": "Espirola"
@@ -448,6 +462,8 @@
   },
   {
     "match": "Soaroide",
+    "visible": true,
+    "appVisible": true,
     "name": {
       "pt": "Soar",
       "en": "Soar"
@@ -512,6 +528,8 @@
   },
   {
     "match": "Camuoide",
+    "visible": false,
+    "appVisible": true,
     "name": {
       "pt": "Camu",
       "en": "Camu"
@@ -576,6 +594,8 @@
   },
   {
     "match": "Zarkol-9",
+    "visible": false,
+    "appVisible": true,
     "name": {
       "pt": "Zarkol-9",
       "en": "Zarkol-9"
@@ -640,6 +660,8 @@
   },
   {
     "match": "Omi",
+    "visible": false,
+    "appVisible": true,
     "name": {
       "pt": "Omi",
       "en": "Omi"
@@ -715,6 +737,8 @@
   },
   {
     "match": "Vexa",
+    "visible": false,
+    "appVisible": true,
     "name": {
       "pt": "Vexa",
       "en": "Vexa"
@@ -790,6 +814,8 @@
   },
   {
     "match": "Lai",
+    "visible": false,
+    "appVisible": true,
     "name": {
       "pt": "Lai",
       "en": "Lai"

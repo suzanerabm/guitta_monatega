@@ -54,6 +54,8 @@
   },
   {
     "match": "Neran_Vel",
+    "visible": false,
+    "appVisible": false,
     "name": {
       "pt": "NERAN VEL",
       "en": "NERAN VEL"
@@ -107,6 +109,8 @@
   },
   {
     "match": "Veris_Anon",
+    "visible": false,
+    "appVisible": false,
     "name": {
       "pt": "VERIS ANON",
       "en": "VERIS ANON"
@@ -160,6 +164,8 @@
   },
   {
     "match": "Kurr",
+    "visible": false,
+    "appVisible": true,
     "name": {
       "pt": "Kurr",
       "en": "Kurr"
@@ -213,6 +219,8 @@
   },
   {
     "match": "Tilu",
+    "visible": true,
+    "appVisible": true,
     "name": {
       "pt": "Tilu",
       "en": "Tilu"
@@ -266,6 +274,8 @@
   },
   {
     "match": "Doopoide",
+    "visible": true,
+    "appVisible": true,
     "name": {
       "pt": "DooPe",
       "en": "DooPe"
@@ -319,6 +329,8 @@
   },
   {
     "match": "Dinossauro Alongado",
+    "visible": false,
+    "appVisible": true,
     "name": {
       "pt": "Logg",
       "en": "Logg"
@@ -372,6 +384,8 @@
   },
   {
     "match": "Suigui",
+    "visible": false,
+    "appVisible": true,
     "name": {
       "pt": "Suigui",
       "en": "Suigui"
@@ -425,6 +439,8 @@
   },
   {
     "match": "Lim",
+    "visible": false,
+    "appVisible": false,
     "name": {
       "pt": "Lim",
       "en": "Lim"

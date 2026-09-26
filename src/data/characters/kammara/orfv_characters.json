@@ -1,6 +1,8 @@
 [
   {
     "match": "Orvian",
+    "visible": true,
+    "appVisible": true,
     "name": {
       "pt": "Orvian",
       "en": "Orvian"
@@ -66,6 +68,8 @@
   },
   {
     "match": "Maelik",
+    "visible": true,
+    "appVisible": true,
     "name": {
       "pt": "Maelik",
       "en": "Maelik"
@@ -163,6 +167,7 @@
       }
     ],
     "visible": false,
+    "appVisible": false,
     "appId": "orfv-character-nylpha"
   },
   {
@@ -214,6 +219,7 @@
       }
     ],
     "visible": false,
+    "appVisible": false,
     "appId": "orfv-character-letik"
   },
   {
@@ -265,6 +271,7 @@
       }
     ],
     "visible": false,
+    "appVisible": false,
     "appId": "orfv-character-kallott"
   },
   {
@@ -316,10 +323,13 @@
       }
     ],
     "visible": false,
+    "appVisible": false,
     "appId": "orfv-character-torwen"
   },
   {
     "match": "Nuvin",
+    "visible": false,
+    "appVisible": true,
     "name": {
       "pt": "Nuvin",
       "en": "Nuvin"
@@ -374,6 +384,8 @@
   },
   {
     "match": "Zupi",
+    "visible": false,
+    "appVisible": true,
     "name": {
       "pt": "Zupi",
       "en": "Zupi"
@@ -479,6 +491,7 @@
       }
     ],
     "visible": true,
+    "appVisible": true,
     "appId": "orfv-character-velo"
   },
   {
@@ -534,6 +547,7 @@
       }
     ],
     "visible": false,
+    "appVisible": false,
     "appId": "orfv-character-aurin"
   }
 ]

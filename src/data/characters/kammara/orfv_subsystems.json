@@ -175,7 +175,7 @@
     },
     "visible": false,
     "appId": "orfv-topic-comunicacao",
-    "appVisible": false
+    "appVisible": true
   },
   {
     "title": {
@@ -211,7 +211,7 @@
     },
     "visible": false,
     "appId": "orfv-topic-conflitos",
-    "appVisible": false
+    "appVisible": true
   },
   {
     "title": {

@@ -87,7 +87,9 @@ test('planet appVisible overrides website progress for app publication', () => {
       categories: [{ id: 'lore' }],
       planets: [{ id: 'lunnp1', appVisible: false, progress: { lore: 100 } }],
     });
-    assert.equal(buildContent(f.root).files['catalog.json'].worldEntries.lunnp1, undefined);
+    const hidden = buildContent(f.root);
+    assert.equal(hidden.files['catalog.json'].worldEntries.lunnp1, undefined);
+    assert.equal(hidden.files['coming_soon.json'].counts.planets, 1);
   } finally { rmSync(f.root, { recursive: true }); }
 });
 
@@ -103,8 +105,22 @@ test('appComingSoon controls the planet dashboard count independently', () => {
     });
     const snapshot = buildContent(f.root);
     assert.equal(snapshot.files['coming_soon.json'].counts.planets, 1);
+    assert.equal(snapshot.files['coming_soon.json'].counts.characters, 44);
     assert.equal(snapshot.files['catalog.json'].worldEntries.memphis, undefined);
     assert.deepEqual(Object.keys(snapshot.files['coming_soon.json']).sort(), ['counts', 'schemaVersion']);
+  } finally { rmSync(f.root, { recursive: true }); }
+});
+
+test('coming soon characters come from announced hidden planets', () => {
+  const f = fixture();
+  try {
+    f.write('src/data/kammara_progress.json', {
+      categories: [{ id: 'lore' }],
+      planets: [{ id: 'lunnp1', appVisible: false, appComingSoon: true, progress: { lore: 100 } }],
+    });
+    const snapshot = buildContent(f.root);
+    assert.equal(snapshot.files['coming_soon.json'].counts.planets, 1);
+    assert.equal(snapshot.files['coming_soon.json'].counts.characters, 87);
   } finally { rmSync(f.root, { recursive: true }); }
 });
 
