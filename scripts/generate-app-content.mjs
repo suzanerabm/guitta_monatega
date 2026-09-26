@@ -51,7 +51,8 @@ export function buildContent(siteRoot, appDataRoot = resolve(siteRoot, 'src/data
     if (!path.startsWith('/imgs/kammara/') && !path.startsWith('/imgs/books/kammara/')) throw Error(`Out-of-scope image: ${path}`);
     const full = resolve(publicRoot, path.slice(1));
     if (!full.startsWith(publicRoot + sep)) throw Error('Invalid image path');
-    return existsSync(full) || inventory.has(path) ? remote(path) : '';
+    if (!existsSync(full) && !inventory.has(path)) throw Error(`Missing image: ${path}`);
+    return remote(path);
   };
   const media = (image, title, video = '', fit = false) => ({ image: art(image), title: localized(title), video: remote(video), fit });
   const entries = [], worldEntries = {}, worldDropIds = {}, mosaicIds = [];

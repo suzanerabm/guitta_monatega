@@ -74,6 +74,21 @@ test('appVisible independently supports app-only and site-only content', () => {
   } finally { rmSync(f.root, { recursive: true }); }
 });
 
+test('export fails instead of silently removing a missing image', () => {
+  const f = fixture();
+  try {
+    f.write(f.folder + 'subsystems.json', [{
+      appVisible: true,
+      title: { pt: 'Imagem ausente' },
+      img: '/imgs/kammara/lunnp1/_subsystems/missing.jpg',
+    }]);
+    assert.throws(
+      () => buildContent(f.root),
+      /Missing image: \/imgs\/kammara\/lunnp1\/_subsystems\/missing\.jpg/,
+    );
+  } finally { rmSync(f.root, { recursive: true }); }
+});
+
 test('planet appVisible overrides website progress for app publication', () => {
   const f = fixture();
   try {
