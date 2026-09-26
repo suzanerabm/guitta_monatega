@@ -63,17 +63,33 @@ export function BookPanel({
   return (
     <Box
       data-testid={testId ?? 'book-panel'}
+      position="relative"
       borderRadius="20px"
       p={{ base: '1.5rem', md: '2rem' }}
       height={height}
       display="flex"
       flexDirection="column"
+      cursor={book.details ? 'pointer' : undefined}
       css={{
         background,
         outline: `2px solid ${borderColor}`,
         outlineOffset: '6px',
       }}
     >
+      {book.details && (
+        <chakra.a
+          href={book.details.url}
+          aria-label={`${book.details.label}: ${book.label}`}
+          position="absolute"
+          inset={0}
+          zIndex={4}
+          borderRadius="20px"
+          transitionProperty="opacity"
+          transitionDuration="default"
+          _hover={{ background: `${borderColor}0a` }}
+          _focusVisible={{ outline: `2px solid ${borderColor}`, outlineOffset: '8px' }}
+        />
+      )}
       {book.image && (
         <Box
           flex={showLabel ? '0 1 auto' : '1 1 auto'}
@@ -115,9 +131,7 @@ export function BookPanel({
         </Text>
       )}
       {book.details ? (
-        <chakra.a
-          href={book.details.url}
-          aria-label={`${book.details.label}: ${book.label}`}
+        <chakra.span
           mb="md"
           css={{
             display: 'inline-flex',
@@ -135,7 +149,7 @@ export function BookPanel({
           }}
         >
           {book.details.label}
-        </chakra.a>
+        </chakra.span>
       ) : book.buy ? (
         // Livro à venda (só capa + link): botão leva pra loja.
         <chakra.a
@@ -210,7 +224,7 @@ export function BookPanel({
           {readLabel}
         </chakra.button>
       )}
-      {book.extraLink && (
+      {!book.details && book.extraLink && (
         <>
           <Box
             aria-hidden="true"

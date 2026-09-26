@@ -70,6 +70,9 @@ describe('BookPanel', () => {
       'href',
       '/pt/books/book-two',
     );
+    expect(screen.getByRole('link', { name: /Conheça o livro/ }).parentElement).toBe(
+      screen.getByTestId('book-panel'),
+    );
     expect(screen.queryByRole('link', { name: /Compre na Amazon/ })).not.toBeInTheDocument();
     expect(screen.getAllByRole('link')).toHaveLength(1);
   });

@@ -397,13 +397,25 @@ export function BichittosClient({ data, booksText }: Props) {
                 )}
 
                 {stickers.length > 0 && (
-                  <Box
+                  <chakra.a
+                    href={stickers[0].buy?.url}
+                    target={stickers[0].buy ? '_blank' : undefined}
+                    rel={stickers[0].buy ? 'noopener noreferrer' : undefined}
+                    aria-label={stickers[0].buy ? `${stickers[0].label} — ${stickers[0].buy.label}` : undefined}
+                    aria-disabled={stickers[0].buy ? undefined : true}
                     maxW={{ base: '100%', md: '520px' }}
                     display="flex"
                     alignItems="center"
                     gap={{ base: '1rem', md: '1.25rem' }}
                     p={{ base: '0.85rem', md: '1rem' }}
                     borderRadius="xl"
+                    color="inherit"
+                    textDecoration="none"
+                    cursor={stickers[0].buy ? 'pointer' : 'default'}
+                    transitionProperty="opacity, transform"
+                    transitionDuration="default"
+                    _hover={stickers[0].buy ? { opacity: 0.9, transform: 'translateY(-2px)' } : undefined}
+                    _focusVisible={{ outline: `2px solid ${boxBorder}`, outlineOffset: '6px' }}
                     css={{
                       background: 'rgba(0,0,0,0.22)',
                       outline: `1px solid ${boxBorder}`,
@@ -449,10 +461,8 @@ export function BichittosClient({ data, booksText }: Props) {
                         {stickers[0].label}
                       </Text>
                       {stickers[0].buy && (
-                        <chakra.a
-                          href={stickers[0].buy.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                        <Box
+                          as="span"
                           display="inline-flex"
                           alignItems="center"
                           gap="0.35rem"
@@ -465,10 +475,10 @@ export function BichittosClient({ data, booksText }: Props) {
                         >
                           <Apple size={16} aria-hidden="true" />
                           {stickers[0].buy.label}
-                        </chakra.a>
+                        </Box>
                       )}
                     </Box>
-                  </Box>
+                  </chakra.a>
                 )}
                 </Box>
 

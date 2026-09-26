@@ -20,6 +20,7 @@ interface BookEditionSelectorProps {
   buyLabel: string;
   amazonBuyLabel: string;
   preorderLabel: string;
+  preorderEmailHint: string;
   preorderEmailSubject: string;
   preorderEmailBody: string;
   soonLabel: string;
@@ -44,6 +45,7 @@ export function BookEditionSelector({
   buyLabel,
   amazonBuyLabel,
   preorderLabel,
+  preorderEmailHint,
   preorderEmailSubject,
   preorderEmailBody,
   soonLabel,
@@ -139,25 +141,32 @@ export function BookEditionSelector({
         )}
 
         {purchaseUrl ? (
-          <Link
-            href={purchaseUrl}
-            target={isPreorder ? undefined : '_blank'}
-            rel={isPreorder ? undefined : 'noopener noreferrer'}
-            display="block"
-            width="100%"
-            bg="ink"
-            color="white"
-            px="xl"
-            py="md"
-            mt="xl"
-            fontSize="sm"
-            fontWeight="semibold"
-            letterSpacing="wide"
-            textTransform="uppercase"
-            textAlign="center"
-          >
-            {isPreorder ? preorderLabel : isAmazon ? amazonBuyLabel : buyLabel}
-          </Link>
+          <>
+            <Link
+              href={purchaseUrl}
+              target={isPreorder ? undefined : '_blank'}
+              rel={isPreorder ? undefined : 'noopener noreferrer'}
+              display="block"
+              width="100%"
+              bg="ink"
+              color="white"
+              px="xl"
+              py="md"
+              mt="xl"
+              fontSize="sm"
+              fontWeight="semibold"
+              letterSpacing="wide"
+              textTransform="uppercase"
+              textAlign="center"
+            >
+              {isPreorder ? preorderLabel : isAmazon ? amazonBuyLabel : buyLabel}
+            </Link>
+            {isPreorder && (
+              <Text fontSize="xs" color="inkMuted" mt="sm" textAlign="center">
+                {preorderEmailHint}
+              </Text>
+            )}
+          </>
         ) : (
           <Text fontSize="sm" color="inkMuted" mt="xl">
             {soonLabel}

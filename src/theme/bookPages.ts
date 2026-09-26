@@ -48,7 +48,7 @@ export const bookPageVisuals: Record<BookVisualKey, BookPageVisual> = {
     decorations: [
       { src: '/imgs/bichittos/zeco/01_zeco.png' },
       { src: '/imgs/bichittos/zeco/02_RuiMerengue.png', height: { base: '210px', md: '322px' } },
-      { src: '/imgs/bichittos/zeco/03_ninha.png', height: { base: '75px', md: '115px' } },
+      { src: '/imgs/bichittos/zeco/03_ninha.png', height: { base: '37.5px', md: '57.5px' } },
     ],
     contextBackground: '/imgs/bichittos/_bg/zeco.jpg',
     contextOverlay: palettes.zeco.gradient,

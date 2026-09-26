@@ -34,7 +34,7 @@
       "onlyLocale": "pt",
       "cover": "/imgs/books/kammara/saga-orf-v/capa_70x10.jpg",
       "title": {
-        "pt": "Saga em ORF-V - Volume 1"
+        "pt": "Saga em ORF-V"
       },
       "buyUrl": "https://a.co/d/0fOqc7NW",
       "buyLabel": "Amazon.com",
@@ -48,9 +48,9 @@
       },
       "contextTitle": { "pt": "Explore o universo Kammara" },
       "editions": [
-        { "format": "ebook", "purchaseChannel": "amazon", "price": { "amount": 29.90, "currency": "BRL" }, "facts": { "readingAge": "9–14 anos", "pageCount": 151, "language": "Português", "publicationDate": "23 de setembro de 2026" } },
-        { "format": "paperback", "purchaseChannel": "preorder", "price": { "amount": 99.90, "currency": "BRL" }, "facts": { "readingAge": "9–14 anos", "pageCount": 144, "language": "Português", "dimensions": "15,24 × 0,86 × 22,86 cm", "publicationDate": "23 de setembro de 2026" } },
-        { "format": "hardcover", "purchaseChannel": "preorder", "price": { "amount": 139.90, "currency": "BRL" }, "facts": { "readingAge": "9–14 anos", "pageCount": 144, "language": "Português", "dimensions": "15,85 × 1,35 × 23,47 cm", "publicationDate": "23 de setembro de 2026" } }
+        { "format": "ebook", "purchaseChannel": "amazon", "price": { "amount": 29.90, "currency": "BRL" }, "facts": { "readingAge": "9–99 anos", "pageCount": 151, "language": "Português", "publicationDate": "23 de setembro de 2026" } },
+        { "format": "paperback", "purchaseChannel": "preorder", "price": { "amount": 99.90, "currency": "BRL" }, "facts": { "readingAge": "9–99 anos", "pageCount": 144, "language": "Português", "dimensions": "15,24 × 0,86 × 22,86 cm", "publicationDate": "23 de setembro de 2026" } },
+        { "format": "hardcover", "purchaseChannel": "preorder", "price": { "amount": 139.90, "currency": "BRL" }, "facts": { "readingAge": "9–99 anos", "pageCount": 144, "language": "Português", "dimensions": "15,85 × 1,35 × 23,47 cm", "publicationDate": "23 de setembro de 2026" } }
       ],
       "appId": "kammara-book-saga-em-orf-v-volume-1"
     },
@@ -75,7 +75,7 @@
       "onlyLocale": "pt",
       "cover": "/imgs/books/kammara/saga-orf-v/capa_70x10_2.jpg",
       "title": {
-        "pt": "Saga em Digg - Volume 2"
+        "pt": "Saga em Digg"
       },
       "description": { "pt": "O segundo volume da saga de Kammara amplia a jornada para Digg e para novas histórias desse universo em expansão." },
       "contextTitle": { "pt": "Explore o universo Kammara" },

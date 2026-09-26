@@ -17,7 +17,8 @@ const labels = {
 
 const preorderProps = {
   bookTitle: 'Zeco nas Estações',
-  preorderLabel: 'Pré-venda',
+  preorderLabel: 'Reserve sua cópia',
+  preorderEmailHint: 'Ao clicar, abriremos seu aplicativo de e-mail com a mensagem pronta. O site não coleta seus dados; o envio acontece pelo seu aplicativo de e-mail.',
   preorderEmailSubject: 'Pré-venda — {title}',
   preorderEmailBody: 'Desejo comprar o livro "{title}", na edição {format}, e quero reservar 1 unidade.',
 };
@@ -84,8 +85,9 @@ describe('BookEditionSelector', () => {
       />,
     );
 
-    const link = screen.getByRole('link', { name: 'Pré-venda' });
+    const link = screen.getByRole('link', { name: 'Reserve sua cópia' });
     expect(link).toHaveAttribute('href', expect.stringMatching(/^mailto:hello@guittamonategastudio\.com\?/));
+    expect(screen.getByText(preorderProps.preorderEmailHint)).toBeInTheDocument();
     expect(decodeURIComponent(link.getAttribute('href') ?? '')).toContain('Zeco nas Estações');
     expect(decodeURIComponent(link.getAttribute('href') ?? '')).toContain('Capa comum');
     expect(decodeURIComponent(link.getAttribute('href') ?? '')).toContain('reservar 1 unidade');

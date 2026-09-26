@@ -171,6 +171,7 @@ export default async function BookPage({
                   buyLabel={t('buyLabel')}
                   amazonBuyLabel={t('amazonBuyLabel')}
                   preorderLabel={t('preorderLabel')}
+                  preorderEmailHint={t('preorderEmailHint')}
                   preorderEmailSubject={t.raw('preorderEmailSubject') as string}
                   preorderEmailBody={t.raw('preorderEmailBody') as string}
                   soonLabel={t('soonLabel')}
