@@ -14,7 +14,7 @@
     "  description ({pt,en}) -> sinopse exibida na página de detalhes.",
     "  contextTitle ({pt,en}) -> chamada do banner no fim da página.",
     "  editions (array) -> formatos, preços, moeda, características, canal e link de compra.",
-    "    purchaseChannel: 'amazon' | 'store' | 'comingSoon'.",
+    "    purchaseChannel: 'amazon' | 'external' | 'comingSoon'.",
     "  buyUrl (string)   -> link de compra. Ausente = mostra 'Em breve' no botão.",
     "  buyLabel (string) -> texto do botão (ex: 'Amazon.com').",
     "  homeButtonUrl (string) -> destino do botão extra exibido na home.",
@@ -48,8 +48,8 @@
       "contextTitle": { "pt": "Explore o universo Kammara" },
       "editions": [
         { "format": "ebook", "purchaseChannel": "amazon", "price": { "amount": 29.90, "currency": "BRL" }, "facts": { "readingAge": "9–14 anos", "pageCount": 151, "language": "Português", "publicationDate": "23 de setembro de 2026" } },
-        { "format": "paperback", "purchaseChannel": "store", "price": { "amount": 99.90, "currency": "BRL" }, "facts": { "readingAge": "9–14 anos", "pageCount": 144, "language": "Português", "dimensions": "15,24 × 0,86 × 22,86 cm", "publicationDate": "23 de setembro de 2026" } },
-        { "format": "hardcover", "purchaseChannel": "store", "price": { "amount": 139.90, "currency": "BRL" }, "facts": { "readingAge": "9–14 anos", "pageCount": 144, "language": "Português", "dimensions": "15,85 × 1,35 × 23,47 cm", "publicationDate": "23 de setembro de 2026" } }
+        { "format": "paperback", "purchaseChannel": "comingSoon", "price": { "amount": 99.90, "currency": "BRL" }, "facts": { "readingAge": "9–14 anos", "pageCount": 144, "language": "Português", "dimensions": "15,24 × 0,86 × 22,86 cm", "publicationDate": "23 de setembro de 2026" } },
+        { "format": "hardcover", "purchaseChannel": "comingSoon", "price": { "amount": 139.90, "currency": "BRL" }, "facts": { "readingAge": "9–14 anos", "pageCount": 144, "language": "Português", "dimensions": "15,85 × 1,35 × 23,47 cm", "publicationDate": "23 de setembro de 2026" } }
       ],
       "appId": "kammara-book-saga-em-orf-v-volume-1"
     },

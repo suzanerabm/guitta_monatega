@@ -9,7 +9,6 @@ import {
   type BookFormat,
   type BookLocale,
 } from '@/lib/bookCatalog';
-import { useCart } from '@/components/Cart';
 
 interface BookEditionSelectorProps {
   editions: BookEdition[];
@@ -20,11 +19,6 @@ interface BookEditionSelectorProps {
   buyLabel: string;
   amazonBuyLabel: string;
   soonLabel: string;
-  book: {
-    slug: string;
-    title: string;
-    cover: string | null;
-  };
 }
 
 export function BookEditionSelector({
@@ -36,9 +30,7 @@ export function BookEditionSelector({
   buyLabel,
   amazonBuyLabel,
   soonLabel,
-  book,
 }: BookEditionSelectorProps) {
-  const { addItem } = useCart();
   const preferredEdition = editions.find((edition) => edition.format === 'paperback') ?? editions[0];
   const [selectedId, setSelectedId] = useState(preferredEdition?.id);
   const selectedEdition = editions.find((edition) => edition.id === selectedId) ?? preferredEdition;
@@ -118,40 +110,7 @@ export function BookEditionSelector({
           </Text>
         )}
 
-        {selectedEdition.purchaseChannel === 'store' ? (
-          <Button
-            type="button"
-            data-cart-action="add"
-            data-edition-id={selectedEdition.id}
-            onClick={() => {
-              if (!selectedEdition.price) return;
-              addItem({
-                editionId: selectedEdition.id,
-                slug: book.slug,
-                title: book.title,
-                format: formatLabels[selectedEdition.format],
-                cover: book.cover,
-                price: selectedEdition.price,
-              });
-            }}
-            disabled={!selectedEdition.price}
-            display="block"
-            width="100%"
-            height="auto"
-            bg="ink"
-            color="white"
-            px="xl"
-            py="md"
-            mt="xl"
-            fontSize="sm"
-            fontWeight="semibold"
-            letterSpacing="wide"
-            textTransform="uppercase"
-            textAlign="center"
-          >
-            {buyLabel}
-          </Button>
-        ) : selectedEdition.url ? (
+        {selectedEdition.url ? (
           <Link
             href={selectedEdition.url}
             target="_blank"

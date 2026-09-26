@@ -145,7 +145,7 @@ export interface BookEditionConfig {
     publicationDate?: string;
     isbn?: string;
   };
-  purchaseChannel?: 'amazon' | 'store' | 'comingSoon';
+  purchaseChannel?: 'amazon' | 'external' | 'comingSoon';
   buyUrl?: string;
   buyLabel?: string;
 }

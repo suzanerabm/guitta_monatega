@@ -4,7 +4,6 @@ import NextLink from 'next/link';
 import { useScrollHeader } from '@/hooks/useScrollHeader';
 import { LanguageToggle } from '@/components/LanguageToggle';
 import { useChromeTint } from '@/components/ChromeTint';
-import { CartTrigger } from '@/components/Cart';
 
 interface HeaderProps {
   homePath: string;
@@ -57,7 +56,6 @@ export function Header({ homePath, transparent = false }: HeaderProps) {
           </NextLink>
         </Box>
         <Flex align="center" gap="sm">
-          <CartTrigger />
           <LanguageToggle />
         </Flex>
       </Flex>

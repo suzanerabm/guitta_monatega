@@ -1,25 +1,7 @@
 import { fireEvent, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import { renderWithChakra } from '@/test-utils';
-import { NextIntlClientProvider } from 'next-intl';
-import { CartProvider } from '@/components/Cart';
 import { BookEditionSelector } from './BookEditionSelector';
-
-const cartMessages = {
-  cart: {
-    open: 'Abrir carrinho', title: 'Seu carrinho', close: 'Fechar carrinho', empty: 'Seu carrinho está vazio.',
-    continueShopping: 'Continuar comprando', subtotal: 'Subtotal', shippingNotice: 'Frete calculado no checkout.',
-    checkoutPreparing: 'Checkout em preparação', decrease: 'Diminuir {title}', increase: 'Aumentar {title}', remove: 'Remover {title}',
-  },
-};
-
-function withCart(children: React.ReactNode) {
-  return (
-    <NextIntlClientProvider locale="pt" messages={cartMessages}>
-      <CartProvider>{children}</CartProvider>
-    </NextIntlClientProvider>
-  );
-}
 
 const labels = {
   readingAge: 'Faixa etária',
@@ -36,8 +18,7 @@ const labels = {
 describe('BookEditionSelector', () => {
   it('shows the information for the selected format', () => {
     renderWithChakra(
-      withCart(<BookEditionSelector
-        book={{ slug: 'zeco', title: 'Zeco', cover: null }}
+      <BookEditionSelector
         editions={[
           { id: 'ebook', format: 'ebook', purchaseChannel: 'amazon', url: '/ebook', retailer: 'Amazon', price: { amount: 4.98, currency: 'USD' } },
           { id: 'paperback', format: 'paperback', purchaseChannel: 'amazon', url: '/paperback', retailer: 'Amazon', price: { amount: 17.99, currency: 'USD' } },
@@ -49,7 +30,7 @@ describe('BookEditionSelector', () => {
         buyLabel="Comprar"
         amazonBuyLabel="Comprar na Amazon"
         soonLabel="Em breve"
-      />),
+      />,
     );
 
     expect(screen.getByRole('link', { name: 'Comprar na Amazon' })).toHaveAttribute('href', '/paperback');
@@ -57,12 +38,11 @@ describe('BookEditionSelector', () => {
     expect(screen.getByRole('link', { name: 'Comprar na Amazon' })).toHaveAttribute('href', '/ebook');
   });
 
-  it('keeps the store purchase button for physical PT-BR editions', () => {
+  it('shows unavailable editions without a purchase action', () => {
     renderWithChakra(
-      withCart(<BookEditionSelector
-        book={{ slug: 'zeco', title: 'Zeco', cover: null }}
+      <BookEditionSelector
         editions={[
-          { id: 'paperback', format: 'paperback', purchaseChannel: 'store', url: null, retailer: null, price: { amount: 69.90, currency: 'BRL' } },
+          { id: 'paperback', format: 'paperback', purchaseChannel: 'comingSoon', url: null, retailer: null, price: { amount: 69.90, currency: 'BRL' } },
         ]}
         locale="pt"
         accentColor="orange"
@@ -71,10 +51,10 @@ describe('BookEditionSelector', () => {
         buyLabel="Comprar"
         amazonBuyLabel="Comprar na Amazon"
         soonLabel="Em breve"
-      />),
+      />,
     );
 
-    expect(screen.getByRole('button', { name: 'Comprar' })).toHaveAttribute('data-cart-action', 'add');
-    expect(screen.queryByText('Em breve')).not.toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'Comprar' })).not.toBeInTheDocument();
+    expect(screen.getByText('Em breve')).toBeInTheDocument();
   });
 });

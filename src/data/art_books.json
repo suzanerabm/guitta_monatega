@@ -14,7 +14,7 @@
     "  description ({pt,en}) -> sinopse exibida na página de detalhes.",
     "  contextTitle ({pt,en}) -> chamada do banner no fim da página.",
     "  editions (array) -> formatos, preços, moeda, características, canal e link de compra.",
-    "    purchaseChannel: 'amazon' | 'store' | 'comingSoon'.",
+    "    purchaseChannel: 'amazon' | 'external' | 'comingSoon'.",
     "  buyUrl (string)   -> link de compra. Ausente = mostra 'Em breve' no botão.",
     "  buyLabel (string) -> texto do botão (ex: 'Amazon.com').",
     "  homeButtonUrl (string) -> destino do botão extra exibido na home.",
@@ -34,7 +34,7 @@
       "contextTitle": { "pt": "Conheça a arte de Guitta Monatega" },
       "editions": [{
         "format": "paperback",
-        "purchaseChannel": "store",
+        "purchaseChannel": "comingSoon",
         "price": { "amount": 59.90, "currency": "BRL" },
         "facts": { "pageCount": 114, "language": "Português", "dimensions": "21,59 × 0,66 × 21,59 cm", "publicationDate": "23 de setembro de 2026", "isbn": "979-8194078561" }
       }],

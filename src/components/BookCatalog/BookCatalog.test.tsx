@@ -13,7 +13,7 @@ const books: CatalogBook[] = [
   {
     slug: 'paperback-book', collection: 'art', contextPath: '/art', visualKey: 'art',
     title: 'Print', description: 'Description', cover: null, contextTitle: 'Art',
-    editions: [{ id: 'paperback', format: 'paperback', purchaseChannel: 'store', url: null, retailer: null }],
+    editions: [{ id: 'paperback', format: 'paperback', purchaseChannel: 'external', url: null, retailer: null }],
   },
 ];
 

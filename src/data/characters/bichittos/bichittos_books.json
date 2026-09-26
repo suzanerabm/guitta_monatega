@@ -13,7 +13,7 @@
     "  description ({pt,en}) -> sinopse exibida na página de detalhes.",
     "  contextTitle ({pt,en}) -> chamada do banner no fim da página.",
     "  editions (array) -> formatos, preços, moeda, características, canal e link de compra.",
-    "    purchaseChannel: 'amazon' | 'store' | 'comingSoon'.",
+    "    purchaseChannel: 'amazon' | 'external' | 'comingSoon'.",
     "  buyUrl (string)   -> link de compra. Ausente = mostra 'Em breve' no botão.",
     "  buyLabel (string) -> texto do botão (ex: 'Amazon.com').",
     "  homeButtonUrl (string) -> destino do botão extra exibido na home.",
@@ -33,7 +33,7 @@
       "contextTitle": { "pt": "Conheça o NapCat" },
       "editions": [{
         "format": "paperback",
-        "purchaseChannel": "store",
+        "purchaseChannel": "comingSoon",
         "price": { "amount": 39.90, "currency": "BRL" },
         "facts": { "readingAge": "3–6 anos", "pageCount": 58, "language": "Português", "dimensions": "20,96 × 20,96 cm", "publicationDate": "23 de setembro de 2026" }
       }],
@@ -68,8 +68,8 @@
       "contextTitle": { "pt": "Conheça Zeco e seus amigos" },
       "editions": [
         { "format": "ebook", "purchaseChannel": "amazon", "price": { "amount": 24.90, "currency": "BRL" }, "facts": { "readingAge": "2–6 anos", "pageCount": 88, "language": "Português", "publicationDate": "23 de setembro de 2026" } },
-        { "format": "paperback", "purchaseChannel": "store", "price": { "amount": 69.90, "currency": "BRL" }, "facts": { "readingAge": "3–6 anos", "pageCount": 88, "language": "Português", "dimensions": "17,78 × 0,53 × 25,4 cm", "publicationDate": "23 de setembro de 2026" } },
-        { "format": "hardcover", "purchaseChannel": "store", "price": { "amount": 99.90, "currency": "BRL" }, "facts": { "readingAge": "2–6 anos", "pageCount": 88, "language": "Português", "dimensions": "18,39 × 1,02 × 26,01 cm", "publicationDate": "23 de setembro de 2026" } }
+        { "format": "paperback", "purchaseChannel": "comingSoon", "price": { "amount": 69.90, "currency": "BRL" }, "facts": { "readingAge": "3–6 anos", "pageCount": 88, "language": "Português", "dimensions": "17,78 × 0,53 × 25,4 cm", "publicationDate": "23 de setembro de 2026" } },
+        { "format": "hardcover", "purchaseChannel": "comingSoon", "price": { "amount": 99.90, "currency": "BRL" }, "facts": { "readingAge": "2–6 anos", "pageCount": 88, "language": "Português", "dimensions": "18,39 × 1,02 × 26,01 cm", "publicationDate": "23 de setembro de 2026" } }
       ],
       "homeButtonUrl": "/bichittos?bichitto=zeco",
       "homeButtonLabel": "Conheça o mundo do Zeco",
@@ -106,7 +106,7 @@
       "contextTitle": { "pt": "Conheça Taylo e Pitu" },
       "editions": [
         { "format": "ebook", "purchaseChannel": "amazon", "price": { "amount": 24.90, "currency": "BRL" }, "facts": { "pageCount": 35, "language": "Português", "fileSize": "10,3 MB", "publicationDate": "23 de setembro de 2026" } },
-        { "format": "paperback", "purchaseChannel": "store", "price": { "amount": 49.90, "currency": "BRL" }, "facts": { "readingAge": "3–8 anos", "pageCount": 36, "language": "Português", "dimensions": "15,24 × 0,23 × 22,86 cm", "publicationDate": "23 de setembro de 2026" } }
+        { "format": "paperback", "purchaseChannel": "comingSoon", "price": { "amount": 49.90, "currency": "BRL" }, "facts": { "readingAge": "3–8 anos", "pageCount": 36, "language": "Português", "dimensions": "15,24 × 0,23 × 22,86 cm", "publicationDate": "23 de setembro de 2026" } }
       ],
       "homeButtonUrl": "/bichittos?bichitto=taylo",
       "homeButtonLabel": "Conheça o mundo de Taylo",
