@@ -222,24 +222,20 @@ export function buildContent(siteRoot, appDataRoot = resolve(siteRoot, 'src/data
     .map(([id, targets]) => [id, [...new Set(targets)].filter(target => byId.has(target) && target !== id)]));
   bookDetails.books = Object.fromEntries(Object.entries(bookDetails.books).filter(([id]) => byId.has(id)));
   const upcoming = progress.planets.filter(planet => planetComingSoon(planet));
-  const upcomingWorldIds = new Set(upcoming.map(planet => planet.id));
-  let baseCharacters = 0;
-  let announcedCharacters = 0;
+  let totalCharacters = 0;
   const folder = resolve(siteRoot, 'src/data/characters/kammara');
   for (const file of readdirSync(folder).filter(name => name.endsWith('_characters.json'))) {
-    const world = file.slice(0, -'_characters.json'.length);
     const items = JSON.parse(readFileSync(resolve(folder, file), 'utf8'));
-    baseCharacters += new Set(items.map(item => item.match)).size;
-    const announced = items.filter(item => upcomingWorldIds.has(world) ? appVisible(item) : appComingSoon(item));
-    announcedCharacters += new Set(announced.map(item => item.match)).size;
+    totalCharacters += new Set(items.map(item => item.match)).size;
   }
+  const visibleCharacters = entries.filter(item => item.kind === 'character').length;
   const legal = { schemaVersion: 1, source: { urls: Object.fromEntries(['pt', 'en'].map(lang => [lang, `${base}/${lang}/privacy`])) },
     documents: Object.fromEntries(['pt', 'en'].map(lang => [lang, allMessages[lang].privacy])) };
   const catalog = { schemaVersion: 1, includeHidden: false, source: 'guitta_monatega / Kammara', universeId: universe.id,
     worldEntries, entries, mosaicIds, worldDropIds, upcoming, progressCategories: progress.categories, websiteMessages: messages };
   const counts = { schemaVersion: 1, counts: { books: Object.fromEntries(['pt', 'en'].map(lang =>
     [lang, Object.values(books).filter(book => appVisible(book) && !(book.buyUrl || '').trim() && (!book.onlyLocale || book.onlyLocale === lang)).length])),
-    characters: baseCharacters + announcedCharacters, planets: upcoming.length } };
+    characters: Math.max(0, totalCharacters - visibleCharacters), planets: upcoming.length } };
   const files = { 'catalog.json': catalog, 'relations.json': authored, 'book_details.json': bookDetails,
     'section_headers.json': appData('section_headers.json'), 'legal.json': legal, 'coming_soon.json': counts };
   return { schemaVersion: 1, revision: hash(JSON.stringify(files)), files };

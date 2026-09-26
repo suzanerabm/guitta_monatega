@@ -65,8 +65,7 @@ As relações continuam registradas nos arquivos autorais. O gerador remove do
 JSON final as conexões cujo destino está oculto e as inclui novamente quando o
 destino volta a ficar visível.
 
-O contador de personagens “Em breve” mantém a base autoral cadastrada e soma os
-personagens publicáveis dos planetas com `appComingSoon: true`. Assim, ocultar
-um planeta anunciado aumenta o saldo futuro; ao publicá-lo novamente, esse
-acréscimo é removido. Personagens ocultos individualmente não entram no
-acréscimo, salvo quando usam explicitamente `appComingSoon: true`.
+O contador de personagens “Em breve” é o total autoral menos os personagens
+presentes no catálogo publicado. Assim, ocultar um planeta ou personagem
+aumenta o saldo futuro e publicá-lo novamente reduz esse saldo. A contagem nunca
+ultrapassa o total completo de personagens cadastrados.

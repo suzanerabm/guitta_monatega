@@ -105,7 +105,7 @@ test('appComingSoon controls the planet dashboard count independently', () => {
     });
     const snapshot = buildContent(f.root);
     assert.equal(snapshot.files['coming_soon.json'].counts.planets, 1);
-    assert.equal(snapshot.files['coming_soon.json'].counts.characters, 44);
+    assert.equal(snapshot.files['coming_soon.json'].counts.characters, 1);
     assert.equal(snapshot.files['catalog.json'].worldEntries.memphis, undefined);
     assert.deepEqual(Object.keys(snapshot.files['coming_soon.json']).sort(), ['counts', 'schemaVersion']);
   } finally { rmSync(f.root, { recursive: true }); }
@@ -120,7 +120,7 @@ test('coming soon characters come from announced hidden planets', () => {
     });
     const snapshot = buildContent(f.root);
     assert.equal(snapshot.files['coming_soon.json'].counts.planets, 1);
-    assert.equal(snapshot.files['coming_soon.json'].counts.characters, 87);
+    assert.equal(snapshot.files['coming_soon.json'].counts.characters, 44);
   } finally { rmSync(f.root, { recursive: true }); }
 });
 
