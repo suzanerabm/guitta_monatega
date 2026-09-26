@@ -140,7 +140,7 @@ export function buildContent(siteRoot, appDataRoot = resolve(siteRoot, 'src/data
     if (!worldEntries[event.planet]) continue;
     entry(event.planet, 'event', event.id, event.title, event.description, undefined, '', {
       source: event, attributes: [
-        ...[['date', 'Data', 'Date'], ['location', 'Local', 'Location'], ['cshiftAddress', 'Endereço Cshift', 'Cshift address']]
+        ...[['date', 'Data', 'Date'], ['location', 'Local', 'Location'], ['cshiftAddress', 'Endereço CShift', 'CShift address']]
           .map(([key, pt, en]) => ({ label: { pt, en }, value: localized(event[key]) })),
         { label: { pt: 'Categoria', en: 'Category' }, value: event.subcategory || {} },
       ], media: event.backgroundVideo ? [media('', event.title, event.backgroundVideo)] : [],

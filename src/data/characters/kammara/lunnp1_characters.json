@@ -10,13 +10,13 @@
       "en": "Shal'ún"
     },
     "bio": {
-      "pt": "Nasceu em Ve'Lume, nas águas profundas. Suas maiores capacidades: detectar microfendas, ler reflexos invertidos, acalmar água viva, estabilizar emoções coletivas. ",
+      "pt": "Nasceu em Ve'Lume, nas águas profundas. Suas maiores capacidades: detectar microfendas, ler reflexos invertidos, acalmar água viva, estabilizar emoções coletivas.",
       "en": "Born in Ve'Lume, in the deep waters. His greatest abilities: detecting microfissures, reading inverted reflections, calming living water, stabilizing collective emotions. "
     },
     "image": "/imgs/kammara/lunnp1/erurin_alta.png",
     "backImage": "/imgs/kammara/lunnp1/EruRin_costas1.png",
     "dorsalMeaning": {
-      "pt": "Papel no grupo é ancorar e direcionar decisões mais focadas. Estabilidade profunda e introspecção, o caminho de quem ancora o planeta.",
+      "pt": "Seu papel no grupo é ancorar e direcionar decisões mais focadas. Estabilidade profunda e introspecção: o caminho de quem ancora o planeta.",
       "en": "His role in the group is to anchor and guide sharper decisions. Deep stability and introspection, the path of the one who anchors the planet."
     },
     "attributes": [
@@ -515,7 +515,7 @@
       "en": ""
     },
     "dorsalMeaning": {
-      "pt": "Lê camadas profundas emocionais e detecta vibrações ocultas: capta o que ainda vai emergir antes da superfície mostrar.",
+      "pt": "Lê camadas emocionais profundas e detecta vibrações ocultas: capta o que ainda vai emergir antes que a superfície o mostre.",
       "en": "She reads deep emotional layers and detects hidden vibrations: catching what is about to emerge before the surface shows it."
     },
     "attributes": [
@@ -556,7 +556,7 @@
       "en": "Lún'Kai"
     },
     "bio": {
-      "pt": "Lún'Kai espectral. Brilho tão sutil que parece existir ligeiramente fora de fase. Antenas voltadas para baixo, escutam camadas profundas. ",
+      "pt": "Lún'Kai espectral. Brilho tão sutil que parece existir ligeiramente fora de fase. As antenas, voltadas para baixo, escutam camadas profundas.",
       "en": "Spectral Lún'Kai. Glow so subtle it seems to exist slightly out of phase. Antennae turned downward, listening to deep layers. "
     },
     "backImage": "/imgs/kammara/lunnp1/veludo_costas.png",
@@ -565,7 +565,7 @@
       "en": "Another Side"
     },
     "dorsalMeaning": {
-      "pt": "A água ao redor muda de densidade quando ele está perto. Nas profundezas, emite azul-nebuloso ancestral.",
+      "pt": "A água ao redor muda de densidade quando ele está perto. Nas profundezas, ele emite um brilho azul-nebuloso ancestral.",
       "en": "The water nearby changes density when it is close. In the depths, it emits an ancestral nebulous blue."
     },
     "attributes": [

@@ -45,6 +45,7 @@ function cleanName(filename: string): string {
     .replace(IMAGE_EXTS, '')
     .replace(/^\d+_?/, '')
     .replace(/_/g, ' ')
+    .replace(/\bcshift\b/gi, 'CShift')
     .trim();
 }
 
