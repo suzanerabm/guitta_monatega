@@ -23,19 +23,19 @@
         "### As Cidades-Classe",
         "Cada cidade de Mesh tem um centro, caminhos que conectam partes, portais de entrada, fronteiras energéticas que definem onde ela começa e termina, e praças onde se comunica com outras cidades. As cidades evoluem por especialização. Quando uma acumula complexidade demais, se divide; uma nova cidade nasce da que já existia.",
         "### As estruturas",
-        "As Pontes de Herança conectam cidades antigas às que nasceram delas, levando adiante a forma que já provou funcionar. Torres replicam padrões e dão origem a cidades inteiras a partir de uma única forma. Há áreas onde o terreno muda conforme quem caminha: quem conhece usa como atalho, quem não conhece se perde. E no subsolo, salas hexagonais mantêm estáveis as passagens de Cshift que cruzam a região.",
+        "As Pontes de Herança conectam cidades antigas às que nasceram delas, levando adiante a forma que já provou funcionar. Torres replicam padrões e dão origem a cidades inteiras a partir de uma única forma. Há áreas onde o terreno muda conforme quem caminha: quem conhece usa como atalho, quem não conhece se perde. E no subsolo, salas hexagonais mantêm estáveis as passagens de CShift que cruzam a região.",
         "### Os bunniets",
         "Os bunniets de Mesh são uma evolução dos de malloc: mais altos, mais definidos, com padrões geométricos verde-dourados na pele. Pelagem creme. Ossatura reforçada por filamentos lineares. Antenas estruturadas. Enxergam várias versões possíveis de uma mesma forma ao mesmo tempo. Organizam emoções em blocos internos. E conseguem criar pequenas estruturas de energia com as próprias mãos: um gesto, uma forma, e algo passa a existir.",
         "### As castas",
         "Arquitetos criam o que vai existir. Moduladores ajustam o que já existe. Polimórficos (raros) conseguem dar várias formas ao mesmo material. E os Guardiões garantem que tudo continue fazendo sentido junto.",
         "### O governo",
-        "Mesh é governada por um Conselho formado pelos mais experientes de cada função. O Conselho decide o que pode ser construído, mantém equilíbrio com malloc e Sharp, e garante que as passagens de Cshift continuem funcionando. Ele não cria ideias; verifica se elas podem existir sem destruir o que já existe.",
+        "Mesh é governada por um Conselho formado pelos mais experientes de cada função. O Conselho decide o que pode ser construído, mantém equilíbrio com malloc e Sharp, e garante que as passagens de CShift continuem funcionando. Ele não cria ideias; verifica se elas podem existir sem destruir o que já existe.",
         "### Os valores",
         "Clareza, elegância, propósito, precisão, responsabilidade sobre as formas criadas. Cada bunniet de Mesh sente o peso do que constrói. O lazer reflete isso: jogos de raciocínio em três dimensões, debates formais chamados de duelos de coerência, arte geométrica, labirintos que mudam conforme quem os percorre.",
         "### Os perigos",
         "Quando algo perde sentido, cidades inteiras se desfazem. Regiões às vezes ficam presas repetindo a mesma forma. Torres instáveis criam construções incompletas. E o maior risco é organizar tanto que a vida fica presa dentro da forma.",
         "### A ponte entre instinto e controle",
-        "Mesh é a ponte entre o instinto de malloc e o controle de Sharp. O eixo estrutural do Cshift. A ordem viva que sustenta TripleC, um território elegante, coerente, belo, e perigoso quando a lógica falha."
+        "Mesh é a ponte entre o instinto de malloc e o controle de Sharp. O eixo estrutural do CShift. A ordem viva que sustenta TripleC, um território elegante, coerente, belo, e perigoso quando a lógica falha."
       ],
       "en": [
         "### Summary",
@@ -47,19 +47,19 @@
         "### The Class-Cities",
         "Each city in Mesh has a center, paths that connect its parts, entry portals, energetic borders that define where it begins and ends, and plazas where it communicates with other cities. Cities evolve through specialization. When one accumulates too much complexity, it splits; a new city is born from the one that already existed.",
         "### The structures",
-        "The Heritage Bridges connect old cities to the ones born from them, carrying forward the form that has already proven to work. Towers replicate patterns and give rise to entire cities from a single form. There are areas where the terrain shifts according to who walks it: those who know it use it as a shortcut, those who don't get lost. And underground, hexagonal chambers keep the Cshift passages that cross the region stable.",
+        "The Heritage Bridges connect old cities to the ones born from them, carrying forward the form that has already proven to work. Towers replicate patterns and give rise to entire cities from a single form. There are areas where the terrain shifts according to who walks it: those who know it use it as a shortcut, those who don't get lost. And underground, hexagonal chambers keep the CShift passages that cross the region stable.",
         "### The bunniets",
         "The bunniets of Mesh are an evolution of malloc's: taller, more defined, with green-gold geometric patterns on the skin. Cream-colored fur. Bone structure reinforced by linear filaments. Structured antennae. They see several possible versions of the same form at once. They organize emotions into internal blocks. And they can create small structures of energy with their own hands: a gesture, a form, and something comes into being.",
         "### The castes",
         "Architects create what is to exist. Modulators adjust what already exists. Polymorphics (rare) can give many forms to the same material. And the Guardians make sure everything keeps making sense together.",
         "### The government",
-        "Mesh is governed by a Council formed of the most experienced of each function. The Council decides what may be built, keeps balance with malloc and Sharp, and ensures the Cshift passages keep working. It does not create ideas; it verifies whether they can exist without destroying what already exists.",
+        "Mesh is governed by a Council formed of the most experienced of each function. The Council decides what may be built, keeps balance with malloc and Sharp, and ensures the CShift passages keep working. It does not create ideas; it verifies whether they can exist without destroying what already exists.",
         "### The values",
         "Clarity, elegance, purpose, precision, responsibility for the forms created. Every bunniet of Mesh feels the weight of what it builds. Leisure reflects this: three-dimensional reasoning games, formal debates called coherence duels, geometric art, labyrinths that change according to who walks them.",
         "### The dangers",
         "When something loses meaning, whole cities come undone. Regions sometimes get stuck repeating the same form. Unstable towers create incomplete constructions. And the greatest risk is organizing so much that life becomes trapped inside the form.",
         "### The bridge between instinct and control",
-        "Mesh is the bridge between malloc's instinct and Sharp's control. The structural axis of the Cshift. The living order that sustains TripleC, an elegant, coherent, beautiful territory, and a dangerous one when logic fails."
+        "Mesh is the bridge between malloc's instinct and Sharp's control. The structural axis of the CShift. The living order that sustains TripleC, an elegant, coherent, beautiful territory, and a dangerous one when logic fails."
       ]
     }
   },

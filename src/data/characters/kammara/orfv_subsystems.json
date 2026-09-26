@@ -40,7 +40,9 @@
       "orfv-character-maelik",
       "orfv-scene-festival",
       "orfv-video-lup-nul-fest"
-    ]
+    ],
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -82,7 +84,9 @@
     "relations": [
       "orfv-character-orvian",
       "orfv-character-maelik"
-    ]
+    ],
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -125,7 +129,9 @@
       "orfv-character-orvian",
       "orfv-character-nuvin",
       "orfv-character-zupi"
-    ]
+    ],
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -168,7 +174,8 @@
       ]
     },
     "visible": false,
-    "appId": "orfv-topic-comunicacao"
+    "appId": "orfv-topic-comunicacao",
+    "appVisible": false
   },
   {
     "title": {
@@ -203,7 +210,8 @@
       ]
     },
     "visible": false,
-    "appId": "orfv-topic-conflitos"
+    "appId": "orfv-topic-conflitos",
+    "appVisible": false
   },
   {
     "title": {
@@ -245,6 +253,8 @@
     "relations": [
       "orfv-character-orvian",
       "orfv-video-troys-atacando"
-    ]
+    ],
+    "visible": false,
+    "appVisible": true
   }
 ]

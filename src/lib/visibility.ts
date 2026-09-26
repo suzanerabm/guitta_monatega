@@ -24,6 +24,8 @@ interface PlanetEntry {
   id: string;
   name: { pt: string; en: string };
   progress: Record<string, number>;
+  /** Publicação no app; o gerador do app trata esse campo separadamente. */
+  appVisible?: boolean;
   /**
    * Desliga o planeta manualmente, independente do progresso. Quando `true`,
    * o mundo fica oculto do site em produção MESMO que o progresso seja 100 —
@@ -114,6 +116,8 @@ export function isBichittoPublished(creatureId: string): boolean {
 
 interface BookConfig {
   visible?: boolean;
+  /** Visibilidade no app; ausente herda `visible`. */
+  appVisible?: boolean;
   /** Idioma em que essa edição aparece. Cada entrada é uma edição de um só idioma. */
   onlyLocale?: 'pt' | 'en';
   /** Caminho da capa dessa edição (ex: '/imgs/books/kammara/saga-orf-v/cover.jpg'). */

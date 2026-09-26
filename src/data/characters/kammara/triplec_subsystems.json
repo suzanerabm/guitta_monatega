@@ -39,7 +39,9 @@
     "relations": [
       "triplec-topic-a-niul-forest",
       "triplec-topic-os-bunniets"
-    ]
+    ],
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -76,7 +78,9 @@
     "appId": "triplec-topic-a-niul-forest",
     "relations": [
       "triplec-scene-floresta-niul"
-    ]
+    ],
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -106,28 +110,30 @@
     "relations": [
       "triplec-video-bunniets",
       "triplec-scene-tres-bunniets"
-    ]
+    ],
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
-      "pt": "O Cshift",
-      "en": "The Cshift"
+      "pt": "O CShift",
+      "en": "The CShift"
     },
-    "img": "/imgs/kammara/triplec/_subsystems/cshift4-gigapixel-standard-v2-6x.jpg",
+    "img": "/imgs/kammara/triplec/_subsystems/CShift4-gigapixel-standard-v2-6x.jpg",
     "text": {
       "pt": [
-        "### As Sementes de Cshift",
+        "### As Sementes de CShift",
         "São o que conecta o Kammara. Pequenos objetos ativos de uso único que abrem passagens instantâneas entre mundos. Feitas de kemita cristalizada e shilo, com a participação das três regiões: malloc fornece a energia vital, Mesh dá a forma, Sharp valida e estabiliza. O processo de fabricação é segredo absoluto de TripleC: ninguém mais no universo sabe replicá-lo. Ao ser ativada, a Semente vira corredor. Quando alguém atravessa, o corredor se desfaz.",
         "### Como transporte",
-        "Graças ao Cshift, TripleC e seus aliados viajam entre mundos sem precisar de naves. As três regiões precisam estar alinhadas para dar vida a uma Semente: é por isso que nenhuma delas funciona sozinha. O Cshift também funciona como transporte entre as regiões de TripleC. Com o Cshift, seja a distância curta ou longa, o transporte acontece em segundos.",
+        "Graças ao CShift, TripleC e seus aliados viajam entre mundos sem precisar de naves. As três regiões precisam estar alinhadas para dar vida a uma Semente: é por isso que nenhuma delas funciona sozinha. O CShift também funciona como transporte entre as regiões de TripleC. Com o CShift, seja a distância curta ou longa, o transporte acontece em segundos.",
         "### O fio que move tudo",
         "Da kemita nasce o bloco. Da cadeia nasce o destino. E de TripleC nasce tudo que o universo precisa para se mover."
       ],
       "en": [
-        "### The Cshift Seeds",
+        "### The CShift Seeds",
         "They are what connects Kammara. Small single-use active objects that open instant passages between worlds. Made of crystallized kemita and shilo, with the participation of all three regions: malloc supplies the vital energy, Mesh gives the form, Sharp validates and stabilizes. The crafting process is an absolute secret of TripleC: no one else in the universe knows how to replicate it. Once activated, the Seed becomes a corridor. When someone crosses, the corridor unmakes itself.",
         "### As transport",
-        "Thanks to the Cshift, TripleC and its allies travel between worlds without needing ships. The three regions must be aligned to give life to a Seed: which is why none of them works alone. The Cshift also serves as transport between the regions of TripleC. With the Cshift, whether the distance is short or long, the journey happens in seconds.",
+        "Thanks to the CShift, TripleC and its allies travel between worlds without needing ships. The three regions must be aligned to give life to a Seed: which is why none of them works alone. The CShift also serves as transport between the regions of TripleC. With the CShift, whether the distance is short or long, the journey happens in seconds.",
         "### The thread that moves everything",
         "From kemita comes the block. From the chain comes the destination. And from TripleC comes everything the universe needs to move."
       ]
@@ -136,7 +142,9 @@
     "relations": [
       "triplec-scene-portal-cshift",
       "triplec-scene-regiao-de-mesh-ativando-o-cshift"
-    ]
+    ],
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -149,7 +157,7 @@
         "### A kemita",
         "O recurso mais importante do universo inteiro nasce nas cavernas da Hepa, a camada mais profunda de malloc. Metade mineral, metade lógica, metade orgânica. Verde-esmeralda. Extrair kemita das cavernas da Hepa é o principal trabalho dos bunniets de malloc. A kemita é matéria-prima para a fabricação do CShift. E o recurso mais cobiçado do universo por suas diversas aplicações.",
         "### O shilo",
-        "A energia de endereço. Flui pelas camadas como rios luminosos em tom teal, herança direta da Niul Forest ancestral. Para os bunniets, shilo é bússola, alimento e estabilizador emocional ao mesmo tempo. Cristais de shilo pulsam nas cavernas de malloc e iluminam os túneis por onde tudo se move. Sem shilo, ninguém se localiza. É também energia fundamental para a fabricação de Sementes de Cshift.",
+        "A energia de endereço. Flui pelas camadas como rios luminosos em tom teal, herança direta da Niul Forest ancestral. Para os bunniets, shilo é bússola, alimento e estabilizador emocional ao mesmo tempo. Cristais de shilo pulsam nas cavernas de malloc e iluminam os túneis por onde tudo se move. Sem shilo, ninguém se localiza. É também energia fundamental para a fabricação de Sementes de CShift.",
         "### Os materiais de cada região",
         "Cada região produz seus próprios recursos. malloc vive de rochas-moles aquecidas pela Datara, cristais da Hepa e frutos de kemita-cor, pequenas esferas minerais que dão foco e memória. Mesh trabalha com torel, um metal ativo, prateado-azulado, usado nas construções modulares. Sharp opera com mekesh, fluxos de energia filtrada em tons brancos e verdes claros.",
         "### As cinco camadas",
@@ -159,9 +167,9 @@
       ],
       "en": [
         "### Kemita",
-        "The most important resource in the entire universe is born in the caves of the Hepa, the deepest layer of malloc. Half mineral, half logic, half organic. Emerald-green. Extracting kemita from the caves of the Hepa is the main work of malloc's bunniets. Kemita is the raw material for crafting the Cshift. And it is the most coveted resource in the universe for its many applications.",
+        "The most important resource in the entire universe is born in the caves of the Hepa, the deepest layer of malloc. Half mineral, half logic, half organic. Emerald-green. Extracting kemita from the caves of the Hepa is the main work of malloc's bunniets. Kemita is the raw material for crafting the CShift. And it is the most coveted resource in the universe for its many applications.",
         "### Shilo",
-        "The energy of address. It flows through the layers like luminous teal rivers, a direct inheritance of the ancestral Niul Forest. For the bunniets, shilo is compass, food and emotional stabilizer all at once. Shilo crystals pulse in the caves of malloc and light the tunnels through which everything moves. Without shilo, no one can find their way. It is also fundamental energy for crafting Cshift Seeds.",
+        "The energy of address. It flows through the layers like luminous teal rivers, a direct inheritance of the ancestral Niul Forest. For the bunniets, shilo is compass, food and emotional stabilizer all at once. Shilo crystals pulse in the caves of malloc and light the tunnels through which everything moves. Without shilo, no one can find their way. It is also fundamental energy for crafting CShift Seeds.",
         "### The materials of each region",
         "Each region produces its own resources. malloc lives on soft-rocks warmed by the Datara, Hepa crystals and kemita-color fruits, small mineral spheres that grant focus and memory. Mesh works with torel, an active, silver-blue metal used in modular construction. Sharp operates with mekesh, flows of filtered energy in white and pale-green tones.",
         "### The five layers",
@@ -175,7 +183,9 @@
       "triplec-malloc-character-mewlites",
       "triplec-malloc-character-krystos",
       "triplec-malloc-character-estakors"
-    ]
+    ],
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -188,13 +198,13 @@
         "### A Tríade das Raízes",
         "TripleC, Z1 e LUNN'P1 formam a Tríade das Raízes, o eixo mais antigo, mais sábio e mais poderoso do Kammara. Juntos, são conhecidos como os Guardiões das Eras Iniciais.",
         "### O papel de TripleC",
-        "Na Tríade, TripleC é quem fornece energia e rotas. Kemita e Cshift: a infraestrutura que mantém o Kammara conectado passa por aqui.",
+        "Na Tríade, TripleC é quem fornece energia e rotas. Kemita e CShift: a infraestrutura que mantém o Kammara conectado passa por aqui.",
         "### A aliança com Z1",
         "Z1 e TripleC compartilham uma história antiga. Alguns seres de Z1 moram na Niul Forest há eras. Quando o Kammara entra em crise, essa proximidade se torna decisiva: Z1 decodifica, TripleC sustenta.",
         "### O Protocol AURYN",
         "Quando crises virais ameaçam outros planetas, o Protocol AURYN é ativado. LUNN'P1 lidera. Z1 decodifica. E TripleC entra com o que nenhum outro planeta pode oferecer: a infraestrutura e o conhecimento.",
         "### A governança",
-        "Em TripleC, nenhum conselho governa. As decisões emergem das regiões, cada uma com seu próprio ritmo. A produção de Sementes de Cshift exige alinhamento entre as três, e esse alinhamento acontece naturalmente, não por comando.",
+        "Em TripleC, nenhum conselho governa. As decisões emergem das regiões, cada uma com seu próprio ritmo. A produção de Sementes de CShift exige alinhamento entre as três, e esse alinhamento acontece naturalmente, não por comando.",
         "### O coração do Kammara",
         "TripleC é o coração que pulsa energia, memória e rotas de viagem para todo o universo."
       ],
@@ -202,13 +212,13 @@
         "### The Triad of Roots",
         "TripleC, Z1 and LUNN'P1 form the Triad of Roots, the oldest, wisest and most powerful axis in Kammara. Together, they are known as the Guardians of the Early Eras.",
         "### TripleC's role",
-        "In the Triad, TripleC is the one that supplies energy and routes. Kemita and Cshift: the infrastructure that keeps Kammara connected passes through here.",
+        "In the Triad, TripleC is the one that supplies energy and routes. Kemita and CShift: the infrastructure that keeps Kammara connected passes through here.",
         "### The alliance with Z1",
         "Z1 and TripleC share an ancient history. Some beings from Z1 have dwelt in the Niul Forest for ages. When Kammara enters a crisis, that closeness becomes decisive: Z1 decodes, TripleC sustains.",
         "### The AURYN Protocol",
         "When viral crises threaten other planets, the AURYN Protocol is activated. LUNN'P1 leads. Z1 decodes. And TripleC brings what no other planet can offer: the infrastructure and the knowledge.",
         "### The governance",
-        "In TripleC, no council governs. Decisions emerge from the regions, each with its own rhythm. Crafting Cshift Seeds demands alignment among the three, and that alignment happens naturally, not by command.",
+        "In TripleC, no council governs. Decisions emerge from the regions, each with its own rhythm. Crafting CShift Seeds demands alignment among the three, and that alignment happens naturally, not by command.",
         "### The heart of Kammara",
         "TripleC is the heart that pulses energy, memory and travel routes for the entire universe."
       ]
@@ -218,7 +228,9 @@
       "triplec-character-omi",
       "triplec-character-vexa",
       "triplec-character-lai"
-    ]
+    ],
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -259,6 +271,8 @@
     "appId": "triplec-topic-o-criptokemita",
     "relations": [
       "triplec-scene-protecao-e-criptografia"
-    ]
+    ],
+    "visible": false,
+    "appVisible": true
   }
 ]

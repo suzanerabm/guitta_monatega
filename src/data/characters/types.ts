@@ -120,6 +120,8 @@ export interface Character {
    * um personagem invisível não vaza no HTML. Ausente = visível (default).
    */
   visible?: boolean;
+  /** Visibilidade no app; ausente herda `visible`. */
+  appVisible?: boolean;
 }
 
 /**

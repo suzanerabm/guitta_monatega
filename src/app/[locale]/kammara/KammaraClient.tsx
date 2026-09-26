@@ -569,6 +569,7 @@ export function KammaraClient({
           renderPanel={({ text: panelText }) => (
             <KammaraCard
               name={sectionName}
+              showName={false}
               category="Universo"
               color={kammaraPalette.colors[0]}
               darkColor={kammaraPalette.dark}

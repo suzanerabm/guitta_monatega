@@ -150,7 +150,7 @@
   {
     "image": "/imgs/kammara/triplec/_scenes/regiao_mesh_ativando_cshift.jpg",
     "label": {
-      "pt": "Região de Mesh: ativando o Cshift",
+      "pt": "Região de Mesh: ativando o CShift",
       "en": "Mesh region: activating CShift"
     },
     "appId": "triplec-scene-regiao-de-mesh-ativando-o-cshift"
@@ -196,8 +196,8 @@
   {
     "image": "/imgs/kammara/triplec/_scenes/6Cshift_portal.jpg",
     "label": {
-      "pt": "Portal Cshift",
-      "en": "Cshift portal"
+      "pt": "Portal CShift",
+      "en": "CShift portal"
     },
     "appId": "triplec-scene-portal-cshift"
   }

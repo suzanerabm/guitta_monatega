@@ -50,7 +50,9 @@
     "relations": [
       "eni4-character-node-0"
     ],
-    "appId": "z1-topic-origem"
+    "appId": "z1-topic-origem",
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -91,7 +93,9 @@
     "relations": [
       "z1-topic-linguagem"
     ],
-    "appId": "z1-topic-cultura"
+    "appId": "z1-topic-cultura",
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -129,7 +133,9 @@
         "Function is identity. Each being is born for a function and remains in it. There is no mobility, dissatisfaction or comparison."
       ]
     },
-    "appId": "z1-topic-habitantes-castas"
+    "appId": "z1-topic-habitantes-castas",
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -172,7 +178,9 @@
       "z1-scene-salas-ancestrais",
       "z1-scene-salao-perfurado"
     ],
-    "appId": "z1-topic-geografia"
+    "appId": "z1-topic-geografia",
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -213,7 +221,9 @@
     "relations": [
       "eni4-topic-o-codigo-dos-virus-asm"
     ],
-    "appId": "z1-topic-linguagem"
+    "appId": "z1-topic-linguagem",
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -255,6 +265,8 @@
       "z1-video-tempestades-de-curto-circuito",
       "eni4-topic-o-codigo-dos-virus-asm"
     ],
-    "appId": "z1-topic-perigos"
+    "appId": "z1-topic-perigos",
+    "visible": false,
+    "appVisible": true
   }
 ]

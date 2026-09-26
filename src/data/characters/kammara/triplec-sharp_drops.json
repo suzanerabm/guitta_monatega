@@ -28,8 +28,8 @@
     "video": "/imgs/kammara/triplec/sharp/_videos/ativando_cshift.mp4",
     "poster": "/imgs/kammara/triplec/sharp/_videos/ativando_cshift_poster.jpg",
     "label": {
-      "pt": "Ativando o Cshift",
-      "en": "Activating C-Shift"
+      "pt": "Ativando o CShift",
+      "en": "Activating CShift"
     },
     "appId": "triplec-sharp-video-ativando-o-cshift",
     "relations": [

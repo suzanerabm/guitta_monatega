@@ -38,7 +38,9 @@
     "appId": "triplec-malloc-topic-cultura",
     "relations": [
       "triplec-malloc-topic-bunniets"
-    ]
+    ],
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -59,7 +61,7 @@
         "### As cinco castas",
         "Prae estabiliza. Koma calcula. Aska registra. Lanko conecta. Runa executa. Cada bunniet nasce em uma casta e permanece nela.",
         "### Runa-Tora",
-        "Uma elite rara entre os Runa, um em cada cinco mil. Ossatura com densidade mineral elevada, cristais de shilo nos antebraços, estabilidade emocional excepcional. São os guardiões das Sementes de Cshift."
+        "Uma elite rara entre os Runa, um em cada cinco mil. Ossatura com densidade mineral elevada, cristais de shilo nos antebraços, estabilidade emocional excepcional. São os guardiões das Sementes de CShift."
       ],
       "en": [
         "### Appearance",
@@ -73,10 +75,12 @@
         "### The five castes",
         "Prae stabilizes. Koma calculates. Aska records. Lanko connects. Runa executes. Each bunniet is born into a caste and remains in it.",
         "### Runa-Tora",
-        "A rare elite among the Runa, one in every five thousand. Bone structure of high mineral density, shilo crystals in the forearms, exceptional emotional stability. They are the guardians of the Cshift Seeds."
+        "A rare elite among the Runa, one in every five thousand. Bone structure of high mineral density, shilo crystals in the forearms, exceptional emotional stability. They are the guardians of the CShift Seeds."
       ]
     },
-    "appId": "triplec-malloc-topic-bunniets"
+    "appId": "triplec-malloc-topic-bunniets",
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -93,7 +97,7 @@
         "### Cidades-Risca",
         "Caminhos estreitos que ligam uma vila à outra em linha reta. Atalhos vivos: aparecem quando alguém precisa passar e somem quando ninguém mais está caminhando por ali.",
         "### Cada-Estaka Central",
-        "A sala de comando de malloc, escavada na rocha da Estaka. Centro de decisão e autorização do Cshift.",
+        "A sala de comando de malloc, escavada na rocha da Estaka. Centro de decisão e autorização do CShift.",
         "### As fronteiras",
         "Ao norte e leste está Mesh. Ao sul, Sharp. A oeste e norte, a floresta Niul. As regiões de TripleC nunca se tocam diretamente: a floresta sempre fica entre elas.",
         "### Os rituais como geografia",
@@ -107,14 +111,16 @@
         "### Risca-Cities",
         "Narrow paths that link one village to another in a straight line. Living shortcuts: they appear when someone needs to pass and vanish when no one is walking there anymore.",
         "### Central Cada-Estaka",
-        "The command room of malloc, carved into the rock of the Estaka. The center of decision and Cshift authorization.",
+        "The command room of malloc, carved into the rock of the Estaka. The center of decision and CShift authorization.",
         "### The borders",
         "To the north and east lies Mesh. To the south, Sharp. To the west and north, the Niul forest. The regions of TripleC never touch directly: the forest always stands between them.",
         "### Rituals as geography",
         "In malloc, rituals are also geography. They happen in specific places, because each layer responds in its own way to what is done there."
       ]
     },
-    "appId": "triplec-malloc-topic-geografia"
+    "appId": "triplec-malloc-topic-geografia",
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -129,8 +135,8 @@
         "### Oka",
         "Instrução condensada, uma ordem viva. Moldada pelos Aska, capaz de alterar a geologia. Perigosa demais para uso regular: é tratada como condimento espiritual.",
         "### Kemita",
-        "A semente semântica que nasce nas cavernas da Hepa. Nutriente, memória e matéria-prima das Sementes de Cshift. Verde-esmeralda. O token primordial do universo inteiro.",
-        "### As Sementes de Cshift",
+        "A semente semântica que nasce nas cavernas da Hepa. Nutriente, memória e matéria-prima das Sementes de CShift. Verde-esmeralda. O token primordial do universo inteiro.",
+        "### As Sementes de CShift",
         "Pequenos objetos vivos que permitem viagem instantânea entre mundos. Uso único. Verde-esmeralda com veios dourados. Nascem aqui, alimentadas por kemita.",
         "### Como se alimentam",
         "Bunniets de malloc se sustentam de kemita extraída de Hepa, shilo absorvido pelos cristais integrados ao corpo, e minerais colhidos em rituais de Basa.",
@@ -143,8 +149,8 @@
         "### Oka",
         "Condensed instruction, a living command. Shaped by the Aska, capable of altering geology. Too dangerous for regular use: it is treated as a spiritual seasoning.",
         "### Kemita",
-        "The semantic seed born in the caves of the Hepa. Nutrient, memory and raw material of the Cshift Seeds. Emerald-green. The primordial token of the entire universe.",
-        "### The Cshift Seeds",
+        "The semantic seed born in the caves of the Hepa. Nutrient, memory and raw material of the CShift Seeds. Emerald-green. The primordial token of the entire universe.",
+        "### The CShift Seeds",
         "Small living objects that allow instant travel between worlds. Single-use. Emerald-green with golden veins. They are born here, fed by kemita.",
         "### How they feed",
         "The bunniets of malloc sustain themselves on kemita extracted from Hepa, shilo absorbed through the crystals integrated into their bodies, and minerals gathered in Basa rituals.",
@@ -155,7 +161,9 @@
     "appId": "triplec-malloc-topic-energia",
     "relations": [
       "triplec-malloc-topic-bunniets"
-    ]
+    ],
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -168,7 +176,7 @@
         "### Sem governo",
         "Não há governo em malloc. Há interpretação de camadas. O planeta fala; os bunniets escutam.",
         "### Klanora",
-        "O Conselho das Castas. Um representante de cada uma das cinco castas. Não governa; interpreta. Supervisiona as Sementes de Cshift e aprova os saltos do Cshift Local.",
+        "O Conselho das Castas. Um representante de cada uma das cinco castas. Não governa; interpreta. Supervisiona as Sementes de CShift e aprova os saltos do CShift Local.",
         "### Maro-Klan",
         "A governança das vilas. Cada vila é autossuficiente: registra mudanças, protege suas Sementes, treina suas castas, sincroniza deslocamentos com as vizinhas.",
         "### Alloc",
@@ -182,7 +190,7 @@
         "### No government",
         "There is no government in malloc. There is interpretation of layers. The planet speaks; the bunniets listen.",
         "### Klanora",
-        "The Council of Castes. One representative from each of the five castes. It does not govern; it interprets. It oversees the Cshift Seeds and approves the jumps of the Local Cshift.",
+        "The Council of Castes. One representative from each of the five castes. It does not govern; it interprets. It oversees the CShift Seeds and approves the jumps of the Local CShift.",
         "### Maro-Klan",
         "The governance of the villages. Each village is self-sufficient: it records changes, protects its Seeds, trains its castes, synchronizes movements with its neighbors.",
         "### Alloc",
@@ -196,7 +204,9 @@
     "appId": "triplec-malloc-topic-governanca",
     "relations": [
       "triplec-malloc-topic-bunniets"
-    ]
+    ],
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -211,10 +221,10 @@
         "### Hepa descontrolada",
         "Quando a camada criadora cresce sem aviso, engole túneis e apaga caminhos inteiros. O ritmo natural da Hepa protege; seu excesso destrói.",
         "### Roubo de Sementes",
-        "Vírus exploram falhas de shilo para tentar roubar as Sementes de Cshift. É um risco existencial, não só para malloc, mas para TripleC inteiro.",
+        "Vírus exploram falhas de shilo para tentar roubar as Sementes de CShift. É um risco existencial, não só para malloc, mas para TripleC inteiro.",
         "### Distorções do PD-11",
         "O artefato que deu origem a tudo ainda pulsa no núcleo, inacessível. Suas interferências são imprevisíveis e sempre profundas.",
-        "### Cshift Local instável",
+        "### CShift Local instável",
         "Quando um salto dá errado, pode criar loops de deslocamento, duplicar vilas inteiras, ou fazer bunniets perderem a identidade geológica, esquecendo de qual camada pertencem.",
         "### Sempre quase caindo",
         "malloc vive sempre quase colapsando. Mas nunca cai, porque a cada ameaça, se reorganiza."
@@ -225,10 +235,10 @@
         "### Uncontrolled Hepa",
         "When the creator layer grows without warning, it swallows tunnels and erases entire paths. The Hepa's natural rhythm protects; its excess destroys.",
         "### Theft of Seeds",
-        "Viruses exploit shilo failures to try to steal the Cshift Seeds. It is an existential risk, not only for malloc, but for all of TripleC.",
+        "Viruses exploit shilo failures to try to steal the CShift Seeds. It is an existential risk, not only for malloc, but for all of TripleC.",
         "### PD-11 distortions",
         "The artifact that gave rise to everything still pulses in the core, inaccessible. Its interferences are unpredictable and always deep.",
-        "### Unstable Local Cshift",
+        "### Unstable Local CShift",
         "When a jump goes wrong, it can create displacement loops, duplicate entire villages, or make bunniets lose their geological identity, forgetting which layer they belong to.",
         "### Always nearly falling",
         "malloc lives forever on the verge of collapse. But it never falls, because with each threat, it reorganizes itself."
@@ -237,6 +247,8 @@
     "appId": "triplec-malloc-topic-perigos",
     "relations": [
       "triplec-malloc-topic-bunniets"
-    ]
+    ],
+    "visible": false,
+    "appVisible": true
   }
 ]

@@ -8,7 +8,7 @@
     "text": {
       "pt": [
         "### Rotina",
-        "Os bunniets de Sharp executam verificações energéticas, mantêm as torres de validação, supervisionam fluxos interplanetários e auxiliam nas operações do Cshift Universal.",
+        "Os bunniets de Sharp executam verificações energéticas, mantêm as torres de validação, supervisionam fluxos interplanetários e auxiliam nas operações do CShift Universal.",
         "### Valores",
         "Responsabilidade. Pureza de intenção. Clareza. Ordem. Consistência emocional. Cinco palavras que definem como cada bunniet de Sharp vive o dia a dia.",
         "### Lazer",
@@ -22,7 +22,7 @@
       ],
       "en": [
         "### Routine",
-        "The bunniets of Sharp run energetic checks, maintain the validation towers, oversee interplanetary flows and assist in the operations of the Universal Cshift.",
+        "The bunniets of Sharp run energetic checks, maintain the validation towers, oversee interplanetary flows and assist in the operations of the Universal CShift.",
         "### Values",
         "Responsibility. Purity of intention. Clarity. Order. Emotional consistency. Five words that define how every bunniet of Sharp lives day to day.",
         "### Leisure",
@@ -38,7 +38,9 @@
     "appId": "triplec-sharp-topic-cultura",
     "relations": [
       "triplec-sharp-topic-bunniets"
-    ]
+    ],
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -57,7 +59,7 @@
         "### O ciclo de vida",
         "Envelhecem lentamente. Seu ciclo de vida é o mais longo de TripleC, o que os torna guardiões de memórias que outros bunniets nem chegam a conhecer.",
         "### As capacidades",
-        "Leitura instantânea de padrões. Validação imediata de qualquer fluxo de energia. Estabilização de túneis. Controle do Cshift Universal, junto com malloc e Mesh.",
+        "Leitura instantânea de padrões. Validação imediata de qualquer fluxo de energia. Estabilização de túneis. Controle do CShift Universal, junto com malloc e Mesh.",
         "### A alimentação",
         "Bunniets de Sharp não comem. Absorvem luz prateada, metadado puro e shilo filtrado. A energia que sustenta o corpo é a mesma que valida os fluxos da região."
       ],
@@ -71,12 +73,14 @@
         "### The life cycle",
         "They age slowly. Their life cycle is the longest in TripleC, which makes them guardians of memories that other bunniets never even come to know.",
         "### The capabilities",
-        "Instant reading of patterns. Immediate validation of any energy flow. Stabilization of tunnels. Control of the Universal Cshift, together with malloc and Mesh.",
+        "Instant reading of patterns. Immediate validation of any energy flow. Stabilization of tunnels. Control of the Universal CShift, together with malloc and Mesh.",
         "### Nourishment",
         "The bunniets of Sharp do not eat. They absorb silver light, pure metadata and filtered shilo. The energy that sustains the body is the same that validates the region's flows."
       ]
     },
-    "appId": "triplec-sharp-topic-bunniets"
+    "appId": "triplec-sharp-topic-bunniets",
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -114,7 +118,9 @@
         "Underground areas where the most delicate operations happen. When something needs total privacy and maximum supervision, it is done there."
       ]
     },
-    "appId": "triplec-sharp-topic-geografia"
+    "appId": "triplec-sharp-topic-geografia",
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -155,7 +161,9 @@
     "appId": "triplec-sharp-topic-energia",
     "relations": [
       "triplec-sharp-topic-bunniets"
-    ]
+    ],
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -166,7 +174,7 @@
     "text": {
       "pt": [
         "### Conselho de Gerência Sistêmica",
-        "A autoridade máxima de Sharp. Aprova fluxos, valida rotas interplanetárias, supervisiona o Cshift e impede corrupção viral. É o último filtro antes de qualquer decisão.",
+        "A autoridade máxima de Sharp. Aprova fluxos, valida rotas interplanetárias, supervisiona o CShift e impede corrupção viral. É o último filtro antes de qualquer decisão.",
         "### Guardiões do Runic-Core",
         "Guerreiros e monges especializados no controle da energia. Protegem a fonte de validação que sustenta toda a região.",
         "### Ordem do Clarion",
@@ -180,7 +188,7 @@
       ],
       "en": [
         "### Council of Systemic Management",
-        "The supreme authority of Sharp. It approves flows, validates interplanetary routes, oversees the Cshift and prevents viral corruption. It is the last filter before any decision.",
+        "The supreme authority of Sharp. It approves flows, validates interplanetary routes, oversees the CShift and prevents viral corruption. It is the last filter before any decision.",
         "### Guardians of the Runic-Core",
         "Warriors and monks specialized in energy control. They protect the source of validation that sustains the whole region.",
         "### Order of the Clarion",
@@ -196,7 +204,9 @@
     "appId": "triplec-sharp-topic-governanca",
     "relations": [
       "triplec-sharp-topic-bunniets"
-    ]
+    ],
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -237,6 +247,8 @@
     "appId": "triplec-sharp-topic-perigos",
     "relations": [
       "triplec-sharp-topic-bunniets"
-    ]
+    ],
+    "visible": false,
+    "appVisible": true
   }
 ]

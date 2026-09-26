@@ -24,8 +24,8 @@
   {
     "image": "/imgs/kammara/triplec/sharp/_scenes/4Camara-de-Permissao_ativando_cshift.jpg",
     "label": {
-      "pt": "Câmara de Permissão ativando o Cshift",
-      "en": "Permission Chamber activating cshift"
+      "pt": "Câmara de Permissão ativando o CShift",
+      "en": "Permission Chamber activating CShift"
     },
     "appId": "triplec-sharp-scene-camara-de-permissao-ativando-o-cshift",
     "relations": [

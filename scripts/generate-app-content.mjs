@@ -20,7 +20,13 @@ const localized = (value, fallback = '') => value && !Array.isArray(value) && ty
 const paragraphs = value => Object.fromEntries(Object.entries(localized(value, [])).map(([lang, text]) =>
   [lang, Array.isArray(text) ? text : text ? [text] : []]));
 const normalize = text => String(text).normalize('NFD').replace(/\p{M}+/gu, '').toLowerCase().replaceAll('’', "'").trim().replace(/\s+/g, ' ');
-const visible = item => item.visible !== false && item.enabled !== false && item.hidden !== true;
+// `visible` controls the website. `appVisible` controls the app and, when
+// omitted, inherits the legacy website rule so existing content keeps the
+// same behavior. An explicit appVisible value always wins, which allows
+// site-only and app-only entries.
+const appVisible = item => item.appVisible ?? (
+  item.visible !== false && item.enabled !== false && item.hidden !== true
+);
 const encodePath = path => path.split('/').map(part => encodeURIComponent(part).replace(/[!'()*]/g, char => '%' + char.charCodeAt(0).toString(16).toUpperCase())).join('/');
 const remote = path => {
   if (!path?.startsWith('/')) return path || '';
@@ -59,7 +65,11 @@ export function buildContent(siteRoot, appDataRoot = resolve(siteRoot, 'src/data
   const statuses = new Map(progress.planets.map(planet => [planet.id, planet]));
   const published = worlds.filter(world => {
     const planet = statuses.get(world);
-    return planet && visible(planet) && Math.round(stages.reduce((sum, stage) => sum + (planet.progress[stage] || 0), 0) / stages.length) >= 100;
+    if (!planet) return false;
+    // An explicit app flag owns app publication, independently from the
+    // website readiness percentage. Without it, preserve the legacy rule.
+    if (typeof planet.appVisible === 'boolean') return planet.appVisible;
+    return appVisible(planet) && Math.round(stages.reduce((sum, stage) => sum + (planet.progress[stage] || 0), 0) / stages.length) >= 100;
   });
   const allMessages = Object.fromEntries(['pt', 'en'].map(lang => [lang, read(`src/i18n/messages/${lang}.json`)]));
   const messages = Object.fromEntries(['pt', 'en'].map(lang => [lang, allMessages[lang].kammara]));
@@ -72,7 +82,7 @@ export function buildContent(siteRoot, appDataRoot = resolve(siteRoot, 'src/data
   for (const world of contexts) {
     if (regions.includes(world) && !worldEntries.triplec) continue;
     const story = readWorld(world, 'story');
-    if (!visible(story)) continue;
+    if (!appVisible(story)) continue;
     const context = `kammara/${world.replace('triplec-', 'triplec/')}`;
     const planet = entry(world, regions.includes(world) ? 'region' : 'planet', world, story.name,
       Object.fromEntries(Object.entries(paragraphs(story.summary)).map(([lang, parts]) => [lang, parts.join('\n\n')])),
@@ -80,7 +90,7 @@ export function buildContent(siteRoot, appDataRoot = resolve(siteRoot, 'src/data
         attributes: story.tags || [], parentId: regions.includes(world) ? worldEntries.triplec || '' : universe.id, source: story,
       });
     worldEntries[world] = planet.id;
-    for (const character of readWorld(world, 'characters').filter(visible)) {
+    for (const character of readWorld(world, 'characters').filter(appVisible)) {
       const item = entry(world, 'character', character.match, character.name, character.bio, undefined, character.image, {
         source: character, attributes: [{ label: { pt: 'Espécie', en: 'Species' }, value: character.species || {}, glyph: '⊙•⊙' }, ...(character.attributes || [])],
         media: [media(character.image, character.name, '', true)],
@@ -93,18 +103,18 @@ export function buildContent(siteRoot, appDataRoot = resolve(siteRoot, 'src/data
       if (Object.values(localized(meaning)).some(Boolean)) item.sections.push({ title: localized(backTitle), body: paragraphs(meaning) });
     }
     for (const [index, sub] of readWorld(world, 'subsystems').entries()) {
-      if (visible(sub)) entry(world, 'topic', sub.title.pt || sub.title.en || String(index), sub.title, undefined, sub.text, sub.img, { source: sub });
+      if (appVisible(sub)) entry(world, 'topic', sub.title.pt || sub.title.en || String(index), sub.title, undefined, sub.text, sub.img, { source: sub });
     }
-    for (const scene of readWorld(world, 'scenes').filter(visible)) {
+    for (const scene of readWorld(world, 'scenes').filter(appVisible)) {
       entry(world, 'scene', scene.image, scene.label, undefined, undefined, scene.image, { source: scene, media: [media(scene.image, scene.label, scene.video)] });
     }
     worldDropIds[world] = [];
-    for (const drop of readWorld(world, 'drops').filter(visible)) {
+    for (const drop of readWorld(world, 'drops').filter(appVisible)) {
       const item = entry(world, 'video', drop.video, drop.label, undefined, undefined, drop.poster, { source: drop, media: [media(drop.poster, drop.label, drop.video)] });
       worldDropIds[world].push(item.id);
     }
   }
-  for (const clip of read('src/data/kammara_mosaic.json').filter(visible)) {
+  for (const clip of read('src/data/kammara_mosaic.json').filter(appVisible)) {
     const world = clip.world || 'kammara';
     if (!worldEntries[world]) continue;
     const id = clip.appId || stableId(world, 'video', clip.label?.pt || clip.label?.en || clip.video);
@@ -114,7 +124,7 @@ export function buildContent(siteRoot, appDataRoot = resolve(siteRoot, 'src/data
   }
   const books = read('src/data/kammara_books.json').books;
   const bookDetails = appData('book_details.json');
-  for (const [key, book] of Object.entries(books).filter(([, book]) => visible(book))) {
+  for (const [key, book] of Object.entries(books).filter(([, book]) => appVisible(book))) {
     let buy = (book.buyUrl || '').trim();
     if (buy && !/^https?:\/\//.test(buy)) buy = `https://${buy}`;
     const item = entry('kammara', 'book', key, book.title, book.description, book.body, book.cover,
@@ -126,7 +136,7 @@ export function buildContent(siteRoot, appDataRoot = resolve(siteRoot, 'src/data
     }
   }
   const events = read('src/data/kammara_events.json');
-  if (visible(events)) for (const event of events.events.filter(visible)) {
+  if (appVisible(events)) for (const event of events.events.filter(appVisible)) {
     if (!worldEntries[event.planet]) continue;
     entry(event.planet, 'event', event.id, event.title, event.description, undefined, '', {
       source: event, attributes: [
@@ -170,7 +180,7 @@ export function buildContent(siteRoot, appDataRoot = resolve(siteRoot, 'src/data
   authored.relations = Object.fromEntries(Object.entries(authored.relations).filter(([id]) => byId.has(id))
     .map(([id, targets]) => [id, [...new Set(targets)].filter(target => byId.has(target) && target !== id)]));
   bookDetails.books = Object.fromEntries(Object.entries(bookDetails.books).filter(([id]) => byId.has(id)));
-  const upcoming = progress.planets.filter(planet => visible(planet) && !worldEntries[planet.id]);
+  const upcoming = progress.planets.filter(planet => appVisible(planet) && !worldEntries[planet.id]);
   let characters = 0;
   const folder = resolve(siteRoot, 'src/data/characters/kammara');
   for (const file of readdirSync(folder).filter(name => name.endsWith('_characters.json'))) {
@@ -181,7 +191,7 @@ export function buildContent(siteRoot, appDataRoot = resolve(siteRoot, 'src/data
   const catalog = { schemaVersion: 1, includeHidden: false, source: 'guitta_monatega / Kammara', universeId: universe.id,
     worldEntries, entries, mosaicIds, worldDropIds, upcoming, progressCategories: progress.categories, websiteMessages: messages };
   const counts = { schemaVersion: 1, counts: { books: Object.fromEntries(['pt', 'en'].map(lang =>
-    [lang, Object.values(books).filter(book => visible(book) && !(book.buyUrl || '').trim() && (!book.onlyLocale || book.onlyLocale === lang)).length])),
+    [lang, Object.values(books).filter(book => appVisible(book) && !(book.buyUrl || '').trim() && (!book.onlyLocale || book.onlyLocale === lang)).length])),
     characters, planets: upcoming.filter(planet => stages.some(stage => (planet.progress[stage] || 0) < 100)).length } };
   const files = { 'catalog.json': catalog, 'relations.json': authored, 'book_details.json': bookDetails,
     'section_headers.json': appData('section_headers.json'), 'legal.json': legal, 'coming_soon.json': counts };

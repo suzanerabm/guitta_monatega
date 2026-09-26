@@ -24,8 +24,8 @@
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/KAEL_TORIN_ativando_Cshift_vista_aerea.jpg",
     "label": {
-      "pt": "KAEL TORIN ativando o Cshift: vista aérea",
-      "en": "KAEL TORIN activating Cshift aerial view"
+      "pt": "KAEL TORIN ativando o CShift: vista aérea",
+      "en": "KAEL TORIN activating CShift aerial view"
     },
     "appId": "triplec-mesh-scene-kael-torin-ativando-o-cshift-vista-aerea",
     "relations": [
@@ -37,8 +37,8 @@
   {
     "image": "/imgs/kammara/triplec/mesh/_scenes/KAEL_TORIN_ativando_Cshift.jpg",
     "label": {
-      "pt": "KAEL TORIN ativando o Cshift",
-      "en": "KAEL TORIN activating Cshift"
+      "pt": "KAEL TORIN ativando o CShift",
+      "en": "KAEL TORIN activating CShift"
     },
     "appId": "triplec-mesh-scene-kael-torin-ativando-o-cshift",
     "relations": [

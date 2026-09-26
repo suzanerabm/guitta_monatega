@@ -22,7 +22,9 @@
     "relations": [
       "digg-scene-o-primeiro-bloco"
     ],
-    "appId": "digg-topic-origem"
+    "appId": "digg-topic-origem",
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -55,7 +57,9 @@
     "appId": "digg-topic-cultura",
     "relations": [
       "digg-topic-diggers"
-    ]
+    ],
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -85,7 +89,9 @@
         "Kemita, above all the pure kind, which only TripleC can create. The Turen, the rare translation devices. And blocks bearing kemita, to shackle to the chain and make the planet grow."
       ]
     },
-    "appId": "digg-topic-diggers"
+    "appId": "digg-topic-diggers",
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -124,7 +130,9 @@
       "digg-character-silko-o-ratao",
       "digg-scene-o-primeiro-bloco"
     ],
-    "appId": "digg-topic-geografia"
+    "appId": "digg-topic-geografia",
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -154,7 +162,9 @@
       "digg-topic-diggers",
       "digg-scene-o-primeiro-bloco"
     ],
-    "appId": "digg-topic-transporte-movimento"
+    "appId": "digg-topic-transporte-movimento",
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -188,7 +198,9 @@
       "digg-topic-diggers",
       "eni4-character-node-0"
     ],
-    "appId": "digg-topic-relacoes-com-outros-planetas"
+    "appId": "digg-topic-relacoes-com-outros-planetas",
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -221,6 +233,8 @@
     "appId": "digg-topic-perigos",
     "relations": [
       "digg-topic-diggers"
-    ]
+    ],
+    "visible": false,
+    "appVisible": true
   }
 ]

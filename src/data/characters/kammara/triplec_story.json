@@ -24,8 +24,8 @@
         "Os habitantes são seres bio-lógicos: parte orgânica, parte mineral, parte instrução ativa. São a única espécie do universo que entende qualquer linguagem binária ou decimal sem tradutor, como se nascessem já sabendo escutar.",
         "### Como se organizam",
         "Cada região desenvolveu sua própria forma de funcionar: malloc no instinto e na profundidade, Mesh na engenharia e na forma, Sharp no controle e na gestão. As três são diferentes entre si, mas sempre unidas e juntas fazem o planeta funcionar.",
-        "### O Cshift: as passagens entre mundos",
-        "Graças ao Cshift, TripleC e seus aliados viajam entre regiões e mundos sem precisar de naves. Cada passagem nasce de uma Semente de Cshift: um pequeno objeto ativo de uso único, feito de kemita cristalizada e shilo.",
+        "### O CShift: as passagens entre mundos",
+        "Graças ao CShift, TripleC e seus aliados viajam entre regiões e mundos sem precisar de naves. Cada passagem nasce de uma Semente de CShift: um pequeno objeto ativo de uso único, feito de kemita cristalizada e shilo.",
         "### As riquezas naturais",
         "TripleC concentra recursos que nenhum outro planeta do Kammara possui:",
         "A kemita nasce nas cavernas da Hepa, a camada mais profunda de malloc. É o token primordial do universo: metade mineral, metade lógica, metade orgânica. Extrair kemita das cavernas da Hepa é o principal trabalho dos bunniets de malloc. A kemita é matéria-prima para a fabricação do CShift.",
@@ -50,11 +50,11 @@
         "The inhabitants are bio-logical beings: part organic, part mineral, part active instruction. They are the only species in the universe that understands any binary or decimal language without a translator, as if born already knowing how to listen.",
         "### How they organize",
         "Each region developed its own way of working: malloc through instinct and depth, Mesh through engineering and form, Sharp through control and management. The three are different from one another, yet always united, and together they keep the planet running.",
-        "### The Cshift: the passages between worlds",
-        "Thanks to the Cshift, TripleC and its allies travel between regions and worlds without needing ships. Each passage is born from a Cshift Seed: a small single-use active object, made of crystallized kemita and shilo.",
+        "### The CShift: the passages between worlds",
+        "Thanks to the CShift, TripleC and its allies travel between regions and worlds without needing ships. Each passage is born from a CShift Seed: a small single-use active object, made of crystallized kemita and shilo.",
         "### The natural riches",
         "TripleC holds resources that no other planet in Kammara possesses:",
-        "Kemita is born in the caves of the Hepa, the deepest layer of malloc. It is the primordial token of the universe: half mineral, half logic, half organic. Extracting kemita from the caves of the Hepa is the main work of malloc's bunniets. Kemita is the raw material for crafting the Cshift.",
+        "Kemita is born in the caves of the Hepa, the deepest layer of malloc. It is the primordial token of the universe: half mineral, half logic, half organic. Extracting kemita from the caves of the Hepa is the main work of malloc's bunniets. Kemita is the raw material for crafting the CShift.",
         "For the bunniets, shilo is compass, food and emotional stabilizer all at once. Without shilo, no one can find their way. Shilo crystals pulse in the caves of malloc and light the tunnels through which everything moves.",
         "### Three regions, one forest",
         "Over time, three regions took shape: malloc to the south, instinct and precision, tunnels and pulsing caves. Mesh to the north, form and architecture, suspended bridges and symmetry. Sharp to the east, control and management, megastructures where everything is verified. To the west, forest remained. And among them all, the original Niul Forest keeps breathing as it always has. It absorbs excesses, keeps chaos and order from colliding directly. A few beings from Z1 live there quietly, ancient and silent.",
@@ -104,8 +104,8 @@
         "en": "Transport"
       },
       "value": {
-        "pt": "Cshift",
-        "en": "Cshift"
+        "pt": "CShift",
+        "en": "CShift"
       }
     }
   ],

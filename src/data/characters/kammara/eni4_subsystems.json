@@ -34,7 +34,9 @@
     "relations": [
       "eni4-character-node-0"
     ],
-    "appId": "eni4-topic-origem"
+    "appId": "eni4-topic-origem",
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -75,7 +77,9 @@
     "relations": [
       "eni4-character-node-0"
     ],
-    "appId": "eni4-topic-cultura"
+    "appId": "eni4-topic-cultura",
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -114,7 +118,8 @@
       ]
     },
     "visible": false,
-    "appId": "eni4-topic-habitantes-hierarquia"
+    "appId": "eni4-topic-habitantes-hierarquia",
+    "appVisible": false
   },
   {
     "title": {
@@ -176,7 +181,9 @@
       "eni4-character-node-0",
       "eni4-character-bug"
     ],
-    "appId": "eni4-topic-geografia"
+    "appId": "eni4-topic-geografia",
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -214,13 +221,14 @@
         "ENI-4Δ is not strong. It is hungry. And the hunger never stops."
       ]
     },
-    "visible": true,
+    "visible": false,
     "relations": [
       "eni4-character-node-0",
       "eni4-character-troy",
       "eni4-character-virus"
     ],
-    "appId": "eni4-topic-energia-sobrevivencia"
+    "appId": "eni4-topic-energia-sobrevivencia",
+    "appVisible": true
   },
   {
     "title": {
@@ -239,7 +247,7 @@
         "### O disfarce",
         "Os vírus chegam com a Máscara Cute, aparência inofensiva. Ganham confiança antes de drenar.",
         "### As naves Troy-Δ",
-        "Sem elas, os vírus evaporam ao cruzar o Cshift. As Troy-Δ são transporte e proteção ao mesmo tempo, e sem elas, nenhum vírus sairia do próprio planeta.",
+        "Sem elas, os vírus evaporam ao cruzar o CShift. As Troy-Δ são transporte e proteção ao mesmo tempo, e sem elas, nenhum vírus sairia do próprio planeta.",
         "### Quando os sintomas aparecem",
         "Quando os sintomas aparecem, a invasão já terminou."
       ],
@@ -253,18 +261,19 @@
         "### The disguise",
         "Viruses arrive wearing the Cute Mask, harmless appearance. They earn trust before draining.",
         "### The Troy-Δ ships",
-        "Without them, viruses evaporate while crossing the Cshift. The Troy-Δ are transport and protection at the same time, and without them, no virus would leave its own planet.",
+        "Without them, viruses evaporate while crossing the CShift. The Troy-Δ are transport and protection at the same time, and without them, no virus would leave its own planet.",
         "### When symptoms appear",
         "By the time the symptoms appear, the invasion is already over."
       ]
     },
-    "visible": true,
+    "visible": false,
     "relations": [
       "eni4-character-troy",
       "eni4-character-virus",
       "eni4-character-vexon"
     ],
-    "appId": "eni4-topic-protocolos-de-ataque"
+    "appId": "eni4-topic-protocolos-de-ataque",
+    "appVisible": true
   },
   {
     "title": {
@@ -390,12 +399,13 @@
         "Karta-MAX : direct orders from Node-0, no one questions"
       ]
     },
-    "visible": true,
+    "visible": false,
     "relations": [
       "eni4-character-node-0",
       "eni4-character-virus",
       "eni4-character-vexon"
     ],
-    "appId": "eni4-topic-o-codigo-dos-virus-asm"
+    "appId": "eni4-topic-o-codigo-dos-virus-asm",
+    "appVisible": true
   }
 ]

@@ -25,6 +25,8 @@ export interface KammaraCardStat {
 
 export interface KammaraCardProps {
   name: string;
+  /** Whether to display the large name in the card header. */
+  showName?: boolean;
   category: string;
   /** Archetype / function in the Kammara cosmos (e.g. "Imunidade", "Diálogo-Código"). Shown as a secondary tag next to the category. */
   role?: string;
@@ -46,6 +48,7 @@ export interface KammaraCardProps {
 
 export function KammaraCard({
   name,
+  showName = true,
   category,
   role,
   subtitle,
@@ -221,27 +224,31 @@ export function KammaraCard({
               </Flex>
 
               {/* Name — hero scale, left aligned */}
-              <Heading
-                as="h2"
-                textStyle="heading"
-                fontSize="h2"
-                lineHeight={1}
-                color={color}
-                letterSpacing="heroTitle"
-                m={0}
-                css={{
-                  textShadow: `0 0 40px ${color}40, 0 4px 20px ${color}30`,
-                }}
-              >
-                {name}
-              </Heading>
+              {showName && (
+                <>
+                  <Heading
+                    as="h2"
+                    textStyle="heading"
+                    fontSize="h2"
+                    lineHeight={1}
+                    color={color}
+                    letterSpacing="heroTitle"
+                    m={0}
+                    css={{
+                      textShadow: `0 0 40px ${color}40, 0 4px 20px ${color}30`,
+                    }}
+                  >
+                    {name}
+                  </Heading>
 
-              {/* Gradient divider */}
-              <Box
-                height="1px"
-                width="80px"
-                css={{ background: `linear-gradient(90deg, ${color}, transparent)` }}
-              />
+                  {/* Gradient divider */}
+                  <Box
+                    height="1px"
+                    width="80px"
+                    css={{ background: `linear-gradient(90deg, ${color}, transparent)` }}
+                  />
+                </>
+              )}
 
               {/* Traits (subtitle) — inline separated list */}
               {subtitle && (
@@ -380,4 +387,3 @@ export function KammaraCard({
     </Box>
   );
 }
-

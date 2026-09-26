@@ -23,3 +23,29 @@ pede um ID mais específico.
 `app_id_aliases.json` registra a migração dos IDs antigos com hash para os IDs
 semânticos. O app deve aplicar esse mapa ao migrar dados ou referências locais
 já persistidas.
+
+## Visibilidade por canal
+
+Os itens dos JSONs de conteúdo aceitam dois controles independentes:
+
+- `visible`: controla a exibição no site; ausente equivale a `true`.
+- `appVisible`: controla a inclusão no conteúdo enviado ao app.
+
+Quando `appVisible` não está presente, ele herda o valor de `visible`. Isso
+preserva o comportamento dos registros antigos. Quando está presente, seu valor
+tem prioridade para o app:
+
+```json
+{
+  "visible": false,
+  "appVisible": true
+}
+```
+
+O exemplo acima fica oculto no site e disponível no app. Para conteúdo somente
+no site, use `visible: true` e `appVisible: false`.
+
+Para planetas, defina `appVisible` na entrada correspondente de
+`kammara_progress.json`. Um valor explícito é independente do progresso:
+`true` publica o planeta no app mesmo enquanto ele está em loading no site;
+`false` o retira do app mesmo quando o progresso chegou a 100%.

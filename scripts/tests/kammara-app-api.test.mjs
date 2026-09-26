@@ -61,6 +61,36 @@ test('export excludes hidden records, prunes links and uses website book values'
   } finally { rmSync(f.root, { recursive: true }); }
 });
 
+test('appVisible independently supports app-only and site-only content', () => {
+  const f = fixture();
+  try {
+    f.write(f.folder + 'characters.json', [
+      { match: 'app-only', name: { pt: 'APP-ONLY' }, visible: false, appVisible: true },
+      { match: 'site-only', name: { pt: 'SITE-ONLY' }, visible: true, appVisible: false },
+    ]);
+    const serialized = JSON.stringify(buildContent(f.root));
+    assert.ok(serialized.includes('APP-ONLY'));
+    assert.ok(!serialized.includes('SITE-ONLY'));
+  } finally { rmSync(f.root, { recursive: true }); }
+});
+
+test('planet appVisible overrides website progress for app publication', () => {
+  const f = fixture();
+  try {
+    f.write('src/data/kammara_progress.json', {
+      categories: [{ id: 'lore' }],
+      planets: [{ id: 'lunnp1', appVisible: true, progress: { lore: 10 } }],
+    });
+    assert.ok(buildContent(f.root).files['catalog.json'].worldEntries.lunnp1);
+
+    f.write('src/data/kammara_progress.json', {
+      categories: [{ id: 'lore' }],
+      planets: [{ id: 'lunnp1', appVisible: false, progress: { lore: 100 } }],
+    });
+    assert.equal(buildContent(f.root).files['catalog.json'].worldEntries.lunnp1, undefined);
+  } finally { rmSync(f.root, { recursive: true }); }
+});
+
 test('API never returns an unlimited catalog and rejects stale revisions', async () => {
   const f = fixture();
   try {

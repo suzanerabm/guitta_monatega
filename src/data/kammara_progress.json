@@ -1,4 +1,11 @@
 {
+  "_readme": [
+    "O progresso e o campo hidden controlam a publicação do planeta no site.",
+    "appVisible controla o app independentemente do site.",
+    "appVisible: true publica no app mesmo com progresso abaixo de 100.",
+    "appVisible: false oculta do app mesmo com progresso em 100.",
+    "Sem appVisible, o app segue a regra antiga de progresso do site."
+  ],
   "categories": [
     { "id": "lore", "label": { "pt": "Conceito Fundamento", "en": "Worldbuilding" } },
     { "id": "personagens", "label": { "pt": "Criação Personagens", "en": "Character Writing" } },
@@ -11,6 +18,7 @@
   "planets": [
     {
       "id": "lunnp1",
+      "appVisible": true,
       "name": { "pt": "LUNN'P1", "en": "LUNN'P1" },
       "progress": {
         "lore": 100,
@@ -24,6 +32,7 @@
     },
     {
       "id": "eni4",
+      "appVisible": true,
       "name": { "pt": "ENI-4Δ", "en": "ENI-4Δ" },
       "progress": {
         "lore": 100,
@@ -37,6 +46,7 @@
     },
     {
       "id": "triplec",
+      "appVisible": true,
       "name": { "pt": "TripleC", "en": "TripleC" },
       "progress": {
         "lore": 100,
@@ -50,6 +60,7 @@
     },
     {
       "id": "orfv",
+      "appVisible": true,
       "name": { "pt": "ORF-V", "en": "ORF-V" },
       "progress": {
         "lore": 100,
@@ -63,6 +74,7 @@
     },
     {
       "id": "z1",
+      "appVisible": true,
       "name": { "pt": "Z1", "en": "Z1" },
       "progress": {
         "lore": 100,
@@ -71,11 +83,12 @@
         "design-conceito": 100,
         "characters-design": 100,
         "cenas": 100,
-        "website": 100
+        "website": 90
       }
     },
     {
       "id": "gotto",
+      "appVisible": true,
       "name": { "pt": "Gotto", "en": "Gotto" },
       "progress": {
         "lore": 100,
@@ -84,11 +97,12 @@
         "design-conceito": 100,
         "characters-design": 100,
         "cenas": 100,
-        "website": 100
+        "website": 80
       }
     },
     {
       "id": "digg",
+      "appVisible": true,
       "name": { "pt": "Digg", "en": "Digg" },
       "progress": {
         "lore": 100,
@@ -97,11 +111,12 @@
         "design-conceito": 100,
         "characters-design": 100,
         "cenas": 100,
-        "website": 100
+        "website": 70
       }
     },
     {
       "id": "memphis",
+      "appVisible": false,
       "name": { "pt": "Memphis", "en": "Memphis" },
       "progress": {
         "lore": 100,

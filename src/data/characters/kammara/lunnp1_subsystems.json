@@ -1,5 +1,7 @@
 [
   {
+    "visible": false,
+    "appVisible": true,
     "title": {
       "pt": "Origem",
       "en": "Origin"
@@ -33,6 +35,8 @@
     ]
   },
   {
+    "visible": false,
+    "appVisible": true,
     "title": {
       "pt": "Cultura",
       "en": "Culture"
@@ -75,6 +79,8 @@
     ]
   },
   {
+    "visible": false,
+    "appVisible": true,
     "title": {
       "pt": "Flora & Fauna",
       "en": "Flora & Fauna"
@@ -117,6 +123,8 @@
     ]
   },
   {
+    "visible": false,
+    "appVisible": true,
     "title": {
       "pt": "Geografia",
       "en": "Geography"
@@ -190,7 +198,8 @@
         "A day lasts about 40 hours. A year, 400 lunar days. But the Shal'ún do not measure time. The moons can stretch their phases; the planet chooses what it needs to feel."
       ]
     },
-    "visible": true,
+    "visible": false,
+    "appVisible": true,
     "appId": "lunnp1-topic-ciclos-luas"
   },
   {
@@ -230,7 +239,8 @@
       ]
     },
     "visible": false,
-    "appId": "lunnp1-topic-a-agua-lun-rai"
+    "appId": "lunnp1-topic-a-agua-lun-rai",
+    "appVisible": false
   },
   {
     "title": {
@@ -269,7 +279,8 @@
       ]
     },
     "visible": false,
-    "appId": "lunnp1-topic-idioma"
+    "appId": "lunnp1-topic-idioma",
+    "appVisible": false
   },
   {
     "title": {
@@ -370,6 +381,7 @@
       ]
     },
     "visible": false,
-    "appId": "lunnp1-topic-os-glifos-kalun"
+    "appId": "lunnp1-topic-os-glifos-kalun",
+    "appVisible": false
   }
 ]

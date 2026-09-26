@@ -85,6 +85,8 @@ export interface WorldSubsystem {
    * então um subsistema invisível não vaza no HTML. Ausente = visível.
    */
   visible?: boolean;
+  /** Visibilidade no app; ausente herda `visible`. */
+  appVisible?: boolean;
 }
 
 export interface WorldScene {

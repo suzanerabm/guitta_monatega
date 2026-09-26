@@ -34,7 +34,9 @@
     "appId": "gotto-topic-origem",
     "relations": [
       "gotto-topic-habitantes-basiks"
-    ]
+    ],
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -75,7 +77,9 @@
     "appId": "gotto-topic-cultura",
     "relations": [
       "gotto-topic-habitantes-basiks"
-    ]
+    ],
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -105,7 +109,9 @@
         "They are small, round and unstoppable. The most beautiful lightness in the universe, and also the most vulnerable."
       ]
     },
-    "appId": "gotto-topic-habitantes-basiks"
+    "appId": "gotto-topic-habitantes-basiks",
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -152,7 +158,9 @@
       "gotto-scene-o-vale-da-escuta",
       "gotto-scene-o-vale-do-reflexo"
     ],
-    "appId": "gotto-topic-geografia"
+    "appId": "gotto-topic-geografia",
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -190,7 +198,9 @@
         "Gotto doesn't age. Gotto begins again. And each new beginning is identical to the last, and completely new."
       ]
     },
-    "appId": "gotto-topic-ciclos-tempo"
+    "appId": "gotto-topic-ciclos-tempo",
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -231,7 +241,9 @@
     "relations": [
       "eni4-character-node-0"
     ],
-    "appId": "gotto-topic-relacoes-com-outros-planetas"
+    "appId": "gotto-topic-relacoes-com-outros-planetas",
+    "visible": false,
+    "appVisible": true
   },
   {
     "title": {
@@ -272,6 +284,8 @@
     "appId": "gotto-topic-perigos",
     "relations": [
       "gotto-topic-ciclos-tempo"
-    ]
+    ],
+    "visible": false,
+    "appVisible": true
   }
 ]
