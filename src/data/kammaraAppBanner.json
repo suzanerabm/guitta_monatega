@@ -1,6 +1,6 @@
 {
-  "backgroundImage": "/imgs/home_app.png",
-  "iconImage": "/imgs/kammara_app_icon.png",
+  "backgroundImage": "https://kammara.s3.us-east-1.amazonaws.com/kammara/app/home_app-v1.png",
+  "iconImage": "https://kammara.s3.us-east-1.amazonaws.com/kammara/app/kammara_app_icon-v1.png",
   "eyebrow": {
     "pt": "Aplicativo Kammara",
     "en": "Kammara App"
