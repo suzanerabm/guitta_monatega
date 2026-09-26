@@ -75,7 +75,22 @@ export function KammaraAppBanner({
         }}
       >
         {backgroundSrc && (
-          <Image src={backgroundSrc} alt="" fill sizes="(max-width: 767px) 100vw, 94vw" style={{ objectFit: 'cover', display: 'block' }} />
+          <Box
+            position="absolute"
+            top={{ base: '-18%', lg: 0 }}
+            right={0}
+            bottom={0}
+            left={0}
+            aria-hidden="true"
+          >
+            <Image
+              src={backgroundSrc}
+              alt=""
+              fill
+              sizes="(max-width: 767px) 100vw, 94vw"
+              style={{ objectFit: 'cover', display: 'block' }}
+            />
+          </Box>
         )}
 
         <Box position="absolute" inset={0} aria-hidden="true" css={{ background: `linear-gradient(90deg, ${darkColor}e8 0%, ${darkColor}c2 28%, ${darkColor}80 48%, ${darkColor}35 58%, ${darkColor}12 70%, ${darkColor}05 100%)` }} />
