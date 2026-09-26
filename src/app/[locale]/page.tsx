@@ -37,7 +37,7 @@ export default async function HomePage({
 
   const prefix = `/${locale}`;
   const books = getCatalogBooks(loc).filter((book) =>
-    book.editions.some((edition) => edition.purchaseChannel !== 'comingSoon'),
+    book.editions.some((edition) => edition.price),
   );
   const booksJsonLd = {
     '@context': 'https://schema.org',

@@ -43,12 +43,10 @@ interface BookPanelProps {
 
 /**
  * BookPanel — a single-book showcase panel: dark card, cover art, title, and
- * a pill button. The button is "buy" (external link, when `book.buy` is
- * set), "coming soon" (same pill, disabled, when the book is visible but
- * has no buy link yet), or "read" (opens the in-site page reader, only when
- * there's nothing to buy AND no pending buy link — i.e. `book.soon` is
- * false and `book.buy` is absent). Shared by Bichittos and Kammara so the
- * look (and future changes to it) stays in one place.
+ * a pill button. Catalog books use their internal details page as the sole
+ * action. Legacy entries without a details page keep the external, coming
+ * soon, or reader fallback. Shared by Bichittos and Kammara so the look (and
+ * future changes to it) stays in one place.
  */
 export function BookPanel({
   book,
@@ -116,7 +114,7 @@ export function BookPanel({
           {book.label}
         </Text>
       )}
-      {book.details && (
+      {book.details ? (
         <chakra.a
           href={book.details.url}
           aria-label={`${book.details.label}: ${book.label}`}
@@ -138,8 +136,7 @@ export function BookPanel({
         >
           {book.details.label}
         </chakra.a>
-      )}
-      {book.buy ? (
+      ) : book.buy ? (
         // Livro à venda (só capa + link): botão leva pra loja.
         <chakra.a
           href={book.buy.url}

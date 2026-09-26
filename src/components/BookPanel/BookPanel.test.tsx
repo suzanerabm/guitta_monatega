@@ -55,7 +55,7 @@ describe('BookPanel', () => {
     expect(link).toHaveAttribute('href', 'https://example.com');
   });
 
-  it('renders a link to the institutional book page without removing the buy link', () => {
+  it('uses the institutional book page as the sole action when available', () => {
     renderWithChakra(
       <BookPanel
         book={{
@@ -70,7 +70,8 @@ describe('BookPanel', () => {
       'href',
       '/pt/books/book-two',
     );
-    expect(screen.getByRole('link', { name: /Compre na Amazon/ })).toBeInTheDocument();
+    expect(screen.queryByRole('link', { name: /Compre na Amazon/ })).not.toBeInTheDocument();
+    expect(screen.getAllByRole('link')).toHaveLength(1);
   });
 
   it('renders a read button and calls onRead when there is no buy link', () => {
