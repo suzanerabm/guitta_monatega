@@ -91,6 +91,42 @@ test('planet appVisible overrides website progress for app publication', () => {
   } finally { rmSync(f.root, { recursive: true }); }
 });
 
+test('appComingSoon controls the planet dashboard count independently', () => {
+  const f = fixture();
+  try {
+    f.write('src/data/kammara_progress.json', {
+      categories: [{ id: 'lore' }],
+      planets: [
+        { id: 'lunnp1', appVisible: true, appComingSoon: false, progress: { lore: 10 } },
+        { id: 'memphis', appVisible: false, appComingSoon: true, progress: { lore: 100 } },
+      ],
+    });
+    const snapshot = buildContent(f.root);
+    assert.equal(snapshot.files['coming_soon.json'].counts.planets, 1);
+    assert.equal(snapshot.files['catalog.json'].worldEntries.memphis, undefined);
+    assert.deepEqual(Object.keys(snapshot.files['coming_soon.json']).sort(), ['counts', 'schemaVersion']);
+  } finally { rmSync(f.root, { recursive: true }); }
+});
+
+test('relations to hidden content are pruned and restored automatically', () => {
+  const f = fixture();
+  try {
+    const sourceId = stableId('lunnp1', 'character', 'Character 0');
+    const targetId = stableId('lunnp1', 'character', 'Character 1');
+    const characters = f.characters.map(character => ({ ...character }));
+    characters[0].relations = [targetId];
+    characters[1].appVisible = false;
+    f.write(f.folder + 'characters.json', characters);
+    const hidden = buildContent(f.root);
+    assert.deepEqual(hidden.files['catalog.json'].entries.find(entry => entry.id === sourceId).relations, []);
+
+    characters[1].appVisible = true;
+    f.write(f.folder + 'characters.json', characters);
+    const restored = buildContent(f.root);
+    assert.deepEqual(restored.files['catalog.json'].entries.find(entry => entry.id === sourceId).relations, [targetId]);
+  } finally { rmSync(f.root, { recursive: true }); }
+});
+
 test('API never returns an unlimited catalog and rejects stale revisions', async () => {
   const f = fixture();
   try {

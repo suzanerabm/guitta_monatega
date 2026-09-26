@@ -2,8 +2,10 @@
   "_readme": [
     "O progresso e o campo hidden controlam a publicação do planeta no site.",
     "appVisible controla o app independentemente do site.",
+    "appComingSoon controla se o planeta entra na contagem do dashboard Em breve.",
     "appVisible: true publica no app mesmo com progresso abaixo de 100.",
     "appVisible: false oculta do app mesmo com progresso em 100.",
+    "Use appVisible: false e appComingSoon: true para ocultar um planeta e anunciá-lo no dashboard.",
     "Sem appVisible, o app segue a regra antiga de progresso do site."
   ],
   "categories": [
@@ -88,7 +90,7 @@
     },
     {
       "id": "gotto",
-      "appVisible": true,
+      "appVisible": false,
       "name": { "pt": "Gotto", "en": "Gotto" },
       "progress": {
         "lore": 100,
@@ -102,7 +104,7 @@
     },
     {
       "id": "digg",
-      "appVisible": true,
+      "appVisible": false,
       "name": { "pt": "Digg", "en": "Digg" },
       "progress": {
         "lore": 100,
@@ -117,6 +119,7 @@
     {
       "id": "memphis",
       "appVisible": false,
+      "appComingSoon": true,
       "name": { "pt": "Memphis", "en": "Memphis" },
       "progress": {
         "lore": 100,

@@ -27,6 +27,7 @@ const normalize = text => String(text).normalize('NFD').replace(/\p{M}+/gu, '').
 const appVisible = item => item.appVisible ?? (
   item.visible !== false && item.enabled !== false && item.hidden !== true
 );
+const appComingSoon = item => item.appComingSoon ?? false;
 const encodePath = path => path.split('/').map(part => encodeURIComponent(part).replace(/[!'()*]/g, char => '%' + char.charCodeAt(0).toString(16).toUpperCase())).join('/');
 const remote = path => {
   if (!path?.startsWith('/')) return path || '';
@@ -79,6 +80,43 @@ export function buildContent(siteRoot, appDataRoot = resolve(siteRoot, 'src/data
   worldEntries.kammara = universe.id;
   const contexts = [...published, ...(published.includes('triplec') ? regions : [])];
   const readWorld = (world, kind) => read(`src/data/characters/kammara/${world}_${kind}.json`);
+  const readWorldIfExists = (world, kind, fallback) => {
+    const path = `src/data/characters/kammara/${world}_${kind}.json`;
+    return existsSync(resolve(siteRoot, path)) ? read(path) : fallback;
+  };
+
+  // Relações autorais permanecem nos JSONs quando um conteúdo é ocultado.
+  // Este índice distingue um alvo temporariamente oculto de um ID digitado
+  // incorretamente, permitindo podar o primeiro sem mascarar o segundo.
+  const knownIds = new Set([universe.id]);
+  for (const world of [...worlds, ...regions]) {
+    const story = readWorldIfExists(world, 'story', null);
+    if (story) knownIds.add(story.appId || stableId(world, regions.includes(world) ? 'region' : 'planet', story.name?.pt || story.name?.en || world));
+    for (const character of readWorldIfExists(world, 'characters', [])) {
+      knownIds.add(character.appId || stableId(world, 'character', character.name?.pt || character.name?.en || character.match));
+    }
+    for (const [index, sub] of readWorldIfExists(world, 'subsystems', []).entries()) {
+      knownIds.add(sub.appId || stableId(world, 'topic', sub.title?.pt || sub.title?.en || String(index)));
+    }
+    for (const scene of readWorldIfExists(world, 'scenes', [])) {
+      knownIds.add(scene.appId || stableId(world, 'scene', scene.label?.pt || scene.label?.en || scene.image));
+    }
+    for (const drop of readWorldIfExists(world, 'drops', [])) {
+      knownIds.add(drop.appId || stableId(world, 'video', drop.label?.pt || drop.label?.en || drop.video));
+    }
+  }
+  for (const clip of read('src/data/kammara_mosaic.json')) {
+    const world = clip.world || 'kammara';
+    knownIds.add(clip.appId || stableId(world, 'video', clip.label?.pt || clip.label?.en || clip.video));
+  }
+  const allBooks = read('src/data/kammara_books.json').books;
+  for (const [key, book] of Object.entries(allBooks)) {
+    knownIds.add(book.appId || stableId('kammara', 'book', book.title?.pt || book.title?.en || key));
+  }
+  const allEvents = read('src/data/kammara_events.json');
+  for (const event of allEvents.events) {
+    knownIds.add(event.appId || stableId(event.planet, 'event', event.title?.pt || event.title?.en || event.id));
+  }
   for (const world of contexts) {
     if (regions.includes(world) && !worldEntries.triplec) continue;
     const story = readWorld(world, 'story');
@@ -122,7 +160,7 @@ export function buildContent(siteRoot, appDataRoot = resolve(siteRoot, 'src/data
       { source: clip, media: [media(clip.poster, clip.label, clip.video)] });
     mosaicIds.push(id);
   }
-  const books = read('src/data/kammara_books.json').books;
+  const books = allBooks;
   const bookDetails = appData('book_details.json');
   for (const [key, book] of Object.entries(books).filter(([, book]) => appVisible(book))) {
     let buy = (book.buyUrl || '').trim();
@@ -135,7 +173,7 @@ export function buildContent(siteRoot, appDataRoot = resolve(siteRoot, 'src/data
       if (Object.hasOwn(book, 'buyUrl')) delete bookDetails.books[item.id].externalUrl;
     }
   }
-  const events = read('src/data/kammara_events.json');
+  const events = allEvents;
   if (appVisible(events)) for (const event of events.events.filter(appVisible)) {
     if (!worldEntries[event.planet]) continue;
     entry(event.planet, 'event', event.id, event.title, event.description, undefined, '', {
@@ -164,9 +202,9 @@ export function buildContent(siteRoot, appDataRoot = resolve(siteRoot, 'src/data
     if (duplicateLinks.length) throw Error(`Duplicate relation in ${item.id}: ${duplicateLinks[0]}`);
     for (const id of authoredLinks) {
       if (id === item.id) throw Error(`Self relation: ${item.id}`);
-      if (!byId.has(id)) throw Error(`Unknown relation from ${item.id}: ${id}`);
+      if (!byId.has(id) && !knownIds.has(id)) throw Error(`Unknown relation from ${item.id}: ${id}`);
     }
-    const links = [...authoredLinks];
+    const links = authoredLinks.filter(id => byId.has(id));
     for (const attribute of item.attributes) {
       const matches = new Set(Object.values(localized(attribute.value)).flatMap(value => [...(names.get(`${item.worldId}:${normalize(value)}`) || [])]));
       if (matches.size === 1 && !matches.has(item.id)) links.push(...matches);
@@ -180,7 +218,7 @@ export function buildContent(siteRoot, appDataRoot = resolve(siteRoot, 'src/data
   authored.relations = Object.fromEntries(Object.entries(authored.relations).filter(([id]) => byId.has(id))
     .map(([id, targets]) => [id, [...new Set(targets)].filter(target => byId.has(target) && target !== id)]));
   bookDetails.books = Object.fromEntries(Object.entries(bookDetails.books).filter(([id]) => byId.has(id)));
-  const upcoming = progress.planets.filter(planet => appVisible(planet) && !worldEntries[planet.id]);
+  const upcoming = progress.planets.filter(planet => appComingSoon(planet));
   let characters = 0;
   const folder = resolve(siteRoot, 'src/data/characters/kammara');
   for (const file of readdirSync(folder).filter(name => name.endsWith('_characters.json'))) {
@@ -192,7 +230,7 @@ export function buildContent(siteRoot, appDataRoot = resolve(siteRoot, 'src/data
     worldEntries, entries, mosaicIds, worldDropIds, upcoming, progressCategories: progress.categories, websiteMessages: messages };
   const counts = { schemaVersion: 1, counts: { books: Object.fromEntries(['pt', 'en'].map(lang =>
     [lang, Object.values(books).filter(book => appVisible(book) && !(book.buyUrl || '').trim() && (!book.onlyLocale || book.onlyLocale === lang)).length])),
-    characters, planets: upcoming.filter(planet => stages.some(stage => (planet.progress[stage] || 0) < 100)).length } };
+    characters, planets: upcoming.length } };
   const files = { 'catalog.json': catalog, 'relations.json': authored, 'book_details.json': bookDetails,
     'section_headers.json': appData('section_headers.json'), 'legal.json': legal, 'coming_soon.json': counts };
   return { schemaVersion: 1, revision: hash(JSON.stringify(files)), files };

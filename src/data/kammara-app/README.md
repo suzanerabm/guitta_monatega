@@ -49,3 +49,17 @@ Para planetas, defina `appVisible` na entrada correspondente de
 `kammara_progress.json`. Um valor explícito é independente do progresso:
 `true` publica o planeta no app mesmo enquanto ele está em loading no site;
 `false` o retira do app mesmo quando o progresso chegou a 100%.
+
+`appComingSoon` controla separadamente a contagem de planetas no dashboard
+“Em breve”. Para ocultar um planeta do catálogo e anunciá-lo no dashboard, use:
+
+```json
+{
+  "appVisible": false,
+  "appComingSoon": true
+}
+```
+
+As relações continuam registradas nos arquivos autorais. O gerador remove do
+JSON final as conexões cujo destino está oculto e as inclui novamente quando o
+destino volta a ficar visível.
