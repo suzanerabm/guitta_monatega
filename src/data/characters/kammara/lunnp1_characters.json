@@ -270,6 +270,7 @@
       "pt": "Rin'Boro",
       "en": "Rin'Boro"
     },
+    "visible": false,
     "species": {
       "pt": "Shal'ún",
       "en": "Shal'ún"
@@ -312,7 +313,6 @@
         }
       }
     ],
-    "visible": false,
     "appId": "lunnp1-character-rin-boro"
   },
   {
@@ -321,6 +321,7 @@
       "pt": "Tiru",
       "en": "Tiru"
     },
+    "visible": false,
     "species": {
       "pt": "Lún'Kai",
       "en": "Lún'Kai"
@@ -376,7 +377,6 @@
         "height": 65
       }
     },
-    "visible": false,
     "appId": "lunnp1-character-tiru"
   },
   {
@@ -385,6 +385,7 @@
       "pt": "Müra",
       "en": "Müra"
     },
+    "visible": false,
     "species": {
       "pt": "Shal'ún",
       "en": "Shal'ún"
@@ -427,7 +428,6 @@
         }
       }
     ],
-    "visible": false,
     "appId": "lunnp1-character-mura"
   },
   {
@@ -436,6 +436,7 @@
       "pt": "Sereno",
       "en": "Sereno"
     },
+    "visible": false,
     "species": {
       "pt": "Lún'Kai",
       "en": "Lún'Kai"
@@ -491,7 +492,6 @@
         "height": 65
       }
     },
-    "visible": false,
     "appId": "lunnp1-character-sereno"
   },
   {
@@ -500,6 +500,7 @@
       "pt": "Shir'Nai",
       "en": "Shir'Nai"
     },
+    "visible": false,
     "species": {
       "pt": "Shal'ún",
       "en": "Shal'ún"
@@ -542,7 +543,6 @@
         }
       }
     ],
-    "visible": false,
     "appId": "lunnp1-character-shir-nai"
   },
   {
@@ -551,6 +551,7 @@
       "pt": "Veludo",
       "en": "Veludo"
     },
+    "visible": false,
     "species": {
       "pt": "Lún'Kai",
       "en": "Lún'Kai"
@@ -606,7 +607,6 @@
       }
     },
     "image": "/imgs/kammara/lunnp1/veludo.png",
-    "visible": false,
     "appId": "lunnp1-character-veludo"
   },
   {
@@ -615,6 +615,7 @@
       "pt": "Kaitor",
       "en": "Kaitor"
     },
+    "visible": false,
     "species": {
       "pt": "Shal'ún",
       "en": "Shal'ún"
@@ -657,7 +658,6 @@
         }
       }
     ],
-    "visible": false,
     "appId": "lunnp1-character-kaitor"
   },
   {
@@ -666,6 +666,7 @@
       "pt": "Lumino",
       "en": "Lumino"
     },
+    "visible": false,
     "species": {
       "pt": "Lún'Kai",
       "en": "Lún'Kai"
@@ -721,7 +722,6 @@
       }
     },
     "image": "/imgs/kammara/lunnp1/Lumino.png",
-    "visible": false,
     "appId": "lunnp1-character-lumino"
   },
   {
@@ -730,6 +730,7 @@
       "pt": "Kaelun",
       "en": "Kaelun"
     },
+    "visible": false,
     "species": {
       "pt": "Shal'ún",
       "en": "Shal'ún"
@@ -772,7 +773,6 @@
         }
       }
     ],
-    "visible": false,
     "appId": "lunnp1-character-kaelun"
   },
   {
@@ -781,6 +781,7 @@
       "pt": "Veloz",
       "en": "Veloz"
     },
+    "visible": false,
     "species": {
       "pt": "Lún'Kai",
       "en": "Lún'Kai"
@@ -836,7 +837,6 @@
         "height": 65
       }
     },
-    "visible": false,
     "appId": "lunnp1-character-veloz"
   },
   {
@@ -845,6 +845,7 @@
       "pt": "Télun",
       "en": "Télun"
     },
+    "visible": false,
     "species": {
       "pt": "Shal'ún",
       "en": "Shal'ún"
@@ -898,7 +899,6 @@
         }
       }
     ],
-    "visible": false,
     "appId": "lunnp1-character-telun"
   },
   {
@@ -907,6 +907,7 @@
       "pt": "Katé",
       "en": "Katé"
     },
+    "visible": false,
     "species": {
       "pt": "Lún'Kai",
       "en": "Lún'Kai"
@@ -962,7 +963,6 @@
         "height": 65
       }
     },
-    "visible": false,
     "appId": "lunnp1-character-kate"
   },
   {
@@ -971,6 +971,7 @@
       "pt": "Serai",
       "en": "Serai"
     },
+    "visible": false,
     "species": {
       "pt": "Shal'ún",
       "en": "Shal'ún"
@@ -1013,7 +1014,6 @@
         }
       }
     ],
-    "visible": false,
     "appId": "lunnp1-character-serai"
   },
   {
@@ -1022,6 +1022,7 @@
       "pt": "Blue",
       "en": "Blue"
     },
+    "visible": false,
     "species": {
       "pt": "Lún'Kai",
       "en": "Lún'Kai"
@@ -1077,7 +1078,6 @@
       }
     },
     "image": "/imgs/kammara/lunnp1/blue.png",
-    "visible": false,
     "appId": "lunnp1-character-blue"
   },
   {
@@ -1086,6 +1086,7 @@
       "pt": "Narúmin",
       "en": "Narúmin"
     },
+    "visible": false,
     "species": {
       "pt": "Shal'ún",
       "en": "Shal'ún"
@@ -1128,7 +1129,6 @@
         }
       }
     ],
-    "visible": false,
     "appId": "lunnp1-character-narumin"
   },
   {
@@ -1137,6 +1137,7 @@
       "pt": "Lei",
       "en": "Lei"
     },
+    "visible": false,
     "species": {
       "pt": "Lún'Kai",
       "en": "Lún'Kai"
@@ -1192,7 +1193,6 @@
         "height": 65
       }
     },
-    "visible": false,
     "appId": "lunnp1-character-lei"
   },
   {
@@ -1288,6 +1288,7 @@
       "pt": "Krii",
       "en": "Krii"
     },
+    "visible": false,
     "species": {
       "pt": "Tzir'Kai",
       "en": "Tzir'Kai"
@@ -1356,7 +1357,6 @@
         "height": 25
       }
     },
-    "visible": false,
     "appId": "lunnp1-character-krii"
   },
   {
@@ -1365,6 +1365,7 @@
       "pt": "Lumira",
       "en": "Lumira"
     },
+    "visible": false,
     "species": {
       "pt": "Tzir'Kai",
       "en": "Tzir'Kai"
@@ -1433,7 +1434,6 @@
         "height": 25
       }
     },
-    "visible": false,
     "appId": "lunnp1-character-lumira"
   },
   {
@@ -1442,6 +1442,7 @@
       "pt": "Veluma",
       "en": "Veluma"
     },
+    "visible": false,
     "species": {
       "pt": "Túri'Kan",
       "en": "Túri'Kan"
@@ -1484,7 +1485,6 @@
         }
       }
     ],
-    "visible": false,
     "appId": "lunnp1-character-veluma",
     "relations": [
       "lunnp1-scene-veluma-na-regiao-oeste",
@@ -1497,6 +1497,7 @@
       "pt": "Koryn",
       "en": "Koryn"
     },
+    "visible": false,
     "species": {
       "pt": "Túri'Kan",
       "en": "Túri'Kan"
@@ -1539,7 +1540,6 @@
         }
       }
     ],
-    "visible": false,
     "appId": "lunnp1-character-koryn"
   },
   {
@@ -1548,6 +1548,7 @@
       "pt": "Naia",
       "en": "Naia"
     },
+    "visible": false,
     "species": {
       "pt": "Túri'Kan",
       "en": "Túri'Kan"
@@ -1589,7 +1590,6 @@
         }
       }
     ],
-    "visible": false,
     "appId": "lunnp1-character-naia"
   }
 ]

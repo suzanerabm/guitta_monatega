@@ -4,6 +4,8 @@
       "pt": "Origem",
       "en": "Origin"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/digg/_scenes/primeira_rocha.jpg",
     "text": {
       "pt": [
@@ -22,15 +24,15 @@
     "relations": [
       "digg-scene-o-primeiro-bloco"
     ],
-    "appId": "digg-topic-origem",
-    "visible": false,
-    "appVisible": true
+    "appId": "digg-topic-origem"
   },
   {
     "title": {
       "pt": "Cultura",
       "en": "Culture"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/digg/_subsystems/cultura.jpg",
     "text": {
       "pt": [
@@ -57,15 +59,15 @@
     "appId": "digg-topic-cultura",
     "relations": [
       "digg-topic-diggers"
-    ],
-    "visible": false,
-    "appVisible": true
+    ]
   },
   {
     "title": {
       "pt": "Diggers",
       "en": "Diggers"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/digg/_subsystems/habitantes.jpg",
     "text": {
       "pt": [
@@ -89,15 +91,15 @@
         "Kemita, above all the pure kind, which only TripleC can create. The Turen, the rare translation devices. And blocks bearing kemita, to shackle to the chain and make the planet grow."
       ]
     },
-    "appId": "digg-topic-diggers",
-    "visible": false,
-    "appVisible": true
+    "appId": "digg-topic-diggers"
   },
   {
     "title": {
       "pt": "Geografia",
       "en": "Geography"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/digg/_subsystems/geografia.jpg",
     "text": {
       "pt": [
@@ -130,15 +132,15 @@
       "digg-character-silko-o-ratao",
       "digg-scene-o-primeiro-bloco"
     ],
-    "appId": "digg-topic-geografia",
-    "visible": false,
-    "appVisible": true
+    "appId": "digg-topic-geografia"
   },
   {
     "title": {
       "pt": "Transporte & Movimento",
       "en": "Transport & Movement"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/digg/_scenes/primeira_rocha.jpg",
     "text": {
       "pt": [
@@ -162,15 +164,15 @@
       "digg-topic-diggers",
       "digg-scene-o-primeiro-bloco"
     ],
-    "appId": "digg-topic-transporte-movimento",
-    "visible": false,
-    "appVisible": true
+    "appId": "digg-topic-transporte-movimento"
   },
   {
     "title": {
       "pt": "Relações com Outros Planetas",
       "en": "Relations with Other Planets"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/digg/_subsystems/eniac_roubo.jpg",
     "text": {
       "pt": [
@@ -198,15 +200,15 @@
       "digg-topic-diggers",
       "eni4-character-node-0"
     ],
-    "appId": "digg-topic-relacoes-com-outros-planetas",
-    "visible": false,
-    "appVisible": true
+    "appId": "digg-topic-relacoes-com-outros-planetas"
   },
   {
     "title": {
       "pt": "Perigos",
       "en": "Dangers"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/digg/_subsystems/perigo.jpg",
     "text": {
       "pt": [
@@ -233,8 +235,6 @@
     "appId": "digg-topic-perigos",
     "relations": [
       "digg-topic-diggers"
-    ],
-    "visible": false,
-    "appVisible": true
+    ]
   }
 ]

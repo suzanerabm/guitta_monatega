@@ -4,6 +4,8 @@
       "pt": "Cultura",
       "en": "Culture"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/orfv/_subsystems/0-gigapixel-standard-v2-6x.jpg",
     "text": {
       "pt": [
@@ -40,15 +42,15 @@
       "orfv-character-maelik",
       "orfv-scene-festival",
       "orfv-video-lup-nul-fest"
-    ],
-    "visible": false,
-    "appVisible": true
+    ]
   },
   {
     "title": {
       "pt": "Habitantes: ElePHPants",
       "en": "Inhabitants: ElePHPants"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/orfv/_subsystems/1-gigapixel-standard-v2-6x.jpg",
     "text": {
       "pt": [
@@ -84,15 +86,15 @@
     "relations": [
       "orfv-character-orvian",
       "orfv-character-maelik"
-    ],
-    "visible": false,
-    "appVisible": true
+    ]
   },
   {
     "title": {
       "pt": "Geografia",
       "en": "Geography"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/orfv/_subsystems/2-gigapixel-standard-v2-6x.jpg",
     "text": {
       "pt": [
@@ -129,15 +131,15 @@
       "orfv-character-orvian",
       "orfv-character-nuvin",
       "orfv-character-zupi"
-    ],
-    "visible": false,
-    "appVisible": true
+    ]
   },
   {
     "title": {
       "pt": "Comunicação",
       "en": "Communication"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/orfv/_subsystems/comunicacao.jpg",
     "text": {
       "pt": [
@@ -173,15 +175,15 @@
         "On ORF-V, when someone speaks, what matters isn't what they say; it's that they are there."
       ]
     },
-    "visible": false,
-    "appId": "orfv-topic-comunicacao",
-    "appVisible": true
+    "appId": "orfv-topic-comunicacao"
   },
   {
     "title": {
       "pt": "Conflitos",
       "en": "Conflicts"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/orfv/_subsystems/4-gigapixel-standard-v2-6x.jpg",
     "text": {
       "pt": [
@@ -209,15 +211,15 @@
         "The boundaries between the inner and the outer are never precise. And fear, once it settles in, postpones decisions and keeps gaps open."
       ]
     },
-    "visible": false,
-    "appId": "orfv-topic-conflitos",
-    "appVisible": true
+    "appId": "orfv-topic-conflitos"
   },
   {
     "title": {
       "pt": "Perigos",
       "en": "Dangers"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/orfv/_subsystems/5-gigapixel-standard-v2-6x.jpg",
     "text": {
       "pt": [
@@ -253,8 +255,6 @@
     "relations": [
       "orfv-character-orvian",
       "orfv-video-troys-atacando"
-    ],
-    "visible": false,
-    "appVisible": true
+    ]
   }
 ]

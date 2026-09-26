@@ -1,11 +1,11 @@
 [
   {
-    "visible": false,
-    "appVisible": true,
     "title": {
       "pt": "Origem",
       "en": "Origin"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/lunnp1/_scenes/regiao_norte.jpg",
     "text": {
       "pt": [
@@ -35,12 +35,12 @@
     ]
   },
   {
-    "visible": false,
-    "appVisible": true,
     "title": {
       "pt": "Cultura",
       "en": "Culture"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/lunnp1/_subsystems/0.jpg",
     "text": {
       "pt": [
@@ -79,12 +79,12 @@
     ]
   },
   {
-    "visible": false,
-    "appVisible": true,
     "title": {
       "pt": "Flora & Fauna",
       "en": "Flora & Fauna"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/lunnp1/_subsystems/1.jpg",
     "text": {
       "pt": [
@@ -123,12 +123,12 @@
     ]
   },
   {
-    "visible": false,
-    "appVisible": true,
     "title": {
       "pt": "Geografia",
       "en": "Geography"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/lunnp1/_subsystems/cidade_flutuante.jpg",
     "text": {
       "pt": [
@@ -167,6 +167,8 @@
       "pt": "Ciclos & Luas",
       "en": "Cycles & Moons"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/lunnp1/_subsystems/3.jpg",
     "text": {
       "pt": [
@@ -198,8 +200,6 @@
         "A day lasts about 40 hours. A year, 400 lunar days. But the Shal'ún do not measure time. The moons can stretch their phases; the planet chooses what it needs to feel."
       ]
     },
-    "visible": false,
-    "appVisible": true,
     "appId": "lunnp1-topic-ciclos-luas"
   },
   {
@@ -207,6 +207,8 @@
       "pt": "A Água: Lún'Rai",
       "en": "The Water: Lún'Rai"
     },
+    "visible": false,
+    "appVisible": false,
     "img": "/imgs/kammara/lunnp1/_subsystems/4.jpg",
     "text": {
       "pt": [
@@ -238,15 +240,15 @@
         "The Lún'Rai dissolves everything: unconscious armor, automatic defenses, untested certainties. Everything. Except the will not to be dissolved."
       ]
     },
-    "visible": false,
-    "appId": "lunnp1-topic-a-agua-lun-rai",
-    "appVisible": false
+    "appId": "lunnp1-topic-a-agua-lun-rai"
   },
   {
     "title": {
       "pt": "Idioma",
       "en": "Language"
     },
+    "visible": false,
+    "appVisible": false,
     "img": "/imgs/kammara/lunnp1/_subsystems/5.jpg",
     "text": {
       "pt": [
@@ -278,15 +280,15 @@
         "In LUNN'P1, no one 'passes information'. Whoever speaks emits light. Whoever listens changes color."
       ]
     },
-    "visible": false,
-    "appId": "lunnp1-topic-idioma",
-    "appVisible": false
+    "appId": "lunnp1-topic-idioma"
   },
   {
     "title": {
       "pt": "Os Glifos Kalún",
       "en": "The Kalún Glyphs"
     },
+    "visible": false,
+    "appVisible": false,
     "img": "/imgs/kammara/lunnp1/_subsystems/6.jpg",
     "text": {
       "pt": [
@@ -380,8 +382,6 @@
         "⊹ ⊶ ⊶ ⊶ emergency, evacuation"
       ]
     },
-    "visible": false,
-    "appId": "lunnp1-topic-os-glifos-kalun",
-    "appVisible": false
+    "appId": "lunnp1-topic-os-glifos-kalun"
   }
 ]

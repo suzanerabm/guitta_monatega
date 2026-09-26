@@ -1,12 +1,12 @@
 [
   {
     "match": "Volpita",
-    "visible": true,
-    "appVisible": true,
     "name": {
       "pt": "Volpita",
       "en": "Volpita"
     },
+    "visible": true,
+    "appVisible": true,
     "species": {
       "pt": "Volpitoide",
       "en": "Volpitoid"
@@ -67,12 +67,12 @@
   },
   {
     "match": "Ypito",
-    "visible": false,
-    "appVisible": true,
     "name": {
       "pt": "Ypito",
       "en": "Ypito"
     },
+    "visible": false,
+    "appVisible": true,
     "species": {
       "pt": "Ypitoide",
       "en": "Ypitoid"
@@ -130,12 +130,12 @@
   },
   {
     "match": "Seal Beans",
-    "visible": false,
-    "appVisible": true,
     "name": {
       "pt": "Seal Beans",
       "en": "Seal Beans"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "Sealbeanoide",
       "en": "Sealbeanoid"
@@ -196,12 +196,12 @@
   },
   {
     "match": "Treezitoide",
-    "visible": false,
-    "appVisible": true,
     "name": {
       "pt": "Treezi",
       "en": "Treezi"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "Treezitoide",
       "en": "Treezitoid"
@@ -263,12 +263,12 @@
   },
   {
     "match": "Plumoide",
-    "visible": false,
-    "appVisible": true,
     "name": {
       "pt": "Pluma",
       "en": "Pluma"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "Plumoide",
       "en": "Plumoid"
@@ -329,12 +329,12 @@
   },
   {
     "match": "Niuloide",
-    "visible": true,
-    "appVisible": true,
     "name": {
       "pt": "Nilo",
       "en": "Nilo"
     },
+    "visible": true,
+    "appVisible": true,
     "species": {
       "pt": "Niuloide",
       "en": "Niuloid"
@@ -395,12 +395,12 @@
   },
   {
     "match": "Espirola",
-    "visible": false,
-    "appVisible": true,
     "name": {
       "pt": "Espirola",
       "en": "Espirola"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "Espirola",
       "en": "Espirola"
@@ -462,12 +462,12 @@
   },
   {
     "match": "Soaroide",
-    "visible": true,
-    "appVisible": true,
     "name": {
       "pt": "Soar",
       "en": "Soar"
     },
+    "visible": true,
+    "appVisible": true,
     "species": {
       "pt": "Soaroide",
       "en": "Soaroid"
@@ -528,12 +528,12 @@
   },
   {
     "match": "Camuoide",
-    "visible": false,
-    "appVisible": true,
     "name": {
       "pt": "Camu",
       "en": "Camu"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "Camuoide",
       "en": "Camuoid"
@@ -594,12 +594,12 @@
   },
   {
     "match": "Zarkol-9",
-    "visible": false,
-    "appVisible": true,
     "name": {
       "pt": "Zarkol-9",
       "en": "Zarkol-9"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "Transistor",
       "en": "Transistor"
@@ -660,12 +660,12 @@
   },
   {
     "match": "Omi",
-    "visible": false,
-    "appVisible": true,
     "name": {
       "pt": "Omi",
       "en": "Omi"
     },
+    "visible": false,
+    "appVisible": true,
     "species": {
       "pt": "Transistor",
       "en": "Transistor"
@@ -737,12 +737,12 @@
   },
   {
     "match": "Vexa",
-    "visible": false,
-    "appVisible": true,
     "name": {
       "pt": "Vexa",
       "en": "Vexa"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "Transistor",
       "en": "Transistor"
@@ -814,12 +814,12 @@
   },
   {
     "match": "Lai",
-    "visible": false,
-    "appVisible": true,
     "name": {
       "pt": "Lai",
       "en": "Lai"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "Transistor",
       "en": "Transistor"

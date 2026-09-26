@@ -4,6 +4,8 @@
       "pt": "Cultura",
       "en": "Culture"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/triplec/malloc/_subsystems/0.jpg",
     "text": {
       "pt": [
@@ -38,15 +40,15 @@
     "appId": "triplec-malloc-topic-cultura",
     "relations": [
       "triplec-malloc-topic-bunniets"
-    ],
-    "visible": false,
-    "appVisible": true
+    ]
   },
   {
     "title": {
       "pt": "Bunniets",
       "en": "Bunniets"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/triplec/malloc/_subsystems/1.jpg",
     "text": {
       "pt": [
@@ -78,15 +80,15 @@
         "A rare elite among the Runa, one in every five thousand. Bone structure of high mineral density, shilo crystals in the forearms, exceptional emotional stability. They are the guardians of the CShift Seeds."
       ]
     },
-    "appId": "triplec-malloc-topic-bunniets",
-    "visible": false,
-    "appVisible": true
+    "appId": "triplec-malloc-topic-bunniets"
   },
   {
     "title": {
       "pt": "Geografia",
       "en": "Geography"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/triplec/malloc/_subsystems/2.jpg",
     "text": {
       "pt": [
@@ -118,15 +120,15 @@
         "In malloc, rituals are also geography. They happen in specific places, because each layer responds in its own way to what is done there."
       ]
     },
-    "appId": "triplec-malloc-topic-geografia",
-    "visible": false,
-    "appVisible": true
+    "appId": "triplec-malloc-topic-geografia"
   },
   {
     "title": {
       "pt": "Energia",
       "en": "Energy"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/triplec/malloc/_subsystems/3.jpg",
     "text": {
       "pt": [
@@ -161,15 +163,15 @@
     "appId": "triplec-malloc-topic-energia",
     "relations": [
       "triplec-malloc-topic-bunniets"
-    ],
-    "visible": false,
-    "appVisible": true
+    ]
   },
   {
     "title": {
       "pt": "Governança",
       "en": "Governance"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/triplec/malloc/_subsystems/4.jpg",
     "text": {
       "pt": [
@@ -204,15 +206,15 @@
     "appId": "triplec-malloc-topic-governanca",
     "relations": [
       "triplec-malloc-topic-bunniets"
-    ],
-    "visible": false,
-    "appVisible": true
+    ]
   },
   {
     "title": {
       "pt": "Perigos",
       "en": "Dangers"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/triplec/malloc/_subsystems/5.jpg",
     "text": {
       "pt": [
@@ -247,8 +249,6 @@
     "appId": "triplec-malloc-topic-perigos",
     "relations": [
       "triplec-malloc-topic-bunniets"
-    ],
-    "visible": false,
-    "appVisible": true
+    ]
   }
 ]

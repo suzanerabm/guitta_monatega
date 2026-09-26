@@ -4,6 +4,8 @@
       "pt": "Origem",
       "en": "Origin"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/z1/_subsystems/origem.jpg",
     "text": {
       "pt": [
@@ -50,15 +52,15 @@
     "relations": [
       "eni4-character-node-0"
     ],
-    "appId": "z1-topic-origem",
-    "visible": false,
-    "appVisible": true
+    "appId": "z1-topic-origem"
   },
   {
     "title": {
       "pt": "Cultura",
       "en": "Culture"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/z1/_subsystems/cultura1.jpg",
     "text": {
       "pt": [
@@ -93,15 +95,15 @@
     "relations": [
       "z1-topic-linguagem"
     ],
-    "appId": "z1-topic-cultura",
-    "visible": false,
-    "appVisible": true
+    "appId": "z1-topic-cultura"
   },
   {
     "title": {
       "pt": "Habitantes & Castas",
       "en": "Inhabitants & Castes"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/z1/_subsystems/habitantes2.jpg",
     "text": {
       "pt": [
@@ -133,15 +135,15 @@
         "Function is identity. Each being is born for a function and remains in it. There is no mobility, dissatisfaction or comparison."
       ]
     },
-    "appId": "z1-topic-habitantes-castas",
-    "visible": false,
-    "appVisible": true
+    "appId": "z1-topic-habitantes-castas"
   },
   {
     "title": {
       "pt": "Geografia",
       "en": "Geography"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/z1/_subsystems/geografia.jpg",
     "text": {
       "pt": [
@@ -178,15 +180,15 @@
       "z1-scene-salas-ancestrais",
       "z1-scene-salao-perfurado"
     ],
-    "appId": "z1-topic-geografia",
-    "visible": false,
-    "appVisible": true
+    "appId": "z1-topic-geografia"
   },
   {
     "title": {
       "pt": "Linguagem",
       "en": "Language"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/z1/_subsystems/linguagem.jpg",
     "text": {
       "pt": [
@@ -221,15 +223,15 @@
     "relations": [
       "eni4-topic-o-codigo-dos-virus-asm"
     ],
-    "appId": "z1-topic-linguagem",
-    "visible": false,
-    "appVisible": true
+    "appId": "z1-topic-linguagem"
   },
   {
     "title": {
       "pt": "Perigos",
       "en": "Dangers"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/z1/_subsystems/perigos.jpg",
     "text": {
       "pt": [
@@ -265,8 +267,6 @@
       "z1-video-tempestades-de-curto-circuito",
       "eni4-topic-o-codigo-dos-virus-asm"
     ],
-    "appId": "z1-topic-perigos",
-    "visible": false,
-    "appVisible": true
+    "appId": "z1-topic-perigos"
   }
 ]

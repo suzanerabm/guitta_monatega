@@ -54,12 +54,12 @@
   },
   {
     "match": "DORAN_KES",
-    "visible": false,
-    "appVisible": false,
     "name": {
       "pt": "DORAN KES",
       "en": "DORAN KES"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "Bunniet",
       "en": "Bunniet"
@@ -109,12 +109,12 @@
   },
   {
     "match": "ELLEN VAR",
-    "visible": false,
-    "appVisible": false,
     "name": {
       "pt": "ELLEN VAR",
       "en": "ELLEN VAR"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "Bunniet",
       "en": "Bunniet"
@@ -164,12 +164,12 @@
   },
   {
     "match": "Caracol-Espiral",
-    "visible": false,
-    "appVisible": false,
     "name": {
       "pt": "Fibo",
       "en": "Fibo"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "Fiboide",
       "en": "Fiboid"
@@ -219,12 +219,12 @@
   },
   {
     "match": "nibu",
-    "visible": false,
-    "appVisible": false,
     "name": {
       "pt": "Nibu",
       "en": "Nibu"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "Cumulus",
       "en": "Cumulus"
@@ -274,12 +274,12 @@
   },
   {
     "match": "Cobra-Caracol",
-    "visible": false,
-    "appVisible": true,
     "name": {
       "pt": "Minati",
       "en": "Minati"
     },
+    "visible": false,
+    "appVisible": true,
     "species": {
       "pt": "Sinnati",
       "en": "Sinnati"
@@ -329,12 +329,12 @@
   },
   {
     "match": "Poly",
-    "visible": false,
-    "appVisible": true,
     "name": {
       "pt": "Poly",
       "en": "Poly"
     },
+    "visible": false,
+    "appVisible": true,
     "species": {
       "pt": "Polymoide",
       "en": "Polymoid"

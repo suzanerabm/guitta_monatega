@@ -4,6 +4,8 @@
       "pt": "Origem",
       "en": "Origin"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/eni4/_subsystems/0.jpg",
     "text": {
       "pt": [
@@ -34,15 +36,15 @@
     "relations": [
       "eni4-character-node-0"
     ],
-    "appId": "eni4-topic-origem",
-    "visible": false,
-    "appVisible": true
+    "appId": "eni4-topic-origem"
   },
   {
     "title": {
       "pt": "Cultura",
       "en": "Culture"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/eni4/_subsystems/1-gigapixel-standard-v2-6x.jpg",
     "text": {
       "pt": [
@@ -77,15 +79,15 @@
     "relations": [
       "eni4-character-node-0"
     ],
-    "appId": "eni4-topic-cultura",
-    "visible": false,
-    "appVisible": true
+    "appId": "eni4-topic-cultura"
   },
   {
     "title": {
       "pt": "Habitantes & Hierarquia",
       "en": "Inhabitants & Hierarchy"
     },
+    "visible": false,
+    "appVisible": false,
     "img": "/imgs/kammara/eni4/_subsystems/2-gigapixel-standard-v2-6x.jpg",
     "text": {
       "pt": [
@@ -117,15 +119,15 @@
         "Viruses have two visual states: the real one (a dark silica sphere, red eyes, eight legs) and the Cute Mask: smooth white shell, small dark eyes, harmless appearance. The swap between them is instantaneous."
       ]
     },
-    "visible": false,
-    "appId": "eni4-topic-habitantes-hierarquia",
-    "appVisible": false
+    "appId": "eni4-topic-habitantes-hierarquia"
   },
   {
     "title": {
       "pt": "Geografia",
       "en": "Geography"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/eni4/_subsystems/3-gigapixel-standard-v2-6x.jpg",
     "text": {
       "pt": [
@@ -181,15 +183,15 @@
       "eni4-character-node-0",
       "eni4-character-bug"
     ],
-    "appId": "eni4-topic-geografia",
-    "visible": false,
-    "appVisible": true
+    "appId": "eni4-topic-geografia"
   },
   {
     "title": {
       "pt": "Energia & Sobrevivência",
       "en": "Energy & Survival"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/eni4/_subsystems/4-gigapixel-standard-v2-6x.jpg",
     "text": {
       "pt": [
@@ -221,20 +223,20 @@
         "ENI-4Δ is not strong. It is hungry. And the hunger never stops."
       ]
     },
-    "visible": false,
     "relations": [
       "eni4-character-node-0",
       "eni4-character-troy",
       "eni4-character-virus"
     ],
-    "appId": "eni4-topic-energia-sobrevivencia",
-    "appVisible": true
+    "appId": "eni4-topic-energia-sobrevivencia"
   },
   {
     "title": {
       "pt": "Protocolos de Ataque",
       "en": "Attack Protocols"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/eni4/_subsystems/5-gigapixel-standard-v2-6x.jpg",
     "text": {
       "pt": [
@@ -266,20 +268,20 @@
         "By the time the symptoms appear, the invasion is already over."
       ]
     },
-    "visible": false,
     "relations": [
       "eni4-character-troy",
       "eni4-character-virus",
       "eni4-character-vexon"
     ],
-    "appId": "eni4-topic-protocolos-de-ataque",
-    "appVisible": true
+    "appId": "eni4-topic-protocolos-de-ataque"
   },
   {
     "title": {
       "pt": "O Código dos Vírus: ASM-Δ",
       "en": "The Code of the Viruses: ASM-Δ"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/eni4/_subsystems/6-gigapixel-standard-v2-6x.jpg",
     "text": {
       "pt": [
@@ -399,13 +401,11 @@
         "Karta-MAX : direct orders from Node-0, no one questions"
       ]
     },
-    "visible": false,
     "relations": [
       "eni4-character-node-0",
       "eni4-character-virus",
       "eni4-character-vexon"
     ],
-    "appId": "eni4-topic-o-codigo-dos-virus-asm",
-    "appVisible": true
+    "appId": "eni4-topic-o-codigo-dos-virus-asm"
   }
 ]

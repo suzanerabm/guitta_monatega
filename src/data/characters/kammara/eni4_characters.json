@@ -55,6 +55,7 @@
       "pt": "VEXON",
       "en": "VEXON"
     },
+    "visible": false,
     "species": {
       "pt": "Vírus APEX-Δ",
       "en": "Virus APEX-Δ"
@@ -111,7 +112,6 @@
     "relations": [
       "eni4-character-node-0"
     ],
-    "visible": false,
     "appId": "eni4-character-vexon"
   },
   {
@@ -170,6 +170,7 @@
       "pt": "SCORAK",
       "en": "SCORAK"
     },
+    "visible": false,
     "species": {
       "pt": "Vírus PRIME-Δ",
       "en": "Vírus PRIME-Δ"
@@ -212,7 +213,6 @@
         }
       }
     ],
-    "visible": false,
     "appId": "eni4-character-scorak"
   },
   {
@@ -221,6 +221,7 @@
       "pt": "THERMAX",
       "en": "THERMAX"
     },
+    "visible": false,
     "species": {
       "pt": "Vírus PRIME-Δ",
       "en": "Virus PRIME-Δ"
@@ -263,7 +264,6 @@
         }
       }
     ],
-    "visible": false,
     "appId": "eni4-character-thermax"
   },
   {
@@ -272,6 +272,7 @@
       "pt": "VALKON",
       "en": "VALKON"
     },
+    "visible": false,
     "species": {
       "pt": "Vírus PRIME-Δ",
       "en": "Virus PRIME-Δ"
@@ -314,7 +315,6 @@
         }
       }
     ],
-    "visible": false,
     "appId": "eni4-character-valkon"
   },
   {
@@ -323,6 +323,7 @@
       "pt": "REPLION",
       "en": "REPLION"
     },
+    "visible": false,
     "species": {
       "pt": "Vírus PRIME-Δ",
       "en": "Virus PRIME-Δ"
@@ -365,7 +366,6 @@
         }
       }
     ],
-    "visible": false,
     "appId": "eni4-character-replion"
   },
   {
@@ -374,6 +374,7 @@
       "pt": "MASKON",
       "en": "MASKON"
     },
+    "visible": false,
     "species": {
       "pt": "Vírus PRIME-Δ",
       "en": "Virus PRIME-Δ"
@@ -416,7 +417,6 @@
         }
       }
     ],
-    "visible": false,
     "appId": "eni4-character-maskon"
   },
   {
@@ -425,6 +425,7 @@
       "pt": "KARTEX",
       "en": "KARTEX"
     },
+    "visible": false,
     "species": {
       "pt": "Vírus PRIME-Δ",
       "en": "Virus PRIME-Δ"
@@ -467,7 +468,6 @@
         }
       }
     ],
-    "visible": false,
     "appId": "eni4-character-kartex"
   },
   {
@@ -526,6 +526,7 @@
       "pt": "ARACNE-Δ I",
       "en": "ARACNE-Δ I"
     },
+    "visible": false,
     "species": {
       "pt": "Válvula-Aranha",
       "en": "Spider-Valve"
@@ -568,7 +569,6 @@
         }
       }
     ],
-    "visible": false,
     "appId": "eni4-character-aracne-i"
   },
   {
@@ -577,6 +577,7 @@
       "pt": "ARACNE-Δ II",
       "en": "ARACNE-Δ II"
     },
+    "visible": false,
     "species": {
       "pt": "Válvula-Aranha",
       "en": "Spider-Valve"
@@ -619,7 +620,6 @@
         }
       }
     ],
-    "visible": false,
     "appId": "eni4-character-aracne-ii"
   },
   {
@@ -628,6 +628,7 @@
       "pt": "ARACNE-Δ III",
       "en": "ARACNE-Δ III"
     },
+    "visible": false,
     "species": {
       "pt": "Válvula-Aranha",
       "en": "Spider-Valve"
@@ -670,7 +671,6 @@
         }
       }
     ],
-    "visible": false,
     "appId": "eni4-character-aracne-iii"
   },
   {
@@ -679,6 +679,7 @@
       "pt": "Worm",
       "en": "Worm"
     },
+    "visible": false,
     "species": {
       "pt": "RECURSE-Δ",
       "en": "RECURSE-Δ"
@@ -721,7 +722,6 @@
         }
       }
     ],
-    "visible": false,
     "appId": "eni4-character-worm"
   },
   {
@@ -730,6 +730,7 @@
       "pt": "Bug",
       "en": "Bug"
     },
+    "visible": true,
     "species": {
       "pt": "ERRATA-Δ",
       "en": "ERRATA-Δ"
@@ -772,7 +773,6 @@
         }
       }
     ],
-    "visible": true,
     "appId": "eni4-character-bug"
   },
   {
@@ -781,6 +781,7 @@
       "pt": "Sil'Rats",
       "en": "Sil'Rats"
     },
+    "visible": false,
     "species": {
       "pt": "Ratos de Sílica",
       "en": "Silica Rats"
@@ -823,7 +824,6 @@
         }
       }
     ],
-    "visible": false,
     "appId": "eni4-character-sil-rats"
   },
   {
@@ -832,6 +832,7 @@
       "pt": "Robô Escravo",
       "en": "Slave Robot"
     },
+    "visible": false,
     "species": {
       "pt": "AUTOMATA-Δ",
       "en": "AUTOMATA-Δ"
@@ -885,7 +886,6 @@
         }
       }
     ],
-    "visible": false,
     "appId": "eni4-character-robo-escravo"
   }
 ]

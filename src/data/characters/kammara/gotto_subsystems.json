@@ -4,6 +4,8 @@
       "pt": "Origem",
       "en": "Origin"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/gotto/_scenes/1_Vale_Escuta.jpg",
     "text": {
       "pt": [
@@ -34,15 +36,15 @@
     "appId": "gotto-topic-origem",
     "relations": [
       "gotto-topic-habitantes-basiks"
-    ],
-    "visible": false,
-    "appVisible": true
+    ]
   },
   {
     "title": {
       "pt": "Cultura",
       "en": "Culture"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/gotto/_subsystems/cultura_vila.jpg",
     "text": {
       "pt": [
@@ -77,15 +79,15 @@
     "appId": "gotto-topic-cultura",
     "relations": [
       "gotto-topic-habitantes-basiks"
-    ],
-    "visible": false,
-    "appVisible": true
+    ]
   },
   {
     "title": {
       "pt": "Habitantes: Basiks",
       "en": "Inhabitants: Basiks"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/gotto/_subsystems/vila_basics.jpg",
     "text": {
       "pt": [
@@ -109,15 +111,15 @@
         "They are small, round and unstoppable. The most beautiful lightness in the universe, and also the most vulnerable."
       ]
     },
-    "appId": "gotto-topic-habitantes-basiks",
-    "visible": false,
-    "appVisible": true
+    "appId": "gotto-topic-habitantes-basiks"
   },
   {
     "title": {
       "pt": "Geografia",
       "en": "Geography"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/gotto/_subsystems/geografia1.jpg",
     "text": {
       "pt": [
@@ -158,15 +160,15 @@
       "gotto-scene-o-vale-da-escuta",
       "gotto-scene-o-vale-do-reflexo"
     ],
-    "appId": "gotto-topic-geografia",
-    "visible": false,
-    "appVisible": true
+    "appId": "gotto-topic-geografia"
   },
   {
     "title": {
       "pt": "Ciclos & Tempo",
       "en": "Cycles & Time"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/gotto/_subsystems/ciclos.jpg",
     "text": {
       "pt": [
@@ -198,15 +200,15 @@
         "Gotto doesn't age. Gotto begins again. And each new beginning is identical to the last, and completely new."
       ]
     },
-    "appId": "gotto-topic-ciclos-tempo",
-    "visible": false,
-    "appVisible": true
+    "appId": "gotto-topic-ciclos-tempo"
   },
   {
     "title": {
       "pt": "Relações com Outros Planetas",
       "en": "Relations with Other Planets"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/gotto/_subsystems/erurin_visits_gotto.png",
     "text": {
       "pt": [
@@ -241,15 +243,15 @@
     "relations": [
       "eni4-character-node-0"
     ],
-    "appId": "gotto-topic-relacoes-com-outros-planetas",
-    "visible": false,
-    "appVisible": true
+    "appId": "gotto-topic-relacoes-com-outros-planetas"
   },
   {
     "title": {
       "pt": "Perigos",
       "en": "Dangers"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/gotto/_subsystems/perigo.jpg",
     "text": {
       "pt": [
@@ -284,8 +286,6 @@
     "appId": "gotto-topic-perigos",
     "relations": [
       "gotto-topic-ciclos-tempo"
-    ],
-    "visible": false,
-    "appVisible": true
+    ]
   }
 ]

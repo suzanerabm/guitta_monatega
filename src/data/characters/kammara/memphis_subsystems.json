@@ -4,6 +4,8 @@
       "pt": "Origem",
       "en": "Origin"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "",
     "text": {
       "pt": [
@@ -23,15 +25,15 @@
         "They threw together a core in a hurry to give the world life, and from that crude gesture everything was born: the Axel, and the defect it never lost."
       ]
     },
-    "appId": "memphis-topic-origem",
-    "visible": false,
-    "appVisible": true
+    "appId": "memphis-topic-origem"
   },
   {
     "title": {
       "pt": "Cultura",
       "en": "Culture"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "",
     "text": {
       "pt": [
@@ -55,15 +57,15 @@
         "Memphis fills itself with everything (sound, people, stimulus, accumulation) so as not to hear its own silence. The excess is no accident: it is the planet's way of not facing the void it was born from."
       ]
     },
-    "appId": "memphis-topic-cultura",
-    "visible": false,
-    "appVisible": true
+    "appId": "memphis-topic-cultura"
   },
   {
     "title": {
       "pt": "Imigrantes",
       "en": "Immigrants"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "",
     "text": {
       "pt": [
@@ -87,15 +89,15 @@
         "The penguins live in the container-districts: sealed, isolated, portable glass bubbles. They are mercenaries, guns for hire, who live apart from the rest of the city."
       ]
     },
-    "appId": "memphis-topic-imigrantes",
-    "visible": false,
-    "appVisible": true
+    "appId": "memphis-topic-imigrantes"
   },
   {
     "title": {
       "pt": "Geografia",
       "en": "Geography"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "",
     "text": {
       "pt": [
@@ -123,15 +125,15 @@
         "Sealed, isolated, portable glass bubbles where groups apart live, like the penguin mercenaries. Closed corners inside the open city."
       ]
     },
-    "appId": "memphis-topic-geografia",
-    "visible": false,
-    "appVisible": true
+    "appId": "memphis-topic-geografia"
   },
   {
     "title": {
       "pt": "Perigos",
       "en": "Dangers"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/memphis/_subsystems/perigos.jpg",
     "text": {
       "pt": [
@@ -155,8 +157,6 @@
         "Memphis was never stable. It was thrown together in a hurry, \"quick and dirty,\" and grew crude on top. At any moment the world can freeze, and no one knows when the Axel will choke."
       ]
     },
-    "appId": "memphis-topic-perigos",
-    "visible": false,
-    "appVisible": true
+    "appId": "memphis-topic-perigos"
   }
 ]

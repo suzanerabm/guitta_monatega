@@ -76,6 +76,8 @@
   },
   {
     "match": "Aruun",
+    "visible": false,
+    "appVisible": false,
     "name": {
       "pt": "Aruun",
       "en": "Aruun"
@@ -151,6 +153,8 @@
   },
   {
     "match": "Kaal",
+    "visible": false,
+    "appVisible": false,
     "name": {
       "pt": "Kaal",
       "en": "Kaal"

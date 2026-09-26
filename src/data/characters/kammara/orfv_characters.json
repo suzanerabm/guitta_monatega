@@ -1,12 +1,12 @@
 [
   {
     "match": "Orvian",
-    "visible": true,
-    "appVisible": true,
     "name": {
       "pt": "Orvian",
       "en": "Orvian"
     },
+    "visible": true,
+    "appVisible": true,
     "species": {
       "pt": "ElePHPant",
       "en": "ElePHPant"
@@ -68,12 +68,12 @@
   },
   {
     "match": "Maelik",
-    "visible": true,
-    "appVisible": true,
     "name": {
       "pt": "Maelik",
       "en": "Maelik"
     },
+    "visible": true,
+    "appVisible": true,
     "species": {
       "pt": "ElePHPant",
       "en": "ElePHPant"
@@ -124,6 +124,8 @@
       "pt": "Nylpha",
       "en": "Nylpha"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "ElePHPant",
       "en": "ElePHPant"
@@ -166,8 +168,6 @@
         }
       }
     ],
-    "visible": false,
-    "appVisible": false,
     "appId": "orfv-character-nylpha"
   },
   {
@@ -176,6 +176,8 @@
       "pt": "LetiK",
       "en": "LetiK"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "ElePHPant",
       "en": "ElePHPant"
@@ -218,8 +220,6 @@
         }
       }
     ],
-    "visible": false,
-    "appVisible": false,
     "appId": "orfv-character-letik"
   },
   {
@@ -228,6 +228,8 @@
       "pt": "Kallott",
       "en": "Kallott"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "ElePHPant",
       "en": "ElePHPant"
@@ -270,8 +272,6 @@
         }
       }
     ],
-    "visible": false,
-    "appVisible": false,
     "appId": "orfv-character-kallott"
   },
   {
@@ -280,6 +280,8 @@
       "pt": "Torwen",
       "en": "Torwen"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "ElePHPant",
       "en": "ElePHPant"
@@ -322,18 +324,16 @@
         }
       }
     ],
-    "visible": false,
-    "appVisible": false,
     "appId": "orfv-character-torwen"
   },
   {
     "match": "Nuvin",
-    "visible": false,
-    "appVisible": true,
     "name": {
       "pt": "Nuvin",
       "en": "Nuvin"
     },
+    "visible": false,
+    "appVisible": true,
     "species": {
       "pt": "Nuvinian",
       "en": "Nuvinian"
@@ -384,12 +384,12 @@
   },
   {
     "match": "Zupi",
-    "visible": false,
-    "appVisible": true,
     "name": {
       "pt": "Zupi",
       "en": "Zupi"
     },
+    "visible": false,
+    "appVisible": true,
     "species": {
       "pt": "Zupik",
       "en": "Zupik"
@@ -444,6 +444,8 @@
       "pt": "Velo",
       "en": "Velo"
     },
+    "visible": true,
+    "appVisible": true,
     "species": {
       "pt": "Zephiriki",
       "en": "Zephiriki"
@@ -490,8 +492,6 @@
         }
       }
     ],
-    "visible": true,
-    "appVisible": true,
     "appId": "orfv-character-velo"
   },
   {
@@ -500,6 +500,8 @@
       "pt": "Aurin",
       "en": "Aurin"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "Aliventi",
       "en": "Aliventi"
@@ -546,8 +548,6 @@
         }
       }
     ],
-    "visible": false,
-    "appVisible": false,
     "appId": "orfv-character-aurin"
   }
 ]

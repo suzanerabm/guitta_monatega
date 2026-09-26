@@ -65,12 +65,12 @@
   },
   {
     "match": "Iren_Kor",
-    "visible": false,
-    "appVisible": false,
     "name": {
       "pt": "IREN KOR",
       "en": "IREN KOR"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "Bunniet",
       "en": "Bunniet"
@@ -131,12 +131,12 @@
   },
   {
     "match": "Aion_Var",
-    "visible": false,
-    "appVisible": false,
     "name": {
       "pt": "AION VAR",
       "en": "AION VAR"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "Bunniet",
       "en": "Bunniet"
@@ -197,12 +197,12 @@
   },
   {
     "match": "Stelipa",
-    "visible": false,
-    "appVisible": false,
     "name": {
       "pt": "Stelipa",
       "en": "Stelipa"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "Stelipa",
       "en": "Stelipa"
@@ -253,12 +253,12 @@
   },
   {
     "match": "Mewlites",
-    "visible": false,
-    "appVisible": false,
     "name": {
       "pt": "Mewlites",
       "en": "Mewlites"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "Mewlites",
       "en": "Mewlites"
@@ -308,12 +308,12 @@
   },
   {
     "match": "Trilume",
-    "visible": true,
-    "appVisible": true,
     "name": {
       "pt": "Trilume",
       "en": "Trilume"
     },
+    "visible": true,
+    "appVisible": true,
     "species": {
       "pt": "Trilume",
       "en": "Trilume"
@@ -363,12 +363,12 @@
   },
   {
     "match": "Krystos",
-    "visible": false,
-    "appVisible": false,
     "name": {
       "pt": "Krystos",
       "en": "Krystos"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "Krystos",
       "en": "Krystos"
@@ -419,12 +419,12 @@
   },
   {
     "match": "Estakors",
-    "visible": false,
-    "appVisible": false,
     "name": {
       "pt": "Estakors",
       "en": "Estakors"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "Estakors",
       "en": "Estakors"

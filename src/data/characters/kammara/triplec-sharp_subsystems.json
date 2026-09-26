@@ -4,6 +4,8 @@
       "pt": "Cultura",
       "en": "Culture"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/triplec/sharp/_subsystems/Bunniets.jpg",
     "text": {
       "pt": [
@@ -38,15 +40,15 @@
     "appId": "triplec-sharp-topic-cultura",
     "relations": [
       "triplec-sharp-topic-bunniets"
-    ],
-    "visible": false,
-    "appVisible": true
+    ]
   },
   {
     "title": {
       "pt": "Bunniets",
       "en": "Bunniets"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/triplec/sharp/_subsystems/Cultura.jpg",
     "text": {
       "pt": [
@@ -78,15 +80,15 @@
         "The bunniets of Sharp do not eat. They absorb silver light, pure metadata and filtered shilo. The energy that sustains the body is the same that validates the region's flows."
       ]
     },
-    "appId": "triplec-sharp-topic-bunniets",
-    "visible": false,
-    "appVisible": true
+    "appId": "triplec-sharp-topic-bunniets"
   },
   {
     "title": {
       "pt": "Geografia",
       "en": "Geography"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/triplec/sharp/_subsystems/Geografia2.jpg",
     "text": {
       "pt": [
@@ -118,15 +120,15 @@
         "Underground areas where the most delicate operations happen. When something needs total privacy and maximum supervision, it is done there."
       ]
     },
-    "appId": "triplec-sharp-topic-geografia",
-    "visible": false,
-    "appVisible": true
+    "appId": "triplec-sharp-topic-geografia"
   },
   {
     "title": {
       "pt": "Energia",
       "en": "Energy"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/triplec/sharp/_subsystems/fluxo_agua.jpg",
     "text": {
       "pt": [
@@ -161,15 +163,15 @@
     "appId": "triplec-sharp-topic-energia",
     "relations": [
       "triplec-sharp-topic-bunniets"
-    ],
-    "visible": false,
-    "appVisible": true
+    ]
   },
   {
     "title": {
       "pt": "Governança",
       "en": "Governance"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/triplec/sharp/_subsystems/Governanca.jpg",
     "text": {
       "pt": [
@@ -204,15 +206,15 @@
     "appId": "triplec-sharp-topic-governanca",
     "relations": [
       "triplec-sharp-topic-bunniets"
-    ],
-    "visible": false,
-    "appVisible": true
+    ]
   },
   {
     "title": {
       "pt": "Perigos",
       "en": "Dangers"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/triplec/sharp/_subsystems/perigo.jpg",
     "text": {
       "pt": [
@@ -247,8 +249,6 @@
     "appId": "triplec-sharp-topic-perigos",
     "relations": [
       "triplec-sharp-topic-bunniets"
-    ],
-    "visible": false,
-    "appVisible": true
+    ]
   }
 ]

@@ -54,12 +54,12 @@
   },
   {
     "match": "Neran_Vel",
-    "visible": false,
-    "appVisible": false,
     "name": {
       "pt": "NERAN VEL",
       "en": "NERAN VEL"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "Bunniet",
       "en": "Bunniet"
@@ -109,12 +109,12 @@
   },
   {
     "match": "Veris_Anon",
-    "visible": false,
-    "appVisible": false,
     "name": {
       "pt": "VERIS ANON",
       "en": "VERIS ANON"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "Bunniet",
       "en": "Bunniet"
@@ -164,12 +164,12 @@
   },
   {
     "match": "Kurr",
-    "visible": false,
-    "appVisible": true,
     "name": {
       "pt": "Kurr",
       "en": "Kurr"
     },
+    "visible": false,
+    "appVisible": true,
     "species": {
       "pt": "Kurr",
       "en": "Kurr"
@@ -219,12 +219,12 @@
   },
   {
     "match": "Tilu",
-    "visible": true,
-    "appVisible": true,
     "name": {
       "pt": "Tilu",
       "en": "Tilu"
     },
+    "visible": true,
+    "appVisible": true,
     "species": {
       "pt": "Tiluoide",
       "en": "Tiluoid"
@@ -274,12 +274,12 @@
   },
   {
     "match": "Doopoide",
-    "visible": true,
-    "appVisible": true,
     "name": {
       "pt": "DooPe",
       "en": "DooPe"
     },
+    "visible": true,
+    "appVisible": true,
     "species": {
       "pt": "Doopoide",
       "en": "Doopoid"
@@ -329,12 +329,12 @@
   },
   {
     "match": "Dinossauro Alongado",
-    "visible": false,
-    "appVisible": true,
     "name": {
       "pt": "Logg",
       "en": "Logg"
     },
+    "visible": false,
+    "appVisible": true,
     "species": {
       "pt": "Longoide",
       "en": "Longoid"
@@ -384,12 +384,12 @@
   },
   {
     "match": "Suigui",
-    "visible": false,
-    "appVisible": true,
     "name": {
       "pt": "Suigui",
       "en": "Suigui"
     },
+    "visible": false,
+    "appVisible": true,
     "species": {
       "pt": "Asymoide",
       "en": "Asymoid"
@@ -439,12 +439,12 @@
   },
   {
     "match": "Lim",
-    "visible": false,
-    "appVisible": false,
     "name": {
       "pt": "Lim",
       "en": "Lim"
     },
+    "visible": false,
+    "appVisible": false,
     "species": {
       "pt": "Sense-logic",
       "en": "Sense-logic"

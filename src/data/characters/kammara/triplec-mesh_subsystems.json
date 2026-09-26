@@ -4,6 +4,8 @@
       "pt": "Cultura",
       "en": "Culture"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/triplec/mesh/_subsystems/cultura-gigapixel-standard-v2-6x.jpg",
     "text": {
       "pt": [
@@ -38,15 +40,15 @@
     "appId": "triplec-mesh-topic-cultura",
     "relations": [
       "triplec-mesh-topic-bunniets"
-    ],
-    "visible": false,
-    "appVisible": true
+    ]
   },
   {
     "title": {
       "pt": "Bunniets",
       "en": "Bunniets"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/triplec/mesh/_subsystems/bunniets_2.jpg",
     "text": {
       "pt": [
@@ -78,15 +80,15 @@
         "The bunniets of Mesh are not rigid. They are structured. The difference is that structure allows creation; rigidity prevents it."
       ]
     },
-    "appId": "triplec-mesh-topic-bunniets",
-    "visible": false,
-    "appVisible": true
+    "appId": "triplec-mesh-topic-bunniets"
   },
   {
     "title": {
       "pt": "Geografia",
       "en": "Geography"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/triplec/mesh/_subsystems/geografia-gigapixel-standard-v2-6x.jpg",
     "text": {
       "pt": [
@@ -118,15 +120,15 @@
         "The north of Mesh is more artistic. The center is more technical. The south preserves ancient traditions. And the west is experimental: where the polymorphic bunniets test forms no one has tried before."
       ]
     },
-    "appId": "triplec-mesh-topic-geografia",
-    "visible": false,
-    "appVisible": true
+    "appId": "triplec-mesh-topic-geografia"
   },
   {
     "title": {
       "pt": "Energia",
       "en": "Energy"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/triplec/mesh/_subsystems/energia_plantacao-gigapixel-standard-6x.jpg",
     "text": {
       "pt": [
@@ -161,15 +163,15 @@
     "appId": "triplec-mesh-topic-energia",
     "relations": [
       "triplec-mesh-topic-bunniets"
-    ],
-    "visible": false,
-    "appVisible": true
+    ]
   },
   {
     "title": {
       "pt": "Governança",
       "en": "Governance"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/triplec/mesh/_subsystems/governanca.jpg",
     "text": {
       "pt": [
@@ -204,15 +206,15 @@
     "appId": "triplec-mesh-topic-governanca",
     "relations": [
       "triplec-mesh-topic-bunniets"
-    ],
-    "visible": false,
-    "appVisible": true
+    ]
   },
   {
     "title": {
       "pt": "Perigos",
       "en": "Dangers"
     },
+    "visible": false,
+    "appVisible": true,
     "img": "/imgs/kammara/triplec/mesh/_subsystems/perigos-gigapixel-standard-v2-6x.jpg",
     "text": {
       "pt": [
@@ -247,8 +249,6 @@
     "appId": "triplec-mesh-topic-perigos",
     "relations": [
       "triplec-mesh-topic-bunniets"
-    ],
-    "visible": false,
-    "appVisible": true
+    ]
   }
 ]
