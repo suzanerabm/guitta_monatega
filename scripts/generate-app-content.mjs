@@ -9,6 +9,7 @@ import { semanticAppId } from './app-id.mjs';
 const worlds = ['lunnp1', 'eni4', 'triplec', 'orfv', 'z1', 'gotto', 'digg', 'memphis'];
 const regions = ['triplec-malloc', 'triplec-mesh', 'triplec-sharp'];
 const base = 'https://guittamonatega.com';
+const websiteBase = 'https://guittamonategastudio.com';
 // Mídia de conteúdo vive no bucket (ver `src/lib/media.ts`): com a env definida,
 // `/imgs/kammara/a.png` → `<base>/kammara/a.png`. Sem ela, cai no próprio site.
 const mediaBase = () => (process.env.NEXT_PUBLIC_MEDIA_BASE_URL ?? '').trim().replace(/\/+$/, '');
@@ -169,8 +170,25 @@ export function buildContent(siteRoot, appDataRoot = resolve(siteRoot, 'src/data
   for (const [key, book] of Object.entries(books).filter(([, book]) => appVisible(book))) {
     let buy = (book.buyUrl || '').trim();
     if (buy && !/^https?:\/\//.test(buy)) buy = `https://${buy}`;
+    const locale = book.onlyLocale || 'pt';
+    const bookUrl = book.pageSlug ? `${websiteBase}/${locale}/books/${book.pageSlug}` : '';
+    const editions = (book.editions || []).map(edition => {
+      let url = (edition.buyUrl || '').trim();
+      if (!url && edition.purchaseChannel === 'amazon') url = buy;
+      if (!url && ['external', 'preorder'].includes(edition.purchaseChannel)) url = bookUrl;
+      if (url && !/^https?:\/\//.test(url)) url = url.startsWith('/') ? websiteBase + url : `https://${url}`;
+      return {
+        format: edition.format,
+        purchaseChannel: edition.purchaseChannel || (url ? 'external' : 'comingSoon'),
+        url,
+        retailer: edition.buyLabel || (edition.purchaseChannel === 'amazon' ? book.buyLabel || '' : ''),
+        ...(edition.price ? { price: edition.price } : {}),
+        ...(edition.facts ? { facts: edition.facts } : {}),
+      };
+    });
     const item = entry('kammara', 'book', key, book.title, book.description, book.body, book.cover,
-      { source: book, onlyLocale: book.onlyLocale || '', externalUrl: buy, media: [media(book.cover, book.title, '', true)] });
+      { source: book, onlyLocale: book.onlyLocale || '', externalUrl: buy, bookUrl, editions,
+        media: [media(book.cover, book.title, '', true)] });
     // Website fields take precedence, including explicit empty values used to remove content.
     if (bookDetails.books[item.id]) {
       if (Object.hasOwn(book, 'description')) delete bookDetails.books[item.id].description;

@@ -120,6 +120,8 @@ interface BookConfig {
   appVisible?: boolean;
   /** Idioma em que essa edição aparece. Cada entrada é uma edição de um só idioma. */
   onlyLocale?: 'pt' | 'en';
+  /** Slug da página canônica em /[locale]/books/[slug], também enviado aos apps. */
+  pageSlug?: string;
   /** Caminho da capa dessa edição (ex: '/imgs/books/kammara/saga-orf-v/cover.jpg'). */
   cover?: string;
   /** Título do livro, preenchido só no idioma dessa edição. */

@@ -61,6 +61,25 @@ test('export excludes hidden records, prunes links and uses website book values'
   } finally { rmSync(f.root, { recursive: true }); }
 });
 
+test('exports the canonical book page and structured purchase options', () => {
+  const f = fixture();
+  try {
+    f.write('src/data/kammara_books.json', { books: { book: {
+      title: { pt: 'Book' }, onlyLocale: 'pt', pageSlug: 'book-volume-1',
+      buyUrl: 'https://amazon.example/ebook', buyLabel: 'Amazon',
+      editions: [
+        { format: 'ebook', purchaseChannel: 'amazon' },
+        { format: 'paperback', purchaseChannel: 'preorder', price: { amount: 99.9, currency: 'BRL' } },
+      ],
+    } } });
+    const book = buildContent(f.root).files['catalog.json'].entries.find(entry => entry.kind === 'book');
+    assert.equal(book.bookUrl, 'https://guittamonategastudio.com/pt/books/book-volume-1');
+    assert.equal(book.editions[0].url, 'https://amazon.example/ebook');
+    assert.equal(book.editions[1].url, book.bookUrl);
+    assert.equal(book.editions[1].price.amount, 99.9);
+  } finally { rmSync(f.root, { recursive: true }); }
+});
+
 test('appVisible independently supports app-only and site-only content', () => {
   const f = fixture();
   try {

@@ -10,6 +10,7 @@
     "  visible (bool)    -> controla o site; false esconde sem apagar. Ausente = visível.",
     "  appVisible (bool) -> controla o app; ausente herda visible.",
     "  onlyLocale ('pt'|'en') -> idioma em que essa edição aparece.",
+    "  pageSlug (string) -> slug da página /[idioma]/books/[slug], usada também pelos apps.",
     "  cover (string)    -> caminho da imagem de capa dessa edição.",
     "  title ({pt,en})   -> nome do livro (preencha só o idioma dessa edição).",
     "  description ({pt,en}) -> sinopse exibida na página de detalhes.",
@@ -32,6 +33,7 @@
     "kammara/saga-orf-v-pt": {
       "visible": true,
       "onlyLocale": "pt",
+      "pageSlug": "saga-orf-v-volume-1",
       "cover": "/imgs/books/kammara/saga-orf-v/capa_70x10.jpg",
       "title": {
         "pt": "Saga em ORF-V"
@@ -57,6 +59,7 @@
     "kammara/saga-orf-v-en": {
       "visible": true,
       "onlyLocale": "en",
+      "pageSlug": "saga-orf-v-volume-1",
       "cover": "/imgs/books/kammara/saga-orf-v/capa_70x10_en.jpg",
       "title": {
         "en": "Saga in ORF-V"
@@ -73,6 +76,7 @@
     "kammara/saga-maelik-v-pt": {
       "visible": true,
       "onlyLocale": "pt",
+      "pageSlug": "saga-digg-volume-2",
       "cover": "/imgs/books/kammara/saga-orf-v/capa_70x10_2.jpg",
       "title": {
         "pt": "Saga em Digg"
