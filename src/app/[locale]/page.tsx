@@ -159,6 +159,7 @@ export default async function HomePage({
           label={t('kammara.label')}
           title={t('kammara.title')}
           description={t('kammara.desc')}
+          planetLabel={t('kammara.planetLabel')}
           planets={kammaraPlanets}
         />
       </Box>

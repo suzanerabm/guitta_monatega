@@ -122,6 +122,13 @@ export const tokens = defineTokens({
     hero: { value: '0.3em' },
     heroTitle: { value: '0.06em' },
   },
+  sizes: {
+    bannerDescription: { value: '400px' },
+    bannerDescriptionWide: { value: '560px' },
+  },
+  lineHeights: {
+    bookCardCompact: { value: '1.25' },
+  },
   spacing: {
     // Original scale (kept backward-compatible)
     xs: { value: '0.25rem' },

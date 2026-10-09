@@ -108,6 +108,7 @@ export function KammaraPlanetCard({
             letterSpacing="hero"
             textTransform="uppercase"
             color={color}
+            textAlign="center"
             css={{ textShadow: `0 0 12px ${color}` }}
           >
             {category.toUpperCase()}
@@ -120,6 +121,7 @@ export function KammaraPlanetCard({
             lineHeight={1}
             letterSpacing="heroTitle"
             color="textOverlayBright"
+            textAlign="center"
             whiteSpace="nowrap"
             css={{
               textShadow: `0 0 24px ${color}, 0 2px 12px rgba(0,0,0,0.6)`,

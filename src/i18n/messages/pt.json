@@ -139,7 +139,8 @@
     "kammara": {
       "label": "Universo",
       "title": "Kammara",
-      "desc": "Um universo onde cada planeta vive a sua própria história."
+      "desc": "Um universo onde cada planeta vive a sua própria história.",
+      "planetLabel": "Planeta"
     },
     "art": {
       "label": "Galeria de Arte",

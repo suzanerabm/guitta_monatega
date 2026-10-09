@@ -14,23 +14,23 @@ const characterCards = [
   {
     id: 'napcat',
     label: 'Napcat',
-    image: mediaUrl('/imgs/banners/004-napcat-institucional-grid-clean-v1.png'),
+    image: mediaUrl('/imgs/banners/005-napcat-institucional-so-nome-v1.png'),
   },
   {
     id: 'zeco',
     label: 'Zeco',
-    image: mediaUrl('/imgs/banners/004-zeco-institucional-grid-clean-v1.png'),
+    image: mediaUrl('/imgs/banners/005-zeco-institucional-so-nome-v1.png'),
   },
   {
     id: 'taylo',
     label: 'Taylo',
-    image: mediaUrl('/imgs/banners/004-taylo-institucional-grid-clean-v1.png'),
+    image: mediaUrl('/imgs/banners/005-taylo-institucional-so-nome-v1.png'),
   },
   {
     id: 'cheiodebolinha',
-    label: 'Bobbin',
+    label: 'Cheio de Bolinha',
     image: mediaUrl(
-      '/imgs/banners/004-cheio-de-bolinha-institucional-grid-clean-v1.png',
+      '/imgs/banners/005-cheio-de-bolinha-institucional-nomes-v2.png',
     ),
   },
 ] as const;

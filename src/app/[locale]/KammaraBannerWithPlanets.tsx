@@ -25,6 +25,7 @@ interface KammaraBannerWithPlanetsProps {
   label: string;
   title: string;
   description: string;
+  planetLabel: string;
   planets: CompactPlanet[];
 }
 
@@ -34,6 +35,7 @@ export function KammaraBannerWithPlanets({
   label,
   title,
   description,
+  planetLabel,
   planets,
 }: KammaraBannerWithPlanetsProps) {
   const router = useRouter();
@@ -59,6 +61,7 @@ export function KammaraBannerWithPlanets({
           <KammaraPlanetCard
             key={planet.id}
             {...planet}
+            category={planetLabel}
             variant="compact"
             onSelect={(id) => router.push(`${href}?planet=${id}`)}
           />

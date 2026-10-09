@@ -14,12 +14,16 @@ interface BookCatalogCardProps {
   editionLabels?: string[];
   priceLabel?: string;
   titleFontSize?: string;
+  variant?: 'default' | 'compact';
 }
 
 export function BookCatalogCard({
   href, title, collection, cover, detailsLabel, accentColor,
   badgeLabel, editionLabels = [], priceLabel, titleFontSize = 'bookCardTitle',
+  variant = 'default',
 }: BookCatalogCardProps) {
+  const isCompact = variant === 'compact';
+
   return (
     <NextLink
       href={href}
@@ -61,7 +65,12 @@ export function BookCatalogCard({
             </Text>
           )}
         </Box>
-        <Box p={{ base: 'lg', md: 'xl' }} display="flex" flexDirection="column" flex="1">
+        <Box
+          p={isCompact ? { base: 'md', md: 'lg' } : { base: 'lg', md: 'xl' }}
+          display="flex"
+          flexDirection="column"
+          flex="1"
+        >
           <Text
             fontSize="xs"
             letterSpacing="wider"
@@ -72,7 +81,14 @@ export function BookCatalogCard({
           >
             {collection}
           </Text>
-          <Heading as="h2" textStyle="heading" fontSize={titleFontSize} color="ink" mb="lg">
+          <Heading
+            as="h2"
+            textStyle="heading"
+            fontSize={titleFontSize}
+            color="ink"
+            lineHeight={isCompact ? 'bookCardCompact' : undefined}
+            mb={isCompact ? 'md' : 'lg'}
+          >
             {title}
           </Heading>
           {priceLabel && (

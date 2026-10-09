@@ -380,7 +380,11 @@ export function HomeBanner({
             fontSize="bannerDesc"
             color={descriptionColor ?? (isArte ? 'arteDesc' : 'bannerDesc')}
             fontWeight="light"
-            maxW="400px"
+            maxW={
+              variant !== 'arte'
+                ? { base: '90%', md: 'bannerDescriptionWide' }
+                : 'bannerDescription'
+            }
             textAlign="center"
             lineHeight={1.5}
             transition="color 0.4s ease"
