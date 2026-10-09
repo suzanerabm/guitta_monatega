@@ -1,0 +1,13 @@
+{
+  "brand": "guitta-monatega-studio",
+  "mode": "draft",
+  "description": "Fila exclusiva do Guitta Monatega Studio. Permanece vazia e sem cron ate existir conteudo aprovado.",
+  "generatedAt": "2026-10-09T00:00:00-03:00",
+  "timezone": "America/Sao_Paulo",
+  "exhaustionPolicy": "stop",
+  "repeatPolicy": "explicit-only",
+  "start": null,
+  "end": null,
+  "total": 0,
+  "items": []
+}
