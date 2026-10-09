@@ -33,6 +33,39 @@ export default async function LocaleLayout({
   const privacyPath = `/${locale}/privacy`;
   const normalizedLocale = normalizeLocale(locale);
   const language = normalizedLocale === 'pt' ? 'pt-BR' : 'en';
+  const socialProfiles = [
+    {
+      name: 'Studio',
+      instagramUrl:
+        process.env.NEXT_PUBLIC_STUDIO_INSTAGRAM_URL
+        ?? 'https://www.instagram.com/guittamonategastudio/',
+      facebookUrl:
+        process.env.NEXT_PUBLIC_STUDIO_FACEBOOK_URL
+        ?? 'https://www.facebook.com/guittamonategastudio/',
+    },
+    {
+      name: 'Bichittos',
+      instagramUrl:
+        process.env.NEXT_PUBLIC_BICHITTOS_INSTAGRAM_URL
+        ?? 'https://www.instagram.com/bichittos.official',
+      facebookUrl:
+        process.env.NEXT_PUBLIC_BICHITTOS_FACEBOOK_URL
+        ?? 'https://www.facebook.com/bichittos.official',
+    },
+    {
+      name: 'Kammara',
+      instagramUrl:
+        process.env.NEXT_PUBLIC_KAMMARA_INSTAGRAM_URL
+        ?? 'https://www.instagram.com/kammara.official',
+      facebookUrl:
+        process.env.NEXT_PUBLIC_KAMMARA_FACEBOOK_URL
+        ?? 'https://www.facebook.com/kammara.official',
+    },
+  ];
+  const studioProfile = socialProfiles[0];
+  const studioSocialUrls = [studioProfile.instagramUrl, studioProfile.facebookUrl].filter(
+    (url): url is string => Boolean(url),
+  );
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -52,6 +85,7 @@ export default async function LocaleLayout({
           normalizedLocale === 'pt'
             ? 'Escritora, ilustradora e engenheira de universos'
             : 'Writer, illustrator and world systems engineer',
+        ...(studioSocialUrls.length > 0 ? { sameAs: studioSocialUrls } : {}),
       },
     ],
   };
@@ -71,6 +105,8 @@ export default async function LocaleLayout({
             <AutoBreadcrumb />
             <main>{children}</main>
             <Footer
+              followLabel={t('footerFollow')}
+              socialProfiles={socialProfiles}
               aboutPath={aboutPath}
               aboutLabel={t('footerAbout')}
               licensingPath={licensingPath}

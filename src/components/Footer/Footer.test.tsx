@@ -9,6 +9,12 @@ vi.mock('next/link', () => ({
 
 describe('Footer', () => {
   const baseProps = {
+    followLabel: 'acompanhe',
+    socialProfiles: [
+      { name: 'Studio' },
+      { name: 'Bichittos' },
+      { name: 'Kammara' },
+    ],
     aboutPath: '/about',
     aboutLabel: 'sobre guitta monatega',
     licensingPath: '/licensing-partnerships',
@@ -16,6 +22,36 @@ describe('Footer', () => {
     privacyPath: '/privacy',
     privacyLabel: 'privacidade',
   };
+
+  it('renders the three social identities', () => {
+    render(<Footer {...baseProps} />);
+    expect(screen.getByText('Studio')).toBeInTheDocument();
+    expect(screen.getByText('Bichittos')).toBeInTheDocument();
+    expect(screen.getByText('Kammara')).toBeInTheDocument();
+  });
+
+  it('activates only configured social links', () => {
+    render(
+      <Footer
+        {...baseProps}
+        socialProfiles={[
+          {
+            name: 'Studio',
+            instagramUrl: 'https://www.instagram.com/studio',
+            facebookUrl: 'https://www.facebook.com/studio',
+          },
+        ]}
+      />,
+    );
+    expect(screen.getByRole('link', { name: 'Studio Instagram' })).toHaveAttribute(
+      'href',
+      'https://www.instagram.com/studio',
+    );
+    expect(screen.getByRole('link', { name: 'Studio Facebook' })).toHaveAttribute(
+      'href',
+      'https://www.facebook.com/studio',
+    );
+  });
 
   it('renders about, licensing and privacy links', () => {
     render(<Footer {...baseProps} />);
