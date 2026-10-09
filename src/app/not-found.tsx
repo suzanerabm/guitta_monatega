@@ -1,16 +1,11 @@
-'use client';
-
 import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import { usePathname } from 'next/navigation';
 import { mediaUrl } from '@/lib/media';
 import { palettes } from '@/theme/palettes';
 
 const pituImage = mediaUrl('/imgs/bichittos/taylo/pitu_chorando.png');
 
-export default function NotFound() {
-  const pathname = usePathname();
-  const locale = pathname?.startsWith('/en') ? 'en' : 'pt';
+export function NotFoundContent({ locale }: { locale: 'pt' | 'en' }) {
   const copy = locale === 'en'
     ? {
         imageAlt: 'Pitu crying because he could not find the page',
@@ -143,4 +138,8 @@ export default function NotFound() {
       </Flex>
     </Flex>
   );
+}
+
+export default function NotFound() {
+  return <NotFoundContent locale="pt" />;
 }
