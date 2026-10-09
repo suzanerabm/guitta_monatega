@@ -19,7 +19,7 @@ const artCover = '/imgs/books/art/Coloring%20Book/cover.jpg';
 export const SingleBook: Story = {
   args: {
     title: 'Em destaque',
-    books: [{ id: 'a', image: napcatCover, alt: 'NapCat Adventures', label: 'NapCat Adventures' }],
+    books: [{ id: 'a', image: napcatCover, alt: 'Napcat Adventures', label: 'Napcat Adventures' }],
   },
 };
 
@@ -27,7 +27,7 @@ export const ThreeBooks: Story = {
   args: {
     title: 'Livros',
     books: [
-      { id: 'napcat', image: napcatCover, alt: 'NapCat Adventures', label: 'NapCat Adventures' },
+      { id: 'napcat', image: napcatCover, alt: 'Napcat Adventures', label: 'Napcat Adventures' },
       { id: 'zeco', image: zecoCover, alt: 'Zeco Estações', label: 'Zeco Estações' },
       { id: 'kammara', image: kammaraCover, alt: 'Saga ORF-V', label: 'Saga ORF-V' },
     ],
@@ -38,7 +38,7 @@ export const ManyBooks: Story = {
   args: {
     title: 'Biblioteca',
     books: [
-      { id: 'napcat', image: napcatCover, alt: 'NapCat', label: 'NapCat Adventures' },
+      { id: 'napcat', image: napcatCover, alt: 'Napcat', label: 'Napcat Adventures' },
       { id: 'zeco', image: zecoCover, alt: 'Zeco', label: 'Zeco Estações' },
       { id: 'kammara', image: kammaraCover, alt: 'Kammara', label: 'Saga ORF-V' },
       { id: 'art', image: artCover, alt: 'Art', label: 'Coloring Book' },
@@ -52,7 +52,7 @@ export const WithSoonVariant: Story = {
   args: {
     title: 'Próximos lançamentos',
     books: [
-      { id: 'napcat', image: napcatCover, alt: 'NapCat', label: 'Disponível' },
+      { id: 'napcat', image: napcatCover, alt: 'Napcat', label: 'Disponível' },
       { id: 'soon', alt: 'soon', label: 'Em breve', soon: true },
     ],
   },

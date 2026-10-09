@@ -11,7 +11,7 @@ export default meta;
 type Story = StoryObj<typeof CharacterCard>;
 
 const baseArgs = {
-  name: 'NapCat',
+  name: 'Napcat',
   image: '/imgs/bichittos/napcat/napcat-dormindo.png',
   gradient: 'linear-gradient(135deg, #667eea, #764ba2)',
 };

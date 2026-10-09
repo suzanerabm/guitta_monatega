@@ -4,7 +4,7 @@ import { renderWithChakra } from '@/test-utils';
 import { CharacterStrip } from './CharacterStrip';
 
 const chars = [
-  { name: 'NapCat', image: '/imgs/napcat.webp' },
+  { name: 'Napcat', image: '/imgs/napcat.webp' },
   { name: 'Zeco', image: '/imgs/zeco.webp' },
   { name: 'Taylo', image: '/imgs/taylo.webp' },
 ];
@@ -18,13 +18,13 @@ describe('CharacterStrip', () => {
   it('duplicates characters when looping (default)', () => {
     renderWithChakra(<CharacterStrip characters={chars} />);
     // Each character should appear twice because of duplication.
-    expect(screen.getAllByAltText('NapCat')).toHaveLength(2);
+    expect(screen.getAllByAltText('Napcat')).toHaveLength(2);
     expect(screen.getAllByAltText('Zeco')).toHaveLength(2);
   });
 
   it('renders characters once when noLoop=true', () => {
     renderWithChakra(<CharacterStrip characters={chars} noLoop />);
-    expect(screen.getAllByAltText('NapCat')).toHaveLength(1);
+    expect(screen.getAllByAltText('Napcat')).toHaveLength(1);
   });
 
   it('renders arrow buttons when showArrows=true', () => {

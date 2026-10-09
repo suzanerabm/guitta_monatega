@@ -13,7 +13,7 @@ describe('BookContextBanner', () => {
       <BookContextBanner
         href="/pt/bichittos?bichitto=napcat"
         eyebrow="Bichittos"
-        title="Conheça o NapCat"
+        title="Conheça o Napcat"
         backgroundImage="/background.jpg"
         overlay="linear-gradient(blue, navy)"
         backgroundImageOpacity={0.22}
@@ -24,6 +24,6 @@ describe('BookContextBanner', () => {
       />,
     );
     expect(screen.getByRole('link')).toHaveAttribute('href', '/pt/bichittos?bichitto=napcat');
-    expect(screen.getByRole('heading', { name: 'Conheça o NapCat' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Conheça o Napcat' })).toBeInTheDocument();
   });
 });

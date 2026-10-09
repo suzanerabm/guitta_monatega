@@ -13,7 +13,7 @@ type Story = StoryObj<typeof CharacterStrip>;
 
 // Real characters from the project
 const chars = [
-  { name: 'NapCat', image: '/imgs/bichittos/napcat/napcat-dormindo.png' },
+  { name: 'Napcat', image: '/imgs/bichittos/napcat/napcat-dormindo.png' },
   { name: 'Cambalhota', image: '/imgs/bichittos/napcat/napcat-cambalhota.png' },
   { name: 'Pijama', image: '/imgs/bichittos/napcat/napcat-pijama.png' },
   { name: 'Sonequinha', image: '/imgs/bichittos/napcat/napcat-sonequinha.png' },

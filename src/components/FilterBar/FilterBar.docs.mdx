@@ -19,14 +19,14 @@ Barra de filtro sticky logo abaixo do header. Cada filtro pode ter sua própria 
 ```tsx
 <FilterBar
   filters={[
-    { id: 'napcat', label: 'NapCat', color: '#b5a2dc', bgColor: '#1a1432' },
+    { id: 'napcat', label: 'Napcat', color: '#b5a2dc', bgColor: '#1a1432' },
     { id: 'zeco', label: 'Zeco', color: '#964712', bgColor: '#f58020' },
   ]}
   onFilter={(id) => setActiveFilter(id)}
 />
 ```
 
-Quando o usuário clica em "NapCat":
+Quando o usuário clica em "Napcat":
 1. O filtro `napcat` fica ativo (cor `#1a1432` no fundo)
 2. Os outros filtros viram outline branco translúcido
 3. O header inteiro pega `#1a1432` via ChromeTintProvider

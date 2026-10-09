@@ -90,10 +90,10 @@ export const palettes: Record<PaletteName, Palette> = {
     gradient: 'linear-gradient(135deg, #0f1a4a, #0f1a33, #c4d4ff)',
     gradientBg: 'linear-gradient(160deg, #0f1a4a 10%, #1e3a7a 40%, #0f1a4a 100%)',
     bichittos: {
-      name: '#c4d4ff', // hero "NapCat" grande fora do card
+      name: '#c4d4ff', // hero "Napcat" grande fora do card
       text: '#c4d4ff',       // texto do CreatureCard externo
-      // titleColor: '#29bade', // h2 "NapCat & Violeta" dentro do painel + borda
-      titleColor: '#c4d4ff', // h2 "NapCat & Violeta" dentro do painel + borda
+      // titleColor: '#29bade', // h2 "Napcat & Violeta" dentro do painel + borda
+      titleColor: '#c4d4ff', // h2 "Napcat & Violeta" dentro do painel + borda
       textColor: '#c4d4ff',  // parágrafos dentro do painel
       accent: '#c4d4ff',  
       accentAlt: '#c4d4ff',  // texto da pill

@@ -12,7 +12,7 @@ type Story = StoryObj<typeof FilterBar>;
 export const Bichittos: Story = {
   args: {
     filters: [
-      { id: 'napcat', label: 'NapCat', color: '#667eea' },
+      { id: 'napcat', label: 'Napcat', color: '#667eea' },
       { id: 'zeco', label: 'Zeco', color: '#ff8c42' },
       { id: 'taylo', label: 'Taylo', color: '#5d9466' },
       { id: 'miscelania', label: 'Miscelania', color: '#3a5a8c' },

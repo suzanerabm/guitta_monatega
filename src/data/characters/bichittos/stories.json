@@ -1,32 +1,32 @@
 {
   "napcat": {
     "name": {
-      "pt": "NapCat",
-      "en": "NapCat"
+      "pt": "Napcat",
+      "en": "Napcat"
     },
     "text": {
       "pt": [
-        "NapCat é um gatinho calmo e sonhador que adora tirar pequenos cochilos. Em cada soneca, ele descobre o mundo de um jeitinho especial: sentindo sons, cores e texturas. Ao lado de sua irmã Violeta, NapCat vive momentos simples, cheios de carinho, imaginação e aconchego.",
-        "Venha tirar soneca e sonhar com NapCat e seus amigos."
+        "Napcat é um gatinho calmo e sonhador que adora tirar pequenos cochilos. Em cada soneca, ele descobre o mundo de um jeitinho especial: sentindo sons, cores e texturas. Ao lado de sua irmã Violeta, Napcat vive momentos simples, cheios de carinho, imaginação e aconchego.",
+        "Venha tirar soneca e sonhar com Napcat e seus amigos."
       ],
       "en": [
-        "NapCat is a calm and dreamy kitten who loves taking little naps. In each nap, he discovers the world in his own special way: feeling sounds, colors and textures. Alongside his sister Violeta, NapCat lives simple moments, full of warmth, imagination and coziness.",
-        "Come take a nap and dream with NapCat and his friends."
+        "Napcat is a calm and dreamy kitten who loves taking little naps. In each nap, he discovers the world in his own special way: feeling sounds, colors and textures. Alongside his sister Violeta, Napcat lives simple moments, full of warmth, imagination and coziness.",
+        "Come take a nap and dream with Napcat and his friends."
       ]
     },
     "panel": {
       "story": {
         "pt": [
-          "NapCat é um gatinho calmo e sonhador que adora tirar pequenos cochilos.",
+          "Napcat é um gatinho calmo e sonhador que adora tirar pequenos cochilos.",
           "Em cada soneca, ele descobre o mundo de um jeitinho especial: sentindo sons, cores e texturas.",
-          "Ao lado de sua irmã Violeta, NapCat vive momentos simples, cheios de carinho, imaginação e aconchego.",
-          "Venha tirar soneca com NapCat e seus amigos."
+          "Ao lado de sua irmã Violeta, Napcat vive momentos simples, cheios de carinho, imaginação e aconchego.",
+          "Venha tirar soneca com Napcat e seus amigos."
         ],
         "en": [
-          "NapCat is a calm and dreamy kitten who loves taking little naps.",
+          "Napcat is a calm and dreamy kitten who loves taking little naps.",
           "In each nap, he discovers the world in his own special way: feeling sounds, colors and textures.",
-          "Alongside his sister Violeta, NapCat lives simple moments, full of warmth, imagination and coziness.",
-          "Come take a nap with NapCat and his friends."
+          "Alongside his sister Violeta, Napcat lives simple moments, full of warmth, imagination and coziness.",
+          "Come take a nap with Napcat and his friends."
         ]
       }
     },

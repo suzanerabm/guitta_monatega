@@ -11,11 +11,11 @@ const meta: Meta<typeof BookContextBanner> = {
 export default meta;
 type Story = StoryObj<typeof BookContextBanner>;
 
-export const NapCat: Story = {
+export const Napcat: Story = {
   args: {
     href: '/pt/bichittos?bichitto=napcat',
     eyebrow: 'Bichittos',
-    title: 'Conheça o NapCat',
+    title: 'Conheça o Napcat',
     backgroundImage: '/imgs/bichittos/_bg/napcat.jpg',
     overlay: bookPageVisuals.napcat.contextOverlay,
     backgroundImageOpacity: bookPageVisuals.napcat.contextImageOpacity,

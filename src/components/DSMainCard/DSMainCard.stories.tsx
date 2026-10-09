@@ -25,7 +25,7 @@ const characters = [
 
 const sampleText = (
   <>
-    <h2>NapCat & Violeta</h2>
+    <h2>Napcat & Violeta</h2>
     <p>Um gato sonolento e sua amiga roxa, sempre juntos em suas pequenas aventuras.</p>
     <h3>Sobre eles</h3>
     <p>Vivem entre o sonho e o despertar.</p>
