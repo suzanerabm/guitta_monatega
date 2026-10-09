@@ -14,8 +14,8 @@ describe('book catalog', () => {
   });
 
   it('keeps locale-specific availability', () => {
-    expect(getBookLocales('taylo-e-pitu-volume-1')).toEqual(['pt']);
-    expect(getCatalogBooks('en').some((book) => book.slug === 'taylo-e-pitu-volume-1')).toBe(false);
+    expect(getBookLocales('taylo-e-pitu-volume-1')).toEqual(['pt', 'en']);
+    expect(getCatalogBooks('en').some((book) => book.slug === 'taylo-e-pitu-volume-1')).toBe(true);
   });
 
   it('returns Taylo digital and paperback details independently', () => {
@@ -23,8 +23,8 @@ describe('book catalog', () => {
     const editions = book?.editions;
 
     expect(editions?.map((edition) => edition.format)).toEqual(['ebook', 'paperback']);
-    expect(editions?.every((edition) => edition.purchaseChannel === 'comingSoon')).toBe(true);
-    expect(book && isBookComingSoon(book)).toBe(true);
+    expect(editions?.map((edition) => edition.purchaseChannel)).toEqual(['amazon', 'preorder']);
+    expect(book && isBookComingSoon(book)).toBe(false);
     expect(editions?.map((edition) => edition.price?.amount)).toEqual([24.90, 49.90]);
     expect(editions?.every((edition) => edition.price?.currency === 'BRL')).toBe(true);
     expect(editions?.[0].facts).toMatchObject({ pageCount: 35, fileSize: '10,3 MB' });
@@ -33,6 +33,14 @@ describe('book catalog', () => {
       pageCount: 36,
       dimensions: '15,24 × 0,23 × 22,86 cm',
     });
+  });
+
+  it('marks only the English Taylo edition as coming soon', () => {
+    const book = getCatalogBook('taylo-e-pitu-volume-1', 'en');
+
+    expect(book?.editions.map((edition) => edition.format)).toEqual(['ebook', 'paperback']);
+    expect(book?.editions.every((edition) => edition.purchaseChannel === 'comingSoon')).toBe(true);
+    expect(book && isBookComingSoon(book)).toBe(true);
   });
 
   it('returns all Saga ORF-V formats with their own prices and dimensions', () => {
