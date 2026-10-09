@@ -19,9 +19,12 @@ describe('book catalog', () => {
   });
 
   it('returns Taylo digital and paperback details independently', () => {
-    const editions = getCatalogBook('taylo-e-pitu-volume-1', 'pt')?.editions;
+    const book = getCatalogBook('taylo-e-pitu-volume-1', 'pt');
+    const editions = book?.editions;
 
     expect(editions?.map((edition) => edition.format)).toEqual(['ebook', 'paperback']);
+    expect(editions?.every((edition) => edition.purchaseChannel === 'comingSoon')).toBe(true);
+    expect(book && isBookComingSoon(book)).toBe(true);
     expect(editions?.map((edition) => edition.price?.amount)).toEqual([24.90, 49.90]);
     expect(editions?.every((edition) => edition.price?.currency === 'BRL')).toBe(true);
     expect(editions?.[0].facts).toMatchObject({ pageCount: 35, fileSize: '10,3 MB' });
