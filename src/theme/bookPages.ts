@@ -20,6 +20,7 @@ interface BookPageVisual {
 export const bookPageLayout = {
   catalogTitleSize: 'h2',
   coverAspectRatio: '4 / 5',
+  homeCarouselCardWidth: { base: '72vw', sm: '280px', lg: '300px' },
   accentBorderWidth: '4px',
   contextBannerHeight: { base: '360px', md: '520px' },
   contextCharacterHeight: { base: '300px', md: '460px' },

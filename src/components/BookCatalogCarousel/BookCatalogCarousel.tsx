@@ -10,7 +10,7 @@ import {
   type BookLocale,
   type CatalogBook,
 } from '@/lib/bookCatalog';
-import { bookPageVisuals } from '@/theme/bookPages';
+import { bookPageLayout, bookPageVisuals } from '@/theme/bookPages';
 
 interface BookCatalogCarouselProps {
   books: CatalogBook[];
@@ -38,7 +38,7 @@ export function BookCatalogCarousel({
           const visual = bookPageVisuals[book.visualKey];
           const price = getLowestBookPrice(book);
           return (
-            <Box key={book.slug} width={{ base: '78vw', sm: '340px', lg: '360px' }} height="100%">
+            <Box key={book.slug} width={bookPageLayout.homeCarouselCardWidth} height="100%">
               <BookCatalogCard
                 href={`/${locale}/books/${book.slug}`}
                 title={book.title}
