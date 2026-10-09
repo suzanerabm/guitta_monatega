@@ -6,9 +6,13 @@ import { HomeBanner } from '@/components/HomeBanner';
 import { BookCatalogCarousel } from '@/components/BookCatalogCarousel';
 import { buildPageMetadata, SITE_URL } from '@/lib/seo';
 import { getCatalogBooks } from '@/lib/books';
+import { getWorlds } from '@/lib/content/kammara';
 import { bookPageLayout } from '@/theme/bookPages';
+import { palettes, type PaletteName } from '@/theme/palettes';
+import { worldCrestGlyph } from '@/theme/kalunGlyphs';
 // import { DSCard } from '@/components/DSCard';
-// import { BichittosBannerWithNinha } from './BichittosBannerWithNinha';
+import { BichittosBannerWithNinha } from './BichittosBannerWithNinha';
+import { KammaraBannerWithPlanets } from './KammaraBannerWithPlanets';
 
 export async function generateMetadata({
   params,
@@ -39,6 +43,19 @@ export default async function HomePage({
   const books = getCatalogBooks(loc).filter((book) =>
     book.editions.some((edition) => edition.price),
   );
+  const kammaraPlanets = getWorlds(loc).slice(0, 4).map((world) => {
+    const palette = palettes[world.id as PaletteName];
+    return {
+      id: world.id,
+      name: world.name,
+      summary: world.summary[0] ?? '',
+      color: palette.colors[0],
+      darkColor: palette.dark,
+      image: world.bgImage ?? undefined,
+      crestGlyph: worldCrestGlyph(world.id),
+      badges: world.tags,
+    };
+  });
   const booksJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -131,23 +148,18 @@ export default async function HomePage({
             minHeight={{ base: '140px', md: '200px' }}
           />
         </Box>
-        <HomeBanner
+        <BichittosBannerWithNinha
           href={`${prefix}/bichittos`}
           label={t('bichittos.label')}
           title={t('bichittos.title')}
           description={t('bichittos.desc')}
-          variant="bichittos"
-          height={{ base: '35vh', md: '42vh' }}
-          minHeight={{ base: '180px', md: '280px' }}
         />
-        <HomeBanner
+        <KammaraBannerWithPlanets
           href={`${prefix}/kammara`}
           label={t('kammara.label')}
           title={t('kammara.title')}
           description={t('kammara.desc')}
-          variant="kammara"
-          height={{ base: '35vh', md: '42vh' }}
-          minHeight={{ base: '180px', md: '280px' }}
+          planets={kammaraPlanets}
         />
       </Box>
 

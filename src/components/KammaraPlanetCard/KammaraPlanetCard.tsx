@@ -30,6 +30,8 @@ export interface KammaraPlanetCardProps {
   category?: string;
   /** Clicking the card opens this world (the page wires it to the filter). */
   onSelect?: (id: string) => void;
+  /** Condensed treatment for the four-world strip on the home page. */
+  variant?: 'default' | 'compact';
   'data-testid'?: string;
 }
 
@@ -58,8 +60,111 @@ export function KammaraPlanetCard({
   badges = [],
   category = 'Planeta',
   onSelect,
+  variant = 'default',
   'data-testid': testId,
 }: KammaraPlanetCardProps) {
+  if (variant === 'compact') {
+    return (
+      <chakra.button
+        type="button"
+        onClick={onSelect ? () => onSelect(id) : undefined}
+        aria-label={`Abrir ${name}`}
+        data-testid={testId ?? 'kammara-planet-card'}
+        position="relative"
+        display="block"
+        width="100%"
+        height="100%"
+        overflow="hidden"
+        cursor="pointer"
+        textAlign="left"
+        css={{
+          background: image
+            ? `linear-gradient(180deg, ${darkColor}55, ${darkColor}cc), url(${image}) center/cover`
+            : `linear-gradient(160deg, ${darkColor}, ${color})`,
+          border: `1px solid ${color}88`,
+          boxShadow: `inset 0 0 0 1px ${color}33, inset 0 1px 0 rgba(255,255,255,0.15)`,
+          transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+        }}
+        _hover={{
+          transform: 'scale(1.04)',
+          zIndex: 1,
+          boxShadow: `inset 0 0 0 2px ${color}, 0 0 24px ${color}60`,
+        }}
+      >
+        <style>{KEYFRAMES}</style>
+        {/* Same identity hero used by the full planet card: category, world
+            name and declarer. Only the long copy and badges are omitted. */}
+        <Box
+          position="absolute"
+          top="sm"
+          left="sm"
+          right="sm"
+          zIndex={2}
+        >
+          <Text
+            m={0}
+            textStyle="heading"
+            fontSize="xs"
+            letterSpacing="hero"
+            textTransform="uppercase"
+            color={color}
+            css={{ textShadow: `0 0 12px ${color}` }}
+          >
+            {category.toUpperCase()}
+          </Text>
+          <Heading
+            as="h2"
+            m={0}
+            textStyle="heading"
+            fontSize={{ base: 'base', md: '2xl' }}
+            lineHeight={1}
+            letterSpacing="heroTitle"
+            color="textOverlayBright"
+            whiteSpace="nowrap"
+            css={{
+              textShadow: `0 0 24px ${color}, 0 2px 12px rgba(0,0,0,0.6)`,
+            }}
+          >
+            {name}
+          </Heading>
+
+          <Flex
+            align="center"
+            gap="sm"
+            mt="sm"
+            width="100%"
+            aria-hidden="true"
+            css={{
+              fontFamily: 'var(--chakra-fonts-glyph)',
+              color,
+              letterSpacing: '0.3em',
+              textShadow: `0 0 12px ${color}`,
+            }}
+          >
+            <Box
+              flex={1}
+              height="1px"
+              css={{
+                background: `linear-gradient(90deg, ${color}, transparent)`,
+                boxShadow: `0 0 8px ${color}`,
+              }}
+            />
+            <span>⊙</span>
+            <Box
+              flex={1}
+              height="1px"
+              css={{
+                background: `linear-gradient(90deg, transparent, ${color})`,
+                boxShadow: `0 0 8px ${color}`,
+              }}
+            />
+          </Flex>
+        </Box>
+
+      </chakra.button>
+    );
+  }
+
   return (
     <chakra.button
       type="button"
