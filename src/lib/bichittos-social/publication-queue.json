@@ -1,0 +1,4602 @@
+{
+  "brand": "bichittos",
+  "mode": "active",
+  "description": "Fila operacional do Bichittos. Não publica sem --apply e credenciais exclusivas do Bichittos.",
+  "generatedAt": "2026-10-09T03:49:48.353Z",
+  "timezone": "America/Sao_Paulo",
+  "cadence": [
+    "terça-feira",
+    "sexta-feira"
+  ],
+  "regularTime": "19:30",
+  "exhaustionPolicy": "stop",
+  "repeatPolicy": "explicit-only",
+  "exhaustionMessage": "A fila termina quando os posts planejados acabam. Não reiniciar nem repetir automaticamente.",
+  "start": "2026-10-20T19:30:00-03:00",
+  "end": "2027-12-28T19:30:00-03:00",
+  "total": 95,
+  "calendarExceptions": [
+    "001",
+    "020",
+    "019",
+    "029",
+    "016",
+    "030",
+    "052",
+    "031",
+    "084",
+    "017",
+    "086",
+    "087",
+    "022",
+    "027",
+    "018",
+    "032",
+    "033",
+    "034",
+    "035",
+    "026",
+    "088",
+    "089",
+    "001",
+    "016"
+  ],
+  "validation": {
+    "seasonalViolations": 0,
+    "seasonalOpeningOrderViolations": 0,
+    "missingPosts": []
+  },
+  "items": [
+    {
+      "occurrence": "001",
+      "postId": "001",
+      "world": "zeco",
+      "type": "special-day",
+      "title": "Primavera no Sul",
+      "scheduledAt": "2026-10-20T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "seasonality": {
+        "hemisphere": "both",
+        "eventMonth": 9,
+        "season": "primavera",
+        "south": "primavera",
+        "north": "outono",
+        "allowedMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "mkt/templates/_PUBLICAR/001-01-zeco-estacoes.png",
+            "key": "social/bichittos/posts/001-01-zeco-estacoes-slide-01.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/001-01-zeco-estacoes-slide-01.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/001-02-zeco-estacoes.png",
+            "key": "social/bichittos/posts/001-02-zeco-estacoes-slide-02.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/001-02-zeco-estacoes-slide-02.png"
+          }
+        ]
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "A primavera chegou no Hemisfério Sul. Ao mesmo tempo, o outono começa no Hemisfério Norte.\n\nSpring has arrived in the Southern Hemisphere. At the same time, fall begins in the Northern Hemisphere.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "A primavera chegou no Hemisfério Sul. Ao mesmo tempo, o outono começa no Hemisfério Norte.\n\nSpring has arrived in the Southern Hemisphere. At the same time, fall begins in the Northern Hemisphere.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "002",
+      "postId": "002",
+      "world": "zeco",
+      "type": "character",
+      "title": "Zeco",
+      "scheduledAt": "2026-10-23T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/002-zeco-personagem.png",
+          "key": "social/bichittos/posts/002-zeco-personagem.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/002-zeco-personagem.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Este é o Zeco. Curioso, afetuoso e cheio de imaginação, ele sonha em ser chef de cozinha.\n\nThis is Zeco. Curious, affectionate and full of imagination, he dreams of becoming a chef.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Este é o Zeco. Curioso, afetuoso e cheio de imaginação, ele sonha em ser chef de cozinha.\n\nThis is Zeco. Curious, affectionate and full of imagination, he dreams of becoming a chef.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "003",
+      "postId": "020",
+      "world": "zeco",
+      "type": "special-day",
+      "title": "Rui vampiro",
+      "scheduledAt": "2026-10-27T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "primavera",
+        "allowedMonths": [
+          10
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/020-rui-merengue-halloween.png",
+          "key": "social/bichittos/posts/020-rui-merengue-halloween.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/020-rui-merengue-halloween.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Rui Merengue chegou fantasiado de vampiro para começar as brincadeiras de Halloween.\n\nRooey Meringue arrived dressed as a vampire to begin the Halloween fun.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Rui Merengue chegou fantasiado de vampiro para começar as brincadeiras de Halloween.\n\nRooey Meringue arrived dressed as a vampire to begin the Halloween fun.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "004",
+      "postId": "019",
+      "world": "zeco",
+      "type": "special-day",
+      "title": "Feliz Dia das Bruxas!",
+      "scheduledAt": "2026-10-30T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "primavera",
+        "allowedMonths": [
+          10
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/019-zeco-halloween.png",
+          "key": "social/bichittos/posts/019-zeco-halloween.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/019-zeco-halloween.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Feliz Dia das Bruxas! Uma noite de brincadeiras e gostosuras com o Zeco, em plena primavera brasileira.\n\nHappy Halloween! A night of games and treats with Zeco, right in the middle of Brazilian spring.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Feliz Dia das Bruxas! Uma noite de brincadeiras e gostosuras com o Zeco, em plena primavera brasileira.\n\nHappy Halloween! A night of games and treats with Zeco, right in the middle of Brazilian spring.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "005",
+      "postId": "003",
+      "world": "zeco",
+      "type": "character",
+      "title": "Rui Merengue",
+      "scheduledAt": "2026-11-03T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/003-rui-merengue-personagem.png",
+          "key": "social/bichittos/posts/003-rui-merengue-personagem.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/003-rui-merengue-personagem.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Este é Rui Merengue, o melhor amigo do Zeco. Ele sonha em ser piloto, mas morre de medo de água.\n\nThis is Rooey Meringue, Zeco’s best friend. He dreams of becoming a pilot, but he is terrified of water.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Este é Rui Merengue, o melhor amigo do Zeco. Ele sonha em ser piloto, mas morre de medo de água.\n\nThis is Rooey Meringue, Zeco’s best friend. He dreams of becoming a pilot, but he is terrified of water.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "006",
+      "postId": "004",
+      "world": "zeco",
+      "type": "character",
+      "title": "Ninha",
+      "scheduledAt": "2026-11-06T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/004-ninha-personagem.png",
+          "key": "social/bichittos/posts/004-ninha-personagem.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/004-ninha-personagem.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Esta é Ninha, uma joaninha alegre e amiga do Zeco. No bolso mágico dela cabe tudo o que você imagina.\n\nThis is Neena, a cheerful little ladybug and Zeco’s friend. Her magical pocket can hold anything you imagine.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Esta é Ninha, uma joaninha alegre e amiga do Zeco. No bolso mágico dela cabe tudo o que você imagina.\n\nThis is Neena, a cheerful little ladybug and Zeco’s friend. Her magical pocket can hold anything you imagine.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "007",
+      "postId": "006",
+      "world": "zeco",
+      "type": "book-sale",
+      "title": "Zeco nas Estações e seus amigos",
+      "scheduledAt": "2026-11-10T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/006-zeco-livro.png",
+          "key": "social/bichittos/posts/006-zeco-livro.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/006-zeco-livro.png"
+        }
+      },
+      "destinationUrl": "https://guittamonategastudio.com/pt/books/zeco-estacoes",
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/zeco-estacoes",
+        "en": "https://guittamonategastudio.com/en/books/zeco-estacoes"
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Zeco e seus amigos brincam em qualquer estação. Conheça o livro e escolha onde comprar pelo site.\n\nZeco and his friends play in every season. Discover the book and choose where to buy it on the website.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Zeco e seus amigos brincam em qualquer estação. Conheça o livro e escolha onde comprar pelo site.\n\nZeco and his friends play in every season. Discover the book and choose where to buy it on the website.\n\nPT-BR: https://guittamonategastudio.com/pt/books/zeco-estacoes\nEN: https://guittamonategastudio.com/en/books/zeco-estacoes",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "008",
+      "postId": "007",
+      "world": "napcat",
+      "type": "scene",
+      "title": "Um cochilo pode ser uma aventura",
+      "scheduledAt": "2026-11-13T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/007-napcat-cena.png",
+          "key": "social/bichittos/posts/007-napcat-cena.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/007-napcat-cena.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Algumas aventuras começam quando o quarto fica quietinho. Para NapCat, até um cochilo pode abrir a porta para uma nova aventura.\n\nSome adventures begin when the room grows quiet. For NapCat, even a nap can open the door to a new adventure.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Algumas aventuras começam quando o quarto fica quietinho. Para NapCat, até um cochilo pode abrir a porta para uma nova aventura.\n\nSome adventures begin when the room grows quiet. For NapCat, even a nap can open the door to a new adventure.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "009",
+      "postId": "008",
+      "world": "napcat",
+      "type": "character",
+      "title": "NapCat",
+      "scheduledAt": "2026-11-17T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/008-napcat-personagem.png",
+          "key": "social/bichittos/posts/008-napcat-personagem.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/008-napcat-personagem.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Este é NapCat, um explorador gentil que transforma cada cochilo em uma pequena aventura.\n\nThis is NapCat, a gentle explorer who can turn every nap into a little adventure.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Este é NapCat, um explorador gentil que transforma cada cochilo em uma pequena aventura.\n\nThis is NapCat, a gentle explorer who can turn every nap into a little adventure.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "010",
+      "postId": "011",
+      "world": "taylo",
+      "type": "scene",
+      "title": "A estrela de Pitu",
+      "scheduledAt": "2026-11-20T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/011-taylo-cena.png",
+          "key": "social/bichittos/posts/011-taylo-cena.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/011-taylo-cena.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "A estrela de Pitu sempre esteve lá. Só estava esperando que ele olhasse para ela.\n\nPitu’s star had always been there, waiting for him to look up and see it.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "A estrela de Pitu sempre esteve lá. Só estava esperando que ele olhasse para ela.\n\nPitu’s star had always been there, waiting for him to look up and see it.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "011",
+      "postId": "012",
+      "world": "taylo",
+      "type": "character",
+      "title": "Taylo",
+      "scheduledAt": "2026-11-24T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/012-taylo-personagem.png",
+          "key": "social/bichittos/posts/012-taylo-personagem.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/012-taylo-personagem.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Este é Taylo, o Colecionador de Estrelas e guardião silencioso da Floresta Azul.\n\nThis is Taylo, the Star Collector and silent guardian of the Blue Forest.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Este é Taylo, o Colecionador de Estrelas e guardião silencioso da Floresta Azul.\n\nThis is Taylo, the Star Collector and silent guardian of the Blue Forest.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "012",
+      "postId": "063",
+      "world": "cheiodebolinha",
+      "type": "character",
+      "title": "Cheio de Bolinha",
+      "scheduledAt": "2026-11-27T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/063-cheio-de-bolinha-personagem.png",
+          "key": "social/bichittos/posts/063-cheio-de-bolinha-personagem.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/063-cheio-de-bolinha-personagem.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Este é Cheio de Bolinha. Um elefante enorme, gentil e educadíssimo que morre de medo de ratinhos.\n\nThis is Bobbin. A huge, gentle, and extremely polite elephant who is terrified of mice.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Este é Cheio de Bolinha. Um elefante enorme, gentil e educadíssimo que morre de medo de ratinhos.\n\nThis is Bobbin. A huge, gentle, and extremely polite elephant who is terrified of mice.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "013",
+      "postId": "038",
+      "world": "cheiodebolinha",
+      "type": "scene",
+      "title": "O medo faz flutuar",
+      "scheduledAt": "2026-12-01T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/038-cheio-de-bolinha-cena-nuvens.png",
+          "key": "social/bichittos/posts/038-cheio-de-bolinha-cena-nuvens.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/038-cheio-de-bolinha-cena-nuvens.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Quando leva um susto, Cheio de Bolinha fica tão leve que começa a flutuar. Educado como sempre, ele pede licença até para as nuvens.\n\nWhenever he gets scared, Bobbin becomes so light that he starts to float. Polite as always, he even says excuse me to the clouds.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Quando leva um susto, Cheio de Bolinha fica tão leve que começa a flutuar. Educado como sempre, ele pede licença até para as nuvens.\n\nWhenever he gets scared, Bobbin becomes so light that he starts to float. Polite as always, he even says excuse me to the clouds.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "014",
+      "postId": "028",
+      "world": "zeco",
+      "type": "book-sale",
+      "title": "Orgulho de ser do Sul",
+      "scheduledAt": "2026-12-04T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/028-zeco-livro-sul-do-brasil.png",
+          "key": "social/bichittos/posts/028-zeco-livro-sul-do-brasil.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/028-zeco-livro-sul-do-brasil.png"
+        }
+      },
+      "destinationUrl": "https://guittamonategastudio.com/pt/books/zeco-estacoes",
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/zeco-estacoes",
+        "en": "https://guittamonategastudio.com/en/books/zeco-estacoes"
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Zeco nas Estações é também uma homenagem ao Sul do Brasil, à sua natureza e à sua gente. Conheça o livro pelo link da bio.\n\nZeco in the Seasons is also a tribute to Southern Brazil, its nature, and its people. Discover the book through the link in our bio.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Zeco nas Estações é também uma homenagem ao Sul do Brasil, à sua natureza e à sua gente. Conheça o livro pelo link da bio.\n\nZeco in the Seasons is also a tribute to Southern Brazil, its nature, and its people. Discover the book through the link in our bio.\n\nPT-BR: https://guittamonategastudio.com/pt/books/zeco-estacoes\nEN: https://guittamonategastudio.com/en/books/zeco-estacoes",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "015",
+      "postId": "009",
+      "world": "napcat",
+      "type": "character",
+      "title": "Violeta",
+      "scheduledAt": "2026-12-08T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/009-violeta-personagem.png",
+          "key": "social/bichittos/posts/009-violeta-personagem.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/009-violeta-personagem.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Esta é Violeta, a irmã gêmea do NapCat. Ela é pura energia e está sempre pulando, brincando e inventando novidades.\n\nThis is Violeta, NapCat’s twin sister. She is pure energy, always jumping, playing, and inventing something new.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Esta é Violeta, a irmã gêmea do NapCat. Ela é pura energia e está sempre pulando, brincando e inventando novidades.\n\nThis is Violeta, NapCat’s twin sister. She is pure energy, always jumping, playing, and inventing something new.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "016",
+      "postId": "041",
+      "world": "napcat",
+      "type": "coloring",
+      "title": "Pronto para colorir",
+      "scheduledAt": "2026-12-11T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "mkt/templates/_PUBLICAR/041-01-napcat-passaros-original.png",
+            "key": "social/bichittos/posts/041-01-napcat-passaros-original-slide-01.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/041-01-napcat-passaros-original-slide-01.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/041-02-napcat-passaros-versao-1.png",
+            "key": "social/bichittos/posts/041-02-napcat-passaros-versao-1-slide-02.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/041-02-napcat-passaros-versao-1-slide-02.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/041-03-napcat-passaros-versao-2.png",
+            "key": "social/bichittos/posts/041-03-napcat-passaros-versao-2-slide-03.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/041-03-napcat-passaros-versao-2-slide-03.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/041-04-napcat-livro-colorir.png",
+            "key": "social/bichittos/posts/041-04-napcat-livro-colorir-slide-04.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/041-04-napcat-livro-colorir-slide-04.png"
+          }
+        ]
+      },
+      "destinationUrl": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+        "en": "https://guittamonategastudio.com/en/books/napcat-coloring-book"
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Uma mesma cena pode ganhar muitas cores. Deslize para ver duas versões dos passarinhos na plantação e depois crie a sua.\n\nThe same scene can take on many colors. Swipe to see two versions of the birds in the garden, then create your own.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Uma mesma cena pode ganhar muitas cores. Deslize para ver duas versões dos passarinhos na plantação e depois crie a sua.\n\nThe same scene can take on many colors. Swipe to see two versions of the birds in the garden, then create your own.\n\nPT-BR: https://guittamonategastudio.com/pt/books/napcat-coloring-book\nEN: https://guittamonategastudio.com/en/books/napcat-coloring-book",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "017",
+      "postId": "010",
+      "world": "napcat",
+      "type": "book-sale",
+      "title": "Livro para Colorir do NapCat",
+      "scheduledAt": "2026-12-15T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/010-napcat-livro.png",
+          "key": "social/bichittos/posts/010-napcat-livro.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/010-napcat-livro.png"
+        }
+      },
+      "destinationUrl": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+        "en": "https://guittamonategastudio.com/en/books/napcat-coloring-book"
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Entre cochilos e pequenas aventuras, NapCat espera pelas cores que você escolher. Conheça o livro para colorir no link da bio.\n\nBetween naps and little adventures, NapCat is waiting for the colors you choose. Discover the coloring book through the link in our bio.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Entre cochilos e pequenas aventuras, NapCat espera pelas cores que você escolher. Conheça o livro para colorir no link da bio.\n\nBetween naps and little adventures, NapCat is waiting for the colors you choose. Discover the coloring book through the link in our bio.\n\nPT-BR: https://guittamonategastudio.com/pt/books/napcat-coloring-book\nEN: https://guittamonategastudio.com/en/books/napcat-coloring-book",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "018",
+      "postId": "029",
+      "world": "zeco",
+      "type": "special-day",
+      "title": "Natal no calorão",
+      "scheduledAt": "2026-12-18T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "primavera",
+        "allowedMonths": [
+          12
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/029-zeco-natal-calorao.png",
+          "key": "social/bichittos/posts/029-zeco-natal-calorao.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/029-zeco-natal-calorao.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Aqui o Natal é no verão. Faz muito calor, mas continua divertido.\n\nHere, Christmas is in summer. It is very hot, but it is still so much fun.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Aqui o Natal é no verão. Faz muito calor, mas continua divertido.\n\nHere, Christmas is in summer. It is very hot, but it is still so much fun.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "019",
+      "postId": "016",
+      "world": "zeco",
+      "type": "special-day",
+      "title": "Verão no Sul",
+      "scheduledAt": "2026-12-21T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "seasonality": {
+        "hemisphere": "both",
+        "eventMonth": 12,
+        "season": "verão",
+        "south": "verão",
+        "north": "inverno",
+        "allowedMonths": [
+          12,
+          1,
+          2
+        ]
+      },
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "mkt/templates/_PUBLICAR/016-01-zeco-estacoes.png",
+            "key": "social/bichittos/posts/016-01-zeco-estacoes-slide-01.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/016-01-zeco-estacoes-slide-01.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/016-02-zeco-estacoes.png",
+            "key": "social/bichittos/posts/016-02-zeco-estacoes-slide-02.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/016-02-zeco-estacoes-slide-02.png"
+          }
+        ]
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "O verão chegou no Hemisfério Sul. Ao mesmo tempo, o inverno começa no Hemisfério Norte.\n\nSummer has arrived in the Southern Hemisphere. At the same time, winter begins in the Northern Hemisphere.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "O verão chegou no Hemisfério Sul. Ao mesmo tempo, o inverno começa no Hemisfério Norte.\n\nSummer has arrived in the Southern Hemisphere. At the same time, winter begins in the Northern Hemisphere.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "020",
+      "postId": "013",
+      "world": "taylo",
+      "type": "character",
+      "title": "Pitu",
+      "scheduledAt": "2026-12-22T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/013-pitu-personagem.png",
+          "key": "social/bichittos/posts/013-pitu-personagem.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/013-pitu-personagem.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Este é Pitu. Ele sente tudo intensamente, e sua sensibilidade também faz parte de sua coragem.\n\nThis is Pitu. He feels everything deeply, and his sensitivity is also part of his courage.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Este é Pitu. Ele sente tudo intensamente, e sua sensibilidade também faz parte de sua coragem.\n\nThis is Pitu. He feels everything deeply, and his sensitivity is also part of his courage.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "021",
+      "postId": "030",
+      "world": "zeco",
+      "type": "special-day",
+      "title": "Feliz Natal para todos!",
+      "scheduledAt": "2026-12-25T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "verão",
+        "allowedMonths": [
+          12
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/030-zeco-feliz-natal.png",
+          "key": "social/bichittos/posts/030-zeco-feliz-natal.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/030-zeco-feliz-natal.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Feliz Natal para todos!\n\nMerry Christmas, everyone!",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Feliz Natal para todos!\n\nMerry Christmas, everyone!",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "022",
+      "postId": "052",
+      "world": "napcat",
+      "type": "special-day",
+      "title": "Feliz Natal!",
+      "scheduledAt": "2026-12-25T20:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/052-napcat-violeta-feliz-natal.png",
+          "key": "social/bichittos/posts/052-napcat-violeta-feliz-natal.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/052-napcat-violeta-feliz-natal.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "NapCat e Violeta cantam juntos para celebrar. Feliz Natal!\n\nNapCat and Violeta sing together to celebrate. Merry Christmas!",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "NapCat e Violeta cantam juntos para celebrar. Feliz Natal!\n\nNapCat and Violeta sing together to celebrate. Merry Christmas!",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "023",
+      "postId": "051",
+      "world": "taylo",
+      "type": "scene",
+      "title": "O choro na tulipa",
+      "scheduledAt": "2026-12-29T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/051-taylo-pitu-tulipa.png",
+          "key": "social/bichittos/posts/051-taylo-pitu-tulipa.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/051-taylo-pitu-tulipa.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Naquele mesmo campo, dentro de uma tulipa vermelha, morava Pitu.\n\nIn that very field, inside a red tulip, lived Pitu.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Naquele mesmo campo, dentro de uma tulipa vermelha, morava Pitu.\n\nIn that very field, inside a red tulip, lived Pitu.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "024",
+      "postId": "031",
+      "world": "zeco",
+      "type": "special-day",
+      "title": "Feliz Ano Novo!",
+      "scheduledAt": "2027-01-01T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "verão",
+        "allowedMonths": [
+          1
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/031-zeco-feliz-ano-novo.png",
+          "key": "social/bichittos/posts/031-zeco-feliz-ano-novo.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/031-zeco-feliz-ano-novo.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Feliz Ano Novo! Na virada do ano, na beira do mar, sete ondinhas vamos pular.\n\nHappy New Year! On New Year’s Eve, down by the sea, seven little waves to jump.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Feliz Ano Novo! Na virada do ano, na beira do mar, sete ondinhas vamos pular.\n\nHappy New Year! On New Year’s Eve, down by the sea, seven little waves to jump.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "025",
+      "postId": "014",
+      "world": "taylo",
+      "type": "book-sale",
+      "title": "Taylo e Pitu",
+      "scheduledAt": "2027-01-05T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/014-taylo-livro.png",
+          "key": "social/bichittos/posts/014-taylo-livro.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/014-taylo-livro.png"
+        }
+      },
+      "destinationUrl": "https://guittamonategastudio.com/pt/books/taylo-e-pitu-volume-1",
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/taylo-e-pitu-volume-1",
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Conheça Taylo e Pitu em uma história delicada sobre encontros, sonhos e as estrelas que colecionamos pelo caminho. Encontre o livro no link da bio.\n\nMeet Taylo and Pitu in a gentle story about encounters, dreams, and the stars we collect along the way. Find the book through the link in our bio.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Conheça Taylo e Pitu em uma história delicada sobre encontros, sonhos e as estrelas que colecionamos pelo caminho. Encontre o livro no link da bio.\n\nMeet Taylo and Pitu in a gentle story about encounters, dreams, and the stars we collect along the way. Find the book through the link in our bio.\n\nPT-BR: https://guittamonategastudio.com/pt/books/taylo-e-pitu-volume-1",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "026",
+      "postId": "064",
+      "world": "cheiodebolinha",
+      "type": "character",
+      "title": "Querie",
+      "scheduledAt": "2027-01-08T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/064-querie-personagem.png",
+          "key": "social/bichittos/posts/064-querie-personagem.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/064-querie-personagem.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Este é Querie. Um ratinho pequeno, travesso e especialista em transformar qualquer obrigação em uma desculpa impossível.\n\nThis is Querie. A small, mischievous mouse and an expert at turning every chore into an impossible excuse.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Este é Querie. Um ratinho pequeno, travesso e especialista em transformar qualquer obrigação em uma desculpa impossível.\n\nThis is Querie. A small, mischievous mouse and an expert at turning every chore into an impossible excuse.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "027",
+      "postId": "039",
+      "world": "cheiodebolinha",
+      "type": "scene",
+      "title": "A escova fugiu!",
+      "scheduledAt": "2027-01-12T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/039-querie-a-escova-fugiu.png",
+          "key": "social/bichittos/posts/039-querie-a-escova-fugiu.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/039-querie-a-escova-fugiu.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Querie jura que ia escovar os dentes. A escova conta outra história e, muito suspeitamente, saiu correndo.\n\nQuerie swears he was going to brush his teeth. The toothbrush tells a different story and very suspiciously ran away.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Querie jura que ia escovar os dentes. A escova conta outra história e, muito suspeitamente, saiu correndo.\n\nQuerie swears he was going to brush his teeth. The toothbrush tells a different story and very suspiciously ran away.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "028",
+      "postId": "015",
+      "world": "zeco",
+      "type": "gif",
+      "title": "Oi, eu sou o Zeco!",
+      "scheduledAt": "2027-01-15T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "reel",
+        "video": {
+          "local": "mkt/templates/_PUBLICAR/015-zeco-gif.mp4",
+          "key": "social/bichittos/posts/015-zeco-gif.mp4",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/015-zeco-gif.mp4"
+        },
+        "cover": {
+          "local": "mkt/templates/_PUBLICAR/015-zeco-gif.png",
+          "key": "social/bichittos/posts/015-zeco-gif.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/015-zeco-gif.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Oi, eu sou o Zeco! Um pequeno movimento e uma nova brincadeira para começar.\n\nHi, I’m Zeco! A little movement and a brand-new game to begin.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Oi, eu sou o Zeco! Um pequeno movimento e uma nova brincadeira para começar.\n\nHi, I’m Zeco! A little movement and a brand-new game to begin.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "029",
+      "postId": "042",
+      "world": "napcat",
+      "type": "coloring",
+      "title": "Vamos colorir?",
+      "scheduledAt": "2027-01-19T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "mkt/templates/_PUBLICAR/042-01-napcat-escondido-original.png",
+            "key": "social/bichittos/posts/042-01-napcat-escondido-original-slide-01.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/042-01-napcat-escondido-original-slide-01.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/042-02-napcat-escondido-versao-1.png",
+            "key": "social/bichittos/posts/042-02-napcat-escondido-versao-1-slide-02.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/042-02-napcat-escondido-versao-1-slide-02.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/042-03-napcat-escondido-versao-2.png",
+            "key": "social/bichittos/posts/042-03-napcat-escondido-versao-2-slide-03.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/042-03-napcat-escondido-versao-2-slide-03.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/042-04-napcat-livro-colorir.png",
+            "key": "social/bichittos/posts/042-04-napcat-livro-colorir-slide-04.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/042-04-napcat-livro-colorir-slide-04.png"
+          }
+        ]
+      },
+      "destinationUrl": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+        "en": "https://guittamonategastudio.com/en/books/napcat-coloring-book"
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "NapCat se escondeu entre as folhas. Deslize para descobrir duas maneiras de colorir a mesma cena e imagine a sua versão.\n\nNapCat hid among the leaves. Swipe to discover two ways to color the same scene and imagine your own version.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "NapCat se escondeu entre as folhas. Deslize para descobrir duas maneiras de colorir a mesma cena e imagine a sua versão.\n\nNapCat hid among the leaves. Swipe to discover two ways to color the same scene and imagine your own version.\n\nPT-BR: https://guittamonategastudio.com/pt/books/napcat-coloring-book\nEN: https://guittamonategastudio.com/en/books/napcat-coloring-book",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "030",
+      "postId": "043",
+      "world": "napcat",
+      "type": "coloring",
+      "title": "Cambalhota em dupla",
+      "scheduledAt": "2027-01-22T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "mkt/templates/_PUBLICAR/043-01-napcat-cambalhota-original.png",
+            "key": "social/bichittos/posts/043-01-napcat-cambalhota-original-slide-01.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/043-01-napcat-cambalhota-original-slide-01.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/043-02-napcat-cambalhota-versao-1.png",
+            "key": "social/bichittos/posts/043-02-napcat-cambalhota-versao-1-slide-02.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/043-02-napcat-cambalhota-versao-1-slide-02.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/043-03-napcat-cambalhota-versao-2.png",
+            "key": "social/bichittos/posts/043-03-napcat-cambalhota-versao-2-slide-03.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/043-03-napcat-cambalhota-versao-2-slide-03.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/043-04-napcat-livro-colorir.png",
+            "key": "social/bichittos/posts/043-04-napcat-livro-colorir-slide-04.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/043-04-napcat-livro-colorir-slide-04.png"
+          }
+        ]
+      },
+      "destinationUrl": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+        "en": "https://guittamonategastudio.com/en/books/napcat-coloring-book"
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "NapCat e Violeta fazem cambalhotas pelo jardim. Deslize para ver como a mesma brincadeira muda com novas combinações de cores.\n\nNapCat and Violeta tumble through the garden. Swipe to see how the same game changes with new color combinations.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "NapCat e Violeta fazem cambalhotas pelo jardim. Deslize para ver como a mesma brincadeira muda com novas combinações de cores.\n\nNapCat and Violeta tumble through the garden. Swipe to see how the same game changes with new color combinations.\n\nPT-BR: https://guittamonategastudio.com/pt/books/napcat-coloring-book\nEN: https://guittamonategastudio.com/en/books/napcat-coloring-book",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "031",
+      "postId": "054",
+      "world": "taylo",
+      "type": "scene",
+      "title": "A trilha de pistas",
+      "scheduledAt": "2027-01-26T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "mkt/templates/_PUBLICAR/054-taylo-trilha-de-pistas.png",
+            "key": "social/bichittos/posts/054-taylo-trilha-de-pistas-slide-01.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/054-taylo-trilha-de-pistas-slide-01.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/054-02-taylo-semente-amarela.png",
+            "key": "social/bichittos/posts/054-02-taylo-semente-amarela-slide-02.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/054-02-taylo-semente-amarela-slide-02.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/054-03-taylo-semente-rosada.png",
+            "key": "social/bichittos/posts/054-03-taylo-semente-rosada-slide-03.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/054-03-taylo-semente-rosada-slide-03.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/054-04-taylo-terceira-semente.png",
+            "key": "social/bichittos/posts/054-04-taylo-terceira-semente-slide-04.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/054-04-taylo-terceira-semente-slide-04.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/054-05-taylo-livro.png",
+            "key": "social/bichittos/posts/054-05-taylo-livro-slide-05.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/054-05-taylo-livro-slide-05.png"
+          }
+        ]
+      },
+      "destinationUrl": "https://guittamonategastudio.com/pt/books/taylo-e-pitu-volume-1",
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/taylo-e-pitu-volume-1",
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Então começaram a procurar juntos. Taylo não saía apontando onde estavam as coisas. Fazia algo ainda melhor: ensinava o Pitu a investigar.\n\nAnd so they began searching together. Taylo did not simply point out where things were. He did something even better. He taught Pitu how to investigate.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Então começaram a procurar juntos. Taylo não saía apontando onde estavam as coisas. Fazia algo ainda melhor: ensinava o Pitu a investigar.\n\nAnd so they began searching together. Taylo did not simply point out where things were. He did something even better. He taught Pitu how to investigate.\n\nPT-BR: https://guittamonategastudio.com/pt/books/taylo-e-pitu-volume-1",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "032",
+      "postId": "053",
+      "world": "taylo",
+      "type": "scene",
+      "title": "O encontro",
+      "scheduledAt": "2027-01-29T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/053-taylo-o-encontro.png",
+          "key": "social/bichittos/posts/053-taylo-o-encontro.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/053-taylo-o-encontro.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Taylo parou e ouviu, bem baixinho, um chorinho. Assim começou o encontro de Taylo e Pitu.\n\nTaylo stopped. He could hear a quiet little cry. This was the beginning of Taylo and Pitu’s meeting.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Taylo parou e ouviu, bem baixinho, um chorinho. Assim começou o encontro de Taylo e Pitu.\n\nTaylo stopped. He could hear a quiet little cry. This was the beginning of Taylo and Pitu’s meeting.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "033",
+      "postId": "065",
+      "world": "cheiodebolinha",
+      "type": "gif",
+      "title": "O milho mordeu meu dente",
+      "scheduledAt": "2027-02-02T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "reel",
+        "video": {
+          "local": "mkt/templates/_PUBLICAR/065.mp4",
+          "key": "social/bichittos/posts/065.mp4",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/065.mp4"
+        },
+        "cover": {
+          "local": "mkt/templates/_PUBLICAR/065-querie-milho.png",
+          "key": "social/bichittos/posts/065-querie-milho.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/065-querie-milho.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Querie percebeu que seu dente estava mole. A explicação é óbvia: foi o milho que mordeu o dente dele.\n\nQuerie noticed that his tooth was loose. The explanation is obvious: the corn bit his tooth.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Querie percebeu que seu dente estava mole. A explicação é óbvia: foi o milho que mordeu o dente dele.\n\nQuerie noticed that his tooth was loose. The explanation is obvious: the corn bit his tooth.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "034",
+      "postId": "084",
+      "world": "zeco",
+      "type": "special-day",
+      "title": "Carnaval no verão",
+      "scheduledAt": "2027-02-05T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "verão",
+        "allowedMonths": [
+          1,
+          2,
+          3
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/084-zeco-verao-carnaval.png",
+          "key": "social/bichittos/posts/084-zeco-verao-carnaval.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/084-zeco-verao-carnaval.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "No verão tem Carnaval, vamos para o bailinho. Você escolhe a fantasia, pode ser pirata ou gatinho.\n\nSummer brings Carnival. What's your costume? A pirate? A kitten? You choose.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "No verão tem Carnaval, vamos para o bailinho. Você escolhe a fantasia, pode ser pirata ou gatinho.\n\nSummer brings Carnival. What's your costume? A pirate? A kitten? You choose.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "035",
+      "postId": "040",
+      "world": "cheiodebolinha",
+      "type": "scene",
+      "title": "Corre, Cheio de Bolinha!",
+      "scheduledAt": "2027-02-09T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/040-cheio-foge-dos-queries.png",
+          "key": "social/bichittos/posts/040-cheio-foge-dos-queries.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/040-cheio-foge-dos-queries.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Os Queries azucrinam em cima do muro. Cheio de Bolinha fica assustado, sobe sobre suas bolhas de sabão e escapa pelo céu.\n\nThe Queries tease him from the wall. Bobbin gets scared, rises on his soap bubbles, and escapes through the sky.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Os Queries azucrinam em cima do muro. Cheio de Bolinha fica assustado, sobe sobre suas bolhas de sabão e escapa pelo céu.\n\nThe Queries tease him from the wall. Bobbin gets scared, rises on his soap bubbles, and escapes through the sky.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "036",
+      "postId": "023",
+      "world": "zeco",
+      "type": "scene",
+      "title": "Protetor solar",
+      "scheduledAt": "2027-02-12T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "verão",
+        "allowedMonths": [
+          12,
+          1,
+          2
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/023-zeco-cena-verao-praia.png",
+          "key": "social/bichittos/posts/023-zeco-cena-verao-praia.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/023-zeco-cena-verao-praia.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Depois do protetor solar passar, na areia pode ir brincar.\n\nRub, rub, rub! Sunscreen on. Now go play in the sand.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Depois do protetor solar passar, na areia pode ir brincar.\n\nRub, rub, rub! Sunscreen on. Now go play in the sand.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "037",
+      "postId": "036",
+      "world": "zeco",
+      "type": "scene",
+      "title": "A capivara",
+      "scheduledAt": "2027-02-16T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "verão",
+        "allowedMonths": [
+          12,
+          1,
+          2
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/036-zeco-natureza-capivara.png",
+          "key": "social/bichittos/posts/036-zeco-natureza-capivara.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/036-zeco-natureza-capivara.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Onde Zeco mora, as capivaras gostam de se estender ao sol e ficar perto do lago.\n\nWhere Zeco lives, capybaras like to stretch out in the sun and stay close to the lake.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Onde Zeco mora, as capivaras gostam de se estender ao sol e ficar perto do lago.\n\nWhere Zeco lives, capybaras like to stretch out in the sun and stay close to the lake.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "038",
+      "postId": "080",
+      "world": "zeco",
+      "type": "scene",
+      "title": "Nadar e velejar",
+      "scheduledAt": "2027-02-19T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "verão",
+        "allowedMonths": [
+          12,
+          1,
+          2
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/080-zeco-verao-nadar-velejar.png",
+          "key": "social/bichittos/posts/080-zeco-verao-nadar-velejar.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/080-zeco-verao-nadar-velejar.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Como é divertido nadar, vamos também velejar.\n\nSplish, splash! Swimming and sailing are fun.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Como é divertido nadar, vamos também velejar.\n\nSplish, splash! Swimming and sailing are fun.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "039",
+      "postId": "081",
+      "world": "zeco",
+      "type": "scene",
+      "title": "Vamos curtir a natureza",
+      "scheduledAt": "2027-02-23T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "verão",
+        "allowedMonths": [
+          12,
+          1,
+          2
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/081-zeco-verao-rio.png",
+          "key": "social/bichittos/posts/081-zeco-verao-rio.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/081-zeco-verao-rio.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Vamos curtir a natureza. Para descer o rio é só seguir a correnteza.\n\nLet's enjoy nature. To go down the river, just follow the current.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Vamos curtir a natureza. Para descer o rio é só seguir a correnteza.\n\nLet's enjoy nature. To go down the river, just follow the current.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "040",
+      "postId": "082",
+      "world": "zeco",
+      "type": "scene",
+      "title": "Começou a chover",
+      "scheduledAt": "2027-02-26T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "verão",
+        "allowedMonths": [
+          12,
+          1,
+          2
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/082-zeco-verao-chuva.png",
+          "key": "social/bichittos/posts/082-zeco-verao-chuva.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/082-zeco-verao-chuva.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Começou a chover e o Rui abriu sua florzinha para se proteger daquela chuvinha.\n\nUh-oh, rain! Rooey popped open his flower like an umbrella.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Começou a chover e o Rui abriu sua florzinha para se proteger daquela chuvinha.\n\nUh-oh, rain! Rooey popped open his flower like an umbrella.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "041",
+      "postId": "006",
+      "world": "zeco",
+      "type": "book-sale",
+      "title": "Zeco nas Estações e seus amigos",
+      "scheduledAt": "2027-03-02T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/006-zeco-livro.png",
+          "key": "social/bichittos/posts/006-zeco-livro.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/006-zeco-livro.png"
+        }
+      },
+      "destinationUrl": "https://guittamonategastudio.com/pt/books/zeco-estacoes",
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/zeco-estacoes",
+        "en": "https://guittamonategastudio.com/en/books/zeco-estacoes"
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Zeco e seus amigos brincam em qualquer estação. Conheça o livro e escolha onde comprar pelo site.\n\nZeco and his friends play in every season. Discover the book and choose where to buy it on the website.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Zeco e seus amigos brincam em qualquer estação. Conheça o livro e escolha onde comprar pelo site.\n\nZeco and his friends play in every season. Discover the book and choose where to buy it on the website.\n\nPT-BR: https://guittamonategastudio.com/pt/books/zeco-estacoes\nEN: https://guittamonategastudio.com/en/books/zeco-estacoes",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "042",
+      "postId": "044",
+      "world": "napcat",
+      "type": "coloring",
+      "title": "Hora de colorir",
+      "scheduledAt": "2027-03-05T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "mkt/templates/_PUBLICAR/044-01-napcat-beterraba-original.png",
+            "key": "social/bichittos/posts/044-01-napcat-beterraba-original-slide-01.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/044-01-napcat-beterraba-original-slide-01.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/044-02-napcat-beterraba-versao-1.png",
+            "key": "social/bichittos/posts/044-02-napcat-beterraba-versao-1-slide-02.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/044-02-napcat-beterraba-versao-1-slide-02.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/044-03-napcat-beterraba-versao-2.png",
+            "key": "social/bichittos/posts/044-03-napcat-beterraba-versao-2-slide-03.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/044-03-napcat-beterraba-versao-2-slide-03.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/044-04-napcat-livro-colorir.png",
+            "key": "social/bichittos/posts/044-04-napcat-livro-colorir-slide-04.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/044-04-napcat-livro-colorir-slide-04.png"
+          }
+        ]
+      },
+      "destinationUrl": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+        "en": "https://guittamonategastudio.com/en/books/napcat-coloring-book"
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "NapCat encontrou uma beterraba. Deslize para ver a cena em lápis de cor, em outra paleta e depois invente a sua pintura.\n\nNapCat found a beet. Swipe to see the scene in colored pencils, in another palette, and then invent your own version.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "NapCat encontrou uma beterraba. Deslize para ver a cena em lápis de cor, em outra paleta e depois invente a sua pintura.\n\nNapCat found a beet. Swipe to see the scene in colored pencils, in another palette, and then invent your own version.\n\nPT-BR: https://guittamonategastudio.com/pt/books/napcat-coloring-book\nEN: https://guittamonategastudio.com/en/books/napcat-coloring-book",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "043",
+      "postId": "045",
+      "world": "napcat",
+      "type": "coloring",
+      "title": "Hora do macarrão",
+      "scheduledAt": "2027-03-09T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "mkt/templates/_PUBLICAR/045-01-napcat-macarrao-original.png",
+            "key": "social/bichittos/posts/045-01-napcat-macarrao-original-slide-01.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/045-01-napcat-macarrao-original-slide-01.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/045-02-napcat-macarrao-versao-1.png",
+            "key": "social/bichittos/posts/045-02-napcat-macarrao-versao-1-slide-02.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/045-02-napcat-macarrao-versao-1-slide-02.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/045-03-napcat-macarrao-versao-2.png",
+            "key": "social/bichittos/posts/045-03-napcat-macarrao-versao-2-slide-03.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/045-03-napcat-macarrao-versao-2-slide-03.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/045-04-napcat-livro-colorir.png",
+            "key": "social/bichittos/posts/045-04-napcat-livro-colorir-slide-04.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/045-04-napcat-livro-colorir-slide-04.png"
+          }
+        ]
+      },
+      "destinationUrl": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+        "en": "https://guittamonategastudio.com/en/books/napcat-coloring-book"
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "NapCat já escolheu seus hashis. Deslize para ver duas versões do almoço e escolha as cores da sua própria cena.\n\nNapCat has picked his chopsticks. Swipe to see two versions of lunch and choose the colors for your own scene.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "NapCat já escolheu seus hashis. Deslize para ver duas versões do almoço e escolha as cores da sua própria cena.\n\nNapCat has picked his chopsticks. Swipe to see two versions of lunch and choose the colors for your own scene.\n\nPT-BR: https://guittamonategastudio.com/pt/books/napcat-coloring-book\nEN: https://guittamonategastudio.com/en/books/napcat-coloring-book",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "044",
+      "postId": "010",
+      "world": "napcat",
+      "type": "book-sale",
+      "title": "Livro para Colorir do NapCat",
+      "scheduledAt": "2027-03-12T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/010-napcat-livro.png",
+          "key": "social/bichittos/posts/010-napcat-livro.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/010-napcat-livro.png"
+        }
+      },
+      "destinationUrl": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+        "en": "https://guittamonategastudio.com/en/books/napcat-coloring-book"
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Entre cochilos e pequenas aventuras, NapCat espera pelas cores que você escolher. Conheça o livro para colorir no link da bio.\n\nBetween naps and little adventures, NapCat is waiting for the colors you choose. Discover the coloring book through the link in our bio.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Entre cochilos e pequenas aventuras, NapCat espera pelas cores que você escolher. Conheça o livro para colorir no link da bio.\n\nBetween naps and little adventures, NapCat is waiting for the colors you choose. Discover the coloring book through the link in our bio.\n\nPT-BR: https://guittamonategastudio.com/pt/books/napcat-coloring-book\nEN: https://guittamonategastudio.com/en/books/napcat-coloring-book",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "045",
+      "postId": "055",
+      "world": "taylo",
+      "type": "scene",
+      "title": "As estrelas",
+      "scheduledAt": "2027-03-16T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/055-taylo-as-estrelas.png",
+          "key": "social/bichittos/posts/055-taylo-as-estrelas.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/055-taylo-as-estrelas.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Sentados lado a lado, olhavam o campo escuro onde as sementes agora dormiam na terra. Pitu enfim sossegou o coração.\n\nSitting side by side, they looked across the dark field where the seeds now slept beneath the earth. At last, Pitu’s heart grew peaceful.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Sentados lado a lado, olhavam o campo escuro onde as sementes agora dormiam na terra. Pitu enfim sossegou o coração.\n\nSitting side by side, they looked across the dark field where the seeds now slept beneath the earth. At last, Pitu’s heart grew peaceful.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "046",
+      "postId": "056",
+      "world": "taylo",
+      "type": "tale",
+      "scheduledAt": "2027-03-19T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/056-taylo-conto-lua-azul.png",
+          "key": "social/bichittos/posts/056-taylo-conto-lua-azul.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/056-taylo-conto-lua-azul.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "O silêncio da noite não é vazio. É como se a Floresta Azul estivesse sempre a ponto de contar um segredo.\n\nThe quiet of the night is never empty. It feels as though the Blue Forest is always just about to share a secret.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "O silêncio da noite não é vazio. É como se a Floresta Azul estivesse sempre a ponto de contar um segredo.\n\nThe quiet of the night is never empty. It feels as though the Blue Forest is always just about to share a secret.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "047",
+      "postId": "017",
+      "world": "zeco",
+      "type": "special-day",
+      "title": "O outono chegou",
+      "scheduledAt": "2027-03-20T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "seasonality": {
+        "hemisphere": "both",
+        "eventMonth": 3,
+        "season": "outono",
+        "south": "outono",
+        "north": "primavera",
+        "allowedMonths": [
+          3,
+          4,
+          5
+        ]
+      },
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "mkt/templates/_PUBLICAR/017-01-zeco-estacoes.png",
+            "key": "social/bichittos/posts/017-01-zeco-estacoes-slide-01.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/017-01-zeco-estacoes-slide-01.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/017-02-zeco-estacoes.png",
+            "key": "social/bichittos/posts/017-02-zeco-estacoes-slide-02.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/017-02-zeco-estacoes-slide-02.png"
+          }
+        ]
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "O outono chegou por aqui.\n\nFall is here in the Southern Hemisphere.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "O outono chegou por aqui.\n\nFall is here in the Southern Hemisphere.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "048",
+      "postId": "086",
+      "world": "zeco",
+      "type": "scene",
+      "title": "Friozinho de manhã",
+      "scheduledAt": "2027-03-23T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "outono",
+        "allowedMonths": [
+          3,
+          4,
+          5
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/086-zeco-outono-cedinho.png",
+          "key": "social/bichittos/posts/086-zeco-outono-cedinho.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/086-zeco-outono-cedinho.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Começou o outono e a fazer friozinho. Como é difícil sair da cama cedinho.\n\nFall is here and it is chilly. So hard to leave a cozy bed.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Começou o outono e a fazer friozinho. Como é difícil sair da cama cedinho.\n\nFall is here and it is chilly. So hard to leave a cozy bed.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "049",
+      "postId": "087",
+      "world": "zeco",
+      "type": "scene",
+      "title": "Vamos fazer bolinho?",
+      "scheduledAt": "2027-03-26T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "outono",
+        "allowedMonths": [
+          3,
+          4,
+          5
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/087-zeco-outono-bolinho.png",
+          "key": "social/bichittos/posts/087-zeco-outono-bolinho.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/087-zeco-outono-bolinho.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Lá fora está chovendo e está friozinho. Vamos fazer bolinho? Zeco adora ficar na cozinha de avental e todo sujo de farinha.\n\nRainy and chilly outside. Shall we bake? Zeco loves his kitchen, apron on and flour on his nose.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Lá fora está chovendo e está friozinho. Vamos fazer bolinho? Zeco adora ficar na cozinha de avental e todo sujo de farinha.\n\nRainy and chilly outside. Shall we bake? Zeco loves his kitchen, apron on and flour on his nose.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "050",
+      "postId": "022",
+      "world": "zeco",
+      "type": "scene",
+      "title": "A gralha-azul",
+      "scheduledAt": "2027-03-30T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "outono",
+        "allowedMonths": [
+          3,
+          4,
+          5
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/022-zeco-cena-gralha-azul.png",
+          "key": "social/bichittos/posts/022-zeco-cena-gralha-azul.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/022-zeco-cena-gralha-azul.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "A gralha-azul esconde o pinhão e esquece. É assim que um pinheiro novo aparece.\n\nThe blue jay hides a pine nut and forgets it. And that’s how a pine tree grows.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "A gralha-azul esconde o pinhão e esquece. É assim que um pinheiro novo aparece.\n\nThe blue jay hides a pine nut and forgets it. And that’s how a pine tree grows.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "051",
+      "postId": "027",
+      "world": "zeco",
+      "type": "scene",
+      "title": "A jardineira da araucária",
+      "scheduledAt": "2027-04-02T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "outono",
+        "allowedMonths": [
+          3,
+          4,
+          5
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/027-zeco-cena-jardineira-araucaria.png",
+          "key": "social/bichittos/posts/027-zeco-cena-jardineira-araucaria.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/027-zeco-cena-jardineira-araucaria.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Sem querer, ela planta a floresta inteira. A jardineira da araucária é muito faceira.\n\nWithout meaning to, she plants a whole forest. What a sweet little gardener.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Sem querer, ela planta a floresta inteira. A jardineira da araucária é muito faceira.\n\nWithout meaning to, she plants a whole forest. What a sweet little gardener.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "052",
+      "postId": "014",
+      "world": "taylo",
+      "type": "book-sale",
+      "title": "Taylo e Pitu",
+      "scheduledAt": "2027-04-06T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/014-taylo-livro.png",
+          "key": "social/bichittos/posts/014-taylo-livro.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/014-taylo-livro.png"
+        }
+      },
+      "destinationUrl": "https://guittamonategastudio.com/pt/books/taylo-e-pitu-volume-1",
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/taylo-e-pitu-volume-1",
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Conheça Taylo e Pitu em uma história delicada sobre encontros, sonhos e as estrelas que colecionamos pelo caminho. Encontre o livro no link da bio.\n\nMeet Taylo and Pitu in a gentle story about encounters, dreams, and the stars we collect along the way. Find the book through the link in our bio.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Conheça Taylo e Pitu em uma história delicada sobre encontros, sonhos e as estrelas que colecionamos pelo caminho. Encontre o livro no link da bio.\n\nMeet Taylo and Pitu in a gentle story about encounters, dreams, and the stars we collect along the way. Find the book through the link in our bio.\n\nPT-BR: https://guittamonategastudio.com/pt/books/taylo-e-pitu-volume-1",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "053",
+      "postId": "066",
+      "world": "cheiodebolinha",
+      "type": "gif",
+      "title": "A maçã que fazia croc",
+      "scheduledAt": "2027-04-09T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "reel",
+        "video": {
+          "local": "mkt/templates/_PUBLICAR/066.mp4",
+          "key": "social/bichittos/posts/066.mp4",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/066.mp4"
+        },
+        "cover": {
+          "local": "mkt/templates/_PUBLICAR/066-querie-maca.png",
+          "key": "social/bichittos/posts/066-querie-maca.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/066-querie-maca.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Os Queries procuraram por toda parte a origem de um enorme croc. Era só Querie comendo uma maçã escondido.\n\nThe Queries searched everywhere for the source of a huge crunch. It was only Querie secretly eating an apple.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Os Queries procuraram por toda parte a origem de um enorme croc. Era só Querie comendo uma maçã escondido.\n\nThe Queries searched everywhere for the source of a huge crunch. It was only Querie secretly eating an apple.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "054",
+      "postId": "071",
+      "world": "cheiodebolinha",
+      "type": "scene",
+      "title": "Escovação coletiva",
+      "scheduledAt": "2027-04-13T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/071-cheio-de-bolinha-escovacao-coletiva.png",
+          "key": "social/bichittos/posts/071-cheio-de-bolinha-escovacao-coletiva.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/071-cheio-de-bolinha-escovacao-coletiva.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "A escova finalmente parou de fugir. Com espuma, caretas e amigos por perto, Querie descobriu que cuidar dos dentes pode ser divertido.\n\nThe toothbrush finally stopped running away. With foam, funny faces and friends nearby, Querie discovered that brushing can be fun.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "A escova finalmente parou de fugir. Com espuma, caretas e amigos por perto, Querie descobriu que cuidar dos dentes pode ser divertido.\n\nThe toothbrush finally stopped running away. With foam, funny faces and friends nearby, Querie discovered that brushing can be fun.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "055",
+      "postId": "046",
+      "world": "napcat",
+      "type": "coloring",
+      "title": "Cochilo no banco",
+      "scheduledAt": "2027-04-16T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "mkt/templates/_PUBLICAR/046-01-napcat-banco-original.png",
+            "key": "social/bichittos/posts/046-01-napcat-banco-original-slide-01.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/046-01-napcat-banco-original-slide-01.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/046-02-napcat-banco-versao-1.png",
+            "key": "social/bichittos/posts/046-02-napcat-banco-versao-1-slide-02.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/046-02-napcat-banco-versao-1-slide-02.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/046-03-napcat-banco-versao-2.png",
+            "key": "social/bichittos/posts/046-03-napcat-banco-versao-2-slide-03.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/046-03-napcat-banco-versao-2-slide-03.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/046-04-napcat-livro-colorir.png",
+            "key": "social/bichittos/posts/046-04-napcat-livro-colorir-slide-04.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/046-04-napcat-livro-colorir-slide-04.png"
+          }
+        ]
+      },
+      "destinationUrl": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+        "en": "https://guittamonategastudio.com/en/books/napcat-coloring-book"
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "NapCat encontrou um cantinho tranquilo para cochilar. Deslize para conhecer duas pinturas da mesma pausa.\n\nNapCat found a quiet little spot for a nap. Swipe to discover two colored versions of the same peaceful pause.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "NapCat encontrou um cantinho tranquilo para cochilar. Deslize para conhecer duas pinturas da mesma pausa.\n\nNapCat found a quiet little spot for a nap. Swipe to discover two colored versions of the same peaceful pause.\n\nPT-BR: https://guittamonategastudio.com/pt/books/napcat-coloring-book\nEN: https://guittamonategastudio.com/en/books/napcat-coloring-book",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "056",
+      "postId": "047",
+      "world": "napcat",
+      "type": "coloring",
+      "title": "Boa noite, NapCat",
+      "scheduledAt": "2027-04-20T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "mkt/templates/_PUBLICAR/047-01-napcat-boa-noite-original.png",
+            "key": "social/bichittos/posts/047-01-napcat-boa-noite-original-slide-01.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/047-01-napcat-boa-noite-original-slide-01.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/047-02-napcat-boa-noite-versao-1.png",
+            "key": "social/bichittos/posts/047-02-napcat-boa-noite-versao-1-slide-02.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/047-02-napcat-boa-noite-versao-1-slide-02.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/047-03-napcat-boa-noite-versao-2.png",
+            "key": "social/bichittos/posts/047-03-napcat-boa-noite-versao-2-slide-03.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/047-03-napcat-boa-noite-versao-2-slide-03.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/047-04-napcat-livro-colorir.png",
+            "key": "social/bichittos/posts/047-04-napcat-livro-colorir-slide-04.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/047-04-napcat-livro-colorir-slide-04.png"
+          }
+        ]
+      },
+      "destinationUrl": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+        "en": "https://guittamonategastudio.com/en/books/napcat-coloring-book"
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "NapCat se prepara para dormir com seu ursinho marrom. Deslize para ver duas noites pintadas de maneiras diferentes.\n\nNapCat gets ready to sleep with his brown teddy bear. Swipe to see two nights colored in different ways.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "NapCat se prepara para dormir com seu ursinho marrom. Deslize para ver duas noites pintadas de maneiras diferentes.\n\nNapCat gets ready to sleep with his brown teddy bear. Swipe to see two nights colored in different ways.\n\nPT-BR: https://guittamonategastudio.com/pt/books/napcat-coloring-book\nEN: https://guittamonategastudio.com/en/books/napcat-coloring-book",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "057",
+      "postId": "057",
+      "world": "taylo",
+      "type": "tale",
+      "scheduledAt": "2027-04-23T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/057-taylo-conto-arvore-magica.png",
+          "key": "social/bichittos/posts/057-taylo-conto-arvore-magica.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/057-taylo-conto-arvore-magica.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Na árvore mais antiga da Floresta Azul mora Taylo. Por fora, ninguém diria que cabe alguém ali dentro.\n\nTaylo lives in the oldest tree in the Blue Forest. From the outside, no one would guess that anyone could fit inside.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Na árvore mais antiga da Floresta Azul mora Taylo. Por fora, ninguém diria que cabe alguém ali dentro.\n\nTaylo lives in the oldest tree in the Blue Forest. From the outside, no one would guess that anyone could fit inside.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "058",
+      "postId": "058",
+      "world": "taylo",
+      "type": "tale",
+      "scheduledAt": "2027-04-27T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/058-taylo-conto-o-encontro.png",
+          "key": "social/bichittos/posts/058-taylo-conto-o-encontro.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/058-taylo-conto-o-encontro.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "A chuva leva as coisas, é verdade. Mas quase sempre deixa pistas. Taylo convidou Pitu para procurá-las juntos.\n\nRain carries things away, that is true. But it almost always leaves clues behind. Taylo invited Pitu to search with him.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "A chuva leva as coisas, é verdade. Mas quase sempre deixa pistas. Taylo convidou Pitu para procurá-las juntos.\n\nRain carries things away, that is true. But it almost always leaves clues behind. Taylo invited Pitu to search with him.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "059",
+      "postId": "067",
+      "world": "cheiodebolinha",
+      "type": "gif",
+      "title": "Escove junto!",
+      "scheduledAt": "2027-04-30T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "reel",
+        "video": {
+          "local": "mkt/templates/_PUBLICAR/067.mp4",
+          "key": "social/bichittos/posts/067.mp4",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/067.mp4"
+        },
+        "cover": {
+          "local": "mkt/templates/_PUBLICAR/067-querie-escove-junto.png",
+          "key": "social/bichittos/posts/067-querie-escove-junto.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/067-querie-escove-junto.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Quando a escovação vira brincadeira, Querie descobre que cuidar dos dentes também pode ser divertido.\n\nWhen brushing becomes a game, Querie discovers that taking care of his teeth can be fun too.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Quando a escovação vira brincadeira, Querie descobre que cuidar dos dentes também pode ser divertido.\n\nWhen brushing becomes a game, Querie discovers that taking care of his teeth can be fun too.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "060",
+      "postId": "072",
+      "world": "cheiodebolinha",
+      "type": "scene",
+      "title": "Cadê o Cheio de Bolinha?",
+      "scheduledAt": "2027-05-04T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/072-cade-cheio-de-bolinha.png",
+          "key": "social/bichittos/posts/072-cade-cheio-de-bolinha.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/072-cade-cheio-de-bolinha.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Cheio de Bolinha produziu tanta espuma que os Queries começaram a procurar onde o elefante tinha ido parar.\n\nBobbin made so much foam that the Queries began searching for where the elephant had gone.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Cheio de Bolinha produziu tanta espuma que os Queries começaram a procurar onde o elefante tinha ido parar.\n\nBobbin made so much foam that the Queries began searching for where the elephant had gone.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "061",
+      "postId": "006",
+      "world": "zeco",
+      "type": "book-sale",
+      "title": "Zeco nas Estações e seus amigos",
+      "scheduledAt": "2027-05-07T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/006-zeco-livro.png",
+          "key": "social/bichittos/posts/006-zeco-livro.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/006-zeco-livro.png"
+        }
+      },
+      "destinationUrl": "https://guittamonategastudio.com/pt/books/zeco-estacoes",
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/zeco-estacoes",
+        "en": "https://guittamonategastudio.com/en/books/zeco-estacoes"
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Zeco e seus amigos brincam em qualquer estação. Conheça o livro e escolha onde comprar pelo site.\n\nZeco and his friends play in every season. Discover the book and choose where to buy it on the website.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Zeco e seus amigos brincam em qualquer estação. Conheça o livro e escolha onde comprar pelo site.\n\nZeco and his friends play in every season. Discover the book and choose where to buy it on the website.\n\nPT-BR: https://guittamonategastudio.com/pt/books/zeco-estacoes\nEN: https://guittamonategastudio.com/en/books/zeco-estacoes",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "062",
+      "postId": "048",
+      "world": "napcat",
+      "type": "coloring",
+      "title": "Uma pausa para beber",
+      "scheduledAt": "2027-05-11T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "mkt/templates/_PUBLICAR/048-01-napcat-bebida-original.png",
+            "key": "social/bichittos/posts/048-01-napcat-bebida-original-slide-01.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/048-01-napcat-bebida-original-slide-01.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/048-02-napcat-bebida-versao-1.png",
+            "key": "social/bichittos/posts/048-02-napcat-bebida-versao-1-slide-02.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/048-02-napcat-bebida-versao-1-slide-02.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/048-03-napcat-bebida-versao-2.png",
+            "key": "social/bichittos/posts/048-03-napcat-bebida-versao-2-slide-03.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/048-03-napcat-bebida-versao-2-slide-03.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/048-04-napcat-livro-colorir.png",
+            "key": "social/bichittos/posts/048-04-napcat-livro-colorir-slide-04.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/048-04-napcat-livro-colorir-slide-04.png"
+          }
+        ]
+      },
+      "destinationUrl": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+        "en": "https://guittamonategastudio.com/en/books/napcat-coloring-book"
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Uma pausa para beber também pode ganhar muitas cores. Deslize para comparar as duas versões e criar a sua.\n\nA little drink break can take on many colors too. Swipe to compare both versions and create your own.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Uma pausa para beber também pode ganhar muitas cores. Deslize para comparar as duas versões e criar a sua.\n\nA little drink break can take on many colors too. Swipe to compare both versions and create your own.\n\nPT-BR: https://guittamonategastudio.com/pt/books/napcat-coloring-book\nEN: https://guittamonategastudio.com/en/books/napcat-coloring-book",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "063",
+      "postId": "049",
+      "world": "napcat",
+      "type": "coloring",
+      "title": "Soninho nas estrelas",
+      "scheduledAt": "2027-05-14T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "mkt/templates/_PUBLICAR/049-01-napcat-rede-original.png",
+            "key": "social/bichittos/posts/049-01-napcat-rede-original-slide-01.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/049-01-napcat-rede-original-slide-01.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/049-02-napcat-rede-versao-1.png",
+            "key": "social/bichittos/posts/049-02-napcat-rede-versao-1-slide-02.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/049-02-napcat-rede-versao-1-slide-02.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/049-03-napcat-rede-versao-2.png",
+            "key": "social/bichittos/posts/049-03-napcat-rede-versao-2-slide-03.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/049-03-napcat-rede-versao-2-slide-03.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/049-04-napcat-livro-colorir.png",
+            "key": "social/bichittos/posts/049-04-napcat-livro-colorir-slide-04.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/049-04-napcat-livro-colorir-slide-04.png"
+          }
+        ]
+      },
+      "destinationUrl": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+        "en": "https://guittamonategastudio.com/en/books/napcat-coloring-book"
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "NapCat descansa enquanto a lua cuida da noite. Deslize para ver dois sonhos pintados com cores diferentes.\n\nNapCat rests while the moon watches over the night. Swipe to see two dreams colored in different ways.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "NapCat descansa enquanto a lua cuida da noite. Deslize para ver dois sonhos pintados com cores diferentes.\n\nNapCat rests while the moon watches over the night. Swipe to see two dreams colored in different ways.\n\nPT-BR: https://guittamonategastudio.com/pt/books/napcat-coloring-book\nEN: https://guittamonategastudio.com/en/books/napcat-coloring-book",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "064",
+      "postId": "010",
+      "world": "napcat",
+      "type": "book-sale",
+      "title": "Livro para Colorir do NapCat",
+      "scheduledAt": "2027-05-18T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/010-napcat-livro.png",
+          "key": "social/bichittos/posts/010-napcat-livro.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/010-napcat-livro.png"
+        }
+      },
+      "destinationUrl": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+        "en": "https://guittamonategastudio.com/en/books/napcat-coloring-book"
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Entre cochilos e pequenas aventuras, NapCat espera pelas cores que você escolher. Conheça o livro para colorir no link da bio.\n\nBetween naps and little adventures, NapCat is waiting for the colors you choose. Discover the coloring book through the link in our bio.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Entre cochilos e pequenas aventuras, NapCat espera pelas cores que você escolher. Conheça o livro para colorir no link da bio.\n\nBetween naps and little adventures, NapCat is waiting for the colors you choose. Discover the coloring book through the link in our bio.\n\nPT-BR: https://guittamonategastudio.com/pt/books/napcat-coloring-book\nEN: https://guittamonategastudio.com/en/books/napcat-coloring-book",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "065",
+      "postId": "059",
+      "world": "taylo",
+      "type": "tale",
+      "scheduledAt": "2027-05-21T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/059-taylo-conto-trilha-de-pistas.png",
+          "key": "social/bichittos/posts/059-taylo-conto-trilha-de-pistas.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/059-taylo-conto-trilha-de-pistas.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Nem sempre a pista está onde a gente olha primeiro. Taylo ensinou Pitu a investigar.\n\nA clue is not always where we look first. Taylo taught Pitu how to investigate.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Nem sempre a pista está onde a gente olha primeiro. Taylo ensinou Pitu a investigar.\n\nA clue is not always where we look first. Taylo taught Pitu how to investigate.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "066",
+      "postId": "060",
+      "world": "taylo",
+      "type": "tale",
+      "scheduledAt": "2027-05-25T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/060-taylo-conto-cada-estrela.png",
+          "key": "social/bichittos/posts/060-taylo-conto-cada-estrela.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/060-taylo-conto-cada-estrela.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Cada estrela pertence a alguém, e cada uma tem um brilho único.\n\nEvery star belongs to someone, and each one has a unique glow.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Cada estrela pertence a alguém, e cada uma tem um brilho único.\n\nEvery star belongs to someone, and each one has a unique glow.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "067",
+      "postId": "014",
+      "world": "taylo",
+      "type": "book-sale",
+      "title": "Taylo e Pitu",
+      "scheduledAt": "2027-05-28T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/014-taylo-livro.png",
+          "key": "social/bichittos/posts/014-taylo-livro.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/014-taylo-livro.png"
+        }
+      },
+      "destinationUrl": "https://guittamonategastudio.com/pt/books/taylo-e-pitu-volume-1",
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/taylo-e-pitu-volume-1",
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Conheça Taylo e Pitu em uma história delicada sobre encontros, sonhos e as estrelas que colecionamos pelo caminho. Encontre o livro no link da bio.\n\nMeet Taylo and Pitu in a gentle story about encounters, dreams, and the stars we collect along the way. Find the book through the link in our bio.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Conheça Taylo e Pitu em uma história delicada sobre encontros, sonhos e as estrelas que colecionamos pelo caminho. Encontre o livro no link da bio.\n\nMeet Taylo and Pitu in a gentle story about encounters, dreams, and the stars we collect along the way. Find the book through the link in our bio.\n\nPT-BR: https://guittamonategastudio.com/pt/books/taylo-e-pitu-volume-1",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "068",
+      "postId": "068",
+      "world": "cheiodebolinha",
+      "type": "gif",
+      "title": "O banho encolheu",
+      "scheduledAt": "2027-06-01T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "reel",
+        "video": {
+          "local": "mkt/templates/_PUBLICAR/068.mp4",
+          "key": "social/bichittos/posts/068.mp4",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/068.mp4"
+        },
+        "cover": {
+          "local": "mkt/templates/_PUBLICAR/068-querie-banho.png",
+          "key": "social/bichittos/posts/068-querie-banho.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/068-querie-banho.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Querie afirma que não cabe mais na banheira. Agora só falta descobrir se foi ele que cresceu ou se o banho encolheu.\n\nQuerie says he no longer fits in the bathtub. Now they only need to discover whether he grew or the bath shrank.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Querie afirma que não cabe mais na banheira. Agora só falta descobrir se foi ele que cresceu ou se o banho encolheu.\n\nQuerie says he no longer fits in the bathtub. Now they only need to discover whether he grew or the bath shrank.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "069",
+      "postId": "073",
+      "world": "cheiodebolinha",
+      "type": "scene",
+      "title": "Coragem também é gentileza",
+      "scheduledAt": "2027-06-04T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/073-cheio-de-bolinha-coragem-gentileza.png",
+          "key": "social/bichittos/posts/073-cheio-de-bolinha-coragem-gentileza.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/073-cheio-de-bolinha-coragem-gentileza.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Cheio de Bolinha ainda sente medo. Mesmo assim, escolhe cuidar dos pequenos amigos que vivem assustando-o.\n\nBobbin still feels afraid. Even so, he chooses to care for the little friends who are always startling him.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Cheio de Bolinha ainda sente medo. Mesmo assim, escolhe cuidar dos pequenos amigos que vivem assustando-o.\n\nBobbin still feels afraid. Even so, he chooses to care for the little friends who are always startling him.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "070",
+      "postId": "006",
+      "world": "zeco",
+      "type": "book-sale",
+      "title": "Zeco nas Estações e seus amigos",
+      "scheduledAt": "2027-06-08T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/006-zeco-livro.png",
+          "key": "social/bichittos/posts/006-zeco-livro.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/006-zeco-livro.png"
+        }
+      },
+      "destinationUrl": "https://guittamonategastudio.com/pt/books/zeco-estacoes",
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/zeco-estacoes",
+        "en": "https://guittamonategastudio.com/en/books/zeco-estacoes"
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Zeco e seus amigos brincam em qualquer estação. Conheça o livro e escolha onde comprar pelo site.\n\nZeco and his friends play in every season. Discover the book and choose where to buy it on the website.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Zeco e seus amigos brincam em qualquer estação. Conheça o livro e escolha onde comprar pelo site.\n\nZeco and his friends play in every season. Discover the book and choose where to buy it on the website.\n\nPT-BR: https://guittamonategastudio.com/pt/books/zeco-estacoes\nEN: https://guittamonategastudio.com/en/books/zeco-estacoes",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "071",
+      "postId": "050",
+      "world": "napcat",
+      "type": "coloring",
+      "title": "Cantando juntos",
+      "scheduledAt": "2027-06-11T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "mkt/templates/_PUBLICAR/050-01-napcat-violeta-cantando-original.png",
+            "key": "social/bichittos/posts/050-01-napcat-violeta-cantando-original-slide-01.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/050-01-napcat-violeta-cantando-original-slide-01.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/050-02-napcat-violeta-cantando-versao-1.png",
+            "key": "social/bichittos/posts/050-02-napcat-violeta-cantando-versao-1-slide-02.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/050-02-napcat-violeta-cantando-versao-1-slide-02.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/050-03-napcat-violeta-cantando-versao-2.png",
+            "key": "social/bichittos/posts/050-03-napcat-violeta-cantando-versao-2-slide-03.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/050-03-napcat-violeta-cantando-versao-2-slide-03.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/050-04-napcat-livro-colorir.png",
+            "key": "social/bichittos/posts/050-04-napcat-livro-colorir-slide-04.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/050-04-napcat-livro-colorir-slide-04.png"
+          }
+        ]
+      },
+      "destinationUrl": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+        "en": "https://guittamonategastudio.com/en/books/napcat-coloring-book"
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "NapCat e Violeta encontram música nas páginas. Deslize para ver duas versões da mesma canção colorida.\n\nNapCat and Violeta find music in the pages. Swipe to see two colored versions of the same song.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "NapCat e Violeta encontram música nas páginas. Deslize para ver duas versões da mesma canção colorida.\n\nNapCat and Violeta find music in the pages. Swipe to see two colored versions of the same song.\n\nPT-BR: https://guittamonategastudio.com/pt/books/napcat-coloring-book\nEN: https://guittamonategastudio.com/en/books/napcat-coloring-book",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "072",
+      "postId": "010",
+      "world": "napcat",
+      "type": "book-sale",
+      "title": "Livro para Colorir do NapCat",
+      "scheduledAt": "2027-06-15T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/010-napcat-livro.png",
+          "key": "social/bichittos/posts/010-napcat-livro.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/010-napcat-livro.png"
+        }
+      },
+      "destinationUrl": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+        "en": "https://guittamonategastudio.com/en/books/napcat-coloring-book"
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Entre cochilos e pequenas aventuras, NapCat espera pelas cores que você escolher. Conheça o livro para colorir no link da bio.\n\nBetween naps and little adventures, NapCat is waiting for the colors you choose. Discover the coloring book through the link in our bio.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Entre cochilos e pequenas aventuras, NapCat espera pelas cores que você escolher. Conheça o livro para colorir no link da bio.\n\nBetween naps and little adventures, NapCat is waiting for the colors you choose. Discover the coloring book through the link in our bio.\n\nPT-BR: https://guittamonategastudio.com/pt/books/napcat-coloring-book\nEN: https://guittamonategastudio.com/en/books/napcat-coloring-book",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "073",
+      "postId": "062",
+      "world": "taylo",
+      "type": "tale",
+      "scheduledAt": "2027-06-18T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/062-taylo-conto-estrelas-piscam.png",
+          "key": "social/bichittos/posts/062-taylo-conto-estrelas-piscam.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/062-taylo-conto-estrelas-piscam.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "O brilho pode mudar, mas a estrela continua sempre sendo estrela.\n\nThe glow may change, but a star is always still a star.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "O brilho pode mudar, mas a estrela continua sempre sendo estrela.\n\nThe glow may change, but a star is always still a star.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "074",
+      "postId": "018",
+      "world": "zeco",
+      "type": "special-day",
+      "title": "Inverno no Sul",
+      "scheduledAt": "2027-06-21T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "seasonality": {
+        "hemisphere": "both",
+        "eventMonth": 6,
+        "season": "inverno",
+        "south": "inverno",
+        "north": "verão",
+        "allowedMonths": [
+          6,
+          7,
+          8
+        ]
+      },
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "mkt/templates/_PUBLICAR/018-01-zeco-estacoes.png",
+            "key": "social/bichittos/posts/018-01-zeco-estacoes-slide-01.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/018-01-zeco-estacoes-slide-01.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/018-02-zeco-estacoes.png",
+            "key": "social/bichittos/posts/018-02-zeco-estacoes-slide-02.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/018-02-zeco-estacoes-slide-02.png"
+          }
+        ]
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "O inverno chegou por aqui.\n\nWinter is here in the Southern Hemisphere.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "O inverno chegou por aqui.\n\nWinter is here in the Southern Hemisphere.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "075",
+      "postId": "032",
+      "world": "zeco",
+      "type": "special-day",
+      "title": "O Arraiá do Zeco",
+      "scheduledAt": "2027-06-22T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "inverno",
+        "allowedMonths": [
+          6,
+          7
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/032-zeco-arraia-abertura.png",
+          "key": "social/bichittos/posts/032-zeco-arraia-abertura.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/032-zeco-arraia-abertura.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Bandeirinhas no alto, chapéu na cabeça e muita alegria. A Festa Junina vai começar!\n\nFlags up high, hats on and lots of joy. The June Festival is about to begin!",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Bandeirinhas no alto, chapéu na cabeça e muita alegria. A Festa Junina vai começar!\n\nFlags up high, hats on and lots of joy. The June Festival is about to begin!",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "076",
+      "postId": "033",
+      "world": "zeco",
+      "type": "special-day",
+      "title": "A fogueira do arraiá",
+      "scheduledAt": "2027-06-23T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "inverno",
+        "allowedMonths": [
+          6,
+          7
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/033-zeco-arraia-fogueira.png",
+          "key": "social/bichittos/posts/033-zeco-arraia-fogueira.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/033-zeco-arraia-fogueira.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "A fogueira é um dos principais símbolos juninos. É ao redor dela que a festa acontece.\n\nThe bonfire is a main symbol of June festivities. It brings everyone together to celebrate.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "A fogueira é um dos principais símbolos juninos. É ao redor dela que a festa acontece.\n\nThe bonfire is a main symbol of June festivities. It brings everyone together to celebrate.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "077",
+      "postId": "034",
+      "world": "zeco",
+      "type": "special-day",
+      "title": "Sabores do arraiá",
+      "scheduledAt": "2027-06-24T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "inverno",
+        "allowedMonths": [
+          6,
+          7
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/034-zeco-arraia-sabores.png",
+          "key": "social/bichittos/posts/034-zeco-arraia-sabores.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/034-zeco-arraia-sabores.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Tapioca pelo Brasil, pinhão no Sul. Sabores diferentes que também fazem parte da Festa Junina.\n\nTapioca across Brazil, pine nuts in the South. Different flavors that are part of June festivities.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Tapioca pelo Brasil, pinhão no Sul. Sabores diferentes que também fazem parte da Festa Junina.\n\nTapioca across Brazil, pine nuts in the South. Different flavors that are part of June festivities.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "078",
+      "postId": "035",
+      "world": "zeco",
+      "type": "special-day",
+      "title": "Hora da quadrilha",
+      "scheduledAt": "2027-06-25T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "inverno",
+        "allowedMonths": [
+          6,
+          7
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/035-zeco-arraia-quadrilha.png",
+          "key": "social/bichittos/posts/035-zeco-arraia-quadrilha.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/035-zeco-arraia-quadrilha.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Na Festa Junina tem quadrilha e fogueira. Vamos dançar e rodar a noite inteira.\n\nDancing and a bonfire.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Na Festa Junina tem quadrilha e fogueira. Vamos dançar e rodar a noite inteira.\n\nDancing and a bonfire.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "079",
+      "postId": "026",
+      "world": "zeco",
+      "type": "scene",
+      "title": "Pinhão na Festa Junina",
+      "scheduledAt": "2027-06-29T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "inverno",
+        "allowedMonths": [
+          6,
+          7
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/026-zeco-cena-pinhao.png",
+          "key": "social/bichittos/posts/026-zeco-cena-pinhao.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/026-zeco-cena-pinhao.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Tem pinhão assado na brasa, o mesmo que a gralha-azul plantou perto de casa.\n\nPine nuts roasted by the fire, the same ones our blue jay planted.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Tem pinhão assado na brasa, o mesmo que a gralha-azul plantou perto de casa.\n\nPine nuts roasted by the fire, the same ones our blue jay planted.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "080",
+      "postId": "088",
+      "world": "zeco",
+      "type": "scene",
+      "title": "A janela embaçou",
+      "scheduledAt": "2027-07-02T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "inverno",
+        "allowedMonths": [
+          6,
+          7,
+          8
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/088-zeco-inverno-janela-embacada.png",
+          "key": "social/bichittos/posts/088-zeco-inverno-janela-embacada.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/088-zeco-inverno-janela-embacada.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "A janela está embaçada, que coisa mais engraçada. Lá fora está bem branquinho, tudo coberto de gelinho.\n\nThe window is all fogged up, perfect for drawing. Outside, everything is white and sparkly.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "A janela está embaçada, que coisa mais engraçada. Lá fora está bem branquinho, tudo coberto de gelinho.\n\nThe window is all fogged up, perfect for drawing. Outside, everything is white and sparkly.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "081",
+      "postId": "014",
+      "world": "taylo",
+      "type": "book-sale",
+      "title": "Taylo e Pitu",
+      "scheduledAt": "2027-07-06T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/014-taylo-livro.png",
+          "key": "social/bichittos/posts/014-taylo-livro.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/014-taylo-livro.png"
+        }
+      },
+      "destinationUrl": "https://guittamonategastudio.com/pt/books/taylo-e-pitu-volume-1",
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/taylo-e-pitu-volume-1",
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Conheça Taylo e Pitu em uma história delicada sobre encontros, sonhos e as estrelas que colecionamos pelo caminho. Encontre o livro no link da bio.\n\nMeet Taylo and Pitu in a gentle story about encounters, dreams, and the stars we collect along the way. Find the book through the link in our bio.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Conheça Taylo e Pitu em uma história delicada sobre encontros, sonhos e as estrelas que colecionamos pelo caminho. Encontre o livro no link da bio.\n\nMeet Taylo and Pitu in a gentle story about encounters, dreams, and the stars we collect along the way. Find the book through the link in our bio.\n\nPT-BR: https://guittamonategastudio.com/pt/books/taylo-e-pitu-volume-1",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "082",
+      "postId": "069",
+      "world": "cheiodebolinha",
+      "type": "gif",
+      "title": "Querie entrou no ritmo",
+      "scheduledAt": "2027-07-09T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "reel",
+        "video": {
+          "local": "mkt/templates/_PUBLICAR/069.mp4",
+          "key": "social/bichittos/posts/069.mp4",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/069.mp4"
+        },
+        "cover": {
+          "local": "mkt/templates/_PUBLICAR/069-querie-dancando.png",
+          "key": "social/bichittos/posts/069-querie-dancando.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/069-querie-dancando.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Querie prometeu guardar tudo em cinco minutos. Por enquanto, começou pela dança de preparação.\n\nQuerie promised to put everything away in five minutes. For now, he started with the preparation dance.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Querie prometeu guardar tudo em cinco minutos. Por enquanto, começou pela dança de preparação.\n\nQuerie promised to put everything away in five minutes. For now, he started with the preparation dance.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "083",
+      "postId": "070",
+      "world": "cheiodebolinha",
+      "type": "gif",
+      "title": "A cama está sem sono",
+      "scheduledAt": "2027-07-13T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": null,
+      "media": {
+        "kind": "reel",
+        "video": {
+          "local": "mkt/templates/_PUBLICAR/070.mp4",
+          "key": "social/bichittos/posts/070.mp4",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/070.mp4"
+        },
+        "cover": {
+          "local": "mkt/templates/_PUBLICAR/070-querie-cama-sem-sono.png",
+          "key": "social/bichittos/posts/070-querie-cama-sem-sono.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/070-querie-cama-sem-sono.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Querie garante que está com sono. Quem não quer dormir é a cama. Talvez ela precise ouvir uma história.\n\nQuerie insists that he is sleepy. The bed is the one that will not sleep. Maybe it needs a story.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Querie garante que está com sono. Quem não quer dormir é a cama. Talvez ela precise ouvir uma história.\n\nQuerie insists that he is sleepy. The bed is the one that will not sleep. Maybe it needs a story.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "084",
+      "postId": "089",
+      "world": "zeco",
+      "type": "special-day",
+      "title": "Boa volta às aulas!",
+      "scheduledAt": "2027-07-27T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "inverno",
+        "allowedMonths": [
+          7,
+          8
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/089-zeco-inverno-volta-as-aulas.png",
+          "key": "social/bichittos/posts/089-zeco-inverno-volta-as-aulas.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/089-zeco-inverno-volta-as-aulas.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Boa volta às aulas! Depois de tanta diversão, é hora de fazer a lição. Vamos fazer com atenção.\n\nWelcome back to school! After all that fun, it's homework time. Nice and careful does it.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Boa volta às aulas! Depois de tanta diversão, é hora de fazer a lição. Vamos fazer com atenção.\n\nWelcome back to school! After all that fun, it's homework time. Nice and careful does it.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "085",
+      "postId": "001",
+      "world": "zeco",
+      "type": "special-day",
+      "title": "Primavera no Sul",
+      "scheduledAt": "2027-09-23T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "seasonality": {
+        "hemisphere": "both",
+        "eventMonth": 9,
+        "season": "primavera",
+        "south": "primavera",
+        "north": "outono",
+        "allowedMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "mkt/templates/_PUBLICAR/001-01-zeco-estacoes.png",
+            "key": "social/bichittos/posts/001-01-zeco-estacoes-slide-01.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/001-01-zeco-estacoes-slide-01.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/001-02-zeco-estacoes.png",
+            "key": "social/bichittos/posts/001-02-zeco-estacoes-slide-02.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/001-02-zeco-estacoes-slide-02.png"
+          }
+        ]
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "A primavera chegou no Hemisfério Sul. Ao mesmo tempo, o outono começa no Hemisfério Norte.\n\nSpring has arrived in the Southern Hemisphere. At the same time, fall begins in the Northern Hemisphere.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "A primavera chegou no Hemisfério Sul. Ao mesmo tempo, o outono começa no Hemisfério Norte.\n\nSpring has arrived in the Southern Hemisphere. At the same time, fall begins in the Northern Hemisphere.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "086",
+      "postId": "005",
+      "world": "zeco",
+      "type": "scene",
+      "title": "A capivara veio nos conhecer",
+      "scheduledAt": "2027-09-24T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "primavera",
+        "allowedMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/005-zeco-cena-capivara.png",
+          "key": "social/bichittos/posts/005-zeco-cena-capivara.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/005-zeco-cena-capivara.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "A capivara veio nos conhecer. Olha quantos filhotinhos começando a aparecer.\n\nA capybara came to meet us. Look how many babies are peeking out.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "A capivara veio nos conhecer. Olha quantos filhotinhos começando a aparecer.\n\nA capybara came to meet us. Look how many babies are peeking out.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "087",
+      "postId": "074",
+      "world": "zeco",
+      "type": "scene",
+      "title": "Todo mundo acordou",
+      "scheduledAt": "2027-09-28T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "primavera",
+        "allowedMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/074-zeco-primavera-acordar.png",
+          "key": "social/bichittos/posts/074-zeco-primavera-acordar.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/074-zeco-primavera-acordar.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "O despertador tocou e todo mundo acordou. Vamos nos espreguiçar, o dia vai começar.\n\nRing-a-ling! Everybody's awake. Time for a big stretch. The day is starting.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "O despertador tocou e todo mundo acordou. Vamos nos espreguiçar, o dia vai começar.\n\nRing-a-ling! Everybody's awake. Time for a big stretch. The day is starting.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "088",
+      "postId": "075",
+      "world": "zeco",
+      "type": "scene",
+      "title": "Limpeza de primavera",
+      "scheduledAt": "2027-10-01T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "primavera",
+        "allowedMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/075-zeco-primavera-limpeza.png",
+          "key": "social/bichittos/posts/075-zeco-primavera-limpeza.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/075-zeco-primavera-limpeza.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "A limpeza da primavera vamos iniciar. Deixe o sol entrar. O que não usamos mais, doamos para os demais.\n\nIt's spring cleaning day. Let the sunshine in. What we don't use, we give away to make someone happy.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "A limpeza da primavera vamos iniciar. Deixe o sol entrar. O que não usamos mais, doamos para os demais.\n\nIt's spring cleaning day. Let the sunshine in. What we don't use, we give away to make someone happy.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "089",
+      "postId": "076",
+      "world": "zeco",
+      "type": "scene",
+      "title": "As flores estão se abrindo",
+      "scheduledAt": "2027-10-05T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "primavera",
+        "allowedMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/076-zeco-primavera-flores.png",
+          "key": "social/bichittos/posts/076-zeco-primavera-flores.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/076-zeco-primavera-flores.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Veja que lindo, as flores estão se abrindo. Com as que caíram no chão, um arranjo vai saindo.\n\nLook, the flowers are opening up. And the fallen ones? They'll make a lovely bouquet.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Veja que lindo, as flores estão se abrindo. Com as que caíram no chão, um arranjo vai saindo.\n\nLook, the flowers are opening up. And the fallen ones? They'll make a lovely bouquet.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "090",
+      "postId": "077",
+      "world": "zeco",
+      "type": "play",
+      "title": "Vem pular amarelinha",
+      "scheduledAt": "2027-10-08T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "primavera",
+        "allowedMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/077-zeco-primavera-amarelinha.png",
+          "key": "social/bichittos/posts/077-zeco-primavera-amarelinha.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/077-zeco-primavera-amarelinha.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Joga a pedrinha e vem pular na amarelinha! Com um pé só, sem pisar na linha.\n\nToss your stone and hop. One foot, mind the lines. Up to the sky!",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Joga a pedrinha e vem pular na amarelinha! Com um pé só, sem pisar na linha.\n\nToss your stone and hop. One foot, mind the lines. Up to the sky!",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "091",
+      "postId": "078",
+      "world": "zeco",
+      "type": "play",
+      "title": "Pular corda",
+      "scheduledAt": "2027-10-12T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "primavera",
+        "allowedMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/078-zeco-primavera-pular-corda.png",
+          "key": "social/bichittos/posts/078-zeco-primavera-pular-corda.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/078-zeco-primavera-pular-corda.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Gira, gira a corda no ar! Um, dois, três... quem consegue pular?\n\nSwing the rope round. One... two... three... who can jump?",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Gira, gira a corda no ar! Um, dois, três... quem consegue pular?\n\nSwing the rope round. One... two... three... who can jump?",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "092",
+      "postId": "079",
+      "world": "zeco",
+      "type": "scene",
+      "title": "Os ipês estão floridos",
+      "scheduledAt": "2027-10-15T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "primavera",
+        "allowedMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/079-zeco-primavera-ipes.png",
+          "key": "social/bichittos/posts/079-zeco-primavera-ipes.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/079-zeco-primavera-ipes.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Os ipês estão muito floridos. E no chão, as flores formam um tapete colorido.\n\nThe trees are full of blossoms. And the fallen petals make a colorful carpet.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Os ipês estão muito floridos. E no chão, as flores formam um tapete colorido.\n\nThe trees are full of blossoms. And the fallen petals make a colorful carpet.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "093",
+      "postId": "016",
+      "world": "zeco",
+      "type": "special-day",
+      "title": "Verão no Sul",
+      "scheduledAt": "2027-12-21T23:50:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "seasonality": {
+        "hemisphere": "both",
+        "eventMonth": 12,
+        "season": "verão",
+        "south": "verão",
+        "north": "inverno",
+        "allowedMonths": [
+          12,
+          1,
+          2
+        ]
+      },
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "mkt/templates/_PUBLICAR/016-01-zeco-estacoes.png",
+            "key": "social/bichittos/posts/016-01-zeco-estacoes-slide-01.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/016-01-zeco-estacoes-slide-01.png"
+          },
+          {
+            "local": "mkt/templates/_PUBLICAR/016-02-zeco-estacoes.png",
+            "key": "social/bichittos/posts/016-02-zeco-estacoes-slide-02.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/016-02-zeco-estacoes-slide-02.png"
+          }
+        ]
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "O verão chegou no Hemisfério Sul. Ao mesmo tempo, o inverno começa no Hemisfério Norte.\n\nSummer has arrived in the Southern Hemisphere. At the same time, winter begins in the Northern Hemisphere.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "O verão chegou no Hemisfério Sul. Ao mesmo tempo, o inverno começa no Hemisfério Norte.\n\nSummer has arrived in the Southern Hemisphere. At the same time, winter begins in the Northern Hemisphere.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "094",
+      "postId": "083",
+      "world": "zeco",
+      "type": "scene",
+      "title": "Chuva de picolé",
+      "scheduledAt": "2027-12-24T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "verão",
+        "allowedMonths": [
+          12,
+          1,
+          2
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/083-zeco-verao-chuva-picole.png",
+          "key": "social/bichittos/posts/083-zeco-verao-chuva-picole.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/083-zeco-verao-chuva-picole.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Rui Merengue tinha dado no pé. Mas quando percebeu, a chuva era de picolé.\n\nRooey ran off to hide. But wait... it was raining popsicles!",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Rui Merengue tinha dado no pé. Mas quando percebeu, a chuva era de picolé.\n\nRooey ran off to hide. But wait... it was raining popsicles!",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "095",
+      "postId": "085",
+      "world": "zeco",
+      "type": "play",
+      "title": "Bola na praia",
+      "scheduledAt": "2027-12-28T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "verão",
+        "allowedMonths": [
+          12,
+          1,
+          2
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/085-zeco-verao-bola-praia.png",
+          "key": "social/bichittos/posts/085-zeco-verao-bola-praia.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/085-zeco-verao-bola-praia.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-09T12:49:14.432Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "De volta à praia, tira a bola da sacola. Chuta com cuidado para ver como ela rola.\n\nBack at the beach. Take the ball out and kick it gently. Watch it roll.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "De volta à praia, tira a bola da sacola. Chuta com cuidado para ver como ela rola.\n\nBack at the beach. Take the ball out and kick it gently. Watch it roll.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    }
+  ]
+}
