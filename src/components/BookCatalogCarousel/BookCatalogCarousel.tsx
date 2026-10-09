@@ -42,6 +42,7 @@ export function BookCatalogCarousel({
               <BookCatalogCard
                 href={`/${locale}/books/${book.slug}`}
                 title={book.title}
+                titleFontSize="homeBookCardTitle"
                 collection={collectionLabels[book.collection]}
                 cover={book.cover}
                 detailsLabel={detailsLabel}

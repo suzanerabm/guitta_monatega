@@ -13,11 +13,12 @@ interface BookCatalogCardProps {
   badgeLabel?: string;
   editionLabels?: string[];
   priceLabel?: string;
+  titleFontSize?: string;
 }
 
 export function BookCatalogCard({
   href, title, collection, cover, detailsLabel, accentColor,
-  badgeLabel, editionLabels = [], priceLabel,
+  badgeLabel, editionLabels = [], priceLabel, titleFontSize = 'bookCardTitle',
 }: BookCatalogCardProps) {
   return (
     <NextLink
@@ -71,7 +72,7 @@ export function BookCatalogCard({
           >
             {collection}
           </Text>
-          <Heading as="h2" textStyle="heading" fontSize="bookCardTitle" color="ink" mb="lg">
+          <Heading as="h2" textStyle="heading" fontSize={titleFontSize} color="ink" mb="lg">
             {title}
           </Heading>
           {priceLabel && (

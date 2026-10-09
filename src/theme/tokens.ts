@@ -75,6 +75,7 @@ export const tokens = defineTokens({
     md: { value: '1rem' },
     lg: { value: '1.05rem' },
     xl: { value: '1.1rem' },
+    homeBookCardTitle: { value: '1.05rem' },
     bookCardTitle: { value: '1.225rem' },
     '2xl': { value: '1.6rem' },
     '3xl': { value: '1.8rem' },
