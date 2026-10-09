@@ -1,4 +1,4 @@
-import { GetObjectCommand, PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
+import { GetObjectCommand, ListObjectsV2Command, PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import { awsCredentialsProvider } from "@vercel/oidc-aws-credentials-provider";
 import type { PublicationState } from "./types";
 
@@ -16,7 +16,7 @@ const bucket = () => {
   return value;
 };
 
-const key = (occurrence: string) => `publications/${occurrence}.json`;
+const key = (occurrence: string) => `publications/kammara/${occurrence}.json`;
 
 async function read(occurrence: string): Promise<StoredState | null> {
   try {
@@ -76,11 +76,5 @@ export async function save(stored: StoredState): Promise<StoredState> {
 }
 
 export async function verifyStateAccess(): Promise<void> {
-  try {
-    const output = await client.send(new GetObjectCommand({ Bucket: bucket(), Key: "publications/.healthcheck" }));
-    if (output.Body) await output.Body.transformToByteArray();
-  } catch (error) {
-    if ((error as { name?: string }).name === "NoSuchKey") return;
-    throw error;
-  }
+  await client.send(new ListObjectsV2Command({ Bucket: bucket(), Prefix: "publications/kammara/", MaxKeys: 1 }));
 }
