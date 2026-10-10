@@ -7,6 +7,7 @@ import {
   KammaraPlanetCard,
   type KammaraPlanetCardProps,
 } from '@/components/KammaraPlanetCard';
+import { palettes } from '@/theme/palettes';
 
 type CompactPlanet = Pick<
   KammaraPlanetCardProps,
@@ -41,13 +42,19 @@ export function KammaraBannerWithPlanets({
   const router = useRouter();
 
   return (
-    <Box as="section" overflow="hidden" background="darkBg">
+    <Box
+      as="section"
+      overflow="hidden"
+      background={palettes.kammara.gradient}
+      paddingBottom="homeBannerCardsInset"
+    >
       <HomeBanner
         href={href}
         label={label}
         title={title}
         description={description}
         variant="kammara"
+        showBackground={false}
         height={{ base: '20vh', md: '23vh' }}
         minHeight={{ base: '110px', md: '160px' }}
       />
@@ -56,6 +63,8 @@ export function KammaraBannerWithPlanets({
         display="grid"
         gridTemplateColumns="repeat(4, 1fr)"
         aspectRatio="3 / 1"
+        width="homeBannerCardsWidth"
+        marginX="auto"
       >
         {planets.map((planet) => (
           <KammaraPlanetCard

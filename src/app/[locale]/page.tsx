@@ -133,6 +133,7 @@ export default async function HomePage({
         display="grid"
         gridTemplateColumns={{ base: '1fr', md: '1fr 1fr' }}
         gridTemplateRows={{ base: 'auto', md: 'auto 1fr' }}
+        paddingTop={{ base: 'homeHeaderOffsetMobile', md: 'homeHeaderOffsetDesktop' }}
         width="100vw"
         marginLeft="calc(-50vw + 50%)"
       >
@@ -144,8 +145,8 @@ export default async function HomePage({
             description={t('art.desc')}
             variant="arte"
             fullWidth
-            height={{ base: '35vh', md: '42vh' }}
-            minHeight={{ base: '140px', md: '200px' }}
+            height={{ base: '28vh', md: '30vh' }}
+            minHeight={{ base: '180px', md: '220px' }}
           />
         </Box>
         <BichittosBannerWithNinha

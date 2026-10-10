@@ -106,6 +106,20 @@ export const artHero = {
   textColor: '#1a1d21',
   labelColor: '#999999',
 };
+
+// Quiet watermark used only by the art banner on the home page. The inverted
+// source turns the original white-on-black drawing into a dark pencil trace;
+// multiply makes the light background of the image disappear over the banner.
+export const homeArtBanner = {
+  image: mediaUrl('/imgs/art/black/1-arte.jpg'),
+  width: { base: '48%', md: '28%' },
+  height: '90%',
+  right: { base: '1%', md: '2%' },
+  bottom: '5%',
+  opacity: 0.12,
+  filter: 'invert(1) grayscale(1) contrast(1.35)',
+  mixBlendMode: 'multiply' as const,
+};
 // Home-only treatment for the combined book gallery. It reuses the first
 // black-and-white artwork without changing the books section on /art.
 export const homeBooksGallery = {

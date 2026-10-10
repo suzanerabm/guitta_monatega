@@ -22,9 +22,12 @@ export interface HomeBannerProps {
   order?: number;
   /** Corner for the order number. Defaults to 'right'. */
   orderSide?: 'left' | 'right';
+  /** Disable the local gradient when a parent section provides one continuous background. */
+  showBackground?: boolean;
 }
 
 import { palettes } from '@/theme/palettes';
+import { homeArtBanner } from '@/theme/artSections';
 
 // Home banner gradients. Bichittos/kammara/arte reuse the primary palette
 // gradient so changing a palette automatically refreshes the banner.
@@ -54,6 +57,7 @@ export function HomeBanner({
   descriptionColor,
   order,
   orderSide = 'right',
+  showBackground = true,
 }: HomeBannerProps) {
   const isArte = variant === 'arte';
 
@@ -75,45 +79,47 @@ export function HomeBanner({
         }}
       >
         {/* Background */}
-        <Box
-          className="banner-bg"
-          data-bannerbg
-          position="absolute"
-          top="-10%"
-          left={0}
-          width="100%"
-          height="120%"
-          background={variantBg[variant]}
-          backgroundSize="400% 400%"
-          backgroundPosition="center"
-          transition="transform 0.6s ease"
-          animation={variantAnimation[variant]}
-          css={
-            variant === 'bichittos'
-              ? {
-                  '&::after': {
-                    content: '""',
-                    position: 'absolute',
-                    inset: 0,
-                    background:
-                      'radial-gradient(ellipse at 20% 50%, rgba(255,255,255,0.2) 0%, transparent 60%), radial-gradient(ellipse at 80% 30%, rgba(255,107,157,0.15) 0%, transparent 50%), radial-gradient(ellipse at 50% 90%, rgba(109,213,250,0.2) 0%, transparent 50%)',
-                    animation: 'glowShift 8s ease-in-out infinite alternate',
-                  },
-                }
-              : variant === 'kammara'
+        {showBackground && (
+          <Box
+            className="banner-bg"
+            data-bannerbg
+            position="absolute"
+            top="-10%"
+            left={0}
+            width="100%"
+            height="120%"
+            background={variantBg[variant]}
+            backgroundSize="400% 400%"
+            backgroundPosition="center"
+            transition="transform 0.6s ease"
+            animation={variantAnimation[variant]}
+            css={
+              variant === 'bichittos'
                 ? {
                     '&::after': {
                       content: '""',
                       position: 'absolute',
                       inset: 0,
                       background:
-                        'radial-gradient(ellipse at 25% 40%, rgba(100,80,200,0.2) 0%, transparent 60%), radial-gradient(ellipse at 75% 60%, rgba(15,52,96,0.2) 0%, transparent 50%)',
-                      animation: 'glowShift 10s ease-in-out infinite alternate',
+                        'radial-gradient(ellipse at 20% 50%, rgba(255,255,255,0.2) 0%, transparent 60%), radial-gradient(ellipse at 80% 30%, rgba(255,107,157,0.15) 0%, transparent 50%), radial-gradient(ellipse at 50% 90%, rgba(109,213,250,0.2) 0%, transparent 50%)',
+                      animation: 'glowShift 8s ease-in-out infinite alternate',
                     },
                   }
-                : undefined
-          }
-        />
+                : variant === 'kammara'
+                  ? {
+                      '&::after': {
+                        content: '""',
+                        position: 'absolute',
+                        inset: 0,
+                        background:
+                          'radial-gradient(ellipse at 25% 40%, rgba(100,80,200,0.2) 0%, transparent 60%), radial-gradient(ellipse at 75% 60%, rgba(15,52,96,0.2) 0%, transparent 50%)',
+                        animation: 'glowShift 10s ease-in-out infinite alternate',
+                      },
+                    }
+                  : undefined
+            }
+          />
+        )}
 
         {/* Bichittos shapes */}
         {variant === 'bichittos' && (
@@ -289,12 +295,29 @@ export function HomeBanner({
 
         {/* Arte strokes */}
         {variant === 'arte' && (
-          <Box
-            position="absolute"
-            inset={0}
-            pointerEvents="none"
-            overflow="hidden"
-            css={{
+          <>
+            <Box
+              position="absolute"
+              width={homeArtBanner.width}
+              height={homeArtBanner.height}
+              right={homeArtBanner.right}
+              bottom={homeArtBanner.bottom}
+              pointerEvents="none"
+              aria-hidden="true"
+              backgroundImage={`url("${homeArtBanner.image}")`}
+              backgroundPosition="center"
+              backgroundRepeat="no-repeat"
+              backgroundSize="contain"
+              opacity={homeArtBanner.opacity}
+              filter={homeArtBanner.filter}
+              mixBlendMode={homeArtBanner.mixBlendMode}
+            />
+            <Box
+              position="absolute"
+              inset={0}
+              pointerEvents="none"
+              overflow="hidden"
+              css={{
               '& .stroke': {
                 position: 'absolute',
                 background:
@@ -329,14 +352,15 @@ export function HomeBanner({
                 animationDelay: '1.5s',
                 transform: 'rotate(-15deg)',
               },
-            }}
-          >
-            <div className="stroke" />
-            <div className="stroke" />
-            <div className="stroke" />
-            <div className="stroke" />
-            <div className="stroke" />
-          </Box>
+              }}
+            >
+              <div className="stroke" />
+              <div className="stroke" />
+              <div className="stroke" />
+              <div className="stroke" />
+              <div className="stroke" />
+            </Box>
+          </>
         )}
 
         {/* Overlay content */}
@@ -347,11 +371,12 @@ export function HomeBanner({
           direction="column"
           align="center"
           justify="center"
-          gap="clamp(0.3rem, 0.8vw, 0.8rem)"
+          gap="bannerContentGap"
           zIndex={1}
           transition="transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1)"
         >
           <Text
+            m={0}
             fontSize="bannerLabel"
             fontFamily="heading"
             letterSpacing="widest"
@@ -364,6 +389,7 @@ export function HomeBanner({
           </Text>
           <Heading
             as="h2"
+            m={0}
             fontSize="h2"
             textStyle="heading"
             color={titleColor ?? (isArte ? 'ink' : 'white')}
@@ -377,6 +403,7 @@ export function HomeBanner({
             {title}
           </Heading>
           <Text
+            m={0}
             fontSize="bannerDesc"
             color={descriptionColor ?? (isArte ? 'arteDesc' : 'bannerDesc')}
             fontWeight="light"

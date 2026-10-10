@@ -2,6 +2,7 @@ import { Box, Image } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { HomeBanner } from '@/components/HomeBanner';
 import { mediaUrl } from '@/lib/media';
+import { palettes } from '@/theme/palettes';
 
 interface BichittosBannerWithNinhaProps {
   href: string;
@@ -43,13 +44,19 @@ export function BichittosBannerWithNinha({
   description,
 }: BichittosBannerWithNinhaProps) {
   return (
-    <Box as="section" overflow="hidden" background="white">
+    <Box
+      as="section"
+      overflow="hidden"
+      background={palettes.bichittos.gradient}
+      paddingBottom="homeBannerCardsInset"
+    >
       <HomeBanner
         href={href}
         label={label}
         title={title}
         description={description}
         variant="bichittos"
+        showBackground={false}
         height={{ base: '20vh', md: '23vh' }}
         minHeight={{ base: '110px', md: '160px' }}
       />
@@ -58,6 +65,8 @@ export function BichittosBannerWithNinha({
         display="grid"
         gridTemplateColumns="repeat(4, 1fr)"
         aspectRatio="3 / 1"
+        width="homeBannerCardsWidth"
+        marginX="auto"
       >
         {characterCards.map((character) => (
           <Box

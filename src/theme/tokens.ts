@@ -76,6 +76,7 @@ export const tokens = defineTokens({
     lg: { value: '1.05rem' },
     xl: { value: '1.1rem' },
     homeBookCardTitle: { value: '1.05rem' },
+    homeBooksTitle: { value: 'clamp(2rem, 3.2vw, 3rem)' },
     bookCardTitle: { value: '1.225rem' },
     '2xl': { value: '1.6rem' },
     '3xl': { value: '1.8rem' },
@@ -125,6 +126,7 @@ export const tokens = defineTokens({
   sizes: {
     bannerDescription: { value: '400px' },
     bannerDescriptionWide: { value: '560px' },
+    homeBannerCardsWidth: { value: '96%' },
   },
   lineHeights: {
     bookCardCompact: { value: '1.25' },
@@ -144,6 +146,10 @@ export const tokens = defineTokens({
     cozy: { value: '0.6rem' }, // ~10px
     snug: { value: '0.7rem' }, // ~11px
     base: { value: '1rem' }, // 16px (token name "base" to avoid clashing with md=0.8rem)
+    bannerContentGap: { value: '0.1rem' },
+    homeBannerCardsInset: { value: '2%' },
+    homeHeaderOffsetMobile: { value: '60px' },
+    homeHeaderOffsetDesktop: { value: '52px' },
     '3xl': { value: '2rem' }, // 32px
     '4xl': { value: '4rem' }, // 64px
     '5xl': { value: '8rem' }, // 128px (hero pt)
