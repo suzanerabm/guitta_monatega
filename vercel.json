@@ -19,12 +19,12 @@
       "schedule": "50 2 * * *"
     },
     {
-      "path": "/api/cron/guitta-studio-publish",
-      "schedule": "30 22 * * *"
-    },
-    {
       "path": "/api/cron/social-publishing-watchdog",
       "schedule": "30 3 * * *"
+    },
+    {
+      "path": "/api/cron/guitta-studio-publish",
+      "schedule": "30 22 * * *"
     }
   ]
 }
