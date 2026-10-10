@@ -1,5 +1,5 @@
 import { timingSafeEqual } from "node:crypto";
-import { reportPublishingFailure } from "@/lib/social-publishing-alerts";
+import { reportPublishingFailure, sendPublishingAlert } from "@/lib/social-publishing-alerts";
 import { runSocialPublishingWatchdog } from "@/lib/social-publishing-watchdog";
 
 export const runtime = "nodejs";
@@ -17,6 +17,13 @@ function authorized(request: Request): boolean {
 export async function GET(request: Request) {
   if (!authorized(request)) return Response.json({ error: "Unauthorized" }, { status: 401 });
   try {
+    if (new URL(request.url).searchParams.get("testAlert") === "1") {
+      await sendPublishingAlert({
+        brand: "Monitor geral",
+        summary: "Teste concluído. Os alertas de Kammara, Bichittos e Guitta Monatega Studio estão ativos.",
+      });
+      return Response.json({ status: "test-alert-sent" });
+    }
     return Response.json(await runSocialPublishingWatchdog(new Date()));
   } catch (error) {
     console.error("Social publishing watchdog failed", error);
