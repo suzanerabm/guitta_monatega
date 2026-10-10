@@ -1,13 +1,1696 @@
 {
-  "brand": "guitta-monatega-studio",
+  "brand": "guittamonategastudio",
   "mode": "draft",
-  "description": "Fila exclusiva do Guitta Monatega Studio. Permanece vazia e sem cron ate existir conteudo aprovado.",
-  "generatedAt": "2026-10-09T00:00:00-03:00",
+  "description": "Fila operacional isolada do Guitta Monatega Studio.",
+  "generatedAt": "2026-10-09T23:32:13.414Z",
   "timezone": "America/Sao_Paulo",
+  "cadence": "dias 10, 20 e 30, com meses reduzidos conforme a régua",
+  "regularTime": "19:30",
   "exhaustionPolicy": "stop",
-  "repeatPolicy": "explicit-only",
-  "start": null,
-  "end": null,
-  "total": 0,
-  "items": []
+  "repeatPolicy": "never",
+  "start": "2026-10-20T19:30:00-03:00",
+  "end": "2027-10-20T19:30:00-03:00",
+  "total": 37,
+  "regularTotal": 35,
+  "calendarExceptions": [
+    {
+      "topic": "feliz-natal",
+      "scheduledAt": "2026-12-25T19:30:00-03:00"
+    },
+    {
+      "topic": "feliz-ano-novo",
+      "scheduledAt": "2026-12-31T19:30:00-03:00"
+    }
+  ],
+  "items": [
+    {
+      "occurrence": "001",
+      "postId": "studio-001",
+      "topic": "criatura-no-jardim",
+      "world": "arte",
+      "type": "coloring",
+      "title": "Criatura no jardim",
+      "scheduledAt": "2026-10-20T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/026-01-arte-colorir-original.png",
+            "key": "social/guittamonategastudio/posts/026-01-arte-colorir-original.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/026-01-arte-colorir-original.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/026-02-arte-colorida-lapis.png",
+            "key": "social/guittamonategastudio/posts/026-02-arte-colorida-lapis.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/026-02-arte-colorida-lapis.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/026-03-arte-colorida-canetinha.png",
+            "key": "social/guittamonategastudio/posts/026-03-arte-colorida-canetinha.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/026-03-arte-colorida-canetinha.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/026-04-arte-livro.png",
+            "key": "social/guittamonategastudio/posts/026-04-arte-livro.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/026-04-arte-livro.png"
+          }
+        ]
+      },
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/mundos-imaginarios-coloring-book",
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Criatura no jardim. Deslize para ver o desenho original, duas interpretações coloridas e o livro Mundos Imaginários.\n\nCriatura no jardim. Swipe to see the original drawing, two colored interpretations and the Imaginary Worlds book.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Criatura no jardim. Deslize para ver o desenho original, duas interpretações coloridas e o livro Mundos Imaginários.\n\nCriatura no jardim. Swipe to see the original drawing, two colored interpretations and the Imaginary Worlds book.\n\nPT-BR: https://guittamonategastudio.com/pt/books/mundos-imaginarios-coloring-book",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "002",
+      "postId": "studio-002",
+      "topic": "boas-vindas",
+      "world": "kammara",
+      "type": "welcome",
+      "title": "BEM-VINDO AO KAMMARA",
+      "scheduledAt": "2026-10-30T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/001.png",
+          "key": "social/guittamonategastudio/posts/001.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/001.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "E se as invenções da humanidade continuassem evoluindo em outro universo? Continuaram. E se tornaram Kammara.\n\nWhat if humanity's inventions had kept evolving in another universe? They did. And they became Kammara.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "E se as invenções da humanidade continuassem evoluindo em outro universo? Continuaram. E se tornaram Kammara.\n\nWhat if humanity's inventions had kept evolving in another universe? They did. And they became Kammara.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "003",
+      "postId": "studio-003",
+      "topic": "institucional",
+      "world": "zeco",
+      "type": "institutional",
+      "title": "Zeco",
+      "scheduledAt": "2026-11-10T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/001-zeco-institucional-v2.png",
+          "key": "social/guittamonategastudio/posts/001-zeco-institucional-v2.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/001-zeco-institucional-v2.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Zeco e seus amigos estão esperando para brincar.\n\nZeco and his friends are waiting for you to play.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Zeco e seus amigos estão esperando para brincar.\n\nZeco and his friends are waiting for you to play.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "004",
+      "postId": "studio-004",
+      "topic": "institucional",
+      "world": "napcat",
+      "type": "institutional",
+      "title": "Napcat",
+      "scheduledAt": "2026-11-20T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/001-napcat-institucional-v2.png",
+          "key": "social/guittamonategastudio/posts/001-napcat-institucional-v2.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/001-napcat-institucional-v2.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Venha tirar uma soneca e sonhar com Napcat.\n\nCome take a nap and dream with Napcat.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Venha tirar uma soneca e sonhar com Napcat.\n\nCome take a nap and dream with Napcat.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "005",
+      "postId": "studio-005",
+      "topic": "institucional",
+      "world": "taylo",
+      "type": "institutional",
+      "title": "Taylo",
+      "scheduledAt": "2026-11-30T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/001-taylo-institucional-v1.png",
+          "key": "social/guittamonategastudio/posts/001-taylo-institucional-v1.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/001-taylo-institucional-v1.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Cada brilho tem seu tempo e seu jeito.\n\nEvery light has its own time and its own way.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Cada brilho tem seu tempo e seu jeito.\n\nEvery light has its own time and its own way.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "006",
+      "postId": "studio-006",
+      "topic": "institucional",
+      "world": "cheio-de-bolinha",
+      "type": "institutional",
+      "title": "Cheio de Bolinha / Bobbin",
+      "scheduledAt": "2026-12-10T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/001-cheio-de-bolinha-institucional-v1.png",
+          "key": "social/guittamonategastudio/posts/001-cheio-de-bolinha-institucional-v1.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/001-cheio-de-bolinha-institucional-v1.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Cheio de Bolinha e Querie estão esperando para brincar.\n\nBobbin and Querie are waiting for you to come play.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Cheio de Bolinha e Querie estão esperando para brincar.\n\nBobbin and Querie are waiting for you to come play.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "007",
+      "postId": "studio-007",
+      "topic": "livro-saga-orf-v",
+      "world": "kammara",
+      "type": "book-carousel",
+      "title": "SAGA EM ORF-V",
+      "scheduledAt": "2026-12-20T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/002-01.png",
+            "key": "social/guittamonategastudio/posts/002-01.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/002-01.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/002-02.png",
+            "key": "social/guittamonategastudio/posts/002-02.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/002-02.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/002-03.png",
+            "key": "social/guittamonategastudio/posts/002-03.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/002-03.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/002-04.png",
+            "key": "social/guittamonategastudio/posts/002-04.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/002-04.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/002-05.png",
+            "key": "social/guittamonategastudio/posts/002-05.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/002-05.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/002-06.png",
+            "key": "social/guittamonategastudio/posts/002-06.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/002-06.png"
+          }
+        ]
+      },
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/saga-orf-v-volume-1",
+        "en": "https://guittamonategastudio.com/en/books/saga-orf-v-volume-1"
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "A primeira saga de Kammara começa em ORF-V.\n\nThe first Kammara saga begins in ORF-V.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "A primeira saga de Kammara começa em ORF-V.\n\nThe first Kammara saga begins in ORF-V.\n\nPT-BR: https://guittamonategastudio.com/pt/books/saga-orf-v-volume-1\nEN: https://guittamonategastudio.com/en/books/saga-orf-v-volume-1",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "008",
+      "postId": "studio-008",
+      "topic": "feliz-natal",
+      "world": "bichittos",
+      "type": "special-day",
+      "title": "Feliz Natal para todos!",
+      "scheduledAt": "2026-12-25T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/030-zeco-feliz-natal.png",
+            "key": "social/guittamonategastudio/posts/030-zeco-feliz-natal.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/030-zeco-feliz-natal.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/052-napcat-violeta-feliz-natal.png",
+            "key": "social/guittamonategastudio/posts/052-napcat-violeta-feliz-natal.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/052-napcat-violeta-feliz-natal.png"
+          }
+        ]
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Feliz Natal para todos!\n\nMerry Christmas, everyone!",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Feliz Natal para todos!\n\nMerry Christmas, everyone!",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "009",
+      "postId": "studio-009",
+      "topic": "feliz-ano-novo",
+      "world": "zeco",
+      "type": "special-day",
+      "title": "Feliz Ano Novo!",
+      "scheduledAt": "2026-12-31T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": true,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/031-zeco-feliz-ano-novo.png",
+          "key": "social/guittamonategastudio/posts/031-zeco-feliz-ano-novo.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/031-zeco-feliz-ano-novo.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Feliz Ano Novo! Na virada do ano, na beira do mar, sete ondinhas vamos pular.\n\nHappy New Year! On New Year’s Eve, down by the sea, seven little waves to jump.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Feliz Ano Novo! Na virada do ano, na beira do mar, sete ondinhas vamos pular.\n\nHappy New Year! On New Year’s Eve, down by the sea, seven little waves to jump.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "010",
+      "postId": "studio-010",
+      "topic": "capivara",
+      "world": "zeco",
+      "type": "scene",
+      "title": "A capivara veio nos conhecer",
+      "scheduledAt": "2027-01-10T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/003-zeco-cena-capivara.png",
+          "key": "social/guittamonategastudio/posts/003-zeco-cena-capivara.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/003-zeco-cena-capivara.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "A capivara veio nos conhecer. Olha quantos filhotinhos começando a aparecer.\n\nA capybara came to meet us. Look how many babies are peeking out.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "A capivara veio nos conhecer. Olha quantos filhotinhos começando a aparecer.\n\nA capybara came to meet us. Look how many babies are peeking out.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "011",
+      "postId": "studio-011",
+      "topic": "cena",
+      "world": "napcat",
+      "type": "scene",
+      "title": "Um cochilo pode ser uma aventura",
+      "scheduledAt": "2027-01-20T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/007-napcat-cena.png",
+          "key": "social/guittamonategastudio/posts/007-napcat-cena.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/007-napcat-cena.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Algumas aventuras começam quando o quarto fica quietinho. Para NapCat, até um cochilo pode abrir a porta para uma nova aventura.\n\nSome adventures begin when the room grows quiet. For NapCat, even a nap can open the door to a new adventure.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Algumas aventuras começam quando o quarto fica quietinho. Para NapCat, até um cochilo pode abrir a porta para uma nova aventura.\n\nSome adventures begin when the room grows quiet. For NapCat, even a nap can open the door to a new adventure.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "012",
+      "postId": "studio-012",
+      "topic": "cidade-e-floresta",
+      "world": "arte",
+      "type": "coloring",
+      "title": "Cidade e floresta",
+      "scheduledAt": "2027-01-30T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/027-01-arte-cidade-floresta-original.png",
+            "key": "social/guittamonategastudio/posts/027-01-arte-cidade-floresta-original.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/027-01-arte-cidade-floresta-original.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/027-02-arte-cidade-floresta-lapis.png",
+            "key": "social/guittamonategastudio/posts/027-02-arte-cidade-floresta-lapis.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/027-02-arte-cidade-floresta-lapis.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/027-03-arte-cidade-floresta-luminosa.png",
+            "key": "social/guittamonategastudio/posts/027-03-arte-cidade-floresta-luminosa.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/027-03-arte-cidade-floresta-luminosa.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/027-04-arte-livro.png",
+            "key": "social/guittamonategastudio/posts/027-04-arte-livro.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/027-04-arte-livro.png"
+          }
+        ]
+      },
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/mundos-imaginarios-coloring-book",
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Cidade e floresta. Deslize para ver o desenho original, duas interpretações coloridas e o livro Mundos Imaginários.\n\nCidade e floresta. Swipe to see the original drawing, two colored interpretations and the Imaginary Worlds book.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Cidade e floresta. Deslize para ver o desenho original, duas interpretações coloridas e o livro Mundos Imaginários.\n\nCidade e floresta. Swipe to see the original drawing, two colored interpretations and the Imaginary Worlds book.\n\nPT-BR: https://guittamonategastudio.com/pt/books/mundos-imaginarios-coloring-book",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "013",
+      "postId": "studio-013",
+      "topic": "cena",
+      "world": "taylo",
+      "type": "scene",
+      "title": "A estrela de Pitu",
+      "scheduledAt": "2027-02-10T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/011-taylo-cena.png",
+          "key": "social/guittamonategastudio/posts/011-taylo-cena.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/011-taylo-cena.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "A estrela de Pitu sempre esteve lá. Só estava esperando que ele olhasse para ela.\n\nPitu’s star had always been there, waiting for him to look up and see it.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "A estrela de Pitu sempre esteve lá. Só estava esperando que ele olhasse para ela.\n\nPitu’s star had always been there, waiting for him to look up and see it.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "014",
+      "postId": "studio-014",
+      "topic": "a-escova-fugiu",
+      "world": "cheio-de-bolinha",
+      "type": "scene",
+      "title": "A escova fugiu!",
+      "scheduledAt": "2027-02-20T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/015-querie-a-escova-fugiu.png",
+          "key": "social/guittamonategastudio/posts/015-querie-a-escova-fugiu.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/015-querie-a-escova-fugiu.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Querie jura que ia escovar os dentes. A escova conta outra história e, muito suspeitamente, saiu correndo.\n\nQuerie swears he was going to brush his teeth. The toothbrush tells a different story and very suspiciously ran away.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Querie jura que ia escovar os dentes. A escova conta outra história e, muito suspeitamente, saiu correndo.\n\nQuerie swears he was going to brush his teeth. The toothbrush tells a different story and very suspiciously ran away.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "015",
+      "postId": "studio-015",
+      "topic": "a-essencia",
+      "world": "kammara",
+      "type": "institutional",
+      "title": "A ESSÊNCIA",
+      "scheduledAt": "2027-03-10T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/002.png",
+          "key": "social/guittamonategastudio/posts/002.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/002.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Kammara: uma homenagem à história da computação transformada em mitologia.\n\nKammara: a tribute to the history of computing transformed into mythology.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Kammara: uma homenagem à história da computação transformada em mitologia.\n\nKammara: a tribute to the history of computing transformed into mythology.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "016",
+      "postId": "studio-016",
+      "topic": "personagem",
+      "world": "zeco",
+      "type": "character",
+      "title": "Zeco",
+      "scheduledAt": "2027-03-20T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/004-zeco-personagem.png",
+          "key": "social/guittamonategastudio/posts/004-zeco-personagem.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/004-zeco-personagem.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Este é o Zeco. Curioso, afetuoso e cheio de imaginação, ele sonha em ser chef de cozinha.\n\nThis is Zeco. Curious, affectionate and full of imagination, he dreams of becoming a chef.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Este é o Zeco. Curioso, afetuoso e cheio de imaginação, ele sonha em ser chef de cozinha.\n\nThis is Zeco. Curious, affectionate and full of imagination, he dreams of becoming a chef.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "017",
+      "postId": "studio-017",
+      "topic": "personagem",
+      "world": "napcat",
+      "type": "character",
+      "title": "NapCat",
+      "scheduledAt": "2027-03-30T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/008-napcat-personagem.png",
+          "key": "social/guittamonategastudio/posts/008-napcat-personagem.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/008-napcat-personagem.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Este é NapCat, um explorador gentil que transforma cada cochilo em uma pequena aventura.\n\nThis is NapCat, a gentle explorer who can turn every nap into a little adventure.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Este é NapCat, um explorador gentil que transforma cada cochilo em uma pequena aventura.\n\nThis is NapCat, a gentle explorer who can turn every nap into a little adventure.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "018",
+      "postId": "studio-018",
+      "topic": "viajantes",
+      "world": "arte",
+      "type": "coloring",
+      "title": "Viajantes",
+      "scheduledAt": "2027-04-10T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/028-01-arte-viajantes-original.png",
+            "key": "social/guittamonategastudio/posts/028-01-arte-viajantes-original.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/028-01-arte-viajantes-original.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/028-02-arte-viajantes-giz.png",
+            "key": "social/guittamonategastudio/posts/028-02-arte-viajantes-giz.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/028-02-arte-viajantes-giz.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/028-03-arte-viajantes-noite.png",
+            "key": "social/guittamonategastudio/posts/028-03-arte-viajantes-noite.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/028-03-arte-viajantes-noite.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/028-04-arte-livro.png",
+            "key": "social/guittamonategastudio/posts/028-04-arte-livro.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/028-04-arte-livro.png"
+          }
+        ]
+      },
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/mundos-imaginarios-coloring-book",
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Viajantes. Deslize para ver o desenho original, duas interpretações coloridas e o livro Mundos Imaginários.\n\nViajantes. Swipe to see the original drawing, two colored interpretations and the Imaginary Worlds book.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Viajantes. Deslize para ver o desenho original, duas interpretações coloridas e o livro Mundos Imaginários.\n\nViajantes. Swipe to see the original drawing, two colored interpretations and the Imaginary Worlds book.\n\nPT-BR: https://guittamonategastudio.com/pt/books/mundos-imaginarios-coloring-book",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "019",
+      "postId": "studio-019",
+      "topic": "personagem",
+      "world": "taylo",
+      "type": "character",
+      "title": "Taylo",
+      "scheduledAt": "2027-04-20T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/012-taylo-personagem.png",
+          "key": "social/guittamonategastudio/posts/012-taylo-personagem.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/012-taylo-personagem.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Este é Taylo, o Colecionador de Estrelas e guardião silencioso da Floresta Azul.\n\nThis is Taylo, the Star Collector and silent guardian of the Blue Forest.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Este é Taylo, o Colecionador de Estrelas e guardião silencioso da Floresta Azul.\n\nThis is Taylo, the Star Collector and silent guardian of the Blue Forest.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "020",
+      "postId": "studio-020",
+      "topic": "fuga-dos-queries",
+      "world": "cheio-de-bolinha",
+      "type": "scene",
+      "title": "Corre, Cheio de Bolinha!",
+      "scheduledAt": "2027-04-30T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/016-cheio-foge-dos-queries.png",
+          "key": "social/guittamonategastudio/posts/016-cheio-foge-dos-queries.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/016-cheio-foge-dos-queries.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Os Queries azucrinam em cima do muro. Cheio de Bolinha fica assustado, sobe sobre suas bolhas de sabão e escapa pelo céu.\n\nThe Queries tease him from the wall. Bobbin gets scared, rises on his soap bubbles, and escapes through the sky.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Os Queries azucrinam em cima do muro. Cheio de Bolinha fica assustado, sobe sobre suas bolhas de sabão e escapa pelo céu.\n\nThe Queries tease him from the wall. Bobbin gets scared, rises on his soap bubbles, and escapes through the sky.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "021",
+      "postId": "studio-021",
+      "topic": "eni-4-delta",
+      "world": "kammara",
+      "type": "planet",
+      "title": "ENI-4Δ",
+      "scheduledAt": "2027-05-10T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/021.png",
+          "key": "social/guittamonategastudio/posts/021.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/021.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "ENI-4Δ: o planeta das válvulas. Um mundo que não cria energia, apenas consome.\n\nENI-4Δ: the planet of valves. A world that does not create energy, only consumes.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "ENI-4Δ: o planeta das válvulas. Um mundo que não cria energia, apenas consome.\n\nENI-4Δ: the planet of valves. A world that does not create energy, only consumes.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "022",
+      "postId": "studio-022",
+      "topic": "ninha",
+      "world": "zeco",
+      "type": "character",
+      "title": "Ninha",
+      "scheduledAt": "2027-05-20T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/004-ninha-personagem.png",
+          "key": "social/guittamonategastudio/posts/004-ninha-personagem.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/004-ninha-personagem.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Esta é Ninha, uma joaninha alegre e amiga do Zeco. No bolso mágico dela cabe tudo o que você imagina.\n\nThis is Neena, a cheerful little ladybug and Zeco’s friend. Her magical pocket can hold anything you imagine.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Esta é Ninha, uma joaninha alegre e amiga do Zeco. No bolso mágico dela cabe tudo o que você imagina.\n\nThis is Neena, a cheerful little ladybug and Zeco’s friend. Her magical pocket can hold anything you imagine.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "023",
+      "postId": "studio-023",
+      "topic": "violeta",
+      "world": "napcat",
+      "type": "character",
+      "title": "Violeta",
+      "scheduledAt": "2027-05-30T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/009-violeta-personagem.png",
+          "key": "social/guittamonategastudio/posts/009-violeta-personagem.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/009-violeta-personagem.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Esta é Violeta, a irmã gêmea do NapCat. Ela é pura energia e está sempre pulando, brincando e inventando novidades.\n\nThis is Violeta, NapCat’s twin sister. She is pure energy, always jumping, playing, and inventing something new.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Esta é Violeta, a irmã gêmea do NapCat. Ela é pura energia e está sempre pulando, brincando e inventando novidades.\n\nThis is Violeta, NapCat’s twin sister. She is pure energy, always jumping, playing, and inventing something new.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "024",
+      "postId": "studio-024",
+      "topic": "squizo-e-os-coracoes",
+      "world": "arte",
+      "type": "coloring",
+      "title": "Squizo e os corações",
+      "scheduledAt": "2027-06-10T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/029-01-arte-squizo-coracoes-original.png",
+            "key": "social/guittamonategastudio/posts/029-01-arte-squizo-coracoes-original.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/029-01-arte-squizo-coracoes-original.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/029-02-arte-squizo-coracoes-lapis.png",
+            "key": "social/guittamonategastudio/posts/029-02-arte-squizo-coracoes-lapis.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/029-02-arte-squizo-coracoes-lapis.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/029-03-arte-squizo-coracoes-gouache.png",
+            "key": "social/guittamonategastudio/posts/029-03-arte-squizo-coracoes-gouache.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/029-03-arte-squizo-coracoes-gouache.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/029-04-arte-livro.png",
+            "key": "social/guittamonategastudio/posts/029-04-arte-livro.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/029-04-arte-livro.png"
+          }
+        ]
+      },
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/mundos-imaginarios-coloring-book",
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Squizo e os corações. Deslize para ver o desenho original, duas interpretações coloridas e o livro Mundos Imaginários.\n\nSquizo e os corações. Swipe to see the original drawing, two colored interpretations and the Imaginary Worlds book.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Squizo e os corações. Deslize para ver o desenho original, duas interpretações coloridas e o livro Mundos Imaginários.\n\nSquizo e os corações. Swipe to see the original drawing, two colored interpretations and the Imaginary Worlds book.\n\nPT-BR: https://guittamonategastudio.com/pt/books/mundos-imaginarios-coloring-book",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "025",
+      "postId": "studio-025",
+      "topic": "pitu",
+      "world": "taylo",
+      "type": "character",
+      "title": "Pitu",
+      "scheduledAt": "2027-06-20T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/013-pitu-personagem.png",
+          "key": "social/guittamonategastudio/posts/013-pitu-personagem.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/013-pitu-personagem.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Este é Pitu. Ele sente tudo intensamente, e sua sensibilidade também faz parte de sua coragem.\n\nThis is Pitu. He feels everything deeply, and his sensitivity is also part of his courage.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Este é Pitu. Ele sente tudo intensamente, e sua sensibilidade também faz parte de sua coragem.\n\nThis is Pitu. He feels everything deeply, and his sensitivity is also part of his courage.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "026",
+      "postId": "studio-026",
+      "topic": "personagem",
+      "world": "cheio-de-bolinha",
+      "type": "character",
+      "title": "Cheio de Bolinha",
+      "scheduledAt": "2027-06-30T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/017-cheio-de-bolinha-personagem.png",
+          "key": "social/guittamonategastudio/posts/017-cheio-de-bolinha-personagem.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/017-cheio-de-bolinha-personagem.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Este é Cheio de Bolinha. Um elefante enorme, gentil e educadíssimo que morre de medo de ratinhos.\n\nThis is Bobbin. A huge, gentle, and extremely polite elephant who is terrified of mice.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Este é Cheio de Bolinha. Um elefante enorme, gentil e educadíssimo que morre de medo de ratinhos.\n\nThis is Bobbin. A huge, gentle, and extremely polite elephant who is terrified of mice.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "027",
+      "postId": "studio-027",
+      "topic": "lunn-p1",
+      "world": "kammara",
+      "type": "planet",
+      "title": "LUNN'P1",
+      "scheduledAt": "2027-07-10T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/022.png",
+          "key": "social/guittamonategastudio/posts/022.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/022.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "LUNN'P1: o planeta onde tudo flui. Um mundo onde as quatro luas regem o tempo e a água cobre todo o planeta.\n\nLUNN'P1: the planet where everything flows. A world where four moons govern time and water covers the entire planet.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "LUNN'P1: o planeta onde tudo flui. Um mundo onde as quatro luas regem o tempo e a água cobre todo o planeta.\n\nLUNN'P1: the planet where everything flows. A world where four moons govern time and water covers the entire planet.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "028",
+      "postId": "studio-028",
+      "topic": "rui-merengue",
+      "world": "zeco",
+      "type": "character",
+      "title": "Rui Merengue",
+      "scheduledAt": "2027-07-20T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/005-rui-merengue-personagem.png",
+          "key": "social/guittamonategastudio/posts/005-rui-merengue-personagem.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/005-rui-merengue-personagem.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Este é Rui Merengue, o melhor amigo do Zeco. Ele sonha em ser piloto, mas morre de medo de água.\n\nThis is Rooey Meringue, Zeco’s best friend. He dreams of becoming a pilot, but he is terrified of water.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Este é Rui Merengue, o melhor amigo do Zeco. Ele sonha em ser piloto, mas morre de medo de água.\n\nThis is Rooey Meringue, Zeco’s best friend. He dreams of becoming a pilot, but he is terrified of water.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "029",
+      "postId": "studio-029",
+      "topic": "passaros-e-livro-de-colorir",
+      "world": "napcat",
+      "type": "coloring",
+      "title": "Pronto para colorir",
+      "scheduledAt": "2027-07-30T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/010-01-napcat-passaros-original.png",
+            "key": "social/guittamonategastudio/posts/010-01-napcat-passaros-original.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/010-01-napcat-passaros-original.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/010-02-napcat-passaros-versao-1.png",
+            "key": "social/guittamonategastudio/posts/010-02-napcat-passaros-versao-1.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/010-02-napcat-passaros-versao-1.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/010-03-napcat-passaros-versao-2.png",
+            "key": "social/guittamonategastudio/posts/010-03-napcat-passaros-versao-2.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/010-03-napcat-passaros-versao-2.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/010-04-napcat-livro-colorir.png",
+            "key": "social/guittamonategastudio/posts/010-04-napcat-livro-colorir.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/010-04-napcat-livro-colorir.png"
+          }
+        ]
+      },
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/napcat-coloring-book",
+        "en": "https://guittamonategastudio.com/en/books/napcat-coloring-book"
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Uma mesma cena pode ganhar muitas cores. Deslize para ver duas versões dos passarinhos na plantação e depois crie a sua.\n\nThe same scene can take on many colors. Swipe to see two versions of the birds in the garden, then create your own.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Uma mesma cena pode ganhar muitas cores. Deslize para ver duas versões dos passarinhos na plantação e depois crie a sua.\n\nThe same scene can take on many colors. Swipe to see two versions of the birds in the garden, then create your own.\n\nPT-BR: https://guittamonategastudio.com/pt/books/napcat-coloring-book\nEN: https://guittamonategastudio.com/en/books/napcat-coloring-book",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "030",
+      "postId": "studio-030",
+      "topic": "padrao-de-criaturas",
+      "world": "arte",
+      "type": "coloring",
+      "title": "Padrão de criaturas",
+      "scheduledAt": "2027-08-10T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/030-01-arte-padrao-criaturas-original.png",
+            "key": "social/guittamonategastudio/posts/030-01-arte-padrao-criaturas-original.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/030-01-arte-padrao-criaturas-original.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/030-02-arte-padrao-criaturas-lapis.png",
+            "key": "social/guittamonategastudio/posts/030-02-arte-padrao-criaturas-lapis.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/030-02-arte-padrao-criaturas-lapis.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/030-03-arte-padrao-criaturas-canetinha-preto.png",
+            "key": "social/guittamonategastudio/posts/030-03-arte-padrao-criaturas-canetinha-preto.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/030-03-arte-padrao-criaturas-canetinha-preto.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/030-04-arte-livro.png",
+            "key": "social/guittamonategastudio/posts/030-04-arte-livro.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/030-04-arte-livro.png"
+          }
+        ]
+      },
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/mundos-imaginarios-coloring-book",
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Padrão de criaturas. Deslize para ver o desenho original, duas interpretações coloridas e o livro Mundos Imaginários.\n\nPadrão de criaturas. Swipe to see the original drawing, two colored interpretations and the Imaginary Worlds book.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Padrão de criaturas. Deslize para ver o desenho original, duas interpretações coloridas e o livro Mundos Imaginários.\n\nPadrão de criaturas. Swipe to see the original drawing, two colored interpretations and the Imaginary Worlds book.\n\nPT-BR: https://guittamonategastudio.com/pt/books/mundos-imaginarios-coloring-book",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "031",
+      "postId": "studio-031",
+      "topic": "livro",
+      "world": "taylo",
+      "type": "book-sale",
+      "title": "Taylo e Pitu",
+      "scheduledAt": "2027-08-20T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/014-taylo-livro.png",
+          "key": "social/guittamonategastudio/posts/014-taylo-livro.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/014-taylo-livro.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/taylo-e-pitu-volume-1"
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Conheça Taylo e Pitu em uma história delicada sobre encontros, sonhos e as estrelas que colecionamos pelo caminho. Encontre o livro no link da bio.\n\nMeet Taylo and Pitu in a gentle story about encounters, dreams, and the stars we collect along the way. Find the book through the link in our bio.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Conheça Taylo e Pitu em uma história delicada sobre encontros, sonhos e as estrelas que colecionamos pelo caminho. Encontre o livro no link da bio.\n\nMeet Taylo and Pitu in a gentle story about encounters, dreams, and the stars we collect along the way. Find the book through the link in our bio.\n\nPT-BR: https://guittamonategastudio.com/pt/books/taylo-e-pitu-volume-1",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "032",
+      "postId": "studio-032",
+      "topic": "orf-v",
+      "world": "kammara",
+      "type": "planet",
+      "title": "ORF-V",
+      "scheduledAt": "2027-08-30T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/023.png",
+          "key": "social/guittamonategastudio/posts/023.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/023.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "ORF-V: o planeta onde tudo conecta. Um mundo que vive de se reinventar, onde duas luas regem o tempo.\n\nORF-V: the planet where everything connects. A world that thrives on reinventing itself, where two moons govern time.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "ORF-V: o planeta onde tudo conecta. Um mundo que vive de se reinventar, onde duas luas regem o tempo.\n\nORF-V: the planet where everything connects. A world that thrives on reinventing itself, where two moons govern time.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "033",
+      "postId": "studio-033",
+      "topic": "querie",
+      "world": "cheio-de-bolinha",
+      "type": "character",
+      "title": "Querie",
+      "scheduledAt": "2027-09-10T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/018-querie-personagem.png",
+          "key": "social/guittamonategastudio/posts/018-querie-personagem.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/018-querie-personagem.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Este é Querie. Um ratinho pequeno, travesso e especialista em transformar qualquer obrigação em uma desculpa impossível.\n\nThis is Querie. A small, mischievous mouse and an expert at turning every chore into an impossible excuse.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Este é Querie. Um ratinho pequeno, travesso e especialista em transformar qualquer obrigação em uma desculpa impossível.\n\nThis is Querie. A small, mischievous mouse and an expert at turning every chore into an impossible excuse.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "034",
+      "postId": "studio-034",
+      "topic": "livro",
+      "world": "zeco",
+      "type": "book-sale",
+      "title": "Zeco nas Estações e seus amigos",
+      "scheduledAt": "2027-09-20T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/005-zeco-livro.png",
+          "key": "social/guittamonategastudio/posts/005-zeco-livro.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/005-zeco-livro.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/zeco-estacoes",
+        "en": "https://guittamonategastudio.com/en/books/zeco-estacoes"
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Zeco e seus amigos brincam em qualquer estação. Conheça o livro e escolha onde comprar pelo site.\n\nZeco and his friends play in every season. Discover the book and choose where to buy it on the website.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Zeco e seus amigos brincam em qualquer estação. Conheça o livro e escolha onde comprar pelo site.\n\nZeco and his friends play in every season. Discover the book and choose where to buy it on the website.\n\nPT-BR: https://guittamonategastudio.com/pt/books/zeco-estacoes\nEN: https://guittamonategastudio.com/en/books/zeco-estacoes",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "035",
+      "postId": "studio-035",
+      "topic": "criaturas-sob-as-estrelas",
+      "world": "arte",
+      "type": "coloring",
+      "title": "Criaturas sob as estrelas",
+      "scheduledAt": "2027-09-30T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "carousel",
+        "images": [
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/031-01-arte-criaturas-estrelas-original.png",
+            "key": "social/guittamonategastudio/posts/031-01-arte-criaturas-estrelas-original.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/031-01-arte-criaturas-estrelas-original.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/031-02-arte-criaturas-estrelas-lapis.png",
+            "key": "social/guittamonategastudio/posts/031-02-arte-criaturas-estrelas-lapis.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/031-02-arte-criaturas-estrelas-lapis.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/031-03-arte-criaturas-estrelas-gouache.png",
+            "key": "social/guittamonategastudio/posts/031-03-arte-criaturas-estrelas-gouache.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/031-03-arte-criaturas-estrelas-gouache.png"
+          },
+          {
+            "local": "06_Studio/mkt/_PUBLICAR/031-04-arte-livro.png",
+            "key": "social/guittamonategastudio/posts/031-04-arte-livro.png",
+            "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/031-04-arte-livro.png"
+          }
+        ]
+      },
+      "destinationUrls": {
+        "pt": "https://guittamonategastudio.com/pt/books/mundos-imaginarios-coloring-book",
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Criaturas sob as estrelas. Deslize para ver o desenho original, duas interpretações coloridas e o livro Mundos Imaginários.\n\nCriaturas sob as estrelas. Swipe to see the original drawing, two colored interpretations and the Imaginary Worlds book.\n\nLink no perfil. / Link in bio.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Criaturas sob as estrelas. Deslize para ver o desenho original, duas interpretações coloridas e o livro Mundos Imaginários.\n\nCriaturas sob as estrelas. Swipe to see the original drawing, two colored interpretations and the Imaginary Worlds book.\n\nPT-BR: https://guittamonategastudio.com/pt/books/mundos-imaginarios-coloring-book",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "036",
+      "postId": "studio-036",
+      "topic": "querie-e-o-milho",
+      "world": "cheio-de-bolinha",
+      "type": "gif",
+      "title": "O milho mordeu meu dente",
+      "scheduledAt": "2027-10-10T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/019-querie-milho.png",
+          "key": "social/guittamonategastudio/posts/019-querie-milho.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/019-querie-milho.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "Querie percebeu que seu dente estava mole. A explicação é óbvia: foi o milho que mordeu o dente dele.\n\nQuerie noticed that his tooth was loose. The explanation is obvious: the corn bit his tooth.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Querie percebeu que seu dente estava mole. A explicação é óbvia: foi o milho que mordeu o dente dele.\n\nQuerie noticed that his tooth was loose. The explanation is obvious: the corn bit his tooth.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "037",
+      "postId": "studio-037",
+      "topic": "triplec",
+      "world": "kammara",
+      "type": "planet",
+      "title": "TRIPLEC",
+      "scheduledAt": "2027-10-20T19:30:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "06_Studio/mkt/_PUBLICAR/024.png",
+          "key": "social/guittamonategastudio/posts/024.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/guittamonategastudio/posts/024.png"
+        }
+      },
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "pending",
+        "verifiedAt": null,
+        "error": null
+      },
+      "instagram": {
+        "caption": "TRIPLEC: o coração energético de Kammara. Um planeta onde floresta e lógica se fundiram num único organismo.\n\nTRIPLEC: the energetic heart of Kammara. A planet where forest and logic merged into a single organism.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "TRIPLEC: o coração energético de Kammara. Um planeta onde floresta e lógica se fundiram num único organismo.\n\nTRIPLEC: the energetic heart of Kammara. A planet where forest and logic merged into a single organism.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    }
+  ]
 }

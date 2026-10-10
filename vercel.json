@@ -7,6 +7,10 @@
       "schedule": "30 22 * * 0,2,4"
     },
     {
+      "path": "/api/cron/guitta-studio-publish",
+      "schedule": "30 22 * * *"
+    },
+    {
       "path": "/api/cron/bichittos-publish",
       "schedule": "30 22 * * *"
     },
