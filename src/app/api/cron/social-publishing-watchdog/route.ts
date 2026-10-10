@@ -1,7 +1,6 @@
 import { timingSafeEqual } from "node:crypto";
-import { runKammaraPublisher } from "@/lib/kammara-social/run";
-import { verifyStateAccess } from "@/lib/kammara-social/state";
 import { reportPublishingFailure } from "@/lib/social-publishing-alerts";
+import { runSocialPublishingWatchdog } from "@/lib/social-publishing-watchdog";
 
 export const runtime = "nodejs";
 export const maxDuration = 300;
@@ -18,13 +17,10 @@ function authorized(request: Request): boolean {
 export async function GET(request: Request) {
   if (!authorized(request)) return Response.json({ error: "Unauthorized" }, { status: 401 });
   try {
-    const url = new URL(request.url);
-    if (url.searchParams.get("dryRun") === "1") await verifyStateAccess();
-    const result = await runKammaraPublisher(new Date(), url.searchParams.get("dryRun") === "1");
-    return Response.json(result);
+    return Response.json(await runSocialPublishingWatchdog(new Date()));
   } catch (error) {
-    console.error("Kammara publisher failed", error);
-    await reportPublishingFailure({ brand: "Kammara", summary: "O publicador encontrou uma falha.", error });
-    return Response.json({ error: error instanceof Error ? error.message : "Unknown publication error" }, { status: 500 });
+    console.error("Social publishing watchdog failed", error);
+    await reportPublishingFailure({ brand: "Monitor geral", summary: "O verificador diário falhou.", error });
+    return Response.json({ error: error instanceof Error ? error.message : "Unknown watchdog error" }, { status: 500 });
   }
 }

@@ -1,6 +1,7 @@
 import { timingSafeEqual } from "node:crypto";
 import { runBichittosPublisher } from "@/lib/bichittos-social/run";
 import { verifyStateAccess } from "@/lib/bichittos-social/state";
+import { reportPublishingFailure } from "@/lib/social-publishing-alerts";
 
 export const runtime = "nodejs";
 export const maxDuration = 300;
@@ -23,7 +24,7 @@ export async function GET(request: Request) {
     return Response.json(await runBichittosPublisher(new Date(), dryRun));
   } catch (error) {
     console.error("Bichittos publisher failed", error);
+    await reportPublishingFailure({ brand: "Bichittos", summary: "O publicador encontrou uma falha.", error });
     return Response.json({ error: error instanceof Error ? error.message : "Unknown publication error" }, { status: 500 });
   }
 }
-

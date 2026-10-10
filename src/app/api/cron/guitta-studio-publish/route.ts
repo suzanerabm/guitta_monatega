@@ -1,6 +1,7 @@
 import { timingSafeEqual } from "node:crypto";
 import { runGuittaStudioPublisher } from "@/lib/guitta-studio-social/run";
 import { verifyStateAccess } from "@/lib/guitta-studio-social/state";
+import { reportPublishingFailure } from "@/lib/social-publishing-alerts";
 
 export const runtime = "nodejs";
 export const maxDuration = 300;
@@ -22,6 +23,7 @@ export async function GET(request: Request) {
     return Response.json(await runGuittaStudioPublisher(new Date(), dryRun));
   } catch (error) {
     console.error("Guitta Studio publisher failed", error);
+    await reportPublishingFailure({ brand: "Guitta Monatega Studio", summary: "O publicador encontrou uma falha.", error });
     return Response.json({ error: error instanceof Error ? error.message : "Unknown publication error" }, { status: 500 });
   }
 }

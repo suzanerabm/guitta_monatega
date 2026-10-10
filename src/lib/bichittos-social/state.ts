@@ -29,6 +29,10 @@ async function read(occurrence: string): Promise<StoredState | null> {
   }
 }
 
+export async function readPublicationState(occurrence: string): Promise<PublicationState | null> {
+  return (await read(occurrence))?.state ?? null;
+}
+
 async function write(state: PublicationState, etag?: string): Promise<StoredState> {
   const output = await client.send(new PutObjectCommand({
     Bucket: bucket(),
