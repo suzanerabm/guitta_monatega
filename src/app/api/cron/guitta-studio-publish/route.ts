@@ -20,7 +20,9 @@ export async function GET(request: Request) {
   try {
     const dryRun = new URL(request.url).searchParams.get("dryRun") === "1";
     if (dryRun) await verifyStateAccess();
-    return Response.json(await runGuittaStudioPublisher(new Date(), dryRun));
+    const result = await runGuittaStudioPublisher(new Date(), dryRun);
+    console.info("Guitta Studio publisher result", result);
+    return Response.json(result);
   } catch (error) {
     console.error("Guitta Studio publisher failed", error);
     await reportPublishingFailure({ brand: "Guitta Monatega Studio", summary: "O publicador encontrou uma falha.", error });
