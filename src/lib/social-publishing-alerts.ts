@@ -34,7 +34,7 @@ export async function sendPublishingAlert(input: {
     "",
     "A publicação não será repetida automaticamente se houver risco de duplicidade. Revise o estado antes de reenviar.",
   ];
-  await client.send(new SendEmailCommand({
+  const result = await client.send(new SendEmailCommand({
     FromEmailAddress: required("SOCIAL_ALERT_FROM"),
     Destination: { ToAddresses: [required("SOCIAL_ALERT_EMAIL")] },
     Content: {
@@ -44,6 +44,10 @@ export async function sendPublishingAlert(input: {
       },
     },
   }));
+  console.info("Publishing alert accepted by SES", {
+    brand: input.brand,
+    messageId: result.MessageId ?? "missing",
+  });
 }
 
 export async function reportPublishingFailure(input: Parameters<typeof sendPublishingAlert>[0]): Promise<void> {

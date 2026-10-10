@@ -8,6 +8,14 @@
     },
     {
       "path": "/api/cron/social-publishing-watchdog",
+      "schedule": "45 22 * * *"
+    },
+    {
+      "path": "/api/cron/social-publishing-watchdog",
+      "schedule": "45 23 * * *"
+    },
+    {
+      "path": "/api/cron/social-publishing-watchdog",
       "schedule": "30 3 * * *"
     },
     {

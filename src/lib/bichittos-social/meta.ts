@@ -24,6 +24,14 @@ async function post(path: string, fields: Record<string, string>, token: string,
   }), operation);
 }
 
+async function verifyPublished(id: string, token: string, operation: string): Promise<void> {
+  const url = new URL(`${graph()}/${id}`);
+  url.searchParams.set("fields", "id");
+  url.searchParams.set("access_token", token);
+  const published = await json(await fetch(url), operation);
+  if (published.id !== id) throw new Error(`${operation}: Meta did not confirm the published object.`);
+}
+
 async function pageToken(): Promise<string> {
   const response = await fetch(`${graph()}/${env("BICHITTOS_FACEBOOK_PAGE_ID")}?fields=id,access_token`, {
     headers: { authorization: `Bearer ${env("BICHITTOS_META_ACCESS_TOKEN")}` },
@@ -85,6 +93,7 @@ async function publishInstagram(item: PublicationItem): Promise<string> {
 
   const published = await post(`${account}/media_publish`, { creation_id: creationId }, token, "publish on Instagram");
   if (!published.id) throw new Error("Instagram did not return the published media ID.");
+  await verifyPublished(published.id, token, "verify Instagram publication");
   return published.id;
 }
 
@@ -102,16 +111,20 @@ async function publishFacebook(item: PublicationItem): Promise<string> {
     photoIds.forEach((id, index) => { fields[`attached_media[${index}]`] = JSON.stringify({ media_fbid: id }); });
     const published = await post(`${page}/feed`, fields, token, "publish Facebook carousel");
     if (!published.id) throw new Error("Facebook did not return a carousel post ID.");
+    await verifyPublished(published.id, token, "verify Facebook carousel publication");
     return published.id;
   }
   if (item.media.kind === "reel") {
     const published = await post(`${page}/videos`, { file_url: item.media.video.url, description: item.facebook.message }, token, "publish Facebook video");
     if (!published.id) throw new Error("Facebook did not return a video ID.");
+    await verifyPublished(published.id, token, "verify Facebook video publication");
     return published.id;
   }
   const published = await post(`${page}/photos`, { url: item.media.image.url, message: item.facebook.message }, token, "publish Facebook photo");
   if (!published.id) throw new Error("Facebook did not return a photo ID.");
-  return published.post_id ?? published.id;
+  const publishedId = published.post_id ?? published.id;
+  await verifyPublished(publishedId, token, "verify Facebook photo publication");
+  return publishedId;
 }
 
 export const publishers = { instagram: publishInstagram, facebook: publishFacebook };
