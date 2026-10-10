@@ -33,6 +33,21 @@ async function pageToken(): Promise<string> {
   return payload.access_token;
 }
 
+async function waitUntilReady(creationId: string, token: string, label: string): Promise<void> {
+  for (let attempt = 0; attempt < 75; attempt += 1) {
+    const statusUrl = new URL(`${graph()}/${creationId}`);
+    statusUrl.searchParams.set("fields", "status_code,status");
+    statusUrl.searchParams.set("access_token", token);
+    const status = await json(await fetch(statusUrl), `check Instagram ${label} processing`);
+    if (status.status_code === "FINISHED") return;
+    if (["ERROR", "EXPIRED"].includes(status.status_code ?? "")) {
+      throw new Error(`Instagram ${label} processing ended as ${status.status_code}: ${status.status ?? "no details"}`);
+    }
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+  }
+  throw new Error(`Instagram ${label} was not ready within 150 seconds.`);
+}
+
 async function publishInstagram(item: PublicationItem): Promise<string> {
   const account = env("BICHITTOS_INSTAGRAM_USER_ID");
   const token = env("BICHITTOS_META_ACCESS_TOKEN");
@@ -43,11 +58,13 @@ async function publishInstagram(item: PublicationItem): Promise<string> {
     for (const image of item.media.images) {
       const child = await post(`${account}/media`, { image_url: image.url, is_carousel_item: "true" }, token, "create Instagram carousel item");
       if (!child.id) throw new Error("Instagram did not return a carousel item ID.");
+      await waitUntilReady(child.id, token, "carousel item");
       childIds.push(child.id);
     }
     const container = await post(`${account}/media`, { media_type: "CAROUSEL", children: childIds.join(","), caption: item.instagram.caption }, token, "create Instagram carousel");
     if (!container.id) throw new Error("Instagram did not return a carousel container ID.");
     creationId = container.id;
+    await waitUntilReady(creationId, token, "carousel");
   } else if (item.media.kind === "reel") {
     const container = await post(`${account}/media`, {
       media_type: "REELS",
@@ -59,17 +76,7 @@ async function publishInstagram(item: PublicationItem): Promise<string> {
     if (!container.id) throw new Error("Instagram did not return a Reel container ID.");
     creationId = container.id;
 
-    let ready = false;
-    for (let attempt = 0; attempt < 75; attempt += 1) {
-      const statusUrl = new URL(`${graph()}/${creationId}`);
-      statusUrl.searchParams.set("fields", "status_code,status");
-      statusUrl.searchParams.set("access_token", token);
-      const status = await json(await fetch(statusUrl), "check Instagram Reel processing");
-      if (status.status_code === "FINISHED") { ready = true; break; }
-      if (["ERROR", "EXPIRED"].includes(status.status_code ?? "")) throw new Error(`Instagram Reel processing ended as ${status.status_code}: ${status.status ?? "no details"}`);
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-    }
-    if (!ready) throw new Error("Instagram Reel was not ready within 150 seconds.");
+    await waitUntilReady(creationId, token, "Reel");
   } else {
     const container = await post(`${account}/media`, { image_url: item.media.image.url, caption: item.instagram.caption }, token, "create Instagram image");
     if (!container.id) throw new Error("Instagram did not return an image container ID.");
@@ -108,4 +115,3 @@ async function publishFacebook(item: PublicationItem): Promise<string> {
 }
 
 export const publishers = { instagram: publishInstagram, facebook: publishFacebook };
-
