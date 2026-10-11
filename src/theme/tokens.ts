@@ -75,6 +75,8 @@ export const tokens = defineTokens({
     md: { value: '1rem' },
     lg: { value: '1.05rem' },
     xl: { value: '1.1rem' },
+    homePlanetCardLabel: { value: 'clamp(0.4rem, 0.55vw, 0.9rem)' },
+    homePlanetCardTitle: { value: 'clamp(1.35rem, 2vw, 3.25rem)' },
     homeBookCardTitle: { value: '1.05rem' },
     homeBooksTitle: { value: 'clamp(2rem, 3.2vw, 3rem)' },
     bookCardTitle: { value: '1.225rem' },
@@ -127,9 +129,14 @@ export const tokens = defineTokens({
     bannerDescription: { value: '400px' },
     bannerDescriptionWide: { value: '560px' },
     homeBannerCardsWidth: { value: '96%' },
+    homePlanetTitleBandHeight: { value: 'clamp(5rem, 8vw, 10.5rem)' },
+    homePlanetTitleGlyphHeight: { value: 'clamp(2.05rem, 3.1vw, 5.2rem)' },
   },
   lineHeights: {
     bookCardCompact: { value: '1.25' },
+  },
+  radii: {
+    homePlanetCompact: { value: 'clamp(0.75rem, 1.4vw, 1.75rem)' },
   },
   spacing: {
     // Original scale (kept backward-compatible)
@@ -147,6 +154,11 @@ export const tokens = defineTokens({
     snug: { value: '0.7rem' }, // ~11px
     base: { value: '1rem' }, // 16px (token name "base" to avoid clashing with md=0.8rem)
     bannerContentGap: { value: '0.1rem' },
+    homePlanetTitleTop: { value: 'clamp(0.5rem, 0.65vw, 1.1rem)' },
+    homePlanetTitleGlyphInset: { value: '0' },
+    homePlanetTitleTextGap: { value: 'clamp(0.2rem, 0.3vw, 0.45rem)' },
+    homePlanetTitleStackGap: { value: 'clamp(0.1rem, 0.15vw, 0.25rem)' },
+    homePlanetFrameOffset: { value: '0.375rem' },
     homeBannerCardsInset: { value: '2%' },
     homeHeaderOffsetMobile: { value: '60px' },
     homeHeaderOffsetDesktop: { value: '52px' },

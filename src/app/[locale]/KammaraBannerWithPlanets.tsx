@@ -84,11 +84,9 @@ export function KammaraBannerWithPlanets({
       />
 
       <Box
-        display="grid"
-        gridTemplateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)' }}
-        aspectRatio={{ base: '1 / 1', md: '3 / 1' }}
         width="homeBannerCardsWidth"
         marginX="auto"
+        padding="homePlanetFrameOffset"
         onTouchStart={(event) => {
           const touch = event.touches[0];
           touchStart.current = { x: touch.clientX, y: touch.clientY };
@@ -105,20 +103,28 @@ export function KammaraBannerWithPlanets({
           }
         }}
       >
-        {planets.map((planet) => {
-          const drop = dropsByPlanet[planet.id]?.[page];
-          return (
-            <KammaraPlanetCard
-              key={`${planet.id}-${drop?.video ?? page}`}
-              {...planet}
-              dropVideo={drop?.video}
-              dropPoster={drop?.poster}
-              category={planetLabel}
-              variant="compact"
-              onSelect={(id) => router.push(`${href}?planet=${id}`)}
-            />
-          );
-        })}
+        <Box
+          display="grid"
+          gridTemplateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)' }}
+          aspectRatio={{ base: '1 / 1', md: '3 / 1' }}
+          borderRadius="homePlanetCompact"
+          overflow="hidden"
+        >
+          {planets.map((planet) => {
+            const drop = dropsByPlanet[planet.id]?.[page];
+            return (
+              <KammaraPlanetCard
+                key={`${planet.id}-${drop?.video ?? page}`}
+                {...planet}
+                dropVideo={drop?.video}
+                dropPoster={drop?.poster}
+                category={planetLabel}
+                variant="compact"
+                onSelect={(id) => router.push(`${href}?planet=${id}`)}
+              />
+            );
+          })}
+        </Box>
       </Box>
 
       {pageCount > 1 && (

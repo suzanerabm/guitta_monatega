@@ -1,5 +1,6 @@
 'use client';
 import { Box, Flex, Grid, Heading, Text, chakra } from '@chakra-ui/react';
+import { GlyphPlanet } from '@/components/GlyphPlanet';
 import { LazyVideo } from '@/components/LazyVideo';
 import { KammaraStatBadge } from '@/components/KammaraStatBadge';
 
@@ -81,14 +82,15 @@ export function KammaraPlanetCard({
         width="100%"
         height="100%"
         overflow="hidden"
+        borderRadius={0}
         cursor="pointer"
         textAlign="left"
         css={{
           background: image
             ? `linear-gradient(180deg, ${darkColor}55, ${darkColor}cc), url(${image}) center/cover`
             : `linear-gradient(160deg, ${darkColor}, ${color})`,
-          border: `1px solid ${color}88`,
-          boxShadow: `inset 0 0 0 1px ${color}33, inset 0 1px 0 rgba(255,255,255,0.15)`,
+          border: `1px solid ${color}`,
+          boxShadow: `inset 0 0 0 1px ${darkColor}, inset 0 1px 0 rgba(255,255,255,0.15)`,
           transition: 'transform 0.3s ease, box-shadow 0.3s ease',
         }}
         _hover={{
@@ -116,80 +118,81 @@ export function KammaraPlanetCard({
             zIndex={1}
             aria-hidden="true"
             css={{
-              background: `linear-gradient(180deg, ${darkColor}66, ${darkColor}bb)`,
+              background: `linear-gradient(180deg, ${darkColor}33, ${darkColor}77)`,
             }}
           />
         )}
-        {/* Same identity hero used by the full planet card: category, world
-            name and declarer. Only the long copy and badges are omitted. */}
         <Box
           position="absolute"
-          top="sm"
-          left="sm"
-          right="sm"
+          top={0}
+          left={0}
+          right={0}
+          height="homePlanetTitleBandHeight"
           zIndex={2}
+          pointerEvents="none"
+          aria-hidden="true"
+          css={{
+            background: `linear-gradient(180deg, ${darkColor}cc 0%, ${darkColor}88 68%, transparent 100%)`,
+          }}
+        />
+        {/* Same identity hero used by the full planet card: category, world
+            name and declarer. Only the long copy and badges are omitted. */}
+        <Flex
+          position="absolute"
+          top="homePlanetTitleTop"
+          left="homePlanetTitleGlyphInset"
+          right="sm"
+          alignItems="center"
+          gap="homePlanetTitleTextGap"
+          zIndex={3}
         >
-          <Text
-            m={0}
-            textStyle="heading"
-            fontSize="xs"
-            letterSpacing="hero"
-            textTransform="uppercase"
-            color={color}
-            textAlign="center"
+          <Box
+            height="homePlanetTitleGlyphHeight"
+            flexShrink={0}
+            aria-hidden="true"
             css={{ textShadow: `0 0 12px ${color}` }}
           >
-            {category.toUpperCase()}
-          </Text>
-          <Heading
-            as="h2"
-            m={0}
-            textStyle="heading"
-            fontSize={{ base: 'base', md: '2xl' }}
-            lineHeight={1}
-            letterSpacing="heroTitle"
-            color="textOverlayBright"
-            textAlign="center"
-            whiteSpace="nowrap"
-            css={{
-              textShadow: `0 0 24px ${color}, 0 2px 12px rgba(0,0,0,0.6)`,
-            }}
-          >
-            {name}
-          </Heading>
-
+            <GlyphPlanet size="h3" color={color} stretch />
+          </Box>
+          {/* Hero: category + world name are one indivisible visual unit. */}
           <Flex
-            align="center"
-            gap="sm"
-            mt="sm"
-            width="100%"
-            aria-hidden="true"
-            css={{
-              fontFamily: 'var(--chakra-fonts-glyph)',
-              color,
-              letterSpacing: '0.3em',
-              textShadow: `0 0 12px ${color}`,
-            }}
+            data-part="planet-hero"
+            minWidth={0}
+            flexDirection="column"
+            alignItems="flex-start"
+            gap="homePlanetTitleStackGap"
           >
-            <Box
-              flex={1}
-              height="1px"
+            <Text
+              m={0}
+              textStyle="heading"
+              fontSize="homePlanetCardLabel"
+              lineHeight={1}
+              letterSpacing="hero"
+              textTransform="uppercase"
+              color={color}
+              textAlign="left"
+              css={{ textShadow: `0 0 12px ${color}` }}
+            >
+              {category.toUpperCase()}
+            </Text>
+            <Heading
+              as="h2"
+              m={0}
+              textStyle="heading"
+              fontSize="homePlanetCardTitle"
+              lineHeight={1}
+              letterSpacing="heroTitle"
+              color="textOverlayBright"
+              textAlign="left"
+              whiteSpace="nowrap"
               css={{
-                background: `linear-gradient(90deg, ${color}, transparent)`,
-                boxShadow: `0 0 8px ${color}`,
+                textShadow: `0 0 24px ${color}, 0 2px 12px rgba(0,0,0,0.6)`,
               }}
-            />
-            <span>⊙</span>
-            <Box
-              flex={1}
-              height="1px"
-              css={{
-                background: `linear-gradient(90deg, transparent, ${color})`,
-                boxShadow: `0 0 8px ${color}`,
-              }}
-            />
+            >
+              {name}
+            </Heading>
           </Flex>
-        </Box>
+        </Flex>
 
       </chakra.button>
     );
