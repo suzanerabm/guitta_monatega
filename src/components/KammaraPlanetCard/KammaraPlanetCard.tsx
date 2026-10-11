@@ -89,7 +89,7 @@ export function KammaraPlanetCard({
           background: image
             ? `linear-gradient(180deg, ${darkColor}55, ${darkColor}cc), url(${image}) center/cover`
             : `linear-gradient(160deg, ${darkColor}, ${color})`,
-          border: `1px solid ${color}`,
+          border: `1px solid ${color}40`,
           boxShadow: `inset 0 0 0 1px ${darkColor}, inset 0 1px 0 rgba(255,255,255,0.15)`,
           transition: 'transform 0.3s ease, box-shadow 0.3s ease',
         }}
@@ -140,20 +140,12 @@ export function KammaraPlanetCard({
         <Flex
           position="absolute"
           top="homePlanetTitleTop"
-          left="homePlanetTitleGlyphInset"
+          left="homePlanetHeroInset"
           right="sm"
-          alignItems="center"
-          gap="homePlanetTitleTextGap"
+          flexDirection="column"
+          alignItems="flex-start"
           zIndex={3}
         >
-          <Box
-            height="homePlanetTitleGlyphHeight"
-            flexShrink={0}
-            aria-hidden="true"
-            css={{ textShadow: `0 0 12px ${color}` }}
-          >
-            <GlyphPlanet size="h3" color={color} stretch />
-          </Box>
           {/* Hero: category + world name are one indivisible visual unit. */}
           <Flex
             data-part="planet-hero"
@@ -192,6 +184,39 @@ export function KammaraPlanetCard({
               {name}
             </Heading>
           </Flex>
+          <Box
+            marginTop="homePlanetDeclarerGap"
+            width="homePlanetDeclarerWidth"
+            aria-hidden="true"
+            css={{ textShadow: `0 0 12px ${color}` }}
+          >
+            <Flex alignItems="center" gap="2xs" color={color}>
+              <Box
+                flex={1}
+                height="homePlanetDeclarerLine"
+                css={{
+                  background: `linear-gradient(90deg, ${color}, transparent)`,
+                  boxShadow: `0 0 8px ${color}`,
+                }}
+              />
+              <Box
+                as="span"
+                fontFamily="glyph"
+                fontSize="glyphH3"
+                lineHeight={1}
+              >
+                ⊙
+              </Box>
+              <Box
+                flex={1}
+                height="homePlanetDeclarerLine"
+                css={{
+                  background: `linear-gradient(90deg, transparent, ${color})`,
+                  boxShadow: `0 0 8px ${color}`,
+                }}
+              />
+            </Flex>
+          </Box>
         </Flex>
 
       </chakra.button>

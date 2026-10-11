@@ -1,0 +1,1 @@
+export { ConnectedCardFrame } from './ConnectedCardFrame';

@@ -75,8 +75,9 @@ export const tokens = defineTokens({
     md: { value: '1rem' },
     lg: { value: '1.05rem' },
     xl: { value: '1.1rem' },
-    homePlanetCardLabel: { value: 'clamp(0.4rem, 0.55vw, 0.9rem)' },
-    homePlanetCardTitle: { value: 'clamp(1.35rem, 2vw, 3.25rem)' },
+    // Mini hero follows the canonical planet card ratio: title ~4.3x label.
+    homePlanetCardLabel: { value: 'clamp(0.25rem, 0.46vw, 0.65rem)' },
+    homePlanetCardTitle: { value: 'clamp(1rem, 2vw, 2.8rem)' },
     homeBookCardTitle: { value: '1.05rem' },
     homeBooksTitle: { value: 'clamp(2rem, 3.2vw, 3rem)' },
     bookCardTitle: { value: '1.225rem' },
@@ -130,13 +131,15 @@ export const tokens = defineTokens({
     bannerDescriptionWide: { value: '560px' },
     homeBannerCardsWidth: { value: '96%' },
     homePlanetTitleBandHeight: { value: 'clamp(5rem, 8vw, 10.5rem)' },
-    homePlanetTitleGlyphHeight: { value: 'clamp(2.05rem, 3.1vw, 5.2rem)' },
+    homePlanetDeclarerWidth: { value: '38%' },
+    homePlanetDeclarerLine: { value: '1px' },
   },
   lineHeights: {
     bookCardCompact: { value: '1.25' },
   },
   radii: {
     homePlanetCompact: { value: 'clamp(0.75rem, 1.4vw, 1.75rem)' },
+    homePlanetOutline: { value: 'clamp(1rem, 1.7vw, 2rem)' },
   },
   spacing: {
     // Original scale (kept backward-compatible)
@@ -154,10 +157,11 @@ export const tokens = defineTokens({
     snug: { value: '0.7rem' }, // ~11px
     base: { value: '1rem' }, // 16px (token name "base" to avoid clashing with md=0.8rem)
     bannerContentGap: { value: '0.1rem' },
-    homePlanetTitleTop: { value: 'clamp(0.5rem, 0.65vw, 1.1rem)' },
-    homePlanetTitleGlyphInset: { value: '0' },
-    homePlanetTitleTextGap: { value: 'clamp(0.2rem, 0.3vw, 0.45rem)' },
-    homePlanetTitleStackGap: { value: 'clamp(0.1rem, 0.15vw, 0.25rem)' },
+    homePlanetTitleTop: { value: 'clamp(0.75rem, 0.9vw, 1.35rem)' },
+    homePlanetHeroInset: { value: 'clamp(0.5rem, 1vw, 1.25rem)' },
+    homePlanetTitleStackGap: { value: '0.125rem' },
+    homePlanetDeclarerGap: { value: 'clamp(0.2rem, 0.35vw, 0.45rem)' },
+    homePlanetOutlineWidth: { value: '0.125rem' },
     homePlanetFrameOffset: { value: '0.375rem' },
     homeBannerCardsInset: { value: '2%' },
     homeHeaderOffsetMobile: { value: '60px' },

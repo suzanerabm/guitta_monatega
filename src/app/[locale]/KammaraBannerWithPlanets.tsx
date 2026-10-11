@@ -4,6 +4,7 @@ import { useMemo, useRef, useState } from 'react';
 import { Box, Flex, Text, chakra } from '@chakra-ui/react';
 import { useRouter } from 'next/navigation';
 import { HomeBanner } from '@/components/HomeBanner';
+import { ConnectedCardFrame } from '@/components/ConnectedCardFrame';
 import {
   KammaraPlanetCard,
   type KammaraPlanetCardProps,
@@ -59,7 +60,6 @@ export function KammaraBannerWithPlanets({
   const pageCount = Math.min(
     ...planets.map((planet) => dropsByPlanet[planet.id]?.length ?? 0),
   );
-
   const changePage = (direction: -1 | 1) => {
     if (pageCount < 2) return;
     setPage((current) => (current + direction + pageCount) % pageCount);
@@ -83,10 +83,9 @@ export function KammaraBannerWithPlanets({
         minHeight={{ base: '110px', md: '160px' }}
       />
 
-      <Box
-        width="homeBannerCardsWidth"
-        marginX="auto"
-        padding="homePlanetFrameOffset"
+      <ConnectedCardFrame
+        colors={planets.map((planet) => planet.color)}
+        negativeBackground={palettes.kammara.gradient}
         onTouchStart={(event) => {
           const touch = event.touches[0];
           touchStart.current = { x: touch.clientX, y: touch.clientY };
@@ -103,29 +102,21 @@ export function KammaraBannerWithPlanets({
           }
         }}
       >
-        <Box
-          display="grid"
-          gridTemplateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)' }}
-          aspectRatio={{ base: '1 / 1', md: '3 / 1' }}
-          borderRadius="homePlanetCompact"
-          overflow="hidden"
-        >
-          {planets.map((planet) => {
-            const drop = dropsByPlanet[planet.id]?.[page];
-            return (
-              <KammaraPlanetCard
-                key={`${planet.id}-${drop?.video ?? page}`}
-                {...planet}
-                dropVideo={drop?.video}
-                dropPoster={drop?.poster}
-                category={planetLabel}
-                variant="compact"
-                onSelect={(id) => router.push(`${href}?planet=${id}`)}
-              />
-            );
-          })}
-        </Box>
-      </Box>
+        {planets.map((planet) => {
+          const drop = dropsByPlanet[planet.id]?.[page];
+          return (
+            <KammaraPlanetCard
+              key={`${planet.id}-${drop?.video ?? page}`}
+              {...planet}
+              dropVideo={drop?.video}
+              dropPoster={drop?.poster}
+              category={planetLabel}
+              variant="compact"
+              onSelect={(id) => router.push(`${href}?planet=${id}`)}
+            />
+          );
+        })}
+      </ConnectedCardFrame>
 
       {pageCount > 1 && (
         <Flex
