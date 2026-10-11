@@ -19,16 +19,20 @@ async function json(response: Response, operation: string): Promise<IdPayload> {
 async function post(path: string, fields: Record<string, string>, token: string, operation: string): Promise<IdPayload> {
   return json(await fetch(`${graph()}/${path}`, {
     method: "POST",
-    headers: { "content-type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams({ ...fields, access_token: token }),
+    headers: {
+      authorization: `Bearer ${token}`,
+      "content-type": "application/x-www-form-urlencoded",
+    },
+    body: new URLSearchParams(fields),
   }), operation);
 }
 
 async function verifyPublished(id: string, token: string, operation: string): Promise<void> {
   const url = new URL(`${graph()}/${id}`);
   url.searchParams.set("fields", "id");
-  url.searchParams.set("access_token", token);
-  const published = await json(await fetch(url), operation);
+  const published = await json(await fetch(url, {
+    headers: { authorization: `Bearer ${token}` },
+  }), operation);
   if (published.id !== id) throw new Error(`${operation}: Meta did not confirm the published object.`);
 }
 
@@ -45,8 +49,9 @@ async function waitUntilReady(creationId: string, token: string, label: string):
   for (let attempt = 0; attempt < 75; attempt += 1) {
     const statusUrl = new URL(`${graph()}/${creationId}`);
     statusUrl.searchParams.set("fields", "status_code,status");
-    statusUrl.searchParams.set("access_token", token);
-    const status = await json(await fetch(statusUrl), `check Instagram ${label} processing`);
+    const status = await json(await fetch(statusUrl, {
+      headers: { authorization: `Bearer ${token}` },
+    }), `check Instagram ${label} processing`);
     if (status.status_code === "FINISHED") return;
     if (["ERROR", "EXPIRED"].includes(status.status_code ?? "")) {
       throw new Error(`Instagram ${label} processing ended as ${status.status_code}: ${status.status ?? "no details"}`);
