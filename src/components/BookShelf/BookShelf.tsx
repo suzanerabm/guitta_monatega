@@ -2,9 +2,9 @@
 
 import { Box } from '@chakra-ui/react';
 import type { BoxProps } from '@chakra-ui/react';
-import NextLink from 'next/link';
-import { HorizontalCardStrip } from '@/components/HorizontalCardStrip';
+import { HorizontalCardStrip, type HorizontalCardStripProps } from '@/components/HorizontalCardStrip';
 import { BookPanel, type BookPanelBook } from '@/components/BookPanel';
+import { OutlineActionLink } from '@/components/OutlineActionLink';
 
 export interface BookShelfEntry {
   book: BookPanelBook;
@@ -19,6 +19,14 @@ interface BookShelfProps {
   books: BookShelfEntry[];
   /** Color of the prev/next arrows. Falls back to HorizontalCardStrip's default. */
   arrowColor?: string;
+  /** Color used for arrows at the beginning/end of the shelf. */
+  disabledArrowColor?: string;
+  /** Overlay navigation without taking horizontal space from the cards. */
+  overlayArrows?: boolean;
+  /** Horizontal offset for overlaid navigation arrows. */
+  overlayArrowOffset?: string;
+  /** Padding applied inside the scrollable card track. */
+  cardPadding?: HorizontalCardStripProps['cardPadding'];
   /**
    * Arrow glyph style — see HorizontalCardStrip. Default 'plain': the
    * glyph font (⊷/⊶) is Kammara's visual language, so only the Kammara
@@ -42,6 +50,8 @@ interface BookShelfProps {
   viewAllHref?: string;
   viewAllLabel?: string;
   viewAllColor?: string;
+  /** Place the view-all action beside the host section title on desktop. */
+  viewAllPlacement?: 'shelf' | 'section-title';
   'data-testid'?: string;
 }
 
@@ -56,6 +66,10 @@ interface BookShelfProps {
 export function BookShelf({
   books,
   arrowColor,
+  disabledArrowColor,
+  overlayArrows = false,
+  overlayArrowOffset,
+  cardPadding,
   arrowVariant = 'plain',
   readLabel,
   comingSoonLabel,
@@ -67,36 +81,35 @@ export function BookShelf({
   viewAllHref,
   viewAllLabel,
   viewAllColor = 'ink',
+  viewAllPlacement = 'shelf',
   'data-testid': testId,
 }: BookShelfProps) {
   return (
     <Box>
       {viewAllHref && viewAllLabel && (
-        <Box display="flex" justifyContent="flex-end" mb="lg" pr={{ base: 'lg', md: 0 }}>
-          <NextLink href={viewAllHref} style={{ textDecoration: 'none' }}>
-            <Box
-              as="span"
-              display="inline-flex"
-              alignItems="center"
-              border="1px solid"
-              borderColor={viewAllColor}
-              color={viewAllColor}
-              px="lg"
-              py="md"
-              fontSize="sm"
-              fontWeight="semibold"
-              letterSpacing="wide"
-              textTransform="uppercase"
-              transitionProperty="opacity"
-              transitionDuration="default"
-              _hover={{ opacity: 0.72 }}
-            >
-              {viewAllLabel}
-            </Box>
-          </NextLink>
+        <Box
+          display="flex"
+          justifyContent="flex-end"
+          position={viewAllPlacement === 'section-title' ? { base: 'static', md: 'absolute' } : 'static'}
+          top={viewAllPlacement === 'section-title' ? { base: 'auto', md: 0 } : undefined}
+          right={viewAllPlacement === 'section-title' ? { base: 'auto', md: 0 } : undefined}
+          mb={viewAllPlacement === 'section-title' ? { base: 'lg', md: 0 } : 'lg'}
+          pr={{ base: 'lg', md: 0 }}
+        >
+          <OutlineActionLink href={viewAllHref} color={viewAllColor}>
+            {viewAllLabel}
+          </OutlineActionLink>
         </Box>
       )}
-      <HorizontalCardStrip arrowColor={arrowColor} arrowVariant={arrowVariant} data-testid={testId}>
+      <HorizontalCardStrip
+        arrowColor={arrowColor}
+        disabledArrowColor={disabledArrowColor}
+        overlayArrows={overlayArrows}
+        overlayArrowOffset={overlayArrowOffset}
+        cardPadding={cardPadding}
+        arrowVariant={arrowVariant}
+        data-testid={testId}
+      >
         {books.map((entry) => (
           <Box key={entry.book.id} width={cardWidth} maxW={cardMaxWidth}>
             <BookPanel

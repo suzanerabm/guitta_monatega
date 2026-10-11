@@ -16,6 +16,12 @@ export interface HorizontalCardStripProps {
    * Defaults to the theme's `glyphIdle`.
    */
   arrowColor?: string;
+  /** Optional color used while an arrow is disabled. */
+  disabledArrowColor?: string;
+  /** Overlay arrows on the track instead of reserving columns for them. */
+  overlayArrows?: boolean;
+  /** Horizontal offset used by overlaid arrows. Negative values move them outside the track. */
+  overlayArrowOffset?: string;
   /** Gap between cards. Default `1.5rem`. */
   gap?: string;
   /**
@@ -50,6 +56,9 @@ const MASK_IMAGE =
 export function HorizontalCardStrip({
   children,
   arrowColor,
+  disabledArrowColor,
+  overlayArrows = false,
+  overlayArrowOffset = 'var(--chakra-spacing-sm)',
   gap = '1.5rem',
   cardPadding = { base: '1rem 16px', md: '0.5rem 2rem 2rem' },
   arrowVariant = 'glyph',
@@ -97,6 +106,9 @@ export function HorizontalCardStrip({
   // `& .hcs-arrow`, not the Box itself, and uses the canonical 48em cut.
   const arrowSelector = {
     '& .hcs-arrow': {
+      position: overlayArrows ? 'absolute' : 'relative',
+      top: overlayArrows ? '50%' : 'auto',
+      transform: overlayArrows ? 'translateY(-50%)' : 'none',
       flexShrink: 0,
       zIndex: 10,
       background: 'none',
@@ -117,11 +129,11 @@ export function HorizontalCardStrip({
   };
 
   const idleColor = arrowColor ?? 'var(--chakra-colors-glyphIdle)';
-  const disabledColor = 'var(--chakra-colors-glyphDisabled)';
+  const disabledColor = disabledArrowColor ?? 'var(--chakra-colors-glyphDisabled)';
   const [prevGlyph, nextGlyph] = arrowVariant === 'glyph' ? ['⊷', '⊶'] : ['‹', '›'];
 
   return (
-    <Flex align="center" css={arrowSelector} data-testid={testId}>
+    <Flex align="center" position="relative" css={arrowSelector} data-testid={testId}>
       <button
         type="button"
         aria-label="Previous"
@@ -130,7 +142,8 @@ export function HorizontalCardStrip({
         data-testid={testId ? `${testId}-arrow-left` : 'hcs-arrow-left'}
         className="hcs-arrow"
         style={{
-          marginRight: '0.5rem',
+          left: overlayArrows ? overlayArrowOffset : undefined,
+          marginRight: overlayArrows ? 0 : '0.5rem',
           color: canPrev ? idleColor : disabledColor,
           cursor: canPrev ? 'pointer' : 'default',
         }}
@@ -174,7 +187,8 @@ export function HorizontalCardStrip({
         data-testid={testId ? `${testId}-arrow-right` : 'hcs-arrow-right'}
         className="hcs-arrow"
         style={{
-          marginLeft: '0.5rem',
+          right: overlayArrows ? overlayArrowOffset : undefined,
+          marginLeft: overlayArrows ? 0 : '0.5rem',
           color: canNext ? idleColor : disabledColor,
           cursor: canNext ? 'pointer' : 'default',
         }}

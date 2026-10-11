@@ -20,7 +20,11 @@ interface BookPageVisual {
 export const bookPageLayout = {
   catalogTitleSize: 'homeBooksTitle',
   coverAspectRatio: '4 / 5',
-  homeCarouselCardWidth: { base: '64vw', sm: '240px', lg: '260px' },
+  homeCarouselCardWidth: { base: '72vw', sm: '280px', lg: '300px' },
+  homeShelfCardHeight: { base: '470px', md: '520px' },
+  homeShelfTrackPadding: { base: '1rem 0', md: '0.5rem 0 2rem' },
+  homeShelfArrowOffset: '-1.5rem',
+  catalogCardMaxWidth: '300px',
   accentBorderWidth: '4px',
   contextBannerHeight: { base: '360px', md: '520px' },
   contextCharacterHeight: { base: '300px', md: '460px' },

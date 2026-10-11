@@ -56,6 +56,7 @@ export const tokens = defineTokens({
     // Hero defaults
     heroDefaultText: { value: '#ffffff' },
     heroDefaultLabel: { value: 'rgba(255,255,255,0.5)' },
+    homeBichittosMediaWash: { value: 'rgba(255,255,255,0.18)' },
     // Modal overlay backgrounds
     modalBgDark: { value: 'rgba(0,0,0,0.95)' },
     modalBgLight: { value: 'rgba(255,255,255,0.97)' },
@@ -78,6 +79,7 @@ export const tokens = defineTokens({
     // Mini hero follows the canonical planet card ratio: title ~4.3x label.
     homePlanetCardLabel: { value: 'clamp(0.25rem, 0.46vw, 0.65rem)' },
     homePlanetCardTitle: { value: 'clamp(1rem, 2vw, 2.8rem)' },
+    homeBichittosCardTitle: { value: 'clamp(0.9rem, 1.5vw, 1.8rem)' },
     homeBookCardTitle: { value: '1.05rem' },
     homeBooksTitle: { value: 'clamp(2rem, 3.2vw, 3rem)' },
     bookCardTitle: { value: '1.225rem' },
@@ -133,6 +135,8 @@ export const tokens = defineTokens({
     homePlanetTitleBandHeight: { value: 'clamp(5rem, 8vw, 10.5rem)' },
     homePlanetDeclarerWidth: { value: '38%' },
     homePlanetDeclarerLine: { value: '1px' },
+    homeBichittosTitleBandHeight: { value: 'clamp(3.5rem, 6vw, 7rem)' },
+    homeBichittosMediaSize: { value: '80%' },
   },
   lineHeights: {
     bookCardCompact: { value: '1.25' },
@@ -161,6 +165,9 @@ export const tokens = defineTokens({
     homePlanetHeroInset: { value: 'clamp(0.5rem, 1vw, 1.25rem)' },
     homePlanetTitleStackGap: { value: '0.125rem' },
     homePlanetDeclarerGap: { value: 'clamp(0.2rem, 0.35vw, 0.45rem)' },
+    homeBichittosTitleTop: { value: 'clamp(0.75rem, 1vw, 1.25rem)' },
+    homeBichittosTitleInset: { value: 'clamp(0.5rem, 1vw, 1.25rem)' },
+    homeBichittosMediaInset: { value: '10%' },
     homePlanetOutlineWidth: { value: '0.125rem' },
     homePlanetFrameOffset: { value: '0.375rem' },
     homeBannerCardsInset: { value: '2%' },

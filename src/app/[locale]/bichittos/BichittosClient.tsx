@@ -555,7 +555,7 @@ export function BichittosClient({ data, booksText }: Props) {
               <BookShelf
                 arrowColor={palettes.livros.colors[0]}
                 viewAllHref={`/${locale}/books`}
-                viewAllLabel={tBooks('viewAllLabel')}
+                viewAllLabel={tBooks('viewAllBooksLabel')}
                 viewAllColor={palettes.livros.colors[0]}
                 books={allBooks.map((b) => ({
                   book: {

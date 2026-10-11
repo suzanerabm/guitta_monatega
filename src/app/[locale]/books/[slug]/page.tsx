@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Box, Heading, Image, Text } from '@chakra-ui/react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import NextLink from 'next/link';
 import {
   getAllBookSlugs,
   getBookLocales,
@@ -14,6 +13,7 @@ import { buildPageMetadata, SITE_URL } from '@/lib/seo';
 import { bookPageVisuals } from '@/theme/bookPages';
 import { BookContextBanner } from '@/components/BookContextBanner';
 import { BookEditionSelector } from '@/components/BookEditionSelector';
+import { OutlineActionLink } from '@/components/OutlineActionLink';
 
 export function generateStaticParams() {
   return getAllBookSlugs().flatMap((slug) =>
@@ -180,28 +180,9 @@ export default async function BookPage({
             )}
 
             <Box mt={comingSoon ? 0 : '2xl'}>
-              <NextLink href={`/${loc}/books`} style={{ textDecoration: 'none' }}>
-                <Box
-                  as="span"
-                  display="inline-flex"
-                  alignItems="center"
-                  border="1px solid"
-                  borderColor="ink"
-                  borderRadius="full"
-                  color="ink"
-                  px="xl"
-                  py="md"
-                  fontSize="sm"
-                  fontWeight="semibold"
-                  letterSpacing="wide"
-                  textTransform="uppercase"
-                  transitionProperty="opacity"
-                  transitionDuration="default"
-                  _hover={{ opacity: 0.72 }}
-                >
-                  {t('viewAllBooksLabel')}
-                </Box>
-              </NextLink>
+              <OutlineActionLink href={`/${loc}/books`}>
+                {t('viewAllBooksLabel')}
+              </OutlineActionLink>
             </Box>
           </Box>
         </Box>

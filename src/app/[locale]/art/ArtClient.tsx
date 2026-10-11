@@ -212,7 +212,7 @@ export function ArtClient({ sections, books }: Props) {
               <BookShelf
                 arrowColor={booksMeta.titleColor}
                 viewAllHref={`/${locale}/books`}
-                viewAllLabel={tBooks('viewAllLabel')}
+                viewAllLabel={tBooks('viewAllBooksLabel')}
                 viewAllColor={booksMeta.titleColor}
                 comingSoonLabel={tCommon('soon')}
                 books={books.map((b) => ({

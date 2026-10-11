@@ -6,6 +6,7 @@
 // single section and don't have reuse potential as global tokens.
 
 import { mediaUrl } from '@/lib/media';
+import { palettes } from './palettes';
 
 export interface ArtSectionMeta {
   bg: string;
@@ -120,14 +121,14 @@ export const homeArtBanner = {
   filter: 'invert(1) grayscale(1) contrast(1.35)',
   mixBlendMode: 'multiply' as const,
 };
-// Home-only treatment for the combined book gallery. It reuses the first
-// black-and-white artwork without changing the books section on /art.
+// Home-only treatment for the combined book gallery. It follows the same
+// visual language as the books shelf on /art over Taylo's warm paper tone.
 export const homeBooksGallery = {
-  background:
-    `linear-gradient(rgba(222,215,204,0.86), rgba(222,215,204,0.86)), url("${mediaUrl('/imgs/art/black/1-arte.jpg')}")`,
-  backgroundPosition: 'center',
-  backgroundSize: 'cover',
-  panelBackground: 'rgba(245,240,232,0.78)',
-  titleColor: '#302d29',
-  techColor: 'rgba(48,45,41,0.66)',
+  background: `color-mix(in srgb, ${palettes.taylo.colors[3]} 70%, white)`,
+  panelBackground: '#ffffff',
+  panelBorderColor: '#ffffff',
+  accentColor: palettes.taylo.colors[2],
+  accentSoftColor: palettes.taylo.colors[1],
+  titleColor: '#1a1a1a',
+  techColor: 'rgba(26,26,26,0.55)',
 };

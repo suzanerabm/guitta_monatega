@@ -1636,7 +1636,7 @@
       "topic": "institucional",
       "world": "cheio-de-bolinha",
       "type": "institutional",
-      "title": "Cheio de Bolinha / Bobbin",
+      "title": "Bobbin",
       "scheduledAt": "2027-06-12T19:30:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
@@ -1658,13 +1658,13 @@
         "error": null
       },
       "instagram": {
-        "caption": "Cheio de Bolinha e Querie estão esperando para brincar.\n\nBobbin and Querie are waiting for you to come play.",
+        "caption": "Bobbin e Querie estão esperando para brincar.\n\nBobbin and Querie are waiting for you to come play.",
         "status": "pending",
         "mediaId": null,
         "error": null
       },
       "facebook": {
-        "message": "Cheio de Bolinha e Querie estão esperando para brincar.\n\nBobbin and Querie are waiting for you to come play.",
+        "message": "Bobbin e Querie estão esperando para brincar.\n\nBobbin and Querie are waiting for you to come play.",
         "status": "pending",
         "postId": null,
         "error": null
@@ -1718,7 +1718,7 @@
       "topic": "fuga-dos-queries",
       "world": "cheio-de-bolinha",
       "type": "scene",
-      "title": "Corre, Cheio de Bolinha!",
+      "title": "Corre, Bobbin!",
       "scheduledAt": "2027-06-26T19:30:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
@@ -1740,13 +1740,13 @@
         "error": null
       },
       "instagram": {
-        "caption": "Os Queries azucrinam em cima do muro. Cheio de Bolinha fica assustado, sobe sobre suas bolhas de sabão e escapa pelo céu.\n\nThe Queries tease him from the wall. Bobbin gets scared, rises on his soap bubbles, and escapes through the sky.",
+        "caption": "Os Queries azucrinam em cima do muro. Bobbin fica assustado, sobe sobre suas bolhas de sabão e escapa pelo céu.\n\nThe Queries tease him from the wall. Bobbin gets scared, rises on his soap bubbles, and escapes through the sky.",
         "status": "pending",
         "mediaId": null,
         "error": null
       },
       "facebook": {
-        "message": "Os Queries azucrinam em cima do muro. Cheio de Bolinha fica assustado, sobe sobre suas bolhas de sabão e escapa pelo céu.\n\nThe Queries tease him from the wall. Bobbin gets scared, rises on his soap bubbles, and escapes through the sky.",
+        "message": "Os Queries azucrinam em cima do muro. Bobbin fica assustado, sobe sobre suas bolhas de sabão e escapa pelo céu.\n\nThe Queries tease him from the wall. Bobbin gets scared, rises on his soap bubbles, and escapes through the sky.",
         "status": "pending",
         "postId": null,
         "error": null
@@ -1759,7 +1759,7 @@
       "topic": "personagem",
       "world": "cheio-de-bolinha",
       "type": "character",
-      "title": "Cheio de Bolinha",
+      "title": "Bobbin",
       "scheduledAt": "2027-07-03T19:30:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
@@ -1781,13 +1781,13 @@
         "error": null
       },
       "instagram": {
-        "caption": "Este é Cheio de Bolinha. Um elefante enorme, gentil e educadíssimo que morre de medo de ratinhos.\n\nThis is Bobbin. A huge, gentle, and extremely polite elephant who is terrified of mice.",
+        "caption": "Este é Bobbin. Um elefante enorme, gentil e educadíssimo que morre de medo de ratinhos.\n\nThis is Bobbin. A huge, gentle, and extremely polite elephant who is terrified of mice.",
         "status": "pending",
         "mediaId": null,
         "error": null
       },
       "facebook": {
-        "message": "Este é Cheio de Bolinha. Um elefante enorme, gentil e educadíssimo que morre de medo de ratinhos.\n\nThis is Bobbin. A huge, gentle, and extremely polite elephant who is terrified of mice.",
+        "message": "Este é Bobbin. Um elefante enorme, gentil e educadíssimo que morre de medo de ratinhos.\n\nThis is Bobbin. A huge, gentle, and extremely polite elephant who is terrified of mice.",
         "status": "pending",
         "postId": null,
         "error": null

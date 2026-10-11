@@ -2,18 +2,16 @@
 
 import { useMemo, useState } from 'react';
 import { Box } from '@chakra-ui/react';
-import { BookCatalogCard } from '@/components/BookCatalogCard';
+import { BookPanel } from '@/components/BookPanel';
 import { FilterBar } from '@/components/FilterBar';
 import {
   BOOK_FORMAT_ORDER,
-  formatBookPrice,
-  getBookFormats,
-  getLowestBookPrice,
   isBookComingSoon,
   type BookFormat,
   type CatalogBook,
 } from '@/lib/bookCatalog';
-import { bookPageVisuals } from '@/theme/bookPages';
+import { bookPageLayout } from '@/theme/bookPages';
+import { homeBooksGallery } from '@/theme/artSections';
 
 interface BookCatalogLabels {
   filterLabel: string;
@@ -38,7 +36,11 @@ export function BookCatalog({ books, locale, labels }: BookCatalogProps) {
     [books],
   );
   const filters = useMemo(
-    () => availableFormats.map((format) => ({ id: format, label: labels.formats[format] })),
+    () => availableFormats.map((format) => ({
+      id: format,
+      label: labels.formats[format],
+      color: homeBooksGallery.accentColor,
+    })),
     [availableFormats, labels.formats],
   );
   const visibleBooks = activeFormat === 'all'
@@ -57,6 +59,7 @@ export function BookCatalog({ books, locale, labels }: BookCatalogProps) {
 
       <Box
         as="section"
+        background={homeBooksGallery.background}
         maxW="1200px"
         mx="auto"
         px={{ base: 'lg', md: '3xl' }}
@@ -64,28 +67,29 @@ export function BookCatalog({ books, locale, labels }: BookCatalogProps) {
         display="grid"
         gridTemplateColumns={{ base: '1fr', sm: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }}
         gap={{ base: 'xl', md: '2xl' }}
+        justifyItems="center"
       >
-        {visibleBooks.map((book) => {
-          const visual = bookPageVisuals[book.visualKey];
-          const formats = getBookFormats(book);
-          const lowestPrice = getLowestBookPrice(book);
-          const formattedPrice = lowestPrice ? formatBookPrice(lowestPrice, locale) : null;
-
-          return (
-            <BookCatalogCard
-              key={book.slug}
-              href={`/${locale}/books/${book.slug}`}
-              title={book.title}
-              collection={labels.collections[book.collection]}
-              cover={book.cover}
-              detailsLabel={labels.details}
-              accentColor={visual.accent}
-              badgeLabel={isBookComingSoon(book) ? labels.comingSoon : undefined}
-              editionLabels={formats.map((format) => labels.formats[format])}
-              priceLabel={formattedPrice ? `${labels.fromPrice} ${formattedPrice}` : undefined}
+        {visibleBooks.map((book) => (
+          <Box key={book.slug} width="100%" maxW={bookPageLayout.catalogCardMaxWidth}>
+            <BookPanel
+              book={{
+                id: book.slug,
+                image: book.cover,
+                alt: book.title,
+                label: book.title,
+                soon: isBookComingSoon(book),
+                details: {
+                  url: `/${locale}/books/${book.slug}`,
+                  label: labels.details,
+                },
+              }}
+              borderColor={homeBooksGallery.panelBorderColor}
+              textColor={homeBooksGallery.accentColor}
+              background={homeBooksGallery.panelBackground}
+              height={bookPageLayout.homeShelfCardHeight}
             />
-          );
-        })}
+          </Box>
+        ))}
       </Box>
     </Box>
   );

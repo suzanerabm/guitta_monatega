@@ -779,7 +779,7 @@ export function KammaraClient({
               <BookShelf
                 arrowColor={kammaraPalette.colors[0]}
                 viewAllHref={`/${locale}/books`}
-                viewAllLabel={tBooks('viewAllLabel')}
+                viewAllLabel={tBooks('viewAllBooksLabel')}
                 viewAllColor={kammaraPalette.colors[0]}
                 arrowVariant="glyph"
                 comingSoonLabel={tCommon('soon')}

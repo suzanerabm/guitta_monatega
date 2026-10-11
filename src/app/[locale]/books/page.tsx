@@ -1,11 +1,10 @@
 import type { Metadata } from 'next';
-import { Box } from '@chakra-ui/react';
+import { Box, Heading, Text } from '@chakra-ui/react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { BookCatalog } from '@/components/BookCatalog';
-import { HeroSection } from '@/components/HeroSection';
 import { getCatalogBooks, type BookLocale } from '@/lib/books';
 import { buildPageMetadata } from '@/lib/seo';
-import { artHero } from '@/theme/artSections';
+import { homeBooksGallery } from '@/theme/artSections';
 
 export async function generateMetadata({
   params,
@@ -34,16 +33,38 @@ export default async function BooksPage({
   const books = getCatalogBooks(loc);
 
   return (
-    <Box bg="white" color="ink" minH="100vh">
-      <HeroSection
-        label={t('catalogLabel')}
-        title={t('title')}
-        description={t('intro')}
-        background={artHero.background}
-        textColor={artHero.textColor}
-        labelColor={artHero.labelColor}
-        minHeight="35vh"
-      />
+    <Box bg={homeBooksGallery.background} color="ink" minH="100vh">
+      <Box as="section" background="white">
+        <Box
+          maxW="1200px"
+          mx="auto"
+          px={{ base: 'lg', md: '3xl' }}
+          pt={{ base: '5xl', md: '5xl' }}
+          pb={{ base: 'xl', md: '2xl' }}
+        >
+          <Heading
+            as="h1"
+            textStyle="heading"
+            fontSize="2xl"
+            letterSpacing="tight"
+            m="0"
+            mb="tight"
+            color={homeBooksGallery.titleColor}
+          >
+            {t('title')}
+          </Heading>
+          <Text
+            fontFamily="body"
+            fontSize="sm"
+            letterSpacing="wide"
+            textTransform="uppercase"
+            m="0"
+            color={homeBooksGallery.titleColor}
+          >
+            {t('intro')}
+          </Text>
+        </Box>
+      </Box>
 
       <BookCatalog
         books={books}

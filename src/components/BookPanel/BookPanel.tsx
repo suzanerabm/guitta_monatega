@@ -115,17 +115,13 @@ export function BookPanel({
       )}
       {showLabel && (
         <Text
+          as="h2"
           textStyle="heading"
           fontSize={{ base: 'lg', md: 'xl' }}
           color={textColor}
+          lineHeight="bookCardCompact"
           mb="1rem"
           flex="1"
-          css={{
-            display: '-webkit-box',
-            WebkitLineClamp: 2,
-            WebkitBoxOrient: 'vertical',
-            overflow: 'hidden',
-          }}
         >
           {book.label}
         </Text>
@@ -137,6 +133,7 @@ export function BookPanel({
             display: 'inline-flex',
             alignItems: 'center',
             justifyContent: 'center',
+            border: `1px solid ${textColor}`,
             borderRadius: '999px',
             padding: '0.5rem 1.4rem',
             color: textColor,
@@ -144,7 +141,7 @@ export function BookPanel({
             fontWeight: 700,
             letterSpacing: '0.08em',
             textTransform: 'uppercase',
-            background: `${borderColor}22`,
+            background: 'transparent',
             textDecoration: 'none',
           }}
         >

@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import { Box, Heading, Text, VisuallyHidden } from '@chakra-ui/react';
-import NextLink from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { HomeBanner } from '@/components/HomeBanner';
-import { BookCatalogCarousel } from '@/components/BookCatalogCarousel';
+import { BookShelf } from '@/components/BookShelf';
 import { buildPageMetadata, SITE_URL } from '@/lib/seo';
-import { getCatalogBooks } from '@/lib/books';
+import { getCatalogBooks, isBookComingSoon } from '@/lib/books';
 import { getMosaic, getWorlds } from '@/lib/content/kammara';
 import { bookPageLayout } from '@/theme/bookPages';
+import { homeBooksGallery } from '@/theme/artSections';
 import { palettes, type PaletteName } from '@/theme/palettes';
 import { worldCrestGlyph } from '@/theme/kalunGlyphs';
 // import { DSCard } from '@/components/DSCard';
@@ -173,71 +173,62 @@ export default async function HomePage({
       {books.length > 0 && (
         <Box
           as="section"
-          background="white"
+          background={homeBooksGallery.background}
           padding={{ base: '3rem 0', md: '4rem 0' }}
         >
-          <Box width="100%" px={{ base: 'lg', md: 'xl' }}>
-            <Box
-              display="flex"
-              flexDirection={{ base: 'column', md: 'row' }}
-              alignItems={{ base: 'flex-start', md: 'flex-end' }}
-              justifyContent="space-between"
-              gap="lg"
-              mb="lg"
+          <Box maxW="1200px" mx="auto" px={{ base: 'base', md: '3xl' }} position="relative">
+            <Heading
+              as="h2"
+              textStyle="heading"
+              fontSize="2xl"
+              letterSpacing="tight"
+              m="0"
+              mb="tight"
+              color={homeBooksGallery.accentColor}
             >
-              <Box>
-                <Text fontSize="sm" letterSpacing="widest" textTransform="uppercase" color="inkMuted" mb="md">
-                  {tBooks('eyebrow')}
-                </Text>
-                <Heading as="h2" textStyle="heading" fontSize={bookPageLayout.catalogTitleSize} color="ink">
-                  {tBooks('title')}
-                </Heading>
-              </Box>
-              <NextLink href={`${prefix}/books`} style={{ textDecoration: 'none' }}>
-                <Box
-                  as="span"
-                  display="inline-flex"
-                  border="1px solid"
-                  borderColor="ink"
-                  color="ink"
-                  px="lg"
-                  py="md"
-                  fontSize="sm"
-                  fontWeight="semibold"
-                  letterSpacing="wide"
-                  textTransform="uppercase"
-                  whiteSpace="nowrap"
-                  transitionProperty="opacity"
-                  transitionDuration="default"
-                  _hover={{ opacity: 0.72 }}
-                >
-                  {tBooks('viewAllLabel')}
-                </Box>
-              </NextLink>
-            </Box>
+              {tBooks('title')}
+            </Heading>
             <Text
-              fontSize="xl"
-              color="inkSoft"
-              lineHeight={1.7}
-              maxW="720px"
-              mb="2xl"
+              fontFamily="body"
+              fontSize="sm"
+              letterSpacing="wide"
+              textTransform="uppercase"
+              m="0 0 2rem"
+              color={homeBooksGallery.accentSoftColor}
             >
               {tBooks('intro')}
             </Text>
-            <BookCatalogCarousel
-              books={books}
-              locale={loc}
-              detailsLabel={tBooks('detailsLabel')}
-              fromPriceLabel={tBooks('fromPrice')}
+            <BookShelf
+              arrowColor={homeBooksGallery.accentColor}
+              disabledArrowColor={homeBooksGallery.accentColor}
+              arrowVariant="plain"
+              overlayArrows
+              overlayArrowOffset={bookPageLayout.homeShelfArrowOffset}
+              cardPadding={bookPageLayout.homeShelfTrackPadding}
+              viewAllHref={`${prefix}/books`}
+              viewAllLabel={tBooks('viewAllBooksLabel')}
+              viewAllColor={homeBooksGallery.accentColor}
+              viewAllPlacement="section-title"
               comingSoonLabel={tBooks('soonLabel')}
-              formatLabels={{
-                ebook: tBooks('formats.ebook'), paperback: tBooks('formats.paperback'),
-                hardcover: tBooks('formats.hardcover'),
-              }}
-              collectionLabels={{
-                art: tBooks('collections.art'), bichittos: tBooks('collections.bichittos'),
-                kammara: tBooks('collections.kammara'),
-              }}
+              cardWidth={bookPageLayout.homeCarouselCardWidth}
+              cardMaxWidth={bookPageLayout.homeCarouselCardWidth}
+              cardHeight={bookPageLayout.homeShelfCardHeight}
+              panelBackground={homeBooksGallery.panelBackground}
+              books={books.map((book) => ({
+                book: {
+                  id: book.slug,
+                  image: book.cover,
+                  alt: book.title,
+                  label: book.title,
+                  soon: isBookComingSoon(book),
+                  details: {
+                    url: `${prefix}/books/${book.slug}`,
+                    label: tBooks('detailsLabel'),
+                  },
+                },
+                borderColor: homeBooksGallery.panelBorderColor,
+                textColor: homeBooksGallery.titleColor,
+              }))}
             />
           </Box>
         </Box>
