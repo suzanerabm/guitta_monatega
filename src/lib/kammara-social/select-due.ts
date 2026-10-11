@@ -8,5 +8,5 @@ export function saoPauloDate(date: Date): string {
 
 export function selectDuePublication(items: PublicationItem[], now: Date): PublicationItem | null {
   const today = saoPauloDate(now);
-  return items.find((item) => item.scheduledAt.slice(0, 10) === today) ?? null;
+  return items.find((item) => !item.postado && item.scheduledAt.slice(0, 10) === today) ?? null;
 }

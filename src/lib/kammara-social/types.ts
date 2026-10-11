@@ -4,6 +4,7 @@ export type PublicationItem = {
   discovery: number;
   slug: string;
   type: string;
+  postado?: boolean;
   media:
     | { kind: "image"; image: { url: string } }
     | { kind: "carousel"; images: Array<{ url: string }> }

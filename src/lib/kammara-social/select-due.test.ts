@@ -18,4 +18,9 @@ describe("Kammara schedule", () => {
     expect(selectDuePublication([expected], new Date("2026-10-20T22:30:00Z"))).toBe(expected);
     expect(selectDuePublication([expected], new Date("2026-10-21T22:30:00Z"))).toBeNull();
   });
+
+  it("does not select an occurrence already published manually", () => {
+    const published = { ...item("2026-10-20T19:30:00-03:00"), postado: true };
+    expect(selectDuePublication([published], new Date("2026-10-20T22:30:00Z"))).toBeNull();
+  });
 });
