@@ -6,7 +6,7 @@ import { HomeBanner } from '@/components/HomeBanner';
 import { BookCatalogCarousel } from '@/components/BookCatalogCarousel';
 import { buildPageMetadata, SITE_URL } from '@/lib/seo';
 import { getCatalogBooks } from '@/lib/books';
-import { getWorlds } from '@/lib/content/kammara';
+import { getMosaic, getWorlds } from '@/lib/content/kammara';
 import { bookPageLayout } from '@/theme/bookPages';
 import { palettes, type PaletteName } from '@/theme/palettes';
 import { worldCrestGlyph } from '@/theme/kalunGlyphs';
@@ -43,6 +43,10 @@ export default async function HomePage({
   const books = getCatalogBooks(loc).filter((book) =>
     book.editions.some((edition) => edition.price),
   );
+  const kammaraDrops = getMosaic(loc).map((drop) => ({
+    ...drop,
+    crestGlyph: worldCrestGlyph(drop.worldId),
+  }));
   const kammaraPlanets = getWorlds(loc).slice(0, 4).map((world) => {
     const palette = palettes[world.id as PaletteName];
     return {
@@ -162,6 +166,7 @@ export default async function HomePage({
           description={t('kammara.desc')}
           planetLabel={t('kammara.planetLabel')}
           planets={kammaraPlanets}
+          drops={kammaraDrops}
         />
       </Box>
 

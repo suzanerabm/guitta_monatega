@@ -1,5 +1,6 @@
 'use client';
 import { Box, Flex, Grid, Heading, Text, chakra } from '@chakra-ui/react';
+import { LazyVideo } from '@/components/LazyVideo';
 import { KammaraStatBadge } from '@/components/KammaraStatBadge';
 
 export interface PlanetBadge {
@@ -32,6 +33,9 @@ export interface KammaraPlanetCardProps {
   onSelect?: (id: string) => void;
   /** Condensed treatment for the four-world strip on the home page. */
   variant?: 'default' | 'compact';
+  /** Optional drop shown inside the compact home card. */
+  dropVideo?: string;
+  dropPoster?: string;
   'data-testid'?: string;
 }
 
@@ -61,6 +65,8 @@ export function KammaraPlanetCard({
   category = 'Planeta',
   onSelect,
   variant = 'default',
+  dropVideo,
+  dropPoster,
   'data-testid': testId,
 }: KammaraPlanetCardProps) {
   if (variant === 'compact') {
@@ -92,6 +98,28 @@ export function KammaraPlanetCard({
         }}
       >
         <style>{KEYFRAMES}</style>
+        {dropVideo && dropPoster && (
+          <Box position="absolute" inset={0}>
+            <LazyVideo
+              src={dropVideo}
+              poster={dropPoster}
+              alt=""
+              fit="cover"
+              playOn="visible"
+            />
+          </Box>
+        )}
+        {dropVideo && dropPoster && (
+          <Box
+            position="absolute"
+            inset={0}
+            zIndex={1}
+            aria-hidden="true"
+            css={{
+              background: `linear-gradient(180deg, ${darkColor}66, ${darkColor}bb)`,
+            }}
+          />
+        )}
         {/* Same identity hero used by the full planet card: category, world
             name and declarer. Only the long copy and badges are omitted. */}
         <Box

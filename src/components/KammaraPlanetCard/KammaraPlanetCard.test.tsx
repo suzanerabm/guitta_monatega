@@ -39,4 +39,25 @@ describe('KammaraPlanetCard', () => {
     fireEvent.click(screen.getByLabelText("Abrir LUNN'P1"));
     expect(onSelect).toHaveBeenCalledWith('lunnp1');
   });
+
+  it('uses the planet drop poster in the compact variant', () => {
+    const { container } = renderWithChakra(
+      <KammaraPlanetCard
+        id="lunnp1"
+        name="LUNN'P1"
+        summary="O planeta onde tudo flui."
+        crestGlyph="⊙—⊹—⊙"
+        color="#00e676"
+        darkColor="#002e14"
+        variant="compact"
+        dropVideo="/videos/lunnp1.mp4"
+        dropPoster="/posters/lunnp1.jpg"
+      />,
+    );
+
+    expect(container.querySelector('img')).toHaveAttribute(
+      'src',
+      '/posters/lunnp1.jpg',
+    );
+  });
 });
