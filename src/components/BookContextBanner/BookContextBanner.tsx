@@ -67,7 +67,13 @@ export function BookContextBanner({
           >
             {eyebrow}
           </Text>
-          <Heading as="h2" textStyle="heading" fontSize="h2" lineHeight={1.02} color={textColor}>
+          <Heading
+            as="h2"
+            textStyle="heading"
+            fontSize="bookContextTitle"
+            lineHeight={1.02}
+            color={textColor}
+          >
             {title}
           </Heading>
         </Box>

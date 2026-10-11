@@ -129,6 +129,6 @@ export const homeBooksGallery = {
   panelBorderColor: '#ffffff',
   accentColor: palettes.taylo.colors[2],
   accentSoftColor: palettes.taylo.colors[1],
-  titleColor: '#1a1a1a',
+  titleColor: palettes.taylo.colors[2],
   techColor: 'rgba(26,26,26,0.55)',
 };

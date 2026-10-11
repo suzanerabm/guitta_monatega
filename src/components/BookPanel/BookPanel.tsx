@@ -92,7 +92,7 @@ export function BookPanel({
       )}
       {book.image && (
         <Box
-          flex={showLabel ? '0 1 auto' : '1 1 auto'}
+          flex="1 1 auto"
           minHeight={0}
           mb="1rem"
           textAlign="center"
@@ -117,11 +117,11 @@ export function BookPanel({
         <Text
           as="h2"
           textStyle="heading"
-          fontSize={{ base: 'lg', md: 'xl' }}
+          fontSize={{ base: 'bookCardTitleMobile', md: 'xl' }}
           color={textColor}
           lineHeight="bookCardCompact"
           mb="1rem"
-          flex="1"
+          flexShrink={0}
         >
           {book.label}
         </Text>
@@ -129,6 +129,7 @@ export function BookPanel({
       {book.details ? (
         <chakra.span
           mb="md"
+          fontSize={{ base: 'bookCardActionMobile', md: 'base' }}
           css={{
             display: 'inline-flex',
             alignItems: 'center',
@@ -137,7 +138,6 @@ export function BookPanel({
             borderRadius: '999px',
             padding: '0.5rem 1.4rem',
             color: textColor,
-            fontSize: '0.85rem',
             fontWeight: 700,
             letterSpacing: '0.08em',
             textTransform: 'uppercase',
@@ -154,6 +154,7 @@ export function BookPanel({
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`${book.buy.label}: ${book.label}`}
+          fontSize={{ base: 'bookCardActionMobile', md: 'base' }}
           css={{
             display: 'inline-flex',
             alignItems: 'center',
@@ -163,7 +164,6 @@ export function BookPanel({
             borderRadius: '999px',
             padding: '0.5rem 1.4rem',
             color: textColor,
-            fontSize: '0.85rem',
             fontWeight: 700,
             letterSpacing: '0.08em',
             textTransform: 'uppercase',
@@ -180,6 +180,7 @@ export function BookPanel({
         // botão de compra, só que desabilitado.
         <chakra.span
           aria-disabled="true"
+          fontSize={{ base: 'bookCardActionMobile', md: 'base' }}
           css={{
             display: 'inline-flex',
             alignItems: 'center',
@@ -189,7 +190,6 @@ export function BookPanel({
             borderRadius: '999px',
             padding: '0.5rem 1.4rem',
             color: textColor,
-            fontSize: '0.85rem',
             fontWeight: 700,
             letterSpacing: '0.08em',
             textTransform: 'uppercase',
@@ -203,6 +203,7 @@ export function BookPanel({
         <chakra.button
           type="button"
           onClick={() => onRead?.(book.id)}
+          fontSize={{ base: 'bookCardActionMobile', md: 'base' }}
           css={{
             display: 'inline-block',
             outline: `2px solid ${borderColor}`,
@@ -210,7 +211,6 @@ export function BookPanel({
             borderRadius: '999px',
             padding: '0.5rem 1.4rem',
             color: textColor,
-            fontSize: '0.85rem',
             fontWeight: 700,
             letterSpacing: '0.08em',
             textTransform: 'uppercase',

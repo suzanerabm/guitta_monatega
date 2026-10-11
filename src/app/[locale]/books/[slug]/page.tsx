@@ -10,9 +10,11 @@ import {
   type BookLocale,
 } from '@/lib/books';
 import { buildPageMetadata, SITE_URL } from '@/lib/seo';
-import { bookPageVisuals } from '@/theme/bookPages';
+import { bookPageLayout, bookPageVisuals } from '@/theme/bookPages';
+import { homeBooksGallery } from '@/theme/artSections';
 import { BookContextBanner } from '@/components/BookContextBanner';
 import { BookEditionSelector } from '@/components/BookEditionSelector';
+import { GradientLine } from '@/components/GradientLine';
 import { OutlineActionLink } from '@/components/OutlineActionLink';
 
 export function generateStaticParams() {
@@ -80,7 +82,7 @@ export default async function BookPage({
   };
 
   return (
-    <Box background="offWhite" color="ink" minH="100vh">
+    <Box background={homeBooksGallery.background} color={homeBooksGallery.accentColor} minH="100vh">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -98,13 +100,24 @@ export default async function BookPage({
         gap={{ base: '2xl', md: '4xl' }}
         alignItems="start"
       >
-        <Box bg="surface" position={{ base: 'relative', md: 'sticky' }} top={{ md: '5xl' }}>
+        <Box
+          bg="white"
+          p="sm"
+          borderRadius={bookPageLayout.detailPanelRadius}
+          position={{ base: 'relative', md: 'sticky' }}
+          top={{ md: '5xl' }}
+          css={{
+            outline: `${bookPageLayout.detailOutlineWidth} solid ${homeBooksGallery.panelBorderColor}`,
+            outlineOffset: bookPageLayout.detailOutlineOffset,
+          }}
+        >
           {book.cover && (
             <Image
               src={book.cover}
               alt={book.title}
               width="100%"
               height="auto"
+              borderRadius={bookPageLayout.detailCoverRadius}
               decoding="async"
             />
           )}
@@ -129,22 +142,36 @@ export default async function BookPage({
 
         <Box minW="0">
           <Text
-            fontSize="sm"
+            fontSize="bookDetailEyebrow"
             letterSpacing="widest"
             textTransform="uppercase"
-            color="inkMuted"
-            mb="md"
+            color={homeBooksGallery.accentSoftColor}
+            mb="xs"
           >
             {t(`collections.${book.collection}`)}
           </Text>
-          <Heading as="h1" textStyle="heading" fontSize="h3" lineHeight={1.05} color="ink" mb="xl">
+          <Heading
+            as="h1"
+            textStyle="heading"
+            fontSize="h3"
+            lineHeight={1.05}
+            color={homeBooksGallery.accentColor}
+            mb="xl"
+          >
             {book.title}
           </Heading>
-          <Text fontSize="base" color="inkSoft" lineHeight={1.7} whiteSpace="pre-line" mb="3xl">
+          <Text
+            fontSize="base"
+            color={homeBooksGallery.accentColor}
+            lineHeight={1.7}
+            whiteSpace="pre-line"
+            mb="3xl"
+          >
             {book.description}
           </Text>
 
-          <Box borderTop="1px solid" borderColor="border" pt="2xl">
+          <GradientLine color={visual.accent} />
+          <Box pt="2xl">
             {!comingSoon && (
               <Box as="section" aria-label={t('editionsTitle')}>
                 <BookEditionSelector
@@ -152,6 +179,9 @@ export default async function BookPage({
                   bookTitle={book.title}
                   locale={loc}
                   accentColor={visual.accent}
+                  frameColor={homeBooksGallery.panelBorderColor}
+                  textColor={homeBooksGallery.accentColor}
+                  mutedTextColor={homeBooksGallery.accentSoftColor}
                   formatLabels={{
                     ebook: t('formats.ebook'),
                     paperback: t('formats.paperback'),
@@ -180,7 +210,7 @@ export default async function BookPage({
             )}
 
             <Box mt={comingSoon ? 0 : '2xl'}>
-              <OutlineActionLink href={`/${loc}/books`}>
+              <OutlineActionLink href={`/${loc}/books`} color={homeBooksGallery.accentColor}>
                 {t('viewAllBooksLabel')}
               </OutlineActionLink>
             </Box>

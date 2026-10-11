@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Box, Heading, Text } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { BookCatalog } from '@/components/BookCatalog';
 import { getCatalogBooks, type BookLocale } from '@/lib/books';
@@ -33,43 +33,13 @@ export default async function BooksPage({
   const books = getCatalogBooks(loc);
 
   return (
-    <Box bg={homeBooksGallery.background} color="ink" minH="100vh">
-      <Box as="section" background="white">
-        <Box
-          maxW="1200px"
-          mx="auto"
-          px={{ base: 'lg', md: '3xl' }}
-          pt={{ base: '5xl', md: '5xl' }}
-          pb={{ base: 'xl', md: '2xl' }}
-        >
-          <Heading
-            as="h1"
-            textStyle="heading"
-            fontSize="2xl"
-            letterSpacing="tight"
-            m="0"
-            mb="tight"
-            color={homeBooksGallery.titleColor}
-          >
-            {t('title')}
-          </Heading>
-          <Text
-            fontFamily="body"
-            fontSize="sm"
-            letterSpacing="wide"
-            textTransform="uppercase"
-            m="0"
-            color={homeBooksGallery.titleColor}
-          >
-            {t('intro')}
-          </Text>
-        </Box>
-      </Box>
-
+    <Box bg={homeBooksGallery.background} color={homeBooksGallery.accentColor} minH="100vh">
       <BookCatalog
         books={books}
         locale={loc}
         labels={{
+          title: t('title'),
+          intro: t('intro'),
           filterLabel: t('filterLabel'),
           allFormats: t('allFormats'),
           fromPrice: t('fromPrice'),

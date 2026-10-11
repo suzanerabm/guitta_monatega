@@ -30,6 +30,8 @@ interface BookFactsProps {
   facts: BookFactsData;
   labels: BookFactsLabels;
   accentColor: string;
+  textColor?: string;
+  mutedTextColor?: string;
   embedded?: boolean;
 }
 
@@ -40,7 +42,14 @@ interface FactItem {
   Icon: LucideIcon;
 }
 
-export function BookFacts({ facts, labels, accentColor, embedded = false }: BookFactsProps) {
+export function BookFacts({
+  facts,
+  labels,
+  accentColor,
+  textColor = 'ink',
+  mutedTextColor = 'inkMuted',
+  embedded = false,
+}: BookFactsProps) {
   const possibleItems: FactItem[] = [
     { key: 'readingAge', label: labels.readingAge, value: facts.readingAge, Icon: Baby },
     {
@@ -88,10 +97,10 @@ export function BookFacts({ facts, labels, accentColor, embedded = false }: Book
             <Box color={accentColor} display="flex" justifyContent="center" mb="sm" aria-hidden="true">
               <Icon size={bookPageLayout.factIconSize} strokeWidth={1.5} />
             </Box>
-            <Text as="dt" fontSize="xs" color="inkMuted" letterSpacing="wide" textTransform="uppercase" mb="xs">
+            <Text as="dt" fontSize="xs" color={mutedTextColor} letterSpacing="wide" textTransform="uppercase" mb="xs">
               {label}
             </Text>
-            <Text as="dd" fontSize="sm" color="ink" fontWeight="semibold" lineHeight={1.45} m="0">
+            <Text as="dd" fontSize="sm" color={textColor} fontWeight="semibold" lineHeight={1.45} m="0">
               {value}
             </Text>
           </Box>

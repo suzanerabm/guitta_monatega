@@ -9,12 +9,16 @@ import {
   type BookFormat,
   type BookLocale,
 } from '@/lib/bookCatalog';
+import { bookPageLayout } from '@/theme/bookPages';
 
 interface BookEditionSelectorProps {
   editions: BookEdition[];
   bookTitle: string;
   locale: BookLocale;
   accentColor: string;
+  frameColor?: string;
+  textColor?: string;
+  mutedTextColor?: string;
   formatLabels: Record<BookFormat, string>;
   factsLabels: BookFactsLabels;
   buyLabel: string;
@@ -40,6 +44,9 @@ export function BookEditionSelector({
   bookTitle,
   locale,
   accentColor,
+  frameColor = 'white',
+  textColor = 'ink',
+  mutedTextColor = 'inkMuted',
   formatLabels,
   factsLabels,
   buyLabel,
@@ -92,16 +99,21 @@ export function BookEditionSelector({
               alignItems="flex-start"
               justifyContent="flex-start"
               gap="xs"
-              bg={selected ? 'surface' : 'transparent'}
-              color="ink"
+              bg="white"
+              color={textColor}
               border="1px solid"
-              borderColor={selected ? accentColor : 'border'}
+              borderColor={selected ? accentColor : frameColor}
+              borderRadius={bookPageLayout.detailPanelRadius}
               boxShadow={selected ? 'card' : 'none'}
               whiteSpace="normal"
               textAlign="left"
               transitionProperty="border-color, opacity"
               transitionDuration="default"
               _hover={{ opacity: 0.78 }}
+              css={{
+                outline: `${bookPageLayout.detailOutlineWidth} solid ${frameColor}`,
+                outlineOffset: bookPageLayout.detailSelectorOutlineOffset,
+              }}
             >
               <Text as="span" fontSize="sm" fontWeight="semibold">
                 {formatLabels[edition.format]}
@@ -122,20 +134,25 @@ export function BookEditionSelector({
         minW="0"
         boxSizing="border-box"
         border="1px solid"
-        borderColor="border"
-        bg="surface"
+        borderColor={frameColor}
+        borderRadius={bookPageLayout.detailPanelRadius}
+        bg="white"
         p={{ base: 'lg', md: 'xl' }}
+        css={{
+          outline: `${bookPageLayout.detailOutlineWidth} solid ${frameColor}`,
+          outlineOffset: bookPageLayout.detailOutlineOffset,
+        }}
       >
-        <Text textStyle="heading" fontSize="xl" color="ink">
+        <Text textStyle="heading" fontSize="xl" color={textColor}>
           {formatLabels[selectedEdition.format]}
         </Text>
         {selectedEdition.price && (
-          <Text fontSize="2xl" color="ink" fontWeight="semibold" mt="xs">
+          <Text fontSize="2xl" color={textColor} fontWeight="semibold" mt="xs">
             {formatBookPrice(selectedEdition.price, locale)}
           </Text>
         )}
         {selectedEdition.retailer && (
-          <Text fontSize="sm" color="inkMuted" mt="sm">
+          <Text fontSize="sm" color={mutedTextColor} mt="sm">
             {selectedEdition.retailer}
           </Text>
         )}
@@ -148,8 +165,11 @@ export function BookEditionSelector({
               rel={isPreorder ? undefined : 'noopener noreferrer'}
               display="block"
               width="100%"
-              bg="ink"
+              bg={textColor}
               color="white"
+              border="1px solid"
+              borderColor={frameColor}
+              borderRadius="full"
               px="xl"
               py="md"
               mt="xl"
@@ -162,13 +182,13 @@ export function BookEditionSelector({
               {isPreorder ? preorderLabel : isAmazon ? amazonBuyLabel : buyLabel}
             </Link>
             {isPreorder && (
-              <Text fontSize="xs" color="inkMuted" mt="sm" textAlign="center">
+              <Text fontSize="xs" color={mutedTextColor} mt="sm" textAlign="center">
                 {preorderEmailHint}
               </Text>
             )}
           </>
         ) : (
-          <Text fontSize="sm" color="inkMuted" mt="xl">
+          <Text fontSize="sm" color={mutedTextColor} mt="xl">
             {soonLabel}
           </Text>
         )}
@@ -177,6 +197,8 @@ export function BookEditionSelector({
           <BookFacts
             facts={selectedEdition.facts}
             accentColor={accentColor}
+            textColor={textColor}
+            mutedTextColor={mutedTextColor}
             embedded
             labels={factsLabels}
           />
