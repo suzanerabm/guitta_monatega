@@ -5,21 +5,21 @@
   "generatedAt": "2026-10-10T21:27:36.509Z",
   "timezone": "America/Sao_Paulo",
   "cadence": "1 post por semana, aos sábados; Natal e Réveillon substituem a publicação regular da semana",
-  "regularTime": "19:30",
+  "regularTime": "09:00",
   "exhaustionPolicy": "stop",
   "repeatPolicy": "never",
-  "start": "2026-10-10T19:30:00-03:00",
-  "end": "2027-07-17T19:30:00-03:00",
+  "start": "2026-10-10T09:00:00-03:00",
+  "end": "2027-07-17T09:00:00-03:00",
   "total": 41,
   "regularTotal": 39,
   "calendarExceptions": [
     {
       "topic": "feliz-natal",
-      "scheduledAt": "2026-12-25T19:30:00-03:00"
+      "scheduledAt": "2026-12-25T09:00:00-03:00"
     },
     {
       "topic": "feliz-ano-novo",
-      "scheduledAt": "2026-12-31T19:30:00-03:00"
+      "scheduledAt": "2026-12-31T09:00:00-03:00"
     }
   ],
   "items": [
@@ -30,7 +30,7 @@
       "world": "bichittos",
       "type": "institutional",
       "title": "Bem-vindos ao Bichittos",
-      "scheduledAt": "2026-10-10T19:30:00-03:00",
+      "scheduledAt": "2026-10-10T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -93,7 +93,7 @@
       "world": "zeco",
       "type": "institutional",
       "title": "Zeco",
-      "scheduledAt": "2026-10-17T19:30:00-03:00",
+      "scheduledAt": "2026-10-17T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -134,7 +134,7 @@
       "world": "zeco",
       "type": "stickers",
       "title": "Stickers do Zeco",
-      "scheduledAt": "2026-10-24T19:30:00-03:00",
+      "scheduledAt": "2026-10-24T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -174,7 +174,7 @@
       "world": "zeco",
       "type": "scene",
       "title": "A capivara veio nos conhecer",
-      "scheduledAt": "2026-10-31T19:30:00-03:00",
+      "scheduledAt": "2026-10-31T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -215,7 +215,7 @@
       "world": "zeco",
       "type": "character",
       "title": "Zeco",
-      "scheduledAt": "2026-11-07T19:30:00-03:00",
+      "scheduledAt": "2026-11-07T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -256,7 +256,7 @@
       "world": "zeco",
       "type": "character",
       "title": "Ninha",
-      "scheduledAt": "2026-11-14T19:30:00-03:00",
+      "scheduledAt": "2026-11-14T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -297,7 +297,7 @@
       "world": "zeco",
       "type": "character",
       "title": "Rui Merengue",
-      "scheduledAt": "2026-11-21T19:30:00-03:00",
+      "scheduledAt": "2026-11-21T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -338,7 +338,7 @@
       "world": "zeco",
       "type": "book-sale",
       "title": "Zeco nas Estações",
-      "scheduledAt": "2026-11-28T19:30:00-03:00",
+      "scheduledAt": "2026-11-28T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -379,7 +379,7 @@
       "world": "kammara",
       "type": "welcome",
       "title": "BEM-VINDO AO KAMMARA",
-      "scheduledAt": "2026-12-05T19:30:00-03:00",
+      "scheduledAt": "2026-12-05T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -420,7 +420,7 @@
       "world": "kammara",
       "type": "institutional",
       "title": "A ESSÊNCIA",
-      "scheduledAt": "2026-12-12T19:30:00-03:00",
+      "scheduledAt": "2026-12-12T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -461,7 +461,7 @@
       "world": "kammara",
       "type": "book-carousel",
       "title": "SAGA EM ORF-V",
-      "scheduledAt": "2026-12-19T19:30:00-03:00",
+      "scheduledAt": "2026-12-19T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -529,7 +529,7 @@
       "world": "bichittos",
       "type": "special-day",
       "title": "Feliz Natal para todos!",
-      "scheduledAt": "2026-12-25T19:30:00-03:00",
+      "scheduledAt": "2026-12-25T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": true,
       "media": {
@@ -577,7 +577,7 @@
       "world": "zeco",
       "type": "special-day",
       "title": "Feliz Ano Novo!",
-      "scheduledAt": "2026-12-31T19:30:00-03:00",
+      "scheduledAt": "2026-12-31T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": true,
       "media": {
@@ -618,7 +618,7 @@
       "world": "kammara",
       "type": "planet",
       "title": "ENI-4Δ",
-      "scheduledAt": "2027-01-09T19:30:00-03:00",
+      "scheduledAt": "2027-01-09T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -659,7 +659,7 @@
       "world": "kammara",
       "type": "planet",
       "title": "LUNN'P1",
-      "scheduledAt": "2027-01-16T19:30:00-03:00",
+      "scheduledAt": "2027-01-16T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -700,7 +700,7 @@
       "world": "kammara",
       "type": "planet",
       "title": "ORF-V",
-      "scheduledAt": "2027-01-23T19:30:00-03:00",
+      "scheduledAt": "2027-01-23T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -741,7 +741,7 @@
       "world": "kammara",
       "type": "planet",
       "title": "TRIPLEC",
-      "scheduledAt": "2027-01-30T19:30:00-03:00",
+      "scheduledAt": "2027-01-30T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -782,7 +782,7 @@
       "world": "kammara",
       "type": "institutional-app",
       "title": "Kammara App",
-      "scheduledAt": "2027-02-06T19:30:00-03:00",
+      "scheduledAt": "2027-02-06T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -823,7 +823,7 @@
       "world": "arte",
       "type": "coloring",
       "title": "Criatura no jardim",
-      "scheduledAt": "2027-02-13T19:30:00-03:00",
+      "scheduledAt": "2027-02-13T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -881,7 +881,7 @@
       "world": "arte",
       "type": "coloring",
       "title": "Cidade e floresta",
-      "scheduledAt": "2027-02-20T19:30:00-03:00",
+      "scheduledAt": "2027-02-20T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -939,7 +939,7 @@
       "world": "arte",
       "type": "coloring",
       "title": "Viajantes",
-      "scheduledAt": "2027-02-27T19:30:00-03:00",
+      "scheduledAt": "2027-02-27T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -997,7 +997,7 @@
       "world": "arte",
       "type": "coloring",
       "title": "Squizo e os corações",
-      "scheduledAt": "2027-03-06T19:30:00-03:00",
+      "scheduledAt": "2027-03-06T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -1055,7 +1055,7 @@
       "world": "arte",
       "type": "coloring",
       "title": "Padrão de criaturas",
-      "scheduledAt": "2027-03-13T19:30:00-03:00",
+      "scheduledAt": "2027-03-13T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -1113,7 +1113,7 @@
       "world": "arte",
       "type": "coloring",
       "title": "Criaturas sob as estrelas",
-      "scheduledAt": "2027-03-20T19:30:00-03:00",
+      "scheduledAt": "2027-03-20T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -1171,7 +1171,7 @@
       "world": "napcat",
       "type": "institutional",
       "title": "Napcat",
-      "scheduledAt": "2027-03-27T19:30:00-03:00",
+      "scheduledAt": "2027-03-27T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -1212,7 +1212,7 @@
       "world": "napcat",
       "type": "stickers",
       "title": "Stickers do Napcat",
-      "scheduledAt": "2027-04-03T19:30:00-03:00",
+      "scheduledAt": "2027-04-03T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -1252,7 +1252,7 @@
       "world": "napcat",
       "type": "scene",
       "title": "Um cochilo pode ser uma aventura",
-      "scheduledAt": "2027-04-10T19:30:00-03:00",
+      "scheduledAt": "2027-04-10T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -1293,7 +1293,7 @@
       "world": "napcat",
       "type": "character",
       "title": "Napcat",
-      "scheduledAt": "2027-04-17T19:30:00-03:00",
+      "scheduledAt": "2027-04-17T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -1334,7 +1334,7 @@
       "world": "napcat",
       "type": "coloring",
       "title": "Pronto para colorir",
-      "scheduledAt": "2027-04-24T19:30:00-03:00",
+      "scheduledAt": "2027-04-24T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -1392,7 +1392,7 @@
       "world": "napcat",
       "type": "character",
       "title": "Violeta",
-      "scheduledAt": "2027-05-01T19:30:00-03:00",
+      "scheduledAt": "2027-05-01T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -1433,7 +1433,7 @@
       "world": "taylo",
       "type": "institutional",
       "title": "Taylo",
-      "scheduledAt": "2027-05-08T19:30:00-03:00",
+      "scheduledAt": "2027-05-08T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -1474,7 +1474,7 @@
       "world": "taylo",
       "type": "scene",
       "title": "A estrela de Pitu",
-      "scheduledAt": "2027-05-15T19:30:00-03:00",
+      "scheduledAt": "2027-05-15T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -1515,7 +1515,7 @@
       "world": "taylo",
       "type": "character",
       "title": "Taylo",
-      "scheduledAt": "2027-05-22T19:30:00-03:00",
+      "scheduledAt": "2027-05-22T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -1556,7 +1556,7 @@
       "world": "taylo",
       "type": "character",
       "title": "Pitu",
-      "scheduledAt": "2027-05-29T19:30:00-03:00",
+      "scheduledAt": "2027-05-29T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -1597,7 +1597,7 @@
       "world": "taylo",
       "type": "book-sale",
       "title": "Taylo e Pitu",
-      "scheduledAt": "2027-06-05T19:30:00-03:00",
+      "scheduledAt": "2027-06-05T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -1637,7 +1637,7 @@
       "world": "cheio-de-bolinha",
       "type": "institutional",
       "title": "Bobbin",
-      "scheduledAt": "2027-06-12T19:30:00-03:00",
+      "scheduledAt": "2027-06-12T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -1678,7 +1678,7 @@
       "world": "cheio-de-bolinha",
       "type": "scene",
       "title": "A escova fugiu!",
-      "scheduledAt": "2027-06-19T19:30:00-03:00",
+      "scheduledAt": "2027-06-19T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -1719,7 +1719,7 @@
       "world": "cheio-de-bolinha",
       "type": "scene",
       "title": "Corre, Bobbin!",
-      "scheduledAt": "2027-06-26T19:30:00-03:00",
+      "scheduledAt": "2027-06-26T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -1760,7 +1760,7 @@
       "world": "cheio-de-bolinha",
       "type": "character",
       "title": "Bobbin",
-      "scheduledAt": "2027-07-03T19:30:00-03:00",
+      "scheduledAt": "2027-07-03T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -1801,7 +1801,7 @@
       "world": "cheio-de-bolinha",
       "type": "character",
       "title": "Querie",
-      "scheduledAt": "2027-07-10T19:30:00-03:00",
+      "scheduledAt": "2027-07-10T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {
@@ -1842,7 +1842,7 @@
       "world": "cheio-de-bolinha",
       "type": "gif",
       "title": "O milho mordeu meu dente",
-      "scheduledAt": "2027-07-17T19:30:00-03:00",
+      "scheduledAt": "2027-07-17T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
       "media": {

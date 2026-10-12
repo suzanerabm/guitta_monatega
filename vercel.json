@@ -15,10 +15,6 @@
       "schedule": "30 3 * * *"
     },
     {
-      "path": "/api/cron/guitta-studio-publish",
-      "schedule": "30 22 * * *"
-    },
-    {
       "path": "/api/cron/kammara-publish",
       "schedule": "30 22 * * 0,2,4"
     },
@@ -33,6 +29,10 @@
     {
       "path": "/api/cron/bichittos-publish",
       "schedule": "20 16 * * *"
+    },
+    {
+      "path": "/api/cron/guitta-studio-publish",
+      "schedule": "0 12 * * *"
     }
   ]
 }
