@@ -31,10 +31,6 @@
       "schedule": "50 2 * * *"
     },
     {
-      "path": "/api/cron/bichittos-publish",
-      "schedule": "8 14 12 10 *"
-    },
-    {
       "path": "/api/cron/kammara-publish",
       "schedule": "30 22 * * 0,2,4"
     }
