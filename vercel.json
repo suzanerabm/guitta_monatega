@@ -19,20 +19,20 @@
       "schedule": "30 22 * * *"
     },
     {
-      "path": "/api/cron/bichittos-publish",
-      "schedule": "30 22 * * *"
-    },
-    {
-      "path": "/api/cron/bichittos-publish",
-      "schedule": "30 23 * * *"
-    },
-    {
-      "path": "/api/cron/bichittos-publish",
-      "schedule": "50 2 * * *"
-    },
-    {
       "path": "/api/cron/kammara-publish",
       "schedule": "30 22 * * 0,2,4"
+    },
+    {
+      "path": "/api/cron/bichittos-publish",
+      "schedule": "0 12 * * *"
+    },
+    {
+      "path": "/api/cron/bichittos-publish",
+      "schedule": "0 13 * * *"
+    },
+    {
+      "path": "/api/cron/bichittos-publish",
+      "schedule": "20 16 * * *"
     }
   ]
 }
