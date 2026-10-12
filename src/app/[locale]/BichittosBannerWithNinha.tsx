@@ -22,10 +22,9 @@ const characterCards = [
     color: palettes.napcat.bichittos?.accent ?? palettes.napcat.colors[0],
     titleColor:
       palettes.napcat.bichittos?.name ?? palettes.napcat.colors[2],
-    background: palettes.napcat.gradientBg,
-    scene: palettes.napcat.bichittos?.bgImage,
-    scenePosition: 'center',
-    sceneFallback: palettes.napcat.dark,
+    background:
+      palettes.napcat.bichittos?.homeBannerBackground ??
+      palettes.napcat.gradientBg,
     slides: [mediaUrl('/imgs/bichittos/napcat/napcat-burp.gif')],
   },
   {
@@ -33,10 +32,9 @@ const characterCards = [
     label: 'Zeco',
     color: palettes.zeco.bichittos?.accent ?? palettes.zeco.colors[0],
     titleColor: palettes.zeco.bichittos?.name ?? palettes.zeco.dark,
-    background: palettes.zeco.gradientBg,
-    scene: palettes.zeco.bichittos?.bgImage,
-    scenePosition: 'center',
-    sceneFallback: palettes.zeco.dark,
+    background:
+      palettes.zeco.bichittos?.homeBannerBackground ??
+      palettes.zeco.gradientBg,
     slides: [
       mediaUrl('/imgs/bichittos/zeco/01_zeco_piscando.png'),
       mediaUrl('/imgs/bichittos/zeco/01_zeco_feliz.png'),
@@ -49,14 +47,12 @@ const characterCards = [
     label: 'Taylo',
     color: palettes.taylo.bichittos?.accent ?? palettes.taylo.colors[0],
     titleColor: palettes.taylo.bichittos?.name ?? palettes.taylo.colors[0],
-    background: palettes.taylo.gradientBg,
-    scene: palettes.taylo.bichittos?.bgImage,
-    scenePosition: '0% center',
-    sceneFallback: palettes.taylo.dark,
+    background:
+      palettes.taylo.bichittos?.homeBannerBackground ??
+      palettes.taylo.gradientBg,
     slides: [
-      mediaUrl('/imgs/bichittos/taylo/os_dois.png'),
-      mediaUrl('/imgs/bichittos/taylo/pitu_chorando.png'),
       mediaUrl('/imgs/bichittos/taylo/tayllo_agachado.png'),
+      mediaUrl('/imgs/bichittos/taylo/tayllo_costas.png'),
       mediaUrl('/imgs/bichittos/taylo/tayllo_em_pe.png'),
     ],
   },
@@ -69,18 +65,14 @@ const characterCards = [
     titleColor:
       palettes.cheiodebolinha.bichittos?.name ??
       palettes.cheiodebolinha.colors[2],
-    background: palettes.cheiodebolinha.gradientBg,
-    scene: palettes.cheiodebolinha.bichittos?.bgImage,
-    scenePosition: 'center',
-    sceneFallback: palettes.cheiodebolinha.dark,
-    slides: [
-      mediaUrl('/imgs/bichittos/cheiodebolinha/Cheio_Bolinha.gif'),
-      mediaUrl('/imgs/bichittos/cheiodebolinha/Querie.gif'),
-      mediaUrl('/imgs/bichittos/cheiodebolinha/querie_dancando.gif'),
-      mediaUrl('/imgs/bichittos/cheiodebolinha/querie_feliz.gif'),
-    ],
+    background:
+      palettes.cheiodebolinha.bichittos?.homeBannerBackground ??
+      palettes.cheiodebolinha.gradientBg,
+    slides: [mediaUrl('/imgs/bichittos/cheiodebolinha/Cheio_Bolinha.gif')],
   },
 ] as const;
+
+const SHOW_CAROUSEL_NAVIGATION = false;
 
 /** Orange Bichittos hero with a compact four-character card strip. */
 export function BichittosBannerWithNinha({
@@ -148,17 +140,8 @@ export function BichittosBannerWithNinha({
               cursor="pointer"
               focusRing="inside"
               focusRingColor="ink"
-              css={{
-                backgroundColor: character.sceneFallback,
-                backgroundImage: character.scene
-                  ? `url(${character.scene})`
-                  : character.background,
-                backgroundPosition: character.scenePosition,
-                backgroundSize: 'cover',
-              }}
-              _hover={{
-                '& img': { transform: 'scale(1.06)' },
-              }}
+              background={character.background}
+              _hover={{ '& img': { transform: 'scale(1.06)' } }}
             >
               <NextLink
                 href={`${href}?bichitto=${character.id}`}
@@ -195,22 +178,23 @@ export function BichittosBannerWithNinha({
                 >
                   {character.label}
                 </Text>
-              <Image
-                src={slide}
-                alt=""
-                aria-hidden
-                position="absolute"
-                left="homeBichittosMediaInset"
-                bottom={0}
-                width="homeBichittosMediaSize"
-                height="homeBichittosMediaSize"
-                objectFit="contain"
-                objectPosition="center bottom"
-                display="block"
-                transitionProperty="transform"
-                transitionDuration="slow"
-                _motionReduce={{ transition: 'none' }}
-              />
+                <Image
+                  src={slide}
+                  alt=""
+                  aria-hidden="true"
+                  position="absolute"
+                  left="homeBichittosMediaInset"
+                  bottom={0}
+                  zIndex={1}
+                  width="homeBichittosMediaSize"
+                  height="homeBichittosMediaSize"
+                  objectFit="contain"
+                  objectPosition="center bottom"
+                  display="block"
+                  transitionProperty="transform"
+                  transitionDuration="slow"
+                  _motionReduce={{ transition: 'none' }}
+                />
                 <Box
                   position="absolute"
                   inset={0}
@@ -225,7 +209,7 @@ export function BichittosBannerWithNinha({
         })}
       </ConnectedCardFrame>
 
-      {pageCount > 1 && (
+      {SHOW_CAROUSEL_NAVIGATION && pageCount > 1 && (
         <Flex
           width="homeBannerCardsWidth"
           marginX="auto"

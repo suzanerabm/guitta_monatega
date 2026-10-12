@@ -55,6 +55,8 @@ export interface Palette {
     accentAlt: string;
     /** Imagem de fundo parallax da seção. */
     bgImage?: string;
+    /** Fundo do card da criatura no banner de Bichittos da home. */
+    homeBannerBackground?: string;
     /** Texto da pill (ex: "Gato · Sonhador"). */
     tag: string;
     /** Fundo translúcido do DSTextPanel (default: rgba(0,0,0,0.3)). */
@@ -98,6 +100,8 @@ export const palettes: Record<PaletteName, Palette> = {
       accent: '#c4d4ff',  
       accentAlt: '#c4d4ff',  // texto da pill
       bgImage: mediaUrl('/imgs/bichittos/_bg/violeta_caminha.jpg'),
+      homeBannerBackground:
+        'radial-gradient(circle at 10% 18%, rgba(74, 126, 255, 0.12) 0 7%, transparent 7.4%), radial-gradient(circle at 78% 42%, rgba(74, 126, 255, 0.1) 0 5%, transparent 5.4%), linear-gradient(180deg, #20205f 0%, #292262 52%, #33286c 100%)',
       tag: 'Gato · Sonhador',
       panelBg: 'rgb(30, 58, 122, 0.8)',
       // panelBg: '#3b0033',
@@ -117,6 +121,8 @@ export const palettes: Record<PaletteName, Palette> = {
       accent: '#f58020',
       accentAlt: '#fece95',
       bgImage: mediaUrl('/imgs/bichittos/_bg/primaveracena_12_ipe.jpg'),
+      homeBannerBackground:
+        'radial-gradient(circle at 16% 12%, rgba(255, 255, 255, 0.14) 0 12%, transparent 12.4%), linear-gradient(180deg, #ffab47 0%, #ff8b27 45%, #ed6e15 100%)',
       tag: 'Hamster · Quintal',
       panelBg: '#592e06',
       // panelBg: 'rgb(245, 128, 32, 0.6)',
@@ -139,6 +145,8 @@ export const palettes: Record<PaletteName, Palette> = {
       accent: '#e4ebf1',
       accentAlt: '#b58a49',
       bgImage: mediaUrl('/imgs/bichittos/taylo/_backgrounds/new_cena_fundo.jpg'),
+      homeBannerBackground:
+        'radial-gradient(circle at 85% 82%, rgba(143, 169, 191, 0.16) 0 18%, transparent 18.4%), linear-gradient(180deg, #f9eddf 0%, #f5eadf 52%, #e9eef2 100%)',
       tag: 'Amigos · Natureza',
       panelBg: 'rgba(247, 229, 208, 0.88)',
       storyPanelBg: 'rgba(247, 229, 208, 0.9)',
@@ -176,6 +184,8 @@ export const palettes: Record<PaletteName, Palette> = {
       accent: '#3ae9f2',
       accentAlt: '#83e5ea',
       bgImage: mediaUrl('/imgs/bichittos/_bg/ceu_nuvem.jpg'),
+      homeBannerBackground:
+        'radial-gradient(ellipse at 18% 70%, rgba(237, 240, 242, 0.16) 0 12%, transparent 12.5%), radial-gradient(ellipse at 78% 62%, rgba(237, 240, 242, 0.12) 0 16%, transparent 16.5%), linear-gradient(180deg, #263eae 0%, #4264bc 52%, #68c5dc 100%)',
       tag: 'Elefante · Medroso',
       panelBg: 'rgb(47, 49, 113)',
     },
