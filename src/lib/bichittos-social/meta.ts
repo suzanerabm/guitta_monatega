@@ -94,6 +94,7 @@ async function publishInstagram(item: PublicationItem): Promise<string> {
     const container = await post(`${account}/media`, { image_url: item.media.image.url, caption: item.instagram.caption }, token, "create Instagram image");
     if (!container.id) throw new Error("Instagram did not return an image container ID.");
     creationId = container.id;
+    await waitUntilReady(creationId, token, "image");
   }
 
   const published = await post(`${account}/media_publish`, { creation_id: creationId }, token, "publish on Instagram");

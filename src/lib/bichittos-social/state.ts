@@ -51,12 +51,19 @@ export type AcquireResult =
   | { status: "published" }
   | { status: "locked" };
 
+export class PublicationNeedsReviewError extends Error {
+  constructor(occurrence: string) {
+    super(`Occurrence ${occurrence} needs review because a previous execution stopped during publishing.`);
+    this.name = "PublicationNeedsReviewError";
+  }
+}
+
 export async function acquire(occurrence: string, now: Date, owner: string): Promise<AcquireResult> {
   const current = await read(occurrence);
   if (current?.state.instagram.status === "published" && current.state.facebook.status === "published") return { status: "published" };
   if (current && new Date(current.state.lockUntil) > now && current.state.lockOwner !== owner) return { status: "locked" };
   if (current && [current.state.instagram.status, current.state.facebook.status].some((status) => status === "publishing" || status === "needs_review")) {
-    throw new Error(`Occurrence ${occurrence} needs review because a previous execution stopped during publishing.`);
+    throw new PublicationNeedsReviewError(occurrence);
   }
 
   const state: PublicationState = current?.state ?? {
