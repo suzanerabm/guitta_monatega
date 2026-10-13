@@ -24,6 +24,7 @@ export const Default: Story = {
     licensingLabel: 'licenciamento e parcerias',
     privacyPath: '/privacy',
     privacyLabel: 'privacidade',
+    cookieSettingsLabel: 'cookies',
     version: '1.0.0',
   },
 };

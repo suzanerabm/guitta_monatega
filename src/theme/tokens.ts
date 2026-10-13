@@ -57,6 +57,7 @@ export const tokens = defineTokens({
     heroDefaultText: { value: '#ffffff' },
     heroDefaultLabel: { value: 'rgba(255,255,255,0.5)' },
     homeBichittosMediaWash: { value: 'rgba(255,255,255,0.18)' },
+    cookieDialogFrame: { value: '#ffffff' },
     // Modal overlay backgrounds
     modalBgDark: { value: 'rgba(0,0,0,0.95)' },
     modalBgLight: { value: 'rgba(255,255,255,0.97)' },
@@ -72,6 +73,7 @@ export const tokens = defineTokens({
   fontSizes: {
     xs: { value: '0.65rem' },
     sm: { value: '0.72rem' },
+    footerLink: { value: '0.75rem' },
     base: { value: '0.85rem' },
     md: { value: '1rem' },
     lg: { value: '1.05rem' },
@@ -127,6 +129,7 @@ export const tokens = defineTokens({
     tight: { value: '0.04em' },
     normal: { value: '0.08em' },
     wide: { value: '0.12em' },
+    footerLink: { value: '0.1em' },
     wider: { value: '0.2em' },
     widest: { value: '0.25em' },
     hero: { value: '0.3em' },
@@ -141,6 +144,7 @@ export const tokens = defineTokens({
     homePlanetDeclarerLine: { value: '1px' },
     homeBichittosTitleBandHeight: { value: 'clamp(3.5rem, 6vw, 7rem)' },
     homeBichittosMediaSize: { value: '80%' },
+    footerSocialButtonHeight: { value: '2.25rem' },
   },
   lineHeights: {
     bookCardCompact: { value: '1.25' },

@@ -4,7 +4,7 @@
     "siteTitle": "Guitta Monatega",
     "footerAbout": "guitta monatega",
     "footerLicensing": "licenciamento e parcerias",
-    "footerPrivacy": "privacidade",
+    "footerPrivacy": "privacidade e termos",
     "footerCopyright": "© Guitta Monatega. Todos os direitos reservados",
     "footerFollow": "acompanhe",
     "soon": "em breve",
@@ -388,39 +388,98 @@
       "kammara": "Conheça o universo Kammara"
     }
   },
+  "cookieConsent": {
+    "title": "Sua privacidade",
+    "description": "Você escolhe se autoriza as métricas opcionais. A recusa não limita o acesso ao site.",
+    "essentialLabel": "Essenciais",
+    "essentialDescription": "Mantêm o site funcionando e guardam sua preferência de privacidade por até 180 dias.",
+    "analyticsLabel": "Análises opcionais",
+    "analyticsDescription": "Vercel Analytics, Google Analytics e Microsoft Clarity ajudam a entender visitas e melhorar a experiência.",
+    "acceptLabel": "Aceitar análises",
+    "rejectLabel": "Recusar",
+    "privacyLabel": "Privacidade e termos de uso",
+    "settingsLabel": "Cookies"
+  },
   "privacy": {
-    "pageTitle": "Privacidade — Guitta Monatega",
-    "title": "Privacidade",
-    "lastUpdate": "Última atualização: 30/04/2026",
-    "intro": "Este site é um portfólio pessoal e um espaço conceitual de obras autorais. Não coleta dados pessoais identificáveis, não usa cookies de rastreamento e não comercializa informações de visitantes. Os termos abaixo regem privacidade, propriedade intelectual e uso permitido do conteúdo.",
+    "pageTitle": "Privacidade e termos de uso — Guitta Monatega",
+    "title": "Privacidade e termos de uso",
+    "lastUpdate": "Última atualização: 13/10/2026",
+    "intro": "Este site é um portfólio pessoal e um espaço conceitual de obras autorais. Esta página explica como as métricas opcionais funcionam, como controlar cookies e tecnologias semelhantes e quais condições regem o uso do conteúdo.",
     "sections": [
       {
-        "tag": "O que medimos",
-        "body": "Estatísticas anônimas e agregadas (visitas, países, dispositivos) via Vercel Analytics. Sem cookies, sem identificação individual, sem cruzamento entre sites."
+        "tag": "Responsável e contato",
+        "body": "O Guitta Monatega Studio é responsável pelas decisões sobre o tratamento realizado diretamente neste site. Dúvidas, pedidos relacionados a dados, privacidade, licenciamento ou uso autorizado podem ser enviados ao endereço de contato ao final desta página."
       },
       {
-        "tag": "Cookies",
-        "body": "Este site não usa cookies próprios para rastreamento ou publicidade. Pode haver cookies técnicos definidos pela infraestrutura (Cloudflare, Vercel) apenas para funcionamento da entrega de conteúdo; nenhum identifica a pessoa. Por isso este site não exibe banner de consentimento de cookies: não há cookie nosso que exija essa permissão sob LGPD ou GDPR."
+        "tag": "O que medimos",
+        "body": "Quando a pessoa visitante autoriza análises opcionais, usamos Vercel Analytics, Google Analytics e Microsoft Clarity para compreender audiência, páginas visitadas, origem da visita, características gerais do navegador e dispositivo e interações com a interface. Essas informações são usadas para avaliar desempenho e melhorar conteúdo e experiência; não vendemos dados de visitantes."
+      },
+      {
+        "tag": "Cookies e consentimento",
+        "body": "As ferramentas opcionais de análise ficam desativadas por padrão e só carregam após uma escolha positiva. É possível aceitar ou recusar sem perder acesso ao conteúdo. A decisão é guardada no armazenamento local do navegador por até 180 dias. O botão Cookies permanece disponível para rever ou revogar a escolha; ao revogar, o site desativa as métricas e remove, quando tecnicamente possível, os cookies analíticos próprios já existentes."
+      },
+      {
+        "tag": "Serviços de análise",
+        "body": "O Google Analytics pode tratar identificadores online, endereço IP, informações de navegador e dispositivo, páginas, origem, duração e eventos de navegação. O Microsoft Clarity pode produzir mapas de calor e gravações de sessão a partir de cliques, rolagem e uso da interface. O Vercel Analytics fornece métricas agregadas de audiência e desempenho. O consentimento para publicidade, personalização de anúncios e dados de anúncios permanece desativado nesta implementação."
+      },
+      {
+        "tag": "Terceiros, transferência e retenção",
+        "body": "Google, Microsoft e Vercel tratam informações como operadores independentes de suas plataformas e podem processá-las em outros países, conforme suas políticas e contratos. Os prazos de retenção seguem as configurações das contas e as políticas dos provedores e devem permanecer limitados ao necessário para análise e segurança."
+      },
+      {
+        "tag": "Seus direitos e preferências",
+        "body": "Você pode recusar ou revogar as métricas a qualquer momento pelo botão Cookies. Também pode limpar cookies e armazenamento local nas configurações do navegador. Solicitações de acesso, correção, informação, oposição ou eliminação relacionadas a dados sob controle direto do Studio podem ser feitas pelo contato abaixo."
       },
       {
         "tag": "Natureza do site",
-        "body": "Este é um site conceito e de portfolio. Reúne universos ficcionais, personagens, ilustrações, sistemas narrativos e estudos visuais de autoria pessoal. Todo o conteúdo aqui apresentado é parte de obras autorais em desenvolvimento contínuo."
+        "body": "Este é um site conceito e de portfólio. Reúne universos ficcionais, personagens, ilustrações, sistemas narrativos e estudos visuais de autoria pessoal. Todo o conteúdo apresentado integra obras autorais em desenvolvimento contínuo."
+      },
+      {
+        "tag": "Termos de uso",
+        "body": "O acesso ao site é oferecido para apreciação, informação e contato. A navegação não transfere licença nem direitos sobre qualquer obra. Não é permitido copiar, republicar, distribuir, modificar, explorar comercialmente, remover créditos, realizar coleta automatizada substancial ou usar o conteúdo de modo ilegal ou que prejudique o site, a autora ou terceiros sem autorização expressa e por escrito."
       },
       {
         "tag": "Propriedade intelectual",
-        "body": "Todo o conteúdo deste site, incluindo arte, ilustrações, textos, nomes próprios, personagens, criaturas, universos (Kammara, Bichittos e demais), sistemas linguísticos, glifos, símbolos e demais elementos criativos, é propriedade intelectual exclusiva de Guitta Monatega e está protegido pelas leis brasileiras de direito autoral (Lei 9.610/98) e por tratados internacionais. É vedada qualquer reprodução, redistribuição, modificação, uso em treinamento de modelos de inteligência artificial ou utilização comercial sem autorização expressa e por escrito."
+        "body": "Todo o conteúdo deste site, incluindo arte, ilustrações, textos, nomes próprios, personagens, criaturas, universos (Kammara, Bichittos e demais), sistemas linguísticos, glifos, símbolos e demais elementos criativos, é propriedade intelectual exclusiva de Guitta Monatega e está protegido pelas leis brasileiras de direito autoral e por tratados internacionais."
       },
       {
         "tag": "Uso de inteligência artificial na produção",
-        "body": "Algumas imagens deste site foram geradas com auxílio de ferramentas de IA. Em todos os casos, a geração ocorreu sob direção criativa explícita da autora: prompts especializados foram desenvolvidos a partir de doodles, esboços manuais, estudos de personagem, paletas e referências visuais autorais previamente concebidos. As ferramentas de IA atuaram como instrumento de execução assistida (análogo a um pincel digital, a um escultor 3D ou a qualquer outro recurso técnico) e não substituíram a autoria conceitual, narrativa ou estética. A obra resultante é considerada criação derivada de processo autoral pessoal e, como tal, permanece propriedade intelectual da autora."
+        "body": "Algumas imagens deste site foram geradas com auxílio de ferramentas de IA sob direção criativa explícita da autora, a partir de doodles, esboços, estudos de personagem, paletas e referências visuais autorais previamente concebidos. As ferramentas atuaram como instrumento de execução assistida e não substituíram a autoria conceitual, narrativa ou estética."
       },
       {
-        "tag": "Reservas de direitos",
-        "body": "A autora reserva-se expressamente o direito de não permitir o uso deste conteúdo para treinamento, ajuste fino, ou qualquer forma de incorporação em sistemas de inteligência artificial generativa, bancos de dados de treino, datasets públicos ou comerciais. Esta reserva aplica-se a todo conteúdo textual e visual presente no site."
+        "tag": "Reserva sobre treinamento de IA",
+        "body": "A autora não autoriza o uso do conteúdo deste site para treinamento, ajuste fino, construção de datasets ou qualquer incorporação em sistemas de inteligência artificial generativa, públicos ou comerciais, sem autorização expressa e por escrito."
+      },
+      {
+        "tag": "Links externos e disponibilidade",
+        "body": "Links externos são fornecidos por conveniência e levam a serviços com regras próprias. O Studio procura manter o site disponível e as informações corretas, mas não garante operação ininterrupta nem se responsabiliza por conteúdo, práticas ou indisponibilidade de serviços de terceiros."
       },
       {
         "tag": "Contato",
-        "body": "Para questões de privacidade, licenciamento, uso autorizado, parcerias ou solicitação de remoção, entre em contato pelo e-mail abaixo."
+        "body": "Para questões de privacidade, preferências, licenciamento, uso autorizado, parcerias ou solicitação de remoção, entre em contato pelo e-mail abaixo."
+      }
+    ],
+    "providerLinksTitle": "Políticas dos serviços utilizados",
+    "providerLinks": [
+      {
+        "label": "Como o Google usa informações de sites parceiros",
+        "url": "https://policies.google.com/technologies/partner-sites"
+      },
+      {
+        "label": "Política de Privacidade do Google",
+        "url": "https://policies.google.com/privacy"
+      },
+      {
+        "label": "Declaração de Privacidade da Microsoft",
+        "url": "https://privacy.microsoft.com/privacystatement"
+      },
+      {
+        "label": "Termos do Microsoft Clarity",
+        "url": "https://clarity.microsoft.com/terms"
+      },
+      {
+        "label": "Política de Privacidade da Vercel",
+        "url": "https://vercel.com/legal/privacy-policy"
       }
     ],
     "contact": "hello@guittamonategastudio.com"

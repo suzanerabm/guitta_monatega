@@ -26,6 +26,11 @@ interface Section {
   body: string;
 }
 
+interface ProviderLink {
+  label: string;
+  url: string;
+}
+
 export default async function PrivacyPage({
   params,
 }: {
@@ -35,6 +40,7 @@ export default async function PrivacyPage({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'privacy' });
   const sections = t.raw('sections') as Section[];
+  const providerLinks = t.raw('providerLinks') as ProviderLink[];
   const contact = t('contact');
 
   return (
@@ -83,6 +89,36 @@ export default async function PrivacyPage({
             </Box>
           ))}
         </Flex>
+
+        <Box mt="lg">
+          <Heading
+            as="h2"
+            fontSize="xl"
+            textStyle="heading"
+            letterSpacing="wide"
+            textTransform="uppercase"
+            mb="md"
+            color="ink"
+          >
+            {t('providerLinksTitle')}
+          </Heading>
+          <Flex as="ul" direction="column" align="flex-start" gap="sm">
+            {providerLinks.map((provider) => (
+              <Box as="li" key={provider.url}>
+                <ChakraLink
+                  href={provider.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  fontSize={{ base: 'base', md: 'md' }}
+                  color="ink"
+                  textDecoration="underline"
+                >
+                  {provider.label}
+                </ChakraLink>
+              </Box>
+            ))}
+          </Flex>
+        </Box>
 
         <Box mt="lg">
           <ChakraLink

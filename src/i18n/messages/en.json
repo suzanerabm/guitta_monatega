@@ -4,7 +4,7 @@
     "siteTitle": "Guitta Monatega",
     "footerAbout": "guitta monatega",
     "footerLicensing": "licensing & partnerships",
-    "footerPrivacy": "privacy",
+    "footerPrivacy": "privacy & terms",
     "footerCopyright": "© Guitta Monatega. All rights reserved",
     "footerFollow": "follow",
     "soon": "coming soon",
@@ -388,39 +388,98 @@
       "kammara": "Explore the Kammara universe"
     }
   },
+  "cookieConsent": {
+    "title": "Your privacy",
+    "description": "You choose whether to allow optional analytics. Declining does not limit access to the site.",
+    "essentialLabel": "Essential",
+    "essentialDescription": "Keep the site working and store your privacy preference for up to 180 days.",
+    "analyticsLabel": "Optional analytics",
+    "analyticsDescription": "Vercel Analytics, Google Analytics, and Microsoft Clarity help us understand visits and improve the experience.",
+    "acceptLabel": "Accept analytics",
+    "rejectLabel": "Decline",
+    "privacyLabel": "Privacy and terms of use",
+    "settingsLabel": "Cookies"
+  },
   "privacy": {
-    "pageTitle": "Privacy — Guitta Monatega",
-    "title": "Privacy",
-    "lastUpdate": "Last updated: April 30, 2026",
-    "intro": "This site is a personal portfolio and a conceptual space for original works. It does not collect identifiable personal data, does not use tracking cookies, and does not commercialize visitor information. The terms below govern privacy, intellectual property, and permitted use of the content.",
+    "pageTitle": "Privacy and terms of use — Guitta Monatega",
+    "title": "Privacy and terms of use",
+    "lastUpdate": "Last updated: October 13, 2026",
+    "intro": "This site is a personal portfolio and a conceptual space for original works. This page explains how optional analytics work, how to control cookies and similar technologies, and the conditions governing use of the content.",
     "sections": [
       {
-        "tag": "What we measure",
-        "body": "Anonymous, aggregated statistics (visits, countries, devices) via Vercel Analytics. No cookies, no individual identification, no cross-site tracking."
+        "tag": "Responsible party and contact",
+        "body": "Guitta Monatega Studio is responsible for decisions about processing performed directly on this site. Questions and requests concerning data, privacy, licensing, or authorized use can be sent to the contact address at the end of this page."
       },
       {
-        "tag": "Cookies",
-        "body": "This site does not use its own cookies for tracking or advertising. There may be technical cookies set by the underlying infrastructure (Cloudflare, Vercel) solely to deliver content; none of them identifies an individual. That is why this site does not show a cookie consent banner: no cookie of ours requires that permission under LGPD or GDPR."
+        "tag": "What we measure",
+        "body": "When a visitor authorizes optional analytics, we use Vercel Analytics, Google Analytics, and Microsoft Clarity to understand audience, pages visited, visit source, general browser and device characteristics, and interface interactions. This information is used to assess performance and improve content and experience; we do not sell visitor data."
+      },
+      {
+        "tag": "Cookies and consent",
+        "body": "Optional analytics tools are disabled by default and load only after a positive choice. Visitors may accept or decline without losing access to content. The decision is stored in the browser's local storage for up to 180 days. The Cookies button remains available to review or withdraw the choice; when consent is withdrawn, the site disables analytics and removes existing first-party analytics cookies when technically possible."
+      },
+      {
+        "tag": "Analytics services",
+        "body": "Google Analytics may process online identifiers, IP address, browser and device information, pages, source, duration, and navigation events. Microsoft Clarity may produce heatmaps and session recordings from clicks, scrolling, and interface use. Vercel Analytics provides aggregated audience and performance metrics. Consent for advertising, ad personalization, and ad-user data remains disabled in this implementation."
+      },
+      {
+        "tag": "Third parties, transfers, and retention",
+        "body": "Google, Microsoft, and Vercel process information as independent providers of their platforms and may process it in other countries under their policies and contracts. Retention periods follow account settings and provider policies and should remain limited to what is necessary for analytics and security."
+      },
+      {
+        "tag": "Your rights and preferences",
+        "body": "You may decline or withdraw analytics at any time through the Cookies button. You may also clear cookies and local storage in your browser settings. Requests for access, correction, information, objection, or deletion concerning data directly controlled by the Studio may be submitted through the contact below."
       },
       {
         "tag": "Nature of this site",
         "body": "This is a concept and portfolio site. It gathers fictional universes, characters, illustrations, narrative systems, and visual studies of personal authorship. All content presented here is part of original works under continuous development."
       },
       {
+        "tag": "Terms of use",
+        "body": "Access is offered for appreciation, information, and contact. Browsing does not transfer any license or rights in any work. Without express written permission, users may not copy, republish, distribute, modify, commercially exploit, remove credits, perform substantial automated extraction, or use the content unlawfully or in a manner that harms the site, the author, or third parties."
+      },
+      {
         "tag": "Intellectual property",
-        "body": "All content on this site, including artwork, illustrations, texts, proper names, characters, creatures, universes (Kammara, Bichittos, and others), linguistic systems, glyphs, symbols, and other creative elements, is the exclusive intellectual property of Guitta Monatega and is protected under Brazilian copyright law (Law 9.610/98) and international treaties. Any reproduction, redistribution, modification, use in training of artificial intelligence models, or commercial use is forbidden without express written permission."
+        "body": "All content on this site, including artwork, illustrations, texts, proper names, characters, creatures, universes (Kammara, Bichittos, and others), linguistic systems, glyphs, symbols, and other creative elements, is the exclusive intellectual property of Guitta Monatega and is protected under Brazilian copyright law and international treaties."
       },
       {
         "tag": "Use of AI in production",
-        "body": "Some images on this site were generated with the assistance of AI tools. In every case, generation occurred under the explicit creative direction of the author: specialized prompts were developed from previously conceived doodles, hand-drawn sketches, character studies, palettes, and authorial visual references. AI tools acted as an instrument of assisted execution (analogous to a digital brush, a 3D sculpting tool, or any other technical resource) and did not replace conceptual, narrative, or aesthetic authorship. The resulting work is considered a derivative creation of a personal authorial process and, as such, remains the author's intellectual property."
+        "body": "Some images on this site were generated with the assistance of AI tools under the author's explicit creative direction, based on previously conceived doodles, sketches, character studies, palettes, and original visual references. The tools acted as instruments of assisted execution and did not replace conceptual, narrative, or aesthetic authorship."
       },
       {
-        "tag": "Reservation of rights",
-        "body": "The author expressly reserves the right not to allow this content to be used for training, fine-tuning, or any form of inclusion in generative AI systems, training databases, public or commercial datasets. This reservation applies to all textual and visual content on this site."
+        "tag": "Reservation concerning AI training",
+        "body": "The author does not authorize use of this site's content for training, fine-tuning, dataset construction, or any incorporation into public or commercial generative artificial intelligence systems without express written permission."
+      },
+      {
+        "tag": "External links and availability",
+        "body": "External links are provided for convenience and lead to services governed by their own rules. The Studio seeks to keep the site available and information accurate but does not guarantee uninterrupted operation and is not responsible for third-party content, practices, or service availability."
       },
       {
         "tag": "Contact",
-        "body": "For privacy questions, licensing, authorized use, partnerships, or removal requests, please reach out via the email below."
+        "body": "For questions about privacy, preferences, licensing, authorized use, partnerships, or removal requests, please contact us through the email below."
+      }
+    ],
+    "providerLinksTitle": "Policies of the services we use",
+    "providerLinks": [
+      {
+        "label": "How Google uses information from partner sites",
+        "url": "https://policies.google.com/technologies/partner-sites"
+      },
+      {
+        "label": "Google Privacy Policy",
+        "url": "https://policies.google.com/privacy"
+      },
+      {
+        "label": "Microsoft Privacy Statement",
+        "url": "https://privacy.microsoft.com/privacystatement"
+      },
+      {
+        "label": "Microsoft Clarity Terms",
+        "url": "https://clarity.microsoft.com/terms"
+      },
+      {
+        "label": "Vercel Privacy Policy",
+        "url": "https://vercel.com/legal/privacy-policy"
       }
     ],
     "contact": "hello@guittamonategastudio.com"

@@ -21,6 +21,7 @@ describe('Footer', () => {
     licensingLabel: 'licenciamento e parcerias',
     privacyPath: '/privacy',
     privacyLabel: 'privacidade',
+    cookieSettingsLabel: 'cookies',
   };
 
   it('renders the three social identities', () => {
@@ -58,6 +59,7 @@ describe('Footer', () => {
     expect(screen.getByText('sobre guitta monatega')).toBeInTheDocument();
     expect(screen.getByText('licenciamento e parcerias')).toBeInTheDocument();
     expect(screen.getByText('privacidade')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'cookies' })).toBeInTheDocument();
   });
 
   it('links to the right paths', () => {

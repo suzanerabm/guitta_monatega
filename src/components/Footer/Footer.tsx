@@ -2,6 +2,7 @@
 import { Box, Flex, Link as ChakraLink } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { useChromeTint } from '@/components/ChromeTint';
+import { COOKIE_SETTINGS_EVENT } from '@/components/CookieConsent';
 import { GradientLine } from '@/components/GradientLine';
 
 interface FooterProps {
@@ -17,6 +18,7 @@ interface FooterProps {
   licensingLabel: string;
   privacyPath: string;
   privacyLabel: string;
+  cookieSettingsLabel: string;
   /** Aviso de direitos autorais (i18n). Mostrado discreto abaixo dos links. */
   copyright?: string;
   /** Versão do site (vem do package.json, resolvida no servidor). */
@@ -58,6 +60,7 @@ export function Footer({
   licensingLabel,
   privacyPath,
   privacyLabel,
+  cookieSettingsLabel,
   copyright,
   version,
 }: FooterProps) {
@@ -150,6 +153,7 @@ export function Footer({
                       rel="noopener noreferrer"
                       display="inline-flex"
                       alignItems="center"
+                      height="footerSocialButtonHeight"
                       gap="sm"
                       px="md"
                       py="sm"
@@ -171,6 +175,7 @@ export function Footer({
                     <Flex
                       as="span"
                       align="center"
+                      height="footerSocialButtonHeight"
                       gap="sm"
                       px="md"
                       py="sm"
@@ -193,6 +198,7 @@ export function Footer({
                       rel="noopener noreferrer"
                       display="inline-flex"
                       alignItems="center"
+                      height="footerSocialButtonHeight"
                       gap="sm"
                       px="md"
                       py="sm"
@@ -214,6 +220,7 @@ export function Footer({
                     <Flex
                       as="span"
                       align="center"
+                      height="footerSocialButtonHeight"
                       gap="sm"
                       px="md"
                       py="sm"
@@ -268,6 +275,29 @@ export function Footer({
           <NextLink href={licensingPath} style={linkStyle}>
             {licensingLabel}
           </NextLink>
+          <Box
+            w="2px"
+            h="2px"
+            borderRadius="full"
+            bg={tintColor ? 'textOverlayStrong' : 'borderColor'}
+            opacity={0.6}
+          />
+          <ChakraLink
+            as="button"
+            type="button"
+            onClick={() => window.dispatchEvent(new Event(COOKIE_SETTINGS_EVENT))}
+            fontSize="footerLink"
+            fontWeight="light"
+            letterSpacing="footerLink"
+            textTransform="lowercase"
+            color="inherit"
+            transitionProperty="opacity"
+            transitionDuration="default"
+            textDecoration="none"
+            _hover={{ opacity: 0.65 }}
+          >
+            {cookieSettingsLabel}
+          </ChakraLink>
         </Flex>
 
         {/* Aviso de direitos autorais — discreto, abaixo dos links. Não impede

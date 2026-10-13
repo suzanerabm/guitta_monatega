@@ -25,19 +25,20 @@ const mediaRemotePatterns = mediaOrigins.map(
 // pro que o site REALMENTE usa:
 //  - Google Fonts (fonts.googleapis.com CSS + fonts.gstatic.com woff2)
 //  - Adobe Fonts / Typekit (use.typekit.net CSS+woff2 + p.typekit.net @import)
-//  - Vercel Analytics/Speed Insights (va.vercel-scripts.com)
+//  - Métricas opcionais, carregadas só após consentimento: Vercel Analytics,
+//    Google Analytics e Microsoft Clarity
 //  - imagens/vídeos: do próprio site (self) + data: (posters inline) + o CDN
 //    de mídia, quando NEXT_PUBLIC_MEDIA_BASE_URL estiver definida
 // `'unsafe-inline'`/`'unsafe-eval'` em script/style são exigidos pelo Next
 // (hidratação e estilos inline) — sem nonce dá pra endurecer mais depois.
 const cspDirectives = [
 	"default-src 'self'",
-	"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://va.vercel-scripts.com",
+	"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://va.vercel-scripts.com https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms https://c.bing.com",
 	"style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://use.typekit.net https://p.typekit.net",
 	"font-src 'self' https://fonts.gstatic.com https://use.typekit.net data:",
-	`img-src 'self' data: blob:${mediaSrc}`,
+	`img-src 'self' data: blob: https://www.googletagmanager.com https://*.google-analytics.com https://www.clarity.ms https://*.clarity.ms https://c.bing.com${mediaSrc}`,
 	`media-src 'self' data: blob:${mediaSrc}`,
-	"connect-src 'self' https://va.vercel-scripts.com https://vitals.vercel-insights.com",
+	"connect-src 'self' https://va.vercel-scripts.com https://vitals.vercel-insights.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.google.com https://www.clarity.ms https://*.clarity.ms https://c.bing.com",
 	"frame-ancestors 'none'",
 	"base-uri 'self'",
 	"form-action 'self'",

@@ -7,6 +7,7 @@ import { Footer } from '@/components/Footer';
 import { ModalProvider, Modal, ModalKammara } from '@/components/Modal';
 import { ChromeTintProvider } from '@/components/ChromeTint';
 import { AutoBreadcrumb } from '@/components/Breadcrumb';
+import { CookieConsent } from '@/components/CookieConsent';
 import { version } from '../../../package.json';
 import { SITE_NAME, SITE_URL, normalizeLocale } from '@/lib/seo';
 
@@ -27,6 +28,7 @@ export default async function LocaleLayout({
 
   const messages = await getMessages({ locale });
   const t = await getTranslations({ locale, namespace: 'common' });
+  const cookieT = await getTranslations({ locale, namespace: 'cookieConsent' });
   const homePath = `/${locale}`;
   const aboutPath = `/${locale}/about`;
   const licensingPath = `/${locale}/licensing-partnerships`;
@@ -113,11 +115,26 @@ export default async function LocaleLayout({
               licensingLabel={t('footerLicensing')}
               privacyPath={privacyPath}
               privacyLabel={t('footerPrivacy')}
+              cookieSettingsLabel={cookieT('settingsLabel')}
               copyright={t('footerCopyright')}
               version={version}
             />
             <Modal />
             <ModalKammara />
+            <CookieConsent
+              privacyPath={privacyPath}
+              copy={{
+                title: cookieT('title'),
+                description: cookieT('description'),
+                essentialLabel: cookieT('essentialLabel'),
+                essentialDescription: cookieT('essentialDescription'),
+                analyticsLabel: cookieT('analyticsLabel'),
+                analyticsDescription: cookieT('analyticsDescription'),
+                acceptLabel: cookieT('acceptLabel'),
+                rejectLabel: cookieT('rejectLabel'),
+                privacyLabel: cookieT('privacyLabel'),
+              }}
+            />
           </ModalProvider>
         </ChromeTintProvider>
       </div>

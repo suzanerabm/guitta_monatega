@@ -176,7 +176,12 @@ export default async function HomePage({
           background={homeBooksGallery.background}
           padding={{ base: '3rem 0', md: '4rem 0' }}
         >
-          <Box maxW="1200px" mx="auto" px={{ base: 'base', md: '3xl' }} position="relative">
+          <Box
+            width={bookPageLayout.homeBooksSectionWidth}
+            mx="auto"
+            px={{ base: 'base', md: '3xl' }}
+            position="relative"
+          >
             <Heading
               as="h2"
               textStyle="heading"
@@ -210,9 +215,9 @@ export default async function HomePage({
               viewAllColor={homeBooksGallery.accentColor}
               viewAllPlacement="section-title"
               comingSoonLabel={tBooks('soonLabel')}
-              cardWidth={bookPageLayout.homeCarouselCardWidth}
-              cardMaxWidth={bookPageLayout.homeCarouselCardWidth}
-              cardHeight={bookPageLayout.homeShelfCardHeight}
+              cardWidth={bookPageLayout.homeBooksCardWidth}
+              cardMaxWidth={bookPageLayout.homeBooksCardWidth}
+              cardHeight={bookPageLayout.homeBooksCardHeight}
               panelBackground={homeBooksGallery.panelBackground}
               books={books.map((book) => ({
                 book: {
