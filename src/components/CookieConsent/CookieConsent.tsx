@@ -40,6 +40,19 @@ const CONSENT_CHANGE_EVENT = 'guitta:analytics-consent-change';
 export const COOKIE_SETTINGS_EVENT = 'guitta:open-cookie-settings';
 const CONSENT_DURATION_MS = 180 * 24 * 60 * 60 * 1000;
 
+export function shouldLoadAnalytics(
+  decision: ConsentDecision | null,
+  hostname: string,
+) {
+  const normalizedHostname = hostname.replace(/^\[|\]$/g, '').toLowerCase();
+  const isLocalHostname = normalizedHostname === 'localhost'
+    || normalizedHostname === '127.0.0.1'
+    || normalizedHostname === '::1'
+    || normalizedHostname.endsWith('.localhost');
+
+  return decision === 'accepted' && !isLocalHostname;
+}
+
 function readStoredConsent(): ConsentDecision | null {
   try {
     const value = window.localStorage.getItem(CONSENT_STORAGE_KEY);
@@ -141,10 +154,11 @@ export function CookieConsent({ copy, privacyPath }: CookieConsentProps) {
   };
 
   if (decision === undefined) return null;
+  const analyticsEnabled = shouldLoadAnalytics(decision, window.location.hostname);
 
   return (
     <>
-      {decision === 'accepted' && (
+      {analyticsEnabled && (
         <>
           <Analytics />
           <Script id="google-analytics-consent" strategy="afterInteractive">

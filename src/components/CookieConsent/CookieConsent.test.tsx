@@ -5,6 +5,7 @@ import { renderWithChakra as render } from '@/test-utils';
 import {
   COOKIE_SETTINGS_EVENT,
   CookieConsent,
+  shouldLoadAnalytics,
   type CookieConsentCopy,
 } from './CookieConsent';
 
@@ -59,16 +60,25 @@ describe('CookieConsent', () => {
     expect(await screen.findByRole('dialog', { name: copy.title })).toBeInTheDocument();
   });
 
-  it('loads all analytics services after consent', async () => {
+  it('does not load analytics services on localhost after consent', async () => {
     render(<CookieConsent copy={copy} privacyPath="/pt/privacy" />);
 
     fireEvent.click(await screen.findByRole('button', { name: copy.acceptLabel }));
 
     await waitFor(() => {
-      expect(screen.getByTestId('vercel-analytics')).toBeInTheDocument();
-      expect(document.querySelector('#google-analytics-library')).toBeInTheDocument();
-      expect(document.querySelector('#microsoft-clarity')).toBeInTheDocument();
+      expect(window.localStorage.getItem('guitta-analytics-consent-v1')).toContain('accepted');
     });
-    expect(window.localStorage.getItem('guitta-analytics-consent-v1')).toContain('accepted');
+    expect(screen.queryByTestId('vercel-analytics')).not.toBeInTheDocument();
+    expect(document.querySelector('#google-analytics-library')).not.toBeInTheDocument();
+    expect(document.querySelector('#microsoft-clarity')).not.toBeInTheDocument();
+  });
+
+  it('only enables analytics after consent on a non-local hostname', () => {
+    expect(shouldLoadAnalytics('accepted', 'guittamonategastudio.com')).toBe(true);
+    expect(shouldLoadAnalytics('rejected', 'guittamonategastudio.com')).toBe(false);
+    expect(shouldLoadAnalytics('accepted', 'localhost')).toBe(false);
+    expect(shouldLoadAnalytics('accepted', '127.0.0.1')).toBe(false);
+    expect(shouldLoadAnalytics('accepted', '::1')).toBe(false);
+    expect(shouldLoadAnalytics('accepted', 'preview.localhost')).toBe(false);
   });
 });
