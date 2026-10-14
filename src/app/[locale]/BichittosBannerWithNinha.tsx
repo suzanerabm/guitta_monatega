@@ -50,11 +50,7 @@ const characterCards = [
     background:
       palettes.taylo.bichittos?.homeBannerBackground ??
       palettes.taylo.gradientBg,
-    slides: [
-      mediaUrl('/imgs/bichittos/taylo/tayllo_agachado.png'),
-      mediaUrl('/imgs/bichittos/taylo/tayllo_costas.png'),
-      mediaUrl('/imgs/bichittos/taylo/tayllo_em_pe.png'),
-    ],
+    slides: [mediaUrl('/imgs/bichittos/taylo/os_dois.png')],
   },
   {
     id: 'cheiodebolinha',
