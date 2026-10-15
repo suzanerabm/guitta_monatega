@@ -1,6 +1,6 @@
 {
   "description": "Fila operacional de publicação. Cada ocorrência é independente, inclusive nas campanhas recorrentes.",
-  "generatedAt": "2026-10-15T18:47:21.380Z",
+  "generatedAt": "2026-10-15T18:52:52.489Z",
   "timezone": "America/Sao_Paulo",
   "cadence": [
     "terça-feira",
@@ -222,8 +222,8 @@
         "en": null
       },
       "upload": {
-        "status": "pending",
-        "verifiedAt": null,
+        "status": "verified",
+        "verifiedAt": "2026-10-15T18:54:37.669Z",
         "error": null
       },
       "instagram": {
@@ -282,6 +282,47 @@
     },
     {
       "occurrence": "007",
+      "scheduledAt": "2026-10-19T08:00:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": "institucional-extra",
+      "discovery": 182,
+      "slug": "orfv-planeta-orvian-personagem",
+      "type": "institutional",
+      "campaign": "institucional",
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/182.png",
+          "key": "social/kammara/discoveries/182-orfv-planeta-orvian-personagem-v2.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/kammara/discoveries/182-orfv-planeta-orvian-personagem-v2.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-15T18:54:41.224Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "ORF-V IS A PLANET. ORVIAN IS A CHARACTER.\nORF-V is a planet of stone, bridges, and Fjork villages. ORVIAN is an elePHPant who lives there and takes part in Kammara's first saga.\n\nORF-V É UM PLANETA. ORVIAN É UM PERSONAGEM.\nORF-V é um planeta de pedra, pontes e vilas Fjork. ORVIAN é um elePHPant que vive lá e participa da primeira saga de Kammara.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "ORF-V IS A PLANET. ORVIAN IS A CHARACTER.\nORF-V is a planet of stone, bridges, and Fjork villages. ORVIAN is an elePHPant who lives there and takes part in Kammara's first saga.\n\nORF-V É UM PLANETA. ORVIAN É UM PERSONAGEM.\nORF-V é um planeta de pedra, pontes e vilas Fjork. ORVIAN é um elePHPant que vive lá e participa da primeira saga de Kammara.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "008",
       "scheduledAt": "2026-10-20T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 6,
@@ -314,47 +355,6 @@
       },
       "facebook": {
         "message": "VIEW OF THE CENTRAL FJORKS\nTowering fjorks rise above the water, connected only by suspended bridges. These paths keep the villages of ORF-V close, even when the ground itself is far apart.\n\nVISTA DOS FJORKS CENTRAIS\nFjorks altíssimos se erguem sobre a água, conectados apenas por pontes suspensas. Esses caminhos mantêm as vilas de ORF-V próximas, mesmo quando o chão está distante.",
-        "status": "pending",
-        "postId": null,
-        "error": null
-      },
-      "postado": false
-    },
-    {
-      "occurrence": "008",
-      "scheduledAt": "2026-10-19T08:00:00-03:00",
-      "timezone": "America/Sao_Paulo",
-      "calendarException": "institucional-extra",
-      "discovery": 182,
-      "slug": "orfv-planeta-orvian-personagem",
-      "type": "institutional",
-      "campaign": "institucional",
-      "media": {
-        "kind": "image",
-        "image": {
-          "local": "mkt/templates/_PUBLICAR/182.png",
-          "key": "social/kammara/discoveries/182-orfv-planeta-orvian-personagem-v2.png",
-          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/kammara/discoveries/182-orfv-planeta-orvian-personagem-v2.png"
-        }
-      },
-      "destinationUrl": null,
-      "destinationUrls": {
-        "pt": null,
-        "en": null
-      },
-      "upload": {
-        "status": "pending",
-        "verifiedAt": null,
-        "error": null
-      },
-      "instagram": {
-        "caption": "ORF-V IS A PLANET. ORVIAN IS A CHARACTER.\nORF-V is a planet of stone, bridges, and Fjork villages. ORVIAN is an elePHPant who lives there and takes part in Kammara's first saga.\n\nORF-V É UM PLANETA. ORVIAN É UM PERSONAGEM.\nORF-V é um planeta de pedra, pontes e vilas Fjork. ORVIAN é um elePHPant que vive lá e participa da primeira saga de Kammara.",
-        "status": "pending",
-        "mediaId": null,
-        "error": null
-      },
-      "facebook": {
-        "message": "ORF-V IS A PLANET. ORVIAN IS A CHARACTER.\nORF-V is a planet of stone, bridges, and Fjork villages. ORVIAN is an elePHPant who lives there and takes part in Kammara's first saga.\n\nORF-V É UM PLANETA. ORVIAN É UM PERSONAGEM.\nORF-V é um planeta de pedra, pontes e vilas Fjork. ORVIAN é um elePHPant que vive lá e participa da primeira saga de Kammara.",
         "status": "pending",
         "postId": null,
         "error": null
@@ -464,8 +464,8 @@
         "en": null
       },
       "upload": {
-        "status": "pending",
-        "verifiedAt": null,
+        "status": "verified",
+        "verifiedAt": "2026-10-15T18:54:44.498Z",
         "error": null
       },
       "instagram": {
@@ -546,7 +546,7 @@
       },
       "upload": {
         "status": "verified",
-        "verifiedAt": "2026-10-15T18:47:59.678Z",
+        "verifiedAt": "2026-10-15T18:54:45.738Z",
         "error": null
       },
       "instagram": {
@@ -937,8 +937,8 @@
         "en": "https://guittamonategastudio.com/en/books/saga-orf-v-volume-1"
       },
       "upload": {
-        "status": "pending",
-        "verifiedAt": null,
+        "status": "verified",
+        "verifiedAt": "2026-10-15T18:54:48.882Z",
         "error": null
       },
       "instagram": {
@@ -1018,8 +1018,8 @@
         "en": null
       },
       "upload": {
-        "status": "pending",
-        "verifiedAt": null,
+        "status": "verified",
+        "verifiedAt": "2026-10-15T18:54:52.389Z",
         "error": null
       },
       "instagram": {
