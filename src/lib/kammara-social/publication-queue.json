@@ -1,6 +1,6 @@
 {
   "description": "Fila operacional de publicação. Cada ocorrência é independente, inclusive nas campanhas recorrentes.",
-  "generatedAt": "2026-10-15T18:36:26.242Z",
+  "generatedAt": "2026-10-15T18:47:21.380Z",
   "timezone": "America/Sao_Paulo",
   "cadence": [
     "terça-feira",
@@ -8,9 +8,9 @@
     "domingo"
   ],
   "time": "08:00",
-  "total": 209,
+  "total": 206,
   "start": "2026-10-10T08:00:00-03:00",
-  "end": "2028-01-25T08:00:00-03:00",
+  "end": "2028-01-16T08:00:00-03:00",
   "items": [
     {
       "occurrence": "001",
@@ -524,6 +524,47 @@
     },
     {
       "occurrence": "013",
+      "scheduledAt": "2026-10-28T08:00:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": "institucional-extra",
+      "discovery": 185,
+      "slug": "lunnp1-planeta-erurin-personagem",
+      "type": "institutional",
+      "campaign": "institucional",
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/185.png",
+          "key": "social/kammara/discoveries/185-lunnp1-planeta-erurin-personagem-v2.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/kammara/discoveries/185-lunnp1-planeta-erurin-personagem-v2.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-15T18:47:59.678Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "LUNN'P1 IS A PLANET. ERÚ'RIN IS A CHARACTER.\nLUNN'P1 is a planet. Erú'Rin is a character. He appears in Kammara's first saga.\n\nLUNN'P1 É UM PLANETA. ERÚ'RIN É UM PERSONAGEM.\nLUNN'P1 é um planeta. Erú'Rin é um personagem. Ele está na primeira saga de Kammara.",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "LUNN'P1 IS A PLANET. ERÚ'RIN IS A CHARACTER.\nLUNN'P1 is a planet. Erú'Rin is a character. He appears in Kammara's first saga.\n\nLUNN'P1 É UM PLANETA. ERÚ'RIN É UM PERSONAGEM.\nLUNN'P1 é um planeta. Erú'Rin é um personagem. Ele está na primeira saga de Kammara.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "014",
       "scheduledAt": "2026-10-29T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 10,
@@ -563,7 +604,7 @@
       "postado": false
     },
     {
-      "occurrence": "014",
+      "occurrence": "015",
       "scheduledAt": "2026-11-01T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 11,
@@ -603,7 +644,7 @@
       "postado": false
     },
     {
-      "occurrence": "015",
+      "occurrence": "016",
       "scheduledAt": "2026-11-03T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 12,
@@ -643,7 +684,7 @@
       "postado": false
     },
     {
-      "occurrence": "016",
+      "occurrence": "017",
       "scheduledAt": "2026-11-05T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 13,
@@ -687,7 +728,7 @@
       "postado": false
     },
     {
-      "occurrence": "017",
+      "occurrence": "018",
       "scheduledAt": "2026-11-08T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 14,
@@ -727,7 +768,7 @@
       "postado": false
     },
     {
-      "occurrence": "018",
+      "occurrence": "019",
       "scheduledAt": "2026-11-10T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 15,
@@ -767,7 +808,7 @@
       "postado": false
     },
     {
-      "occurrence": "019",
+      "occurrence": "020",
       "scheduledAt": "2026-11-12T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 16,
@@ -807,7 +848,7 @@
       "postado": false
     },
     {
-      "occurrence": "020",
+      "occurrence": "021",
       "scheduledAt": "2026-11-15T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 2,
@@ -874,7 +915,7 @@
       "postado": false
     },
     {
-      "occurrence": "021",
+      "occurrence": "022",
       "scheduledAt": "2026-11-16T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": "institucional-extra",
@@ -915,7 +956,7 @@
       "postado": false
     },
     {
-      "occurrence": "022",
+      "occurrence": "023",
       "scheduledAt": "2026-11-17T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 17,
@@ -955,7 +996,7 @@
       "postado": false
     },
     {
-      "occurrence": "023",
+      "occurrence": "024",
       "scheduledAt": "2026-11-18T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": "institucional-extra",
@@ -996,7 +1037,7 @@
       "postado": false
     },
     {
-      "occurrence": "024",
+      "occurrence": "025",
       "scheduledAt": "2026-11-19T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 18,
@@ -1040,7 +1081,7 @@
       "postado": false
     },
     {
-      "occurrence": "025",
+      "occurrence": "026",
       "scheduledAt": "2026-11-22T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 19,
@@ -1080,7 +1121,7 @@
       "postado": false
     },
     {
-      "occurrence": "026",
+      "occurrence": "027",
       "scheduledAt": "2026-11-24T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 20,
@@ -1120,7 +1161,7 @@
       "postado": false
     },
     {
-      "occurrence": "027",
+      "occurrence": "028",
       "scheduledAt": "2026-11-26T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 21,
@@ -1160,7 +1201,7 @@
       "postado": false
     },
     {
-      "occurrence": "028",
+      "occurrence": "029",
       "scheduledAt": "2026-11-29T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 22,
@@ -1200,7 +1241,7 @@
       "postado": false
     },
     {
-      "occurrence": "029",
+      "occurrence": "030",
       "scheduledAt": "2026-12-01T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 23,
@@ -1244,7 +1285,7 @@
       "postado": false
     },
     {
-      "occurrence": "030",
+      "occurrence": "031",
       "scheduledAt": "2026-12-03T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 24,
@@ -1284,7 +1325,7 @@
       "postado": false
     },
     {
-      "occurrence": "031",
+      "occurrence": "032",
       "scheduledAt": "2026-12-06T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 25,
@@ -1328,7 +1369,7 @@
       "postado": false
     },
     {
-      "occurrence": "032",
+      "occurrence": "033",
       "scheduledAt": "2026-12-08T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 26,
@@ -1368,7 +1409,7 @@
       "postado": false
     },
     {
-      "occurrence": "033",
+      "occurrence": "034",
       "scheduledAt": "2026-12-10T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 27,
@@ -1408,7 +1449,7 @@
       "postado": false
     },
     {
-      "occurrence": "034",
+      "occurrence": "035",
       "scheduledAt": "2026-12-13T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 28,
@@ -1448,7 +1489,7 @@
       "postado": false
     },
     {
-      "occurrence": "035",
+      "occurrence": "036",
       "scheduledAt": "2026-12-15T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 29,
@@ -1488,7 +1529,7 @@
       "postado": false
     },
     {
-      "occurrence": "036",
+      "occurrence": "037",
       "scheduledAt": "2026-12-17T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 30,
@@ -1528,7 +1569,7 @@
       "postado": false
     },
     {
-      "occurrence": "037",
+      "occurrence": "038",
       "scheduledAt": "2026-12-20T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 31,
@@ -1568,7 +1609,7 @@
       "postado": false
     },
     {
-      "occurrence": "038",
+      "occurrence": "039",
       "scheduledAt": "2026-12-22T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 32,
@@ -1608,7 +1649,7 @@
       "postado": false
     },
     {
-      "occurrence": "039",
+      "occurrence": "040",
       "scheduledAt": "2026-12-24T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 33,
@@ -1648,7 +1689,7 @@
       "postado": false
     },
     {
-      "occurrence": "040",
+      "occurrence": "041",
       "scheduledAt": "2026-12-27T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 34,
@@ -1688,7 +1729,7 @@
       "postado": false
     },
     {
-      "occurrence": "041",
+      "occurrence": "042",
       "scheduledAt": "2026-12-29T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 35,
@@ -1728,7 +1769,7 @@
       "postado": false
     },
     {
-      "occurrence": "042",
+      "occurrence": "043",
       "scheduledAt": "2026-12-31T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 36,
@@ -1768,7 +1809,7 @@
       "postado": false
     },
     {
-      "occurrence": "043",
+      "occurrence": "044",
       "scheduledAt": "2027-01-03T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 37,
@@ -1808,7 +1849,7 @@
       "postado": false
     },
     {
-      "occurrence": "044",
+      "occurrence": "045",
       "scheduledAt": "2027-01-05T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 38,
@@ -1848,7 +1889,7 @@
       "postado": false
     },
     {
-      "occurrence": "045",
+      "occurrence": "046",
       "scheduledAt": "2027-01-07T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 39,
@@ -1900,7 +1941,7 @@
       "postado": false
     },
     {
-      "occurrence": "046",
+      "occurrence": "047",
       "scheduledAt": "2027-01-10T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 40,
@@ -1940,7 +1981,7 @@
       "postado": false
     },
     {
-      "occurrence": "047",
+      "occurrence": "048",
       "scheduledAt": "2027-01-12T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 41,
@@ -1980,7 +2021,7 @@
       "postado": false
     },
     {
-      "occurrence": "048",
+      "occurrence": "049",
       "scheduledAt": "2027-01-14T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 42,
@@ -2020,7 +2061,7 @@
       "postado": false
     },
     {
-      "occurrence": "049",
+      "occurrence": "050",
       "scheduledAt": "2027-01-17T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 43,
@@ -2060,7 +2101,7 @@
       "postado": false
     },
     {
-      "occurrence": "050",
+      "occurrence": "051",
       "scheduledAt": "2027-01-19T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 44,
@@ -2100,7 +2141,7 @@
       "postado": false
     },
     {
-      "occurrence": "051",
+      "occurrence": "052",
       "scheduledAt": "2027-01-21T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 45,
@@ -2140,7 +2181,7 @@
       "postado": false
     },
     {
-      "occurrence": "052",
+      "occurrence": "053",
       "scheduledAt": "2027-01-24T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 2,
@@ -2207,7 +2248,7 @@
       "postado": false
     },
     {
-      "occurrence": "053",
+      "occurrence": "054",
       "scheduledAt": "2027-01-26T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 46,
@@ -2247,7 +2288,7 @@
       "postado": false
     },
     {
-      "occurrence": "054",
+      "occurrence": "055",
       "scheduledAt": "2027-01-28T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 47,
@@ -2287,7 +2328,7 @@
       "postado": false
     },
     {
-      "occurrence": "055",
+      "occurrence": "056",
       "scheduledAt": "2027-01-31T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 48,
@@ -2327,7 +2368,7 @@
       "postado": false
     },
     {
-      "occurrence": "056",
+      "occurrence": "057",
       "scheduledAt": "2027-02-02T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 49,
@@ -2367,7 +2408,7 @@
       "postado": false
     },
     {
-      "occurrence": "057",
+      "occurrence": "058",
       "scheduledAt": "2027-02-04T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 50,
@@ -2407,7 +2448,7 @@
       "postado": false
     },
     {
-      "occurrence": "058",
+      "occurrence": "059",
       "scheduledAt": "2027-02-07T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 51,
@@ -2447,7 +2488,7 @@
       "postado": false
     },
     {
-      "occurrence": "059",
+      "occurrence": "060",
       "scheduledAt": "2027-02-09T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 52,
@@ -2487,7 +2528,7 @@
       "postado": false
     },
     {
-      "occurrence": "060",
+      "occurrence": "061",
       "scheduledAt": "2027-02-11T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 10,
@@ -2527,7 +2568,7 @@
       "postado": false
     },
     {
-      "occurrence": "061",
+      "occurrence": "062",
       "scheduledAt": "2027-02-14T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 53,
@@ -2567,7 +2608,7 @@
       "postado": false
     },
     {
-      "occurrence": "062",
+      "occurrence": "063",
       "scheduledAt": "2027-02-16T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 54,
@@ -2607,7 +2648,7 @@
       "postado": false
     },
     {
-      "occurrence": "063",
+      "occurrence": "064",
       "scheduledAt": "2027-02-18T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 55,
@@ -2647,7 +2688,7 @@
       "postado": false
     },
     {
-      "occurrence": "064",
+      "occurrence": "065",
       "scheduledAt": "2027-02-21T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 56,
@@ -2687,7 +2728,7 @@
       "postado": false
     },
     {
-      "occurrence": "065",
+      "occurrence": "066",
       "scheduledAt": "2027-02-23T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 57,
@@ -2727,7 +2768,7 @@
       "postado": false
     },
     {
-      "occurrence": "066",
+      "occurrence": "067",
       "scheduledAt": "2027-02-25T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 58,
@@ -2767,7 +2808,7 @@
       "postado": false
     },
     {
-      "occurrence": "067",
+      "occurrence": "068",
       "scheduledAt": "2027-02-28T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 2,
@@ -2834,7 +2875,7 @@
       "postado": false
     },
     {
-      "occurrence": "068",
+      "occurrence": "069",
       "scheduledAt": "2027-03-02T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 59,
@@ -2874,7 +2915,7 @@
       "postado": false
     },
     {
-      "occurrence": "069",
+      "occurrence": "070",
       "scheduledAt": "2027-03-04T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 60,
@@ -2914,7 +2955,7 @@
       "postado": false
     },
     {
-      "occurrence": "070",
+      "occurrence": "071",
       "scheduledAt": "2027-03-07T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 61,
@@ -2954,7 +2995,7 @@
       "postado": false
     },
     {
-      "occurrence": "071",
+      "occurrence": "072",
       "scheduledAt": "2027-03-09T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 62,
@@ -2994,7 +3035,7 @@
       "postado": false
     },
     {
-      "occurrence": "072",
+      "occurrence": "073",
       "scheduledAt": "2027-03-11T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 63,
@@ -3034,7 +3075,7 @@
       "postado": false
     },
     {
-      "occurrence": "073",
+      "occurrence": "074",
       "scheduledAt": "2027-03-14T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 64,
@@ -3074,7 +3115,7 @@
       "postado": false
     },
     {
-      "occurrence": "074",
+      "occurrence": "075",
       "scheduledAt": "2027-03-16T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 65,
@@ -3114,7 +3155,7 @@
       "postado": false
     },
     {
-      "occurrence": "075",
+      "occurrence": "076",
       "scheduledAt": "2027-03-18T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 24,
@@ -3154,7 +3195,7 @@
       "postado": false
     },
     {
-      "occurrence": "076",
+      "occurrence": "077",
       "scheduledAt": "2027-03-21T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 66,
@@ -3194,7 +3235,7 @@
       "postado": false
     },
     {
-      "occurrence": "077",
+      "occurrence": "078",
       "scheduledAt": "2027-03-23T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 67,
@@ -3234,7 +3275,7 @@
       "postado": false
     },
     {
-      "occurrence": "078",
+      "occurrence": "079",
       "scheduledAt": "2027-03-25T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 68,
@@ -3274,7 +3315,7 @@
       "postado": false
     },
     {
-      "occurrence": "079",
+      "occurrence": "080",
       "scheduledAt": "2027-03-28T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 69,
@@ -3314,7 +3355,7 @@
       "postado": false
     },
     {
-      "occurrence": "080",
+      "occurrence": "081",
       "scheduledAt": "2027-03-30T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 70,
@@ -3354,7 +3395,7 @@
       "postado": false
     },
     {
-      "occurrence": "081",
+      "occurrence": "082",
       "scheduledAt": "2027-04-01T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 71,
@@ -3394,7 +3435,7 @@
       "postado": false
     },
     {
-      "occurrence": "082",
+      "occurrence": "083",
       "scheduledAt": "2027-04-04T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 72,
@@ -3434,7 +3475,7 @@
       "postado": false
     },
     {
-      "occurrence": "083",
+      "occurrence": "084",
       "scheduledAt": "2027-04-06T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 73,
@@ -3474,7 +3515,7 @@
       "postado": false
     },
     {
-      "occurrence": "084",
+      "occurrence": "085",
       "scheduledAt": "2027-04-08T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 74,
@@ -3514,7 +3555,7 @@
       "postado": false
     },
     {
-      "occurrence": "085",
+      "occurrence": "086",
       "scheduledAt": "2027-04-11T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 75,
@@ -3554,7 +3595,7 @@
       "postado": false
     },
     {
-      "occurrence": "086",
+      "occurrence": "087",
       "scheduledAt": "2027-04-13T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 76,
@@ -3594,7 +3635,7 @@
       "postado": false
     },
     {
-      "occurrence": "087",
+      "occurrence": "088",
       "scheduledAt": "2027-04-15T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 77,
@@ -3634,7 +3675,7 @@
       "postado": false
     },
     {
-      "occurrence": "088",
+      "occurrence": "089",
       "scheduledAt": "2027-04-18T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 78,
@@ -3674,7 +3715,7 @@
       "postado": false
     },
     {
-      "occurrence": "089",
+      "occurrence": "090",
       "scheduledAt": "2027-04-20T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 79,
@@ -3714,7 +3755,7 @@
       "postado": false
     },
     {
-      "occurrence": "090",
+      "occurrence": "091",
       "scheduledAt": "2027-04-22T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 39,
@@ -3766,7 +3807,7 @@
       "postado": false
     },
     {
-      "occurrence": "091",
+      "occurrence": "092",
       "scheduledAt": "2027-04-25T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 80,
@@ -3806,7 +3847,7 @@
       "postado": false
     },
     {
-      "occurrence": "092",
+      "occurrence": "093",
       "scheduledAt": "2027-04-27T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 81,
@@ -3846,7 +3887,7 @@
       "postado": false
     },
     {
-      "occurrence": "093",
+      "occurrence": "094",
       "scheduledAt": "2027-04-29T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 82,
@@ -3886,7 +3927,7 @@
       "postado": false
     },
     {
-      "occurrence": "094",
+      "occurrence": "095",
       "scheduledAt": "2027-05-02T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 83,
@@ -3926,7 +3967,7 @@
       "postado": false
     },
     {
-      "occurrence": "095",
+      "occurrence": "096",
       "scheduledAt": "2027-05-04T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 84,
@@ -3966,7 +4007,7 @@
       "postado": false
     },
     {
-      "occurrence": "096",
+      "occurrence": "097",
       "scheduledAt": "2027-05-06T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 85,
@@ -4006,7 +4047,7 @@
       "postado": false
     },
     {
-      "occurrence": "097",
+      "occurrence": "098",
       "scheduledAt": "2027-05-09T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 2,
@@ -4073,7 +4114,7 @@
       "postado": false
     },
     {
-      "occurrence": "098",
+      "occurrence": "099",
       "scheduledAt": "2027-05-11T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 86,
@@ -4113,7 +4154,7 @@
       "postado": false
     },
     {
-      "occurrence": "099",
+      "occurrence": "100",
       "scheduledAt": "2027-05-13T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 87,
@@ -4153,7 +4194,7 @@
       "postado": false
     },
     {
-      "occurrence": "100",
+      "occurrence": "101",
       "scheduledAt": "2027-05-16T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 88,
@@ -4193,7 +4234,7 @@
       "postado": false
     },
     {
-      "occurrence": "101",
+      "occurrence": "102",
       "scheduledAt": "2027-05-18T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 89,
@@ -4233,7 +4274,7 @@
       "postado": false
     },
     {
-      "occurrence": "102",
+      "occurrence": "103",
       "scheduledAt": "2027-05-20T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 90,
@@ -4273,7 +4314,7 @@
       "postado": false
     },
     {
-      "occurrence": "103",
+      "occurrence": "104",
       "scheduledAt": "2027-05-23T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 91,
@@ -4313,7 +4354,7 @@
       "postado": false
     },
     {
-      "occurrence": "104",
+      "occurrence": "105",
       "scheduledAt": "2027-05-25T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 92,
@@ -4353,7 +4394,7 @@
       "postado": false
     },
     {
-      "occurrence": "105",
+      "occurrence": "106",
       "scheduledAt": "2027-05-27T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 10,
@@ -4393,7 +4434,7 @@
       "postado": false
     },
     {
-      "occurrence": "106",
+      "occurrence": "107",
       "scheduledAt": "2027-05-30T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 93,
@@ -4433,7 +4474,7 @@
       "postado": false
     },
     {
-      "occurrence": "107",
+      "occurrence": "108",
       "scheduledAt": "2027-06-01T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 94,
@@ -4473,7 +4514,7 @@
       "postado": false
     },
     {
-      "occurrence": "108",
+      "occurrence": "109",
       "scheduledAt": "2027-06-03T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 95,
@@ -4513,7 +4554,7 @@
       "postado": false
     },
     {
-      "occurrence": "109",
+      "occurrence": "110",
       "scheduledAt": "2027-06-06T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 96,
@@ -4553,7 +4594,7 @@
       "postado": false
     },
     {
-      "occurrence": "110",
+      "occurrence": "111",
       "scheduledAt": "2027-06-08T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 97,
@@ -4593,7 +4634,7 @@
       "postado": false
     },
     {
-      "occurrence": "111",
+      "occurrence": "112",
       "scheduledAt": "2027-06-10T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 98,
@@ -4633,7 +4674,7 @@
       "postado": false
     },
     {
-      "occurrence": "112",
+      "occurrence": "113",
       "scheduledAt": "2027-06-13T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 2,
@@ -4700,7 +4741,7 @@
       "postado": false
     },
     {
-      "occurrence": "113",
+      "occurrence": "114",
       "scheduledAt": "2027-06-15T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 99,
@@ -4740,7 +4781,7 @@
       "postado": false
     },
     {
-      "occurrence": "114",
+      "occurrence": "115",
       "scheduledAt": "2027-06-17T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 100,
@@ -4780,7 +4821,7 @@
       "postado": false
     },
     {
-      "occurrence": "115",
+      "occurrence": "116",
       "scheduledAt": "2027-06-20T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 101,
@@ -4820,7 +4861,7 @@
       "postado": false
     },
     {
-      "occurrence": "116",
+      "occurrence": "117",
       "scheduledAt": "2027-06-22T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 102,
@@ -4860,7 +4901,7 @@
       "postado": false
     },
     {
-      "occurrence": "117",
+      "occurrence": "118",
       "scheduledAt": "2027-06-24T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 103,
@@ -4900,7 +4941,7 @@
       "postado": false
     },
     {
-      "occurrence": "118",
+      "occurrence": "119",
       "scheduledAt": "2027-06-27T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 104,
@@ -4940,7 +4981,7 @@
       "postado": false
     },
     {
-      "occurrence": "119",
+      "occurrence": "120",
       "scheduledAt": "2027-06-29T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 105,
@@ -4980,7 +5021,7 @@
       "postado": false
     },
     {
-      "occurrence": "120",
+      "occurrence": "121",
       "scheduledAt": "2027-07-01T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 24,
@@ -5020,7 +5061,7 @@
       "postado": false
     },
     {
-      "occurrence": "121",
+      "occurrence": "122",
       "scheduledAt": "2027-07-04T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 106,
@@ -5060,7 +5101,7 @@
       "postado": false
     },
     {
-      "occurrence": "122",
+      "occurrence": "123",
       "scheduledAt": "2027-07-06T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 107,
@@ -5100,7 +5141,7 @@
       "postado": false
     },
     {
-      "occurrence": "123",
+      "occurrence": "124",
       "scheduledAt": "2027-07-08T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 108,
@@ -5140,7 +5181,7 @@
       "postado": false
     },
     {
-      "occurrence": "124",
+      "occurrence": "125",
       "scheduledAt": "2027-07-11T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 109,
@@ -5180,7 +5221,7 @@
       "postado": false
     },
     {
-      "occurrence": "125",
+      "occurrence": "126",
       "scheduledAt": "2027-07-13T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 110,
@@ -5220,7 +5261,7 @@
       "postado": false
     },
     {
-      "occurrence": "126",
+      "occurrence": "127",
       "scheduledAt": "2027-07-15T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 111,
@@ -5260,7 +5301,7 @@
       "postado": false
     },
     {
-      "occurrence": "127",
+      "occurrence": "128",
       "scheduledAt": "2027-07-18T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 31,
@@ -5300,7 +5341,7 @@
       "postado": false
     },
     {
-      "occurrence": "128",
+      "occurrence": "129",
       "scheduledAt": "2027-07-20T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 112,
@@ -5340,7 +5381,7 @@
       "postado": false
     },
     {
-      "occurrence": "129",
+      "occurrence": "130",
       "scheduledAt": "2027-07-22T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 113,
@@ -5380,7 +5421,7 @@
       "postado": false
     },
     {
-      "occurrence": "130",
+      "occurrence": "131",
       "scheduledAt": "2027-07-25T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 114,
@@ -5420,7 +5461,7 @@
       "postado": false
     },
     {
-      "occurrence": "131",
+      "occurrence": "132",
       "scheduledAt": "2027-07-27T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 115,
@@ -5460,7 +5501,7 @@
       "postado": false
     },
     {
-      "occurrence": "132",
+      "occurrence": "133",
       "scheduledAt": "2027-07-29T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 116,
@@ -5500,7 +5541,7 @@
       "postado": false
     },
     {
-      "occurrence": "133",
+      "occurrence": "134",
       "scheduledAt": "2027-08-01T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 117,
@@ -5540,7 +5581,7 @@
       "postado": false
     },
     {
-      "occurrence": "134",
+      "occurrence": "135",
       "scheduledAt": "2027-08-03T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 118,
@@ -5580,7 +5621,7 @@
       "postado": false
     },
     {
-      "occurrence": "135",
+      "occurrence": "136",
       "scheduledAt": "2027-08-05T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 39,
@@ -5632,7 +5673,7 @@
       "postado": false
     },
     {
-      "occurrence": "136",
+      "occurrence": "137",
       "scheduledAt": "2027-08-08T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 119,
@@ -5672,7 +5713,7 @@
       "postado": false
     },
     {
-      "occurrence": "137",
+      "occurrence": "138",
       "scheduledAt": "2027-08-10T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 120,
@@ -5712,7 +5753,7 @@
       "postado": false
     },
     {
-      "occurrence": "138",
+      "occurrence": "139",
       "scheduledAt": "2027-08-12T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 121,
@@ -5752,7 +5793,7 @@
       "postado": false
     },
     {
-      "occurrence": "139",
+      "occurrence": "140",
       "scheduledAt": "2027-08-15T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 122,
@@ -5792,7 +5833,7 @@
       "postado": false
     },
     {
-      "occurrence": "140",
+      "occurrence": "141",
       "scheduledAt": "2027-08-17T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 123,
@@ -5836,7 +5877,7 @@
       "postado": false
     },
     {
-      "occurrence": "141",
+      "occurrence": "142",
       "scheduledAt": "2027-08-19T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 124,
@@ -5876,7 +5917,7 @@
       "postado": false
     },
     {
-      "occurrence": "142",
+      "occurrence": "143",
       "scheduledAt": "2027-08-22T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 2,
@@ -5943,7 +5984,7 @@
       "postado": false
     },
     {
-      "occurrence": "143",
+      "occurrence": "144",
       "scheduledAt": "2027-08-24T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 125,
@@ -5983,7 +6024,7 @@
       "postado": false
     },
     {
-      "occurrence": "144",
+      "occurrence": "145",
       "scheduledAt": "2027-08-26T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 126,
@@ -6023,7 +6064,7 @@
       "postado": false
     },
     {
-      "occurrence": "145",
+      "occurrence": "146",
       "scheduledAt": "2027-08-29T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 127,
@@ -6063,7 +6104,7 @@
       "postado": false
     },
     {
-      "occurrence": "146",
+      "occurrence": "147",
       "scheduledAt": "2027-08-31T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 128,
@@ -6103,7 +6144,7 @@
       "postado": false
     },
     {
-      "occurrence": "147",
+      "occurrence": "148",
       "scheduledAt": "2027-09-02T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 129,
@@ -6143,7 +6184,7 @@
       "postado": false
     },
     {
-      "occurrence": "148",
+      "occurrence": "149",
       "scheduledAt": "2027-09-05T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 130,
@@ -6187,7 +6228,7 @@
       "postado": false
     },
     {
-      "occurrence": "149",
+      "occurrence": "150",
       "scheduledAt": "2027-09-07T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 131,
@@ -6227,7 +6268,7 @@
       "postado": false
     },
     {
-      "occurrence": "150",
+      "occurrence": "151",
       "scheduledAt": "2027-09-09T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 10,
@@ -6267,7 +6308,7 @@
       "postado": false
     },
     {
-      "occurrence": "151",
+      "occurrence": "152",
       "scheduledAt": "2027-09-12T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 132,
@@ -6307,7 +6348,7 @@
       "postado": false
     },
     {
-      "occurrence": "152",
+      "occurrence": "153",
       "scheduledAt": "2027-09-14T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 133,
@@ -6347,7 +6388,7 @@
       "postado": false
     },
     {
-      "occurrence": "153",
+      "occurrence": "154",
       "scheduledAt": "2027-09-16T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 134,
@@ -6391,7 +6432,7 @@
       "postado": false
     },
     {
-      "occurrence": "154",
+      "occurrence": "155",
       "scheduledAt": "2027-09-19T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 135,
@@ -6435,7 +6476,7 @@
       "postado": false
     },
     {
-      "occurrence": "155",
+      "occurrence": "156",
       "scheduledAt": "2027-09-21T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 136,
@@ -6479,7 +6520,7 @@
       "postado": false
     },
     {
-      "occurrence": "156",
+      "occurrence": "157",
       "scheduledAt": "2027-09-23T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 137,
@@ -6519,7 +6560,7 @@
       "postado": false
     },
     {
-      "occurrence": "157",
+      "occurrence": "158",
       "scheduledAt": "2027-09-26T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 2,
@@ -6586,7 +6627,7 @@
       "postado": false
     },
     {
-      "occurrence": "158",
+      "occurrence": "159",
       "scheduledAt": "2027-09-28T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 138,
@@ -6626,7 +6667,7 @@
       "postado": false
     },
     {
-      "occurrence": "159",
+      "occurrence": "160",
       "scheduledAt": "2027-09-30T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 139,
@@ -6666,7 +6707,7 @@
       "postado": false
     },
     {
-      "occurrence": "160",
+      "occurrence": "161",
       "scheduledAt": "2027-10-03T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 140,
@@ -6710,7 +6751,7 @@
       "postado": false
     },
     {
-      "occurrence": "161",
+      "occurrence": "162",
       "scheduledAt": "2027-10-05T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 141,
@@ -6754,7 +6795,7 @@
       "postado": false
     },
     {
-      "occurrence": "162",
+      "occurrence": "163",
       "scheduledAt": "2027-10-07T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 142,
@@ -6798,7 +6839,7 @@
       "postado": false
     },
     {
-      "occurrence": "163",
+      "occurrence": "164",
       "scheduledAt": "2027-10-10T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 143,
@@ -6838,7 +6879,7 @@
       "postado": false
     },
     {
-      "occurrence": "164",
+      "occurrence": "165",
       "scheduledAt": "2027-10-12T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 144,
@@ -6878,7 +6919,7 @@
       "postado": false
     },
     {
-      "occurrence": "165",
+      "occurrence": "166",
       "scheduledAt": "2027-10-14T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 24,
@@ -6918,7 +6959,7 @@
       "postado": false
     },
     {
-      "occurrence": "166",
+      "occurrence": "167",
       "scheduledAt": "2027-10-17T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 145,
@@ -6958,7 +6999,7 @@
       "postado": false
     },
     {
-      "occurrence": "167",
+      "occurrence": "168",
       "scheduledAt": "2027-10-19T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 146,
@@ -7002,7 +7043,7 @@
       "postado": false
     },
     {
-      "occurrence": "168",
+      "occurrence": "169",
       "scheduledAt": "2027-10-21T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 147,
@@ -7046,7 +7087,7 @@
       "postado": false
     },
     {
-      "occurrence": "169",
+      "occurrence": "170",
       "scheduledAt": "2027-10-24T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 148,
@@ -7090,7 +7131,7 @@
       "postado": false
     },
     {
-      "occurrence": "170",
+      "occurrence": "171",
       "scheduledAt": "2027-10-26T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 149,
@@ -7134,7 +7175,7 @@
       "postado": false
     },
     {
-      "occurrence": "171",
+      "occurrence": "172",
       "scheduledAt": "2027-10-28T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 150,
@@ -7174,7 +7215,7 @@
       "postado": false
     },
     {
-      "occurrence": "172",
+      "occurrence": "173",
       "scheduledAt": "2027-10-31T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 72,
@@ -7214,7 +7255,7 @@
       "postado": false
     },
     {
-      "occurrence": "173",
+      "occurrence": "174",
       "scheduledAt": "2027-11-02T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 151,
@@ -7254,7 +7295,7 @@
       "postado": false
     },
     {
-      "occurrence": "174",
+      "occurrence": "175",
       "scheduledAt": "2027-11-04T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 152,
@@ -7298,7 +7339,7 @@
       "postado": false
     },
     {
-      "occurrence": "175",
+      "occurrence": "176",
       "scheduledAt": "2027-11-07T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 153,
@@ -7342,7 +7383,7 @@
       "postado": false
     },
     {
-      "occurrence": "176",
+      "occurrence": "177",
       "scheduledAt": "2027-11-09T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 154,
@@ -7386,7 +7427,7 @@
       "postado": false
     },
     {
-      "occurrence": "177",
+      "occurrence": "178",
       "scheduledAt": "2027-11-11T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 155,
@@ -7430,7 +7471,7 @@
       "postado": false
     },
     {
-      "occurrence": "178",
+      "occurrence": "179",
       "scheduledAt": "2027-11-14T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 156,
@@ -7470,7 +7511,7 @@
       "postado": false
     },
     {
-      "occurrence": "179",
+      "occurrence": "180",
       "scheduledAt": "2027-11-16T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 157,
@@ -7510,7 +7551,7 @@
       "postado": false
     },
     {
-      "occurrence": "180",
+      "occurrence": "181",
       "scheduledAt": "2027-11-18T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 39,
@@ -7562,7 +7603,7 @@
       "postado": false
     },
     {
-      "occurrence": "181",
+      "occurrence": "182",
       "scheduledAt": "2027-11-21T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 158,
@@ -7606,7 +7647,7 @@
       "postado": false
     },
     {
-      "occurrence": "182",
+      "occurrence": "183",
       "scheduledAt": "2027-11-23T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 159,
@@ -7650,7 +7691,7 @@
       "postado": false
     },
     {
-      "occurrence": "183",
+      "occurrence": "184",
       "scheduledAt": "2027-11-25T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 160,
@@ -7694,7 +7735,7 @@
       "postado": false
     },
     {
-      "occurrence": "184",
+      "occurrence": "185",
       "scheduledAt": "2027-11-28T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 161,
@@ -7738,7 +7779,7 @@
       "postado": false
     },
     {
-      "occurrence": "185",
+      "occurrence": "186",
       "scheduledAt": "2027-11-30T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 162,
@@ -7778,7 +7819,7 @@
       "postado": false
     },
     {
-      "occurrence": "186",
+      "occurrence": "187",
       "scheduledAt": "2027-12-02T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 163,
@@ -7822,7 +7863,7 @@
       "postado": false
     },
     {
-      "occurrence": "187",
+      "occurrence": "188",
       "scheduledAt": "2027-12-05T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 2,
@@ -7889,7 +7930,7 @@
       "postado": false
     },
     {
-      "occurrence": "188",
+      "occurrence": "189",
       "scheduledAt": "2027-12-07T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 164,
@@ -7933,7 +7974,7 @@
       "postado": false
     },
     {
-      "occurrence": "189",
+      "occurrence": "190",
       "scheduledAt": "2027-12-09T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 165,
@@ -7977,7 +8018,7 @@
       "postado": false
     },
     {
-      "occurrence": "190",
+      "occurrence": "191",
       "scheduledAt": "2027-12-12T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 166,
@@ -8021,7 +8062,7 @@
       "postado": false
     },
     {
-      "occurrence": "191",
+      "occurrence": "192",
       "scheduledAt": "2027-12-14T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 167,
@@ -8065,7 +8106,7 @@
       "postado": false
     },
     {
-      "occurrence": "192",
+      "occurrence": "193",
       "scheduledAt": "2027-12-16T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 168,
@@ -8109,7 +8150,7 @@
       "postado": false
     },
     {
-      "occurrence": "193",
+      "occurrence": "194",
       "scheduledAt": "2027-12-19T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 169,
@@ -8149,7 +8190,7 @@
       "postado": false
     },
     {
-      "occurrence": "194",
+      "occurrence": "195",
       "scheduledAt": "2027-12-21T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 170,
@@ -8193,7 +8234,7 @@
       "postado": false
     },
     {
-      "occurrence": "195",
+      "occurrence": "196",
       "scheduledAt": "2027-12-23T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 10,
@@ -8233,7 +8274,7 @@
       "postado": false
     },
     {
-      "occurrence": "196",
+      "occurrence": "197",
       "scheduledAt": "2027-12-26T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 171,
@@ -8273,7 +8314,7 @@
       "postado": false
     },
     {
-      "occurrence": "197",
+      "occurrence": "198",
       "scheduledAt": "2027-12-28T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 172,
@@ -8317,7 +8358,7 @@
       "postado": false
     },
     {
-      "occurrence": "198",
+      "occurrence": "199",
       "scheduledAt": "2027-12-30T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 173,
@@ -8357,7 +8398,7 @@
       "postado": false
     },
     {
-      "occurrence": "199",
+      "occurrence": "200",
       "scheduledAt": "2028-01-02T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 174,
@@ -8401,7 +8442,7 @@
       "postado": false
     },
     {
-      "occurrence": "200",
+      "occurrence": "201",
       "scheduledAt": "2028-01-04T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 175,
@@ -8445,7 +8486,7 @@
       "postado": false
     },
     {
-      "occurrence": "201",
+      "occurrence": "202",
       "scheduledAt": "2028-01-06T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 176,
@@ -8489,7 +8530,7 @@
       "postado": false
     },
     {
-      "occurrence": "202",
+      "occurrence": "203",
       "scheduledAt": "2028-01-09T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 2,
@@ -8556,7 +8597,7 @@
       "postado": false
     },
     {
-      "occurrence": "203",
+      "occurrence": "204",
       "scheduledAt": "2028-01-11T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 177,
@@ -8600,7 +8641,7 @@
       "postado": false
     },
     {
-      "occurrence": "204",
+      "occurrence": "205",
       "scheduledAt": "2028-01-13T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 178,
@@ -8644,7 +8685,7 @@
       "postado": false
     },
     {
-      "occurrence": "205",
+      "occurrence": "206",
       "scheduledAt": "2028-01-16T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 179,
@@ -8677,166 +8718,6 @@
       },
       "facebook": {
         "message": "KAMMARA IS A UNIVERSE\nKammara is a universe of countless worlds. Each one has its own people, its own way of being, and stories waiting to be told.\n\nKAMMARA É UM UNIVERSO\nKammara é um universo com incontáveis planetas. Cada um tem seu povo, seu jeito de existir e histórias esperando para serem contadas.",
-        "status": "pending",
-        "postId": null,
-        "error": null
-      },
-      "postado": false
-    },
-    {
-      "occurrence": "206",
-      "scheduledAt": "2028-01-18T08:00:00-03:00",
-      "timezone": "America/Sao_Paulo",
-      "discovery": 180,
-      "slug": "cada-planeta-sua-historia",
-      "type": "institutional",
-      "campaign": null,
-      "media": {
-        "kind": "image",
-        "image": {
-          "local": "mkt/templates/_PUBLICAR/180.png",
-          "key": "social/kammara/discoveries/180-cada-planeta-sua-historia-v2.png",
-          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/kammara/discoveries/180-cada-planeta-sua-historia-v2.png"
-        }
-      },
-      "destinationUrl": null,
-      "destinationUrls": {
-        "pt": null,
-        "en": null
-      },
-      "upload": {
-        "status": "pending",
-        "verifiedAt": null,
-        "error": null
-      },
-      "instagram": {
-        "caption": "EVERY WORLD LIVES ITS OWN STORY\nEvery world is one of a kind. Some flow in calm, others live in motion; some build, some keep, and some begin again with every cycle.\n\nCADA PLANETA VIVE SUA PRÓPRIA HISTÓRIA\nCada planeta é único. Alguns fluem em calma, outros vivem em movimento; alguns constroem, alguns guardam e alguns recomeçam a cada ciclo.",
-        "status": "pending",
-        "mediaId": null,
-        "error": null
-      },
-      "facebook": {
-        "message": "EVERY WORLD LIVES ITS OWN STORY\nEvery world is one of a kind. Some flow in calm, others live in motion; some build, some keep, and some begin again with every cycle.\n\nCADA PLANETA VIVE SUA PRÓPRIA HISTÓRIA\nCada planeta é único. Alguns fluem em calma, outros vivem em movimento; alguns constroem, alguns guardam e alguns recomeçam a cada ciclo.",
-        "status": "pending",
-        "postId": null,
-        "error": null
-      },
-      "postado": false
-    },
-    {
-      "occurrence": "207",
-      "scheduledAt": "2028-01-20T08:00:00-03:00",
-      "timezone": "America/Sao_Paulo",
-      "discovery": 181,
-      "slug": "quatro-planetas-para-comecar",
-      "type": "institutional",
-      "campaign": null,
-      "media": {
-        "kind": "image",
-        "image": {
-          "local": "mkt/templates/_PUBLICAR/181.png",
-          "key": "social/kammara/discoveries/181-quatro-planetas-para-comecar-v2.png",
-          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/kammara/discoveries/181-quatro-planetas-para-comecar-v2.png"
-        }
-      },
-      "destinationUrl": null,
-      "destinationUrls": {
-        "pt": null,
-        "en": null
-      },
-      "upload": {
-        "status": "pending",
-        "verifiedAt": null,
-        "error": null
-      },
-      "instagram": {
-        "caption": "BEGIN WITH FOUR WORLDS\nBegin with ORF-V, LUNN'P1, TRIPLEC, and ENI-4Δ. Four gateways into a universe that reaches far beyond them.\n\nCOMECE POR QUATRO PLANETAS\nComece por ORF-V, LUNN'P1, TRIPLEC e ENI-4Δ. Quatro portas de entrada para um universo que vai muito além deles.",
-        "status": "pending",
-        "mediaId": null,
-        "error": null
-      },
-      "facebook": {
-        "message": "BEGIN WITH FOUR WORLDS\nBegin with ORF-V, LUNN'P1, TRIPLEC, and ENI-4Δ. Four gateways into a universe that reaches far beyond them.\n\nCOMECE POR QUATRO PLANETAS\nComece por ORF-V, LUNN'P1, TRIPLEC e ENI-4Δ. Quatro portas de entrada para um universo que vai muito além deles.",
-        "status": "pending",
-        "postId": null,
-        "error": null
-      },
-      "postado": false
-    },
-    {
-      "occurrence": "208",
-      "scheduledAt": "2028-01-23T08:00:00-03:00",
-      "timezone": "America/Sao_Paulo",
-      "discovery": 183,
-      "slug": "computacao-transformada-em-mitologia",
-      "type": "institutional",
-      "campaign": null,
-      "media": {
-        "kind": "image",
-        "image": {
-          "local": "mkt/templates/_PUBLICAR/183.png",
-          "key": "social/kammara/discoveries/183-computacao-transformada-em-mitologia-v2.png",
-          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/kammara/discoveries/183-computacao-transformada-em-mitologia-v2.png"
-        }
-      },
-      "destinationUrl": null,
-      "destinationUrls": {
-        "pt": null,
-        "en": null
-      },
-      "upload": {
-        "status": "pending",
-        "verifiedAt": null,
-        "error": null
-      },
-      "instagram": {
-        "caption": "COMPUTING TRANSFORMED INTO MYTHOLOGY\nKammara was born as a tribute to the history of computing. Its ideas, languages, and systems became worlds, peoples, cultures, and stories.\n\nCOMPUTAÇÃO TRANSFORMADA EM MITOLOGIA\nKammara nasceu como uma homenagem à história da computação. Suas ideias, linguagens e sistemas se tornaram planetas, povos, culturas e histórias.",
-        "status": "pending",
-        "mediaId": null,
-        "error": null
-      },
-      "facebook": {
-        "message": "COMPUTING TRANSFORMED INTO MYTHOLOGY\nKammara was born as a tribute to the history of computing. Its ideas, languages, and systems became worlds, peoples, cultures, and stories.\n\nCOMPUTAÇÃO TRANSFORMADA EM MITOLOGIA\nKammara nasceu como uma homenagem à história da computação. Suas ideias, linguagens e sistemas se tornaram planetas, povos, culturas e histórias.",
-        "status": "pending",
-        "postId": null,
-        "error": null
-      },
-      "postado": false
-    },
-    {
-      "occurrence": "209",
-      "scheduledAt": "2028-01-25T08:00:00-03:00",
-      "timezone": "America/Sao_Paulo",
-      "discovery": 184,
-      "slug": "primeira-saga-comeca-em-orfv",
-      "type": "institutional",
-      "campaign": null,
-      "media": {
-        "kind": "image",
-        "image": {
-          "local": "mkt/templates/_PUBLICAR/184.png",
-          "key": "social/kammara/discoveries/184-primeira-saga-comeca-em-orfv-v2.png",
-          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/kammara/discoveries/184-primeira-saga-comeca-em-orfv-v2.png"
-        }
-      },
-      "destinationUrl": "https://guittamonategastudio.com/pt/books/saga-orf-v-volume-1",
-      "destinationUrls": {
-        "pt": "https://guittamonategastudio.com/pt/books/saga-orf-v-volume-1",
-        "en": "https://guittamonategastudio.com/en/books/saga-orf-v-volume-1"
-      },
-      "upload": {
-        "status": "pending",
-        "verifiedAt": null,
-        "error": null
-      },
-      "instagram": {
-        "caption": "THE FIRST SAGA BEGINS IN ORF-V\nThe book Saga in ORF-V is one gateway into Kammara. A call for help brings different worlds together and sets the first saga in motion.\n\nA PRIMEIRA SAGA COMEÇA EM ORF-V\nO livro Saga em ORF-V é uma porta de entrada para Kammara. Um pedido de ajuda reúne diferentes planetas e coloca a primeira saga em movimento.\n\nLink in bio. / Link no perfil.",
-        "status": "pending",
-        "mediaId": null,
-        "error": null
-      },
-      "facebook": {
-        "message": "THE FIRST SAGA BEGINS IN ORF-V\nThe book Saga in ORF-V is one gateway into Kammara. A call for help brings different worlds together and sets the first saga in motion.\n\nA PRIMEIRA SAGA COMEÇA EM ORF-V\nO livro Saga em ORF-V é uma porta de entrada para Kammara. Um pedido de ajuda reúne diferentes planetas e coloca a primeira saga em movimento.\n\nEN: https://guittamonategastudio.com/en/books/saga-orf-v-volume-1\nPT-BR: https://guittamonategastudio.com/pt/books/saga-orf-v-volume-1",
         "status": "pending",
         "postId": null,
         "error": null
