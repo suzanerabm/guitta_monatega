@@ -61,6 +61,19 @@ async function waitUntilReady(creationId: string, token: string, label: string):
   throw new Error(`Instagram ${label} was not ready within 150 seconds.`);
 }
 
+async function publishReadyContainer(account: string, creationId: string, token: string, operation: string): Promise<IdPayload> {
+  for (let attempt = 0; attempt < 6; attempt += 1) {
+    try {
+      return await post(`${account}/media_publish`, { creation_id: creationId }, token, operation);
+    } catch (error) {
+      const stillProcessing = error instanceof Error && error.message.includes("media is not ready for publishing");
+      if (!stillProcessing || attempt === 5) throw error;
+      await new Promise((resolve) => setTimeout(resolve, 5000));
+    }
+  }
+  throw new Error(`${operation}: Instagram did not accept a ready media container.`);
+}
+
 async function publishInstagram(item: PublicationItem): Promise<string> {
   const account = env("KAMMARA_INSTAGRAM_USER_ID");
   const token = env("KAMMARA_META_ACCESS_TOKEN");
@@ -97,7 +110,7 @@ async function publishInstagram(item: PublicationItem): Promise<string> {
     await waitUntilReady(creationId, token, "image");
   }
 
-  const published = await post(`${account}/media_publish`, { creation_id: creationId }, token, "publish on Instagram");
+  const published = await publishReadyContainer(account, creationId, token, "publish on Instagram");
   if (!published.id) throw new Error("Instagram did not return the published media ID.");
   await verifyPublished(published.id, token, "verify Instagram publication");
   return published.id;
