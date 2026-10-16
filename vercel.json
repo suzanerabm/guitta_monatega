@@ -13,22 +13,6 @@
     {
       "path": "/api/cron/social-publishing-watchdog",
       "schedule": "30 3 * * *"
-    },
-    {
-      "path": "/api/cron/bichittos-publish",
-      "schedule": "0 12 * * *"
-    },
-    {
-      "path": "/api/cron/bichittos-publish",
-      "schedule": "0 13 * * *"
-    },
-    {
-      "path": "/api/cron/bichittos-publish",
-      "schedule": "20 16 * * *"
-    },
-    {
-      "path": "/api/cron/guitta-studio-publish",
-      "schedule": "0 12 * * *"
     }
   ]
 }

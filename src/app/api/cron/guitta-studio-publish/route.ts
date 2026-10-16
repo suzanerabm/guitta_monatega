@@ -5,6 +5,7 @@ import { reportPublishingFailure } from "@/lib/social-publishing-alerts";
 
 export const runtime = "nodejs";
 export const maxDuration = 300;
+const publishingPaused = true;
 
 function authorized(request: Request): boolean {
   const secret = process.env.CRON_SECRET;
@@ -16,6 +17,12 @@ function authorized(request: Request): boolean {
 }
 
 export async function GET(request: Request) {
+  if (publishingPaused) {
+    return Response.json(
+      { paused: true, message: "Guitta Studio publishing is paused pending a Meta API safety review." },
+      { status: 503 },
+    );
+  }
   if (!authorized(request)) return Response.json({ error: "Unauthorized" }, { status: 401 });
   try {
     const dryRun = new URL(request.url).searchParams.get("dryRun") === "1";
