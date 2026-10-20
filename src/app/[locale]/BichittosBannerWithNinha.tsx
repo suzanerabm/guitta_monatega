@@ -54,7 +54,7 @@ const characterCards = [
   },
   {
     id: 'cheiodebolinha',
-    label: 'Bobbin',
+    label: 'Cheio de Bolinha',
     color:
       palettes.cheiodebolinha.bichittos?.accent ??
       palettes.cheiodebolinha.colors[0],
