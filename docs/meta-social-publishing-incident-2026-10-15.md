@@ -88,6 +88,21 @@ Como contenção, os três publicadores foram pausados, seus crons removidos da 
 - Os tokens Meta na Vercel foram confirmados como variáveis do tipo `Secret`, com valores ocultos.
 - Arquivos locais `.env.*.local` estavam ignorados pelo Git, mas alguns tinham permissão `644`; as permissões foram corrigidas para `600`.
 
+### 20 de outubro de 2026
+
+Remoção dos laços em todos os publicadores, com as três marcas ainda pausadas:
+
+- Vercel (`src/lib/*-social/meta.ts`): fim das 75 consultas de status e das 6 tentativas de `media_publish`. Cada container recebe uma única espera local, sem chamadas, e uma única consulta; se não estiver pronto, a ocorrência vai para `needs_review`.
+- Teto de chamadas por execução e plataforma: imagem 4 no Instagram e 3 no Facebook; carrossel de 10 imagens 24 e 13. Ultrapassar o teto interrompe a execução.
+- Removida de `bichittos-social/state.ts` e `guitta-studio-social/state.ts` a reabertura automática de ocorrências com erro "media is not ready for publishing", que permitia nova tentativa no cron seguinte.
+- Cópia-fonte do Bichittos (`bichittos/mkt/publishing/vercel/`) alinhada à produção, incluindo a trava de pausa que faltava em `route.ts`.
+- Biblioteca local da Kammara, usada também pelo Bichittos: fim dos laços de 30 consultas e token retirado da URL de consulta.
+- Executores locais de Kammara e Bichittos: trava de pausa em todos os comandos de publicação e no máximo uma ocorrência por execução.
+- Os três scripts `sync-vercel-integration.mjs` agora recusam a execução.
+- Testes: `src/lib/social-meta-publishers.test.ts` conta as chamadas nas três marcas; testes locais em `instagram-publisher.test.ts`.
+
+Isto não autoriza reativação. Continuam pendentes a máquina de estados, o circuit breaker persistente, a telemetria por chamada, a rotação de credenciais e as demais etapas do processo de liberação.
+
 ## Evidências técnicas
 
 ### Código que permitia polling excessivo

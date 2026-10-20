@@ -49,9 +49,6 @@ export async function acquire(occurrence: string, now: Date, owner: string): Pro
   const current = await read(occurrence);
   if (current?.state.instagram.status === "published" && current.state.facebook.status === "published") return { status: "published" };
   if (current && new Date(current.state.lockUntil) > now && current.state.lockOwner !== owner) return { status: "locked" };
-  if (current?.state.instagram.status === "needs_review" && current.state.instagram.error?.includes("media is not ready for publishing")) {
-    current.state.instagram = { status: "pending", externalId: null, error: null };
-  }
   if (current && [current.state.instagram.status, current.state.facebook.status].some((status) => status === "publishing" || status === "needs_review")) {
     throw new Error(`Occurrence ${occurrence} needs review because a previous execution stopped during publishing.`);
   }
