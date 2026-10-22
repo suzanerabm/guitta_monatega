@@ -158,6 +158,7 @@ export default async function HomePage({
           label={t('bichittos.label')}
           title={t('bichittos.title')}
           description={t('bichittos.desc')}
+          cheioDeBolinhaName={t('bichittos.cheioDeBolinhaName')}
         />
         <KammaraBannerWithPlanets
           href={`${prefix}/kammara`}

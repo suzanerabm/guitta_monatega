@@ -13,6 +13,7 @@ interface BichittosBannerWithNinhaProps {
   label: string;
   title: string;
   description: string;
+  cheioDeBolinhaName: string;
 }
 
 const characterCards = [
@@ -54,7 +55,7 @@ const characterCards = [
   },
   {
     id: 'cheiodebolinha',
-    label: 'Cheio de Bolinha',
+    label: null,
     color:
       palettes.cheiodebolinha.bichittos?.accent ??
       palettes.cheiodebolinha.colors[0],
@@ -76,6 +77,7 @@ export function BichittosBannerWithNinha({
   label,
   title,
   description,
+  cheioDeBolinhaName,
 }: BichittosBannerWithNinhaProps) {
   const [page, setPage] = useState(0);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
@@ -127,6 +129,7 @@ export function BichittosBannerWithNinha({
       >
         {characterCards.map((character) => {
           const slide = character.slides[page % character.slides.length];
+          const characterLabel = character.label ?? cheioDeBolinhaName;
           return (
             <Box
               key={`${character.id}-${slide}`}
@@ -141,7 +144,7 @@ export function BichittosBannerWithNinha({
             >
               <NextLink
                 href={`${href}?bichitto=${character.id}`}
-                aria-label={`${title}: ${character.label}`}
+                aria-label={`${title}: ${characterLabel}`}
               >
                 <Box
                   position="absolute"
@@ -172,7 +175,7 @@ export function BichittosBannerWithNinha({
                   color={character.titleColor}
                   css={{ textShadow: 'var(--chakra-shadows-label-text)' }}
                 >
-                  {character.label}
+                  {characterLabel}
                 </Text>
                 <Image
                   src={slide}
