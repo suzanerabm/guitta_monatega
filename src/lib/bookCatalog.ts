@@ -4,12 +4,18 @@ export type BookLocale = 'pt' | 'en';
 export type BookCollection = 'art' | 'bichittos' | 'kammara';
 export type BookFormat = 'ebook' | 'paperback' | 'hardcover';
 export type PurchaseChannel = 'amazon' | 'external' | 'preorder' | 'comingSoon';
+export type BookMediaType = 'image' | 'video';
 
 export const BOOK_FORMAT_ORDER: BookFormat[] = ['ebook', 'paperback', 'hardcover'];
 
 export interface BookPrice {
   amount: number;
   currency: 'USD' | 'BRL';
+}
+
+export interface BookPromotion {
+  name: string;
+  originalPrice: BookPrice;
 }
 
 export interface BookFacts {
@@ -25,12 +31,25 @@ export interface BookFacts {
 
 export interface BookEdition {
   id: string;
+  /** Stable edition variant shared by localized versions of the same book. */
+  variantId?: string;
   format: BookFormat;
+  label?: string;
   purchaseChannel: PurchaseChannel;
   url: string | null;
   retailer: string | null;
   price?: BookPrice;
+  promotion?: BookPromotion;
   facts?: BookFacts;
+}
+
+export interface BookMedia {
+  id: string;
+  type: BookMediaType;
+  src: string;
+  poster?: string;
+  alt: string;
+  caption?: string;
 }
 
 export interface CatalogBook {
@@ -41,6 +60,7 @@ export interface CatalogBook {
   title: string;
   description: string;
   cover: string | null;
+  gallery: BookMedia[];
   editions: BookEdition[];
   contextTitle: string;
 }
@@ -76,4 +96,17 @@ export function formatBookPrice(price: BookPrice, locale: BookLocale): string {
     style: 'currency',
     currency: price.currency,
   }).format(price.amount);
+}
+
+export function isBookPromotionValid(
+  currentPrice?: BookPrice,
+  originalPrice?: BookPrice,
+): boolean {
+  return Boolean(
+    currentPrice &&
+    originalPrice &&
+    currentPrice.currency === originalPrice.currency &&
+    originalPrice.amount > currentPrice.amount &&
+    originalPrice.amount > 0,
+  );
 }

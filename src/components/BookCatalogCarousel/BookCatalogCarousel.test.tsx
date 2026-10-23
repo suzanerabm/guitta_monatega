@@ -6,7 +6,7 @@ import { BookCatalogCarousel } from './BookCatalogCarousel';
 
 const book: CatalogBook = {
   slug: 'zeco-estacoes', collection: 'bichittos', contextPath: '/bichittos', visualKey: 'zeco',
-  title: 'Zeco', description: 'Description', cover: null, contextTitle: 'Zeco',
+  title: 'Zeco', description: 'Description', cover: null, gallery: [], contextTitle: 'Zeco',
   editions: [{ id: 'ebook', format: 'ebook', purchaseChannel: 'amazon', url: null, retailer: null, price: { amount: 4.98, currency: 'USD' } }],
 };
 

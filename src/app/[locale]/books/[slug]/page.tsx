@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Box, Heading, Image, Text } from '@chakra-ui/react';
+import { Box, Heading, Text } from '@chakra-ui/react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import {
@@ -14,6 +14,7 @@ import { bookPageLayout, bookPageVisuals } from '@/theme/bookPages';
 import { homeBooksGallery } from '@/theme/artSections';
 import { BookContextBanner } from '@/components/BookContextBanner';
 import { BookEditionSelector } from '@/components/BookEditionSelector';
+import { BookMediaGallery } from '@/components/BookMediaGallery';
 import { GradientLine } from '@/components/GradientLine';
 import { OutlineActionLink } from '@/components/OutlineActionLink';
 
@@ -64,6 +65,8 @@ export default async function BookPage({
   const loc: BookLocale = locale === 'en' ? 'en' : 'pt';
   const book = getCatalogBook(slug, loc);
   if (!book) notFound();
+  const alternateLocale: BookLocale = loc === 'pt' ? 'en' : 'pt';
+  const alternateBook = getCatalogBook(slug, alternateLocale);
   const t = await getTranslations('booksPage');
   const visual = bookPageVisuals[book.visualKey];
   const comingSoon = isBookComingSoon(book);
@@ -112,13 +115,15 @@ export default async function BookPage({
           }}
         >
           {book.cover && (
-            <Image
-              src={book.cover}
-              alt={book.title}
-              width="100%"
-              height="auto"
-              borderRadius={bookPageLayout.detailCoverRadius}
-              decoding="async"
+            <BookMediaGallery
+              cover={book.cover}
+              bookTitle={book.title}
+              items={book.gallery}
+              accentColor={visual.accent}
+              frameColor={homeBooksGallery.panelBorderColor}
+              coverLabel={t('media.coverLabel')}
+              galleryLabel={t('media.galleryLabel')}
+              videoFallback={t('media.videoFallback')}
             />
           )}
           {comingSoon && (
@@ -176,6 +181,7 @@ export default async function BookPage({
               <Box as="section" aria-label={t('editionsTitle')}>
                 <BookEditionSelector
                   editions={book.editions}
+                  alternateEditions={alternateBook?.editions}
                   bookTitle={book.title}
                   locale={loc}
                   accentColor={visual.accent}
@@ -187,6 +193,8 @@ export default async function BookPage({
                     paperback: t('formats.paperback'),
                     hardcover: t('formats.hardcover'),
                   }}
+                  editionFormatLabel={t('editionFormatLabel')}
+                  digitalFormatLabel={t('digitalFormatLabel')}
                   factsLabels={{
                     readingAge: t('facts.readingAge'),
                     pageCount: t('facts.pageCount'),
@@ -200,7 +208,13 @@ export default async function BookPage({
                   }}
                   buyLabel={t('buyLabel')}
                   amazonBuyLabel={t('amazonBuyLabel')}
-                  preorderLabel={t('preorderLabel')}
+                  amazonVersionLabels={{
+                    pt: t('amazonBuyPortugueseVersionLabel'),
+                    en: t('amazonBuyEnglishVersionLabel'),
+                  }}
+                  preorderLabel={t('preorderLabel', {
+                    name: t(`preorderNames.${book.visualKey}`),
+                  })}
                   preorderEmailHint={t('preorderEmailHint')}
                   preorderEmailSubject={t.raw('preorderEmailSubject') as string}
                   preorderEmailBody={t.raw('preorderEmailBody') as string}

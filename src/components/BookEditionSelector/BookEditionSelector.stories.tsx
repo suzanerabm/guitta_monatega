@@ -21,6 +21,8 @@ export const Default: Story = {
     locale: 'pt',
     accentColor: 'orange',
     formatLabels: { ebook: 'Livro digital', paperback: 'Capa comum', hardcover: 'Capa dura' },
+    editionFormatLabel: 'Formato',
+    digitalFormatLabel: 'digital',
     factsLabels: {
       readingAge: 'Faixa etária', pageCount: 'Número de páginas', language: 'Idioma',
       dimensions: 'Dimensões', weight: 'Peso', fileSize: 'Tamanho do arquivo',
@@ -28,7 +30,7 @@ export const Default: Story = {
     },
     buyLabel: 'Comprar',
     amazonBuyLabel: 'Comprar na Amazon',
-    preorderLabel: 'Reserve sua cópia',
+    preorderLabel: 'Eu quero o Zeco!',
     preorderEmailHint: 'Ao clicar, abriremos seu aplicativo de e-mail com a mensagem pronta. O site não coleta seus dados; o envio acontece pelo seu aplicativo de e-mail.',
     preorderEmailSubject: 'Pré-venda — {title}',
     preorderEmailBody: 'Desejo comprar o livro "{title}", na edição {format}, e quero reservar 1 unidade.',

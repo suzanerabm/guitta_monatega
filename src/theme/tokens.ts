@@ -145,6 +145,7 @@ export const tokens = defineTokens({
     homeBichittosTitleBandHeight: { value: 'clamp(3.5rem, 6vw, 7rem)' },
     homeBichittosMediaSize: { value: '80%' },
     footerSocialButtonHeight: { value: '2.25rem' },
+    bookMediaThumbnail: { value: '4.5rem' },
   },
   lineHeights: {
     bookCardCompact: { value: '1.25' },
@@ -152,6 +153,8 @@ export const tokens = defineTokens({
   radii: {
     homePlanetCompact: { value: 'clamp(0.75rem, 1.4vw, 1.75rem)' },
     homePlanetOutline: { value: 'clamp(1rem, 1.7vw, 2rem)' },
+    bookMediaThumbnail: { value: '0.75rem' },
+    bookMediaThumbnailInner: { value: '0.6rem' },
   },
   spacing: {
     // Original scale (kept backward-compatible)

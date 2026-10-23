@@ -128,6 +128,7 @@ interface BookConfig {
   title?: { pt?: string; en?: string };
   description?: { pt?: string; en?: string };
   contextTitle?: { pt?: string; en?: string };
+  gallery?: BookMediaConfig[];
   editions?: BookEditionConfig[];
   buyUrl?: string;
   buyLabel?: string;
@@ -138,9 +139,26 @@ interface BookConfig {
   homeButtonImageAlt?: string;
 }
 
+interface BookMediaConfig {
+  id: string;
+  type: 'image' | 'video';
+  src: string;
+  poster?: string;
+  alt?: { pt?: string; en?: string };
+  caption?: { pt?: string; en?: string };
+}
+
 export interface BookEditionConfig {
+  /** Identificador estável da edição; obrigatório quando há duas do mesmo formato. */
+  id?: string;
   format: 'ebook' | 'paperback' | 'hardcover';
+  /** Nome já localizado, como "Capa comum — grande". */
+  label?: string;
   price?: { amount: number; currency: 'USD' | 'BRL' };
+  promotion?: {
+    name: string;
+    originalPrice: { amount: number; currency: 'USD' | 'BRL' };
+  };
   facts?: {
     readingAge?: string;
     pageCount?: number;
@@ -163,6 +181,14 @@ export interface BookEntry {
   cover: string | null;
   description: string | null;
   contextTitle: string | null;
+  gallery: Array<{
+    id: string;
+    type: 'image' | 'video';
+    src: string;
+    poster?: string;
+    alt: string;
+    caption?: string;
+  }>;
   editions: BookEditionConfig[];
   buy: { url: string; label: string } | null;
   homeButton: { url: string; label: string; image?: string; imageAlt?: string } | null;
@@ -203,6 +229,14 @@ function resolveBooks(
       cover: cfg.cover ? mediaUrl(cfg.cover) : null,
       description: cfg.description?.[locale] ?? null,
       contextTitle: cfg.contextTitle?.[locale] ?? null,
+      gallery: (cfg.gallery ?? []).map((item) => ({
+        id: item.id,
+        type: item.type,
+        src: mediaUrl(item.src),
+        poster: item.poster ? mediaUrl(item.poster) : undefined,
+        alt: item.alt?.[locale] ?? '',
+        caption: item.caption?.[locale],
+      })),
       editions: cfg.editions ?? [],
       buy: resolveBuy(cfg),
       homeButton: cfg.homeButtonUrl

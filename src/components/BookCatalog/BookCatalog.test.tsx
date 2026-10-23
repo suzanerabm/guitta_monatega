@@ -7,12 +7,12 @@ import { BookCatalog } from './BookCatalog';
 const books: CatalogBook[] = [
   {
     slug: 'digital-book', collection: 'bichittos', contextPath: '/bichittos', visualKey: 'zeco',
-    title: 'Digital', description: 'Description', cover: null, contextTitle: 'Zeco',
+    title: 'Digital', description: 'Description', cover: null, gallery: [], contextTitle: 'Zeco',
     editions: [{ id: 'digital', format: 'ebook', purchaseChannel: 'amazon', url: null, retailer: null, price: { amount: 4.98, currency: 'USD' } }],
   },
   {
     slug: 'paperback-book', collection: 'art', contextPath: '/art', visualKey: 'art',
-    title: 'Print', description: 'Description', cover: null, contextTitle: 'Art',
+    title: 'Print', description: 'Description', cover: null, gallery: [], contextTitle: 'Art',
     editions: [{ id: 'paperback', format: 'paperback', purchaseChannel: 'external', url: null, retailer: null }],
   },
 ];

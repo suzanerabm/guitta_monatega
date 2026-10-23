@@ -15,7 +15,11 @@
     "  title ({pt,en})   -> nome do livro (preencha só o idioma dessa edição).",
     "  description ({pt,en}) -> sinopse exibida na página de detalhes.",
     "  contextTitle ({pt,en}) -> chamada do banner no fim da página.",
+    "  gallery (array) -> fotos e vídeos reais exibidos abaixo da capa; use type 'image' ou 'video', src, poster para vídeo e alt/caption em pt/en.",
     "  editions (array) -> formatos, preços, moeda, características, canal e link de compra.",
+    "    id -> identificador único; obrigatório quando o livro tem duas edições do mesmo formato.",
+    "    label -> nome localizado da edição, como 'Capa comum — menor'.",
+    "    facts -> faixa etária, páginas, idioma, dimensões, peso, arquivo, publicação e ISBN específicos desta edição.",
     "    purchaseChannel: 'amazon' | 'external' | 'preorder' | 'comingSoon'.",
     "  buyUrl (string)   -> link de compra. Ausente = mostra 'Em breve' no botão.",
     "  buyLabel (string) -> texto do botão (ex: 'Amazon.com').",
@@ -50,9 +54,10 @@
       },
       "contextTitle": { "pt": "Explore o universo Kammara" },
       "editions": [
-        { "format": "ebook", "purchaseChannel": "amazon", "price": { "amount": 29.90, "currency": "BRL" }, "facts": { "readingAge": "9–99 anos", "pageCount": 151, "language": "Português", "publicationDate": "23 de setembro de 2026" } },
-        { "format": "paperback", "purchaseChannel": "preorder", "price": { "amount": 99.90, "currency": "BRL" }, "facts": { "readingAge": "9–99 anos", "pageCount": 144, "language": "Português", "dimensions": "15,24 × 0,86 × 22,86 cm", "publicationDate": "23 de setembro de 2026" } },
-        { "format": "hardcover", "purchaseChannel": "preorder", "price": { "amount": 139.90, "currency": "BRL" }, "facts": { "readingAge": "9–99 anos", "pageCount": 144, "language": "Português", "dimensions": "15,85 × 1,35 × 23,47 cm", "publicationDate": "23 de setembro de 2026" } }
+        { "id": "ebook-kindle", "format": "ebook", "label": "Livro digital", "purchaseChannel": "amazon", "price": { "amount": 29.90, "currency": "BRL" }, "facts": { "readingAge": "9–99 anos", "pageCount": 151, "language": "Português", "publicationDate": "23 de setembro de 2026" } },
+        { "id": "paperback-kdp", "format": "paperback", "label": "Capa comum — 15,24 × 22,86 cm", "purchaseChannel": "amazon", "price": { "amount": 99.90, "currency": "BRL" }, "facts": { "readingAge": "9–99 anos", "pageCount": 144, "language": "Português", "dimensions": "15,24 × 0,86 × 22,86 cm", "publicationDate": "23 de setembro de 2026" } },
+        { "id": "hardcover-kdp", "format": "hardcover", "label": "Edição especial com capa dura", "purchaseChannel": "amazon", "price": { "amount": 139.90, "currency": "BRL" }, "facts": { "readingAge": "9–99 anos", "pageCount": 144, "language": "Português", "dimensions": "15,85 × 1,35 × 23,47 cm", "publicationDate": "23 de setembro de 2026" } },
+        { "id": "paperback-monte-seu-livro", "format": "paperback", "label": "Capa comum — 16 × 23 cm", "purchaseChannel": "preorder", "facts": { "readingAge": "9–99 anos", "pageCount": 144, "language": "Português", "dimensions": "16 × 23 cm", "publicationDate": "23 de setembro de 2026" } }
       ],
       "appId": "kammara-book-saga-em-orf-v-volume-1"
     },
@@ -66,7 +71,10 @@
       },
       "description": { "en": "What if humanity’s inventions continued to evolve in another universe?\n\nWelcome to Kammara, a universe of countless planets, each with its own people, way of life, and story. In this first saga, journey through ORF-V, the planet where everything connects, and meet peoples who come together, help one another, and face each other when their worlds cross.\n\nAn illustrated adventure about courage, friendship, and what makes us who we are, for young readers and everyone who never stopped imagining." },
       "contextTitle": { "en": "Explore the Kammara universe" },
-      "editions": [{ "format": "paperback", "purchaseChannel": "comingSoon" }],
+      "editions": [
+        { "id": "paperback-kdp", "format": "paperback", "label": "Paperback — 6 × 9 in", "purchaseChannel": "comingSoon", "facts": { "language": "English", "dimensions": "6 × 9 in (15.24 × 22.86 cm)" } },
+        { "id": "hardcover-kdp", "format": "hardcover", "label": "Special hardcover edition", "purchaseChannel": "comingSoon", "facts": { "language": "English", "dimensions": "6 × 9 in (15.24 × 22.86 cm)" } }
+      ],
       "homeButtonUrl": "/kammara",
       "homeButtonLabel": "Discover the Kammara universe",
       "homeButtonImage": "/imgs/kammara/orfv/2maelik.png",

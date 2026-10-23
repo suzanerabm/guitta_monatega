@@ -355,13 +355,30 @@
     "viewAllBooksLabel": "Ver todos os livros",
     "backToBooks": "Voltar para Livros",
     "editionsTitle": "Edições disponíveis",
+    "editionFormatLabel": "Formato",
+    "digitalFormatLabel": "digital",
     "buyLabel": "Comprar",
     "amazonBuyLabel": "Comprar na Amazon",
-    "preorderLabel": "Reserve sua cópia",
+    "amazonBuyPortugueseVersionLabel": "[versão em português]",
+    "amazonBuyEnglishVersionLabel": "[versão em inglês]",
+    "preorderLabel": "Eu quero {name}!",
+    "preorderNames": {
+      "napcat": "o Napcat",
+      "zeco": "o Zeco",
+      "taylo": "Taylo e Pitu",
+      "orfv": "a Saga ORF-V",
+      "digg": "a Saga DIGG",
+      "art": "Mundos Imaginários"
+    },
     "preorderEmailHint": "Ao clicar, abriremos seu aplicativo de e-mail com a mensagem pronta. O site não coleta seus dados; o envio acontece pelo seu aplicativo de e-mail.",
     "preorderEmailSubject": "Pré-venda — {title}",
     "preorderEmailBody": "Olá,\n\nDesejo comprar o livro \"{title}\", na edição {format}, e quero reservar 1 unidade.\n\nObrigada(o).",
     "soonLabel": "Em breve",
+    "media": {
+      "coverLabel": "Capa",
+      "galleryLabel": "Fotos e vídeos do livro",
+      "videoFallback": "Seu navegador não suporta a reprodução deste vídeo."
+    },
     "facts": {
       "readingAge": "Faixa etária",
       "pageCount": "Número de páginas",

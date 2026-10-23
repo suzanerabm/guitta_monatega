@@ -13,6 +13,7 @@ export {
   getBookFormats,
   getLowestBookPrice,
   isBookComingSoon,
+  isBookPromotionValid,
 } from '@/lib/bookCatalog';
 
 export type {
@@ -21,7 +22,10 @@ export type {
   BookFacts,
   BookFormat,
   BookLocale,
+  BookMedia,
+  BookMediaType,
   BookPrice,
+  BookPromotion,
   CatalogBook,
   PurchaseChannel,
 } from '@/lib/bookCatalog';
@@ -59,12 +63,15 @@ function normalizeUrl(value?: string): string | null {
 function resolveEdition(book: BookEntry, edition: BookEditionConfig): BookEdition {
   const purchaseChannel = edition.purchaseChannel ?? (edition.buyUrl || book.buy ? 'amazon' : 'comingSoon');
   return {
-    id: `${book.id}-${edition.format}`,
+    id: `${book.id}-${edition.id ?? edition.format}`,
+    variantId: edition.id ?? edition.format,
     format: edition.format,
+    label: edition.label,
     purchaseChannel,
     url: normalizeUrl(edition.buyUrl) ?? (purchaseChannel === 'amazon' ? book.buy?.url ?? null : null),
     retailer: edition.buyLabel ?? (purchaseChannel === 'amazon' ? book.buy?.label ?? null : null),
     price: edition.price,
+    promotion: edition.promotion,
     facts: edition.facts,
   };
 }
@@ -92,7 +99,7 @@ export function getCatalogBooks(locale: BookLocale): CatalogBook[] {
     return [{
       slug: definition.slug, collection: definition.collection, contextPath: definition.contextPath,
       visualKey: definition.visualKey, title: primary.title, description: primary.description,
-      cover: primary.cover, contextTitle: primary.contextTitle,
+      cover: primary.cover, gallery: primary.gallery, contextTitle: primary.contextTitle,
       editions: matches.flatMap((book) => {
         const editions = book.editions.length > 0
           ? book.editions
