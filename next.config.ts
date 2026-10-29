@@ -60,6 +60,9 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+	experimental: {
+		agentUpgrade: "security",
+	},
 	images: {
 		// A mesma origem usada por `mediaUrl` e pelo CSP. O pathname amplo é
 		// necessário porque o bucket guarda kammara/, books/ e art/ na raiz.
