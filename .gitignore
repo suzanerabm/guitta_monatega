@@ -66,3 +66,9 @@ _bkp/
 
 # Server-only generated Kammara app content
 /src/generated/kammara-app.json
+
+# Local-only order reader. Never commit or deploy this directory.
+/local/
+
+# Local Nuvemshop theme experiments and exported customization files.
+/nuvemshop/
