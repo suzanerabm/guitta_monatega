@@ -82,3 +82,43 @@ export async function save(stored: StoredState): Promise<StoredState> {
 export async function verifyStateAccess(): Promise<void> {
   await client.send(new ListObjectsV2Command({ Bucket: bucket(), Prefix: "publications/kammara/", MaxKeys: 1 }));
 }
+
+// Interruptor persistente da marca (circuit breaker). Sem o objeto, a marca está desligada.
+// Religar exige uma pessoa gravando publishingEnabled: true neste objeto no S3.
+export type BrandControl = {
+  publishingEnabled: boolean;
+  pauseReason: string | null;
+  pausedAt: string | null;
+  pausedBy: "system" | "human" | null;
+};
+
+const controlKey = "publications/kammara/_control.json";
+
+export async function readBrandControl(): Promise<BrandControl> {
+  try {
+    const output = await client.send(new GetObjectCommand({ Bucket: bucket(), Key: controlKey }));
+    const control = JSON.parse(await output.Body!.transformToString()) as Partial<BrandControl>;
+    return {
+      publishingEnabled: control.publishingEnabled === true,
+      pauseReason: control.pauseReason ?? null,
+      pausedAt: control.pausedAt ?? null,
+      pausedBy: control.pausedBy ?? null,
+    };
+  } catch (error) {
+    if ((error as { name?: string }).name === "NoSuchKey") {
+      return { publishingEnabled: false, pauseReason: "Publishing has never been enabled for this brand.", pausedAt: null, pausedBy: null };
+    }
+    throw error;
+  }
+}
+
+export async function pauseBrand(reason: string, now = new Date()): Promise<void> {
+  const control: BrandControl = { publishingEnabled: false, pauseReason: reason, pausedAt: now.toISOString(), pausedBy: "system" };
+  await client.send(new PutObjectCommand({
+    Bucket: bucket(),
+    Key: controlKey,
+    Body: `${JSON.stringify(control, null, 2)}\n`,
+    ContentType: "application/json",
+    ServerSideEncryption: "AES256",
+  }));
+}

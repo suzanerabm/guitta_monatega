@@ -103,6 +103,29 @@ Remoção dos laços em todos os publicadores, com as três marcas ainda pausada
 
 Isto não autoriza reativação. Continuam pendentes a máquina de estados, o circuit breaker persistente, a telemetria por chamada, a rotação de credenciais e as demais etapas do processo de liberação.
 
+### 20 de outubro de 2026, segunda etapa
+
+Implementados, ainda com as três marcas pausadas:
+
+- **Circuit breaker persistente por marca:** `publications/<marca>/_control.json` no bucket de cada marca. Sem o objeto, ou sem `publishingEnabled: true` literal, a marca fica desligada. A execução consulta o interruptor antes de qualquer estado de ocorrência ou chamada à Meta.
+- **Pausa automática:** erro de token, permissão, bloqueio, limite (HTTP 401, 403, 429; códigos 4, 10, 17, 32, 102, 190, 200–299, 341, 368, 613, 80000–80014; subcódigos 2207042, 2207051) grava `publishingEnabled: false` com o motivo, `pausedBy: "system"`.
+- **Leitura de uso da Meta:** `X-App-Usage` e `X-Business-Use-Case-Usage`. A partir de 50% a próxima chamada não é feita e a marca é pausada, preservando o resultado de uma publicação já concluída.
+- **Menos chamadas:** removidas as verificações pós-publicação e a busca do Page Token. Imagem: 3 chamadas no Instagram e 1 no Facebook. Carrossel de N imagens: 2N + 3 e N + 1.
+- **Tempo-limite de 15 s por chamada**, sem nova tentativa; resultado desconhecido vai para `needs_review`.
+- **Registro por chamada** (`event: "meta_call"`): marca, ocorrência, plataforma, operação, método, endpoint sem query string, número da chamada e teto, status HTTP, duração, pico de uso, código, subcódigo e `fbtrace_id`. Sem token, cabeçalhos ou corpo.
+- Código compartilhado em `src/lib/social-meta/` (`client.ts`, `publishers.ts`, `execute.ts`); estado e credenciais seguem separados por marca.
+- Testes: `src/lib/social-meta/client.test.ts`, `src/lib/social-meta/brand-control.test.ts`, `src/lib/social-meta-publishers.test.ts`.
+
+**Nova variável obrigatória por marca:** `<PREFIXO>_FACEBOOK_PAGE_ACCESS_TOKEN` (Page Access Token de longa duração, tipo `Secret`). Deve ser criada junto com a rotação de credenciais.
+
+**Religar uma marca** exige, além das etapas do processo de liberação: remover `publishingPaused` da rota, restaurar o cron e gravar manualmente no S3, com registro de quem autorizou:
+
+```json
+{ "publishingEnabled": true, "pauseReason": null, "pausedAt": null, "pausedBy": "human" }
+```
+
+Ainda pendentes: máquina de estados com uma etapa por execução, alertas para pausa automática, revisão independente, rotação de credenciais e o teste manual único.
+
 ## Evidências técnicas
 
 ### Código que permitia polling excessivo
