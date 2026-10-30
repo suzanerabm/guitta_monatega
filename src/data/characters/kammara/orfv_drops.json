@@ -16,13 +16,12 @@
     "video": "/imgs/kammara/orfv/_videos/melik_andando_para_festival.mp4",
     "poster": "/imgs/kammara/orfv/_videos/melik_andando_para_festival_poster.jpg",
     "label": {
-      "pt": "Maelik a caminho do festival",
-      "en": "Maelik heading to the festival"
+      "pt": "Orvian a caminho do festival",
+      "en": "Orvian heading to the festival"
     },
     "appId": "orfv-video-maelik-a-caminho-do-festival",
     "relations": [
-      "orfv-character-maelik",
-      "orfv-scene-maelik-nos-fjorks-oeste",
+      "orfv-character-orvian",
       "orfv-scene-festival"
     ]
   },
@@ -30,13 +29,13 @@
     "video": "/imgs/kammara/orfv/_videos/velo_e_maelik.mp4",
     "poster": "/imgs/kammara/orfv/_videos/velo_e_maelik_poster.jpg",
     "label": {
-      "pt": "Velo e Maelik",
-      "en": "Velo and Maelik"
+      "pt": "Velo e Orvian",
+      "en": "Velo and Orvian"
     },
     "appId": "orfv-video-velo-e-maelik",
     "relations": [
       "orfv-character-velo",
-      "orfv-character-maelik"
+      "orfv-character-orvian"
     ]
   },
   {
