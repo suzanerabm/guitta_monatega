@@ -29,13 +29,13 @@
     "video": "/imgs/kammara/orfv/_videos/velo_e_maelik.mp4",
     "poster": "/imgs/kammara/orfv/_videos/velo_e_maelik_poster.jpg",
     "label": {
-      "pt": "Velo e Orvian",
-      "en": "Velo and Orvian"
+      "pt": "Velo e Maelik",
+      "en": "Velo and Maelik"
     },
     "appId": "orfv-video-velo-e-maelik",
     "relations": [
       "orfv-character-velo",
-      "orfv-character-orvian"
+      "orfv-character-maelik"
     ]
   },
   {
