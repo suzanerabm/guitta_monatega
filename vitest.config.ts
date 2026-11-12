@@ -8,6 +8,9 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     globals: true,
+    // Node 25+ exposes its own Web Storage globals by default, which collide
+    // with jsdom's localStorage. Tests must exercise the browser implementation.
+    execArgv: ['--no-experimental-webstorage'],
     setupFiles: ['./src/test-setup.ts'],
     include: ['src/**/*.test.{ts,tsx}'],
   },
