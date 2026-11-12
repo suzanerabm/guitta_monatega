@@ -6,7 +6,10 @@ import { reportPublishingFailure } from "@/lib/social-publishing-alerts";
 export const runtime = "nodejs";
 // The safe publisher performs at most one external request and never waits or polls.
 export const maxDuration = 30;
-const publishingPaused = true;
+
+function publishingRouteEnabled(): boolean {
+  return process.env.GUITTA_STUDIO_META_ROUTE_ENABLED === "true";
+}
 
 function authorized(request: Request): boolean {
   const secret = process.env.CRON_SECRET;
@@ -18,7 +21,7 @@ function authorized(request: Request): boolean {
 }
 
 export async function GET(request: Request) {
-  if (publishingPaused) {
+  if (!publishingRouteEnabled()) {
     return Response.json(
       { paused: true, message: "Guitta Studio publishing is paused pending a Meta API safety review." },
       { status: 503 },

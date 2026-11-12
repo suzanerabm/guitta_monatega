@@ -2,7 +2,7 @@ import { randomUUID } from "node:crypto";
 import queue from "./publication-queue.json";
 import { advanceStudioPublication } from "./safe-publisher";
 import { selectDuePublications } from "./select-due";
-import { acquire, pauseBrand, readBrandControl, save } from "./state";
+import { acquire, consumeBrandAuthorization, pauseBrand, readBrandControl, save } from "./state";
 import type { PublicationItem } from "./types";
 
 const items = queue.items as PublicationItem[];
@@ -12,7 +12,7 @@ export async function runGuittaStudioPublisher(now = new Date(), dryRun = false)
   if (queue.mode !== "active" && !dryRun) return { status: "inactive", mode: queue.mode };
   const control = await readBrandControl();
   if (!control.publishingEnabled) return { status: "brand-paused", reason: control.pauseReason, pausedAt: control.pausedAt };
-  if (!control.allowedOccurrence || control.allowedPlatforms.length !== 1 || !control.authorizationExpiresAt) {
+  if (!control.allowedOccurrence || control.allowedPlatforms.length !== 1 || !control.allowedOperation || !control.authorizationExpiresAt) {
     return { status: "manual-authorization-required", calls: 0 };
   }
   const authorizationExpiresAt = new Date(control.authorizationExpiresAt);
@@ -35,6 +35,7 @@ export async function runGuittaStudioPublisher(now = new Date(), dryRun = false)
       media: item.media.kind,
       scheduledAt: item.scheduledAt,
       allowedPlatforms: control.allowedPlatforms,
+      allowedOperation: control.allowedOperation,
       authorizationExpiresAt: control.authorizationExpiresAt,
       calls: 0,
     };
@@ -50,6 +51,7 @@ export async function runGuittaStudioPublisher(now = new Date(), dryRun = false)
     allowedPlatforms: control.allowedPlatforms,
     now,
     save,
+    consumeAuthorization: (authorization) => consumeBrandAuthorization(authorization),
     pauseBrand: (reason) => pauseBrand(reason),
   });
   return {

@@ -1,6 +1,6 @@
 import { GetObjectCommand, ListObjectsV2Command, PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import { awsCredentialsProvider } from "@vercel/oidc-aws-credentials-provider";
-import type { Platform, PlatformState, PublicationState } from "./types";
+import type { MetaCallAuthorization, MetaOperation, Platform, PlatformState, PublicationState } from "./types";
 
 export type StoredState = { state: PublicationState; etag: string };
 
@@ -102,6 +102,7 @@ export type BrandControl = {
   publishingEnabled: boolean;
   allowedOccurrence: string | null;
   allowedPlatforms: Platform[];
+  allowedOperation: MetaOperation | null;
   authorizationExpiresAt: string | null;
   pauseReason: string | null;
   pausedAt: string | null;
@@ -109,6 +110,18 @@ export type BrandControl = {
 };
 
 const controlKey = "publications/guitta-monatega-studio/_control.json";
+const metaOperations = new Set<MetaOperation>([
+  "create_instagram_container",
+  "check_instagram_container",
+  "publish_instagram_media",
+  "confirm_instagram_media",
+  "publish_facebook_image",
+  "confirm_facebook_media",
+]);
+
+function isMetaOperation(value: unknown): value is MetaOperation {
+  return typeof value === "string" && metaOperations.has(value as MetaOperation);
+}
 
 export async function readBrandControl(): Promise<BrandControl> {
   try {
@@ -121,6 +134,7 @@ export async function readBrandControl(): Promise<BrandControl> {
       publishingEnabled: control.publishingEnabled === true,
       allowedOccurrence: typeof control.allowedOccurrence === "string" && control.allowedOccurrence.length > 0 ? control.allowedOccurrence : null,
       allowedPlatforms,
+      allowedOperation: isMetaOperation(control.allowedOperation) ? control.allowedOperation : null,
       authorizationExpiresAt: typeof control.authorizationExpiresAt === "string" ? control.authorizationExpiresAt : null,
       pauseReason: control.pauseReason ?? null,
       pausedAt: control.pausedAt ?? null,
@@ -132,6 +146,7 @@ export async function readBrandControl(): Promise<BrandControl> {
         publishingEnabled: false,
         allowedOccurrence: null,
         allowedPlatforms: [],
+        allowedOperation: null,
         authorizationExpiresAt: null,
         pauseReason: "Publishing has never been enabled for this brand.",
         pausedAt: null,
@@ -142,11 +157,59 @@ export async function readBrandControl(): Promise<BrandControl> {
   }
 }
 
+// Every manual authorization is a one-shot fuse. It is turned off with a conditional S3 write
+// before the Meta request starts. A concurrent or repeated execution cannot reuse it.
+export async function consumeBrandAuthorization(
+  expected: MetaCallAuthorization,
+  now = new Date(),
+): Promise<void> {
+  const output = await client.send(new GetObjectCommand({ Bucket: bucket(), Key: controlKey }));
+  if (!output.Body || !output.ETag) throw new Error("Brand authorization object is incomplete.");
+  const control = JSON.parse(await output.Body.transformToString()) as Partial<BrandControl>;
+  const expiresAt = typeof control.authorizationExpiresAt === "string"
+    ? new Date(control.authorizationExpiresAt)
+    : null;
+  const exactPlatform = Array.isArray(control.allowedPlatforms)
+    && control.allowedPlatforms.length === 1
+    && control.allowedPlatforms[0] === expected.platform;
+  if (
+    control.publishingEnabled !== true
+    || control.allowedOccurrence !== expected.occurrence
+    || !exactPlatform
+    || control.allowedOperation !== expected.operation
+    || !expiresAt
+    || !Number.isFinite(expiresAt.getTime())
+    || expiresAt <= now
+  ) {
+    throw new Error("Brand authorization is absent, expired or does not match this exact operation.");
+  }
+
+  const consumed: BrandControl = {
+    publishingEnabled: false,
+    allowedOccurrence: null,
+    allowedPlatforms: [],
+    allowedOperation: null,
+    authorizationExpiresAt: null,
+    pauseReason: `One-shot authorization consumed before ${expected.platform}:${expected.operation} (${expected.correlationId}).`,
+    pausedAt: now.toISOString(),
+    pausedBy: "system",
+  };
+  await client.send(new PutObjectCommand({
+    Bucket: bucket(),
+    Key: controlKey,
+    Body: `${JSON.stringify(consumed, null, 2)}\n`,
+    ContentType: "application/json",
+    ServerSideEncryption: "AES256",
+    IfMatch: output.ETag,
+  }));
+}
+
 export async function pauseBrand(reason: string, now = new Date()): Promise<void> {
   const control: BrandControl = {
     publishingEnabled: false,
     allowedOccurrence: null,
     allowedPlatforms: [],
+    allowedOperation: null,
     authorizationExpiresAt: null,
     pauseReason: reason,
     pausedAt: now.toISOString(),

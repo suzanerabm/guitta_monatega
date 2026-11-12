@@ -32,6 +32,13 @@ export type MetaOperation =
   | "publish_facebook_image"
   | "confirm_facebook_media";
 
+export type MetaCallAuthorization = {
+  occurrence: string;
+  platform: Platform;
+  operation: MetaOperation;
+  correlationId: string;
+};
+
 export type PlatformState = {
   status: PlatformStatus;
   externalId: string | null;

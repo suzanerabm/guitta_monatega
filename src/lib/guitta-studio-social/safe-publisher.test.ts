@@ -63,11 +63,13 @@ function harness(initial = stored()) {
     saves.push(structuredClone(value));
     return value;
   });
+  const consumeAuthorization = vi.fn(async () => {});
   const pauseBrand = vi.fn(async () => {});
   return {
     get current() { return current; },
     saves,
     save,
+    consumeAuthorization,
     pauseBrand,
   };
 }
@@ -88,6 +90,7 @@ describe("Studio safe publisher", () => {
       allowedPlatforms: ["instagram"],
       now: new Date(now),
       save: state.save,
+      consumeAuthorization: state.consumeAuthorization,
       pauseBrand: state.pauseBrand,
       performOperation,
     });
@@ -124,6 +127,7 @@ describe("Studio safe publisher", () => {
       "confirm_instagram_media",
     ]);
     expect(performOperation).toHaveBeenCalledTimes(4);
+    expect(state.consumeAuthorization).toHaveBeenCalledTimes(4);
   });
 
   it("never publishes Instagram and Facebook in the same execution", async () => {
@@ -137,6 +141,7 @@ describe("Studio safe publisher", () => {
       allowedPlatforms: ["instagram", "facebook"],
       now: new Date("2026-11-12T12:00:00.000Z"),
       save: state.save,
+      consumeAuthorization: state.consumeAuthorization,
       pauseBrand: state.pauseBrand,
       performOperation,
     });
@@ -162,6 +167,7 @@ describe("Studio safe publisher", () => {
       allowedPlatforms: ["instagram", "facebook"],
       now: new Date(now),
       save: state.save,
+      consumeAuthorization: state.consumeAuthorization,
       pauseBrand: state.pauseBrand,
       performOperation,
     });
@@ -187,6 +193,7 @@ describe("Studio safe publisher", () => {
     const performOperation = vi.fn(async () => {
       expect(state.saves).toHaveLength(1);
       expect(state.saves[0].state.instagram.inFlight?.operation).toBe("create_instagram_container");
+      expect(state.consumeAuthorization).toHaveBeenCalledTimes(1);
       return ok();
     });
 
@@ -197,6 +204,7 @@ describe("Studio safe publisher", () => {
       allowedPlatforms: ["instagram"],
       now: new Date("2026-11-12T12:00:00.000Z"),
       save: state.save,
+      consumeAuthorization: state.consumeAuthorization,
       pauseBrand: state.pauseBrand,
       performOperation,
     });
@@ -204,6 +212,28 @@ describe("Studio safe publisher", () => {
     expect(outcome.result.calls).toBe(1);
     expect(state.saves).toHaveLength(2);
     expect(state.saves[1].state.instagram.inFlight).toBeNull();
+  });
+
+  it("makes zero Meta calls when the one-shot authorization cannot be consumed", async () => {
+    const state = harness();
+    state.consumeAuthorization.mockRejectedValueOnce(new Error("conditional S3 write failed"));
+    const performOperation = vi.fn();
+
+    const outcome = await advanceStudioPublication({
+      occurrence: "test-001",
+      item: item(),
+      stored: state.current,
+      allowedPlatforms: ["instagram"],
+      now: new Date("2026-11-12T12:00:00.000Z"),
+      save: state.save,
+      consumeAuthorization: state.consumeAuthorization,
+      pauseBrand: state.pauseBrand,
+      performOperation,
+    });
+
+    expect(outcome.result).toMatchObject({ status: "needs-review", calls: 0 });
+    expect(performOperation).not.toHaveBeenCalled();
+    expect(state.current.state.instagram.error).toContain("zero Meta calls made");
   });
 
   it("never repeats an operation left in-flight by an interrupted execution", async () => {
@@ -223,6 +253,7 @@ describe("Studio safe publisher", () => {
       allowedPlatforms: ["instagram"],
       now: new Date("2026-11-12T12:00:00.000Z"),
       save: state.save,
+      consumeAuthorization: state.consumeAuthorization,
       pauseBrand: state.pauseBrand,
       performOperation,
     });
@@ -253,6 +284,7 @@ describe("Studio safe publisher", () => {
       allowedPlatforms: ["instagram"],
       now: new Date("2026-11-12T12:00:00.000Z"),
       save,
+      consumeAuthorization: vi.fn(async () => {}),
       pauseBrand: vi.fn(async () => {}),
       performOperation: firstOperation,
     })).rejects.toThrow("simulated S3 failure");
@@ -269,6 +301,7 @@ describe("Studio safe publisher", () => {
       allowedPlatforms: ["instagram"],
       now: new Date("2026-11-12T12:10:00.000Z"),
       save: recovery.save,
+      consumeAuthorization: recovery.consumeAuthorization,
       pauseBrand: recovery.pauseBrand,
       performOperation: repeatedOperation,
     });
@@ -287,6 +320,7 @@ describe("Studio safe publisher", () => {
       allowedPlatforms: ["instagram"],
       now: new Date("2026-11-12T12:00:00.000Z"),
       save: state.save,
+      consumeAuthorization: state.consumeAuthorization,
       pauseBrand: state.pauseBrand,
       performOperation,
     });
@@ -308,6 +342,7 @@ describe("Studio safe publisher", () => {
       allowedPlatforms: ["instagram"],
       now: new Date(now),
       save: state.save,
+      consumeAuthorization: state.consumeAuthorization,
       pauseBrand: state.pauseBrand,
       performOperation,
     });
@@ -334,6 +369,7 @@ describe("Studio safe publisher", () => {
       allowedPlatforms: ["instagram"],
       now: new Date("2026-11-12T12:00:00.000Z"),
       save: state.save,
+      consumeAuthorization: state.consumeAuthorization,
       pauseBrand: state.pauseBrand,
       performOperation,
     });
@@ -353,6 +389,7 @@ describe("Studio safe publisher", () => {
       allowedPlatforms: [],
       now: new Date("2026-11-12T12:00:00.000Z"),
       save: state.save,
+      consumeAuthorization: state.consumeAuthorization,
       pauseBrand: state.pauseBrand,
       performOperation,
     });

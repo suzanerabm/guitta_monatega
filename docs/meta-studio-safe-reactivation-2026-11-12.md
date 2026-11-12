@@ -14,19 +14,26 @@ externo nunca podem virar polling, repetição ou rajada de chamadas.
 
 ## Barreiras que continuam ativas
 
-1. A rota contém `publishingPaused = true` e retorna HTTP 503 antes de autenticação, S3 ou Meta.
+1. A rota só é habilitada pelo valor literal `GUITTA_STUDIO_META_ROUTE_ENABLED=true`; ausente ou
+   qualquer outro valor retorna HTTP 503 antes de autenticação, S3 ou Meta.
 2. Não há cron de publicação no `vercel.json`.
 3. O circuit breaker persistente tem padrão desligado.
-4. Ligar o circuit breaker não basta: é obrigatória uma ocorrência exata, exatamente uma plataforma
-   e uma autorização com vencimento de no máximo 24 horas.
+4. Ligar o circuit breaker não basta: são obrigatórias uma ocorrência, uma plataforma e uma operação
+   exatas, além de uma autorização com vencimento de no máximo 24 horas.
 5. O primeiro estágio aceita somente imagem simples. Carrossel e Reel terminam em revisão humana
    com zero chamadas à Meta.
 6. A fila vencida não é processada sem que uma ocorrência específica seja autorizada.
+7. A autorização é descartável: ela é consumida no S3 antes de cada chamada Meta. A etapa seguinte
+   exige uma nova autorização humana para a mesma ocorrência, plataforma e operação exata.
 
 ## Regra estrutural contra looping
 
 Cada execução realiza **zero ou uma chamada Meta**. O adaptador usa também um teto técnico de uma
 chamada; mesmo um erro de programação não permite uma segunda requisição pela mesma instância.
+
+Além do limite por execução, a autorização persistente é consumida antes da chamada. Repetir a URL,
+inclusive em outra execução, produz zero chamadas até uma pessoa autorizar expressamente a próxima
+etapa.
 
 Não existem `sleep`, laço de polling ou retry no publicador seguro.
 

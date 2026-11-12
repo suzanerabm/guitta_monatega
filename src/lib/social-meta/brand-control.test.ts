@@ -16,7 +16,7 @@ const brands = [
   { name: "Studio", prefix: "GUITTA_STUDIO", key: "publications/guitta-monatega-studio/_control.json", state: studioState, run: runGuittaStudioPublisher, due: "2026-10-10T09:00:00-03:00" },
 ];
 
-type Command = { input: { Key?: string; Body?: string } };
+type Command = { input: { Key?: string; Body?: string; IfMatch?: string } };
 
 describe.each(brands)("$name brand control", ({ prefix, key, state, run, due }) => {
   let send: ReturnType<typeof vi.spyOn>;
@@ -33,7 +33,7 @@ describe.each(brands)("$name brand control", ({ prefix, key, state, run, due }) 
         return { ETag: "etag" };
       }
       if (stored === null) throw Object.assign(new Error("missing"), { name: "NoSuchKey" });
-      return { Body: { transformToString: async () => stored } };
+      return { Body: { transformToString: async () => stored }, ETag: "etag" };
     }) as never);
     fetchSpy = vi.fn();
     vi.stubGlobal("fetch", fetchSpy);
@@ -76,6 +76,7 @@ describe.each(brands)("$name brand control", ({ prefix, key, state, run, due }) 
       publishingEnabled: true,
       allowedOccurrence: "001",
       allowedPlatforms: ["instagram"],
+      allowedOperation: "create_instagram_container",
       authorizationExpiresAt: "2026-10-10T11:59:59.000Z",
     });
     const result = await run(new Date(due));
@@ -90,6 +91,7 @@ describe.each(brands)("$name brand control", ({ prefix, key, state, run, due }) 
       publishingEnabled: true,
       allowedOccurrence: "001",
       allowedPlatforms: ["instagram"],
+      allowedOperation: "create_instagram_container",
       authorizationExpiresAt: "2026-10-12T12:00:00.000Z",
     });
     const result = await run(new Date(due));
@@ -110,9 +112,63 @@ describe.each(brands)("$name brand control", ({ prefix, key, state, run, due }) 
       expect(JSON.parse(stored!)).toMatchObject({
         allowedOccurrence: null,
         allowedPlatforms: [],
+        allowedOperation: null,
         authorizationExpiresAt: null,
       });
     }
     expect((await state.readBrandControl()).publishingEnabled).toBe(false);
+  });
+
+  it("atomically consumes the Studio authorization before a Meta call", async () => {
+    if (prefix !== "GUITTA_STUDIO") return;
+    stored = JSON.stringify({
+      publishingEnabled: true,
+      allowedOccurrence: "test-001",
+      allowedPlatforms: ["instagram"],
+      allowedOperation: "create_instagram_container",
+      authorizationExpiresAt: "2026-11-12T13:00:00.000Z",
+    });
+
+    await studioState.consumeBrandAuthorization({
+      occurrence: "test-001",
+      platform: "instagram",
+      operation: "create_instagram_container",
+      correlationId: "correlation-1",
+    }, new Date("2026-11-12T12:00:00.000Z"));
+
+    expect(JSON.parse(stored!)).toMatchObject({
+      publishingEnabled: false,
+      allowedOccurrence: null,
+      allowedPlatforms: [],
+      allowedOperation: null,
+      authorizationExpiresAt: null,
+      pausedBy: "system",
+    });
+    expect(JSON.parse(stored!).pauseReason).toContain("create_instagram_container");
+    const put = send.mock.calls[1][0] as Command;
+    expect(put.input.IfMatch).toBe("etag");
+    expect(fetchSpy).not.toHaveBeenCalled();
+  });
+
+  it("refuses to consume a Studio authorization for a different operation", async () => {
+    if (prefix !== "GUITTA_STUDIO") return;
+    stored = JSON.stringify({
+      publishingEnabled: true,
+      allowedOccurrence: "test-001",
+      allowedPlatforms: ["instagram"],
+      allowedOperation: "create_instagram_container",
+      authorizationExpiresAt: "2026-11-12T13:00:00.000Z",
+    });
+
+    await expect(studioState.consumeBrandAuthorization({
+      occurrence: "test-001",
+      platform: "instagram",
+      operation: "publish_instagram_media",
+      correlationId: "correlation-2",
+    }, new Date("2026-11-12T12:00:00.000Z"))).rejects.toThrow("does not match");
+
+    expect(send).toHaveBeenCalledTimes(1);
+    expect(JSON.parse(stored!).publishingEnabled).toBe(true);
+    expect(fetchSpy).not.toHaveBeenCalled();
   });
 });

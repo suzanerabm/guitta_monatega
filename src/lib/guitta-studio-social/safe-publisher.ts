@@ -2,7 +2,7 @@ import { randomUUID } from "node:crypto";
 import { MetaPublishingError } from "@/lib/social-meta/client";
 import { performStudioMetaOperation, type StudioMetaResult } from "./meta";
 import type { StoredState } from "./state";
-import type { MetaOperation, Platform, PlatformState, PlatformStatus, PublicationItem } from "./types";
+import type { MetaCallAuthorization, MetaOperation, Platform, PlatformState, PlatformStatus, PublicationItem } from "./types";
 
 const FIRST_STATUS_DELAY_MS = 60_000;
 const CONFIRM_DELAY_MS = 5 * 60_000;
@@ -27,6 +27,7 @@ type AdvanceOptions = {
   allowedPlatforms: Platform[];
   now: Date;
   save: (stored: StoredState) => Promise<StoredState>;
+  consumeAuthorization: (authorization: MetaCallAuthorization) => Promise<void>;
   pauseBrand: (reason: string) => Promise<void>;
   performOperation?: PerformOperation;
 };
@@ -185,6 +186,20 @@ export async function advanceStudioPublication(options: AdvanceOptions): Promise
   const correlationId = randomUUID();
   state.inFlight = { operation, correlationId, startedAt: options.now.toISOString() };
   stored = await options.save(stored);
+
+  try {
+    await options.consumeAuthorization({
+      occurrence: options.occurrence,
+      platform,
+      operation,
+      correlationId,
+    });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    markNeedsReview(state, `One-shot authorization could not be consumed (${message}); zero Meta calls made.`);
+    stored = await options.save(stored);
+    return { stored, result: { status: "needs-review", platform, operation, calls: 0 } };
+  }
 
   let metaResult: StudioMetaResult;
   try {
