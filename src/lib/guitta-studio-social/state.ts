@@ -1,8 +1,8 @@
 import { GetObjectCommand, ListObjectsV2Command, PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import { awsCredentialsProvider } from "@vercel/oidc-aws-credentials-provider";
-import type { PublicationState } from "./types";
+import type { Platform, PlatformState, PublicationState } from "./types";
 
-type StoredState = { state: PublicationState; etag: string };
+export type StoredState = { state: PublicationState; etag: string };
 
 const client = new S3Client({
   region: process.env.GUITTA_STUDIO_AWS_REGION ?? "us-east-1",
@@ -45,17 +45,36 @@ async function write(state: PublicationState, etag?: string): Promise<StoredStat
 
 export type AcquireResult = { status: "acquired"; stored: StoredState } | { status: "published" } | { status: "locked" };
 
+function initialPlatformState(): PlatformState {
+  return {
+    status: "pending",
+    externalId: null,
+    containerId: null,
+    nextActionAt: null,
+    statusChecks: 0,
+    inFlight: null,
+    error: null,
+  };
+}
+
 export async function acquire(occurrence: string, now: Date, owner: string): Promise<AcquireResult> {
   const current = await read(occurrence);
   if (current?.state.instagram.status === "published" && current.state.facebook.status === "published") return { status: "published" };
   if (current && new Date(current.state.lockUntil) > now && current.state.lockOwner !== owner) return { status: "locked" };
-  if (current && [current.state.instagram.status, current.state.facebook.status].some((status) => status === "publishing" || status === "needs_review")) {
-    throw new Error(`Occurrence ${occurrence} needs review because a previous execution stopped during publishing.`);
+  if (current && current.state.schemaVersion !== 2) {
+    throw new Error(`Occurrence ${occurrence} uses legacy state and requires a human migration before any Meta call.`);
+  }
+  if (current && [current.state.instagram, current.state.facebook].some((platform) => platform.inFlight || platform.status === "needs_review" || platform.status === "brand_paused")) {
+    throw new Error(`Occurrence ${occurrence} needs human review; automatic recovery is disabled.`);
   }
   const state: PublicationState = current?.state ?? {
-    occurrence, lockOwner: owner, lockUntil: now.toISOString(), updatedAt: now.toISOString(),
-    instagram: { status: "pending", externalId: null, error: null },
-    facebook: { status: "pending", externalId: null, error: null },
+    schemaVersion: 2,
+    occurrence,
+    lockOwner: owner,
+    lockUntil: now.toISOString(),
+    updatedAt: now.toISOString(),
+    instagram: initialPlatformState(),
+    facebook: initialPlatformState(),
   };
   state.lockOwner = owner;
   state.lockUntil = new Date(now.getTime() + 4 * 60 * 1000).toISOString();
@@ -81,6 +100,9 @@ export async function verifyStateAccess(): Promise<void> {
 // Religar exige uma pessoa gravando publishingEnabled: true neste objeto no S3.
 export type BrandControl = {
   publishingEnabled: boolean;
+  allowedOccurrence: string | null;
+  allowedPlatforms: Platform[];
+  authorizationExpiresAt: string | null;
   pauseReason: string | null;
   pausedAt: string | null;
   pausedBy: "system" | "human" | null;
@@ -92,22 +114,44 @@ export async function readBrandControl(): Promise<BrandControl> {
   try {
     const output = await client.send(new GetObjectCommand({ Bucket: bucket(), Key: controlKey }));
     const control = JSON.parse(await output.Body!.transformToString()) as Partial<BrandControl>;
+    const allowedPlatforms = Array.isArray(control.allowedPlatforms)
+      ? control.allowedPlatforms.filter((platform): platform is Platform => platform === "instagram" || platform === "facebook")
+      : [];
     return {
       publishingEnabled: control.publishingEnabled === true,
+      allowedOccurrence: typeof control.allowedOccurrence === "string" && control.allowedOccurrence.length > 0 ? control.allowedOccurrence : null,
+      allowedPlatforms,
+      authorizationExpiresAt: typeof control.authorizationExpiresAt === "string" ? control.authorizationExpiresAt : null,
       pauseReason: control.pauseReason ?? null,
       pausedAt: control.pausedAt ?? null,
       pausedBy: control.pausedBy ?? null,
     };
   } catch (error) {
     if ((error as { name?: string }).name === "NoSuchKey") {
-      return { publishingEnabled: false, pauseReason: "Publishing has never been enabled for this brand.", pausedAt: null, pausedBy: null };
+      return {
+        publishingEnabled: false,
+        allowedOccurrence: null,
+        allowedPlatforms: [],
+        authorizationExpiresAt: null,
+        pauseReason: "Publishing has never been enabled for this brand.",
+        pausedAt: null,
+        pausedBy: null,
+      };
     }
     throw error;
   }
 }
 
 export async function pauseBrand(reason: string, now = new Date()): Promise<void> {
-  const control: BrandControl = { publishingEnabled: false, pauseReason: reason, pausedAt: now.toISOString(), pausedBy: "system" };
+  const control: BrandControl = {
+    publishingEnabled: false,
+    allowedOccurrence: null,
+    allowedPlatforms: [],
+    authorizationExpiresAt: null,
+    pauseReason: reason,
+    pausedAt: now.toISOString(),
+    pausedBy: "system",
+  };
   await client.send(new PutObjectCommand({
     Bucket: bucket(),
     Key: controlKey,

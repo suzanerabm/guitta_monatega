@@ -1,45 +1,60 @@
 import { randomUUID } from "node:crypto";
-import { publishPlatforms } from "@/lib/social-meta/execute";
 import queue from "./publication-queue.json";
-import { publishers } from "./meta";
+import { advanceStudioPublication } from "./safe-publisher";
 import { selectDuePublications } from "./select-due";
 import { acquire, pauseBrand, readBrandControl, save } from "./state";
 import type { PublicationItem } from "./types";
 
 const items = queue.items as PublicationItem[];
+const MAX_AUTHORIZATION_HORIZON_MS = 24 * 60 * 60 * 1000;
 
 export async function runGuittaStudioPublisher(now = new Date(), dryRun = false) {
   if (queue.mode !== "active" && !dryRun) return { status: "inactive", mode: queue.mode };
-  const due = selectDuePublications(items, now);
-  if (!due.length) return { status: queue.mode === "draft" ? "draft-empty" : "nothing-due", date: now.toISOString(), exhausted: false };
-  const item = due[0];
-  if (dryRun) return { status: "dry-run", occurrence: item.occurrence, postId: item.postId, media: item.media.kind, scheduledAt: item.scheduledAt };
-
   const control = await readBrandControl();
   if (!control.publishingEnabled) return { status: "brand-paused", reason: control.pauseReason, pausedAt: control.pausedAt };
-
-  let selected: PublicationItem | null = null;
-  let stored = null;
-  for (const candidate of due) {
-    const result = await acquire(candidate.occurrence, now, randomUUID());
-    if (result.status === "published") continue;
-    if (result.status === "locked") return { status: "locked", occurrence: candidate.occurrence };
-    selected = candidate;
-    stored = result.stored;
-    break;
+  if (!control.allowedOccurrence || control.allowedPlatforms.length !== 1 || !control.authorizationExpiresAt) {
+    return { status: "manual-authorization-required", calls: 0 };
   }
-  if (!selected || !stored) return { status: "nothing-due", date: now.toISOString(), exhausted: false };
-  const publication = selected;
-  const result = await publishPlatforms({
-    brand: "guitta-studio",
-    occurrence: publication.occurrence,
-    item: publication,
-    stored,
+  const authorizationExpiresAt = new Date(control.authorizationExpiresAt);
+  if (
+    !Number.isFinite(authorizationExpiresAt.getTime())
+    || authorizationExpiresAt <= now
+    || authorizationExpiresAt.getTime() - now.getTime() > MAX_AUTHORIZATION_HORIZON_MS
+  ) {
+    return { status: "manual-authorization-expired", calls: 0, authorizationExpiresAt: control.authorizationExpiresAt };
+  }
+
+  const due = selectDuePublications(items, now);
+  const item = due.find((candidate) => candidate.occurrence === control.allowedOccurrence);
+  if (!item) return { status: "authorized-occurrence-not-due", occurrence: control.allowedOccurrence, calls: 0 };
+  if (dryRun) {
+    return {
+      status: "dry-run",
+      occurrence: item.occurrence,
+      postId: item.postId,
+      media: item.media.kind,
+      scheduledAt: item.scheduledAt,
+      allowedPlatforms: control.allowedPlatforms,
+      authorizationExpiresAt: control.authorizationExpiresAt,
+      calls: 0,
+    };
+  }
+
+  const acquired = await acquire(item.occurrence, now, randomUUID());
+  if (acquired.status === "published") return { status: "published", occurrence: item.occurrence, calls: 0 };
+  if (acquired.status === "locked") return { status: "locked", occurrence: item.occurrence, calls: 0 };
+  const outcome = await advanceStudioPublication({
+    occurrence: item.occurrence,
+    item,
+    stored: acquired.stored,
+    allowedPlatforms: control.allowedPlatforms,
+    now,
     save,
-    publishers,
     pauseBrand: (reason) => pauseBrand(reason),
   });
-  stored = result.stored;
-  if (result.pausedReason) return { status: "brand-paused-after-publish", occurrence: publication.occurrence, reason: result.pausedReason };
-  return { status: "published", occurrence: publication.occurrence, postId: publication.postId, instagramId: stored.state.instagram.externalId, facebookId: stored.state.facebook.externalId };
+  return {
+    occurrence: item.occurrence,
+    postId: item.postId,
+    ...outcome.result,
+  };
 }

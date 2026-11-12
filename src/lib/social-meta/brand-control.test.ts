@@ -61,14 +61,58 @@ describe.each(brands)("$name brand control", ({ prefix, key, state, run, due }) 
     expect(fetchSpy).not.toHaveBeenCalled();
   });
 
+  it("requires a scoped, expiring manual authorization before Studio can touch occurrence state", async () => {
+    if (prefix !== "GUITTA_STUDIO") return;
+    stored = JSON.stringify({ publishingEnabled: true });
+    const result = await run(new Date(due));
+    expect(result).toMatchObject({ status: "manual-authorization-required", calls: 0 });
+    expect(send).toHaveBeenCalledTimes(1);
+    expect(fetchSpy).not.toHaveBeenCalled();
+  });
+
+  it("rejects an expired Studio authorization before touching occurrence state", async () => {
+    if (prefix !== "GUITTA_STUDIO") return;
+    stored = JSON.stringify({
+      publishingEnabled: true,
+      allowedOccurrence: "001",
+      allowedPlatforms: ["instagram"],
+      authorizationExpiresAt: "2026-10-10T11:59:59.000Z",
+    });
+    const result = await run(new Date(due));
+    expect(result).toMatchObject({ status: "manual-authorization-expired", calls: 0 });
+    expect(send).toHaveBeenCalledTimes(1);
+    expect(fetchSpy).not.toHaveBeenCalled();
+  });
+
+  it("rejects a Studio authorization longer than 24 hours", async () => {
+    if (prefix !== "GUITTA_STUDIO") return;
+    stored = JSON.stringify({
+      publishingEnabled: true,
+      allowedOccurrence: "001",
+      allowedPlatforms: ["instagram"],
+      authorizationExpiresAt: "2026-10-12T12:00:00.000Z",
+    });
+    const result = await run(new Date(due));
+    expect(result).toMatchObject({ status: "manual-authorization-expired", calls: 0 });
+    expect(send).toHaveBeenCalledTimes(1);
+    expect(fetchSpy).not.toHaveBeenCalled();
+  });
+
   it("records a system pause with its reason", async () => {
     await state.pauseBrand("instagram: Invalid OAuth access token", new Date("2026-10-20T12:00:00Z"));
-    expect(JSON.parse(stored!)).toEqual({
+    expect(JSON.parse(stored!)).toMatchObject({
       publishingEnabled: false,
       pauseReason: "instagram: Invalid OAuth access token",
       pausedAt: "2026-10-20T12:00:00.000Z",
       pausedBy: "system",
     });
+    if (prefix === "GUITTA_STUDIO") {
+      expect(JSON.parse(stored!)).toMatchObject({
+        allowedOccurrence: null,
+        allowedPlatforms: [],
+        authorizationExpiresAt: null,
+      });
+    }
     expect((await state.readBrandControl()).publishingEnabled).toBe(false);
   });
 });

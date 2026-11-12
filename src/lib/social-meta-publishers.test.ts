@@ -1,17 +1,15 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { publishers as bichittos } from "./bichittos-social/meta";
-import { publishers as studio } from "./guitta-studio-social/meta";
 import { publishers as kammara } from "./kammara-social/meta";
 import { publishPlatforms } from "./social-meta/execute";
 import { facebookCallLimit, instagramCallLimit, type PublishableItem } from "./social-meta/publishers";
 
-// Garante a política pós-incidente de 15/10/2026 nas três marcas: nenhuma chamada à Meta é
-// repetida, cada execução respeita um teto fixo e erros graves pausam a marca.
+// Regression coverage for the paused legacy Kammara and Bichittos publishers. Studio has a
+// stricter one-call state machine covered by guitta-studio-social/safe-publisher.test.ts.
 
 const brands = [
   { name: "Kammara", prefix: "KAMMARA", publishers: kammara },
   { name: "Bichittos", prefix: "BICHITTOS", publishers: bichittos },
-  { name: "Studio", prefix: "GUITTA_STUDIO", publishers: studio },
 ];
 
 const image = (): PublishableItem => ({

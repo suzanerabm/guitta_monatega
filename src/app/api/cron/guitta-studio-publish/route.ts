@@ -4,7 +4,8 @@ import { verifyStateAccess } from "@/lib/guitta-studio-social/state";
 import { reportPublishingFailure } from "@/lib/social-publishing-alerts";
 
 export const runtime = "nodejs";
-export const maxDuration = 300;
+// The safe publisher performs at most one external request and never waits or polls.
+export const maxDuration = 30;
 const publishingPaused = true;
 
 function authorized(request: Request): boolean {

@@ -1,9 +1,9 @@
 import bichittosQueue from "@/lib/bichittos-social/publication-queue.json";
-import { readPublicationState as readBichittosState } from "@/lib/bichittos-social/state";
+import { readBrandControl as readBichittosControl, readPublicationState as readBichittosState } from "@/lib/bichittos-social/state";
 import studioQueue from "@/lib/guitta-studio-social/publication-queue.json";
-import { readPublicationState as readStudioState } from "@/lib/guitta-studio-social/state";
+import { readBrandControl as readStudioControl, readPublicationState as readStudioState } from "@/lib/guitta-studio-social/state";
 import kammaraQueue from "@/lib/kammara-social/publication-queue.json";
-import { readPublicationState as readKammaraState } from "@/lib/kammara-social/state";
+import { readBrandControl as readKammaraControl, readPublicationState as readKammaraState } from "@/lib/kammara-social/state";
 import { sendPublishingAlert, type PublishingBrand } from "@/lib/social-publishing-alerts";
 
 type QueueItem = { occurrence: string; scheduledAt: string; postId?: string; title?: string; slug?: string };
@@ -15,10 +15,11 @@ const campaigns: Array<{
   brand: PublishingBrand;
   items: QueueItem[];
   read: (occurrence: string) => Promise<State>;
+  readControl: () => Promise<{ publishingEnabled: boolean }>;
 }> = [
-  { brand: "Kammara", items: kammaraQueue.items as QueueItem[], read: readKammaraState },
-  { brand: "Bichittos", items: bichittosQueue.items as QueueItem[], read: readBichittosState },
-  { brand: "Guitta Monatega Studio", items: studioQueue.items as QueueItem[], read: readStudioState },
+  { brand: "Kammara", items: kammaraQueue.items as QueueItem[], read: readKammaraState, readControl: readKammaraControl },
+  { brand: "Bichittos", items: bichittosQueue.items as QueueItem[], read: readBichittosState, readControl: readBichittosControl },
+  { brand: "Guitta Monatega Studio", items: studioQueue.items as QueueItem[], read: readStudioState, readControl: readStudioControl },
 ];
 
 export async function runSocialPublishingWatchdog(now = new Date()) {
@@ -31,6 +32,9 @@ export async function runSocialPublishingWatchdog(now = new Date()) {
       const scheduled = new Date(item.scheduledAt).getTime();
       return scheduled <= now.getTime() && scheduled > start;
     });
+    if (expected.length === 0) continue;
+    const control = await campaign.readControl();
+    if (!control.publishingEnabled) continue;
     for (const item of expected) {
       checked += 1;
       const state = await campaign.read(item.occurrence);
