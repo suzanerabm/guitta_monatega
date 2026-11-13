@@ -2,7 +2,7 @@
 
 Data: 13 de novembro de 2026
 Branch de implementação: `main`
-Status operacional: **cron seguro ativo somente para Instagram do Studio; Facebook pausado até configurar o Page Access Token; Reel manual**
+Status operacional: **Instagram ativo; Page Access Token do Facebook configurado e publicação isolada concluída; ativação automática do Facebook aguarda confirmação humana; Reel manual**
 
 ## Escopo
 
@@ -208,3 +208,10 @@ que `GUITTA_STUDIO_FACEBOOK_PAGE_ACCESS_TOKEN` não estava configurado na Vercel
 requisição de publicação. O estado passou para `needs_review` e o controle foi pausado automaticamente,
 sem post no Facebook, sem repetição e sem chamada ao Instagram. A fila foi restaurada em seguida e o
 cron voltou a autorizar somente o Instagram até a credencial exclusiva da Página ser configurada.
+
+Depois que `GUITTA_STUDIO_FACEBOOK_PAGE_ACCESS_TOKEN` foi cadastrado como segredo exclusivo de
+produção, a ocorrência `005` foi novamente isolada com autorização apenas para `facebook`. Em 13 de
+novembro de 2026 às 18:45 de `America/Sao_Paulo`, uma única execução publicou a imagem e persistiu o
+ID `1376392398892999_122124305385500542`, sem tocar no Instagram e sem repetição. O controle foi
+pausado imediatamente após a resposta da Meta e a fila original foi restaurada. A ativação contínua
+do Facebook depende da confirmação humana de que esse post está visível na Página.
