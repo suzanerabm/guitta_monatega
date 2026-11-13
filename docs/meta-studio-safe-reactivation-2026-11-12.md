@@ -2,7 +2,7 @@
 
 Data: 13 de novembro de 2026
 Branch de implementação: `main`
-Status operacional: **cron seguro ativo para Instagram e Facebook do Studio; Reel manual**
+Status operacional: **cron seguro ativo somente para Instagram do Studio; Facebook pausado até configurar o Page Access Token; Reel manual**
 
 ## Escopo
 
@@ -201,3 +201,10 @@ plataformas autorizadas. O controle foi pausado antes da alteração, o Preview 
 foi promovido com o controle ainda pausado e somente então a lista `instagram, facebook` foi ativada
 por escrita condicional. O contador permaneceu em zero. Instagram e Facebook continuam avançando
 em execuções separadas, nunca na mesma chamada do cron.
+
+No teste isolado do Facebook da ocorrência `005`, o controle foi limitado exclusivamente a
+`facebook` e o Instagram permaneceu marcado como concluído. A única execução autorizada detectou
+que `GUITTA_STUDIO_FACEBOOK_PAGE_ACCESS_TOKEN` não estava configurado na Vercel antes de enviar uma
+requisição de publicação. O estado passou para `needs_review` e o controle foi pausado automaticamente,
+sem post no Facebook, sem repetição e sem chamada ao Instagram. A fila foi restaurada em seguida e o
+cron voltou a autorizar somente o Instagram até a credencial exclusiva da Página ser configurada.
