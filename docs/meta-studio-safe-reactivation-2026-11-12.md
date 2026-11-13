@@ -2,7 +2,7 @@
 
 Data: 13 de novembro de 2026
 Branch de implementação: `main`
-Status operacional: **Instagram ativo; Page Access Token do Facebook configurado e publicação isolada concluída; ativação automática do Facebook aguarda confirmação humana; Reel manual**
+Status operacional: **Instagram e Facebook ativos para imagens e carrosséis; Reel manual**
 
 ## Escopo
 
@@ -214,4 +214,10 @@ produção, a ocorrência `005` foi novamente isolada com autorização apenas p
 novembro de 2026 às 18:45 de `America/Sao_Paulo`, uma única execução publicou a imagem e persistiu o
 ID `1376392398892999_122124305385500542`, sem tocar no Instagram e sem repetição. O controle foi
 pausado imediatamente após a resposta da Meta e a fila original foi restaurada. A ativação contínua
-do Facebook depende da confirmação humana de que esse post está visível na Página.
+do Facebook dependia da confirmação humana de que esse post estava visível na Página.
+
+A visibilidade do post foi confirmada manualmente pela responsável da Página. O estado da ocorrência
+`005` foi então alterado de `publish_requested` para `published` sem nova chamada à Meta e, somente
+depois, o controle persistente passou a autorizar `instagram, facebook`. As duas gravações no S3
+usaram os ETags lidos imediatamente antes da operação; uma alteração concorrente teria impedido a
+ativação. Kammara e Bichittos permanecem pausados, e Reels continuam exclusivamente manuais.
