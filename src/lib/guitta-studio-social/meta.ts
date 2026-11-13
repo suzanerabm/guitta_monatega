@@ -7,6 +7,7 @@ import type { MetaOperation, PlatformState, PublicationItem } from "./types";
 
 type PerformMetaOperationOptions = {
   operation: MetaOperation;
+  carouselIndex: number | null;
   occurrence: string;
   correlationId: string;
   item: PublicationItem;
@@ -31,6 +32,26 @@ function required(name: string): string {
 function imageUrl(item: PublicationItem): string {
   if (item.media.kind !== "image") throw new Error(`Safe Studio publisher does not support ${item.media.kind} yet; zero Meta calls made.`);
   return item.media.image.url;
+}
+
+function carouselImages(item: PublicationItem): Array<{ url: string }> {
+  if (item.media.kind !== "carousel") throw new Error(`Operation requires a carousel; ${item.media.kind} received; zero Meta calls made.`);
+  return item.media.images;
+}
+
+function carouselImage(item: PublicationItem, index: number | null): { url: string } {
+  if (index === null) throw new Error("Carousel operation is missing its image index; zero Meta calls made.");
+  const image = carouselImages(item)[index];
+  if (!image) throw new Error(`Carousel image ${index} does not exist; zero Meta calls made.`);
+  return image;
+}
+
+function carouselChildIds(state: PlatformState): string[] {
+  const children = state.carousel?.children ?? [];
+  if (children.length === 0 || children.some((child) => child.status !== "media_ready" || !child.containerId)) {
+    throw new Error("Not every carousel child is ready; zero Meta calls made.");
+  }
+  return children.map((child) => child.containerId!);
 }
 
 function requireId(value: string | null, label: string): string {
@@ -89,6 +110,34 @@ export async function performStudioMetaOperation(options: PerformMetaOperationOp
         "create Instagram image container",
       );
       break;
+    case "create_instagram_carousel_child":
+      payload = await post(
+        `${required("INSTAGRAM_USER_ID")}/media`,
+        { image_url: carouselImage(options.item, options.carouselIndex).url, is_carousel_item: "true" },
+        instagramToken(),
+        `create Instagram carousel child ${options.carouselIndex}`,
+      );
+      break;
+    case "check_instagram_carousel_child":
+      payload = await get(
+        requireId(options.platformState.carousel?.children[options.carouselIndex ?? -1]?.containerId ?? null, "Instagram carousel child ID"),
+        "status_code,status",
+        instagramToken(),
+        `check Instagram carousel child ${options.carouselIndex} once`,
+      );
+      break;
+    case "create_instagram_carousel_container":
+      payload = await post(
+        `${required("INSTAGRAM_USER_ID")}/media`,
+        {
+          media_type: "CAROUSEL",
+          children: carouselChildIds(options.platformState).join(","),
+          caption: options.item.instagram.caption,
+        },
+        instagramToken(),
+        "create Instagram carousel container",
+      );
+      break;
     case "check_instagram_container":
       payload = await get(
         requireId(options.platformState.containerId, "Instagram container ID"),
@@ -121,6 +170,27 @@ export async function performStudioMetaOperation(options: PerformMetaOperationOp
         "publish Facebook image once",
       );
       break;
+    case "create_facebook_carousel_child":
+      payload = await post(
+        `${required("FACEBOOK_PAGE_ID")}/photos`,
+        { url: carouselImage(options.item, options.carouselIndex).url, published: "false" },
+        facebookToken(),
+        `create Facebook carousel child ${options.carouselIndex}`,
+      );
+      break;
+    case "publish_facebook_carousel": {
+      const fields: Record<string, string> = { message: options.item.facebook.message };
+      carouselChildIds(options.platformState).forEach((id, index) => {
+        fields[`attached_media[${index}]`] = JSON.stringify({ media_fbid: id });
+      });
+      payload = await post(
+        `${required("FACEBOOK_PAGE_ID")}/feed`,
+        fields,
+        facebookToken(),
+        "publish Facebook carousel once",
+      );
+      break;
+    }
     case "confirm_facebook_media":
       payload = await get(
         requireId(options.platformState.externalId, "Facebook media ID"),

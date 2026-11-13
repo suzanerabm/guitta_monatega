@@ -1,8 +1,8 @@
 # Reativação segura da publicação Meta — Guitta Monatega Studio
 
-Data: 12 de novembro de 2026
-Branch de implementação: `safety-studio-meta-state-machine`
-Status operacional: **não implantado, não autorizado e sem chamadas reais à Meta**
+Data: 13 de novembro de 2026
+Branch de implementação: `main`
+Status operacional: **imagem simples validada em produção; cron seguro do Studio pronto para ativação; Reel manual**
 
 ## Escopo
 
@@ -12,21 +12,52 @@ permanecem pausados e não fazem parte do teste.
 O objetivo da primeira etapa é provar, com respostas simuladas, que lentidão, interrupção ou erro
 externo nunca podem virar polling, repetição ou rajada de chamadas.
 
-## Barreiras que continuam ativas
+## Barreiras da rota manual
 
 1. A rota só é habilitada pelo valor literal `GUITTA_STUDIO_META_ROUTE_ENABLED=true`; ausente ou
    qualquer outro valor retorna HTTP 503 antes de autenticação, S3 ou Meta.
 2. A autenticação usa `GUITTA_STUDIO_META_MANUAL_SECRET`, exclusivo do Studio; o `CRON_SECRET`
    compartilhado não autoriza esta rota.
-3. Não há cron de publicação no `vercel.json`.
-4. O circuit breaker persistente tem padrão desligado.
+3. A rota manual não é registrada no cron.
+4. O circuit breaker manual persistente tem padrão desligado.
 5. Ligar o circuit breaker não basta: são obrigatórias uma ocorrência, uma plataforma e uma operação
    exatas, além de uma autorização com vencimento de no máximo 24 horas.
-6. O primeiro estágio aceita somente imagem simples. Carrossel e Reel terminam em revisão humana
-   com zero chamadas à Meta.
-7. A fila vencida não é processada sem que uma ocorrência específica seja autorizada.
+6. A automação aceita imagem simples e carrossel. Reel termina como `manual-only` com zero chamadas
+   à Meta e sem criar estado de publicação.
+7. O seletor enxerga somente a ocorrência da data corrente em `America/Sao_Paulo`, depois de seu
+   horário agendado. Datas anteriores não têm catch-up e datas futuras nunca são antecipadas.
 8. A autorização é descartável: ela é consumida no S3 antes de cada chamada Meta. A etapa seguinte
-   exige uma nova autorização humana para a mesma ocorrência, plataforma e operação exata.
+   exige uma nova autorização humana para a mesma ocorrência, plataforma, operação e, no carrossel,
+   índice exato do slide.
+9. Mais de uma ocorrência elegível no mesmo dia é conflito de agenda e resulta em zero chamadas.
+10. Cada ocorrência possui um orçamento persistente e finito de chamadas Meta. Atingir o teto leva
+    a revisão humana sem fazer outra chamada.
+
+## Cron restrito do Studio
+
+O agendamento automático usa uma rota separada, `/api/cron/guitta-studio-scheduled-publish`, e não
+reutiliza o segredo nem a autorização descartável da rota manual.
+
+1. A rota exige simultaneamente `GUITTA_STUDIO_META_CRON_ENABLED=true`, o `CRON_SECRET` da Vercel e
+   o objeto persistente `_schedule-control.json` com `enabled: true`.
+2. O cron é exclusivo do Guitta Monatega Studio. Os publicadores de Kammara e Bichittos continuam
+   pausados e não são alterados por este controle.
+3. Nesta fase, somente o Instagram do Studio é permitido. Facebook é recusado antes de acessar o
+   controle no S3; Reel retorna `manual-only` com zero chamadas.
+4. O cron roda a cada 15 minutos, somente entre 09:00 e 18:45 de `America/Sao_Paulo`. Uma execução
+   faz zero ou uma chamada Meta.
+5. Somente a publicação com a data local exata do dia pode avançar. Não há busca de atrasados,
+   antecipação de datas futuras ou recuperação automática no dia seguinte.
+6. Antes de cada chamada, uma autorização é reservada por escrita condicional no S3. Execuções
+   concorrentes não podem consumir a mesma versão do controle.
+7. Há um teto adicional de 32 chamadas Meta por dia para todo o cron do Studio. Esse teto fica
+   acima do necessário para o maior carrossel válido, mas impede crescimento ilimitado.
+8. Conflito de agenda, estado ambíguo, `needs_review`, erro crítico ou exceção inesperada desligam o
+   controle persistente. Religar exige ação humana.
+9. Depois de o Instagram da ocorrência chegar a `published`, execuções posteriores retornam sem
+   adquirir lock ou gravar estado.
+10. O watchdog verifica somente o Instagram do Studio nesta fase; Facebook não é tratado como
+    publicação faltante.
 
 ## Regra estrutural contra looping
 
@@ -69,7 +100,26 @@ PUBLISH_REQUESTED
 PUBLISHED
 ```
 
-Instagram e Facebook nunca são publicados na mesma execução.
+Instagram e Facebook nunca são publicados na mesma execução. O cron inicial não autoriza Facebook;
+esta máquina permanece disponível apenas para a rota manual supervisionada.
+
+### Instagram — carrossel
+
+Cada transição abaixo termina a execução. Para cada slide: criar uma vez, aguardar pelo menos 60
+segundos e consultar uma única vez. Um slide que não estiver pronto nessa consulta vai para revisão
+humana; não existe retry automático do slide.
+
+Depois que todos os slides estiverem prontos, o publicador cria o contêiner pai, consulta seu estado
+em execuções posteriores, publica e confirma. O índice do slide faz parte da autorização descartável,
+impedindo que uma autorização do slide 1 seja usada para o slide 2.
+
+### Facebook — carrossel (somente rota manual supervisionada)
+
+Cada slide é criado como foto não publicada em uma execução separada. Somente depois de todos os IDs
+estarem persistidos o post pai é publicado, também em execução separada, e depois confirmado.
+
+Se o calendário mudar de dia durante qualquer fluxo, a ocorrência deixa de ser selecionável. O estado
+parcial fica preservado para auditoria, mas a automação não continua nem tenta recuperar no dia seguinte.
 
 ## Resposta a interrupção e ambiguidade
 
@@ -91,7 +141,11 @@ token, permissão, bloqueio ou rate limit pausa a marca após a primeira respost
 | Instagram imagem, fluxo feliz | 4 chamadas, cada uma em execução diferente |
 | Instagram imagem lenta | até 6 chamadas, espaçadas em execuções diferentes |
 | Facebook imagem | 2 chamadas, cada uma em execução diferente |
-| Carrossel ou Reel nesta etapa | 0 chamadas Meta |
+| Instagram carrossel de N imagens, fluxo feliz | `2N + 4`, cada chamada em execução diferente |
+| Facebook carrossel de N imagens, fluxo feliz | `N + 2`, cada chamada em execução diferente |
+| Orçamento absoluto de uma ocorrência de carrossel | `3N + 8`; depois disso, revisão humana |
+| Reel | 0 chamadas Meta; publicação manual |
+| Cron do Studio em um dia | máximo adicional de 32 chamadas Meta; depois disso, pausa |
 
 Os números do fluxo completo não são uma rajada: cada chamada depende de estado persistido e de
 uma nova execução posterior. Não há mecanismo que percorra essas etapas em um único processo.
@@ -107,21 +161,29 @@ uma nova execução posterior. Não há mecanismo que percorra essas etapas em u
 - rate limit faz uma chamada, pausa a marca e não repete;
 - interrupção com `inFlight` impede repetição;
 - falha de S3 depois da resposta Meta preserva `inFlight` e bloqueia nova chamada;
-- carrossel é recusado com zero chamadas.
+- passado, futuro e horário futuro do próprio dia produzem zero chamadas;
+- Reel é recusado antes de gravar estado e produz zero chamadas;
+- carrossel cria e verifica um único slide por execução;
+- autorização de carrossel não pode ser reutilizada em outro slide;
+- Instagram e Facebook concluem carrosséis em máquinas de estado independentes.
+- a rota do cron rejeita o segredo manual e aceita somente o `CRON_SECRET`;
+- o cron desligado retorna antes de ler estado ou chamar a Meta;
+- o controle agendado recusa Facebook e uma ocorrência de outra data antes do S3;
+- cada autorização agendada incrementa condicionalmente o contador antes da Meta;
+- o teto diário recusa a chamada seguinte sem gravar outro estado;
+- depois de `published`, o cron não continua gravando locks.
 
 Nenhum teste automatizado usa credenciais ou API real da Meta.
 
-## Etapas ainda obrigatórias
+## Sequência de ativação
 
-1. Revisar esta implementação e os testes.
-2. Resolver ou isolar o teste preexistente do watchdog que depende de variáveis AWS locais.
-3. Definir uma nova ocorrência de teste, simples e não pertencente à fila vencida.
-4. Validar a mídia sem chamar a Meta.
-5. Rotacionar as credenciais do Studio e conferir permissões manualmente.
-6. Fazer deploy com rota pausada, cron ausente e circuit breaker desligado.
-7. Validar somente leitura de estado.
-8. Obter autorização explícita da proprietária para uma plataforma e uma ocorrência.
-9. Executar uma única publicação manual.
-10. Observar conta, logs e estado por pelo menos 24 horas.
+1. Executar testes, TypeScript, lint dos arquivos alterados e build de produção.
+2. Criar `_schedule-control.json` desligado no bucket de automação.
+3. Publicar a rota e o agendamento com o interruptor de ambiente ainda desligado.
+4. Confirmar que a rota responde pausada e que não houve chamada Meta.
+5. Habilitar o interruptor de ambiente, republicar e confirmar que o controle persistente desligado
+   ainda produz zero chamadas.
+6. Ligar o controle persistente como última ação.
+7. Conferir os logs e o estado depois da primeira publicação agendada.
 
-Carrossel, Reel, cron recorrente e qualquer outra marca exigem avaliações e autorizações separadas.
+Facebook automático, Reel e qualquer outra marca exigem avaliações e autorizações separadas.

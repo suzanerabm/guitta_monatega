@@ -1,7 +1,7 @@
 import bichittosQueue from "@/lib/bichittos-social/publication-queue.json";
 import { readBrandControl as readBichittosControl, readPublicationState as readBichittosState } from "@/lib/bichittos-social/state";
 import studioQueue from "@/lib/guitta-studio-social/publication-queue.json";
-import { readBrandControl as readStudioControl, readPublicationState as readStudioState } from "@/lib/guitta-studio-social/state";
+import { readPublicationState as readStudioState, readStudioScheduleControl } from "@/lib/guitta-studio-social/state";
 import kammaraQueue from "@/lib/kammara-social/publication-queue.json";
 import { readBrandControl as readKammaraControl, readPublicationState as readKammaraState } from "@/lib/kammara-social/state";
 import { sendPublishingAlert, type PublishingBrand } from "@/lib/social-publishing-alerts";
@@ -9,17 +9,36 @@ import { sendPublishingAlert, type PublishingBrand } from "@/lib/social-publishi
 type QueueItem = { occurrence: string; scheduledAt: string; postId?: string; title?: string; slug?: string };
 type State = { instagram: { status: string }; facebook: { status: string } } | null;
 
-const WINDOW_MS = 10 * 60 * 60 * 1000;
+const WINDOW_MS = 12 * 60 * 60 * 1000;
 
 const campaigns: Array<{
   brand: PublishingBrand;
   items: QueueItem[];
   read: (occurrence: string) => Promise<State>;
   readControl: () => Promise<{ publishingEnabled: boolean }>;
+  expectedPlatforms: Array<"instagram" | "facebook">;
 }> = [
-  { brand: "Kammara", items: kammaraQueue.items as QueueItem[], read: readKammaraState, readControl: readKammaraControl },
-  { brand: "Bichittos", items: bichittosQueue.items as QueueItem[], read: readBichittosState, readControl: readBichittosControl },
-  { brand: "Guitta Monatega Studio", items: studioQueue.items as QueueItem[], read: readStudioState, readControl: readStudioControl },
+  {
+    brand: "Kammara",
+    items: kammaraQueue.items as QueueItem[],
+    read: readKammaraState,
+    readControl: readKammaraControl,
+    expectedPlatforms: ["instagram", "facebook"],
+  },
+  {
+    brand: "Bichittos",
+    items: bichittosQueue.items as QueueItem[],
+    read: readBichittosState,
+    readControl: readBichittosControl,
+    expectedPlatforms: ["instagram", "facebook"],
+  },
+  {
+    brand: "Guitta Monatega Studio",
+    items: studioQueue.items as QueueItem[],
+    read: readStudioState,
+    readControl: async () => ({ publishingEnabled: (await readStudioScheduleControl()).enabled }),
+    expectedPlatforms: ["instagram"],
+  },
 ];
 
 export async function runSocialPublishingWatchdog(now = new Date()) {
@@ -40,8 +59,12 @@ export async function runSocialPublishingWatchdog(now = new Date()) {
       const state = await campaign.read(item.occurrence);
       const instagram = state?.instagram.status ?? "missing";
       const facebook = state?.facebook.status ?? "missing";
-      if (instagram !== "published" || facebook !== "published") {
-        failures.push(`${campaign.brand} ${item.occurrence} (${item.postId ?? item.slug ?? item.title ?? "post"}): Instagram=${instagram}, Facebook=${facebook}`);
+      const platformFailures = campaign.expectedPlatforms.flatMap((platform) => {
+        const status = platform === "instagram" ? instagram : facebook;
+        return status === "published" ? [] : [`${platform}=${status}`];
+      });
+      if (platformFailures.length > 0) {
+        failures.push(`${campaign.brand} ${item.occurrence} (${item.postId ?? item.slug ?? item.title ?? "post"}): ${platformFailures.join(", ")}`);
       }
     }
   }

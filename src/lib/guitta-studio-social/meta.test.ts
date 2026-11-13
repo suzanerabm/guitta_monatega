@@ -14,6 +14,17 @@ const publication: PublicationItem = {
   facebook: { message: "Safe test" },
 };
 
+const carouselPublication: PublicationItem = {
+  ...publication,
+  media: {
+    kind: "carousel",
+    images: [
+      { url: "https://media.example/slide-1.jpg" },
+      { url: "https://media.example/slide-2.jpg" },
+    ],
+  },
+};
+
 function state(): PlatformState {
   return {
     status: "pending",
@@ -22,7 +33,21 @@ function state(): PlatformState {
     nextActionAt: null,
     statusChecks: 0,
     inFlight: null,
+    carousel: null,
     error: null,
+  };
+}
+
+function carouselState(): PlatformState {
+  return {
+    ...state(),
+    status: "building_carousel",
+    carousel: {
+      children: [
+        { status: "media_ready", containerId: "child-1", nextActionAt: null, statusChecks: 1, error: null },
+        { status: "media_ready", containerId: "child-2", nextActionAt: null, statusChecks: 1, error: null },
+      ],
+    },
   };
 }
 
@@ -57,6 +82,7 @@ describe("Studio single-call Meta adapter", () => {
 
     await performStudioMetaOperation({
       operation,
+      carouselIndex: null,
       occurrence: "test-001",
       correlationId: "correlation",
       item: publication,
@@ -78,6 +104,7 @@ describe("Studio single-call Meta adapter", () => {
 
     const outcome = performStudioMetaOperation({
       operation: "create_instagram_container",
+      carouselIndex: null,
       occurrence: "test-001",
       correlationId: "correlation",
       item: publication,
@@ -87,6 +114,33 @@ describe("Studio single-call Meta adapter", () => {
     });
 
     await expect(outcome).rejects.toBeInstanceOf(MetaPublishingError);
+    expect(fetchImpl).toHaveBeenCalledTimes(1);
+  });
+
+  it.each([
+    ["create_instagram_carousel_child", 0],
+    ["check_instagram_carousel_child", 0],
+    ["create_instagram_carousel_container", null],
+    ["create_facebook_carousel_child", 0],
+    ["publish_facebook_carousel", null],
+  ] as const)("performs exactly one request for carousel operation %s", async (operation, carouselIndex) => {
+    const fetchImpl = vi.fn(async () => new Response(JSON.stringify(
+      operation === "check_instagram_carousel_child"
+        ? { status_code: "FINISHED", status: "Finished" }
+        : { id: "result-id" },
+    ), { status: 200 })) as unknown as typeof fetch;
+
+    await performStudioMetaOperation({
+      operation,
+      carouselIndex,
+      occurrence: "test-001",
+      correlationId: "carousel-correlation",
+      item: carouselPublication,
+      platformState: carouselState(),
+      fetchImpl,
+      log: () => {},
+    });
+
     expect(fetchImpl).toHaveBeenCalledTimes(1);
   });
 });

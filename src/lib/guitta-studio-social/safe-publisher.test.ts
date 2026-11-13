@@ -13,6 +13,7 @@ function platform(): PlatformState {
     nextActionAt: null,
     statusChecks: 0,
     inFlight: null,
+    carousel: null,
     error: null,
   };
 }
@@ -21,18 +22,19 @@ function stored(): StoredState {
   return {
     etag: "etag-1",
     state: {
-      schemaVersion: 2,
+      schemaVersion: 3,
       occurrence: "test-001",
       lockOwner: "owner",
       lockUntil: "2026-11-12T12:10:00.000Z",
       updatedAt: "2026-11-12T12:00:00.000Z",
+      metaCalls: 0,
       instagram: platform(),
       facebook: platform(),
     },
   };
 }
 
-function item(kind: "image" | "carousel" = "image"): PublicationItem {
+function item(kind: "image" | "carousel" | "reel" = "image"): PublicationItem {
   return {
     occurrence: "test-001",
     postId: "studio-test-001",
@@ -41,7 +43,9 @@ function item(kind: "image" | "carousel" = "image"): PublicationItem {
     type: "test",
     media: kind === "image"
       ? { kind: "image", image: { url: "https://media.example/test.jpg" } }
-      : { kind: "carousel", images: [{ url: "https://media.example/1.jpg" }, { url: "https://media.example/2.jpg" }] },
+      : kind === "carousel"
+        ? { kind: "carousel", images: [{ url: "https://media.example/1.jpg" }, { url: "https://media.example/2.jpg" }] }
+        : { kind: "reel", video: { url: "https://media.example/reel.mp4" }, cover: { url: "https://media.example/cover.jpg" } },
     instagram: { caption: "Safe test" },
     facebook: { message: "Safe test" },
   };
@@ -240,6 +244,7 @@ describe("Studio safe publisher", () => {
     const initial = stored();
     initial.state.instagram.inFlight = {
       operation: "publish_instagram_media",
+      carouselIndex: null,
       correlationId: "previous",
       startedAt: "2026-11-12T11:59:00.000Z",
     };
@@ -310,12 +315,114 @@ describe("Studio safe publisher", () => {
     expect(repeatedOperation).not.toHaveBeenCalled();
   });
 
-  it("refuses carousels with zero Meta calls", async () => {
+  it("publishes an Instagram carousel as finite one-call steps", async () => {
+    const state = harness();
+    const operations: string[] = [];
+    const performOperation = vi.fn(async (options: Parameters<typeof performStudioMetaOperation>[0]) => {
+      operations.push(`${options.operation}:${options.carouselIndex ?? "parent"}`);
+      if (options.operation.startsWith("check_")) return ok({ id: null, statusCode: "FINISHED" });
+      return ok({ id: `${options.operation}-${options.carouselIndex ?? "parent"}` });
+    });
+    const run = (now: string) => advanceStudioPublication({
+      occurrence: "test-001",
+      item: item("carousel"),
+      stored: state.current,
+      allowedPlatforms: ["instagram"],
+      now: new Date(now),
+      save: state.save,
+      consumeAuthorization: state.consumeAuthorization,
+      pauseBrand: state.pauseBrand,
+      performOperation,
+    });
+
+    expect((await run("2026-11-12T12:00:00.000Z")).result).toMatchObject({
+      operation: "create_instagram_carousel_child", carouselIndex: 0, calls: 1,
+    });
+    expect((await run("2026-11-12T12:00:30.000Z")).result.calls).toBe(0);
+    expect((await run("2026-11-12T12:01:00.000Z")).result).toMatchObject({
+      operation: "check_instagram_carousel_child", carouselIndex: 0, calls: 1,
+    });
+    expect((await run("2026-11-12T12:01:01.000Z")).result).toMatchObject({
+      operation: "create_instagram_carousel_child", carouselIndex: 1, calls: 1,
+    });
+    expect((await run("2026-11-12T12:02:01.000Z")).result).toMatchObject({
+      operation: "check_instagram_carousel_child", carouselIndex: 1, calls: 1,
+    });
+    expect((await run("2026-11-12T12:02:02.000Z")).result).toMatchObject({
+      operation: "create_instagram_carousel_container", calls: 1,
+    });
+    expect((await run("2026-11-12T12:03:02.000Z")).result).toMatchObject({ status: "state-advanced", calls: 0 });
+    expect((await run("2026-11-12T12:03:03.000Z")).result).toMatchObject({
+      operation: "check_instagram_container", calls: 1,
+    });
+    expect((await run("2026-11-12T12:03:04.000Z")).result).toMatchObject({
+      operation: "publish_instagram_media", calls: 1,
+    });
+    expect((await run("2026-11-12T12:08:04.000Z")).result).toMatchObject({
+      operation: "confirm_instagram_media", calls: 1, status: "published",
+    });
+    expect(operations).toEqual([
+      "create_instagram_carousel_child:0",
+      "check_instagram_carousel_child:0",
+      "create_instagram_carousel_child:1",
+      "check_instagram_carousel_child:1",
+      "create_instagram_carousel_container:parent",
+      "check_instagram_container:parent",
+      "publish_instagram_media:parent",
+      "confirm_instagram_media:parent",
+    ]);
+    expect(state.current.state.metaCalls).toBe(8);
+    expect(state.consumeAuthorization).toHaveBeenCalledTimes(8);
+  });
+
+  it("publishes a Facebook carousel as finite one-call steps", async () => {
+    const initial = stored();
+    initial.state.instagram.status = "published";
+    const state = harness(initial);
+    const operations: string[] = [];
+    const performOperation = vi.fn(async (options: Parameters<typeof performStudioMetaOperation>[0]) => {
+      operations.push(`${options.operation}:${options.carouselIndex ?? "parent"}`);
+      return ok({ id: `${options.operation}-${options.carouselIndex ?? "parent"}` });
+    });
+    const run = (now: string) => advanceStudioPublication({
+      occurrence: "test-001",
+      item: item("carousel"),
+      stored: state.current,
+      allowedPlatforms: ["facebook"],
+      now: new Date(now),
+      save: state.save,
+      consumeAuthorization: state.consumeAuthorization,
+      pauseBrand: state.pauseBrand,
+      performOperation,
+    });
+
+    expect((await run("2026-11-12T12:00:00.000Z")).result).toMatchObject({
+      operation: "create_facebook_carousel_child", carouselIndex: 0, calls: 1,
+    });
+    expect((await run("2026-11-12T12:00:01.000Z")).result).toMatchObject({
+      operation: "create_facebook_carousel_child", carouselIndex: 1, calls: 1,
+    });
+    expect((await run("2026-11-12T12:00:02.000Z")).result).toMatchObject({
+      operation: "publish_facebook_carousel", calls: 1,
+    });
+    expect((await run("2026-11-12T12:05:02.000Z")).result).toMatchObject({
+      operation: "confirm_facebook_media", calls: 1, status: "published",
+    });
+    expect(operations).toEqual([
+      "create_facebook_carousel_child:0",
+      "create_facebook_carousel_child:1",
+      "publish_facebook_carousel:parent",
+      "confirm_facebook_media:parent",
+    ]);
+    expect(performOperation).toHaveBeenCalledTimes(4);
+  });
+
+  it("keeps Reels manual with zero state changes and zero Meta calls", async () => {
     const state = harness();
     const performOperation = vi.fn();
     const outcome = await advanceStudioPublication({
       occurrence: "test-001",
-      item: item("carousel"),
+      item: item("reel"),
       stored: state.current,
       allowedPlatforms: ["instagram"],
       now: new Date("2026-11-12T12:00:00.000Z"),
@@ -325,8 +432,32 @@ describe("Studio safe publisher", () => {
       performOperation,
     });
 
-    expect(outcome.result).toMatchObject({ status: "needs-review", calls: 0 });
+    expect(outcome.result).toMatchObject({ status: "manual-only", calls: 0 });
     expect(performOperation).not.toHaveBeenCalled();
+    expect(state.save).not.toHaveBeenCalled();
+  });
+
+  it.each([
+    "2026-11-11T15:00:00.000Z",
+    "2026-11-13T15:00:00.000Z",
+  ])("never calls Meta outside the exact publication day (%s)", async (now) => {
+    const state = harness();
+    const performOperation = vi.fn();
+    const outcome = await advanceStudioPublication({
+      occurrence: "test-001",
+      item: item(),
+      stored: state.current,
+      allowedPlatforms: ["instagram"],
+      now: new Date(now),
+      save: state.save,
+      consumeAuthorization: state.consumeAuthorization,
+      pauseBrand: state.pauseBrand,
+      performOperation,
+    });
+
+    expect(outcome.result).toMatchObject({ status: "outside-publication-day", calls: 0 });
+    expect(performOperation).not.toHaveBeenCalled();
+    expect(state.save).not.toHaveBeenCalled();
   });
 
   it("checks a slow container at most three times with increasing waits and no loop", async () => {

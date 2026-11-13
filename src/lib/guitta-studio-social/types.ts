@@ -16,6 +16,7 @@ export type Platform = "instagram" | "facebook";
 
 export type PlatformStatus =
   | "pending"
+  | "building_carousel"
   | "container_created"
   | "waiting_for_media"
   | "media_ready"
@@ -26,17 +27,31 @@ export type PlatformStatus =
 
 export type MetaOperation =
   | "create_instagram_container"
+  | "create_instagram_carousel_child"
+  | "check_instagram_carousel_child"
+  | "create_instagram_carousel_container"
   | "check_instagram_container"
   | "publish_instagram_media"
   | "confirm_instagram_media"
   | "publish_facebook_image"
+  | "create_facebook_carousel_child"
+  | "publish_facebook_carousel"
   | "confirm_facebook_media";
 
 export type MetaCallAuthorization = {
   occurrence: string;
   platform: Platform;
   operation: MetaOperation;
+  carouselIndex: number | null;
   correlationId: string;
+};
+
+export type CarouselChildState = {
+  status: "pending" | "waiting_for_media" | "media_ready" | "needs_review";
+  containerId: string | null;
+  nextActionAt: string | null;
+  statusChecks: number;
+  error: string | null;
 };
 
 export type PlatformState = {
@@ -47,18 +62,21 @@ export type PlatformState = {
   statusChecks: number;
   inFlight: {
     operation: MetaOperation;
+    carouselIndex: number | null;
     correlationId: string;
     startedAt: string;
   } | null;
+  carousel: { children: CarouselChildState[] } | null;
   error: string | null;
 };
 
 export type PublicationState = {
-  schemaVersion: 2;
+  schemaVersion: 3;
   occurrence: string;
   lockOwner: string;
   lockUntil: string;
   updatedAt: string;
+  metaCalls: number;
   instagram: PlatformState;
   facebook: PlatformState;
 };

@@ -133,6 +133,7 @@ describe.each(brands)("$name brand control", ({ prefix, key, state, run, due }) 
       occurrence: "test-001",
       platform: "instagram",
       operation: "create_instagram_container",
+      carouselIndex: null,
       correlationId: "correlation-1",
     }, new Date("2026-11-12T12:00:00.000Z"));
 
@@ -164,7 +165,32 @@ describe.each(brands)("$name brand control", ({ prefix, key, state, run, due }) 
       occurrence: "test-001",
       platform: "instagram",
       operation: "publish_instagram_media",
+      carouselIndex: null,
       correlationId: "correlation-2",
+    }, new Date("2026-11-12T12:00:00.000Z"))).rejects.toThrow("does not match");
+
+    expect(send).toHaveBeenCalledTimes(1);
+    expect(JSON.parse(stored!).publishingEnabled).toBe(true);
+    expect(fetchSpy).not.toHaveBeenCalled();
+  });
+
+  it("refuses to consume a Studio carousel authorization for a different slide", async () => {
+    if (prefix !== "GUITTA_STUDIO") return;
+    stored = JSON.stringify({
+      publishingEnabled: true,
+      allowedOccurrence: "test-001",
+      allowedPlatforms: ["instagram"],
+      allowedOperation: "create_instagram_carousel_child",
+      allowedCarouselIndex: 0,
+      authorizationExpiresAt: "2026-11-12T13:00:00.000Z",
+    });
+
+    await expect(studioState.consumeBrandAuthorization({
+      occurrence: "test-001",
+      platform: "instagram",
+      operation: "create_instagram_carousel_child",
+      carouselIndex: 1,
+      correlationId: "correlation-3",
     }, new Date("2026-11-12T12:00:00.000Z"))).rejects.toThrow("does not match");
 
     expect(send).toHaveBeenCalledTimes(1);

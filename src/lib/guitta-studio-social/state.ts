@@ -1,6 +1,7 @@
 import { GetObjectCommand, ListObjectsV2Command, PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import { awsCredentialsProvider } from "@vercel/oidc-aws-credentials-provider";
-import type { MetaCallAuthorization, MetaOperation, Platform, PlatformState, PublicationState } from "./types";
+import { isPublicationScheduledForToday, studioCalendarDate } from "./select-due";
+import type { MetaCallAuthorization, MetaOperation, Platform, PlatformState, PublicationItem, PublicationState } from "./types";
 
 export type StoredState = { state: PublicationState; etag: string };
 
@@ -53,6 +54,7 @@ function initialPlatformState(): PlatformState {
     nextActionAt: null,
     statusChecks: 0,
     inFlight: null,
+    carousel: null,
     error: null,
   };
 }
@@ -61,18 +63,19 @@ export async function acquire(occurrence: string, now: Date, owner: string): Pro
   const current = await read(occurrence);
   if (current?.state.instagram.status === "published" && current.state.facebook.status === "published") return { status: "published" };
   if (current && new Date(current.state.lockUntil) > now && current.state.lockOwner !== owner) return { status: "locked" };
-  if (current && current.state.schemaVersion !== 2) {
+  if (current && current.state.schemaVersion !== 3) {
     throw new Error(`Occurrence ${occurrence} uses legacy state and requires a human migration before any Meta call.`);
   }
   if (current && [current.state.instagram, current.state.facebook].some((platform) => platform.inFlight || platform.status === "needs_review" || platform.status === "brand_paused")) {
     throw new Error(`Occurrence ${occurrence} needs human review; automatic recovery is disabled.`);
   }
   const state: PublicationState = current?.state ?? {
-    schemaVersion: 2,
+    schemaVersion: 3,
     occurrence,
     lockOwner: owner,
     lockUntil: now.toISOString(),
     updatedAt: now.toISOString(),
+    metaCalls: 0,
     instagram: initialPlatformState(),
     facebook: initialPlatformState(),
   };
@@ -103,6 +106,7 @@ export type BrandControl = {
   allowedOccurrence: string | null;
   allowedPlatforms: Platform[];
   allowedOperation: MetaOperation | null;
+  allowedCarouselIndex: number | null;
   authorizationExpiresAt: string | null;
   pauseReason: string | null;
   pausedAt: string | null;
@@ -112,10 +116,15 @@ export type BrandControl = {
 const controlKey = "publications/guitta-monatega-studio/_control.json";
 const metaOperations = new Set<MetaOperation>([
   "create_instagram_container",
+  "create_instagram_carousel_child",
+  "check_instagram_carousel_child",
+  "create_instagram_carousel_container",
   "check_instagram_container",
   "publish_instagram_media",
   "confirm_instagram_media",
   "publish_facebook_image",
+  "create_facebook_carousel_child",
+  "publish_facebook_carousel",
   "confirm_facebook_media",
 ]);
 
@@ -135,6 +144,7 @@ export async function readBrandControl(): Promise<BrandControl> {
       allowedOccurrence: typeof control.allowedOccurrence === "string" && control.allowedOccurrence.length > 0 ? control.allowedOccurrence : null,
       allowedPlatforms,
       allowedOperation: isMetaOperation(control.allowedOperation) ? control.allowedOperation : null,
+      allowedCarouselIndex: Number.isInteger(control.allowedCarouselIndex) ? control.allowedCarouselIndex as number : null,
       authorizationExpiresAt: typeof control.authorizationExpiresAt === "string" ? control.authorizationExpiresAt : null,
       pauseReason: control.pauseReason ?? null,
       pausedAt: control.pausedAt ?? null,
@@ -147,6 +157,7 @@ export async function readBrandControl(): Promise<BrandControl> {
         allowedOccurrence: null,
         allowedPlatforms: [],
         allowedOperation: null,
+        allowedCarouselIndex: null,
         authorizationExpiresAt: null,
         pauseReason: "Publishing has never been enabled for this brand.",
         pausedAt: null,
@@ -177,6 +188,7 @@ export async function consumeBrandAuthorization(
     || control.allowedOccurrence !== expected.occurrence
     || !exactPlatform
     || control.allowedOperation !== expected.operation
+    || (Number.isInteger(control.allowedCarouselIndex) ? control.allowedCarouselIndex : null) !== expected.carouselIndex
     || !expiresAt
     || !Number.isFinite(expiresAt.getTime())
     || expiresAt <= now
@@ -189,6 +201,7 @@ export async function consumeBrandAuthorization(
     allowedOccurrence: null,
     allowedPlatforms: [],
     allowedOperation: null,
+    allowedCarouselIndex: null,
     authorizationExpiresAt: null,
     pauseReason: `One-shot authorization consumed before ${expected.platform}:${expected.operation} (${expected.correlationId}).`,
     pausedAt: now.toISOString(),
@@ -210,6 +223,7 @@ export async function pauseBrand(reason: string, now = new Date()): Promise<void
     allowedOccurrence: null,
     allowedPlatforms: [],
     allowedOperation: null,
+    allowedCarouselIndex: null,
     authorizationExpiresAt: null,
     pauseReason: reason,
     pausedAt: now.toISOString(),
@@ -222,4 +236,125 @@ export async function pauseBrand(reason: string, now = new Date()): Promise<void
     ContentType: "application/json",
     ServerSideEncryption: "AES256",
   }));
+}
+
+// Controle separado do cron: ele nunca aceita Facebook ou Reel e tem um teto diário fixo.
+// O controle manual descartável acima continua isolado para testes supervisionados.
+export type StudioScheduleControl = {
+  schemaVersion: 1;
+  enabled: boolean;
+  callsDate: string | null;
+  callsToday: number;
+  lastAuthorization: {
+    occurrence: string;
+    operation: MetaOperation;
+    carouselIndex: number | null;
+    correlationId: string;
+    authorizedAt: string;
+  } | null;
+  pauseReason: string | null;
+  pausedAt: string | null;
+  pausedBy: "system" | "human" | null;
+};
+
+const scheduleControlKey = "publications/guitta-monatega-studio/_schedule-control.json";
+export const STUDIO_SCHEDULE_MAX_META_CALLS_PER_DAY = 32;
+
+type StoredScheduleControl = { control: StudioScheduleControl; etag: string | null };
+
+function disabledScheduleControl(): StudioScheduleControl {
+  return {
+    schemaVersion: 1,
+    enabled: false,
+    callsDate: null,
+    callsToday: 0,
+    lastAuthorization: null,
+    pauseReason: "Studio scheduled publishing has never been enabled.",
+    pausedAt: null,
+    pausedBy: null,
+  };
+}
+
+async function readStoredScheduleControl(): Promise<StoredScheduleControl> {
+  try {
+    const output = await client.send(new GetObjectCommand({ Bucket: bucket(), Key: scheduleControlKey }));
+    if (!output.Body || !output.ETag) throw new Error("Studio schedule control object is incomplete.");
+    const value = JSON.parse(await output.Body.transformToString()) as Partial<StudioScheduleControl>;
+    if (value.schemaVersion !== 1) throw new Error("Studio schedule control uses an unsupported schema.");
+    return {
+      control: {
+        schemaVersion: 1,
+        enabled: value.enabled === true,
+        callsDate: typeof value.callsDate === "string" ? value.callsDate : null,
+        callsToday: Number.isInteger(value.callsToday) && (value.callsToday ?? -1) >= 0 ? value.callsToday! : 0,
+        lastAuthorization: value.lastAuthorization ?? null,
+        pauseReason: value.pauseReason ?? null,
+        pausedAt: value.pausedAt ?? null,
+        pausedBy: value.pausedBy ?? null,
+      },
+      etag: output.ETag,
+    };
+  } catch (error) {
+    if ((error as { name?: string }).name === "NoSuchKey") return { control: disabledScheduleControl(), etag: null };
+    throw error;
+  }
+}
+
+async function writeScheduleControl(stored: StoredScheduleControl): Promise<void> {
+  await client.send(new PutObjectCommand({
+    Bucket: bucket(),
+    Key: scheduleControlKey,
+    Body: `${JSON.stringify(stored.control, null, 2)}\n`,
+    ContentType: "application/json",
+    ServerSideEncryption: "AES256",
+    ...(stored.etag ? { IfMatch: stored.etag } : { IfNoneMatch: "*" }),
+  }));
+}
+
+export async function readStudioScheduleControl(): Promise<StudioScheduleControl> {
+  return (await readStoredScheduleControl()).control;
+}
+
+export async function consumeStudioScheduleAuthorization(
+  expected: MetaCallAuthorization,
+  item: PublicationItem,
+  now = new Date(),
+): Promise<void> {
+  if (expected.platform !== "instagram") {
+    throw new Error("Studio cron is restricted to Instagram.");
+  }
+  if (item.media.kind !== "image" && item.media.kind !== "carousel") {
+    throw new Error("Studio cron accepts only image and carousel publications.");
+  }
+  if (item.occurrence !== expected.occurrence || !isPublicationScheduledForToday(item, now)) {
+    throw new Error("Studio cron authorization is not for today's exact occurrence.");
+  }
+
+  const stored = await readStoredScheduleControl();
+  if (!stored.control.enabled) throw new Error("Studio scheduled publishing is paused.");
+  const callsDate = studioCalendarDate(now);
+  const callsToday = stored.control.callsDate === callsDate ? stored.control.callsToday : 0;
+  if (callsToday >= STUDIO_SCHEDULE_MAX_META_CALLS_PER_DAY) {
+    throw new Error(`Studio daily Meta call limit ${STUDIO_SCHEDULE_MAX_META_CALLS_PER_DAY} reached.`);
+  }
+
+  stored.control.callsDate = callsDate;
+  stored.control.callsToday = callsToday + 1;
+  stored.control.lastAuthorization = {
+    occurrence: expected.occurrence,
+    operation: expected.operation,
+    carouselIndex: expected.carouselIndex,
+    correlationId: expected.correlationId,
+    authorizedAt: now.toISOString(),
+  };
+  await writeScheduleControl(stored);
+}
+
+export async function pauseStudioSchedule(reason: string, now = new Date()): Promise<void> {
+  const stored = await readStoredScheduleControl();
+  stored.control.enabled = false;
+  stored.control.pauseReason = reason;
+  stored.control.pausedAt = now.toISOString();
+  stored.control.pausedBy = "system";
+  await writeScheduleControl(stored);
 }

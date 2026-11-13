@@ -24,9 +24,19 @@ export async function runGuittaStudioPublisher(now = new Date(), dryRun = false)
     return { status: "manual-authorization-expired", calls: 0, authorizationExpiresAt: control.authorizationExpiresAt };
   }
 
-  const due = selectDuePublications(items, now);
+  const due = selectDuePublications(items, now, queue.timezone);
+  if (due.length > 1) {
+    return {
+      status: "schedule-conflict",
+      occurrences: due.map((candidate) => candidate.occurrence),
+      calls: 0,
+    };
+  }
   const item = due.find((candidate) => candidate.occurrence === control.allowedOccurrence);
-  if (!item) return { status: "authorized-occurrence-not-due", occurrence: control.allowedOccurrence, calls: 0 };
+  if (!item) return { status: "authorized-occurrence-not-scheduled-today", occurrence: control.allowedOccurrence, calls: 0 };
+  if (item.media.kind === "reel") {
+    return { status: "reel-manual-only", occurrence: item.occurrence, calls: 0 };
+  }
   if (dryRun) {
     return {
       status: "dry-run",
@@ -36,6 +46,7 @@ export async function runGuittaStudioPublisher(now = new Date(), dryRun = false)
       scheduledAt: item.scheduledAt,
       allowedPlatforms: control.allowedPlatforms,
       allowedOperation: control.allowedOperation,
+      allowedCarouselIndex: control.allowedCarouselIndex,
       authorizationExpiresAt: control.authorizationExpiresAt,
       calls: 0,
     };

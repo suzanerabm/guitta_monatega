@@ -19,7 +19,7 @@ vi.mock("@/lib/bichittos-social/state", () => ({
   readPublicationState: mocks.bichittosState,
 }));
 vi.mock("@/lib/guitta-studio-social/state", () => ({
-  readBrandControl: mocks.studioControl,
+  readStudioScheduleControl: mocks.studioControl,
   readPublicationState: mocks.studioState,
 }));
 
@@ -28,7 +28,7 @@ describe("social publishing watchdog", () => {
     vi.clearAllMocks();
     mocks.kammaraControl.mockResolvedValue({ publishingEnabled: false });
     mocks.bichittosControl.mockResolvedValue({ publishingEnabled: false });
-    mocks.studioControl.mockResolvedValue({ publishingEnabled: false });
+    mocks.studioControl.mockResolvedValue({ enabled: false });
   });
 
   it("stays healthy before the first scheduled publication", async () => {
@@ -51,10 +51,10 @@ describe("social publishing watchdog", () => {
   });
 
   it("checks only an explicitly enabled brand", async () => {
-    mocks.studioControl.mockResolvedValue({ publishingEnabled: true });
+    mocks.studioControl.mockResolvedValue({ enabled: true });
     mocks.studioState.mockResolvedValue({
       instagram: { status: "published" },
-      facebook: { status: "published" },
+      facebook: { status: "pending" },
     });
 
     await expect(runSocialPublishingWatchdog(new Date("2026-10-10T12:00:00Z"))).resolves.toEqual({
