@@ -20,7 +20,7 @@
     "    id -> identificador único; obrigatório quando o livro tem duas edições do mesmo formato.",
     "    label -> nome localizado da edição, como 'Capa comum — menor'.",
     "    facts -> faixa etária, páginas, idioma, dimensões, peso, arquivo, publicação e ISBN específicos desta edição.",
-    "    purchaseChannel: 'amazon' | 'external' | 'preorder' | 'comingSoon'.",
+    "    purchaseChannel: 'amazon' | 'store' | 'external' | 'preorder' | 'comingSoon'.",
     "  buyUrl (string)   -> link de compra. Ausente = mostra 'Em breve' no botão.",
     "  buyLabel (string) -> texto do botão (ex: 'Amazon.com').",
     "  homeButtonUrl (string) -> destino do botão extra exibido na home.",
@@ -57,7 +57,7 @@
         { "id": "ebook-kindle", "format": "ebook", "label": "Livro digital", "purchaseChannel": "amazon", "price": { "amount": 29.90, "currency": "BRL" }, "facts": { "readingAge": "9–99 anos", "pageCount": 151, "language": "Português", "publicationDate": "23 de setembro de 2026" } },
         { "id": "paperback-kdp", "format": "paperback", "label": "Capa comum — 15,24 × 22,86 cm", "purchaseChannel": "amazon", "price": { "amount": 99.90, "currency": "BRL" }, "facts": { "readingAge": "9–99 anos", "pageCount": 144, "language": "Português", "dimensions": "15,24 × 0,86 × 22,86 cm", "publicationDate": "23 de setembro de 2026" } },
         { "id": "hardcover-kdp", "format": "hardcover", "label": "Edição especial com capa dura", "purchaseChannel": "amazon", "price": { "amount": 139.90, "currency": "BRL" }, "facts": { "readingAge": "9–99 anos", "pageCount": 144, "language": "Português", "dimensions": "15,85 × 1,35 × 23,47 cm", "publicationDate": "23 de setembro de 2026" } },
-        { "id": "paperback-monte-seu-livro", "format": "paperback", "label": "Capa comum — 16 × 23 cm", "purchaseChannel": "preorder", "facts": { "readingAge": "9–99 anos", "pageCount": 144, "language": "Português", "dimensions": "16 × 23 cm", "publicationDate": "23 de setembro de 2026" } }
+        { "id": "paperback-monte-seu-livro", "format": "paperback", "label": "Capa comum — 16 × 23 cm", "purchaseChannel": "store", "buyUrl": "https://loja.guittamonategastudio.com/produtos/saga-em-orf-v-ptbr/", "buyLabel": "Loja oficial Guitta Monatega Studio", "price": { "amount": 99.00, "currency": "BRL" }, "promotion": { "name": "Preço promocional na loja", "originalPrice": { "amount": 120.00, "currency": "BRL" } }, "facts": { "readingAge": "9–99 anos", "pageCount": 144, "language": "Português", "dimensions": "16 × 23 cm", "publicationDate": "23 de setembro de 2026" } }
       ],
       "appId": "kammara-book-saga-em-orf-v-volume-1"
     },

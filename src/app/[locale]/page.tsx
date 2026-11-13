@@ -6,6 +6,7 @@ import { BookShelf } from '@/components/BookShelf';
 import { buildPageMetadata, SITE_URL } from '@/lib/seo';
 import { getCatalogBooks, isBookComingSoon } from '@/lib/books';
 import { getMosaic, getWorlds } from '@/lib/content/kammara';
+import { STUDIO_STORE_URL } from '@/lib/store';
 import { bookPageLayout } from '@/theme/bookPages';
 import { homeBooksGallery } from '@/theme/artSections';
 import { palettes, type PaletteName } from '@/theme/palettes';
@@ -211,7 +212,7 @@ export default async function HomePage({
               overlayArrows
               overlayArrowOffset={bookPageLayout.homeShelfArrowOffset}
               cardPadding={bookPageLayout.homeShelfTrackPadding}
-              viewAllHref={`${prefix}/books`}
+              viewAllHref={loc === 'pt' ? STUDIO_STORE_URL : `${prefix}/books`}
               viewAllLabel={tBooks('viewAllBooksLabel')}
               viewAllColor={homeBooksGallery.accentColor}
               viewAllPlacement="section-title"
@@ -220,21 +221,29 @@ export default async function HomePage({
               cardMaxWidth={bookPageLayout.homeBooksCardWidth}
               cardHeight={bookPageLayout.homeBooksCardHeight}
               panelBackground={homeBooksGallery.panelBackground}
-              books={books.map((book) => ({
-                book: {
-                  id: book.slug,
-                  image: book.cover,
-                  alt: book.title,
-                  label: book.title,
-                  soon: isBookComingSoon(book),
-                  details: {
-                    url: `${prefix}/books/${book.slug}`,
-                    label: tBooks('detailsLabel'),
+              books={books.map((book) => {
+                const storeEdition = loc === 'pt'
+                  ? book.editions.find(
+                      (edition) => edition.purchaseChannel === 'store' && edition.url,
+                    )
+                  : undefined;
+
+                return {
+                  book: {
+                    id: book.slug,
+                    image: book.cover,
+                    alt: book.title,
+                    label: book.title,
+                    soon: isBookComingSoon(book),
+                    details: {
+                      url: storeEdition?.url ?? `${prefix}/books/${book.slug}`,
+                      label: storeEdition ? tBooks('storeBuyLabel') : tBooks('detailsLabel'),
+                    },
                   },
-                },
-                borderColor: homeBooksGallery.panelBorderColor,
-                textColor: homeBooksGallery.titleColor,
-              }))}
+                  borderColor: homeBooksGallery.panelBorderColor,
+                  textColor: homeBooksGallery.titleColor,
+                };
+              })}
             />
           </Box>
         </Box>

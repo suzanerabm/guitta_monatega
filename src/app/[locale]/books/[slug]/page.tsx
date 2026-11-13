@@ -207,6 +207,8 @@ export default async function BookPage({
                     pages: t('facts.pages'),
                   }}
                   buyLabel={t('buyLabel')}
+                  storeBuyLabel={t('storeBuyLabel')}
+                  storeBuyHint={t('storeBuyHint')}
                   amazonBuyLabel={t('amazonBuyLabel')}
                   amazonVersionLabels={{
                     pt: t('amazonBuyPortugueseVersionLabel'),
@@ -225,7 +227,7 @@ export default async function BookPage({
 
             <Box mt={comingSoon ? 0 : '2xl'}>
               <OutlineActionLink href={`/${loc}/books`} color={homeBooksGallery.accentColor}>
-                {t('viewAllBooksLabel')}
+                {t('exploreOtherBooksLabel')}
               </OutlineActionLink>
             </Box>
           </Box>

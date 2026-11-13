@@ -26,6 +26,8 @@ interface BookEditionSelectorProps {
   digitalFormatLabel: string;
   factsLabels: BookFactsLabels;
   buyLabel: string;
+  storeBuyLabel: string;
+  storeBuyHint: string;
   amazonBuyLabel: string;
   amazonVersionLabels?: Record<BookLocale, string>;
   preorderLabel: string;
@@ -58,6 +60,8 @@ export function BookEditionSelector({
   digitalFormatLabel,
   factsLabels,
   buyLabel,
+  storeBuyLabel,
+  storeBuyHint,
   amazonBuyLabel,
   amazonVersionLabels,
   preorderLabel,
@@ -66,7 +70,9 @@ export function BookEditionSelector({
   preorderEmailBody,
   soonLabel,
 }: BookEditionSelectorProps) {
-  const preferredEdition = editions.find((edition) => edition.format === 'paperback') ?? editions[0];
+  const preferredEdition = editions.find((edition) => edition.purchaseChannel === 'store')
+    ?? editions.find((edition) => edition.format === 'paperback')
+    ?? editions[0];
   const [selectedId, setSelectedId] = useState(preferredEdition?.id);
   const selectedEdition = editions.find((edition) => edition.id === selectedId) ?? preferredEdition;
 
@@ -91,6 +97,7 @@ export function BookEditionSelector({
     : selectedTitle;
   const selectedPromotion = getPromotion(selectedEdition);
   const isAmazon = selectedEdition.purchaseChannel === 'amazon';
+  const isStore = selectedEdition.purchaseChannel === 'store';
   const isPreorder = selectedEdition.purchaseChannel === 'preorder';
   const templateValues = {
     title: bookTitle,
@@ -119,11 +126,13 @@ export function BookEditionSelector({
           url: purchaseUrl,
           label: isPreorder
             ? preorderLabel
-            : isAmazon
-              ? amazonBuyLabel
-              : buyLabel,
-          subLabel: isAmazon ? amazonVersionLabels?.[locale] : undefined,
-          external: !isPreorder,
+            : isStore
+              ? storeBuyLabel
+              : isAmazon
+                ? amazonBuyLabel
+                : buyLabel,
+          subLabel: isStore ? storeBuyHint : isAmazon ? amazonVersionLabels?.[locale] : undefined,
+          external: !isPreorder && !isStore,
         },
         ...(alternateAmazonEdition?.url
           ? [{

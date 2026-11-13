@@ -23,6 +23,8 @@ const preorderProps = {
   preorderEmailHint: 'Ao clicar, abriremos seu aplicativo de e-mail com a mensagem pronta. O site não coleta seus dados; o envio acontece pelo seu aplicativo de e-mail.',
   preorderEmailSubject: 'Pré-venda — {title}',
   preorderEmailBody: 'Desejo comprar o livro "{title}", na edição {format}, e quero reservar 1 unidade.',
+  storeBuyLabel: 'Comprar na loja oficial',
+  storeBuyHint: 'Edição em português • envio no Brasil',
 };
 
 describe('BookEditionSelector', () => {
@@ -143,6 +145,49 @@ describe('BookEditionSelector', () => {
       'href',
       'https://example.com/pt',
     );
+  });
+
+  it('selects the official store edition by default and keeps it in the same tab', () => {
+    renderWithChakra(
+      <BookEditionSelector
+        {...preorderProps}
+        editions={[
+          {
+            id: 'paperback-amazon',
+            format: 'paperback',
+            label: 'Capa comum — Amazon',
+            purchaseChannel: 'amazon',
+            url: 'https://amazon.example/book',
+            retailer: 'Amazon.com',
+          },
+          {
+            id: 'paperback-store',
+            format: 'paperback',
+            label: 'Capa comum — 16 × 23 cm',
+            purchaseChannel: 'store',
+            url: 'https://loja.guittamonategastudio.com/produtos/zeco/',
+            retailer: 'Loja oficial Guitta Monatega Studio',
+          },
+        ]}
+        locale="pt"
+        accentColor="orange"
+        formatLabels={{ ebook: 'Livro digital', paperback: 'Capa comum', hardcover: 'Capa dura' }}
+        factsLabels={labels}
+        buyLabel="Comprar"
+        amazonBuyLabel="Comprar na Amazon"
+        soonLabel="Em breve"
+      />,
+    );
+
+    const storeLink = screen.getByRole('link', {
+      name: 'Comprar na loja oficial Edição em português • envio no Brasil',
+    });
+    expect(storeLink).toHaveAttribute(
+      'href',
+      'https://loja.guittamonategastudio.com/produtos/zeco/',
+    );
+    expect(storeLink).not.toHaveAttribute('target');
+    expect(screen.getByText('Loja oficial Guitta Monatega Studio')).toBeInTheDocument();
   });
 
   it('shows the promotion name, calculated discount and crossed-out original price', () => {

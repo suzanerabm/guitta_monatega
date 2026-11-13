@@ -19,7 +19,7 @@
     "    id -> identificador único; obrigatório quando o livro tem duas edições do mesmo formato.",
     "    label -> nome localizado da edição, como 'Capa comum — menor'.",
     "    facts -> faixa etária, páginas, idioma, dimensões, peso, arquivo, publicação e ISBN específicos desta edição.",
-    "    purchaseChannel: 'amazon' | 'external' | 'preorder' | 'comingSoon'.",
+    "    purchaseChannel: 'amazon' | 'store' | 'external' | 'preorder' | 'comingSoon'.",
     "  buyUrl (string)   -> link de compra. Ausente = mostra 'Em breve' no botão.",
     "  buyLabel (string) -> texto do botão (ex: 'Amazon.com').",
     "  homeButtonUrl (string) -> destino do botão extra exibido na home.",
@@ -50,7 +50,11 @@
           "id": "paperback-monte-seu-livro",
           "format": "paperback",
           "label": "Capa comum — 20 × 20 cm",
-          "purchaseChannel": "preorder",
+          "purchaseChannel": "store",
+          "buyUrl": "https://loja.guittamonategastudio.com/produtos/mundos-imaginarios-livro-de-colorir-ptbr/",
+          "buyLabel": "Loja oficial Guitta Monatega Studio",
+          "price": { "amount": 35.00, "currency": "BRL" },
+          "promotion": { "name": "Preço promocional na loja", "originalPrice": { "amount": 39.00, "currency": "BRL" } },
           "facts": { "pageCount": 114, "language": "Português", "dimensions": "20 × 20 cm", "publicationDate": "23 de setembro de 2026" }
         }
       ],

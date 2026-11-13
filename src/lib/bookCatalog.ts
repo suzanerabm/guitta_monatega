@@ -3,7 +3,7 @@ import type { BookVisualKey } from '@/theme/bookPages';
 export type BookLocale = 'pt' | 'en';
 export type BookCollection = 'art' | 'bichittos' | 'kammara';
 export type BookFormat = 'ebook' | 'paperback' | 'hardcover';
-export type PurchaseChannel = 'amazon' | 'external' | 'preorder' | 'comingSoon';
+export type PurchaseChannel = 'amazon' | 'store' | 'external' | 'preorder' | 'comingSoon';
 export type BookMediaType = 'image' | 'video';
 
 export const BOOK_FORMAT_ORDER: BookFormat[] = ['ebook', 'paperback', 'hardcover'];

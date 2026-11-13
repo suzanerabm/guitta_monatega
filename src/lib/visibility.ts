@@ -169,7 +169,7 @@ export interface BookEditionConfig {
     publicationDate?: string;
     isbn?: string;
   };
-  purchaseChannel?: 'amazon' | 'external' | 'preorder' | 'comingSoon';
+  purchaseChannel?: 'amazon' | 'store' | 'external' | 'preorder' | 'comingSoon';
   buyUrl?: string;
   buyLabel?: string;
 }

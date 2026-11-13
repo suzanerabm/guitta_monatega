@@ -21,10 +21,13 @@ describe('book catalog', () => {
 
     expect(localPaperback).toMatchObject({
       label: 'Capa comum — 16 × 23 cm',
-      price: { amount: 45, currency: 'BRL' },
+      purchaseChannel: 'store',
+      url: 'https://loja.guittamonategastudio.com/produtos/zeco-nas-estacoes-e-seus-amigos-ptbr/',
+      retailer: 'Loja oficial Guitta Monatega Studio',
+      price: { amount: 50, currency: 'BRL' },
       promotion: {
-        name: 'Promoção de lançamento',
-        originalPrice: { amount: 59.90, currency: 'BRL' },
+        name: 'Preço promocional na loja',
+        originalPrice: { amount: 59, currency: 'BRL' },
       },
       facts: {
         pageCount: 78,
@@ -49,9 +52,9 @@ describe('book catalog', () => {
     const editions = book?.editions;
 
     expect(editions?.map((edition) => edition.format)).toEqual(['ebook', 'paperback', 'paperback']);
-    expect(editions?.map((edition) => edition.purchaseChannel)).toEqual(['amazon', 'amazon', 'preorder']);
+    expect(editions?.map((edition) => edition.purchaseChannel)).toEqual(['amazon', 'amazon', 'store']);
     expect(book && isBookComingSoon(book)).toBe(false);
-    expect(editions?.map((edition) => edition.price?.amount)).toEqual([24.90, 49.90, undefined]);
+    expect(editions?.map((edition) => edition.price?.amount)).toEqual([24.90, 49.90, 39]);
     expect(editions?.filter((edition) => edition.price).every((edition) => edition.price?.currency === 'BRL')).toBe(true);
     expect(editions?.[0].facts).toMatchObject({ pageCount: 35, fileSize: '10,3 MB' });
     expect(editions?.[1].facts).toMatchObject({
@@ -99,7 +102,7 @@ describe('book catalog', () => {
       29.90,
       99.90,
       139.90,
-      undefined,
+      99,
     ]);
     expect(book?.editions.map((edition) => edition.facts?.pageCount)).toEqual([
       151,
@@ -122,6 +125,53 @@ describe('book catalog', () => {
       dimensions: '21,59 × 0,66 × 21,59 cm',
       isbn: '979-8194078561',
     });
+  });
+
+  it('links every locally printed Portuguese edition to the official store', () => {
+    const expectedStoreEditions = [
+      {
+        slug: 'napcat-coloring-book',
+        url: 'https://loja.guittamonategastudio.com/produtos/livro-para-colorir-do-napcat-ptbr/',
+        price: 19,
+      },
+      {
+        slug: 'zeco-estacoes',
+        url: 'https://loja.guittamonategastudio.com/produtos/zeco-nas-estacoes-e-seus-amigos-ptbr/',
+        price: 50,
+      },
+      {
+        slug: 'taylo-e-pitu-volume-1',
+        url: 'https://loja.guittamonategastudio.com/produtos/taylo-e-pitu-ptbr/',
+        price: 39,
+      },
+      {
+        slug: 'saga-orf-v-volume-1',
+        url: 'https://loja.guittamonategastudio.com/produtos/saga-em-orf-v-ptbr/',
+        price: 99,
+      },
+      {
+        slug: 'mundos-imaginarios-coloring-book',
+        url: 'https://loja.guittamonategastudio.com/produtos/mundos-imaginarios-livro-de-colorir-ptbr/',
+        price: 35,
+      },
+    ];
+
+    expectedStoreEditions.forEach(({ slug, url, price }) => {
+      const storeEdition = getCatalogBook(slug, 'pt')?.editions.find(
+        (edition) => edition.purchaseChannel === 'store',
+      );
+      expect(storeEdition).toMatchObject({
+        url,
+        retailer: 'Loja oficial Guitta Monatega Studio',
+        price: { amount: price, currency: 'BRL' },
+      });
+    });
+
+    expect(
+      getCatalogBooks('en').flatMap((book) => book.editions).some(
+        (edition) => edition.purchaseChannel === 'store',
+      ),
+    ).toBe(false);
   });
 
   it('returns the confirmed Imaginary Worlds paperback details', () => {

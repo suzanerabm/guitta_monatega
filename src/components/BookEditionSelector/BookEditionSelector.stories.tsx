@@ -29,6 +29,8 @@ export const Default: Story = {
       publicationDate: 'Publicação', isbn: 'ISBN', pages: 'páginas',
     },
     buyLabel: 'Comprar',
+    storeBuyLabel: 'Comprar na loja oficial',
+    storeBuyHint: 'Edição em português • envio no Brasil',
     amazonBuyLabel: 'Comprar na Amazon',
     preorderLabel: 'Eu quero o Zeco!',
     preorderEmailHint: 'Ao clicar, abriremos seu aplicativo de e-mail com a mensagem pronta. O site não coleta seus dados; o envio acontece pelo seu aplicativo de e-mail.',
