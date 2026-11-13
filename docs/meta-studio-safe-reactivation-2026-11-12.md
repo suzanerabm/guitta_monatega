@@ -16,14 +16,16 @@ externo nunca podem virar polling, repetição ou rajada de chamadas.
 
 1. A rota só é habilitada pelo valor literal `GUITTA_STUDIO_META_ROUTE_ENABLED=true`; ausente ou
    qualquer outro valor retorna HTTP 503 antes de autenticação, S3 ou Meta.
-2. Não há cron de publicação no `vercel.json`.
-3. O circuit breaker persistente tem padrão desligado.
-4. Ligar o circuit breaker não basta: são obrigatórias uma ocorrência, uma plataforma e uma operação
+2. A autenticação usa `GUITTA_STUDIO_META_MANUAL_SECRET`, exclusivo do Studio; o `CRON_SECRET`
+   compartilhado não autoriza esta rota.
+3. Não há cron de publicação no `vercel.json`.
+4. O circuit breaker persistente tem padrão desligado.
+5. Ligar o circuit breaker não basta: são obrigatórias uma ocorrência, uma plataforma e uma operação
    exatas, além de uma autorização com vencimento de no máximo 24 horas.
-5. O primeiro estágio aceita somente imagem simples. Carrossel e Reel terminam em revisão humana
+6. O primeiro estágio aceita somente imagem simples. Carrossel e Reel terminam em revisão humana
    com zero chamadas à Meta.
-6. A fila vencida não é processada sem que uma ocorrência específica seja autorizada.
-7. A autorização é descartável: ela é consumida no S3 antes de cada chamada Meta. A etapa seguinte
+7. A fila vencida não é processada sem que uma ocorrência específica seja autorizada.
+8. A autorização é descartável: ela é consumida no S3 antes de cada chamada Meta. A etapa seguinte
    exige uma nova autorização humana para a mesma ocorrência, plataforma e operação exata.
 
 ## Regra estrutural contra looping

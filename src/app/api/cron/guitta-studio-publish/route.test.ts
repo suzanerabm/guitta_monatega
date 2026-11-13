@@ -37,4 +37,22 @@ describe("paused Studio publishing route", () => {
     expect(s3Spy).not.toHaveBeenCalled();
     expect(fetchSpy).not.toHaveBeenCalled();
   });
+
+  it("requires the Studio-specific manual secret and rejects the shared cron secret", async () => {
+    const fetchSpy = vi.fn();
+    const s3Spy = vi.spyOn(S3Client.prototype, "send");
+    vi.stubGlobal("fetch", fetchSpy);
+    vi.stubEnv("GUITTA_STUDIO_META_ROUTE_ENABLED", "true");
+    vi.stubEnv("CRON_SECRET", "shared-secret");
+    vi.stubEnv("GUITTA_STUDIO_META_MANUAL_SECRET", "studio-only-secret");
+
+    const response = await GET(new Request(
+      "https://example.com/api/cron/guitta-studio-publish",
+      { headers: { authorization: "Bearer shared-secret" } },
+    ));
+
+    expect(response.status).toBe(401);
+    expect(s3Spy).not.toHaveBeenCalled();
+    expect(fetchSpy).not.toHaveBeenCalled();
+  });
 });

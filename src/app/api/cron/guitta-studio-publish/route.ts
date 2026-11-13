@@ -12,7 +12,7 @@ function publishingRouteEnabled(): boolean {
 }
 
 function authorized(request: Request): boolean {
-  const secret = process.env.CRON_SECRET;
+  const secret = process.env.GUITTA_STUDIO_META_MANUAL_SECRET;
   const supplied = request.headers.get("authorization")?.replace(/^Bearer\s+/i, "");
   if (!secret || !supplied) return false;
   const left = Buffer.from(secret);
