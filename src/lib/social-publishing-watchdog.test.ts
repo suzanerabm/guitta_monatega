@@ -54,7 +54,7 @@ describe("social publishing watchdog", () => {
     mocks.studioControl.mockResolvedValue({ enabled: true });
     mocks.studioState.mockResolvedValue({
       instagram: { status: "published" },
-      facebook: { status: "pending" },
+      facebook: { status: "published" },
     });
 
     await expect(runSocialPublishingWatchdog(new Date("2026-10-10T12:00:00Z"))).resolves.toEqual({

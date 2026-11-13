@@ -238,11 +238,13 @@ export async function pauseBrand(reason: string, now = new Date()): Promise<void
   }));
 }
 
-// Controle separado do cron: ele nunca aceita Facebook ou Reel e tem um teto diário fixo.
+// Controle separado do cron: aceita somente plataformas explicitamente listadas, nunca Reel,
+// e mantém um teto diário fixo.
 // O controle manual descartável acima continua isolado para testes supervisionados.
 export type StudioScheduleControl = {
   schemaVersion: 1;
   enabled: boolean;
+  allowedPlatforms: Platform[];
   callsDate: string | null;
   callsToday: number;
   lastAuthorization: {
@@ -266,6 +268,7 @@ function disabledScheduleControl(): StudioScheduleControl {
   return {
     schemaVersion: 1,
     enabled: false,
+    allowedPlatforms: [],
     callsDate: null,
     callsToday: 0,
     lastAuthorization: null,
@@ -281,10 +284,14 @@ async function readStoredScheduleControl(): Promise<StoredScheduleControl> {
     if (!output.Body || !output.ETag) throw new Error("Studio schedule control object is incomplete.");
     const value = JSON.parse(await output.Body.transformToString()) as Partial<StudioScheduleControl>;
     if (value.schemaVersion !== 1) throw new Error("Studio schedule control uses an unsupported schema.");
+    const allowedPlatforms = Array.isArray(value.allowedPlatforms)
+      ? value.allowedPlatforms.filter((platform): platform is Platform => platform === "instagram" || platform === "facebook")
+      : [];
     return {
       control: {
         schemaVersion: 1,
         enabled: value.enabled === true,
+        allowedPlatforms,
         callsDate: typeof value.callsDate === "string" ? value.callsDate : null,
         callsToday: Number.isInteger(value.callsToday) && (value.callsToday ?? -1) >= 0 ? value.callsToday! : 0,
         lastAuthorization: value.lastAuthorization ?? null,
@@ -320,9 +327,6 @@ export async function consumeStudioScheduleAuthorization(
   item: PublicationItem,
   now = new Date(),
 ): Promise<void> {
-  if (expected.platform !== "instagram") {
-    throw new Error("Studio cron is restricted to Instagram.");
-  }
   if (item.media.kind !== "image" && item.media.kind !== "carousel") {
     throw new Error("Studio cron accepts only image and carousel publications.");
   }
@@ -332,6 +336,9 @@ export async function consumeStudioScheduleAuthorization(
 
   const stored = await readStoredScheduleControl();
   if (!stored.control.enabled) throw new Error("Studio scheduled publishing is paused.");
+  if (!stored.control.allowedPlatforms.includes(expected.platform)) {
+    throw new Error(`Studio cron is not authorized for ${expected.platform}.`);
+  }
   const callsDate = studioCalendarDate(now);
   const callsToday = stored.control.callsDate === callsDate ? stored.control.callsToday : 0;
   if (callsToday >= STUDIO_SCHEDULE_MAX_META_CALLS_PER_DAY) {

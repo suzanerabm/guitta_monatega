@@ -46,9 +46,14 @@ export async function runGuittaStudioScheduledPublisher(now = new Date()) {
   if (!control.enabled) {
     return { status: "schedule-paused", reason: control.pauseReason, pausedAt: control.pausedAt, calls: 0 };
   }
+  if (control.allowedPlatforms.length === 0) {
+    const reason = "Studio schedule has no explicitly authorized platform; zero Meta calls made.";
+    await pause(reason, now);
+    return { status: "needs-review", occurrence: item.occurrence, reason, calls: 0 };
+  }
 
   const existing = await readPublicationState(item.occurrence);
-  if (existing?.instagram.status === "published") {
+  if (existing && control.allowedPlatforms.every((platform) => existing[platform].status === "published")) {
     return { status: "published", occurrence: item.occurrence, calls: 0 };
   }
 
@@ -67,7 +72,7 @@ export async function runGuittaStudioScheduledPublisher(now = new Date()) {
     occurrence: item.occurrence,
     item,
     stored: acquired.stored,
-    allowedPlatforms: ["instagram"],
+    allowedPlatforms: control.allowedPlatforms,
     now,
     save,
     consumeAuthorization: (authorization) => consumeStudioScheduleAuthorization(authorization, item, new Date()),

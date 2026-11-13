@@ -49,7 +49,13 @@ describe("Studio schedule circuit breaker", () => {
   });
 
   it("conditionally reserves one daily call before Meta", async () => {
-    stored = JSON.stringify({ schemaVersion: 1, enabled: true, callsDate: "2026-11-14", callsToday: 0 });
+    stored = JSON.stringify({
+      schemaVersion: 1,
+      enabled: true,
+      allowedPlatforms: ["instagram", "facebook"],
+      callsDate: "2026-11-14",
+      callsToday: 0,
+    });
 
     await consumeStudioScheduleAuthorization({
       occurrence: "006",
@@ -73,30 +79,67 @@ describe("Studio schedule circuit breaker", () => {
     expect(put.input.IfMatch).toBe("etag");
   });
 
-  it("refuses Facebook and a publication from another calendar date before S3", async () => {
-    await expect(consumeStudioScheduleAuthorization({
-      occurrence: "006",
-      platform: "facebook",
-      operation: "publish_facebook_image",
-      carouselIndex: null,
-      correlationId: "correlation-2",
-    }, item, new Date("2026-11-14T12:00:00.000Z"))).rejects.toThrow("restricted to Instagram");
-
+  it("refuses a publication from another calendar date before S3", async () => {
     await expect(consumeStudioScheduleAuthorization({
       occurrence: "006",
       platform: "instagram",
       operation: "create_instagram_container",
       carouselIndex: null,
-      correlationId: "correlation-3",
+      correlationId: "correlation-2",
     }, item, new Date("2026-11-15T12:00:00.000Z"))).rejects.toThrow("today's exact occurrence");
 
     expect(send).not.toHaveBeenCalled();
+  });
+
+  it("authorizes Facebook only when it is explicitly listed", async () => {
+    stored = JSON.stringify({
+      schemaVersion: 1,
+      enabled: true,
+      allowedPlatforms: ["instagram", "facebook"],
+      callsDate: "2026-11-14",
+      callsToday: 1,
+    });
+
+    await consumeStudioScheduleAuthorization({
+      occurrence: "006",
+      platform: "facebook",
+      operation: "publish_facebook_image",
+      carouselIndex: null,
+      correlationId: "correlation-3",
+    }, item, new Date("2026-11-14T12:00:00.000Z"));
+
+    expect(JSON.parse(stored!)).toMatchObject({
+      allowedPlatforms: ["instagram", "facebook"],
+      callsToday: 2,
+      lastAuthorization: { occurrence: "006", operation: "publish_facebook_image" },
+    });
+  });
+
+  it("refuses Facebook when the persistent allowlist contains only Instagram", async () => {
+    stored = JSON.stringify({
+      schemaVersion: 1,
+      enabled: true,
+      allowedPlatforms: ["instagram"],
+      callsDate: "2026-11-14",
+      callsToday: 0,
+    });
+
+    await expect(consumeStudioScheduleAuthorization({
+      occurrence: "006",
+      platform: "facebook",
+      operation: "publish_facebook_image",
+      carouselIndex: null,
+      correlationId: "correlation-4",
+    }, item, new Date("2026-11-14T12:00:00.000Z"))).rejects.toThrow("not authorized for facebook");
+
+    expect(send).toHaveBeenCalledTimes(1);
   });
 
   it("refuses any call beyond the fixed daily ceiling", async () => {
     stored = JSON.stringify({
       schemaVersion: 1,
       enabled: true,
+      allowedPlatforms: ["instagram", "facebook"],
       callsDate: "2026-11-14",
       callsToday: STUDIO_SCHEDULE_MAX_META_CALLS_PER_DAY,
     });
@@ -106,7 +149,7 @@ describe("Studio schedule circuit breaker", () => {
       platform: "instagram",
       operation: "create_instagram_container",
       carouselIndex: null,
-      correlationId: "correlation-4",
+      correlationId: "correlation-5",
     }, item, new Date("2026-11-14T12:00:00.000Z"))).rejects.toThrow("daily Meta call limit");
 
     expect(send).toHaveBeenCalledTimes(1);

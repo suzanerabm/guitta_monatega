@@ -2,7 +2,7 @@
 
 Data: 13 de novembro de 2026
 Branch de implementação: `main`
-Status operacional: **cron seguro ativo somente para o Instagram do Studio; Reel manual**
+Status operacional: **cron seguro ativo para Instagram e Facebook do Studio; Reel manual**
 
 ## Escopo
 
@@ -42,8 +42,8 @@ reutiliza o segredo nem a autorização descartável da rota manual.
    o objeto persistente `_schedule-control.json` com `enabled: true`.
 2. O cron é exclusivo do Guitta Monatega Studio. Os publicadores de Kammara e Bichittos continuam
    pausados e não são alterados por este controle.
-3. Nesta fase, somente o Instagram do Studio é permitido. Facebook é recusado antes de acessar o
-   controle no S3; Reel retorna `manual-only` com zero chamadas.
+3. Somente as plataformas explicitamente listadas no controle persistente são permitidas. Nesta
+   fase, a lista é `instagram` e `facebook`; Reel retorna `manual-only` com zero chamadas.
 4. O cron roda a cada 15 minutos, somente entre 09:00 e 18:45 de `America/Sao_Paulo`. Uma execução
    faz zero ou uma chamada Meta.
 5. Somente a publicação com a data local exata do dia pode avançar. Não há busca de atrasados,
@@ -54,10 +54,9 @@ reutiliza o segredo nem a autorização descartável da rota manual.
    acima do necessário para o maior carrossel válido, mas impede crescimento ilimitado.
 8. Conflito de agenda, estado ambíguo, `needs_review`, erro crítico ou exceção inesperada desligam o
    controle persistente. Religar exige ação humana.
-9. Depois de o Instagram da ocorrência chegar a `published`, execuções posteriores retornam sem
-   adquirir lock ou gravar estado.
-10. O watchdog verifica somente o Instagram do Studio nesta fase; Facebook não é tratado como
-    publicação faltante.
+9. Depois de todas as plataformas autorizadas da ocorrência chegarem a `published`, execuções
+   posteriores retornam sem adquirir lock ou gravar estado.
+10. O watchdog verifica Instagram e Facebook do Studio depois da janela de publicação.
 
 ## Regra estrutural contra looping
 
@@ -100,8 +99,8 @@ PUBLISH_REQUESTED
 PUBLISHED
 ```
 
-Instagram e Facebook nunca são publicados na mesma execução. O cron inicial não autoriza Facebook;
-esta máquina permanece disponível apenas para a rota manual supervisionada.
+Instagram e Facebook nunca são publicados na mesma execução. A plataforma seguinte só começa em
+outra execução depois que a anterior chega ao estado persistente `published`.
 
 ### Instagram — carrossel
 
@@ -168,7 +167,7 @@ uma nova execução posterior. Não há mecanismo que percorra essas etapas em u
 - Instagram e Facebook concluem carrosséis em máquinas de estado independentes.
 - a rota do cron rejeita o segredo manual e aceita somente o `CRON_SECRET`;
 - o cron desligado retorna antes de ler estado ou chamar a Meta;
-- o controle agendado recusa Facebook e uma ocorrência de outra data antes do S3;
+- o controle agendado recusa qualquer plataforma fora da lista persistente e ocorrências de outra data;
 - cada autorização agendada incrementa condicionalmente o contador antes da Meta;
 - o teto diário recusa a chamada seguinte sem gravar outro estado;
 - depois de `published`, o cron não continua gravando locks.
@@ -186,7 +185,7 @@ Nenhum teste automatizado usa credenciais ou API real da Meta.
 6. Ligar o controle persistente como última ação.
 7. Conferir os logs e o estado depois da primeira publicação agendada.
 
-Facebook automático, Reel e qualquer outra marca exigem avaliações e autorizações separadas.
+Reel e qualquer outra marca exigem avaliações e autorizações separadas.
 
 ## Registro da ativação
 

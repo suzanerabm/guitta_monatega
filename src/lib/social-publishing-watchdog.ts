@@ -37,7 +37,7 @@ const campaigns: Array<{
     items: studioQueue.items as QueueItem[],
     read: readStudioState,
     readControl: async () => ({ publishingEnabled: (await readStudioScheduleControl()).enabled }),
-    expectedPlatforms: ["instagram"],
+    expectedPlatforms: ["instagram", "facebook"],
   },
 ];
 
