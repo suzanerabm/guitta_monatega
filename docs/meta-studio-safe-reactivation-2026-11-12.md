@@ -2,7 +2,7 @@
 
 Data: 13 de novembro de 2026
 Branch de implementação: `main`
-Status operacional: **imagem simples validada em produção; cron seguro do Studio pronto para ativação; Reel manual**
+Status operacional: **cron seguro ativo somente para o Instagram do Studio; Reel manual**
 
 ## Escopo
 
@@ -187,3 +187,12 @@ Nenhum teste automatizado usa credenciais ou API real da Meta.
 7. Conferir os logs e o estado depois da primeira publicação agendada.
 
 Facebook automático, Reel e qualquer outra marca exigem avaliações e autorizações separadas.
+
+## Registro da ativação
+
+Em 13 de novembro de 2026, o commit `840d4dd` foi validado em Preview e promovido para produção.
+A ativação ocorreu em três passos independentes: rota com variável `false`, rota com variável `true`
+e controle do S3 desligado, e finalmente controle do S3 ligado com escrita condicional. Os metadados
+do deploy confirmaram o cron `*/15 12-21 * * *`. O controle iniciou com contador zero e sem
+autorização anterior. A primeira ocorrência automática elegível é `006`, em 14 de novembro de 2026
+às 09:00 de `America/Sao_Paulo`.
