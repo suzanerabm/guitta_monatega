@@ -34,7 +34,7 @@ describe("Studio scheduled publisher", () => {
   });
 
   it("does not catch up past posts and does not touch state on an empty day", async () => {
-    await expect(runGuittaStudioScheduledPublisher(new Date("2026-11-13T15:00:00.000Z"))).resolves.toEqual({
+    await expect(runGuittaStudioScheduledPublisher(new Date("2026-11-12T15:00:00.000Z"))).resolves.toEqual({
       status: "no-publication-today",
       calls: 0,
     });
