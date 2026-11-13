@@ -195,3 +195,9 @@ e controle do S3 desligado, e finalmente controle do S3 ligado com escrita condi
 do deploy confirmaram o cron `*/15 12-21 * * *`. O controle iniciou com contador zero e sem
 autorização anterior. A primeira ocorrência automática elegível é `006`, em 14 de novembro de 2026
 às 09:00 de `America/Sao_Paulo`.
+
+Ainda em 13 de novembro, o commit `9a646a9` adicionou o Facebook do Studio à lista persistente de
+plataformas autorizadas. O controle foi pausado antes da alteração, o Preview foi validado, o deploy
+foi promovido com o controle ainda pausado e somente então a lista `instagram, facebook` foi ativada
+por escrita condicional. O contador permaneceu em zero. Instagram e Facebook continuam avançando
+em execuções separadas, nunca na mesma chamada do cron.
