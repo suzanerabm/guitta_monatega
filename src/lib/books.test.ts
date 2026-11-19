@@ -69,12 +69,16 @@ describe('book catalog', () => {
     });
   });
 
-  it('marks only the English Taylo edition as coming soon', () => {
+  it('sells the English Taylo paperback on Amazon while the ebook is coming soon', () => {
     const book = getCatalogBook('taylo-e-pitu-volume-1', 'en');
+    const ebook = book?.editions.find((edition) => edition.format === 'ebook');
+    const paperback = book?.editions.find((edition) => edition.format === 'paperback');
 
     expect(book?.editions.map((edition) => edition.format)).toEqual(['ebook', 'paperback']);
-    expect(book?.editions.every((edition) => edition.purchaseChannel === 'comingSoon')).toBe(true);
-    expect(book && isBookComingSoon(book)).toBe(true);
+    expect(ebook?.purchaseChannel).toBe('comingSoon');
+    expect(paperback?.purchaseChannel).toBe('amazon');
+    expect(paperback?.url).toBe('https://www.amazon.com/dp/6502513735');
+    expect(book && isBookComingSoon(book)).toBe(false);
   });
 
   it('keeps the Brazilian print formats out of the English catalog', () => {

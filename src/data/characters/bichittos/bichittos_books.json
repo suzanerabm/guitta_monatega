@@ -151,17 +151,19 @@
       "visible": true,
       "onlyLocale": "en",
       "cover": "/imgs/books/taylo/volume1/capa.png",
-      "title": { "en": "The Star Catcher" },
+      "title": { "en": "Taylo and Pitu: The Tales of the Star Collector" },
       "description": { "en": "In the Blue Forest, beneath the moonlight, lives Taylo, the Star Collector. One morning, he meets Pitu and, between a tulip and a campfire, a friendship neither of them expected begins. A gentle story about encounters, dreams, and the stars we collect along the way." },
       "contextTitle": { "en": "Discover Taylo and Pitu" },
       "editions": [
         { "id": "ebook-kindle", "format": "ebook", "label": "Digital book", "purchaseChannel": "comingSoon" },
-        { "id": "paperback-kdp", "format": "paperback", "label": "Paperback — 6 × 9 in", "purchaseChannel": "comingSoon", "facts": { "language": "English", "dimensions": "6 × 9 in (15.24 × 22.86 cm)" } }
+        { "id": "paperback-kdp", "format": "paperback", "label": "Paperback — 6 × 9 in", "purchaseChannel": "amazon", "facts": { "pageCount": 36, "language": "English", "dimensions": "6 × 9 in (15.24 × 22.86 cm)", "isbn": "978-6502513736" } }
       ],
       "homeButtonUrl": "/bichittos?bichitto=taylo",
       "homeButtonLabel": "Discover Taylo's world",
       "homeButtonImage": "/imgs/bichittos/taylo/os_dois.png",
-      "homeButtonImageAlt": "Taylo and Pitu"
+      "homeButtonImageAlt": "Taylo and Pitu",
+      "buyUrl": "https://www.amazon.com/dp/6502513735",
+      "buyLabel": "Amazon.com"
     }
   },
   "stickers": {
