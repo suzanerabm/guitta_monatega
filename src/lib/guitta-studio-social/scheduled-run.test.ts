@@ -44,7 +44,7 @@ describe("Studio scheduled publisher", () => {
   });
 
   it("selects only today's occurrence and uses only the explicitly authorized Studio platforms", async () => {
-    const result = await runGuittaStudioScheduledPublisher(new Date("2026-11-14T12:00:00.000Z"));
+    const result = await runGuittaStudioScheduledPublisher(new Date("2026-11-24T12:00:00.000Z"));
 
     expect(result).toMatchObject({ occurrence: "006", postId: "studio-006", calls: 0 });
     expect(mocks.acquire).toHaveBeenCalledWith("006", expect.any(Date), expect.any(String));
@@ -62,7 +62,7 @@ describe("Studio scheduled publisher", () => {
       pausedAt: null,
     });
 
-    await expect(runGuittaStudioScheduledPublisher(new Date("2026-11-14T12:00:00.000Z"))).resolves.toMatchObject({
+    await expect(runGuittaStudioScheduledPublisher(new Date("2026-11-24T12:00:00.000Z"))).resolves.toMatchObject({
       status: "schedule-paused",
       calls: 0,
     });
@@ -76,7 +76,7 @@ describe("Studio scheduled publisher", () => {
       facebook: { status: "published" },
     });
 
-    await expect(runGuittaStudioScheduledPublisher(new Date("2026-11-14T15:00:00.000Z"))).resolves.toMatchObject({
+    await expect(runGuittaStudioScheduledPublisher(new Date("2026-11-24T15:00:00.000Z"))).resolves.toMatchObject({
       status: "published",
       occurrence: "006",
       calls: 0,
@@ -91,7 +91,7 @@ describe("Studio scheduled publisher", () => {
       facebook: { status: "pending" },
     });
 
-    await runGuittaStudioScheduledPublisher(new Date("2026-11-14T15:00:00.000Z"));
+    await runGuittaStudioScheduledPublisher(new Date("2026-11-24T15:00:00.000Z"));
 
     expect(mocks.acquire).toHaveBeenCalledTimes(1);
     expect(mocks.advance).toHaveBeenCalledWith(expect.objectContaining({
@@ -102,7 +102,7 @@ describe("Studio scheduled publisher", () => {
   it("pauses without touching occurrence state when no platform is explicitly authorized", async () => {
     mocks.readControl.mockResolvedValue({ enabled: true, allowedPlatforms: [] });
 
-    await expect(runGuittaStudioScheduledPublisher(new Date("2026-11-14T12:00:00.000Z"))).resolves.toMatchObject({
+    await expect(runGuittaStudioScheduledPublisher(new Date("2026-11-24T12:00:00.000Z"))).resolves.toMatchObject({
       status: "needs-review",
       calls: 0,
     });
@@ -116,7 +116,7 @@ describe("Studio scheduled publisher", () => {
       result: { status: "needs-review", platform: "instagram", operation: null, calls: 0 },
     });
 
-    await expect(runGuittaStudioScheduledPublisher(new Date("2026-11-14T12:00:00.000Z"))).resolves.toMatchObject({
+    await expect(runGuittaStudioScheduledPublisher(new Date("2026-11-24T12:00:00.000Z"))).resolves.toMatchObject({
       status: "needs-review",
       calls: 0,
     });
