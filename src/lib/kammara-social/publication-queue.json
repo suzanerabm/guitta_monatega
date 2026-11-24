@@ -10,7 +10,7 @@
   "time": "08:00",
   "total": 206,
   "start": "2026-10-10T08:00:00-03:00",
-  "end": "2028-01-16T08:00:00-03:00",
+  "end": "2028-01-29T08:00:00-03:00",
   "items": [
     {
       "occurrence": "001",
@@ -403,7 +403,7 @@
     },
     {
       "occurrence": "010",
-      "scheduledAt": "2026-10-25T08:00:00-03:00",
+      "scheduledAt": "2026-11-24T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 8,
       "slug": "orfv-character-maelik",
@@ -809,7 +809,7 @@
     },
     {
       "occurrence": "020",
-      "scheduledAt": "2026-11-12T08:00:00-03:00",
+      "scheduledAt": "2026-11-25T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 16,
       "slug": "aerial-view",
@@ -849,7 +849,7 @@
     },
     {
       "occurrence": "021",
-      "scheduledAt": "2026-11-15T08:00:00-03:00",
+      "scheduledAt": "2026-11-28T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 2,
       "slug": "saga-orfv-livro-01",
@@ -916,7 +916,7 @@
     },
     {
       "occurrence": "022",
-      "scheduledAt": "2026-11-16T08:00:00-03:00",
+      "scheduledAt": "2026-11-29T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": "institucional-extra",
       "discovery": 184,
@@ -957,7 +957,7 @@
     },
     {
       "occurrence": "023",
-      "scheduledAt": "2026-11-17T08:00:00-03:00",
+      "scheduledAt": "2026-11-30T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 17,
       "slug": "triplec-malloc-character-luma-val",
@@ -997,7 +997,7 @@
     },
     {
       "occurrence": "024",
-      "scheduledAt": "2026-11-18T08:00:00-03:00",
+      "scheduledAt": "2026-12-01T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": "institucional-extra",
       "discovery": 183,
@@ -1038,7 +1038,7 @@
     },
     {
       "occurrence": "025",
-      "scheduledAt": "2026-11-19T08:00:00-03:00",
+      "scheduledAt": "2026-12-02T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 18,
       "slug": "bunniets",
@@ -1082,7 +1082,7 @@
     },
     {
       "occurrence": "026",
-      "scheduledAt": "2026-11-22T08:00:00-03:00",
+      "scheduledAt": "2026-12-05T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 19,
       "slug": "triplec-mesh-character-kael-torin",
@@ -1122,7 +1122,7 @@
     },
     {
       "occurrence": "027",
-      "scheduledAt": "2026-11-24T08:00:00-03:00",
+      "scheduledAt": "2026-12-07T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 20,
       "slug": "triplec-sharp-character-selka-rin",
@@ -1162,7 +1162,7 @@
     },
     {
       "occurrence": "028",
-      "scheduledAt": "2026-11-26T08:00:00-03:00",
+      "scheduledAt": "2026-12-09T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 21,
       "slug": "two-suns",
@@ -1202,7 +1202,7 @@
     },
     {
       "occurrence": "029",
-      "scheduledAt": "2026-11-29T08:00:00-03:00",
+      "scheduledAt": "2026-12-12T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 22,
       "slug": "eni4-character-virus",
@@ -1242,7 +1242,7 @@
     },
     {
       "occurrence": "030",
-      "scheduledAt": "2026-12-01T08:00:00-03:00",
+      "scheduledAt": "2026-12-14T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 23,
       "slug": "lupnul-fest",
@@ -1286,7 +1286,7 @@
     },
     {
       "occurrence": "031",
-      "scheduledAt": "2026-12-03T08:00:00-03:00",
+      "scheduledAt": "2026-12-16T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 24,
       "slug": "explore-kammara-site",
@@ -1326,7 +1326,7 @@
     },
     {
       "occurrence": "032",
-      "scheduledAt": "2026-12-06T08:00:00-03:00",
+      "scheduledAt": "2026-12-19T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 25,
       "slug": "node0-palace",
@@ -1370,7 +1370,7 @@
     },
     {
       "occurrence": "033",
-      "scheduledAt": "2026-12-08T08:00:00-03:00",
+      "scheduledAt": "2026-12-21T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 26,
       "slug": "volpita",
@@ -1410,7 +1410,7 @@
     },
     {
       "occurrence": "034",
-      "scheduledAt": "2026-12-10T08:00:00-03:00",
+      "scheduledAt": "2026-12-23T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 27,
       "slug": "node-0",
@@ -1450,7 +1450,7 @@
     },
     {
       "occurrence": "035",
-      "scheduledAt": "2026-12-13T08:00:00-03:00",
+      "scheduledAt": "2026-12-26T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 28,
       "slug": "eni4",
@@ -1490,7 +1490,7 @@
     },
     {
       "occurrence": "036",
-      "scheduledAt": "2026-12-15T08:00:00-03:00",
+      "scheduledAt": "2026-12-28T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 29,
       "slug": "triplec",
@@ -1530,7 +1530,7 @@
     },
     {
       "occurrence": "037",
-      "scheduledAt": "2026-12-17T08:00:00-03:00",
+      "scheduledAt": "2026-12-30T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 30,
       "slug": "velo",
@@ -1570,7 +1570,7 @@
     },
     {
       "occurrence": "038",
-      "scheduledAt": "2026-12-20T08:00:00-03:00",
+      "scheduledAt": "2027-01-02T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 31,
       "slug": "saga-orfv-english-coming-soon",
@@ -1610,7 +1610,7 @@
     },
     {
       "occurrence": "039",
-      "scheduledAt": "2026-12-22T08:00:00-03:00",
+      "scheduledAt": "2027-01-04T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 32,
       "slug": "zupi",
@@ -1650,7 +1650,7 @@
     },
     {
       "occurrence": "040",
-      "scheduledAt": "2026-12-24T08:00:00-03:00",
+      "scheduledAt": "2027-01-06T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 33,
       "slug": "triplec-malloc-overview",
@@ -1690,7 +1690,7 @@
     },
     {
       "occurrence": "041",
-      "scheduledAt": "2026-12-27T08:00:00-03:00",
+      "scheduledAt": "2027-01-09T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 34,
       "slug": "triplec-mesh-overview",
@@ -1730,7 +1730,7 @@
     },
     {
       "occurrence": "042",
-      "scheduledAt": "2026-12-29T08:00:00-03:00",
+      "scheduledAt": "2027-01-11T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 35,
       "slug": "triplec-sharp-overview",
@@ -1770,7 +1770,7 @@
     },
     {
       "occurrence": "043",
-      "scheduledAt": "2026-12-31T08:00:00-03:00",
+      "scheduledAt": "2027-01-13T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 36,
       "slug": "triplec-character-nilo",
@@ -1810,7 +1810,7 @@
     },
     {
       "occurrence": "044",
-      "scheduledAt": "2027-01-03T08:00:00-03:00",
+      "scheduledAt": "2027-01-16T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 37,
       "slug": "eni4-character-troy",
@@ -1850,7 +1850,7 @@
     },
     {
       "occurrence": "045",
-      "scheduledAt": "2027-01-05T08:00:00-03:00",
+      "scheduledAt": "2027-01-18T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 38,
       "slug": "triplec-malloc-character-trilume",
@@ -1890,7 +1890,7 @@
     },
     {
       "occurrence": "046",
-      "scheduledAt": "2027-01-07T08:00:00-03:00",
+      "scheduledAt": "2027-01-20T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 39,
       "slug": "kammara-app",
@@ -1942,7 +1942,7 @@
     },
     {
       "occurrence": "047",
-      "scheduledAt": "2027-01-10T08:00:00-03:00",
+      "scheduledAt": "2027-01-23T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 40,
       "slug": "triplec-mesh-character-manoo",
@@ -1982,7 +1982,7 @@
     },
     {
       "occurrence": "048",
-      "scheduledAt": "2027-01-12T08:00:00-03:00",
+      "scheduledAt": "2027-01-25T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 41,
       "slug": "triplec-sharp-character-tilu",
@@ -2022,7 +2022,7 @@
     },
     {
       "occurrence": "049",
-      "scheduledAt": "2027-01-14T08:00:00-03:00",
+      "scheduledAt": "2027-01-27T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 42,
       "slug": "triplec-character-soar",
@@ -2062,7 +2062,7 @@
     },
     {
       "occurrence": "050",
-      "scheduledAt": "2027-01-17T08:00:00-03:00",
+      "scheduledAt": "2027-01-30T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 43,
       "slug": "triplec-malloc-scene-main-village",
@@ -2102,7 +2102,7 @@
     },
     {
       "occurrence": "051",
-      "scheduledAt": "2027-01-19T08:00:00-03:00",
+      "scheduledAt": "2027-02-01T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 44,
       "slug": "triplec-mesh-scene-central-village-aerial-view",
@@ -2142,7 +2142,7 @@
     },
     {
       "occurrence": "052",
-      "scheduledAt": "2027-01-21T08:00:00-03:00",
+      "scheduledAt": "2027-02-03T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 45,
       "slug": "triplec-sharp-character-doope",
@@ -2182,7 +2182,7 @@
     },
     {
       "occurrence": "053",
-      "scheduledAt": "2027-01-24T08:00:00-03:00",
+      "scheduledAt": "2027-02-06T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 2,
       "slug": "saga-orfv-livro-01",
@@ -2249,7 +2249,7 @@
     },
     {
       "occurrence": "054",
-      "scheduledAt": "2027-01-26T08:00:00-03:00",
+      "scheduledAt": "2027-02-08T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 46,
       "slug": "eni4-character-bug",
@@ -2289,7 +2289,7 @@
     },
     {
       "occurrence": "055",
-      "scheduledAt": "2027-01-28T08:00:00-03:00",
+      "scheduledAt": "2027-02-10T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 47,
       "slug": "triplec-malloc-scene-portex-layer",
@@ -2329,7 +2329,7 @@
     },
     {
       "occurrence": "056",
-      "scheduledAt": "2027-01-31T08:00:00-03:00",
+      "scheduledAt": "2027-02-13T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 48,
       "slug": "triplec-mesh-scene-central-village",
@@ -2369,7 +2369,7 @@
     },
     {
       "occurrence": "057",
-      "scheduledAt": "2027-02-02T08:00:00-03:00",
+      "scheduledAt": "2027-02-15T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 49,
       "slug": "triplec-sharp-scene-sharp-region",
@@ -2409,7 +2409,7 @@
     },
     {
       "occurrence": "058",
-      "scheduledAt": "2027-02-04T08:00:00-03:00",
+      "scheduledAt": "2027-02-17T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 50,
       "slug": "orfv-scene-central-hill",
@@ -2449,7 +2449,7 @@
     },
     {
       "occurrence": "059",
-      "scheduledAt": "2027-02-07T08:00:00-03:00",
+      "scheduledAt": "2027-02-20T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 51,
       "slug": "triplec-scene-niul-forest",
@@ -2489,7 +2489,7 @@
     },
     {
       "occurrence": "060",
-      "scheduledAt": "2027-02-09T08:00:00-03:00",
+      "scheduledAt": "2027-02-22T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 52,
       "slug": "triplec-malloc-scene-portex-layer-top-view",
@@ -2529,7 +2529,7 @@
     },
     {
       "occurrence": "061",
-      "scheduledAt": "2027-02-11T08:00:00-03:00",
+      "scheduledAt": "2027-02-24T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 10,
       "slug": "kammara-a-essencia",
@@ -2569,7 +2569,7 @@
     },
     {
       "occurrence": "062",
-      "scheduledAt": "2027-02-14T08:00:00-03:00",
+      "scheduledAt": "2027-02-27T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 53,
       "slug": "triplec-mesh-scene-kael-torin-activating-cshift-aerial-view",
@@ -2609,7 +2609,7 @@
     },
     {
       "occurrence": "063",
-      "scheduledAt": "2027-02-16T08:00:00-03:00",
+      "scheduledAt": "2027-03-01T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 54,
       "slug": "triplec-sharp-scene-central-plaza",
@@ -2649,7 +2649,7 @@
     },
     {
       "occurrence": "064",
-      "scheduledAt": "2027-02-18T08:00:00-03:00",
+      "scheduledAt": "2027-03-03T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 55,
       "slug": "orfv-scene-iren-kor-in-the-central-village",
@@ -2689,7 +2689,7 @@
     },
     {
       "occurrence": "065",
-      "scheduledAt": "2027-02-21T08:00:00-03:00",
+      "scheduledAt": "2027-03-06T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 56,
       "slug": "lunnp1-scene-child-playing",
@@ -2729,7 +2729,7 @@
     },
     {
       "occurrence": "066",
-      "scheduledAt": "2027-02-23T08:00:00-03:00",
+      "scheduledAt": "2027-03-08T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 57,
       "slug": "triplec-scene-protection-and-cryptography",
@@ -2769,7 +2769,7 @@
     },
     {
       "occurrence": "067",
-      "scheduledAt": "2027-02-25T08:00:00-03:00",
+      "scheduledAt": "2027-03-10T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 58,
       "slug": "eni4-scene-node-0-s-palace",
@@ -2809,7 +2809,7 @@
     },
     {
       "occurrence": "068",
-      "scheduledAt": "2027-02-28T08:00:00-03:00",
+      "scheduledAt": "2027-03-13T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 2,
       "slug": "saga-orfv-livro-01",
@@ -2876,7 +2876,7 @@
     },
     {
       "occurrence": "069",
-      "scheduledAt": "2027-03-02T08:00:00-03:00",
+      "scheduledAt": "2027-03-15T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 59,
       "slug": "triplec-malloc-scene-datex-layer",
@@ -2916,7 +2916,7 @@
     },
     {
       "occurrence": "070",
-      "scheduledAt": "2027-03-04T08:00:00-03:00",
+      "scheduledAt": "2027-03-17T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 60,
       "slug": "triplec-mesh-scene-kael-torin-activating-cshift",
@@ -2956,7 +2956,7 @@
     },
     {
       "occurrence": "071",
-      "scheduledAt": "2027-03-07T08:00:00-03:00",
+      "scheduledAt": "2027-03-20T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 61,
       "slug": "triplec-sharp-scene-permission-chamber-activating-cshift",
@@ -2996,7 +2996,7 @@
     },
     {
       "occurrence": "072",
-      "scheduledAt": "2027-03-09T08:00:00-03:00",
+      "scheduledAt": "2027-03-22T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 62,
       "slug": "orfv-scene-velo-sleeping-on-the-flower",
@@ -3036,7 +3036,7 @@
     },
     {
       "occurrence": "073",
-      "scheduledAt": "2027-03-11T08:00:00-03:00",
+      "scheduledAt": "2027-03-24T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 63,
       "slug": "lunnp1-scene-eru-rin-and-lum-esha-planting",
@@ -3076,7 +3076,7 @@
     },
     {
       "occurrence": "074",
-      "scheduledAt": "2027-03-14T08:00:00-03:00",
+      "scheduledAt": "2027-03-27T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 64,
       "slug": "triplec-scene-three-bunniets",
@@ -3116,7 +3116,7 @@
     },
     {
       "occurrence": "075",
-      "scheduledAt": "2027-03-16T08:00:00-03:00",
+      "scheduledAt": "2027-03-29T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 65,
       "slug": "triplec-malloc-scene-datara-layer",
@@ -3156,7 +3156,7 @@
     },
     {
       "occurrence": "076",
-      "scheduledAt": "2027-03-18T08:00:00-03:00",
+      "scheduledAt": "2027-03-31T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 24,
       "slug": "explore-kammara-site",
@@ -3196,7 +3196,7 @@
     },
     {
       "occurrence": "077",
-      "scheduledAt": "2027-03-21T08:00:00-03:00",
+      "scheduledAt": "2027-04-03T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 66,
       "slug": "triplec-sharp-scene-permission-chamber-defense-stance",
@@ -3236,7 +3236,7 @@
     },
     {
       "occurrence": "078",
-      "scheduledAt": "2027-03-23T08:00:00-03:00",
+      "scheduledAt": "2027-04-05T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 67,
       "slug": "orfv-scene-zupi-sleeping-with-the-nuvin",
@@ -3276,7 +3276,7 @@
     },
     {
       "occurrence": "079",
-      "scheduledAt": "2027-03-25T08:00:00-03:00",
+      "scheduledAt": "2027-04-07T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 68,
       "slug": "lunnp1-scene-na-lum-small-floating-spheres",
@@ -3316,7 +3316,7 @@
     },
     {
       "occurrence": "080",
-      "scheduledAt": "2027-03-28T08:00:00-03:00",
+      "scheduledAt": "2027-04-10T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 69,
       "slug": "triplec-scene-malloc-region-daily-life",
@@ -3356,7 +3356,7 @@
     },
     {
       "occurrence": "081",
-      "scheduledAt": "2027-03-30T08:00:00-03:00",
+      "scheduledAt": "2027-04-12T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 70,
       "slug": "triplec-malloc-scene-malloc-kemita-mine",
@@ -3396,7 +3396,7 @@
     },
     {
       "occurrence": "082",
-      "scheduledAt": "2027-04-01T08:00:00-03:00",
+      "scheduledAt": "2027-04-14T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 71,
       "slug": "triplec-mesh-scene-plaza",
@@ -3436,7 +3436,7 @@
     },
     {
       "occurrence": "083",
-      "scheduledAt": "2027-04-04T08:00:00-03:00",
+      "scheduledAt": "2027-04-17T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 72,
       "slug": "saga-digg-volume-2-coming-soon",
@@ -3476,7 +3476,7 @@
     },
     {
       "occurrence": "084",
-      "scheduledAt": "2027-04-06T08:00:00-03:00",
+      "scheduledAt": "2027-04-19T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 73,
       "slug": "lunnp1-scene-extreme-north-region",
@@ -3516,7 +3516,7 @@
     },
     {
       "occurrence": "085",
-      "scheduledAt": "2027-04-08T08:00:00-03:00",
+      "scheduledAt": "2027-04-21T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 74,
       "slug": "triplec-scene-mesh-region-daily-life",
@@ -3556,7 +3556,7 @@
     },
     {
       "occurrence": "086",
-      "scheduledAt": "2027-04-11T08:00:00-03:00",
+      "scheduledAt": "2027-04-24T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 75,
       "slug": "eni4-scene-entrance-of-node-0-s-palace",
@@ -3596,7 +3596,7 @@
     },
     {
       "occurrence": "087",
-      "scheduledAt": "2027-04-13T08:00:00-03:00",
+      "scheduledAt": "2027-04-26T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 76,
       "slug": "triplec-malloc-scene-tunnel",
@@ -3636,7 +3636,7 @@
     },
     {
       "occurrence": "088",
-      "scheduledAt": "2027-04-15T08:00:00-03:00",
+      "scheduledAt": "2027-04-28T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 77,
       "slug": "triplec-mesh-scene-plaza-top-view",
@@ -3676,7 +3676,7 @@
     },
     {
       "occurrence": "089",
-      "scheduledAt": "2027-04-18T08:00:00-03:00",
+      "scheduledAt": "2027-05-01T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 78,
       "slug": "triplec-sharp-scene-energy-flow",
@@ -3716,7 +3716,7 @@
     },
     {
       "occurrence": "090",
-      "scheduledAt": "2027-04-20T08:00:00-03:00",
+      "scheduledAt": "2027-05-03T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 79,
       "slug": "orfv-scene-east-village",
@@ -3756,7 +3756,7 @@
     },
     {
       "occurrence": "091",
-      "scheduledAt": "2027-04-22T08:00:00-03:00",
+      "scheduledAt": "2027-05-05T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 39,
       "slug": "kammara-app",
@@ -3808,7 +3808,7 @@
     },
     {
       "occurrence": "092",
-      "scheduledAt": "2027-04-25T08:00:00-03:00",
+      "scheduledAt": "2027-05-08T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 80,
       "slug": "lunnp1-scene-east-region-aerial-view",
@@ -3848,7 +3848,7 @@
     },
     {
       "occurrence": "093",
-      "scheduledAt": "2027-04-27T08:00:00-03:00",
+      "scheduledAt": "2027-05-10T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 81,
       "slug": "triplec-scene-sharp-region-daily-life",
@@ -3888,7 +3888,7 @@
     },
     {
       "occurrence": "094",
-      "scheduledAt": "2027-04-29T08:00:00-03:00",
+      "scheduledAt": "2027-05-12T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 82,
       "slug": "eni4-scene-corridor-of-node-0-s-palace",
@@ -3928,7 +3928,7 @@
     },
     {
       "occurrence": "095",
-      "scheduledAt": "2027-05-02T08:00:00-03:00",
+      "scheduledAt": "2027-05-15T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 83,
       "slug": "triplec-malloc-scene-hepa-region-1",
@@ -3968,7 +3968,7 @@
     },
     {
       "occurrence": "096",
-      "scheduledAt": "2027-05-04T08:00:00-03:00",
+      "scheduledAt": "2027-05-17T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 84,
       "slug": "triplec-mesh-scene-living-room",
@@ -4008,7 +4008,7 @@
     },
     {
       "occurrence": "097",
-      "scheduledAt": "2027-05-06T08:00:00-03:00",
+      "scheduledAt": "2027-05-19T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 85,
       "slug": "triplec-sharp-scene-interior-room",
@@ -4048,7 +4048,7 @@
     },
     {
       "occurrence": "098",
-      "scheduledAt": "2027-05-09T08:00:00-03:00",
+      "scheduledAt": "2027-05-22T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 2,
       "slug": "saga-orfv-livro-01",
@@ -4115,7 +4115,7 @@
     },
     {
       "occurrence": "099",
-      "scheduledAt": "2027-05-11T08:00:00-03:00",
+      "scheduledAt": "2027-05-24T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 86,
       "slug": "orfv-scene-maelik-in-the-west-fjorks",
@@ -4155,7 +4155,7 @@
     },
     {
       "occurrence": "100",
-      "scheduledAt": "2027-05-13T08:00:00-03:00",
+      "scheduledAt": "2027-05-26T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 87,
       "slug": "lunnp1-scene-naru-ei-in-the-east-region",
@@ -4195,7 +4195,7 @@
     },
     {
       "occurrence": "101",
-      "scheduledAt": "2027-05-16T08:00:00-03:00",
+      "scheduledAt": "2027-05-29T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 88,
       "slug": "triplec-scene-malloc-region-house-interior",
@@ -4235,7 +4235,7 @@
     },
     {
       "occurrence": "102",
-      "scheduledAt": "2027-05-18T08:00:00-03:00",
+      "scheduledAt": "2027-05-31T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 89,
       "slug": "eni4-scene-door-of-node-0-s-palace",
@@ -4275,7 +4275,7 @@
     },
     {
       "occurrence": "103",
-      "scheduledAt": "2027-05-20T08:00:00-03:00",
+      "scheduledAt": "2027-06-02T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 90,
       "slug": "triplec-malloc-scene-malloc-layers-region-2",
@@ -4315,7 +4315,7 @@
     },
     {
       "occurrence": "104",
-      "scheduledAt": "2027-05-23T08:00:00-03:00",
+      "scheduledAt": "2027-06-05T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 91,
       "slug": "triplec-mesh-scene-bedroom",
@@ -4355,7 +4355,7 @@
     },
     {
       "occurrence": "105",
-      "scheduledAt": "2027-05-25T08:00:00-03:00",
+      "scheduledAt": "2027-06-07T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 92,
       "slug": "triplec-sharp-scene-panoramic-view",
@@ -4395,7 +4395,7 @@
     },
     {
       "occurrence": "106",
-      "scheduledAt": "2027-05-27T08:00:00-03:00",
+      "scheduledAt": "2027-06-09T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 10,
       "slug": "kammara-a-essencia",
@@ -4435,7 +4435,7 @@
     },
     {
       "occurrence": "107",
-      "scheduledAt": "2027-05-30T08:00:00-03:00",
+      "scheduledAt": "2027-06-12T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 93,
       "slug": "orfv-scene-north-village",
@@ -4475,7 +4475,7 @@
     },
     {
       "occurrence": "108",
-      "scheduledAt": "2027-06-01T08:00:00-03:00",
+      "scheduledAt": "2027-06-14T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 94,
       "slug": "lunnp1-scene-naru-ei-floating-city",
@@ -4515,7 +4515,7 @@
     },
     {
       "occurrence": "109",
-      "scheduledAt": "2027-06-03T08:00:00-03:00",
+      "scheduledAt": "2027-06-16T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 95,
       "slug": "triplec-scene-mesh-region-plaza",
@@ -4555,7 +4555,7 @@
     },
     {
       "occurrence": "110",
-      "scheduledAt": "2027-06-06T08:00:00-03:00",
+      "scheduledAt": "2027-06-19T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 96,
       "slug": "eni4-scene-interior-of-node-0-s-palace",
@@ -4595,7 +4595,7 @@
     },
     {
       "occurrence": "111",
-      "scheduledAt": "2027-06-08T08:00:00-03:00",
+      "scheduledAt": "2027-06-21T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 97,
       "slug": "triplec-malloc-scene-hepa-region-2",
@@ -4635,7 +4635,7 @@
     },
     {
       "occurrence": "112",
-      "scheduledAt": "2027-06-10T08:00:00-03:00",
+      "scheduledAt": "2027-06-23T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 98,
       "slug": "triplec-mesh-scene-in-mesh",
@@ -4675,7 +4675,7 @@
     },
     {
       "occurrence": "113",
-      "scheduledAt": "2027-06-13T08:00:00-03:00",
+      "scheduledAt": "2027-06-26T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 2,
       "slug": "saga-orfv-livro-01",
@@ -4742,7 +4742,7 @@
     },
     {
       "occurrence": "114",
-      "scheduledAt": "2027-06-15T08:00:00-03:00",
+      "scheduledAt": "2027-06-28T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 99,
       "slug": "triplec-sharp-scene-babies-s-bedroom",
@@ -4782,7 +4782,7 @@
     },
     {
       "occurrence": "115",
-      "scheduledAt": "2027-06-17T08:00:00-03:00",
+      "scheduledAt": "2027-06-30T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 100,
       "slug": "orfv-scene-sky-over-orf-v",
@@ -4822,7 +4822,7 @@
     },
     {
       "occurrence": "116",
-      "scheduledAt": "2027-06-20T08:00:00-03:00",
+      "scheduledAt": "2027-07-03T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 101,
       "slug": "lunnp1-scene-north-region-aerial-view-1",
@@ -4862,7 +4862,7 @@
     },
     {
       "occurrence": "117",
-      "scheduledAt": "2027-06-22T08:00:00-03:00",
+      "scheduledAt": "2027-07-05T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 102,
       "slug": "triplec-scene-sharp-region-plaza",
@@ -4902,7 +4902,7 @@
     },
     {
       "occurrence": "118",
-      "scheduledAt": "2027-06-24T08:00:00-03:00",
+      "scheduledAt": "2027-07-07T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 103,
       "slug": "triplec-malloc-scene-village",
@@ -4942,7 +4942,7 @@
     },
     {
       "occurrence": "119",
-      "scheduledAt": "2027-06-27T08:00:00-03:00",
+      "scheduledAt": "2027-07-10T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 104,
       "slug": "triplec-mesh-scene-visit-to-mesh",
@@ -4982,7 +4982,7 @@
     },
     {
       "occurrence": "120",
-      "scheduledAt": "2027-06-29T08:00:00-03:00",
+      "scheduledAt": "2027-07-12T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 105,
       "slug": "triplec-sharp-scene-master-bedroom",
@@ -5022,7 +5022,7 @@
     },
     {
       "occurrence": "121",
-      "scheduledAt": "2027-07-01T08:00:00-03:00",
+      "scheduledAt": "2027-07-14T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 24,
       "slug": "explore-kammara-site",
@@ -5062,7 +5062,7 @@
     },
     {
       "occurrence": "122",
-      "scheduledAt": "2027-07-04T08:00:00-03:00",
+      "scheduledAt": "2027-07-17T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 106,
       "slug": "orfv-scene-night-in-orf-v",
@@ -5102,7 +5102,7 @@
     },
     {
       "occurrence": "123",
-      "scheduledAt": "2027-07-06T08:00:00-03:00",
+      "scheduledAt": "2027-07-19T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 107,
       "slug": "lunnp1-scene-north-region-aerial-view-2",
@@ -5142,7 +5142,7 @@
     },
     {
       "occurrence": "124",
-      "scheduledAt": "2027-07-08T08:00:00-03:00",
+      "scheduledAt": "2027-07-21T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 108,
       "slug": "triplec-scene-malloc-region-city-view",
@@ -5182,7 +5182,7 @@
     },
     {
       "occurrence": "125",
-      "scheduledAt": "2027-07-11T08:00:00-03:00",
+      "scheduledAt": "2027-07-24T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 109,
       "slug": "eni4-scene-entrance-of-node-0-s-chamber",
@@ -5222,7 +5222,7 @@
     },
     {
       "occurrence": "126",
-      "scheduledAt": "2027-07-13T08:00:00-03:00",
+      "scheduledAt": "2027-07-26T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 110,
       "slug": "triplec-malloc-scene-village-1",
@@ -5262,7 +5262,7 @@
     },
     {
       "occurrence": "127",
-      "scheduledAt": "2027-07-15T08:00:00-03:00",
+      "scheduledAt": "2027-07-28T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 111,
       "slug": "triplec-mesh-scene-inside-the-apartment",
@@ -5302,7 +5302,7 @@
     },
     {
       "occurrence": "128",
-      "scheduledAt": "2027-07-18T08:00:00-03:00",
+      "scheduledAt": "2027-07-31T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 31,
       "slug": "saga-orfv-english-coming-soon",
@@ -5342,7 +5342,7 @@
     },
     {
       "occurrence": "129",
-      "scheduledAt": "2027-07-20T08:00:00-03:00",
+      "scheduledAt": "2027-08-02T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 112,
       "slug": "orfv-scene-deserted-south-region",
@@ -5382,7 +5382,7 @@
     },
     {
       "occurrence": "130",
-      "scheduledAt": "2027-07-22T08:00:00-03:00",
+      "scheduledAt": "2027-08-04T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 113,
       "slug": "triplec-scene-mesh-region-city-view",
@@ -5422,7 +5422,7 @@
     },
     {
       "occurrence": "131",
-      "scheduledAt": "2027-07-25T08:00:00-03:00",
+      "scheduledAt": "2027-08-07T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 114,
       "slug": "eni4-scene-interior-of-node-0-s-chamber",
@@ -5462,7 +5462,7 @@
     },
     {
       "occurrence": "132",
-      "scheduledAt": "2027-07-27T08:00:00-03:00",
+      "scheduledAt": "2027-08-09T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 115,
       "slug": "triplec-malloc-scene-village-2",
@@ -5502,7 +5502,7 @@
     },
     {
       "occurrence": "133",
-      "scheduledAt": "2027-07-29T08:00:00-03:00",
+      "scheduledAt": "2027-08-11T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 116,
       "slug": "triplec-mesh-scene-family",
@@ -5542,7 +5542,7 @@
     },
     {
       "occurrence": "134",
-      "scheduledAt": "2027-08-01T08:00:00-03:00",
+      "scheduledAt": "2027-08-14T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 117,
       "slug": "triplec-sharp-scene-visit-to-sharp",
@@ -5582,7 +5582,7 @@
     },
     {
       "occurrence": "135",
-      "scheduledAt": "2027-08-03T08:00:00-03:00",
+      "scheduledAt": "2027-08-16T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 118,
       "slug": "lunnp1-scene-north-region-beneath-the-four-moons",
@@ -5622,7 +5622,7 @@
     },
     {
       "occurrence": "136",
-      "scheduledAt": "2027-08-05T08:00:00-03:00",
+      "scheduledAt": "2027-08-18T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 39,
       "slug": "kammara-app",
@@ -5674,7 +5674,7 @@
     },
     {
       "occurrence": "137",
-      "scheduledAt": "2027-08-08T08:00:00-03:00",
+      "scheduledAt": "2027-08-21T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 119,
       "slug": "triplec-scene-sharp-region-energy",
@@ -5714,7 +5714,7 @@
     },
     {
       "occurrence": "138",
-      "scheduledAt": "2027-08-10T08:00:00-03:00",
+      "scheduledAt": "2027-08-23T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 120,
       "slug": "eni4-scene-burn-factory",
@@ -5754,7 +5754,7 @@
     },
     {
       "occurrence": "139",
-      "scheduledAt": "2027-08-12T08:00:00-03:00",
+      "scheduledAt": "2027-08-25T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 121,
       "slug": "triplec-malloc-scene-village-3",
@@ -5794,7 +5794,7 @@
     },
     {
       "occurrence": "140",
-      "scheduledAt": "2027-08-15T08:00:00-03:00",
+      "scheduledAt": "2027-08-28T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 122,
       "slug": "triplec-mesh-scene-manoo-sleeping",
@@ -5834,7 +5834,7 @@
     },
     {
       "occurrence": "141",
-      "scheduledAt": "2027-08-17T08:00:00-03:00",
+      "scheduledAt": "2027-08-30T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 123,
       "slug": "triplec-sharp-drop-happy-volpita",
@@ -5878,7 +5878,7 @@
     },
     {
       "occurrence": "142",
-      "scheduledAt": "2027-08-19T08:00:00-03:00",
+      "scheduledAt": "2027-09-01T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 124,
       "slug": "orfv-scene-festival",
@@ -5918,7 +5918,7 @@
     },
     {
       "occurrence": "143",
-      "scheduledAt": "2027-08-22T08:00:00-03:00",
+      "scheduledAt": "2027-09-04T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 2,
       "slug": "saga-orfv-livro-01",
@@ -5985,7 +5985,7 @@
     },
     {
       "occurrence": "144",
-      "scheduledAt": "2027-08-24T08:00:00-03:00",
+      "scheduledAt": "2027-09-06T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 125,
       "slug": "lunnp1-scene-west-region-aerial-view",
@@ -6025,7 +6025,7 @@
     },
     {
       "occurrence": "145",
-      "scheduledAt": "2027-08-26T08:00:00-03:00",
+      "scheduledAt": "2027-09-08T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 126,
       "slug": "triplec-scene-sharp-region-pets",
@@ -6065,7 +6065,7 @@
     },
     {
       "occurrence": "146",
-      "scheduledAt": "2027-08-29T08:00:00-03:00",
+      "scheduledAt": "2027-09-11T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 127,
       "slug": "eni4-scene-wall-of-valves-forming-a-maze",
@@ -6105,7 +6105,7 @@
     },
     {
       "occurrence": "147",
-      "scheduledAt": "2027-08-31T08:00:00-03:00",
+      "scheduledAt": "2027-09-13T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 128,
       "slug": "triplec-malloc-scene-village-4",
@@ -6145,7 +6145,7 @@
     },
     {
       "occurrence": "148",
-      "scheduledAt": "2027-09-02T08:00:00-03:00",
+      "scheduledAt": "2027-09-15T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 129,
       "slug": "triplec-mesh-scene-kurr-expanding",
@@ -6185,7 +6185,7 @@
     },
     {
       "occurrence": "149",
-      "scheduledAt": "2027-09-05T08:00:00-03:00",
+      "scheduledAt": "2027-09-18T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 130,
       "slug": "triplec-sharp-drop-doope-and-tilu-playing",
@@ -6229,7 +6229,7 @@
     },
     {
       "occurrence": "150",
-      "scheduledAt": "2027-09-07T08:00:00-03:00",
+      "scheduledAt": "2027-09-20T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 131,
       "slug": "lunnp1-scene-veluma-in-the-west-region",
@@ -6269,7 +6269,7 @@
     },
     {
       "occurrence": "151",
-      "scheduledAt": "2027-09-09T08:00:00-03:00",
+      "scheduledAt": "2027-09-22T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 10,
       "slug": "kammara-a-essencia",
@@ -6309,7 +6309,7 @@
     },
     {
       "occurrence": "152",
-      "scheduledAt": "2027-09-12T08:00:00-03:00",
+      "scheduledAt": "2027-09-25T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 132,
       "slug": "triplec-scene-mesh-region-activating-cshift",
@@ -6349,7 +6349,7 @@
     },
     {
       "occurrence": "153",
-      "scheduledAt": "2027-09-14T08:00:00-03:00",
+      "scheduledAt": "2027-09-27T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 133,
       "slug": "eni4-scene-front-of-the-factory",
@@ -6389,7 +6389,7 @@
     },
     {
       "occurrence": "154",
-      "scheduledAt": "2027-09-16T08:00:00-03:00",
+      "scheduledAt": "2027-09-29T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 134,
       "slug": "triplec-mesh-drop-aerial-view",
@@ -6433,7 +6433,7 @@
     },
     {
       "occurrence": "155",
-      "scheduledAt": "2027-09-19T08:00:00-03:00",
+      "scheduledAt": "2027-10-02T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 135,
       "slug": "triplec-sharp-drop-activating-cshift",
@@ -6477,7 +6477,7 @@
     },
     {
       "occurrence": "156",
-      "scheduledAt": "2027-09-21T08:00:00-03:00",
+      "scheduledAt": "2027-10-04T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 136,
       "slug": "orfv-drop-maelik-heading-to-the-festival",
@@ -6521,7 +6521,7 @@
     },
     {
       "occurrence": "157",
-      "scheduledAt": "2027-09-23T08:00:00-03:00",
+      "scheduledAt": "2027-10-06T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 137,
       "slug": "lunnp1-scene-south-region-aerial-view",
@@ -6561,7 +6561,7 @@
     },
     {
       "occurrence": "158",
-      "scheduledAt": "2027-09-26T08:00:00-03:00",
+      "scheduledAt": "2027-10-09T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 2,
       "slug": "saga-orfv-livro-01",
@@ -6628,7 +6628,7 @@
     },
     {
       "occurrence": "159",
-      "scheduledAt": "2027-09-28T08:00:00-03:00",
+      "scheduledAt": "2027-10-11T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 138,
       "slug": "triplec-scene-malloc-bunniet-running-in-the-forest",
@@ -6668,7 +6668,7 @@
     },
     {
       "occurrence": "160",
-      "scheduledAt": "2027-09-30T08:00:00-03:00",
+      "scheduledAt": "2027-10-13T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 139,
       "slug": "eni4-scene-interior-of-the-factory",
@@ -6708,7 +6708,7 @@
     },
     {
       "occurrence": "161",
-      "scheduledAt": "2027-10-03T08:00:00-03:00",
+      "scheduledAt": "2027-10-16T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 140,
       "slug": "triplec-mesh-drop-mesh-s-bunniet-sleeping",
@@ -6752,7 +6752,7 @@
     },
     {
       "occurrence": "162",
-      "scheduledAt": "2027-10-05T08:00:00-03:00",
+      "scheduledAt": "2027-10-18T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 141,
       "slug": "triplec-sharp-drop-kurr-expanding",
@@ -6796,7 +6796,7 @@
     },
     {
       "occurrence": "163",
-      "scheduledAt": "2027-10-07T08:00:00-03:00",
+      "scheduledAt": "2027-10-20T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 142,
       "slug": "orfv-drop-velo-and-maelik",
@@ -6840,7 +6840,7 @@
     },
     {
       "occurrence": "164",
-      "scheduledAt": "2027-10-10T08:00:00-03:00",
+      "scheduledAt": "2027-10-23T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 143,
       "slug": "lunnp1-scene-south-region",
@@ -6880,7 +6880,7 @@
     },
     {
       "occurrence": "165",
-      "scheduledAt": "2027-10-12T08:00:00-03:00",
+      "scheduledAt": "2027-10-25T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 144,
       "slug": "triplec-scene-lum-esha-visits-luma-val",
@@ -6920,7 +6920,7 @@
     },
     {
       "occurrence": "166",
-      "scheduledAt": "2027-10-14T08:00:00-03:00",
+      "scheduledAt": "2027-10-27T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 24,
       "slug": "explore-kammara-site",
@@ -6960,7 +6960,7 @@
     },
     {
       "occurrence": "167",
-      "scheduledAt": "2027-10-17T08:00:00-03:00",
+      "scheduledAt": "2027-10-30T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 145,
       "slug": "eni4-scene-planet-in-cross-section",
@@ -7000,7 +7000,7 @@
     },
     {
       "occurrence": "168",
-      "scheduledAt": "2027-10-19T08:00:00-03:00",
+      "scheduledAt": "2027-11-01T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 146,
       "slug": "triplec-malloc-drop-running-to-mesh",
@@ -7044,7 +7044,7 @@
     },
     {
       "occurrence": "169",
-      "scheduledAt": "2027-10-21T08:00:00-03:00",
+      "scheduledAt": "2027-11-03T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 147,
       "slug": "triplec-mesh-drop-lunchtime",
@@ -7088,7 +7088,7 @@
     },
     {
       "occurrence": "170",
-      "scheduledAt": "2027-10-24T08:00:00-03:00",
+      "scheduledAt": "2027-11-06T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 148,
       "slug": "triplec-sharp-drop-bunniet-in-the-room",
@@ -7132,7 +7132,7 @@
     },
     {
       "occurrence": "171",
-      "scheduledAt": "2027-10-26T08:00:00-03:00",
+      "scheduledAt": "2027-11-08T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 149,
       "slug": "orfv-drop-zupi-swimming",
@@ -7176,7 +7176,7 @@
     },
     {
       "occurrence": "172",
-      "scheduledAt": "2027-10-28T08:00:00-03:00",
+      "scheduledAt": "2027-11-10T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 150,
       "slug": "triplec-scene-eru-rin-with-neran-vel",
@@ -7216,7 +7216,7 @@
     },
     {
       "occurrence": "173",
-      "scheduledAt": "2027-10-31T08:00:00-03:00",
+      "scheduledAt": "2027-11-13T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 72,
       "slug": "saga-digg-volume-2-coming-soon",
@@ -7256,7 +7256,7 @@
     },
     {
       "occurrence": "174",
-      "scheduledAt": "2027-11-02T08:00:00-03:00",
+      "scheduledAt": "2027-11-15T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 151,
       "slug": "eni4-scene-worms-in-the-scorch-zone",
@@ -7296,7 +7296,7 @@
     },
     {
       "occurrence": "175",
-      "scheduledAt": "2027-11-04T08:00:00-03:00",
+      "scheduledAt": "2027-11-17T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 152,
       "slug": "triplec-malloc-drop-mines",
@@ -7340,7 +7340,7 @@
     },
     {
       "occurrence": "176",
-      "scheduledAt": "2027-11-07T08:00:00-03:00",
+      "scheduledAt": "2027-11-20T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 153,
       "slug": "triplec-mesh-drop-manoo-sleeping",
@@ -7384,7 +7384,7 @@
     },
     {
       "occurrence": "177",
-      "scheduledAt": "2027-11-09T08:00:00-03:00",
+      "scheduledAt": "2027-11-22T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 154,
       "slug": "orfv-drop-brisa-activating-the-protocol",
@@ -7428,7 +7428,7 @@
     },
     {
       "occurrence": "178",
-      "scheduledAt": "2027-11-11T08:00:00-03:00",
+      "scheduledAt": "2027-11-24T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 155,
       "slug": "lunnp1-drop-tzi-ki-and-lumira-playing",
@@ -7472,7 +7472,7 @@
     },
     {
       "occurrence": "179",
-      "scheduledAt": "2027-11-14T08:00:00-03:00",
+      "scheduledAt": "2027-11-27T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 156,
       "slug": "triplec-scene-cshift-portal",
@@ -7512,7 +7512,7 @@
     },
     {
       "occurrence": "180",
-      "scheduledAt": "2027-11-16T08:00:00-03:00",
+      "scheduledAt": "2027-11-29T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 157,
       "slug": "eni4-scene-scorch-zone",
@@ -7552,7 +7552,7 @@
     },
     {
       "occurrence": "181",
-      "scheduledAt": "2027-11-18T08:00:00-03:00",
+      "scheduledAt": "2027-12-01T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 39,
       "slug": "kammara-app",
@@ -7604,7 +7604,7 @@
     },
     {
       "occurrence": "182",
-      "scheduledAt": "2027-11-21T08:00:00-03:00",
+      "scheduledAt": "2027-12-04T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 158,
       "slug": "triplec-malloc-drop-mine-interior",
@@ -7648,7 +7648,7 @@
     },
     {
       "occurrence": "183",
-      "scheduledAt": "2027-11-23T08:00:00-03:00",
+      "scheduledAt": "2027-12-06T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 159,
       "slug": "triplec-mesh-drop-mesh-square",
@@ -7692,7 +7692,7 @@
     },
     {
       "occurrence": "184",
-      "scheduledAt": "2027-11-25T08:00:00-03:00",
+      "scheduledAt": "2027-12-08T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 160,
       "slug": "orfv-drop-troys-attacking",
@@ -7736,7 +7736,7 @@
     },
     {
       "occurrence": "185",
-      "scheduledAt": "2027-11-28T08:00:00-03:00",
+      "scheduledAt": "2027-12-11T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 161,
       "slug": "lunnp1-drop-veluma",
@@ -7780,7 +7780,7 @@
     },
     {
       "occurrence": "186",
-      "scheduledAt": "2027-11-30T08:00:00-03:00",
+      "scheduledAt": "2027-12-13T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 162,
       "slug": "eni4-scene-tunnels-with-worms-in-the-crack-zone",
@@ -7820,7 +7820,7 @@
     },
     {
       "occurrence": "187",
-      "scheduledAt": "2027-12-02T08:00:00-03:00",
+      "scheduledAt": "2027-12-15T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 163,
       "slug": "triplec-malloc-drop-mine-elevator",
@@ -7864,7 +7864,7 @@
     },
     {
       "occurrence": "188",
-      "scheduledAt": "2027-12-05T08:00:00-03:00",
+      "scheduledAt": "2027-12-18T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 2,
       "slug": "saga-orfv-livro-01",
@@ -7931,7 +7931,7 @@
     },
     {
       "occurrence": "189",
-      "scheduledAt": "2027-12-07T08:00:00-03:00",
+      "scheduledAt": "2027-12-20T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 164,
       "slug": "lunnp1-drop-eru-rin-waving",
@@ -7975,7 +7975,7 @@
     },
     {
       "occurrence": "190",
-      "scheduledAt": "2027-12-09T08:00:00-03:00",
+      "scheduledAt": "2027-12-22T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 165,
       "slug": "triplec-drop-nilo-s-family",
@@ -8019,7 +8019,7 @@
     },
     {
       "occurrence": "191",
-      "scheduledAt": "2027-12-12T08:00:00-03:00",
+      "scheduledAt": "2027-12-25T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 166,
       "slug": "triplec-malloc-drop-malloc-village",
@@ -8063,7 +8063,7 @@
     },
     {
       "occurrence": "192",
-      "scheduledAt": "2027-12-14T08:00:00-03:00",
+      "scheduledAt": "2027-12-27T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 167,
       "slug": "lunnp1-drop-na-lum",
@@ -8107,7 +8107,7 @@
     },
     {
       "occurrence": "193",
-      "scheduledAt": "2027-12-16T08:00:00-03:00",
+      "scheduledAt": "2027-12-29T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 168,
       "slug": "triplec-drop-lum-esha-meets-luma-val",
@@ -8151,7 +8151,7 @@
     },
     {
       "occurrence": "194",
-      "scheduledAt": "2027-12-19T08:00:00-03:00",
+      "scheduledAt": "2028-01-01T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 169,
       "slug": "eni4-scene-sink-zone",
@@ -8191,7 +8191,7 @@
     },
     {
       "occurrence": "195",
-      "scheduledAt": "2027-12-21T08:00:00-03:00",
+      "scheduledAt": "2028-01-03T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 170,
       "slug": "triplec-drop-soar-flying",
@@ -8235,7 +8235,7 @@
     },
     {
       "occurrence": "196",
-      "scheduledAt": "2027-12-23T08:00:00-03:00",
+      "scheduledAt": "2028-01-05T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 10,
       "slug": "kammara-a-essencia",
@@ -8275,7 +8275,7 @@
     },
     {
       "occurrence": "197",
-      "scheduledAt": "2027-12-26T08:00:00-03:00",
+      "scheduledAt": "2028-01-08T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 171,
       "slug": "eni4-scene-megavalves-where-viruses-and-bugs-live",
@@ -8315,7 +8315,7 @@
     },
     {
       "occurrence": "198",
-      "scheduledAt": "2027-12-28T08:00:00-03:00",
+      "scheduledAt": "2028-01-10T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 172,
       "slug": "triplec-drop-triplec-creatures",
@@ -8359,7 +8359,7 @@
     },
     {
       "occurrence": "199",
-      "scheduledAt": "2027-12-30T08:00:00-03:00",
+      "scheduledAt": "2028-01-12T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 173,
       "slug": "eni4-scene-bugs-in-the-scrapyard",
@@ -8399,7 +8399,7 @@
     },
     {
       "occurrence": "200",
-      "scheduledAt": "2028-01-02T08:00:00-03:00",
+      "scheduledAt": "2028-01-15T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 174,
       "slug": "eni4-drop-tunnels-with-worms",
@@ -8443,7 +8443,7 @@
     },
     {
       "occurrence": "201",
-      "scheduledAt": "2028-01-04T08:00:00-03:00",
+      "scheduledAt": "2028-01-17T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 175,
       "slug": "eni4-drop-march-of-the-aracnes",
@@ -8487,7 +8487,7 @@
     },
     {
       "occurrence": "202",
-      "scheduledAt": "2028-01-06T08:00:00-03:00",
+      "scheduledAt": "2028-01-19T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 176,
       "slug": "eni4-drop-burn-factory",
@@ -8531,7 +8531,7 @@
     },
     {
       "occurrence": "203",
-      "scheduledAt": "2028-01-09T08:00:00-03:00",
+      "scheduledAt": "2028-01-22T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 2,
       "slug": "saga-orfv-livro-01",
@@ -8598,7 +8598,7 @@
     },
     {
       "occurrence": "204",
-      "scheduledAt": "2028-01-11T08:00:00-03:00",
+      "scheduledAt": "2028-01-24T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 177,
       "slug": "eni4-drop-node-0-heat-chamber",
@@ -8642,7 +8642,7 @@
     },
     {
       "occurrence": "205",
-      "scheduledAt": "2028-01-13T08:00:00-03:00",
+      "scheduledAt": "2028-01-26T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 178,
       "slug": "eni4-drop-wasteland-region",
@@ -8686,7 +8686,7 @@
     },
     {
       "occurrence": "206",
-      "scheduledAt": "2028-01-16T08:00:00-03:00",
+      "scheduledAt": "2028-01-29T08:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "discovery": 179,
       "slug": "o-que-e-kammara",
