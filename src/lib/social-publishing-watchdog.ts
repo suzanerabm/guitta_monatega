@@ -7,6 +7,7 @@ import { readBrandControl as readKammaraControl, readPublicationState as readKam
 import { sendPublishingAlert, type PublishingBrand } from "@/lib/social-publishing-alerts";
 
 type QueueItem = { occurrence: string; scheduledAt: string; postId?: string; title?: string; slug?: string };
+type Platform = "instagram" | "facebook";
 type State = { instagram: { status: string }; facebook: { status: string } } | null;
 
 const WINDOW_MS = 12 * 60 * 60 * 1000;
@@ -15,8 +16,8 @@ const campaigns: Array<{
   brand: PublishingBrand;
   items: QueueItem[];
   read: (occurrence: string) => Promise<State>;
-  readControl: () => Promise<{ publishingEnabled: boolean }>;
-  expectedPlatforms: Array<"instagram" | "facebook">;
+  readControl: () => Promise<{ publishingEnabled: boolean; allowedPlatforms?: Platform[] }>;
+  expectedPlatforms: Platform[];
 }> = [
   {
     brand: "Kammara",
@@ -29,14 +30,20 @@ const campaigns: Array<{
     brand: "Bichittos",
     items: bichittosQueue.items as QueueItem[],
     read: (occurrence) => storeFor(BICHITTOS).readPublicationState(occurrence),
-    readControl: async () => ({ publishingEnabled: (await storeFor(BICHITTOS).readScheduleControl()).enabled }),
+    readControl: async () => {
+      const control = await storeFor(BICHITTOS).readScheduleControl();
+      return { publishingEnabled: control.enabled, allowedPlatforms: control.allowedPlatforms };
+    },
     expectedPlatforms: ["instagram", "facebook"],
   },
   {
     brand: "Guitta Monatega Studio",
     items: studioQueue.items as QueueItem[],
     read: (occurrence) => storeFor(GUITTA_STUDIO).readPublicationState(occurrence),
-    readControl: async () => ({ publishingEnabled: (await storeFor(GUITTA_STUDIO).readScheduleControl()).enabled }),
+    readControl: async () => {
+      const control = await storeFor(GUITTA_STUDIO).readScheduleControl();
+      return { publishingEnabled: control.enabled, allowedPlatforms: control.allowedPlatforms };
+    },
     expectedPlatforms: ["instagram", "facebook"],
   },
 ];
@@ -54,12 +61,13 @@ export async function runSocialPublishingWatchdog(now = new Date()) {
     if (expected.length === 0) continue;
     const control = await campaign.readControl();
     if (!control.publishingEnabled) continue;
+    const platforms = control.allowedPlatforms?.length ? control.allowedPlatforms : campaign.expectedPlatforms;
     for (const item of expected) {
       checked += 1;
       const state = await campaign.read(item.occurrence);
       const instagram = state?.instagram.status ?? "missing";
       const facebook = state?.facebook.status ?? "missing";
-      const platformFailures = campaign.expectedPlatforms.flatMap((platform) => {
+      const platformFailures = platforms.flatMap((platform) => {
         const status = platform === "instagram" ? instagram : facebook;
         return status === "published" ? [] : [`${platform}=${status}`];
       });

@@ -89,4 +89,35 @@ describe("social publishing watchdog", () => {
     expect(mocks.studioState).not.toHaveBeenCalled();
     expect(mocks.kammaraState).not.toHaveBeenCalled();
   });
+
+  it("Bichittos with only instagram allowed does not alert on facebook pending", async () => {
+    mocks.bichittosControl.mockResolvedValue({ enabled: true, allowedPlatforms: ["instagram"] });
+    mocks.bichittosState.mockResolvedValue({
+      instagram: { status: "published" },
+      facebook: { status: "pending" },
+    });
+
+    await expect(runSocialPublishingWatchdog(new Date("2026-11-27T13:00:00Z"))).resolves.toEqual({
+      status: "healthy",
+      checked: 1,
+      failures: 0,
+    });
+    expect(mocks.alert).not.toHaveBeenCalled();
+  });
+
+  it("Bichittos with both allowed alerts when facebook is needs_review", async () => {
+    mocks.bichittosControl.mockResolvedValue({ enabled: true, allowedPlatforms: ["instagram", "facebook"] });
+    mocks.bichittosState.mockResolvedValue({
+      instagram: { status: "published" },
+      facebook: { status: "needs_review" },
+    });
+
+    await expect(runSocialPublishingWatchdog(new Date("2026-11-27T13:00:00Z"))).resolves.toMatchObject({
+      status: "alert-sent",
+      failures: 1,
+    });
+    expect(mocks.alert).toHaveBeenCalledWith(expect.objectContaining({
+      details: [expect.stringContaining("facebook=needs_review")],
+    }));
+  });
 });
