@@ -1,6 +1,9 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { MetaPublishingError } from "@/lib/social-meta/client";
-import { performStudioMetaOperation } from "./meta";
+import { GUITTA_STUDIO } from "./brands";
+import { performMetaOperation, type PerformMetaOperationOptions } from "./meta";
+
+const performStudioMetaOperation = (options: PerformMetaOperationOptions) => performMetaOperation(GUITTA_STUDIO, options);
 import type { MetaOperation, PlatformState, PublicationItem } from "./types";
 
 const publication: PublicationItem = {

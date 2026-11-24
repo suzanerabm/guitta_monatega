@@ -1,7 +1,8 @@
 import { describe, expect, it, vi } from "vitest";
 import { MetaPublishingError } from "@/lib/social-meta/client";
-import { performStudioMetaOperation, type StudioMetaResult } from "./meta";
-import { advanceStudioPublication } from "./safe-publisher";
+import { GUITTA_STUDIO } from "./brands";
+import type { MetaResult as StudioMetaResult, PerformMetaOperationOptions } from "./meta";
+import { advancePublication } from "./safe-publisher";
 import type { StoredState } from "./state";
 import type { PlatformState, PublicationItem } from "./types";
 
@@ -82,12 +83,12 @@ describe("Studio safe publisher", () => {
   it("uses separate executions and at most one Meta call for the complete Instagram image flow", async () => {
     const state = harness();
     const operations: string[] = [];
-    const performOperation = vi.fn(async (options: Parameters<typeof performStudioMetaOperation>[0]) => {
+    const performOperation = vi.fn(async (options: PerformMetaOperationOptions) => {
       operations.push(options.operation);
       if (options.operation === "check_instagram_container") return ok({ id: null, statusCode: "FINISHED" });
       return ok();
     });
-    const run = (now: string) => advanceStudioPublication({
+    const run = (now: string) => advancePublication(GUITTA_STUDIO, {
       occurrence: "test-001",
       item: item(),
       stored: state.current,
@@ -138,7 +139,7 @@ describe("Studio safe publisher", () => {
     const state = harness();
     const performOperation = vi.fn(async () => ok());
 
-    const outcome = await advanceStudioPublication({
+    const outcome = await advancePublication(GUITTA_STUDIO, {
       occurrence: "test-001",
       item: item(),
       stored: state.current,
@@ -160,11 +161,11 @@ describe("Studio safe publisher", () => {
     initial.state.instagram.status = "published";
     const state = harness(initial);
     const operations: string[] = [];
-    const performOperation = vi.fn(async (options: Parameters<typeof performStudioMetaOperation>[0]) => {
+    const performOperation = vi.fn(async (options: PerformMetaOperationOptions) => {
       operations.push(options.operation);
       return ok();
     });
-    const run = (now: string) => advanceStudioPublication({
+    const run = (now: string) => advancePublication(GUITTA_STUDIO, {
       occurrence: "test-001",
       item: item(),
       stored: state.current,
@@ -201,7 +202,7 @@ describe("Studio safe publisher", () => {
       return ok();
     });
 
-    const outcome = await advanceStudioPublication({
+    const outcome = await advancePublication(GUITTA_STUDIO, {
       occurrence: "test-001",
       item: item(),
       stored: state.current,
@@ -223,7 +224,7 @@ describe("Studio safe publisher", () => {
     state.consumeAuthorization.mockRejectedValueOnce(new Error("conditional S3 write failed"));
     const performOperation = vi.fn();
 
-    const outcome = await advanceStudioPublication({
+    const outcome = await advancePublication(GUITTA_STUDIO, {
       occurrence: "test-001",
       item: item(),
       stored: state.current,
@@ -251,7 +252,7 @@ describe("Studio safe publisher", () => {
     const state = harness(initial);
     const performOperation = vi.fn();
 
-    const outcome = await advanceStudioPublication({
+    const outcome = await advancePublication(GUITTA_STUDIO, {
       occurrence: "test-001",
       item: item(),
       stored: state.current,
@@ -282,7 +283,7 @@ describe("Studio safe publisher", () => {
     });
     const firstOperation = vi.fn(async () => ok());
 
-    await expect(advanceStudioPublication({
+    await expect(advancePublication(GUITTA_STUDIO, {
       occurrence: "test-001",
       item: item(),
       stored: initial,
@@ -299,7 +300,7 @@ describe("Studio safe publisher", () => {
 
     const recovery = harness(persisted);
     const repeatedOperation = vi.fn();
-    const outcome = await advanceStudioPublication({
+    const outcome = await advancePublication(GUITTA_STUDIO, {
       occurrence: "test-001",
       item: item(),
       stored: recovery.current,
@@ -318,12 +319,12 @@ describe("Studio safe publisher", () => {
   it("publishes an Instagram carousel as finite one-call steps", async () => {
     const state = harness();
     const operations: string[] = [];
-    const performOperation = vi.fn(async (options: Parameters<typeof performStudioMetaOperation>[0]) => {
+    const performOperation = vi.fn(async (options: PerformMetaOperationOptions) => {
       operations.push(`${options.operation}:${options.carouselIndex ?? "parent"}`);
       if (options.operation.startsWith("check_")) return ok({ id: null, statusCode: "FINISHED" });
       return ok({ id: `${options.operation}-${options.carouselIndex ?? "parent"}` });
     });
-    const run = (now: string) => advanceStudioPublication({
+    const run = (now: string) => advancePublication(GUITTA_STUDIO, {
       occurrence: "test-001",
       item: item("carousel"),
       stored: state.current,
@@ -380,11 +381,11 @@ describe("Studio safe publisher", () => {
     initial.state.instagram.status = "published";
     const state = harness(initial);
     const operations: string[] = [];
-    const performOperation = vi.fn(async (options: Parameters<typeof performStudioMetaOperation>[0]) => {
+    const performOperation = vi.fn(async (options: PerformMetaOperationOptions) => {
       operations.push(`${options.operation}:${options.carouselIndex ?? "parent"}`);
       return ok({ id: `${options.operation}-${options.carouselIndex ?? "parent"}` });
     });
-    const run = (now: string) => advanceStudioPublication({
+    const run = (now: string) => advancePublication(GUITTA_STUDIO, {
       occurrence: "test-001",
       item: item("carousel"),
       stored: state.current,
@@ -420,7 +421,7 @@ describe("Studio safe publisher", () => {
   it("keeps Reels manual with zero state changes and zero Meta calls", async () => {
     const state = harness();
     const performOperation = vi.fn();
-    const outcome = await advanceStudioPublication({
+    const outcome = await advancePublication(GUITTA_STUDIO, {
       occurrence: "test-001",
       item: item("reel"),
       stored: state.current,
@@ -443,7 +444,7 @@ describe("Studio safe publisher", () => {
   ])("never calls Meta outside the exact publication day (%s)", async (now) => {
     const state = harness();
     const performOperation = vi.fn();
-    const outcome = await advanceStudioPublication({
+    const outcome = await advancePublication(GUITTA_STUDIO, {
       occurrence: "test-001",
       item: item(),
       stored: state.current,
@@ -466,7 +467,7 @@ describe("Studio safe publisher", () => {
     initial.state.instagram.containerId = "container";
     const state = harness(initial);
     const performOperation = vi.fn(async () => ok({ id: null, statusCode: "IN_PROGRESS" }));
-    const run = (now: string) => advanceStudioPublication({
+    const run = (now: string) => advancePublication(GUITTA_STUDIO, {
       occurrence: "test-001",
       item: item(),
       stored: state.current,
@@ -493,7 +494,7 @@ describe("Studio safe publisher", () => {
     const performOperation = vi.fn(async () => {
       throw new MetaPublishingError("Application request limit reached", "brand-critical", { httpStatus: 429, code: 4 });
     });
-    const outcome = await advanceStudioPublication({
+    const outcome = await advancePublication(GUITTA_STUDIO, {
       occurrence: "test-001",
       item: item(),
       stored: state.current,
@@ -513,7 +514,7 @@ describe("Studio safe publisher", () => {
   it("does nothing when no platform was explicitly authorized", async () => {
     const state = harness();
     const performOperation = vi.fn();
-    const outcome = await advanceStudioPublication({
+    const outcome = await advancePublication(GUITTA_STUDIO, {
       occurrence: "test-001",
       item: item(),
       stored: state.current,

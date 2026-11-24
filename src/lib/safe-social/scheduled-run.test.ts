@@ -1,5 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
-import { runGuittaStudioScheduledPublisher } from "./scheduled-run";
+import { GUITTA_STUDIO } from "./brands";
+import { runScheduledPublisher } from "./scheduled-run";
+import type { BrandStore } from "./state";
 
 const mocks = vi.hoisted(() => ({
   advance: vi.fn(),
@@ -11,15 +13,22 @@ const mocks = vi.hoisted(() => ({
   save: vi.fn(),
 }));
 
-vi.mock("./safe-publisher", () => ({ advanceStudioPublication: mocks.advance }));
-vi.mock("./state", () => ({
+vi.mock("./safe-publisher", () => ({ advancePublication: mocks.advance }));
+
+const store = {
   acquire: mocks.acquire,
-  consumeStudioScheduleAuthorization: mocks.consume,
-  pauseStudioSchedule: mocks.pause,
+  consumeScheduleAuthorization: mocks.consume,
+  pauseSchedule: mocks.pause,
   readPublicationState: mocks.readState,
-  readStudioScheduleControl: mocks.readControl,
+  readScheduleControl: mocks.readControl,
   save: mocks.save,
-}));
+  verifyStateAccess: vi.fn(),
+  readBrandControl: vi.fn(),
+  consumeBrandAuthorization: vi.fn(),
+  pauseBrand: vi.fn(),
+} as unknown as BrandStore;
+
+const runGuittaStudioScheduledPublisher = (now: Date) => runScheduledPublisher(GUITTA_STUDIO, now, store);
 
 describe("Studio scheduled publisher", () => {
   beforeEach(() => {
@@ -48,7 +57,7 @@ describe("Studio scheduled publisher", () => {
 
     expect(result).toMatchObject({ occurrence: "006", postId: "studio-006", calls: 0 });
     expect(mocks.acquire).toHaveBeenCalledWith("006", expect.any(Date), expect.any(String));
-    expect(mocks.advance).toHaveBeenCalledWith(expect.objectContaining({
+    expect(mocks.advance).toHaveBeenCalledWith(GUITTA_STUDIO, expect.objectContaining({
       occurrence: "006",
       allowedPlatforms: ["instagram", "facebook"],
     }));
@@ -94,7 +103,7 @@ describe("Studio scheduled publisher", () => {
     await runGuittaStudioScheduledPublisher(new Date("2026-11-14T15:00:00.000Z"));
 
     expect(mocks.acquire).toHaveBeenCalledTimes(1);
-    expect(mocks.advance).toHaveBeenCalledWith(expect.objectContaining({
+    expect(mocks.advance).toHaveBeenCalledWith(GUITTA_STUDIO, expect.objectContaining({
       allowedPlatforms: ["instagram", "facebook"],
     }));
   });

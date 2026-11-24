@@ -2,10 +2,14 @@ import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { runBichittosPublisher } from "../bichittos-social/run";
 import * as bichittosState from "../bichittos-social/state";
-import { runGuittaStudioPublisher } from "../guitta-studio-social/run";
-import * as studioState from "../guitta-studio-social/state";
+import { GUITTA_STUDIO } from "../safe-social/brands";
+import { runManualPublisher } from "../safe-social/run";
+import { storeFor } from "../safe-social/state";
 import { runKammaraPublisher } from "../kammara-social/run";
 import * as kammaraState from "../kammara-social/state";
+
+const studioState = storeFor(GUITTA_STUDIO);
+const runGuittaStudioPublisher = (now: Date) => runManualPublisher(GUITTA_STUDIO, now);
 
 // O interruptor da marca é verificado antes de qualquer estado de ocorrência ou chamada à Meta,
 // e o padrão sem objeto é desligado.

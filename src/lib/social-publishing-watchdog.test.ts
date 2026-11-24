@@ -18,9 +18,11 @@ vi.mock("@/lib/bichittos-social/state", () => ({
   readBrandControl: mocks.bichittosControl,
   readPublicationState: mocks.bichittosState,
 }));
-vi.mock("@/lib/guitta-studio-social/state", () => ({
-  readStudioScheduleControl: mocks.studioControl,
-  readPublicationState: mocks.studioState,
+vi.mock("@/lib/safe-social/state", () => ({
+  storeFor: () => ({
+    readScheduleControl: mocks.studioControl,
+    readPublicationState: mocks.studioState,
+  }),
 }));
 
 describe("social publishing watchdog", () => {

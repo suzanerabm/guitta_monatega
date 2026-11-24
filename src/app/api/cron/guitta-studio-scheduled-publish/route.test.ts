@@ -7,11 +7,11 @@ const mocks = vi.hoisted(() => ({
   alert: vi.fn(),
 }));
 
-vi.mock("@/lib/guitta-studio-social/scheduled-run", () => ({
-  runGuittaStudioScheduledPublisher: mocks.run,
+vi.mock("@/lib/safe-social/scheduled-run", () => ({
+  runScheduledPublisher: mocks.run,
 }));
-vi.mock("@/lib/guitta-studio-social/state", () => ({
-  pauseStudioSchedule: mocks.pause,
+vi.mock("@/lib/safe-social/state", () => ({
+  storeFor: () => ({ pauseSchedule: mocks.pause }),
 }));
 vi.mock("@/lib/social-publishing-alerts", () => ({
   reportPublishingFailure: mocks.alert,

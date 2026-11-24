@@ -1,16 +1,20 @@
 import { randomUUID } from "node:crypto";
-import queue from "./publication-queue.json";
-import { advanceStudioPublication } from "./safe-publisher";
+import type { SafeBrand } from "./brands";
+import { advancePublication } from "./safe-publisher";
 import { selectDuePublications } from "./select-due";
-import { acquire, consumeBrandAuthorization, pauseBrand, readBrandControl, save } from "./state";
-import type { PublicationItem } from "./types";
+import { storeFor, type BrandStore } from "./state";
 
-const items = queue.items as PublicationItem[];
 const MAX_AUTHORIZATION_HORIZON_MS = 24 * 60 * 60 * 1000;
 
-export async function runGuittaStudioPublisher(now = new Date(), dryRun = false) {
+export async function runManualPublisher(
+  brand: SafeBrand,
+  now = new Date(),
+  dryRun = false,
+  store: BrandStore = storeFor(brand),
+) {
+  const { queue } = brand;
   if (queue.mode !== "active" && !dryRun) return { status: "inactive", mode: queue.mode };
-  const control = await readBrandControl();
+  const control = await store.readBrandControl();
   if (!control.publishingEnabled) return { status: "brand-paused", reason: control.pauseReason, pausedAt: control.pausedAt };
   if (!control.allowedOccurrence || control.allowedPlatforms.length !== 1 || !control.allowedOperation || !control.authorizationExpiresAt) {
     return { status: "manual-authorization-required", calls: 0 };
@@ -24,7 +28,7 @@ export async function runGuittaStudioPublisher(now = new Date(), dryRun = false)
     return { status: "manual-authorization-expired", calls: 0, authorizationExpiresAt: control.authorizationExpiresAt };
   }
 
-  const due = selectDuePublications(items, now, queue.timezone);
+  const due = selectDuePublications(queue.items, now, queue.timezone);
   if (due.length > 1) {
     return {
       status: "schedule-conflict",
@@ -52,18 +56,18 @@ export async function runGuittaStudioPublisher(now = new Date(), dryRun = false)
     };
   }
 
-  const acquired = await acquire(item.occurrence, now, randomUUID());
+  const acquired = await store.acquire(item.occurrence, now, randomUUID());
   if (acquired.status === "published") return { status: "published", occurrence: item.occurrence, calls: 0 };
   if (acquired.status === "locked") return { status: "locked", occurrence: item.occurrence, calls: 0 };
-  const outcome = await advanceStudioPublication({
+  const outcome = await advancePublication(brand, {
     occurrence: item.occurrence,
     item,
     stored: acquired.stored,
     allowedPlatforms: control.allowedPlatforms,
     now,
-    save,
-    consumeAuthorization: (authorization) => consumeBrandAuthorization(authorization),
-    pauseBrand: (reason) => pauseBrand(reason),
+    save: (stored) => store.save(stored),
+    consumeAuthorization: (authorization) => store.consumeBrandAuthorization(authorization),
+    pauseBrand: (reason) => store.pauseBrand(reason),
   });
   return {
     occurrence: item.occurrence,

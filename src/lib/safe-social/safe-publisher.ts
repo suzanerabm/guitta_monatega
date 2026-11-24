@@ -1,6 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { MetaPublishingError } from "@/lib/social-meta/client";
-import { performStudioMetaOperation, type StudioMetaResult } from "./meta";
+import type { SafeBrand } from "./brands";
+import { performMetaOperation, type MetaResult, type PerformMetaOperationOptions } from "./meta";
 import { isPublicationScheduledForToday } from "./select-due";
 import type { StoredState } from "./state";
 import type {
@@ -20,7 +21,7 @@ const MAX_STATUS_CHECKS = 3;
 const MIN_CAROUSEL_IMAGES = 2;
 const MAX_CAROUSEL_IMAGES = 10;
 
-type PerformOperation = typeof performStudioMetaOperation;
+type PerformOperation = (options: PerformMetaOperationOptions) => Promise<MetaResult>;
 type PlannedOperation = { operation: MetaOperation; carouselIndex: number | null };
 
 export type SafeStepResult = {
@@ -41,7 +42,7 @@ export type SafeStepResult = {
   pausedReason?: string | null;
 };
 
-type AdvanceOptions = {
+export type AdvanceOptions = {
   occurrence: string;
   item: PublicationItem;
   stored: StoredState;
@@ -126,7 +127,7 @@ function completedStatus(status: PlatformStatus): SafeStepResult["status"] {
   return "meta-call-completed";
 }
 
-function requireResultId(result: StudioMetaResult, operation: MetaOperation): string {
+function requireResultId(result: MetaResult, operation: MetaOperation): string {
   if (!result.id) throw new Error(`${operation} returned no ID; result is ambiguous and requires human review.`);
   return result.id;
 }
@@ -138,7 +139,7 @@ function carouselChild(state: PlatformState, index: number | null, operation: Me
   return child;
 }
 
-function applyContainerStatus(state: PlatformState, result: StudioMetaResult, now: Date): void {
+function applyContainerStatus(state: PlatformState, result: MetaResult, now: Date): void {
   state.statusChecks += 1;
   if (result.statusCode === "FINISHED") {
     state.status = "media_ready";
@@ -158,7 +159,7 @@ function applyContainerStatus(state: PlatformState, result: StudioMetaResult, no
 function applySuccess(
   state: PlatformState,
   planned: PlannedOperation,
-  result: StudioMetaResult,
+  result: MetaResult,
   now: Date,
 ): void {
   state.inFlight = null;
@@ -261,22 +262,25 @@ function metaCallBudget(item: PublicationItem): number {
   return 0;
 }
 
-async function pauseBestEffort(pauseBrand: (reason: string) => Promise<void>, reason: string): Promise<void> {
+async function pauseBestEffort(brand: SafeBrand, pauseBrand: (reason: string) => Promise<void>, reason: string): Promise<void> {
   try {
     await pauseBrand(reason);
   } catch (error) {
     console.error(JSON.stringify({
       event: "brand_pause_failed",
-      brand: "guitta-studio",
+      brand: brand.id,
       reason,
       error: error instanceof Error ? error.message : String(error),
     }));
   }
 }
 
-export async function advanceStudioPublication(options: AdvanceOptions): Promise<{ stored: StoredState; result: SafeStepResult }> {
+export async function advancePublication(
+  brand: SafeBrand,
+  options: AdvanceOptions,
+): Promise<{ stored: StoredState; result: SafeStepResult }> {
   let stored = options.stored;
-  if (!isPublicationScheduledForToday(options.item, options.now)) {
+  if (!isPublicationScheduledForToday(options.item, options.now, brand.queue.timezone)) {
     return {
       stored,
       result: { status: "outside-publication-day", platform: null, operation: null, calls: 0 },
@@ -388,9 +392,11 @@ export async function advanceStudioPublication(options: AdvanceOptions): Promise
     };
   }
 
-  let metaResult: StudioMetaResult;
+  let metaResult: MetaResult;
   try {
-    metaResult = await (options.performOperation ?? performStudioMetaOperation)({
+    const performOperation: PerformOperation = options.performOperation
+      ?? ((operationOptions) => performMetaOperation(brand, operationOptions));
+    metaResult = await performOperation({
       operation: planned.operation,
       carouselIndex: planned.carouselIndex,
       occurrence: options.occurrence,
@@ -403,7 +409,7 @@ export async function advanceStudioPublication(options: AdvanceOptions): Promise
     markNeedsReview(state, `${message}; automatic repetition is disabled.`);
     stored = await options.save(stored);
     if (error instanceof MetaPublishingError && error.kind === "brand-critical") {
-      await pauseBestEffort(options.pauseBrand, `${platform}: ${message}`);
+      await pauseBestEffort(brand, options.pauseBrand, `${platform}: ${message}`);
     }
     return {
       stored,
@@ -419,7 +425,7 @@ export async function advanceStudioPublication(options: AdvanceOptions): Promise
   stored = await options.save(stored);
 
   if (metaResult.pauseReason) {
-    await pauseBestEffort(options.pauseBrand, `${platform}: ${metaResult.pauseReason}`);
+    await pauseBestEffort(brand, options.pauseBrand, `${platform}: ${metaResult.pauseReason}`);
   }
   return {
     stored,

@@ -1,42 +1,8 @@
-import { timingSafeEqual } from "node:crypto";
-import { runGuittaStudioPublisher } from "@/lib/guitta-studio-social/run";
-import { verifyStateAccess } from "@/lib/guitta-studio-social/state";
-import { reportPublishingFailure } from "@/lib/social-publishing-alerts";
+import { GUITTA_STUDIO } from "@/lib/safe-social/brands";
+import { manualRouteGET } from "@/lib/safe-social/cron-handlers";
 
 export const runtime = "nodejs";
 // The safe publisher performs at most one external request and never waits or polls.
 export const maxDuration = 30;
 
-function publishingRouteEnabled(): boolean {
-  return process.env.GUITTA_STUDIO_META_ROUTE_ENABLED === "true";
-}
-
-function authorized(request: Request): boolean {
-  const secret = process.env.GUITTA_STUDIO_META_MANUAL_SECRET;
-  const supplied = request.headers.get("authorization")?.replace(/^Bearer\s+/i, "");
-  if (!secret || !supplied) return false;
-  const left = Buffer.from(secret);
-  const right = Buffer.from(supplied);
-  return left.length === right.length && timingSafeEqual(left, right);
-}
-
-export async function GET(request: Request) {
-  if (!publishingRouteEnabled()) {
-    return Response.json(
-      { paused: true, message: "Guitta Studio publishing is paused pending a Meta API safety review." },
-      { status: 503 },
-    );
-  }
-  if (!authorized(request)) return Response.json({ error: "Unauthorized" }, { status: 401 });
-  try {
-    const dryRun = new URL(request.url).searchParams.get("dryRun") === "1";
-    if (dryRun) await verifyStateAccess();
-    const result = await runGuittaStudioPublisher(new Date(), dryRun);
-    console.info("Guitta Studio publisher result", result);
-    return Response.json(result);
-  } catch (error) {
-    console.error("Guitta Studio publisher failed", error);
-    await reportPublishingFailure({ brand: "Guitta Monatega Studio", summary: "O publicador encontrou uma falha.", error });
-    return Response.json({ error: error instanceof Error ? error.message : "Unknown publication error" }, { status: 500 });
-  }
-}
+export const GET = manualRouteGET(GUITTA_STUDIO);

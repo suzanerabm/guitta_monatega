@@ -1,11 +1,12 @@
 import { MetaClient, type MetaCallLog, type MetaPayload } from "@/lib/social-meta/client";
+import type { SafeBrand } from "./brands";
 import type { MetaOperation, PlatformState, PublicationItem } from "./types";
 
 // This module is deliberately limited to one Meta request per invocation. It contains no
 // polling, sleep, loop or retry. The persisted state machine decides which single operation is
 // allowed before calling this function.
 
-type PerformMetaOperationOptions = {
+export type PerformMetaOperationOptions = {
   operation: MetaOperation;
   carouselIndex: number | null;
   occurrence: string;
@@ -16,21 +17,21 @@ type PerformMetaOperationOptions = {
   log?: (entry: MetaCallLog) => void;
 };
 
-export type StudioMetaResult = {
+export type MetaResult = {
   id: string | null;
   statusCode: string | null;
   status: string | null;
   pauseReason: string | null;
 };
 
-function required(name: string): string {
-  const value = process.env[`GUITTA_STUDIO_${name}`]?.trim();
-  if (!value) throw new Error(`GUITTA_STUDIO_${name} is not configured.`);
+function requiredEnv(brand: SafeBrand, name: string): string {
+  const value = process.env[`${brand.envPrefix}_${name}`]?.trim();
+  if (!value) throw new Error(`${brand.envPrefix}_${name} is not configured.`);
   return value;
 }
 
-function imageUrl(item: PublicationItem): string {
-  if (item.media.kind !== "image") throw new Error(`Safe Studio publisher does not support ${item.media.kind} yet; zero Meta calls made.`);
+function imageUrl(brand: SafeBrand, item: PublicationItem): string {
+  if (item.media.kind !== "image") throw new Error(`Safe ${brand.copy.label} publisher does not support ${item.media.kind} yet; zero Meta calls made.`);
   return item.media.image.url;
 }
 
@@ -59,7 +60,7 @@ function requireId(value: string | null, label: string): string {
   return value;
 }
 
-function result(payload: MetaPayload, client: MetaClient): StudioMetaResult {
+function result(payload: MetaPayload, client: MetaClient): MetaResult {
   return {
     id: payload.post_id ?? payload.id ?? null,
     statusCode: payload.status_code ?? null,
@@ -68,14 +69,15 @@ function result(payload: MetaPayload, client: MetaClient): StudioMetaResult {
   };
 }
 
-export async function performStudioMetaOperation(options: PerformMetaOperationOptions): Promise<StudioMetaResult> {
+export async function performMetaOperation(brand: SafeBrand, options: PerformMetaOperationOptions): Promise<MetaResult> {
+  const required = (name: string) => requiredEnv(brand, name);
   const version = required("META_GRAPH_API_VERSION");
   const graph = `https://graph.facebook.com/${version}`;
   const instagramToken = () => required("META_ACCESS_TOKEN");
   const facebookToken = () => required("FACEBOOK_PAGE_ACCESS_TOKEN");
   const platform = options.operation.includes("facebook") ? "facebook" : "instagram";
   const client = new MetaClient({
-    brand: "guitta-studio",
+    brand: brand.id,
     occurrence: options.occurrence,
     platform,
     limit: 1,
@@ -105,7 +107,7 @@ export async function performStudioMetaOperation(options: PerformMetaOperationOp
     case "create_instagram_container":
       payload = await post(
         `${required("INSTAGRAM_USER_ID")}/media`,
-        { image_url: imageUrl(options.item), caption: options.item.instagram.caption },
+        { image_url: imageUrl(brand, options.item), caption: options.item.instagram.caption },
         instagramToken(),
         "create Instagram image container",
       );
@@ -165,7 +167,7 @@ export async function performStudioMetaOperation(options: PerformMetaOperationOp
     case "publish_facebook_image":
       payload = await post(
         `${required("FACEBOOK_PAGE_ID")}/photos`,
-        { url: imageUrl(options.item), message: options.item.facebook.message },
+        { url: imageUrl(brand, options.item), message: options.item.facebook.message },
         facebookToken(),
         "publish Facebook image once",
       );

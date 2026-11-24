@@ -5,7 +5,7 @@ import { publishPlatforms } from "./social-meta/execute";
 import { facebookCallLimit, instagramCallLimit, type PublishableItem } from "./social-meta/publishers";
 
 // Regression coverage for the paused legacy Kammara and Bichittos publishers. Studio has a
-// stricter one-call state machine covered by guitta-studio-social/safe-publisher.test.ts.
+// stricter one-call state machine covered by safe-social/safe-publisher.test.ts.
 
 const brands = [
   { name: "Kammara", prefix: "KAMMARA", publishers: kammara },

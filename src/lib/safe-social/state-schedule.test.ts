@@ -1,10 +1,7 @@
 import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import {
-  consumeStudioScheduleAuthorization,
-  readStudioScheduleControl,
-  STUDIO_SCHEDULE_MAX_META_CALLS_PER_DAY,
-} from "./state";
+import { GUITTA_STUDIO } from "./brands";
+import { createBrandStore } from "./state";
 import type { PublicationItem } from "./types";
 
 const key = "publications/guitta-monatega-studio/_schedule-control.json";
@@ -21,7 +18,16 @@ const item: PublicationItem = {
   facebook: { message: "Ninha" },
 };
 
+const studio = createBrandStore(GUITTA_STUDIO);
+const consumeStudioScheduleAuthorization = studio.consumeScheduleAuthorization;
+const readStudioScheduleControl = studio.readScheduleControl;
+const STUDIO_SCHEDULE_MAX_META_CALLS_PER_DAY = GUITTA_STUDIO.maxMetaCallsPerDay;
+
 describe("Studio schedule circuit breaker", () => {
+  it("keeps the Studio daily ceiling at 32 calls", () => {
+    expect(STUDIO_SCHEDULE_MAX_META_CALLS_PER_DAY).toBe(32);
+  });
+
   let stored: string | null;
   let send: ReturnType<typeof vi.spyOn>;
 

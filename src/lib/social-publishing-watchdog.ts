@@ -1,7 +1,8 @@
 import bichittosQueue from "@/lib/bichittos-social/publication-queue.json";
 import { readBrandControl as readBichittosControl, readPublicationState as readBichittosState } from "@/lib/bichittos-social/state";
 import studioQueue from "@/lib/guitta-studio-social/publication-queue.json";
-import { readPublicationState as readStudioState, readStudioScheduleControl } from "@/lib/guitta-studio-social/state";
+import { GUITTA_STUDIO } from "@/lib/safe-social/brands";
+import { storeFor } from "@/lib/safe-social/state";
 import kammaraQueue from "@/lib/kammara-social/publication-queue.json";
 import { readBrandControl as readKammaraControl, readPublicationState as readKammaraState } from "@/lib/kammara-social/state";
 import { sendPublishingAlert, type PublishingBrand } from "@/lib/social-publishing-alerts";
@@ -35,8 +36,8 @@ const campaigns: Array<{
   {
     brand: "Guitta Monatega Studio",
     items: studioQueue.items as QueueItem[],
-    read: readStudioState,
-    readControl: async () => ({ publishingEnabled: (await readStudioScheduleControl()).enabled }),
+    read: (occurrence) => storeFor(GUITTA_STUDIO).readPublicationState(occurrence),
+    readControl: async () => ({ publishingEnabled: (await storeFor(GUITTA_STUDIO).readScheduleControl()).enabled }),
     expectedPlatforms: ["instagram", "facebook"],
   },
 ];
