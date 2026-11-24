@@ -594,29 +594,21 @@
       "postado": false
     },
     {
-      "occurrence": "090",
-      "postId": "077",
-      "world": "zeco",
-      "type": "play",
-      "title": "Vem pular amarelinha",
+      "occurrence": "011",
+      "postId": "012",
+      "world": "taylo",
+      "type": "character",
+      "title": "Taylo",
       "scheduledAt": "2026-11-13T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
-      "seasonality": {
-        "hemisphere": "south",
-        "season": "primavera",
-        "allowedMonths": [
-          9,
-          10,
-          11
-        ]
-      },
+      "seasonality": null,
       "media": {
         "kind": "image",
         "image": {
-          "local": "mkt/templates/_PUBLICAR/077-zeco-primavera-amarelinha.png",
-          "key": "social/bichittos/posts/077-zeco-primavera-amarelinha.png",
-          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/077-zeco-primavera-amarelinha.png"
+          "local": "mkt/templates/_PUBLICAR/012-taylo-personagem.png",
+          "key": "social/bichittos/posts/012-taylo-personagem.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/012-taylo-personagem.png"
         }
       },
       "destinationUrl": null,
@@ -630,63 +622,13 @@
         "error": null
       },
       "instagram": {
-        "caption": "Joga a pedrinha e vem pular na amarelinha! Com um pé só, sem pisar na linha.\n\nToss your stone and hop. One foot, mind the lines. Up to the sky!",
+        "caption": "Este é Taylo, o Colecionador de Estrelas e guardião silencioso da Floresta Azul.\n\nThis is Taylo, the Star Collector and silent guardian of the Blue Forest.",
         "status": "pending",
         "mediaId": null,
         "error": null
       },
       "facebook": {
-        "message": "Joga a pedrinha e vem pular na amarelinha! Com um pé só, sem pisar na linha.\n\nToss your stone and hop. One foot, mind the lines. Up to the sky!",
-        "status": "pending",
-        "postId": null,
-        "error": null
-      },
-      "postado": false
-    },
-    {
-      "occurrence": "091",
-      "postId": "078",
-      "world": "zeco",
-      "type": "play",
-      "title": "Pular corda",
-      "scheduledAt": "2026-11-17T09:00:00-03:00",
-      "timezone": "America/Sao_Paulo",
-      "calendarException": false,
-      "seasonality": {
-        "hemisphere": "south",
-        "season": "primavera",
-        "allowedMonths": [
-          9,
-          10,
-          11
-        ]
-      },
-      "media": {
-        "kind": "image",
-        "image": {
-          "local": "mkt/templates/_PUBLICAR/078-zeco-primavera-pular-corda.png",
-          "key": "social/bichittos/posts/078-zeco-primavera-pular-corda.png",
-          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/078-zeco-primavera-pular-corda.png"
-        }
-      },
-      "destinationUrl": null,
-      "destinationUrls": {
-        "pt": null,
-        "en": null
-      },
-      "upload": {
-        "status": "verified",
-        "verifiedAt": "2026-10-10T15:37:36.943Z",
-        "error": null
-      },
-      "instagram": {
-        "caption": "Gira, gira a corda no ar! Um, dois, três... quem consegue pular?\n\nSwing the rope round. One... two... three... who can jump?",
-        "status": "pending",
-        "mediaId": null,
-        "error": null
-      },
-      "facebook": {
-        "message": "Gira, gira a corda no ar! Um, dois, três... quem consegue pular?\n\nSwing the rope round. One... two... three... who can jump?",
+        "message": "Este é Taylo, o Colecionador de Estrelas e guardião silencioso da Floresta Azul.\n\nThis is Taylo, the Star Collector and silent guardian of the Blue Forest.",
         "status": "pending",
         "postId": null,
         "error": null
@@ -744,21 +686,29 @@
       "postado": false
     },
     {
-      "occurrence": "011",
-      "postId": "012",
-      "world": "taylo",
-      "type": "character",
-      "title": "Taylo",
+      "occurrence": "090",
+      "postId": "077",
+      "world": "zeco",
+      "type": "play",
+      "title": "Vem pular amarelinha",
       "scheduledAt": "2026-11-24T09:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": false,
-      "seasonality": null,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "primavera",
+        "allowedMonths": [
+          9,
+          10,
+          11
+        ]
+      },
       "media": {
         "kind": "image",
         "image": {
-          "local": "mkt/templates/_PUBLICAR/012-taylo-personagem.png",
-          "key": "social/bichittos/posts/012-taylo-personagem.png",
-          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/012-taylo-personagem.png"
+          "local": "mkt/templates/_PUBLICAR/077-zeco-primavera-amarelinha.png",
+          "key": "social/bichittos/posts/077-zeco-primavera-amarelinha.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/077-zeco-primavera-amarelinha.png"
         }
       },
       "destinationUrl": null,
@@ -772,13 +722,13 @@
         "error": null
       },
       "instagram": {
-        "caption": "Este é Taylo, o Colecionador de Estrelas e guardião silencioso da Floresta Azul.\n\nThis is Taylo, the Star Collector and silent guardian of the Blue Forest.",
+        "caption": "Joga a pedrinha e vem pular na amarelinha! Com um pé só, sem pisar na linha.\n\nToss your stone and hop. One foot, mind the lines. Up to the sky!",
         "status": "pending",
         "mediaId": null,
         "error": null
       },
       "facebook": {
-        "message": "Este é Taylo, o Colecionador de Estrelas e guardião silencioso da Floresta Azul.\n\nThis is Taylo, the Star Collector and silent guardian of the Blue Forest.",
+        "message": "Joga a pedrinha e vem pular na amarelinha! Com um pé só, sem pisar na linha.\n\nToss your stone and hop. One foot, mind the lines. Up to the sky!",
         "status": "pending",
         "postId": null,
         "error": null
@@ -1139,6 +1089,56 @@
       },
       "facebook": {
         "message": "O verão chegou no Hemisfério Sul. Ao mesmo tempo, o inverno começa no Hemisfério Norte.\n\nSummer has arrived in the Southern Hemisphere. At the same time, winter begins in the Northern Hemisphere.",
+        "status": "pending",
+        "postId": null,
+        "error": null
+      },
+      "postado": false
+    },
+    {
+      "occurrence": "091",
+      "postId": "078",
+      "world": "zeco",
+      "type": "play",
+      "title": "Pular corda",
+      "scheduledAt": "2026-12-22T09:00:00-03:00",
+      "timezone": "America/Sao_Paulo",
+      "calendarException": false,
+      "seasonality": {
+        "hemisphere": "south",
+        "season": "primavera",
+        "allowedMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      "media": {
+        "kind": "image",
+        "image": {
+          "local": "mkt/templates/_PUBLICAR/078-zeco-primavera-pular-corda.png",
+          "key": "social/bichittos/posts/078-zeco-primavera-pular-corda.png",
+          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/078-zeco-primavera-pular-corda.png"
+        }
+      },
+      "destinationUrl": null,
+      "destinationUrls": {
+        "pt": null,
+        "en": null
+      },
+      "upload": {
+        "status": "verified",
+        "verifiedAt": "2026-10-10T15:37:36.943Z",
+        "error": null
+      },
+      "instagram": {
+        "caption": "Gira, gira a corda no ar! Um, dois, três... quem consegue pular?\n\nSwing the rope round. One... two... three... who can jump?",
+        "status": "pending",
+        "mediaId": null,
+        "error": null
+      },
+      "facebook": {
+        "message": "Gira, gira a corda no ar! Um, dois, três... quem consegue pular?\n\nSwing the rope round. One... two... three... who can jump?",
         "status": "pending",
         "postId": null,
         "error": null
