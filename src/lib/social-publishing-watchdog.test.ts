@@ -15,20 +15,18 @@ vi.mock("@/lib/social-publishing-alerts", () => ({
   sendPublishingAlert: mocks.alert,
 }));
 
-vi.mock("@/lib/kammara-social/state", () => ({
-  readBrandControl: mocks.kammaraControl,
-  readPublicationState: mocks.kammaraState,
-}));
 vi.mock("@/lib/safe-social/state", () => ({
-  storeFor: (brand: { id: string }) => brand.id === "bichittos"
-    ? { readScheduleControl: mocks.bichittosControl, readPublicationState: mocks.bichittosState }
-    : { readScheduleControl: mocks.studioControl, readPublicationState: mocks.studioState },
+  storeFor: (brand: { id: string }) => {
+    if (brand.id === "kammara") return { readScheduleControl: mocks.kammaraControl, readPublicationState: mocks.kammaraState };
+    if (brand.id === "bichittos") return { readScheduleControl: mocks.bichittosControl, readPublicationState: mocks.bichittosState };
+    return { readScheduleControl: mocks.studioControl, readPublicationState: mocks.studioState };
+  },
 }));
 
 describe("social publishing watchdog", () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    mocks.kammaraControl.mockResolvedValue({ publishingEnabled: false });
+    mocks.kammaraControl.mockResolvedValue({ enabled: false });
     mocks.bichittosControl.mockResolvedValue({ enabled: false });
     mocks.studioControl.mockResolvedValue({ enabled: false });
   });
@@ -119,5 +117,40 @@ describe("social publishing watchdog", () => {
     expect(mocks.alert).toHaveBeenCalledWith(expect.objectContaining({
       details: [expect.stringContaining("facebook=needs_review")],
     }));
+  });
+
+  it("reads Kammara through its own safe store and schedule control", async () => {
+    mocks.kammaraControl.mockResolvedValue({ enabled: true });
+    mocks.kammaraState.mockResolvedValue({
+      instagram: { status: "published" },
+      facebook: { status: "pending" },
+    });
+
+    await expect(runSocialPublishingWatchdog(new Date("2026-11-24T13:00:00Z"))).resolves.toMatchObject({
+      status: "alert-sent",
+      checked: 1,
+      failures: 1,
+    });
+    expect(mocks.kammaraState).toHaveBeenCalledWith("010");
+    expect(mocks.alert).toHaveBeenCalledWith(expect.objectContaining({
+      details: [expect.stringContaining("Kammara 010 (orfv-character-maelik): facebook=pending")],
+    }));
+    expect(mocks.bichittosState).not.toHaveBeenCalled();
+    expect(mocks.studioState).not.toHaveBeenCalled();
+  });
+
+  it("Kammara with only instagram allowed does not alert on facebook pending", async () => {
+    mocks.kammaraControl.mockResolvedValue({ enabled: true, allowedPlatforms: ["instagram"] });
+    mocks.kammaraState.mockResolvedValue({
+      instagram: { status: "published" },
+      facebook: { status: "pending" },
+    });
+
+    await expect(runSocialPublishingWatchdog(new Date("2026-11-24T13:00:00Z"))).resolves.toEqual({
+      status: "healthy",
+      checked: 1,
+      failures: 0,
+    });
+    expect(mocks.alert).not.toHaveBeenCalled();
   });
 });

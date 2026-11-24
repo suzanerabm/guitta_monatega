@@ -1,5 +1,6 @@
 import bichittosQueue from "@/lib/bichittos-social/publication-queue.json";
 import studioQueue from "@/lib/guitta-studio-social/publication-queue.json";
+import kammaraQueue from "@/lib/kammara-social/publication-queue.json";
 import type { PublishingBrand } from "@/lib/social-publishing-alerts";
 import type { PublicationItem } from "./types";
 
@@ -25,9 +26,9 @@ export type SafeBrandCopy = {
 };
 
 export type SafeBrand = {
-  id: "guitta-studio" | "bichittos"; // used as the MetaClient `brand`
+  id: "guitta-studio" | "bichittos" | "kammara"; // used as the MetaClient `brand`
   alertBrand: PublishingBrand;
-  envPrefix: "GUITTA_STUDIO" | "BICHITTOS";
+  envPrefix: "GUITTA_STUDIO" | "BICHITTOS" | "KAMMARA";
   statePrefix: string; // ends with "/"
   queue: { mode: string; timezone: string; items: PublicationItem[] };
   maxMetaCallsPerDay: number;
@@ -81,6 +82,38 @@ export const BICHITTOS: SafeBrand = {
     cronReviewAlertSummary: "O cron seguro dos Bichittos foi pausado para revisão.",
     cronFailureAlertSummary: "O cron seguro dos Bichittos encontrou uma falha e foi pausado.",
     manualPausedMessage: "Bichittos publishing is paused pending a Meta API safety review.",
+    manualFailureAlertSummary: "O publicador encontrou uma falha.",
+  },
+};
+
+// Kammara queue items have no `postId`/`title` (they carry `slug`, `discovery`, `campaign`), so the
+// slug becomes the postId at this boundary. The queue header has no `mode`: it is treated as
+// active, and the safe publisher's own S3 controls (_control.json / _schedule-control.json) and
+// env flags remain the switches that actually allow a Meta call.
+type KammaraQueueItem = Omit<PublicationItem, "postId"> & { postId?: string; slug: string };
+
+export const KAMMARA: SafeBrand = {
+  id: "kammara",
+  alertBrand: "Kammara",
+  envPrefix: "KAMMARA",
+  statePrefix: "publications/kammara/",
+  queue: {
+    mode: "active",
+    timezone: kammaraQueue.timezone,
+    items: (kammaraQueue.items as unknown as KammaraQueueItem[]).map(
+      (item): PublicationItem => ({ ...item, postId: item.postId ?? item.slug }),
+    ),
+  },
+  maxMetaCallsPerDay: 32,
+  sameDay: { kind: "min-gap", minGapMs: 4 * 60 * 60 * 1000 },
+  copy: {
+    label: "Kammara",
+    logEventPrefix: "kammara",
+    logName: "Kammara",
+    cronDisabledMessage: "Kammara scheduled publishing is disabled.",
+    cronReviewAlertSummary: "O cron seguro do Kammara foi pausado para revisão.",
+    cronFailureAlertSummary: "O cron seguro do Kammara encontrou uma falha e foi pausado.",
+    manualPausedMessage: "Kammara publishing is paused pending a Meta API safety review.",
     manualFailureAlertSummary: "O publicador encontrou uma falha.",
   },
 };

@@ -1,9 +1,8 @@
 import bichittosQueue from "@/lib/bichittos-social/publication-queue.json";
 import studioQueue from "@/lib/guitta-studio-social/publication-queue.json";
-import { BICHITTOS, GUITTA_STUDIO } from "@/lib/safe-social/brands";
+import { BICHITTOS, GUITTA_STUDIO, KAMMARA } from "@/lib/safe-social/brands";
 import { storeFor } from "@/lib/safe-social/state";
 import kammaraQueue from "@/lib/kammara-social/publication-queue.json";
-import { readBrandControl as readKammaraControl, readPublicationState as readKammaraState } from "@/lib/kammara-social/state";
 import { sendPublishingAlert, type PublishingBrand } from "@/lib/social-publishing-alerts";
 
 type QueueItem = { occurrence: string; scheduledAt: string; postId?: string; title?: string; slug?: string };
@@ -22,8 +21,11 @@ const campaigns: Array<{
   {
     brand: "Kammara",
     items: kammaraQueue.items as QueueItem[],
-    read: readKammaraState,
-    readControl: readKammaraControl,
+    read: (occurrence) => storeFor(KAMMARA).readPublicationState(occurrence),
+    readControl: async () => {
+      const control = await storeFor(KAMMARA).readScheduleControl();
+      return { publishingEnabled: control.enabled, allowedPlatforms: control.allowedPlatforms };
+    },
     expectedPlatforms: ["instagram", "facebook"],
   },
   {
