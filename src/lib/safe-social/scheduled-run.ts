@@ -1,7 +1,8 @@
 import { randomUUID } from "node:crypto";
 import type { SafeBrand } from "./brands";
 import { advancePublication } from "./safe-publisher";
-import { selectDuePublications } from "./select-due";
+import { selectDuePublications, selectWorkItem } from "./select-due";
+import type { PublicationItem } from "./types";
 import { storeFor, type BrandStore } from "./state";
 
 async function pause(brand: SafeBrand, store: BrandStore, reason: string, now: Date): Promise<void> {
@@ -20,20 +21,48 @@ export async function runScheduledPublisher(brand: SafeBrand, now = new Date(), 
   const { queue } = brand;
   if (queue.mode !== "active") return { status: "inactive", mode: queue.mode, calls: 0 };
 
-  const due = selectDuePublications(queue.items, now, queue.timezone);
-  if (due.length === 0) return { status: "no-publication-today", calls: 0 };
-  if (due.length > 1) {
-    const reason = `Schedule conflict for ${due.map((item) => item.occurrence).join(", ")}; zero Meta calls made.`;
-    await pause(brand, store, reason, now);
-    return { status: "schedule-conflict", occurrences: due.map((item) => item.occurrence), calls: 0 };
+  // The control is read before selection only when the brand allows several posts per day: deciding
+  // whether the first post is finished depends on the authorized platforms. `single` brands keep the
+  // original order (no control read on an empty day, conflict before any S3 read).
+  let control: Awaited<ReturnType<BrandStore["readScheduleControl"]>> | null = null;
+  const finished = new Set<string>();
+  if (brand.sameDay.kind === "min-gap") {
+    const due = selectDuePublications(queue.items, now, queue.timezone);
+    if (due.length > 0) {
+      control = await store.readScheduleControl();
+      for (const candidate of due) {
+        if (candidate.media.kind === "reel") {
+          finished.add(candidate.occurrence);
+        } else if (control.enabled && control.allowedPlatforms.length > 0) {
+          const state = await store.readPublicationState(candidate.occurrence);
+          if (state && control.allowedPlatforms.every((platform) => state[platform].status === "published")) {
+            finished.add(candidate.occurrence);
+          }
+        }
+      }
+    }
   }
 
-  const item = due[0];
+  const selection = selectWorkItem(
+    queue.items,
+    now,
+    queue.timezone,
+    brand.sameDay,
+    (candidate: PublicationItem) => finished.has(candidate.occurrence),
+  );
+  if (selection.kind === "none") return { status: "no-publication-today", calls: 0 };
+  if (selection.kind === "conflict") {
+    const reason = `Schedule conflict for ${selection.occurrences.join(", ")}; zero Meta calls made.`;
+    await pause(brand, store, reason, now);
+    return { status: "schedule-conflict", occurrences: selection.occurrences, calls: 0 };
+  }
+
+  const item = selection.item;
   if (item.media.kind === "reel") {
     return { status: "reel-manual-only", occurrence: item.occurrence, calls: 0 };
   }
 
-  const control = await store.readScheduleControl();
+  control ??= await store.readScheduleControl();
   if (!control.enabled) {
     return { status: "schedule-paused", reason: control.pauseReason, pausedAt: control.pausedAt, calls: 0 };
   }
