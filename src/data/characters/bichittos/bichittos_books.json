@@ -150,7 +150,7 @@
     "taylo/star-hunter-en": {
       "visible": true,
       "onlyLocale": "en",
-      "cover": "/imgs/books/taylo/volume1/capa.png",
+      "cover": "/imgs/books/taylo/volume1/capa_EN.png",
       "title": { "en": "Taylo and Pitu: The Tales of the Star Collector" },
       "description": { "en": "In the Blue Forest, beneath the moonlight, lives Taylo, the Star Collector. One morning, he meets Pitu and, between a tulip and a campfire, a friendship neither of them expected begins. A gentle story about encounters, dreams, and the stars we collect along the way." },
       "contextTitle": { "en": "Discover Taylo and Pitu" },
