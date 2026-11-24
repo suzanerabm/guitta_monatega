@@ -50,6 +50,20 @@ describe("social publishing watchdog", () => {
     expect(mocks.studioState).not.toHaveBeenCalled();
   });
 
+  it("skips Reels, which the owner publishes by hand", async () => {
+    // Kammara 025 (bunniets, 2026-12-02 08:00 BRT) is a Reel.
+    mocks.kammaraControl.mockResolvedValue({ enabled: true, allowedPlatforms: ["instagram", "facebook"] });
+    mocks.kammaraState.mockResolvedValue(null);
+
+    await expect(runSocialPublishingWatchdog(new Date("2026-12-02T15:00:00Z"))).resolves.toEqual({
+      status: "healthy",
+      checked: 0,
+      failures: 0,
+    });
+    expect(mocks.kammaraState).not.toHaveBeenCalled();
+    expect(mocks.alert).not.toHaveBeenCalled();
+  });
+
   it("checks only an explicitly enabled brand", async () => {
     mocks.studioControl.mockResolvedValue({ enabled: true });
     mocks.studioState.mockResolvedValue({

@@ -5,7 +5,14 @@ import { storeFor } from "@/lib/safe-social/state";
 import kammaraQueue from "@/lib/kammara-social/publication-queue.json";
 import { sendPublishingAlert, type PublishingBrand } from "@/lib/social-publishing-alerts";
 
-type QueueItem = { occurrence: string; scheduledAt: string; postId?: string; title?: string; slug?: string };
+type QueueItem = {
+  occurrence: string;
+  scheduledAt: string;
+  postId?: string;
+  title?: string;
+  slug?: string;
+  media?: { kind: string };
+};
 type Platform = "instagram" | "facebook";
 type State = { instagram: { status: string }; facebook: { status: string } } | null;
 
@@ -57,6 +64,8 @@ export async function runSocialPublishingWatchdog(now = new Date()) {
 
   for (const campaign of campaigns) {
     const expected = campaign.items.filter((item) => {
+      // Reels are published by hand; the safe publisher never posts them.
+      if (item.media?.kind === "reel") return false;
       const scheduled = new Date(item.scheduledAt).getTime();
       return scheduled <= now.getTime() && scheduled > start;
     });
