@@ -14,7 +14,7 @@
   "exhaustionMessage": "A fila termina quando os posts planejados acabam. Não reiniciar nem repetir automaticamente.",
   "start": "2026-10-10T09:00:00-03:00",
   "end": "2027-08-27T09:00:00-03:00",
-  "total": 95,
+  "total": 94,
   "calendarExceptions": [
     "001",
     "020",
@@ -1139,48 +1139,6 @@
       },
       "facebook": {
         "message": "O verão chegou no Hemisfério Sul. Ao mesmo tempo, o inverno começa no Hemisfério Norte.\n\nSummer has arrived in the Southern Hemisphere. At the same time, winter begins in the Northern Hemisphere.",
-        "status": "pending",
-        "postId": null,
-        "error": null
-      },
-      "postado": false
-    },
-    {
-      "occurrence": "020",
-      "postId": "013",
-      "world": "taylo",
-      "type": "character",
-      "title": "Pitu",
-      "scheduledAt": "2026-12-22T09:00:00-03:00",
-      "timezone": "America/Sao_Paulo",
-      "calendarException": false,
-      "seasonality": null,
-      "media": {
-        "kind": "image",
-        "image": {
-          "local": "mkt/templates/_PUBLICAR/013-pitu-personagem.png",
-          "key": "social/bichittos/posts/013-pitu-personagem.png",
-          "url": "https://kammara.s3.us-east-1.amazonaws.com/social/bichittos/posts/013-pitu-personagem.png"
-        }
-      },
-      "destinationUrl": null,
-      "destinationUrls": {
-        "pt": null,
-        "en": null
-      },
-      "upload": {
-        "status": "verified",
-        "verifiedAt": "2026-10-10T15:37:36.943Z",
-        "error": null
-      },
-      "instagram": {
-        "caption": "Este é Pitu. Ele sente tudo intensamente, e sua sensibilidade também faz parte de sua coragem.\n\nThis is Pitu. He feels everything deeply, and his sensitivity is also part of his courage.",
-        "status": "pending",
-        "mediaId": null,
-        "error": null
-      },
-      "facebook": {
-        "message": "Este é Pitu. Ele sente tudo intensamente, e sua sensibilidade também faz parte de sua coragem.\n\nThis is Pitu. He feels everything deeply, and his sensitivity is also part of his courage.",
         "status": "pending",
         "postId": null,
         "error": null
