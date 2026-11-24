@@ -156,7 +156,7 @@
       "contextTitle": { "en": "Discover Taylo and Pitu" },
       "editions": [
         { "id": "ebook-kindle", "format": "ebook", "label": "Digital book", "purchaseChannel": "comingSoon" },
-        { "id": "paperback-kdp", "format": "paperback", "label": "Paperback — 6 × 9 in", "purchaseChannel": "amazon", "facts": { "pageCount": 36, "language": "English", "dimensions": "6 × 9 in (15.24 × 22.86 cm)", "isbn": "978-6502513736" } }
+        { "id": "paperback-kdp", "format": "paperback", "label": "Paperback — 6 × 9 in", "purchaseChannel": "amazon", "price": { "amount": 9.99, "currency": "USD" }, "facts": { "pageCount": 36, "language": "English", "dimensions": "6 × 9 in (15.24 × 22.86 cm)", "isbn": "978-6502513736" } }
       ],
       "homeButtonUrl": "/bichittos?bichitto=taylo",
       "homeButtonLabel": "Discover Taylo's world",

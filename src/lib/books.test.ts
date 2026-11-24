@@ -78,6 +78,8 @@ describe('book catalog', () => {
     expect(ebook?.purchaseChannel).toBe('comingSoon');
     expect(paperback?.purchaseChannel).toBe('amazon');
     expect(paperback?.url).toBe('https://www.amazon.com/dp/6502513735');
+    // The home books gallery lists only books with at least one priced edition.
+    expect(paperback?.price).toEqual({ amount: 9.99, currency: 'USD' });
     expect(book && isBookComingSoon(book)).toBe(false);
   });
 
