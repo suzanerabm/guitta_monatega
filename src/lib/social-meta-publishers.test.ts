@@ -1,15 +1,13 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { publishers as bichittos } from "./bichittos-social/meta";
 import { publishers as kammara } from "./kammara-social/meta";
 import { publishPlatforms } from "./social-meta/execute";
 import { facebookCallLimit, instagramCallLimit, type PublishableItem } from "./social-meta/publishers";
 
-// Regression coverage for the paused legacy Kammara and Bichittos publishers. Studio has a
+// Regression coverage for the paused legacy Kammara publisher. Studio and Bichittos use the
 // stricter one-call state machine covered by safe-social/safe-publisher.test.ts.
 
 const brands = [
   { name: "Kammara", prefix: "KAMMARA", publishers: kammara },
-  { name: "Bichittos", prefix: "BICHITTOS", publishers: bichittos },
 ];
 
 const image = (): PublishableItem => ({
@@ -167,12 +165,12 @@ describe("brand isolation", () => {
   it("never uses another brand's credentials", async () => {
     vi.useFakeTimers();
     for (const name of ["META_GRAPH_API_VERSION", "META_ACCESS_TOKEN", "INSTAGRAM_USER_ID", "FACEBOOK_PAGE_ID", "FACEBOOK_PAGE_ACCESS_TOKEN"]) {
-      vi.stubEnv(`KAMMARA_${name}`, "kammara-value");
-      vi.stubEnv(`BICHITTOS_${name}`, "");
+      vi.stubEnv(`BICHITTOS_${name}`, "bichittos-value");
+      vi.stubEnv(`KAMMARA_${name}`, "");
     }
     const mock = metaMock();
-    const { result } = await run(bichittos, image(), mock);
-    expect((result as Error).message).toMatch(/BICHITTOS_.* is not configured/);
+    const { result } = await run(kammara, image(), mock);
+    expect((result as Error).message).toMatch(/KAMMARA_.* is not configured/);
     expect(mock.calls).toHaveLength(0);
   });
 });

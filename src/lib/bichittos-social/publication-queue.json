@@ -1241,7 +1241,7 @@
       "world": "napcat",
       "type": "special-day",
       "title": "Feliz Natal!",
-      "scheduledAt": "2026-12-25T10:00:00-03:00",
+      "scheduledAt": "2026-12-25T15:00:00-03:00",
       "timezone": "America/Sao_Paulo",
       "calendarException": true,
       "seasonality": null,

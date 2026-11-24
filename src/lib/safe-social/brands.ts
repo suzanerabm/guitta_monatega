@@ -1,3 +1,4 @@
+import bichittosQueue from "@/lib/bichittos-social/publication-queue.json";
 import studioQueue from "@/lib/guitta-studio-social/publication-queue.json";
 import type { PublishingBrand } from "@/lib/social-publishing-alerts";
 import type { PublicationItem } from "./types";
@@ -54,6 +55,32 @@ export const GUITTA_STUDIO: SafeBrand = {
     cronReviewAlertSummary: "O cron seguro do Studio foi pausado para revisão.",
     cronFailureAlertSummary: "O cron seguro do Studio encontrou uma falha e foi pausado.",
     manualPausedMessage: "Guitta Studio publishing is paused pending a Meta API safety review.",
+    manualFailureAlertSummary: "O publicador encontrou uma falha.",
+  },
+};
+
+// Bichittos queue items already have the PublicationItem shape; extra fields (seasonality,
+// postado, upload…) are ignored by the publisher.
+export const BICHITTOS: SafeBrand = {
+  id: "bichittos",
+  alertBrand: "Bichittos",
+  envPrefix: "BICHITTOS",
+  statePrefix: "publications/bichittos/",
+  queue: {
+    mode: bichittosQueue.mode,
+    timezone: bichittosQueue.timezone,
+    items: bichittosQueue.items as unknown as PublicationItem[],
+  },
+  maxMetaCallsPerDay: 32,
+  sameDay: { kind: "min-gap", minGapMs: 4 * 60 * 60 * 1000 },
+  copy: {
+    label: "Bichittos",
+    logEventPrefix: "bichittos",
+    logName: "Bichittos",
+    cronDisabledMessage: "Bichittos scheduled publishing is disabled.",
+    cronReviewAlertSummary: "O cron seguro dos Bichittos foi pausado para revisão.",
+    cronFailureAlertSummary: "O cron seguro dos Bichittos encontrou uma falha e foi pausado.",
+    manualPausedMessage: "Bichittos publishing is paused pending a Meta API safety review.",
     manualFailureAlertSummary: "O publicador encontrou uma falha.",
   },
 };

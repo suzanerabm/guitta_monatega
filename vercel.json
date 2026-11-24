@@ -7,6 +7,10 @@
       "schedule": "*/15 12-21 * * *"
     },
     {
+      "path": "/api/cron/bichittos-scheduled-publish",
+      "schedule": "*/15 12-21 * * *"
+    },
+    {
       "path": "/api/cron/social-publishing-watchdog",
       "schedule": "45 22 * * *"
     },

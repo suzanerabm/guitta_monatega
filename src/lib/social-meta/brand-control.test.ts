@@ -1,7 +1,5 @@
 import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { runBichittosPublisher } from "../bichittos-social/run";
-import * as bichittosState from "../bichittos-social/state";
 import { GUITTA_STUDIO } from "../safe-social/brands";
 import { runManualPublisher } from "../safe-social/run";
 import { storeFor } from "../safe-social/state";
@@ -16,7 +14,6 @@ const runGuittaStudioPublisher = (now: Date) => runManualPublisher(GUITTA_STUDIO
 
 const brands = [
   { name: "Kammara", prefix: "KAMMARA", key: "publications/kammara/_control.json", state: kammaraState, run: runKammaraPublisher, due: "2026-10-11T08:00:00-03:00" },
-  { name: "Bichittos", prefix: "BICHITTOS", key: "publications/bichittos/_control.json", state: bichittosState, run: runBichittosPublisher, due: "2026-10-10T09:00:00-03:00" },
   { name: "Studio", prefix: "GUITTA_STUDIO", key: "publications/guitta-monatega-studio/_control.json", state: studioState, run: runGuittaStudioPublisher, due: "2026-10-10T09:00:00-03:00" },
 ];
 
