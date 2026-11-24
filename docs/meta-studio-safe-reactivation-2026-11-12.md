@@ -221,3 +221,30 @@ A visibilidade do post foi confirmada manualmente pela responsável da Página. 
 depois, o controle persistente passou a autorizar `instagram, facebook`. As duas gravações no S3
 usaram os ETags lidos imediatamente antes da operação; uma alteração concorrente teria impedido a
 ativação. Kammara e Bichittos permanecem pausados, e Reels continuam exclusivamente manuais.
+
+## Token da Página expirado e verificação com a `007` (14 a 24 de novembro de 2026)
+
+**14/11, ocorrência `006` (Ninha):**
+- O Instagram foi publicado (`18645453997011259`).
+- A única chamada ao Facebook falhou com sessão expirada: o `GUITTA_STUDIO_FACEBOOK_PAGE_ACCESS_TOKEN` cadastrado em 13/11
+  era de curta duração e venceu às 15:00 PST de 13/11.
+- O Facebook foi para `needs_review`, e o controle agendado se pausou sozinho às 13:15 UTC.
+- Não houve repetição nem post no Facebook.
+- Como o controle ficou pausado, a `007` (21/11) não saiu. O Facebook da Ninha foi dispensado pela proprietária.
+
+**24/11, token novo:**
+- A proprietária gerou um token de Página definitivo pelo usuário do sistema **Guitta Publisher**, no app
+  **Guitta Studio Publisher**.
+- No Access Token Debugger, o token mostrou `Expires: Never`.
+
+**24/11, publicação da `007` (Rui Merengue):**
+- A `007` foi movida para 24/11 (commit `33eb7d3`).
+- O deploy só chegou à produção depois de um push para o remoto `mosaicq` e da promoção manual na Vercel. Os pushes
+  feitos só no `origin` nunca são publicados.
+- O controle foi religado para `instagram, facebook` às 14:56, com escrita condicional.
+- A automação publicou:
+  - Instagram `18583638943078662` às 16:30;
+  - Facebook `1376392398892999_122127690129500542` às 17:00, com o token novo.
+- Confirmou as duas plataformas até 17:15, com 6 chamadas à Meta no total.
+- A proprietária confirmou visualmente os dois posts.
+- A data da `007` voltou a 21/11. O controle segue ligado para `instagram, facebook`.
